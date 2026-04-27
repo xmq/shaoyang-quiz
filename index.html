@@ -47,8 +47,17 @@
     margin-bottom: 10px; box-shadow: var(--shadow);
     position: sticky; top: 0; z-index: 10;
   }
-  .header-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-  .header h1 { margin: 0; font-size: 15px; font-weight: 600; flex-shrink: 0; }
+  .header-row { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+  .header h1 { margin: 0; font-size: 14px; font-weight: 600; flex-shrink: 0; }
+  .subject-inline {
+    flex: 1; min-width: 0; padding: 6px 28px 6px 10px;
+    border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='%236b7280'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E") no-repeat right 10px center;
+    background-size: 9px;
+    color: var(--text); font-size: 12px;
+    -webkit-appearance: none; appearance: none;
+    text-overflow: ellipsis; white-space: nowrap;
+  }
   .stats-grid {
     display: grid; grid-template-columns: repeat(5, 1fr);
     gap: 4px; margin-top: 8px; font-size: 11px;
@@ -221,6 +230,9 @@
   <div class="header">
     <div class="header-row">
       <h1>📚 计算机刷题器</h1>
+      <select id="subject" class="subject-inline">
+        <option value="">全部科目</option>
+      </select>
       <button class="menu-btn" id="menu-toggle" aria-label="菜单">⋯</button>
     </div>
     <div class="stats-grid">
@@ -246,9 +258,6 @@
   </div>
 
   <div class="controls">
-    <select id="subject">
-      <option value="">全部科目</option>
-    </select>
     <div class="chip-row">
       <div class="chip active" data-mode="seq">顺序</div>
       <div class="chip" data-mode="rnd">随机</div>
