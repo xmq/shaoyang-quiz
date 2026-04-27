@@ -376,11 +376,12 @@ function updateStats() {
   const doneInPool = pool.filter(q => state.done[q.id]).length;
   const correct = pool.filter(q => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
   const wrong = doneInPool - correct;
-  document.getElementById('stat-done').textContent = doneInPool;
-  document.getElementById('stat-correct').textContent = correct;
-  document.getElementById('stat-wrong').textContent = wrong;
-  document.getElementById('stat-rate').textContent = doneInPool ? Math.round(correct * 100 / doneInPool) + '%' : '0%';
-  document.getElementById('stat-wrongbook').textContent = Object.keys(state.wrong).length;
+  const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  setText('stat-done', doneInPool);
+  setText('stat-correct', correct);
+  setText('stat-wrong', wrong);
+  setText('stat-rate', doneInPool ? Math.round(correct * 100 / doneInPool) + '%' : '0%');
+  setText('stat-wrongbook', Object.keys(state.wrong).length);
   const pct = pool.length ? Math.round(doneInPool * 100 / pool.length) : 0;
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('total').textContent = QUESTIONS.length;
