@@ -28,7 +28,7 @@
       --shadow: 0 1px 3px rgba(0,0,0,0.3);
     }
   }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   body {
     margin: 0; padding: 0;
     background: var(--bg);
@@ -36,32 +36,61 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    padding-bottom: env(safe-area-inset-bottom);
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 12px 12px 100px; }
   .header {
-    background: var(--card); border-radius: 12px; padding: 12px 16px;
-    margin-bottom: 12px; box-shadow: var(--shadow);
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 8px;
+    background: var(--card); border-radius: 12px; padding: 10px 14px;
+    margin-bottom: 10px; box-shadow: var(--shadow);
+    position: sticky; top: 0; z-index: 10;
   }
-  .header h1 { margin: 0; font-size: 16px; font-weight: 600; }
-  .stats { font-size: 13px; color: var(--muted); }
-  .stats span { margin-left: 8px; }
-  .stats .ok { color: var(--correct); }
-  .stats .ng { color: var(--wrong); }
+  .header-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .header h1 { margin: 0; font-size: 15px; font-weight: 600; flex-shrink: 0; }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 4px; margin-top: 8px; font-size: 11px;
+  }
+  .stats-grid .stat-item { text-align: center; padding: 4px 2px; background: var(--bg); border-radius: 6px; }
+  .stats-grid .stat-item b { display: block; font-size: 14px; font-weight: 700; }
+  .stats-grid .ok b { color: var(--correct); }
+  .stats-grid .ng b { color: var(--wrong); }
+  .stats-grid .wb b { color: var(--wrong); }
+  .menu-btn {
+    background: var(--bg); border: none; padding: 6px 10px; border-radius: 6px;
+    color: var(--text); cursor: pointer; font-size: 18px;
+  }
   .controls {
-    background: var(--card); border-radius: 12px; padding: 12px;
-    margin-bottom: 12px; box-shadow: var(--shadow);
-    display: flex; flex-wrap: wrap; gap: 8px;
+    background: var(--card); border-radius: 12px; padding: 10px;
+    margin-bottom: 10px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .controls select, .controls button {
-    padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
-    background: var(--card); color: var(--text); font-size: 14px;
-    cursor: pointer; transition: all 0.15s;
+  .controls select {
+    width: 100%; padding: 10px 12px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--card); color: var(--text);
+    font-size: 14px; -webkit-appearance: none; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='%236b7280'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center;
+    background-size: 10px;
   }
-  .controls select { flex: 1; min-width: 120px; }
-  .controls button:hover { border-color: var(--primary); }
-  .controls button.active { background: var(--primary); color: white; border-color: var(--primary); }
+  .chip-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    padding: 7px 14px; border-radius: 999px;
+    border: 1.5px solid var(--border); background: var(--card); color: var(--text);
+    font-size: 13px; cursor: pointer; transition: all 0.15s;
+    user-select: none;
+  }
+  .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
+  .menu-popup {
+    position: fixed; right: 12px; top: 60px; z-index: 50;
+    background: var(--card); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    min-width: 160px; padding: 6px; display: none;
+  }
+  .menu-popup.show { display: block; }
+  .menu-item {
+    padding: 10px 14px; cursor: pointer; border-radius: 6px; font-size: 14px;
+    color: var(--text); border: none; background: none; width: 100%; text-align: left;
+  }
+  .menu-item:hover { background: var(--bg); }
   .progress-bar {
     height: 4px; background: var(--border); border-radius: 2px;
     overflow: hidden; margin-bottom: 12px;
@@ -148,59 +177,85 @@
     background: transparent; padding: 6px 0;
   }
   .nav {
-    display: flex; gap: 8px; margin-top: 12px;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;
+    background: var(--card); border-top: 1px solid var(--border);
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    display: flex; gap: 8px; max-width: 720px; margin: 0 auto;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
   }
   .nav button {
-    flex: 1; padding: 12px; border-radius: 8px; border: none;
+    flex: 1; padding: 12px 8px; border-radius: 10px; border: none;
     background: var(--primary); color: white; font-size: 15px;
     font-weight: 500; cursor: pointer; transition: all 0.15s;
+    min-height: 48px;
   }
   .nav button:hover { background: var(--primary-dark); }
-  .nav button.secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
-  .nav button.secondary:hover { border-color: var(--primary); color: var(--primary); }
-  .nav button.fav.active { background: var(--warn); }
+  .nav button.secondary { background: var(--bg); color: var(--text); }
+  .nav button.fav.active { background: var(--warn); color: white; }
   .nav button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .nav button.icon-btn { flex: 0 0 56px; font-size: 18px; }
   .empty { text-align: center; padding: 40px 20px; color: var(--muted); }
-  .footer { text-align: center; margin: 16px 0; font-size: 12px; color: var(--muted); }
+  .footer { text-align: center; margin: 16px 0 0; font-size: 11px; color: var(--muted); }
+  /* 选项更易点 */
+  .opt {
+    padding: 14px 16px; border: 1.5px solid var(--border);
+    border-radius: 10px; cursor: pointer; transition: all 0.15s;
+    display: flex; gap: 12px; align-items: flex-start;
+    background: var(--card); min-height: 52px;
+  }
+  /* 桌面端：导航不固定 */
+  @media (min-width: 720px) {
+    .nav {
+      position: static; max-width: none; padding: 0; margin-top: 12px;
+      background: transparent; border: none; box-shadow: none;
+    }
+    .container { padding-bottom: 16px; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1>📚 计算机刷题器</h1>
-    <div class="stats">
-      <span>已做 <b id="stat-done">0</b></span>
-      <span class="ok">对 <b id="stat-correct">0</b></span>
-      <span class="ng">错 <b id="stat-wrong">0</b></span>
-      <span>正确率 <b id="stat-rate">0%</b></span>
-      <span class="warn-stat">错题本 <b id="stat-wrongbook" style="color:var(--wrong)">0</b></span>
+    <div class="header-row">
+      <h1>📚 计算机刷题器</h1>
+      <button class="menu-btn" id="menu-toggle" aria-label="菜单">⋯</button>
     </div>
+    <div class="stats-grid">
+      <div class="stat-item"><b id="stat-done">0</b>已做</div>
+      <div class="stat-item ok"><b id="stat-correct">0</b>正确</div>
+      <div class="stat-item ng"><b id="stat-wrong">0</b>错误</div>
+      <div class="stat-item wb"><b id="stat-wrongbook">0</b>错题本</div>
+    </div>
+    <div class="progress-bar" style="margin-top:8px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
   </div>
 
-  <div class="controls">
-    <select id="subject">
-      <option value="">全部科目</option>
-    </select>
-    <select id="type-filter">
+  <div class="menu-popup" id="menu-popup">
+    <select id="type-filter" style="margin-bottom:6px;">
       <option value="">全部题型</option>
       <option value="单选">单选</option>
       <option value="多选">多选</option>
       <option value="判断">判断</option>
       <option value="填空">填空</option>
     </select>
-    <button id="mode-seq" class="active">顺序</button>
-    <button id="mode-rnd">随机</button>
-    <button id="mode-wrong">错题本</button>
-    <button id="mode-fav">收藏</button>
-    <button id="export-wrong" title="导出错题为 txt 文件">📥 导出错题</button>
-    <button id="reset">重置</button>
+    <button class="menu-item" id="export-wrong">📥 导出错题</button>
+    <button class="menu-item" id="reset" style="color:var(--wrong);">♻ 重置进度</button>
   </div>
 
-  <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+  <div class="controls">
+    <select id="subject">
+      <option value="">全部科目</option>
+    </select>
+    <div class="chip-row">
+      <div class="chip active" data-mode="seq">顺序</div>
+      <div class="chip" data-mode="rnd">随机</div>
+      <div class="chip" data-mode="wrong">错题本</div>
+      <div class="chip" data-mode="fav">收藏</div>
+    </div>
+  </div>
 
   <div id="card-area"></div>
 
-  <div class="footer">本地存储进度 · 数据不上云 · 共 <span id="total"></span> 题</div>
+  <div class="footer" id="total-footer">共 <span id="total"></span> 题 · 本地存储</div>
 </div>
 
 <script>
@@ -625,29 +680,45 @@ function setupChapters() {
 }
 
 function setupModes() {
-  const modes = { 'mode-seq':'seq', 'mode-rnd':'rnd', 'mode-wrong':'wrong', 'mode-fav':'fav' };
-  for (const [id, m] of Object.entries(modes)) {
-    const btn = document.getElementById(id);
-    if (state.mode === m) btn.classList.add('active');
-    btn.onclick = () => {
+  document.querySelectorAll('.chip[data-mode]').forEach(chip => {
+    if (state.mode === chip.dataset.mode) chip.classList.add('active');
+    chip.onclick = () => {
+      const m = chip.dataset.mode;
       state.mode = m;
       state.cursor = 0;
       state._shuffled = false;
       state._stickyId = null;
       state.currentId = null;
       state._pending = null;
-      Object.keys(modes).forEach(i => document.getElementById(i).classList.toggle('active', modes[i] === m));
+      document.querySelectorAll('.chip[data-mode]').forEach(c => c.classList.toggle('active', c.dataset.mode === m));
       save(); render();
     };
-  }
+  });
   document.getElementById('reset').onclick = () => {
+    document.getElementById('menu-popup').classList.remove('show');
     if (confirm('确定重置所有进度？错题、收藏将一并清除。')) {
       localStorage.removeItem(STORE_KEY);
       localStorage.removeItem('shaoyang-quiz-v1');
       location.reload();
     }
   };
-  document.getElementById('export-wrong').onclick = exportWrong;
+  document.getElementById('export-wrong').onclick = () => {
+    document.getElementById('menu-popup').classList.remove('show');
+    exportWrong();
+  };
+
+  // 菜单展开/关闭
+  const menuBtn = document.getElementById('menu-toggle');
+  const menuPopup = document.getElementById('menu-popup');
+  menuBtn.onclick = (e) => {
+    e.stopPropagation();
+    menuPopup.classList.toggle('show');
+  };
+  document.addEventListener('click', (e) => {
+    if (!menuPopup.contains(e.target) && e.target !== menuBtn) {
+      menuPopup.classList.remove('show');
+    }
+  });
 }
 
 document.addEventListener('keydown', e => {
