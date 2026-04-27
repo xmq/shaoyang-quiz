@@ -833,12 +833,14 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// 手势滑动切换题目（仅手机端）
+// 手势滑动切换题目
 (function setupSwipe() {
   let startX = 0, startY = 0, startT = 0, tracking = false;
-  const card = document.getElementById('card-area');
   function onStart(e) {
-    if (e.target.closest('.opt, .nav, button, input, select, .feedback')) return;
+    if (e.target.closest('.opt, .nav button, input, select, .menu-popup, .menu-btn, .collapse-btn, .chip')) {
+      tracking = false;
+      return;
+    }
     const t = e.touches ? e.touches[0] : e;
     startX = t.clientX; startY = t.clientY; startT = Date.now(); tracking = true;
   }
@@ -849,7 +851,8 @@ document.addEventListener('keydown', e => {
     const dx = t.clientX - startX;
     const dy = t.clientY - startY;
     const dt = Date.now() - startT;
-    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5 || dt > 600) return;
+    // 阈值：横向 ≥40 px，且为纵向位移 1.2 倍以上，时长 ≤900ms
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.2 || dt > 900) return;
     if (dx < 0) nextQuestion();
     else prevQuestion();
   }
