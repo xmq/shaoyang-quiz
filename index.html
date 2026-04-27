@@ -41,7 +41,7 @@
     line-height: 1.6;
     padding-bottom: env(safe-area-inset-bottom);
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 12px 12px 100px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 12px 12px 24px; }
   .header {
     background: var(--card); border-radius: 12px; padding: 10px 14px;
     margin-bottom: 10px; box-shadow: var(--shadow);
@@ -189,11 +189,7 @@
     background: transparent; padding: 6px 0;
   }
   .nav {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;
-    background: var(--card); border-top: 1px solid var(--border);
-    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
-    display: flex; gap: 8px; max-width: 720px; margin: 0 auto;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    display: flex; gap: 8px; margin-top: 16px;
   }
   .nav button {
     flex: 1; padding: 12px 8px; border-radius: 10px; border: none;
@@ -202,7 +198,7 @@
     min-height: 48px;
   }
   .nav button:hover { background: var(--primary-dark); }
-  .nav button.secondary { background: var(--bg); color: var(--text); }
+  .nav button.secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
   .nav button.fav.active { background: var(--warn); color: white; }
   .nav button:disabled { opacity: 0.5; cursor: not-allowed; }
   .nav button.icon-btn { flex: 0 0 56px; font-size: 18px; }
@@ -214,14 +210,6 @@
     border-radius: 10px; cursor: pointer; transition: all 0.15s;
     display: flex; gap: 12px; align-items: flex-start;
     background: var(--card); min-height: 52px;
-  }
-  /* 桌面端：导航不固定 */
-  @media (min-width: 720px) {
-    .nav {
-      position: static; max-width: none; padding: 0; margin-top: 12px;
-      background: transparent; border: none; box-shadow: none;
-    }
-    .container { padding-bottom: 16px; }
   }
 </style>
 </head>
