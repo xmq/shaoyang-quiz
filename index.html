@@ -189,19 +189,30 @@
     background: transparent; padding: 6px 0;
   }
   .nav {
-    display: flex; gap: 8px; margin-top: 16px;
+    display: flex; gap: 8px; margin-top: 18px;
+    align-items: stretch;
   }
   .nav button {
-    flex: 1; padding: 12px 8px; border-radius: 10px; border: none;
-    background: var(--primary); color: white; font-size: 15px;
-    font-weight: 500; cursor: pointer; transition: all 0.15s;
-    min-height: 48px;
+    border-radius: 10px; border: none;
+    font-size: 15px; font-weight: 500; cursor: pointer;
+    transition: all 0.15s; min-height: 48px;
   }
-  .nav button:hover { background: var(--primary-dark); }
-  .nav button.secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
-  .nav button.fav.active { background: var(--warn); color: white; }
+  .nav .icon-only {
+    flex: 0 0 48px; padding: 0;
+    background: var(--bg); color: var(--text); border: 1px solid var(--border);
+    font-size: 18px;
+  }
+  .nav .icon-only.fav.active { background: var(--warn); color: white; border-color: var(--warn); }
+  .nav .primary-next {
+    flex: 1; padding: 12px 16px;
+    background: var(--bg); color: var(--muted); border: 1px solid var(--border);
+  }
+  .nav .primary-next.ready {
+    background: var(--primary); color: white;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+    font-weight: 600; font-size: 16px;
+  }
   .nav button:disabled { opacity: 0.5; cursor: not-allowed; }
-  .nav button.icon-btn { flex: 0 0 56px; font-size: 18px; }
   .empty { text-align: center; padding: 40px 20px; color: var(--muted); }
   .footer { text-align: center; margin: 16px 0 0; font-size: 11px; color: var(--muted); }
   /* 选项更易点 */
@@ -370,19 +381,25 @@ function getPool() {
 
 function updateStats() {
   if (window._refreshSubjectOptions) window._refreshSubjectOptions();
-  const pool = getPool();
-  const doneInPool = pool.filter(q => state.done[q.id]).length;
-  const correct = pool.filter(q => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
-  const wrong = doneInPool - correct;
+  // 统计基于科目+题型筛选范围，不受模式过滤影响（避免"已答的题被过滤后已做归零"）
+  let scope = QUESTIONS;
+  if (state.subject) scope = scope.filter(q => q.subject === state.subject);
+  if (state.typeFilter) scope = scope.filter(q => q.type === state.typeFilter);
+  const totalScope = scope.length;
+  const doneInScope = scope.filter(q => state.done[q.id]).length;
+  const correctInScope = scope.filter(q => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
+  const wrongInScope = doneInScope - correctInScope;
+  // 错题本只统计当前 scope 中处于错题本的题
+  const wrongbookInScope = scope.filter(q => state.wrong[q.id]).length;
   const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
-  setText('stat-done', doneInPool);
-  setText('stat-correct', correct);
-  setText('stat-wrong', wrong);
-  setText('stat-rate', doneInPool ? Math.round(correct * 100 / doneInPool) + '%' : '0%');
-  setText('stat-wrongbook', Object.keys(state.wrong).length);
-  const pct = pool.length ? Math.round(doneInPool * 100 / pool.length) : 0;
+  setText('stat-done', doneInScope);
+  setText('stat-correct', correctInScope);
+  setText('stat-wrong', wrongInScope);
+  setText('stat-rate', doneInScope ? Math.round(correctInScope * 100 / doneInScope) + '%' : '0%');
+  setText('stat-wrongbook', wrongbookInScope);
+  const pct = totalScope ? Math.round(doneInScope * 100 / totalScope) : 0;
   document.getElementById('progress-fill').style.width = pct + '%';
-  document.getElementById('total').textContent = QUESTIONS.length;
+  document.getElementById('total').textContent = totalScope;
 }
 
 function escapeHtml(s) {
@@ -501,10 +518,10 @@ function renderQuestion(q, pool) {
       ${bodyHtml}
       ${feedbackHtml}
       <div class="nav">
-        <button class="secondary" id="prev">← 上一题</button>
-        <button class="secondary fav ${isFav?'active':''}" id="fav">${isFav?'★ 已收藏':'☆ 收藏'}</button>
-        ${state.done[q.id] ? '<button class="secondary" id="redo" title="清除本题答题状态重新作答">↻ 重答</button>' : ''}
-        <button id="next">下一题 →</button>
+        <button class="icon-only" id="prev" aria-label="上一题">←</button>
+        <button class="icon-only fav ${isFav?'active':''}" id="fav" aria-label="收藏">${isFav?'★':'☆'}</button>
+        ${state.done[q.id] ? '<button class="icon-only" id="redo" aria-label="重答">↻</button>' : ''}
+        <button class="primary-next ${state.done[q.id] ? 'ready' : ''}" id="next">${state.done[q.id] ? '下一题 →' : '跳过 →'}</button>
       </div>
     </div>`;
 
