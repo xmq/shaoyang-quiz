@@ -695,14 +695,12 @@ function setupChapters() {
     sel.innerHTML = '';
     const allOpt = document.createElement('option');
     allOpt.value = '';
-    const allStat = buildSubjectStat('');
-    allOpt.textContent = `全部科目 (${allStat.done}/${allStat.total} · ${allStat.rate}%)`;
+    allOpt.textContent = `全部科目 (${counts['__total__'] || QUESTIONS.length})`;
     sel.appendChild(allOpt);
     for (const s of subjects) {
       const opt = document.createElement('option');
       opt.value = s;
-      const st = buildSubjectStat(s);
-      opt.textContent = `${s}  ${st.done}/${st.total} · ${st.rate}%`;
+      opt.textContent = `${s} (${counts[s]})`;
       sel.appendChild(opt);
     }
     sel.value = state.subject || '';
