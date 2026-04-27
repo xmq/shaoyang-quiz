@@ -215,6 +215,10 @@
   .nav button:disabled { opacity: 0.5; cursor: not-allowed; }
   .empty { text-align: center; padding: 40px 20px; color: var(--muted); }
   .footer { text-align: center; margin: 16px 0 0; font-size: 11px; color: var(--muted); }
+  .swipe-hint {
+    text-align: center; margin: 8px 0 0; font-size: 11px; color: var(--muted);
+    opacity: 0.7;
+  }
   /* 选项更易点 */
   .opt {
     padding: 14px 16px; border: 1.5px solid var(--border);
@@ -267,6 +271,7 @@
 
   <div id="card-area"></div>
 
+  <div class="swipe-hint">← 左滑下一题  ·  右滑上一题 →</div>
   <div class="footer" id="total-footer">共 <span id="total"></span> 题 · 本地存储</div>
 </div>
 
@@ -798,6 +803,30 @@ document.addEventListener('keydown', e => {
     save(); render();
   }
 });
+
+// 手势滑动切换题目（仅手机端）
+(function setupSwipe() {
+  let startX = 0, startY = 0, startT = 0, tracking = false;
+  const card = document.getElementById('card-area');
+  function onStart(e) {
+    if (e.target.closest('.opt, .nav, button, input, select, .feedback')) return;
+    const t = e.touches ? e.touches[0] : e;
+    startX = t.clientX; startY = t.clientY; startT = Date.now(); tracking = true;
+  }
+  function onEnd(e) {
+    if (!tracking) return;
+    tracking = false;
+    const t = (e.changedTouches && e.changedTouches[0]) || e;
+    const dx = t.clientX - startX;
+    const dy = t.clientY - startY;
+    const dt = Date.now() - startT;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5 || dt > 600) return;
+    if (dx < 0) nextQuestion();
+    else prevQuestion();
+  }
+  document.addEventListener('touchstart', onStart, { passive: true });
+  document.addEventListener('touchend', onEnd, { passive: true });
+})();
 
 setupChapters();
 setupModes();
