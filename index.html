@@ -49,6 +49,17 @@
   }
   .header-row { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
   .header h1 { margin: 0; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+  .collapse-btn {
+    background: var(--bg); border: none; padding: 6px 8px; border-radius: 6px;
+    color: var(--text); cursor: pointer; font-size: 14px; flex-shrink: 0;
+  }
+  .mini-stat {
+    font-size: 11px; color: var(--muted); white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .collapse-body { max-height: 200px; overflow: hidden; transition: max-height 0.2s; }
+  .header.collapsed .collapse-body { max-height: 0; margin: 0; }
+  .header.collapsed .stats-line { margin-top: 0; }
   .stats-line {
     margin-top: 6px; font-size: 11px; color: var(--muted);
     display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;
@@ -230,22 +241,25 @@
 </head>
 <body>
 <div class="container">
-  <div class="header">
+  <div class="header" id="header">
     <div class="header-row">
-      <h1>📚 计算机刷题器</h1>
+      <button class="collapse-btn" id="collapse-toggle" aria-label="展开/折叠">📊</button>
       <select id="subject" class="subject-inline">
         <option value="">全部科目</option>
       </select>
+      <span class="mini-stat" id="mini-stat">0/0 · 0%</span>
       <button class="menu-btn" id="menu-toggle" aria-label="菜单">⋯</button>
     </div>
-    <div class="stats-line">
-      <span>已做 <b id="stat-done">0</b></span>
-      <span class="ok">对 <b id="stat-correct">0</b></span>
-      <span class="ng">错 <b id="stat-wrong">0</b></span>
-      <span>正确率 <b id="stat-rate">0%</b></span>
-      <span class="wb">错题本 <b id="stat-wrongbook">0</b></span>
+    <div class="collapse-body" id="collapse-body">
+      <div class="stats-line">
+        <span>已做 <b id="stat-done">0</b></span>
+        <span class="ok">对 <b id="stat-correct">0</b></span>
+        <span class="ng">错 <b id="stat-wrong">0</b></span>
+        <span>正确率 <b id="stat-rate">0%</b></span>
+        <span class="wb">错题本 <b id="stat-wrongbook">0</b></span>
+      </div>
     </div>
-    <div class="progress-bar" style="margin-top:6px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-bar" style="margin-top:4px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
   </div>
 
   <div class="menu-popup" id="menu-popup">
@@ -405,6 +419,9 @@ function updateStats() {
   const pct = totalScope ? Math.round(doneInScope * 100 / totalScope) : 0;
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('total').textContent = totalScope;
+  // 折叠时显示的简短统计
+  const rate = doneInScope ? Math.round(correctInScope * 100 / doneInScope) : 0;
+  setText('mini-stat', `${doneInScope}/${totalScope} · ${rate}%${wrongbookInScope ? ' · 错' + wrongbookInScope : ''}`);
 }
 
 function escapeHtml(s) {
@@ -743,6 +760,21 @@ function setupModes() {
   menuBtn.onclick = (e) => {
     e.stopPropagation();
     menuPopup.classList.toggle('show');
+  };
+
+  // 折叠开关（默认折叠）
+  const header = document.getElementById('header');
+  const collapseBtn = document.getElementById('collapse-toggle');
+  const applyCollapsed = (collapsed) => {
+    header.classList.toggle('collapsed', collapsed);
+    collapseBtn.textContent = collapsed ? '📊' : '▼';
+    document.getElementById('mini-stat').style.display = collapsed ? '' : 'none';
+    state._statsCollapsed = collapsed;
+  };
+  applyCollapsed(state._statsCollapsed !== false); // 默认 true（折叠）
+  collapseBtn.onclick = () => {
+    applyCollapsed(!header.classList.contains('collapsed'));
+    save();
   };
   document.addEventListener('click', (e) => {
     if (!menuPopup.contains(e.target) && e.target !== menuBtn) {
