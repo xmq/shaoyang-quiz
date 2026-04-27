@@ -43,12 +43,20 @@
   }
   .container { max-width: 720px; margin: 0 auto; padding: 12px 12px 24px; }
   .header {
-    background: var(--card); border-radius: 12px; padding: 10px 14px;
-    margin-bottom: 10px; box-shadow: var(--shadow);
+    background: var(--card); border-radius: 10px; padding: 8px 12px;
+    margin-bottom: 8px; box-shadow: var(--shadow);
     position: sticky; top: 0; z-index: 10;
   }
   .header-row { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
-  .header h1 { margin: 0; font-size: 14px; font-weight: 600; flex-shrink: 0; }
+  .header h1 { margin: 0; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+  .stats-line {
+    margin-top: 6px; font-size: 11px; color: var(--muted);
+    display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;
+  }
+  .stats-line span b { color: var(--text); font-weight: 600; }
+  .stats-line .ok b { color: var(--correct); }
+  .stats-line .ng b { color: var(--wrong); }
+  .stats-line .wb b { color: var(--wrong); }
   .subject-inline {
     flex: 1; min-width: 0; padding: 6px 28px 6px 10px;
     border-radius: 8px; border: 1px solid var(--border);
@@ -58,23 +66,14 @@
     -webkit-appearance: none; appearance: none;
     text-overflow: ellipsis; white-space: nowrap;
   }
-  .stats-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    gap: 4px; margin-top: 8px; font-size: 11px;
-  }
-  .stats-grid .stat-item { text-align: center; padding: 4px 2px; background: var(--bg); border-radius: 6px; }
-  .stats-grid .stat-item b { display: block; font-size: 14px; font-weight: 700; }
-  .stats-grid .ok b { color: var(--correct); }
-  .stats-grid .ng b { color: var(--wrong); }
-  .stats-grid .wb b { color: var(--wrong); }
+  /* 旧的 5 列网格统计（弃用） */
   .menu-btn {
     background: var(--bg); border: none; padding: 6px 10px; border-radius: 6px;
     color: var(--text); cursor: pointer; font-size: 18px;
   }
   .controls {
-    background: var(--card); border-radius: 12px; padding: 10px;
-    margin-bottom: 10px; box-shadow: var(--shadow);
-    display: flex; flex-direction: column; gap: 8px;
+    margin-bottom: 8px;
+    display: flex; flex-direction: column; gap: 6px;
   }
   .controls select {
     width: 100%; padding: 10px 12px; border-radius: 8px;
@@ -84,11 +83,12 @@
     background-repeat: no-repeat; background-position: right 12px center;
     background-size: 10px;
   }
-  .chip-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip-row { display: flex; gap: 6px; }
   .chip {
-    padding: 7px 14px; border-radius: 999px;
+    flex: 1; text-align: center;
+    padding: 6px 8px; border-radius: 999px;
     border: 1.5px solid var(--border); background: var(--card); color: var(--text);
-    font-size: 13px; cursor: pointer; transition: all 0.15s;
+    font-size: 12px; cursor: pointer; transition: all 0.15s;
     user-select: none;
   }
   .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
@@ -238,14 +238,14 @@
       </select>
       <button class="menu-btn" id="menu-toggle" aria-label="菜单">⋯</button>
     </div>
-    <div class="stats-grid">
-      <div class="stat-item"><b id="stat-done">0</b>已做</div>
-      <div class="stat-item ok"><b id="stat-correct">0</b>正确</div>
-      <div class="stat-item ng"><b id="stat-wrong">0</b>错误</div>
-      <div class="stat-item rate"><b id="stat-rate">0%</b>正确率</div>
-      <div class="stat-item wb"><b id="stat-wrongbook">0</b>错题本</div>
+    <div class="stats-line">
+      <span>已做 <b id="stat-done">0</b></span>
+      <span class="ok">对 <b id="stat-correct">0</b></span>
+      <span class="ng">错 <b id="stat-wrong">0</b></span>
+      <span>正确率 <b id="stat-rate">0%</b></span>
+      <span class="wb">错题本 <b id="stat-wrongbook">0</b></span>
     </div>
-    <div class="progress-bar" style="margin-top:8px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-bar" style="margin-top:6px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
   </div>
 
   <div class="menu-popup" id="menu-popup">
