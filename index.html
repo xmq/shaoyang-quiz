@@ -50,7 +50,7 @@
   .header-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
   .header h1 { margin: 0; font-size: 15px; font-weight: 600; flex-shrink: 0; }
   .stats-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(5, 1fr);
     gap: 4px; margin-top: 8px; font-size: 11px;
   }
   .stats-grid .stat-item { text-align: center; padding: 4px 2px; background: var(--bg); border-radius: 6px; }
@@ -227,6 +227,7 @@
       <div class="stat-item"><b id="stat-done">0</b>已做</div>
       <div class="stat-item ok"><b id="stat-correct">0</b>正确</div>
       <div class="stat-item ng"><b id="stat-wrong">0</b>错误</div>
+      <div class="stat-item rate"><b id="stat-rate">0%</b>正确率</div>
       <div class="stat-item wb"><b id="stat-wrongbook">0</b>错题本</div>
     </div>
     <div class="progress-bar" style="margin-top:8px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
