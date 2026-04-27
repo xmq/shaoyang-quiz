@@ -109,6 +109,45 @@
     min-width: 160px; padding: 6px; display: none;
   }
   .menu-popup.show { display: block; }
+  /* 侧边栏抽屉 */
+  .drawer-mask {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 60;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s;
+  }
+  .drawer-mask.show { opacity: 1; pointer-events: auto; }
+  .drawer {
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 70;
+    width: 80%; max-width: 320px;
+    background: var(--card); box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+    transform: translateX(-100%); transition: transform 0.25s ease-out;
+    overflow-y: auto;
+  }
+  .drawer.show { transform: translateX(0); }
+  .drawer-header {
+    padding: 16px; border-bottom: 1px solid var(--border);
+    font-size: 15px; font-weight: 600; display: flex; justify-content: space-between; align-items: center;
+  }
+  .drawer-section {
+    padding: 12px 16px;
+  }
+  .drawer-section-title {
+    font-size: 11px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 8px;
+  }
+  .drawer-list { display: flex; flex-direction: column; gap: 2px; }
+  .drawer-item {
+    padding: 10px 12px; border-radius: 8px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--text); font-size: 14px;
+  }
+  .drawer-item:hover { background: var(--bg); }
+  .drawer-item.active { background: var(--primary); color: white; font-weight: 500; }
+  .drawer-item .count { font-size: 11px; color: var(--muted); }
+  .drawer-item.active .count { color: rgba(255,255,255,0.9); }
+  .drawer-close {
+    background: none; border: none; font-size: 22px; color: var(--muted);
+    cursor: pointer; padding: 0 8px;
+  }
   .menu-item {
     padding: 10px 14px; cursor: pointer; border-radius: 6px; font-size: 14px;
     color: var(--text); border: none; background: none; width: 100%; text-align: left;
@@ -241,14 +280,37 @@
 </head>
 <body>
 <div class="container">
+  <div class="drawer-mask" id="drawer-mask"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      📚 计算机刷题器
+      <button class="drawer-close" id="drawer-close" aria-label="关闭">×</button>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title">科目</div>
+      <div class="drawer-list" id="drawer-subjects"></div>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title">题型</div>
+      <div class="drawer-list" id="drawer-types"></div>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title">操作</div>
+      <div class="drawer-list">
+        <div class="drawer-item" id="drawer-export">📥 导出错题本</div>
+        <div class="drawer-item" id="drawer-reset" style="color:var(--wrong)">♻ 重置进度</div>
+      </div>
+    </div>
+  </div>
+
   <div class="header" id="header">
     <div class="header-row">
-      <button class="collapse-btn" id="collapse-toggle" aria-label="展开/折叠">📊</button>
+      <button class="collapse-btn" id="drawer-toggle" aria-label="菜单">☰</button>
       <select id="subject" class="subject-inline">
         <option value="">全部科目</option>
       </select>
       <span class="mini-stat" id="mini-stat">0/0 · 0%</span>
-      <button class="menu-btn" id="menu-toggle" aria-label="菜单">⋯</button>
+      <button class="menu-btn" id="collapse-toggle" aria-label="展开统计">📊</button>
     </div>
     <div class="collapse-body" id="collapse-body">
       <div class="stats-line">
@@ -262,17 +324,15 @@
     <div class="progress-bar" style="margin-top:4px;"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
   </div>
 
-  <div class="menu-popup" id="menu-popup">
-    <select id="type-filter" style="margin-bottom:6px;">
-      <option value="">全部题型</option>
-      <option value="单选">单选</option>
-      <option value="多选">多选</option>
-      <option value="判断">判断</option>
-      <option value="填空">填空</option>
-    </select>
-    <button class="menu-item" id="export-wrong">📥 导出错题</button>
-    <button class="menu-item" id="reset" style="color:var(--wrong);">♻ 重置进度</button>
-  </div>
+  <select id="type-filter" style="display:none">
+    <option value="">全部题型</option>
+    <option value="单选">单选</option>
+    <option value="多选">多选</option>
+    <option value="判断">判断</option>
+    <option value="填空">填空</option>
+  </select>
+  <button id="export-wrong" style="display:none"></button>
+  <button id="reset" style="display:none"></button>
 
   <div class="controls">
     <div class="chip-row">
@@ -751,13 +811,72 @@ function setupModes() {
     exportWrong();
   };
 
-  // 菜单展开/关闭
-  const menuBtn = document.getElementById('menu-toggle');
-  const menuPopup = document.getElementById('menu-popup');
-  menuBtn.onclick = (e) => {
-    e.stopPropagation();
-    menuPopup.classList.toggle('show');
-  };
+  // 抽屉
+  const drawer = document.getElementById('drawer');
+  const drawerMask = document.getElementById('drawer-mask');
+  const drawerToggle = document.getElementById('drawer-toggle');
+  const drawerClose = document.getElementById('drawer-close');
+  const openDrawer = () => { drawer.classList.add('show'); drawerMask.classList.add('show'); renderDrawerLists(); };
+  const closeDrawer = () => { drawer.classList.remove('show'); drawerMask.classList.remove('show'); };
+  drawerToggle.onclick = openDrawer;
+  drawerClose.onclick = closeDrawer;
+  drawerMask.onclick = closeDrawer;
+  document.getElementById('drawer-export').onclick = () => { closeDrawer(); document.getElementById('export-wrong').click(); };
+  document.getElementById('drawer-reset').onclick = () => { closeDrawer(); document.getElementById('reset').click(); };
+
+  function renderDrawerLists() {
+    const subList = document.getElementById('drawer-subjects');
+    const typeList = document.getElementById('drawer-types');
+    if (!subList || !typeList) return;
+    const allCount = QUESTIONS.length;
+    const subCounts = {};
+    QUESTIONS.forEach(q => { subCounts[q.subject] = (subCounts[q.subject] || 0) + 1; });
+    const prefer = ['信息基础','计算机基础','操作系统','计算机网络','数据库','办公软件','多媒体','编程语言','算法与数据结构','信息安全','教学论','其他'];
+    const subjects = ['', ...prefer.filter(s => subCounts[s])];
+    subList.innerHTML = '';
+    for (const s of subjects) {
+      const item = document.createElement('div');
+      item.className = 'drawer-item' + ((s === (state.subject || '')) ? ' active' : '');
+      const count = s ? subCounts[s] : allCount;
+      const stat = (typeof buildSubjectStat === 'function') ? buildSubjectStat(s) : null;
+      item.innerHTML = `<span>${s || '全部科目'}</span><span class="count">${stat ? stat.done+'/'+count : count}</span>`;
+      item.onclick = () => {
+        state.subject = s; state.cursor = 0; state._shuffled = false; state._stickyId = null; state.currentId = null;
+        save(); closeDrawer(); render();
+      };
+      subList.appendChild(item);
+    }
+    const typeCounts = {};
+    QUESTIONS.forEach(q => { typeCounts[q.type] = (typeCounts[q.type] || 0) + 1; });
+    typeList.innerHTML = '';
+    for (const t of ['', '单选', '多选', '判断', '填空']) {
+      if (t && !typeCounts[t]) continue;
+      const item = document.createElement('div');
+      item.className = 'drawer-item' + ((t === (state.typeFilter || '')) ? ' active' : '');
+      const count = t ? typeCounts[t] : QUESTIONS.length;
+      item.innerHTML = `<span>${t || '全部题型'}</span><span class="count">${count}</span>`;
+      item.onclick = () => {
+        state.typeFilter = t; state.cursor = 0; state._shuffled = false; state._stickyId = null; state.currentId = null;
+        save(); closeDrawer(); render();
+      };
+      typeList.appendChild(item);
+    }
+  }
+
+  // 左缘滑动打开抽屉
+  let edgeStartX = 0, edgeTracking = false;
+  document.addEventListener('touchstart', (e) => {
+    if (e.touches[0].clientX < 20) {
+      edgeStartX = e.touches[0].clientX;
+      edgeTracking = true;
+    }
+  }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    if (!edgeTracking) return;
+    edgeTracking = false;
+    const dx = e.changedTouches[0].clientX - edgeStartX;
+    if (dx > 60) openDrawer();
+  }, { passive: true });
 
   // 折叠开关（默认折叠）
   const header = document.getElementById('header');
@@ -768,16 +887,11 @@ function setupModes() {
     document.getElementById('mini-stat').style.display = collapsed ? '' : 'none';
     state._statsCollapsed = collapsed;
   };
-  applyCollapsed(state._statsCollapsed !== false); // 默认 true（折叠）
+  applyCollapsed(state._statsCollapsed !== false);
   collapseBtn.onclick = () => {
     applyCollapsed(!header.classList.contains('collapsed'));
     save();
   };
-  document.addEventListener('click', (e) => {
-    if (!menuPopup.contains(e.target) && e.target !== menuBtn) {
-      menuPopup.classList.remove('show');
-    }
-  });
 }
 
 document.addEventListener('keydown', e => {
