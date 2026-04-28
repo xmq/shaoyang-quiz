@@ -30,6 +30,7 @@
 
 body {
   margin: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   background: var(--bg);
   color: var(--text);
   font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -684,28 +685,80 @@ button {
 @media (max-width: 560px) {
   body {
     font-size: 15px;
+    padding-bottom: max(76px, env(safe-area-inset-bottom));
   }
 
   .main {
-    padding: 8px 8px 18px;
+    padding: 8px 8px 96px;
   }
 
   .topbar {
+    padding: 8px;
     border-radius: 8px;
   }
 
-  .quick-filters {
-    flex-direction: column;
+  .topbar-row {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 6px;
+  }
+
+  #stats-toggle {
+    grid-column: 3;
+    grid-row: 1;
   }
 
   .mini-stat {
-    max-width: 112px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: end;
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  .stats {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .mode-tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 0 2px 6px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mode-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mode {
+    flex: 0 0 auto;
+    min-width: 74px;
+    min-height: 38px;
+  }
+
+  .quick-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 72px;
+    gap: 6px;
+  }
+
+  .quick-filters input {
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .quick-filters .secondary-btn {
+    width: auto;
+  }
+
   .card {
-    padding: 16px;
+    padding: 14px;
+    border-radius: 8px;
   }
 
   .dash-grid,
@@ -719,6 +772,8 @@ button {
 
   .stem {
     font-size: 15px;
+    line-height: 1.78;
+    margin-bottom: 14px;
   }
 
   .chapter {
@@ -730,7 +785,15 @@ button {
   }
 
   .opt {
+    min-height: 50px;
     padding: 12px;
+    gap: 10px;
+  }
+
+  .opt .letter {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
   }
 
   .fill-blank {
@@ -742,5 +805,43 @@ button {
   .secondary-btn {
     width: 100%;
     min-width: 0;
+  }
+
+  .nav {
+    position: sticky;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    z-index: 25;
+    gap: 6px;
+    margin: 16px -6px -6px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--panel);
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.16);
+  }
+
+  .nav button {
+    min-height: 44px;
+    border-radius: 9px;
+  }
+
+  .nav .nav-icon {
+    flex: 0 0 42px;
+  }
+
+  .nav .next {
+    min-width: 88px;
+  }
+
+  .drawer {
+    width: min(92vw, 360px);
+  }
+
+  .drawer-section {
+    padding: 10px 12px;
+  }
+
+  .drawer-list-compact {
+    max-height: 220px;
   }
 }
