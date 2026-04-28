@@ -777,11 +777,13 @@ button {
   }
 
   .chapter {
+    order: 2;
     flex-basis: 100%;
   }
 
   .q-pos {
-    margin-left: 0;
+    order: 1;
+    margin-left: auto;
   }
 
   .opt {

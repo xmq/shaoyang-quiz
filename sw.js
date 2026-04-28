@@ -1,4 +1,4 @@
-const CACHE_NAME = "shaoyang-quiz-v5";
+const CACHE_NAME = "shaoyang-quiz-v6";
 const CORE_ASSETS = [
   "./",
   "./index.html",
