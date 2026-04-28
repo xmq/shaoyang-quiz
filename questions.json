@@ -1779,7 +1779,7 @@
    "C": "潜伏性",
    "D": "智能性"
   },
-  "answer": "BCD",
+  "answer": "D",
   "explanation": "本题考查计算机网络协议。网络协议为计算机网络中进行数据交换\n而建立的规则、标准或约定的集合。而不是网络通信的具体内容，故A错误。B是网络协议的功\n能作用，C为计算机网络体系结构的定义，D为网络协议三部分组成内容。故正确答案为BCD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -1796,7 +1796,7 @@
    "C": "CPU",
    "D": "主板芯片"
   },
-  "answer": "BC",
+  "answer": "B",
   "explanation": "IP地址是由32个二进制位组成，IP地址采用“点分十进制”进行\n表示。即将IP地址分成四个字节，每个字节十进制的范围是0~255，并且数值之间用英文圆点“”\n隔开。A选项，只有三个数字，不合法。D选项，第三个字节的数值大于255，不合法。故正确\n答案为 BC。",
   "subject": "计算机基础",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -1991,7 +1991,7 @@
  {
   "id": "dy-52042",
   "source": "德阳",
-  "type": "单选",
+  "type": "多选",
   "chapter": "德阳计算机题本·第七章 信息安全维护",
   "stem": "下列措施中不具备防范网络监听功能的是（）。",
   "options": {
@@ -2000,7 +2000,7 @@
    "C": "数据加密",
    "D": "漏洞扫描"
   },
-  "answer": "ABC",
+  "answer": "ABD",
   "explanation": "<TABLE>是表格标签的开始，<TR>是表格的行标签，<TD>是表\n格的单元格标签，<TD>和</TD>之间为单元格的内容。这几个标签之间是相互包含的关系，但\n是它们之间的关系是从大到小的包含关系。故正确答案为ABC",
   "subject": "信息安全",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -2182,9 +2182,10 @@
   "chapter": "第六章 信息安全与社会",
   "stem": "以下有关计算机病毒的说法，哪一项是错误的（ ）。",
   "options": {
-   "A": "使用盗版软件光盘，有可能会感染病毒",
-   "B": "病毒在本质上是一种会消耗或损害计算机软硬件资源的程序或脚本\nC 感染了病毒之后，计算机马上就会出现运行缓慢等症状",
-   "D": "使用杀毒软件不一定能杀灭计算机中的所有病毒"
+   "A": "?????????????????",
+   "B": "?????????????????????????????",
+   "C": "????????????????????????",
+   "D": "?????????????????????"
   },
   "answer": "C",
   "explanation": "A 选项，使用盗版软件有可能会感染病毒，因此在使用的时候要先进行杀毒。\nB 选项，病毒会破坏计算机中的程序或脚本，导致计算机中的数据和功能被破坏。C 选项，程序感染了\n病毒之后，计算机不会马上出现运行缓慢等症状，因为病毒具有潜伏性，有一定的潜伏期。D 选项，杀\n毒软件中的一些漏洞补丁都是针对已有的某些病毒更新的，因此使用杀毒软件不一定能杀灭计算机中的\n所有病毒。",
@@ -2271,7 +2272,7 @@
    "C": "网速不快，常常掉线",
    "D": "没有严格合理的网络管理制度"
   },
-  "answer": "BCD",
+  "answer": "C",
   "explanation": "网页设计原则有：\n（1）整个页面的设计应该是和谐统一的；\n（2）网页设计应该合理运用好网页的色彩：\n（3）网页设计不是为了设计而设计，是为了更好地突出内容；\n（4）网页设计需要考虑实际的浏览效果\n由此可得，色彩的选择并不是越丰富越好，而是以合理、适中为依据。故正确答案为BCD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -2583,7 +2584,7 @@
   "source_chapter": "题海训练·第一章·第一节"
  },
  {
-  "id": "cg-02-s1-q3",
+  "id": "cg-02-s1-q3-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·导论",
@@ -2634,7 +2635,7 @@
   "source_chapter": "题海训练·第一章·第一节"
  },
  {
-  "id": "cg-02-s1-q7",
+  "id": "cg-02-s1-q7-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·导论",
@@ -3354,8 +3355,10 @@
   "chapter": "第二篇 编程·0103",
   "stem": "某 VB 程序在调试中弹出如图所示的错误窗口，此时程序正执行的语句是（ ）。\nPrivate Sub Command1_Click （ ）\nDim a （1 To 5） As Integer\nDim i As Integer\nFor i = 1 To 5\na（i） = i * i\nNext i\nList1.AddItem Str （a（i））\nEnd Sub",
   "options": {
-   "A": "For i =1 To 5 B. a（i） =i * i",
-   "C": "Next i D. List1.AddItem Str （a（i）） D"
+   "A": "For i =1 To 5",
+   "B": "a?i? = i * i",
+   "C": "Next i",
+   "D": "List1.AddItem Str?a?i??"
   },
   "answer": "D",
   "explanation": "",
@@ -3624,8 +3627,10 @@
   "chapter": "第二篇 编程·程序填空",
   "stem": "对下面程序段，描述正确的是（ ）。\nfor（t=1；t<=100；t++）\n{\nscanf（“%d”，&x）；\nif（x<0） continue；\nprintf（“%d\\n”，t）；\n}",
   "options": {
-   "A": "当 x<0 时，整个循环结束 B. 当 x>=0 时，什么也不输出",
-   "C": "printf 函数永远也不执行 D. 最多允许输出 100 个非负整数 D"
+   "A": "? x<0 ????????",
+   "B": "? x>=0 ????????",
+   "C": "printf ????????",
+   "D": "?????? 100 ?????"
   },
   "answer": "D",
   "explanation": "",
@@ -5450,7 +5455,7 @@
   "source_chapter": "题海训练·第一章"
  },
  {
-  "id": "cg-06-s1-q6",
+  "id": "cg-06-s1-q6-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5467,7 +5472,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q7",
+  "id": "cg-06-s1-q7-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5518,7 +5523,7 @@
   "source_chapter": "第二章 计算机基础知识"
  },
  {
-  "id": "cg-06-s1-q10",
+  "id": "cg-06-s1-q10-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5535,7 +5540,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q11",
+  "id": "cg-06-s1-q11-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5552,7 +5557,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q12",
+  "id": "cg-06-s1-q12-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5569,7 +5574,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q13",
+  "id": "cg-06-s1-q13-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5586,7 +5591,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q14",
+  "id": "cg-06-s1-q14-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5603,7 +5608,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q15",
+  "id": "cg-06-s1-q15-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5620,7 +5625,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q16",
+  "id": "cg-06-s1-q16-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5637,7 +5642,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q17",
+  "id": "cg-06-s1-q17-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -5654,7 +5659,7 @@
   "source_chapter": "第三篇 数据库网络·0110"
  },
  {
-  "id": "cg-06-s1-q18",
+  "id": "cg-06-s1-q18-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0110",
@@ -10743,8 +10748,10 @@
   "chapter": "第三篇 数据库网络·0117",
   "stem": "从参赛选手表中删去“林琳”同学的记录，正确的 SQL 语句是（ ）。",
   "options": {
-   "A": "DELETE * B. DELETE FROM 姓名 =‘林琳’ FROM 参赛选手表 WHERE 参赛选手表 WHERE 姓名 =‘林琳’",
-   "C": "UPDATE D. UPDATE FROM 姓名 =‘林琳’ FROM 参赛选手表 WHERE 参赛选手表 WHERE 姓名 =‘林琳’ B"
+   "A": "DELETE * FROM ????? WHERE ??='??'",
+   "B": "DELETE FROM ????? WHERE ??='??'",
+   "C": "UPDATE ????? WHERE ??='??'",
+   "D": "UPDATE FROM ????? WHERE ??='??'"
   },
   "answer": "B",
   "explanation": "DELETE FROM 表 WHERE 条件 是 SQL 删除记录的标准语法。",
@@ -15341,7 +15348,7 @@
   "source_chapter": "第四篇 Excel"
  },
  {
-  "id": "cg-12-s1-q1",
+  "id": "cg-12-s1-q1-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15375,7 +15382,7 @@
   "source_chapter": "题海训练·第三节"
  },
  {
-  "id": "cg-12-s1-q3",
+  "id": "cg-12-s1-q3-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15392,7 +15399,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q5",
+  "id": "cg-12-s1-q5-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15409,7 +15416,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q6",
+  "id": "cg-12-s1-q6-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15426,7 +15433,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q7",
+  "id": "cg-12-s1-q7-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15443,7 +15450,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q8",
+  "id": "cg-12-s1-q8-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15460,7 +15467,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q9",
+  "id": "cg-12-s1-q9-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15477,7 +15484,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q10",
+  "id": "cg-12-s1-q10-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15494,7 +15501,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q11",
+  "id": "cg-12-s1-q11-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15511,7 +15518,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q12",
+  "id": "cg-12-s1-q12-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15528,7 +15535,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q13",
+  "id": "cg-12-s1-q13-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15545,7 +15552,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q14",
+  "id": "cg-12-s1-q14-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15562,7 +15569,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q15",
+  "id": "cg-12-s1-q15-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15579,7 +15586,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q16",
+  "id": "cg-12-s1-q16-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15596,7 +15603,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q17",
+  "id": "cg-12-s1-q17-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15613,7 +15620,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q18",
+  "id": "cg-12-s1-q18-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15630,7 +15637,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q19",
+  "id": "cg-12-s1-q19-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15647,7 +15654,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q20",
+  "id": "cg-12-s1-q20-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15664,7 +15671,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q21",
+  "id": "cg-12-s1-q21-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15681,7 +15688,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q22",
+  "id": "cg-12-s1-q22-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15698,7 +15705,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q23",
+  "id": "cg-12-s1-q23-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15715,7 +15722,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q24",
+  "id": "cg-12-s1-q24-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15732,7 +15739,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q25",
+  "id": "cg-12-s1-q25-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15749,7 +15756,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q26",
+  "id": "cg-12-s1-q26-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15766,7 +15773,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q27",
+  "id": "cg-12-s1-q27-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15783,7 +15790,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q28",
+  "id": "cg-12-s1-q28-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15800,7 +15807,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q29",
+  "id": "cg-12-s1-q29-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15817,7 +15824,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q30",
+  "id": "cg-12-s1-q30-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15834,7 +15841,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q31",
+  "id": "cg-12-s1-q31-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15851,7 +15858,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q32",
+  "id": "cg-12-s1-q32-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15868,7 +15875,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q34",
+  "id": "cg-12-s1-q34-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15885,7 +15892,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q35",
+  "id": "cg-12-s1-q35-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15902,7 +15909,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q36",
+  "id": "cg-12-s1-q36-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15919,7 +15926,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q39",
+  "id": "cg-12-s1-q39-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -15936,7 +15943,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s1-q40",
+  "id": "cg-12-s1-q40-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PowerPoint",
@@ -16055,7 +16062,7 @@
   "source_chapter": "题海训练·第三节"
  },
  {
-  "id": "cg-12-s2-q7",
+  "id": "cg-12-s2-q7-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 PowerPoint",
@@ -16072,7 +16079,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s2-q8",
+  "id": "cg-12-s2-q8-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 PowerPoint",
@@ -16089,7 +16096,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s2-q9",
+  "id": "cg-12-s2-q9-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 PowerPoint",
@@ -16106,7 +16113,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s2-q10",
+  "id": "cg-12-s2-q10-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 PowerPoint",
@@ -16123,7 +16130,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s2-q11",
+  "id": "cg-12-s2-q11-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 PowerPoint",
@@ -16140,7 +16147,7 @@
   "source_chapter": "第四篇 PowerPoint"
  },
  {
-  "id": "cg-12-s2-q12",
+  "id": "cg-12-s2-q12-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 PowerPoint",
@@ -17483,7 +17490,7 @@
   "source_chapter": "题海训练·第三章"
  },
  {
-  "id": "cg-13-s1-q5",
+  "id": "cg-13-s1-q5-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17500,7 +17507,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q6",
+  "id": "cg-13-s1-q6-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17517,7 +17524,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q7",
+  "id": "cg-13-s1-q7-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17534,7 +17541,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q8",
+  "id": "cg-13-s1-q8-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17551,7 +17558,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q9",
+  "id": "cg-13-s1-q9-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17568,7 +17575,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q10",
+  "id": "cg-13-s1-q10-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17585,7 +17592,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q11",
+  "id": "cg-13-s1-q11-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17602,7 +17609,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q12",
+  "id": "cg-13-s1-q12-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17619,7 +17626,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q13",
+  "id": "cg-13-s1-q13-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17636,7 +17643,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q14",
+  "id": "cg-13-s1-q14-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17653,7 +17660,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q15",
+  "id": "cg-13-s1-q15-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17670,7 +17677,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q16",
+  "id": "cg-13-s1-q16-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17687,7 +17694,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q17",
+  "id": "cg-13-s1-q17-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17704,7 +17711,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q18",
+  "id": "cg-13-s1-q18-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17721,7 +17728,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q19",
+  "id": "cg-13-s1-q19-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17738,7 +17745,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q20",
+  "id": "cg-13-s1-q20-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17755,7 +17762,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q21",
+  "id": "cg-13-s1-q21-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17772,7 +17779,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q22",
+  "id": "cg-13-s1-q22-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17789,7 +17796,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q23",
+  "id": "cg-13-s1-q23-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17806,7 +17813,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q24",
+  "id": "cg-13-s1-q24-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17823,7 +17830,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q25",
+  "id": "cg-13-s1-q25-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17840,7 +17847,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q26",
+  "id": "cg-13-s1-q26-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17857,7 +17864,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q27",
+  "id": "cg-13-s1-q27-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17874,7 +17881,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q28",
+  "id": "cg-13-s1-q28-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17891,7 +17898,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q29",
+  "id": "cg-13-s1-q29-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17908,7 +17915,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q30",
+  "id": "cg-13-s1-q30-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17925,7 +17932,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q31",
+  "id": "cg-13-s1-q31-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17942,7 +17949,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q32",
+  "id": "cg-13-s1-q32-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17959,7 +17966,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q33",
+  "id": "cg-13-s1-q33-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17976,7 +17983,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q34",
+  "id": "cg-13-s1-q34-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -17993,7 +18000,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q35",
+  "id": "cg-13-s1-q35-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18010,7 +18017,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q36",
+  "id": "cg-13-s1-q36-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18027,7 +18034,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q37",
+  "id": "cg-13-s1-q37-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18044,7 +18051,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q38",
+  "id": "cg-13-s1-q38-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18061,7 +18068,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q39",
+  "id": "cg-13-s1-q39-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18078,7 +18085,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q40",
+  "id": "cg-13-s1-q40-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18095,7 +18102,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q41",
+  "id": "cg-13-s1-q41-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18112,7 +18119,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q42",
+  "id": "cg-13-s1-q42-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18129,7 +18136,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q43",
+  "id": "cg-13-s1-q43-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18146,7 +18153,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q44",
+  "id": "cg-13-s1-q44-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18163,7 +18170,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q45",
+  "id": "cg-13-s1-q45-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18180,7 +18187,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q46",
+  "id": "cg-13-s1-q46-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18197,7 +18204,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q47",
+  "id": "cg-13-s1-q47-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18214,7 +18221,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q48",
+  "id": "cg-13-s1-q48-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18231,7 +18238,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q49",
+  "id": "cg-13-s1-q49-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18265,7 +18272,7 @@
   "source_chapter": "第四章 多媒体技术"
  },
  {
-  "id": "cg-13-s1-q51",
+  "id": "cg-13-s1-q51-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18282,7 +18289,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q52",
+  "id": "cg-13-s1-q52-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18299,7 +18306,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q53",
+  "id": "cg-13-s1-q53-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18316,7 +18323,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q54",
+  "id": "cg-13-s1-q54-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18333,7 +18340,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q55",
+  "id": "cg-13-s1-q55-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18350,7 +18357,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q56",
+  "id": "cg-13-s1-q56-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18367,7 +18374,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q57",
+  "id": "cg-13-s1-q57-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18384,7 +18391,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q58",
+  "id": "cg-13-s1-q58-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -18401,7 +18408,7 @@
   "source_chapter": "第四篇 PS"
  },
  {
-  "id": "cg-13-s1-q59",
+  "id": "cg-13-s1-q59-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 PS",
@@ -19281,21 +19288,6 @@
   "source_chapter": "第四篇 Flash"
  },
  {
-  "id": "cg-14-s1-q44",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第四篇 Flash",
-  "stem": "在 Flash 软件中，将一张 GIF 图片导入到舞台，对应的时间轴不可能为（    ）。",
-  "options": {
-   "A": "B.",
-   "C": "D. B"
-  },
-  "answer": "B",
-  "explanation": "",
-  "subject": "多媒体",
-  "source_chapter": "第四篇 Flash"
- },
- {
   "id": "cg-14-s1-q45",
   "source": "超格",
   "type": "单选",
@@ -19568,7 +19560,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q7",
+  "id": "cg-14-s1-q7-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19585,7 +19577,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q8",
+  "id": "cg-14-s1-q8-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19619,7 +19611,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q10",
+  "id": "cg-14-s1-q10-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19636,7 +19628,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q11",
+  "id": "cg-14-s1-q11-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19653,7 +19645,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q12",
+  "id": "cg-14-s1-q12-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19687,7 +19679,7 @@
   "source_chapter": "第二章 计算机基础知识"
  },
  {
-  "id": "cg-14-s1-q14",
+  "id": "cg-14-s1-q14-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19721,7 +19713,7 @@
   "source_chapter": "第二章 计算机基础知识"
  },
  {
-  "id": "cg-14-s1-q16",
+  "id": "cg-14-s1-q16-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19738,7 +19730,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q17",
+  "id": "cg-14-s1-q17-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19755,7 +19747,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q18",
+  "id": "cg-14-s1-q18-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19772,7 +19764,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q19",
+  "id": "cg-14-s1-q19-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19789,7 +19781,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q20",
+  "id": "cg-14-s1-q20-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19806,7 +19798,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q21",
+  "id": "cg-14-s1-q21-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19823,7 +19815,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q22",
+  "id": "cg-14-s1-q22-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19840,7 +19832,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q23",
+  "id": "cg-14-s1-q23-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19857,7 +19849,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q24",
+  "id": "cg-14-s1-q24-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19874,7 +19866,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q25",
+  "id": "cg-14-s1-q25-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19891,7 +19883,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q26",
+  "id": "cg-14-s1-q26-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19908,7 +19900,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q27",
+  "id": "cg-14-s1-q27-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19925,7 +19917,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q28",
+  "id": "cg-14-s1-q28-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 Windows",
@@ -19942,7 +19934,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q29",
+  "id": "cg-14-s1-q29-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19959,7 +19951,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q30",
+  "id": "cg-14-s1-q30-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19976,7 +19968,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q31",
+  "id": "cg-14-s1-q31-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -19993,7 +19985,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q32",
+  "id": "cg-14-s1-q32-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20010,7 +20002,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q33",
+  "id": "cg-14-s1-q33-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20027,7 +20019,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q34",
+  "id": "cg-14-s1-q34-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20044,7 +20036,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q35",
+  "id": "cg-14-s1-q35-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20061,7 +20053,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q36",
+  "id": "cg-14-s1-q36-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20078,7 +20070,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q37",
+  "id": "cg-14-s1-q37-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20095,7 +20087,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q38",
+  "id": "cg-14-s1-q38-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20112,7 +20104,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q39",
+  "id": "cg-14-s1-q39-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20129,7 +20121,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q40",
+  "id": "cg-14-s1-q40-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20163,7 +20155,7 @@
   "source_chapter": "第二章 计算机基础知识"
  },
  {
-  "id": "cg-14-s1-q42",
+  "id": "cg-14-s1-q42-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20180,7 +20172,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q43",
+  "id": "cg-14-s1-q43-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20197,7 +20189,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q44",
+  "id": "cg-14-s1-q44-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20214,7 +20206,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q45",
+  "id": "cg-14-s1-q45-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20231,7 +20223,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s1-q46",
+  "id": "cg-14-s1-q46-dup2",
   "source": "超格",
   "type": "单选",
   "chapter": "第四篇 Windows",
@@ -20435,7 +20427,7 @@
   "source_chapter": "题海训练"
  },
  {
-  "id": "cg-14-s2-q5",
+  "id": "cg-14-s2-q5-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 Windows",
@@ -20452,7 +20444,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s2-q6",
+  "id": "cg-14-s2-q6-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 Windows",
@@ -20469,7 +20461,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s2-q7",
+  "id": "cg-14-s2-q7-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 Windows",
@@ -20486,7 +20478,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s2-q8",
+  "id": "cg-14-s2-q8-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 Windows",
@@ -20503,7 +20495,7 @@
   "source_chapter": "第四篇 Windows"
  },
  {
-  "id": "cg-14-s2-q9",
+  "id": "cg-14-s2-q9-dup2",
   "source": "超格",
   "type": "多选",
   "chapter": "第四篇 Windows",
@@ -24870,9 +24862,10 @@
   "chapter": "第四章 多媒体技术",
   "stem": "下列关于逐帧动画的说法正确是（ ）。",
   "options": {
-   "A": "逐帧动画是把一系列的图形或文字放置在一系列关键帧中形成的动画",
-   "B": "逐帧动画制作比较简单和省时\nC 逐帧动画最大的特点是动画的每一个帧都是关键帧",
-   "D": "逐帧动画对动画中图形、对象的控制功能是最强大最有效的"
+   "A": "??????????????????????????????",
+   "B": "?????????????",
+   "C": "??????????????????????",
+   "D": "??????????????????????????"
   },
   "answer": "ACD",
   "explanation": "逐帧动画是在时间轴的每一帧都设成关键帧，每个关键帧上绘制不同的内\n容，使其连续播放而成动画。逐帧动画的优点：具有非常大的灵活性，几乎可以表现任何想表现的内容，\n而它类似与电影的播放模式，很适合于表演细腻的动画。例如：人物或动物急剧转身、头发及衣服的飘\n动、走路、说话以及精致的 3D 效果等等。逐帧动画的缺点：动画制作的负担重，文件大。",
@@ -28774,7 +28767,7 @@
   "source_chapter": "德阳计算机题本·第一章 计算机基础"
  },
  {
-  "id": "dy-47969",
+  "id": "dy-47969-dup2",
   "source": "德阳",
   "type": "多选",
   "chapter": "德阳计算机题本·第一章 计算机基础",
@@ -31872,7 +31865,7 @@
    "C": "完整性",
    "D": "可用性"
   },
-  "answer": "BCD",
+  "answer": "B",
   "explanation": "计算机设备、通讯线路和连接设备组成硬件部分，网络协议是网络\n通讯中的通用语言，为通讯的顺利进行提供保证，这两部分组成了计算机网络的硬件和软件。故\n正确答案为BCD。",
   "subject": "信息安全",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31889,7 +31882,7 @@
    "C": "感染病毒",
    "D": "信息泄露"
   },
-  "answer": "CD",
+  "answer": "D",
   "explanation": "计算机网络按功能可以分为资源子网和通信子网。资源子网即我们所\n用的终端或服务器，负责数据的处理。通信子网由网络连接设备和通信线路组成，负责数据传输。\n故正确答案为CD。",
   "subject": "信息安全",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31906,7 +31899,7 @@
    "C": "人为无意识失误不是计算机网络安全面临的威胁之一",
    "D": "人为恶意攻击是计算机网络安全面临的威胁之一"
   },
-  "answer": "AD",
+  "answer": "D",
   "explanation": "网络拓扑结构分类有总线型结构、环形结构、星型结构、树型结构、\n网型结构。在计算机局域网络中常用的是总线型结构、环形结构、星型结构和树型结构。网型结\n构是广域网里面应用广泛的拓扑结构。故正确答案为AD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31923,7 +31916,7 @@
    "C": "可控性",
    "D": "完整性"
   },
-  "answer": "BD",
+  "answer": "D",
   "explanation": "TCP和 UDP 属于传输层协议，IP和RARP属于网络层协议。故正确\n答案为 BD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31940,7 +31933,7 @@
    "C": "产品安全",
    "D": "功能安全"
   },
-  "answer": "ABD",
+  "answer": "B",
   "explanation": "网络中数据交换的规则、标准或约定称为网络协议。从本质上讲，\n网络协议也是一种程序，运行在计算机或网络设备上，以实现相应的功能。TCP/IP协议是（传输\n控制协议／网间协议）是Internet最基本的协议、Internet国际互联网络的基础，由网络层的 IP协\n议和传输层的TCP协议组成。网络协议的三要素：语法、语义和时序。故正确答案为 ABD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31957,7 +31950,7 @@
    "C": "传染性",
    "D": "可执行性"
   },
-  "answer": "ABCD",
+  "answer": "B",
   "explanation": "光纤通信的优点：频带宽、损耗低、体积小重量轻、抗干扰能力强、\n保密性好、保真度高、工作性能可靠、成本不断下降等。故正确答案为ABCD。",
   "subject": "信息安全",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31974,7 +31967,7 @@
    "C": "2022年12月31日",
    "D": "2024年2月 1日"
   },
-  "answer": "ACD",
+  "answer": "B",
   "explanation": "常见的有线网络传输介质有同轴电缆、光纤、双绞线；常见的无线\n网络传输介质有无线电波、红外线、蓝牙、微波和激光；集成线路是一种微型电子器件或部件，\n不符合题意。故正确答案为 ACD。\n10.答案】BD。解析：A选项工作在物理层；C选项工作在网络层；只有BD选项是数据链\n路层的设备。故正确答案为BD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -31991,7 +31984,7 @@
    "C": "互联网的发展加快了病毒的传播速度，造成了勒索病毒全球性爆发的局面",
    "D": "随着发展，新的病毒会不断出现，破坏方式也在不断变化"
   },
-  "answer": "AB",
+  "answer": "B",
   "explanation": "（1）域名中包含的字符：26个英文字母；10个阿拉伯数字；\n（英文中的连字符）；（2）域名中字符的组合规则：在域名中，不区分英文字母的大小写；对\n于一个域名的长度是有一定限制的。例如，注册CN下域名，三级域名的长度不能超过20个字符。\nCD两项连字符为“，”错误。故正确答案为AB。\n13.【答案AD。解析：在WWW中，每一信息资源都有唯一的地址，该地址就叫统一资\n源定位符。统一资源定位符（URL），表明某网页在网络中的位置。URL是用来为Internet 网上\n的某个网页或某个文件定位的一串字符，完整的格式为：协议名称：Ⅱ主机名／目录名／文件名。\n统一资源定位符（URL）也被称为“网页地址”，是因特网上标准的资源的地址。URL由三部分\n组成：协议类型，主机名和路径及文件名。故正确答案为AD。\n14.【答案CD。解析：A选项，电子邮件可以是文字、图像、声音等多种形式；B选项，\n电子邮件既可以一对一发送，也可以一对多发送，即可以同时发送给多个人；C选项，电子邮件\n的地址是唯一的；D选项，知道对方的邮件地址，就可以给世界上任意用户发送邮件。故正确答\n案为 CD。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -32025,7 +32018,7 @@
    "C": "可以随意转发微信朋友圈里的文章",
    "D": "可以转卖在淘宝店里买的破解软件"
   },
-  "answer": "ACD",
+  "answer": "B",
   "explanation": "动态网站开发语言包括ASP、PHP、JSP等。ASP是 Microsoft开\n发的动态网页技术，主要应用于Windows NT+IIS或Windows9x+PWS平台。JSP是Sun公司推\n出的新一代Web开发技术。它几乎可以运行在所有的操作系统平台和Web服务器上，因此JSP\n的运行平台更为广泛。PHP是Rasmus Lerdorf推出的一种跨平台的嵌人式脚本语言，可以在\nWindows、UNIX、Linux 等流行的操作系统和IIS、Apache、Netscape 等Web 服务器上运行，用户\n更换平台时，无需变换PHP代码。Dreamweaver只是一个网站开发工具。故正确答案为ACD。",
   "subject": "操作系统",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -32042,7 +32035,7 @@
    "C": "网络的非法入侵者",
    "D": "信息垃圾的制造者"
   },
-  "answer": "ABC",
+  "answer": "C",
   "explanation": "静态网页：指没有后台数据库、不含程序和不可交互的HTML格\n式的网页。静态网页可简单地根据用户的请求传送已有的页面，无法实现各种个性化的交互功能。\n动态网页：指包括动态HTML效果、ASP、PHP、CGI和 JSP等网页技术在内的能提供个性\n化信息服务的页面。动态网页由计算机实时生成，具有日常维护简单，更改结构方便，交互功能\n强大等优点。故正确答案为ABC。",
   "subject": "计算机网络",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -32059,7 +32052,7 @@
    "C": "信息收集型攻击",
    "D": "IP地址欺骗"
   },
-  "answer": "ABCD",
+  "answer": "D",
   "explanation": "在进行网站规划的时候主要考虑以下内容：\n（1）网站定位，包括网站的功能、用户群体等；\n（2）网站内容，包括网站名称、功能模块、网站结构等；\n（3）设计要求，包括网站风格、网站美工等；\n（4）技术方案，包括网站运行方式、开发平台、后台数据库等。\n我们评价网站可以从这几个方面进行全面的评价。综上所述，A、B、C、D选项都符合评价\n的内容。故正确答案为 ABCD。",
   "subject": "信息安全",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -32076,7 +32069,7 @@
    "C": "安装防火墙",
    "D": "采用无线网络传输"
   },
-  "answer": "ACD",
+  "answer": "A",
   "explanation": "<font>规定文本的字体、字体尺寸、字体颜色。\nHTML文件的基本结构如下：\n<html>\n<head>\n</head>\n<body>\n</body>\n</html>。故正确答案为 ACD。",
   "subject": "信息安全",
   "source_chapter": "德阳计算机题本·第七章 信息安全维护"
@@ -32469,9 +32462,10 @@
   "chapter": "德阳计算机真题",
   "stem": "小张觉得自已的笔记本显示屏太小了，想外接一台带VGA接口的显示器，则该显示器应\n连接的位置是（）。\n全金标R教育",
   "options": {
-   "A": "@",
-   "B": "② c. 3",
-   "D": "④"
+   "A": "?",
+   "B": "?",
+   "C": "?",
+   "D": "?"
   },
   "answer": "C",
   "explanation": "本题考查办公设备维护。VGA是使用模拟信号的电脑显示标准，\nVGA接口共有15针，分成3排，每排5个孔。此外，常见的视频接口还有DVI、HDMI和DP等。\n各个接口如下图所示：\nVGA\nDVI\nHDMI\nDP\n故正确答案为C。",
@@ -33571,22 +33565,6 @@
   "answer": "A",
   "explanation": "本题考查快速访问工具栏中按钮的功能。在Word 2007的快速访问\n工具栏中，\n按钮的功能是撤销上次操作。B按钮的功能是加粗。U按钮的功能是设置下\n划线。按钮的功能是改变所选内容的字体颜色。故本题答案为 A。\n4.（答案D。解析：本题考查Word文件扩展名。A选项是电子表格文件，适合用Excle\n打开，B选项是图像文件，可用画图工具等打开，C选项是动画文件适合用flash软件打开，\nD选项是文本文件，四个选项中文本文件最适合用Word 打开。故本题答案为 D。",
   "subject": "编程语言",
-  "source_chapter": "题海训练·第一章·第一节"
- },
- {
-  "id": "th-76340",
-  "source": "题海训练",
-  "type": "单选",
-  "chapter": "题海训练·第一章·第一节",
-  "stem": "执行命令CSREPEAT4[RT90FD20LT90FD 20LT90FD201HT画的图形是（",
-  "options": {
-   "A": "",
-   "B": "",
-   "D": ""
-  },
-  "answer": "C",
-  "explanation": "本题考查word视图。大纲视图是树形结构，页面视图可以得到与打\n印效果完全一致的文档Web版式视图会根据计算机窗口限制每行文字字数。故本题答案为C。\n7.【答案1.C。解析：本题考查Word分栏。在Word 2003 中，分栏最多可以设置11栏,\n所以A项错误。分成的两栏之间的分割线是实线，不是虚线，所以B项错误。对于分栏的设\n置可以应用于所选文字，也可以应用于整篇文档，所以C项正确。此图中两栏宽度不相等是因\n为手动调节了宽度，图上并没有选中偏左设置，所以D项错误。故本题答案为C。\n8．（答案A。解析：本题考查Word 2007中的快捷键。Ctrl+A的功能是全选，Shift+A 的\n功能是书写写字母 A。故本题答案为 A。",
-  "subject": "办公软件",
   "source_chapter": "题海训练·第一章·第一节"
  },
  {
