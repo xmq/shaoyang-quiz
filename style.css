@@ -147,7 +147,7 @@ button {
 
 .mode-tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   gap: 6px;
   margin-bottom: 8px;
 }
@@ -195,6 +195,92 @@ button {
   border-radius: 10px;
   background: var(--panel);
   box-shadow: var(--shadow);
+}
+
+.dashboard {
+  display: grid;
+  gap: 12px;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.dash-stat {
+  min-height: 76px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.dash-stat .value {
+  display: block;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.dash-stat .label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.dash-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.dash-actions button {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.dash-actions button.primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.subject-table {
+  display: grid;
+  gap: 6px;
+}
+
+.subject-row {
+  display: grid;
+  grid-template-columns: minmax(72px, 1fr) 96px 64px;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.subject-row strong {
+  color: var(--text);
+}
+
+.subject-bar {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.subject-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
 }
 
 .meta {
@@ -403,6 +489,18 @@ button {
   color: var(--ng);
 }
 
+.wrong-grade {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  margin-left: 6px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(217, 45, 32, 0.1);
+  color: var(--ng);
+  font-size: 12px;
+}
+
 .explanation {
   padding: 10px 12px;
   border-radius: 6px;
@@ -608,6 +706,15 @@ button {
 
   .card {
     padding: 16px;
+  }
+
+  .dash-grid,
+  .dash-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subject-row {
+    grid-template-columns: minmax(72px, 1fr) 80px 52px;
   }
 
   .stem {

@@ -37,7 +37,7 @@ function initialState() {
   state.streak = state.streak || {};
   state.fav = state.fav || {};
   state.history = state.history || {};
-  state.mode = state.mode || "seq";
+  state.mode = state.mode || "home";
   state.subject = state.subject || "";
   state.typeFilter = state.typeFilter || "";
   state.sourceFilter = state.sourceFilter || "";
@@ -139,7 +139,9 @@ function getScope() {
 
 function getPool() {
   let pool = getScope();
-  if (state.mode === "wrong") {
+  if (state.mode === "review") {
+    pool = buildReviewPool(pool);
+  } else if (state.mode === "wrong") {
     pool = pool.filter((q) => state.wrong[q.id] || state._stickyId === q.id);
   } else if (state.mode === "fav") {
     pool = pool.filter((q) => state.fav[q.id]);
@@ -157,6 +159,21 @@ function getPool() {
     pool = (state._shuffleIds || []).map((id) => map[id]).filter(Boolean);
   }
   return pool;
+}
+
+function buildReviewPool(scope) {
+  return scope
+    .filter((q) => state.wrong[q.id] || state.fav[q.id] || state.flagged[q.id])
+    .sort((a, b) => reviewScore(b) - reviewScore(a))
+    .slice(0, 80);
+}
+
+function reviewScore(q) {
+  const wrong = state.wrong[q.id] || 0;
+  const streak = state.streak[q.id] || 0;
+  const fav = state.fav[q.id] ? 1 : 0;
+  const flagged = state.flagged[q.id] ? 1 : 0;
+  return wrong * 100 + Math.max(0, MASTER_THRESHOLD - streak) * 20 + fav * 8 + flagged * 5;
 }
 
 function resetPosition() {
@@ -218,6 +235,23 @@ function updateStats() {
   $("mini-stat").textContent = `${done}/${scope.length} · ${rate}%${wrongbook ? " · 错" + wrongbook : ""}`;
 }
 
+function subjectStats(subject) {
+  const subset = subject ? QUESTIONS.filter((q) => q.subject === subject) : QUESTIONS;
+  const done = subset.filter((q) => state.done[q.id]).length;
+  const correct = subset.filter((q) => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
+  const wrongbook = subset.filter((q) => state.wrong[q.id]).length;
+  const rate = done ? Math.round(correct * 100 / done) : 0;
+  const progress = subset.length ? Math.round(done * 100 / subset.length) : 0;
+  return {total: subset.length, done, correct, wrongbook, rate, progress};
+}
+
+function wrongGrade(count) {
+  if (count >= 3) return "高频错";
+  if (count === 2) return "二刷错";
+  if (count === 1) return "新错题";
+  return "";
+}
+
 function renderChoiceQuestion(q, chosen, inWrongFresh) {
   const isMulti = q.type === "多选";
   const pending = state._pending && state._pending.qid === q.id ? state._pending.set : new Set();
@@ -273,7 +307,8 @@ function feedbackHtml(q, chosen) {
   const wrongCount = state.wrong[q.id] || 0;
   const streak = state.streak[q.id] || 0;
   const remain = Math.max(0, MASTER_THRESHOLD - streak);
-  const badge = wrongCount ? ` · 已错 ${wrongCount} 次${ok && remain ? ` · 还需连续答对 ${remain} 次出本` : ""}` : "";
+  const grade = wrongGrade(wrongCount);
+  const badge = wrongCount ? ` · 已错 ${wrongCount} 次${ok && remain ? ` · 还需连续答对 ${remain} 次出本` : ""}${grade ? `<span class="wrong-grade">${grade}</span>` : ""}` : "";
   const answer = q.type === "填空" || q.type === "判断" ? `答案：${q.answer}` : `答案：${q.answer}`;
   const explanation = q.explanation && q.explanation.trim()
     ? `<div class="explanation"><div class="exp-title">解析</div>${escapeHtml(q.explanation)}</div>`
@@ -434,13 +469,90 @@ function renderEmpty() {
   } else if (state.mode === "fav") {
     title = "收藏夹为空";
     text = "刷题时点击 ☆ 收藏题目。";
+  } else if (state.mode === "review") {
+    title = "暂无复习队列";
+    text = "答错、收藏或标记有问题的题会进入复习候选。";
   }
   $("card-area").innerHTML = `<div class="card empty"><strong>${title}</strong>${text}</div>`;
+}
+
+function renderDashboard() {
+  updateStats();
+  updateModeTabs();
+  const all = subjectStats("");
+  const wrongIds = Object.keys(state.wrong || {});
+  const favCount = Object.keys(state.fav || {}).length;
+  const flaggedCount = Object.keys(state.flagged || {}).length;
+  const reviewCount = buildReviewPool(getScope()).length;
+  const wrongLevel = wrongIds.reduce((acc, id) => {
+    const count = state.wrong[id] || 0;
+    if (count >= 3) acc.high += 1;
+    else if (count === 2) acc.mid += 1;
+    else if (count === 1) acc.low += 1;
+    return acc;
+  }, {low: 0, mid: 0, high: 0});
+
+  const subjectCounts = countBy(QUESTIONS, (q) => q.subject);
+  const rows = orderedValues(new Set(Object.keys(subjectCounts)), SUBJECT_ORDER)
+    .map((subject) => ({subject, ...subjectStats(subject)}))
+    .sort((a, b) => (b.wrongbook - a.wrongbook) || (a.rate - b.rate) || (b.total - a.total))
+    .slice(0, 8)
+    .map((row) => `<div class="subject-row">
+      <strong>${escapeHtml(row.subject)}</strong>
+      <div class="subject-bar" title="${row.done}/${row.total}"><span style="width:${row.progress}%"></span></div>
+      <span>${row.rate}% · 错${row.wrongbook}</span>
+    </div>`).join("");
+
+  $("card-area").innerHTML = `<section class="dashboard">
+    <article class="card">
+      <div class="dash-grid">
+        <div class="dash-stat"><span class="value">${all.done}</span><span class="label">已做 / ${all.total}</span></div>
+        <div class="dash-stat"><span class="value">${all.rate}%</span><span class="label">总正确率</span></div>
+        <div class="dash-stat"><span class="value">${wrongIds.length}</span><span class="label">错题本</span></div>
+        <div class="dash-stat"><span class="value">${reviewCount}</span><span class="label">今日复习候选</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="dash-actions">
+        <button class="primary" data-jump-mode="seq">继续刷题</button>
+        <button data-jump-mode="review">今日复习</button>
+        <button data-jump-mode="wrong">错题本</button>
+        <button data-jump-mode="fav">收藏 ${favCount}</button>
+      </div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="badge subject">错题分级</span><span class="chapter">高频错题优先处理</span></div>
+      <div class="dash-grid">
+        <div class="dash-stat"><span class="value">${wrongLevel.low}</span><span class="label">新错题</span></div>
+        <div class="dash-stat"><span class="value">${wrongLevel.mid}</span><span class="label">二刷错</span></div>
+        <div class="dash-stat"><span class="value">${wrongLevel.high}</span><span class="label">高频错</span></div>
+        <div class="dash-stat"><span class="value">${flaggedCount}</span><span class="label">纠错标记</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="badge source">薄弱科目</span><span class="chapter">按错题数和正确率排序</span></div>
+      <div class="subject-table">${rows}</div>
+    </article>
+  </section>`;
+
+  document.querySelectorAll("[data-jump-mode]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.mode = button.dataset.jumpMode;
+      resetPosition();
+      save();
+      render();
+    });
+  });
 }
 
 function render() {
   if (!QUESTIONS.length) {
     $("card-area").innerHTML = `<div class="card empty"><strong>题库未加载</strong>请确认 questions.js 与 app.js 在同一目录。</div>`;
+    return;
+  }
+
+  if (state.mode === "home") {
+    renderDashboard();
     return;
   }
 
@@ -808,9 +920,14 @@ function bindGlobalEvents() {
     else if (event.key === "ArrowRight" || event.key === " " || event.key === "Enter") {
       event.preventDefault();
       nextQuestion();
-    } else if (event.shiftKey && event.key.toLowerCase() === "f") {
+  } else if (event.shiftKey && event.key.toLowerCase() === "f") {
       if (state.fav[q.id]) delete state.fav[q.id];
       else state.fav[q.id] = true;
+      save();
+      render();
+    } else if (event.shiftKey && event.key.toLowerCase() === "m") {
+      state.mode = "home";
+      resetPosition();
       save();
       render();
     }
@@ -846,3 +963,9 @@ function bindGlobalEvents() {
 
 bindGlobalEvents();
 render();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
+}

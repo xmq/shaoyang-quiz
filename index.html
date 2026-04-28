@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
   <title>计算机刷题器</title>
+  <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -67,8 +69,10 @@
       </header>
 
       <nav class="mode-tabs" aria-label="刷题模式">
-        <button class="mode active" data-mode="seq">顺序</button>
+        <button class="mode active" data-mode="home">总览</button>
+        <button class="mode" data-mode="seq">顺序</button>
         <button class="mode" data-mode="rnd">随机</button>
+        <button class="mode" data-mode="review">复习</button>
         <button class="mode" data-mode="wrong">错题本</button>
         <button class="mode" data-mode="fav">收藏</button>
       </nav>

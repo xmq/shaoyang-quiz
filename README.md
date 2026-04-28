@@ -9,6 +9,8 @@
 - 支持题干、选项、解析全文搜索
 - 错题自动收集 + 连续答对 2 次出本
 - 支持题目纠错标记和标记导出
+- 支持首页总览、错题分级、今日复习队列
+- 支持 PWA 离线安装
 - 本地 localStorage 保存进度，支持进度导入 / 导出
 - 支持 PC / 手机浏览器
 
@@ -23,6 +25,7 @@
 - `app.js`：刷题逻辑
 - `questions.js`：浏览器直接加载的题库
 - `questions.json`：原始题库数据
+- `sw.js` / `manifest.webmanifest`：PWA 离线安装支持
 
 更新题库后，在项目根目录执行 `python validate_questions.py` 校验，再执行 `python build_web_assets.py` 同步 `web/questions.json` 和 `web/questions.js`。
 
