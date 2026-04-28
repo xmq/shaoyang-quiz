@@ -1,4 +1,4 @@
-const CACHE_NAME = "shaoyang-quiz-v6";
+const CACHE_NAME = "shaoyang-quiz-v7";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -6,6 +6,8 @@ const CORE_ASSETS = [
   "./app.js",
   "./questions.js",
   "./manifest.webmanifest",
+  "./icon-192.png",
+  "./icon-512.png",
   "./icon.svg"
 ];
 
