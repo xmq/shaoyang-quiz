@@ -167,6 +167,28 @@ button {
   color: #fff;
 }
 
+.quick-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.quick-filters input {
+  min-width: 0;
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+}
+
+.quick-filters input:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.18);
+  border-color: var(--primary);
+}
+
 .card {
   margin-bottom: 12px;
   padding: 20px;
@@ -436,6 +458,12 @@ button {
   color: #fff;
 }
 
+.nav .flag.active {
+  border-color: var(--ng);
+  background: var(--ng);
+  color: #fff;
+}
+
 .empty {
   padding: 44px 20px;
   text-align: center;
@@ -507,6 +535,12 @@ button {
   gap: 4px;
 }
 
+.drawer-list-compact {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
 .drawer-item,
 .drawer-action {
   min-height: 40px;
@@ -560,6 +594,10 @@ button {
 
   .topbar {
     border-radius: 8px;
+  }
+
+  .quick-filters {
+    flex-direction: column;
   }
 
   .mini-stat {

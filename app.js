@@ -41,6 +41,9 @@ function initialState() {
   state.subject = state.subject || "";
   state.typeFilter = state.typeFilter || "";
   state.sourceFilter = state.sourceFilter || "";
+  state.chapterFilter = state.chapterFilter || "";
+  state.searchQuery = state.searchQuery || "";
+  state.flagged = state.flagged || {};
   state.cursor = state.cursor || 0;
   delete state._pending;
   delete state._stickyId;
@@ -105,11 +108,32 @@ function countBy(items, getter) {
   return out;
 }
 
+function chapterKey(q) {
+  return q.source_chapter || q.chapter || q.subject || "未分类";
+}
+
+function searchableText(q) {
+  const options = q.options ? Object.values(q.options).join(" ") : "";
+  return [q.id, q.source, q.type, q.subject, chapterKey(q), q.stem, options, q.answer, q.explanation]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
 function getScope() {
   let scope = QUESTIONS;
   if (state.subject) scope = scope.filter((q) => q.subject === state.subject);
   if (state.typeFilter) scope = scope.filter((q) => q.type === state.typeFilter);
   if (state.sourceFilter) scope = scope.filter((q) => q.source === state.sourceFilter);
+  if (state.chapterFilter) scope = scope.filter((q) => chapterKey(q) === state.chapterFilter);
+  const query = String(state.searchQuery || "").trim().toLowerCase();
+  if (query) {
+    const parts = query.split(/\s+/).filter(Boolean);
+    scope = scope.filter((q) => {
+      const text = searchableText(q);
+      return parts.every((part) => text.includes(part));
+    });
+  }
   return scope;
 }
 
@@ -120,7 +144,7 @@ function getPool() {
   } else if (state.mode === "fav") {
     pool = pool.filter((q) => state.fav[q.id]);
   } else {
-    pool = pool.filter((q) => !state.done[q.id] || state._stickyId === q.id);
+    pool = pool.filter((q) => state.searchQuery || !state.done[q.id] || state._stickyId === q.id);
   }
 
   if (state.mode === "rnd") {
@@ -176,6 +200,7 @@ function updateSubjectSelect() {
 
 function updateStats() {
   updateSubjectSelect();
+  if ($("search-input").value !== (state.searchQuery || "")) $("search-input").value = state.searchQuery || "";
   const scope = getScope();
   const done = scope.filter((q) => state.done[q.id]).length;
   const correct = scope.filter((q) => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
@@ -263,6 +288,7 @@ function renderQuestion(q, pool) {
   const inWrongFresh = state.mode === "wrong" && state._stickyId !== q.id;
   const chosen = inWrongFresh ? null : state.done[q.id];
   const isFav = !!state.fav[q.id];
+  const isFlagged = !!state.flagged[q.id];
   let body = "";
 
   if (q.type === "单选" || q.type === "多选") body = renderChoiceQuestion(q, chosen, inWrongFresh);
@@ -283,6 +309,7 @@ function renderQuestion(q, pool) {
     <div class="nav">
       <button class="nav-icon" id="prev" aria-label="上一题">←</button>
       <button class="nav-icon fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏">${isFav ? "★" : "☆"}</button>
+      <button class="nav-icon flag ${isFlagged ? "active" : ""}" id="flag" aria-label="标记有问题">!</button>
       ${state.done[q.id] ? '<button class="nav-icon" id="redo" aria-label="重答">↻</button>' : ""}
       <button class="next ${state.done[q.id] ? "ready" : ""}" id="next">${state.done[q.id] ? "下一题 →" : "跳过 →"}</button>
     </div>
@@ -373,6 +400,12 @@ function bindQuestionEvents(q, inWrongFresh) {
     save();
     render();
   });
+  $("flag").addEventListener("click", () => {
+    if (state.flagged[q.id]) delete state.flagged[q.id];
+    else state.flagged[q.id] = new Date().toISOString();
+    save();
+    render();
+  });
 
   const redo = $("redo");
   if (redo) {
@@ -388,6 +421,13 @@ function bindQuestionEvents(q, inWrongFresh) {
 function renderEmpty() {
   let title = "当前条件下题目已全部刷完";
   let text = "可以切换科目、题型、来源，或进入错题本继续练。";
+  if (state.searchQuery) {
+    title = "没有找到匹配题目";
+    text = "换个关键词，或清空科目、章节、来源筛选后再搜。";
+  } else if (state.chapterFilter) {
+    title = "当前章节没有可刷题目";
+    text = "可以切换模式，或在侧栏清空章节筛选。";
+  }
   if (state.mode === "wrong") {
     title = "错题本已清空";
     text = "当前筛选条件下没有待复习错题。";
@@ -479,6 +519,7 @@ function buildDrawer() {
   );
   renderDrawerList($("drawer-subjects"), subjects, state.subject || "", (value) => {
     state.subject = value;
+    state.chapterFilter = "";
     resetPosition();
     save();
     closeDrawer();
@@ -491,6 +532,7 @@ function buildDrawer() {
   );
   renderDrawerList($("drawer-types"), types, state.typeFilter || "", (value) => {
     state.typeFilter = value;
+    state.chapterFilter = "";
     resetPosition();
     save();
     closeDrawer();
@@ -503,6 +545,25 @@ function buildDrawer() {
   );
   renderDrawerList($("drawer-sources"), sources, state.sourceFilter || "", (value) => {
     state.sourceFilter = value;
+    state.chapterFilter = "";
+    resetPosition();
+    save();
+    closeDrawer();
+    render();
+  });
+
+  let chapterBase = QUESTIONS;
+  if (state.subject) chapterBase = chapterBase.filter((q) => q.subject === state.subject);
+  if (state.typeFilter) chapterBase = chapterBase.filter((q) => q.type === state.typeFilter);
+  if (state.sourceFilter) chapterBase = chapterBase.filter((q) => q.source === state.sourceFilter);
+  const chapterCounts = countBy(chapterBase, chapterKey);
+  const chapters = [{value: "", label: "全部章节", count: chapterBase.length}].concat(
+    Object.keys(chapterCounts)
+      .sort((a, b) => a.localeCompare(b, "zh-CN", {numeric: true}))
+      .map((chapter) => ({value: chapter, label: chapter, count: chapterCounts[chapter]}))
+  );
+  renderDrawerList($("drawer-chapters"), chapters, state.chapterFilter || "", (value) => {
+    state.chapterFilter = value;
     resetPosition();
     save();
     closeDrawer();
@@ -563,6 +624,29 @@ function exportProgress() {
   downloadText(`刷题进度_${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2), "application/json;charset=utf-8");
 }
 
+function exportFlags() {
+  const ids = Object.keys(state.flagged || {});
+  if (!ids.length) {
+    alert("当前没有纠错标记");
+    return;
+  }
+  const map = Object.fromEntries(QUESTIONS.map((q) => [q.id, q]));
+  const rows = ids.map((id) => ({id, q: map[id], markedAt: state.flagged[id]})).filter((row) => row.q);
+  let text = `纠错标记导出 · ${new Date().toLocaleString("zh-CN")}\n共 ${rows.length} 道\n\n`;
+  rows.forEach(({id, q, markedAt}, index) => {
+    text += `${index + 1}. [${markedAt}] ${q.stem}\n`;
+    text += `   ID：${id}\n`;
+    text += `   来源：${q.source} / ${q.type} / ${q.subject} / ${chapterKey(q)}\n`;
+    for (const letter of ["A", "B", "C", "D"]) {
+      if (q.options && q.options[letter]) text += `   ${letter}. ${q.options[letter]}\n`;
+    }
+    text += `   【答案】${q.answer}\n`;
+    if (q.explanation) text += `   【解析】${q.explanation}\n`;
+    text += "\n";
+  });
+  downloadText(`纠错标记_${new Date().toISOString().slice(0, 10)}.txt`, text, "text/plain;charset=utf-8");
+}
+
 function importProgressFile(file) {
   const reader = new FileReader();
   reader.onload = () => {
@@ -575,7 +659,10 @@ function importProgressFile(file) {
       state.wrong = next.wrong || {};
       state.streak = next.streak || {};
       state.fav = next.fav || {};
+      state.flagged = next.flagged || {};
       state.history = next.history || {};
+      state.chapterFilter = next.chapterFilter || "";
+      state.searchQuery = next.searchQuery || "";
       resetPosition();
       save();
       render();
@@ -604,6 +691,20 @@ function bindGlobalEvents() {
 
   $("subject-select").addEventListener("change", (event) => {
     state.subject = event.target.value;
+    state.chapterFilter = "";
+    resetPosition();
+    save();
+    render();
+  });
+
+  $("search-input").addEventListener("input", (event) => {
+    state.searchQuery = event.target.value;
+    resetPosition();
+    save();
+    render();
+  });
+  $("clear-search").addEventListener("click", () => {
+    state.searchQuery = "";
     resetPosition();
     save();
     render();
@@ -627,6 +728,10 @@ function bindGlobalEvents() {
   $("export-wrong").addEventListener("click", () => {
     closeDrawer();
     exportWrong();
+  });
+  $("export-flags").addEventListener("click", () => {
+    closeDrawer();
+    exportFlags();
   });
   $("export-progress").addEventListener("click", () => {
     closeDrawer();

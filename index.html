@@ -30,9 +30,15 @@
       </section>
 
       <section class="drawer-section">
+        <div class="drawer-title">章节</div>
+        <div class="drawer-list drawer-list-compact" id="drawer-chapters"></div>
+      </section>
+
+      <section class="drawer-section">
         <div class="drawer-title">数据</div>
         <div class="drawer-list">
           <button class="drawer-action" id="export-wrong">导出错题本</button>
+          <button class="drawer-action" id="export-flags">导出纠错标记</button>
           <button class="drawer-action" id="export-progress">导出进度</button>
           <button class="drawer-action" id="import-progress">导入进度</button>
           <button class="drawer-action danger" id="reset">重置进度</button>
@@ -66,6 +72,11 @@
         <button class="mode" data-mode="wrong">错题本</button>
         <button class="mode" data-mode="fav">收藏</button>
       </nav>
+
+      <section class="quick-filters" aria-label="搜索">
+        <input id="search-input" type="search" placeholder="搜索题干、选项、解析..." autocomplete="off">
+        <button id="clear-search" class="secondary-btn" type="button">清除</button>
+      </section>
 
       <section id="card-area"></section>
     </main>
