@@ -163,12 +163,14 @@
       padding: 10px 0;
       background: linear-gradient(180deg, rgba(244, 247, 251, .98), rgba(244, 247, 251, .92));
       backdrop-filter: blur(10px);
+      align-items: start;
     }
     .search-area { min-width: 0; }
     .search-area .search-status { margin: 4px 4px 0; }
-    .toolbar-actions { display: flex; gap: 8px; }
+    .toolbar-actions { display: flex; align-items: flex-start; gap: 8px; }
     .text-button {
       min-height: 46px;
+      height: 46px;
       padding: 0 15px;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -296,6 +298,7 @@
     .note th:last-child, .note td:last-child { border-right: 0; }
     .note th { background: var(--primary-soft); color: var(--blue); font-weight: 750; }
     .search-status { min-height: 24px; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+    .search-status:empty { display: none; }
     .nav-mask { display: none; }
 
     @media (max-width: 900px) {
