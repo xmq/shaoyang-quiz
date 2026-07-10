@@ -1,26 +1,21 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#2563eb"><title>讲义三色笔记</title>
-  <link rel="stylesheet" href="./style.css">
-  <style>
-    body{margin:0;background:#f5f7fb;color:#172033;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif}
-    main{max-width:900px;margin:auto;padding:20px}.note{background:#fff;border-radius:16px;padding:22px;box-shadow:0 4px 18px #17203314;line-height:1.8}
-    h1{margin-top:0}.note h2{border-bottom:1px solid #e5e7eb;padding-bottom:8px}.red{color:#c62828;font-weight:700}.blue{color:#1565c0}.green{color:#2e7d32}
-    .back{display:inline-block;margin-bottom:14px;color:#2563eb;text-decoration:none}
-  </style>
-</head>
-<body><main><a class="back" href="./">← 返回刷题</a><article class="note" id="note">正在加载讲义笔记…</article></main>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2563eb"><title>讲义三色笔记</title><link rel="stylesheet" href="./style.css">
+<style>
+:root{--red:#c62828;--blue:#1565c0;--green:#2e7d32}body{margin:0;background:#f4f6fa;color:#172033;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif}main{max-width:920px;margin:auto;padding:14px 14px 40px}.top{position:sticky;top:0;z-index:5;background:#f4f6faf2;padding:8px 0 12px;backdrop-filter:blur(8px)}.back{color:#2563eb;text-decoration:none;font-size:14px}.bar{display:flex;gap:8px;margin-top:10px}.bar input{flex:1;border:1px solid #d7dce5;border-radius:12px;padding:11px 13px;font-size:16px;background:#fff}.bar button{border:0;border-radius:12px;background:#2563eb;color:#fff;padding:0 15px;font-size:14px}.legend{font-size:13px;color:#657085;margin:9px 2px}.legend span{margin-right:12px}.red{color:var(--red);font-weight:700}.blue{color:var(--blue);font-weight:700}.green{color:var(--green);font-weight:700}.note{background:#fff;border-radius:16px;padding:20px 18px;box-shadow:0 3px 16px #17203314;line-height:1.8}.note h1{font-size:25px;margin:0 0 10px}.note h2{font-size:20px;border-bottom:1px solid #e5e7eb;padding:16px 0 7px;margin:14px 0 0;cursor:pointer}.note h2:before{content:'▾';display:inline-block;width:22px;color:#8b95a7;font-size:15px}.note h2.collapsed:before{content:'▸'}.note h2.collapsed~.section-content{display:none}.note h3{font-size:17px;margin:16px 0 5px;color:#334155}.note p{margin:7px 0}.note blockquote{margin:8px 0;padding:7px 12px;border-left:4px solid #94a3b8;background:#f8fafc;color:#536174}.note mark{background:#fff0a8;border-radius:3px;padding:0 2px}.toc{background:#fff;border-radius:14px;padding:12px 15px;margin:12px 0;box-shadow:0 2px 10px #17203310}.toc strong{font-size:14px}.toc a{display:block;color:#2563eb;text-decoration:none;font-size:14px;padding:3px 0}.empty{padding:35px;text-align:center;color:#7b8494}
+@media(max-width:600px){main{padding:8px 10px 28px}.note{padding:16px 14px}.note h1{font-size:22px}.note h2{font-size:18px}.note h3{font-size:16px}}
+</style></head>
+<body><main><div class="top"><a class="back" href="./">← 返回刷题</a><div class="bar"><input id="search" type="search" placeholder="搜索笔记内容…"><button id="expand">全部展开</button></div><div class="legend"><span class="red">🔴重点</span><span class="blue">🔵易错</span><span class="green">🟢记忆</span></div></div><nav id="toc" class="toc" hidden></nav><article id="note" class="note"><div class="empty">正在加载讲义笔记…</div></article></main>
 <script>
-fetch('./讲义三色笔记.md').then(r=>r.text()).then(md=>{
-  const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-  let html=md.split(/\r?\n/).map(line=>{
-    if(line.startsWith('# ')) return '<h1>'+esc(line.slice(2))+'</h1>';
-    if(line.startsWith('## ')) return '<h2>'+esc(line.slice(3))+'</h2>';
-    if(line.startsWith('### ')) return '<h3>'+esc(line.slice(4))+'</h3>';
-    let x=esc(line).replace(/🔴/g,'<span class="red">🔴').replace(/🔵/g,'</span><span class="blue">🔵').replace(/🟢/g,'</span><span class="green">🟢')+'</span>';
-    return line.trim()?'<p>'+x+'</p>':'';
-  }).join(''); document.getElementById('note').innerHTML=html;
-}).catch(()=>document.getElementById('note').textContent='笔记加载失败，请刷新页面。');
+const note=document.getElementById('note'),toc=document.getElementById('toc'),search=document.getElementById('search'),expand=document.getElementById('expand');
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(md){let lines=md.split(/\r?\n/),out=[],tocItems=[],inSection=false,sec=0;for(const line of lines){if(line.startsWith('# ')){out.push('<h1>'+esc(line.slice(2))+'</h1>');continue}if(line.startsWith('## ')){if(inSection)out.push('</div>');sec++;let id='s'+sec;tocItems.push([id,line.slice(3)]);out.push('<h2 id="'+id+'">'+esc(line.slice(3))+'</h2><div class="section-content">');inSection=true;continue}if(line.startsWith('### ')){out.push('<h3>'+esc(line.slice(4))+'</h3>');continue}if(line.startsWith('> ')){out.push('<blockquote>'+format(line.slice(2))+'</blockquote>');continue}if(/^[-*] /.test(line)){out.push('<p>'+format(line.slice(2))+'</p>');continue}if(line.trim())out.push('<p>'+format(line)+'</p>')}if(inSection)out.push('</div>');note.innerHTML=out.join('');toc.innerHTML='<strong>章节目录</strong>'+tocItems.map(x=>'<a href="#'+x[0]+'">'+esc(x[1])+'</a>').join('');toc.hidden=!tocItems.length;note.querySelectorAll('h2').forEach(h=>h.onclick=()=>h.classList.toggle('collapsed'));}
+function format(s){let x=esc(s).replace(/🔴/g,'<span class="red">🔴').replace(/🔵/g,'</span><span class="blue">🔵').replace(/🟢/g,'</span><span class="green">🟢').replace(/(（[^）]+）|\([^\)]+\))/g,'<small>$1</small>');return x+'</span>'}
+Promise.all(['./讲义核心详解.md','./讲义应用与教学详解.md','./讲义三色笔记.md'].map(u=>fetch(u).then(r=>r.ok?r.text():Promise.reject())))
+  .then(parts=>render(parts.join('\n\n---\n\n')))
+  .catch(()=>note.innerHTML='<div class="empty">笔记加载失败，请刷新页面</div>');
+search.oninput=()=>{let q=search.value.trim().toLowerCase();note.querySelectorAll('p,blockquote,h3').forEach(e=>{e.style.display=!q||e.textContent.toLowerCase().includes(q)?'':'none'});};
+expand.onclick=()=>{let c=note.querySelectorAll('h2.collapsed').length>0;note.querySelectorAll('h2').forEach(h=>h.classList.toggle('collapsed',!c));expand.textContent=c?'全部收起':'全部展开';};
 </script></body></html>

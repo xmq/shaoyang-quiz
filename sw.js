@@ -1,4 +1,4 @@
-const CACHE_NAME = "shaoyang-quiz-v43";
+const CACHE_NAME = "shaoyang-quiz-v44";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -12,6 +12,8 @@ const CORE_ASSETS = [
   "./icon.svg"
   ,"./notes.html"
   ,"./讲义三色笔记.md"
+  ,"./讲义核心详解.md"
+  ,"./讲义应用与教学详解.md"
 ];
 
 self.addEventListener("install", (event) => {
