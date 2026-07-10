@@ -266,7 +266,7 @@
    "C": "可伪性",
    "D": "价值性"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": "情报在战前最有价值、战后变废纸，体现信息的时效性。",
   "subject": "信息基础",
   "source_chapter": "第一篇 信息科技基础"
@@ -29600,5 +29600,501 @@
   "options": {},
   "answer": "正确",
   "explanation": "操作系统的设计漏洞是导致计算机频繁中毒的重要原因之一一。应\n用软件的设计漏洞也会导致计算机中毒。"
+ },
+ {
+  "id": "se-gen-q01",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "软件工程基础",
+  "stem": "软件工程的主要目标是（ ）。",
+  "options": {
+   "A": "只提高程序运行速度",
+   "B": "在成本和进度约束下开发高质量、可维护的软件",
+   "C": "尽量减少需求分析工作",
+   "D": "完全消除软件缺陷"
+  },
+  "answer": "B",
+  "explanation": "软件工程强调在成本、进度等约束下，以系统化方法开发和维护高质量软件。",
+  "subject": "软件工程",
+  "source_chapter": "软件工程基础"
+ },
+ {
+  "id": "se-gen-q02",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "软件生命周期",
+  "stem": "在瀑布模型中，需求分析阶段的主要产物是（ ）。",
+  "options": {
+   "A": "源程序",
+   "B": "软件需求规格说明书",
+   "C": "测试报告",
+   "D": "用户操作手册"
+  },
+  "answer": "B",
+  "explanation": "需求分析将用户需求转化为明确、可验证的需求规格说明书。",
+  "subject": "软件工程",
+  "source_chapter": "软件生命周期"
+ },
+ {
+  "id": "se-gen-q03",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "需求工程",
+  "stem": "下列哪项最符合可验证的软件需求？",
+  "options": {
+   "A": "系统应尽可能快",
+   "B": "界面要美观大方",
+   "C": "查询结果应在2秒内返回",
+   "D": "系统应易于使用"
+  },
+  "answer": "C",
+  "explanation": "2秒内返回具有明确度量标准，可通过测试验证。",
+  "subject": "软件工程",
+  "source_chapter": "需求工程"
+ },
+ {
+  "id": "se-gen-q04",
+  "source": "新增",
+  "type": "多选",
+  "chapter": "软件设计",
+  "stem": "面向对象设计中，良好模块通常具有（ ）。",
+  "options": {
+   "A": "高内聚",
+   "B": "低耦合",
+   "C": "职责单一",
+   "D": "尽可能依赖全局变量"
+  },
+  "answer": "ABC",
+  "explanation": "高内聚、低耦合和单一职责有利于理解、测试和维护。",
+  "subject": "软件工程",
+  "source_chapter": "软件设计"
+ },
+ {
+  "id": "se-gen-q05",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "软件测试",
+  "stem": "黑盒测试主要依据（ ）设计测试用例。",
+  "options": {
+   "A": "程序内部控制流程",
+   "B": "程序源代码语句覆盖率",
+   "C": "软件需求和功能规格",
+   "D": "编译器优化策略"
+  },
+  "answer": "C",
+  "explanation": "黑盒测试不关注内部实现，依据需求和外部可观察行为验证功能。",
+  "subject": "软件工程",
+  "source_chapter": "软件测试"
+ },
+ {
+  "id": "se-gen-q06",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "软件测试",
+  "stem": "若一个模块的圈复杂度为8，基本路径测试至少需要多少条独立路径？",
+  "options": {
+   "A": "1",
+   "B": "7",
+   "C": "8",
+   "D": "16"
+  },
+  "answer": "C",
+  "explanation": "独立路径数通常等于圈复杂度V(G)，因此至少8条。",
+  "subject": "软件工程",
+  "source_chapter": "软件测试"
+ },
+ {
+  "id": "se-gen-q07",
+  "source": "新增",
+  "type": "多选",
+  "chapter": "软件维护",
+  "stem": "软件维护的类型包括（ ）。",
+  "options": {
+   "A": "改正性维护",
+   "B": "适应性维护",
+   "C": "完善性维护",
+   "D": "预防性维护"
+  },
+  "answer": "ABCD",
+  "explanation": "维护包括改正、适应、完善和预防性维护。",
+  "subject": "软件工程",
+  "source_chapter": "软件维护"
+ },
+ {
+  "id": "se-gen-q08",
+  "source": "新增",
+  "type": "判断",
+  "chapter": "软件配置管理",
+  "stem": "配置管理中的基线一经建立就绝对不能再修改。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "错误",
+  "explanation": "基线修改须按变更控制流程审批并保留版本记录。",
+  "subject": "软件工程",
+  "source_chapter": "软件配置管理"
+ },
+ {
+  "id": "se-gen-q09",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "项目管理",
+  "stem": "关键路径上的活动通常具有（ ）。",
+  "options": {
+   "A": "最大的总时差",
+   "B": "总时差为零或最小",
+   "C": "最少资源需求",
+   "D": "可以任意延期"
+  },
+  "answer": "B",
+  "explanation": "关键路径决定最短工期，其活动总时差通常为零。",
+  "subject": "软件工程",
+  "source_chapter": "项目管理"
+ },
+ {
+  "id": "se-gen-q10",
+  "source": "新增",
+  "type": "多选",
+  "chapter": "敏捷开发",
+  "stem": "Scrum框架的典型角色包括（ ）。",
+  "options": {
+   "A": "产品负责人",
+   "B": "Scrum Master",
+   "C": "开发人员",
+   "D": "项目出纳"
+  },
+  "answer": "ABC",
+  "explanation": "Scrum团队由产品负责人、Scrum Master和开发人员组成。",
+  "subject": "软件工程",
+  "source_chapter": "敏捷开发"
+ },
+ {
+  "id": "se-gen-q11",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "软件质量",
+  "stem": "McCall质量模型中，可维护性属于（ ）类别。",
+  "options": {
+   "A": "产品运行",
+   "B": "产品修订",
+   "C": "产品转移",
+   "D": "项目管理"
+  },
+  "answer": "B",
+  "explanation": "可维护性归入产品修订类别。",
+  "subject": "软件工程",
+  "source_chapter": "软件质量"
+ },
+ {
+  "id": "se-gen-q12",
+  "source": "新增",
+  "type": "判断",
+  "chapter": "软件工程模型",
+  "stem": "原型模型适合需求不明确、需与用户反复确认的项目。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "正确",
+  "explanation": "原型便于快速呈现外部特征并澄清需求。",
+  "subject": "软件工程",
+  "source_chapter": "软件工程模型"
+ },
+ {
+  "id": "se-gen-q13",
+  "source": "新增",
+  "type": "单选",
+  "chapter": "软件度量",
+  "stem": "以下属于规模度量的是（ ）。",
+  "options": {
+   "A": "人月数",
+   "B": "开发成本",
+   "C": "代码行数（LOC）",
+   "D": "投入工时"
+  },
+  "answer": "C",
+  "explanation": "LOC用于衡量软件规模，其余是工作量或资源投入度量。",
+  "subject": "软件工程",
+  "source_chapter": "软件度量"
+ },
+ {
+  "id": "se-gen-q14",
+  "source": "新增",
+  "type": "多选",
+  "chapter": "软件体系结构",
+  "stem": "分层体系结构的常见优点包括（ ）。",
+  "options": {
+   "A": "职责分离便于维护",
+   "B": "支持层间替换和复用",
+   "C": "任意跨层访问内部实现",
+   "D": "有利于控制依赖方向"
+  },
+  "answer": "ABD",
+  "explanation": "分层可降低耦合、控制依赖并便于替换；任意跨层访问会破坏结构。",
+  "subject": "软件工程",
+  "source_chapter": "软件体系结构"
+ },
+ {
+  "id": "se-gen-q15",
+  "source": "新增",
+  "type": "判断",
+  "chapter": "软件风险管理",
+  "stem": "风险缓解通过降低风险发生概率或影响来减少损失。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "正确",
+  "explanation": "风险缓解包括预防措施和降低影响的应急措施。",
+  "subject": "软件工程",
+  "source_chapter": "软件风险管理"
+ },
+ {
+  "id": "bd-001",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "Hadoop基础",
+  "stem": "Hadoop中负责分布式文件存储的核心组件是（）。",
+  "options": {
+   "A": "YARN",
+   "B": "HDFS",
+   "C": "MapReduce",
+   "D": "Hive"
+  },
+  "answer": "B",
+  "explanation": "HDFS提供分布式文件存储。",
+  "subject": "大数据",
+  "source_chapter": "Hadoop基础"
+ },
+ {
+  "id": "bd-002",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "HDFS",
+  "stem": "HDFS多副本存储的主要目的是（）。",
+  "options": {
+   "A": "提高CPU频率",
+   "B": "实现容错与高可用",
+   "C": "减少带宽",
+   "D": "替代数据库"
+  },
+  "answer": "B",
+  "explanation": "多副本可在节点故障时保持数据可用。",
+  "subject": "大数据",
+  "source_chapter": "HDFS"
+ },
+ {
+  "id": "bd-003",
+  "source": "大数据基础题",
+  "type": "判断",
+  "chapter": "Hadoop基础",
+  "stem": "NameNode主要保存HDFS元数据，而非文件实际数据。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "正确",
+  "explanation": "实际数据块存储在DataNode。",
+  "subject": "大数据",
+  "source_chapter": "Hadoop基础"
+ },
+ {
+  "id": "bd-004",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "MapReduce",
+  "stem": "Mapper输出按键分组并发送给Reducer的阶段称为（）。",
+  "options": {
+   "A": "InputFormat",
+   "B": "Shuffle",
+   "C": "Combine",
+   "D": "OutputCommit"
+  },
+  "answer": "B",
+  "explanation": "Shuffle负责分区、排序、分组和传输。",
+  "subject": "大数据",
+  "source_chapter": "MapReduce"
+ },
+ {
+  "id": "bd-005",
+  "source": "大数据基础题",
+  "type": "多选",
+  "chapter": "MapReduce",
+  "stem": "关于Combiner，正确的有（）。",
+  "options": {
+   "A": "Map端局部聚合",
+   "B": "减少网络传输",
+   "C": "必须执行才能正确",
+   "D": "执行次数不应影响结果"
+  },
+  "answer": "ABD",
+  "explanation": "Combiner是可选优化，需保证结果与执行次数无关。",
+  "subject": "大数据",
+  "source_chapter": "MapReduce"
+ },
+ {
+  "id": "bd-006",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "YARN",
+  "stem": "YARN中负责全局资源管理的组件是（）。",
+  "options": {
+   "A": "NodeManager",
+   "B": "ResourceManager",
+   "C": "ApplicationMaster",
+   "D": "DataNode"
+  },
+  "answer": "B",
+  "explanation": "ResourceManager负责集群资源管理。",
+  "subject": "大数据",
+  "source_chapter": "YARN"
+ },
+ {
+  "id": "bd-007",
+  "source": "大数据基础题",
+  "type": "判断",
+  "chapter": "HDFS",
+  "stem": "HDFS适合存储大量小文件。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "错误",
+  "explanation": "大量小文件会消耗NameNode元数据内存。",
+  "subject": "大数据",
+  "source_chapter": "HDFS"
+ },
+ {
+  "id": "bd-008",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "Spark",
+  "stem": "Spark中不可变、可分区并行数据集合是（）。",
+  "options": {
+   "A": "RDD",
+   "B": "BlockManager",
+   "C": "Driver",
+   "D": "Accumulator"
+  },
+  "answer": "A",
+  "explanation": "RDD是Spark核心数据抽象。",
+  "subject": "大数据",
+  "source_chapter": "Spark"
+ },
+ {
+  "id": "bd-009",
+  "source": "大数据基础题",
+  "type": "多选",
+  "chapter": "Spark",
+  "stem": "关于Spark转换操作，正确的有（）。",
+  "options": {
+   "A": "惰性求值",
+   "B": "立即执行",
+   "C": "包括map、filter",
+   "D": "生成新RDD"
+  },
+  "answer": "ACD",
+  "explanation": "Transformation惰性生成新RDD，Action才触发计算。",
+  "subject": "大数据",
+  "source_chapter": "Spark"
+ },
+ {
+  "id": "bd-010",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "Spark",
+  "stem": "触发Spark实际计算的操作称为（）。",
+  "options": {
+   "A": "Transformation",
+   "B": "Action",
+   "C": "Partition",
+   "D": "Stage"
+  },
+  "answer": "B",
+  "explanation": "collect、count等Action触发执行。",
+  "subject": "大数据",
+  "source_chapter": "Spark"
+ },
+ {
+  "id": "bd-011",
+  "source": "大数据基础题",
+  "type": "判断",
+  "chapter": "流处理",
+  "stem": "Structured Streaming支持持续数据的增量计算和事件时间语义。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "正确",
+  "explanation": "其支持事件时间和水位线机制。",
+  "subject": "大数据",
+  "source_chapter": "流处理"
+ },
+ {
+  "id": "bd-012",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "数据仓库",
+  "stem": "保存销售额等业务度量值的表称为（）。",
+  "options": {
+   "A": "事实表",
+   "B": "维度表",
+   "C": "字典表",
+   "D": "日志表"
+  },
+  "answer": "A",
+  "explanation": "事实表记录可度量业务事实。",
+  "subject": "大数据",
+  "source_chapter": "数据仓库"
+ },
+ {
+  "id": "bd-013",
+  "source": "大数据基础题",
+  "type": "多选",
+  "chapter": "数据仓库",
+  "stem": "ETL通常包括（）。",
+  "options": {
+   "A": "抽取",
+   "B": "转换",
+   "C": "加载",
+   "D": "编译"
+  },
+  "answer": "ABC",
+  "explanation": "ETL依次为Extract、Transform、Load。",
+  "subject": "大数据",
+  "source_chapter": "数据仓库"
+ },
+ {
+  "id": "bd-014",
+  "source": "大数据基础题",
+  "type": "单选",
+  "chapter": "流处理",
+  "stem": "Kafka中实现并行消费划分的逻辑单元是（）。",
+  "options": {
+   "A": "Topic",
+   "B": "Partition",
+   "C": "Broker",
+   "D": "Producer"
+  },
+  "answer": "B",
+  "explanation": "Partition是Topic的有序日志分片。",
+  "subject": "大数据",
+  "source_chapter": "流处理"
+ },
+ {
+  "id": "bd-015",
+  "source": "大数据基础题",
+  "type": "判断",
+  "chapter": "数据处理",
+  "stem": "批处理面向有限数据集，流处理持续处理不断到达的数据。",
+  "options": {
+   "A": "正确",
+   "B": "错误"
+  },
+  "answer": "正确",
+  "explanation": "批处理处理有界数据，流处理处理无界数据流。",
+  "subject": "大数据",
+  "source_chapter": "数据处理"
  }
 ]
