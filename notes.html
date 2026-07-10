@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#2563eb"><title>讲义三色笔记</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body{margin:0;background:#f5f7fb;color:#172033;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif}
+    main{max-width:900px;margin:auto;padding:20px}.note{background:#fff;border-radius:16px;padding:22px;box-shadow:0 4px 18px #17203314;line-height:1.8}
+    h1{margin-top:0}.note h2{border-bottom:1px solid #e5e7eb;padding-bottom:8px}.red{color:#c62828;font-weight:700}.blue{color:#1565c0}.green{color:#2e7d32}
+    .back{display:inline-block;margin-bottom:14px;color:#2563eb;text-decoration:none}
+  </style>
+</head>
+<body><main><a class="back" href="./">← 返回刷题</a><article class="note" id="note">正在加载讲义笔记…</article></main>
+<script>
+fetch('./讲义三色笔记.md').then(r=>r.text()).then(md=>{
+  const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  let html=md.split(/\r?\n/).map(line=>{
+    if(line.startsWith('# ')) return '<h1>'+esc(line.slice(2))+'</h1>';
+    if(line.startsWith('## ')) return '<h2>'+esc(line.slice(3))+'</h2>';
+    if(line.startsWith('### ')) return '<h3>'+esc(line.slice(4))+'</h3>';
+    let x=esc(line).replace(/🔴/g,'<span class="red">🔴').replace(/🔵/g,'</span><span class="blue">🔵').replace(/🟢/g,'</span><span class="green">🟢')+'</span>';
+    return line.trim()?'<p>'+x+'</p>':'';
+  }).join(''); document.getElementById('note').innerHTML=html;
+}).catch(()=>document.getElementById('note').textContent='笔记加载失败，请刷新页面。');
+</script></body></html>
