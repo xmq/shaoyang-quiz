@@ -1,4 +1,5 @@
 const QUESTIONS = Array.isArray(window.QUESTIONS) ? window.QUESTIONS : [];
+const QUESTION_MEDIA = window.QUESTION_MEDIA && typeof window.QUESTION_MEDIA === "object" ? window.QUESTION_MEDIA : {};
 const STORE_KEY = "shaoyang-quiz-v3";
 const LEGACY_KEYS = ["shaoyang-quiz-v2", "shaoyang-quiz-v1"];
 const MASTER_THRESHOLD = 2;
@@ -319,6 +320,15 @@ function feedbackHtml(q, chosen) {
   </div>`;
 }
 
+function mediaHtml(q) {
+  const media = QUESTION_MEDIA[q.id];
+  if (!media || !media.src) return "";
+  return `<figure class="question-media">
+    <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || "题图重绘示意")}" loading="lazy">
+    <figcaption><strong>${escapeHtml(media.label || "重绘示意")}</strong>${media.note ? `：${escapeHtml(media.note)}` : ""}</figcaption>
+  </figure>`;
+}
+
 function renderQuestion(q, pool) {
   const inWrongFresh = state.mode === "wrong" && state._stickyId !== q.id;
   const chosen = inWrongFresh ? null : state.done[q.id];
@@ -339,6 +349,7 @@ function renderQuestion(q, pool) {
       <span class="q-pos">${state.cursor + 1} / ${pool.length}</span>
     </div>
     <div class="stem">${escapeHtml(q.stem)}</div>
+    ${mediaHtml(q)}
     ${body}
     ${feedbackHtml(q, chosen)}
     <div class="nav">
@@ -792,8 +803,35 @@ function downloadText(filename, content, type) {
   const a = document.createElement("a");
   a.href = url;
   a.download = filename;
+  a.style.display = "none";
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(url);
+
+  // Some mobile browsers/PWAs finish handling the click asynchronously. Keep
+  // the object URL alive briefly and offer a visible fallback link.
+  const notice = document.createElement("div");
+  notice.className = "download-notice";
+  notice.setAttribute("role", "status");
+
+  const message = document.createElement("span");
+  message.textContent = `已生成 ${filename}`;
+  const fallback = document.createElement("a");
+  fallback.href = url;
+  fallback.download = filename;
+  fallback.textContent = "未自动下载？点此保存";
+  const close = document.createElement("button");
+  close.type = "button";
+  close.setAttribute("aria-label", "关闭提示");
+  close.textContent = "×";
+  close.addEventListener("click", () => notice.remove());
+
+  notice.append(message, fallback, close);
+  document.querySelectorAll(".download-notice").forEach((item) => item.remove());
+  document.body.appendChild(notice);
+
+  window.setTimeout(() => a.remove(), 1000);
+  window.setTimeout(() => notice.remove(), 15000);
+  window.setTimeout(() => URL.revokeObjectURL(url), 60000);
 }
 
 function bindGlobalEvents() {

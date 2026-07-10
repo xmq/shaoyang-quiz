@@ -1,9 +1,10 @@
-const CACHE_NAME = "shaoyang-quiz-v12";
+const CACHE_NAME = "shaoyang-quiz-v42";
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./style.css",
   "./app.js",
+  "./question-media.js",
   "./questions.js",
   "./manifest.webmanifest",
   "./icon-192.png",

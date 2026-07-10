@@ -46,6 +46,58 @@ button {
   cursor: pointer;
 }
 
+.download-notice {
+  position: fixed;
+  left: 50%;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 100;
+  width: min(92vw, 560px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.22);
+  font-size: 14px;
+}
+
+.download-notice span {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.download-notice a {
+  color: var(--primary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.download-notice button {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 520px) {
+  .download-notice {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .download-notice a {
+    order: 3;
+    width: 100%;
+  }
+}
+
 .app-shell {
   min-height: 100vh;
 }
@@ -349,6 +401,34 @@ button {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.8;
+}
+
+.question-media {
+  margin: 0 0 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.question-media img {
+  display: block;
+  width: 100%;
+  max-height: 460px;
+  object-fit: contain;
+  background: #f8fafc;
+}
+
+.question-media figcaption {
+  padding: 8px 10px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.question-media figcaption strong {
+  color: var(--text);
 }
 
 .options {
