@@ -1,10 +1,12 @@
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_FILE = ROOT / "questions.json"
+QUESTION_JS_FILE = ROOT / "questions.js"
 CHOICE_TYPES = {"单选", "多选"}
 JUDGE_ANSWERS = {"正确", "错误"}
 
@@ -12,6 +14,18 @@ JUDGE_ANSWERS = {"正确", "错误"}
 def main():
     qs = json.loads(QUESTION_FILE.read_text(encoding="utf-8"))
     errors = []
+
+    js_text = QUESTION_JS_FILE.read_text(encoding="utf-8").strip()
+    prefix = "window.QUESTIONS="
+    if not js_text.startswith(prefix) or not js_text.endswith(";"):
+        errors.append("questions.js: invalid wrapper")
+    else:
+        try:
+            js_questions = json.loads(js_text[len(prefix):-1])
+            if js_questions != qs:
+                errors.append("questions.js is not synchronized with questions.json")
+        except json.JSONDecodeError as error:
+            errors.append(f"questions.js: invalid JSON payload: {error}")
 
     ids = [q.get("id") for q in qs]
     for qid, count in Counter(ids).items():
@@ -29,8 +43,18 @@ def main():
                 errors.append(f"{qid}: missing {field}")
 
         if qtype in CHOICE_TYPES:
+            if not isinstance(options, dict):
+                errors.append(f"{qid}: options should be an object")
+                options = {}
+            for key, value in options.items():
+                if not isinstance(key, str) or not re.fullmatch(r"[A-Z]", key):
+                    errors.append(f"{qid}: invalid option key: {key!r}")
+                if not isinstance(value, str) or not value.strip():
+                    errors.append(f"{qid}: empty option value: {key!r}")
             if qtype == "单选" and len(answer) != 1:
                 errors.append(f"{qid}: single-choice answer should be one letter: {answer}")
+            if not re.fullmatch(r"[A-Z]+", answer) or len(set(answer)) != len(answer):
+                errors.append(f"{qid}: invalid or duplicated choice answer: {answer}")
             if len(options) < 2:
                 errors.append(f"{qid}: too few options")
             for letter in answer:
@@ -44,6 +68,8 @@ def main():
                 errors.append(f"{qid}: blank question has empty answer")
         else:
             errors.append(f"{qid}: unknown type: {qtype}")
+        if not str(q.get("explanation") or "").strip():
+            errors.append(f"{qid}: missing explanation")
 
     print(f"questions: {len(qs)}")
     print(f"errors: {len(errors)}")

@@ -8,7 +8,7 @@
   --primary-strong: #1d4ed8;
   --ok: #079455;
   --ng: #d92d20;
-  --warn: #f59e0b;
+  --warn: #b54708;
   --shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
 }
 
@@ -30,6 +30,9 @@
 
 body {
   margin: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   padding-bottom: env(safe-area-inset-bottom);
   background: var(--bg);
   color: var(--text);
@@ -44,6 +47,32 @@ input {
 
 button {
   cursor: pointer;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+:where(button, input, select, a):focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.42);
+  outline-offset: 2px;
+}
+
+body.drawer-open {
+  overflow: hidden;
 }
 
 .download-notice {
@@ -126,9 +155,9 @@ button {
 }
 
 .icon-btn {
-  width: 38px;
-  min-width: 38px;
-  height: 38px;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg);
@@ -142,7 +171,7 @@ button {
 #subject-select {
   min-width: 0;
   flex: 1;
-  height: 38px;
+  height: 44px;
   padding: 0 34px 0 12px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -206,7 +235,7 @@ button {
 }
 
 .mode {
-  min-height: 36px;
+  min-height: 44px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--panel);
@@ -401,6 +430,34 @@ button {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.8;
+  scroll-margin-top: 122px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+}
+
+.active-filters button {
+  min-height: 44px;
+  padding: 7px 10px;
+  border: 1px solid #84adff;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #175cd3;
+  font-size: 13px;
+}
+
+.active-filters .clear-all {
+  border-color: var(--border);
+  background: var(--panel);
+  color: var(--muted);
 }
 
 .question-media {
@@ -722,7 +779,7 @@ button {
 
 .drawer-item,
 .drawer-action {
-  min-height: 40px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -779,7 +836,7 @@ button {
 
   .topbar-row {
     display: grid;
-    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
     gap: 6px;
   }
 
@@ -803,22 +860,15 @@ button {
   }
 
   .mode-tabs {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px;
-    overflow-x: auto;
     padding: 0 2px 6px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .mode-tabs::-webkit-scrollbar {
-    display: none;
   }
 
   .mode {
-    flex: 0 0 auto;
-    min-width: 74px;
-    min-height: 38px;
+    min-width: 0;
+    min-height: 44px;
   }
 
   .quick-filters {
@@ -902,13 +952,17 @@ button {
     box-shadow: 0 8px 24px rgba(16, 24, 40, 0.16);
   }
 
+  .nav.unanswered {
+    position: static;
+  }
+
   .nav button {
     min-height: 44px;
     border-radius: 9px;
   }
 
   .nav .nav-icon {
-    flex: 0 0 42px;
+    flex: 0 0 44px;
   }
 
   .nav .next {
@@ -925,5 +979,16 @@ button {
 
   .drawer-list-compact {
     max-height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
