@@ -19,16 +19,20 @@ jobs:
       - name: Check JavaScript
         run: |
           node --check app.js
-          node --check build-meta.js
-          node --check questions.js
+          node --check home.js
+          node --check question-media.js
           node --check sw.js
       - name: Check JSON
         run: |
           python -m json.tool questions.json > /dev/null
           python -m json.tool manifest.webmanifest > /dev/null
-      - name: Validate question bank
-        run: python scripts/validate_questions.py
-      - name: Check generated notes and release metadata
+      - name: Check reproducible question bank
+        run: python scripts/merge_university_exam_bank.py --check
+      - name: Build and validate Pages artifact
         run: |
-          python build_notes.py --check
-          python scripts/build_release.py --check
+          python scripts/build_site.py --output dist
+          python scripts/validate_questions.py --js dist/questions.js
+          python scripts/build_release.py --asset-root dist --check
+          node --check dist/build-meta.js
+          node --check dist/home-data.js
+          node --check dist/questions.js

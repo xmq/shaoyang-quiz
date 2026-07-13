@@ -2,6 +2,7 @@ import json
 import re
 import sys
 import unicodedata
+import argparse
 from collections import Counter
 from pathlib import Path
 
@@ -21,20 +22,28 @@ def normalized_stem(value):
 
 
 def main():
-    qs = json.loads(QUESTION_FILE.read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--questions", type=Path, default=QUESTION_FILE)
+    parser.add_argument("--js", type=Path, default=QUESTION_JS_FILE)
+    parser.add_argument("--allow-missing-js", action="store_true")
+    args = parser.parse_args()
+    qs = json.loads(args.questions.read_text(encoding="utf-8"))
     errors = []
 
-    js_text = QUESTION_JS_FILE.read_text(encoding="utf-8").strip()
-    prefix = "window.QUESTIONS="
-    if not js_text.startswith(prefix) or not js_text.endswith(";"):
-        errors.append("questions.js: invalid wrapper")
-    else:
-        try:
-            js_questions = json.loads(js_text[len(prefix):-1])
-            if js_questions != qs:
-                errors.append("questions.js is not synchronized with questions.json")
-        except json.JSONDecodeError as error:
-            errors.append(f"questions.js: invalid JSON payload: {error}")
+    if args.js.is_file():
+        js_text = args.js.read_text(encoding="utf-8").strip()
+        prefix = "window.QUESTIONS="
+        if not js_text.startswith(prefix) or not js_text.endswith(";"):
+            errors.append("questions.js: invalid wrapper")
+        else:
+            try:
+                js_questions = json.loads(js_text[len(prefix):-1])
+                if js_questions != qs:
+                    errors.append("questions.js is not synchronized with questions.json")
+            except json.JSONDecodeError as error:
+                errors.append(f"questions.js: invalid JSON payload: {error}")
+    elif not args.allow_missing_js:
+        errors.append(f"missing generated question bundle: {args.js}")
 
     ids = [q.get("id") for q in qs]
     for qid, count in Counter(ids).items():
