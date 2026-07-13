@@ -6,11 +6,18 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
+from enrich_question_metadata import (
+    ABILITY_VALUES,
+    DIFFICULTY_VALUES,
+    KNOWLEDGE_POINT_VALUES,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_FILE = ROOT / "questions.json"
 CHOICE_TYPES = {"单选", "多选"}
 JUDGE_ANSWERS = {"正确", "错误"}
 UNIVERSITY_PREFIXES = ("ua-", "uc-", "ue-")
+APPLIED_PREFIXES = ("ap-", "sp-")
 
 
 def normalized_stem(value):
@@ -93,17 +100,43 @@ def main():
         elif qtype == "判断":
             if answer not in JUDGE_ANSWERS:
                 errors.append(f"{qid}: bad judge answer: {answer}")
-        elif qtype == "填空":
+        elif qtype in {"填空", "简答"}:
             if not answer:
-                errors.append(f"{qid}: blank question has empty answer")
+                errors.append(f"{qid}: {qtype} question has empty answer")
+            if qtype == "简答" and options not in ({}, None):
+                errors.append(f"{qid}: short-answer options should be empty")
         else:
             errors.append(f"{qid}: unknown type: {qtype}")
         if not str(q.get("explanation") or "").strip():
             errors.append(f"{qid}: missing explanation")
 
+        knowledge_point = str(q.get("knowledge_point") or "").strip()
+        ability = str(q.get("ability") or "").strip()
+        difficulty = str(q.get("difficulty") or "").strip()
+        if not knowledge_point:
+            errors.append(f"{qid}: missing knowledge_point")
+        elif knowledge_point not in KNOWLEDGE_POINT_VALUES:
+            errors.append(f"{qid}: invalid knowledge_point: {knowledge_point}")
+        if not ability:
+            errors.append(f"{qid}: missing ability")
+        elif ability not in ABILITY_VALUES:
+            errors.append(f"{qid}: invalid ability: {ability}")
+        if not difficulty:
+            errors.append(f"{qid}: missing difficulty")
+        elif difficulty not in DIFFICULTY_VALUES:
+            errors.append(f"{qid}: invalid difficulty: {difficulty}")
+
         if str(qid).startswith(UNIVERSITY_PREFIXES):
             if q.get("source") != "大学期末改编":
                 errors.append(f"{qid}: university adaptation has invalid source")
+            for field in ("source_chapter", "source_url", "source_title", "adaptation_note"):
+                if not str(q.get(field) or "").strip():
+                    errors.append(f"{qid}: missing provenance field {field}")
+            if not str(q.get("source_url") or "").startswith("https://"):
+                errors.append(f"{qid}: source_url should use https")
+        if str(qid).startswith(APPLIED_PREFIXES):
+            if q.get("source") != "高校试题提炼":
+                errors.append(f"{qid}: applied question has invalid source")
             for field in ("source_chapter", "source_url", "source_title", "adaptation_note"):
                 if not str(q.get(field) or "").strip():
                     errors.append(f"{qid}: missing provenance field {field}")

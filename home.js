@@ -65,6 +65,7 @@
   }
 
   function isCorrect(question, given) {
+    if (question.type === "简答") return given === "掌握";
     if (question.type === "多选") {
       return [...String(given || "")].sort().join("") === [...String(question.answer || "")].sort().join("");
     }
@@ -108,7 +109,7 @@
     const groups = [
       {key: "信息技术应用", label: "信息技术应用"},
       {key: "计算机专业", label: "计算机专业"},
-      {key: "电子与通信", label: "电子与通信 · 电子信息岗专项"},
+      {key: "电子与通信", label: "电子与通信"},
     ];
     root.innerHTML = groups.map((group, groupIndex) => {
       const cards = COURSES.filter((course) => course.group === group.key).map((course) => {
@@ -117,15 +118,16 @@
         const progressText = stats.done
           ? `已做 ${stats.done}/${stats.total}${stats.rate === null ? "" : ` · ${stats.rate}%`}${stats.wrong ? ` · 错题 ${stats.wrong}` : ""}`
           : `${stats.total || "—"} 道配套题`;
+        const percent = stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
         const noteHash = `#course=${encodeURIComponent(course.name)}`;
         const quizQuery = `?subject=${encodeURIComponent(subject)}&mode=seq`;
-        const routeTag = course.name === "信息技术与教学论" ? '<span class="course-route-tag">信息技术教师岗专项</span>' : "";
         return `<article class="home-course-card">
-          <div class="home-course-title"><span aria-hidden="true">${course.icon}</span><div><strong>${course.name}</strong>${routeTag}<small>${progressText}</small></div></div>
+          <div class="home-course-title"><span aria-hidden="true">${course.icon}</span><div><strong>${course.name}</strong><small>${progressText}</small></div></div>
+          <div class="course-progress" aria-label="已完成 ${percent}%"><span style="width:${percent}%"></span></div>
           <div class="home-course-actions">
-            <a href="./notes.html${noteHash}">学讲义</a>
-            <a href="./color-notes.html${noteHash}">做回忆</a>
-            <a href="./quiz.html${quizQuery}">刷本专项</a>
+            <a class="course-main-action" href="./notes.html${noteHash}">${stats.done ? "继续学习" : "开始学习"}</a>
+            <a href="./color-notes.html${noteHash}">回忆</a>
+            <a href="./quiz.html${quizQuery}">练题</a>
           </div>
         </article>`;
       }).join("");
@@ -150,11 +152,19 @@
     $("home-rate").textContent = rate === null ? "—" : `${rate}%`;
     $("home-due").textContent = dueCount;
     $("home-wrong").textContent = wrongCount;
-    $("question-count").textContent = `${QUESTION_INDEX.length} 道题`;
+    $("question-count").textContent = QUESTION_INDEX.length;
+    $("short-count").textContent = QUESTION_INDEX.filter((question) => question.type === "简答").length;
 
     const action = $("continue-action");
     const recommendation = $("status-recommendation");
     const note = $("status-note");
+    const status = $("learning-status");
+    const statusTitle = $("status-title");
+    const statusKicker = $("status-kicker");
+    const hasProgress = completed.length > 0 || wrongCount > 0 || dueCount > 0 || !!last;
+    status?.classList.toggle("has-progress", hasProgress);
+    if (statusTitle) statusTitle.textContent = hasProgress ? "今天从这里继续" : "从一个课程开始";
+    if (statusKicker) statusKicker.textContent = hasProgress ? "你的学习状态" : "新手起点";
     if (dueCount > 0) {
       action.href = "./quiz.html?mode=review";
       action.textContent = `复习 ${dueCount} 道到期题`;
@@ -174,8 +184,8 @@
       action.textContent = "继续练习";
       recommendation.textContent = `你已完成 ${completed.length} 道题。下一步可继续当前科目，并在答题后核对解析。`;
     } else {
-      action.href = "./notes.html";
-      action.textContent = "选择科目开始学习";
+      action.href = "#courses";
+      action.textContent = "选择课程 →";
       recommendation.textContent = "先选一个科目，从讲义的一个小节开始，学完立即回忆并做题检验。";
     }
     note.textContent = completed.length

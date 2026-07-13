@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#173b57">
-  <meta name="description" content="面向事业单位专业知识备考的学习平台，用讲义建立理解、三色回忆强化提取、题库检验掌握，并根据学习记录安排复习。">
-  <title>邵阳备考 · 事业单位专业知识备考</title>
+  <meta name="description" content="刷题器提供专业知识讲义、三色回忆、专项练习、限时模拟和错题复习。">
+  <title>刷题器</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="platform-home">
+<body class="platform-home home-workbench">
   <a class="sr-only home-skip" href="#home-main">跳到主要内容</a>
   <header class="home-header">
     <div class="home-header-inner">
       <a class="home-brand" href="./index.html" aria-current="page">
-        <span class="home-brand-mark" aria-hidden="true">邵</span>
-        <span><strong>邵阳备考</strong><small>事业单位专业知识备考</small></span>
+        <span class="home-brand-mark" aria-hidden="true">题</span>
+        <span><strong>刷题器</strong><small>专业知识学习与练习</small></span>
       </a>
       <nav class="home-nav" aria-label="学习模块">
         <a aria-current="page" href="./index.html">首页</a>
@@ -29,23 +29,29 @@
   <main class="home-main" id="home-main">
     <section class="home-hero" aria-labelledby="home-title">
       <div class="home-hero-copy">
-        <p class="home-eyebrow">基础概念 · 特点要素 · 简答回忆 · 客观题练习</p>
-        <h1 id="home-title">先搭知识骨架，<br>再把得分点练出来。</h1>
-        <p class="home-lead">围绕事业单位专业知识常见考查，先用讲义理解概念、特点、要素和作用，再在三色回忆中口述或默写简答得分点，最后用选择、判断、填空和少量一步计算检验并修正。</p>
+        <p class="home-eyebrow">事业单位 · 计算机与电子信息专业知识</p>
+        <h1 id="home-title">把专业基础，<br>练成考场得分。</h1>
+        <p class="home-lead">自主选择15门基础课程。讲义负责理解，三色回忆负责说出得分点，题库负责检验与纠错。</p>
+        <div class="home-proof" aria-label="平台内容概览">
+          <span><strong>15</strong> 门课程</span>
+          <span><strong id="question-count">—</strong> 公开题</span>
+          <span><strong id="short-count">—</strong> 道简答自评</span>
+        </div>
         <div class="home-hero-actions">
-          <a class="home-primary-action" id="continue-action" href="./notes.html">开始学习</a>
-          <a class="home-secondary-action" href="#courses">选择科目</a>
+          <a class="home-primary-action" href="#courses">选择课程</a>
+          <a class="home-secondary-action" href="#study-method">查看学习闭环</a>
         </div>
       </div>
-      <aside class="learning-status" aria-labelledby="status-title">
+      <aside class="learning-status" id="learning-status" aria-labelledby="status-title">
         <div class="status-head">
           <div>
-            <span class="status-kicker">学习状态</span>
-            <h2 id="status-title">今天从这里继续</h2>
+            <span class="status-kicker" id="status-kicker">学习工作台</span>
+            <h2 id="status-title">从一个科目开始</h2>
           </div>
           <span class="status-dot" aria-hidden="true"></span>
         </div>
         <p class="status-recommendation" id="status-recommendation">正在读取本机学习记录…</p>
+        <a class="status-action" id="continue-action" href="./notes.html">开始第一个知识点 <span aria-hidden="true">→</span></a>
         <div class="status-grid">
           <div><strong id="home-done">0</strong><span>已做题</span></div>
           <div><strong id="home-rate">—</strong><span>正确率</span></div>
@@ -56,98 +62,72 @@
       </aside>
     </section>
 
-    <section class="home-section" aria-labelledby="modules-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">学习主路径</p><h2 id="modules-title">三个入口，各做一件事</h2></div>
-        <p>零基础时先理解；学完一小节立刻回忆；做题后按解析修正。</p>
+    <section class="home-section quick-start" aria-labelledby="modules-title">
+      <div class="section-heading compact-heading">
+        <div><p class="section-kicker">今日学习闭环</p><h2 id="modules-title">一次只完成三个动作</h2></div>
+        <p>不要从头反复重读。学一小节、回忆一次、做一组题。</p>
       </div>
       <div class="learning-modules">
         <a class="learning-module module-lecture" href="./notes.html">
-          <span class="module-step">01</span><span class="module-icon" aria-hidden="true">书</span>
-          <span class="module-purpose">学懂知识</span><strong>零基础讲义</strong>
-          <span>从基本概念入手，理解特点、要素、作用、流程和基础计算。</span>
-          <em>15 个专业科目 <b aria-hidden="true">→</b></em>
+          <span class="module-step">01</span><span class="module-icon" aria-hidden="true">读</span>
+          <span class="module-purpose">建立理解</span><strong>讲义 · 1个小节</strong>
+          <span>先弄清是什么、为什么、有什么特点和适用条件。</span>
+          <em>进入讲义 <b aria-hidden="true">→</b></em>
         </a>
         <a class="learning-module module-recall" href="./color-notes.html">
-          <span class="module-step">02</span><span class="module-icon" aria-hidden="true">记</span>
-          <span class="module-purpose">主动提取</span><strong>三色回忆</strong>
-          <span>把特点、要素、作用等简答点先口述或默写，再核对最小答案和得分词。</span>
-          <em>15 个专业科目 <b aria-hidden="true">→</b></em>
+          <span class="module-step">02</span><span class="module-icon" aria-hidden="true">忆</span>
+          <span class="module-purpose">主动提取</span><strong>回忆 · 5张卡</strong>
+          <span>先口述结论、原因和边界，再揭示三色得分点。</span>
+          <em>开始回忆 <b aria-hidden="true">→</b></em>
         </a>
-        <a class="learning-module module-practice" href="./quiz.html">
+        <a class="learning-module module-practice" href="./quiz.html?mode=seq">
           <span class="module-step">03</span><span class="module-icon" aria-hidden="true">练</span>
-          <span class="module-purpose">作答检验</span><strong>专项刷题</strong>
-          <span>用选择、判断、填空和一步计算检验，错题与到期题重点重练。</span>
-          <em><span id="question-count">题库载入中</span> <b aria-hidden="true">→</b></em>
+          <span class="module-purpose">反馈纠错</span><strong>练习 · 10道题</strong>
+          <span>用判断、选择、简答和一步计算确认是否真正掌握。</span>
+          <em>开始练习 <b aria-hidden="true">→</b></em>
         </a>
       </div>
     </section>
 
-    <section class="home-section study-loop-section" aria-labelledby="loop-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">高效学习闭环</p><h2 id="loop-title">每学一个知识单元，都走完四步</h2></div>
-        <p>不要连续重读。短单元、主动提取、及时反馈和间隔复习更容易暴露“以为会了”。</p>
+    <section class="home-section course-workbench" id="courses" aria-labelledby="courses-title">
+      <div class="section-heading compact-heading">
+        <div><p class="section-kicker">课程目录</p><h2 id="courses-title">选择课程，直接开始</h2></div>
+        <p>每门课程都可以独立进入讲义、三色回忆或专项练习。</p>
+      </div>
+      <nav class="course-jumps" aria-label="课程分类快捷入口">
+        <a href="#course-group-0">信息技术应用</a>
+        <a href="#course-group-1">计算机专业</a>
+        <a href="#course-group-2">电子与通信</a>
+      </nav>
+      <div class="home-course-grid" id="home-course-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="home-section study-loop-section" id="study-method" aria-labelledby="loop-title">
+      <div class="section-heading compact-heading">
+        <div><p class="section-kicker">学习方法</p><h2 id="loop-title">理解 → 回忆 → 检验 → 重练</h2></div>
+        <p>每个知识点走完闭环，再扩大范围；会认不等于会答。</p>
       </div>
       <ol class="study-loop">
-        <li><span>1</span><div><strong>理解一个小节</strong><p>读讲义时追问“是什么、有什么特点、起什么作用、条件是什么”，计算题写清公式与单位。</p></div></li>
-        <li><span>2</span><div><strong>根据问题主动回忆</strong><p>三色回忆默认遮住答案；先口述或默写，再核对最小答案、得分词、方法与边界。</p></div></li>
-        <li><span>3</span><div><strong>先专项、再交错</strong><p>首轮按知识点做题建立正确规则；基础稳定后混合相近概念，练习判断题目在考什么。</p></div></li>
-        <li><span>4</span><div><strong>归因并按期重练</strong><p>把错误归为概念、条件、方法、计算或遗忘；系统安排复习，连续答对才算掌握。</p></div></li>
+        <li><span>1</span><div><strong>理解</strong><p>用自己的话解释概念和机制。</p></div></li>
+        <li><span>2</span><div><strong>回忆</strong><p>不看答案说出得分关键词。</p></div></li>
+        <li><span>3</span><div><strong>检验</strong><p>完成客观题、简答或一步计算。</p></div></li>
+        <li><span>4</span><div><strong>重练</strong><p>按错因和到期时间再次提取。</p></div></li>
       </ol>
-      <div class="method-strip" aria-label="学习方法说明">
-        <span><strong>检索练习</strong>先想后看答案</span>
-        <span><strong>间隔复习</strong>快忘时再提取</span>
-        <span><strong>交错练习</strong>混合相近题型</span>
-        <span><strong>掌握学习</strong>反馈后再达标</span>
-      </div>
       <details class="method-evidence">
-        <summary>查看方法依据与适用边界</summary>
-        <p>提取练习与间隔学习有较广泛证据；交错练习更适合需要辨别解法的内容。平台采用固定复习间隔作为易懂的默认规则，不宣称它对每门课程都最优。</p>
+        <summary>方法依据与适用边界</summary>
+        <p>提取练习与间隔学习适合巩固记忆；交错练习适合辨别相近概念和解法。平台使用易懂的默认复习间隔，不宣称适合所有课程与个人。</p>
         <div>
           <a href="https://doi.org/10.1126/science.1152408" target="_blank" rel="noopener noreferrer">提取练习研究</a>
           <a href="https://digitalcommons.usf.edu/psy_facpub/1771/" target="_blank" rel="noopener noreferrer">间隔学习综述</a>
-          <a href="https://eric.ed.gov/?id=EJ1237752" target="_blank" rel="noopener noreferrer">交错练习试验</a>
-          <a href="https://ies.ed.gov/ncee/wwc/PracticeGuide/1" target="_blank" rel="noopener noreferrer">IES 学习实践指南</a>
+          <a href="https://ies.ed.gov/ncee/wwc/PracticeGuide/1" target="_blank" rel="noopener noreferrer">学习实践指南</a>
         </div>
       </details>
-    </section>
-
-    <section class="home-section" id="courses" aria-labelledby="courses-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">按科目进入</p><h2 id="courses-title">选择你现在要复习的科目</h2></div>
-        <p>先按报考岗位确定路线，再从一个知识点开始完成讲义、三色回忆和刷题闭环。</p>
-      </div>
-      <div class="career-routes" aria-label="岗位学习路线">
-        <article class="career-route route-core">
-          <span>主线</span>
-          <div><strong>计算机岗通用主线</strong><p>优先学习计算机基础、编程与算法、组成原理、操作系统、数据库、网络、软件工程和信息安全；再按岗位要求补办公软件与多媒体。</p></div>
-        </article>
-        <article class="career-route route-teacher">
-          <span>专项</span>
-          <div><strong>信息技术教师岗专项</strong><p>在通用基础上重点学习信息技术与教学论，练课程目标、教学设计、课堂评价、案例分析和技能表达。</p></div>
-        </article>
-        <article class="career-route route-electronic">
-          <span>专项</span>
-          <div><strong>电子信息岗专项</strong><p>电路、模拟电子、数字电子、通信原理与高频电子线路主要服务电子信息和通信类岗位，普通计算机岗按岗位要求选学。</p></div>
-        </article>
-      </div>
-      <div class="home-course-grid" id="home-course-grid"></div>
-    </section>
-
-    <section class="home-section home-guidance" aria-labelledby="guidance-title">
-      <div>
-        <p class="section-kicker">零基础建议</p>
-        <h2 id="guidance-title">先完成最小闭环，再扩大范围</h2>
-        <p>一次只学一个知识点：能用自己的话解释、能列出特点或作用、能不看答案完成一道题、能说清错误原因，再进入下一点。不同科目不必齐头并进。</p>
-      </div>
-      <a href="./notes.html">从科目目录开始 <span aria-hidden="true">→</span></a>
     </section>
   </main>
 
   <footer class="home-footer">
-    <p>内容围绕专业知识备考所需的基础概念、特点与要素、作用与流程、判断与简答，以及少量一步计算组织。</p>
-    <p>公开题库聚焦基础与常见题型，已隐藏偏复杂综合计算题。</p>
-    <p>进度保存在本机浏览器，可在刷题页导出备份。</p>
+    <p>学习进度保存在本机浏览器，可在刷题页导出备份。</p>
+    <p>内容用于专业知识基础复习，具体范围以岗位公告和准考证说明为准。</p>
   </footer>
 
   <script src="./build-meta.js"></script>
