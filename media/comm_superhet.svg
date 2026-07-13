@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 420" role="img" aria-labelledby="title desc">
+  <title id="title">超外差接收机方框图</title><desc id="desc">天线信号经高频选频放大，与本地振荡信号在混频器中产生固定中频，再经中频放大、解调和低频放大输出。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.b{fill:#fff;stroke:#344054;stroke-width:3}.mix{fill:#eff8ff;stroke:#1565c0;stroke-width:4}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.lo{stroke:#c62828;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:17px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="1004" height="384" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <rect class="b" x="55" y="120" width="135" height="90" rx="12"/><rect class="mix" x="245" y="120" width="120" height="90" rx="12"/><rect class="b" x="420" y="120" width="135" height="90" rx="12"/><rect class="b" x="610" y="120" width="120" height="90" rx="12"/><rect class="b" x="785" y="120" width="150" height="90" rx="12"/>
+  <text x="122" y="158" text-anchor="middle" class="t">高频选频</text><text x="122" y="185" text-anchor="middle" class="t">与放大</text><text x="305" y="175" text-anchor="middle" class="t">混频器</text><text x="487" y="158" text-anchor="middle" class="t">中频选频</text><text x="487" y="185" text-anchor="middle" class="t">与放大</text><text x="670" y="175" text-anchor="middle" class="t">解调</text><text x="860" y="158" text-anchor="middle" class="t">低频放大</text><text x="860" y="185" text-anchor="middle" class="t">与输出</text>
+  <path class="w" d="M25 165H55M190 165H245M365 165H420M555 165H610M730 165H785M935 165H1010"/>
+  <rect class="b" x="245" y="285" width="120" height="65" rx="12"/><text x="305" y="325" text-anchor="middle" class="t">本地振荡器</text><path class="lo" d="M305 285V210"/>
+  <text x="520" y="60" text-anchor="middle" class="t" font-weight="700">不同射频统一变为固定中频，便于获得稳定的增益与选择性</text>
+  <text x="305" y="245" text-anchor="middle" class="s">fIF = |fLO − fRF|</text><text x="520" y="385" text-anchor="middle" class="s">混频改变中心频率而保留调制信息；解调才是恢复基带消息</text>
+</svg>

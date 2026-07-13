@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">反相比例运算电路</title><desc id="desc">输入通过R1接到反相端，输出经Rf反馈到反相端，同相端接地，输出等于负的Rf比R1乘以输入。</desc>
+  <style>.w{stroke:#344054;stroke-width:4;fill:none}.r{fill:#fff;stroke:#c62828;stroke-width:4}.op{fill:#fff;stroke:#1565c0;stroke-width:5}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
+  <rect x="18" y="18" width="884" height="384" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <polygon class="op" points="510,105 510,315 720,210"/><text x="545" y="160" class="t">−</text><text x="545" y="275" class="t">+</text>
+  <line class="w" x1="120" y1="155" x2="220" y2="155"/><rect class="r" x="220" y="130" width="125" height="50" rx="5"/><line class="w" x1="345" y1="155" x2="510" y2="155"/>
+  <text x="280" y="115" text-anchor="middle" class="t">R₁</text><text x="75" y="162" class="t">uᵢ</text>
+  <line class="w" x1="510" y1="265" x2="450" y2="265"/><path class="w" d="M450 265V330M420 330H480"/>
+  <line class="w" x1="720" y1="210" x2="840" y2="210"/><text x="845" y="217" class="t">uₒ</text>
+  <path class="w" d="M790 210V75H660"/><rect class="r" x="410" y="50" width="250" height="50" rx="5"/><path class="w" d="M410 75H400V155"/>
+  <text x="535" y="42" text-anchor="middle" class="t">Rᶠ（负反馈）</text>
+  <circle cx="400" cy="155" r="7" fill="#c62828"/><text x="385" y="190" text-anchor="end" class="s">反相节点：虚地</text>
+  <text x="460" y="365" text-anchor="middle" class="t" font-weight="700">虚短：u₋≈u₊=0　虚断：i₋≈0　所以 uₒ=−(Rᶠ/R₁)uᵢ</text>
+</svg>

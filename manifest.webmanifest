@@ -1,12 +1,12 @@
 {
-  "name": "计算机刷题器",
-  "short_name": "刷题器",
-  "description": "邵阳备考计算机刷题工具",
+  "name": "邵阳备考大学课程学习平台",
+  "short_name": "邵阳备考",
+  "description": "用课程讲义建立理解、三色笔记主动回忆、题库检验与间隔复习的一体化学习平台",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f7f9",
-  "theme_color": "#2563eb",
+  "background_color": "#fbfaf7",
+  "theme_color": "#173b57",
   "icons": [
     {
       "src": "./icon-192.png",

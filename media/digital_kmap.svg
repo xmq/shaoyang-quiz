@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">四变量卡诺图相邻关系</title><desc id="desc">行列按格雷码顺序排列，左右边界和上下边界相邻，四角相邻，对角不相邻。</desc>
+  <style>.cell{fill:#fff;stroke:#344054;stroke-width:2}.group{fill:#dbeafe;stroke:#1565c0;stroke-width:4;opacity:.8}.wrap{fill:#fee2e2;stroke:#c62828;stroke-width:4;opacity:.7}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
+  <rect x="18" y="18" width="864" height="484" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <text x="450" y="48" text-anchor="middle" class="t" font-weight="700">四变量卡诺图：行列均按 00、01、11、10 排列</text>
+  <text x="345" y="82" class="t">CD →</text><text x="75" y="265" class="t" transform="rotate(-90 75 265)">AB →</text>
+  <g transform="translate(150 105)">
+    <text x="45" y="-12" text-anchor="middle" class="t">00</text><text x="135" y="-12" text-anchor="middle" class="t">01</text><text x="225" y="-12" text-anchor="middle" class="t">11</text><text x="315" y="-12" text-anchor="middle" class="t">10</text>
+    <text x="-25" y="52" text-anchor="middle" class="t">00</text><text x="-25" y="142" text-anchor="middle" class="t">01</text><text x="-25" y="232" text-anchor="middle" class="t">11</text><text x="-25" y="322" text-anchor="middle" class="t">10</text>
+    <g>
+      <rect class="cell" x="0" y="0" width="90" height="90"/><rect class="cell" x="90" y="0" width="90" height="90"/><rect class="cell" x="180" y="0" width="90" height="90"/><rect class="cell" x="270" y="0" width="90" height="90"/>
+      <rect class="cell" x="0" y="90" width="90" height="90"/><rect class="cell" x="90" y="90" width="90" height="90"/><rect class="cell" x="180" y="90" width="90" height="90"/><rect class="cell" x="270" y="90" width="90" height="90"/>
+      <rect class="cell" x="0" y="180" width="90" height="90"/><rect class="cell" x="90" y="180" width="90" height="90"/><rect class="cell" x="180" y="180" width="90" height="90"/><rect class="cell" x="270" y="180" width="90" height="90"/>
+      <rect class="cell" x="0" y="270" width="90" height="90"/><rect class="cell" x="90" y="270" width="90" height="90"/><rect class="cell" x="180" y="270" width="90" height="90"/><rect class="cell" x="270" y="270" width="90" height="90"/>
+    </g>
+    <rect class="group" x="95" y="5" width="170" height="170" rx="30"/><text x="135" y="52" text-anchor="middle" class="t">1</text><text x="225" y="52" text-anchor="middle" class="t">1</text><text x="135" y="142" text-anchor="middle" class="t">1</text><text x="225" y="142" text-anchor="middle" class="t">1</text>
+    <rect class="wrap" x="5" y="185" width="80" height="80" rx="20"/><rect class="wrap" x="275" y="185" width="80" height="80" rx="20"/><text x="45" y="232" text-anchor="middle" class="t">1</text><text x="315" y="232" text-anchor="middle" class="t">1</text>
+  </g>
+  <text x="555" y="135" class="s">蓝圈：4格成组</text><text x="555" y="180" class="s">红圈：左右边界相邻</text><text x="555" y="225" class="s">分组数量只能是1、2、4、8…</text><text x="555" y="270" class="s">尽量圈大，可以重叠</text><text x="555" y="315" class="s">上下边界也相邻</text><text x="555" y="360" class="s">四个角彼此相邻</text><text x="555" y="405" class="s">对角线不相邻</text>
+  <text x="450" y="485" text-anchor="middle" class="s">每个圈写出“圈内保持不变”的变量，发生变化的变量被消去</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
+  <title id="title">模数转换基本过程</title><desc id="desc">连续模拟信号先采样，再保持、量化，最后编码成数字码。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.b{fill:#fff;stroke:#344054;stroke-width:3}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="924" height="294" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <rect class="b" x="65" y="95" width="150" height="80" rx="12"/><rect class="b" x="270" y="95" width="150" height="80" rx="12"/><rect class="b" x="475" y="95" width="150" height="80" rx="12"/><rect class="b" x="680" y="95" width="150" height="80" rx="12"/>
+  <text x="140" y="143" text-anchor="middle" class="t">采样</text><text x="345" y="143" text-anchor="middle" class="t">保持</text><text x="550" y="143" text-anchor="middle" class="t">量化</text><text x="755" y="143" text-anchor="middle" class="t">编码</text>
+  <path class="w" d="M25 135H65M215 135H270M420 135H475M625 135H680M830 135H920"/>
+  <text x="140" y="215" text-anchor="middle" class="s">在离散时刻取值</text><text x="345" y="215" text-anchor="middle" class="s">转换期间维持幅值</text><text x="550" y="215" text-anchor="middle" class="s">映射到有限电平</text><text x="755" y="215" text-anchor="middle" class="s">输出二进制码</text>
+  <text x="480" y="55" text-anchor="middle" class="t" font-weight="700">A/D：连续时间、连续幅度 → 离散时间、离散幅度</text><text x="480" y="280" text-anchor="middle" class="s">理想均匀量化误差通常不超过 ±1/2 LSB；位数越高，量化台阶越细</text>
+</svg>

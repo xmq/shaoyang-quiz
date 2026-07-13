@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#175cd3">
-  <title>计算机岗位考试 · 三色笔记</title>
+  <title>__DOCUMENT_TITLE__</title>
   <style>
     :root {
       --bg: #f4f7fb;
@@ -22,8 +22,10 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
     body {
+      max-width: 100%;
+      overflow-x: hidden;
       margin: 0;
       background: linear-gradient(180deg, #eaf2ff 0, var(--bg) 280px);
       color: var(--text);
@@ -67,10 +69,11 @@
       margin: auto;
       padding: 8px max(18px, env(safe-area-inset-right)) 8px max(18px, env(safe-area-inset-left));
     }
-    .quiz-link {
+    .module-link {
       min-height: 42px;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       padding: 0 12px;
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -78,7 +81,12 @@
       color: var(--primary);
       text-decoration: none;
       font-weight: 650;
+      white-space: nowrap;
     }
+    .module-link:hover { border-color: #84adff; background: var(--primary-soft); }
+    .module-link[aria-current="page"] { border-color: var(--primary); background: var(--primary); color: #fff; }
+    .header-brand { min-width: 0; color: inherit; text-decoration: none; }
+    .module-nav { display: flex; gap: 7px; margin-left: auto; }
     .brand { font-size: 18px; font-weight: 800; letter-spacing: .01em; }
     .brand-sub { color: var(--muted); font-size: 13px; }
 
@@ -238,7 +246,7 @@
       box-shadow: var(--shadow);
     }
     .note:focus { outline: none; }
-    .note > h1 { margin: 0 0 14px; font-size: clamp(24px, 3.5vw, 32px); line-height: 1.35; }
+    .note > h1 { margin: 0 0 14px; font-size: clamp(24px, 3.5vw, 32px); line-height: 1.35; overflow-wrap: anywhere; }
     .note p { margin: 0 0 13px; overflow-wrap: anywhere; }
     .note code {
       padding: .1em .36em;
@@ -257,6 +265,19 @@
     .red { color: var(--red); font-weight: 750; }
     .blue { color: var(--blue); font-weight: 750; }
     .black { color: var(--black); }
+    .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) {
+      display: inline;
+      border-radius: 4px;
+      background: repeating-linear-gradient(135deg, rgba(37, 99, 235, .13) 0 8px, rgba(37, 99, 235, .06) 8px 16px);
+      color: transparent !important;
+      text-shadow: none;
+      cursor: pointer;
+      user-select: none;
+    }
+    .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) * { visibility: hidden; }
+    .study.recall-mode .note :is(.red, .blue, .black):focus-visible { outline: 3px solid rgba(37, 99, 235, .42); outline-offset: 2px; }
+    .recall-hint { display: none; margin: 0 0 13px; padding: 10px 12px; border: 1px solid #84adff; border-radius: 10px; background: var(--primary-soft); color: var(--blue); font-size: 13px; }
+    .study.recall-mode .recall-hint { display: block; }
     .chapter-section { margin: 24px 0 10px; scroll-margin-top: 138px; }
     .chapter-heading { margin: 0 0 14px; }
     .chapter-toggle {
@@ -292,6 +313,9 @@
     }
     .table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
     .table-hint { margin: -8px 0 12px !important; color: var(--muted); font-size: 13px; }
+    .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff; text-align: center; }
+    .note-figure img { display: block; width: 100%; max-width: 920px; max-height: 560px; margin: 0 auto; object-fit: contain; }
+    .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: #fff; font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
     .note tr:last-child td { border-bottom: 0; }
@@ -307,16 +331,21 @@
     }
 
     @media (max-width: 700px) {
-      .header-inner { min-height: 54px; padding: 6px max(10px, env(safe-area-inset-right)) 6px max(10px, env(safe-area-inset-left)); }
+      .site-header { position: static; }
+      .header-inner { min-height: 54px; flex-wrap: wrap; padding: 6px max(10px, env(safe-area-inset-right)) 6px max(10px, env(safe-area-inset-left)); }
+      .header-brand { flex: 1 1 100%; }
       .brand-sub { display: none; }
+      .module-nav { width: 100%; min-width: 0; margin-left: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+      .module-link { min-width: 0; padding: 4px 2px; font-size: 13px; line-height: 1.25; white-space: normal; text-align: center; overflow-wrap: anywhere; }
       main { padding: 18px max(10px, env(safe-area-inset-right)) max(42px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left)); }
       .course-grid { grid-template-columns: 1fr; gap: 10px; }
       .course-card { min-height: 76px; padding: 14px; border-radius: 14px; }
       .course-icon { width: 42px; height: 42px; flex-basis: 42px; }
-      .study-toolbar { top: 55px; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 6px; margin-top: -8px; padding: 8px 0; }
+      .study-toolbar { top: 0; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 6px; margin-top: -8px; padding: 8px 0; }
       .mobile-nav-toggle { display: inline-flex; }
       .toolbar-actions .text-button { width: 46px; padding: 0; font-size: 0; }
-      .toolbar-actions .text-button::before { content: "↩"; font-size: 21px; }
+      .toolbar-actions #back::before { content: "↩"; font-size: 21px; }
+      .toolbar-actions #recall-toggle::before { content: "忆"; font-size: 17px; font-weight: 750; }
       .study-layout, .study.nav-collapsed .study-layout { display: block; }
       .chapter-nav {
         position: fixed;
@@ -364,11 +393,16 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="quiz-link" href="./" aria-label="返回刷题首页">← 刷题</a>
-      <div>
-        <div class="brand">计算机岗位考试 · 三色笔记</div>
-        <div class="brand-sub">按课程学习，按章节快速定位</div>
-      </div>
+      <a class="header-brand" href="./index.html" aria-label="返回学习平台首页">
+        <div class="brand">__BRAND_TITLE__</div>
+        <div class="brand-sub">__BRAND_SUBTITLE__</div>
+      </a>
+      <nav class="module-nav" aria-label="学习模块">
+        <a class="module-link" href="./index.html">首页</a>
+        <a class="module-link" __LECTURE_CURRENT__ href="./notes.html">讲义</a>
+        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色笔记</a>
+        <a class="module-link" href="./quiz.html">刷题</a>
+      </nav>
     </div>
   </header>
 
@@ -376,7 +410,7 @@
     <section id="directory" aria-labelledby="directory-title">
       <div class="directory-head">
         <h1 id="directory-title">选择课程</h1>
-        <p>每门课程均包含完整知识内容、得分关键词和易错点，点击课程即可开始学习。</p>
+        <p>__DIRECTORY_DESCRIPTION__</p>
       </div>
       <div class="directory-search search-box">
         <span class="search-icon" aria-hidden="true">⌕</span>
@@ -400,6 +434,7 @@
           <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
         </div>
         <div class="toolbar-actions">
+          <button class="text-button hidden" id="recall-toggle" type="button" aria-pressed="false">回忆模式</button>
           <button class="text-button" id="back" type="button" aria-label="返回选择课程">换课程</button>
         </div>
       </div>
@@ -420,6 +455,10 @@
 
   <script>
     const items = __COURSE_DATA__;
+    const courseIcon = "__COURSE_ICON__";
+    const colorMode = __COLOR_MODE__;
+    const pageKind = "__PAGE_KIND__";
+    const recallToggle = document.getElementById("recall-toggle");
     const directory = document.getElementById("directory");
     const courses = document.getElementById("courses");
     const courseEmpty = document.getElementById("course-empty");
@@ -451,14 +490,38 @@
       }[char]));
     }
 
+    function syncRecallTargets() {
+      const active = study.classList.contains("recall-mode");
+      content.querySelectorAll(".red, .blue, .black").forEach((item) => {
+        item.classList.remove("recall-revealed");
+        if (active) {
+          item.setAttribute("role", "button");
+          item.setAttribute("tabindex", "0");
+          item.setAttribute("aria-label", "显示这条笔记");
+        } else {
+          item.removeAttribute("role");
+          item.removeAttribute("tabindex");
+          item.removeAttribute("aria-label");
+        }
+      });
+    }
+
+    function revealRecallItem(item) {
+      if (!study.classList.contains("recall-mode") || !item) return;
+      item.classList.add("recall-revealed");
+      item.removeAttribute("role");
+      item.removeAttribute("tabindex");
+      item.removeAttribute("aria-label");
+    }
+
     function formatInline(value) {
       const source = String(value || "");
       let output = escapeHtml(source)
         .replace(/`([^`]+)`/g, "<code>$1</code>")
         .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-      if (source.startsWith("🔴")) output = `<span class="red">${output}</span>`;
-      else if (source.startsWith("🔵")) output = `<span class="blue">${output}</span>`;
-      else if (source.startsWith("⚫")) output = `<span class="black">${output}</span>`;
+      if (colorMode && source.startsWith("🔴")) output = `<span class="red">${output}</span>`;
+      else if (colorMode && source.startsWith("🔵")) output = `<span class="blue">${output}</span>`;
+      else if (colorMode && source.startsWith("⚫")) output = `<span class="black">${output}</span>`;
       return output;
     }
 
@@ -503,7 +566,10 @@
 
     function renderMarkdown(markdown) {
       const lines = markdown.split(/\r?\n/);
-      const output = ["<div class=\"preface\">"];
+      const output = [
+        ...(colorMode ? ['<p class="recall-hint">先根据标题口述答案，再点击被遮住的内容逐条核对。</p>'] : []),
+        "<div class=\"preface\">",
+      ];
       let index = 0;
       let chapterOpen = false;
       let prefaceOpen = true;
@@ -561,6 +627,19 @@
             index += 1;
           }
           output.push(renderTable(rows));
+          continue;
+        }
+
+        const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+        if (imageMatch) {
+          closeList();
+          const caption = imageMatch[1].trim();
+          const rawSource = imageMatch[2].trim();
+          const normalizedSource = rawSource.replace(/^\.\.\/media\//, "media/");
+          if (/^media\/[a-zA-Z0-9_./-]+\.svg$/i.test(normalizedSource)) {
+            output.push(`<figure class="note-figure"><img src="${escapeHtml(normalizedSource)}" alt="${escapeHtml(caption)}" loading="lazy" decoding="async">${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
+          }
+          index += 1;
           continue;
         }
 
@@ -663,6 +742,10 @@
       currentCourse = course;
       collapsedBeforeSearch = null;
       renderMarkdown(course.text);
+      syncRecallTargets();
+      try {
+        localStorage.setItem("shaoyang-last-learning", JSON.stringify({course: course.name, module: pageKind, savedAt: new Date().toISOString()}));
+      } catch {}
       directory.classList.add("hidden");
       study.classList.remove("hidden");
       search.value = "";
@@ -719,7 +802,7 @@
         const icon = document.createElement("span");
         icon.className = "course-icon";
         icon.setAttribute("aria-hidden", "true");
-        icon.textContent = "📘";
+        icon.textContent = courseIcon;
         const name = document.createElement("span");
         name.className = "course-name";
         name.textContent = course.name;
@@ -880,6 +963,21 @@
         showDirectory();
       }
     });
+    if (colorMode) recallToggle.classList.remove("hidden");
+    recallToggle.addEventListener("click", () => {
+      const active = study.classList.toggle("recall-mode");
+      recallToggle.setAttribute("aria-pressed", String(active));
+      recallToggle.textContent = active ? "退出回忆" : "回忆模式";
+      syncRecallTargets();
+    });
+    content.addEventListener("click", (event) => revealRecallItem(event.target.closest(".red, .blue, .black")));
+    content.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const item = event.target.closest(".red, .blue, .black");
+      if (!item) return;
+      event.preventDefault();
+      revealRecallItem(item);
+    });
     navCollapse.addEventListener("click", () => {
       if (mobileMedia.matches) closeMobileNav();
       else setDesktopNavCollapsed(!study.classList.contains("nav-collapsed"));
@@ -904,6 +1002,12 @@
     renderCourses();
     closeMobileNav();
     applyLocation();
+
+    if ("serviceWorker" in navigator && location.protocol !== "file:") {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).catch(() => {});
+      });
+    }
   </script>
 </body>
 </html>

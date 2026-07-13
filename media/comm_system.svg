@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 350" role="img" aria-labelledby="title desc">
+  <title id="title">通信系统基本模型</title><desc id="desc">消息从信源经过发送设备进入信道，在噪声影响后由接收设备恢复并送到信宿。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.b{fill:#fff;stroke:#344054;stroke-width:3}.ch{fill:#eff8ff;stroke:#1565c0;stroke-width:4}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.noise{stroke:#c62828;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="984" height="314" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <rect class="b" x="45" y="120" width="130" height="75" rx="12"/><rect class="b" x="230" y="100" width="170" height="115" rx="12"/><rect class="ch" x="455" y="100" width="130" height="115" rx="12"/><rect class="b" x="640" y="100" width="170" height="115" rx="12"/><rect class="b" x="865" y="120" width="110" height="75" rx="12"/>
+  <text x="110" y="165" text-anchor="middle" class="t">信源</text><text x="315" y="145" text-anchor="middle" class="t">发送设备</text><text x="315" y="178" text-anchor="middle" class="s">编码/调制/放大</text><text x="520" y="165" text-anchor="middle" class="t">信道</text><text x="725" y="145" text-anchor="middle" class="t">接收设备</text><text x="725" y="178" text-anchor="middle" class="s">解调/译码/判决</text><text x="920" y="165" text-anchor="middle" class="t">信宿</text>
+  <path class="w" d="M175 158H230M400 158H455M585 158H640M810 158H865"/>
+  <path class="noise" d="M520 285V215"/><text x="520" y="310" text-anchor="middle" class="t" fill="#c62828">噪声n(t)</text>
+  <text x="510" y="55" text-anchor="middle" class="t" font-weight="700">通信的目的：可靠、有效地把信息从一处传到另一处</text><text x="510" y="255" text-anchor="middle" class="s">发送端“适配信道”，接收端“从受噪信号中恢复消息”</text>
+</svg>

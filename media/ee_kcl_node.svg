@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">基尔霍夫电流定律节点图</title><desc id="desc">三股电流流入节点，两股电流流出节点，流入等于流出。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.w{stroke:#344054;stroke-width:5;fill:none}.i{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:22px system-ui,sans-serif;fill:#101828}.s{font:18px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="864" height="324" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <path class="w" d="M450 180L130 80M450 180L120 180M450 180L130 280M450 180L770 90M450 180L780 260"/>
+  <circle cx="450" cy="180" r="15" fill="#c62828"/>
+  <path class="i" d="M160 90L390 162"/><path class="i" d="M150 180H390"/><path class="i" d="M160 270L390 198"/>
+  <path class="i" d="M500 164L730 103"/><path class="i" d="M500 196L738 246"/>
+  <text x="230" y="75" class="t">i₁</text><text x="230" y="165" class="t">i₂</text><text x="230" y="300" class="t">i₃</text><text x="675" y="80" class="t">i₄</text><text x="680" y="285" class="t">i₅</text>
+  <text x="450" y="315" text-anchor="middle" class="t" font-weight="700">流入 = 流出：i₁ + i₂ + i₃ = i₄ + i₅</text>
+  <text x="450" y="55" text-anchor="middle" class="s">先任意设参考方向；计算结果为负，只表示实际方向相反</text>
+</svg>

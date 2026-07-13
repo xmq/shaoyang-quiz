@@ -1,1 +1,1 @@
-globalThis.SHAOYANG_BUILD=Object.freeze({"id":"aa0e7cdd64dc0977","questionCount":1854});
+globalThis.SHAOYANG_BUILD=Object.freeze({"id":"05356f1d42ac9a83","questionCount":2210});

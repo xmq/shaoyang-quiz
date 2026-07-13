@@ -1,3 +1,5 @@
+"""Build the separate lecture and three-color-note modules from Markdown."""
+
 from pathlib import Path
 import argparse
 import json
@@ -6,21 +8,50 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parent
-INDEX = ROOT / "course-index.json"
 TEMPLATE = ROOT / "notes.template.html"
-HTML_OUTPUT = ROOT / "notes.html"
-MARKDOWN_OUTPUT = ROOT / "讲义三色笔记.md"
+LEGACY_MARKDOWN_OUTPUT = ROOT / "讲义三色笔记.md"
 
 RED_STYLE = "color:#c62828;font-weight:700"
 BLUE_STYLE = "color:#1565c0;font-weight:700"
 CHAPTER_RE = re.compile(r"^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?")
 POINT_RE = re.compile(r"^(?:考点|专题|模块)\s*\d+[：:]?")
 
+PAGE_CONFIGS = {
+    "lecture": {
+        "index": ROOT / "course-index.json",
+        "html": ROOT / "notes.html",
+        "markdown": ROOT / "零基础讲义完整版.md",
+        "document_title": "邵阳备考 · 零基础讲义",
+        "brand_title": "邵阳备考 · 零基础讲义",
+        "brand_subtitle": "从基本概念到例题，按章节系统学习",
+        "directory_description": "适合零基础先学概念、原理和计算方法；学完一章，再到三色笔记记忆重点、到习题模块检验掌握程度。",
+        "markdown_title": "邵阳备考 · 零基础讲义完整版",
+        "course_icon": "📖",
+        "active_module": "lecture",
+        "use_color_markup": False,
+    },
+    "color-notes": {
+        "index": ROOT / "color-notes-index.json",
+        "html": ROOT / "color-notes.html",
+        "markdown": ROOT / "三色笔记完整版.md",
+        "document_title": "邵阳备考 · 三色笔记",
+        "brand_title": "邵阳备考 · 三色笔记",
+        "brand_subtitle": "红色核心必背，蓝色公式步骤，黑色条件易错",
+        "directory_description": "用于学完讲义后的压缩复习：红色记核心必背与结论，蓝色记公式、步骤和踩分词，黑色记条件、解释和易错点。",
+        "markdown_title": "邵阳备考 · 三色笔记完整版",
+        "course_icon": "🖍️",
+        "active_module": "color-notes",
+        "use_color_markup": True,
+    },
+}
 
-def load_courses():
-    items = json.loads(INDEX.read_text(encoding="utf-8"))
+
+def load_courses(index_path):
+    if not index_path.is_file():
+        raise ValueError(f"缺少课程索引：{index_path.name}")
+    items = json.loads(index_path.read_text(encoding="utf-8"))
     if not isinstance(items, list) or not items:
-        raise ValueError("course-index.json 必须是非空数组")
+        raise ValueError(f"{index_path.name} 必须是非空数组")
 
     seen_names = set()
     seen_files = set()
@@ -44,15 +75,32 @@ def load_courses():
     return courses
 
 
-def render_html(courses):
+def render_html(courses, config):
     if not TEMPLATE.exists():
-        raise ValueError("缺少 notes.template.html，无法构建讲义页面")
-    template = TEMPLATE.read_text(encoding="utf-8")
-    if template.count("__COURSE_DATA__") != 1:
-        raise ValueError("notes.template.html 必须且只能包含一个课程数据占位符")
+        raise ValueError("缺少 notes.template.html，无法构建学习页面")
+    rendered = TEMPLATE.read_text(encoding="utf-8")
     payload_items = [{"name": item["name"], "text": item["text"]} for item in courses]
     payload = json.dumps(payload_items, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    return template.replace("__COURSE_DATA__", payload)
+    replacements = {
+        "__COURSE_DATA__": payload,
+        "__DOCUMENT_TITLE__": config["document_title"],
+        "__BRAND_TITLE__": config["brand_title"],
+        "__BRAND_SUBTITLE__": config["brand_subtitle"],
+        "__DIRECTORY_DESCRIPTION__": config["directory_description"],
+        "__COURSE_ICON__": config["course_icon"],
+        "__COLOR_MODE__": "true" if config["use_color_markup"] else "false",
+        "__PAGE_KIND__": config["active_module"],
+        "__LECTURE_CURRENT__": 'aria-current="page"' if config["active_module"] == "lecture" else "",
+        "__COLOR_NOTES_CURRENT__": 'aria-current="page"' if config["active_module"] == "color-notes" else "",
+    }
+    for placeholder, value in replacements.items():
+        if rendered.count(placeholder) != 1:
+            raise ValueError(f"notes.template.html 必须且只能包含一个占位符：{placeholder}")
+        rendered = rendered.replace(placeholder, value)
+    leftovers = sorted(set(re.findall(r"__[A-Z][A-Z0-9_]*__", rendered)))
+    if leftovers:
+        raise ValueError(f"notes.template.html 含未替换占位符：{', '.join(leftovers)}")
+    return rendered
 
 
 def color_line(line):
@@ -63,7 +111,7 @@ def color_line(line):
     return line
 
 
-def render_course_markdown(course):
+def render_course_markdown(course, use_color_markup):
     lines = course["text"].splitlines()
     if lines and lines[0].startswith("# "):
         lines = lines[1:]
@@ -95,7 +143,9 @@ def render_course_markdown(course):
             first_content = False
             continue
 
-        converted = color_line(stripped)
+        if stripped.startswith("![") and "](../media/" in stripped:
+            stripped = stripped.replace("](../media/", "](media/")
+        converted = color_line(stripped) if use_color_markup else stripped
         if first_content:
             converted = f"> {converted}"
             first_content = False
@@ -106,41 +156,72 @@ def render_course_markdown(course):
     return "\n".join(rendered)
 
 
-def render_markdown(courses):
-    header = (
-        "# 计算机岗位考试 · 三色笔记完整版\n\n"
-        "---\n\n"
+def render_markdown(courses, config):
+    header = f'# {config["markdown_title"]}\n\n---\n\n'
+    body = "\n\n---\n\n".join(
+        render_course_markdown(course, config["use_color_markup"]) for course in courses
     )
-    body = "\n\n---\n\n".join(render_course_markdown(course) for course in courses)
     return header + body + "\n"
+
+
+def render_legacy_pointer():
+    return (
+        "# 讲义与三色笔记已拆分\n\n"
+        "为避免把系统学习、考前记忆和刷题混在一起，请改用以下独立模块：\n\n"
+        "- [零基础讲义完整版](零基础讲义完整版.md)\n"
+        "- [三色笔记完整版](三色笔记完整版.md)\n"
+        "- [习题训练网页版](quiz.html)\n"
+    )
 
 
 def check_output(path, expected):
     current = path.read_text(encoding="utf-8") if path.exists() else ""
     if current != expected:
-        print(f"{path.name} 与课程 Markdown 不同步", file=sys.stderr)
+        print(f"{path.name} 与源 Markdown 不同步", file=sys.stderr)
         return False
     return True
 
 
+def select_configs(target):
+    return PAGE_CONFIGS.items() if target == "all" else [(target, PAGE_CONFIGS[target])]
+
+
 def main():
-    parser = argparse.ArgumentParser(description="从 course_notes 单一数据源构建讲义页面和总笔记")
+    parser = argparse.ArgumentParser(description="分别构建零基础讲义和三色笔记页面")
     parser.add_argument("--check", action="store_true", help="只检查生成物是否同步")
+    parser.add_argument(
+        "--target",
+        choices=("all", *PAGE_CONFIGS),
+        default="all",
+        help="构建全部模块或指定模块（默认：all）",
+    )
     args = parser.parse_args()
 
-    courses = load_courses()
-    html = render_html(courses)
-    markdown = render_markdown(courses)
+    rendered_pages = []
+    for key, config in select_configs(args.target):
+        courses = load_courses(config["index"])
+        rendered_pages.append((key, config, courses, render_html(courses, config), render_markdown(courses, config)))
+
+    legacy_pointer = render_legacy_pointer()
     if args.check:
-        ok = check_output(HTML_OUTPUT, html) & check_output(MARKDOWN_OUTPUT, markdown)
+        ok = True
+        for _, config, _, html, markdown in rendered_pages:
+            ok &= check_output(config["html"], html)
+            ok &= check_output(config["markdown"], markdown)
+        if args.target == "all":
+            ok &= check_output(LEGACY_MARKDOWN_OUTPUT, legacy_pointer)
         if not ok:
             raise SystemExit(1)
-        print(f"讲义生成物已与 {len(courses)} 门课程 Markdown 同步")
+        counts = "、".join(f"{config['brand_title']} {len(courses)} 门" for _, config, courses, _, _ in rendered_pages)
+        print(f"生成物已同步：{counts}")
         return
 
-    HTML_OUTPUT.write_text(html, encoding="utf-8", newline="\n")
-    MARKDOWN_OUTPUT.write_text(markdown, encoding="utf-8", newline="\n")
-    print(f"已生成 {HTML_OUTPUT.name} 和 {MARKDOWN_OUTPUT.name}：{len(courses)} 门课程")
+    for _, config, courses, html, markdown in rendered_pages:
+        config["html"].write_text(html, encoding="utf-8", newline="\n")
+        config["markdown"].write_text(markdown, encoding="utf-8", newline="\n")
+        print(f"已生成 {config['html'].name} 和 {config['markdown'].name}：{len(courses)} 门课程")
+    if args.target == "all":
+        LEGACY_MARKDOWN_OUTPUT.write_text(legacy_pointer, encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

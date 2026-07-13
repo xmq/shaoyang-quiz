@@ -1,9 +1,9 @@
 const QUESTIONS = Array.isArray(window.QUESTIONS) ? window.QUESTIONS : [];
 const QUESTION_MEDIA = window.QUESTION_MEDIA && typeof window.QUESTION_MEDIA === "object" ? window.QUESTION_MEDIA : {};
 const BUILD_INFO = window.SHAOYANG_BUILD && typeof window.SHAOYANG_BUILD === "object" ? window.SHAOYANG_BUILD : {id: "development"};
-const STORE_KEY = "shaoyang-quiz-v4";
-const LEGACY_KEYS = ["shaoyang-quiz-v3", "shaoyang-quiz-v2", "shaoyang-quiz-v1"];
-const STATE_SCHEMA_VERSION = 4;
+const STORE_KEY = "shaoyang-quiz-v5";
+const LEGACY_KEYS = ["shaoyang-quiz-v4", "shaoyang-quiz-v3", "shaoyang-quiz-v2", "shaoyang-quiz-v1"];
+const STATE_SCHEMA_VERSION = 5;
 const QUESTION_BANK_VERSION = BUILD_INFO.id;
 const QUESTION_REVISIONS = Object.freeze({
   "web-17": 1,
@@ -20,10 +20,18 @@ const QUESTION_REVISIONS = Object.freeze({
 const MAX_IMPORT_BYTES = 5 * 1024 * 1024;
 const MAX_HISTORY_PER_QUESTION = 50;
 const MASTER_THRESHOLD = 2;
-const SUBJECT_ORDER = ["信息基础", "计算机基础", "操作系统", "计算机网络", "数据库", "办公软件", "多媒体", "编程语言", "算法与数据结构", "信息安全", "教学论", "其他"];
+const REVIEW_INTERVAL_DAYS = [1, 3, 7, 14, 30];
+const ERROR_TAG_LABELS = Object.freeze({
+  concept: "概念不清",
+  method: "公式/方法选错",
+  condition: "条件漏看",
+  calculation: "计算/操作失误",
+  recall: "想不起来",
+});
+const SUBJECT_ORDER = ["信息基础", "计算机基础", "办公软件", "教学论", "多媒体", "编程语言", "算法与数据结构", "计算机组成原理", "操作系统", "数据库", "计算机网络", "软件工程", "信息安全", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "大数据", "其他"];
 const TYPE_ORDER = ["单选", "多选", "判断", "填空"];
-const SOURCE_ORDER = ["题海训练", "超格", "中公", "德阳", "网络"];
-const PROGRESS_FIELDS = ["done", "wrong", "streak", "fav", "flagged", "history"];
+const SOURCE_ORDER = ["大学期末改编", "大学期末原创", "题海训练", "超格", "中公", "德阳", "网络", "新增", "大数据基础题"];
+const PROGRESS_FIELDS = ["done", "wrong", "streak", "fav", "flagged", "history", "reviewMeta", "errorTags"];
 
 const $ = (id) => document.getElementById(id);
 
@@ -61,6 +69,7 @@ function initialState() {
 }
 
 let state = initialState();
+applyLaunchParams();
 let saveWarningShown = false;
 let drawerReturnFocus = null;
 let focusQuestionAfterRender = false;
@@ -99,6 +108,8 @@ function stateDefaults() {
     fav: {},
     history: {},
     flagged: {},
+    reviewMeta: {},
+    errorTags: {},
     mode: "home",
     subject: "",
     typeFilter: "",
@@ -163,7 +174,10 @@ function chapterKey(q) {
 
 function searchableText(q) {
   const options = q.options ? Object.values(q.options).join(" ") : "";
-  return [q.id, q.source, q.type, q.subject, chapterKey(q), q.stem, options, q.answer, q.explanation]
+  return [
+    q.id, q.source, q.type, q.subject, chapterKey(q), q.stem, options,
+    q.answer, q.explanation, q.source_title, q.adaptation_note,
+  ]
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
@@ -200,7 +214,7 @@ function getPool() {
 
   if (state.mode === "rnd") {
     if (!state._shuffled) {
-      const ids = [...pool].sort(() => Math.random() - 0.5).map((q) => q.id);
+      const ids = buildInterleavedIds(pool);
       state._shuffleIds = ids;
       state._shuffled = true;
     }
@@ -210,18 +224,56 @@ function getPool() {
   return pool;
 }
 
+function shuffle(items) {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
+
+function buildInterleavedIds(pool) {
+  const groups = new Map();
+  pool.forEach((question) => {
+    const key = `${question.subject}｜${chapterKey(question)}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(question.id);
+  });
+  groups.forEach((ids, key) => groups.set(key, shuffle(ids)));
+  const result = [];
+  let previousKey = "";
+  while (result.length < pool.length) {
+    const available = [...groups.keys()].filter((key) => groups.get(key).length);
+    const candidates = available.length > 1 ? available.filter((key) => key !== previousKey) : available;
+    const key = candidates[Math.floor(Math.random() * candidates.length)];
+    if (!key) break;
+    result.push(groups.get(key).pop());
+    previousKey = key;
+  }
+  return result;
+}
+
 function buildReviewPool(scope) {
   return scope
-    .filter((q) => !state.flagged[q.id] && (state.wrong[q.id] || state.fav[q.id] || state._stickyId === q.id))
+    .filter((q) => !state.flagged[q.id] && (isReviewDue(q.id) || state._stickyId === q.id))
     .sort((a, b) => reviewScore(b) - reviewScore(a))
     .slice(0, 80);
+}
+
+function isReviewDue(id, now = Date.now()) {
+  const meta = state.reviewMeta[id];
+  if (!meta) return !!state.wrong[id];
+  const dueAt = Date.parse(meta.nextReviewAt);
+  return Number.isFinite(dueAt) && dueAt <= now;
 }
 
 function reviewScore(q) {
   const wrong = state.wrong[q.id] || 0;
   const streak = state.streak[q.id] || 0;
-  const fav = state.fav[q.id] ? 1 : 0;
-  return wrong * 100 + Math.max(0, MASTER_THRESHOLD - streak) * 20 + fav * 8;
+  const dueAt = Date.parse(state.reviewMeta[q.id]?.nextReviewAt || "");
+  const overdueDays = Number.isFinite(dueAt) ? Math.max(0, Math.floor((Date.now() - dueAt) / 86400000)) : 0;
+  return wrong * 100 + Math.max(0, MASTER_THRESHOLD - streak) * 20 + Math.min(overdueDays, 30);
 }
 
 function resetPosition() {
@@ -231,6 +283,46 @@ function resetPosition() {
   state._pending = null;
   state._shuffled = false;
   state._navBack = [];
+}
+
+function applyLaunchParams() {
+  const params = new URLSearchParams(location.search);
+  const requestedMode = params.get("mode");
+  const requestedSubject = params.get("subject");
+  let changed = false;
+  if (["home", "seq", "rnd", "review", "wrong", "fav"].includes(requestedMode)) {
+    state.mode = requestedMode;
+    changed = true;
+  }
+  if (requestedSubject && QUESTIONS.some((question) => question.subject === requestedSubject)) {
+    state.subject = requestedSubject;
+    state.chapterFilter = "";
+    if (!requestedMode) state.mode = "seq";
+    changed = true;
+  }
+  if (changed) resetPosition();
+}
+
+function updateReviewSchedule(id, correct) {
+  const now = new Date();
+  const previous = state.reviewMeta[id] || {};
+  if (!correct) {
+    state.reviewMeta[id] = {
+      level: 0,
+      lastAnsweredAt: now.toISOString(),
+      nextReviewAt: now.toISOString(),
+      lastCorrect: false,
+    };
+    return;
+  }
+  const nextLevel = Math.min(REVIEW_INTERVAL_DAYS.length, Math.max(0, Number(previous.level) || 0) + 1);
+  const nextReview = new Date(now.getTime() + REVIEW_INTERVAL_DAYS[nextLevel - 1] * 86400000);
+  state.reviewMeta[id] = {
+    level: nextLevel,
+    lastAnsweredAt: now.toISOString(),
+    nextReviewAt: nextReview.toISOString(),
+    lastCorrect: true,
+  };
 }
 
 function handleAnswer(q, given) {
@@ -248,6 +340,7 @@ function handleAnswer(q, given) {
   state.currentId = q.id;
 
   const correct = isAnswerCorrect(q, given);
+  updateReviewSchedule(q.id, correct);
   if (!correct) {
     state.wrong[q.id] = (state.wrong[q.id] || 0) + 1;
     state.streak[q.id] = 0;
@@ -412,6 +505,17 @@ function renderFillQuestion(q, chosen) {
   </div>`;
 }
 
+function courseNameForSubject(subject) {
+  return ({
+    "办公软件": "Office软件操作",
+    "教学论": "信息技术与教学论",
+    "多媒体": "多媒体技术",
+    "算法与数据结构": "数据结构与算法",
+    "操作系统": "操作系统原理",
+    "数据库": "数据库技术",
+  })[subject] || subject;
+}
+
 function feedbackHtml(q, chosen) {
   if (!chosen) return "";
   const ok = isAnswerCorrect(q, chosen);
@@ -424,9 +528,36 @@ function feedbackHtml(q, chosen) {
   const explanation = q.explanation && q.explanation.trim()
     ? `<div class="explanation"><div class="exp-title">解析</div>${escapeHtml(q.explanation)}</div>`
     : `<div class="explanation">本题暂无文字解析</div>`;
+  const provenance = q.source === "大学期末改编" && q.source_title && q.source_url
+    ? `<div class="question-provenance">
+        <div><strong>题型参考：</strong><a href="${escapeHtml(q.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(q.source_title)}</a></div>
+        ${q.adaptation_note ? `<div><strong>改编说明：</strong>${escapeHtml(q.adaptation_note)}</div>` : ""}
+      </div>`
+    : "";
+  const reviewMeta = state.reviewMeta[q.id];
+  const reviewMessage = ok && reviewMeta?.nextReviewAt
+    ? `已安排 ${new Date(reviewMeta.nextReviewAt).toLocaleDateString("zh-CN", {month: "numeric", day: "numeric"})} 再次练习`
+    : "已加入待复习队列";
+  const selectedErrorTag = state.errorTags[q.id] || "";
+  const errorTagButtons = !ok
+    ? `<div class="error-reflection">
+        <strong>这次错在哪里？</strong>
+        <span>选一个最主要原因，方便下次有针对性地修正。</span>
+        <div>${Object.entries(ERROR_TAG_LABELS).map(([value, label]) => `<button type="button" data-error-tag="${value}" aria-pressed="${selectedErrorTag === value}">${label}</button>`).join("")}</div>
+      </div>`
+    : "";
+  const courseHash = `#course=${encodeURIComponent(courseNameForSubject(q.subject))}`;
+  const repairLinks = `<div class="repair-links">
+    <span>${reviewMessage}</span>
+    <a href="./notes.html${courseHash}">回看讲义</a>
+    <a href="./color-notes.html${courseHash}">核对三色笔记</a>
+  </div>`;
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
     <div class="feedback-label ${ok ? "ok" : "ng"}">${ok ? "✓ 正确" : "× 错误，" + answer}${badge}</div>
     ${explanation}
+    ${errorTagButtons}
+    ${provenance}
+    ${repairLinks}
   </div>`;
 }
 
@@ -588,6 +719,14 @@ function bindQuestionEvents(q, inWrongFresh) {
       render();
     });
   }
+
+  document.querySelectorAll("[data-error-tag]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.errorTags[q.id] = button.dataset.errorTag;
+      save();
+      render();
+    });
+  });
 }
 
 function renderEmpty() {
@@ -607,8 +746,8 @@ function renderEmpty() {
     title = "收藏夹为空";
     text = "刷题时点击 ☆ 收藏题目。";
   } else if (state.mode === "review") {
-    title = "暂无复习队列";
-    text = "答错或收藏的题会进入复习候选；标记有问题的题会暂停复习，等待核对。";
+    title = "暂无到期复习";
+    text = "作答后系统会按间隔安排再次练习；标记有问题的题会暂停复习，等待核对。";
   }
   $("card-area").innerHTML = `<div class="card empty"><strong>${title}</strong>${text}</div>`;
 }
@@ -628,6 +767,14 @@ function renderDashboard() {
     else if (count === 1) acc.low += 1;
     return acc;
   }, {low: 0, mid: 0, high: 0});
+  const errorCounts = Object.values(state.errorTags || {}).reduce((counts, tag) => {
+    counts[tag] = (counts[tag] || 0) + 1;
+    return counts;
+  }, {});
+  const errorSummary = Object.entries(errorCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([tag, count]) => `<span>${escapeHtml(ERROR_TAG_LABELS[tag] || tag)} <b>${count}</b></span>`)
+    .join("");
 
   const subjectCounts = countBy(QUESTIONS, (q) => q.subject);
   const rows = orderedValues(new Set(Object.keys(subjectCounts)), SUBJECT_ORDER)
@@ -646,13 +793,13 @@ function renderDashboard() {
         <div class="dash-stat"><span class="value">${all.done}</span><span class="label">已做 / ${all.total}</span></div>
         <div class="dash-stat"><span class="value">${all.rate}%</span><span class="label">总正确率</span></div>
         <div class="dash-stat"><span class="value">${wrongIds.length}</span><span class="label">错题本</span></div>
-        <div class="dash-stat"><span class="value">${reviewCount}</span><span class="label">今日复习候选</span></div>
+        <div class="dash-stat"><span class="value">${reviewCount}</span><span class="label">到期复习</span></div>
       </div>
     </article>
     <article class="card">
       <div class="dash-actions">
         <button class="primary" data-jump-mode="seq">继续刷题</button>
-        <button data-jump-mode="review">今日复习</button>
+        <button data-jump-mode="review">到期复习</button>
         <button data-jump-mode="wrong">错题本</button>
         <button data-jump-mode="fav">收藏 ${favCount}</button>
       </div>
@@ -665,6 +812,7 @@ function renderDashboard() {
         <div class="dash-stat"><span class="value">${wrongLevel.high}</span><span class="label">高频错</span></div>
         <div class="dash-stat"><span class="value">${flaggedCount}</span><span class="label">纠错标记</span></div>
       </div>
+      ${errorSummary ? `<div class="error-summary"><strong>错因分布</strong>${errorSummary}</div>` : ""}
     </article>
     <article class="card">
       <div class="meta"><span class="badge source">薄弱科目</span><span class="chapter">按错题数和正确率排序</span></div>
@@ -906,6 +1054,8 @@ function exportWrong() {
       }
       text += `   【答案】${q.answer}\n`;
       if (q.explanation) text += `   【解析】${q.explanation}\n`;
+      if (q.source_title && q.source_url) text += `   【题型参考】${q.source_title} ${q.source_url}\n`;
+      if (q.adaptation_note) text += `   【改编说明】${q.adaptation_note}\n`;
       text += "\n";
     });
   }
@@ -942,6 +1092,8 @@ function exportFlags() {
     }
     text += `   【答案】${q.answer}\n`;
     if (q.explanation) text += `   【解析】${q.explanation}\n`;
+    if (q.source_title && q.source_url) text += `   【题型参考】${q.source_title} ${q.source_url}\n`;
+    if (q.adaptation_note) text += `   【改编说明】${q.adaptation_note}\n`;
     text += "\n";
   });
   downloadText(`纠错标记_${new Date().toISOString().slice(0, 10)}.txt`, text, "text/plain;charset=utf-8");
@@ -988,6 +1140,21 @@ function sanitizeState(input, strict = false) {
   clean.history = Object.fromEntries(entries("history")
     .filter(([, value]) => Array.isArray(value) && value.every((entry) => typeof entry === "string" && entry.length <= 500))
     .map(([id, value]) => [id, value.slice(-MAX_HISTORY_PER_QUESTION)]));
+  clean.reviewMeta = Object.fromEntries(entries("reviewMeta").filter(([, value]) => {
+    if (!isRecord(value)) return false;
+    const level = Number(value.level);
+    return Number.isInteger(level) && level >= 0 && level <= REVIEW_INTERVAL_DAYS.length
+      && typeof value.lastAnsweredAt === "string" && Number.isFinite(Date.parse(value.lastAnsweredAt))
+      && typeof value.nextReviewAt === "string" && Number.isFinite(Date.parse(value.nextReviewAt))
+      && typeof value.lastCorrect === "boolean";
+  }).map(([id, value]) => [id, {
+    level: Number(value.level),
+    lastAnsweredAt: value.lastAnsweredAt,
+    nextReviewAt: value.nextReviewAt,
+    lastCorrect: value.lastCorrect,
+  }]));
+  clean.errorTags = Object.fromEntries(entries("errorTags")
+    .filter(([, value]) => typeof value === "string" && Object.prototype.hasOwnProperty.call(ERROR_TAG_LABELS, value)));
 
   if (["home", "seq", "rnd", "review", "wrong", "fav"].includes(input.mode)) clean.mode = input.mode;
   const allowedSubjects = new Set(QUESTIONS.map((q) => q.subject));
@@ -1007,8 +1174,8 @@ function applyQuestionRevisionResets(clean, storedRevisions = {}) {
   let resetCount = 0;
   for (const [id, revision] of Object.entries(QUESTION_REVISIONS)) {
     if (storedRevisions[id] === revision) continue;
-    const hadProgress = ["done", "wrong", "streak", "history"].some((key) => Object.prototype.hasOwnProperty.call(clean[key], id));
-    for (const key of ["done", "wrong", "streak", "history"]) delete clean[key][id];
+    const hadProgress = ["done", "wrong", "streak", "history", "reviewMeta", "errorTags"].some((key) => Object.prototype.hasOwnProperty.call(clean[key], id));
+    for (const key of ["done", "wrong", "streak", "history", "reviewMeta", "errorTags"]) delete clean[key][id];
     if (hadProgress) resetCount += 1;
   }
   if (resetCount) clean._revisionResetCount = resetCount;

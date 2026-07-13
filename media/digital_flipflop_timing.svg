@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="title desc">
+  <title id="title">上升沿D触发器时序图</title><desc id="desc">D输入可在时钟周期内变化，Q只在每个上升沿采样D并保持到下一个有效边沿。</desc>
+  <style>.axis{stroke:#98a2b3;stroke-width:1;stroke-dasharray:6 6}.clk{stroke:#344054;stroke-width:4;fill:none}.d{stroke:#1565c0;stroke-width:4;fill:none}.q{stroke:#c62828;stroke-width:4;fill:none}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
+  <rect x="18" y="18" width="944" height="464" rx="18" fill="#fff" stroke="#d0d5dd"/>
+  <text x="490" y="48" text-anchor="middle" class="t" font-weight="700">上升沿D触发器：只在 ↑ 时刻采样D，其他时间Q保持</text>
+  <g><line class="axis" x1="180" y1="70" x2="180" y2="440"/><line class="axis" x1="340" y1="70" x2="340" y2="440"/><line class="axis" x1="500" y1="70" x2="500" y2="440"/><line class="axis" x1="660" y1="70" x2="660" y2="440"/><line class="axis" x1="820" y1="70" x2="820" y2="440"/></g>
+  <text x="65" y="135" class="t">CLK</text><path class="clk" d="M120 160H180V100H260V160H340V100H420V160H500V100H580V160H660V100H740V160H820V100H900"/>
+  <text x="65" y="285" class="t">D</text><path class="d" d="M120 310H150V250H300V310H450V250H620V310H760V250H900"/>
+  <text x="65" y="420" class="t">Q</text><path class="q" d="M120 445H180V385H340V445H500V385H660V445H820V385H900"/>
+  <text x="180" y="82" text-anchor="middle" class="t">↑</text><text x="340" y="82" text-anchor="middle" class="t">↑</text><text x="500" y="82" text-anchor="middle" class="t">↑</text><text x="660" y="82" text-anchor="middle" class="t">↑</text><text x="820" y="82" text-anchor="middle" class="t">↑</text>
+  <text x="490" y="475" text-anchor="middle" class="s">真实器件还要求D在有效边沿前后满足建立时间与保持时间，否则可能出现亚稳态</text>
+</svg>

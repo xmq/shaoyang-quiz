@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+  <title id="title">RLC串联电路电压相量图</title><desc id="desc">以电流为参考，电阻电压同相，电感电压向上，电容电压向下，总电压为矢量和。</desc>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><style>.axis{stroke:#98a2b3;stroke-width:2}.v{fill:none;stroke-width:5;marker-end:url(#arr)}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:16px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="864" height="384" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <line class="axis" x1="100" y1="235" x2="820" y2="235"/><line class="axis" x1="260" y1="360" x2="260" y2="60"/>
+  <line class="v" x1="260" y1="235" x2="500" y2="235" stroke="#344054"/><text x="470" y="260" class="t">Uᴿ（与I同相）</text>
+  <line class="v" x1="260" y1="235" x2="260" y2="80" stroke="#1565c0"/><text x="275" y="95" class="t">Uᴸ</text>
+  <line class="v" x1="260" y1="235" x2="260" y2="330" stroke="#c62828"/><text x="275" y="330" class="t">Uᶜ</text>
+  <line class="v" x1="260" y1="235" x2="500" y2="175" stroke="#7f56d9"/><text x="510" y="175" class="t">总电压U</text>
+  <path d="M345 235A85 85 0 0 0 342 214" fill="none" stroke="#7f56d9" stroke-width="3"/><text x="355" y="215" class="t">φ</text>
+  <text x="610" y="95" class="t" font-weight="700">判断口诀</text>
+  <text x="610" y="135" class="s">Uᴸ &gt; Uᶜ：感性，电流滞后</text><text x="610" y="170" class="s">Uᴸ &lt; Uᶜ：容性，电流超前</text><text x="610" y="205" class="s">Uᴸ = Uᶜ：串联谐振</text>
+  <text x="610" y="255" class="s">谐振时φ=0</text><text x="610" y="290" class="s">Z=R，功率因数=1</text><text x="610" y="325" class="s">电流达到最大</text>
+</svg>

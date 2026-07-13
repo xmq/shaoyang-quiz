@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">基带、AM和FM波形对比</title><desc id="desc">基带消息缓慢变化，AM载波幅度随消息改变，FM载波幅度不变而疏密随消息改变。</desc>
+  <style>.axis{stroke:#d0d5dd;stroke-width:1}.msg{stroke:#344054;stroke-width:4;fill:none}.am{stroke:#1565c0;stroke-width:2.5;fill:none}.env{stroke:#98a2b3;stroke-width:2;fill:none;stroke-dasharray:6 6}.fm{stroke:#c62828;stroke-width:3;fill:none}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style>
+  <rect x="18" y="18" width="944" height="484" rx="18" fill="#fff" stroke="#d0d5dd"/>
+  <text x="490" y="45" text-anchor="middle" class="t" font-weight="700">调制：用消息控制高频载波的某个参数</text>
+  <line class="axis" x1="110" y1="125" x2="930" y2="125"/><path class="msg" d="M110 125C180 55 250 55 320 125S460 195 530 125S670 55 740 125S880 195 930 145"/><text x="45" y="132" class="t">m(t)</text><text x="130" y="85" class="s">基带消息</text>
+  <line class="axis" x1="110" y1="300" x2="930" y2="300"/><path class="env" d="M110 300C180 220 250 220 320 300S460 380 530 300S670 220 740 300S880 380 930 325M110 300C180 380 250 380 320 300S460 220 530 300S670 380 740 300S880 220 930 275"/>
+  <path class="am" d="M110 300 q8-35 16 0 q8 35 16 0 q8-50 16 0 q8 50 16 0 q8-65 16 0 q8 65 16 0 q8-75 16 0 q8 75 16 0 q8-80 16 0 q8 80 16 0 q8-75 16 0 q8 75 16 0 q8-65 16 0 q8 65 16 0 q8-50 16 0 q8 50 16 0 q8-35 16 0 q8 35 16 0 q8-22 16 0 q8 22 16 0 q8-15 16 0 q8 15 16 0 q8-18 16 0 q8 18 16 0 q8-28 16 0 q8 28 16 0 q8-45 16 0 q8 45 16 0 q8-60 16 0 q8 60 16 0 q8-72 16 0 q8 72 16 0 q8-80 16 0 q8 80 16 0 q8-75 16 0 q8 75 16 0 q8-65 16 0 q8 65 16 0 q8-50 16 0 q8 50 16 0 q8-35 16 0 q8 35 16 0 q8-22 16 0 q8 22 16 0 q8-18 16 0 q8 18 16 0 q8-25 16 0 q8 25 16 0 q8-38 16 0 q8 38 16 0"/>
+  <text x="45" y="307" class="t">AM</text><text x="130" y="225" class="s">幅度随消息变化，频率基本不变</text>
+  <line class="axis" x1="110" y1="445" x2="930" y2="445"/><path class="fm" d="M110 445q18-38 36 0t36 0t36 0t24 0t24 0t24 0t16 0t16 0t16 0t16 0t16 0t16 0t20 0t20 0t20 0t28 0t28 0t28 0t36 0t36 0t36 0t28 0t28 0t28 0t20 0t20 0t20 0t16 0t16 0t16 0t16 0"/><text x="45" y="452" class="t">FM</text><text x="130" y="410" class="s">幅度不变，瞬时频率随消息变化</text>
+</svg>

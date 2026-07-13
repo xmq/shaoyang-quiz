@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">接触器自锁控制回路</title><desc id="desc">停止按钮常闭，启动按钮常开，接触器辅助常开触点与启动按钮并联形成自锁，热继电器常闭触点提供过载保护。</desc>
+  <style>.wire{stroke:#344054;stroke-width:4;fill:none}.dev{stroke:#1565c0;stroke-width:4;fill:#fff}.coil{stroke:#c62828;stroke-width:4;fill:#fff}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
+  <rect x="18" y="18" width="924" height="394" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <line class="wire" x1="90" y1="75" x2="90" y2="355"/><line class="wire" x1="870" y1="75" x2="870" y2="355"/>
+  <text x="90" y="58" text-anchor="middle" class="t">L</text><text x="870" y="58" text-anchor="middle" class="t">N</text>
+  <path class="wire" d="M90 150H170M235 150H320M385 150H560M625 150H700"/>
+  <line class="dev" x1="170" y1="150" x2="205" y2="130"/><line class="dev" x1="205" y1="130" x2="235" y2="150"/><text x="202" y="105" text-anchor="middle" class="t">停止SB₁（常闭）</text>
+  <line class="dev" x1="320" y1="150" x2="350" y2="125"/><line class="dev" x1="355" y1="150" x2="385" y2="150"/><text x="352" y="105" text-anchor="middle" class="t">启动SB₂（常开）</text>
+  <line class="dev" x1="560" y1="150" x2="592" y2="130"/><line class="dev" x1="595" y1="150" x2="625" y2="150"/><text x="593" y="105" text-anchor="middle" class="t">热继电器FR（常闭）</text>
+  <path class="coil" d="M700 120C735 120 735 180 700 180M810 120C775 120 775 180 810 180"/><line class="wire" x1="810" y1="150" x2="870" y2="150"/><text x="755" y="205" text-anchor="middle" class="t">接触器线圈KM</text>
+  <path class="wire" d="M285 150V280H420M520 280H555V150"/>
+  <line class="dev" x1="420" y1="280" x2="465" y2="255"/><line class="dev" x1="475" y1="280" x2="520" y2="280"/><text x="470" y="325" text-anchor="middle" class="t">KM辅助常开触点（自锁）</text>
+  <text x="480" y="375" text-anchor="middle" class="s">按下启动：KM吸合，辅助触点闭合；松开启动后，电流仍经辅助触点维持线圈得电</text>
+</svg>

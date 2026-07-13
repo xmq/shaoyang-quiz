@@ -1,4 +1,4 @@
-"""Generate one deterministic build id for the app, question bank, notes and PWA cache."""
+"""Generate one deterministic build id for the quiz, lecture, color notes and PWA cache."""
 
 from pathlib import Path
 import argparse
@@ -9,19 +9,30 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "build-meta.js"
-HASHED_ASSETS = [
+CORE_HASHED_ASSETS = [
     "app.js",
     "icon-192.png",
     "icon-512.png",
     "icon.svg",
+    "home-data.js",
+    "home.js",
     "index.html",
     "manifest.webmanifest",
     "notes.html",
+    "quiz.html",
+    "color-notes.html",
     "question-media.js",
     "questions.js",
     "style.css",
     "sw.js",
 ]
+NOTE_MEDIA_PATTERNS = ("ee_*.svg", "analog_*.svg", "digital_*.svg", "comm_*.svg")
+NOTE_MEDIA = sorted(
+    path.relative_to(ROOT).as_posix()
+    for pattern in NOTE_MEDIA_PATTERNS
+    for path in (ROOT / "media").glob(pattern)
+)
+HASHED_ASSETS = CORE_HASHED_ASSETS + NOTE_MEDIA
 
 
 def render():

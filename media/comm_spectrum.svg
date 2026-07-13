@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" role="img" aria-labelledby="title desc">
+  <title id="title">电磁波谱顺序</title><desc id="desc">从无线电波到伽马射线，频率和能量增大，波长减小。</desc>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#2563eb"/><stop offset=".35" stop-color="#ef4444"/><stop offset=".52" stop-color="#22c55e"/><stop offset=".68" stop-color="#8b5cf6"/><stop offset="1" stop-color="#111827"/></linearGradient><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#344054"/></marker><style>.t{font:17px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="964" height="314" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <text x="500" y="50" text-anchor="middle" class="t" font-weight="700">电磁波本质相同，只是频率、波长和能量范围不同</text>
+  <rect x="70" y="120" width="860" height="70" rx="10" fill="url(#g)"/>
+  <g fill="#fff" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle"><text x="135" y="162">无线电波</text><text x="265" y="162">微波</text><text x="390" y="162">红外</text><text x="515" y="162">可见光</text><text x="640" y="162">紫外</text><text x="760" y="162">X射线</text><text x="875" y="162">γ射线</text></g>
+  <line x1="80" y1="90" x2="920" y2="90" stroke="#344054" stroke-width="3" marker-end="url(#a)"/><text x="500" y="80" text-anchor="middle" class="t">频率、光子能量增大</text>
+  <line x1="920" y1="225" x2="80" y2="225" stroke="#344054" stroke-width="3" marker-end="url(#a)"/><text x="500" y="252" text-anchor="middle" class="t">波长增大</text>
+  <text x="500" y="300" text-anchor="middle" class="s">关系：c = λf；考试若问“波长由长到短”，顺序与频率由低到高相同</text>
+</svg>

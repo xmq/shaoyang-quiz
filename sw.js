@@ -6,8 +6,11 @@ const NETWORK_TIMEOUT_MS = 4500;
 const CORE_ASSETS = [
   "./",
   "./index.html",
+  "./quiz.html",
   "./style.css",
   "./build-meta.js",
+  "./home.js",
+  "./home-data.js",
   "./app.js",
   "./question-media.js",
   "./questions.js",
@@ -15,7 +18,29 @@ const CORE_ASSETS = [
   "./icon-192.png",
   "./icon-512.png",
   "./icon.svg",
-  "./notes.html"
+  "./notes.html",
+  "./color-notes.html",
+  "./media/ee_series_parallel.svg",
+  "./media/ee_kcl_node.svg",
+  "./media/ee_rc_response.svg",
+  "./media/ee_rlc_phasor.svg",
+  "./media/ee_self_hold_control.svg",
+  "./media/analog_diode_iv.svg",
+  "./media/analog_bjt_states.svg",
+  "./media/analog_common_emitter.svg",
+  "./media/analog_opamp_inverting.svg",
+  "./media/analog_feedback_block.svg",
+  "./media/analog_power_supply.svg",
+  "./media/digital_comb_seq.svg",
+  "./media/digital_kmap.svg",
+  "./media/digital_flipflop_timing.svg",
+  "./media/digital_counter_states.svg",
+  "./media/digital_adc_process.svg",
+  "./media/comm_system.svg",
+  "./media/comm_sampling.svg",
+  "./media/comm_modulation.svg",
+  "./media/comm_spectrum.svg",
+  "./media/comm_superhet.svg"
 ];
 
 self.addEventListener("install", (event) => {
@@ -52,7 +77,10 @@ async function readFallback(request) {
     if (direct) return direct;
     if (request.mode === "navigate") {
       const pathname = new URL(request.url).pathname;
-      return await cache.match(pathname.endsWith("/notes.html") ? "./notes.html" : "./index.html", {ignoreSearch: true});
+      if (pathname.endsWith("/color-notes.html")) return await cache.match("./color-notes.html", {ignoreSearch: true});
+      if (pathname.endsWith("/notes.html")) return await cache.match("./notes.html", {ignoreSearch: true});
+      if (pathname.endsWith("/quiz.html")) return await cache.match("./quiz.html", {ignoreSearch: true});
+      return await cache.match("./index.html", {ignoreSearch: true});
     }
   } catch {}
   return null;
@@ -90,7 +118,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin || url.pathname.includes("/api/")) return;
 
-  const isCritical = request.mode === "navigate" || /\/(questions\.js|notes\.html|app\.js)$/.test(url.pathname);
+  const isCritical = request.mode === "navigate" || /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);
   const isMedia = request.destination === "image";
   event.respondWith(isCritical ? networkFirst(request) : isMedia ? cacheFirst(request) : networkFirst(request));
 });

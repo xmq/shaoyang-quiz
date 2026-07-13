@@ -3,97 +3,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#2563eb">
-  <title>计算机刷题器</title>
+  <meta name="theme-color" content="#173b57">
+  <meta name="description" content="面向大学课程的学习平台，用讲义建立理解、三色笔记主动回忆、题库检索练习，并根据学习记录安排复习。">
+  <title>邵阳备考 · 大学课程学习平台</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <div class="app-shell">
-    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="筛选和操作" aria-hidden="true" tabindex="-1" inert>
-      <div class="drawer-head">
-        <strong>计算机刷题器</strong>
-        <button class="icon-btn" id="drawer-close" aria-label="关闭">×</button>
-      </div>
-
-      <section class="drawer-section">
-        <div class="drawer-title">科目</div>
-        <div class="drawer-list" id="drawer-subjects"></div>
-      </section>
-
-      <section class="drawer-section">
-        <div class="drawer-title">题型</div>
-        <div class="drawer-list" id="drawer-types"></div>
-      </section>
-
-      <section class="drawer-section">
-        <div class="drawer-title">来源</div>
-        <div class="drawer-list" id="drawer-sources"></div>
-      </section>
-
-      <section class="drawer-section">
-        <div class="drawer-title">章节</div>
-        <div class="drawer-list drawer-list-compact" id="drawer-chapters"></div>
-      </section>
-
-      <section class="drawer-section">
-        <div class="drawer-title">数据</div>
-        <div class="drawer-list">
-          <button class="drawer-action" id="export-wrong">导出错题本</button>
-          <button class="drawer-action" id="export-flags">导出纠错标记</button>
-          <button class="drawer-action" id="export-progress">导出进度</button>
-          <button class="drawer-action" id="import-progress">导入进度</button>
-          <button class="drawer-action" id="restore-progress">恢复导入前进度</button>
-          <button class="drawer-action danger" id="reset">重置进度</button>
-        </div>
-      </section>
-    </aside>
-
-    <div class="drawer-mask" id="drawer-mask" aria-hidden="true"></div>
-
-    <main class="main" id="app-main">
-      <header class="topbar" id="topbar">
-        <div class="topbar-row">
-          <button class="icon-btn" id="drawer-toggle" aria-label="打开筛选和操作菜单" aria-controls="drawer" aria-expanded="false">☰</button>
-          <select id="subject-select" aria-label="科目"></select>
-          <span class="mini-stat" id="mini-stat">0/0 · 0%</span>
-          <button class="icon-btn" id="stats-toggle" aria-label="收起统计" aria-controls="stats" aria-expanded="true">▾</button>
-        </div>
-        <div class="stats" id="stats">
-          <span>已做 <b id="stat-done">0</b></span>
-          <span class="ok">对 <b id="stat-correct">0</b></span>
-          <span class="ng">错 <b id="stat-wrong">0</b></span>
-          <span>正确率 <b id="stat-rate">0%</b></span>
-          <span class="ng">错题本 <b id="stat-wrongbook">0</b></span>
-        </div>
-        <div class="progress" id="progress" role="progressbar" aria-label="当前范围完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div>
-      </header>
-
-      <p style="margin:8px 14px"><a href="./notes.html" style="color:#2563eb">📚 打开讲义三色笔记</a></p>
-      <nav class="mode-tabs" aria-label="刷题模式">
-        <button class="mode active" data-mode="home" aria-pressed="true">总览</button>
-        <button class="mode" data-mode="seq" aria-pressed="false">顺序</button>
-        <button class="mode" data-mode="rnd" aria-pressed="false">随机</button>
-        <button class="mode" data-mode="review" aria-pressed="false">复习</button>
-        <button class="mode" data-mode="wrong" aria-pressed="false">错题本</button>
-        <button class="mode" data-mode="fav" aria-pressed="false">收藏</button>
+<body class="platform-home">
+  <a class="sr-only home-skip" href="#home-main">跳到主要内容</a>
+  <header class="home-header">
+    <div class="home-header-inner">
+      <a class="home-brand" href="./index.html" aria-current="page">
+        <span class="home-brand-mark" aria-hidden="true">邵</span>
+        <span><strong>邵阳备考</strong><small>大学课程学习平台</small></span>
+      </a>
+      <nav class="home-nav" aria-label="学习模块">
+        <a aria-current="page" href="./index.html">首页</a>
+        <a href="./notes.html">讲义</a>
+        <a href="./color-notes.html">三色笔记</a>
+        <a href="./quiz.html">刷题</a>
       </nav>
+    </div>
+  </header>
 
-      <section class="quick-filters" aria-label="搜索">
-        <input id="search-input" type="search" aria-label="搜索题干、选项和解析" placeholder="搜索题干、选项、解析..." autocomplete="off">
-        <button id="clear-search" class="secondary-btn" type="button">清除</button>
-      </section>
-      <section class="active-filters hidden" id="active-filters" aria-label="当前筛选条件"></section>
+  <main class="home-main" id="home-main">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero-copy">
+        <p class="home-eyebrow">理解 · 回忆 · 练习 · 复习</p>
+        <h1 id="home-title">不只是看过，<br>要真正学会。</h1>
+        <p class="home-lead">先用讲义建立知识结构，再用三色笔记脱离原文回忆，最后通过题目检验并修正。平台根据你的作答记录推荐下一步。</p>
+        <div class="home-hero-actions">
+          <a class="home-primary-action" id="continue-action" href="./notes.html">开始学习</a>
+          <a class="home-secondary-action" href="#courses">选择课程</a>
+        </div>
+      </div>
+      <aside class="learning-status" aria-labelledby="status-title">
+        <div class="status-head">
+          <div>
+            <span class="status-kicker">学习状态</span>
+            <h2 id="status-title">今天从这里继续</h2>
+          </div>
+          <span class="status-dot" aria-hidden="true"></span>
+        </div>
+        <p class="status-recommendation" id="status-recommendation">正在读取本机学习记录…</p>
+        <div class="status-grid">
+          <div><strong id="home-done">0</strong><span>已做题</span></div>
+          <div><strong id="home-rate">—</strong><span>正确率</span></div>
+          <div><strong id="home-due">0</strong><span>到期复习</span></div>
+          <div><strong id="home-wrong">0</strong><span>错题</span></div>
+        </div>
+        <p class="status-note" id="status-note">学习记录只保存在当前浏览器中。</p>
+      </aside>
+    </section>
 
-      <section id="card-area"></section>
-    </main>
-  </div>
+    <section class="home-section" aria-labelledby="modules-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">学习主路径</p><h2 id="modules-title">三个入口，各做一件事</h2></div>
+        <p>零基础时先理解；学完一小节立刻回忆；做题后按解析修正。</p>
+      </div>
+      <div class="learning-modules">
+        <a class="learning-module module-lecture" href="./notes.html">
+          <span class="module-step">01</span><span class="module-icon" aria-hidden="true">书</span>
+          <span class="module-purpose">建立理解</span><strong>课程讲义</strong>
+          <span>从基本概念、原理和例题开始，先搭起知识骨架。</span>
+          <em>15 门课程 <b aria-hidden="true">→</b></em>
+        </a>
+        <a class="learning-module module-recall" href="./color-notes.html">
+          <span class="module-step">02</span><span class="module-icon" aria-hidden="true">记</span>
+          <span class="module-purpose">主动回忆</span><strong>三色笔记</strong>
+          <span>用必会结论、得分步骤和易错点压缩复习内容。</span>
+          <em>15 门课程 <b aria-hidden="true">→</b></em>
+        </a>
+        <a class="learning-module module-practice" href="./quiz.html">
+          <span class="module-step">03</span><span class="module-icon" aria-hidden="true">练</span>
+          <span class="module-purpose">检索练习</span><strong>分层题库</strong>
+          <span>顺序打基础、交错练迁移、错题与到期题重点重练。</span>
+          <em><span id="question-count">题库载入中</span> <b aria-hidden="true">→</b></em>
+        </a>
+      </div>
+    </section>
 
-  <input id="progress-file" type="file" accept="application/json,.json" hidden>
-  <div class="sr-only" id="answer-live" role="status" aria-live="assertive" aria-atomic="true"></div>
+    <section class="home-section study-loop-section" aria-labelledby="loop-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">高效学习闭环</p><h2 id="loop-title">每学一个知识单元，都走完四步</h2></div>
+        <p>不要连续重读。短单元、主动提取、及时反馈和间隔复习更容易暴露“以为会了”。</p>
+      </div>
+      <ol class="study-loop">
+        <li><span>1</span><div><strong>理解一个小节</strong><p>读讲义时追问“为什么、条件是什么、怎么计算”，能复述再往下。</p></div></li>
+        <li><span>2</span><div><strong>合上原文回忆</strong><p>看三色笔记的标题，口述定义、公式、步骤，再对照补缺口。</p></div></li>
+        <li><span>3</span><div><strong>做一组交错题</strong><p>把相近概念和不同题型混合，练习识别该用哪条规则。</p></div></li>
+        <li><span>4</span><div><strong>归因并按期重练</strong><p>错题标记错因；系统把题目安排到后续复习，连续答对才算掌握。</p></div></li>
+      </ol>
+      <div class="method-strip" aria-label="学习方法说明">
+        <span><strong>检索练习</strong>先想后看答案</span>
+        <span><strong>间隔复习</strong>快忘时再提取</span>
+        <span><strong>交错练习</strong>混合相近题型</span>
+        <span><strong>掌握学习</strong>反馈后再达标</span>
+      </div>
+      <details class="method-evidence">
+        <summary>查看方法依据与适用边界</summary>
+        <p>提取练习与间隔学习有较广泛证据；交错练习更适合需要辨别解法的内容。平台采用固定复习间隔作为易懂的默认规则，不宣称它对每门课程都最优。</p>
+        <div>
+          <a href="https://doi.org/10.1126/science.1152408" target="_blank" rel="noopener noreferrer">提取练习研究</a>
+          <a href="https://digitalcommons.usf.edu/psy_facpub/1771/" target="_blank" rel="noopener noreferrer">间隔学习综述</a>
+          <a href="https://eric.ed.gov/?id=EJ1237752" target="_blank" rel="noopener noreferrer">交错练习试验</a>
+          <a href="https://ies.ed.gov/ncee/wwc/PracticeGuide/1" target="_blank" rel="noopener noreferrer">IES 学习实践指南</a>
+        </div>
+      </details>
+    </section>
+
+    <section class="home-section" id="courses" aria-labelledby="courses-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">按课程进入</p><h2 id="courses-title">选择你现在要学的课程</h2></div>
+        <p>每门课程都可直接进入讲义、三色笔记或对应题库。</p>
+      </div>
+      <div class="home-course-grid" id="home-course-grid"></div>
+    </section>
+
+    <section class="home-section home-guidance" aria-labelledby="guidance-title">
+      <div>
+        <p class="section-kicker">零基础建议</p>
+        <h2 id="guidance-title">先完成最小闭环，再扩大范围</h2>
+        <p>一次选一门课的一个知识点：能用自己的话解释、能不看答案做一道题、能说清错误原因，就进入下一点。课程之间不必齐头并进。</p>
+      </div>
+      <a href="./notes.html">从课程目录开始 <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <p>内容按大学主流课程体系组织；题库包含高校公开考试资料提炼后的原创与改编题。</p>
+    <p>进度保存在本机浏览器，可在刷题页导出备份。</p>
+  </footer>
+
   <script src="./build-meta.js"></script>
-  <script src="./questions.js"></script>
-  <script src="./question-media.js"></script>
-  <script src="./app.js"></script>
+  <script src="./home-data.js"></script>
+  <script src="./home.js"></script>
 </body>
 </html>

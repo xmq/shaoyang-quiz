@@ -1,6 +1,7 @@
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -9,6 +10,14 @@ QUESTION_FILE = ROOT / "questions.json"
 QUESTION_JS_FILE = ROOT / "questions.js"
 CHOICE_TYPES = {"单选", "多选"}
 JUDGE_ANSWERS = {"正确", "错误"}
+UNIVERSITY_PREFIXES = ("ua-", "uc-", "ue-")
+
+
+def normalized_stem(value):
+    text = unicodedata.normalize("NFKC", str(value or "")).lower()
+    text = re.sub(r"^\s*(?:第?\d+[.、：)]|[一二三四五六七八九十]+[、.)])\s*", "", text)
+    text = re.sub(r"[（(]\s*[）)]\s*[。.]?$", "", text)
+    return re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", text)
 
 
 def main():
@@ -31,6 +40,17 @@ def main():
     for qid, count in Counter(ids).items():
         if count > 1:
             errors.append(f"duplicate id: {qid}")
+
+    normalized = {}
+    for q in qs:
+        key = (str(q.get("subject") or ""), normalized_stem(q.get("stem")))
+        if key[1] and key in normalized:
+            errors.append(
+                f"duplicate normalized stem in {key[0]}: "
+                f"{normalized[key].get('id')} / {q.get('id')}"
+            )
+        else:
+            normalized[key] = q
 
     for index, q in enumerate(qs, 1):
         qid = q.get("id") or f"#{index}"
@@ -70,6 +90,15 @@ def main():
             errors.append(f"{qid}: unknown type: {qtype}")
         if not str(q.get("explanation") or "").strip():
             errors.append(f"{qid}: missing explanation")
+
+        if str(qid).startswith(UNIVERSITY_PREFIXES):
+            if q.get("source") != "大学期末改编":
+                errors.append(f"{qid}: university adaptation has invalid source")
+            for field in ("source_chapter", "source_url", "source_title", "adaptation_note"):
+                if not str(q.get(field) or "").strip():
+                    errors.append(f"{qid}: missing provenance field {field}")
+            if not str(q.get("source_url") or "").startswith("https://"):
+                errors.append(f"{qid}: source_url should use https")
 
     print(f"questions: {len(qs)}")
     print(f"errors: {len(errors)}")

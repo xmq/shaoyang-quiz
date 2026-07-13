@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">电阻串联与并联示意图</title>
+  <desc id="desc">左侧为两个电阻串联分压，右侧为三个电阻并联分流。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker>
+    <style>.wire{stroke:#344054;stroke-width:4;fill:none;stroke-linecap:round}.res{stroke:#c62828;stroke-width:4;fill:#fff}.lbl{font:20px system-ui,sans-serif;fill:#101828}.sub{font:16px system-ui,sans-serif;fill:#475467}.flow{stroke:#1565c0;stroke-width:3;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect x="15" y="15" width="445" height="400" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <text x="238" y="50" text-anchor="middle" class="lbl" font-weight="700">串联：同一电流，按电阻分压</text>
+  <path class="wire" d="M80 140H145M315 140H390V330H80V140"/>
+  <rect class="res" x="145" y="115" width="75" height="50" rx="6"/>
+  <rect class="res" x="240" y="115" width="75" height="50" rx="6"/>
+  <text x="182" y="105" text-anchor="middle" class="lbl">R₁</text><text x="277" y="105" text-anchor="middle" class="lbl">R₂</text>
+  <circle cx="80" cy="235" r="30" fill="#fff" stroke="#344054" stroke-width="4"/><text x="80" y="242" text-anchor="middle" class="lbl">U</text>
+  <path class="flow" d="M115 190H205"/><text x="160" y="215" text-anchor="middle" class="sub">I</text>
+  <text x="238" y="375" text-anchor="middle" class="lbl">Rₑq = R₁ + R₂</text>
+  <text x="238" y="401" text-anchor="middle" class="sub">U₁ = U·R₁/(R₁+R₂)</text>
+
+  <rect x="500" y="15" width="445" height="400" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <text x="722" y="50" text-anchor="middle" class="lbl" font-weight="700">并联：同一电压，支路分流</text>
+  <path class="wire" d="M555 105H885M555 340H885M555 105V340M885 105V340"/>
+  <circle cx="555" cy="222" r="30" fill="#fff" stroke="#344054" stroke-width="4"/><text x="555" y="229" text-anchor="middle" class="lbl">U</text>
+  <rect class="res" x="635" y="150" width="55" height="145" rx="6"/><rect class="res" x="710" y="150" width="55" height="145" rx="6"/><rect class="res" x="785" y="150" width="55" height="145" rx="6"/>
+  <text x="662" y="137" text-anchor="middle" class="lbl">R</text><text x="737" y="137" text-anchor="middle" class="lbl">R</text><text x="812" y="137" text-anchor="middle" class="lbl">R</text>
+  <path class="flow" d="M662 175V245"/><path class="flow" d="M737 175V245"/><path class="flow" d="M812 175V245"/>
+  <text x="662" y="320" text-anchor="middle" class="sub">I₁</text><text x="737" y="320" text-anchor="middle" class="sub">I₂</text><text x="812" y="320" text-anchor="middle" class="sub">I₃</text>
+  <text x="722" y="375" text-anchor="middle" class="lbl">三个相同R并联：Rₑq = R/3</text>
+  <text x="722" y="401" text-anchor="middle" class="sub">三个6 Ω并联得到2 Ω</text>
+</svg>

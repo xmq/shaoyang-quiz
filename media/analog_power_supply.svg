@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 330" role="img" aria-labelledby="title desc">
+  <title id="title">直流稳压电源组成</title><desc id="desc">交流电依次经过变压、整流、滤波和稳压，得到稳定直流输出。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.b{fill:#fff;stroke:#344054;stroke-width:3}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}.wave{stroke:#c62828;stroke-width:3;fill:none}</style></defs>
+  <rect x="18" y="18" width="944" height="294" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <rect class="b" x="65" y="90" width="130" height="80" rx="12"/><rect class="b" x="250" y="90" width="130" height="80" rx="12"/><rect class="b" x="435" y="90" width="130" height="80" rx="12"/><rect class="b" x="620" y="90" width="130" height="80" rx="12"/><rect class="b" x="805" y="90" width="110" height="80" rx="12"/>
+  <text x="130" y="138" text-anchor="middle" class="t">变压</text><text x="315" y="138" text-anchor="middle" class="t">整流</text><text x="500" y="138" text-anchor="middle" class="t">滤波</text><text x="685" y="138" text-anchor="middle" class="t">稳压</text><text x="860" y="138" text-anchor="middle" class="t">负载</text>
+  <path class="w" d="M30 130H65M195 130H250M380 130H435M565 130H620M750 130H805"/>
+  <path class="wave" d="M65 225q20-45 40 0t40 0t40 0"/><path class="wave" d="M255 225q15-40 30 0q15-40 30 0q15-40 30 0q15-40 30 0"/><path class="wave" d="M440 220q30-15 60 0t60 0"/><line class="wave" x1="625" y1="220" x2="745" y2="220"/>
+  <text x="130" y="275" text-anchor="middle" class="s">交流正弦</text><text x="315" y="275" text-anchor="middle" class="s">单向脉动</text><text x="500" y="275" text-anchor="middle" class="s">减小纹波</text><text x="685" y="275" text-anchor="middle" class="s">稳定直流</text><text x="490" y="55" text-anchor="middle" class="t" font-weight="700">交流电网 → 变压 → 整流 → 滤波 → 稳压 → 直流负载</text>
+</svg>

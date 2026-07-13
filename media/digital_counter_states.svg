@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">模六计数器状态图</title><desc id="desc">模六计数器在六个有效状态之间循环，并把两个无效状态导回零状态实现自启动。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.state{fill:#fff;stroke:#344054;stroke-width:3}.w{stroke:#1565c0;stroke-width:3;fill:none;marker-end:url(#a)}.bad{stroke:#c62828;stroke-dasharray:7 7}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="884" height="404" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <text x="460" y="48" text-anchor="middle" class="t" font-weight="700">模6计数器：6个有效状态，3个触发器，2个无效状态</text>
+  <g><circle class="state" cx="190" cy="125" r="45"/><circle class="state" cx="390" cy="105" r="45"/><circle class="state" cx="590" cy="125" r="45"/><circle class="state" cx="650" cy="285" r="45"/><circle class="state" cx="450" cy="325" r="45"/><circle class="state" cx="250" cy="285" r="45"/></g>
+  <text x="190" y="132" text-anchor="middle" class="t">000</text><text x="390" y="112" text-anchor="middle" class="t">001</text><text x="590" y="132" text-anchor="middle" class="t">010</text><text x="650" y="292" text-anchor="middle" class="t">011</text><text x="450" y="332" text-anchor="middle" class="t">100</text><text x="250" y="292" text-anchor="middle" class="t">101</text>
+  <path class="w" d="M236 120L343 108M436 110L543 120M610 167L637 240M605 306L496 324M404 319L294 296M220 245L185 171"/>
+  <rect x="745" y="125" width="105" height="55" rx="10" class="state bad"/><rect x="745" y="235" width="105" height="55" rx="10" class="state bad"/><text x="798" y="160" text-anchor="middle" class="t">110</text><text x="798" y="270" text-anchor="middle" class="t">111</text>
+  <path class="w bad" d="M745 150C700 80 300 40 220 95"/><path class="w bad" d="M745 260C700 380 260 405 190 172"/><text x="760" y="100" class="s">无效状态</text><text x="460" y="400" text-anchor="middle" class="s">能从无效状态自动进入有效循环，称为“能自启动”</text>
+</svg>

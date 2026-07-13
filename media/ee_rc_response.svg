@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title desc">
+  <title id="title">RC电路充放电响应</title><desc id="desc">充电曲线从零趋向终值，放电曲线从初值衰减到零，并标出一个、三个、五个时间常数。</desc>
+  <style>.axis{stroke:#344054;stroke-width:3}.grid{stroke:#d0d5dd;stroke-width:1;stroke-dasharray:6 6}.charge{stroke:#1565c0;stroke-width:5;fill:none}.discharge{stroke:#c62828;stroke-width:5;fill:none}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#667085}</style>
+  <rect x="18" y="18" width="864" height="404" rx="18" fill="#fff" stroke="#d0d5dd"/>
+  <line class="axis" x1="95" y1="350" x2="835" y2="350"/><line class="axis" x1="95" y1="350" x2="95" y2="65"/>
+  <line class="grid" x1="95" y1="90" x2="835" y2="90"/><line class="grid" x1="240" y1="65" x2="240" y2="350"/><line class="grid" x1="530" y1="65" x2="530" y2="350"/><line class="grid" x1="820" y1="65" x2="820" y2="350"/>
+  <path class="charge" d="M95 350C150 250 190 190 240 155C330 100 460 92 820 90"/>
+  <path class="discharge" d="M95 90C150 190 190 250 240 285C330 340 460 348 820 350"/>
+  <text x="845" y="356" class="t">t</text><text x="58" y="75" class="t">f(t)</text>
+  <text x="240" y="382" text-anchor="middle" class="t">τ</text><text x="530" y="382" text-anchor="middle" class="t">3τ</text><text x="820" y="382" text-anchor="middle" class="t">5τ</text>
+  <text x="300" y="125" class="t" fill="#1565c0">充电：趋向终值</text><text x="300" y="320" class="t" fill="#c62828">放电：趋向零</text>
+  <text x="680" y="80" class="s">约5τ可视为稳态</text><text x="245" y="175" class="s">1τ完成约63.2%的变化</text>
+  <text x="450" y="412" text-anchor="middle" class="t">f(t)=f(∞)+[f(0⁺)-f(∞)]e⁻ᵗ/τ</text>
+</svg>

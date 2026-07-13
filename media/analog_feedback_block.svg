@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 390" role="img" aria-labelledby="title desc">
+  <title id="title">负反馈放大器方框图</title><desc id="desc">输入与反馈信号相减形成净输入，经基本放大器得到输出，输出的一部分经反馈网络返回输入端。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.b{fill:#fff;stroke:#344054;stroke-width:3}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style></defs>
+  <rect x="18" y="18" width="884" height="354" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
+  <circle cx="210" cy="160" r="42" class="b"/><text x="210" y="168" text-anchor="middle" class="t">Σ</text><text x="190" y="130" class="t">+</text><text x="190" y="205" class="t">−</text>
+  <rect x="350" y="105" width="210" height="110" rx="12" class="b"/><text x="455" y="153" text-anchor="middle" class="t" font-weight="700">基本放大器</text><text x="455" y="185" text-anchor="middle" class="t">增益 A</text>
+  <rect x="410" y="275" width="170" height="70" rx="12" class="b"/><text x="495" y="318" text-anchor="middle" class="t">反馈网络 F</text>
+  <path class="w" d="M70 160H168"/><text x="70" y="140" class="t">输入Xᵢ</text><path class="w" d="M252 160H350"/><text x="285" y="140" class="s">净输入Xᵢ−Xᶠ</text><path class="w" d="M560 160H820"/><text x="735" y="140" class="t">输出Xₒ</text>
+  <path class="w" d="M700 160V310H580"/><path class="w" d="M410 310H210V205"/><text x="285" y="295" class="t">反馈Xᶠ=FXₒ</text>
+  <text x="455" y="65" text-anchor="middle" class="t" font-weight="700">闭环增益 Aᶠ = A/(1+AF)</text><text x="455" y="365" text-anchor="middle" class="s">负反馈牺牲部分增益，换取稳定性、带宽、线性度和所需的输入/输出电阻</text>
+</svg>
