@@ -1,14 +1,13 @@
+import argparse
 import json
 import re
 import sys
 import unicodedata
-import argparse
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_FILE = ROOT / "questions.json"
-QUESTION_JS_FILE = ROOT / "questions.js"
 CHOICE_TYPES = {"单选", "多选"}
 JUDGE_ANSWERS = {"正确", "错误"}
 UNIVERSITY_PREFIXES = ("ua-", "uc-", "ue-")
@@ -24,13 +23,15 @@ def normalized_stem(value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--questions", type=Path, default=QUESTION_FILE)
-    parser.add_argument("--js", type=Path, default=QUESTION_JS_FILE)
+    parser.add_argument("--js", type=Path)
     parser.add_argument("--allow-missing-js", action="store_true")
     args = parser.parse_args()
     qs = json.loads(args.questions.read_text(encoding="utf-8"))
     errors = []
 
-    if args.js.is_file():
+    if args.js is None:
+        pass
+    elif args.js.is_file():
         js_text = args.js.read_text(encoding="utf-8").strip()
         prefix = "window.QUESTIONS="
         if not js_text.startswith(prefix) or not js_text.endswith(";"):

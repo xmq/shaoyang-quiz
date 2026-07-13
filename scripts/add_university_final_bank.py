@@ -13,7 +13,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
-QUESTION_JS = ROOT / "questions.js"
 SOURCE = "大学期末原创"
 PREFIX = "uf-"
 START = "<!-- UNIVERSITY_FINAL_SUPPLEMENT_START -->"
@@ -426,8 +425,6 @@ def update_questions():
     current = [q for q in current if not str(q.get("id", "")).startswith(PREFIX)]
     combined = current + QUESTIONS
     QUESTION_JSON.write_text(json.dumps(combined, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
-    payload = "window.QUESTIONS=" + json.dumps(combined, ensure_ascii=False, separators=(",", ":")) + ";\n"
-    QUESTION_JS.write_text(payload, encoding="utf-8", newline="\n")
     return len(current), len(combined)
 
 

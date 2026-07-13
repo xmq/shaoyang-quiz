@@ -190,12 +190,24 @@ def main():
     parser = argparse.ArgumentParser(description="分别构建零基础讲义和三色笔记页面")
     parser.add_argument("--check", action="store_true", help="只检查生成物是否同步")
     parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=ROOT / "dist",
+        help="生成物目录（默认：dist）",
+    )
+    parser.add_argument(
+        "--include-markdown",
+        action="store_true",
+        help="同时生成合并版 Markdown（默认只生成网页）",
+    )
+    parser.add_argument(
         "--target",
         choices=("all", *PAGE_CONFIGS),
         default="all",
         help="构建全部模块或指定模块（默认：all）",
     )
     args = parser.parse_args()
+    output_dir = args.output_dir.resolve()
 
     rendered_pages = []
     for key, config in select_configs(args.target):
@@ -206,22 +218,26 @@ def main():
     if args.check:
         ok = True
         for _, config, _, html, markdown in rendered_pages:
-            ok &= check_output(config["html"], html)
-            ok &= check_output(config["markdown"], markdown)
-        if args.target == "all":
-            ok &= check_output(LEGACY_MARKDOWN_OUTPUT, legacy_pointer)
+            ok &= check_output(output_dir / config["html"].name, html)
+            if args.include_markdown:
+                ok &= check_output(output_dir / config["markdown"].name, markdown)
+        if args.target == "all" and args.include_markdown:
+            ok &= check_output(output_dir / LEGACY_MARKDOWN_OUTPUT.name, legacy_pointer)
         if not ok:
             raise SystemExit(1)
         counts = "、".join(f"{config['brand_title']} {len(courses)} 门" for _, config, courses, _, _ in rendered_pages)
         print(f"生成物已同步：{counts}")
         return
 
+    output_dir.mkdir(parents=True, exist_ok=True)
     for _, config, courses, html, markdown in rendered_pages:
-        config["html"].write_text(html, encoding="utf-8", newline="\n")
-        config["markdown"].write_text(markdown, encoding="utf-8", newline="\n")
-        print(f"已生成 {config['html'].name} 和 {config['markdown'].name}：{len(courses)} 门课程")
-    if args.target == "all":
-        LEGACY_MARKDOWN_OUTPUT.write_text(legacy_pointer, encoding="utf-8", newline="\n")
+        (output_dir / config["html"].name).write_text(html, encoding="utf-8", newline="\n")
+        if args.include_markdown:
+            (output_dir / config["markdown"].name).write_text(markdown, encoding="utf-8", newline="\n")
+        suffix = f" 和 {config['markdown'].name}" if args.include_markdown else ""
+        print(f"已生成 {config['html'].name}{suffix}：{len(courses)} 门课程")
+    if args.target == "all" and args.include_markdown:
+        (output_dir / LEGACY_MARKDOWN_OUTPUT.name).write_text(legacy_pointer, encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

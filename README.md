@@ -82,11 +82,11 @@ python scripts/add_university_final_bank.py
 python scripts/merge_university_exam_bank.py
 ```
 
-`dist/` 采用发布白名单，只包含 HTML、CSS、浏览器脚本、站点图标和题目配图。根目录中历史生成物在 Pages 迁移期间暂时保留，以保证旧的分支发布方式仍可访问；确认 GitHub Pages 已切换到 **GitHub Actions** 且新部署成功后，可再从版本库移除。
+`dist/` 采用发布白名单，只包含 HTML、CSS、浏览器脚本、站点图标和题目配图。`questions.js`、讲义页面、三色笔记页面、首页索引和发布版本号均在构建时生成，不提交到版本库。
 
 ## GitHub Pages 发布
 
-仓库管理员只需进行一次设置：打开仓库 **Settings → Pages**，将 **Build and deployment → Source** 设为 **GitHub Actions**。之后推送到 `main` 会自动校验、构建 `dist/` 并发布；也可以在 Actions 中手动运行 `Deploy GitHub Pages`。
+本仓库的 Pages 来源已设为 **GitHub Actions**。推送到 `main` 会自动校验、构建 `dist/` 并发布；也可以在 Actions 中手动运行 `Deploy Pages`。若重新创建 Pages 站点，应在仓库 **Settings → Pages** 中将 **Build and deployment → Source** 设为 **GitHub Actions**。
 
 高校官方期末样卷、课程大纲、考试大纲和考核资料只用于分析范围、题型和能力层次；“大学期末改编”与“大学期末原创”题均重新设置题干、数据、选项和解析，不整卷转载，也不宣称225题逐字来自期末原卷。
 

@@ -8,6 +8,8 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
 CORE_HASHED_ASSETS = [
     "app.js",
     "icon-192.png",
@@ -25,6 +27,8 @@ CORE_HASHED_ASSETS = [
     "style.css",
     "sw.js",
 ]
+
+
 def hashed_assets(asset_root):
     media_root = asset_root / "media"
     media = sorted(
@@ -59,7 +63,7 @@ def render(asset_root=ROOT, question_file=None):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
-    parser.add_argument("--asset-root", type=Path, default=ROOT)
+    parser.add_argument("--asset-root", type=Path, default=ROOT / "dist")
     parser.add_argument("--question-file", type=Path, default=ROOT / "questions.json")
     args = parser.parse_args()
     asset_root = args.asset_root.resolve()

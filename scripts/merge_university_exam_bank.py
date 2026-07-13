@@ -13,7 +13,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
-QUESTION_JS = ROOT / "questions.js"
 REPORT = ROOT / "大学期末题库去重报告.md"
 SOURCE_REPORT = ROOT / "大学期末改编题来源汇总.md"
 STAGING_SPECS = {
@@ -281,7 +280,7 @@ def render_source_report():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="只校验暂存题和当前合并结果")
-    parser.add_argument("--question-js", type=Path, default=QUESTION_JS, help="可选的浏览器题库生成物")
+    parser.add_argument("--question-js", type=Path, help="可选的浏览器题库生成物")
     args = parser.parse_args()
 
     all_current = json.loads(QUESTION_JSON.read_text(encoding="utf-8"))
@@ -302,10 +301,13 @@ def main():
     if args.check:
         if all_current != merged:
             raise SystemExit("questions.json 与去重合并结果不同步")
-        if args.question_js.is_file() and not args.question_js.read_text(encoding="utf-8").strip() == (
-            "window.QUESTIONS=" + json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + ";"
-        ):
-            raise SystemExit(f"{args.question_js.name} 与去重合并结果不同步")
+        if args.question_js is not None:
+            if not args.question_js.is_file():
+                raise SystemExit(f"缺少浏览器题库生成物：{args.question_js}")
+            if not args.question_js.read_text(encoding="utf-8").strip() == (
+                "window.QUESTIONS=" + json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + ";"
+            ):
+                raise SystemExit(f"{args.question_js.name} 与去重合并结果不同步")
         if not REPORT.is_file() or "# 大学期末题库去重报告" not in REPORT.read_text(encoding="utf-8"):
             raise SystemExit("缺少大学期末题库去重报告.md")
         if SOURCE_REPORT.read_text(encoding="utf-8") != source_report:
@@ -314,10 +316,12 @@ def main():
         return
 
     QUESTION_JSON.write_text(json.dumps(merged, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
-    args.question_js.write_text(
-        "window.QUESTIONS=" + json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + ";\n",
-        encoding="utf-8", newline="\n",
-    )
+    if args.question_js is not None:
+        args.question_js.parent.mkdir(parents=True, exist_ok=True)
+        args.question_js.write_text(
+            "window.QUESTIONS=" + json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + ";\n",
+            encoding="utf-8", newline="\n",
+        )
     REPORT.write_text(report, encoding="utf-8", newline="\n")
     SOURCE_REPORT.write_text(source_report, encoding="utf-8", newline="\n")
     print(
