@@ -265,19 +265,25 @@
     .red { color: var(--red); font-weight: 750; }
     .blue { color: var(--blue); font-weight: 750; }
     .black { color: var(--black); }
+    .recall-answer { display: inline; }
     .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) {
-      display: inline;
-      border-radius: 4px;
+      display: inline-block;
+      max-width: 100%;
+      padding: .18em .55em;
+      border: 1px dashed rgba(37, 99, 235, .42);
+      border-radius: 7px;
       background: repeating-linear-gradient(135deg, rgba(37, 99, 235, .13) 0 8px, rgba(37, 99, 235, .06) 8px 16px);
-      color: transparent !important;
-      text-shadow: none;
+      color: #1d4ed8 !important;
+      font-weight: 700;
       cursor: pointer;
-      user-select: none;
+      user-select: text;
     }
-    .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) * { visibility: hidden; }
+    .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed)::before { content: "点击核对：" attr(data-recall-cue); }
+    .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) .recall-answer { display: none; }
     .study.recall-mode .note :is(.red, .blue, .black):focus-visible { outline: 3px solid rgba(37, 99, 235, .42); outline-offset: 2px; }
     .recall-hint { display: none; margin: 0 0 13px; padding: 10px 12px; border: 1px solid #84adff; border-radius: 10px; background: var(--primary-soft); color: var(--blue); font-size: 13px; }
     .study.recall-mode .recall-hint { display: block; }
+    .recall-prompt { margin: 11px 0 8px !important; padding: 9px 12px; border-left: 4px solid var(--blue); border-radius: 7px; background: #eff6ff; color: #1e3a8a; font-weight: 700; }
     .chapter-section { margin: 24px 0 10px; scroll-margin-top: 138px; }
     .chapter-heading { margin: 0 0 14px; }
     .chapter-toggle {
@@ -346,6 +352,8 @@
       .toolbar-actions .text-button { width: 46px; padding: 0; font-size: 0; }
       .toolbar-actions #back::before { content: "↩"; font-size: 21px; }
       .toolbar-actions #recall-toggle::before { content: "忆"; font-size: 17px; font-weight: 750; }
+      .toolbar-actions #recall-toggle[aria-pressed="true"]::before { content: "显"; }
+      .toolbar-actions #recall-toggle[aria-pressed="true"] { background: var(--primary); color: #fff; }
       .study-layout, .study.nav-collapsed .study-layout { display: block; }
       .chapter-nav {
         position: fixed;
@@ -477,6 +485,7 @@
     const navMask = document.getElementById("nav-mask");
     const studyToolbar = document.querySelector(".study-toolbar");
     const siteHeader = document.querySelector(".site-header");
+    const moduleLinks = [...document.querySelectorAll(".module-link")];
     const mobileMedia = window.matchMedia("(max-width: 700px)");
     let currentCourse = null;
     let activeObserver = null;
@@ -497,7 +506,7 @@
         if (active) {
           item.setAttribute("role", "button");
           item.setAttribute("tabindex", "0");
-          item.setAttribute("aria-label", "显示这条笔记");
+          item.setAttribute("aria-label", `显示答案：${item.dataset.recallCue || "这条笔记"}`);
         } else {
           item.removeAttribute("role");
           item.removeAttribute("tabindex");
@@ -509,19 +518,21 @@
     function revealRecallItem(item) {
       if (!study.classList.contains("recall-mode") || !item) return;
       item.classList.add("recall-revealed");
-      item.removeAttribute("role");
-      item.removeAttribute("tabindex");
-      item.removeAttribute("aria-label");
+      item.setAttribute("aria-label", `已显示答案：${item.dataset.recallCue || "这条笔记"}`);
     }
 
     function formatInline(value) {
       const source = String(value || "");
-      let output = escapeHtml(source)
+      const marker = source.match(/^(🔴|🔵|⚫️?)\s*/u);
+      const visibleSource = marker ? source.slice(marker[0].length) : source;
+      let output = escapeHtml(visibleSource)
         .replace(/`([^`]+)`/g, "<code>$1</code>")
         .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-      if (colorMode && source.startsWith("🔴")) output = `<span class="red">${output}</span>`;
-      else if (colorMode && source.startsWith("🔵")) output = `<span class="blue">${output}</span>`;
-      else if (colorMode && source.startsWith("⚫")) output = `<span class="black">${output}</span>`;
+      if (colorMode && marker) {
+        const className = marker[1] === "🔴" ? "red" : marker[1] === "🔵" ? "blue" : "black";
+        const recallRole = className === "red" ? "最小答案" : className === "blue" ? "方法与步骤" : "条件与易错点";
+        output = `<span class="${className}" data-recall-cue="${recallRole}"><span class="recall-answer">${output}</span></span>`;
+      }
       return output;
     }
 
@@ -567,7 +578,7 @@
     function renderMarkdown(markdown) {
       const lines = markdown.split(/\r?\n/);
       const output = [
-        ...(colorMode ? ['<p class="recall-hint">先根据标题口述答案，再点击被遮住的内容逐条核对。</p>'] : []),
+        ...(colorMode ? ['<p class="recall-hint">默认先答后看：根据每张卡的提示口述或默写，再点击卡片核对最小答案。本次只练当前展开章节。</p>'] : []),
         "<div class=\"preface\">",
       ];
       let index = 0;
@@ -662,6 +673,9 @@
           closeList();
           const title = markdownH3 ? markdownH3[1] : plainPoint[0];
           output.push(`<h3 class="point">${formatInline(title)}</h3>`);
+        } else if (colorMode && /^先答[：:]/.test(trimmed)) {
+          closeList();
+          output.push(`<p class="recall-prompt">${formatInline(trimmed)}</p>`);
         } else if (/^>\s?/.test(trimmed)) {
           closeList();
           output.push(`<blockquote>${formatInline(trimmed.replace(/^>\s?/, ""))}</blockquote>`);
@@ -742,7 +756,33 @@
       currentCourse = course;
       collapsedBeforeSearch = null;
       renderMarkdown(course.text);
+      if (colorMode) {
+        study.classList.add("recall-mode");
+        recallToggle.setAttribute("aria-pressed", "true");
+        recallToggle.textContent = "显示全文";
+        content.querySelectorAll(".chapter-section").forEach((section, index) => {
+          const collapsed = index > 0;
+          section.classList.toggle("collapsed", collapsed);
+          section.querySelector(".chapter-toggle")?.setAttribute("aria-expanded", String(!collapsed));
+        });
+      }
       syncRecallTargets();
+      const courseHash = `#course=${encodeURIComponent(course.name)}`;
+      const subjectAliases = {
+        "Office软件操作": "办公软件",
+        "信息技术与教学论": "教学论",
+        "多媒体技术": "多媒体",
+        "数据结构与算法": "算法与数据结构",
+        "操作系统原理": "操作系统",
+        "数据库技术": "数据库",
+      };
+      moduleLinks.forEach((link) => {
+        if (link.getAttribute("href") === "./notes.html" || link.pathname.endsWith("/notes.html")) link.href = `./notes.html${courseHash}`;
+        if (link.getAttribute("href") === "./color-notes.html" || link.pathname.endsWith("/color-notes.html")) link.href = `./color-notes.html${courseHash}`;
+        if (link.getAttribute("href") === "./quiz.html" || link.pathname.endsWith("/quiz.html")) {
+          link.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[course.name] || course.name)}&mode=seq`;
+        }
+      });
       try {
         localStorage.setItem("shaoyang-last-learning", JSON.stringify({course: course.name, module: pageKind, savedAt: new Date().toISOString()}));
       } catch {}
@@ -852,6 +892,7 @@
           .filter((index) => index >= 0));
       }
       renderMarkdown(currentCourse.text);
+      syncRecallTargets();
       const sections = [...content.querySelectorAll(".chapter-section")];
       const targets = [...content.querySelectorAll(".preface, .chapter-section")];
       let matches = 0;
@@ -967,7 +1008,7 @@
     recallToggle.addEventListener("click", () => {
       const active = study.classList.toggle("recall-mode");
       recallToggle.setAttribute("aria-pressed", String(active));
-      recallToggle.textContent = active ? "退出回忆" : "回忆模式";
+      recallToggle.textContent = active ? "显示全文" : "回忆模式";
       syncRecallTargets();
     });
     content.addEventListener("click", (event) => revealRecallItem(event.target.closest(".red, .blue, .black")));

@@ -10,7 +10,7 @@
 - 题型：单选、多选、判断、填空；全部题目带答案和文字解析。
 - 18 个题库科目分类，支持科目、题型、来源和章节筛选。
 - 15 门零基础讲义用于系统学习概念、原理和例题。
-- 15 门三色笔记用于考前压缩记忆：红色标核心必背与结论，蓝色标公式、步骤和踩分词，黑色标条件、解释和易错点。
+- 15 门三色笔记采用“先答后看”回忆卡：问题始终可见，答案默认遮住；红色核对最小答案，蓝色核对公式与步骤，黑色核对条件、反例和易错点。
 - 编程语言主线已统一为 **C 语言 + Python 3**；34 道只考 Visual Basic 的旧题已从刷题库移除。
 - 办公软件按 **Microsoft Office + WPS Office** 共性主线讲解，并单列格式兼容、菜单差异与版本边界。
 - 四门电子通信课程各有 24 道独立期末训练题；其他 11 门课程各有 8 道针对性补充题。
@@ -74,6 +74,7 @@ python scripts/build_site.py --output dist
 
 # 发布前校验
 python scripts/validate_questions.py --js dist/questions.js
+python scripts/validate_color_notes.py
 python scripts/merge_university_exam_bank.py --check
 python scripts/build_release.py --asset-root dist --check
 

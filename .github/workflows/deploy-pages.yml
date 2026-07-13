@@ -24,6 +24,8 @@ jobs:
           python-version: "3.12"
       - name: Build site artifact
         run: python scripts/build_site.py --output dist
+      - name: Validate three-color recall cards
+        run: python scripts/validate_color_notes.py
       - name: Validate question bundle
         run: python scripts/validate_questions.py --js dist/questions.js
       - name: Configure GitHub Pages
