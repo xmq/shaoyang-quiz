@@ -408,7 +408,7 @@
       <nav class="module-nav" aria-label="学习模块">
         <a class="module-link" href="./index.html">首页</a>
         <a class="module-link" __LECTURE_CURRENT__ href="./notes.html">讲义</a>
-        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色笔记</a>
+        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色回忆</a>
         <a class="module-link" href="./quiz.html">刷题</a>
       </nav>
     </div>
@@ -417,33 +417,33 @@
   <main id="main">
     <section id="directory" aria-labelledby="directory-title">
       <div class="directory-head">
-        <h1 id="directory-title">选择课程</h1>
+        <h1 id="directory-title">选择科目</h1>
         <p>__DIRECTORY_DESCRIPTION__</p>
       </div>
       <div class="directory-search search-box">
         <span class="search-icon" aria-hidden="true">⌕</span>
-        <input id="course-search" type="search" aria-label="搜索课程" placeholder="搜索课程名称" autocomplete="off">
-        <button class="icon-button hidden" id="course-search-clear" type="button" aria-label="清空课程搜索">×</button>
+        <input id="course-search" type="search" aria-label="搜索科目" placeholder="搜索科目名称" autocomplete="off">
+        <button class="icon-button hidden" id="course-search-clear" type="button" aria-label="清空科目搜索">×</button>
       </div>
       <div class="course-grid" id="courses"></div>
-      <div class="empty-result hidden" id="course-empty">没有找到匹配的课程</div>
+      <div class="empty-result hidden" id="course-empty">没有找到匹配的科目</div>
       <p class="sr-only" id="course-status" role="status" aria-live="polite"></p>
     </section>
 
-    <section class="study hidden" id="study" aria-label="课程内容">
+    <section class="study hidden" id="study" aria-label="科目内容">
       <div class="study-toolbar">
         <button class="icon-button mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false">☰</button>
         <div class="search-area">
           <div class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
-            <input id="search" type="search" aria-label="搜索当前课程内容" placeholder="搜索当前课程" autocomplete="off">
+            <input id="search" type="search" aria-label="搜索当前科目内容" placeholder="搜索当前科目" autocomplete="off">
             <button class="icon-button hidden" id="search-clear" type="button" aria-label="清空内容搜索">×</button>
           </div>
           <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
         </div>
         <div class="toolbar-actions">
           <button class="text-button hidden" id="recall-toggle" type="button" aria-pressed="false">回忆模式</button>
-          <button class="text-button" id="back" type="button" aria-label="返回选择课程">换课程</button>
+          <button class="text-button" id="back" type="button" aria-label="返回选择科目">换科目</button>
         </div>
       </div>
 
@@ -521,8 +521,35 @@
       item.setAttribute("aria-label", `已显示答案：${item.dataset.recallCue || "这条笔记"}`);
     }
 
+    function publicFacingText(value) {
+      return String(value || "")
+        .replace(/按高校程序设计基础常见期末范围/g, "按事业单位专业知识常见考查范围")
+        .replace(/讲义按大学《([^》]+)》的典型期末结构组织/g, "讲义按《$1》的专业知识常见考查结构组织")
+        .replace(/公开大学期末试卷显示/g, "常见专业知识试题显示")
+        .replace(/公开考试大纲和期末试卷样例表明/g, "常见专业知识考查表明")
+        .replace(/公开通信专业试卷还常考/g, "通信专业考查还可能涉及")
+        .replace(/完整通信专业期末/g, "通信专业知识考查")
+        .replace(/期末/g, "考试");
+    }
+
+    function publicMarkdownLines(markdown) {
+      const visible = [];
+      let hiddenSection = false;
+      String(markdown || "").split(/\r?\n/).forEach((line) => {
+        const trimmed = line.trim();
+        const markdownH2 = trimmed.match(/^##\s+(.+)$/);
+        const plainChapter = trimmed.match(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?.*$/);
+        if (markdownH2 || plainChapter) {
+          const title = markdownH2 ? markdownH2[1] : plainChapter[0];
+          hiddenSection = /(?:公开课程|课程与扩展依据|课程依据|教材依据|资料来源|参考资料|参考链接|题型参考|改编说明)/.test(title);
+        }
+        if (!hiddenSection) visible.push(line);
+      });
+      return visible;
+    }
+
     function formatInline(value) {
-      const source = String(value || "");
+      const source = publicFacingText(value);
       const marker = source.match(/^(🔴|🔵|⚫️?)\s*/u);
       const visibleSource = marker ? source.slice(marker[0].length) : source;
       let output = escapeHtml(visibleSource)
@@ -576,7 +603,7 @@
     }
 
     function renderMarkdown(markdown) {
-      const lines = markdown.split(/\r?\n/);
+      const lines = publicMarkdownLines(markdown);
       const output = [
         ...(colorMode ? ['<p class="recall-hint">默认先答后看：根据每张卡的提示口述或默写，再点击卡片核对最小答案。本次只练当前展开章节。</p>'] : []),
         "<div class=\"preface\">",
@@ -851,7 +878,7 @@
         courses.appendChild(button);
       });
       courseEmpty.classList.toggle("hidden", matches.length > 0);
-      courseStatus.textContent = normalized ? `找到 ${matches.length} 门课程` : "";
+      courseStatus.textContent = normalized ? `找到 ${matches.length} 个科目` : "";
     }
 
     function highlightMatches(root, query) {
@@ -916,7 +943,7 @@
         });
         collapsedBeforeSearch = null;
       }
-      searchStatus.textContent = query ? (matches ? `找到 ${matches} 个相关内容区，已定位到首个结果` : "当前课程没有匹配内容") : "";
+      searchStatus.textContent = query ? (matches ? `找到 ${matches} 个相关内容区，已定位到首个结果` : "当前科目没有匹配内容") : "";
       chapterLinks.querySelectorAll(".chapter-link").forEach((link, index) => link.classList.toggle("hidden", Boolean(query) && sections[index]?.classList.contains("hidden")));
       if (firstMatch) requestAnimationFrame(() => firstMatch.scrollIntoView({behavior: "smooth", block: "start"}));
     }

@@ -1,4 +1,5 @@
 const QUESTIONS = Array.isArray(window.QUESTIONS) ? window.QUESTIONS : [];
+const PUBLIC_QUESTIONS = QUESTIONS.filter((question) => !/^(?:uc|ue)-/i.test(String(question.id || "")));
 const QUESTION_MEDIA = window.QUESTION_MEDIA && typeof window.QUESTION_MEDIA === "object" ? window.QUESTION_MEDIA : {};
 const BUILD_INFO = window.SHAOYANG_BUILD && typeof window.SHAOYANG_BUILD === "object" ? window.SHAOYANG_BUILD : {id: "development"};
 const STORE_KEY = "shaoyang-quiz-v5";
@@ -30,7 +31,6 @@ const ERROR_TAG_LABELS = Object.freeze({
 });
 const SUBJECT_ORDER = ["信息基础", "计算机基础", "办公软件", "教学论", "多媒体", "编程语言", "算法与数据结构", "计算机组成原理", "操作系统", "数据库", "计算机网络", "软件工程", "信息安全", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "大数据", "其他"];
 const TYPE_ORDER = ["单选", "多选", "判断", "填空"];
-const SOURCE_ORDER = ["大学期末改编", "大学期末原创", "题海训练", "超格", "中公", "德阳", "网络", "新增", "大数据基础题"];
 const PROGRESS_FIELDS = ["done", "wrong", "streak", "fav", "flagged", "history", "reviewMeta", "errorTags"];
 
 const $ = (id) => document.getElementById(id);
@@ -113,7 +113,6 @@ function stateDefaults() {
     mode: "home",
     subject: "",
     typeFilter: "",
-    sourceFilter: "",
     chapterFilter: "",
     searchQuery: "",
     currentId: null,
@@ -175,8 +174,8 @@ function chapterKey(q) {
 function searchableText(q) {
   const options = q.options ? Object.values(q.options).join(" ") : "";
   return [
-    q.id, q.source, q.type, q.subject, chapterKey(q), q.stem, options,
-    q.answer, q.explanation, q.source_title, q.adaptation_note,
+    q.id, q.type, q.subject, chapterKey(q), q.stem, options,
+    q.answer, q.explanation,
   ]
     .filter(Boolean)
     .join(" ")
@@ -184,10 +183,9 @@ function searchableText(q) {
 }
 
 function getScope() {
-  let scope = QUESTIONS;
+  let scope = PUBLIC_QUESTIONS;
   if (state.subject) scope = scope.filter((q) => q.subject === state.subject);
   if (state.typeFilter) scope = scope.filter((q) => q.type === state.typeFilter);
-  if (state.sourceFilter) scope = scope.filter((q) => q.source === state.sourceFilter);
   if (state.chapterFilter) scope = scope.filter((q) => chapterKey(q) === state.chapterFilter);
   const query = String(state.searchQuery || "").trim().toLowerCase();
   if (query) {
@@ -294,7 +292,7 @@ function applyLaunchParams() {
     state.mode = requestedMode;
     changed = true;
   }
-  if (requestedSubject && QUESTIONS.some((question) => question.subject === requestedSubject)) {
+  if (requestedSubject && PUBLIC_QUESTIONS.some((question) => question.subject === requestedSubject)) {
     state.subject = requestedSubject;
     state.chapterFilter = "";
     if (!requestedMode) state.mode = "seq";
@@ -369,9 +367,9 @@ function announceAnswer(q, correct) {
 
 function updateSubjectSelect() {
   const select = $("subject-select");
-  const counts = countBy(QUESTIONS, (q) => q.subject);
+  const counts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
   const subjects = orderedValues(new Set(Object.keys(counts)), SUBJECT_ORDER);
-  select.innerHTML = `<option value="">全部科目 (${QUESTIONS.length})</option>` +
+  select.innerHTML = `<option value="">全部科目 (${PUBLIC_QUESTIONS.length})</option>` +
     subjects.map((s) => `<option value="${escapeHtml(s)}">${escapeHtml(s)} (${counts[s]})</option>`).join("");
   select.value = state.subject || "";
 }
@@ -400,7 +398,7 @@ function updateStats() {
 }
 
 function subjectStats(subject) {
-  const subset = subject ? QUESTIONS.filter((q) => q.subject === subject) : QUESTIONS;
+  const subset = subject ? PUBLIC_QUESTIONS.filter((q) => q.subject === subject) : PUBLIC_QUESTIONS;
   const done = subset.filter((q) => state.done[q.id]).length;
   const correct = subset.filter((q) => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
   const wrongbook = subset.filter((q) => state.wrong[q.id]).length;
@@ -420,7 +418,6 @@ function renderActiveFilters() {
   const container = $("active-filters");
   const filters = [
     ["typeFilter", "题型", state.typeFilter],
-    ["sourceFilter", "来源", state.sourceFilter],
     ["chapterFilter", "章节", state.chapterFilter],
   ].filter(([, , value]) => value);
   container.classList.toggle("hidden", filters.length === 0);
@@ -436,7 +433,6 @@ function renderActiveFilters() {
       const key = button.dataset.clearFilter;
       if (key === "all") {
         state.typeFilter = "";
-        state.sourceFilter = "";
         state.chapterFilter = "";
       } else {
         state[key] = "";
@@ -528,12 +524,6 @@ function feedbackHtml(q, chosen) {
   const explanation = q.explanation && q.explanation.trim()
     ? `<div class="explanation"><div class="exp-title">解析</div>${escapeHtml(q.explanation)}</div>`
     : `<div class="explanation">本题暂无文字解析</div>`;
-  const provenance = q.source === "大学期末改编" && q.source_title && q.source_url
-    ? `<div class="question-provenance">
-        <div><strong>题型参考：</strong><a href="${escapeHtml(q.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(q.source_title)}</a></div>
-        ${q.adaptation_note ? `<div><strong>改编说明：</strong>${escapeHtml(q.adaptation_note)}</div>` : ""}
-      </div>`
-    : "";
   const reviewMeta = state.reviewMeta[q.id];
   const reviewMessage = ok && reviewMeta?.nextReviewAt
     ? `已安排 ${new Date(reviewMeta.nextReviewAt).toLocaleDateString("zh-CN", {month: "numeric", day: "numeric"})} 再次练习`
@@ -556,7 +546,6 @@ function feedbackHtml(q, chosen) {
     <div class="feedback-label ${ok ? "ok" : "ng"}">${ok ? "✓ 正确" : "× 错误，" + answer}${badge}</div>
     ${explanation}
     ${errorTagButtons}
-    ${provenance}
     ${repairLinks}
   </div>`;
 }
@@ -583,7 +572,6 @@ function renderQuestion(q, pool) {
 
   $("card-area").innerHTML = `<article class="card" aria-labelledby="question-stem">
     <div class="meta">
-      <span class="badge source source-${escapeHtml(q.source)}">${escapeHtml(q.source)}</span>
       <span class="badge type-${escapeHtml(q.type)}">${escapeHtml(q.type)}</span>
       <span class="badge subject">${escapeHtml(q.subject)}</span>
       <span class="chapter">${escapeHtml(q.source_chapter || q.chapter || "")}</span>
@@ -731,10 +719,10 @@ function bindQuestionEvents(q, inWrongFresh) {
 
 function renderEmpty() {
   let title = "当前条件下题目已全部刷完";
-  let text = "可以切换科目、题型、来源，或进入错题本继续练。";
+  let text = "可以切换科目、题型、章节，或进入错题本继续练。";
   if (state.searchQuery) {
     title = "没有找到匹配题目";
-    text = "换个关键词，或清空科目、章节、来源筛选后再搜。";
+    text = "换个关键词，或清空科目、题型、章节筛选后再搜。";
   } else if (state.chapterFilter) {
     title = "当前章节没有可刷题目";
     text = "可以切换模式，或在侧栏清空章节筛选。";
@@ -776,7 +764,7 @@ function renderDashboard() {
     .map(([tag, count]) => `<span>${escapeHtml(ERROR_TAG_LABELS[tag] || tag)} <b>${count}</b></span>`)
     .join("");
 
-  const subjectCounts = countBy(QUESTIONS, (q) => q.subject);
+  const subjectCounts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
   const rows = orderedValues(new Set(Object.keys(subjectCounts)), SUBJECT_ORDER)
     .map((subject) => ({subject, ...subjectStats(subject)}))
     .sort((a, b) => (b.wrongbook - a.wrongbook) || (a.rate - b.rate) || (b.total - a.total))
@@ -815,7 +803,7 @@ function renderDashboard() {
       ${errorSummary ? `<div class="error-summary"><strong>错因分布</strong>${errorSummary}</div>` : ""}
     </article>
     <article class="card">
-      <div class="meta"><span class="badge source">薄弱科目</span><span class="chapter">按错题数和正确率排序</span></div>
+      <div class="meta"><span class="badge subject">薄弱科目</span><span class="chapter">按错题数和正确率排序</span></div>
       <div class="subject-table">${rows}</div>
     </article>
   </section>`;
@@ -832,7 +820,7 @@ function renderDashboard() {
 }
 
 function render() {
-  if (!QUESTIONS.length) {
+  if (!PUBLIC_QUESTIONS.length) {
     $("card-area").innerHTML = `<div class="card empty"><strong>题库未加载</strong>请确认 questions.js 与 app.js 在同一目录。</div>`;
     return;
   }
@@ -927,8 +915,8 @@ function renderDrawerList(el, items, active, onPick) {
 }
 
 function buildDrawer() {
-  const subjectCounts = countBy(QUESTIONS, (q) => q.subject);
-  const subjects = [{value: "", label: "全部科目", count: QUESTIONS.length}].concat(
+  const subjectCounts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
+  const subjects = [{value: "", label: "全部科目", count: PUBLIC_QUESTIONS.length}].concat(
     orderedValues(new Set(Object.keys(subjectCounts)), SUBJECT_ORDER).map((s) => ({value: s, label: s, count: subjectCounts[s]}))
   );
   renderDrawerList($("drawer-subjects"), subjects, state.subject || "", (value) => {
@@ -940,8 +928,8 @@ function buildDrawer() {
     render();
   });
 
-  const typeCounts = countBy(QUESTIONS, (q) => q.type);
-  const types = [{value: "", label: "全部题型", count: QUESTIONS.length}].concat(
+  const typeCounts = countBy(PUBLIC_QUESTIONS, (q) => q.type);
+  const types = [{value: "", label: "全部题型", count: PUBLIC_QUESTIONS.length}].concat(
     orderedValues(new Set(Object.keys(typeCounts)), TYPE_ORDER).map((t) => ({value: t, label: t, count: typeCounts[t]}))
   );
   renderDrawerList($("drawer-types"), types, state.typeFilter || "", (value) => {
@@ -953,23 +941,9 @@ function buildDrawer() {
     render();
   });
 
-  const sourceCounts = countBy(QUESTIONS, (q) => q.source);
-  const sources = [{value: "", label: "全部来源", count: QUESTIONS.length}].concat(
-    orderedValues(new Set(Object.keys(sourceCounts)), SOURCE_ORDER).map((s) => ({value: s, label: s, count: sourceCounts[s]}))
-  );
-  renderDrawerList($("drawer-sources"), sources, state.sourceFilter || "", (value) => {
-    state.sourceFilter = value;
-    state.chapterFilter = "";
-    resetPosition();
-    save();
-    closeDrawer();
-    render();
-  });
-
-  let chapterBase = QUESTIONS;
+  let chapterBase = PUBLIC_QUESTIONS;
   if (state.subject) chapterBase = chapterBase.filter((q) => q.subject === state.subject);
   if (state.typeFilter) chapterBase = chapterBase.filter((q) => q.type === state.typeFilter);
-  if (state.sourceFilter) chapterBase = chapterBase.filter((q) => q.source === state.sourceFilter);
   const chapterCounts = countBy(chapterBase, chapterKey);
   const chapters = [{value: "", label: "全部章节", count: chapterBase.length}].concat(
     Object.keys(chapterCounts)
@@ -1034,7 +1008,7 @@ function exportWrong() {
     alert("错题本是空的");
     return;
   }
-  const map = Object.fromEntries(QUESTIONS.map((q) => [q.id, q]));
+  const map = Object.fromEntries(PUBLIC_QUESTIONS.map((q) => [q.id, q]));
   const groups = {};
   for (const id of ids) {
     const q = map[id];
@@ -1054,8 +1028,6 @@ function exportWrong() {
       }
       text += `   【答案】${q.answer}\n`;
       if (q.explanation) text += `   【解析】${q.explanation}\n`;
-      if (q.source_title && q.source_url) text += `   【题型参考】${q.source_title} ${q.source_url}\n`;
-      if (q.adaptation_note) text += `   【改编说明】${q.adaptation_note}\n`;
       text += "\n";
     });
   }
@@ -1080,20 +1052,18 @@ function exportFlags() {
     alert("当前没有纠错标记");
     return;
   }
-  const map = Object.fromEntries(QUESTIONS.map((q) => [q.id, q]));
+  const map = Object.fromEntries(PUBLIC_QUESTIONS.map((q) => [q.id, q]));
   const rows = ids.map((id) => ({id, q: map[id], markedAt: state.flagged[id]})).filter((row) => row.q);
   let text = `纠错标记导出 · ${new Date().toLocaleString("zh-CN")}\n共 ${rows.length} 道\n\n`;
   rows.forEach(({id, q, markedAt}, index) => {
     text += `${index + 1}. [${markedAt}] ${q.stem}\n`;
     text += `   ID：${id}\n`;
-    text += `   来源：${q.source} / ${q.type} / ${q.subject} / ${chapterKey(q)}\n`;
+    text += `   题型：${q.type} / ${q.subject} / ${chapterKey(q)}\n`;
     for (const letter of optionKeys(q)) {
       if (q.options && q.options[letter]) text += `   ${letter}. ${q.options[letter]}\n`;
     }
     text += `   【答案】${q.answer}\n`;
     if (q.explanation) text += `   【解析】${q.explanation}\n`;
-    if (q.source_title && q.source_url) text += `   【题型参考】${q.source_title} ${q.source_url}\n`;
-    if (q.adaptation_note) text += `   【改编说明】${q.adaptation_note}\n`;
     text += "\n";
   });
   downloadText(`纠错标记_${new Date().toISOString().slice(0, 10)}.txt`, text, "text/plain;charset=utf-8");
@@ -1118,7 +1088,7 @@ function sanitizeState(input, strict = false) {
   }
 
   const clean = stateDefaults();
-  const questionMap = new Map(QUESTIONS.map((q) => [q.id, q]));
+  const questionMap = new Map(PUBLIC_QUESTIONS.map((q) => [q.id, q]));
   const entries = (key) => (isRecord(input[key]) ? Object.entries(input[key]) : []).filter(([id]) => questionMap.has(id));
   clean.done = Object.fromEntries(entries("done").filter(([id, value]) => {
     if (typeof value !== "string" || value.length > 500) return false;
@@ -1157,16 +1127,14 @@ function sanitizeState(input, strict = false) {
     .filter(([, value]) => typeof value === "string" && Object.prototype.hasOwnProperty.call(ERROR_TAG_LABELS, value)));
 
   if (["home", "seq", "rnd", "review", "wrong", "fav"].includes(input.mode)) clean.mode = input.mode;
-  const allowedSubjects = new Set(QUESTIONS.map((q) => q.subject));
-  const allowedTypes = new Set(QUESTIONS.map((q) => q.type));
-  const allowedSources = new Set(QUESTIONS.map((q) => q.source));
+  const allowedSubjects = new Set(PUBLIC_QUESTIONS.map((q) => q.subject));
+  const allowedTypes = new Set(PUBLIC_QUESTIONS.map((q) => q.type));
   if (typeof input.subject === "string" && (!input.subject || allowedSubjects.has(input.subject))) clean.subject = input.subject;
   if (typeof input.typeFilter === "string" && (!input.typeFilter || allowedTypes.has(input.typeFilter))) clean.typeFilter = input.typeFilter;
-  if (typeof input.sourceFilter === "string" && (!input.sourceFilter || allowedSources.has(input.sourceFilter))) clean.sourceFilter = input.sourceFilter;
   if (typeof input.chapterFilter === "string" && input.chapterFilter.length <= 300) clean.chapterFilter = input.chapterFilter;
   if (typeof input.searchQuery === "string" && input.searchQuery.length <= 300) clean.searchQuery = input.searchQuery;
   if (typeof input.currentId === "string" && questionMap.has(input.currentId)) clean.currentId = input.currentId;
-  if (Number.isInteger(input.cursor) && input.cursor >= 0 && input.cursor < QUESTIONS.length) clean.cursor = input.cursor;
+  if (Number.isInteger(input.cursor) && input.cursor >= 0 && input.cursor < PUBLIC_QUESTIONS.length) clean.cursor = input.cursor;
   return clean;
 }
 

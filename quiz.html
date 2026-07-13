@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#2563eb">
-  <meta name="description" content="按课程、题型和复习状态练习大学课程题库，支持错题、收藏、到期复习与进度备份。">
+  <meta name="description" content="围绕事业单位专业知识常见考点，按科目、题型和复习状态练习，支持错题、收藏、到期复习与进度备份。">
   <title>邵阳备考 · 刷题</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
@@ -13,7 +13,7 @@
   <div class="app-shell">
     <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="筛选和操作" aria-hidden="true" tabindex="-1" inert>
       <div class="drawer-head">
-        <strong>邵阳备考 · 刷题</strong>
+        <strong>邵阳备考 · 专业知识刷题</strong>
         <button class="icon-btn" id="drawer-close" aria-label="关闭">×</button>
       </div>
 
@@ -25,11 +25,6 @@
       <section class="drawer-section">
         <div class="drawer-title">题型</div>
         <div class="drawer-list" id="drawer-types"></div>
-      </section>
-
-      <section class="drawer-section">
-        <div class="drawer-title">来源</div>
-        <div class="drawer-list" id="drawer-sources"></div>
       </section>
 
       <section class="drawer-section">
@@ -73,7 +68,7 @@
       <nav class="module-switcher" aria-label="学习模块">
         <a class="module-switcher-link" href="./index.html"><span aria-hidden="true">⌂</span>首页</a>
         <a class="module-switcher-link" href="./notes.html"><span aria-hidden="true">📖</span>讲义</a>
-        <a class="module-switcher-link" href="./color-notes.html"><span aria-hidden="true">🖍️</span>三色笔记</a>
+        <a class="module-switcher-link" href="./color-notes.html"><span aria-hidden="true">🖍️</span>三色回忆</a>
         <a class="module-switcher-link" aria-current="page" href="./quiz.html"><span aria-hidden="true">🧠</span>刷题</a>
       </nav>
       <nav class="mode-tabs" aria-label="刷题模式">
@@ -89,6 +84,7 @@
         <input id="search-input" type="search" aria-label="搜索题干、选项和解析" placeholder="搜索题干、选项、解析..." autocomplete="off">
         <button id="clear-search" class="secondary-btn" type="button">清除</button>
       </section>
+      <p class="scope-disclosure">题库练选择、判断、填空和一步计算；简答请在三色回忆中先口述或默写，再核对得分词。已隐藏偏复杂综合计算题。</p>
       <section class="active-filters hidden" id="active-filters" aria-label="当前筛选条件"></section>
 
       <section id="card-area"></section>

@@ -1,11 +1,13 @@
 (function () {
   "use strict";
 
-  const QUESTION_INDEX = Array.isArray(window.HOME_QUESTION_INDEX)
+  const RAW_QUESTION_INDEX = Array.isArray(window.HOME_QUESTION_INDEX)
     ? window.HOME_QUESTION_INDEX
     : Array.isArray(window.QUESTIONS)
       ? window.QUESTIONS.map(({id, subject, type, answer}) => ({id, subject, type, answer}))
       : [];
+  const QUESTION_INDEX = RAW_QUESTION_INDEX.filter((question) => !/^(?:uc|ue)-/i.test(String(question.id || "")));
+  const QUESTION_IDS = new Set(QUESTION_INDEX.map((question) => question.id));
   const STORE_KEYS = ["shaoyang-quiz-v5", "shaoyang-quiz-v4", "shaoyang-quiz-v3", "shaoyang-quiz-v2", "shaoyang-quiz-v1"];
   const SUBJECT_ALIASES = {
     "Office软件操作": "办公软件",
@@ -16,21 +18,21 @@
     "数据库技术": "数据库",
   };
   const COURSES = [
-    {name: "Office软件操作", group: "教育技术", icon: "O"},
-    {name: "信息技术与教学论", group: "教育技术", icon: "教"},
-    {name: "多媒体技术", group: "教育技术", icon: "媒"},
-    {name: "编程语言", group: "计算机核心", icon: "码"},
-    {name: "数据结构与算法", group: "计算机核心", icon: "算"},
-    {name: "计算机组成原理", group: "计算机核心", icon: "组"},
-    {name: "操作系统原理", group: "计算机核心", icon: "OS"},
-    {name: "数据库技术", group: "计算机核心", icon: "库"},
-    {name: "计算机网络", group: "计算机核心", icon: "网"},
-    {name: "软件工程", group: "计算机核心", icon: "软"},
-    {name: "信息安全", group: "计算机核心", icon: "安"},
-    {name: "电路分析与电工技术", group: "电子通信", icon: "电"},
-    {name: "模拟电子技术", group: "电子通信", icon: "模"},
-    {name: "数字电子技术", group: "电子通信", icon: "数"},
-    {name: "通信原理与高频电子线路", group: "电子通信", icon: "通"},
+    {name: "Office软件操作", group: "信息技术应用", icon: "O"},
+    {name: "信息技术与教学论", group: "信息技术应用", icon: "教"},
+    {name: "多媒体技术", group: "信息技术应用", icon: "媒"},
+    {name: "编程语言", group: "计算机专业", icon: "码"},
+    {name: "数据结构与算法", group: "计算机专业", icon: "算"},
+    {name: "计算机组成原理", group: "计算机专业", icon: "组"},
+    {name: "操作系统原理", group: "计算机专业", icon: "OS"},
+    {name: "数据库技术", group: "计算机专业", icon: "库"},
+    {name: "计算机网络", group: "计算机专业", icon: "网"},
+    {name: "软件工程", group: "计算机专业", icon: "软"},
+    {name: "信息安全", group: "计算机专业", icon: "安"},
+    {name: "电路分析与电工技术", group: "电子与通信", icon: "电"},
+    {name: "模拟电子技术", group: "电子与通信", icon: "模"},
+    {name: "数字电子技术", group: "电子与通信", icon: "数"},
+    {name: "通信原理与高频电子线路", group: "电子与通信", icon: "通"},
   ];
 
   function readProgress() {
@@ -75,11 +77,12 @@
     const ids = new Set();
     const meta = progress.reviewMeta && typeof progress.reviewMeta === "object" ? progress.reviewMeta : {};
     Object.entries(meta).forEach(([id, item]) => {
+      if (!QUESTION_IDS.has(id)) return;
       const due = item && Date.parse(item.nextReviewAt);
       if (Number.isFinite(due) && due <= now && !(progress.flagged || {})[id]) ids.add(id);
     });
     Object.keys(progress.wrong || {}).forEach((id) => {
-      if (!(progress.flagged || {})[id] && !meta[id]) ids.add(id);
+      if (QUESTION_IDS.has(id) && !(progress.flagged || {})[id] && !meta[id]) ids.add(id);
     });
     return ids;
   }
@@ -102,9 +105,13 @@
   function buildCourseGrid(progress) {
     const root = document.getElementById("home-course-grid");
     if (!root) return;
-    const groups = ["教育技术", "计算机核心", "电子通信"];
-    root.innerHTML = groups.map((group) => {
-      const cards = COURSES.filter((course) => course.group === group).map((course) => {
+    const groups = [
+      {key: "信息技术应用", label: "信息技术应用"},
+      {key: "计算机专业", label: "计算机专业"},
+      {key: "电子与通信", label: "电子与通信 · 电子信息岗专项"},
+    ];
+    root.innerHTML = groups.map((group, groupIndex) => {
+      const cards = COURSES.filter((course) => course.group === group.key).map((course) => {
         const subject = SUBJECT_ALIASES[course.name] || course.name;
         const stats = courseStats(progress, subject);
         const progressText = stats.done
@@ -112,17 +119,18 @@
           : `${stats.total || "—"} 道配套题`;
         const noteHash = `#course=${encodeURIComponent(course.name)}`;
         const quizQuery = `?subject=${encodeURIComponent(subject)}&mode=seq`;
+        const routeTag = course.name === "信息技术与教学论" ? '<span class="course-route-tag">信息技术教师岗专项</span>' : "";
         return `<article class="home-course-card">
-          <div class="home-course-title"><span aria-hidden="true">${course.icon}</span><div><strong>${course.name}</strong><small>${progressText}</small></div></div>
+          <div class="home-course-title"><span aria-hidden="true">${course.icon}</span><div><strong>${course.name}</strong>${routeTag}<small>${progressText}</small></div></div>
           <div class="home-course-actions">
             <a href="./notes.html${noteHash}">学讲义</a>
-            <a href="./color-notes.html${noteHash}">用笔记</a>
-            <a href="./quiz.html${quizQuery}">做本课题</a>
+            <a href="./color-notes.html${noteHash}">做回忆</a>
+            <a href="./quiz.html${quizQuery}">刷本专项</a>
           </div>
         </article>`;
       }).join("");
-      return `<section class="home-course-group" aria-labelledby="course-group-${group}">
-        <h3 id="course-group-${group}">${group}</h3>
+      return `<section class="home-course-group" aria-labelledby="course-group-${groupIndex}">
+        <h3 id="course-group-${groupIndex}">${group.label}</h3>
         <div>${cards}</div>
       </section>`;
     }).join("");
@@ -132,7 +140,7 @@
     const done = progress.done && typeof progress.done === "object" ? progress.done : {};
     const completed = QUESTION_INDEX.filter((question) => Object.prototype.hasOwnProperty.call(done, question.id));
     const correct = completed.filter((question) => isCorrect(question, done[question.id])).length;
-    const wrongCount = Object.keys(progress.wrong || {}).length;
+    const wrongCount = QUESTION_INDEX.filter((question) => (progress.wrong || {})[question.id]).length;
     const dueCount = dueIds(progress).size;
     const rate = completed.length ? Math.round(correct * 100 / completed.length) : null;
     const last = readLastLearning();
@@ -142,7 +150,7 @@
     $("home-rate").textContent = rate === null ? "—" : `${rate}%`;
     $("home-due").textContent = dueCount;
     $("home-wrong").textContent = wrongCount;
-    $("question-count").textContent = `${window.SHAOYANG_BUILD?.questionCount || QUESTION_INDEX.length || 0} 道题`;
+    $("question-count").textContent = `${QUESTION_INDEX.length} 道题`;
 
     const action = $("continue-action");
     const recommendation = $("status-recommendation");
@@ -153,10 +161,10 @@
       recommendation.textContent = `有 ${dueCount} 道题需要再次提取。先完成到期复习，再学习新内容。`;
     } else if (last && last.course) {
       const page = last.module === "color-notes" ? "color-notes.html" : "notes.html";
-      const moduleName = last.module === "color-notes" ? "三色笔记" : "讲义";
+      const moduleName = last.module === "color-notes" ? "三色回忆" : "讲义";
       action.href = `./${page}#course=${encodeURIComponent(last.course)}`;
       action.textContent = `继续：${last.course}`;
-      recommendation.textContent = `上次学习了“${last.course}”${moduleName}，可以从这门课继续完成学习闭环。`;
+      recommendation.textContent = `上次学习了“${last.course}”${moduleName}，可以从这个科目继续完成学习闭环。`;
     } else if (wrongCount > 0) {
       action.href = "./quiz.html?mode=wrong";
       action.textContent = `处理 ${wrongCount} 道错题`;
@@ -167,8 +175,8 @@
       recommendation.textContent = `你已完成 ${completed.length} 道题。下一步可继续当前科目，并在答题后核对解析。`;
     } else {
       action.href = "./notes.html";
-      action.textContent = "选择课程开始学习";
-      recommendation.textContent = "先选一门课程，从讲义的一个小节开始，学完立即回忆并做题检验。";
+      action.textContent = "选择科目开始学习";
+      recommendation.textContent = "先选一个科目，从讲义的一个小节开始，学完立即回忆并做题检验。";
     }
     note.textContent = completed.length
       ? `正确率基于 ${completed.length} 道已作答题；记录只保存在当前浏览器中。`
