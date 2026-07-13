@@ -17,7 +17,7 @@
         <span class="home-brand-mark" aria-hidden="true">题</span>
         <span><strong>刷题器</strong><small>专业知识学习与练习</small></span>
       </a>
-      <nav class="home-nav" aria-label="学习模块">
+      <nav class="home-nav desktop-primary-nav" aria-label="学习模块">
         <a aria-current="page" href="./index.html">首页</a>
         <a href="./notes.html">讲义</a>
         <a href="./color-notes.html">三色回忆</a>
@@ -29,9 +29,9 @@
   <main class="home-main" id="home-main">
     <section class="home-hero" aria-labelledby="home-title">
       <div class="home-hero-copy">
-        <p class="home-eyebrow">事业单位 · 计算机与电子信息专业知识</p>
-        <h1 id="home-title">把专业基础，<br>练成考场得分。</h1>
-        <p class="home-lead">自主选择15门基础课程。讲义负责理解，三色回忆负责说出得分点，题库负责检验与纠错。</p>
+        <p class="home-eyebrow">计算机与电子信息专业知识</p>
+        <h1 id="home-title">选一门课，<br>开始今天的学习。</h1>
+        <p class="home-lead">课程只选一次。进入后可在讲义、三色回忆和刷题之间直接切换，并始终保留当前课程。</p>
         <div class="home-proof" aria-label="平台内容概览">
           <span><strong>15</strong> 门课程</span>
           <span><strong id="question-count">—</strong> 公开题</span>
@@ -39,7 +39,6 @@
         </div>
         <div class="home-hero-actions">
           <a class="home-primary-action" href="#courses">选择课程</a>
-          <a class="home-secondary-action" href="#study-method">查看学习闭环</a>
         </div>
       </div>
       <aside class="learning-status" id="learning-status" aria-labelledby="status-title">
@@ -62,73 +61,42 @@
       </aside>
     </section>
 
-    <section class="home-section quick-start" aria-labelledby="modules-title">
-      <div class="section-heading compact-heading">
-        <div><p class="section-kicker">今日学习闭环</p><h2 id="modules-title">一次只完成三个动作</h2></div>
-        <p>不要从头反复重读。学一小节、回忆一次、做一组题。</p>
-      </div>
-      <div class="learning-modules">
-        <a class="learning-module module-lecture" href="./notes.html">
-          <span class="module-step">01</span><span class="module-icon" aria-hidden="true">读</span>
-          <span class="module-purpose">建立理解</span><strong>讲义 · 1个小节</strong>
-          <span>先弄清是什么、为什么、有什么特点和适用条件。</span>
-          <em>进入讲义 <b aria-hidden="true">→</b></em>
-        </a>
-        <a class="learning-module module-recall" href="./color-notes.html">
-          <span class="module-step">02</span><span class="module-icon" aria-hidden="true">忆</span>
-          <span class="module-purpose">主动提取</span><strong>回忆 · 5张卡</strong>
-          <span>先口述结论、原因和边界，再揭示三色得分点。</span>
-          <em>开始回忆 <b aria-hidden="true">→</b></em>
-        </a>
-        <a class="learning-module module-practice" href="./quiz.html?mode=seq">
-          <span class="module-step">03</span><span class="module-icon" aria-hidden="true">练</span>
-          <span class="module-purpose">反馈纠错</span><strong>练习 · 10道题</strong>
-          <span>用判断、选择、简答和一步计算确认是否真正掌握。</span>
-          <em>开始练习 <b aria-hidden="true">→</b></em>
-        </a>
-      </div>
-    </section>
-
     <section class="home-section course-workbench" id="courses" aria-labelledby="courses-title">
       <div class="section-heading compact-heading">
-        <div><p class="section-kicker">课程目录</p><h2 id="courses-title">选择课程，直接开始</h2></div>
-        <p>每门课程都可以独立进入讲义、三色回忆或专项练习。</p>
+        <div><p class="section-kicker">课程目录</p><h2 id="courses-title">选择一门课程</h2></div>
+        <p>点击课程进入讲义；进入后可从底部直接切换回忆或刷题。</p>
       </div>
-      <nav class="course-jumps" aria-label="课程分类快捷入口">
-        <a href="#course-group-0">信息技术应用</a>
-        <a href="#course-group-1">计算机专业</a>
-        <a href="#course-group-2">电子与通信</a>
+      <nav class="course-jumps" aria-label="筛选课程分类" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-course-filter="all">全部</button>
+        <button type="button" role="tab" aria-selected="false" data-course-filter="信息技术应用">信息技术</button>
+        <button type="button" role="tab" aria-selected="false" data-course-filter="计算机专业">计算机</button>
+        <button type="button" role="tab" aria-selected="false" data-course-filter="电子与通信">电子通信</button>
       </nav>
       <div class="home-course-grid" id="home-course-grid" aria-live="polite"></div>
     </section>
 
-    <section class="home-section study-loop-section" id="study-method" aria-labelledby="loop-title">
-      <div class="section-heading compact-heading">
-        <div><p class="section-kicker">学习方法</p><h2 id="loop-title">理解 → 回忆 → 检验 → 重练</h2></div>
-        <p>每个知识点走完闭环，再扩大范围；会认不等于会答。</p>
-      </div>
-      <ol class="study-loop">
-        <li><span>1</span><div><strong>理解</strong><p>用自己的话解释概念和机制。</p></div></li>
-        <li><span>2</span><div><strong>回忆</strong><p>不看答案说出得分关键词。</p></div></li>
-        <li><span>3</span><div><strong>检验</strong><p>完成客观题、简答或一步计算。</p></div></li>
-        <li><span>4</span><div><strong>重练</strong><p>按错因和到期时间再次提取。</p></div></li>
+    <details class="home-help" id="study-method">
+      <summary>如何高效使用刷题器</summary>
+      <ol>
+        <li><strong>理解</strong><span>讲义学一个小节。</span></li>
+        <li><strong>回忆</strong><span>不看答案说出得分点。</span></li>
+        <li><strong>检验</strong><span>做一组题确认掌握。</span></li>
+        <li><strong>重练</strong><span>按错题和到期时间复习。</span></li>
       </ol>
-      <details class="method-evidence">
-        <summary>方法依据与适用边界</summary>
-        <p>提取练习与间隔学习适合巩固记忆；交错练习适合辨别相近概念和解法。平台使用易懂的默认复习间隔，不宣称适合所有课程与个人。</p>
-        <div>
-          <a href="https://doi.org/10.1126/science.1152408" target="_blank" rel="noopener noreferrer">提取练习研究</a>
-          <a href="https://digitalcommons.usf.edu/psy_facpub/1771/" target="_blank" rel="noopener noreferrer">间隔学习综述</a>
-          <a href="https://ies.ed.gov/ncee/wwc/PracticeGuide/1" target="_blank" rel="noopener noreferrer">学习实践指南</a>
-        </div>
-      </details>
-    </section>
+    </details>
   </main>
 
   <footer class="home-footer">
     <p>学习进度保存在本机浏览器，可在刷题页导出备份。</p>
     <p>内容用于专业知识基础复习，具体范围以岗位公告和准考证说明为准。</p>
   </footer>
+
+  <nav class="mobile-tabbar" aria-label="主导航">
+    <a aria-current="page" href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
+    <a href="./notes.html"><span aria-hidden="true">读</span><strong>讲义</strong></a>
+    <a href="./color-notes.html"><span aria-hidden="true">忆</span><strong>回忆</strong></a>
+    <a href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
+  </nav>
 
   <script src="./build-meta.js"></script>
   <script src="./home-data.js"></script>

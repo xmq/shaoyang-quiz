@@ -120,22 +120,34 @@
           : `${stats.total || "—"} 道配套题`;
         const percent = stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
         const noteHash = `#course=${encodeURIComponent(course.name)}`;
-        const quizQuery = `?subject=${encodeURIComponent(subject)}&mode=seq`;
-        return `<article class="home-course-card">
+        return `<a class="home-course-card" href="./notes.html${noteHash}" aria-label="进入${course.name}讲义">
           <div class="home-course-title"><span aria-hidden="true">${course.icon}</span><div><strong>${course.name}</strong><small>${progressText}</small></div></div>
           <div class="course-progress" aria-label="已完成 ${percent}%"><span style="width:${percent}%"></span></div>
-          <div class="home-course-actions">
-            <a class="course-main-action" href="./notes.html${noteHash}">${stats.done ? "继续学习" : "开始学习"}</a>
-            <a href="./color-notes.html${noteHash}">回忆</a>
-            <a href="./quiz.html${quizQuery}">练题</a>
-          </div>
-        </article>`;
+          <div class="course-card-footer"><span>${stats.done ? "继续课程" : "进入课程"}</span><b aria-hidden="true">→</b></div>
+        </a>`;
       }).join("");
-      return `<section class="home-course-group" aria-labelledby="course-group-${groupIndex}">
+      return `<section class="home-course-group" data-course-group="${group.key}" aria-labelledby="course-group-${groupIndex}">
         <h3 id="course-group-${groupIndex}">${group.label}</h3>
         <div>${cards}</div>
       </section>`;
     }).join("");
+  }
+
+  function bindCourseFilters() {
+    const buttons = [...document.querySelectorAll("[data-course-filter]")];
+    const groups = [...document.querySelectorAll("[data-course-group]")];
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.courseFilter;
+        buttons.forEach((item) => {
+          const active = item === button;
+          item.setAttribute("aria-selected", String(active));
+        });
+        groups.forEach((group) => {
+          group.hidden = filter !== "all" && group.dataset.courseGroup !== filter;
+        });
+      });
+    });
   }
 
   function updateStatus(progress) {
@@ -163,6 +175,7 @@
     const statusKicker = $("status-kicker");
     const hasProgress = completed.length > 0 || wrongCount > 0 || dueCount > 0 || !!last;
     status?.classList.toggle("has-progress", hasProgress);
+    status?.closest(".home-hero")?.classList.toggle("has-progress", hasProgress);
     if (statusTitle) statusTitle.textContent = hasProgress ? "今天从这里继续" : "从一个课程开始";
     if (statusKicker) statusKicker.textContent = hasProgress ? "你的学习状态" : "新手起点";
     if (dueCount > 0) {
@@ -172,7 +185,10 @@
     } else if (last && last.course) {
       const page = last.module === "color-notes" ? "color-notes.html" : "notes.html";
       const moduleName = last.module === "color-notes" ? "三色回忆" : "讲义";
-      action.href = `./${page}#course=${encodeURIComponent(last.course)}`;
+      const position = new URLSearchParams({course: last.course});
+      if (Number.isInteger(last.chapter) && last.chapter > 0) position.set("chapter", String(last.chapter));
+      if (last.module === "color-notes" && Number.isInteger(last.card) && last.card > 0) position.set("card", String(last.card));
+      action.href = `./${page}#${position.toString()}`;
       action.textContent = `继续：${last.course}`;
       recommendation.textContent = `上次学习了“${last.course}”${moduleName}，可以从这个科目继续完成学习闭环。`;
     } else if (wrongCount > 0) {
@@ -203,5 +219,6 @@
   const progress = readProgress();
   updateStatus(progress);
   buildCourseGrid(progress);
+  bindCourseFilters();
   registerServiceWorker();
 })();

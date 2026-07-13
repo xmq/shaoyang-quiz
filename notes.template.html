@@ -187,9 +187,15 @@
       white-space: nowrap;
     }
     .text-button:hover { border-color: #84adff; color: var(--primary); }
-    .mobile-nav-toggle { display: none; }
+    .mobile-nav-toggle,
+    .mobile-search-toggle,
+    .mobile-course-context,
+    .chapter-pager,
+    .recall-card-pager,
+    .mobile-module-tabs { display: none; }
 
     .study-layout { display: grid; grid-template-columns: 238px minmax(0, 1fr); gap: 18px; align-items: start; }
+    .study-content { min-width: 0; }
     .chapter-nav {
       position: sticky;
       top: 128px;
@@ -330,6 +336,7 @@
     .search-status { min-height: 24px; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
     .search-status:empty { display: none; }
     .nav-mask { display: none; }
+    .recall-card { min-width: 0; }
 
     @media (max-width: 900px) {
       .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -390,6 +397,138 @@
       .point { margin-top: 17px; padding: 9px 10px; font-size: 16px; }
       .note p { line-height: 1.85; }
       .table-wrap { margin-right: -3px; }
+
+      body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+      .site-header { position: sticky; }
+      .header-inner { min-height: 52px; flex-wrap: nowrap; padding: 6px 14px; }
+      .header-brand { flex: 1 1 auto; }
+      .brand { font-size: 15px; }
+      .desktop-module-nav { display: none; }
+      main { padding: 12px 8px 92px; }
+      .directory-head { margin: 4px 6px 14px; }
+      .directory-head h1 { font-size: 24px; }
+      .directory-head p { font-size: 13px; line-height: 1.6; }
+      .directory-search { margin: 12px 0; }
+      .course-card { min-height: 68px; }
+
+      .study-toolbar {
+        top: 52px;
+        grid-template-columns: auto minmax(0, 1fr) 44px auto;
+        align-items: center;
+        gap: 6px;
+        margin: -4px 0 8px;
+        padding: 6px 0;
+      }
+      .mobile-nav-toggle {
+        min-width: 70px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 6px 9px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--primary);
+        font-size: 14px;
+      }
+      .mobile-nav-toggle strong { font-size: 11px; }
+      .mobile-course-context { min-width: 0; display: grid; line-height: 1.25; }
+      .mobile-course-context strong { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+      .mobile-course-context span { color: var(--muted); font-size: 10px; }
+      .mobile-search-toggle { display: inline-flex; }
+      .search-area { display: none; grid-column: 1 / -1; grid-row: 2; }
+      .study.mobile-search-open .search-area { display: block; }
+      .toolbar-actions { align-items: center; }
+      .toolbar-actions #recall-toggle { display: none !important; }
+      .toolbar-actions #back { width: auto; min-width: 48px; padding: 0 8px; font-size: 11px; }
+      .toolbar-actions #back::before { content: none; }
+
+      .chapter-nav {
+        inset: auto 8px calc(66px + env(safe-area-inset-bottom)) 8px;
+        width: auto;
+        max-height: min(66vh, 560px);
+        padding: 0 0 env(safe-area-inset-bottom);
+        border: 1px solid var(--border);
+        border-radius: 18px 18px 12px 12px;
+        transform: translateY(calc(100% + 90px));
+        box-shadow: 0 -16px 38px rgba(16, 24, 40, .2);
+      }
+      .study.mobile-nav-open .chapter-nav { transform: translateY(0); }
+      .chapter-nav-head { min-height: 56px; border-radius: 18px 18px 0 0; }
+      .chapter-links { max-height: calc(66vh - 58px); overflow: auto; }
+      .chapter-link { min-height: 48px; }
+      .nav-mask { z-index: 35; }
+
+      .study-layout, .study.nav-collapsed .study-layout { display: block; }
+      .note { padding: 16px 13px; border-radius: 13px; }
+      .chapter-section { display: none; margin-top: 6px; scroll-margin-top: 110px; }
+      .chapter-section.mobile-active { display: block; }
+      .chapter-section.mobile-active .chapter-body { display: block; }
+      .chapter-toggle { min-height: auto; padding: 0 0 12px; border: 0; border-radius: 0; background: transparent; color: var(--text); pointer-events: none; }
+      .chapter-chevron { display: none; }
+
+      .chapter-pager {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin: 10px 0 2px;
+      }
+      .chapter-pager button,
+      .recall-card-pager button {
+        min-height: 46px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--text);
+        font-weight: 700;
+      }
+      .chapter-pager button:disabled,
+      .recall-card-pager button:disabled { color: #98a2b3; }
+
+      .study.recall-mode .chapter-pager { display: none; }
+      .study.recall-mode .chapter-body > :not(.recall-card) { display: none; }
+      .study.recall-mode .recall-card { display: none; }
+      .study.recall-mode .recall-card.mobile-active { display: block; }
+      .study.recall-mode .recall-card .point { margin-top: 2px; }
+      .study.recall-mode .recall-card-pager {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr 1fr;
+        gap: 6px;
+        margin: 10px 0 2px;
+      }
+      .recall-card-pager .reveal-card { border-color: var(--primary); background: var(--primary); color: #fff; }
+      .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { pointer-events: none; }
+
+      .mobile-module-tabs {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 80;
+        min-height: calc(62px + env(safe-area-inset-bottom));
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 6px max(8px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(8px, env(safe-area-inset-left));
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, .97);
+        box-shadow: 0 -8px 24px rgba(16, 24, 40, .08);
+        backdrop-filter: blur(16px);
+      }
+      .mobile-module-tabs a { min-height: 50px; display: grid; place-content: center; gap: 1px; border-radius: 11px; color: #667085; text-align: center; text-decoration: none; }
+      .mobile-module-tabs a[aria-current="page"] { background: var(--primary-soft); color: var(--primary); }
+      .mobile-module-tabs a span { font-size: 17px; font-weight: 800; line-height: 1; }
+      .mobile-module-tabs a strong { font-size: 11px; line-height: 1.25; }
+    }
+
+    @media (max-width: 700px) and (prefers-color-scheme: dark) {
+      .mobile-nav-toggle,
+      .chapter-pager button,
+      .recall-card-pager button { background: #182230; }
+      .mobile-module-tabs { border-color: #344054; background: rgba(24, 34, 48, .98); }
+      .mobile-module-tabs a { color: #aab7c4; }
+      .mobile-module-tabs a[aria-current="page"] { background: #243b5a; color: #b9d2ff; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -405,7 +544,7 @@
         <div class="brand">__BRAND_TITLE__</div>
         <div class="brand-sub">__BRAND_SUBTITLE__</div>
       </a>
-      <nav class="module-nav" aria-label="学习模块">
+      <nav class="module-nav desktop-module-nav" aria-label="学习模块">
         <a class="module-link" href="./index.html">首页</a>
         <a class="module-link" __LECTURE_CURRENT__ href="./notes.html">讲义</a>
         <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色回忆</a>
@@ -432,7 +571,9 @@
 
     <section class="study hidden" id="study" aria-label="科目内容">
       <div class="study-toolbar">
-        <button class="icon-button mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false">☰</button>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><span aria-hidden="true">☰</span><strong id="mobile-chapter-progress">章节</strong></button>
+        <div class="mobile-course-context"><strong id="mobile-course-name">当前课程</strong><span id="mobile-card-progress"></span></div>
+        <button class="icon-button mobile-search-toggle" id="mobile-search-toggle" type="button" aria-label="搜索当前课程" aria-expanded="false">⌕</button>
         <div class="search-area">
           <div class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
@@ -455,17 +596,36 @@
           </div>
           <div class="chapter-links" id="chapter-links"></div>
         </nav>
-        <article class="note" id="content" tabindex="-1"></article>
+        <div class="study-content">
+          <article class="note" id="content" tabindex="-1"></article>
+          <nav class="chapter-pager" aria-label="章节翻页">
+            <button type="button" id="chapter-prev">← 上一章</button>
+            <button type="button" id="chapter-next">下一章 →</button>
+          </nav>
+          <nav class="recall-card-pager" aria-label="回忆卡操作">
+            <button type="button" id="recall-prev">← 上一张</button>
+            <button type="button" class="reveal-card" id="reveal-card">显示答案</button>
+            <button type="button" id="recall-next">下一张 →</button>
+          </nav>
+        </div>
       </div>
       <div class="nav-mask" id="nav-mask" aria-hidden="true"></div>
     </section>
   </main>
+
+  <nav class="mobile-module-tabs" aria-label="主导航">
+    <a href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
+    <a class="mobile-module-link" data-page-kind="lecture" href="./notes.html"><span aria-hidden="true">读</span><strong>讲义</strong></a>
+    <a class="mobile-module-link" data-page-kind="color-notes" href="./color-notes.html"><span aria-hidden="true">忆</span><strong>回忆</strong></a>
+    <a class="mobile-module-link" href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
+  </nav>
 
   <script>
     const items = __COURSE_DATA__;
     const courseIcon = "__COURSE_ICON__";
     const colorMode = __COLOR_MODE__;
     const pageKind = "__PAGE_KIND__";
+    document.querySelector(`[data-page-kind="${pageKind}"]`)?.setAttribute("aria-current", "page");
     const recallToggle = document.getElementById("recall-toggle");
     const directory = document.getElementById("directory");
     const courses = document.getElementById("courses");
@@ -482,14 +642,28 @@
     const chapterLinks = document.getElementById("chapter-links");
     const navCollapse = document.getElementById("nav-collapse");
     const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+    const mobileSearchToggle = document.getElementById("mobile-search-toggle");
+    const mobileCourseName = document.getElementById("mobile-course-name");
+    const mobileChapterProgress = document.getElementById("mobile-chapter-progress");
+    const mobileCardProgress = document.getElementById("mobile-card-progress");
+    const chapterPrev = document.getElementById("chapter-prev");
+    const chapterNext = document.getElementById("chapter-next");
+    const recallPrev = document.getElementById("recall-prev");
+    const recallNext = document.getElementById("recall-next");
+    const revealCard = document.getElementById("reveal-card");
     const navMask = document.getElementById("nav-mask");
     const studyToolbar = document.querySelector(".study-toolbar");
+    const studyContent = document.querySelector(".study-content");
     const siteHeader = document.querySelector(".site-header");
-    const moduleLinks = [...document.querySelectorAll(".module-link")];
+    const mobileModuleTabs = document.querySelector(".mobile-module-tabs");
+    const backButton = document.getElementById("back");
+    const moduleLinks = [...document.querySelectorAll(".module-link, .mobile-module-link")];
     const mobileMedia = window.matchMedia("(max-width: 700px)");
     let currentCourse = null;
     let activeObserver = null;
     let collapsedBeforeSearch = null;
+    let activeChapterIndex = 0;
+    let activeRecallIndex = 0;
     let searchTimer = null;
     let mobileNavReturnFocus = null;
 
@@ -503,7 +677,7 @@
       const active = study.classList.contains("recall-mode");
       content.querySelectorAll(".red, .blue, .black").forEach((item) => {
         item.classList.remove("recall-revealed");
-        if (active) {
+        if (active && !mobileMedia.matches) {
           item.setAttribute("role", "button");
           item.setAttribute("tabindex", "0");
           item.setAttribute("aria-label", `显示答案：${item.dataset.recallCue || "这条笔记"}`);
@@ -516,7 +690,7 @@
     }
 
     function revealRecallItem(item) {
-      if (!study.classList.contains("recall-mode") || !item) return;
+      if (!study.classList.contains("recall-mode") || !item || mobileMedia.matches) return;
       item.classList.add("recall-revealed");
       item.setAttribute("aria-label", `已显示答案：${item.dataset.recallCue || "这条笔记"}`);
     }
@@ -723,12 +897,114 @@
       closePreface();
       closeChapter();
       content.innerHTML = output.join("");
+      if (colorMode) prepareRecallCards();
       bindChapters();
+    }
+
+    function prepareRecallCards() {
+      content.querySelectorAll(".chapter-body").forEach((body) => {
+        [...body.children].filter((node) => node.classList.contains("point")).forEach((point) => {
+          if (point.closest(".recall-card")) return;
+          const card = document.createElement("section");
+          card.className = "recall-card";
+          body.insertBefore(card, point);
+          let node = point;
+          while (node && (node === point || !node.classList?.contains("point"))) {
+            const next = node.nextSibling;
+            card.appendChild(node);
+            node = next;
+          }
+        });
+      });
     }
 
     function cleanChapterLabel(label) {
       const cleaned = label.replace(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?\s*/, "").trim();
       return cleaned || label;
+    }
+
+    function updateStudyPosition({replaceRoute = true} = {}) {
+      const sections = [...content.querySelectorAll(".chapter-section")];
+      const section = sections[activeChapterIndex];
+      const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
+      sections.forEach((item, index) => item.classList.toggle("mobile-active", index === activeChapterIndex));
+      chapterLinks.querySelectorAll(".chapter-link").forEach((link, index) => {
+        const active = index === activeChapterIndex;
+        link.classList.toggle("active", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+      mobileChapterProgress.textContent = sections.length ? `${activeChapterIndex + 1}/${sections.length}章` : "章节";
+      chapterPrev.disabled = activeChapterIndex <= 0;
+      chapterNext.disabled = activeChapterIndex >= sections.length - 1;
+
+      if (colorMode) {
+        activeRecallIndex = Math.max(0, Math.min(activeRecallIndex, Math.max(0, cards.length - 1)));
+        cards.forEach((card, index) => card.classList.toggle("mobile-active", index === activeRecallIndex));
+        mobileCardProgress.textContent = cards.length ? `回忆卡 ${activeRecallIndex + 1}/${cards.length}` : "";
+        recallPrev.disabled = activeRecallIndex <= 0;
+        recallNext.disabled = activeRecallIndex >= cards.length - 1;
+        const activeCard = cards[activeRecallIndex];
+        const hiddenAnswer = activeCard && [...activeCard.querySelectorAll(".red, .blue, .black")].some((item) => !item.classList.contains("recall-revealed"));
+        revealCard.textContent = hiddenAnswer ? "显示答案" : "答案已显示";
+        revealCard.disabled = !activeCard || !hiddenAnswer;
+      } else {
+        mobileCardProgress.textContent = "";
+      }
+
+      if (currentCourse) {
+        const position = new URLSearchParams();
+        position.set("course", currentCourse.name);
+        position.set("chapter", String(activeChapterIndex + 1));
+        if (colorMode) position.set("card", String(activeRecallIndex + 1));
+        moduleLinks.forEach((link) => {
+          if (link.pathname.endsWith("/notes.html")) link.href = `./notes.html#${position.toString()}`;
+          if (link.pathname.endsWith("/color-notes.html")) link.href = `./color-notes.html#${position.toString()}`;
+        });
+      }
+
+      if (replaceRoute && currentCourse && mobileMedia.matches) {
+        const params = new URLSearchParams();
+        params.set("course", currentCourse.name);
+        params.set("chapter", String(activeChapterIndex + 1));
+        if (colorMode) params.set("card", String(activeRecallIndex + 1));
+        history.replaceState(history.state, "", `#${params.toString()}`);
+        try {
+          localStorage.setItem("shaoyang-last-learning", JSON.stringify({
+            course: currentCourse.name,
+            module: pageKind,
+            chapter: activeChapterIndex + 1,
+            card: colorMode ? activeRecallIndex + 1 : undefined,
+            savedAt: new Date().toISOString(),
+          }));
+        } catch {}
+      }
+    }
+
+    function setActiveChapter(index, {replaceRoute = true, focus = false} = {}) {
+      const sections = [...content.querySelectorAll(".chapter-section")];
+      if (!sections.length) return;
+      activeChapterIndex = Math.max(0, Math.min(index, sections.length - 1));
+      activeRecallIndex = 0;
+      sections[activeChapterIndex].classList.remove("collapsed");
+      sections[activeChapterIndex].querySelector(".chapter-toggle")?.setAttribute("aria-expanded", "true");
+      updateStudyPosition({replaceRoute});
+      if (focus) {
+        window.scrollTo({top: 0, behavior: "smooth"});
+        requestAnimationFrame(() => sections[activeChapterIndex].querySelector(".chapter-title")?.focus?.({preventScroll: true}));
+      }
+    }
+
+    function setActiveRecallCard(index, {replaceRoute = true, focus = false} = {}) {
+      const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
+      const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
+      if (!cards.length) return;
+      activeRecallIndex = Math.max(0, Math.min(index, cards.length - 1));
+      updateStudyPosition({replaceRoute});
+      if (focus) {
+        window.scrollTo({top: 0, behavior: "smooth"});
+        requestAnimationFrame(() => cards[activeRecallIndex].querySelector(".point")?.scrollIntoView({block: "start"}));
+      }
     }
 
     function bindChapters() {
@@ -742,6 +1018,7 @@
         toggle.setAttribute("aria-controls", `${section.id}-body`);
         section.querySelector(".chapter-body").id = `${section.id}-body`;
         toggle.addEventListener("click", () => {
+          if (mobileMedia.matches) return;
           const collapsed = section.classList.toggle("collapsed");
           toggle.setAttribute("aria-expanded", String(!collapsed));
         });
@@ -751,12 +1028,13 @@
         link.className = "chapter-link";
         link.textContent = cleanChapterLabel(title);
         link.addEventListener("click", () => {
-          section.classList.remove("collapsed");
-          toggle.setAttribute("aria-expanded", "true");
-          section.scrollIntoView({behavior: "smooth", block: "start"});
           if (mobileMedia.matches) {
+            setActiveChapter(index, {focus: true});
             closeMobileNav({restoreFocus: false});
-            toggle.focus({preventScroll: true});
+          } else {
+            section.classList.remove("collapsed");
+            toggle.setAttribute("aria-expanded", "true");
+            section.scrollIntoView({behavior: "smooth", block: "start"});
           }
         });
         chapterLinks.appendChild(link);
@@ -765,23 +1043,29 @@
       chapterNav.classList.toggle("hidden", sections.length === 0);
       mobileNavToggle.classList.toggle("hidden", sections.length === 0);
       if (!sections.length) return;
-      activeObserver = new IntersectionObserver((entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-        if (!visible) return;
-        const index = sections.indexOf(visible.target);
-        chapterLinks.querySelectorAll(".chapter-link").forEach((link, linkIndex) => {
-          const active = linkIndex === index;
-          link.classList.toggle("active", active);
-          if (active) link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
-        });
-      }, {rootMargin: "-135px 0px -62% 0px", threshold: 0});
-      sections.forEach((section) => activeObserver.observe(section));
+      if (!mobileMedia.matches) {
+        activeObserver = new IntersectionObserver((entries) => {
+          const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+          if (!visible) return;
+          const index = sections.indexOf(visible.target);
+          chapterLinks.querySelectorAll(".chapter-link").forEach((link, linkIndex) => {
+            const active = linkIndex === index;
+            link.classList.toggle("active", active);
+            if (active) link.setAttribute("aria-current", "location");
+            else link.removeAttribute("aria-current");
+          });
+        }, {rootMargin: "-135px 0px -62% 0px", threshold: 0});
+        sections.forEach((section) => activeObserver.observe(section));
+      }
+      updateStudyPosition({replaceRoute: false});
     }
 
     function openCourse(course) {
       currentCourse = course;
       collapsedBeforeSearch = null;
+      const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
+      activeChapterIndex = Math.max(0, (Number(routeParams.get("chapter")) || 1) - 1);
+      activeRecallIndex = Math.max(0, (Number(routeParams.get("card")) || 1) - 1);
       renderMarkdown(course.text);
       if (colorMode) {
         study.classList.add("recall-mode");
@@ -794,6 +1078,7 @@
         });
       }
       syncRecallTargets();
+      mobileCourseName.textContent = course.name;
       const courseHash = `#course=${encodeURIComponent(course.name)}`;
       const subjectAliases = {
         "Office软件操作": "办公软件",
@@ -810,8 +1095,15 @@
           link.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[course.name] || course.name)}&mode=seq`;
         }
       });
+      updateStudyPosition({replaceRoute: mobileMedia.matches});
       try {
-        localStorage.setItem("shaoyang-last-learning", JSON.stringify({course: course.name, module: pageKind, savedAt: new Date().toISOString()}));
+        localStorage.setItem("shaoyang-last-learning", JSON.stringify({
+          course: course.name,
+          module: pageKind,
+          chapter: activeChapterIndex + 1,
+          card: colorMode ? activeRecallIndex + 1 : undefined,
+          savedAt: new Date().toISOString(),
+        }));
       } catch {}
       directory.classList.add("hidden");
       study.classList.remove("hidden");
@@ -826,6 +1118,8 @@
       closeMobileNav();
       currentCourse = null;
       collapsedBeforeSearch = null;
+      study.classList.remove("mobile-search-open");
+      mobileSearchToggle.setAttribute("aria-expanded", "false");
       study.classList.add("hidden");
       directory.classList.remove("hidden");
       search.value = "";
@@ -963,8 +1257,9 @@
       chapterNav.setAttribute("aria-modal", "true");
       chapterNav.inert = false;
       studyToolbar.inert = true;
-      content.inert = true;
+      studyContent.inert = true;
       siteHeader.inert = true;
+      mobileModuleTabs.inert = true;
       mobileNavToggle.setAttribute("aria-expanded", "true");
       mobileNavToggle.setAttribute("aria-label", "关闭章节目录");
       navCollapse.setAttribute("aria-label", "关闭章节目录");
@@ -981,8 +1276,9 @@
       chapterNav.removeAttribute("aria-modal");
       chapterNav.inert = mobileMedia.matches;
       studyToolbar.inert = false;
-      content.inert = false;
+      studyContent.inert = false;
       siteHeader.inert = false;
+      mobileModuleTabs.inert = false;
       mobileNavToggle.setAttribute("aria-expanded", "false");
       mobileNavToggle.setAttribute("aria-label", "打开章节目录");
       document.body.style.overflow = "";
@@ -1024,7 +1320,32 @@
       filterContent();
       search.focus();
     });
-    document.getElementById("back").addEventListener("click", () => {
+    mobileSearchToggle.addEventListener("click", () => {
+      const open = study.classList.toggle("mobile-search-open");
+      mobileSearchToggle.setAttribute("aria-expanded", String(open));
+      if (open) requestAnimationFrame(() => search.focus());
+    });
+    chapterPrev.addEventListener("click", () => setActiveChapter(activeChapterIndex - 1, {focus: true}));
+    chapterNext.addEventListener("click", () => setActiveChapter(activeChapterIndex + 1, {focus: true}));
+    recallPrev.addEventListener("click", () => setActiveRecallCard(activeRecallIndex - 1, {focus: true}));
+    recallNext.addEventListener("click", () => setActiveRecallCard(activeRecallIndex + 1, {focus: true}));
+    revealCard.addEventListener("click", () => {
+      const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
+      const card = section?.querySelectorAll(".recall-card")[activeRecallIndex];
+      if (!card) return;
+      card.querySelectorAll(".red, .blue, .black").forEach((item) => {
+        item.classList.add("recall-revealed");
+        item.removeAttribute("role");
+        item.removeAttribute("tabindex");
+        item.setAttribute("aria-label", `已显示答案：${item.dataset.recallCue || "这条笔记"}`);
+      });
+      updateStudyPosition({replaceRoute: false});
+    });
+    backButton.addEventListener("click", () => {
+      if (mobileMedia.matches) {
+        location.href = "./index.html#courses";
+        return;
+      }
       if (history.state?.shaoyangCourse) history.back();
       else {
         history.replaceState(null, "", location.href.split("#")[0]);
@@ -1064,11 +1385,15 @@
     mobileMedia.addEventListener("change", () => {
       closeMobileNav();
       if (!mobileMedia.matches) setDesktopNavCollapsed(study.classList.contains("nav-collapsed"));
+      else updateStudyPosition({replaceRoute: false});
+      backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
+      syncRecallTargets();
     });
 
     window.addEventListener("popstate", applyLocation);
     renderCourses();
     closeMobileNav();
+    backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
     applyLocation();
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {

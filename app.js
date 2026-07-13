@@ -3,6 +3,7 @@ const PUBLIC_QUESTIONS = QUESTIONS.filter((question) => !/^(?:uc|ue)-/i.test(Str
 const QUESTION_MEDIA = window.QUESTION_MEDIA && typeof window.QUESTION_MEDIA === "object" ? window.QUESTION_MEDIA : {};
 const BUILD_INFO = window.SHAOYANG_BUILD && typeof window.SHAOYANG_BUILD === "object" ? window.SHAOYANG_BUILD : {id: "development"};
 const STORE_KEY = "shaoyang-quiz-v5";
+const MOCK_STORE_KEY = "shaoyang-quiz-mock-v1";
 const LEGACY_KEYS = ["shaoyang-quiz-v4", "shaoyang-quiz-v3", "shaoyang-quiz-v2", "shaoyang-quiz-v1"];
 const STATE_SCHEMA_VERSION = 5;
 const QUESTION_BANK_VERSION = BUILD_INFO.id;
@@ -68,12 +69,38 @@ function initialState() {
   return applyQuestionRevisionResets(sanitizeState(stored, false), storedRevisions);
 }
 
+function loadMockSession() {
+  const stored = readStore(MOCK_STORE_KEY, null);
+  if (!stored || !Array.isArray(stored.ids) || !stored.ids.length || !isRecord(stored.answers)) return null;
+  const validIds = new Set(PUBLIC_QUESTIONS.map((question) => question.id));
+  const ids = stored.ids.filter((id) => validIds.has(id));
+  if (!ids.length || ids.length !== stored.ids.length) return null;
+  if (!Number.isFinite(stored.startedAt) || !Number.isFinite(stored.durationMinutes) || stored.durationMinutes <= 0) return null;
+  return {
+    ids,
+    answers: Object.fromEntries(Object.entries(stored.answers).filter(([id]) => validIds.has(id))),
+    startedAt: stored.startedAt,
+    durationMinutes: stored.durationMinutes,
+    subject: String(stored.subject || "全部课程"),
+    finishedAt: Number.isFinite(stored.finishedAt) ? stored.finishedAt : null,
+    result: isRecord(stored.result) ? stored.result : null,
+  };
+}
+
+function persistMockSession() {
+  try {
+    if (mockSession) localStorage.setItem(MOCK_STORE_KEY, JSON.stringify(mockSession));
+    else localStorage.removeItem(MOCK_STORE_KEY);
+  } catch {}
+}
+
 let state = initialState();
 applyLaunchParams();
-let mockSession = null;
+let mockSession = loadMockSession();
 let mockTimerId = null;
 let saveWarningShown = false;
 let drawerReturnFocus = null;
+let drawerFiltersDirty = false;
 let focusQuestionAfterRender = false;
 let focusFeedbackAfterRender = false;
 save({silent: true});
@@ -370,6 +397,7 @@ function isMockActive() {
 function submitAnswer(q, given) {
   if (isMockActive()) {
     mockSession.answers[q.id] = given;
+    persistMockSession();
     state._pending = null;
     state.currentId = q.id;
     return;
@@ -401,6 +429,7 @@ function updateSubjectSelect() {
 
 function updateStats() {
   updateSubjectSelect();
+  updateCourseModuleLinks();
   renderActiveFilters();
   if ($("search-input").value !== (state.searchQuery || "")) $("search-input").value = state.searchQuery || "";
   const scope = getScope();
@@ -420,6 +449,15 @@ function updateStats() {
   $("progress").setAttribute("aria-valuenow", String(pct));
   $("progress").setAttribute("aria-valuetext", `已完成 ${done} 道，共 ${scope.length} 道，${pct}%`);
   $("mini-stat").textContent = `${done}/${scope.length} · ${rate}%${wrongbook ? " · 错" + wrongbook : ""}`;
+}
+
+function updateCourseModuleLinks() {
+  const course = courseNameForSubject(state.subject || "");
+  const suffix = course ? `#course=${encodeURIComponent(course)}` : "";
+  const notesLink = $("mobile-notes-link");
+  const recallLink = $("mobile-recall-link");
+  if (notesLink) notesLink.href = `./notes.html${suffix}`;
+  if (recallLink) recallLink.href = `./color-notes.html${suffix}`;
 }
 
 function subjectStats(subject) {
@@ -479,7 +517,9 @@ function optionKeys(q) {
 function renderChoiceQuestion(q, chosen, inWrongFresh) {
   const isMulti = q.type === "多选";
   const concealResult = isMockActive();
-  const pending = state._pending && state._pending.qid === q.id ? state._pending.set : new Set();
+  const pending = state._pending && state._pending.qid === q.id
+    ? state._pending.set
+    : new Set(concealResult && chosen ? String(chosen).split("") : []);
   const options = optionKeys(q);
   const optsHtml = options.map((letter) => {
     let cls = "opt";
@@ -489,17 +529,19 @@ function renderChoiceQuestion(q, chosen, inWrongFresh) {
       if (concealResult && userSet.has(letter)) cls += " selected";
       else if (!concealResult && answerSet.has(letter)) cls += " correct";
       else if (!concealResult && userSet.has(letter)) cls += " wrong";
-    } else if (isMulti && pending.has(letter)) {
+    }
+    if (isMulti && pending.has(letter) && !cls.includes("selected")) {
       cls += " selected";
     }
-    const pressed = isMulti && !chosen ? String(pending.has(letter)) : null;
-    return `<button type="button" class="${cls}" data-letter="${letter}"${pressed === null ? "" : ` aria-pressed="${pressed}"`}${chosen ? " disabled" : ""}>
+    const pressed = isMulti ? String(pending.has(letter)) : null;
+    const disabled = chosen && !concealResult;
+    return `<button type="button" class="${cls}" data-letter="${letter}"${pressed === null ? "" : ` aria-pressed="${pressed}"`}${disabled ? " disabled" : ""}>
       <span class="letter">${letter}</span>
       <span class="text">${escapeHtml(q.options[letter])}</span>
     </button>`;
   }).join("");
 
-  const submit = isMulti && !chosen
+  const submit = isMulti && (!chosen || concealResult)
     ? `<div class="multi-actions"><button id="submit-multi" class="primary-btn">提交多选答案 (${pending.size})</button></div>`
     : "";
   return `<div class="options">${optsHtml}</div>${submit}`;
@@ -514,7 +556,7 @@ function renderJudgeQuestion(q, chosen) {
       else if (!concealResult && value === q.answer) cls += " correct";
       else if (!concealResult && value === chosen) cls += " wrong";
     }
-    return `<button type="button" class="${cls}" data-judge="${value}"${chosen ? " disabled" : ""}>
+    return `<button type="button" class="${cls}" data-judge="${value}"${chosen && !concealResult ? " disabled" : ""}>
       <span class="letter">${value === "正确" ? "✓" : "×"}</span>
       <span class="text">${value}</span>
     </button>`;
@@ -524,9 +566,10 @@ function renderJudgeQuestion(q, chosen) {
 function renderFillQuestion(q, chosen) {
   const val = chosen || (state._pending && state._pending.qid === q.id ? state._pending.text : "");
   const cls = chosen && !isMockActive() ? (isAnswerCorrect(q, chosen) ? "correct" : "wrong") : "";
+  const editable = !chosen || isMockActive();
   return `<div class="fill-blank">
-    <input id="fill-input" class="${cls}" value="${escapeHtml(val)}" placeholder="输入答案..." ${chosen ? "disabled" : ""}>
-    ${!chosen ? `<button id="submit-fill" class="primary-btn">提交</button>${isMockActive() ? "" : '<button id="show-fill" class="secondary-btn">查看答案</button>'}` : ""}
+    <input id="fill-input" class="${cls}" value="${escapeHtml(val)}" placeholder="输入答案..." ${editable ? "" : "disabled"}>
+    ${editable ? `<button id="submit-fill" class="primary-btn">${chosen ? "更新答案" : "提交"}</button>${isMockActive() ? "" : '<button id="show-fill" class="secondary-btn">查看答案</button>'}` : ""}
   </div>`;
 }
 
@@ -649,11 +692,13 @@ function renderQuestion(q, pool) {
     ${mediaHtml(q)}
     ${body}
     ${feedbackHtml(q, chosen)}
+    <div class="question-tools" aria-label="题目工具">
+      <button class="flag ${isFlagged ? "active" : ""}" id="flag" aria-pressed="${isFlagged}">${isFlagged ? "已标记" : "标记问题"}</button>
+      ${chosen && !isMockActive() ? '<button id="redo">重新作答</button>' : ""}
+    </div>
     <div class="nav ${chosen ? "answered" : "unanswered"}">
       <button class="nav-icon" id="prev" aria-label="上一题"${state._navBack && state._navBack.length ? "" : " disabled"}>←</button>
       <button class="nav-icon fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
-      <button class="nav-icon flag ${isFlagged ? "active" : ""}" id="flag" aria-label="标记有问题" aria-pressed="${isFlagged}">!</button>
-      ${chosen ? '<button class="nav-icon" id="redo" aria-label="重答">↻</button>' : ""}
       <button class="next ${chosen ? "ready" : ""}" id="next">${chosen ? "下一题 →" : "跳过 →"}</button>
     </div>
   </article>`;
@@ -678,7 +723,7 @@ function renderQuestion(q, pool) {
 }
 
 function bindQuestionEvents(q, inWrongFresh) {
-  const canAnswer = isMockActive() ? !mockSession.answers[q.id] : (!state.done[q.id] || inWrongFresh);
+  const canAnswer = isMockActive() ? true : (!state.done[q.id] || inWrongFresh);
   document.querySelectorAll("[data-letter]").forEach((el) => {
     el.addEventListener("click", () => {
       if (!canAnswer) return;
@@ -688,7 +733,9 @@ function bindQuestionEvents(q, inWrongFresh) {
         save();
         render();
       } else {
-        if (!state._pending || state._pending.qid !== q.id) state._pending = {qid: q.id, set: new Set()};
+        if (!state._pending || state._pending.qid !== q.id) {
+          state._pending = {qid: q.id, set: new Set(isMockActive() && mockSession.answers[q.id] ? String(mockSession.answers[q.id]).split("") : [])};
+        }
         if (state._pending.set.has(letter)) state._pending.set.delete(letter);
         else state._pending.set.add(letter);
         render();
@@ -834,7 +881,8 @@ function renderEmpty() {
 function renderDashboard() {
   updateStats();
   updateModeTabs();
-  const all = subjectStats("");
+  const all = subjectStats(state.subject || "");
+  const scopeLabel = state.subject || "全部课程";
   const wrongIds = Object.keys(state.wrong || {});
   const favCount = Object.keys(state.fav || {}).length;
   const flaggedCount = Object.keys(state.flagged || {}).length;
@@ -866,37 +914,52 @@ function renderDashboard() {
       <span>${row.rate}% · 错${row.wrongbook}</span>
     </div>`).join("");
 
-  $("card-area").innerHTML = `<section class="dashboard">
-    <article class="card">
-      <div class="dash-grid">
-        <div class="dash-stat"><span class="value">${all.done}</span><span class="label">已做 / ${all.total}</span></div>
-        <div class="dash-stat"><span class="value">${all.rate}%</span><span class="label">总正确率</span></div>
-        <div class="dash-stat"><span class="value">${wrongIds.length}</span><span class="label">错题本</span></div>
-        <div class="dash-stat"><span class="value">${reviewCount}</span><span class="label">到期复习</span></div>
+  const activeMock = mockSession && !mockSession.finishedAt;
+  const remainingMinutes = activeMock ? Math.max(0, Math.ceil(mockRemainingMs() / 60000)) : 0;
+
+  $("card-area").innerHTML = `<section class="dashboard quiz-hub-dashboard">
+    <article class="card hub-overview">
+      <div>
+        <span class="hub-kicker">${escapeHtml(scopeLabel)}</span>
+        <h1>今天想练什么？</h1>
+        <p>先完成一组基础题，再处理到期复习和错题。</p>
+      </div>
+      <div class="hub-progress" aria-label="当前课程进度">
+        <strong>${all.progress}%</strong>
+        <span>已做 ${all.done} / ${all.total} · 正确率 ${all.rate}%</span>
       </div>
     </article>
-    <article class="card">
-      <div class="dash-actions">
-        <button class="primary" data-jump-mode="seq">继续刷题</button>
-        <button data-jump-mode="review">到期复习</button>
-        <button data-jump-mode="wrong">错题本</button>
-        <button data-jump-mode="fav">收藏 ${favCount}</button>
+    ${activeMock ? `<button type="button" class="resume-mock" data-resume-mock>
+      <span><strong>继续限时模拟</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
+      <b>约 ${remainingMinutes} 分钟 →</b>
+    </button>` : ""}
+    <article class="card hub-tasks">
+      <div class="hub-section-title"><strong>开始一组</strong><span>选择一种节奏即可开始</span></div>
+      <div class="hub-primary-actions">
+        <button class="primary" data-jump-mode="seq"><span>顺序练习</span><small>按章节稳步推进</small></button>
+        <button data-jump-mode="rnd"><span>随机练习</span><small>交叉检验记忆</small></button>
+        <button data-jump-mode="mock"><span>限时模拟</span><small>组卷、计时、交卷</small></button>
       </div>
     </article>
-    <article class="card">
-      <div class="meta"><span class="badge subject">错题分级</span><span class="chapter">高频错题优先处理</span></div>
-      <div class="dash-grid">
+    <article class="card hub-review">
+      <div class="hub-section-title"><strong>巩固任务</strong><span>按需要处理，不必逐层找入口</span></div>
+      <div class="hub-review-actions">
+        <button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>
+        <button data-jump-mode="wrong"><span>错题本</span><b>${wrongIds.length}</b></button>
+        <button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>
+      </div>
+    </article>
+    <details class="card hub-insights">
+      <summary>查看薄弱项与错题分布</summary>
+      <div class="dash-grid compact">
         <div class="dash-stat"><span class="value">${wrongLevel.low}</span><span class="label">新错题</span></div>
         <div class="dash-stat"><span class="value">${wrongLevel.mid}</span><span class="label">二刷错</span></div>
         <div class="dash-stat"><span class="value">${wrongLevel.high}</span><span class="label">高频错</span></div>
         <div class="dash-stat"><span class="value">${flaggedCount}</span><span class="label">纠错标记</span></div>
       </div>
       ${errorSummary ? `<div class="error-summary"><strong>错因分布</strong>${errorSummary}</div>` : ""}
-    </article>
-    <article class="card">
-      <div class="meta"><span class="badge subject">薄弱科目</span><span class="chapter">按错题数和正确率排序</span></div>
       <div class="subject-table">${rows}</div>
-    </article>
+    </details>
   </section>`;
 
   document.querySelectorAll("[data-jump-mode]").forEach((button) => {
@@ -907,6 +970,15 @@ function renderDashboard() {
       save();
       render();
     });
+  });
+  document.querySelector("[data-resume-mock]")?.addEventListener("click", () => {
+    state.mode = "mock";
+    const nextId = mockSession.ids.find((id) => mockSession.answers[id] === undefined) || mockSession.ids[0];
+    state.currentId = nextId;
+    state.cursor = Math.max(0, mockSession.ids.indexOf(nextId));
+    state._navBack = [];
+    save();
+    render();
   });
 }
 
@@ -993,6 +1065,8 @@ function startMock(count) {
   state.currentId = mockSession.ids[0] || null;
   state.cursor = 0;
   state._navBack = [];
+  persistMockSession();
+  save();
   render();
 }
 
@@ -1017,6 +1091,7 @@ function finishMock(autoSubmitted = false) {
     autoSubmitted,
     weakAbilities,
   };
+  persistMockSession();
   clearMockTimer();
   answered.forEach(({question, answer}) => handleAnswer(question, answer));
   save();
@@ -1048,6 +1123,12 @@ function renderMockResult() {
   updateStats();
   updateModeTabs();
   const result = mockSession.result;
+  const questionMap = Object.fromEntries(PUBLIC_QUESTIONS.map((question) => [question.id, question]));
+  const reviewRows = mockSession.ids.map((id, index) => ({
+    index,
+    question: questionMap[id],
+    answer: mockSession.answers[id],
+  })).filter(({question, answer}) => question && (answer === undefined || !isAnswerCorrect(question, answer)));
   const weak = Object.entries(result.weakAbilities || {})
     .sort((a, b) => b[1] - a[1])
     .map(([ability, count]) => `<span>${escapeHtml(ability)} <b>${count}</b></span>`)
@@ -1063,6 +1144,15 @@ function renderMockResult() {
     </div>
     ${result.autoSubmitted ? '<p class="mock-notice">时间到，系统已自动交卷。</p>' : ""}
     ${weak ? `<div class="mock-weak"><strong>失分能力类型</strong>${weak}</div>` : '<p class="mock-notice success">本卷全部答对。</p>'}
+    ${reviewRows.length ? `<details class="mock-review">
+      <summary>查看本卷错题与解析（${reviewRows.length}）</summary>
+      <div class="mock-review-list">${reviewRows.map(({index, question, answer}) => `<article>
+        <strong>${index + 1}. ${escapeHtml(question.stem)}</strong>
+        <p><span>你的答案</span>${answer === undefined ? "未作答" : escapeHtml(answer)}</p>
+        <p><span>正确答案</span>${escapeHtml(question.answer)}</p>
+        ${question.explanation ? `<p><span>解析</span>${escapeHtml(question.explanation)}</p>` : ""}
+      </article>`).join("")}</div>
+    </details>` : ""}
     <div class="dash-actions">
       <button class="primary" id="mock-new">再来一套</button>
       <button id="mock-wrong">查看错题本</button>
@@ -1070,6 +1160,7 @@ function renderMockResult() {
   </section>`;
   $("mock-new").addEventListener("click", () => {
     mockSession = null;
+    persistMockSession();
     resetPosition();
     render();
   });
@@ -1107,8 +1198,29 @@ function renderMock() {
   $("card-area").insertAdjacentHTML("afterbegin", `<section class="mock-toolbar" aria-label="模拟进度">
     <div><span>模拟进度</span><strong>${answered} / ${mockSession.ids.length}</strong></div>
     <div><span>剩余时间</span><strong id="mock-clock">--:--</strong></div>
-    <button type="button" id="mock-finish">交卷</button>
+    <button type="button" class="mock-sheet-button" id="mock-sheet-toggle" aria-controls="mock-answer-sheet" aria-expanded="false">答题卡</button>
+    <button type="button" class="mock-finish-button" id="mock-finish">交卷</button>
+  </section>
+  <section class="mock-answer-sheet" id="mock-answer-sheet" aria-label="模拟答题卡" hidden>
+    <div class="mock-sheet-head"><strong>答题卡</strong><span>点题号可跳转；已答题仍可修改</span></div>
+    <div class="mock-sheet-grid">${mockSession.ids.map((id, index) => `<button type="button" data-mock-id="${escapeHtml(id)}" class="${id === question.id ? "current " : ""}${mockSession.answers[id] !== undefined ? "answered" : ""}" aria-label="第 ${index + 1} 题${mockSession.answers[id] !== undefined ? "，已作答" : "，未作答"}"${id === question.id ? ' aria-current="true"' : ""}>${index + 1}</button>`).join("")}</div>
   </section>`);
+  $("mock-sheet-toggle").addEventListener("click", () => {
+    const sheet = $("mock-answer-sheet");
+    sheet.hidden = !sheet.hidden;
+    $("mock-sheet-toggle").setAttribute("aria-expanded", String(!sheet.hidden));
+  });
+  document.querySelectorAll("[data-mock-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.currentId = button.dataset.mockId;
+      state.cursor = Math.max(0, mockSession.ids.indexOf(state.currentId));
+      state._pending = null;
+      state._navBack = [];
+      focusQuestionAfterRender = true;
+      save();
+      render();
+    });
+  });
   $("mock-finish").addEventListener("click", () => {
     const unanswered = mockSession.ids.length - Object.keys(mockSession.answers).length;
     if (unanswered && !confirm(`还有 ${unanswered} 道未作答，确定交卷吗？`)) return;
@@ -1117,7 +1229,25 @@ function renderMock() {
   ensureMockTimer();
 }
 
+function updateViewState() {
+  const isHub = state.mode === "home" || (state.mode === "mock" && (!mockSession || mockSession.finishedAt));
+  document.body.classList.toggle("quiz-hub", isHub);
+  document.body.classList.toggle("quiz-runner", !isHub);
+  document.body.classList.toggle("quiz-mock-active", !!isMockActive());
+  const labels = {
+    seq: "顺序练习",
+    rnd: "随机练习",
+    review: "到期复习",
+    wrong: "错题本",
+    fav: "收藏题",
+    mock: "限时模拟",
+  };
+  if ($("runner-title")) $("runner-title").textContent = labels[state.mode] || "练习";
+  if ($("runner-scope")) $("runner-scope").textContent = isMockActive() ? mockSession.subject : (state.subject || "全部课程");
+}
+
 function render() {
+  updateViewState();
   if (!PUBLIC_QUESTIONS.length) {
     $("card-area").innerHTML = `<div class="card empty"><strong>题库未加载</strong>请确认 questions.js 与 app.js 在同一目录。</div>`;
     return;
@@ -1218,19 +1348,6 @@ function renderDrawerList(el, items, active, onPick) {
 }
 
 function buildDrawer() {
-  const subjectCounts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
-  const subjects = [{value: "", label: "全部科目", count: PUBLIC_QUESTIONS.length}].concat(
-    orderedValues(new Set(Object.keys(subjectCounts)), SUBJECT_ORDER).map((s) => ({value: s, label: s, count: subjectCounts[s]}))
-  );
-  renderDrawerList($("drawer-subjects"), subjects, state.subject || "", (value) => {
-    state.subject = value;
-    state.chapterFilter = "";
-    resetPosition();
-    save();
-    closeDrawer();
-    render();
-  });
-
   const typeCounts = countBy(PUBLIC_QUESTIONS, (q) => q.type);
   const types = [{value: "", label: "全部题型", count: PUBLIC_QUESTIONS.length}].concat(
     orderedValues(new Set(Object.keys(typeCounts)), TYPE_ORDER).map((t) => ({value: t, label: t, count: typeCounts[t]}))
@@ -1238,10 +1355,9 @@ function buildDrawer() {
   renderDrawerList($("drawer-types"), types, state.typeFilter || "", (value) => {
     state.typeFilter = value;
     state.chapterFilter = "";
-    resetPosition();
+    drawerFiltersDirty = true;
     save();
-    closeDrawer();
-    render();
+    buildDrawer();
   });
 
   let chapterBase = PUBLIC_QUESTIONS;
@@ -1255,14 +1371,14 @@ function buildDrawer() {
   );
   renderDrawerList($("drawer-chapters"), chapters, state.chapterFilter || "", (value) => {
     state.chapterFilter = value;
-    resetPosition();
+    drawerFiltersDirty = true;
     save();
-    closeDrawer();
-    render();
+    buildDrawer();
   });
 }
 
 function openDrawer() {
+  drawerFiltersDirty = false;
   buildDrawer();
   drawerReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : $("drawer-toggle");
   $("drawer").classList.add("show");
@@ -1277,6 +1393,7 @@ function openDrawer() {
 
 function closeDrawer() {
   const wasOpen = $("drawer").classList.contains("show");
+  const applyFilters = wasOpen && drawerFiltersDirty;
   $("drawer").classList.remove("show");
   $("drawer-mask").classList.remove("show");
   $("drawer").setAttribute("aria-hidden", "true");
@@ -1288,6 +1405,12 @@ function closeDrawer() {
     drawerReturnFocus.focus();
   }
   drawerReturnFocus = null;
+  drawerFiltersDirty = false;
+  if (applyFilters) {
+    resetPosition();
+    save();
+    render();
+  }
 }
 
 function trapDrawerFocus(event) {
@@ -1430,7 +1553,7 @@ function sanitizeState(input, strict = false) {
   clean.errorTags = Object.fromEntries(entries("errorTags")
     .filter(([, value]) => typeof value === "string" && Object.prototype.hasOwnProperty.call(ERROR_TAG_LABELS, value)));
 
-  if (["home", "seq", "rnd", "review", "wrong", "fav"].includes(input.mode)) clean.mode = input.mode;
+  if (["home", "seq", "rnd", "mock", "review", "wrong", "fav"].includes(input.mode)) clean.mode = input.mode;
   const allowedSubjects = new Set(PUBLIC_QUESTIONS.map((q) => q.subject));
   const allowedTypes = new Set(PUBLIC_QUESTIONS.map((q) => q.type));
   if (typeof input.subject === "string" && (!input.subject || allowedSubjects.has(input.subject))) clean.subject = input.subject;
@@ -1597,13 +1720,35 @@ function bindGlobalEvents() {
 
   $("search-input").addEventListener("input", (event) => {
     state.searchQuery = event.target.value;
-    resetPosition();
+    drawerFiltersDirty = true;
     save();
-    render();
   });
   $("clear-search").addEventListener("click", () => {
     state.searchQuery = "";
-    resetPosition();
+    $("search-input").value = "";
+    drawerFiltersDirty = true;
+    save();
+  });
+
+  $("drawer-reset-filters").addEventListener("click", () => {
+    state.typeFilter = "";
+    state.chapterFilter = "";
+    state.searchQuery = "";
+    $("search-input").value = "";
+    drawerFiltersDirty = true;
+    save();
+    buildDrawer();
+  });
+  $("drawer-apply").addEventListener("click", () => {
+    closeDrawer();
+  });
+
+  $("runner-exit").addEventListener("click", () => {
+    if (isMockActive() && !confirm("返回刷题概览后计时仍会继续，确定返回吗？")) return;
+    if (!isMockActive() && state._pending?.text && !confirm("当前输入尚未提交，确定返回吗？")) return;
+    state.mode = "home";
+    state._pending = null;
+    clearMockTimer();
     save();
     render();
   });
@@ -1664,6 +1809,8 @@ function bindGlobalEvents() {
       }
     } catch {}
     state = initialState();
+    mockSession = null;
+    persistMockSession();
     render();
   });
 
@@ -1683,7 +1830,7 @@ function bindGlobalEvents() {
     const q = pool[state.cursor];
     if (!q) return;
     const inWrongFresh = state.mode === "wrong" && state._stickyId !== q.id;
-    const canAnswer = isMockActive() ? !mockSession.answers[q.id] : (!state.done[q.id] || inWrongFresh);
+    const canAnswer = isMockActive() ? true : (!state.done[q.id] || inWrongFresh);
     const keys = optionKeys(q);
     const typedLetter = event.key.length === 1 ? event.key.toUpperCase() : "";
     const numericIndex = /^\d$/.test(event.key) ? Number(event.key) - 1 : -1;
@@ -1716,7 +1863,9 @@ function bindGlobalEvents() {
         save();
         render();
       } else {
-        if (!state._pending || state._pending.qid !== q.id) state._pending = {qid: q.id, set: new Set()};
+        if (!state._pending || state._pending.qid !== q.id) {
+          state._pending = {qid: q.id, set: new Set(isMockActive() && mockSession.answers[q.id] ? String(mockSession.answers[q.id]).split("") : [])};
+        }
         if (state._pending.set.has(letter)) state._pending.set.delete(letter);
         else state._pending.set.add(letter);
         render();
@@ -1751,32 +1900,6 @@ function bindGlobalEvents() {
     }
   });
 
-  let startX = 0;
-  let startY = 0;
-  let startTime = 0;
-  let tracking = false;
-  document.addEventListener("touchstart", (event) => {
-    if (event.target.closest(".opt, button, input, select, .drawer")) {
-      tracking = false;
-      return;
-    }
-    const touch = event.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startTime = Date.now();
-    tracking = true;
-  }, {passive: true});
-
-  document.addEventListener("touchend", (event) => {
-    if (!tracking) return;
-    tracking = false;
-    const touch = event.changedTouches[0];
-    const dx = touch.clientX - startX;
-    const dy = touch.clientY - startY;
-    if (Math.abs(dx) < 44 || Math.abs(dx) < Math.abs(dy) * 1.2 || Date.now() - startTime > 900) return;
-    if (dx < 0) nextQuestion();
-    else prevQuestion();
-  }, {passive: true});
 }
 
 const startupRevisionResetCount = state._revisionResetCount || 0;
