@@ -350,6 +350,43 @@
     .nav-mask { display: none; }
     .recall-card { min-width: 0; }
 
+    /* 讲义保持连续文档形态，不复用三色笔记与刷题模块的卡片视觉。 */
+    .lecture-page .note {
+      padding: 6px 4px 28px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .lecture-page .chapter-toggle {
+      min-height: 0;
+      padding: 0 0 12px;
+      border: 0;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      background: transparent;
+      color: var(--text);
+    }
+    .lecture-page .exam-meta { gap: 0; color: var(--muted); font-weight: 650; }
+    .lecture-page .exam-level,
+    .lecture-page .exam-types {
+      min-height: 0;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--muted);
+    }
+    .lecture-page .exam-level::after { content: "·"; margin: 0 6px; color: #98a2b3; }
+    .lecture-page .point {
+      margin: 21px 0 9px;
+      padding: 0 0 6px;
+      border: 0;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      background: transparent;
+      color: var(--deep);
+    }
+
     @media (max-width: 900px) {
       .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .study-layout { grid-template-columns: 210px minmax(0, 1fr); gap: 12px; }
@@ -421,22 +458,24 @@
       .study-toolbar {
         position: fixed;
         top: 0;
-        right: 8px;
-        left: 8px;
+        right: 0;
+        left: 0;
         z-index: 50;
-        grid-template-columns: 72px minmax(0, 1fr) 78px;
+        grid-template-columns: 76px minmax(0, 1fr) 76px;
+        grid-template-rows: 44px;
         align-items: center;
         gap: 6px;
-        height: calc(56px + env(safe-area-inset-top));
+        height: calc(58px + env(safe-area-inset-top));
         margin: 0;
-        padding: env(safe-area-inset-top) 0 0;
+        padding: calc(7px + env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) 7px max(8px, env(safe-area-inset-left));
         border-bottom: 1px solid var(--border);
         background: rgba(244, 247, 251, .98);
       }
       .mobile-nav-toggle {
-        min-width: 70px;
+        width: 100%;
         min-width: 0;
-        min-height: 42px;
+        height: 44px;
+        min-height: 44px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -449,11 +488,50 @@
         font-size: 14px;
       }
       .mobile-nav-toggle strong { font-size: 11px; }
-      .mobile-course-context { min-width: 0; height: 42px; display: flex; align-items: center; padding: 0 7px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); }
-      .mobile-course-context select { min-width: 0; width: 100%; height: 40px; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; font-weight: 750; text-overflow: ellipsis; }
+      .mobile-course-context,
+      .mobile-module-context {
+        position: relative;
+        min-width: 0;
+        width: 100%;
+        height: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: stretch;
+        margin: 0;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--panel);
+      }
+      .mobile-course-context::after,
+      .mobile-module-context::after {
+        content: "⌄";
+        position: absolute;
+        top: 50%;
+        right: 9px;
+        color: var(--primary);
+        font-size: 13px;
+        line-height: 1;
+        pointer-events: none;
+        transform: translateY(-55%);
+      }
+      .mobile-course-context select,
+      .mobile-module-context select {
+        min-width: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0 27px 0 10px;
+        border: 0;
+        outline: 0;
+        appearance: none;
+        background: transparent;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+      }
+      .mobile-course-context select { color: var(--text); font-size: 13px; font-weight: 750; }
       .mobile-course-context span { display: none; }
-      .mobile-module-context { min-width: 0; height: 42px; display: flex; align-items: center; padding: 0 5px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); }
-      .mobile-module-context select { min-width: 0; width: 100%; height: 40px; border: 0; outline: 0; background: transparent; color: var(--primary); font-size: 12px; font-weight: 750; }
+      .mobile-module-context select { color: var(--primary); font-size: 12px; font-weight: 750; }
       .search-area { display: none; }
       .toolbar-actions { display: none; }
 
@@ -474,7 +552,7 @@
       .nav-mask { z-index: 35; }
 
       .study-layout, .study.nav-collapsed .study-layout { display: block; }
-      body.is-studying main { padding-top: calc(66px + env(safe-area-inset-top)); }
+      body.is-studying main { padding-top: calc(68px + env(safe-area-inset-top)); }
       .note { padding: 0 6px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
       body.is-studying .note h1 { display: none; }
       .chapter-section { display: none; margin-top: 6px; scroll-margin-top: 110px; }
@@ -559,7 +637,7 @@
     }
   </style>
 </head>
-<body>
+<body class="__PAGE_BODY_CLASS__">
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <div class="header-inner">

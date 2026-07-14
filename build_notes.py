@@ -25,6 +25,7 @@ PAGE_CONFIGS = {
         "markdown_title": "刷题器 · 零基础讲义完整版",
         "active_module": "lecture",
         "use_color_markup": False,
+        "body_class": "lecture-page",
     },
     "color-notes": {
         "index": ROOT / "color-notes-index.json",
@@ -34,6 +35,7 @@ PAGE_CONFIGS = {
         "markdown_title": "刷题器 · 三色笔记完整版",
         "active_module": "color-notes",
         "use_color_markup": True,
+        "body_class": "color-notes-page",
     },
 }
 
@@ -78,6 +80,7 @@ def render_html(courses, config):
         "__DOCUMENT_TITLE__": config["document_title"],
         "__COLOR_MODE__": "true" if config["use_color_markup"] else "false",
         "__PAGE_KIND__": config["active_module"],
+        "__PAGE_BODY_CLASS__": config["body_class"],
         "__LECTURE_CURRENT__": 'aria-current="page"' if config["active_module"] == "lecture" else "",
         "__COLOR_NOTES_CURRENT__": 'aria-current="page"' if config["active_module"] == "color-notes" else "",
     }
