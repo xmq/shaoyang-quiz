@@ -688,7 +688,7 @@
             <button type="button" id="chapter-prev">← 上一章</button>
             <button type="button" id="chapter-next">下一章 →</button>
           </nav>
-          <nav class="recall-card-pager hidden" aria-label="回忆卡操作" hidden>
+          <nav class="recall-card-pager hidden" aria-label="笔记操作" hidden>
             <button type="button" id="recall-prev">← 上一张</button>
             <button type="button" class="reveal-card" id="reveal-card">显示答案</button>
             <div class="recall-rating hidden" id="recall-rating" role="group" aria-label="回忆结果">
@@ -1055,7 +1055,7 @@
       if (colorMode) {
         activeRecallIndex = Math.max(0, Math.min(activeRecallIndex, Math.max(0, cards.length - 1)));
         cards.forEach((card, index) => card.classList.toggle("mobile-active", index === activeRecallIndex));
-        mobileCardProgress.textContent = cards.length ? `回忆卡 ${activeRecallIndex + 1}/${cards.length}` : "";
+        mobileCardProgress.textContent = cards.length ? `笔记 ${activeRecallIndex + 1}/${cards.length}` : "";
         recallPrev.disabled = activeChapterIndex <= 0 && activeRecallIndex <= 0;
         recallNext.disabled = activeChapterIndex >= sections.length - 1 && activeRecallIndex >= cards.length - 1;
         const activeCard = cards[activeRecallIndex];

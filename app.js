@@ -639,7 +639,7 @@ function feedbackHtml(q, chosen) {
   const repairLinks = ok ? "" : `<div class="repair-links">
     <span>${reviewMessage}</span>
     <a href="./notes.html${courseHash}">回看讲义</a>
-    <a href="./color-notes.html${courseHash}">三色回忆</a>
+    <a href="./color-notes.html${courseHash}">三色笔记</a>
   </div>`;
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
     <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已自评为基本答到" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
