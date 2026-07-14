@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#173b57">
+  <meta name="theme-color" content="#143b6b">
   <meta name="description" content="刷题器提供专业知识讲义、三色回忆、专项练习、限时模拟和错题复习。">
   <title>刷题器</title>
   <link rel="manifest" href="./manifest.webmanifest">
@@ -27,69 +27,17 @@
   </header>
 
   <main class="home-main" id="home-main">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="home-hero-copy">
-        <p class="home-eyebrow">计算机与电子信息专业知识</p>
-        <h1 id="home-title">选一门课，<br>开始今天的学习。</h1>
-        <p class="home-lead">课程只选一次。进入后可在讲义、三色回忆和刷题之间直接切换，并始终保留当前课程。</p>
-        <div class="home-proof" aria-label="平台内容概览">
-          <span><strong>15</strong> 门课程</span>
-          <span><strong id="question-count">—</strong> 公开题</span>
-          <span><strong id="short-count">—</strong> 道简答自评</span>
-        </div>
-        <div class="home-hero-actions">
-          <a class="home-primary-action" href="#courses">选择课程</a>
-        </div>
-      </div>
-      <aside class="learning-status" id="learning-status" aria-labelledby="status-title">
-        <div class="status-head">
-          <div>
-            <span class="status-kicker" id="status-kicker">学习工作台</span>
-            <h2 id="status-title">从一个科目开始</h2>
-          </div>
-          <span class="status-dot" aria-hidden="true"></span>
-        </div>
-        <p class="status-recommendation" id="status-recommendation">正在读取本机学习记录…</p>
-        <a class="status-action" id="continue-action" href="./notes.html">开始第一个知识点 <span aria-hidden="true">→</span></a>
-        <div class="status-grid">
-          <div><strong id="home-done">0</strong><span>已做题</span></div>
-          <div><strong id="home-rate">—</strong><span>正确率</span></div>
-          <div><strong id="home-due">0</strong><span>到期复习</span></div>
-          <div><strong id="home-wrong">0</strong><span>错题</span></div>
-        </div>
-        <p class="status-note" id="status-note">学习记录只保存在当前浏览器中。</p>
-      </aside>
-    </section>
-
-    <section class="home-section course-workbench" id="courses" aria-labelledby="courses-title">
-      <div class="section-heading compact-heading">
-        <div><p class="section-kicker">课程目录</p><h2 id="courses-title">选择一门课程</h2></div>
-        <p>点击课程进入讲义；进入后可从底部直接切换回忆或刷题。</p>
-      </div>
+    <section class="course-workbench" id="courses" aria-labelledby="courses-title">
+      <div class="section-heading compact-heading page-heading"><h1 class="home-page-title" id="courses-title">课程</h1></div>
       <nav class="course-jumps" aria-label="筛选课程分类" role="tablist">
         <button type="button" role="tab" aria-selected="true" data-course-filter="all">全部</button>
         <button type="button" role="tab" aria-selected="false" data-course-filter="信息技术应用">信息技术</button>
         <button type="button" role="tab" aria-selected="false" data-course-filter="计算机专业">计算机</button>
         <button type="button" role="tab" aria-selected="false" data-course-filter="电子与通信">电子通信</button>
       </nav>
-      <div class="home-course-grid" id="home-course-grid" aria-live="polite"></div>
+      <div class="home-course-grid" id="home-course-grid" data-active-filter="all" aria-live="polite"></div>
     </section>
-
-    <details class="home-help" id="study-method">
-      <summary>如何高效使用刷题器</summary>
-      <ol>
-        <li><strong>理解</strong><span>讲义学一个小节。</span></li>
-        <li><strong>回忆</strong><span>不看答案说出得分点。</span></li>
-        <li><strong>检验</strong><span>做一组题确认掌握。</span></li>
-        <li><strong>重练</strong><span>按错题和到期时间复习。</span></li>
-      </ol>
-    </details>
   </main>
-
-  <footer class="home-footer">
-    <p>学习进度保存在本机浏览器，可在刷题页导出备份。</p>
-    <p>内容用于专业知识基础复习，具体范围以岗位公告和准考证说明为准。</p>
-  </footer>
 
   <nav class="mobile-tabbar" aria-label="主导航">
     <a aria-current="page" href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
