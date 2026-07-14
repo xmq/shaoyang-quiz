@@ -48,7 +48,7 @@ python -m http.server 8000 --directory dist
 
 ## 文件结构
 
-- `index.html` / `home.js`：课程目录与学习入口。
+- `index.html` / `home.js`：课程菜单与学习入口。
 - `quiz.html` / `app.js`：顺序刷题、随机刷题、模拟考试、错题、到期复习与进度管理。
 - `course_notes/*.md`：15 个科目讲义的唯一可编辑数据源。
 - `color_notes/*.md`：15 个科目三色回忆内容的唯一可编辑数据源。

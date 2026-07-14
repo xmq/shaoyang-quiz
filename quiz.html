@@ -60,6 +60,7 @@
         <div class="topbar-row">
           <button class="icon-btn filter-trigger" id="drawer-toggle" aria-label="打开筛选" aria-controls="drawer" aria-expanded="false"><span aria-hidden="true">☷</span></button>
           <select id="subject-select" aria-label="科目"></select>
+          <select id="quiz-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">三色笔记</option><option value="quiz" selected>刷题</option></select>
           <span class="mini-stat" id="mini-stat">0/0 · 0%</span>
           <button class="icon-btn" id="stats-toggle" aria-label="展开统计" aria-controls="stats" aria-expanded="false">▸</button>
         </div>
@@ -73,12 +74,6 @@
         <div class="progress" id="progress" role="progressbar" aria-label="当前范围完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div>
       </header>
 
-      <nav class="module-switcher desktop-module-switcher" aria-label="学习模块">
-        <a class="module-switcher-link" href="./index.html">课程</a>
-        <a class="module-switcher-link" href="./notes.html">讲义</a>
-        <a class="module-switcher-link" href="./color-notes.html">三色回忆</a>
-        <a class="module-switcher-link" aria-current="page" href="./quiz.html">刷题</a>
-      </nav>
       <section class="active-filters hidden" id="active-filters" aria-label="当前筛选条件"></section>
 
       <header class="runner-header" id="runner-header">
@@ -89,13 +84,6 @@
       <section id="card-area"></section>
     </main>
   </div>
-
-  <nav class="mobile-tabbar quiz-mobile-tabbar" aria-label="主导航">
-    <a href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
-    <a id="mobile-notes-link" href="./notes.html"><span aria-hidden="true">读</span><strong>讲义</strong></a>
-    <a id="mobile-recall-link" href="./color-notes.html"><span aria-hidden="true">忆</span><strong>回忆</strong></a>
-    <a aria-current="page" href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
-  </nav>
 
   <input id="progress-file" type="file" accept="application/json,.json" hidden>
   <div class="sr-only" id="answer-live" role="status" aria-live="assertive" aria-atomic="true"></div>

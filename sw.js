@@ -10,7 +10,6 @@ const CORE_ASSETS = [
   "./style.css",
   "./build-meta.js",
   "./home.js",
-  "./home-data.js",
   "./app.js",
   "./question-media.js",
   "./questions.js",
@@ -104,6 +103,21 @@ async function networkFirst(request) {
   }
 }
 
+async function fastNavigation(request, event) {
+  const cached = await readFallback(request);
+  const refresh = fetchWithTimeout(request)
+    .then(async (response) => {
+      await cacheResponse(request, response);
+      return response;
+    })
+    .catch(() => null);
+  if (cached) {
+    event.waitUntil(refresh.then(() => undefined));
+    return cached;
+  }
+  return (await refresh) || Response.error();
+}
+
 async function cacheFirst(request) {
   const cached = await readFallback(request);
   if (cached) return cached;
@@ -118,7 +132,11 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin || url.pathname.includes("/api/")) return;
 
-  const isCritical = request.mode === "navigate" || /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);
+  if (request.mode === "navigate") {
+    event.respondWith(fastNavigation(request, event));
+    return;
+  }
+  const isCritical = /\/(questions\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);
   const isMedia = request.destination === "image";
   event.respondWith(isCritical ? networkFirst(request) : isMedia ? cacheFirst(request) : networkFirst(request));
 });

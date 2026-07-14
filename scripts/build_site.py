@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 import build_notes  # noqa: E402
-from scripts import build_home_data, build_release  # noqa: E402
+from scripts import build_release  # noqa: E402
 
 
 STATIC_FILES = (
@@ -32,7 +32,6 @@ GENERATED_FILES = (
     "notes.html",
     "color-notes.html",
     "questions.js",
-    "home-data.js",
     "build-meta.js",
 )
 
@@ -70,7 +69,6 @@ def generate_notes(output):
 
 
 def generate_derived_assets(output):
-    (output / "home-data.js").write_text(build_home_data.render(), encoding="utf-8", newline="\n")
     (output / "build-meta.js").write_text(
         build_release.render(output, ROOT / "questions.json"),
         encoding="utf-8",

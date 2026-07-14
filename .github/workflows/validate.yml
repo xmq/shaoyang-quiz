@@ -42,5 +42,4 @@ jobs:
           python scripts/validate_questions.py --js dist/questions.js
           python scripts/build_release.py --asset-root dist --check
           node --check dist/build-meta.js
-          node --check dist/home-data.js
           node --check dist/questions.js

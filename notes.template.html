@@ -182,9 +182,9 @@
     .mobile-nav-toggle,
     .mobile-search-toggle,
     .mobile-course-context,
+    .mobile-module-context,
     .chapter-pager,
     .recall-card-pager,
-    .mobile-module-tabs { display: none; }
 
     .study-layout { display: grid; grid-template-columns: 238px minmax(0, 1fr); gap: 18px; align-items: start; }
     .study-content { min-width: 0; }
@@ -409,22 +409,18 @@
       .note p { line-height: 1.85; }
       .table-wrap { margin-right: -3px; }
 
-      body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+      body { padding-bottom: env(safe-area-inset-bottom); }
       .site-header { position: sticky; }
       body.is-studying .site-header { display: none; }
       .header-inner { min-height: 52px; flex-wrap: nowrap; padding: 6px 14px; }
       .header-brand { flex: 1 1 auto; }
       .brand { font-size: 15px; }
       .desktop-module-nav { display: none; }
-      main { padding: 12px 8px 92px; }
-      .directory-head { margin: 4px 6px 14px; }
-      .directory-head h1 { font-size: 24px; }
-      .directory-search { margin: 12px 0; }
-      .course-card { min-height: 68px; }
+      main { padding: 12px 8px 28px; }
 
       .study-toolbar {
         top: 0;
-        grid-template-columns: auto minmax(0, 1fr) 44px;
+        grid-template-columns: auto minmax(0, 1fr) 82px;
         align-items: center;
         gap: 6px;
         margin: -4px 0 8px;
@@ -445,16 +441,16 @@
         font-size: 14px;
       }
       .mobile-nav-toggle strong { font-size: 11px; }
-      .mobile-course-context { min-width: 0; display: grid; padding: 4px 2px; border: 0; background: transparent; color: var(--text); text-align: left; line-height: 1.25; }
-      .mobile-course-context strong { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+      .mobile-course-context { min-width: 0; display: grid; padding: 3px 7px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); line-height: 1.2; }
+      .mobile-course-context select { min-width: 0; width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; font-weight: 750; text-overflow: ellipsis; }
       .mobile-course-context span { color: var(--muted); font-size: 10px; }
-      .mobile-search-toggle { display: inline-flex; }
-      .search-area { display: none; grid-column: 1 / -1; grid-row: 2; }
-      .study.mobile-search-open .search-area { display: block; }
+      .mobile-module-context { min-width: 0; min-height: 44px; display: flex; align-items: center; padding: 0 5px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
+      .mobile-module-context select { width: 100%; border: 0; outline: 0; background: transparent; color: var(--primary); font-size: 12px; font-weight: 750; }
+      .search-area { display: none; }
       .toolbar-actions { display: none; }
 
       .chapter-nav {
-        inset: auto 8px calc(66px + env(safe-area-inset-bottom)) 8px;
+        inset: auto 8px calc(8px + env(safe-area-inset-bottom)) 8px;
         width: auto;
         max-height: min(66vh, 560px);
         padding: 0 0 env(safe-area-inset-bottom);
@@ -520,26 +516,6 @@
       .recall-rating button[data-recall-rating="known"] { border-color: #8fd0b2; color: #067647; }
       .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { pointer-events: none; }
 
-      .mobile-module-tabs {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 80;
-        min-height: calc(62px + env(safe-area-inset-bottom));
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        padding: 6px max(8px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(8px, env(safe-area-inset-left));
-        border-top: 1px solid var(--border);
-        background: rgba(255, 255, 255, .97);
-        box-shadow: 0 -8px 24px rgba(16, 24, 40, .08);
-        backdrop-filter: blur(16px);
-        isolation: isolate;
-      }
-      .mobile-module-tabs a { min-height: 50px; display: grid; place-content: center; gap: 1px; border-radius: 11px; color: #667085; text-align: center; text-decoration: none; touch-action: manipulation; }
-      .mobile-module-tabs a[aria-current="page"] { background: var(--primary-soft); color: var(--primary); }
-      .mobile-module-tabs a span { font-size: 17px; font-weight: 800; line-height: 1; }
-      .mobile-module-tabs a strong { font-size: 11px; line-height: 1.25; }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -567,9 +543,6 @@
       .mobile-nav-toggle,
       .chapter-pager button,
       .recall-card-pager button { background: #182230; }
-      .mobile-module-tabs { border-color: #344054; background: rgba(24, 34, 48, .98); }
-      .mobile-module-tabs a { color: #aab7c4; }
-      .mobile-module-tabs a[aria-current="page"] { background: #243b5a; color: #b9d2ff; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -588,32 +561,18 @@
       <nav class="module-nav desktop-module-nav" aria-label="学习模块">
         <a class="module-link" href="./index.html">课程</a>
         <a class="module-link" __LECTURE_CURRENT__ href="./notes.html">讲义</a>
-        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色回忆</a>
+        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色笔记</a>
         <a class="module-link" href="./quiz.html">刷题</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section id="directory" aria-labelledby="directory-title">
-      <div class="directory-head">
-        <h1 id="directory-title">__DIRECTORY_TITLE__</h1>
-      </div>
-      <div class="directory-search search-box">
-        <span class="search-icon" aria-hidden="true">⌕</span>
-        <input id="course-search" type="search" aria-label="搜索科目" placeholder="搜索科目名称" autocomplete="off">
-        <button class="icon-button hidden" id="course-search-clear" type="button" aria-label="清空科目搜索">×</button>
-      </div>
-      <div class="course-grid" id="courses"></div>
-      <div class="empty-result hidden" id="course-empty">没有找到匹配的科目</div>
-      <p class="sr-only" id="course-status" role="status" aria-live="polite"></p>
-    </section>
-
     <section class="study hidden" id="study" aria-label="科目内容">
       <div class="study-toolbar">
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><span aria-hidden="true">☰</span><strong id="mobile-chapter-progress">章节</strong></button>
-        <button class="mobile-course-context" id="mobile-course-context" type="button" aria-label="更换科目"><strong id="mobile-course-name">当前课程</strong><span id="mobile-card-progress"></span></button>
-        <button class="icon-button mobile-search-toggle" id="mobile-search-toggle" type="button" aria-label="搜索当前课程" aria-expanded="false">⌕</button>
+        <label class="mobile-course-context"><select id="mobile-course-select" aria-label="切换课程"></select><span id="mobile-card-progress"></span></label>
+        <label class="mobile-module-context"><select id="mobile-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">三色笔记</option><option value="quiz">刷题</option></select></label>
         <div class="search-area">
           <div class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
@@ -658,25 +617,19 @@
     </section>
   </main>
 
-  <nav class="mobile-module-tabs" aria-label="主导航">
-    <a href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
-    <a class="mobile-module-link" data-page-kind="lecture" href="./notes.html"><span aria-hidden="true">读</span><strong>讲义</strong></a>
-    <a class="mobile-module-link" data-page-kind="color-notes" href="./color-notes.html"><span aria-hidden="true">忆</span><strong>回忆</strong></a>
-    <a class="mobile-module-link" href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
-  </nav>
-
   <script>
     const items = __COURSE_DATA__;
     const colorMode = __COLOR_MODE__;
     const pageKind = "__PAGE_KIND__";
-    document.querySelector(`[data-page-kind="${pageKind}"]`)?.setAttribute("aria-current", "page");
+    const subjectAliases = {
+      "Office软件操作": "办公软件",
+      "信息技术与教学论": "教学论",
+      "多媒体技术": "多媒体",
+      "数据结构与算法": "算法与数据结构",
+      "操作系统原理": "操作系统",
+      "数据库技术": "数据库",
+    };
     const recallToggle = document.getElementById("recall-toggle");
-    const directory = document.getElementById("directory");
-    const courses = document.getElementById("courses");
-    const courseEmpty = document.getElementById("course-empty");
-    const courseStatus = document.getElementById("course-status");
-    const courseSearch = document.getElementById("course-search");
-    const courseSearchClear = document.getElementById("course-search-clear");
     const study = document.getElementById("study");
     const content = document.getElementById("content");
     const search = document.getElementById("search");
@@ -686,9 +639,8 @@
     const chapterLinks = document.getElementById("chapter-links");
     const navCollapse = document.getElementById("nav-collapse");
     const mobileNavToggle = document.getElementById("mobile-nav-toggle");
-    const mobileSearchToggle = document.getElementById("mobile-search-toggle");
-    const mobileCourseContext = document.getElementById("mobile-course-context");
-    const mobileCourseName = document.getElementById("mobile-course-name");
+    const mobileCourseSelect = document.getElementById("mobile-course-select");
+    const mobileModuleSelect = document.getElementById("mobile-module-select");
     const mobileChapterProgress = document.getElementById("mobile-chapter-progress");
     const mobileCardProgress = document.getElementById("mobile-card-progress");
     const chapterPrev = document.getElementById("chapter-prev");
@@ -702,9 +654,8 @@
     const studyToolbar = document.querySelector(".study-toolbar");
     const studyContent = document.querySelector(".study-content");
     const siteHeader = document.querySelector(".site-header");
-    const mobileModuleTabs = document.querySelector(".mobile-module-tabs");
     const backButton = document.getElementById("back");
-    const moduleLinks = [...document.querySelectorAll(".module-link, .mobile-module-link")];
+    const moduleLinks = [...document.querySelectorAll(".module-link")];
     const mobileMedia = window.matchMedia("(max-width: 700px)");
     let currentCourse = null;
     let activeObserver = null;
@@ -1243,25 +1194,19 @@
         });
       }
       syncRecallTargets();
-      mobileCourseName.textContent = course.name;
+      mobileCourseSelect.value = course.name;
+      mobileModuleSelect.value = pageKind;
       const courseHash = `#course=${encodeURIComponent(course.name)}`;
-      const subjectAliases = {
-        "Office软件操作": "办公软件",
-        "信息技术与教学论": "教学论",
-        "多媒体技术": "多媒体",
-        "数据结构与算法": "算法与数据结构",
-        "操作系统原理": "操作系统",
-        "数据库技术": "数据库",
-      };
       moduleLinks.forEach((link) => {
         if (link.getAttribute("href") === "./notes.html" || link.pathname.endsWith("/notes.html")) link.href = `./notes.html${courseHash}`;
         if (link.getAttribute("href") === "./color-notes.html" || link.pathname.endsWith("/color-notes.html")) link.href = `./color-notes.html${courseHash}`;
         if (link.getAttribute("href") === "./quiz.html" || link.pathname.endsWith("/quiz.html")) {
-          link.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[course.name] || course.name)}&mode=seq`;
+          link.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[course.name] || course.name)}&mode=home`;
         }
       });
       updateStudyPosition({replaceRoute: mobileMedia.matches});
       try {
+        localStorage.setItem("shaoyang-selected-course-v1", course.name);
         localStorage.setItem("shaoyang-last-learning", JSON.stringify({
           course: course.name,
           module: pageKind,
@@ -1270,7 +1215,6 @@
           savedAt: new Date().toISOString(),
         }));
       } catch {}
-      directory.classList.add("hidden");
       study.classList.remove("hidden");
       document.body.classList.add("is-studying");
       search.value = "";
@@ -1281,20 +1225,7 @@
     }
 
     function showDirectory() {
-      closeMobileNav();
-      currentCourse = null;
-      collapsedBeforeSearch = null;
-      study.classList.remove("mobile-search-open");
-      mobileSearchToggle.setAttribute("aria-expanded", "false");
-      study.classList.add("hidden");
-      directory.classList.remove("hidden");
-      document.body.classList.remove("is-studying");
-      search.value = "";
-      searchStatus.textContent = "";
-      window.scrollTo({top: 0, behavior: "auto"});
-      const title = document.getElementById("directory-title");
-      title.setAttribute("tabindex", "-1");
-      title.focus({preventScroll: true});
+      location.href = "./index.html";
     }
 
     function courseHash(course) {
@@ -1316,30 +1247,7 @@
       const name = params.get("course");
       const course = name ? items.find((item) => item.name === name) : null;
       if (course) openCourse(course);
-      else if (!study.classList.contains("hidden")) showDirectory();
-    }
-
-    function renderCourses(query = "") {
-      const normalized = query.trim().toLowerCase();
-      courses.innerHTML = "";
-      const matches = items.filter((course) => course.name.toLowerCase().includes(normalized));
-      matches.forEach((course) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "course-card";
-        const name = document.createElement("span");
-        name.className = "course-name";
-        name.textContent = course.name;
-        const arrow = document.createElement("span");
-        arrow.className = "course-arrow";
-        arrow.setAttribute("aria-hidden", "true");
-        arrow.textContent = "→";
-        button.append(name, arrow);
-        button.addEventListener("click", () => navigateToCourse(course));
-        courses.appendChild(button);
-      });
-      courseEmpty.classList.toggle("hidden", matches.length > 0);
-      courseStatus.textContent = normalized ? `找到 ${matches.length} 个科目` : "";
+      else location.replace("./index.html");
     }
 
     function highlightMatches(root, query) {
@@ -1431,7 +1339,6 @@
       studyToolbar.inert = true;
       studyContent.inert = true;
       siteHeader.inert = true;
-      mobileModuleTabs.inert = false;
       mobileNavToggle.setAttribute("aria-expanded", "true");
       mobileNavToggle.setAttribute("aria-label", "关闭章节目录");
       navCollapse.setAttribute("aria-label", "关闭章节目录");
@@ -1450,7 +1357,6 @@
       studyToolbar.inert = false;
       studyContent.inert = false;
       siteHeader.inert = false;
-      mobileModuleTabs.inert = false;
       mobileNavToggle.setAttribute("aria-expanded", "false");
       mobileNavToggle.setAttribute("aria-label", "打开章节目录");
       document.body.style.overflow = "";
@@ -1473,16 +1379,6 @@
       }
     }
 
-    courseSearch.addEventListener("input", () => {
-      renderCourses(courseSearch.value);
-      courseSearchClear.classList.toggle("hidden", !courseSearch.value);
-    });
-    courseSearchClear.addEventListener("click", () => {
-      courseSearch.value = "";
-      renderCourses();
-      courseSearchClear.classList.add("hidden");
-      courseSearch.focus();
-    });
     search.addEventListener("input", () => {
       clearTimeout(searchTimer);
       searchTimer = setTimeout(filterContent, 160);
@@ -1492,10 +1388,18 @@
       filterContent();
       search.focus();
     });
-    mobileSearchToggle.addEventListener("click", () => {
-      const open = study.classList.toggle("mobile-search-open");
-      mobileSearchToggle.setAttribute("aria-expanded", String(open));
-      if (open) requestAnimationFrame(() => search.focus());
+    mobileCourseSelect.innerHTML = items.map((course) => `<option value="${escapeHtml(course.name)}">${escapeHtml(course.name)}</option>`).join("");
+    mobileCourseSelect.addEventListener("change", () => {
+      const course = items.find((item) => item.name === mobileCourseSelect.value);
+      if (course) navigateToCourse(course);
+    });
+    mobileModuleSelect.addEventListener("change", () => {
+      if (!currentCourse || mobileModuleSelect.value === pageKind) return;
+      closeMobileNav({restoreFocus: false});
+      const courseHash = location.hash || `#course=${encodeURIComponent(currentCourse.name)}`;
+      if (mobileModuleSelect.value === "lecture") location.href = `./notes.html${courseHash}`;
+      else if (mobileModuleSelect.value === "color-notes") location.href = `./color-notes.html${courseHash}`;
+      else location.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[currentCourse.name] || currentCourse.name)}&mode=home`;
     });
     chapterPrev.addEventListener("click", () => setActiveChapter(activeChapterIndex - 1, {focus: true}));
     chapterNext.addEventListener("click", () => setActiveChapter(activeChapterIndex + 1, {focus: true}));
@@ -1519,21 +1423,8 @@
       saveRecallRating(button.dataset.recallRating);
       advanceAfterRecallRating(button.dataset.recallRating);
     });
-    mobileCourseContext.addEventListener("click", () => {
-      history.replaceState(null, "", location.href.split("#")[0]);
-      showDirectory();
-    });
     backButton.addEventListener("click", () => {
-      if (mobileMedia.matches) {
-        history.replaceState(null, "", location.href.split("#")[0]);
-        showDirectory();
-        return;
-      }
-      if (history.state?.shaoyangCourse) history.back();
-      else {
-        history.replaceState(null, "", location.href.split("#")[0]);
-        showDirectory();
-      }
+      showDirectory();
     });
     if (colorMode) recallToggle.classList.remove("hidden");
     recallToggle.addEventListener("click", () => {
@@ -1559,10 +1450,6 @@
       else openMobileNav();
     });
     navMask.addEventListener("click", closeMobileNav);
-    mobileModuleTabs.addEventListener("click", (event) => {
-      if (!event.target.closest("a")) return;
-      closeMobileNav({restoreFocus: false});
-    });
     document.addEventListener("keydown", (event) => {
       if (study.classList.contains("mobile-nav-open")) {
         if (event.key === "Escape") closeMobileNav();
@@ -1579,7 +1466,6 @@
 
     window.addEventListener("popstate", applyLocation);
     window.addEventListener("pageshow", () => closeMobileNav({restoreFocus: false}));
-    renderCourses();
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
     applyLocation();

@@ -455,12 +455,12 @@ function updateStats() {
 }
 
 function updateCourseModuleLinks() {
-  const course = courseNameForSubject(state.subject || "");
-  const suffix = course ? `#course=${encodeURIComponent(course)}` : "";
-  const notesLink = $("mobile-notes-link");
-  const recallLink = $("mobile-recall-link");
-  if (notesLink) notesLink.href = `./notes.html${suffix}`;
-  if (recallLink) recallLink.href = `./color-notes.html${suffix}`;
+  const moduleSelect = $("quiz-module-select");
+  const hasLearningContent = Boolean(state.subject && !["信息基础", "计算机基础", "大数据"].includes(state.subject));
+  [...moduleSelect.options].forEach((option) => {
+    if (option.value !== "quiz") option.disabled = !hasLearningContent;
+  });
+  moduleSelect.value = "quiz";
 }
 
 function wrongGrade(count) {
@@ -1715,11 +1715,20 @@ function bindGlobalEvents() {
   $("drawer-toggle").addEventListener("click", openDrawer);
   $("drawer-close").addEventListener("click", closeDrawer);
   $("drawer-mask").addEventListener("click", closeDrawer);
-  document.querySelector(".quiz-mobile-tabbar").addEventListener("click", (event) => {
-    if (!event.target.closest("a")) return;
-    closeDrawer({restoreFocus: false});
-  });
   window.addEventListener("pageshow", () => closeDrawer({restoreFocus: false}));
+
+  $("quiz-module-select").addEventListener("change", (event) => {
+    const module = event.target.value;
+    event.target.value = "quiz";
+    if (module === "quiz") return;
+    if (!state.subject) {
+      $("subject-select").focus();
+      return;
+    }
+    const course = courseNameForSubject(state.subject);
+    const target = module === "lecture" ? "notes.html" : "color-notes.html";
+    location.href = `./${target}#course=${encodeURIComponent(course)}`;
+  });
 
   $("subject-select").addEventListener("change", (event) => {
     state.subject = event.target.value;
@@ -1727,6 +1736,9 @@ function bindGlobalEvents() {
     state.chapterFilter = "";
     state.searchQuery = "";
     $("search-input").value = "";
+    try {
+      if (state.subject) localStorage.setItem("shaoyang-selected-course-v1", courseNameForSubject(state.subject));
+    } catch {}
     resetPosition();
     save();
     render();

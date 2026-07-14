@@ -17,37 +17,27 @@
         <span class="home-brand-mark" aria-hidden="true">题</span>
         <span><strong>刷题器</strong></span>
       </a>
-      <nav class="home-nav desktop-primary-nav" aria-label="学习模块">
-        <a aria-current="page" href="./index.html">课程</a>
-        <a href="./notes.html">讲义</a>
-        <a href="./color-notes.html">三色回忆</a>
-        <a href="./quiz.html">刷题</a>
-      </nav>
     </div>
   </header>
 
   <main class="home-main" id="home-main">
-    <section class="course-workbench" id="courses" aria-labelledby="courses-title">
-      <div class="section-heading compact-heading page-heading"><h1 class="home-page-title" id="courses-title">课程</h1></div>
-      <nav class="course-jumps" aria-label="筛选课程分类" role="tablist">
-        <button type="button" role="tab" aria-selected="true" data-course-filter="all">全部</button>
-        <button type="button" role="tab" aria-selected="false" data-course-filter="信息技术应用">信息技术</button>
-        <button type="button" role="tab" aria-selected="false" data-course-filter="计算机专业">计算机</button>
-        <button type="button" role="tab" aria-selected="false" data-course-filter="电子与通信">电子通信</button>
+    <section class="course-launcher" aria-labelledby="courses-title">
+      <h1 id="courses-title">选择课程</h1>
+      <label class="course-select-control">
+        <span class="sr-only">课程</span>
+        <select id="home-course-select">
+          <option value="">请选择课程</option>
+        </select>
+      </label>
+      <nav class="home-module-actions hidden" id="home-module-actions" aria-label="学习功能">
+        <a id="home-notes-link" href="./notes.html"><strong>讲义</strong></a>
+        <a id="home-recall-link" href="./color-notes.html"><strong>三色笔记</strong></a>
+        <a id="home-quiz-link" href="./quiz.html"><strong>刷题</strong></a>
       </nav>
-      <div class="home-course-grid" id="home-course-grid" data-active-filter="all" aria-live="polite"></div>
     </section>
   </main>
 
-  <nav class="mobile-tabbar" aria-label="主导航">
-    <a aria-current="page" href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
-    <a href="./notes.html"><span aria-hidden="true">读</span><strong>讲义</strong></a>
-    <a href="./color-notes.html"><span aria-hidden="true">忆</span><strong>回忆</strong></a>
-    <a href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
-  </nav>
-
   <script src="./build-meta.js"></script>
-  <script src="./home-data.js"></script>
   <script src="./home.js"></script>
 </body>
 </html>
