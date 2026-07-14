@@ -132,8 +132,10 @@ def load_candidates() -> list[dict]:
         for subject, expected_count in expected.items():
             if counts[subject] != expected_count:
                 errors.append(f"{path.name}: {subject}应为{expected_count}题，实际{counts[subject]}题")
-            if type_counts[subject]["简答"] < 5:
-                errors.append(f"{path.name}: {subject}至少应含5道简答")
+            # 简答只用于机制、过程、边界和多维比较，不设置最低配额。
+            # 用三分之一上限防止普通识记点被批量简答化。
+            if type_counts[subject]["简答"] > max(2, expected_count // 3):
+                errors.append(f"{path.name}: {subject}简答题超过总量三分之一")
             if type_counts[subject]["判断"] < 5:
                 errors.append(f"{path.name}: {subject}至少应含5道判断")
     if errors:

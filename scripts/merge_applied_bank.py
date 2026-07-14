@@ -131,8 +131,10 @@ def load_candidates() -> list[dict]:
         for subject in sorted(allowed_subjects):
             if counts[subject] != EXPECTED_PER_SUBJECT:
                 errors.append(f"{path.name}: {subject}应为{EXPECTED_PER_SUBJECT}题，实际{counts[subject]}题")
-            if type_counts[subject]["简答"] != 2:
-                errors.append(f"{path.name}: {subject}应含2道简答，实际{type_counts[subject]['简答']}道")
+            # 简答题由知识形态决定，不能为了凑固定配额把普通概念强行改成简答。
+            # 应用补充库只约束上限，保证客观题仍是主体。
+            if type_counts[subject]["简答"] > 2:
+                errors.append(f"{path.name}: {subject}简答题不应超过2道")
     if errors:
         raise ValueError("暂存题库校验失败：\n" + "\n".join(errors[:120]))
     return candidates

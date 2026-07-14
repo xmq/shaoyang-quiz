@@ -123,8 +123,8 @@ SUBJECT_RULES: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
     ),
     "算法与数据结构": (
         ("栈与队列", ("栈", "队列", "先进先出", "后进先出")),
-        ("树与二叉树", ("二叉树", "树", "遍历", "哈夫曼", "叶子结点")),
         ("图结构与算法", ("图", "顶点", "边", "最短路径", "最小生成树", "深度优先", "广度优先")),
+        ("树与二叉树", ("二叉树", "树", "遍历", "哈夫曼", "叶子结点")),
         ("排序算法", ("排序", "冒泡", "插入排序", "快速排序", "归并", "堆排序")),
         ("查找与散列", ("查找", "二分", "折半", "散列", "哈希表")),
         ("线性表", ("线性表", "顺序表", "链表", "数组", "插入", "删除")),
@@ -228,13 +228,20 @@ def normalized_text(*values: object) -> str:
     return unicodedata.normalize("NFKC", text).lower()
 
 
-def question_text(question: dict, *, include_options: bool = True) -> str:
-    values: list[object] = [
-        question.get("subject"),
+def question_text(
+    question: dict,
+    *,
+    include_options: bool = True,
+    include_subject: bool = True,
+) -> str:
+    values: list[object] = []
+    if include_subject:
+        values.append(question.get("subject"))
+    values.extend([
         question.get("chapter"),
         question.get("source_chapter"),
         question.get("stem"),
-    ]
+    ])
     if include_options:
         options = question.get("options")
         if isinstance(options, dict):
@@ -254,7 +261,9 @@ def classify_knowledge_point(question: dict) -> str:
 def classify_ability(question: dict) -> str:
     subject = str(question.get("subject") or "")
     qtype = str(question.get("type") or "")
-    text = question_text(question, include_options=False)
+    # 学科名称只是分类，不是题目能力证据。若把“计算机组成原理”中的
+    # “原理”用于匹配，会把普通名词识别题批量误标成机制解释题。
+    text = question_text(question, include_options=False, include_subject=False)
 
     if re.search(r"如图|图中|示意图|拓扑图|波形图|电路图|逻辑图|真值表|截图", text):
         return "读图排障"

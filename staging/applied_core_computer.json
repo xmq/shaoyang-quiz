@@ -165,8 +165,8 @@
   "source_chapter": "总线与信息传送",
   "adaptation_note": "依据总线信息交换知识点，原创为直接套公式的一步计算。",
   "knowledge_point": "总线与I/O",
-  "ability": "机制解释",
-  "difficulty": "应用"
+  "ability": "概念识记",
+  "difficulty": "基础"
  },
  {
   "id": "ap-co-003",
@@ -183,8 +183,8 @@
   "source_chapter": "程序中断方式与DMA方式",
   "adaptation_note": "依据课程I/O控制模块，原创为参与边界判断题。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
-  "difficulty": "应用"
+  "ability": "概念识记",
+  "difficulty": "基础"
  },
  {
   "id": "ap-co-004",
@@ -206,7 +206,7 @@
   "source_chapter": "存储系统",
   "adaptation_note": "依据RAM、ROM和存储层次考点，原创为用途选型多选。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -353,19 +353,24 @@
  {
   "id": "ap-ds-006",
   "source": "高校试题提炼",
-  "type": "简答",
+  "type": "单选",
   "chapter": "顺序表与链表",
-  "stem": "比较顺序表和链表在存储、随机访问、插入删除和适用场景上的主要区别。",
-  "options": {},
-  "answer": "顺序表连续存储、按下标O(1)，中间插删常需移动；链表结点可不连续、按位访问O(n)，已知位置时插删可O(1)。前者适合频繁随机访问，后者适合动态扩展和已知位置频繁插删。",
-  "explanation": "至少覆盖存储连续性、访问、插删和场景四个维度；链表插删效率必须带“已知位置”前提。",
+  "stem": "某系统需要频繁按下标随机访问第 i 个元素，并希望该操作的时间复杂度为 O(1)。优先采用的数据结构是（ ）。",
+  "options": {
+   "A": "顺序表",
+   "B": "单链表",
+   "C": "链式队列",
+   "D": "链栈"
+  },
+  "answer": "A",
+  "explanation": "顺序表采用连续存储，可根据首地址和下标直接定位元素，按下标随机访问为 O(1)。链式结构通常要从结点沿指针逐个查找，按位访问为 O(n)。",
   "subject": "算法与数据结构",
   "source_url": "https://www.gxtcmu.edu.cn/ggxy/jysjs1/xxglyxxxtjysyxxxgcjyshs/jxyhygl2/sjjg/content_29237",
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "顺序表和链表的时空性能",
-  "adaptation_note": "依据大纲的结构比较要求，重新组织为带适用边界的基础简答。",
-  "knowledge_point": "线性表",
-  "ability": "过程描述",
+  "adaptation_note": "依据大纲的时空性能要求，改写为随机访问场景下的数据结构单选题。",
+  "knowledge_point": "栈与队列",
+  "ability": "直接计算",
   "difficulty": "应用"
  },
  {

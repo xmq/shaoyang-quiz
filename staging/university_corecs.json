@@ -770,7 +770,7 @@
   "source_url": "https://jxjy.ahut.edu.cn/www/doc/jsj2.pdf",
   "source_title": "安徽工业大学《数据结构》考试大纲",
   "adaptation_note": "依据图基本性质与生成树考点改写。",
-  "knowledge_point": "树与二叉树",
+  "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "进阶"
  },
@@ -967,7 +967,7 @@
   "source_url": "https://jxjy.ahut.edu.cn/www/doc/jsj2.pdf",
   "source_title": "安徽工业大学《数据结构》考试大纲",
   "adaptation_note": "依据Prim/Kruskal相关性质改编判断题。",
-  "knowledge_point": "树与二叉树",
+  "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "进阶"
  },
@@ -1009,7 +1009,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据补码计算要求重新给出机器数。",
   "knowledge_point": "数据表示与运算",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1032,7 +1032,7 @@
   "source_title": "湖南工商大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据运算器分析题重新设计补码加法数据。",
   "knowledge_point": "数据表示与运算",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1055,7 +1055,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据存储器部件设计题，把常见芯片数量题改编为片内地址与组选择线分析。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1101,7 +1101,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据存储层次性能计算重新设置时间参数。",
   "knowledge_point": "存储层次与Cache",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1124,7 +1124,7 @@
   "source_title": "湖南工商大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据寻址方式计算题重新给出PC和位移。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1147,7 +1147,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据指令格式设计考点重新设置操作数目。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1170,7 +1170,7 @@
   "source_title": "湖南工商大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据CPU综合分析要求改写理想流水线计算。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1193,7 +1193,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据CPU性能指标考点重新设定IC、CPI和主频。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1216,8 +1216,8 @@
   "source_title": "湖南工商大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据存储器层次综合题重新组合Cache性质。",
   "knowledge_point": "存储层次与Cache",
-  "ability": "机制解释",
-  "difficulty": "进阶"
+  "ability": "概念识记",
+  "difficulty": "应用"
  },
  {
   "id": "uc-co-011",
@@ -1239,8 +1239,8 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据流水线分析考点改编冒险分类。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
-  "difficulty": "进阶"
+  "ability": "概念识记",
+  "difficulty": "应用"
  },
  {
   "id": "uc-co-012",
@@ -1262,8 +1262,8 @@
   "source_title": "湖南工商大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据I/O基本部件分析要求重组DMA流程。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
-  "difficulty": "进阶"
+  "ability": "概念识记",
+  "difficulty": "应用"
  },
  {
   "id": "uc-co-013",
@@ -1280,7 +1280,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据ISA考点改编RISC常见绝对化表述。",
   "knowledge_point": "指令系统与CPU",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1316,7 +1316,7 @@
   "source_title": "安徽工业大学《计算机组成原理》考试大纲",
   "adaptation_note": "依据存储层次综合辨析要求重新命制。",
   "knowledge_point": "存储层次与Cache",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {

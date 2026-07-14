@@ -1009,7 +1009,7 @@
   "source_title": "哈尔滨理工大学《通信原理》考试大纲",
   "adaptation_note": "依据大纲的信息度量计算要求重新设置三符号概率。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1032,7 +1032,7 @@
   "source_title": "重庆邮电大学《通信原理》考试大纲",
   "adaptation_note": "依据香农公式应用考点重新给定带宽与信噪比，使结果可心算验证。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "进阶"
  },
  {
@@ -1055,7 +1055,7 @@
   "source_title": "青岛科技大学《通信原理》公开期终试卷02",
   "adaptation_note": "参考公开卷PCM综合计算题型，抽取抽样环节并更换信号带宽。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "进阶"
  },
  {
@@ -1078,7 +1078,7 @@
   "source_title": "哈尔滨理工大学《通信原理》考试大纲",
   "adaptation_note": "按大纲有效性指标与数字调制要求，原创速率换算题。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1101,7 +1101,7 @@
   "source_title": "河北工业大学《高频电子线路》课程教学大纲",
   "adaptation_note": "依据大纲振幅调制信号特征与频谱要求，重新设置基带带宽。",
   "knowledge_point": "信道容量与香农公式",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1124,7 +1124,7 @@
   "source_title": "河北工业大学《高频电子线路》课程教学大纲",
   "adaptation_note": "按角度调制带宽分析要求，原创典型广播参数计算题。",
   "knowledge_point": "信道容量与香农公式",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1170,7 +1170,7 @@
   "source_title": "河北工业大学《高频电子线路》课程教学大纲",
   "adaptation_note": "依据混频原理、失真与工程计算要求，原创本振及镜像频率计算题。",
   "knowledge_point": "高频电路",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1216,8 +1216,8 @@
   "source_title": "北京交通大学海滨学院《计算机网络技术与应用》等课程教学大纲汇编",
   "adaptation_note": "依据大纲中的无线、光纤、移动与蜂窝通信范围，并结合用户近期考试中的半双工、波谱、光纤窗口和网络代际考点，重新命制综合辨析题；链接用于支撑课程范围，不声称选项原文出自该页。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
-  "difficulty": "进阶"
+  "ability": "概念识记",
+  "difficulty": "应用"
  },
  {
   "id": "ue-comm-011",
@@ -1239,7 +1239,7 @@
   "source_title": "青岛科技大学《通信原理》公开期终试卷02",
   "adaptation_note": "参考公开卷滚降系统综合题，重新组织为原理、波形和工程权衡多选题。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "进阶"
  },
  {
@@ -1262,8 +1262,8 @@
   "source_title": "河北工业大学《高频电子线路》课程教学大纲",
   "adaptation_note": "依据大纲强调的识图、作图与简单设计能力，原创发射—接收功能链综合题。",
   "knowledge_point": "模拟调制",
-  "ability": "机制解释",
-  "difficulty": "进阶"
+  "ability": "概念识记",
+  "difficulty": "应用"
  },
  {
   "id": "ue-comm-013",
@@ -1280,7 +1280,7 @@
   "source_title": "哈尔滨理工大学《通信原理》考试大纲",
   "adaptation_note": "依据通信方式概念考点，结合对讲机场景原创判断题。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  },
  {
@@ -1298,7 +1298,7 @@
   "source_title": "重庆邮电大学《通信原理》考试大纲",
   "adaptation_note": "围绕香农公式的物理意义重新命制边界判断题。",
   "knowledge_point": "通信系统基础",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "进阶"
  },
  {
@@ -1316,7 +1316,7 @@
   "source_title": "河北工业大学《高频电子线路》课程教学大纲",
   "adaptation_note": "依据大纲的AM特征及包络检波失真分析要求，原创条件判断题。",
   "knowledge_point": "模拟调制",
-  "ability": "机制解释",
+  "ability": "概念识记",
   "difficulty": "应用"
  }
 ]

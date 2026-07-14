@@ -27,9 +27,15 @@ jobs:
           python -m json.tool questions.json > /dev/null
           python -m json.tool manifest.webmanifest > /dev/null
       - name: Check reproducible question bank
-        run: python scripts/merge_university_exam_bank.py --check
+        run: |
+          python scripts/merge_applied_bank.py --check
+          python scripts/merge_supplement_bank.py --check
+          python scripts/merge_university_exam_bank.py --check
+          python scripts/enrich_question_metadata.py --check
       - name: Validate three-color recall cards
         run: python scripts/validate_color_notes.py
+      - name: Validate lecture exam guidance
+        run: python scripts/validate_course_notes.py
       - name: Build and validate Pages artifact
         run: |
           python scripts/build_site.py --output dist

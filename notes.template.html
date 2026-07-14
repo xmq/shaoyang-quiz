@@ -310,6 +310,15 @@
       font-weight: 800;
       line-height: 1.45;
     }
+    .chapter-heading-copy { min-width: 0; display: grid; gap: 6px; }
+    .exam-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 11px; font-weight: 750; line-height: 1.35; }
+    .exam-level,
+    .exam-types { min-height: 23px; display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; }
+    .exam-level { background: #fff; }
+    .exam-level.level-a { color: #b42318; }
+    .exam-level.level-b { color: #175cd3; }
+    .exam-level.level-c { color: #475467; }
+    .exam-types { background: rgba(255, 255, 255, .62); color: #475467; }
     .chapter-chevron { flex: 0 0 auto; transition: transform .16s ease; }
     .chapter-section.collapsed .chapter-chevron { transform: rotate(-90deg); }
     .chapter-section.collapsed .chapter-body { display: none; }
@@ -467,6 +476,8 @@
       .chapter-section.mobile-active { display: block; }
       .chapter-section.mobile-active .chapter-body { display: block; }
       .chapter-toggle { min-height: auto; padding: 0 0 12px; border: 0; border-radius: 0; background: transparent; color: var(--text); pointer-events: none; }
+      .exam-meta { gap: 5px; }
+      .exam-level, .exam-types { min-height: 22px; padding: 3px 7px; }
       .chapter-chevron { display: none; }
 
       .chapter-pager {
@@ -715,11 +726,18 @@
         const plainChapter = trimmed.match(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?.*$/);
         if (markdownH2 || plainChapter) {
           const title = markdownH2 ? markdownH2[1] : plainChapter[0];
-          hiddenSection = /(?:公开课程|课程与扩展依据|课程依据|教材依据|资料来源|参考资料|参考链接|题型参考|改编说明)/.test(title);
+          hiddenSection = /(?:公开课程|课程与扩展依据|课程依据|教材依据|资料来源|参考资料|参考链接|题型参考|改编说明|基础简答题答法|基础简答题答题框架)/.test(title);
         }
         if (!hiddenSection) visible.push(line);
       });
-      return visible;
+      if (colorMode) return visible;
+
+      // 讲义直接进入第一章：课程名后的“本讲义面向……”“定位……”等
+      // 说明不属于知识点，统一从展示层去除，避免 15 门课程逐份维护。
+      const firstChapter = visible.findIndex((line) => /^##\s+/.test(line.trim()) || /^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?/.test(line.trim()));
+      if (firstChapter < 0) return visible;
+      const title = visible.find((line) => /^#\s+/.test(line.trim()));
+      return title ? [title, "", ...visible.slice(firstChapter)] : visible.slice(firstChapter);
     }
 
     function formatInline(value) {
@@ -860,13 +878,28 @@
         const markdownH3 = trimmed.match(/^###\s+(.+)$/);
         const plainChapter = trimmed.match(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?.*$/);
         const plainPoint = trimmed.match(/^(?:考点|专题|模块)\s*\d+[：:]?.*$/);
+        const examMarker = trimmed.match(/^<!--\s*exam:\s*([ABC])\s*\|\s*(.+?)\s*-->$/i);
 
         if (markdownH2 || plainChapter) {
           closeChapter();
           closePreface();
           const title = markdownH2 ? markdownH2[1] : plainChapter[0];
-          output.push(`<section class="chapter-section"><h2 class="chapter-heading"><button class="chapter-toggle" type="button" aria-expanded="true"><span class="chapter-title">${formatInline(title)}</span><span class="chapter-chevron" aria-hidden="true">▾</span></button></h2><div class="chapter-body">`);
+          let marker = null;
+          for (let lookahead = index + 1; lookahead < Math.min(lines.length, index + 4); lookahead += 1) {
+            const candidate = lines[lookahead].trim();
+            if (!candidate) continue;
+            marker = candidate.match(/^<!--\s*exam:\s*([ABC])\s*\|\s*(.+?)\s*-->$/i);
+            break;
+          }
+          const levelLabels = {A: "优先掌握", B: "常规掌握", C: "补充了解"};
+          const examHtml = !colorMode && marker
+            ? `<span class="exam-meta"><span class="exam-level level-${marker[1].toLowerCase()}">${levelLabels[marker[1].toUpperCase()]}</span><span class="exam-types">${formatInline(marker[2].replace(/[、，]/g, " · "))}</span></span>`
+            : "";
+          output.push(`<section class="chapter-section"><h2 class="chapter-heading"><button class="chapter-toggle" type="button" aria-expanded="true"><span class="chapter-heading-copy"><span class="chapter-title">${formatInline(title)}</span>${examHtml}</span><span class="chapter-chevron" aria-hidden="true">▾</span></button></h2><div class="chapter-body">`);
           chapterOpen = true;
+        } else if (examMarker) {
+          index += 1;
+          continue;
         } else if (h1) {
           closeList();
           output.push(`<h1>${formatInline(h1[1])}</h1>`);
