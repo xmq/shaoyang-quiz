@@ -1386,7 +1386,7 @@ function openDrawer() {
   requestAnimationFrame(() => $("drawer-close").focus());
 }
 
-function closeDrawer({apply = false} = {}) {
+function closeDrawer({apply = false, restoreFocus = true} = {}) {
   const wasOpen = $("drawer").classList.contains("show");
   const applyFilters = wasOpen && drawerFiltersDirty && apply;
   if (wasOpen && drawerFiltersDirty && !apply && drawerFilterSnapshot) {
@@ -1403,7 +1403,7 @@ function closeDrawer({apply = false} = {}) {
   $("drawer-toggle").setAttribute("aria-expanded", "false");
   $("app-main").inert = false;
   document.body.classList.remove("drawer-open");
-  if (wasOpen && drawerReturnFocus && document.contains(drawerReturnFocus)) {
+  if (wasOpen && restoreFocus && drawerReturnFocus && document.contains(drawerReturnFocus)) {
     drawerReturnFocus.focus();
   }
   drawerReturnFocus = null;
@@ -1715,6 +1715,11 @@ function bindGlobalEvents() {
   $("drawer-toggle").addEventListener("click", openDrawer);
   $("drawer-close").addEventListener("click", closeDrawer);
   $("drawer-mask").addEventListener("click", closeDrawer);
+  document.querySelector(".quiz-mobile-tabbar").addEventListener("click", (event) => {
+    if (!event.target.closest("a")) return;
+    closeDrawer({restoreFocus: false});
+  });
+  window.addEventListener("pageshow", () => closeDrawer({restoreFocus: false}));
 
   $("subject-select").addEventListener("change", (event) => {
     state.subject = event.target.value;

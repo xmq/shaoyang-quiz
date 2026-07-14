@@ -2528,6 +2528,7 @@ body.drawer-open {
     background: rgba(255, 255, 255, .97);
     box-shadow: 0 -8px 24px rgba(16, 24, 40, .08);
     backdrop-filter: blur(16px);
+    isolation: isolate;
   }
 
   .mobile-tabbar a {
@@ -2540,6 +2541,7 @@ body.drawer-open {
     color: #667085;
     text-align: center;
     text-decoration: none;
+    touch-action: manipulation;
   }
 
   .mobile-tabbar a[aria-current="page"] { background: var(--home-primary-soft); color: var(--home-primary); }

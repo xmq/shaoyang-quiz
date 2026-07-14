@@ -534,8 +534,9 @@
         background: rgba(255, 255, 255, .97);
         box-shadow: 0 -8px 24px rgba(16, 24, 40, .08);
         backdrop-filter: blur(16px);
+        isolation: isolate;
       }
-      .mobile-module-tabs a { min-height: 50px; display: grid; place-content: center; gap: 1px; border-radius: 11px; color: #667085; text-align: center; text-decoration: none; }
+      .mobile-module-tabs a { min-height: 50px; display: grid; place-content: center; gap: 1px; border-radius: 11px; color: #667085; text-align: center; text-decoration: none; touch-action: manipulation; }
       .mobile-module-tabs a[aria-current="page"] { background: var(--primary-soft); color: var(--primary); }
       .mobile-module-tabs a span { font-size: 17px; font-weight: 800; line-height: 1; }
       .mobile-module-tabs a strong { font-size: 11px; line-height: 1.25; }
@@ -1430,7 +1431,7 @@
       studyToolbar.inert = true;
       studyContent.inert = true;
       siteHeader.inert = true;
-      mobileModuleTabs.inert = true;
+      mobileModuleTabs.inert = false;
       mobileNavToggle.setAttribute("aria-expanded", "true");
       mobileNavToggle.setAttribute("aria-label", "关闭章节目录");
       navCollapse.setAttribute("aria-label", "关闭章节目录");
@@ -1558,6 +1559,10 @@
       else openMobileNav();
     });
     navMask.addEventListener("click", closeMobileNav);
+    mobileModuleTabs.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) return;
+      closeMobileNav({restoreFocus: false});
+    });
     document.addEventListener("keydown", (event) => {
       if (study.classList.contains("mobile-nav-open")) {
         if (event.key === "Escape") closeMobileNav();
@@ -1573,6 +1578,7 @@
     });
 
     window.addEventListener("popstate", applyLocation);
+    window.addEventListener("pageshow", () => closeMobileNav({restoreFocus: false}));
     renderCourses();
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
