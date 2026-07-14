@@ -677,8 +677,14 @@ function renderQuestion(q, pool) {
   $("card-area").innerHTML = `<article class="card" aria-labelledby="question-stem">
     <div class="meta">
       <span class="badge type-${escapeHtml(q.type)}">${escapeHtml(q.type)}</span>
-      <span class="chapter">${escapeHtml(q.knowledge_point || q.chapter || "")}</span>
       <span class="q-pos">${state.cursor + 1} / ${pool.length}</span>
+      <div class="question-controls" aria-label="题目导航">
+        <button type="button" id="question-exit">返回</button>
+        <button type="button" id="prev" aria-label="上一题"${canGoBack ? "" : " disabled"}>←</button>
+        <button type="button" class="fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
+        <button type="button" class="next ${chosen ? "ready" : ""}" id="next">${chosen ? "下一题" : "跳过"}</button>
+      </div>
+      <span class="chapter">${escapeHtml(q.knowledge_point || q.chapter || "")}</span>
     </div>
     <div class="stem" id="question-stem" tabindex="-1">${escapeHtml(q.stem)}</div>
     ${mediaHtml(q)}
@@ -688,11 +694,6 @@ function renderQuestion(q, pool) {
       <button class="flag ${isFlagged ? "active" : ""}" id="flag" aria-pressed="${isFlagged}">${isFlagged ? "已标记有误" : "题目有误"}</button>
       ${chosen ? '<button id="redo">重新作答</button>' : ""}
     </div>`}
-    <div class="nav ${chosen ? "answered" : "unanswered"}">
-      <button class="nav-icon" id="prev" aria-label="上一题"${canGoBack ? "" : " disabled"}>←</button>
-      <button class="nav-icon fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
-      <button class="next ${chosen ? "ready" : ""}" id="next">${chosen ? "下一题 →" : "跳过 →"}</button>
-    </div>
   </article>`;
 
   bindQuestionEvents(q, inWrongFresh);
@@ -708,7 +709,6 @@ function renderQuestion(q, pool) {
     focusQuestionAfterRender = false;
     requestAnimationFrame(() => {
       const stem = $("question-stem");
-      stem?.scrollIntoView({behavior: "smooth", block: "start"});
       stem?.focus({preventScroll: true});
     });
   }
@@ -814,6 +814,7 @@ function bindQuestionEvents(q, inWrongFresh) {
 
   $("prev").addEventListener("click", prevQuestion);
   $("next").addEventListener("click", nextQuestion);
+  $("question-exit").addEventListener("click", exitRunner);
   $("fav").addEventListener("click", () => {
     if (state.fav[q.id]) delete state.fav[q.id];
     else state.fav[q.id] = true;
@@ -1201,8 +1202,10 @@ function renderMock() {
 
 function updateViewState() {
   const isHub = state.mode === "home";
+  const isQuestionActive = !isHub && (state.mode !== "mock" || isMockActive());
   document.body.classList.toggle("quiz-hub", isHub);
   document.body.classList.toggle("quiz-runner", !isHub);
+  document.body.classList.toggle("quiz-question-active", isQuestionActive);
   document.body.classList.toggle("quiz-mock-active", !!isMockActive());
   const labels = {
     seq: "顺序刷题",
@@ -1711,6 +1714,16 @@ function downloadText(filename, content, type) {
   window.setTimeout(() => URL.revokeObjectURL(url), 60000);
 }
 
+function exitRunner() {
+  if (isMockActive() && !confirm("模拟考试仍在计时，返回刷题主页？稍后可以继续作答。")) return;
+  if (!isMockActive() && state._pending?.text && !confirm("当前输入尚未提交，确定返回吗？")) return;
+  state.mode = "home";
+  state._pending = null;
+  clearMockTimer();
+  save();
+  render();
+}
+
 function bindGlobalEvents() {
   $("drawer-toggle").addEventListener("click", openDrawer);
   $("drawer-close").addEventListener("click", closeDrawer);
@@ -1769,15 +1782,7 @@ function bindGlobalEvents() {
     closeDrawer({apply: true});
   });
 
-  $("runner-exit").addEventListener("click", () => {
-    if (isMockActive() && !confirm("模拟考试仍在计时，返回刷题主页？稍后可以继续作答。")) return;
-    if (!isMockActive() && state._pending?.text && !confirm("当前输入尚未提交，确定返回吗？")) return;
-    state.mode = "home";
-    state._pending = null;
-    clearMockTimer();
-    save();
-    render();
-  });
+  $("runner-exit").addEventListener("click", exitRunner);
 
   $("stats-toggle").addEventListener("click", () => {
     const stats = $("stats");

@@ -184,7 +184,7 @@
     .mobile-course-context,
     .mobile-module-context,
     .chapter-pager,
-    .recall-card-pager,
+    .recall-card-pager { display: none; }
 
     .study-layout { display: grid; grid-template-columns: 238px minmax(0, 1fr); gap: 18px; align-items: start; }
     .study-content { min-width: 0; }
@@ -419,16 +419,24 @@
       main { padding: 12px 8px 28px; }
 
       .study-toolbar {
+        position: fixed;
         top: 0;
-        grid-template-columns: auto minmax(0, 1fr) 82px;
+        right: 8px;
+        left: 8px;
+        z-index: 50;
+        grid-template-columns: 72px minmax(0, 1fr) 78px;
         align-items: center;
         gap: 6px;
-        margin: -4px 0 8px;
-        padding: 6px 0;
+        height: calc(56px + env(safe-area-inset-top));
+        margin: 0;
+        padding: env(safe-area-inset-top) 0 0;
+        border-bottom: 1px solid var(--border);
+        background: rgba(244, 247, 251, .98);
       }
       .mobile-nav-toggle {
         min-width: 70px;
-        min-height: 44px;
+        min-width: 0;
+        min-height: 42px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -441,11 +449,11 @@
         font-size: 14px;
       }
       .mobile-nav-toggle strong { font-size: 11px; }
-      .mobile-course-context { min-width: 0; display: grid; padding: 3px 7px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); line-height: 1.2; }
-      .mobile-course-context select { min-width: 0; width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; font-weight: 750; text-overflow: ellipsis; }
-      .mobile-course-context span { color: var(--muted); font-size: 10px; }
-      .mobile-module-context { min-width: 0; min-height: 44px; display: flex; align-items: center; padding: 0 5px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
-      .mobile-module-context select { width: 100%; border: 0; outline: 0; background: transparent; color: var(--primary); font-size: 12px; font-weight: 750; }
+      .mobile-course-context { min-width: 0; height: 42px; display: flex; align-items: center; padding: 0 7px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); }
+      .mobile-course-context select { min-width: 0; width: 100%; height: 40px; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; font-weight: 750; text-overflow: ellipsis; }
+      .mobile-course-context span { display: none; }
+      .mobile-module-context { min-width: 0; height: 42px; display: flex; align-items: center; padding: 0 5px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); }
+      .mobile-module-context select { min-width: 0; width: 100%; height: 40px; border: 0; outline: 0; background: transparent; color: var(--primary); font-size: 12px; font-weight: 750; }
       .search-area { display: none; }
       .toolbar-actions { display: none; }
 
@@ -466,7 +474,8 @@
       .nav-mask { z-index: 35; }
 
       .study-layout, .study.nav-collapsed .study-layout { display: block; }
-      .note { padding: 16px 13px; border-radius: 13px; }
+      body.is-studying main { padding-top: calc(66px + env(safe-area-inset-top)); }
+      .note { padding: 0 6px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
       body.is-studying .note h1 { display: none; }
       .chapter-section { display: none; margin-top: 6px; scroll-margin-top: 110px; }
       .chapter-section.mobile-active { display: block; }
@@ -477,10 +486,7 @@
       .chapter-chevron { display: none; }
 
       .chapter-pager {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        margin: 10px 0 2px;
+        display: none;
       }
       .chapter-pager button,
       .recall-card-pager button {
@@ -515,6 +521,9 @@
       .recall-rating button[data-recall-rating="again"] { border-color: #f0b4ae; color: var(--red); }
       .recall-rating button[data-recall-rating="known"] { border-color: #8fd0b2; color: #067647; }
       .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { pointer-events: none; }
+
+      .study.color-notes-list .recall-prompt { margin: 9px 0 6px !important; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--blue); }
+      .study.color-notes-list .point { margin: 16px 0 8px; padding: 7px 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; background: transparent; }
 
     }
 
@@ -601,7 +610,7 @@
             <button type="button" id="chapter-prev">← 上一章</button>
             <button type="button" id="chapter-next">下一章 →</button>
           </nav>
-          <nav class="recall-card-pager" aria-label="回忆卡操作">
+          <nav class="recall-card-pager hidden" aria-label="回忆卡操作" hidden>
             <button type="button" id="recall-prev">← 上一张</button>
             <button type="button" class="reveal-card" id="reveal-card">显示答案</button>
             <div class="recall-rating hidden" id="recall-rating" role="group" aria-label="回忆结果">
@@ -916,7 +925,8 @@
           output.push(`<h1>${formatInline(h1[1])}</h1>`);
         } else if (markdownH3 || plainPoint) {
           closeList();
-          const title = markdownH3 ? markdownH3[1] : plainPoint[0];
+          const rawTitle = markdownH3 ? markdownH3[1] : plainPoint[0];
+          const title = colorMode ? rawTitle.replace(/^回忆卡\s*\d+\s*[|｜:：—-]\s*/, "") : rawTitle;
           output.push(`<h3 class="point">${formatInline(title)}</h3>`);
         } else if (colorMode && /^先答[：:]/.test(trimmed)) {
           closeList();
@@ -941,25 +951,7 @@
       closePreface();
       closeChapter();
       content.innerHTML = output.join("");
-      if (colorMode) prepareRecallCards();
       bindChapters();
-    }
-
-    function prepareRecallCards() {
-      content.querySelectorAll(".chapter-body").forEach((body) => {
-        [...body.children].filter((node) => node.classList.contains("point")).forEach((point) => {
-          if (point.closest(".recall-card")) return;
-          const card = document.createElement("section");
-          card.className = "recall-card";
-          body.insertBefore(card, point);
-          let node = point;
-          while (node && (node === point || !node.classList?.contains("point"))) {
-            const next = node.nextSibling;
-            card.appendChild(node);
-            node = next;
-          }
-        });
-      });
     }
 
     function cleanChapterLabel(label) {
@@ -1183,16 +1175,8 @@
       activeChapterIndex = Math.max(0, (Number(routeParams.get("chapter")) || 1) - 1);
       activeRecallIndex = Math.max(0, (Number(routeParams.get("card")) || 1) - 1);
       renderMarkdown(course.text);
-      if (colorMode) {
-        study.classList.add("recall-mode");
-        recallToggle.setAttribute("aria-pressed", "true");
-        recallToggle.textContent = "显示全文";
-        content.querySelectorAll(".chapter-section").forEach((section, index) => {
-          const collapsed = index > 0;
-          section.classList.toggle("collapsed", collapsed);
-          section.querySelector(".chapter-toggle")?.setAttribute("aria-expanded", String(!collapsed));
-        });
-      }
+      study.classList.remove("recall-mode");
+      study.classList.toggle("color-notes-list", colorMode);
       syncRecallTargets();
       mobileCourseSelect.value = course.name;
       mobileModuleSelect.value = pageKind;
@@ -1426,7 +1410,6 @@
     backButton.addEventListener("click", () => {
       showDirectory();
     });
-    if (colorMode) recallToggle.classList.remove("hidden");
     recallToggle.addEventListener("click", () => {
       const active = study.classList.toggle("recall-mode");
       recallToggle.setAttribute("aria-pressed", String(active));
