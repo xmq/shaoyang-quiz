@@ -887,14 +887,26 @@ function renderDashboard() {
       <h1>刷题</h1>
     </header>
     ${activeMock ? `<button type="button" class="resume-mock" data-resume-mock>
-      <span><strong>继续限时模拟</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
+      <span><strong>继续模拟考试</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
       <b>约 ${remainingMinutes} 分钟 →</b>
     </button>` : ""}
     <article class="card hub-tasks">
       <div class="hub-primary-actions">
-        <button class="primary" data-jump-mode="seq"><span>顺序练习</span></button>
-        <button data-jump-mode="rnd"><span>随机练习</span></button>
-        <button data-jump-mode="mock"><span>限时模拟</span></button>
+        <button class="primary mode-card" data-jump-mode="seq">
+          <span class="mode-symbol" aria-hidden="true">顺</span>
+          <span class="mode-copy"><strong>顺序刷题</strong><small>按知识点依次练习</small></span>
+          <span class="mode-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="mode-card" data-jump-mode="rnd">
+          <span class="mode-symbol" aria-hidden="true">随</span>
+          <span class="mode-copy"><strong>随机刷题</strong><small>打乱题序，交叉检验</small></span>
+          <span class="mode-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="mode-card" data-jump-mode="mock">
+          <span class="mode-symbol" aria-hidden="true">考</span>
+          <span class="mode-copy"><strong>模拟考试</strong><small>计时组卷，交卷后判分</small></span>
+          <span class="mode-arrow" aria-hidden="true">→</span>
+        </button>
       </div>
     </article>
     ${hasReviewTasks ? `<article class="card hub-review">
@@ -1065,10 +1077,8 @@ function renderMockSetup() {
   const scope = availableMockQuestions();
   const choices = [20, 30, 50].filter((count) => count <= scope.length);
   if (scope.length && !choices.length) choices.push(scope.length);
-  const subject = state.subject || "未选择课程";
   $("card-area").innerHTML = `<section class="mock-setup card">
-    <div class="meta"><span class="badge subject">限时模拟</span><span class="chapter">${escapeHtml(subject)}</span></div>
-    <h2>${state.subject ? `${escapeHtml(subject)} · 可抽 ${scope.length} 题` : "请先选择课程"}</h2>
+    <div class="mock-setup-heading"><h2>${state.subject ? "选择题量" : "请先选择课程"}</h2>${state.subject ? `<span>可抽 ${scope.length} 题</span>` : ""}</div>
     <div class="mock-choices">
       ${choices.map((count) => `<button type="button" data-mock-count="${count}"><strong>${count}题</strong><span>${Math.max(20, Math.ceil(count * 1.5))}分钟</span></button>`).join("")}
     </div>
@@ -1094,7 +1104,7 @@ function renderMockResult() {
     .map(([ability, count]) => `<span>${escapeHtml(ability)} <b>${count}</b></span>`)
     .join("");
   $("card-area").innerHTML = `<section class="mock-result card">
-    <div class="meta"><span class="badge subject">模拟结果</span><span class="chapter">${escapeHtml(mockSession.subject)}</span></div>
+    <h2>考试结果</h2>
     <div class="mock-score"><strong>${result.score}</strong><span>分</span></div>
     <div class="mock-result-grid">
       <div><strong>${result.correct}</strong><span>答对</span></div>
@@ -1190,17 +1200,17 @@ function renderMock() {
 }
 
 function updateViewState() {
-  const isHub = state.mode === "home" || (state.mode === "mock" && (!mockSession || mockSession.finishedAt));
+  const isHub = state.mode === "home";
   document.body.classList.toggle("quiz-hub", isHub);
   document.body.classList.toggle("quiz-runner", !isHub);
   document.body.classList.toggle("quiz-mock-active", !!isMockActive());
   const labels = {
-    seq: "顺序练习",
-    rnd: "随机练习",
+    seq: "顺序刷题",
+    rnd: "随机刷题",
     review: "到期复习",
     wrong: "错题本",
     fav: "收藏题",
-    mock: "限时模拟",
+    mock: "模拟考试",
   };
   if ($("runner-title")) $("runner-title").textContent = labels[state.mode] || "练习";
   if ($("runner-scope")) $("runner-scope").textContent = isMockActive() ? mockSession.subject : (state.subject || "全部课程");
@@ -1743,7 +1753,7 @@ function bindGlobalEvents() {
   });
 
   $("runner-exit").addEventListener("click", () => {
-    if (isMockActive() && !confirm("返回刷题概览后计时仍会继续，确定返回吗？")) return;
+    if (isMockActive() && !confirm("模拟考试仍在计时，返回刷题主页？稍后可以继续作答。")) return;
     if (!isMockActive() && state._pending?.text && !confirm("当前输入尚未提交，确定返回吗？")) return;
     state.mode = "home";
     state._pending = null;
