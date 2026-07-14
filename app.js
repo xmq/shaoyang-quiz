@@ -1,5 +1,5 @@
 const QUESTIONS = Array.isArray(window.QUESTIONS) ? window.QUESTIONS : [];
-const PUBLIC_QUESTIONS = QUESTIONS.filter((question) => !/^(?:uc|ue)-/i.test(String(question.id || "")));
+const PUBLIC_QUESTIONS = QUESTIONS;
 const QUESTION_MEDIA = window.QUESTION_MEDIA && typeof window.QUESTION_MEDIA === "object" ? window.QUESTION_MEDIA : {};
 const BUILD_INFO = window.SHAOYANG_BUILD && typeof window.SHAOYANG_BUILD === "object" ? window.SHAOYANG_BUILD : {id: "development"};
 const STORE_KEY = "shaoyang-quiz-v5";
