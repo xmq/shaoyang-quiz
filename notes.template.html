@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#175cd3">
+  <meta name="theme-color" content="#143b6b">
   <title>__DOCUMENT_TITLE__</title>
   <style>
     :root {
@@ -12,11 +12,13 @@
       --text: #182230;
       --muted: #667085;
       --border: #e4e7ec;
-      --primary: #175cd3;
-      --primary-soft: #eff6ff;
+      --primary: #2563eb;
+      --primary-strong: #1d4ed8;
+      --primary-soft: #eaf2ff;
+      --deep: #143b6b;
       --red: #b42318;
       --red-soft: #fff2f0;
-      --blue: #175cd3;
+      --blue: #2563eb;
       --black: #182230;
       --shadow: 0 10px 30px rgba(16, 24, 40, .08);
     }
@@ -27,14 +29,14 @@
       max-width: 100%;
       overflow-x: hidden;
       margin: 0;
-      background: linear-gradient(180deg, #eaf2ff 0, var(--bg) 280px);
+      background: var(--bg);
       color: var(--text);
       font: 16px/1.75 system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
     button, input { font: inherit; }
     button { cursor: pointer; }
     :where(button, input, a):focus-visible {
-      outline: 3px solid rgba(23, 92, 211, .38);
+      outline: 3px solid rgba(37, 99, 235, .38);
       outline-offset: 2px;
     }
     .skip-link {
@@ -77,18 +79,18 @@
       padding: 0 12px;
       border: 1px solid var(--border);
       border-radius: 10px;
-      background: #fff;
+      background: var(--panel);
       color: var(--primary);
       text-decoration: none;
       font-weight: 650;
       white-space: nowrap;
     }
     .module-link:hover { border-color: #84adff; background: var(--primary-soft); }
-    .module-link[aria-current="page"] { border-color: var(--primary); background: var(--primary); color: #fff; }
-    .header-brand { min-width: 0; color: inherit; text-decoration: none; }
+    .module-link[aria-current="page"] { border-color: #b9d2ff; background: var(--primary-soft); color: var(--primary-strong); }
+    .header-brand { min-width: 0; display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+    .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: var(--deep); color: #fff; font-weight: 850; }
     .module-nav { display: flex; gap: 7px; margin-left: auto; }
     .brand { font-size: 18px; font-weight: 800; letter-spacing: .01em; }
-    .brand-sub { color: var(--muted); font-size: 13px; }
 
     main {
       width: min(1160px, 100%);
@@ -97,10 +99,9 @@
     }
     .directory-head {
       max-width: 720px;
-      margin: 8px 0 22px;
+      margin: 8px 0 18px;
     }
-    .directory-head h1 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 38px); line-height: 1.25; }
-    .directory-head p { margin: 0; color: var(--muted); }
+    .directory-head h1 { margin: 0; font-size: clamp(26px, 4vw, 36px); line-height: 1.25; }
     .directory-search { max-width: 560px; margin: 18px 0; }
     .search-box {
       min-height: 46px;
@@ -110,7 +111,7 @@
       padding: 0 12px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: #fff;
+      background: var(--panel);
       box-shadow: 0 3px 12px rgba(16, 24, 40, .04);
     }
     .search-box:focus-within { border-color: var(--primary); }
@@ -133,32 +134,23 @@
     .icon-button:hover { background: var(--primary-soft); color: var(--primary); }
     .course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .course-card {
-      min-height: 104px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       gap: 14px;
-      padding: 18px;
+      padding: 15px 17px;
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 12px;
       background: var(--panel);
       color: var(--text);
       text-align: left;
-      box-shadow: 0 6px 20px rgba(16, 24, 40, .05);
+      box-shadow: 0 1px 3px rgba(16, 24, 40, .06);
       transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
     }
     .course-card:hover { transform: translateY(-2px); border-color: #84adff; box-shadow: var(--shadow); }
-    .course-icon {
-      width: 46px;
-      height: 46px;
-      flex: 0 0 46px;
-      display: grid;
-      place-items: center;
-      border-radius: 13px;
-      background: var(--primary-soft);
-      font-size: 24px;
-    }
     .course-name { font-size: 17px; font-weight: 750; line-height: 1.45; overflow-wrap: anywhere; }
-    .empty-result { margin: 18px 0; padding: 26px; border-radius: 14px; background: #fff; color: var(--muted); text-align: center; }
+    .course-arrow { margin-left: auto; color: var(--primary); font-size: 17px; }
+    .empty-result { margin: 18px 0; padding: 26px; border-radius: 14px; background: var(--panel); color: var(--muted); text-align: center; }
 
     .study-toolbar {
       position: sticky;
@@ -169,7 +161,7 @@
       gap: 10px;
       margin: -10px 0 14px;
       padding: 10px 0;
-      background: linear-gradient(180deg, rgba(244, 247, 251, .98), rgba(244, 247, 251, .92));
+      background: rgba(244, 247, 251, .94);
       backdrop-filter: blur(10px);
       align-items: start;
     }
@@ -182,7 +174,7 @@
       padding: 0 15px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: #fff;
+      background: var(--panel);
       color: var(--text);
       white-space: nowrap;
     }
@@ -203,7 +195,7 @@
       overflow: auto;
       border: 1px solid var(--border);
       border-radius: 15px;
-      background: #fff;
+      background: var(--panel);
       box-shadow: 0 6px 22px rgba(16, 24, 40, .06);
     }
     .chapter-nav-head {
@@ -217,7 +209,7 @@
       gap: 8px;
       padding: 7px 8px 7px 14px;
       border-bottom: 1px solid var(--border);
-      background: #fff;
+      background: var(--panel);
       font-weight: 750;
     }
     .chapter-links { padding: 8px; }
@@ -252,7 +244,7 @@
       box-shadow: var(--shadow);
     }
     .note:focus { outline: none; }
-    .note > h1 { margin: 0 0 14px; font-size: clamp(24px, 3.5vw, 32px); line-height: 1.35; overflow-wrap: anywhere; }
+    .note h1 { margin: 0 0 14px; font-size: clamp(24px, 3.5vw, 32px); line-height: 1.35; overflow-wrap: anywhere; }
     .note p { margin: 0 0 13px; overflow-wrap: anywhere; }
     .note code {
       padding: .1em .36em;
@@ -287,8 +279,19 @@
     .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed)::before { content: "点击核对：" attr(data-recall-cue); }
     .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) .recall-answer { display: none; }
     .study.recall-mode .note :is(.red, .blue, .black):focus-visible { outline: 3px solid rgba(37, 99, 235, .42); outline-offset: 2px; }
-    .recall-hint { display: none; margin: 0 0 13px; padding: 10px 12px; border: 1px solid #84adff; border-radius: 10px; background: var(--primary-soft); color: var(--blue); font-size: 13px; }
-    .study.recall-mode .recall-hint { display: block; }
+    .study.recall-mode .note :is(.red, .blue, .black).recall-revealed::before {
+      display: inline-flex;
+      margin-right: 6px;
+      padding: 1px 6px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 11px;
+      line-height: 1.55;
+      vertical-align: .08em;
+    }
+    .study.recall-mode .note .red.recall-revealed::before { content: "结论"; }
+    .study.recall-mode .note .blue.recall-revealed::before { content: "得分点"; }
+    .study.recall-mode .note .black.recall-revealed::before { content: "条件 / 易错"; }
     .recall-prompt { margin: 11px 0 8px !important; padding: 9px 12px; border-left: 4px solid var(--blue); border-radius: 7px; background: #eff6ff; color: #1e3a8a; font-weight: 700; }
     .chapter-section { margin: 24px 0 10px; scroll-margin-top: 138px; }
     .chapter-heading { margin: 0 0 14px; }
@@ -301,10 +304,10 @@
       gap: 12px;
       padding: 12px 15px;
       border: 0;
-      border-left: 6px solid var(--red);
+      border-left: 6px solid var(--primary);
       border-radius: 10px;
-      background: var(--red-soft);
-      color: var(--red);
+      background: var(--primary-soft);
+      color: var(--deep);
       text-align: left;
       font-size: clamp(18px, 2.5vw, 22px);
       font-weight: 800;
@@ -314,7 +317,7 @@
     .exam-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 11px; font-weight: 750; line-height: 1.35; }
     .exam-level,
     .exam-types { min-height: 23px; display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; }
-    .exam-level { background: #fff; }
+    .exam-level { background: var(--panel); }
     .exam-level.level-a { color: #b42318; }
     .exam-level.level-b { color: #175cd3; }
     .exam-level.level-c { color: #475467; }
@@ -334,10 +337,10 @@
     }
     .table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
     .table-hint { margin: -8px 0 12px !important; color: var(--muted); font-size: 13px; }
-    .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff; text-align: center; }
+    .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); text-align: center; }
     .note-figure img { display: block; width: 100%; max-width: 920px; max-height: 560px; margin: 0 auto; object-fit: contain; }
     .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
-    .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: #fff; font-size: 14px; }
+    .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--panel); font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
     .note tr:last-child td { border-bottom: 0; }
     .note th:last-child, .note td:last-child { border-right: 0; }
@@ -362,7 +365,6 @@
       main { padding: 18px max(10px, env(safe-area-inset-right)) max(42px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left)); }
       .course-grid { grid-template-columns: 1fr; gap: 10px; }
       .course-card { min-height: 76px; padding: 14px; border-radius: 14px; }
-      .course-icon { width: 42px; height: 42px; flex-basis: 42px; }
       .study-toolbar { top: 0; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 6px; margin-top: -8px; padding: 8px 0; }
       .mobile-nav-toggle { display: inline-flex; }
       .toolbar-actions .text-button { width: 46px; padding: 0; font-size: 0; }
@@ -400,7 +402,7 @@
       }
       .study.mobile-nav-open .nav-mask { opacity: 1; pointer-events: auto; }
       .note { padding: 18px 13px; border-radius: 14px; }
-      .note > h1 { font-size: 23px; }
+      .note h1 { font-size: 23px; }
       .chapter-section { scroll-margin-top: 122px; }
       .chapter-toggle { min-height: 54px; padding: 11px 12px; border-left-width: 5px; font-size: 18px; }
       .point { margin-top: 17px; padding: 9px 10px; font-size: 16px; }
@@ -409,6 +411,7 @@
 
       body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
       .site-header { position: sticky; }
+      body.is-studying .site-header { display: none; }
       .header-inner { min-height: 52px; flex-wrap: nowrap; padding: 6px 14px; }
       .header-brand { flex: 1 1 auto; }
       .brand { font-size: 15px; }
@@ -416,13 +419,12 @@
       main { padding: 12px 8px 92px; }
       .directory-head { margin: 4px 6px 14px; }
       .directory-head h1 { font-size: 24px; }
-      .directory-head p { font-size: 13px; line-height: 1.6; }
       .directory-search { margin: 12px 0; }
       .course-card { min-height: 68px; }
 
       .study-toolbar {
-        top: 52px;
-        grid-template-columns: auto minmax(0, 1fr) 44px auto;
+        top: 0;
+        grid-template-columns: auto minmax(0, 1fr) 44px;
         align-items: center;
         gap: 6px;
         margin: -4px 0 8px;
@@ -438,21 +440,18 @@
         padding: 6px 9px;
         border: 1px solid var(--border);
         border-radius: 10px;
-        background: #fff;
+        background: var(--panel);
         color: var(--primary);
         font-size: 14px;
       }
       .mobile-nav-toggle strong { font-size: 11px; }
-      .mobile-course-context { min-width: 0; display: grid; line-height: 1.25; }
+      .mobile-course-context { min-width: 0; display: grid; padding: 4px 2px; border: 0; background: transparent; color: var(--text); text-align: left; line-height: 1.25; }
       .mobile-course-context strong { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
       .mobile-course-context span { color: var(--muted); font-size: 10px; }
       .mobile-search-toggle { display: inline-flex; }
       .search-area { display: none; grid-column: 1 / -1; grid-row: 2; }
       .study.mobile-search-open .search-area { display: block; }
-      .toolbar-actions { align-items: center; }
-      .toolbar-actions #recall-toggle { display: none !important; }
-      .toolbar-actions #back { width: auto; min-width: 48px; padding: 0 8px; font-size: 11px; }
-      .toolbar-actions #back::before { content: none; }
+      .toolbar-actions { display: none; }
 
       .chapter-nav {
         inset: auto 8px calc(66px + env(safe-area-inset-bottom)) 8px;
@@ -472,6 +471,7 @@
 
       .study-layout, .study.nav-collapsed .study-layout { display: block; }
       .note { padding: 16px 13px; border-radius: 13px; }
+      body.is-studying .note h1 { display: none; }
       .chapter-section { display: none; margin-top: 6px; scroll-margin-top: 110px; }
       .chapter-section.mobile-active { display: block; }
       .chapter-section.mobile-active .chapter-body { display: block; }
@@ -491,7 +491,7 @@
         min-height: 46px;
         border: 1px solid var(--border);
         border-radius: 10px;
-        background: #fff;
+        background: var(--panel);
         color: var(--text);
         font-weight: 700;
       }
@@ -510,6 +510,14 @@
         margin: 10px 0 2px;
       }
       .recall-card-pager .reveal-card { border-color: var(--primary); background: var(--primary); color: #fff; }
+      .recall-rating { display: none; }
+      .recall-card-pager.is-rating { grid-template-columns: 1fr; }
+      .recall-card-pager.is-rating > #recall-prev,
+      .recall-card-pager.is-rating > #reveal-card,
+      .recall-card-pager.is-rating > #recall-next { display: none; }
+      .recall-card-pager.is-rating .recall-rating { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+      .recall-rating button[data-recall-rating="again"] { border-color: #f0b4ae; color: var(--red); }
+      .recall-rating button[data-recall-rating="known"] { border-color: #8fd0b2; color: #067647; }
       .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { pointer-events: none; }
 
       .mobile-module-tabs {
@@ -533,6 +541,27 @@
       .mobile-module-tabs a strong { font-size: 11px; line-height: 1.25; }
     }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101828;
+        --panel: #182230;
+        --text: #f2f4f7;
+        --muted: #98a2b3;
+        --border: #344054;
+        --primary-soft: #1c3157;
+        --deep: #e8eef7;
+        --black: #f2f4f7;
+        --red-soft: #3a2424;
+        --shadow: 0 10px 30px rgba(0, 0, 0, .24);
+      }
+      .site-header { border-color: var(--border); background: rgba(16, 24, 40, .94); }
+      .study-toolbar { background: rgba(16, 24, 40, .94); }
+      .search-box, .chapter-nav-head, .note code { background: var(--panel); }
+      .note blockquote { background: #202c3d; color: #c8d1dc; }
+      .recall-prompt { background: #1c3157; color: #bfdbfe; }
+      .note mark { background: #854d0e; color: #fef3c7; }
+    }
+
     @media (max-width: 700px) and (prefers-color-scheme: dark) {
       .mobile-nav-toggle,
       .chapter-pager button,
@@ -551,12 +580,12 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="header-brand" href="./index.html" aria-label="返回学习平台首页">
-        <div class="brand">__BRAND_TITLE__</div>
-        <div class="brand-sub">__BRAND_SUBTITLE__</div>
+      <a class="header-brand" href="./index.html" aria-label="返回课程页">
+        <span class="brand-mark" aria-hidden="true">题</span>
+        <div class="brand">刷题器</div>
       </a>
       <nav class="module-nav desktop-module-nav" aria-label="学习模块">
-        <a class="module-link" href="./index.html">首页</a>
+        <a class="module-link" href="./index.html">课程</a>
         <a class="module-link" __LECTURE_CURRENT__ href="./notes.html">讲义</a>
         <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色回忆</a>
         <a class="module-link" href="./quiz.html">刷题</a>
@@ -567,8 +596,7 @@
   <main id="main">
     <section id="directory" aria-labelledby="directory-title">
       <div class="directory-head">
-        <h1 id="directory-title">选择科目</h1>
-        <p>__DIRECTORY_DESCRIPTION__</p>
+        <h1 id="directory-title">__DIRECTORY_TITLE__</h1>
       </div>
       <div class="directory-search search-box">
         <span class="search-icon" aria-hidden="true">⌕</span>
@@ -583,7 +611,7 @@
     <section class="study hidden" id="study" aria-label="科目内容">
       <div class="study-toolbar">
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><span aria-hidden="true">☰</span><strong id="mobile-chapter-progress">章节</strong></button>
-        <div class="mobile-course-context"><strong id="mobile-course-name">当前课程</strong><span id="mobile-card-progress"></span></div>
+        <button class="mobile-course-context" id="mobile-course-context" type="button" aria-label="更换科目"><strong id="mobile-course-name">当前课程</strong><span id="mobile-card-progress"></span></button>
         <button class="icon-button mobile-search-toggle" id="mobile-search-toggle" type="button" aria-label="搜索当前课程" aria-expanded="false">⌕</button>
         <div class="search-area">
           <div class="search-box">
@@ -616,6 +644,11 @@
           <nav class="recall-card-pager" aria-label="回忆卡操作">
             <button type="button" id="recall-prev">← 上一张</button>
             <button type="button" class="reveal-card" id="reveal-card">显示答案</button>
+            <div class="recall-rating hidden" id="recall-rating" role="group" aria-label="回忆结果">
+              <button type="button" data-recall-rating="again">不记得</button>
+              <button type="button" data-recall-rating="fuzzy">有点模糊</button>
+              <button type="button" data-recall-rating="known">记住了</button>
+            </div>
             <button type="button" id="recall-next">下一张 →</button>
           </nav>
         </div>
@@ -633,7 +666,6 @@
 
   <script>
     const items = __COURSE_DATA__;
-    const courseIcon = "__COURSE_ICON__";
     const colorMode = __COLOR_MODE__;
     const pageKind = "__PAGE_KIND__";
     document.querySelector(`[data-page-kind="${pageKind}"]`)?.setAttribute("aria-current", "page");
@@ -654,6 +686,7 @@
     const navCollapse = document.getElementById("nav-collapse");
     const mobileNavToggle = document.getElementById("mobile-nav-toggle");
     const mobileSearchToggle = document.getElementById("mobile-search-toggle");
+    const mobileCourseContext = document.getElementById("mobile-course-context");
     const mobileCourseName = document.getElementById("mobile-course-name");
     const mobileChapterProgress = document.getElementById("mobile-chapter-progress");
     const mobileCardProgress = document.getElementById("mobile-card-progress");
@@ -662,6 +695,8 @@
     const recallPrev = document.getElementById("recall-prev");
     const recallNext = document.getElementById("recall-next");
     const revealCard = document.getElementById("reveal-card");
+    const recallPager = document.querySelector(".recall-card-pager");
+    const recallRating = document.getElementById("recall-rating");
     const navMask = document.getElementById("nav-mask");
     const studyToolbar = document.querySelector(".study-toolbar");
     const studyContent = document.querySelector(".study-content");
@@ -675,8 +710,18 @@
     let collapsedBeforeSearch = null;
     let activeChapterIndex = 0;
     let activeRecallIndex = 0;
+    let recallRetryQueue = [];
+    let recallRetryMode = false;
     let searchTimer = null;
     let mobileNavReturnFocus = null;
+    const recallRatings = (() => {
+      try {
+        const stored = JSON.parse(localStorage.getItem("shaoyang-recall-ratings-v1") || "{}");
+        return stored && typeof stored === "object" ? stored : {};
+      } catch {
+        return {};
+      }
+    })();
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -697,6 +742,26 @@
           item.removeAttribute("tabindex");
           item.removeAttribute("aria-label");
         }
+      });
+    }
+
+    function recallRatingKey(chapterIndex = activeChapterIndex, cardIndex = activeRecallIndex) {
+      return currentCourse ? `${currentCourse.name}::${chapterIndex + 1}::${cardIndex + 1}` : "";
+    }
+
+    function saveRecallRating(value) {
+      const key = recallRatingKey();
+      if (!key) return;
+      recallRatings[key] = {value, savedAt: new Date().toISOString()};
+      try {
+        localStorage.setItem("shaoyang-recall-ratings-v1", JSON.stringify(recallRatings));
+      } catch {}
+    }
+
+    function concealRecallCard(card) {
+      card?.querySelectorAll(".red, .blue, .black").forEach((item) => {
+        item.classList.remove("recall-revealed");
+        item.removeAttribute("aria-label");
       });
     }
 
@@ -730,10 +795,7 @@
         }
         if (!hiddenSection) visible.push(line);
       });
-      if (colorMode) return visible;
-
-      // 讲义直接进入第一章：课程名后的“本讲义面向……”“定位……”等
-      // 说明不属于知识点，统一从展示层去除，避免 15 门课程逐份维护。
+      // 学习页直接进入第一章：课程名后的定位、用法等说明不属于知识点。
       const firstChapter = visible.findIndex((line) => /^##\s+/.test(line.trim()) || /^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?/.test(line.trim()));
       if (firstChapter < 0) return visible;
       const title = visible.find((line) => /^#\s+/.test(line.trim()));
@@ -749,7 +811,7 @@
         .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
       if (colorMode && marker) {
         const className = marker[1] === "🔴" ? "red" : marker[1] === "🔵" ? "blue" : "black";
-        const recallRole = className === "red" ? "最小答案" : className === "blue" ? "方法与步骤" : "条件与易错点";
+        const recallRole = className === "red" ? "结论" : className === "blue" ? "方法与得分点" : "条件与易错";
         output = `<span class="${className}" data-recall-cue="${recallRole}"><span class="recall-answer">${output}</span></span>`;
       }
       return output;
@@ -796,10 +858,7 @@
 
     function renderMarkdown(markdown) {
       const lines = publicMarkdownLines(markdown);
-      const output = [
-        ...(colorMode ? ['<p class="recall-hint">默认先答后看：根据每张卡的提示口述或默写，再点击卡片核对最小答案。本次只练当前展开章节。</p>'] : []),
-        "<div class=\"preface\">",
-      ];
+      const output = ["<div class=\"preface\">"];
       let index = 0;
       let chapterOpen = false;
       let prefaceOpen = true;
@@ -975,12 +1034,15 @@
         activeRecallIndex = Math.max(0, Math.min(activeRecallIndex, Math.max(0, cards.length - 1)));
         cards.forEach((card, index) => card.classList.toggle("mobile-active", index === activeRecallIndex));
         mobileCardProgress.textContent = cards.length ? `回忆卡 ${activeRecallIndex + 1}/${cards.length}` : "";
-        recallPrev.disabled = activeRecallIndex <= 0;
-        recallNext.disabled = activeRecallIndex >= cards.length - 1;
+        recallPrev.disabled = activeChapterIndex <= 0 && activeRecallIndex <= 0;
+        recallNext.disabled = activeChapterIndex >= sections.length - 1 && activeRecallIndex >= cards.length - 1;
         const activeCard = cards[activeRecallIndex];
         const hiddenAnswer = activeCard && [...activeCard.querySelectorAll(".red, .blue, .black")].some((item) => !item.classList.contains("recall-revealed"));
         revealCard.textContent = hiddenAnswer ? "显示答案" : "答案已显示";
         revealCard.disabled = !activeCard || !hiddenAnswer;
+        const awaitingRating = Boolean(activeCard && !hiddenAnswer && mobileMedia.matches);
+        recallPager.classList.toggle("is-rating", awaitingRating);
+        recallRating.classList.toggle("hidden", !awaitingRating);
       } else {
         mobileCardProgress.textContent = "";
       }
@@ -996,7 +1058,7 @@
         });
       }
 
-      if (replaceRoute && currentCourse && mobileMedia.matches) {
+      if (replaceRoute && currentCourse) {
         const params = new URLSearchParams();
         params.set("course", currentCourse.name);
         params.set("chapter", String(activeChapterIndex + 1));
@@ -1019,6 +1081,8 @@
       if (!sections.length) return;
       activeChapterIndex = Math.max(0, Math.min(index, sections.length - 1));
       activeRecallIndex = 0;
+      recallRetryQueue = [];
+      recallRetryMode = false;
       sections[activeChapterIndex].classList.remove("collapsed");
       sections[activeChapterIndex].querySelector(".chapter-toggle")?.setAttribute("aria-expanded", "true");
       updateStudyPosition({replaceRoute});
@@ -1028,16 +1092,79 @@
       }
     }
 
-    function setActiveRecallCard(index, {replaceRoute = true, focus = false} = {}) {
+    function setActiveRecallCard(index, {replaceRoute = true, focus = false, conceal = true} = {}) {
       const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
       const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
       if (!cards.length) return;
       activeRecallIndex = Math.max(0, Math.min(index, cards.length - 1));
+      if (conceal) concealRecallCard(cards[activeRecallIndex]);
       updateStudyPosition({replaceRoute});
       if (focus) {
         window.scrollTo({top: 0, behavior: "smooth"});
         requestAnimationFrame(() => cards[activeRecallIndex].querySelector(".point")?.scrollIntoView({block: "start"}));
       }
+    }
+
+    function moveRecallCard(direction, {focus = true} = {}) {
+      const sections = [...content.querySelectorAll(".chapter-section")];
+      const section = sections[activeChapterIndex];
+      const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
+      if (!cards.length) return;
+      const nextCard = activeRecallIndex + direction;
+      if (nextCard >= 0 && nextCard < cards.length) {
+        recallRetryMode = false;
+        setActiveRecallCard(nextCard, {focus});
+        return;
+      }
+      const nextChapter = activeChapterIndex + direction;
+      if (nextChapter < 0 || nextChapter >= sections.length) return;
+      activeChapterIndex = nextChapter;
+      const nextCards = [...sections[nextChapter].querySelectorAll(".recall-card")];
+      activeRecallIndex = direction > 0 ? 0 : Math.max(0, nextCards.length - 1);
+      recallRetryQueue = [];
+      recallRetryMode = false;
+      concealRecallCard(nextCards[activeRecallIndex]);
+      sections[nextChapter].classList.remove("collapsed");
+      updateStudyPosition();
+      if (focus) {
+        window.scrollTo({top: 0, behavior: "smooth"});
+        requestAnimationFrame(() => nextCards[activeRecallIndex]?.querySelector(".point")?.scrollIntoView({block: "start"}));
+      }
+    }
+
+    function advanceAfterRecallRating(value) {
+      const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
+      const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
+      if (!cards.length) return;
+      if (!recallRetryMode && value !== "known" && !recallRetryQueue.includes(activeRecallIndex)) {
+        recallRetryQueue.push(activeRecallIndex);
+      }
+      if (!recallRetryMode && activeRecallIndex < cards.length - 1) {
+        setActiveRecallCard(activeRecallIndex + 1, {focus: true});
+        return;
+      }
+      if (recallRetryQueue.length) {
+        recallRetryMode = true;
+        setActiveRecallCard(recallRetryQueue.shift(), {focus: true});
+        return;
+      }
+      if (recallRetryMode) {
+        recallRetryMode = false;
+        const sections = [...content.querySelectorAll(".chapter-section")];
+        if (activeChapterIndex >= sections.length - 1) {
+          updateStudyPosition({replaceRoute: false});
+          return;
+        }
+        activeChapterIndex += 1;
+        activeRecallIndex = 0;
+        const nextCard = sections[activeChapterIndex].querySelector(".recall-card");
+        concealRecallCard(nextCard);
+        updateStudyPosition();
+        window.scrollTo({top: 0, behavior: "smooth"});
+        return;
+      }
+      recallRetryMode = false;
+      moveRecallCard(1);
     }
 
     function bindChapters() {
@@ -1065,6 +1192,8 @@
             setActiveChapter(index, {focus: true});
             closeMobileNav({restoreFocus: false});
           } else {
+            activeChapterIndex = index;
+            updateStudyPosition({replaceRoute: true});
             section.classList.remove("collapsed");
             toggle.setAttribute("aria-expanded", "true");
             section.scrollIntoView({behavior: "smooth", block: "start"});
@@ -1096,6 +1225,8 @@
     function openCourse(course) {
       currentCourse = course;
       collapsedBeforeSearch = null;
+      recallRetryQueue = [];
+      recallRetryMode = false;
       const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
       activeChapterIndex = Math.max(0, (Number(routeParams.get("chapter")) || 1) - 1);
       activeRecallIndex = Math.max(0, (Number(routeParams.get("card")) || 1) - 1);
@@ -1140,6 +1271,7 @@
       } catch {}
       directory.classList.add("hidden");
       study.classList.remove("hidden");
+      document.body.classList.add("is-studying");
       search.value = "";
       searchClear.classList.add("hidden");
       searchStatus.textContent = "";
@@ -1155,6 +1287,7 @@
       mobileSearchToggle.setAttribute("aria-expanded", "false");
       study.classList.add("hidden");
       directory.classList.remove("hidden");
+      document.body.classList.remove("is-studying");
       search.value = "";
       searchStatus.textContent = "";
       window.scrollTo({top: 0, behavior: "auto"});
@@ -1193,14 +1326,14 @@
         const button = document.createElement("button");
         button.type = "button";
         button.className = "course-card";
-        const icon = document.createElement("span");
-        icon.className = "course-icon";
-        icon.setAttribute("aria-hidden", "true");
-        icon.textContent = courseIcon;
         const name = document.createElement("span");
         name.className = "course-name";
         name.textContent = course.name;
-        button.append(icon, name);
+        const arrow = document.createElement("span");
+        arrow.className = "course-arrow";
+        arrow.setAttribute("aria-hidden", "true");
+        arrow.textContent = "→";
+        button.append(name, arrow);
         button.addEventListener("click", () => navigateToCourse(course));
         courses.appendChild(button);
       });
@@ -1272,6 +1405,11 @@
       }
       searchStatus.textContent = query ? (matches ? `找到 ${matches} 个相关内容区，已定位到首个结果` : "当前科目没有匹配内容") : "";
       chapterLinks.querySelectorAll(".chapter-link").forEach((link, index) => link.classList.toggle("hidden", Boolean(query) && sections[index]?.classList.contains("hidden")));
+      if (mobileMedia.matches && firstMatch?.classList.contains("chapter-section")) {
+        activeChapterIndex = Math.max(0, sections.indexOf(firstMatch));
+        activeRecallIndex = 0;
+        updateStudyPosition();
+      }
       if (firstMatch) requestAnimationFrame(() => firstMatch.scrollIntoView({behavior: "smooth", block: "start"}));
     }
 
@@ -1360,8 +1498,8 @@
     });
     chapterPrev.addEventListener("click", () => setActiveChapter(activeChapterIndex - 1, {focus: true}));
     chapterNext.addEventListener("click", () => setActiveChapter(activeChapterIndex + 1, {focus: true}));
-    recallPrev.addEventListener("click", () => setActiveRecallCard(activeRecallIndex - 1, {focus: true}));
-    recallNext.addEventListener("click", () => setActiveRecallCard(activeRecallIndex + 1, {focus: true}));
+    recallPrev.addEventListener("click", () => moveRecallCard(-1));
+    recallNext.addEventListener("click", () => moveRecallCard(1));
     revealCard.addEventListener("click", () => {
       const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
       const card = section?.querySelectorAll(".recall-card")[activeRecallIndex];
@@ -1374,9 +1512,20 @@
       });
       updateStudyPosition({replaceRoute: false});
     });
+    recallRating.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-recall-rating]");
+      if (!button) return;
+      saveRecallRating(button.dataset.recallRating);
+      advanceAfterRecallRating(button.dataset.recallRating);
+    });
+    mobileCourseContext.addEventListener("click", () => {
+      history.replaceState(null, "", location.href.split("#")[0]);
+      showDirectory();
+    });
     backButton.addEventListener("click", () => {
       if (mobileMedia.matches) {
-        location.href = "./index.html#courses";
+        history.replaceState(null, "", location.href.split("#")[0]);
+        showDirectory();
         return;
       }
       if (history.state?.shaoyangCourse) history.back();

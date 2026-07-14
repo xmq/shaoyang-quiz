@@ -22,11 +22,8 @@ PAGE_CONFIGS = {
         "html": ROOT / "notes.html",
         "markdown": ROOT / "零基础讲义完整版.md",
         "document_title": "刷题器 · 零基础讲义",
-        "brand_title": "刷题器 · 零基础讲义",
-        "brand_subtitle": "围绕概念、特点、要素和作用，按章节打好基础",
-        "directory_description": "适合零基础先理解定义、组成、机制和易混概念；保留子网划分、公式直接代入等基础计算，并用场景选型、比较和过程描述联系实际。",
+        "directory_title": "讲义",
         "markdown_title": "刷题器 · 零基础讲义完整版",
-        "course_icon": "📖",
         "active_module": "lecture",
         "use_color_markup": False,
     },
@@ -34,12 +31,9 @@ PAGE_CONFIGS = {
         "index": ROOT / "color-notes-index.json",
         "html": ROOT / "color-notes.html",
         "markdown": ROOT / "三色笔记完整版.md",
-        "document_title": "刷题器 · 三色笔记",
-        "brand_title": "刷题器 · 三色笔记",
-        "brand_subtitle": "先答后看：红色背结论，蓝色练简答，黑色辨陷阱",
-        "directory_description": "用于学完讲义后的主动回忆：默认只显示问题，先按“结论—原因或机制—适用边界”口述或默写，再核对最小答案、得分关键词和判断陷阱。",
+        "document_title": "刷题器 · 三色回忆",
+        "directory_title": "三色回忆",
         "markdown_title": "刷题器 · 三色笔记完整版",
-        "course_icon": "🖍️",
         "active_module": "color-notes",
         "use_color_markup": True,
     },
@@ -84,10 +78,7 @@ def render_html(courses, config):
     replacements = {
         "__COURSE_DATA__": payload,
         "__DOCUMENT_TITLE__": config["document_title"],
-        "__BRAND_TITLE__": config["brand_title"],
-        "__BRAND_SUBTITLE__": config["brand_subtitle"],
-        "__DIRECTORY_DESCRIPTION__": config["directory_description"],
-        "__COURSE_ICON__": config["course_icon"],
+        "__DIRECTORY_TITLE__": config["directory_title"],
         "__COLOR_MODE__": "true" if config["use_color_markup"] else "false",
         "__PAGE_KIND__": config["active_module"],
         "__LECTURE_CURRENT__": 'aria-current="page"' if config["active_module"] == "lecture" else "",
@@ -225,7 +216,7 @@ def main():
             ok &= check_output(output_dir / LEGACY_MARKDOWN_OUTPUT.name, legacy_pointer)
         if not ok:
             raise SystemExit(1)
-        counts = "、".join(f"{config['brand_title']} {len(courses)} 门" for _, config, courses, _, _ in rendered_pages)
+        counts = "、".join(f"{config['directory_title']} {len(courses)} 门" for _, config, courses, _, _ in rendered_pages)
         print(f"生成物已同步：{counts}")
         return
 

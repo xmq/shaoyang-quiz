@@ -101,6 +101,7 @@ let mockTimerId = null;
 let saveWarningShown = false;
 let drawerReturnFocus = null;
 let drawerFiltersDirty = false;
+let drawerFilterSnapshot = null;
 let focusQuestionAfterRender = false;
 let focusFeedbackAfterRender = false;
 save({silent: true});
@@ -198,13 +199,13 @@ function countBy(items, getter) {
 }
 
 function chapterKey(q) {
-  return q.source_chapter || q.chapter || q.subject || "未分类";
+  return q.knowledge_point || q.chapter || q.subject || "未分类";
 }
 
 function searchableText(q) {
   const options = q.options ? Object.values(q.options).join(" ") : "";
   return [
-    q.id, q.type, q.subject, chapterKey(q), q.stem, options,
+    q.id, q.type, q.subject, chapterKey(q), q.source_chapter, q.stem, options,
     q.answer, q.explanation,
   ]
     .filter(Boolean)
@@ -328,7 +329,9 @@ function applyLaunchParams() {
   }
   if (requestedSubject && PUBLIC_QUESTIONS.some((question) => question.subject === requestedSubject)) {
     state.subject = requestedSubject;
+    state.typeFilter = "";
     state.chapterFilter = "";
+    state.searchQuery = "";
     if (!requestedMode) state.mode = "seq";
     changed = true;
   }
@@ -422,7 +425,7 @@ function updateSubjectSelect() {
   const select = $("subject-select");
   const counts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
   const subjects = orderedValues(new Set(Object.keys(counts)), SUBJECT_ORDER);
-  select.innerHTML = `<option value="">全部科目 (${PUBLIC_QUESTIONS.length})</option>` +
+  select.innerHTML = `<option value="">选择课程</option>` +
     subjects.map((s) => `<option value="${escapeHtml(s)}">${escapeHtml(s)} (${counts[s]})</option>`).join("");
   select.value = state.subject || "";
 }
@@ -432,7 +435,7 @@ function updateStats() {
   updateCourseModuleLinks();
   renderActiveFilters();
   if ($("search-input").value !== (state.searchQuery || "")) $("search-input").value = state.searchQuery || "";
-  const scope = getScope();
+  const scope = state.subject ? getScope() : [];
   const done = scope.filter((q) => state.done[q.id]).length;
   const correct = scope.filter((q) => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
   const wrong = done - correct;
@@ -448,7 +451,7 @@ function updateStats() {
   $("progress-fill").style.width = `${pct}%`;
   $("progress").setAttribute("aria-valuenow", String(pct));
   $("progress").setAttribute("aria-valuetext", `已完成 ${done} 道，共 ${scope.length} 道，${pct}%`);
-  $("mini-stat").textContent = `${done}/${scope.length} · ${rate}%${wrongbook ? " · 错" + wrongbook : ""}`;
+  $("mini-stat").textContent = state.subject ? `${done}/${scope.length} · ${rate}%${wrongbook ? " · 错" + wrongbook : ""}` : "";
 }
 
 function updateCourseModuleLinks() {
@@ -458,16 +461,6 @@ function updateCourseModuleLinks() {
   const recallLink = $("mobile-recall-link");
   if (notesLink) notesLink.href = `./notes.html${suffix}`;
   if (recallLink) recallLink.href = `./color-notes.html${suffix}`;
-}
-
-function subjectStats(subject) {
-  const subset = subject ? PUBLIC_QUESTIONS.filter((q) => q.subject === subject) : PUBLIC_QUESTIONS;
-  const done = subset.filter((q) => state.done[q.id]).length;
-  const correct = subset.filter((q) => state.done[q.id] && isAnswerCorrect(q, state.done[q.id])).length;
-  const wrongbook = subset.filter((q) => state.wrong[q.id]).length;
-  const rate = done ? Math.round(correct * 100 / done) : 0;
-  const progress = subset.length ? Math.round(done * 100 / subset.length) : 0;
-  return {total: subset.length, done, correct, wrongbook, rate, progress};
 }
 
 function wrongGrade(count) {
@@ -481,7 +474,7 @@ function renderActiveFilters() {
   const container = $("active-filters");
   const filters = [
     ["typeFilter", "题型", state.typeFilter],
-    ["chapterFilter", "章节", state.chapterFilter],
+    ["chapterFilter", "知识点", state.chapterFilter],
   ].filter(([, , value]) => value);
   container.classList.toggle("hidden", filters.length === 0);
   if (!filters.length) {
@@ -580,12 +573,12 @@ function renderShortAnswerQuestion(q, chosen) {
   if (chosen) {
     return `<div class="short-answer short-graded">
       <strong>${chosen === "掌握" ? "已自评：基本答到" : "已自评：还需复习"}</strong>
-      <span>简答题由你根据参考得分点自评，系统不做字面匹配。</span>
+      <span>已按参考得分点记录自评结果。</span>
     </div>`;
   }
   return `<div class="short-answer ${revealed ? "is-revealed" : ""}">
-    <label for="short-input">先用自己的话作答</label>
-    <textarea id="short-input" rows="6" placeholder="建议按“结论—原因或机制—条件与边界”作答…"${revealed ? " disabled" : ""}>${escapeHtml(draft)}</textarea>
+    <label for="short-input">作答要点</label>
+    <textarea id="short-input" rows="6" placeholder="写出你的作答要点"${revealed ? " disabled" : ""}>${escapeHtml(draft)}</textarea>
     ${revealed ? `<div class="short-reference">
         <div class="exp-title">参考得分点</div>
         <p>${escapeHtml(q.answer)}</p>
@@ -596,7 +589,6 @@ function renderShortAnswerQuestion(q, chosen) {
         <button type="button" class="secondary-btn" data-short-grade="未掌握">还需复习</button>
       </div>` : `<div class="short-draft-actions">
         <button type="button" id="show-short" class="primary-btn">核对参考答案</button>
-        <span>实在不会可留空直接核对，再标记为“还需复习”。</span>
       </div>`}
   </div>`;
 }
@@ -644,10 +636,10 @@ function feedbackHtml(q, chosen) {
       </div>`
     : "";
   const courseHash = `#course=${encodeURIComponent(courseNameForSubject(q.subject))}`;
-  const repairLinks = `<div class="repair-links">
+  const repairLinks = ok ? "" : `<div class="repair-links">
     <span>${reviewMessage}</span>
     <a href="./notes.html${courseHash}">回看讲义</a>
-    <a href="./color-notes.html${courseHash}">核对三色笔记</a>
+    <a href="./color-notes.html${courseHash}">三色回忆</a>
   </div>`;
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
     <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已自评为基本答到" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
@@ -674,6 +666,7 @@ function renderQuestion(q, pool) {
     : (inWrongFresh ? null : state.done[q.id]);
   const isFav = !!state.fav[q.id];
   const isFlagged = !!state.flagged[q.id];
+  const canGoBack = isMockActive() ? state.cursor > 0 : Boolean(state._navBack && state._navBack.length);
   let body = "";
 
   if (q.type === "单选" || q.type === "多选") body = renderChoiceQuestion(q, chosen, inWrongFresh);
@@ -684,20 +677,19 @@ function renderQuestion(q, pool) {
   $("card-area").innerHTML = `<article class="card" aria-labelledby="question-stem">
     <div class="meta">
       <span class="badge type-${escapeHtml(q.type)}">${escapeHtml(q.type)}</span>
-      <span class="badge subject">${escapeHtml(q.subject)}</span>
-      <span class="chapter">${escapeHtml(q.source_chapter || q.chapter || "")}</span>
+      <span class="chapter">${escapeHtml(q.knowledge_point || q.chapter || "")}</span>
       <span class="q-pos">${state.cursor + 1} / ${pool.length}</span>
     </div>
     <div class="stem" id="question-stem" tabindex="-1">${escapeHtml(q.stem)}</div>
     ${mediaHtml(q)}
     ${body}
     ${feedbackHtml(q, chosen)}
-    <div class="question-tools" aria-label="题目工具">
-      <button class="flag ${isFlagged ? "active" : ""}" id="flag" aria-pressed="${isFlagged}">${isFlagged ? "已标记" : "标记问题"}</button>
-      ${chosen && !isMockActive() ? '<button id="redo">重新作答</button>' : ""}
-    </div>
+    ${isMockActive() ? "" : `<div class="question-tools" aria-label="题目工具">
+      <button class="flag ${isFlagged ? "active" : ""}" id="flag" aria-pressed="${isFlagged}">${isFlagged ? "已标记有误" : "题目有误"}</button>
+      ${chosen ? '<button id="redo">重新作答</button>' : ""}
+    </div>`}
     <div class="nav ${chosen ? "answered" : "unanswered"}">
-      <button class="nav-icon" id="prev" aria-label="上一题"${state._navBack && state._navBack.length ? "" : " disabled"}>←</button>
+      <button class="nav-icon" id="prev" aria-label="上一题"${canGoBack ? "" : " disabled"}>←</button>
       <button class="nav-icon fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
       <button class="next ${chosen ? "ready" : ""}" id="next">${chosen ? "下一题 →" : "跳过 →"}</button>
     </div>
@@ -828,7 +820,7 @@ function bindQuestionEvents(q, inWrongFresh) {
     save();
     render();
   });
-  $("flag").addEventListener("click", () => {
+  $("flag")?.addEventListener("click", () => {
     if (state.flagged[q.id]) delete state.flagged[q.id];
     else state.flagged[q.id] = new Date().toISOString();
     save();
@@ -881,90 +873,49 @@ function renderEmpty() {
 function renderDashboard() {
   updateStats();
   updateModeTabs();
-  const all = subjectStats(state.subject || "");
-  const scopeLabel = state.subject || "全部课程";
-  const wrongIds = Object.keys(state.wrong || {});
-  const favCount = Object.keys(state.fav || {}).length;
-  const flaggedCount = Object.keys(state.flagged || {}).length;
-  const reviewCount = buildReviewPool(getScope()).length;
-  const wrongLevel = wrongIds.reduce((acc, id) => {
-    const count = state.wrong[id] || 0;
-    if (count >= 3) acc.high += 1;
-    else if (count === 2) acc.mid += 1;
-    else if (count === 1) acc.low += 1;
-    return acc;
-  }, {low: 0, mid: 0, high: 0});
-  const errorCounts = Object.values(state.errorTags || {}).reduce((counts, tag) => {
-    counts[tag] = (counts[tag] || 0) + 1;
-    return counts;
-  }, {});
-  const errorSummary = Object.entries(errorCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([tag, count]) => `<span>${escapeHtml(ERROR_TAG_LABELS[tag] || tag)} <b>${count}</b></span>`)
-    .join("");
-
-  const subjectCounts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
-  const rows = orderedValues(new Set(Object.keys(subjectCounts)), SUBJECT_ORDER)
-    .map((subject) => ({subject, ...subjectStats(subject)}))
-    .sort((a, b) => (b.wrongbook - a.wrongbook) || (a.rate - b.rate) || (b.total - a.total))
-    .slice(0, 8)
-    .map((row) => `<div class="subject-row">
-      <strong>${escapeHtml(row.subject)}</strong>
-      <div class="subject-bar" title="${row.done}/${row.total}"><span style="width:${row.progress}%"></span></div>
-      <span>${row.rate}% · 错${row.wrongbook}</span>
-    </div>`).join("");
+  const scope = getScope();
+  const wrongCount = scope.filter((question) => state.wrong[question.id]).length;
+  const favCount = scope.filter((question) => state.fav[question.id]).length;
+  const reviewCount = buildReviewPool(scope).length;
+  const hasReviewTasks = Boolean(state.subject && (reviewCount || wrongCount || favCount));
 
   const activeMock = mockSession && !mockSession.finishedAt;
   const remainingMinutes = activeMock ? Math.max(0, Math.ceil(mockRemainingMs() / 60000)) : 0;
 
   $("card-area").innerHTML = `<section class="dashboard quiz-hub-dashboard">
-    <article class="card hub-overview">
-      <div>
-        <span class="hub-kicker">${escapeHtml(scopeLabel)}</span>
-        <h1>今天想练什么？</h1>
-        <p>先完成一组基础题，再处理到期复习和错题。</p>
-      </div>
-      <div class="hub-progress" aria-label="当前课程进度">
-        <strong>${all.progress}%</strong>
-        <span>已做 ${all.done} / ${all.total} · 正确率 ${all.rate}%</span>
-      </div>
-    </article>
+    <header class="hub-heading">
+      <h1>刷题</h1>
+    </header>
     ${activeMock ? `<button type="button" class="resume-mock" data-resume-mock>
       <span><strong>继续限时模拟</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
       <b>约 ${remainingMinutes} 分钟 →</b>
     </button>` : ""}
     <article class="card hub-tasks">
-      <div class="hub-section-title"><strong>开始一组</strong><span>选择一种节奏即可开始</span></div>
       <div class="hub-primary-actions">
-        <button class="primary" data-jump-mode="seq"><span>顺序练习</span><small>按章节稳步推进</small></button>
-        <button data-jump-mode="rnd"><span>随机练习</span><small>交叉检验记忆</small></button>
-        <button data-jump-mode="mock"><span>限时模拟</span><small>组卷、计时、交卷</small></button>
+        <button class="primary" data-jump-mode="seq"><span>顺序练习</span></button>
+        <button data-jump-mode="rnd"><span>随机练习</span></button>
+        <button data-jump-mode="mock"><span>限时模拟</span></button>
       </div>
     </article>
-    <article class="card hub-review">
-      <div class="hub-section-title"><strong>巩固任务</strong><span>按需要处理，不必逐层找入口</span></div>
+    ${hasReviewTasks ? `<article class="card hub-review">
       <div class="hub-review-actions">
-        <button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>
-        <button data-jump-mode="wrong"><span>错题本</span><b>${wrongIds.length}</b></button>
-        <button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>
+        ${reviewCount ? `<button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>` : ""}
+        ${wrongCount ? `<button data-jump-mode="wrong"><span>错题本</span><b>${wrongCount}</b></button>` : ""}
+        ${favCount ? `<button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>` : ""}
       </div>
-    </article>
-    <details class="card hub-insights">
-      <summary>查看薄弱项与错题分布</summary>
-      <div class="dash-grid compact">
-        <div class="dash-stat"><span class="value">${wrongLevel.low}</span><span class="label">新错题</span></div>
-        <div class="dash-stat"><span class="value">${wrongLevel.mid}</span><span class="label">二刷错</span></div>
-        <div class="dash-stat"><span class="value">${wrongLevel.high}</span><span class="label">高频错</span></div>
-        <div class="dash-stat"><span class="value">${flaggedCount}</span><span class="label">纠错标记</span></div>
-      </div>
-      ${errorSummary ? `<div class="error-summary"><strong>错因分布</strong>${errorSummary}</div>` : ""}
-      <div class="subject-table">${rows}</div>
-    </details>
+    </article>` : ""}
   </section>`;
 
   document.querySelectorAll("[data-jump-mode]").forEach((button) => {
     button.addEventListener("click", () => {
-      state.mode = button.dataset.jumpMode;
+      const mode = button.dataset.jumpMode;
+      if (!state.subject && ["seq", "rnd", "mock"].includes(mode)) {
+        $("subject-select").focus();
+        $("subject-select").classList.add("needs-subject");
+        window.setTimeout(() => $("subject-select").classList.remove("needs-subject"), 900);
+        return;
+      }
+      state.mode = mode;
       resetPosition();
       focusQuestionAfterRender = true;
       save();
@@ -983,9 +934,10 @@ function renderDashboard() {
 }
 
 function availableMockQuestions() {
+  if (!state.subject) return [];
   return PUBLIC_QUESTIONS.filter((question) => {
     if (question.type === "简答" || state.flagged[question.id]) return false;
-    return !state.subject || question.subject === state.subject;
+    return question.subject === state.subject;
   });
 }
 
@@ -1045,6 +997,10 @@ function ensureMockTimer() {
 }
 
 function startMock(count) {
+  if (!state.subject) {
+    alert("请先选择课程");
+    return;
+  }
   const scope = availableMockQuestions();
   const actualCount = Math.min(count, scope.length);
   if (!actualCount) {
@@ -1057,7 +1013,7 @@ function startMock(count) {
     answers: {},
     startedAt: Date.now(),
     durationMinutes,
-    subject: state.subject || "全部课程",
+    subject: state.subject,
     finishedAt: null,
     result: null,
   };
@@ -1094,6 +1050,11 @@ function finishMock(autoSubmitted = false) {
   persistMockSession();
   clearMockTimer();
   answered.forEach(({question, answer}) => handleAnswer(question, answer));
+  rows.filter((row) => row.answer === undefined).forEach(({question}) => {
+    state.wrong[question.id] = (state.wrong[question.id] || 0) + 1;
+    state.streak[question.id] = 0;
+    updateReviewSchedule(question.id, false);
+  });
   save();
   render();
 }
@@ -1104,15 +1065,14 @@ function renderMockSetup() {
   const scope = availableMockQuestions();
   const choices = [20, 30, 50].filter((count) => count <= scope.length);
   if (scope.length && !choices.length) choices.push(scope.length);
-  const subject = state.subject || "全部课程";
+  const subject = state.subject || "未选择课程";
   $("card-area").innerHTML = `<section class="mock-setup card">
     <div class="meta"><span class="badge subject">限时模拟</span><span class="chapter">${escapeHtml(subject)}</span></div>
-    <h2>选择题量后开始计时</h2>
-    <p>模拟卷从当前课程的单选、多选、判断和填空题中交错抽取；作答期间不显示答案，交卷后统一计分并写入错题记录。</p>
+    <h2>${state.subject ? `${escapeHtml(subject)} · 可抽 ${scope.length} 题` : "请先选择课程"}</h2>
     <div class="mock-choices">
       ${choices.map((count) => `<button type="button" data-mock-count="${count}"><strong>${count}题</strong><span>${Math.max(20, Math.ceil(count * 1.5))}分钟</span></button>`).join("")}
     </div>
-    ${scope.length ? `<small>当前范围共 ${scope.length} 道可抽取客观题。可先在上方选择课程，再进入模拟。</small>` : '<div class="empty">当前课程没有可抽取的客观题。</div>'}
+    ${state.subject && !scope.length ? '<div class="empty">当前课程没有可抽取的客观题。</div>' : ""}
   </section>`;
   document.querySelectorAll("[data-mock-count]").forEach((button) => {
     button.addEventListener("click", () => startMock(Number(button.dataset.mockCount)));
@@ -1253,6 +1213,14 @@ function render() {
     return;
   }
 
+  const canShowStoredMock = state.mode === "mock" && Boolean(mockSession);
+  if (!state.subject && state.mode !== "home" && !canShowStoredMock) {
+    state.mode = "home";
+    resetPosition();
+    save();
+    updateViewState();
+  }
+
   if (state.mode === "home") {
     renderDashboard();
     return;
@@ -1304,6 +1272,17 @@ function nextQuestion() {
 function prevQuestion() {
   state._stickyId = null;
   state._pending = null;
+  if (isMockActive()) {
+    const pool = getPool();
+    const index = pool.findIndex((question) => question.id === state.currentId);
+    if (index <= 0) return;
+    state.currentId = pool[index - 1].id;
+    state.cursor = index - 1;
+    focusQuestionAfterRender = true;
+    save();
+    render();
+    return;
+  }
   const previousId = state._navBack && state._navBack.pop();
   if (previousId) {
     state.currentId = previousId;
@@ -1348,8 +1327,9 @@ function renderDrawerList(el, items, active, onPick) {
 }
 
 function buildDrawer() {
-  const typeCounts = countBy(PUBLIC_QUESTIONS, (q) => q.type);
-  const types = [{value: "", label: "全部题型", count: PUBLIC_QUESTIONS.length}].concat(
+  const typeBase = state.subject ? PUBLIC_QUESTIONS.filter((q) => q.subject === state.subject) : PUBLIC_QUESTIONS;
+  const typeCounts = countBy(typeBase, (q) => q.type);
+  const types = [{value: "", label: "全部题型", count: typeBase.length}].concat(
     orderedValues(new Set(Object.keys(typeCounts)), TYPE_ORDER).map((t) => ({value: t, label: t, count: typeCounts[t]}))
   );
   renderDrawerList($("drawer-types"), types, state.typeFilter || "", (value) => {
@@ -1364,7 +1344,7 @@ function buildDrawer() {
   if (state.subject) chapterBase = chapterBase.filter((q) => q.subject === state.subject);
   if (state.typeFilter) chapterBase = chapterBase.filter((q) => q.type === state.typeFilter);
   const chapterCounts = countBy(chapterBase, chapterKey);
-  const chapters = [{value: "", label: "全部章节", count: chapterBase.length}].concat(
+  const chapters = [{value: "", label: "全部知识点", count: chapterBase.length}].concat(
     Object.keys(chapterCounts)
       .sort((a, b) => a.localeCompare(b, "zh-CN", {numeric: true}))
       .map((chapter) => ({value: chapter, label: chapter, count: chapterCounts[chapter]}))
@@ -1379,6 +1359,11 @@ function buildDrawer() {
 
 function openDrawer() {
   drawerFiltersDirty = false;
+  drawerFilterSnapshot = {
+    typeFilter: state.typeFilter,
+    chapterFilter: state.chapterFilter,
+    searchQuery: state.searchQuery,
+  };
   buildDrawer();
   drawerReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : $("drawer-toggle");
   $("drawer").classList.add("show");
@@ -1391,9 +1376,16 @@ function openDrawer() {
   requestAnimationFrame(() => $("drawer-close").focus());
 }
 
-function closeDrawer() {
+function closeDrawer({apply = false} = {}) {
   const wasOpen = $("drawer").classList.contains("show");
-  const applyFilters = wasOpen && drawerFiltersDirty;
+  const applyFilters = wasOpen && drawerFiltersDirty && apply;
+  if (wasOpen && drawerFiltersDirty && !apply && drawerFilterSnapshot) {
+    state.typeFilter = drawerFilterSnapshot.typeFilter;
+    state.chapterFilter = drawerFilterSnapshot.chapterFilter;
+    state.searchQuery = drawerFilterSnapshot.searchQuery;
+    $("search-input").value = state.searchQuery || "";
+    save();
+  }
   $("drawer").classList.remove("show");
   $("drawer-mask").classList.remove("show");
   $("drawer").setAttribute("aria-hidden", "true");
@@ -1406,6 +1398,7 @@ function closeDrawer() {
   }
   drawerReturnFocus = null;
   drawerFiltersDirty = false;
+  drawerFilterSnapshot = null;
   if (applyFilters) {
     resetPosition();
     save();
@@ -1558,7 +1551,10 @@ function sanitizeState(input, strict = false) {
   const allowedTypes = new Set(PUBLIC_QUESTIONS.map((q) => q.type));
   if (typeof input.subject === "string" && (!input.subject || allowedSubjects.has(input.subject))) clean.subject = input.subject;
   if (typeof input.typeFilter === "string" && (!input.typeFilter || allowedTypes.has(input.typeFilter))) clean.typeFilter = input.typeFilter;
-  if (typeof input.chapterFilter === "string" && input.chapterFilter.length <= 300) clean.chapterFilter = input.chapterFilter;
+  if (typeof input.chapterFilter === "string" && input.chapterFilter.length <= 300
+      && (!input.chapterFilter || PUBLIC_QUESTIONS.some((question) => chapterKey(question) === input.chapterFilter))) {
+    clean.chapterFilter = input.chapterFilter;
+  }
   if (typeof input.searchQuery === "string" && input.searchQuery.length <= 300) clean.searchQuery = input.searchQuery;
   if (typeof input.currentId === "string" && questionMap.has(input.currentId)) clean.currentId = input.currentId;
   if (Number.isInteger(input.cursor) && input.cursor >= 0 && input.cursor < PUBLIC_QUESTIONS.length) clean.cursor = input.cursor;
@@ -1712,7 +1708,10 @@ function bindGlobalEvents() {
 
   $("subject-select").addEventListener("change", (event) => {
     state.subject = event.target.value;
+    state.typeFilter = "";
     state.chapterFilter = "";
+    state.searchQuery = "";
+    $("search-input").value = "";
     resetPosition();
     save();
     render();
@@ -1740,7 +1739,7 @@ function bindGlobalEvents() {
     buildDrawer();
   });
   $("drawer-apply").addEventListener("click", () => {
-    closeDrawer();
+    closeDrawer({apply: true});
   });
 
   $("runner-exit").addEventListener("click", () => {

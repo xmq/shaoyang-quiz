@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#2563eb">
+  <meta name="theme-color" content="#143b6b">
   <meta name="description" content="围绕事业单位专业知识常见考点，按科目、题型和复习状态练习，支持错题、收藏、到期复习与进度备份。">
   <title>刷题器</title>
   <link rel="manifest" href="./manifest.webmanifest">
@@ -31,7 +31,7 @@
       </section>
 
       <section class="drawer-section">
-        <div class="drawer-title">章节</div>
+        <div class="drawer-title">知识点</div>
         <div class="drawer-list drawer-list-compact" id="drawer-chapters"></div>
       </section>
 
@@ -51,7 +51,6 @@
           <button class="drawer-action danger" id="reset">重置进度</button>
         </div>
       </details>
-      <p class="drawer-help">筛选用于普通练习；限时模拟只按当前课程组卷，开始后会锁定范围。</p>
     </aside>
 
     <div class="drawer-mask" id="drawer-mask" aria-hidden="true"></div>
@@ -75,10 +74,10 @@
       </header>
 
       <nav class="module-switcher desktop-module-switcher" aria-label="学习模块">
-        <a class="module-switcher-link" href="./index.html"><span aria-hidden="true">⌂</span>首页</a>
-        <a class="module-switcher-link" href="./notes.html"><span aria-hidden="true">📖</span>讲义</a>
-        <a class="module-switcher-link" href="./color-notes.html"><span aria-hidden="true">🖍️</span>三色回忆</a>
-        <a class="module-switcher-link" aria-current="page" href="./quiz.html"><span aria-hidden="true">🧠</span>刷题</a>
+        <a class="module-switcher-link" href="./index.html">课程</a>
+        <a class="module-switcher-link" href="./notes.html">讲义</a>
+        <a class="module-switcher-link" href="./color-notes.html">三色回忆</a>
+        <a class="module-switcher-link" aria-current="page" href="./quiz.html">刷题</a>
       </nav>
       <section class="active-filters hidden" id="active-filters" aria-label="当前筛选条件"></section>
 
