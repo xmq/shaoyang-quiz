@@ -216,7 +216,10 @@ def main():
             ok &= check_output(output_dir / LEGACY_MARKDOWN_OUTPUT.name, legacy_pointer)
         if not ok:
             raise SystemExit(1)
-        counts = "、".join(f"{config['directory_title']} {len(courses)} 门" for _, config, courses, _, _ in rendered_pages)
+        counts = "、".join(
+            f"{config['document_title']} {len(courses)} 门"
+            for _, config, courses, _, _ in rendered_pages
+        )
         print(f"生成物已同步：{counts}")
         return
 
