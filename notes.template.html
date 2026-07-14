@@ -366,7 +366,11 @@
       border-radius: 0;
       background: transparent;
       color: var(--text);
+      cursor: default;
     }
+    .lecture-page .chapter-toggle[aria-expanded] { pointer-events: none; }
+    .lecture-page .chapter-chevron { display: none; }
+    .lecture-page .chapter-section.collapsed .chapter-body { display: block; }
     .lecture-page .exam-meta { gap: 0; color: var(--muted); font-weight: 650; }
     .lecture-page .exam-level,
     .lecture-page .exam-types {
@@ -558,6 +562,9 @@
       .chapter-section { display: none; margin-top: 6px; scroll-margin-top: 110px; }
       .chapter-section.mobile-active { display: block; }
       .chapter-section.mobile-active .chapter-body { display: block; }
+      .lecture-page .chapter-section { display: block; margin-top: 18px; }
+      .lecture-page .chapter-section .chapter-body { display: block; }
+      .lecture-page .chapter-pager { display: none !important; }
       .chapter-toggle { min-height: auto; padding: 0 0 12px; border: 0; border-radius: 0; background: transparent; color: var(--text); pointer-events: none; }
       .exam-meta { gap: 5px; }
       .exam-level, .exam-types { min-height: 22px; padding: 3px 7px; }
@@ -1200,6 +1207,7 @@
         toggle.setAttribute("aria-controls", `${section.id}-body`);
         section.querySelector(".chapter-body").id = `${section.id}-body`;
         toggle.addEventListener("click", () => {
+          if (!colorMode) return;
           if (mobileMedia.matches) return;
           const collapsed = section.classList.toggle("collapsed");
           toggle.setAttribute("aria-expanded", String(!collapsed));
@@ -1210,6 +1218,13 @@
         link.className = "chapter-link";
         link.textContent = cleanChapterLabel(title);
         link.addEventListener("click", () => {
+          if (!colorMode) {
+            activeChapterIndex = index;
+            updateStudyPosition({replaceRoute: true});
+            closeMobileNav({restoreFocus: false});
+            section.scrollIntoView({behavior: "smooth", block: "start"});
+            return;
+          }
           if (mobileMedia.matches) {
             setActiveChapter(index, {focus: true});
             closeMobileNav({restoreFocus: false});
