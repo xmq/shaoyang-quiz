@@ -14,6 +14,8 @@ COURSE_INDEX = ROOT / "course-index.json"
 EXPECTED_COURSE_COUNT = 15
 MIN_COURSE_CHARS = 3800
 MIN_CHAPTER_CHARS = 180
+MIN_PLAIN_EXPLANATIONS = 3
+MAX_PLAIN_EXPLANATIONS = 8
 
 H1_RE = re.compile(r"^#[ \t]+(.+?)\s*$")
 H2_RE = re.compile(r"^##[ \t]+(.+?)\s*$")
@@ -186,6 +188,15 @@ def main() -> int:
             errors.append(f"{name}：讲义正文过短（{len(source)} 字符）")
         if source.count("```") % 2:
             errors.append(f"{name}：Markdown 代码围栏未成对闭合")
+        explanation_count = source.count("**通俗理解：**")
+        if explanation_count < MIN_PLAIN_EXPLANATIONS:
+            errors.append(
+                f"{name}：通俗解释不足（{explanation_count} 处，至少 {MIN_PLAIN_EXPLANATIONS} 处）"
+            )
+        if explanation_count > MAX_PLAIN_EXPLANATIONS:
+            errors.append(
+                f"{name}：通俗解释过多（{explanation_count} 处），疑似机械套用模板"
+            )
         for topic, pattern in REQUIRED_TOPICS.get(name, ()):
             if not re.search(pattern, source, re.IGNORECASE | re.DOTALL):
                 errors.append(f"{name}：缺少本科课程主干主题：{topic}")
