@@ -2618,6 +2618,19 @@ body.drawer-open {
 .question-controls .next.ready { border-color: var(--primary); background: var(--primary); color: #fff; }
 .question-controls .fav.active { border-color: var(--warn); background: var(--warn); color: #fff; }
 
+.question-nav {
+  justify-content: space-between;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.question-nav button {
+  min-width: 112px;
+  min-height: 42px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
 .drawer-filter-actions {
   display: grid;
   grid-template-columns: 1fr 1.4fr;

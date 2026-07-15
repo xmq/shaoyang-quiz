@@ -680,9 +680,7 @@ function renderQuestion(q, pool) {
       <span class="q-pos">${state.cursor + 1} / ${pool.length}</span>
       <div class="question-controls" aria-label="题目导航">
         <button type="button" id="question-exit">返回</button>
-        <button type="button" id="prev" aria-label="上一题"${canGoBack ? "" : " disabled"}>←</button>
         <button type="button" class="fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
-        <button type="button" class="next ${chosen ? "ready" : ""}" id="next">${chosen ? "下一题" : "跳过"}</button>
       </div>
       <span class="chapter">${escapeHtml(q.knowledge_point || q.chapter || "")}</span>
     </div>
@@ -690,6 +688,10 @@ function renderQuestion(q, pool) {
     ${mediaHtml(q)}
     ${body}
     ${feedbackHtml(q, chosen)}
+    <div class="question-controls question-nav" aria-label="题目翻页">
+      <button type="button" id="prev" aria-label="上一题"${canGoBack ? "" : " disabled"}>上一题</button>
+      <button type="button" class="next ${chosen ? "ready" : ""}" id="next">${chosen ? "下一题" : "跳过"}</button>
+    </div>
     ${isMockActive() ? "" : `<div class="question-tools" aria-label="题目工具">
       <button class="flag ${isFlagged ? "active" : ""}" id="flag" aria-pressed="${isFlagged}">${isFlagged ? "已标记有误" : "题目有误"}</button>
       ${chosen ? '<button id="redo">重新作答</button>' : ""}
@@ -914,6 +916,7 @@ function renderDashboard() {
       <div class="hub-review-actions">
         ${reviewCount ? `<button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>` : ""}
         ${wrongCount ? `<button data-jump-mode="wrong"><span>错题本</span><b>${wrongCount}</b></button>` : ""}
+        ${wrongCount ? `<button data-export-wrong><span>导出错题</span><b>${wrongCount}</b></button>` : ""}
         ${favCount ? `<button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>` : ""}
       </div>
     </article>` : ""}
@@ -935,6 +938,7 @@ function renderDashboard() {
       render();
     });
   });
+  document.querySelector("[data-export-wrong]")?.addEventListener("click", exportWrong);
   document.querySelector("[data-resume-mock]")?.addEventListener("click", () => {
     state.mode = "mock";
     const nextId = mockSession.ids.find((id) => mockSession.answers[id] === undefined) || mockSession.ids[0];
