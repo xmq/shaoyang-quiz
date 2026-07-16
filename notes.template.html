@@ -223,7 +223,7 @@
       border: 0;
       border-radius: 9px;
       background: transparent;
-      color: #475467;
+      color: var(--muted);
       text-align: left;
       line-height: 1.45;
       -webkit-line-clamp: 2;
@@ -318,10 +318,10 @@
     .exam-level,
     .exam-types { min-height: 23px; display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; }
     .exam-level { background: var(--panel); }
-    .exam-level.level-a { color: #b42318; }
-    .exam-level.level-b { color: #175cd3; }
-    .exam-level.level-c { color: #475467; }
-    .exam-types { background: rgba(255, 255, 255, .62); color: #475467; }
+    .exam-level.level-a { color: var(--red); }
+    .exam-level.level-b { color: var(--blue); }
+    .exam-level.level-c { color: var(--muted); }
+    .exam-types { background: rgba(255, 255, 255, .62); color: var(--muted); }
     .chapter-chevron { flex: 0 0 auto; transition: transform .16s ease; }
     .chapter-section.collapsed .chapter-chevron { transform: rotate(-90deg); }
     .chapter-section.collapsed .chapter-body { display: none; }
@@ -620,7 +620,11 @@
         --muted: #98a2b3;
         --border: #344054;
         --primary-soft: #1c3157;
+        --primary: #9ec5ff;
+        --primary-strong: #c4dcff;
         --deep: #e8eef7;
+        --red: #ffb4ab;
+        --blue: #a8c7ff;
         --black: #f2f4f7;
         --red-soft: #3a2424;
         --shadow: 0 10px 30px rgba(0, 0, 0, .24);
@@ -628,7 +632,12 @@
       .site-header { border-color: var(--border); background: rgba(16, 24, 40, .94); }
       .study-toolbar { background: rgba(16, 24, 40, .94); }
       .search-box, .chapter-nav-head, .note code { background: var(--panel); }
+      .module-link[aria-current="page"] { border-color: #315d96; color: var(--primary-strong); }
+      .chapter-link { color: var(--muted); }
+      .exam-types { background: rgba(255, 255, 255, .08); }
+      .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { color: var(--primary-strong) !important; }
       .note blockquote { background: #202c3d; color: #c8d1dc; }
+      .note code { color: #ffb4ab; }
       .recall-prompt { background: #1c3157; color: #bfdbfe; }
       .note mark { background: #854d0e; color: #fef3c7; }
     }
