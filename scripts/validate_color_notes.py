@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 COLOR_INDEX = ROOT / "color-notes-index.json"
 LECTURE_INDEX = ROOT / "course-index.json"
-EXPECTED_COURSE_COUNT = 15
+EXPECTED_COURSE_COUNT = 16
 MAX_LENGTH_RATIO = 0.85
 MIN_ITEMS = {"🔴": 5, "🔵": 4, "⚫": 3}
 
