@@ -391,6 +391,14 @@
       color: var(--deep);
     }
 
+    /* 三色笔记默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
+    .color-notes-page .chapter-toggle {
+      cursor: default;
+      pointer-events: none;
+    }
+    .color-notes-page .chapter-chevron { display: none; }
+    .color-notes-page .chapter-section.collapsed .chapter-body { display: block; }
+
     @media (max-width: 900px) {
       .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .study-layout { grid-template-columns: 210px minmax(0, 1fr); gap: 12px; }
@@ -565,6 +573,9 @@
       .lecture-page .chapter-section { display: block; margin-top: 18px; }
       .lecture-page .chapter-section .chapter-body { display: block; }
       .lecture-page .chapter-pager { display: none !important; }
+      .color-notes-page .study:not(.recall-mode) .chapter-section { display: block; margin-top: 18px; }
+      .color-notes-page .study:not(.recall-mode) .chapter-section .chapter-body { display: block; }
+      .color-notes-page .study:not(.recall-mode) .chapter-pager { display: none !important; }
       .chapter-toggle { min-height: auto; padding: 0 0 12px; border: 0; border-radius: 0; background: transparent; color: var(--text); pointer-events: none; }
       .exam-meta { gap: 5px; }
       .exam-level, .exam-types { min-height: 22px; padding: 3px 7px; }
@@ -1064,7 +1075,7 @@
         if (active) link.setAttribute("aria-current", "location");
         else link.removeAttribute("aria-current");
       });
-      mobileChapterProgress.textContent = sections.length ? `${activeChapterIndex + 1}/${sections.length}章` : "章节";
+      mobileChapterProgress.textContent = colorMode ? "目录" : (sections.length ? `${activeChapterIndex + 1}/${sections.length}章` : "章节");
       chapterPrev.disabled = activeChapterIndex <= 0;
       chapterNext.disabled = activeChapterIndex >= sections.length - 1;
 
@@ -1217,6 +1228,7 @@
         section.querySelector(".chapter-body").id = `${section.id}-body`;
         toggle.addEventListener("click", () => {
           if (!colorMode) return;
+          if (study.classList.contains("color-notes-list")) return;
           if (mobileMedia.matches) return;
           const collapsed = section.classList.toggle("collapsed");
           toggle.setAttribute("aria-expanded", String(!collapsed));
@@ -1227,7 +1239,7 @@
         link.className = "chapter-link";
         link.textContent = cleanChapterLabel(title);
         link.addEventListener("click", () => {
-          if (!colorMode) {
+          if (!colorMode || study.classList.contains("color-notes-list")) {
             activeChapterIndex = index;
             updateStudyPosition({replaceRoute: true});
             closeMobileNav({restoreFocus: false});
