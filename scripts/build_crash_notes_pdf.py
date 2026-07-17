@@ -1,8 +1,8 @@
-"""Build a data-driven, retrieval-based all-subject exam crash pack.
+"""Build a data-driven all-subject high-frequency knowledge guide.
 
 This is intentionally independent from color_notes/*.md.  The three-colour notes
-are reference material; this pack is a last-day scoring workout generated from
-question-bank frequencies plus hand-authored recall, comparison and answer frames.
+are reference material; this guide ranks and explains the most frequent knowledge
+points, their boundaries, formulas and short-answer phrasing without adding drills.
 """
 
 from __future__ import annotations
@@ -53,7 +53,7 @@ COURSES = [
 ]
 
 
-# Every entry is a scoring workout, not a restatement of the colour notes.
+# Supporting comparisons, formulas, answer phrasing and boundary warnings.
 # routine entries use "name|method|meaning/boundary|micro example".
 GUIDES = {
     "Office软件操作": {
@@ -379,6 +379,133 @@ GUIDES = {
 }
 
 
+# Ordered, directly readable knowledge points.  For subjects in questions.json,
+# the order follows the measured frequency distribution; Signal and Systems has
+# no bank entries yet, so its order follows the foundational dependency chain.
+CORE_POINTS = {
+    "Office软件操作": [
+        "Word文字与段落|高频集中在字符与段落格式、查找替换、项目符号、边框底纹。段落格式作用于整段，字符格式只作用于选中文字；稳定排版应优先修改样式，避免逐处手工设置。",
+        "Excel工作簿基础|工作簿包含工作表，单元格地址由列标和行号组成。输入、填充、复制、选择性粘贴、行列隐藏及冻结窗格是基础操作；数字被存成文本时，排序、计算和查找都可能异常。",
+        "PowerPoint演示|母版统一全局版式，主题统一颜色和字体，版式决定占位符结构。动画作用于页内对象，切换作用于幻灯片之间；演示文稿应突出层级和可读性，避免把正文堆成大段文字。",
+        "Excel公式与引用|公式以等号开始；相对引用随复制改变，绝对引用`$A$1`行列均锁定，混合引用只锁一维。函数题先判断任务属于统计、求和、判断还是查找，再检查区域尺寸与数据类型。",
+        "Excel数据分析|排序改变记录顺序，筛选隐藏不符合条件的记录，分类汇总要求先按分类字段排序，数据透视表用于多维汇总。图表类型必须匹配目的：趋势用折线、类别比较用柱形、构成比例谨慎用饼图。",
+        "Word长文档与协作|标题样式是目录、导航和多级编号的基础；分节符用于局部页面方向、页眉页脚或页码体系。协作修改应使用修订、批注、接受/拒绝和版本备份形成闭环。",
+    ],
+    "信息技术与教学论": [
+        "信息技术学科核心素养|重点不是记软件按钮，而是信息意识、计算思维、数字化学习与创新、信息社会责任在任务中的体现。答题要把素养落到可观察行为，例如分析数据、抽象问题、选择工具、合规使用信息。",
+        "教学评价|形成性评价服务于过程诊断和改进，总结性评价判断阶段达成水平。评价任务必须与目标层次一致：操作目标要用真实操作证据，问题解决目标要用新情境任务，不能只靠概念选择题。",
+        "教学目标与设计|目标应包含对象、可观察行为、条件和达标标准；“了解、掌握”难以直接测量。教学活动、资源、评价都应围绕目标对齐，形成导入、示范、练习、反馈、迁移和评价闭环。",
+        "教学媒体与整合|媒体的价值取决于是否降低无关负荷、呈现关键过程并支持互动反馈，而不取决于技术是否新颖。选择媒体要考虑内容特征、学习者基础、环境条件和可访问性。",
+        "教学方法与学习理论|任务驱动、项目学习、合作学习等方法要与目标和学情匹配。连续讲授容易造成工作记忆超载，应采用分段、示例、即时练习、支架和逐步撤除支架促进迁移。",
+    ],
+    "多媒体技术": [
+        "图形图像|位图以像素表示，适合照片；矢量图以几何对象表示，适合标志和线稿。分辨率决定像素数量，色深决定每像素可表示的颜色级数；未压缩容量约为宽×高×色深÷8。",
+        "音频数字化|声音经换能、放大和抗混叠滤波后，依次采样、量化、编码。采样率决定时间分辨率和可表示最高频率，量化位数决定幅度级数和量化误差；无压缩码率=采样率×位数×声道数。",
+        "动画与视频|帧率影响运动连续性，分辨率影响空间细节，码率影响单位时间数据量。视频文件容量通常按总码率×时间÷8计算；题目已给码率时不能再乘分辨率和帧率。",
+        "多媒体系统与应用|完整链路包括采集、处理、存储、传输和呈现。格式是封装容器，编码是音视频压缩方式，二者不能混为一谈；播放兼容性同时受容器、编码器和终端能力影响。",
+        "压缩与容量|无损压缩可完全恢复，适合源文件、文字和图表；有损压缩舍弃感知次要信息，压缩率高，适合照片、音频和视频发布。容量计算必须先统一bit/Byte及1000/1024口径。",
+    ],
+    "操作系统原理": [
+        "Windows系统操作|文件路径、扩展名、权限、快捷方式、任务管理和系统设置是常考操作。快捷方式删除不等于源文件删除；文件能看见不代表有修改权限；故障定位应先确认路径、权限、占用进程和默认程序。",
+        "进程与线程|程序是静态指令集合，进程是资源分配和保护单位，线程是CPU调度执行单位。同一进程的线程共享地址空间和打开文件，但各有寄存器现场与栈，因此切换较轻而并发访问需要同步。",
+        "操作系统基础|操作系统负责处理机、存储器、设备和文件管理，并向应用提供抽象接口。内核态可执行特权操作，用户态受保护；系统调用是应用请求内核服务的受控入口。",
+        "调度、同步与死锁|调度题要区分到达、运行、等待、完成时间；同步约束先后关系，互斥保护临界区。死锁需同时满足互斥、占有且等待、不可剥夺和循环等待，预防就是破坏至少一个必要条件。",
+        "内存与虚拟存储|分页把虚拟页映射到物理页框，TLB缓存地址转换，缺页时由操作系统调页并可能置换。页面频繁换入换出会形成抖动；分页常有内部碎片，分段更符合逻辑但易产生外部碎片。",
+        "文件系统|目录组织名字到文件的映射，文件控制信息记录位置、大小和权限。连续、链接和索引分配在随机访问、空间利用和扩展性上各有取舍；删除目录项与数据块真正覆盖不是一回事。",
+    ],
+    "数据库技术": [
+        "SQL查询|基本逻辑顺序是FROM/连接→WHERE筛行→GROUP BY分组→HAVING筛组→SELECT投影→ORDER BY排序。聚合条件通常放HAVING；`COUNT(*)`计行，`COUNT(列)`忽略NULL。",
+        "数据库系统基础|数据库系统由数据、DBMS、应用和人员组成，DBMS负责定义、操纵、控制和维护数据。三级模式与两级映像提供逻辑、物理数据独立性，使存储变化尽量不影响应用。",
+        "关系模型与代数|关系可看作满足约束的二维表，元组是行，属性是列。选择筛行、投影选列、连接按条件组合关系；主键唯一且非空，外键维护参照完整性。",
+        "事务与并发控制|ACID分别是原子性、一致性、隔离性和持久性。并发可能导致丢失更新、脏读、不可重复读和幻读；应通过事务、隔离级别、锁或版本控制保证业务不变量。",
+        "数据库设计与规范化|设计流程由需求分析到概念、逻辑和物理设计。1NF要求原子属性，2NF消除对组合键的部分依赖，3NF消除非主属性对键的传递依赖，目标是减少插入、删除和更新异常。",
+    ],
+    "数据结构与算法": [
+        "栈、队列与优先队列|栈后进先出，适合调用、括号匹配和回溯；队列先进先出，适合缓冲和广度优先搜索；优先队列按关键字出队，通常用堆实现，同优先级若需FIFO要加入到达序。",
+        "图|邻接矩阵查边快但空间O(V²)，适合稠密图；邻接表空间O(V+E)，适合稀疏图和遍历邻居。BFS用队列并能求无权图最短边数，DFS用栈/递归，适合连通性和回溯。",
+        "树|二叉搜索树满足左小右大，平均查找高效但可能退化；堆只保证父子优先关系，不保证全局有序；B+树扇出大、层数低且叶结点有序，适合磁盘索引和范围查询。",
+        "排序|排序题重点看时间复杂度、额外空间和稳定性。插入、冒泡通常稳定；选择、快速、堆通常不稳定；归并稳定且O(nlogn)但需额外空间，快速排序平均O(nlogn)、最坏O(n²)。",
+        "查找与散列|二分查找要求有序且支持高效随机访问，复杂度O(logn)。散列平均查找接近O(1)，但冲突不可避免，可用开放定址或链地址处理，性能取决于装载因子和散列函数。",
+        "复杂度|渐进复杂度只保留增长最快项并忽略常数。连续语句取最大量级，嵌套循环通常相乘但必须结合边界求和；对数复杂度常来自每轮把问题规模按比例缩小。",
+    ],
+    "编程语言": [
+        "程序设计基础|变量、数据类型、表达式、分支、循环和函数构成程序主干。代码题应按语言规则逐行跟踪初值、条件、更新和输出，重点检查整除、类型转换、短路求值及循环差一错误。",
+        "C指针与内存|指针保存地址，`*`用于间接访问，`&`取得地址。数组名在多数表达式中退化为首元素指针但并非可修改指针；动态内存要成对申请释放，避免越界、空指针、泄漏和悬空指针。",
+        "控制结构|分支由条件决定路径，循环由初始化、条件和更新构成。`break`退出当前循环，`continue`跳过本轮剩余语句；分析嵌套结构必须明确它作用于哪一层。",
+        "Python数据类型|数字、字符串、元组通常不可变，列表、字典和集合可变。赋值复制引用而非对象内容，浅拷贝仍共享嵌套对象；集合去重且无稳定位置索引，字典按键访问。",
+        "C数组、字符串与函数|C数组长度固定且不做运行时越界保护；字符串以`\0`结束，缓冲区必须预留终止符。函数参数按值传递，若需修改调用方对象可传地址，同时注意局部变量生命周期和作用域。",
+        "文件与异常|持久化流程包括选择模式、打开检查、读写、错误处理和可靠关闭。`w`模式会截断旧文件，追加用`a`；Python用`with`保证关闭，C应检查`FILE*`并调用`fclose`。",
+    ],
+    "计算机组成原理": [
+        "指令系统与CPU|指令由操作码和地址字段组成，CPU按取指、译码、取数、执行、写回循环工作。控制器产生控制信号，运算器完成算术逻辑运算，寄存器保存高速临时数据。",
+        "存储层次与Cache|寄存器、Cache、主存、外存按速度下降而容量上升排列。Cache利用时间和空间局部性缓存主存块；映射方式在冲突率、硬件复杂度和替换灵活性之间权衡。",
+        "数据表示|补码把符号与数值统一参与加法，定长整数范围由位数决定；同号相加得异号表示有符号溢出。浮点数由符号、阶码和尾数组成，存在范围、精度与舍入误差。",
+        "总线与I/O|总线由数据、地址和控制信号构成。程序查询简单但浪费CPU，中断在事件到来时服务，DMA适合成块高速传输；DMA仍需CPU初始化并处理完成状态。",
+        "流水线与性能|流水线重叠指令阶段以提高吞吐率，结构、数据和控制相关会造成停顿。CPU时间=`IC×CPI/f`，提高主频不一定同比提速，因为指令数、CPI、访存和功耗也会变化。",
+    ],
+    "计算机网络": [
+        "网络基础|分层把复杂通信划为接口明确的功能层；发送端逐层封装，接收端逐层解封装。带宽是速率上限概念，实际时延还包括发送、传播、处理和排队。",
+        "IPv4与子网|IPv4地址由网络位和主机位组成，掩码中连续1表示网络位。子网块大小由前缀决定，网络地址主机位全0、广播地址主机位全1，常规主机数为`2^h-2`。",
+        "TCP与UDP|TCP面向连接，利用序号、确认、重传、校验、滑动窗口保证可靠字节流，并区分流量控制和拥塞控制。UDP无连接、开销小、保留报文边界，但可靠性需由应用按需要实现。",
+        "链路层与局域网|以太网帧按MAC地址在局域网传送，交换机学习源MAC并按表转发。ARP解析同一链路所需的MAC地址；VLAN逻辑划分广播域，跨VLAN通信需要三层转发。",
+        "DNS与DHCP|DNS将域名解析为IP等记录并采用分层、缓存机制；DHCP动态提供IP、掩码、默认网关和DNS服务器。能ping通IP但域名失败时应优先检查DNS。",
+        "路由与排障|路由器按最长前缀匹配选择下一跳。排障应按物理链路→本机配置→网关→远端IP→DNS/端口→应用逐层验证，ping通不代表应用端口和业务一定正常。",
+    ],
+    "电路分析与电工技术": [
+        "直流电路与功率|欧姆定律、KCL和KVL是分析基础，列方程前必须规定电压电流参考方向。电阻功率可用`P=UI=I²R=U²/R`，结果为负通常表示实际方向与参考方向相反或元件在供能。",
+        "等效与网络定理|戴维南等效用开路电压和等效电阻替代线性二端网络，诺顿等效用短路电流与并联电阻表示。求等效电阻时独立电压源短路、独立电流源开路，受控源必须保留。",
+        "一阶动态电路|电容电压和电感电流在通常换路瞬间不能突变。全响应由初值、终值和时间常数决定；RC时间常数为`τ=RC`，一个τ完成总变化量约63.2%。",
+        "正弦交流与RLC|相量法把同频正弦稳态微分关系转为复数代数。电阻电压电流同相，电感电流滞后，电容电流超前；阻抗、相位和功率因数必须结合频率判断。",
+        "三相与安全用电|三相题先辨星形或三角形再套线量与相量关系。测量时电压表高内阻并联、电流表低内阻串联；电阻挡禁止带电测量，冒烟火花时先断电隔离再专业检查。",
+    ],
+    "模拟电子技术": [
+        "三极管放大|BJT截止时近似断开，放大区用于线性放大，饱和时近似开关闭合。`IC≈βIB`主要适用于放大区；静态工作点过低或过高会导致截止或饱和削顶。",
+        "二极管|普通二极管正向达到导通条件后导电、反向截止；分析时可选理想或恒压降模型。整流把交流变为单向脉动，滤波减小纹波；稳压管反向工作时必须限流并校核功耗。",
+        "运算放大器|理想运放在线性负反馈下可用虚短和虚断：两输入端电位近似相等、输入电流近似为零。反相增益`-Rf/Rin`，同相增益`1+Rf/Rg`，实际输出受电源、摆幅、带宽和电流能力限制。",
+        "负反馈|负反馈通常降低闭环增益但提高稳定性、扩展带宽、减小非线性失真。电压/电流取样决定输出电阻趋势，串联/并联混合决定输入电阻趋势，类型判断不能只看反馈线接到哪个引脚。",
+        "直流电源与信号链|典型直流电源为变压、整流、滤波、稳压。传感器采集链常为保护/偏置、缓冲或放大、抗混叠滤波、ADC；增益过大会饱和，提高ADC位数不能消除前端噪声。",
+    ],
+    "数字电子技术": [
+        "数字基础|进制转换、补码、逻辑门和布尔代数是基础。逻辑表达式、真值表、卡诺图和门电路应能互相转换；卡诺图按格雷码排列，分组为2的幂并允许跨边相邻。",
+        "触发器|触发器保存一位状态，D触发器下一状态等于采样的D，JK触发器可置位、复位、保持和翻转。建立时间、保持时间和传播延迟决定可靠时序，异步输入不受时钟控制。",
+        "组合逻辑|组合电路输出只取决于当前输入，常见模块有编码器、译码器、数据选择器、加法器。不同路径传播延迟会产生竞争冒险，稳态逻辑正确不代表瞬态无毛刺。",
+        "ADC与DAC|ADC完成采样、保持、量化和编码，n位有`2^n`个量化级；分辨率提高不等于精度一定提高。DAC把数字码转换为模拟量，性能还受参考源、线性误差和转换时间影响。",
+        "时序逻辑|时序电路输出还依赖历史状态，常见为寄存器和计数器。同步计数器共用时钟、速度高；异步计数器逐级触发、结构简单但延迟累积，状态设计要考虑非法状态恢复。",
+        "555与接口应用|555单稳态产生规定宽度脉冲，无稳态连续振荡，施密特方式用双阈值整形抗扰。UART、I²C、SPI、CAN的选择取决于速率、距离、节点数、布线和抗干扰。",
+    ],
+    "通信原理与高频电子线路": [
+        "通信系统基础|基本链路为信源、信源编码、信道编码、调制、信道、解调和译码。信源编码去冗余降码率，信道编码增加受控冗余以检错纠错，两者目的不同。",
+        "高频电路|高频放大、振荡、调制和解调电路受器件寄生参数、选频网络和阻抗匹配显著影响。谐振回路用于选频，品质因数反映选择性与带宽的折中。",
+        "香农容量|`C=B log2(1+S/N)`给出带宽B、线性信噪比S/N下的理论可靠传输上限。dB必须先换算为线性功率比；增大带宽或信噪比可提高容量，但收益并非线性无限增长。",
+        "抽样与PCM|带限信号理论上需`fs≥2fmax`避免频谱混叠，工程中还需抗混叠滤波和过渡带。PCM依次采样、量化、编码，码率=`fs×每样本位数×声道数`。",
+        "模拟与数字调制|AM把信息放在幅度包络，FM放在频率变化，通常FM抗幅度干扰更强但占带宽更大。ASK、FSK、PSK分别改变载波幅度、频率、相位，性能与带宽、同步复杂度相关。",
+        "同步与差错控制|载波同步恢复频率相位参考，位同步确定码元判决时刻，帧同步确定数据块边界。CRC主要检错，ARQ通过确认、超时和重传恢复，任何机制都不能保证绝对零错。",
+    ],
+    "信号与系统": [
+        "系统基本性质|线性用齐次性与可加性判断，时不变比较输入移位后的输出，因果性要求不依赖未来输入，BIBO稳定要求有界输入产生有界输出。这些性质必须分别判断，互不等价。",
+        "典型信号|单位冲激用于刻画系统瞬时响应，单位阶跃表示开关过程，二者满足阶跃的导数为冲激。信号的移位、反折和尺度变换要先抓住关键点再作图。",
+        "LTI与卷积|LTI系统完全由冲激响应h决定，输出`y=x*h`。卷积按翻转、平移、相乘、积分/求和进行；连续系统稳定要求h绝对可积，离散系统要求h绝对可和。",
+        "频域分析|傅里叶变换把时域卷积变为频域相乘，频率响应描述系统对不同频率正弦分量的幅度和相位作用。时移、尺度和微分性质是常用计算捷径。",
+        "拉普拉斯与Z变换|拉普拉斯变换用于连续时间系统，Z变换用于离散时间系统，系统函数与收敛域共同决定因果性和稳定性。只看代数表达式、不看ROC可能得到错误结论。",
+    ],
+    "软件工程": [
+        "软件测试|单元测试面向模块，集成测试关注接口，系统测试验证完整系统，验收测试确认用户需求。黑盒依据规格设计输入，白盒依据内部结构覆盖路径；测试能发现缺陷，不能证明绝对无缺陷。",
+        "需求工程|需求过程包括获取、分析、规格说明、确认和变更管理。需求应明确触发条件、系统行为、量化指标和异常边界；冲突要分析协商并形成可验证、可追踪记录。",
+        "维护与配置管理|维护包括纠错、适应、完善和预防。配置管理通过配置项、版本、基线、变更控制和审计保持一致性；紧急修复仍需授权、测试、回退、发布验证和留痕。",
+        "项目管理|估算、进度、成本、质量和风险相互制约。关键路径上的活动延误会直接影响总工期；风险管理包括识别、分析、应对和监控，不能等风险发生后才处理。",
+        "设计与UML|高内聚让模块职责集中，低耦合减少依赖和变更传播。用例图表达参与者与系统功能，类图表达静态结构，顺序图表达对象交互时序，图的选择取决于要表达的视角。",
+    ],
+    "信息安全": [
+        "恶意代码与社会工程|病毒依附宿主，蠕虫可自我复制传播，木马伪装合法程序或建立后门。钓鱼和社会工程利用人的信任与紧迫感，防护需结合身份核验、最小权限、补丁、终端防护和培训。",
+        "安全目标与风险|机密性防泄露，完整性防未授权篡改，可用性保证可获得，可审计性支持追责。风险由资产、威胁、脆弱性、可能性和影响共同决定，控制措施用于降低而非绝对消除风险。",
+        "网络防护|防火墙按策略控制流量，IDS侧重检测告警，IPS可在线阻断，VPN建立受保护隧道。分区隔离、最小暴露和纵深防御比单一设备更可靠，HTTPS也不自动证明业务可信。",
+        "事件响应|标准闭环为准备、发现与分析、遏制、根除、恢复和复盘。处置异常主机时要先报告记录、隔离并保全证据，不能立即格式化，以免毁证和遗漏横向影响。",
+        "身份与访问控制|认证确认主体是谁，授权决定能做什么，审计记录做了什么。最小权限、职责分离、多因素认证、定期复核和及时撤权共同降低账户滥用风险。",
+        "密码技术|对称加密速度快但密钥分发困难，非对称加密便于密钥交换和签名但开销大，哈希用于完整性摘要且不可逆，数字签名用私钥签、公开密钥验，提供完整性、身份鉴别和不可否认性。",
+    ],
+}
+
+
 def configure_console() -> None:
     for stream in (sys.stdout, sys.stderr):
         reconfigure = getattr(stream, "reconfigure", None)
@@ -398,86 +525,37 @@ def question_stats(questions: list[dict], subject: str | None) -> tuple[int, Cou
     return len(rows), Counter(q.get("knowledge_point") or "未分类" for q in rows), Counter(q.get("type") or "未知" for q in rows)
 
 
-def select_drills(questions: list[dict], subject: str | None, count: int = 2) -> list[dict]:
-    if not subject:
-        return []
-    rows = [q for q in questions if q.get("subject") == subject]
-    kp_count = Counter(q.get("knowledge_point") or "未分类" for q in rows)
-    type_rank = {"简答": 0, "填空": 1, "多选": 2, "单选": 3, "判断": 4}
-    rows.sort(key=lambda q: (-kp_count[q.get("knowledge_point") or "未分类"], type_rank.get(q.get("type"), 9), str(q.get("id", ""))))
-    chosen, seen = [], set()
-    for q in rows:
-        kp = q.get("knowledge_point") or "未分类"
-        if kp in seen:
-            continue
-        chosen.append(q)
-        seen.add(kp)
-        if len(chosen) == count:
-            break
-    return chosen
-
-
 def render_radar(total: int, kp: Counter, types: Counter, no_bank: bool) -> str:
     if no_bank:
-        return "> 本科目暂未进入题库统计。冲刺优先级按课程核心能力设置；练习后请将错因手写进个人错题清单。"
-    top = kp.most_common(5)
+        return "> 本科目暂未进入题库统计，以下顺序按知识依赖和课程核心地位排列，不虚构考频。"
+    top = kp.most_common(6)
     rows = ["| 高频知识点 | 题量 | 占本科题库 |", "|---|---:|---:|"]
     rows.extend(f"| {name} | {number} | {number / total:.1%} |" for name, number in top)
-    type_text = "、".join(f"{name}{number}题" for name, number in types.most_common())
-    return f"> 本科题库 **{total}题**；题型：{type_text}。先拿下前两项，再补第三至第五项。\n\n" + "\n".join(rows)
-
-
-def render_question(q: dict, number: int) -> str:
-    options = q.get("options") or []
-    if isinstance(options, dict):
-        option_lines = [f"{key}. {value}" for key, value in options.items()]
-    else:
-        option_lines = [str(value) for value in options]
-    option_text = "\n".join(f"   - {line}" for line in option_lines)
-    suffix = f"\n{option_text}" if option_text else ""
-    return f"{number}. 【{q.get('type', '题')}·{q.get('knowledge_point', '综合')}】{q.get('stem', '')}{suffix}"
-
-
-def render_answer(q: dict, number: int) -> str:
-    answer = q.get("answer") or ""
-    explanation = q.get("explanation") or ""
-    if explanation and explanation != answer:
-        return f"{number}. **答案：{answer}**　{explanation}"
-    return f"{number}. **答案：{answer}**"
+    return f"> 统计样本 **{total}条**。百分比用于安排临考时间，不代表正式考试的固定分值。\n\n" + "\n".join(rows)
 
 
 def build_markdown(questions: list[dict]) -> str:
-    intro = f"""# 全科临考冲刺训练包
+    intro = f"""# 全科高频考点冲刺讲义
 
-> 生成日期：{date.today().isoformat()}　　范围：{len(COURSES)}门课程　　性质：**主动输出训练，不是三色笔记摘要**
+> 生成日期：{date.today().isoformat()}　　范围：{len(COURSES)}门课程　　依据：本仓库题库共{len(questions)}条数据
 
-## 这份资料怎么用
+## 这份资料是什么
 
-冲刺阶段最值钱的动作不是继续阅读，而是把知识从脑中“提取出来”。每科严格限时12分钟：
+这是一份按本地题库知识点出现频率重新排序的**高频知识点讲义**。正文不放练习题、不设置自测题和答案区，只保留考试前最值得看的知识结论：
 
-1. **2分钟看考情雷达**：只确定先后顺序，不展开阅读。
-2. **3分钟白纸输出**：遮住资料，回答“10分钟输出清单”中的前两项。
-3. **3分钟例题变式**：先写公式、变量含义和条件，再心算微型例题。
-4. **2分钟简答口述**：按评分句说完整，不只背名词。
-5. **2分钟限时检测**：做题后到本资料末尾统一核对；错题只记“错因+正确触发词”。
+1. **考频排序**：明确每科复习优先级。
+2. **核心知识点**：直接给定义、原理、作用和边界。
+3. **易混辨析**：解决最常见的概念混淆。
+4. **公式与流程**：解释变量、适用条件和典型数量关系。
+5. **简答得分表述**：给出可以直接组织进答案的完整因果链。
 
-本训练包的结构参考了学习科学中证据较强的做法：练习测试与间隔复习、从记忆中主动提取、例题与独立解题交替，以及使用测验定位薄弱点。方法依据：[IES学习指南](https://ies.ed.gov/ncee/wwc/PracticeGuide/1)、[Cornell主动提取与模拟考试建议](https://lsc.cornell.edu/how-to-study/studying-for-and-taking-exams/what-to-do-with-practice-exams/)、[Dunlosky等人的学习技术综述](https://journals.sagepub.com/stoken/rbtfl/Z10jaVH/60XQM/full)。
+## 最后一天阅读顺序
 
-## 明日考前安排
-
-| 时段 | 任务 | 停止条件 |
+| 轮次 | 只看什么 | 目标 |
 |---|---|---|
-| 今晚第一轮（约3小时） | 16科各12分钟，完成白纸输出与题库检测 | 每科只标红1个最弱点，不扩展新资料 |
-| 今晚第二轮（60分钟） | 重做所有错题，口述16道简答模板 | 能说出“定义/机制/结果/边界”四句 |
-| 睡前（20分钟） | 只看公式变量、单位和失分警报 | 不做难偏怪题，保证睡眠 |
-| 入场前（15分钟） | 网络子网、容量换算、SQL、三大电子公式与通用简答骨架 | 看完即停，保持稳定 |
-
-## 通用得分骨架
-
-- **计算题**：已知量（统一单位）→公式→变量含义/适用条件→代入→结果单位→数量级检查。
-- **简答题**：结论先行→原理或因果链→题干情境落地→限制/例外。每个评分点单独一句。
-- **操作/排障题**：安全与备份→确认现象→从公共条件到局部逐层验证→修复→复测与留痕。
-- **选择题**：圈出“最、仅、一定、任何、完全”等绝对词；先按定义排错，再看条件边界。
+| 第一轮 | 每科考频前3项及其核心解释 | 覆盖最大概率知识面 |
+| 第二轮 | 公式、步骤、变量含义和适用边界 | 防止会背公式却不会用 |
+| 第三轮 | 易混辨析、简答表述和失分警报 | 修正概念边界与答题语言 |
 
 ## 公式与单位总闸
 
@@ -486,54 +564,24 @@ def build_markdown(questions: list[dict]) -> str:
 - `dB=10log10(功率比)`，所以线性功率比=`10^(dB/10)`；不能把30 dB直接当30代入香农公式。
 """
     parts = [intro.strip()]
-    answers: list[tuple[str, list[dict]]] = []
-    global_number = 1
     for course, subject in COURSES:
         guide = GUIDES[course]
         total, kp, types = question_stats(questions, subject)
-        drills = select_drills(questions, subject)
-        answers.append((course, drills))
-        section = [f'<div class="course-break"></div>\n\n## {course}', "\n### 1. 考情雷达", render_radar(total, kp, types, subject is None)]
-        section.extend(["\n### 2. 10分钟白纸输出清单", "\n".join(f"- [ ] {item}" for item in guide["recall"])])
-        section.extend(["\n### 3. 易混对比（先说差异维度）", "\n| 对比项 | 一句话判别 | 高频陷阱 |\n|---|---|---|\n" + "\n".join("| " + " | ".join(row.split("|")) + " |" for row in guide["compare"])])
+        section = [f'<div class="course-break"></div>\n\n## {course}', "\n### 1. 高频权重", render_radar(total, kp, types, subject is None)]
+        core_rows = []
+        for item in CORE_POINTS[course]:
+            name, explanation = item.split("|", 1)
+            core_rows.append(f"- **{name}**：{explanation}")
+        section.extend(["\n### 2. 高频核心知识点", "\n".join(core_rows)])
+        section.extend(["\n### 3. 易混知识边界", "\n| 对比项 | 核心区别 | 易错边界 |\n|---|---|---|\n" + "\n".join("| " + " | ".join(row.split("|")) + " |" for row in guide["compare"])])
         routine_rows = []
         for row in guide["routine"]:
             name, method, meaning, example = row.split("|")
             routine_rows.append(f"| {name} | {method} | {meaning} | {example} |")
-        section.extend(["\n### 4. 得分套路：含义—条件—微型例题", "\n| 任务 | 公式/步骤 | 含义与边界 | 立即检验 |\n|---|---|---|---|\n" + "\n".join(routine_rows)])
-        section.extend(["\n### 5. 高频简答：30秒说出评分句", f"> **题目：** {guide['short'].split('评分句：')[0].strip()}\n>\n> **评分句：** {guide['short'].split('评分句：', 1)[1].strip()}"])
+        section.extend(["\n### 4. 高频公式、操作与流程", "\n| 知识点 | 公式或步骤 | 含义与适用边界 | 典型关系 |\n|---|---|---|---|\n" + "\n".join(routine_rows)])
+        section.extend(["\n### 5. 常见简答得分表述", f"> {guide['short'].split('评分句：', 1)[1].strip()}"])
         section.extend(["\n### 6. 最后失分警报", "\n".join(f"- ⚠ {item}" for item in guide["alerts"])])
-        section.append("\n### 7. 题库限时检测（答案在文末）")
-        if drills:
-            rendered = []
-            for q in drills:
-                rendered.append(render_question(q, global_number))
-                global_number += 1
-            section.append("\n\n".join(rendered))
-        else:
-            section.append("1. 【输出题】给定一个系统，分别用反例或判据检查线性、时不变、因果和稳定，并写出卷积输出表达式。")
         parts.append("\n".join(section))
-
-    parts.append('<div class="course-break"></div>\n\n## 题库限时检测答案与错因登记')
-    number = 1
-    for course, drills in answers:
-        parts.append(f"### {course}")
-        if not drills:
-            parts.append("1. **自评要点：** 线性用叠加性；时不变用输入移位与输出移位比较；因果看是否依赖未来输入；LTI稳定看冲激响应是否绝对可积/可和；输出为 `y=x*h`。")
-            continue
-        for q in drills:
-            parts.append(render_answer(q, number))
-            number += 1
-    parts.append("""## 最后一页：错因只记这一行
-
-| 科目/题号 | 我的错误触发词 | 正确规则（不超过20字） | 明早是否会做 |
-|---|---|---|---|
-|  |  |  | □ |
-|  |  |  | □ |
-|  |  |  | □ |
-|  |  |  | □ |
-
-> 到此停止扩展。剩余时间优先睡眠、饮水、准备证件与考试用品。""")
     return "\n\n".join(parts).strip() + "\n"
 
 
@@ -563,7 +611,7 @@ a { color: #145a83; text-decoration: none; }
 
 def build_html(markdown_text: str) -> str:
     body = markdown.Markdown(extensions=("extra", "sane_lists", "toc")).convert(markdown_text)
-    return f'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全科临考冲刺训练包</title><style>{CSS}</style></head><body>{body}</body></html>'
+    return f'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全科高频考点冲刺讲义</title><style>{CSS}</style></head><body>{body}</body></html>'
 
 
 def find_browser() -> Path:
@@ -595,20 +643,20 @@ def print_pdf(browser: Path, html_path: Path, pdf_path: Path) -> None:
 
 def main() -> int:
     configure_console()
-    parser = argparse.ArgumentParser(description="生成题库驱动的全科临考冲刺训练包")
+    parser = argparse.ArgumentParser(description="生成题库考频驱动的全科高频考点讲义")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
-    markdown_path = output_dir / "全科临考冲刺训练包.md"
-    html_path = output_dir / "全科临考冲刺训练包.html"
-    pdf_path = output_dir / "全科临考冲刺训练包.pdf"
+    markdown_path = output_dir / "全科高频考点冲刺讲义.md"
+    html_path = output_dir / "全科高频考点冲刺讲义.html"
+    pdf_path = output_dir / "全科高频考点冲刺讲义.pdf"
     text = build_markdown(load_questions())
     markdown_path.write_text(text, encoding="utf-8", newline="\n")
     html_path.write_text(build_html(text), encoding="utf-8", newline="\n")
     print_pdf(find_browser(), html_path, pdf_path)
     print(f"已生成：{pdf_path}")
-    print(f"结构：题库考频 + 白纸提取 + 易混对比 + 例题变式 + 简答评分句 + 限时检测")
+    print(f"结构：题库考频 + 高频知识解释 + 易混边界 + 公式流程 + 简答表述")
     print(f"科目数：{len(COURSES)}；PDF大小：{pdf_path.stat().st_size / 1024:.1f} KB")
     return 0
 

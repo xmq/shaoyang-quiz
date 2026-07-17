@@ -1,0 +1,2008 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全科高频考点冲刺讲义</title><style>
+@page { size: A4; margin: 14mm 14mm 16mm; }
+* { box-sizing: border-box; }
+html { color: #182230; background: #fff; }
+body { max-width: 182mm; margin: 0 auto; font: 9.5pt/1.52 "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1, h2, h3 { color: #123b63; page-break-after: avoid; }
+h1 { margin: 0 0 5mm; padding-bottom: 3mm; border-bottom: 2px solid #176b87; font-size: 22pt; }
+h2 { margin: 6mm 0 3mm; padding: 2mm 3mm; border-left: 4px solid #1d7797; background: #eaf5f8; font-size: 15pt; }
+h3 { margin: 4mm 0 2mm; font-size: 11.5pt; }
+p { margin: 0 0 2mm; }
+ul, ol { margin: 1mm 0 2.5mm; padding-left: 6mm; }
+li { margin: 1mm 0; }
+strong { color: #0d3858; }
+code { padding: .2mm .8mm; border: 1px solid #d4e1e6; border-radius: 3px; background: #f3f7f9; color: #8b3024; font: .92em Consolas, "Microsoft YaHei", monospace; }
+blockquote { margin: 2.5mm 0; padding: 2.2mm 3.5mm; border-left: 4px solid #d28a1d; background: #fff7e7; color: #463714; }
+table { width: 100%; border-collapse: collapse; margin: 2.5mm 0; font-size: 8.5pt; }
+th, td { padding: 1.6mm; border: 1px solid #ccd9df; vertical-align: top; }
+th { background: #e7f2f6; color: #153d59; }
+.course-break { break-before: page; page-break-before: always; }
+a { color: #145a83; text-decoration: none; }
+@media print { h1, h2, h3, blockquote, pre, table { break-inside: avoid; } p, li { orphans: 2; widows: 2; } }
+</style></head><body><h1 id="_1">全科高频考点冲刺讲义</h1>
+<blockquote>
+<p>生成日期：2026-07-17　　范围：16门课程　　依据：本仓库题库共2531条数据</p>
+</blockquote>
+<h2 id="_2">这份资料是什么</h2>
+<p>这是一份按本地题库知识点出现频率重新排序的<strong>高频知识点讲义</strong>。正文不放练习题、不设置自测题和答案区，只保留考试前最值得看的知识结论：</p>
+<ol>
+<li><strong>考频排序</strong>：明确每科复习优先级。</li>
+<li><strong>核心知识点</strong>：直接给定义、原理、作用和边界。</li>
+<li><strong>易混辨析</strong>：解决最常见的概念混淆。</li>
+<li><strong>公式与流程</strong>：解释变量、适用条件和典型数量关系。</li>
+<li><strong>简答得分表述</strong>：给出可以直接组织进答案的完整因果链。</li>
+</ol>
+<h2 id="_3">最后一天阅读顺序</h2>
+<table>
+<thead>
+<tr>
+<th>轮次</th>
+<th>只看什么</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一轮</td>
+<td>每科考频前3项及其核心解释</td>
+<td>覆盖最大概率知识面</td>
+</tr>
+<tr>
+<td>第二轮</td>
+<td>公式、步骤、变量含义和适用边界</td>
+<td>防止会背公式却不会用</td>
+</tr>
+<tr>
+<td>第三轮</td>
+<td>易混辨析、简答表述和失分警报</td>
+<td>修正概念边界与答题语言</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">公式与单位总闸</h2>
+<ul>
+<li><code>1 Byte=8 bit</code>；通信速率通常按1000进位，存储容量题按题干决定1000或1024进位。</li>
+<li><code>k=10³，M=10⁶，m=10⁻³，μ=10⁻⁶，n=10⁻⁹</code>。代入前统一到基本单位。</li>
+<li><code>dB=10log10(功率比)</code>，所以线性功率比=<code>10^(dB/10)</code>；不能把30 dB直接当30代入香农公式。</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="office">Office软件操作</h2>
+<h3 id="1">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>383条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Word文字与段落</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">24.0%</td>
+</tr>
+<tr>
+<td>Excel工作簿基础</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">20.4%</td>
+</tr>
+<tr>
+<td>PowerPoint演示</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">14.4%</td>
+</tr>
+<tr>
+<td>Excel公式与引用</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">12.0%</td>
+</tr>
+<tr>
+<td>Excel数据分析</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">11.0%</td>
+</tr>
+<tr>
+<td>办公文件与协作</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">9.9%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2">2. 高频核心知识点</h3>
+<ul>
+<li><strong>Word文字与段落</strong>：高频集中在字符与段落格式、查找替换、项目符号、边框底纹。段落格式作用于整段，字符格式只作用于选中文字；稳定排版应优先修改样式，避免逐处手工设置。</li>
+<li><strong>Excel工作簿基础</strong>：工作簿包含工作表，单元格地址由列标和行号组成。输入、填充、复制、选择性粘贴、行列隐藏及冻结窗格是基础操作；数字被存成文本时，排序、计算和查找都可能异常。</li>
+<li><strong>PowerPoint演示</strong>：母版统一全局版式，主题统一颜色和字体，版式决定占位符结构。动画作用于页内对象，切换作用于幻灯片之间；演示文稿应突出层级和可读性，避免把正文堆成大段文字。</li>
+<li><strong>Excel公式与引用</strong>：公式以等号开始；相对引用随复制改变，绝对引用<code>$A$1</code>行列均锁定，混合引用只锁一维。函数题先判断任务属于统计、求和、判断还是查找，再检查区域尺寸与数据类型。</li>
+<li><strong>Excel数据分析</strong>：排序改变记录顺序，筛选隐藏不符合条件的记录，分类汇总要求先按分类字段排序，数据透视表用于多维汇总。图表类型必须匹配目的：趋势用折线、类别比较用柱形、构成比例谨慎用饼图。</li>
+<li><strong>Word长文档与协作</strong>：标题样式是目录、导航和多级编号的基础；分节符用于局部页面方向、页眉页脚或页码体系。协作修改应使用修订、批注、接受/拒绝和版本备份形成闭环。</li>
+</ul>
+<h3 id="3">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分页符 vs 分节符</td>
+<td>分页符只换页；分节符还能改变页边距、方向、页眉页脚和页码体系</td>
+<td>题目出现‘本页横向/重新编号’优先分节</td>
+</tr>
+<tr>
+<td>VLOOKUP精确匹配 vs 近似匹配</td>
+<td>FALSE/0要求完全相等；TRUE/1要求首列有序并做区间定位</td>
+<td>学号、身份证号通常精确匹配</td>
+</tr>
+<tr>
+<td>嵌入对象 vs 链接对象</td>
+<td>嵌入便携但文件大；链接可随源更新但路径失效会断链</td>
+<td>跨电脑提交优先考虑嵌入或同时打包源文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>条件统计</td>
+<td>COUNTIF/COUNTIFS按一个/多个条件计数</td>
+<td>条件区域与统计区域尺寸必须一致</td>
+<td>统计A班且成绩≥60：COUNTIFS(班级列,"A班",成绩列,"&gt;=60")</td>
+</tr>
+<tr>
+<td>条件求和</td>
+<td>SUMIF/SUMIFS对满足条件的数值求和</td>
+<td>SUMIFS先写求和区域，再写条件区域与条件</td>
+<td>统计一组销售额：SUMIFS(金额列,组别列,"一组")</td>
+</tr>
+<tr>
+<td>查找防错</td>
+<td>精确查找并用IFERROR处理未找到</td>
+<td>查找键格式要一致，数字文本混用会失败</td>
+<td>IFERROR(VLOOKUP(A2,表,3,0),"未找到")</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5">5. 常见简答得分表述</h3>
+<blockquote>
+<p>先清洗并用公式/透视表汇总，再选与任务匹配的图表并核验口径，最后在文字处理器中排版；嵌入便携、链接便于更新但依赖源路径。</p>
+</blockquote>
+<h3 id="6">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 合并单元格会妨碍排序、筛选和透视分析</li>
+<li>⚠ 目录不手敲页码，先用标题样式再自动生成</li>
+<li>⚠ 公式结果异常先查括号、引用方式、数据类型和隐藏空格</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_5">信息技术与教学论</h2>
+<h3 id="1_1">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>99条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信息技术课程素养</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">33.3%</td>
+</tr>
+<tr>
+<td>教学评价</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">32.3%</td>
+</tr>
+<tr>
+<td>教学目标与设计</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">17.2%</td>
+</tr>
+<tr>
+<td>教学媒体与整合</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7.1%</td>
+</tr>
+<tr>
+<td>教学方法</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7.1%</td>
+</tr>
+<tr>
+<td>学习理论</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3.0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_1">2. 高频核心知识点</h3>
+<ul>
+<li><strong>信息技术学科核心素养</strong>：重点不是记软件按钮，而是信息意识、计算思维、数字化学习与创新、信息社会责任在任务中的体现。答题要把素养落到可观察行为，例如分析数据、抽象问题、选择工具、合规使用信息。</li>
+<li><strong>教学评价</strong>：形成性评价服务于过程诊断和改进，总结性评价判断阶段达成水平。评价任务必须与目标层次一致：操作目标要用真实操作证据，问题解决目标要用新情境任务，不能只靠概念选择题。</li>
+<li><strong>教学目标与设计</strong>：目标应包含对象、可观察行为、条件和达标标准；“了解、掌握”难以直接测量。教学活动、资源、评价都应围绕目标对齐，形成导入、示范、练习、反馈、迁移和评价闭环。</li>
+<li><strong>教学媒体与整合</strong>：媒体的价值取决于是否降低无关负荷、呈现关键过程并支持互动反馈，而不取决于技术是否新颖。选择媒体要考虑内容特征、学习者基础、环境条件和可访问性。</li>
+<li><strong>教学方法与学习理论</strong>：任务驱动、项目学习、合作学习等方法要与目标和学情匹配。连续讲授容易造成工作记忆超载，应采用分段、示例、即时练习、支架和逐步撤除支架促进迁移。</li>
+</ul>
+<h3 id="3_1">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>形成性评价 vs 总结性评价</td>
+<td>前者在学习过程中诊断并改进；后者在阶段结束判断达成度</td>
+<td>课堂练习反馈不是为了最终排名</td>
+</tr>
+<tr>
+<td>教师演示 vs 学生实操</td>
+<td>演示降低初学负担并呈现过程；实操提供可观察的技能证据</td>
+<td>会复述步骤不等于能完成操作</td>
+</tr>
+<tr>
+<td>教学目标 vs 教学活动</td>
+<td>目标描述最终可观察表现；活动是达到目标的手段</td>
+<td>‘观看视频’通常是活动而非学习结果</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_1">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标改写</td>
+<td>对象+可观察行为+条件+达标标准</td>
+<td>避免‘了解、掌握’等不可直接测量词</td>
+<td>给定表格，3分钟内正确筛出两个条件且结果无误</td>
+</tr>
+<tr>
+<td>评价对齐</td>
+<td>目标→任务→证据→反馈</td>
+<td>考核层次不得低于目标层次</td>
+<td>目标是排错，评价就应让学生实际诊断故障</td>
+</tr>
+<tr>
+<td>讲解降负荷</td>
+<td>分段示范+即时练习+逐步撤除支架</td>
+<td>材料越多不等于认知越深</td>
+<td>演示两步后暂停，让学生复现并解释理由</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_1">5. 常见简答得分表述</h3>
+<blockquote>
+<p>工作记忆容量有限，连续信息易造成认知超载；应分段演示、紧接操作、提供步骤支架和即时反馈，最后用新情境任务检验迁移。</p>
+</blockquote>
+<h3 id="6_1">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 媒体新颖不等于教学有效，必须服务目标</li>
+<li>⚠ 只考概念不能证明操作技能达成</li>
+<li>⚠ 评价标准应在任务前明确且可观察</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_6">多媒体技术</h2>
+<h3 id="1_2">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>227条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图形图像</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">50.7%</td>
+</tr>
+<tr>
+<td>音频数字化</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">24.2%</td>
+</tr>
+<tr>
+<td>动画与视频</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">14.5%</td>
+</tr>
+<tr>
+<td>多媒体系统与应用</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">7.9%</td>
+</tr>
+<tr>
+<td>多媒体压缩与容量</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2.6%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_2">2. 高频核心知识点</h3>
+<ul>
+<li><strong>图形图像</strong>：位图以像素表示，适合照片；矢量图以几何对象表示，适合标志和线稿。分辨率决定像素数量，色深决定每像素可表示的颜色级数；未压缩容量约为宽×高×色深÷8。</li>
+<li><strong>音频数字化</strong>：声音经换能、放大和抗混叠滤波后，依次采样、量化、编码。采样率决定时间分辨率和可表示最高频率，量化位数决定幅度级数和量化误差；无压缩码率=采样率×位数×声道数。</li>
+<li><strong>动画与视频</strong>：帧率影响运动连续性，分辨率影响空间细节，码率影响单位时间数据量。视频文件容量通常按总码率×时间÷8计算；题目已给码率时不能再乘分辨率和帧率。</li>
+<li><strong>多媒体系统与应用</strong>：完整链路包括采集、处理、存储、传输和呈现。格式是封装容器，编码是音视频压缩方式，二者不能混为一谈；播放兼容性同时受容器、编码器和终端能力影响。</li>
+<li><strong>压缩与容量</strong>：无损压缩可完全恢复，适合源文件、文字和图表；有损压缩舍弃感知次要信息，压缩率高，适合照片、音频和视频发布。容量计算必须先统一bit/Byte及1000/1024口径。</li>
+</ul>
+<h3 id="3_2">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位图 vs 矢量图</td>
+<td>位图由像素构成，适合照片；矢量由几何描述，适合标志和线稿</td>
+<td>位图放大会像素化，矢量复杂效果不一定占优</td>
+</tr>
+<tr>
+<td>有损 vs 无损压缩</td>
+<td>有损舍弃感知次要信息、压缩率高；无损可完全还原</td>
+<td>归档源文件、文字图表优先无损</td>
+</tr>
+<tr>
+<td>采样率 vs 量化位数</td>
+<td>采样率决定时间分辨率和可表示最高频率；位数决定幅度级数和量化噪声</td>
+<td>二者都会增加码率但作用不同</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_2">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无压缩音频容量</td>
+<td>采样率×量化位数×声道数×时间÷8</td>
+<td>前三项得到bit/s，除8才是Byte</td>
+<td>44.1kHz、16bit、双声道、10s≈1.764MB</td>
+</tr>
+<tr>
+<td>位图容量</td>
+<td>宽×高×色深÷8</td>
+<td>未计压缩、文件头和调色板</td>
+<td>1920×1080×24bit≈5.93MiB</td>
+</tr>
+<tr>
+<td>压缩视频容量</td>
+<td>码率×时间÷8</td>
+<td>已有总码率时不能再乘分辨率与帧率</td>
+<td>2Mbit/s×60s÷8=15MB（十进制）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_2">5. 常见简答得分表述</h3>
+<blockquote>
+<p>麦克风将声波变为模拟电信号，经放大与抗混叠滤波后由ADC采样、量化、编码；采样使时间离散，量化使幅度离散，编码把量化结果表示为二进制。</p>
+</blockquote>
+<h3 id="6_2">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 题目给出码率后不要再乘分辨率/帧率</li>
+<li>⚠ 存储容量与通信速率的1000/1024口径以题干为准</li>
+<li>⚠ PNG无损不等于任何图都比JPEG小</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_7">操作系统原理</h2>
+<h3 id="1_3">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>190条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows系统操作</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">47.4%</td>
+</tr>
+<tr>
+<td>进程与线程</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">20.0%</td>
+</tr>
+<tr>
+<td>操作系统基础</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">12.6%</td>
+</tr>
+<tr>
+<td>进程调度与同步</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">6.3%</td>
+</tr>
+<tr>
+<td>内存与虚拟存储</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5.8%</td>
+</tr>
+<tr>
+<td>文件系统</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4.2%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_3">2. 高频核心知识点</h3>
+<ul>
+<li><strong>Windows系统操作</strong>：文件路径、扩展名、权限、快捷方式、任务管理和系统设置是常考操作。快捷方式删除不等于源文件删除；文件能看见不代表有修改权限；故障定位应先确认路径、权限、占用进程和默认程序。</li>
+<li><strong>进程与线程</strong>：程序是静态指令集合，进程是资源分配和保护单位，线程是CPU调度执行单位。同一进程的线程共享地址空间和打开文件，但各有寄存器现场与栈，因此切换较轻而并发访问需要同步。</li>
+<li><strong>操作系统基础</strong>：操作系统负责处理机、存储器、设备和文件管理，并向应用提供抽象接口。内核态可执行特权操作，用户态受保护；系统调用是应用请求内核服务的受控入口。</li>
+<li><strong>调度、同步与死锁</strong>：调度题要区分到达、运行、等待、完成时间；同步约束先后关系，互斥保护临界区。死锁需同时满足互斥、占有且等待、不可剥夺和循环等待，预防就是破坏至少一个必要条件。</li>
+<li><strong>内存与虚拟存储</strong>：分页把虚拟页映射到物理页框，TLB缓存地址转换，缺页时由操作系统调页并可能置换。页面频繁换入换出会形成抖动；分页常有内部碎片，分段更符合逻辑但易产生外部碎片。</li>
+<li><strong>文件系统</strong>：目录组织名字到文件的映射，文件控制信息记录位置、大小和权限。连续、链接和索引分配在随机访问、空间利用和扩展性上各有取舍；删除目录项与数据块真正覆盖不是一回事。</li>
+</ul>
+<h3 id="3_3">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>程序 vs 进程 vs 线程</td>
+<td>程序是静态指令；进程是资源分配/保护单位；线程是CPU调度执行单位</td>
+<td>同进程线程共享地址空间但各有栈和寄存器现场</td>
+</tr>
+<tr>
+<td>互斥 vs 同步</td>
+<td>互斥防止同时进入临界区；同步约束先后次序或资源数量</td>
+<td>仅加锁不一定表达‘有数据才能消费’</td>
+</tr>
+<tr>
+<td>分页 vs 分段</td>
+<td>分页固定大小、利于物理管理；分段按逻辑意义、长度可变</td>
+<td>分页有内部碎片，分段易产生外部碎片</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_3">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU调度判断</td>
+<td>先画到达时间轴和就绪队列，再按算法选进程</td>
+<td>周转时间=完成-到达，等待=周转-运行</td>
+<td>抢占式算法每逢新进程到达都要重新比较</td>
+</tr>
+<tr>
+<td>页面置换</td>
+<td>按访问串逐次维护页框并标记缺页</td>
+<td>FIFO淘汰最早进入；LRU淘汰最久未用</td>
+<td>先填空页框，满后才发生置换</td>
+</tr>
+<tr>
+<td>并发故障闭环</td>
+<td>找共享数据→标临界区→选互斥/同步工具→检查粒度与死锁</td>
+<td>原子性要覆盖完整业务不变量</td>
+<td>库存检查和扣减应作为一个受控操作</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_3">5. 常见简答得分表述</h3>
+<blockquote>
+<p>读—改—写不是原子操作，交错执行会产生竞态或丢失更新；应把检查和扣减作为临界区，用互斥锁/原子操作保护，并在业务层保证请求幂等。</p>
+</blockquote>
+<h3 id="6_3">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 阻塞进程得到资源后先进入就绪态，不直接进入运行态</li>
+<li>⚠ 死锁与饥饿不同：前者循环等待，后者长期得不到调度</li>
+<li>⚠ 线程切换较轻但不是零开销</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_8">数据库技术</h2>
+<h3 id="1_4">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>136条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL查询</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">29.4%</td>
+</tr>
+<tr>
+<td>数据库系统基础</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">27.9%</td>
+</tr>
+<tr>
+<td>关系模型与代数</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">24.3%</td>
+</tr>
+<tr>
+<td>事务与并发控制</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">9.6%</td>
+</tr>
+<tr>
+<td>数据库设计</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4.4%</td>
+</tr>
+<tr>
+<td>数据库规范化</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2.9%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_4">2. 高频核心知识点</h3>
+<ul>
+<li><strong>SQL查询</strong>：基本逻辑顺序是FROM/连接→WHERE筛行→GROUP BY分组→HAVING筛组→SELECT投影→ORDER BY排序。聚合条件通常放HAVING；<code>COUNT(*)</code>计行，<code>COUNT(列)</code>忽略NULL。</li>
+<li><strong>数据库系统基础</strong>：数据库系统由数据、DBMS、应用和人员组成，DBMS负责定义、操纵、控制和维护数据。三级模式与两级映像提供逻辑、物理数据独立性，使存储变化尽量不影响应用。</li>
+<li><strong>关系模型与代数</strong>：关系可看作满足约束的二维表，元组是行，属性是列。选择筛行、投影选列、连接按条件组合关系；主键唯一且非空，外键维护参照完整性。</li>
+<li><strong>事务与并发控制</strong>：ACID分别是原子性、一致性、隔离性和持久性。并发可能导致丢失更新、脏读、不可重复读和幻读；应通过事务、隔离级别、锁或版本控制保证业务不变量。</li>
+<li><strong>数据库设计与规范化</strong>：设计流程由需求分析到概念、逻辑和物理设计。1NF要求原子属性，2NF消除对组合键的部分依赖，3NF消除非主属性对键的传递依赖，目标是减少插入、删除和更新异常。</li>
+</ul>
+<h3 id="3_4">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WHERE vs HAVING</td>
+<td>WHERE在分组前筛行；HAVING在分组后筛组</td>
+<td>聚合条件通常放HAVING</td>
+</tr>
+<tr>
+<td>主键 vs 外键 vs 唯一约束</td>
+<td>主键唯一且非空标识本表行；外键引用他表键；唯一约束限制重复</td>
+<td>外键可以重复，是否为空取决于约束</td>
+</tr>
+<tr>
+<td>B+树索引 vs 哈希索引</td>
+<td>B+树支持等值、范围和排序；哈希擅长等值</td>
+<td>索引加速读但增加空间与写维护成本</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_4">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分组查询</td>
+<td>先确定分组粒度，再确定聚合指标和组后条件</td>
+<td>SELECT中的非聚合列通常必须在GROUP BY中</td>
+<td>按班级统计平均分并筛平均≥80</td>
+</tr>
+<tr>
+<td>连接判断</td>
+<td>先写关联键，再判断是否保留未匹配行</td>
+<td>INNER只保留匹配；LEFT保留左表全部</td>
+<td>查所有学生含无成绩者用LEFT JOIN</td>
+</tr>
+<tr>
+<td>并发更新</td>
+<td>事务包裹读取与修改，使用锁或单条原子UPDATE</td>
+<td>TCP可靠不等于事务隔离</td>
+<td>UPDATE stock SET n=n-1 WHERE n&gt;0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_4">5. 常见简答得分表述</h3>
+<blockquote>
+<p>两个事务读到相同旧值后分别写回，其中一次结果被覆盖；应使用合适隔离级别、行锁/乐观版本号，或把修改写成带条件的原子UPDATE。</p>
+</blockquote>
+<h3 id="6_4">6. 最后失分警报</h3>
+<ul>
+<li>⚠ COUNT(*)计行，COUNT(列)忽略NULL</li>
+<li>⚠ NULL不能用=比较，应使用IS NULL</li>
+<li>⚠ 规范化减少异常，但查询性能需求可能要求受控反规范化</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_9">数据结构与算法</h2>
+<h3 id="1_5">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>栈与队列</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">25.3%</td>
+</tr>
+<tr>
+<td>图结构与算法</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">21.3%</td>
+</tr>
+<tr>
+<td>树与二叉树</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">18.7%</td>
+</tr>
+<tr>
+<td>数据结构基础</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9.3%</td>
+</tr>
+<tr>
+<td>排序算法</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9.3%</td>
+</tr>
+<tr>
+<td>查找与散列</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6.7%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_5">2. 高频核心知识点</h3>
+<ul>
+<li><strong>栈、队列与优先队列</strong>：栈后进先出，适合调用、括号匹配和回溯；队列先进先出，适合缓冲和广度优先搜索；优先队列按关键字出队，通常用堆实现，同优先级若需FIFO要加入到达序。</li>
+<li><strong>图</strong>：邻接矩阵查边快但空间O(V²)，适合稠密图；邻接表空间O(V+E)，适合稀疏图和遍历邻居。BFS用队列并能求无权图最短边数，DFS用栈/递归，适合连通性和回溯。</li>
+<li><strong>树</strong>：二叉搜索树满足左小右大，平均查找高效但可能退化；堆只保证父子优先关系，不保证全局有序；B+树扇出大、层数低且叶结点有序，适合磁盘索引和范围查询。</li>
+<li><strong>排序</strong>：排序题重点看时间复杂度、额外空间和稳定性。插入、冒泡通常稳定；选择、快速、堆通常不稳定；归并稳定且O(nlogn)但需额外空间，快速排序平均O(nlogn)、最坏O(n²)。</li>
+<li><strong>查找与散列</strong>：二分查找要求有序且支持高效随机访问，复杂度O(logn)。散列平均查找接近O(1)，但冲突不可避免，可用开放定址或链地址处理，性能取决于装载因子和散列函数。</li>
+<li><strong>复杂度</strong>：渐进复杂度只保留增长最快项并忽略常数。连续语句取最大量级，嵌套循环通常相乘但必须结合边界求和；对数复杂度常来自每轮把问题规模按比例缩小。</li>
+</ul>
+<h3 id="3_5">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>栈 vs 队列 vs 优先队列</td>
+<td>LIFO；FIFO；按优先级出队</td>
+<td>紧急任务同优先级还需加入到达序保持FIFO</td>
+</tr>
+<tr>
+<td>BFS vs DFS</td>
+<td>BFS逐层、无权图可求最短边数；DFS沿路深入、适合遍历/回溯</td>
+<td>复杂度都通常为O(V+E)</td>
+</tr>
+<tr>
+<td>稳定排序 vs 不稳定排序</td>
+<td>相等关键字相对次序是否保持</td>
+<td>多字段分步排序时稳定性有实际意义</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_5">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复杂度计数</td>
+<td>只保留增长最快项并忽略常数</td>
+<td>嵌套循环不能仅看层数，要看边界</td>
+<td>Σ(i=1..n)i=n(n+1)/2，所以O(n²)</td>
+</tr>
+<tr>
+<td>二分查找</td>
+<td>先确认有序，再维护闭区间或半开区间不变量</td>
+<td>每次规模约减半，O(log n)</td>
+<td>mid应避免边界更新不前进</td>
+</tr>
+<tr>
+<td>图存储选择</td>
+<td>稠密/频繁查边选邻接矩阵；稀疏/遍历邻居选邻接表</td>
+<td>矩阵空间O(V²)，表O(V+E)</td>
+<td>社交网络通常稀疏，优先邻接表</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_5">5. 常见简答得分表述</h3>
+<blockquote>
+<p>顺序处理用队列维持FIFO，编号定位另建哈希表；新增同时入队并建索引，完成后出队并删索引，注意一致性和哈希冲突。</p>
+</blockquote>
+<h3 id="6_5">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 堆只保证父子次序，不保证全局有序</li>
+<li>⚠ 二分查找前提是可随机访问的有序序列</li>
+<li>⚠ 哈希平均O(1)不等于最坏O(1)</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_10">编程语言</h2>
+<h3 id="1_6">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>124条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>程序设计基础</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">53.2%</td>
+</tr>
+<tr>
+<td>C指针与内存</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">10.5%</td>
+</tr>
+<tr>
+<td>程序控制结构</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9.7%</td>
+</tr>
+<tr>
+<td>Python数据类型</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8.1%</td>
+</tr>
+<tr>
+<td>C数组与字符串</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7.3%</td>
+</tr>
+<tr>
+<td>C函数与作用域</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">6.5%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_6">2. 高频核心知识点</h3>
+<ul>
+<li><strong>程序设计基础</strong>：变量、数据类型、表达式、分支、循环和函数构成程序主干。代码题应按语言规则逐行跟踪初值、条件、更新和输出，重点检查整除、类型转换、短路求值及循环差一错误。</li>
+<li><strong>C指针与内存</strong>：指针保存地址，<code>*</code>用于间接访问，<code>&amp;</code>取得地址。数组名在多数表达式中退化为首元素指针但并非可修改指针；动态内存要成对申请释放，避免越界、空指针、泄漏和悬空指针。</li>
+<li><strong>控制结构</strong>：分支由条件决定路径，循环由初始化、条件和更新构成。<code>break</code>退出当前循环，<code>continue</code>跳过本轮剩余语句；分析嵌套结构必须明确它作用于哪一层。</li>
+<li><strong>Python数据类型</strong>：数字、字符串、元组通常不可变，列表、字典和集合可变。赋值复制引用而非对象内容，浅拷贝仍共享嵌套对象；集合去重且无稳定位置索引，字典按键访问。</li>
+<li><strong>C数组、字符串与函数</strong>：C数组长度固定且不做运行时越界保护；字符串以<code> </code>结束，缓冲区必须预留终止符。函数参数按值传递，若需修改调用方对象可传地址，同时注意局部变量生命周期和作用域。</li>
+<li><strong>文件与异常</strong>：持久化流程包括选择模式、打开检查、读写、错误处理和可靠关闭。<code>w</code>模式会截断旧文件，追加用<code>a</code>；Python用<code>with</code>保证关闭，C应检查<code>FILE*</code>并调用<code>fclose</code>。</li>
+</ul>
+<h3 id="3_6">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编译错误 vs 运行错误 vs 逻辑错误</td>
+<td>分别在翻译、执行、结果语义阶段暴露</td>
+<td>测试主要发现后两类，编译通过不代表正确</td>
+</tr>
+<tr>
+<td>C数组 vs Python列表</td>
+<td>C数组元素类型和长度更固定、需管边界；列表动态且存对象引用</td>
+<td>Python方便不代表没有索引越界</td>
+</tr>
+<tr>
+<td>浅拷贝 vs 深拷贝</td>
+<td>浅拷贝共享嵌套对象；深拷贝递归复制</td>
+<td>修改嵌套元素时差异最明显</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_6">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代码跟踪</td>
+<td>列出输入、变量初值、每轮变化、终止条件、输出</td>
+<td>短路求值和自增位置要单独标记</td>
+<td>循环题至少手算0次、1次和边界次数</td>
+</tr>
+<tr>
+<td>递归分析</td>
+<td>写终止条件、规模缩小、返回组合</td>
+<td>无终止或规模不缩小会无限递归</td>
+<td>阶乘：n=0返回1，否则n×f(n-1)</td>
+</tr>
+<tr>
+<td>文件持久化</td>
+<td>选择模式→检查打开→读写→处理失败→可靠关闭</td>
+<td>w模式会截断旧内容</td>
+<td>Python用with，C检查FILE*并fclose</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_6">5. 常见简答得分表述</h3>
+<blockquote>
+<p>先确定语言语义和输入类型，建立变量跟踪表，逐次判断条件与更新，检查0次/边界/终止情况，最后核对输出；C还要查整除、越界和指针，Python要查缩进、可变对象与类型。</p>
+</blockquote>
+<h3 id="6_6">6. 最后失分警报</h3>
+<ul>
+<li>⚠ C整数相除会截断，除数不能为0</li>
+<li>⚠ 赋值=与比较==不要混淆</li>
+<li>⚠ 循环边界重点查&lt;与&lt;=造成的差一错误</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_11">计算机组成原理</h2>
+<h3 id="1_7">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指令系统与CPU</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">61.3%</td>
+</tr>
+<tr>
+<td>存储层次与Cache</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">17.3%</td>
+</tr>
+<tr>
+<td>数据表示与运算</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6.7%</td>
+</tr>
+<tr>
+<td>计算机组成基础</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6.7%</td>
+</tr>
+<tr>
+<td>总线与I/O</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+<tr>
+<td>流水线</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2.7%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_7">2. 高频核心知识点</h3>
+<ul>
+<li><strong>指令系统与CPU</strong>：指令由操作码和地址字段组成，CPU按取指、译码、取数、执行、写回循环工作。控制器产生控制信号，运算器完成算术逻辑运算，寄存器保存高速临时数据。</li>
+<li><strong>存储层次与Cache</strong>：寄存器、Cache、主存、外存按速度下降而容量上升排列。Cache利用时间和空间局部性缓存主存块；映射方式在冲突率、硬件复杂度和替换灵活性之间权衡。</li>
+<li><strong>数据表示</strong>：补码把符号与数值统一参与加法，定长整数范围由位数决定；同号相加得异号表示有符号溢出。浮点数由符号、阶码和尾数组成，存在范围、精度与舍入误差。</li>
+<li><strong>总线与I/O</strong>：总线由数据、地址和控制信号构成。程序查询简单但浪费CPU，中断在事件到来时服务，DMA适合成块高速传输；DMA仍需CPU初始化并处理完成状态。</li>
+<li><strong>流水线与性能</strong>：流水线重叠指令阶段以提高吞吐率，结构、数据和控制相关会造成停顿。CPU时间=<code>IC×CPI/f</code>，提高主频不一定同比提速，因为指令数、CPI、访存和功耗也会变化。</li>
+</ul>
+<h3 id="3_7">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache vs TLB</td>
+<td>Cache缓存主存数据块；TLB缓存页表项/地址转换</td>
+<td>TLB未命中不必然缺页，可继续查页表</td>
+</tr>
+<tr>
+<td>中断I/O vs DMA</td>
+<td>中断适合事件/中小传输，由CPU参与；DMA适合成块高速传输，只在启动/完成等时刻打扰CPU</td>
+<td>DMA仍需CPU配置</td>
+</tr>
+<tr>
+<td>RISC vs CISC</td>
+<td>RISC指令较规整、利于流水；CISC指令丰富、单指令功能复杂</td>
+<td>现代处理器常融合两者思想</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_7">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU时间</td>
+<td>T=指令数IC×平均CPI÷时钟频率f</td>
+<td>性能同时受程序、体系结构和频率影响</td>
+<td>IC=10⁹,CPI=2,f=2GHz，则T=1s</td>
+</tr>
+<tr>
+<td>Cache平均访存</td>
+<td>Tavg=命中时间+失效率×未命中代价</td>
+<td>概率用小数且口径保持一致</td>
+<td>1ns+2%×50ns=2ns</td>
+</tr>
+<tr>
+<td>补码运算</td>
+<td>统一位宽→写补码→相加→舍弃最高进位→判断溢出</td>
+<td>同号相加得异号才是有符号溢出</td>
+<td>8位127+1得到10000000，发生溢出</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_7">5. 常见简答得分表述</h3>
+<blockquote>
+<p>CPU时间=IC×CPI/f；主频升高会减小周期，但指令数和CPI受程序、流水停顿、访存及架构影响，还受功耗散热约束，因此必须比较实际执行时间。</p>
+</blockquote>
+<h3 id="6_7">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 命中率高不等于平均时间必然低，还看未命中代价</li>
+<li>⚠ 流水线提高吞吐率，不等于单条指令延迟同比下降</li>
+<li>⚠ 地址位数、容量单位和按字/按字节编址要先辨口径</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_12">计算机网络</h2>
+<h3 id="1_8">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>241条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机网络基础</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">32.4%</td>
+</tr>
+<tr>
+<td>IPv4与子网</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">14.9%</td>
+</tr>
+<tr>
+<td>TCP与UDP</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">13.3%</td>
+</tr>
+<tr>
+<td>数据链路与局域网</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">9.5%</td>
+</tr>
+<tr>
+<td>DNS与DHCP</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">7.5%</td>
+</tr>
+<tr>
+<td>网络体系结构</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">5.8%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_8">2. 高频核心知识点</h3>
+<ul>
+<li><strong>网络基础</strong>：分层把复杂通信划为接口明确的功能层；发送端逐层封装，接收端逐层解封装。带宽是速率上限概念，实际时延还包括发送、传播、处理和排队。</li>
+<li><strong>IPv4与子网</strong>：IPv4地址由网络位和主机位组成，掩码中连续1表示网络位。子网块大小由前缀决定，网络地址主机位全0、广播地址主机位全1，常规主机数为<code>2^h-2</code>。</li>
+<li><strong>TCP与UDP</strong>：TCP面向连接，利用序号、确认、重传、校验、滑动窗口保证可靠字节流，并区分流量控制和拥塞控制。UDP无连接、开销小、保留报文边界，但可靠性需由应用按需要实现。</li>
+<li><strong>链路层与局域网</strong>：以太网帧按MAC地址在局域网传送，交换机学习源MAC并按表转发。ARP解析同一链路所需的MAC地址；VLAN逻辑划分广播域，跨VLAN通信需要三层转发。</li>
+<li><strong>DNS与DHCP</strong>：DNS将域名解析为IP等记录并采用分层、缓存机制；DHCP动态提供IP、掩码、默认网关和DNS服务器。能ping通IP但域名失败时应优先检查DNS。</li>
+<li><strong>路由与排障</strong>：路由器按最长前缀匹配选择下一跳。排障应按物理链路→本机配置→网关→远端IP→DNS/端口→应用逐层验证，ping通不代表应用端口和业务一定正常。</li>
+</ul>
+<h3 id="3_8">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP vs UDP</td>
+<td>TCP面向连接、可靠字节流；UDP无连接、尽力而为、报文边界保留</td>
+<td>实时性要求高不等于永远选UDP，还看业务容错</td>
+</tr>
+<tr>
+<td>交换机 vs 路由器</td>
+<td>交换机主要按MAC在二层转发；路由器按IP跨网段选择路径</td>
+<td>广播域通常由路由器划分</td>
+</tr>
+<tr>
+<td>DNS vs DHCP</td>
+<td>DNS做名称到地址等解析；DHCP动态分配IP、掩码、网关、DNS等参数</td>
+<td>能拿到IP不代表DNS一定可用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_8">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子网划分</td>
+<td>借位数n满足子网数，主机位h满足2^h-2≥主机数</td>
+<td>块大小=256-掩码末字节</td>
+<td>/24划4个：借2位得/26，块长64，每网62主机</td>
+</tr>
+<tr>
+<td>端到端时延</td>
+<td>发送时延=L/R；传播时延=d/v；总时延还含处理和排队</td>
+<td>一个看包长/速率，一个看距离/传播速度</td>
+<td>先统一bit、s、m单位</td>
+</tr>
+<tr>
+<td>故障定位</td>
+<td>物理→本机配置→同网关→远端IP→DNS/端口→应用</td>
+<td>每一步只验证一层假设</td>
+<td>ping 8.8.8.8通而域名失败，优先查DNS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_8">5. 常见简答得分表述</h3>
+<blockquote>
+<p>借2位得到/26，掩码255.255.255.192，块长64；网络地址为.0、.64、.128、.192，各有62个可用主机，广播分别为.63、.127、.191、.255。</p>
+</blockquote>
+<h3 id="6_8">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 网络地址和广播地址通常不可分配给主机</li>
+<li>⚠ ping通只证明相关ICMP路径，不证明应用端口正常</li>
+<li>⚠ 可靠传输是端到端语义，不由链路层单独保证</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_13">电路分析与电工技术</h2>
+<h3 id="1_9">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直流电路与功率</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">70.7%</td>
+</tr>
+<tr>
+<td>电路分析基础</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">13.3%</td>
+</tr>
+<tr>
+<td>一阶动态电路</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+<tr>
+<td>正弦交流与RLC</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+<tr>
+<td>三相电路与用电</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_9">2. 高频核心知识点</h3>
+<ul>
+<li><strong>直流电路与功率</strong>：欧姆定律、KCL和KVL是分析基础，列方程前必须规定电压电流参考方向。电阻功率可用<code>P=UI=I²R=U²/R</code>，结果为负通常表示实际方向与参考方向相反或元件在供能。</li>
+<li><strong>等效与网络定理</strong>：戴维南等效用开路电压和等效电阻替代线性二端网络，诺顿等效用短路电流与并联电阻表示。求等效电阻时独立电压源短路、独立电流源开路，受控源必须保留。</li>
+<li><strong>一阶动态电路</strong>：电容电压和电感电流在通常换路瞬间不能突变。全响应由初值、终值和时间常数决定；RC时间常数为<code>τ=RC</code>，一个τ完成总变化量约63.2%。</li>
+<li><strong>正弦交流与RLC</strong>：相量法把同频正弦稳态微分关系转为复数代数。电阻电压电流同相，电感电流滞后，电容电流超前；阻抗、相位和功率因数必须结合频率判断。</li>
+<li><strong>三相与安全用电</strong>：三相题先辨星形或三角形再套线量与相量关系。测量时电压表高内阻并联、电流表低内阻串联；电阻挡禁止带电测量，冒烟火花时先断电隔离再专业检查。</li>
+</ul>
+<h3 id="3_9">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>节点电压法 vs 网孔电流法</td>
+<td>前者以节点KCL为主，适合少节点；后者以网孔KVL为主，适合平面少网孔</td>
+<td>含电流源常优先节点法</td>
+</tr>
+<tr>
+<td>有功P vs 无功Q vs 视在S</td>
+<td>P做净功，Q往返交换能量，S反映设备容量；S²=P²+Q²</td>
+<td>功率因数提高不等于负载有功功率凭空增加</td>
+</tr>
+<tr>
+<td>电压表 vs 电流表</td>
+<td>电压表高内阻并联；电流表低内阻串联</td>
+<td>电流挡并接电源可能短路</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_9">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直流功率</td>
+<td>P=UI=I²R=U²/R</td>
+<td>后两式只直接适用于电阻，注意关联参考方向</td>
+<td>10V加5Ω：I=2A，P=20W</td>
+</tr>
+<tr>
+<td>功率因数</td>
+<td>单相P=UIcosφ，所以I=P/(Ucosφ)</td>
+<td>P、U不变时提高cosφ可降电流与I²R损耗</td>
+<td>补偿过度会变为容性，不是越多越好</td>
+</tr>
+<tr>
+<td>RC充电</td>
+<td>uC(t)=U终+(U初-U终)e^(-t/RC)</td>
+<td>τ=RC决定快慢，电容电压通常不能突变</td>
+<td>由0充到10V，一个τ约6.32V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_9">5. 常见简答得分表述</h3>
+<blockquote>
+<p>在负载有功功率P和电压U不变时，I=P/(Ucosφ)；cosφ提高使电流减小，而线路损耗近似I²R，因此下降。补偿要适度且不会增加负载有功功率。</p>
+</blockquote>
+<h3 id="6_9">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 受控源求等效电阻时不能随独立源一起置零</li>
+<li>⚠ 电阻挡不能带电测量</li>
+<li>⚠ 三相线/相电压、电流关系取决于星形或三角形连接</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_14">模拟电子技术</h2>
+<h3 id="1_10">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三极管放大</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">33.3%</td>
+</tr>
+<tr>
+<td>二极管电路</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">26.7%</td>
+</tr>
+<tr>
+<td>运算放大器</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">20.0%</td>
+</tr>
+<tr>
+<td>负反馈放大</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6.7%</td>
+</tr>
+<tr>
+<td>直流电源</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4.0%</td>
+</tr>
+<tr>
+<td>模拟电子基础</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4.0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_10">2. 高频核心知识点</h3>
+<ul>
+<li><strong>三极管放大</strong>：BJT截止时近似断开，放大区用于线性放大，饱和时近似开关闭合。<code>IC≈βIB</code>主要适用于放大区；静态工作点过低或过高会导致截止或饱和削顶。</li>
+<li><strong>二极管</strong>：普通二极管正向达到导通条件后导电、反向截止；分析时可选理想或恒压降模型。整流把交流变为单向脉动，滤波减小纹波；稳压管反向工作时必须限流并校核功耗。</li>
+<li><strong>运算放大器</strong>：理想运放在线性负反馈下可用虚短和虚断：两输入端电位近似相等、输入电流近似为零。反相增益<code>-Rf/Rin</code>，同相增益<code>1+Rf/Rg</code>，实际输出受电源、摆幅、带宽和电流能力限制。</li>
+<li><strong>负反馈</strong>：负反馈通常降低闭环增益但提高稳定性、扩展带宽、减小非线性失真。电压/电流取样决定输出电阻趋势，串联/并联混合决定输入电阻趋势，类型判断不能只看反馈线接到哪个引脚。</li>
+<li><strong>直流电源与信号链</strong>：典型直流电源为变压、整流、滤波、稳压。传感器采集链常为保护/偏置、缓冲或放大、抗混叠滤波、ADC；增益过大会饱和，提高ADC位数不能消除前端噪声。</li>
+</ul>
+<h3 id="3_10">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>截止 vs 放大 vs 饱和</td>
+<td>截止近似断开；放大区满足受控放大；饱和近似闭合</td>
+<td>IC=βIB主要用于放大区</td>
+</tr>
+<tr>
+<td>反相 vs 同相运放</td>
+<td>反相增益-Rf/Rin且输入电阻约Rin；同相增益1+Rf/Rg且输入电阻高</td>
+<td>符号和接法必须同时判断</td>
+</tr>
+<tr>
+<td>稳压二极管 vs 普通二极管</td>
+<td>稳压管利用规定反向击穿区；普通管多用正向导通/反向截止</td>
+<td>稳压管必须限流并满足功耗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_10">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反相放大</td>
+<td>Au=-Rf/Rin</td>
+<td>负号表示反相，需线性负反馈且输出未饱和</td>
+<td>Rf=100k,Rin=10k，增益-10</td>
+</tr>
+<tr>
+<td>同相放大</td>
+<td>Au=1+Rf/Rg</td>
+<td>输入加同相端，输出受电源轨与摆幅限制</td>
+<td>Rf=90k,Rg=10k，增益10</td>
+</tr>
+<tr>
+<td>器件排障</td>
+<td>先电源→静态点→输入→逐级输出→负载</td>
+<td>万用表看直流、示波器看波形</td>
+<td>单侧削顶先查静态点过高/过低而非直接换管</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_10">5. 常见简答得分表述</h3>
+<blockquote>
+<p>截止时IC近零用于开关断；放大区用于线性放大且近似满足IC=βIB；饱和时管压降低用于开关闭，电流由外电路限制，β关系不再成立。</p>
+</blockquote>
+<h3 id="6_10">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 虚短虚断只在线性负反馈且未饱和时使用</li>
+<li>⚠ 耦合电容隔直通交但低频下容抗变大</li>
+<li>⚠ 负反馈类型要按取样量和混合方式判断</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_15">数字电子技术</h2>
+<h3 id="1_11">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字电子基础</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">24.0%</td>
+</tr>
+<tr>
+<td>触发器</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">17.3%</td>
+</tr>
+<tr>
+<td>组合逻辑</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">14.7%</td>
+</tr>
+<tr>
+<td>A/D与D/A转换</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">14.7%</td>
+</tr>
+<tr>
+<td>逻辑代数与门电路</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10.7%</td>
+</tr>
+<tr>
+<td>时序逻辑</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10.7%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_11">2. 高频核心知识点</h3>
+<ul>
+<li><strong>数字基础</strong>：进制转换、补码、逻辑门和布尔代数是基础。逻辑表达式、真值表、卡诺图和门电路应能互相转换；卡诺图按格雷码排列，分组为2的幂并允许跨边相邻。</li>
+<li><strong>触发器</strong>：触发器保存一位状态，D触发器下一状态等于采样的D，JK触发器可置位、复位、保持和翻转。建立时间、保持时间和传播延迟决定可靠时序，异步输入不受时钟控制。</li>
+<li><strong>组合逻辑</strong>：组合电路输出只取决于当前输入，常见模块有编码器、译码器、数据选择器、加法器。不同路径传播延迟会产生竞争冒险，稳态逻辑正确不代表瞬态无毛刺。</li>
+<li><strong>ADC与DAC</strong>：ADC完成采样、保持、量化和编码，n位有<code>2^n</code>个量化级；分辨率提高不等于精度一定提高。DAC把数字码转换为模拟量，性能还受参考源、线性误差和转换时间影响。</li>
+<li><strong>时序逻辑</strong>：时序电路输出还依赖历史状态，常见为寄存器和计数器。同步计数器共用时钟、速度高；异步计数器逐级触发、结构简单但延迟累积，状态设计要考虑非法状态恢复。</li>
+<li><strong>555与接口应用</strong>：555单稳态产生规定宽度脉冲，无稳态连续振荡，施密特方式用双阈值整形抗扰。UART、I²C、SPI、CAN的选择取决于速率、距离、节点数、布线和抗干扰。</li>
+</ul>
+<h3 id="3_11">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组合逻辑 vs 时序逻辑</td>
+<td>组合输出只依赖当前输入；时序输出还依赖历史状态</td>
+<td>锁存报警必须用时序存储</td>
+</tr>
+<tr>
+<td>同步计数器 vs 异步计数器</td>
+<td>同步各触发器共用时钟、速度高；异步逐级触发、结构简单但延迟累积</td>
+<td>高频和精确译码优先同步</td>
+</tr>
+<tr>
+<td>锁存器 vs 边沿触发器</td>
+<td>锁存器在有效电平期间透明；触发器通常在边沿采样</td>
+<td>时序图必须看电平还是边沿有效</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_11">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>逻辑化简</td>
+<td>先用代数/卡诺图找最小项相邻合并，再保留必要项</td>
+<td>卡诺图边缘相邻且分组为2的幂</td>
+<td>别把无关项当固定0，合理利用可进一步化简</td>
+</tr>
+<tr>
+<td>ADC分辨率</td>
+<td>量化级数2^n；理想步距约满量程/2^n</td>
+<td>n为位数，端点口径以题干为准</td>
+<td>0~5V、8位，步距约19.5mV</td>
+</tr>
+<tr>
+<td>PWM平均作用</td>
+<td>占空比D=Ton/T，理想平均电压≈D·V</td>
+<td>频率过低闪烁/脉动，过高增加开关损耗</td>
+<td>12V、25%占空比，理想平均约3V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_11">5. 常见简答得分表述</h3>
+<blockquote>
+<p>选时序逻辑并用触发器保存状态，因为输出不仅取决于当前传感器，还取决于过去是否报警；置位记录报警，复位清除状态。</p>
+</blockquote>
+<h3 id="6_11">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 卡诺图按格雷码排列，不是自然二进制顺序</li>
+<li>⚠ 竞争冒险来自传播延迟，代数等价不保证瞬态无毛刺</li>
+<li>⚠ ADC位数提高不能自动消除前端噪声或参考误差</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_16">通信原理与高频电子线路</h2>
+<h3 id="1_12">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通信系统基础</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">40.0%</td>
+</tr>
+<tr>
+<td>高频电路</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">30.7%</td>
+</tr>
+<tr>
+<td>信道容量与香农公式</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10.7%</td>
+</tr>
+<tr>
+<td>抽样与PCM</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10.7%</td>
+</tr>
+<tr>
+<td>模拟调制</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+<tr>
+<td>数字调制</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2.7%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_12">2. 高频核心知识点</h3>
+<ul>
+<li><strong>通信系统基础</strong>：基本链路为信源、信源编码、信道编码、调制、信道、解调和译码。信源编码去冗余降码率，信道编码增加受控冗余以检错纠错，两者目的不同。</li>
+<li><strong>高频电路</strong>：高频放大、振荡、调制和解调电路受器件寄生参数、选频网络和阻抗匹配显著影响。谐振回路用于选频，品质因数反映选择性与带宽的折中。</li>
+<li><strong>香农容量</strong>：<code>C=B log2(1+S/N)</code>给出带宽B、线性信噪比S/N下的理论可靠传输上限。dB必须先换算为线性功率比；增大带宽或信噪比可提高容量，但收益并非线性无限增长。</li>
+<li><strong>抽样与PCM</strong>：带限信号理论上需<code>fs≥2fmax</code>避免频谱混叠，工程中还需抗混叠滤波和过渡带。PCM依次采样、量化、编码，码率=<code>fs×每样本位数×声道数</code>。</li>
+<li><strong>模拟与数字调制</strong>：AM把信息放在幅度包络，FM放在频率变化，通常FM抗幅度干扰更强但占带宽更大。ASK、FSK、PSK分别改变载波幅度、频率、相位，性能与带宽、同步复杂度相关。</li>
+<li><strong>同步与差错控制</strong>：载波同步恢复频率相位参考，位同步确定码元判决时刻，帧同步确定数据块边界。CRC主要检错，ARQ通过确认、超时和重传恢复，任何机制都不能保证绝对零错。</li>
+</ul>
+<h3 id="3_12">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信源编码 vs 信道编码</td>
+<td>前者去冗余降码率；后者加受控冗余以检错纠错</td>
+<td>压缩与纠错目标相反但可串联使用</td>
+</tr>
+<tr>
+<td>AM vs FM</td>
+<td>AM信息在幅度包络，设备较简；FM信息在频率变化，抗幅度噪声较强但带宽常更大</td>
+<td>弱信号下FM也会恶化</td>
+</tr>
+<tr>
+<td>CRC vs ARQ</td>
+<td>CRC主要检错；ARQ依靠确认、超时和重传恢复</td>
+<td>CRC通常不能自行纠错，ARQ引入时延</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_12">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽样定理</td>
+<td>fs≥2fmax</td>
+<td>fs为采样频率，fmax为带限信号最高频率；工程需留过渡带</td>
+<td>最高4kHz语音理论至少8kHz采样</td>
+</tr>
+<tr>
+<td>香农容量</td>
+<td>C=B log2(1+S/N)</td>
+<td>C bit/s，B Hz，S/N为线性功率比</td>
+<td>SNR=30dB时先换成10^(30/10)=1000</td>
+</tr>
+<tr>
+<td>PCM码率</td>
+<td>Rb=fs×n×声道数</td>
+<td>n为每样本量化位数，未含信道编码开销</td>
+<td>8kHz×8bit×1=64kbit/s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_12">5. 常见简答得分表述</h3>
+<blockquote>
+<p>AM的信息直接承载在幅度包络，幅度噪声会污染信息；FM的信息承载在频率变化，可在解调前限幅。代价是通常占更宽带宽、设备更复杂，弱信号下也会恶化。</p>
+</blockquote>
+<h3 id="6_12">6. 最后失分警报</h3>
+<ul>
+<li>⚠ dB不能直接代入香农式，要先转线性比</li>
+<li>⚠ 抽样率达标不代表无需抗混叠滤波</li>
+<li>⚠ 带宽、信噪比和容量有上限关系，编码不能突破香农极限</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_17">信号与系统</h2>
+<h3 id="1_13">1. 高频权重</h3>
+<blockquote>
+<p>本科目暂未进入题库统计，以下顺序按知识依赖和课程核心地位排列，不虚构考频。</p>
+</blockquote>
+<h3 id="2_13">2. 高频核心知识点</h3>
+<ul>
+<li><strong>系统基本性质</strong>：线性用齐次性与可加性判断，时不变比较输入移位后的输出，因果性要求不依赖未来输入，BIBO稳定要求有界输入产生有界输出。这些性质必须分别判断，互不等价。</li>
+<li><strong>典型信号</strong>：单位冲激用于刻画系统瞬时响应，单位阶跃表示开关过程，二者满足阶跃的导数为冲激。信号的移位、反折和尺度变换要先抓住关键点再作图。</li>
+<li><strong>LTI与卷积</strong>：LTI系统完全由冲激响应h决定，输出<code>y=x*h</code>。卷积按翻转、平移、相乘、积分/求和进行；连续系统稳定要求h绝对可积，离散系统要求h绝对可和。</li>
+<li><strong>频域分析</strong>：傅里叶变换把时域卷积变为频域相乘，频率响应描述系统对不同频率正弦分量的幅度和相位作用。时移、尺度和微分性质是常用计算捷径。</li>
+<li><strong>拉普拉斯与Z变换</strong>：拉普拉斯变换用于连续时间系统，Z变换用于离散时间系统，系统函数与收敛域共同决定因果性和稳定性。只看代数表达式、不看ROC可能得到错误结论。</li>
+</ul>
+<h3 id="3_13">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>因果性 vs 稳定性</td>
+<td>因果要求输出不依赖未来输入；BIBO稳定要求有界输入产生有界输出</td>
+<td>二者互不等价</td>
+</tr>
+<tr>
+<td>连续卷积 vs 离散卷积</td>
+<td>前者积分，后者求和；都由输入与冲激响应决定LTI输出</td>
+<td>先判断重叠区间再算</td>
+</tr>
+<tr>
+<td>频率响应 vs 系统函数</td>
+<td>频率响应描述稳态正弦响应；系统函数还结合复频域和收敛域表征结构</td>
+<td>H(jω)存在需虚轴位于ROC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_13">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LTI输出</td>
+<td>y=x*h；连续为∫x(τ)h(t-τ)dτ，离散为Σx[k]h[n-k]</td>
+<td>h是单位冲激响应</td>
+<td>两个宽度1矩形卷积得到底宽2的三角形</td>
+</tr>
+<tr>
+<td>BIBO稳定</td>
+<td>连续∫&#124;h(t)&#124;dt&lt;∞；离散Σ&#124;h[n]&#124;&lt;∞</td>
+<td>这是LTI系统判据</td>
+<td>h(t)=e^-t u(t)绝对可积，稳定</td>
+</tr>
+<tr>
+<td>正弦响应</td>
+<td>输入e^(jωt)，稳态输出H(jω)e^(jωt)</td>
+<td>幅值乘&#124;H&#124;、相位加∠H</td>
+<td>低通对高频通常衰减并产生相移</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_13">5. 常见简答得分表述</h3>
+<blockquote>
+<p>因果要求连续系统h(t)=0(t&lt;0)或离散系统h[n]=0(n&lt;0)；BIBO稳定要求冲激响应绝对可积/绝对可和。必须分别检查，不能把因果当稳定。</p>
+</blockquote>
+<h3 id="6_13">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 卷积中必须先翻转再平移</li>
+<li>⚠ 系统函数相同而ROC不同，系统性质可能不同</li>
+<li>⚠ 频域相乘对应时域卷积，别把两边运算同时写反</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_18">软件工程</h2>
+<h3 id="1_14">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>75条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>软件测试</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">38.7%</td>
+</tr>
+<tr>
+<td>需求工程</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">21.3%</td>
+</tr>
+<tr>
+<td>软件维护与配置</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12.0%</td>
+</tr>
+<tr>
+<td>项目管理</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10.7%</td>
+</tr>
+<tr>
+<td>软件设计与UML</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9.3%</td>
+</tr>
+<tr>
+<td>软件工程基础</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_14">2. 高频核心知识点</h3>
+<ul>
+<li><strong>软件测试</strong>：单元测试面向模块，集成测试关注接口，系统测试验证完整系统，验收测试确认用户需求。黑盒依据规格设计输入，白盒依据内部结构覆盖路径；测试能发现缺陷，不能证明绝对无缺陷。</li>
+<li><strong>需求工程</strong>：需求过程包括获取、分析、规格说明、确认和变更管理。需求应明确触发条件、系统行为、量化指标和异常边界；冲突要分析协商并形成可验证、可追踪记录。</li>
+<li><strong>维护与配置管理</strong>：维护包括纠错、适应、完善和预防。配置管理通过配置项、版本、基线、变更控制和审计保持一致性；紧急修复仍需授权、测试、回退、发布验证和留痕。</li>
+<li><strong>项目管理</strong>：估算、进度、成本、质量和风险相互制约。关键路径上的活动延误会直接影响总工期；风险管理包括识别、分析、应对和监控，不能等风险发生后才处理。</li>
+<li><strong>设计与UML</strong>：高内聚让模块职责集中，低耦合减少依赖和变更传播。用例图表达参与者与系统功能，类图表达静态结构，顺序图表达对象交互时序，图的选择取决于要表达的视角。</li>
+</ul>
+<h3 id="3_14">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>验证 vs 确认</td>
+<td>验证关注‘是否按规格正确构建’；确认关注‘是否构建了用户需要的产品’</td>
+<td>评审和测试都可提供证据但问题不同</td>
+</tr>
+<tr>
+<td>黑盒 vs 白盒测试</td>
+<td>黑盒依据外部规格设计输入输出；白盒依据内部结构覆盖路径/分支</td>
+<td>两者互补而非替代</td>
+</tr>
+<tr>
+<td>高内聚 vs 低耦合</td>
+<td>模块内部职责集中；模块之间依赖少且清晰</td>
+<td>目的在于限制变更传播并提高可维护性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_14">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可测需求</td>
+<td>触发条件+系统行为+量化指标+异常边界</td>
+<td>‘快速、友好’需转成测量判据</td>
+<td>95%查询在2秒内返回，数据量与环境写清</td>
+</tr>
+<tr>
+<td>边界值测试</td>
+<td>有效类、无效类、边界内、边界、边界外相邻值</td>
+<td>1~100整数至少覆盖0、1、2、99、100、101及非整数</td>
+<td>不要只测典型有效值</td>
+</tr>
+<tr>
+<td>变更控制</td>
+<td>提交→影响分析→审批→实现→回归→基线/追踪更新</td>
+<td>紧急也要有回退和留痕</td>
+<td>直接覆盖线上文件不可审计且难恢复</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_14">5. 常见简答得分表述</h3>
+<blockquote>
+<p>高内聚让相关职责集中，低耦合减少模块间依赖；需求变化时修改范围更局部、连锁影响更小，便于测试维护，但不意味着模块完全不通信。</p>
+</blockquote>
+<h3 id="6_14">6. 最后失分警报</h3>
+<ul>
+<li>⚠ 敏捷不等于不要文档、设计和测试</li>
+<li>⚠ 测试只能发现缺陷存在，不能证明绝对无缺陷</li>
+<li>⚠ 需求冲突应分析协商并记录，不能擅自拍板</li>
+</ul>
+<div class="course-break"></div>
+
+<h2 id="_19">信息安全</h2>
+<h3 id="1_15">1. 高频权重</h3>
+<blockquote>
+<p>统计样本 <strong>137条</strong>。百分比用于安排临考时间，不代表正式考试的固定分值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>高频知识点</th>
+<th style="text-align: right;">题量</th>
+<th style="text-align: right;">占本科题库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恶意代码与社会工程</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">38.7%</td>
+</tr>
+<tr>
+<td>安全目标与风险</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">22.6%</td>
+</tr>
+<tr>
+<td>网络安全防护</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10.2%</td>
+</tr>
+<tr>
+<td>安全事件响应</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">9.5%</td>
+</tr>
+<tr>
+<td>身份认证与访问控制</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8.8%</td>
+</tr>
+<tr>
+<td>密码技术</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">8.0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_15">2. 高频核心知识点</h3>
+<ul>
+<li><strong>恶意代码与社会工程</strong>：病毒依附宿主，蠕虫可自我复制传播，木马伪装合法程序或建立后门。钓鱼和社会工程利用人的信任与紧迫感，防护需结合身份核验、最小权限、补丁、终端防护和培训。</li>
+<li><strong>安全目标与风险</strong>：机密性防泄露，完整性防未授权篡改，可用性保证可获得，可审计性支持追责。风险由资产、威胁、脆弱性、可能性和影响共同决定，控制措施用于降低而非绝对消除风险。</li>
+<li><strong>网络防护</strong>：防火墙按策略控制流量，IDS侧重检测告警，IPS可在线阻断，VPN建立受保护隧道。分区隔离、最小暴露和纵深防御比单一设备更可靠，HTTPS也不自动证明业务可信。</li>
+<li><strong>事件响应</strong>：标准闭环为准备、发现与分析、遏制、根除、恢复和复盘。处置异常主机时要先报告记录、隔离并保全证据，不能立即格式化，以免毁证和遗漏横向影响。</li>
+<li><strong>身份与访问控制</strong>：认证确认主体是谁，授权决定能做什么，审计记录做了什么。最小权限、职责分离、多因素认证、定期复核和及时撤权共同降低账户滥用风险。</li>
+<li><strong>密码技术</strong>：对称加密速度快但密钥分发困难，非对称加密便于密钥交换和签名但开销大，哈希用于完整性摘要且不可逆，数字签名用私钥签、公开密钥验，提供完整性、身份鉴别和不可否认性。</li>
+</ul>
+<h3 id="3_15">3. 易混知识边界</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>核心区别</th>
+<th>易错边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加密 vs 哈希 vs 签名</td>
+<td>加密保护机密性且可解密；哈希生成摘要用于完整性；签名用私钥签、公开密钥验</td>
+<td>哈希不是加密，签名通常不隐藏正文</td>
+</tr>
+<tr>
+<td>认证 vs 授权 vs 审计</td>
+<td>认证确认是谁；授权决定能做什么；审计记录做了什么</td>
+<td>登录成功不代表拥有所有权限</td>
+</tr>
+<tr>
+<td>病毒 vs 木马 vs 蠕虫</td>
+<td>病毒依附宿主传播；木马伪装/后门；蠕虫可自我复制跨网络传播</td>
+<td>实际恶意代码可混合多种特征</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_15">4. 高频公式、操作与流程</h3>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>公式或步骤</th>
+<th>含义与适用边界</th>
+<th>典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>风险判断</td>
+<td>风险≈威胁可能性×脆弱性影响</td>
+<td>资产价值、暴露面和控制有效性都要考虑</td>
+<td>高危漏洞若不可达，现实风险可低于暴露的中危漏洞</td>
+</tr>
+<tr>
+<td>最小权限</td>
+<td>主体只获完成任务所需的最少权限、最短时间</td>
+<td>配合职责分离、定期复核和撤权</td>
+<td>临时管理员权限到期自动回收</td>
+</tr>
+<tr>
+<td>事件处置</td>
+<td>先保安全与业务，再隔离遏制并保存证据</td>
+<td>不能一上来格式化破坏证据和范围判断</td>
+<td>恢复后还要监控、复盘和修补根因</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5_15">5. 常见简答得分表述</h3>
+<blockquote>
+<p>先报告记录并研判范围，在授权下隔离遏制、保全日志和镜像证据，再根除原因、从可信备份恢复并持续监控，最后复盘整改；不能立即格式化，以免毁证和遗漏横向影响。</p>
+</blockquote>
+<h3 id="6_15">6. 最后失分警报</h3>
+<ul>
+<li>⚠ HTTPS保护传输通道，不自动证明网站业务可信</li>
+<li>⚠ 备份必须验证可恢复且与生产隔离</li>
+<li>⚠ 安全是持续风险管理，不是安装一次软件即可完成</li>
+</ul></body></html>
