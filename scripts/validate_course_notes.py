@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSE_INDEX = ROOT / "course-index.json"
-EXPECTED_COURSE_COUNT = 15
+EXPECTED_COURSE_COUNT = 16
 MIN_COURSE_CHARS = 3800
 MIN_CHAPTER_CHARS = 180
 MIN_PLAIN_EXPLANATIONS = 3
