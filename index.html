@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#143b6b">
-  <meta name="description" content="刷题器提供专业知识讲义、三色回忆、顺序刷题、随机刷题、模拟考试和错题复习。">
+  <meta name="description" content="刷题器提供专业知识讲义、重点复习、顺序刷题、随机刷题、模拟考试和错题复习。">
   <title>刷题器</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
@@ -23,6 +23,7 @@
   <main class="home-main" id="home-main">
     <section class="course-launcher" aria-labelledby="courses-title">
       <h1 id="courses-title">选择课程</h1>
+      <p class="home-scope">按大学课程学习，结合岗位范围取舍。<a href="./exam-guide.html">查看湖南考情与科目范围</a></p>
       <label class="course-select-control">
         <span class="sr-only">课程</span>
         <select id="home-course-select">
@@ -31,7 +32,7 @@
       </label>
       <nav class="home-module-actions hidden" id="home-module-actions" aria-label="学习功能">
         <a id="home-notes-link" href="./notes.html"><strong>讲义</strong></a>
-        <a id="home-recall-link" href="./color-notes.html"><strong>三色笔记</strong></a>
+        <a id="home-recall-link" href="./color-notes.html"><strong>重点与易错</strong></a>
         <a id="home-quiz-link" href="./quiz.html"><strong>刷题</strong></a>
       </nav>
     </section>

@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-09-23",
+  "notice": "课程分组和章节重点是学习内容安排，不是湖南统一考试占比；各科分值须以具体岗位大纲或可核验试卷为依据。",
+  "references": [
+    {
+      "id": "hunau-cs",
+      "title": "湖南农业大学计算机科学与技术培养方案（2022年公开页）",
+      "url": "https://xky.hunau.edu.cn/rcpy_8487/bksjy_8488/pyfa/202206/t20220625_327691.html",
+      "use": "核对程序设计、数据结构、组成原理、操作系统、数据库、网络、软件工程等课程主干；学分不转换为招聘考试占比。"
+    },
+    {
+      "id": "hnu-cs",
+      "title": "湖南大学2015版计算机科学与技术本科培养方案",
+      "url": "https://csee.hnu.edu.cn/info/1290/5540.htm",
+      "use": "历史课程结构对照，不作为当前考试大纲。"
+    },
+    {
+      "id": "ostep",
+      "title": "威斯康星大学 OSTEP 开放教材",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "use": "操作系统章节结构参考，围绕虚拟化、并发、持久化组织学习；本工具正文为自行整理，不是教材全文摘录。"
+    },
+    {
+      "id": "cmu-db",
+      "title": "CMU 15-445/645 数据库课程安排（2024）",
+      "url": "https://15445.courses.cs.cmu.edu/fall2024/schedule.html",
+      "use": "数据库课程覆盖对照：关系、SQL、索引、事务与恢复；不作为湖南考频证据。"
+    },
+    {
+      "id": "mit-signals",
+      "title": "MIT Signals and Systems（2011公开课程）",
+      "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+      "use": "信号与系统的课程主题对照；不提供湖南考频依据。"
+    },
+    {
+      "id": "http3",
+      "title": "RFC 9114：HTTP/3",
+      "url": "https://www.rfc-editor.org/rfc/rfc9114.html",
+      "use": "核对HTTP/3与QUIC的关系，不将所有HTTP版本概括为直接基于TCP。"
+    },
+    {
+      "id": "postgres-isolation",
+      "title": "PostgreSQL事务隔离官方文档",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "use": "说明SQL标准与具体数据库隔离实现的差异，不能把一种实现推广为所有数据库行为。"
+    }
+  ],
+  "courses": [
+    {
+      "name": "计算机组成原理",
+      "group": "计算机专业主干",
+      "focus": "数制与编码、CPU与指令、存储层次、Cache、I/O；掌握地址容量和性能计算的条件。",
+      "depth": "系统讲解并配基础计算",
+      "references": [
+        "hunau-cs",
+        "hnu-cs"
+      ]
+    },
+    {
+      "name": "操作系统原理",
+      "group": "计算机专业主干",
+      "focus": "进程线程、调度、同步死锁、分页与虚拟存储、文件和设备；能跟踪小规模执行过程。",
+      "depth": "系统讲解并配过程分析",
+      "references": [
+        "hunau-cs",
+        "ostep"
+      ]
+    },
+    {
+      "name": "数据结构与算法",
+      "group": "计算机专业主干",
+      "focus": "复杂度、线性结构、树图、查找排序；比较前提、过程和性能，避免只背复杂度。",
+      "depth": "系统讲解并配手算过程",
+      "references": [
+        "hunau-cs",
+        "hnu-cs"
+      ]
+    },
+    {
+      "name": "计算机网络",
+      "group": "计算机专业主干",
+      "focus": "分层、以太网、IP与子网、路由、TCP/UDP、应用协议及排障；结合单位和协议作用域理解。",
+      "depth": "系统讲解并配子网及场景例题",
+      "references": [
+        "hunau-cs",
+        "hnu-cs",
+        "http3"
+      ]
+    },
+    {
+      "name": "数据库技术",
+      "group": "计算机专业主干",
+      "focus": "关系模型、SQL、E-R设计、函数依赖与范式、事务、索引和恢复。",
+      "depth": "系统讲解并配SQL及依赖分析",
+      "references": [
+        "hunau-cs",
+        "cmu-db",
+        "postgres-isolation"
+      ]
+    },
+    {
+      "name": "编程语言",
+      "group": "计算机专业主干",
+      "focus": "以C与Python讲变量、控制流、函数、数组与指针；保留语言差异，具体岗位语言要求另行核对。",
+      "depth": "程序阅读与基础编写；非完整多语言课程",
+      "references": [
+        "hunau-cs",
+        "hnu-cs"
+      ]
+    },
+    {
+      "name": "软件工程",
+      "group": "计算机专业主干",
+      "focus": "需求、过程模型、设计、测试、配置与维护；能根据情境选择方法并解释原因。",
+      "depth": "原理、比较与案例",
+      "references": [
+        "hunau-cs",
+        "hnu-cs"
+      ]
+    },
+    {
+      "name": "信息安全",
+      "group": "计算机应用与安全",
+      "focus": "安全目标、认证授权、密码机制、常见威胁、防护与恢复；法规具体条款另核现行文本。",
+      "depth": "机制与场景；法规不据旧资料推断",
+      "references": []
+    },
+    {
+      "name": "Office软件操作",
+      "group": "计算机应用与安全",
+      "focus": "文字排版、表格引用与函数、数据管理、演示文稿；说明Microsoft Office与WPS及版本差异。",
+      "depth": "操作原理与任务示例，按岗位范围取舍",
+      "references": []
+    },
+    {
+      "name": "多媒体技术",
+      "group": "计算机应用与安全",
+      "focus": "采样量化、音视频容量、图像与压缩；以通用原理为主，专用制作软件按岗位需要学习。",
+      "depth": "概念、容量计算与格式辨析",
+      "references": []
+    },
+    {
+      "name": "数字电子技术",
+      "group": "电子通信方向扩展",
+      "focus": "逻辑代数、组合与时序电路、计数器、A/D和D/A；也是组成原理的前置知识。",
+      "depth": "保留数字逻辑基础，综合电路按岗位扩展",
+      "references": []
+    },
+    {
+      "name": "电路分析与电工技术",
+      "group": "电子通信方向扩展",
+      "focus": "基本定律、等效电路、RC/RL、交流与测量；未获大纲支持前不视为普通计算机岗必考。",
+      "depth": "基础分析与典型计算",
+      "references": []
+    },
+    {
+      "name": "模拟电子技术",
+      "group": "电子通信方向扩展",
+      "focus": "二极管、三极管、放大器、反馈和运放；需要先掌握电路分析。",
+      "depth": "工作条件与基本电路",
+      "references": []
+    },
+    {
+      "name": "通信原理与高频电子线路",
+      "group": "电子通信方向扩展",
+      "focus": "通信模型、带宽与速率、调制编码、接收机与链路；与普通网络知识分开。",
+      "depth": "概念与基础计算，岗位要求决定展开程度",
+      "references": []
+    },
+    {
+      "name": "信号与系统",
+      "group": "电子通信方向扩展",
+      "focus": "系统性质、卷积、频谱、变换与抽样；作为通信方向的理论基础。",
+      "depth": "定义、条件和简单计算；非完整变换推导课程",
+      "references": [
+        "mit-signals"
+      ]
+    }
+  ]
+}

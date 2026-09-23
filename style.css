@@ -3081,3 +3081,6 @@ body:not(.platform-home) {
   .course-launcher h1 { color: var(--home-ink); }
   .home-module-actions a { color: #bfdbfe; }
 }
+/* 课程入口保持简单，考情作为可选阅读入口。 */
+.home-scope { max-width: 44rem; color: #526071; line-height: 1.8; font-size: 14px; }
+.home-scope a { color: #1d4ed8; text-underline-offset: 3px; }

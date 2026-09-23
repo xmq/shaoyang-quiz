@@ -32,9 +32,9 @@ jobs:
           python scripts/merge_supplement_bank.py --check
           python scripts/merge_university_exam_bank.py --check
           python scripts/enrich_question_metadata.py --check
-      - name: Validate three-color recall cards
+      - name: Validate chapter notes and exam sources
         run: python scripts/validate_color_notes.py
-      - name: Validate lecture exam guidance
+      - name: Validate lecture content
         run: python scripts/validate_course_notes.py
       - name: Build and validate Pages artifact
         run: |

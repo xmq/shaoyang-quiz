@@ -30,7 +30,7 @@ const ERROR_TAG_LABELS = Object.freeze({
   calculation: "计算/操作失误",
   recall: "想不起来",
 });
-const SUBJECT_ORDER = ["信息基础", "计算机基础", "办公软件", "教学论", "多媒体", "编程语言", "算法与数据结构", "计算机组成原理", "操作系统", "数据库", "计算机网络", "软件工程", "信息安全", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "信号与系统", "大数据", "其他"];
+const SUBJECT_ORDER = ["信息基础", "计算机基础", "办公软件", "多媒体", "编程语言", "算法与数据结构", "计算机组成原理", "操作系统", "数据库", "计算机网络", "软件工程", "信息安全", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "信号与系统", "大数据", "其他"];
 const TYPE_ORDER = ["单选", "多选", "判断", "填空", "简答"];
 const PROGRESS_FIELDS = ["done", "wrong", "streak", "fav", "flagged", "history", "reviewMeta", "errorTags"];
 
@@ -596,7 +596,6 @@ function renderShortAnswerQuestion(q, chosen) {
 function courseNameForSubject(subject) {
   return ({
     "办公软件": "Office软件操作",
-    "教学论": "信息技术与教学论",
     "多媒体": "多媒体技术",
     "算法与数据结构": "数据结构与算法",
     "操作系统": "操作系统原理",
@@ -639,7 +638,7 @@ function feedbackHtml(q, chosen) {
   const repairLinks = ok ? "" : `<div class="repair-links">
     <span>${reviewMessage}</span>
     <a href="./notes.html${courseHash}">回看讲义</a>
-    <a href="./color-notes.html${courseHash}">三色笔记</a>
+    <a href="./color-notes.html${courseHash}">重点与易错</a>
   </div>`;
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
     <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已自评为基本答到" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>

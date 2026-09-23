@@ -3,17 +3,17 @@
 
   const SUBJECT_ALIASES = {
     "Office软件操作": "办公软件",
-    "信息技术与教学论": "教学论",
     "多媒体技术": "多媒体",
     "数据结构与算法": "算法与数据结构",
     "操作系统原理": "操作系统",
     "数据库技术": "数据库",
   };
-  const COURSES = [
-    "Office软件操作", "信息技术与教学论", "多媒体技术", "编程语言", "数据结构与算法",
-    "计算机组成原理", "操作系统原理", "数据库技术", "计算机网络", "软件工程", "信息安全",
-    "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "信号与系统",
-  ];
+  const COURSE_GROUPS = {
+    "计算机专业主干": ["计算机组成原理", "操作系统原理", "数据结构与算法", "计算机网络", "数据库技术", "编程语言", "软件工程"],
+    "计算机应用与安全": ["信息安全", "Office软件操作", "多媒体技术"],
+    "电子通信方向扩展": ["数字电子技术", "电路分析与电工技术", "模拟电子技术", "通信原理与高频电子线路", "信号与系统"],
+  };
+  const COURSES = Object.values(COURSE_GROUPS).flat();
 
   function selectedCourseName() {
     try {
@@ -42,7 +42,7 @@
 
   function buildCourseMenu() {
     const select = document.getElementById("home-course-select");
-    select.insertAdjacentHTML("beforeend", COURSES.map((course) => `<option value="${course}">${course}</option>`).join(""));
+    select.insertAdjacentHTML("beforeend", Object.entries(COURSE_GROUPS).map(([group, courses]) => `<optgroup label="${group}">${courses.map((course) => `<option value="${course}">${course}</option>`).join("")}</optgroup>`).join(""));
     select.value = selectedCourseName();
     updateCourseLinks(select.value);
     select.addEventListener("change", () => {

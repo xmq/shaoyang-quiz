@@ -348,6 +348,7 @@ def update_course_note(item: dict[str, object], global_scores: dict[str, float],
 
 
 def main() -> None:
+    raise SystemExit("旧版题库加权考频脚本已停用。题库来源数量不代表湖南考试占比；请维护 exam-sources.json 与章节重点。")
     parser = argparse.ArgumentParser(description="Update three-color notes by exam frequency")
     parser.add_argument("--check", action="store_true", help="Dry run only, no writes")
     parser.add_argument("--verbose", action="store_true", help="Print mapping summary")

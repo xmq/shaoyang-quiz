@@ -21,7 +21,7 @@ STAGING_SPECS = {
         "操作系统", "计算机组成原理", "算法与数据结构", "数据库", "编程语言", "软件工程",
     },
     ROOT / "staging" / "applied_network_application.json": {
-        "办公软件", "教学论", "多媒体", "计算机网络", "信息安全",
+        "办公软件", "多媒体", "计算机网络", "信息安全",
     },
     ROOT / "staging" / "applied_electronics.json": {
         "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路",

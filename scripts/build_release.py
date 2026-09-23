@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 CORE_HASHED_ASSETS = [
+    "exam-guide.html",
     "app.js",
     "icon-192.png",
     "icon-512.png",

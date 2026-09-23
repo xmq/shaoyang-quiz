@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT))
 
 import build_notes  # noqa: E402
 from scripts import build_release  # noqa: E402
+from scripts import build_exam_guide  # noqa: E402
 
 
 STATIC_FILES = (
@@ -29,6 +30,7 @@ STATIC_FILES = (
     "icon-512.png",
 )
 GENERATED_FILES = (
+    "exam-guide.html",
     "notes.html",
     "color-notes.html",
     "questions.js",
@@ -110,6 +112,7 @@ def main():
     copy_runtime_sources(output)
     generate_question_bundle(output)
     generate_notes(output)
+    (output / "exam-guide.html").write_text(build_exam_guide.render(), encoding="utf-8", newline="\n")
     generate_derived_assets(output)
     validate_local_references(output)
 

@@ -51,6 +51,12 @@
     }
     .skip-link:focus { top: 12px; }
     .hidden { display: none !important; }
+    .course-guide { margin: 12px 0 20px; padding: 12px 16px; border: 1px solid #dbe3ed; border-radius: 10px; background: #f8fafc; font-size: 14px; line-height: 1.75; }
+    .course-guide summary { cursor: pointer; font-weight: 650; color: #143b6b; }
+    .course-guide p { margin: 10px 0; }
+    .course-guide a, .chapter-study-link { color: #1d4ed8; text-decoration: underline; text-underline-offset: 3px; }
+    .chapter-study-link { display: inline-block; margin: 12px 0 20px; font-size: 14px; }
+    .chapter-section { scroll-margin-top: 145px; }
     .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 
     .site-header {
@@ -350,7 +356,7 @@
     .nav-mask { display: none; }
     .recall-card { min-width: 0; }
 
-    /* 讲义保持连续文档形态，不复用三色笔记与刷题模块的卡片视觉。 */
+    /* 讲义保持连续文档形态，不复用重点与易错与刷题模块的卡片视觉。 */
     .lecture-page .note {
       padding: 6px 4px 28px;
       border: 0;
@@ -391,7 +397,7 @@
       color: var(--deep);
     }
 
-    /* 三色笔记默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
+    /* 重点与易错默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
     .color-notes-page .chapter-toggle {
       cursor: default;
       pointer-events: none;
@@ -641,6 +647,8 @@
         --shadow: 0 10px 30px rgba(0, 0, 0, .24);
       }
       .site-header { border-color: var(--border); background: rgba(16, 24, 40, .94); }
+      .course-guide { background: var(--panel); border-color: var(--border); }
+      .course-guide summary, .course-guide a, .chapter-study-link { color: var(--primary); }
       .study-toolbar { background: rgba(16, 24, 40, .94); }
       .search-box, .chapter-nav-head, .note code { background: var(--panel); }
       .module-link[aria-current="page"] { border-color: #315d96; color: var(--primary-strong); }
@@ -659,6 +667,22 @@
       .recall-card-pager button { background: #182230; }
     }
 
+    @media (max-width: 700px) {
+      .study-toolbar { grid-template-columns: 66px minmax(0, 1fr) 104px; grid-template-rows: 44px 42px; height: calc(108px + env(safe-area-inset-top)); }
+      .search-area { display: block; grid-column: 1 / 3; grid-row: 2; min-width: 0; }
+      .search-box { height: 42px; min-height: 42px; }
+      .search-status { position: absolute; top: 100%; left: 8px; right: 8px; margin: 0; background: var(--bg); font-size: 12px; }
+      .toolbar-actions { display: flex; grid-column: 3; grid-row: 2; }
+      .toolbar-actions #back { display: none; }
+      .toolbar-actions #recall-toggle { width: 100%; min-height: 42px; height: 42px; font-size: 13px; padding: 0 6px; }
+      .toolbar-actions #recall-toggle::before { content: none; }
+      .lecture-page .search-area { grid-column: 1 / -1; }
+      .lecture-page .toolbar-actions { display: none; }
+      body.is-studying main { padding-top: calc(118px + env(safe-area-inset-top)); }
+      .chapter-section { scroll-margin-top: 145px; }
+      .course-guide { margin: 0 0 16px; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
     }
@@ -675,7 +699,7 @@
       <nav class="module-nav desktop-module-nav" aria-label="学习模块">
         <a class="module-link" href="./index.html">课程</a>
         <a class="module-link" __LECTURE_CURRENT__ href="./notes.html">讲义</a>
-        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">三色笔记</a>
+        <a class="module-link" __COLOR_NOTES_CURRENT__ href="./color-notes.html">重点与易错</a>
         <a class="module-link" href="./quiz.html">刷题</a>
       </nav>
     </div>
@@ -686,7 +710,7 @@
       <div class="study-toolbar">
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><span aria-hidden="true">☰</span><strong id="mobile-chapter-progress">章节</strong></button>
         <label class="mobile-course-context"><select id="mobile-course-select" aria-label="切换课程"></select><span id="mobile-card-progress"></span></label>
-        <label class="mobile-module-context"><select id="mobile-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">三色笔记</option><option value="quiz">刷题</option></select></label>
+        <label class="mobile-module-context"><select id="mobile-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">重点与易错</option><option value="quiz">刷题</option></select></label>
         <div class="search-area">
           <div class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
@@ -700,6 +724,11 @@
           <button class="text-button" id="back" type="button" aria-label="返回选择科目">换科目</button>
         </div>
       </div>
+
+      <details class="course-guide" id="course-guide">
+        <summary id="course-guide-title">课程范围与依据</summary>
+        <div id="course-guide-body"></div>
+      </details>
 
       <div class="study-layout">
         <nav class="chapter-nav" id="chapter-nav" aria-label="章节目录" aria-hidden="false">
@@ -737,7 +766,6 @@
     const pageKind = "__PAGE_KIND__";
     const subjectAliases = {
       "Office软件操作": "办公软件",
-      "信息技术与教学论": "教学论",
       "多媒体技术": "多媒体",
       "数据结构与算法": "算法与数据结构",
       "操作系统原理": "操作系统",
@@ -782,7 +810,7 @@
     let mobileNavReturnFocus = null;
     const recallRatings = (() => {
       try {
-        const stored = JSON.parse(localStorage.getItem("shaoyang-recall-ratings-v1") || "{}");
+        const stored = JSON.parse(localStorage.getItem("shaoyang-recall-ratings-v2") || "{}");
         return stored && typeof stored === "object" ? stored : {};
       } catch {
         return {};
@@ -820,7 +848,7 @@
       if (!key) return;
       recallRatings[key] = {value, savedAt: new Date().toISOString()};
       try {
-        localStorage.setItem("shaoyang-recall-ratings-v1", JSON.stringify(recallRatings));
+        localStorage.setItem("shaoyang-recall-ratings-v2", JSON.stringify(recallRatings));
       } catch {}
     }
 
@@ -838,34 +866,11 @@
     }
 
     function publicFacingText(value) {
-      return String(value || "")
-        .replace(/按高校程序设计基础常见期末范围/g, "按事业单位专业知识常见考查范围")
-        .replace(/讲义按大学《([^》]+)》的典型期末结构组织/g, "讲义按《$1》的专业知识常见考查结构组织")
-        .replace(/公开大学期末试卷显示/g, "常见专业知识试题显示")
-        .replace(/公开考试大纲和期末试卷样例表明/g, "常见专业知识考查表明")
-        .replace(/公开通信专业试卷还常考/g, "通信专业考查还可能涉及")
-        .replace(/完整通信专业期末/g, "通信专业知识考查")
-        .replace(/期末/g, "考试");
+      return String(value || "");
     }
 
     function publicMarkdownLines(markdown) {
-      const visible = [];
-      let hiddenSection = false;
-      String(markdown || "").split(/\r?\n/).forEach((line) => {
-        const trimmed = line.trim();
-        const markdownH2 = trimmed.match(/^##\s+(.+)$/);
-        const plainChapter = trimmed.match(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?.*$/);
-        if (markdownH2 || plainChapter) {
-          const title = markdownH2 ? markdownH2[1] : plainChapter[0];
-          hiddenSection = /(?:公开课程|课程与扩展依据|课程依据|教材依据|资料来源|参考资料|参考链接|题型参考|改编说明|基础简答题答法|基础简答题答题框架)/.test(title);
-        }
-        if (!hiddenSection) visible.push(line);
-      });
-      // 学习页直接进入第一章：课程名后的定位、用法等说明不属于知识点。
-      const firstChapter = visible.findIndex((line) => /^##\s+/.test(line.trim()) || /^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?/.test(line.trim()));
-      if (firstChapter < 0) return visible;
-      const title = visible.find((line) => /^#\s+/.test(line.trim()));
-      return title ? [title, "", ...visible.slice(firstChapter)] : visible.slice(firstChapter);
+      return String(markdown || "").split(/\r?\n/);
     }
 
     function formatInline(value) {
@@ -1016,9 +1021,9 @@
             marker = candidate.match(/^<!--\s*exam:\s*([ABC])\s*\|\s*(.+?)\s*-->$/i);
             break;
           }
-          const levelLabels = {A: "优先掌握", B: "常规掌握", C: "补充了解"};
+          const levelLabels = {A: "课程核心", B: "课程基础", C: "课程拓展"};
           const examHtml = !colorMode && marker
-            ? `<span class="exam-meta"><span class="exam-level level-${marker[1].toLowerCase()}">${levelLabels[marker[1].toUpperCase()]}</span><span class="exam-types">${formatInline(marker[2].replace(/[、，]/g, " · "))}</span></span>`
+            ? `<span class="exam-meta"><span class="exam-level level-${marker[1].toLowerCase()}">${levelLabels[marker[1].toUpperCase()]}</span><span class="exam-types">练习形式：${formatInline(marker[2].replace(/[、，]/g, " · "))}</span></span>`
             : "";
           output.push(`<section class="chapter-section"><h2 class="chapter-heading"><button class="chapter-toggle" type="button" aria-expanded="true"><span class="chapter-heading-copy"><span class="chapter-title">${formatInline(title)}</span>${examHtml}</span><span class="chapter-chevron" aria-hidden="true">▾</span></button></h2><div class="chapter-body">`);
           chapterOpen = true;
@@ -1066,6 +1071,7 @@
 
     function updateStudyPosition({replaceRoute = true} = {}) {
       const sections = [...content.querySelectorAll(".chapter-section")];
+      activeChapterIndex = Math.max(0, Math.min(activeChapterIndex, Math.max(0, sections.length - 1)));
       const section = sections[activeChapterIndex];
       const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
       sections.forEach((item, index) => item.classList.toggle("mobile-active", index === activeChapterIndex));
@@ -1102,8 +1108,14 @@
         position.set("chapter", String(activeChapterIndex + 1));
         if (colorMode) position.set("card", String(activeRecallIndex + 1));
         moduleLinks.forEach((link) => {
-          if (link.pathname.endsWith("/notes.html")) link.href = `./notes.html#${position.toString()}`;
-          if (link.pathname.endsWith("/color-notes.html")) link.href = `./color-notes.html#${position.toString()}`;
+          const title = currentCourse.chapters?.[pageKind]?.[activeChapterIndex];
+          for (const [kind, file] of [["lecture", "notes.html"], ["color-notes", "color-notes.html"]]) {
+            if (!link.pathname.endsWith(`/${file}`)) continue;
+            const targetIndex = currentCourse.chapters?.[kind]?.indexOf(title) ?? -1;
+            const target = new URLSearchParams({course: currentCourse.name});
+            if (targetIndex >= 0) target.set("chapter", String(targetIndex + 1));
+            link.href = `./${file}#${target.toString()}`;
+          }
         });
       }
 
@@ -1221,6 +1233,18 @@
       chapterLinks.innerHTML = "";
       const sections = [...content.querySelectorAll(".chapter-section")];
       sections.forEach((section, index) => {
+        if (colorMode) {
+          const body = section.querySelector(".chapter-body");
+          let card = null;
+          [...body.children].forEach((child) => {
+            if (child.matches("h3.point")) {
+              card = document.createElement("div");
+              card.className = "recall-card";
+              body.insertBefore(card, child);
+            }
+            if (card) card.appendChild(child);
+          });
+        }
         section.id = `chapter-${index + 1}`;
         const toggle = section.querySelector(".chapter-toggle");
         const title = section.querySelector(".chapter-title").textContent.trim();
@@ -1258,6 +1282,16 @@
           }
         });
         chapterLinks.appendChild(link);
+        const otherKind = colorMode ? "lecture" : "color-notes";
+        const otherIndex = currentCourse?.chapters?.[otherKind]?.indexOf(title) ?? -1;
+        if (otherIndex >= 0) {
+          const companion = document.createElement("a");
+          companion.className = "chapter-study-link";
+          const route = new URLSearchParams({course: currentCourse.name, chapter: String(otherIndex + 1)});
+          companion.href = `./${colorMode ? "notes" : "color-notes"}.html#${route.toString()}`;
+          companion.textContent = colorMode ? "查看本章讲义 →" : "查看本章重点与易错 →";
+          section.querySelector(".chapter-body").appendChild(companion);
+        }
       });
 
       chapterNav.classList.toggle("hidden", sections.length === 0);
@@ -1282,6 +1316,14 @@
 
     function openCourse(course) {
       currentCourse = course;
+      const guide = course.guide;
+      document.getElementById("course-guide-title").textContent = `${guide.group} · 课程范围与依据`;
+      document.getElementById("course-guide-body").innerHTML =
+        `<p><strong>学习内容：</strong>${escapeHtml(guide.focus)}</p><p><strong>讲解深度：</strong>${escapeHtml(guide.depth)}</p>` +
+        `<p>${escapeHtml(guide.notice)}</p>` +
+        (colorMode ? "<p>红色：核心知识；蓝色：方法与例题；黑色：易混易错。颜色不代表考试频率。</p>" : "<p>章节标签表示课程学习层次，所列题型表示练习形式，不是已核实的招聘题型。</p>") +
+        (guide.references.length ? `<ul>${guide.references.map((ref) => `<li><a href="${escapeHtml(ref.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ref.title)}</a>：${escapeHtml(ref.use)}</li>`).join("")}</ul>` : "<p>本课基于现有专业资料重整，逐章教材出处仍待补充核验。</p>") +
+        '<p><a href="./exam-guide.html">湖南各地考情与科目范围 →</a></p>';
       collapsedBeforeSearch = null;
       recallRetryQueue = [];
       recallRetryMode = false;
@@ -1291,6 +1333,11 @@
       renderMarkdown(course.text);
       study.classList.remove("recall-mode");
       study.classList.toggle("color-notes-list", colorMode);
+      recallToggle.classList.toggle("hidden", !colorMode);
+      recallToggle.setAttribute("aria-pressed", "false");
+      recallToggle.textContent = "回忆模式";
+      recallPager.hidden = true;
+      recallPager.classList.add("hidden");
       syncRecallTargets();
       mobileCourseSelect.value = course.name;
       mobileModuleSelect.value = pageKind;
@@ -1320,6 +1367,9 @@
       searchStatus.textContent = "";
       window.scrollTo({top: 0, behavior: "auto"});
       content.focus({preventScroll: true});
+      if (routeParams.has("chapter")) {
+        requestAnimationFrame(() => content.querySelectorAll(".chapter-section")[activeChapterIndex]?.scrollIntoView({block: "start"}));
+      }
     }
 
     function showDirectory() {
@@ -1378,6 +1428,14 @@
 
     function filterContent() {
       const query = search.value.trim().toLowerCase();
+      if (query && study.classList.contains("recall-mode")) {
+        study.classList.remove("recall-mode");
+        study.classList.toggle("color-notes-list", colorMode);
+        recallToggle.setAttribute("aria-pressed", "false");
+        recallToggle.textContent = "回忆模式";
+        recallPager.hidden = true;
+        recallPager.classList.add("hidden");
+      }
       searchClear.classList.toggle("hidden", !query);
       if (!currentCourse) return;
       if (query && collapsedBeforeSearch === null) {
@@ -1494,7 +1552,12 @@
     mobileModuleSelect.addEventListener("change", () => {
       if (!currentCourse || mobileModuleSelect.value === pageKind) return;
       closeMobileNav({restoreFocus: false});
-      const courseHash = location.hash || `#course=${encodeURIComponent(currentCourse.name)}`;
+      const targetKind = mobileModuleSelect.value;
+      const chapterTitle = currentCourse.chapters?.[pageKind]?.[activeChapterIndex];
+      const targetIndex = currentCourse.chapters?.[targetKind]?.indexOf(chapterTitle) ?? -1;
+      const targetRoute = new URLSearchParams({course: currentCourse.name});
+      if (targetIndex >= 0) targetRoute.set("chapter", String(targetIndex + 1));
+      const courseHash = `#${targetRoute.toString()}`;
       if (mobileModuleSelect.value === "lecture") location.href = `./notes.html${courseHash}`;
       else if (mobileModuleSelect.value === "color-notes") location.href = `./color-notes.html${courseHash}`;
       else location.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[currentCourse.name] || currentCourse.name)}&mode=home`;
@@ -1525,10 +1588,18 @@
       showDirectory();
     });
     recallToggle.addEventListener("click", () => {
+      if (search.value.trim()) {
+        search.value = "";
+        filterContent();
+      }
       const active = study.classList.toggle("recall-mode");
+      study.classList.toggle("color-notes-list", !active);
+      recallPager.hidden = !active;
+      recallPager.classList.toggle("hidden", !active);
       recallToggle.setAttribute("aria-pressed", String(active));
       recallToggle.textContent = active ? "显示全文" : "回忆模式";
       syncRecallTargets();
+      updateStudyPosition();
     });
     content.addEventListener("click", (event) => revealRecallItem(event.target.closest(".red, .blue, .black")));
     content.addEventListener("keydown", (event) => {

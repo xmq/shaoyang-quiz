@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-09-23",
+  "scope": "湖南省各地事业单位计算机专业知识笔试",
+  "status": "首批公开资料；不是全省历年试卷统计",
+  "complete_paper_count": 0,
+  "subject_weights": null,
+  "weight_note": "尚无可核验的完整计算机专业试卷样本，暂不提供网络、数据库等科目的考试百分比。未知不等于零。",
+  "sources": [
+    {
+      "id": "hunan-2026-01",
+      "region": "省直",
+      "year": 2026,
+      "title": "湖南省省直事业单位2026年第一次公开招聘工作人员公告",
+      "url": "https://www.hunan.gov.cn/hnszf/xxgk/rsxx/klzp/202602/t20260211_33915310.html",
+      "kind": "官方公告",
+      "applies_to": "本批次各岗位，具体类别须查岗位表",
+      "finding": "按岗位设置分类公共科目考试，笔试为职业能力倾向测验、综合应用能力。",
+      "limit": "用于区分公共科目与专业知识考试，不能据此确定计算机专业科目占比。",
+      "written_parts": null,
+      "professional_subject_weights": null
+    },
+    {
+      "id": "yueyanglou-2025-02",
+      "region": "岳阳",
+      "year": 2025,
+      "title": "岳阳楼区事业单位2025年第二批集中公开招聘工作人员公告",
+      "url": "https://rsj.yueyang.gov.cn/rsks/71686/content_2318076.html",
+      "kind": "官方公告",
+      "applies_to": "公告中除A01—A04、B01—B05外的其他岗位；具体专业须对应岗位表",
+      "finding": "这组岗位笔试满分100分，公共基础知识30%，岗位专业知识70%。",
+      "limit": "70%是专业知识在整张笔试中的占比，并不是计算机网络等单科占比，也不能推广到岳阳全部招聘。",
+      "written_parts": {
+        "公共基础知识": 30,
+        "岗位专业知识": 70
+      },
+      "professional_subject_weights": null
+    },
+    {
+      "id": "changde-2025-02",
+      "region": "常德",
+      "year": 2025,
+      "title": "常德市市直部分事业单位集中公开招聘工作人员公告（2025年2月10日）",
+      "url": "https://mohrss.changde.gov.cn/rsks/gsgg/ggl/content_78141019",
+      "kind": "官方公告",
+      "applies_to": "本批次，须逐岗核对岗位表",
+      "finding": "笔试范围分综合知识、写作或相应岗位专业知识，具体范围以岗位表为准。",
+      "limit": "公告正文没有提供计算机内部科目分值，不能从报考专业名称推断笔试内容。",
+      "written_parts": null,
+      "professional_subject_weights": null
+    },
+    {
+      "id": "changde-2025-09",
+      "region": "常德",
+      "year": 2025,
+      "title": "常德市2025年市直部分事业单位集中公开招聘工作人员公告（2025年9月1日）",
+      "url": "https://www.changde.gov.cn/zwgk/public/6616759/3294414021.html",
+      "kind": "官方公告",
+      "applies_to": "本批次20人招聘；具体岗位附件尚待逐项核验",
+      "finding": "笔试100分、120分钟，专业范围详见岗位表。",
+      "limit": "搜索到的培训机构教师岗比例未作为官方已核实数据入库；教师岗与普通技术岗须分开统计。",
+      "written_parts": null,
+      "professional_subject_weights": null
+    },
+    {
+      "id": "yiyang-2023-posts",
+      "region": "益阳",
+      "year": 2023,
+      "title": "益阳市市直事业单位2023年度集中公开招聘工作人员岗位表",
+      "url": "https://www.yiyang.gov.cn/yycg/2751/40333/content_1838844.html",
+      "kind": "官方岗位表",
+      "applies_to": "市专用通信局通信保障等表内岗位",
+      "finding": "通信保障岗位接受电子信息类、计算机类专业，但表列笔试为公共基础知识和公文写作能力。",
+      "limit": "历史样本只用于说明专业资格不等于考试科目，不代表该岗位当前考试安排。",
+      "written_parts": null,
+      "professional_subject_weights": null
+    },
+    {
+      "id": "changsha-2024-rules",
+      "region": "长沙",
+      "year": 2024,
+      "title": "长沙市事业单位公开招聘人员实施办法（试行）",
+      "url": "https://www.hunan.gov.cn/zqt/zcsd/202406/t20240605_33320946.html",
+      "kind": "官方规则说明",
+      "applies_to": "考试组织的一般规则；不是某次计算机招聘大纲",
+      "finding": "考试强调专业水平及履行岗位职责所需能力，具体测试仍需落实到招聘公告。",
+      "limit": "笔试占综合成绩的比例不等于计算机各科在笔试中的占比，本条不纳入科目统计。",
+      "written_parts": null,
+      "professional_subject_weights": null
+    }
+  ],
+  "coverage": {
+    "长沙": "已收录一般规则；具体计算机岗位大纲和完整试卷待补",
+    "株洲": "待收集可核验的计算机岗位资料",
+    "湘潭": "待收集可核验的计算机岗位资料",
+    "衡阳": "已检索到综合招聘公告；具体计算机岗位范围尚未核实",
+    "邵阳": "普通计算机技术岗位的具体范围与完整试卷待核实",
+    "岳阳": "已收录岳阳楼区笔试结构；专业内部比例待补",
+    "常德": "已收录两批公告；具体岗位附件、完整试卷待补",
+    "张家界": "待收集可核验的计算机岗位资料",
+    "益阳": "已收录历史岗位表；专业知识试卷待补",
+    "郴州": "待收集可核验的计算机岗位资料",
+    "永州": "待收集可核验的计算机岗位资料",
+    "怀化": "待收集可核验的计算机岗位资料",
+    "娄底": "待收集可核验的计算机岗位资料",
+    "湘西": "待收集可核验的计算机岗位资料"
+  }
+}

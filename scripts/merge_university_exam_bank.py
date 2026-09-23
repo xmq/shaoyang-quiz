@@ -17,7 +17,7 @@ REPORT = ROOT / "大学期末题库去重报告.md"
 SOURCE_REPORT = ROOT / "大学期末改编题来源汇总.md"
 STAGING_SPECS = {
     ROOT / "staging" / "university_applied.json": (
-        "ua-", {"办公软件", "教学论", "多媒体", "编程语言", "信息安全"},
+        "ua-", {"办公软件", "多媒体", "编程语言", "信息安全"},
     ),
     ROOT / "staging" / "university_corecs.json": (
         "uc-", {"操作系统", "数据库", "算法与数据结构", "计算机组成原理", "计算机网络", "软件工程"},

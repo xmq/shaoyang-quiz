@@ -6,6 +6,7 @@ const NETWORK_TIMEOUT_MS = 4500;
 const CORE_ASSETS = [
   "./",
   "./index.html",
+  "./exam-guide.html",
   "./quiz.html",
   "./style.css",
   "./build-meta.js",

@@ -72,6 +72,8 @@ def main():
     for index, q in enumerate(qs, 1):
         qid = q.get("id") or f"#{index}"
         qtype = q.get("type")
+        if q.get("subject") == "教学论":
+            errors.append(f"{qid}: 教师方向已移除，不应重新加入现行题库")
         answer = str(q.get("answer") or "")
         options = q.get("options") or {}
 

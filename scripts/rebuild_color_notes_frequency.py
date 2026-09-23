@@ -367,6 +367,7 @@ def render_course(name: str, groups: dict[str, list[str]]) -> str:
 
 
 def main() -> None:
+    raise SystemExit("旧版按考频覆盖笔记的脚本已停用。请直接编辑 color_notes/*.md，并运行 validate_color_notes.py；未核验题库频次不能作为湖南考频。")
     COLOR_DIR.mkdir(exist_ok=True)
     for course, groups in COURSES.items():
         (COLOR_DIR / f"{course}.md").write_text(render_course(course, groups), encoding="utf-8", newline="\n")

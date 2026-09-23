@@ -31,8 +31,8 @@ PAGE_CONFIGS = {
         "index": ROOT / "color-notes-index.json",
         "html": ROOT / "color-notes.html",
         "markdown": ROOT / "三色笔记完整版.md",
-        "document_title": "刷题器 · 三色笔记",
-        "markdown_title": "刷题器 · 三色笔记完整版",
+        "document_title": "刷题器 · 重点与易错",
+        "markdown_title": "刷题器 · 重点与易错完整版",
         "active_module": "color-notes",
         "use_color_markup": True,
         "body_class": "color-notes-page",
@@ -73,7 +73,24 @@ def render_html(courses, config):
     if not TEMPLATE.exists():
         raise ValueError("缺少 notes.template.html，无法构建学习页面")
     rendered = TEMPLATE.read_text(encoding="utf-8")
-    payload_items = [{"name": item["name"], "text": item["text"]} for item in courses]
+    guide = json.loads((ROOT / "course-guide.json").read_text(encoding="utf-8"))
+    guides = {item["name"]: item for item in guide["courses"]}
+    references = {item["id"]: item for item in guide["references"]}
+    lecture_courses = load_courses(ROOT / "course-index.json")
+    note_courses = load_courses(ROOT / "color-notes-index.json")
+    chapters = {
+        kind: {item["name"]: re.findall(r"(?m)^## (.+)$", item["text"]) for item in items}
+        for kind, items in (("lecture", lecture_courses), ("color-notes", note_courses))
+    }
+    payload_items = []
+    for item in courses:
+        entry = guides[item["name"]]
+        payload_items.append({
+            "name": item["name"], "text": item["text"],
+            "guide": {**entry, "notice": guide["notice"],
+                      "references": [references[key] for key in entry["references"]]},
+            "chapters": {kind: values[item["name"]] for kind, values in chapters.items()},
+        })
     payload = json.dumps(payload_items, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     replacements = {
         "__COURSE_DATA__": payload,
