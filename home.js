@@ -92,42 +92,35 @@
     };
   }
 
-  function updateContinueLink() {
-    const link = document.getElementById("home-continue");
-    const last = lastLearning();
-    if (!last) {
-      link.classList.add("hidden");
-      return;
-    }
-    const moduleName = last.module === "color-notes" ? "重点与易错" : "讲义";
-    const path = last.module === "color-notes" ? "color-notes.html" : "notes.html";
-    const route = new URLSearchParams({course: last.course, chapter: String(last.chapter || 1)});
-    if (last.module === "color-notes" && last.card) route.set("card", String(last.card));
-    link.href = `./${path}#${route.toString()}`;
-    link.innerHTML = `<span>继续上次学习</span><strong>${last.course} · 第${last.chapter || 1}章</strong><small>${moduleName} →</small>`;
-    link.classList.remove("hidden");
-  }
-
   function updateCourseLinks(courseName, progress) {
     const actions = document.getElementById("home-module-actions");
     const status = document.getElementById("selected-course-status");
-    const title = document.getElementById("start-title");
     if (!courseName) {
       actions.classList.add("hidden");
-      title.textContent = "选择一门课程";
       status.textContent = "选课后可直接进入讲义、重点与易错或专项练习。";
       return;
     }
     const subject = SUBJECT_ALIASES[courseName] || courseName;
     const hash = `#course=${encodeURIComponent(courseName)}`;
     const stats = courseStats(progress, courseName);
-    document.getElementById("home-notes-link").href = `./notes.html${hash}`;
+    const course = COURSES.find((item) => item.name === courseName);
+    const notesLink = document.getElementById("home-notes-link");
+    notesLink.href = `./notes.html${hash}`;
+    notesLink.innerHTML = "<strong>开始讲义</strong><small>进入 →</small>";
     document.getElementById("home-recall-link").href = `./color-notes.html${hash}`;
     document.getElementById("home-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
-    title.textContent = courseName;
+    const last = lastLearning();
+    if (last?.course === courseName) {
+      const path = last.module === "color-notes" ? "color-notes.html" : "notes.html";
+      const moduleName = last.module === "color-notes" ? "重点" : "讲义";
+      const route = new URLSearchParams({course: last.course, chapter: String(last.chapter || 1)});
+      if (last.module === "color-notes" && last.card) route.set("card", String(last.card));
+      notesLink.href = `./${path}#${route.toString()}`;
+      notesLink.innerHTML = `<strong>继续第${last.chapter || 1}章</strong><small>${moduleName} →</small>`;
+    }
     status.textContent = stats.done
       ? `已完成 ${stats.done}/${stats.total} 题 · 正确率 ${stats.rate}%${stats.wrong ? ` · 错题 ${stats.wrong}` : ""}`
-      : `${stats.total || "—"} 道配套练习，建议先从讲义开始。`;
+      : `${course?.topics || "—"} 个知识点 · ${stats.total || "—"} 道题`;
     actions.classList.remove("hidden");
   }
 
@@ -149,7 +142,6 @@
     const root = document.getElementById("home-course-grid");
     root.innerHTML = GROUPS.map((group, groupIndex) => {
       const cards = COURSES.filter((course) => course.group === group).map((course) => {
-        const subject = SUBJECT_ALIASES[course.name] || course.name;
         const stats = courseStats(progress, course.name);
         const noteHash = `#course=${encodeURIComponent(course.name)}`;
         const progressText = stats.done ? `已做 ${stats.done}/${stats.total} · ${stats.rate}%` : `${course.topics} 个知识点 · ${stats.total || "—"} 题`;
@@ -160,11 +152,6 @@
             <span class="home-course-copy"><strong>${course.name}</strong><small>${progressText}</small><i><b style="width:${progressWidth}%"></b></i></span>
             <span class="course-card-arrow" aria-hidden="true">›</span>
           </a>
-          <nav class="home-course-actions" aria-label="${course.name}学习入口">
-            <a href="./notes.html${noteHash}">讲义</a>
-            <a href="./color-notes.html${noteHash}">重点</a>
-            <a href="./quiz.html?subject=${encodeURIComponent(subject)}&mode=home">练习</a>
-          </nav>
         </article>`;
       }).join("");
       return `<section class="home-course-group" data-course-group="${group}" aria-labelledby="course-group-${groupIndex}"><h3 id="course-group-${groupIndex}">${group}</h3><div>${cards}</div></section>`;
@@ -209,6 +196,5 @@
   buildCourseMenu(progress);
   buildCourseGrid(progress);
   bindCourseFilters();
-  updateContinueLink();
   registerServiceWorker();
 })();

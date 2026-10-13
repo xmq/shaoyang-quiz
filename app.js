@@ -915,34 +915,26 @@ function renderDashboard() {
   const remainingMinutes = activeMock ? Math.max(0, Math.ceil(mockRemainingMs() / 60000)) : 0;
 
   $("card-area").innerHTML = `<section class="dashboard quiz-hub-dashboard">
-    <header class="card hub-overview">
-      <div>
-        <span class="hub-kicker">专项训练</span>
-        <h1>${escapeHtml(state.subject || "先选择一门课程")}</h1>
-        <p>${state.subject ? "按知识点练习，答错后回到解析和讲义。" : "在上方选择课程，再开始顺序练习或模拟考试。"}</p>
-      </div>
-      <div class="hub-progress"><strong>${completionRate}%</strong><span>${doneCount}/${scope.length} 已完成</span></div>
-    </header>
     ${activeMock ? `<button type="button" class="resume-mock" data-resume-mock>
       <span><strong>继续模拟考试</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
       <b>约 ${remainingMinutes} 分钟 →</b>
     </button>` : ""}
     <article class="card hub-tasks">
-      <div class="hub-section-title"><strong>开始练习</strong><span>先完成本课，再随机检验</span></div>
+      <div class="hub-section-title"><strong>练习方式</strong><span>${doneCount}/${scope.length} · ${completionRate}%</span></div>
       <div class="hub-primary-actions">
         <button class="primary mode-card" data-jump-mode="seq">
           <span class="mode-symbol" aria-hidden="true">顺</span>
-          <span class="mode-copy"><strong>继续本课练习</strong><small>按课程顺序完成未做题目</small></span>
+          <span class="mode-copy"><strong>顺序练习</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
         <button class="mode-card" data-jump-mode="rnd">
           <span class="mode-symbol" aria-hidden="true">随</span>
-          <span class="mode-copy"><strong>随机刷题</strong><small>打乱题序，交叉检验</small></span>
+          <span class="mode-copy"><strong>随机练习</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
         <button class="mode-card" data-jump-mode="mock">
           <span class="mode-symbol" aria-hidden="true">考</span>
-          <span class="mode-copy"><strong>模拟考试</strong><small>计时组卷，交卷后判分</small></span>
+          <span class="mode-copy"><strong>模拟考试</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
       </div>
@@ -951,7 +943,6 @@ function renderDashboard() {
       <div class="hub-review-actions">
         ${reviewCount ? `<button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>` : ""}
         ${wrongCount ? `<button data-jump-mode="wrong"><span>错题本</span><b>${wrongCount}</b></button>` : ""}
-        ${wrongCount ? `<button data-export-wrong><span>导出错题</span><b>${wrongCount}</b></button>` : ""}
         ${favCount ? `<button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>` : ""}
       </div>
     </article>` : ""}
@@ -973,7 +964,6 @@ function renderDashboard() {
       render();
     });
   });
-  document.querySelector("[data-export-wrong]")?.addEventListener("click", exportWrong);
   document.querySelector("[data-resume-mock]")?.addEventListener("click", () => {
     state.mode = "mock";
     const nextId = mockSession.ids.find((id) => mockSession.answers[id] === undefined) || mockSession.ids[0];
@@ -1523,29 +1513,6 @@ function exportProgress() {
   downloadText(`刷题进度_${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2), "application/json;charset=utf-8");
 }
 
-function exportFlags() {
-  const ids = Object.keys(state.flagged || {});
-  if (!ids.length) {
-    alert("当前没有纠错标记");
-    return;
-  }
-  const map = Object.fromEntries(PUBLIC_QUESTIONS.map((q) => [q.id, q]));
-  const rows = ids.map((id) => ({id, q: map[id], markedAt: state.flagged[id]})).filter((row) => row.q);
-  let text = `纠错标记导出 · ${new Date().toLocaleString("zh-CN")}\n共 ${rows.length} 道\n\n`;
-  rows.forEach(({id, q, markedAt}, index) => {
-    text += `${index + 1}. [${markedAt}] ${q.stem}\n`;
-    text += `   ID：${id}\n`;
-    text += `   题型：${q.type} / ${q.subject} / ${chapterKey(q)}\n`;
-    for (const letter of optionKeys(q)) {
-      if (q.options && q.options[letter]) text += `   ${letter}. ${q.options[letter]}\n`;
-    }
-    text += `   【答案】${q.answer}\n`;
-    if (q.explanation) text += `   【解析】${q.explanation}\n`;
-    text += "\n";
-  });
-  downloadText(`纠错标记_${new Date().toISOString().slice(0, 10)}.txt`, text, "text/plain;charset=utf-8");
-}
-
 function isRecord(value) {
   return value && typeof value === "object" && !Array.isArray(value);
 }
@@ -1635,27 +1602,6 @@ function validateImportedState(next, storedRevisions = {}) {
   return applyQuestionRevisionResets(sanitizeState(next, true), storedRevisions);
 }
 
-function backupProgress(progress) {
-  const current = {...progress};
-  delete current._pending;
-  delete current._stickyId;
-  try {
-    localStorage.setItem(`${STORE_KEY}-backup`, JSON.stringify({
-      backedUpAt: new Date().toISOString(),
-      questionBankVersion: QUESTION_BANK_VERSION,
-      questionRevisions: QUESTION_REVISIONS,
-      state: current,
-    }));
-    return true;
-  } catch {
-    throw new Error("无法创建设备内备份，请先导出进度文件");
-  }
-}
-
-function backupCurrentProgress() {
-  return backupProgress(state);
-}
-
 function applyImportedState(next) {
   const previous = state;
   state = sanitizeState(next, false);
@@ -1688,38 +1634,13 @@ function importProgressFile(file) {
         ? "\n该文件来自不同题库版本，已自动清除修订题的旧作答记录。"
         : "";
       if (!confirm(`导入将替换当前设备上的学习进度，是否继续？${versionWarning}`)) return;
-      backupCurrentProgress();
       if (!applyImportedState(next)) return;
-      alert(`进度已导入；原进度已自动备份在本设备中。${revisionResetCount ? `另有 ${revisionResetCount} 道修订题已重新加入待练。` : ""}`);
+      alert(`进度已导入。${revisionResetCount ? `另有 ${revisionResetCount} 道修订题已重新加入待练。` : ""}`);
     } catch (error) {
       alert(`导入失败：${error.message || "文件格式不正确"}`);
     }
   };
   reader.readAsText(file, "utf-8");
-}
-
-function restoreProgressBackup() {
-  const payload = readStore(`${STORE_KEY}-backup`, null);
-  if (!payload || !isRecord(payload.state)) {
-    alert("当前设备上没有可恢复的导入前进度。");
-    return;
-  }
-  if (!confirm(`确定恢复导入前的进度${payload.backedUpAt ? `（备份时间：${new Date(payload.backedUpAt).toLocaleString("zh-CN")}）` : ""}？`)) return;
-  try {
-    const next = validateImportedState({...payload.state}, payload.questionRevisions);
-    const revisionResetCount = next._revisionResetCount || 0;
-    const previous = state;
-    if (!applyImportedState(next)) return;
-    try {
-      backupProgress(previous);
-    } catch {
-      alert("进度已恢复，但恢复前的状态因存储空间不足未能继续备份。建议立即导出进度文件。");
-      return;
-    }
-    alert(`已恢复进度；恢复前的状态也已保留为最新备份。${revisionResetCount ? `另有 ${revisionResetCount} 道修订题已重新加入待练。` : ""}`);
-  } catch (error) {
-    alert(`恢复失败：${error.message || "备份格式不正确"}`);
-  }
 }
 
 function downloadText(filename, content, type) {
@@ -1852,10 +1773,6 @@ function bindGlobalEvents() {
     closeDrawer();
     exportWrong();
   });
-  $("export-flags").addEventListener("click", () => {
-    closeDrawer();
-    exportFlags();
-  });
   $("export-progress").addEventListener("click", () => {
     closeDrawer();
     exportProgress();
@@ -1863,10 +1780,6 @@ function bindGlobalEvents() {
   $("import-progress").addEventListener("click", () => {
     closeDrawer();
     $("progress-file").click();
-  });
-  $("restore-progress").addEventListener("click", () => {
-    closeDrawer();
-    restoreProgressBackup();
   });
   $("progress-file").addEventListener("change", (event) => {
     const file = event.target.files && event.target.files[0];
@@ -1878,10 +1791,8 @@ function bindGlobalEvents() {
     if (!confirm("确定重置所有进度？错题、收藏、历史记录将一并清除。")) return;
     try {
       localStorage.removeItem(STORE_KEY);
-      localStorage.removeItem(`${STORE_KEY}-backup`);
       for (const key of LEGACY_KEYS) {
         localStorage.removeItem(key);
-        localStorage.removeItem(`${key}-backup`);
       }
     } catch {}
     state = initialState();

@@ -73,8 +73,6 @@ def render_html(courses, config):
     if not TEMPLATE.exists():
         raise ValueError("缺少 notes.template.html，无法构建学习页面")
     rendered = TEMPLATE.read_text(encoding="utf-8")
-    guide = json.loads((ROOT / "course-guide.json").read_text(encoding="utf-8"))
-    guides = {item["name"]: item for item in guide["courses"]}
     learning_map = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
     questions = json.loads((ROOT / "questions.json").read_text(encoding="utf-8"))
     question_counts = {}
@@ -97,10 +95,8 @@ def render_html(courses, config):
     }
     payload_items = []
     for item in courses:
-        entry = guides[item["name"]]
         payload_items.append({
             "name": item["name"], "text": item["text"],
-            "guide": {"group": entry["group"], "focus": entry["focus"], "depth": entry["depth"]},
             "chapters": {kind: values[item["name"]] for kind, values in chapters.items()},
             "learning_chapters": next(
                 (course.get("chapters", []) for course in learning_map["courses"] if course["course_name"] == item["name"]),

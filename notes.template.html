@@ -52,10 +52,7 @@
     }
     .skip-link:focus { top: 12px; }
     .hidden { display: none !important; }
-    .course-guide { margin: 12px 0 20px; padding: 12px 16px; border: 1px solid #dbe3ed; border-radius: 10px; background: #f8fafc; font-size: 14px; line-height: 1.75; }
-    .course-guide summary { cursor: pointer; font-weight: 650; color: #143b6b; }
-    .course-guide p { margin: 10px 0; }
-    .course-guide a, .chapter-study-link { color: #1d4ed8; text-decoration: underline; text-underline-offset: 3px; }
+    .chapter-study-link { color: #1d4ed8; text-decoration: underline; text-underline-offset: 3px; }
     .chapter-study-link { display: inline-block; margin: 12px 0 20px; font-size: 14px; }
     .point-practice-link { margin: 2px 0 12px; font-size: 13px; }
     .topic-study-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: -2px 0 8px; color: var(--muted); font-size: 12px; line-height: 1.55; }
@@ -646,8 +643,7 @@
         --shadow: 0 10px 30px rgba(0, 0, 0, .24);
       }
       .site-header { border-color: var(--border); background: rgba(16, 24, 40, .94); }
-      .course-guide { background: var(--panel); border-color: var(--border); }
-      .course-guide summary, .course-guide a, .chapter-study-link { color: var(--primary); }
+      .chapter-study-link { color: var(--primary); }
       .study-toolbar { background: rgba(16, 24, 40, .94); }
       .search-box, .chapter-nav-head, .note code { background: var(--panel); }
       .module-link[aria-current="page"] { border-color: #315d96; color: var(--primary-strong); }
@@ -679,7 +675,6 @@
       .lecture-page .toolbar-actions { display: none; }
       body.is-studying main { padding-top: calc(118px + env(safe-area-inset-top)); }
       .chapter-section { scroll-margin-top: 145px; }
-      .course-guide { margin: 0 0 16px; }
     }
 
     /* Mobile-first reading surface */
@@ -695,8 +690,6 @@
     .module-link[aria-current="page"] { border-color: #b8e8e2; background: #e8f7f5; color: #176f68; }
     main { width: min(1220px, 100%); }
     .study-toolbar { border-radius: 15px; }
-    .course-guide { border-color: #dbe5ed; border-radius: 14px; background: rgba(255, 255, 255, .88); }
-    .course-guide summary { color: #176f68; }
     .study-layout { grid-template-columns: 246px minmax(0, 1fr); gap: 20px; }
     .chapter-nav { border-color: #dbe5ed; border-radius: 18px; box-shadow: 0 8px 28px rgba(16, 42, 67, .055); }
     .chapter-link:hover, .chapter-link.active { background: #e8f7f5; color: #176f68; }
@@ -719,7 +712,6 @@
       .study-toolbar { margin: -8px 0 12px; padding: 8px; border: 1px solid #dbe5ed; border-radius: 0 0 15px 15px; background: rgba(244, 247, 250, .96); box-shadow: 0 8px 24px rgba(16, 42, 67, .055); }
       .mobile-nav-toggle, .text-button, .mobile-course-context, .mobile-module-context { border-radius: 10px; }
       .search-box { border-radius: 10px; box-shadow: none; }
-      .course-guide { margin-right: 2px; margin-left: 2px; }
       .note { padding: 18px 15px 24px; border-radius: 16px; box-shadow: 0 7px 24px rgba(16, 42, 67, .055); }
       .lecture-page .note { padding: 10px 7px 28px; }
       .chapter-toggle { border-radius: 12px; }
@@ -735,8 +727,6 @@
       .module-link { color: #a7b7c5; }
       .module-link[aria-current="page"] { border-color: #275951; background: #143936; color: #a3eee6; }
       .study-toolbar { background: rgba(12, 23, 36, .95); }
-      .course-guide { border-color: #2a3d52; background: #142234; }
-      .course-guide summary { color: #99e8df; }
       .chapter-nav, .chapter-nav-head { border-color: #2a3d52; background: #142234; }
       .chapter-link:hover, .chapter-link.active { background: #143936; color: #a3eee6; }
       .note { border-color: #2a3d52; background: #142234; box-shadow: 0 12px 34px rgba(0, 0, 0, .22); }
@@ -749,7 +739,6 @@
 
     @media (max-width: 700px) and (prefers-color-scheme: dark) {
       .study-toolbar { border-color: #2a3d52; background: rgba(12, 23, 36, .96); box-shadow: 0 8px 24px rgba(0, 0, 0, .24); }
-      .course-guide { border-color: #2a3d52; background: #142234; }
       .note { background: transparent; box-shadow: none; }
       .chapter-pager { border-color: #2a3d52; background: rgba(20, 34, 52, .96); box-shadow: 0 10px 30px rgba(0, 0, 0, .28); }
     }
@@ -795,11 +784,6 @@
           <button class="text-button" id="back" type="button" aria-label="返回选择科目">换科目</button>
         </div>
       </div>
-
-      <details class="course-guide" id="course-guide">
-        <summary id="course-guide-title">本课怎么学</summary>
-        <div id="course-guide-body"></div>
-      </details>
 
       <div class="study-layout">
         <nav class="chapter-nav" id="chapter-nav" aria-label="章节目录" aria-hidden="false">
@@ -1140,6 +1124,7 @@
     }
 
     function bindTopicGuidance() {
+      if (!colorMode) return;
       content.querySelectorAll(".point[data-topic-id]").forEach((point) => {
         const topic = currentCourse?.topics?.find((item) => item.topic_id === point.dataset.topicId);
         if (!topic) return;
@@ -1151,7 +1136,7 @@
         tag.textContent = priority;
         const copy = document.createElement("span");
         copy.className = "topic-study-copy";
-        copy.textContent = `掌握到：${(topic.mastery_steps || ["识别概念"]).join(" → ")} · 练习方式：${(topic.practice_modes || ["客观辨析"]).join(" / ")}`;
+        copy.textContent = `${topic.target_depth || "识记理解"} · ${(topic.practice_modes || ["客观辨析"]).join(" / ")}`;
         meta.append(tag, copy);
         point.insertAdjacentElement("afterend", meta);
         if (!topic.question_count) return;
@@ -1416,11 +1401,6 @@
 
     function openCourse(course) {
       currentCourse = course;
-      const guide = course.guide;
-      document.getElementById("course-guide-title").textContent = `${guide.group} · 本课怎么学`;
-      document.getElementById("course-guide-body").innerHTML =
-        `<p><strong>学习内容：</strong>${escapeHtml(guide.focus)}</p><p><strong>讲解深度：</strong>${escapeHtml(guide.depth)}</p>` +
-        (colorMode ? "<p>红色记结论，蓝色学方法，黑色防失分。优先练先完成，正常练随后完成，补充练用于偶发题；所有知识点都要学。</p>" : "<p>先按章节建立知识结构，再进入重点与易错和题库练习。</p>");
       collapsedBeforeSearch = null;
       recallRetryQueue = [];
       recallRetryMode = false;
