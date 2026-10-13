@@ -1,0 +1,369 @@
+[
+  {
+    "id": "gap-db-001", "source": "课程缺口补充", "type": "单选", "chapter": "设计阶段与查询成本",
+    "stem": "数据库逻辑结构已经确定。现在需要根据常用查询选择索引和文件组织方式，这项工作主要属于哪个阶段？",
+    "options": {"A": "需求分析", "B": "概念设计", "C": "逻辑设计", "D": "物理设计"}, "answer": "D",
+    "explanation": "索引、存储结构和文件组织属于物理设计。选择时要结合查询频率、选择性、更新代价和存储空间。",
+    "subject": "数据库", "source_chapter": "设计阶段与查询成本", "adaptation_note": "依据本课讲义补齐物理设计与查询成本练习。",
+    "knowledge_point": "索引与存储", "ability": "场景选型", "difficulty": "应用"
+  },
+  {
+    "id": "gap-ds-001", "source": "课程缺口补充", "type": "简答", "chapter": "从操作需求选结构",
+    "stem": "一个系统需要实现三个功能：撤销最近一次操作、按到达顺序处理打印任务、按学号快速等值查找。分别选择合适的数据结构并说明理由。",
+    "options": {}, "answer": "撤销最近操作用栈，因为后执行的操作先撤销；打印任务用队列，因为先到先处理；按学号快速等值查找可用散列表，因为平均情况下可快速定位。",
+    "explanation": "结构选择必须从所需操作和性能目标出发，不能只背结构名称。",
+    "max_score": 6, "rubric": [{"criterion": "撤销选择栈并说明后进先出", "points": 2}, {"criterion": "打印选择队列并说明先进先出", "points": 2}, {"criterion": "等值查找选择散列表并说明平均查找特点", "points": 2}],
+    "subject": "算法与数据结构", "source_chapter": "从操作需求选结构", "adaptation_note": "依据本课讲义补齐结构选型简答。",
+    "knowledge_point": "数据结构基础", "ability": "场景选型", "difficulty": "应用"
+  },
+  {
+    "id": "gap-pl-001", "source": "课程缺口补充", "type": "单选", "chapter": "优先级、除法与短路",
+    "stem": "在C语言中执行int x=0; if (0 && ++x) { }后，x的值是？",
+    "options": {"A": "0", "B": "1", "C": "未定义", "D": "编译错误"}, "answer": "A",
+    "explanation": "逻辑与左操作数为假时发生短路，右侧++x不执行，因此x仍为0。",
+    "subject": "编程语言", "source_chapter": "优先级、除法与短路", "adaptation_note": "依据短路求值补齐程序阅读题。",
+    "knowledge_point": "程序设计基础", "ability": "程序阅读", "difficulty": "基础"
+  },
+  {
+    "id": "gap-pl-002", "source": "课程缺口补充", "type": "单选", "chapter": "输入转换",
+    "stem": "Python 3程序a=input(); b=input(); print(a+b)，依次输入12和3，输出是什么？",
+    "options": {"A": "15", "B": "123", "C": "12 3", "D": "发生类型错误"}, "answer": "B",
+    "explanation": "input返回字符串，字符串相加执行拼接。若需要数值相加，应先使用int转换。",
+    "subject": "编程语言", "source_chapter": "输入转换", "adaptation_note": "依据输入类型与转换补齐程序阅读题。",
+    "knowledge_point": "程序设计基础", "ability": "程序阅读", "difficulty": "基础"
+  },
+  {
+    "id": "gap-pl-003", "source": "课程缺口补充", "type": "填空", "chapter": "跟踪变量与边界",
+    "stem": "Python程序s=0; for i in range(1,5): s+=i。循环结束后s等于多少？只填写数字。",
+    "options": {}, "answer": "10", "explanation": "range(1,5)依次产生1、2、3、4，因此s=1+2+3+4=10。",
+    "max_score": 3, "rubric": [{"criterion": "判断range不包含终点5", "points": 1}, {"criterion": "正确跟踪1、2、3、4", "points": 1}, {"criterion": "求和结果10", "points": 1}],
+    "subject": "编程语言", "source_chapter": "跟踪变量与边界", "adaptation_note": "依据循环边界补齐无提示填空题。",
+    "knowledge_point": "程序控制结构", "ability": "程序阅读", "difficulty": "基础"
+  },
+  {
+    "id": "gap-pl-004", "source": "课程缺口补充", "type": "简答", "chapter": "同一算法，不同语义",
+    "stem": "比较表达式7/2和-7/2在现代C整数运算与Python 3中的结果，并说明Python的//与/有什么区别。",
+    "options": {}, "answer": "现代C中整数7/2为3，-7/2向零截断为-3。Python 3的/执行真除法，7/2为3.5、-7/2为-3.5；//执行向下取整，7//2为3，-7//2为-4。",
+    "explanation": "同一符号在不同语言和类型下可能具有不同语义，必须先确定语言、类型和运算规则。",
+    "max_score": 5, "rubric": [{"criterion": "写出现代C的7/2=3", "points": 1}, {"criterion": "写出现代C的-7/2=-3", "points": 1}, {"criterion": "说明Python /是真除法", "points": 1}, {"criterion": "写出Python 7//2=3", "points": 1}, {"criterion": "写出Python -7//2=-4并说明向下取整", "points": 1}],
+    "subject": "编程语言", "source_chapter": "同一算法，不同语义", "adaptation_note": "依据C与Python运算语义补齐比较简答。",
+    "knowledge_point": "程序设计基础", "ability": "比较辨析", "difficulty": "应用"
+  },
+  {
+    "id": "gap-circuit-001", "source": "课程缺口补充", "type": "简答", "chapter": "测量对象与仪表影响",
+    "stem": "说明电压表和电流表应怎样接入电路、理想内阻分别是多少，以及实际内阻会怎样影响被测电路。",
+    "options": {}, "answer": "电压表并联在被测两端，理想内阻无穷大；实际内阻有限，会分流并产生负载效应。电流表串联在被测支路，理想内阻为0；实际内阻非零，会增加支路电阻并改变电流。",
+    "explanation": "测量仪表也是电路的一部分，实际内阻会改变原电路工作状态。",
+    "max_score": 6, "rubric": [{"criterion": "电压表并联", "points": 1}, {"criterion": "电压表理想内阻无穷大", "points": 1}, {"criterion": "说明电压表负载效应", "points": 1}, {"criterion": "电流表串联", "points": 1}, {"criterion": "电流表理想内阻为0", "points": 1}, {"criterion": "说明电流表实际压降影响", "points": 1}],
+    "subject": "电路分析与电工技术", "source_chapter": "测量对象与仪表影响", "adaptation_note": "依据测量模型补齐机制简答。",
+    "knowledge_point": "电路分析基础", "ability": "机制解释", "difficulty": "应用"
+  },
+  {
+    "id": "gap-circuit-002", "source": "课程缺口补充", "type": "单选", "chapter": "分段定位",
+    "stem": "串联控制回路不能工作。已确认电源正常，测得开关输入端有电压、输出端无电压，且开关应处于闭合状态。优先判断哪里故障？",
+    "options": {"A": "电源", "B": "开关或其接线", "C": "负载之后的回线", "D": "测量仪表一定损坏"}, "answer": "B",
+    "explanation": "分段测量显示电压在开关两端中断，且开关应闭合，因此优先检查开关触点和接线。",
+    "subject": "电路分析与电工技术", "source_chapter": "分段定位", "adaptation_note": "依据分段测量补齐故障定位场景题。",
+    "knowledge_point": "电路分析基础", "ability": "读图排障", "difficulty": "应用"
+  },
+  {
+    "id": "gap-analog-001", "source": "课程缺口补充", "type": "简答", "chapter": "级间负载与共模",
+    "stem": "说明多级放大器的后级为什么会影响前级增益，并说明差分放大器抑制共模信号的含义。",
+    "options": {}, "answer": "后级输入电阻会作为前级负载，与前级输出电阻共同分压，使前级实际输出和总增益下降。差分放大器主要放大两输入之差，对两端同时出现、大小和相位相同的共模信号尽量抑制。",
+    "explanation": "分析多级电路要考虑级间负载，分析差分电路要区分差模和共模。",
+    "max_score": 4, "rubric": [{"criterion": "说明后级输入电阻构成负载", "points": 1}, {"criterion": "说明分压导致增益下降", "points": 1}, {"criterion": "说明差模信号含义", "points": 1}, {"criterion": "说明共模信号及抑制目标", "points": 1}],
+    "subject": "模拟电子技术", "source_chapter": "级间负载与共模", "adaptation_note": "依据多级与差分放大补齐机制简答。",
+    "knowledge_point": "三极管放大", "ability": "机制解释", "difficulty": "应用"
+  },
+  {
+    "id": "gap-analog-002", "source": "课程缺口补充", "type": "单选", "chapter": "按信号链分析",
+    "stem": "分析一个放大系统输出削顶失真时，最合理的顺序是？",
+    "options": {"A": "只检查最后一级", "B": "从输入、偏置、各级增益与摆幅限制逐级检查", "C": "先更换所有电阻", "D": "只测电源频率"}, "answer": "B",
+    "explanation": "信号链分析从输入条件开始，逐级检查静态工作点、增益、负载和输出摆幅，才能定位失真首次出现的位置。",
+    "subject": "模拟电子技术", "source_chapter": "按信号链分析", "adaptation_note": "依据放大系统分析流程补齐场景题。",
+    "knowledge_point": "模拟电子基础", "ability": "读图排障", "difficulty": "应用"
+  },
+  {
+    "id": "gap-comm-001", "source": "课程缺口补充", "type": "简答", "chapter": "冗余的不同用途",
+    "stem": "比较信源编码和信道编码对冗余的处理方向及主要目的。",
+    "options": {}, "answer": "信源编码尽量去除信息中的统计冗余，以降低码率或压缩数据；信道编码有控制地加入冗余，以便接收端检测或纠正传输错误，提高可靠性。",
+    "explanation": "两者都涉及冗余，但目标相反：一个主要压缩，一个主要抗差错。",
+    "max_score": 4, "rubric": [{"criterion": "信源编码去除冗余", "points": 1}, {"criterion": "说明压缩或降低码率目的", "points": 1}, {"criterion": "信道编码加入冗余", "points": 1}, {"criterion": "说明检错纠错与可靠性目的", "points": 1}],
+    "subject": "通信原理与高频电子线路", "source_chapter": "冗余的不同用途", "adaptation_note": "依据编码目的补齐比较简答。",
+    "knowledge_point": "通信系统基础", "ability": "比较辨析", "difficulty": "应用"
+  },
+  {
+    "id": "gap-comm-002", "source": "课程缺口补充", "type": "填空", "chapter": "功率预算",
+    "stem": "链路发射功率10 dBm，发射和接收天线增益各2 dB，路径损耗80 dB，其他系统损耗2 dB。接收功率是多少dBm？只填写数字。",
+    "options": {}, "answer": "-68", "explanation": "接收功率=10+2+2-80-2=-68 dBm。增益相加，损耗相减。",
+    "max_score": 3, "rubric": [{"criterion": "写出功率预算加减关系", "points": 1}, {"criterion": "正确代入增益和损耗", "points": 1}, {"criterion": "结果-68 dBm", "points": 1}],
+    "subject": "通信原理与高频电子线路", "source_chapter": "功率预算", "adaptation_note": "依据链路预算补齐无公式提示计算。",
+    "knowledge_point": "通信系统基础", "ability": "直接计算", "difficulty": "应用"
+  },
+  {
+    "id": "gap-signal-001", "source": "课程缺口补充", "type": "填空", "chapter": "时间、幅度与周期",
+    "stem": "连续时间信号x(t)=3cos(4πt+π/6)的周期是多少秒？只填写数字。",
+    "options": {}, "answer": "0.5", "explanation": "角频率ω=4π rad/s，周期T=2π/ω=0.5 s。",
+    "max_score": 3, "rubric": [{"criterion": "识别角频率4π", "points": 1}, {"criterion": "写出T=2π/ω", "points": 1}, {"criterion": "结果0.5 s", "points": 1}],
+    "subject": "信号与系统", "source_chapter": "时间、幅度与周期", "adaptation_note": "依据正弦信号参数补齐直接计算。",
+    "knowledge_point": "信号与系统基础", "ability": "直接计算", "difficulty": "基础"
+  },
+  {
+    "id": "gap-signal-002", "source": "课程缺口补充", "type": "简答", "chapter": "逐项检验性质",
+    "stem": "判断系统y(t)=x(t-2)是否线性、时不变、因果和BIBO稳定，并分别说明理由。",
+    "options": {}, "answer": "该系统线性，因为满足叠加与齐次；时不变，因为输入平移会引起输出同样平移；因果，因为时刻t的输出只依赖过去时刻t-2的输入；BIBO稳定，因为有界输入经延时后仍有界。",
+    "explanation": "系统性质必须逐项按定义检验，不能由一个性质推出其他性质。",
+    "max_score": 8, "rubric": [{"criterion": "线性结论与理由", "points": 2}, {"criterion": "时不变结论与理由", "points": 2}, {"criterion": "因果结论与理由", "points": 2}, {"criterion": "稳定结论与理由", "points": 2}],
+    "subject": "信号与系统", "source_chapter": "逐项检验性质", "adaptation_note": "依据系统性质定义补齐综合简答。",
+    "knowledge_point": "系统性质", "ability": "机制解释", "difficulty": "应用"
+  },
+  {
+    "id": "gap-signal-003", "source": "课程缺口补充", "type": "简答", "chapter": "输入与冲激响应",
+    "stem": "连续时间LTI系统的冲激响应为h(t)=e^(-t)u(t)，输入x(t)=δ(t-1)。写出输出y(t)并说明依据。",
+    "options": {}, "answer": "y(t)=x(t)*h(t)=h(t-1)=e^{-(t-1)}u(t-1)。依据是LTI系统输出等于输入与冲激响应的卷积，冲激的移位卷积会使函数产生相同移位。",
+    "explanation": "单位冲激及其移位是理解卷积和冲激响应的基础。",
+    "max_score": 4, "rubric": [{"criterion": "写出y=x*h", "points": 1}, {"criterion": "使用δ(t-1)的移位性质", "points": 1}, {"criterion": "写出e^{-(t-1)}", "points": 1}, {"criterion": "写出u(t-1)", "points": 1}],
+    "subject": "信号与系统", "source_chapter": "输入与冲激响应", "adaptation_note": "依据LTI卷积补齐冲激响应简答。",
+    "knowledge_point": "LTI系统与卷积", "ability": "直接计算", "difficulty": "应用"
+  },
+  {
+    "id": "gap-signal-004", "source": "课程缺口补充", "type": "单选", "chapter": "时域与频域",
+    "stem": "两个信号在时域卷积，对应到频域的关系是？",
+    "options": {"A": "频谱相加", "B": "频谱相乘", "C": "频谱求导", "D": "频谱取倒数"}, "answer": "B",
+    "explanation": "时域卷积对应频域相乘；时域相乘则对应频域卷积并带相应尺度因子。",
+    "subject": "信号与系统", "source_chapter": "时域与频域", "adaptation_note": "依据卷积性质补齐概念辨析。",
+    "knowledge_point": "频域分析", "ability": "比较辨析", "difficulty": "基础"
+  },
+  {
+    "id": "gap-signal-005", "source": "课程缺口补充", "type": "简答", "chapter": "变换式与收敛域",
+    "stem": "说明拉普拉斯变换中收敛域ROC为什么不能省略，并写出因果有理系统和稳定系统对ROC的基本要求。",
+    "options": {}, "answer": "同一个代数形式配合不同ROC可能对应不同的时域信号，因此ROC不能省略。因果有理系统的ROC位于最外侧极点之外；稳定系统的ROC必须包含jω轴。极点本身不属于ROC。",
+    "explanation": "变换表达式和ROC共同确定信号及系统性质。",
+    "max_score": 4, "rubric": [{"criterion": "说明代数式相同但ROC不同可对应不同信号", "points": 1}, {"criterion": "因果系统ROC在最外极点之外", "points": 1}, {"criterion": "稳定系统ROC包含jω轴", "points": 1}, {"criterion": "极点不属于ROC", "points": 1}],
+    "subject": "信号与系统", "source_chapter": "变换式与收敛域", "adaptation_note": "依据拉普拉斯变换与ROC补齐简答。",
+    "knowledge_point": "拉普拉斯与Z变换", "ability": "机制解释", "difficulty": "应用"
+  },
+  {
+    "id": "gap-signal-006", "source": "课程缺口补充", "type": "填空", "chapter": "采样条件与抗混叠",
+    "stem": "连续信号最高频率为4 kHz。按理想采样定理，无混叠恢复所需采样频率理论下限是多少kHz？只填写数字。",
+    "options": {}, "answer": "8", "explanation": "采样频率应不低于最高频率的2倍，理论下限为2×4=8 kHz；实际系统通常留出过渡带和裕量。",
+    "max_score": 3, "rubric": [{"criterion": "写出fs≥2fmax", "points": 1}, {"criterion": "代入4 kHz", "points": 1}, {"criterion": "结果8 kHz", "points": 1}],
+    "subject": "信号与系统", "source_chapter": "采样条件与抗混叠", "adaptation_note": "依据采样定理补齐无公式提示计算。",
+    "knowledge_point": "采样定理", "ability": "直接计算", "difficulty": "基础"
+  },
+  {
+    "id": "gap-signal-007", "source": "课程缺口补充", "type": "简答", "chapter": "三种分析视角",
+    "stem": "分别说明时域、频域和复频域分析信号与系统时主要关注什么，并各举一种常用工具。",
+    "options": {}, "answer": "时域关注信号随时间的变化和系统响应，常用微分方程、差分方程或卷积；频域关注频率成分和频率响应，常用傅里叶级数或傅里叶变换；复频域把微分或差分关系转为代数关系并结合收敛域分析系统，常用拉普拉斯变换或Z变换。",
+    "explanation": "三种视角描述同一系统的不同侧面，应根据问题选择合适工具。",
+    "max_score": 6, "rubric": [{"criterion": "时域关注点和工具", "points": 2}, {"criterion": "频域关注点和工具", "points": 2}, {"criterion": "复频域关注点和工具", "points": 2}],
+    "subject": "信号与系统", "source_chapter": "三种分析视角", "adaptation_note": "依据三种分析视角补齐总结简答。",
+    "knowledge_point": "信号与系统基础", "ability": "比较辨析", "difficulty": "应用"
+  },
+  {
+    "id": "gap-se-001", "source": "课程缺口补充", "type": "单选", "chapter": "从证据判断方法",
+    "stem": "用户需求变化频繁，并希望尽早看到可运行版本并持续反馈。根据这些证据，更合适的开发方式是？",
+    "options": {"A": "一次性完成全部阶段后再交付", "B": "迭代增量开发并持续获取反馈", "C": "取消需求记录", "D": "只增加编码人员"}, "answer": "B",
+    "explanation": "需求变化频繁且需要早期反馈，支持短周期迭代、增量交付和持续确认。方法选择应由项目证据决定。",
+    "subject": "软件工程", "source_chapter": "从证据判断方法", "adaptation_note": "依据过程选择补齐情境判断题。",
+    "knowledge_point": "软件过程模型", "ability": "场景选型", "difficulty": "应用"
+  },
+  {
+    "id": "gap-sec-001", "source": "课程缺口补充", "type": "简答", "chapter": "分层防护与职责",
+    "stem": "某单位要保护内部业务系统。说明身份认证、最小权限、网络边界防护、终端防护、日志监控和备份恢复分别承担什么职责。",
+    "options": {}, "answer": "身份认证确认使用者身份；最小权限限制账号可执行的操作；边界防护控制网络访问；终端防护降低恶意代码和主机入侵风险；日志监控用于发现、追踪异常；备份恢复用于在故障或攻击后恢复数据与业务。",
+    "explanation": "纵深防御依靠多层措施分担职责，任何单一产品都不能覆盖全部风险。",
+    "max_score": 6, "rubric": [{"criterion": "身份认证职责", "points": 1}, {"criterion": "最小权限职责", "points": 1}, {"criterion": "边界防护职责", "points": 1}, {"criterion": "终端防护职责", "points": 1}, {"criterion": "日志监控职责", "points": 1}, {"criterion": "备份恢复职责", "points": 1}],
+    "subject": "信息安全", "source_chapter": "分层防护与职责", "adaptation_note": "依据纵深防御补齐职责简答。",
+    "knowledge_point": "网络安全防护", "ability": "机制解释", "difficulty": "应用"
+  },
+  {
+    "id": "gap-found-001", "source": "课程缺口补充", "type": "简答", "chapter": "信息特征与数字素养",
+    "stem": "简要说明数据、信息和载体三者的关系，并列出核验网络信息时至少三个需要检查的方面。",
+    "options": {}, "answer": "数据是信息的可处理表示，载体承载数据或信息，数据结合语境后表达信息。核验时可检查发布主体、原始材料、发布时间、单位与统计口径、其他独立来源。",
+    "explanation": "数字素养不仅是会使用工具，还包括识别信息需求、核验来源和负责任地使用信息。",
+    "max_score": 5, "rubric": [{"criterion": "说明数据是信息的表示", "points": 1}, {"criterion": "说明载体承担承载作用", "points": 1}, {"criterion": "指出数据需结合语境获得含义", "points": 1}, {"criterion": "列出至少三个有效核验方面", "points": 2}],
+    "subject": "信息基础", "source_chapter": "信息特征与数字素养", "adaptation_note": "依据通用信息基础教材补充低频简答。",
+    "knowledge_point": "信息特征", "ability": "机制解释", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-002", "source": "课程缺口补充", "type": "简答", "chapter": "数制、编码与系统组成",
+    "stem": "列出冯·诺依曼计算机的五大基本部件，并说明CPU通常由哪些核心部分组成。",
+    "options": {}, "answer": "五大基本部件是运算器、控制器、存储器、输入设备和输出设备。CPU通常以运算器和控制器为核心，并包含寄存器等高速部件。",
+    "explanation": "系统组成题要区分整机五大部件与CPU内部组成。",
+    "max_score": 6, "rubric": [{"criterion": "运算器", "points": 1}, {"criterion": "控制器", "points": 1}, {"criterion": "存储器", "points": 1}, {"criterion": "输入设备", "points": 1}, {"criterion": "输出设备", "points": 1}, {"criterion": "说明CPU核心组成", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "数制、编码与系统组成", "adaptation_note": "依据通用计算机基础教材补充系统组成简答。",
+    "knowledge_point": "计算机硬件", "ability": "机制解释", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-003", "source": "课程缺口补充", "type": "简答", "chapter": "文件、软件与常用操作",
+    "stem": "为什么把文件的扩展名从.jpg改成.pdf不能完成格式转换？软件卸载为什么也不宜只删除安装目录？",
+    "options": {}, "answer": "扩展名只是文件类型标签，修改名称不会重新编码文件内容。软件安装还可能写入服务、配置、依赖和系统记录，只删除目录可能留下残余或破坏依赖，应使用系统或软件提供的卸载方式。",
+    "explanation": "文件格式由内部结构决定，软件安装状态也不只存在于一个目录中。",
+    "max_score": 4, "rubric": [{"criterion": "说明扩展名只是标签", "points": 1}, {"criterion": "说明格式转换需要重编码或导出", "points": 1}, {"criterion": "指出安装可能包含目录外内容", "points": 1}, {"criterion": "说明应使用正规卸载方式", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "文件、软件与常用操作", "adaptation_note": "依据文件与软件管理共性补充简答。",
+    "knowledge_point": "文件与Windows基础", "ability": "机制解释", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-004", "source": "课程缺口补充", "type": "简答", "chapter": "IaaS、PaaS与SaaS",
+    "stem": "比较IaaS、PaaS和SaaS向用户提供的主要内容，并各举一个适合的使用场景。",
+    "options": {}, "answer": "IaaS提供计算、存储和网络等基础资源，适合需要管理操作系统的场景；PaaS提供应用运行与开发平台，适合只部署代码的场景；SaaS直接提供软件功能，适合在线办公等直接使用服务的场景。",
+    "explanation": "区分三种服务模型的关键是用户仍需管理到哪一层。",
+    "max_score": 6, "rubric": [{"criterion": "说明IaaS及场景", "points": 2}, {"criterion": "说明PaaS及场景", "points": 2}, {"criterion": "说明SaaS及场景", "points": 2}],
+    "subject": "计算机基础", "source_chapter": "IaaS、PaaS与SaaS", "adaptation_note": "依据通用云计算概念补充低频简答。",
+    "knowledge_point": "计算机发展与应用", "ability": "比较辨析", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-005", "source": "课程缺口补充", "type": "单选", "chapter": "IaaS、PaaS与SaaS",
+    "stem": "某团队只想上传应用代码，不希望自行维护操作系统和运行时环境，较适合选择哪种云服务模型？",
+    "options": {"A": "IaaS", "B": "PaaS", "C": "SaaS办公软件", "D": "离线磁带备份"}, "answer": "B",
+    "explanation": "PaaS由平台提供并管理应用运行环境，用户主要负责代码和业务数据。",
+    "subject": "计算机基础", "source_chapter": "IaaS、PaaS与SaaS", "adaptation_note": "依据云服务责任边界补充场景题。",
+    "knowledge_point": "计算机发展与应用", "ability": "场景选型", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-006", "source": "课程缺口补充", "type": "简答", "chapter": "4V、数据挖掘与分布式处理",
+    "stem": "列出大数据常说的4V，并比较分类、聚类和关联分析三种数据挖掘任务。",
+    "options": {}, "answer": "4V通常指Volume、Velocity、Variety和Value。分类利用已有类别学习预测新样本类别；聚类按相似性自动分组；关联分析发现项目或事件之间经常共同出现的关系。",
+    "explanation": "4V是特征概括，数据挖掘任务要根据目标和是否已有标签来区分。",
+    "max_score": 7, "rubric": [{"criterion": "写出4V", "points": 4}, {"criterion": "说明分类", "points": 1}, {"criterion": "说明聚类", "points": 1}, {"criterion": "说明关联分析", "points": 1}],
+    "subject": "大数据", "source_chapter": "4V、数据挖掘与分布式处理", "adaptation_note": "依据大数据与数据挖掘通用概念补充简答。",
+    "knowledge_point": "Hadoop与HDFS", "ability": "比较辨析", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-007", "source": "课程缺口补充", "type": "简答", "chapter": "训练、推理与生成式AI",
+    "stem": "比较机器学习模型的训练和推理两个阶段，并说明生成式AI输出为什么仍需人工核验。",
+    "options": {}, "answer": "训练阶段利用数据调整模型参数，推理阶段使用已训练模型处理新输入。生成式AI按学习到的模式生成高概率内容，可能出现事实错误、偏差或不当信息，因此重要场景需要核对来源并人工复核。",
+    "explanation": "模型输出流畅不代表已经通过事实验证，训练效果也不等于面对所有新数据都可靠。",
+    "max_score": 4, "rubric": [{"criterion": "说明训练阶段", "points": 1}, {"criterion": "说明推理阶段", "points": 1}, {"criterion": "指出生成内容可能出错或有偏差", "points": 1}, {"criterion": "说明核验或人工复核", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "训练、推理与生成式AI", "adaptation_note": "依据人工智能通用概念补充简答。",
+    "knowledge_point": "计算机发展与应用", "ability": "机制解释", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-008", "source": "课程缺口补充", "type": "简答", "chapter": "感知、网络与物联网平台",
+    "stem": "以智慧农业自动灌溉为例，说明传感器、网络、平台和执行器分别承担什么作用。",
+    "options": {}, "answer": "传感器采集土壤湿度等现场数据；网络传输数据和控制指令；平台存储分析数据并执行规则；执行器根据指令控制水泵或阀门。",
+    "explanation": "物联网简答按感知、传输、处理和执行的链路说明即可。",
+    "max_score": 4, "rubric": [{"criterion": "传感器作用", "points": 1}, {"criterion": "网络作用", "points": 1}, {"criterion": "平台作用", "points": 1}, {"criterion": "执行器作用", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "感知、网络与物联网平台", "adaptation_note": "依据物联网通用分层补充简答。",
+    "knowledge_point": "计算机发展与应用", "ability": "过程描述", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-009", "source": "课程缺口补充", "type": "单选", "chapter": "区块、共识与智能合约",
+    "stem": "关于区块链的说法，正确的是？",
+    "options": {"A": "链上数据一定来自真实世界事实", "B": "区块链必然比普通数据库更快", "C": "共识机制帮助多个节点对记录状态形成一致", "D": "智能合约不存在代码漏洞"}, "answer": "C",
+    "explanation": "共识机制解决多节点状态一致问题。区块链不能自动保证源数据真实，也不保证性能更高，智能合约仍可能存在漏洞。",
+    "subject": "计算机基础", "source_chapter": "区块、共识与智能合约", "adaptation_note": "依据区块链通用概念补充客观辨析。",
+    "knowledge_point": "计算机发展与应用", "ability": "比较辨析", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-010", "source": "课程缺口补充", "type": "简答", "chapter": "区块、共识与智能合约",
+    "stem": "分别说明哈希、数字签名和共识机制在区块链系统中的主要作用。",
+    "options": {}, "answer": "哈希用于形成摘要并发现内容变化；数字签名用于验证记录来源和完整性；共识机制帮助多个节点对记录顺序或系统状态形成一致。",
+    "explanation": "三者分别解决内容关联、身份与完整性、多节点一致等不同问题。",
+    "max_score": 3, "rubric": [{"criterion": "说明哈希作用", "points": 1}, {"criterion": "说明数字签名作用", "points": 1}, {"criterion": "说明共识机制作用", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "区块、共识与智能合约", "adaptation_note": "依据区块链基本机制补充简答。",
+    "knowledge_point": "计算机发展与应用", "ability": "机制解释", "difficulty": "基础"
+  },
+  {
+    "id": "gap-found-011", "source": "课程缺口补充", "type": "单选", "chapter": "区块、共识与智能合约",
+    "stem": "下列场景中，最有理由进一步评估联盟链方案的是？",
+    "options": {"A": "个人保存本机通讯录", "B": "多家机构共同维护可追溯记录且缺少单一完全可信中心", "C": "单机计算器保存历史记录", "D": "临时编辑一份个人文档"}, "answer": "B",
+    "explanation": "多方共同维护、追溯要求和信任约束是评估联盟链的典型理由，简单单机数据无需增加区块链复杂度。",
+    "subject": "计算机基础", "source_chapter": "区块、共识与智能合约", "adaptation_note": "依据技术适用边界补充场景题。",
+    "knowledge_point": "计算机发展与应用", "ability": "场景选型", "difficulty": "应用"
+  },
+  {
+    "id": "gap-found-012", "source": "课程缺口补充", "type": "简答", "chapter": "按场景选择技术",
+    "stem": "某工厂需要毫秒级设备停机保护，同时希望长期汇总数据并更新预测模型。说明边缘侧和云端分别适合承担哪些任务，并给出理由。",
+    "options": {}, "answer": "边缘侧适合采集、过滤和执行毫秒级停机控制，因为靠近设备、时延低且断网时仍可工作；云端适合长期存储、跨设备汇总、集中分析和模型更新，因为资源弹性较强并便于统一管理。",
+    "explanation": "云与边缘通常协同使用，任务划分由时延、网络可靠性、数据规模和管理需求决定。",
+    "max_score": 4, "rubric": [{"criterion": "说明边缘侧任务", "points": 1}, {"criterion": "说明边缘侧低时延或离线理由", "points": 1}, {"criterion": "说明云端任务", "points": 1}, {"criterion": "说明云端资源或集中管理理由", "points": 1}],
+    "subject": "信息基础", "source_chapter": "按场景选择技术", "adaptation_note": "依据云边协同补充场景简答。",
+    "knowledge_point": "信息技术与社会", "ability": "场景选型", "difficulty": "应用",
+    "topic_source": "manual", "topic_id": "computer-foundations.t10"
+  },
+  {
+    "id": "gap-found-013", "source": "课程缺口补充", "type": "单选", "chapter": "按场景选择技术",
+    "stem": "某单位只需在单一可信部门内部管理少量结构化联系人数据，没有多方共同记账需求。更直接的技术选择是？",
+    "options": {"A": "普通关系数据库", "B": "公有区块链", "C": "训练大型生成模型", "D": "建设流式大数据集群"}, "answer": "A",
+    "explanation": "单一可信主体、少量结构化数据适合普通数据库。选择技术应由目标、规模和信任关系决定，不能为了使用热门技术增加复杂度。",
+    "subject": "计算机基础", "source_chapter": "按场景选择技术", "adaptation_note": "依据技术适用边界补充场景选择题。",
+    "knowledge_point": "计算机发展与应用", "ability": "场景选型", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "computer-foundations.t10"
+  },
+  {
+    "id": "gap-found-014", "source": "课程缺口补充", "type": "填空", "chapter": "数制、编码与系统组成",
+    "stem": "十六进制数2F转换为十进制是多少？只填写数字。",
+    "options": {}, "answer": "47", "explanation": "2F=2×16+15=47。",
+    "max_score": 3, "rubric": [{"criterion": "识别F表示15", "points": 1}, {"criterion": "写出2×16+15", "points": 1}, {"criterion": "结果47", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "数制、编码与系统组成", "adaptation_note": "依据通用教材补充无选项数制计算。",
+    "knowledge_point": "数制与编码", "ability": "直接计算", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "computer-foundations.t02"
+  },
+  {
+    "id": "gap-found-015", "source": "课程缺口补充", "type": "简答", "chapter": "文件、软件与常用操作",
+    "stem": "某软件无法正常启动，用户准备直接删除安装目录后重新安装。说明这种处理的风险，并给出更合理的排查顺序。",
+    "options": {}, "answer": "直接删除目录可能遗留服务、配置、依赖或系统记录，也可能破坏共享组件。应先记录报错并检查权限、磁盘和依赖，再使用修复功能或正规卸载程序，必要时清理残留后重新安装，并从可信来源取得安装包。",
+    "explanation": "软件故障处理应先收集现象，再使用可回退的修复和卸载方式。",
+    "max_score": 5, "rubric": [{"criterion": "指出直接删除的残留风险", "points": 1}, {"criterion": "先记录报错和检查基础条件", "points": 1}, {"criterion": "优先使用修复或正规卸载", "points": 1}, {"criterion": "必要时清理后重装", "points": 1}, {"criterion": "强调可信安装来源", "points": 1}],
+    "subject": "计算机基础", "source_chapter": "文件、软件与常用操作", "adaptation_note": "依据文件与软件管理补充故障场景题。",
+    "knowledge_point": "文件与Windows基础", "ability": "场景选型", "difficulty": "应用",
+    "topic_source": "manual", "topic_id": "computer-foundations.t03"
+  },
+  {
+    "id": "gap-found-016", "source": "课程缺口补充", "type": "简答", "chapter": "计算机发展与应用",
+    "stem": "分别说明科学计算、数据处理和过程控制的主要任务，并各举一个典型应用。",
+    "options": {}, "answer": "科学计算用数值方法求解复杂数学或工程问题，如气象模拟；数据处理对大量业务数据进行整理、统计和查询，如工资结算；过程控制根据现场数据及时调节设备，如生产线温度自动控制。",
+    "explanation": "判断应用类型要看主要任务，同一系统也可能组合多种方式。",
+    "max_score": 6, "rubric": [{"criterion": "说明科学计算并举例", "points": 2}, {"criterion": "说明数据处理并举例", "points": 2}, {"criterion": "说明过程控制并举例", "points": 2}],
+    "subject": "计算机基础", "source_chapter": "计算机发展与应用", "adaptation_note": "依据大学计算机基础通用内容补充应用分类简答。",
+    "knowledge_point": "计算机发展与应用", "ability": "比较辨析", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "computer-foundations.t09"
+  },
+  {
+    "id": "gap-os-001", "source": "课程缺口补充", "type": "填空", "chapter": "资源、状态与调度",
+    "stem": "进程A、B均在时刻0到达，服务时间分别为3和1。按A先B后的FCFS执行，平均周转时间是多少？",
+    "options": {}, "answer": "3.5", "explanation": "A在时刻3完成，周转时间3；B在时刻4完成，周转时间4；平均为(3+4)/2=3.5。",
+    "max_score": 4, "rubric": [{"criterion": "A完成时刻3", "points": 1}, {"criterion": "B完成时刻4", "points": 1}, {"criterion": "写出两个周转时间", "points": 1}, {"criterion": "平均结果3.5", "points": 1}],
+    "subject": "操作系统", "source_chapter": "资源、状态与调度", "adaptation_note": "依据处理机调度补充时间线计算。",
+    "knowledge_point": "进程与线程", "ability": "直接计算", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "operating-system.t03"
+  },
+  {
+    "id": "gap-os-002", "source": "课程缺口补充", "type": "填空", "chapter": "安全性检查",
+    "stem": "某系统Available=(1,1)。P1的Need=(1,0)、Allocation=(1,0)；P2的Need=(1,1)、Allocation=(0,1)。写出一个安全序列，只填写P1、P2并用逗号分隔。",
+    "options": {}, "answer": "P1,P2", "explanation": "P1的Need不超过Available，可先完成并释放(1,0)，此时Work=(2,1)，随后P2可以完成。",
+    "max_score": 4, "rubric": [{"criterion": "判断P1可先满足", "points": 1}, {"criterion": "P1释放后Work=(2,1)", "points": 1}, {"criterion": "判断P2随后可满足", "points": 1}, {"criterion": "安全序列P1,P2", "points": 1}],
+    "subject": "操作系统", "source_chapter": "安全性检查", "adaptation_note": "依据银行家算法补充小规模安全序列计算。",
+    "knowledge_point": "死锁", "ability": "直接计算", "difficulty": "应用",
+    "topic_source": "manual", "topic_id": "operating-system.t05"
+  },
+  {
+    "id": "gap-os-003", "source": "课程缺口补充", "type": "填空", "chapter": "分页、缺页与置换",
+    "stem": "页大小为1024B，逻辑地址2500所在页映射到物理页框5。物理地址是多少？只填写十进制数字。",
+    "options": {}, "answer": "5572", "explanation": "2500=2×1024+452，页内偏移452不变，物理地址=5×1024+452=5572。",
+    "max_score": 4, "rubric": [{"criterion": "求出页号2", "points": 1}, {"criterion": "求出偏移452", "points": 1}, {"criterion": "使用页框号5", "points": 1}, {"criterion": "物理地址5572", "points": 1}],
+    "subject": "操作系统", "source_chapter": "分页、缺页与置换", "adaptation_note": "依据分页地址转换补充无选项计算。",
+    "knowledge_point": "内存与虚拟存储", "ability": "直接计算", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "operating-system.t06"
+  },
+  {
+    "id": "gap-os-004", "source": "课程缺口补充", "type": "填空", "chapter": "分页、缺页与置换",
+    "stem": "物理内存有3个空页框，采用FIFO置换，页面访问序列为1、2、3、1、4。缺页次数是多少？只填写数字。",
+    "options": {}, "answer": "4", "explanation": "访问1、2、3分别缺页装入；再次访问1命中；访问4缺页并淘汰最早装入的1，共4次缺页。",
+    "max_score": 4, "rubric": [{"criterion": "前三次均缺页", "points": 1}, {"criterion": "第二次访问1命中", "points": 1}, {"criterion": "访问4发生缺页", "points": 1}, {"criterion": "总计4次", "points": 1}],
+    "subject": "操作系统", "source_chapter": "分页、缺页与置换", "adaptation_note": "依据FIFO页面置换补充过程计算。",
+    "knowledge_point": "内存与虚拟存储", "ability": "直接计算", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "operating-system.t06"
+  },
+  {
+    "id": "gap-os-005", "source": "课程缺口补充", "type": "填空", "chapter": "CPU参与和磁头移动",
+    "stem": "磁头当前位置为50，待访问磁道为10、40、70。按SSTF调度，磁头总移动距离是多少个磁道？",
+    "options": {}, "answer": "100", "explanation": "先访问40，移动10；再访问10，移动30；最后访问70，移动60；总计100。",
+    "max_score": 4, "rubric": [{"criterion": "先选择40", "points": 1}, {"criterion": "再选择10", "points": 1}, {"criterion": "最后选择70", "points": 1}, {"criterion": "总移动100", "points": 1}],
+    "subject": "操作系统", "source_chapter": "CPU参与和磁头移动", "adaptation_note": "依据磁盘调度补充直接计算。",
+    "knowledge_point": "设备与I/O管理", "ability": "直接计算", "difficulty": "基础",
+    "topic_source": "manual", "topic_id": "operating-system.t08"
+  }
+]

@@ -18,6 +18,27 @@ CHOICE_TYPES = {"单选", "多选"}
 JUDGE_ANSWERS = {"正确", "错误"}
 UNIVERSITY_PREFIXES = ("ua-", "uc-", "ue-")
 APPLIED_PREFIXES = ("ap-", "sp-")
+NATIONAL_PREFIX = "nw-national-"
+NATIONAL_SOURCES = {
+    source["url"] for source in json.loads((ROOT / "network-exam-sources.json").read_text(encoding="utf-8"))["sources"]
+    if source["kind"] in {"高校官方公开期末卷", "高校官方期末答案及题卷索引", "高校官方期末考试分析", "社区收录期末卷", "事业单位试题整理稿", "事业单位回忆材料"}
+}
+LEARNING_MAP = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
+COURSE_BY_SUBJECT = {
+    subject: course
+    for course in LEARNING_MAP["courses"]
+    for subject in course.get("subjects", [course["subject"]])
+}
+TOPICS = {
+    topic["topic_id"]: topic
+    for course in LEARNING_MAP["courses"]
+    for topic in course.get("topics", [])
+}
+TOPIC_ORDER = {
+    topic["topic_id"]: index
+    for course in LEARNING_MAP["courses"]
+    for index, topic in enumerate(course.get("topics", []))
+}
 
 
 def normalized_stem(value):
@@ -127,6 +148,18 @@ def main():
             errors.append(f"{qid}: missing difficulty")
         elif difficulty not in DIFFICULTY_VALUES:
             errors.append(f"{qid}: invalid difficulty: {difficulty}")
+        if qtype == "简答":
+            rubric = q.get("rubric")
+            if not isinstance(rubric, list) or not rubric:
+                errors.append(f"{qid}: short answer requires rubric")
+            elif any(not item.get("criterion") or not isinstance(item.get("points"), int) or item["points"] <= 0 for item in rubric):
+                errors.append(f"{qid}: invalid short-answer rubric")
+            elif sum(item["points"] for item in rubric) != q.get("max_score"):
+                errors.append(f"{qid}: rubric points do not match max_score")
+        if ability == "直接计算" and qtype in {"填空", "简答"}:
+            rubric = q.get("rubric")
+            if not isinstance(rubric, list) or not rubric or sum(item.get("points", 0) for item in rubric) != q.get("max_score"):
+                errors.append(f"{qid}: calculation requires a valid rubric")
 
         if str(qid).startswith(UNIVERSITY_PREFIXES):
             if q.get("source") != "大学期末改编":
@@ -144,6 +177,38 @@ def main():
                     errors.append(f"{qid}: missing provenance field {field}")
             if not str(q.get("source_url") or "").startswith("https://"):
                 errors.append(f"{qid}: source_url should use https")
+        if str(qid).startswith(NATIONAL_PREFIX):
+            if q.get("source") != "全国试题提炼":
+                errors.append(f"{qid}: invalid national source label")
+            for field in ("source_chapter", "source_url", "source_title", "adaptation_note"):
+                if not str(q.get(field) or "").strip():
+                    errors.append(f"{qid}: missing provenance field {field}")
+            if q.get("source_url") not in NATIONAL_SOURCES:
+                errors.append(f"{qid}: source_url does not match a reviewed exam material")
+            for field in ("source_id", "source_item", "evidence_level", "review_status", "version"):
+                if q.get(field) in (None, ""):
+                    errors.append(f"{qid}: missing structured provenance field {field}")
+            if q.get("origin_verified") not in (True, False) or q.get("answer_reviewed") is not True:
+                errors.append(f"{qid}: invalid review flags")
+            accepted = q.get("accepted_answers")
+            if accepted is not None and (not isinstance(accepted, list) or not accepted or any(not str(value).strip() for value in accepted)):
+                errors.append(f"{qid}: invalid accepted_answers")
+        if q.get("subject") in COURSE_BY_SUBJECT:
+            topic = TOPICS.get(q.get("topic_id"))
+            if not topic:
+                errors.append(f"{qid}: missing or invalid topic_id")
+            elif q.get("topic_title") != topic["title"] or q.get("chapter_id") != topic["chapter_id"]:
+                errors.append(f"{qid}: topic metadata does not match learning-map.json")
+            elif q.get("topic_order") != TOPIC_ORDER.get(topic["topic_id"]):
+                errors.append(f"{qid}: topic order does not match learning-map.json")
+
+    for course in LEARNING_MAP["courses"]:
+        subjects = set(course.get("subjects", [course["subject"]]))
+        covered_topics = {question.get("topic_id") for question in qs if question.get("subject") in subjects}
+        required_topics = {topic["topic_id"] for topic in course["topics"]}
+        missing_topics = sorted(required_topics - covered_topics)
+        if missing_topics:
+            errors.append(f"{course['course_name']}知识点没有练习：" + ", ".join(missing_topics))
 
     print(f"questions: {len(qs)}")
     print(f"errors: {len(errors)}")

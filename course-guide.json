@@ -1,7 +1,49 @@
 {
-  "checked_at": "2026-09-23",
+  "checked_at": "2026-10-13",
   "notice": "课程分组和章节重点是学习内容安排，不是湖南统一考试占比；各科分值须以具体岗位大纲或可核验试卷为依据。",
   "references": [
+    {
+      "id": "huhst-network",
+      "title": "湖南人文科技学院《计算机网络》教学大纲（2015年公开，2012年编写）",
+      "url": "https://www.huhst.edu.cn/jsjx/info/1641/19131.htm",
+      "use": "核对网络课程教学要求与重点；属于历史大纲，教材为陈代武《计算机网络技术》（2009），不代表当前期末考频或招聘范围。"
+    },
+    {
+      "id": "hnust-network",
+      "title": "湖南科技大学《计算机网络》公开课程（2026-10-13核对）",
+      "url": "https://www.icourse163.org/course/HNKJ-1461816178",
+      "use": "核对分层教学结构与配套教材：2024年《深入浅出计算机网络（微课视频版）（第2版）》、2023年仿真实验教材；课程中的408解析不作为本科期末或招聘真题。"
+    },
+    {
+      "id": "hnu-math-network",
+      "title": "湖南大学数学学院专业平台课程（2017年公开）",
+      "url": "https://math.hnu.edu.cn/info/1035/1110.htm",
+      "use": "确认专业课程列表包含计算机网络；未读取逐章大纲，不据此判定知识点重要度。"
+    },
+    {
+      "id": "nwnu-network-exam",
+      "title": "西北师范大学2014—2015学年第二学期计算机网络A卷",
+      "url": "https://jw1.nwnu.edu.cn/jpkc/2015/jsjwl/Archive/xtkt/2014-2015%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E8%AF%95%E9%A2%98A.pdf",
+      "use": "高校官网公开的完整历史期末卷；用于复习任务和题型分析，不推广为各校考频。"
+    },
+    {
+      "id": "ustc-network-exam",
+      "title": "学生资料库收录的2020—2021学年网络期末卷",
+      "url": "https://github.com/guch8017/USTC_CS_EXAM/blob/master/Exams/CN2020F.pdf",
+      "use": "社区收录完整卷，可用于计算与问答题型分析；卷面未署学校名，学校归属尚未官方核实。"
+    },
+    {
+      "id": "jiangsu-2026-computer-outline",
+      "title": "江苏省2026年事业单位计算机类岗位考试大纲",
+      "url": "https://jshrss.jiangsu.gov.cn/art/2026/3/18/art_93341_11743853.html",
+      "use": "官方列出计算机网络概念、理论及相关应用；没有给出网络内部知识点分值。"
+    },
+    {
+      "id": "hbucm-network-2024",
+      "title": "湖北中医药大学2023—2024学年计算机网络原理期末考试分析",
+      "url": "https://internet.hactcm.edu.cn/fileservice/network/file/2024/9/13/133706953401336876.pdf",
+      "use": "学校官网考试分析，给出43道题的题型分值及IP设计、VLSM、路由聚合、ARP、HTTP报文、URL与安全等具体任务；不是原题全文。"
+    },
     {
       "id": "hunau-cs",
       "title": "湖南农业大学计算机科学与技术培养方案（2022年公开页）",
@@ -50,7 +92,7 @@
       "name": "计算机组成原理",
       "group": "计算机专业主干",
       "focus": "数制与编码、CPU与指令、存储层次、Cache、I/O；掌握地址容量和性能计算的条件。",
-      "depth": "系统讲解并配基础计算",
+      "depth": "事业单位深度，配基础计算；408只作为分析任务和加深上限",
       "references": [
         "hunau-cs",
         "hnu-cs"
@@ -60,7 +102,7 @@
       "name": "操作系统原理",
       "group": "计算机专业主干",
       "focus": "进程线程、调度、同步死锁、分页与虚拟存储、文件和设备；能跟踪小规模执行过程。",
-      "depth": "系统讲解并配过程分析",
+      "depth": "事业单位深度，配调度、死锁和存储过程分析；408只作加深参考",
       "references": [
         "hunau-cs",
         "ostep"
@@ -70,7 +112,7 @@
       "name": "数据结构与算法",
       "group": "计算机专业主干",
       "focus": "复杂度、线性结构、树图、查找排序；比较前提、过程和性能，避免只背复杂度。",
-      "depth": "系统讲解并配手算过程",
+      "depth": "事业单位深度，配常见手算与程序过程；408只作加深参考",
       "references": [
         "hunau-cs",
         "hnu-cs"
@@ -79,9 +121,16 @@
     {
       "name": "计算机网络",
       "group": "计算机专业主干",
-      "focus": "分层、以太网、IP与子网、路由、TCP/UDP、应用协议及排障；结合单位和协议作用域理解。",
-      "depth": "系统讲解并配子网及场景例题",
+      "focus": "分层与设备、MAC/IP/端口、IPv4与子网、基础路由、TCP/UDP、常用应用协议、安全及按层排障；保留常见一步计算。",
+      "depth": "26个知识点全部学习；公式需默写并说明参数，简答需写出机制与边界，计算达到常见直接计算和基础综合应用深度。",
       "references": [
+        "huhst-network",
+        "hnust-network",
+        "hnu-math-network",
+        "nwnu-network-exam",
+        "ustc-network-exam",
+        "jiangsu-2026-computer-outline",
+        "hbucm-network-2024",
         "hunau-cs",
         "hnu-cs",
         "http3"
@@ -99,7 +148,7 @@
       ]
     },
     {
-      "name": "编程语言",
+      "name": "C与Python程序设计",
       "group": "计算机专业主干",
       "focus": "以C与Python讲变量、控制流、函数、数组与指针；保留语言差异，具体岗位语言要求另行核对。",
       "depth": "程序阅读与基础编写；非完整多语言课程",
@@ -130,6 +179,13 @@
       "group": "计算机应用与安全",
       "focus": "文字排版、表格引用与函数、数据管理、演示文稿；说明Microsoft Office与WPS及版本差异。",
       "depth": "操作原理与任务示例，按岗位范围取舍",
+      "references": []
+    },
+    {
+      "name": "大学计算机基础与新技术",
+      "group": "计算机应用与安全",
+      "focus": "信息与数字素养、计算机基础、云计算、大数据与数据挖掘、人工智能、物联网和区块链；作为偶发题补充，不展开产品配置和复杂算法。",
+      "depth": "补充模块：会辨认、能简答、能完成短场景选择；当前不宣称稳定考频",
       "references": []
     },
     {

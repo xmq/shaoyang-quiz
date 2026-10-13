@@ -56,6 +56,12 @@
     .course-guide p { margin: 10px 0; }
     .course-guide a, .chapter-study-link { color: #1d4ed8; text-decoration: underline; text-underline-offset: 3px; }
     .chapter-study-link { display: inline-block; margin: 12px 0 20px; font-size: 14px; }
+    .point-practice-link { margin: 2px 0 12px; font-size: 13px; }
+    .topic-study-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: -2px 0 8px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .topic-study-tag { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--panel); white-space: nowrap; }
+    .topic-study-tag.topic-key { border-color: rgba(198, 40, 40, .26); background: rgba(198, 40, 40, .08); color: var(--red); font-weight: 750; }
+    .topic-study-tag.topic-supplement { color: var(--muted); }
+    .topic-study-copy { min-width: 0; }
     .chapter-section { scroll-margin-top: 145px; }
     .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 
@@ -296,7 +302,7 @@
       vertical-align: .08em;
     }
     .study.recall-mode .note .red.recall-revealed::before { content: "结论"; }
-    .study.recall-mode .note .blue.recall-revealed::before { content: "得分点"; }
+    .study.recall-mode .note .blue.recall-revealed::before { content: "方法与步骤"; }
     .study.recall-mode .note .black.recall-revealed::before { content: "条件 / 易错"; }
     .recall-prompt { margin: 11px 0 8px !important; padding: 9px 12px; border-left: 4px solid var(--blue); border-radius: 7px; background: #eff6ff; color: #1e3a8a; font-weight: 700; }
     .chapter-section { margin: 24px 0 10px; scroll-margin-top: 138px; }
@@ -576,20 +582,12 @@
       .chapter-section { display: none; margin-top: 6px; scroll-margin-top: 110px; }
       .chapter-section.mobile-active { display: block; }
       .chapter-section.mobile-active .chapter-body { display: block; }
-      .lecture-page .chapter-section { display: block; margin-top: 18px; }
-      .lecture-page .chapter-section .chapter-body { display: block; }
-      .lecture-page .chapter-pager { display: none !important; }
-      .color-notes-page .study:not(.recall-mode) .chapter-section { display: block; margin-top: 18px; }
-      .color-notes-page .study:not(.recall-mode) .chapter-section .chapter-body { display: block; }
-      .color-notes-page .study:not(.recall-mode) .chapter-pager { display: none !important; }
       .chapter-toggle { min-height: auto; padding: 0 0 12px; border: 0; border-radius: 0; background: transparent; color: var(--text); pointer-events: none; }
       .exam-meta { gap: 5px; }
       .exam-level, .exam-types { min-height: 22px; padding: 3px 7px; }
       .chapter-chevron { display: none; }
 
-      .chapter-pager {
-        display: none;
-      }
+      .chapter-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 16px 0 4px; }
       .chapter-pager button,
       .recall-card-pager button {
         min-height: 46px;
@@ -726,7 +724,7 @@
       </div>
 
       <details class="course-guide" id="course-guide">
-        <summary id="course-guide-title">课程范围与依据</summary>
+        <summary id="course-guide-title">本课怎么学</summary>
         <div id="course-guide-body"></div>
       </details>
 
@@ -766,6 +764,8 @@
     const pageKind = "__PAGE_KIND__";
     const subjectAliases = {
       "Office软件操作": "办公软件",
+      "大学计算机基础与新技术": "计算机基础",
+      "C与Python程序设计": "编程语言",
       "多媒体技术": "多媒体",
       "数据结构与算法": "算法与数据结构",
       "操作系统原理": "操作系统",
@@ -882,7 +882,7 @@
         .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
       if (colorMode && marker) {
         const className = marker[1] === "🔴" ? "red" : marker[1] === "🔵" ? "blue" : "black";
-        const recallRole = className === "red" ? "结论" : className === "blue" ? "方法与得分点" : "条件与易错";
+        const recallRole = className === "red" ? "结论" : className === "blue" ? "方法与步骤" : "条件与易错";
         output = `<span class="${className}" data-recall-cue="${recallRole}"><span class="recall-answer">${output}</span></span>`;
       }
       return output;
@@ -1037,7 +1037,8 @@
           closeList();
           const rawTitle = markdownH3 ? markdownH3[1] : plainPoint[0];
           const title = colorMode ? rawTitle.replace(/^回忆卡\s*\d+\s*[|｜:：—-]\s*/, "") : rawTitle;
-          output.push(`<h3 class="point">${formatInline(title)}</h3>`);
+          const topic = currentCourse?.topics?.find((item) => item.title === title);
+          output.push(`<h3 class="point"${topic ? ` data-topic-id="${escapeHtml(topic.topic_id)}"` : ""}>${formatInline(title)}</h3>`);
         } else if (colorMode && /^先答[：:]/.test(trimmed)) {
           closeList();
           output.push(`<p class="recall-prompt">${formatInline(trimmed)}</p>`);
@@ -1061,7 +1062,33 @@
       closePreface();
       closeChapter();
       content.innerHTML = output.join("");
+      bindTopicGuidance();
       bindChapters();
+    }
+
+    function bindTopicGuidance() {
+      content.querySelectorAll(".point[data-topic-id]").forEach((point) => {
+        const topic = currentCourse?.topics?.find((item) => item.topic_id === point.dataset.topicId);
+        if (!topic) return;
+        const meta = document.createElement("div");
+        meta.className = "topic-study-meta";
+        const priority = topic.practice_priority || "正常练";
+        const tag = document.createElement("span");
+        tag.className = `topic-study-tag ${priority === "优先练" ? "topic-key" : priority === "补充练" ? "topic-supplement" : ""}`.trim();
+        tag.textContent = priority;
+        const copy = document.createElement("span");
+        copy.className = "topic-study-copy";
+        copy.textContent = `掌握到：${(topic.mastery_steps || ["识别概念"]).join(" → ")} · 练习方式：${(topic.practice_modes || ["客观辨析"]).join(" / ")}`;
+        meta.append(tag, copy);
+        point.insertAdjacentElement("afterend", meta);
+        if (!topic.question_count) return;
+        const link = document.createElement("a");
+        link.className = "chapter-study-link point-practice-link";
+        const params = new URLSearchParams({topic: point.dataset.topicId, mode: "seq"});
+        link.href = `./quiz.html?${params.toString()}`;
+        link.textContent = `练习这个知识点（${topic.question_count}题） →`;
+        meta.insertAdjacentElement("afterend", link);
+      });
     }
 
     function cleanChapterLabel(label) {
@@ -1317,20 +1344,35 @@
     function openCourse(course) {
       currentCourse = course;
       const guide = course.guide;
-      document.getElementById("course-guide-title").textContent = `${guide.group} · 课程范围与依据`;
+      document.getElementById("course-guide-title").textContent = `${guide.group} · 本课怎么学`;
       document.getElementById("course-guide-body").innerHTML =
         `<p><strong>学习内容：</strong>${escapeHtml(guide.focus)}</p><p><strong>讲解深度：</strong>${escapeHtml(guide.depth)}</p>` +
-        `<p>${escapeHtml(guide.notice)}</p>` +
-        (colorMode ? "<p>红色：核心知识；蓝色：方法与例题；黑色：易混易错。颜色不代表考试频率。</p>" : "<p>章节标签表示课程学习层次，所列题型表示练习形式，不是已核实的招聘题型。</p>") +
-        (guide.references.length ? `<ul>${guide.references.map((ref) => `<li><a href="${escapeHtml(ref.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ref.title)}</a>：${escapeHtml(ref.use)}</li>`).join("")}</ul>` : "<p>本课基于现有专业资料重整，逐章教材出处仍待补充核验。</p>") +
-        '<p><a href="./exam-guide.html">湖南各地考情与科目范围 →</a></p>';
+        (colorMode ? "<p>红色记结论，蓝色学方法，黑色防失分。优先练先完成，正常练随后完成，补充练用于偶发题；所有知识点都要学。</p>" : "<p>先按章节建立知识结构，再进入重点与易错和题库练习。</p>");
       collapsedBeforeSearch = null;
       recallRetryQueue = [];
       recallRetryMode = false;
       const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
+      const routeTopic = routeParams.get("topic");
       activeChapterIndex = Math.max(0, (Number(routeParams.get("chapter")) || 1) - 1);
       activeRecallIndex = Math.max(0, (Number(routeParams.get("card")) || 1) - 1);
       renderMarkdown(course.text);
+      if (routeTopic) {
+        const topic = currentCourse?.topics?.find((item) => item.topic_id === routeTopic);
+        const point = [...content.querySelectorAll(".point[data-topic-id]")].find((item) => item.dataset.topicId === routeTopic);
+        let section = point?.closest(".chapter-section");
+        const sections = [...content.querySelectorAll(".chapter-section")];
+        let sectionIndex = sections.indexOf(section);
+        if (sectionIndex < 0 && topic) {
+          const chapterTitle = currentCourse.learning_chapters?.find((item) => item.chapter_id === topic.chapter_id)?.title;
+          const chapterPosition = currentCourse.chapters?.[pageKind]?.indexOf(chapterTitle) ?? -1;
+          if (chapterPosition >= 0) {
+            sectionIndex = chapterPosition;
+            section = sections[sectionIndex];
+          }
+        }
+        if (sectionIndex >= 0) setActiveChapter(sectionIndex, {replaceRoute: false});
+        requestAnimationFrame(() => (point || section)?.scrollIntoView({block: "start"}));
+      }
       study.classList.remove("recall-mode");
       study.classList.toggle("color-notes-list", colorMode);
       recallToggle.classList.toggle("hidden", !colorMode);

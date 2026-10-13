@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
 SOURCE = "高校试题提炼"
 PREFIX = "ap-"
+DERIVED_METADATA_FIELDS = ("topic_id", "topic_title", "chapter_id", "required_depth", "topic_order", "rubric", "max_score", "rubric_source")
 EXPECTED_PER_SUBJECT = 6
 STAGING_SPECS = {
     ROOT / "staging" / "applied_core_computer.json": {
@@ -141,6 +142,10 @@ def load_candidates() -> list[dict]:
 
 
 def build_merged(existing: list[dict], candidates: list[dict]) -> list[dict]:
+    derived_by_id = {
+        str(question.get("id") or ""): {key: question[key] for key in DERIVED_METADATA_FIELDS if key in question}
+        for question in existing
+    }
     without_applied = [question for question in existing if not str(question.get("id") or "").startswith(PREFIX)]
     university = [
         question for question in without_applied
@@ -150,8 +155,15 @@ def build_merged(existing: list[dict], candidates: list[dict]) -> list[dict]:
         question for question in without_applied
         if str(question.get("id") or "").startswith("sp-")
     ]
-    base = [question for question in without_applied if question not in university and question not in supplement]
-    comparison_pool = base + supplement + university
+    hunan_recall = [
+        question for question in without_applied
+        if str(question.get("id") or "").startswith("hn-recall-")
+    ]
+    base = [
+        question for question in without_applied
+        if question not in university and question not in supplement and question not in hunan_recall
+    ]
+    comparison_pool = base + supplement + university + hunan_recall
     accepted: list[dict] = []
     exact = {
         (str(question.get("subject") or ""), compact_text(question.get("stem"))): question
@@ -180,7 +192,8 @@ def build_merged(existing: list[dict], candidates: list[dict]) -> list[dict]:
         raise ValueError("应用题去重失败：\n" + "\n".join(errors[:120]))
     # Keep both reproducible merge pipelines stable: application questions sit
     # before the managed university-final groups, which their merger appends.
-    return base + accepted + supplement + university
+    merged = base + accepted + supplement + university + hunan_recall
+    return [{**question, **derived_by_id.get(str(question.get("id") or ""), {})} for question in merged]
 
 
 def main() -> int:

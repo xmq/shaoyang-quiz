@@ -15,6 +15,10 @@ def validate():
     lectures = json.loads((ROOT / "course-index.json").read_text(encoding="utf-8"))
     guide = json.loads((ROOT / "course-guide.json").read_text(encoding="utf-8"))
     exams = json.loads((ROOT / "exam-sources.json").read_text(encoding="utf-8"))
+    network = json.loads((ROOT / "network-exam-sources.json").read_text(encoding="utf-8"))
+    learning_map = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
+    if learning_map.get("schema_version") != 3 or not learning_map.get("scope_policy") or not learning_map.get("exam_policy"):
+        errors.append("学习地图缺少范围或命题方式说明")
     names = [item["name"] for item in lectures]
     if "信息技术与教学论" in names or any(item["group"] == "信息技术教师方向" for item in guide["courses"]):
         errors.append("教师方向已移除，不应重新加入现行课程")
@@ -71,6 +75,56 @@ def validate():
     for ref in guide["references"]:
         if not ref["url"].startswith("https://") or not ref["use"]:
             errors.append(f"课程参考资料无效：{ref['id']}")
+    network_ids = [source["id"] for source in network["sources"]]
+    network_titles = re.findall(r"(?m)^### (.+)$", (ROOT / "color_notes" / "计算机网络.md").read_text(encoding="utf-8"))
+    mapped_courses = {course["course_name"]: course for course in learning_map["courses"]}
+    for note in notes:
+        course = mapped_courses.get(note["name"])
+        if not course:
+            errors.append(f"学习地图缺少课程：{note['name']}")
+            continue
+        actual_titles = re.findall(r"(?m)^### (.+)$", (ROOT / note["file"]).read_text(encoding="utf-8"))
+        expected_titles = [topic["title"] for topic in course["topics"]]
+        if actual_titles != expected_titles:
+            errors.append(f"{note['name']}：重点卡与learning-map.json知识点不一致")
+        for topic in course["topics"]:
+            if topic.get("core_status") != "必学":
+                errors.append(f"{note['name']}/{topic['title']}：缺少必学标记")
+            if topic.get("practice_priority") not in {"优先练", "正常练", "补充练"}:
+                errors.append(f"{note['name']}/{topic['title']}：缺少练习优先级")
+            if topic.get("target_depth") not in {"识记理解", "直接应用", "综合应用"} or topic.get("depth") != topic.get("target_depth"):
+                errors.append(f"{note['name']}/{topic['title']}：掌握深度无效或不同步")
+            steps = topic.get("mastery_steps")
+            if not isinstance(steps, list) or not steps or steps[0] != "识别概念":
+                errors.append(f"{note['name']}/{topic['title']}：缺少连续掌握层次")
+            forms = topic.get("practice_modes")
+            if not isinstance(forms, list) or "客观辨析" not in forms:
+                errors.append(f"{note['name']}/{topic['title']}：缺少练习方式")
+            if topic.get("short_answer") != ("简答说明" in (forms or [])):
+                errors.append(f"{note['name']}/{topic['title']}：简答标记与练习方式不一致")
+    network_course = mapped_courses["计算机网络"]
+    mapped_titles = [topic["title"] for topic in network_course["topics"]]
+    if network_titles != mapped_titles:
+        errors.append("计算机网络重点卡与learning-map.json知识点不一致")
+    topic_ids = [topic["topic_id"] for topic in network_course["topics"]]
+    if len(topic_ids) != len(set(topic_ids)):
+        errors.append("计算机网络topic_id重复")
+    if len(network_ids) != len(set(network_ids)):
+        errors.append("计算机网络试题来源ID重复")
+    if len(network["topics"]) != len({topic["name"] for topic in network["topics"]}):
+        errors.append("计算机网络证据知识点重复")
+    for source in network["sources"]:
+        if not source.get("url", "").startswith("https://") or not source.get("status") or not source.get("limit"):
+            errors.append(f"计算机网络试题来源缺少地址或限制：{source['id']}")
+        scores = source.get("section_scores")
+        if scores is not None and sum(scores.values()) != source.get("total_score"):
+            errors.append(f"计算机网络卷面分值不符：{source['id']}")
+    for topic in network["topics"]:
+        if topic["name"] not in network_titles:
+            errors.append(f"计算机网络试题证据没有对应笔记：{topic['name']}")
+        for evidence in topic["evidence"]:
+            if evidence.get("source") not in network_ids or not evidence.get("items"):
+                errors.append(f"计算机网络试题证据缺少有效来源或题号：{topic['name']}")
     ids = set()
     for source in exams["sources"]:
         if source["id"] in ids:
@@ -93,7 +147,7 @@ def validate():
     regions = {"长沙", "株洲", "湘潭", "衡阳", "邵阳", "岳阳", "常德", "张家界", "益阳", "郴州", "永州", "怀化", "娄底", "湘西"}
     if set(exams["coverage"]) != regions:
         errors.append("考情覆盖表没有完整列出14个市州")
-    return errors, len(notes), chapters, cards, len(exams["sources"])
+    return errors, len(notes), chapters, cards, len(exams["sources"]), len(network["sources"])
 
 
 def main():
@@ -101,14 +155,14 @@ def main():
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8")
     try:
-        errors, courses, chapters, cards, sources = validate()
+        errors, courses, chapters, cards, sources, network_sources = validate()
     except (OSError, ValueError, KeyError, TypeError) as exc:
         print(f"内容校验失败：{exc}", file=sys.stderr)
         return 1
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
-    print(f"校验通过：{courses}科、{chapters}章、{cards}组重点；讲义章节对应有效，{sources}条考情记录明确适用范围与限制。")
+    print(f"校验通过：{courses}科、{chapters}章、{cards}组重点；讲义章节对应有效，{sources}条湖南考情记录、{network_sources}条网络试题资料明确适用范围与限制。")
     print("这是结构与依据字段校验，不代表已完成全部知识点的教材级准确性审查。")
     return 0
 

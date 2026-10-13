@@ -16,30 +16,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Check JavaScript
-        run: |
-          node --check app.js
-          node --check home.js
-          node --check question-media.js
-          node --check sw.js
-      - name: Check JSON
-        run: |
-          python -m json.tool questions.json > /dev/null
-          python -m json.tool manifest.webmanifest > /dev/null
-      - name: Check reproducible question bank
-        run: |
-          python scripts/merge_applied_bank.py --check
-          python scripts/merge_supplement_bank.py --check
-          python scripts/merge_university_exam_bank.py --check
-          python scripts/enrich_question_metadata.py --check
-      - name: Validate chapter notes and exam sources
-        run: python scripts/validate_color_notes.py
-      - name: Validate lecture content
-        run: python scripts/validate_course_notes.py
-      - name: Build and validate Pages artifact
-        run: |
-          python scripts/build_site.py --output dist
-          python scripts/validate_questions.py --js dist/questions.js
-          python scripts/build_release.py --asset-root dist --check
-          node --check dist/build-meta.js
-          node --check dist/questions.js
+      - name: Run complete validation gate
+        run: python scripts/check_all.py

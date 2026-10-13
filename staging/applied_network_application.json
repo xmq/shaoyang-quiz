@@ -341,6 +341,14 @@
   "options": {},
   "answer": "借2位得/26，掩码255.255.255.192，每块64个地址、传统可用62个。网络地址为.0、.64、.128、.192；广播地址为.63、.127、.191、.255。",
   "explanation": "评分点：借2位、/26或掩码、块大小64、可用62、四个网络边界和对应广播。特殊/31等情形按题干，不在本题范围。",
+  "max_score": 6,
+  "rubric": [
+   {"criterion": "判断借2位并得到/26", "points": 1},
+   {"criterion": "写出掩码255.255.255.192", "points": 1},
+   {"criterion": "写出每块64个地址、传统可用62个", "points": 1},
+   {"criterion": "写出4个网络地址", "points": 1},
+   {"criterion": "写出4个广播地址", "points": 2}
+  ],
   "subject": "计算机网络",
   "source_url": "https://xxy.hbucm.edu.cn/info/1751/12012.htm",
   "source_title": "湖北中医药大学《计算机网络》考试大纲",
@@ -359,6 +367,15 @@
   "options": {},
   "answer": "更可能是DNS配置或解析故障。先用ipconfig核对DNS地址，再用nslookup查询域名，必要时换用已知可用DNS并检查防火墙或服务；DHCP可自动下发IP、掩码、网关和DNS参数，但不负责名称解析。",
   "explanation": "评分点：公网IP可达说明基本IP路径可能正常、定位DNS、ipconfig、nslookup、核对或更换DNS、说明DHCP与DNS分工。不能仅凭一次ping断言所有网络层都正常。",
+  "max_score": 6,
+  "rubric": [
+   {"criterion": "判断优先检查DNS配置或解析", "points": 1},
+   {"criterion": "使用ipconfig核对DNS配置", "points": 1},
+   {"criterion": "使用nslookup验证解析", "points": 1},
+   {"criterion": "核对可用DNS、防火墙或服务", "points": 1},
+   {"criterion": "说明DHCP下发网络参数", "points": 1},
+   {"criterion": "说明DHCP不负责名称解析", "points": 1}
+  ],
   "subject": "计算机网络",
   "source_url": "https://xxy.hbucm.edu.cn/info/1751/12012.htm",
   "source_title": "湖北中医药大学《计算机网络》考试大纲",

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
 REPORT = ROOT / "大学期末题库去重报告.md"
 SOURCE_REPORT = ROOT / "大学期末改编题来源汇总.md"
+NETWORK_REPORT = ROOT / "staging" / "network_research.md"
 STAGING_SPECS = {
     ROOT / "staging" / "university_applied.json": (
         "ua-", {"办公软件", "多媒体", "编程语言", "信息安全"},
@@ -34,6 +35,7 @@ SOURCE_FILES = (
 )
 PROGRAMMING_REMOVAL_FILE = ROOT / "staging" / "programming_vb_remove_ids.json"
 MANAGED_PREFIXES = ("ua-", "uc-", "ue-")
+DERIVED_METADATA_FIELDS = ("topic_id", "topic_title", "chapter_id", "required_depth", "topic_order", "rubric", "max_score", "rubric_source")
 CHOICE_TYPES = {"单选", "多选"}
 JUDGE_ANSWERS = {"正确", "错误"}
 
@@ -271,6 +273,8 @@ def render_report(before, staged, final, accepted, removal_ids, removed_base, sk
 
 def render_source_report():
     sections = ["# 大学期末改编题来源汇总", "", "公开材料用于分析考查范围和题型；入库题均重新命制，不整卷转载。", ""]
+    if NETWORK_REPORT.is_file():
+        sections.extend([NETWORK_REPORT.read_text(encoding="utf-8").strip(), ""])
     for path in SOURCE_FILES:
         if path.is_file():
             sections.extend([f"## {path.stem}", "", path.read_text(encoding="utf-8").strip(), ""])
@@ -292,6 +296,13 @@ def main():
     ]
     candidates = load_staging()
     merged, accepted, removed_base, skipped_exact, skipped_fuzzy = merge(base, candidates)
+    hunan_recall = [q for q in merged if str(q.get("id") or "").startswith("hn-recall-")]
+    merged = [q for q in merged if not str(q.get("id") or "").startswith("hn-recall-")] + hunan_recall
+    derived_by_id = {
+        str(question.get("id") or ""): {key: question[key] for key in DERIVED_METADATA_FIELDS if key in question}
+        for question in all_current
+    }
+    merged = [{**question, **derived_by_id.get(str(question.get("id") or ""), {})} for question in merged]
     report = render_report(
         len(all_current), len(candidates), len(merged), accepted, removal_ids,
         removed_base, skipped_exact, skipped_fuzzy,

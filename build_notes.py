@@ -75,7 +75,20 @@ def render_html(courses, config):
     rendered = TEMPLATE.read_text(encoding="utf-8")
     guide = json.loads((ROOT / "course-guide.json").read_text(encoding="utf-8"))
     guides = {item["name"]: item for item in guide["courses"]}
-    references = {item["id"]: item for item in guide["references"]}
+    learning_map = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
+    questions = json.loads((ROOT / "questions.json").read_text(encoding="utf-8"))
+    question_counts = {}
+    for question in questions:
+        topic_id = question.get("topic_id")
+        if topic_id:
+            question_counts[topic_id] = question_counts.get(topic_id, 0) + 1
+    topics_by_course = {
+        course["course_name"]: [
+            {**topic, "question_count": question_counts.get(topic["topic_id"], 0)}
+            for topic in course.get("topics", [])
+        ]
+        for course in learning_map["courses"]
+    }
     lecture_courses = load_courses(ROOT / "course-index.json")
     note_courses = load_courses(ROOT / "color-notes-index.json")
     chapters = {
@@ -87,9 +100,13 @@ def render_html(courses, config):
         entry = guides[item["name"]]
         payload_items.append({
             "name": item["name"], "text": item["text"],
-            "guide": {**entry, "notice": guide["notice"],
-                      "references": [references[key] for key in entry["references"]]},
+            "guide": {"group": entry["group"], "focus": entry["focus"], "depth": entry["depth"]},
             "chapters": {kind: values[item["name"]] for kind, values in chapters.items()},
+            "learning_chapters": next(
+                (course.get("chapters", []) for course in learning_map["courses"] if course["course_name"] == item["name"]),
+                [],
+            ),
+            "topics": topics_by_course.get(item["name"], []),
         })
     payload = json.dumps(payload_items, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     replacements = {

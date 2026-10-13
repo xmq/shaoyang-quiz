@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
 PREFIX = "sp-"
+DERIVED_METADATA_FIELDS = ("topic_id", "topic_title", "chapter_id", "required_depth", "topic_order", "rubric", "max_score", "rubric_source")
 SOURCE = "高校试题提炼"
 STAGING_SPECS = {
     ROOT / "staging" / "supplement_core_thin.json": {
@@ -144,11 +145,16 @@ def load_candidates() -> list[dict]:
 
 
 def build_merged(existing: list[dict], candidates: list[dict]) -> list[dict]:
+    derived_by_id = {
+        str(question.get("id") or ""): {key: question[key] for key in DERIVED_METADATA_FIELDS if key in question}
+        for question in existing
+    }
     without_supplement = [q for q in existing if not str(q.get("id") or "").startswith(PREFIX)]
     university = [q for q in without_supplement if str(q.get("id") or "").startswith(("ua-", "uc-", "ue-"))]
     applied = [q for q in without_supplement if str(q.get("id") or "").startswith("ap-")]
-    base = [q for q in without_supplement if q not in university and q not in applied]
-    comparison_pool = base + applied + university
+    hunan_recall = [q for q in without_supplement if str(q.get("id") or "").startswith("hn-recall-")]
+    base = [q for q in without_supplement if q not in university and q not in applied and q not in hunan_recall]
+    comparison_pool = base + applied + university + hunan_recall
     exact = {(str(q.get("subject") or ""), compact_text(q.get("stem"))): q for q in comparison_pool}
     accepted: list[dict] = []
     errors: list[str] = []
@@ -172,7 +178,8 @@ def build_merged(existing: list[dict], candidates: list[dict]) -> list[dict]:
             exact[key] = candidate
     if errors:
         raise ValueError("补充题库去重失败：\n" + "\n".join(errors[:150]))
-    return base + applied + accepted + university
+    merged = base + applied + accepted + university + hunan_recall
+    return [{**question, **derived_by_id.get(str(question.get("id") or ""), {})} for question in merged]
 
 
 def main() -> int:

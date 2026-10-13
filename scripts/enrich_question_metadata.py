@@ -14,9 +14,25 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
+from add_network_questions import NEW_QUESTIONS
+
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_FILE = ROOT / "questions.json"
+NETWORK_QUESTIONS = {question["id"]: question for question in NEW_QUESTIONS}
+GAP_QUESTIONS = {
+    question["id"]: question
+    for question in json.loads((ROOT / "staging" / "course_gap_questions.json").read_text(encoding="utf-8"))
+}
+LEARNING_MAP = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
+COURSE_BY_SUBJECT = {
+    subject: course
+    for course in LEARNING_MAP["courses"]
+    for subject in course.get("subjects", [course["subject"]])
+}
+NETWORK_COURSE = next(course for course in LEARNING_MAP["courses"] if course["subject"] == "计算机网络")
+NETWORK_TOPICS = tuple(NETWORK_COURSE["topics"])
+NETWORK_TOPIC_BY_ID = {topic["topic_id"]: topic for topic in NETWORK_TOPICS}
 
 ABILITY_VALUES = frozenset({
     "概念识记",
@@ -26,6 +42,8 @@ ABILITY_VALUES = frozenset({
     "机制解释",
     "过程描述",
     "程序阅读",
+    "代码编写",
+    "SQL编写",
     "读图排障",
 })
 DIFFICULTY_VALUES = frozenset({"基础", "应用", "进阶"})
@@ -193,6 +211,14 @@ SUBJECT_RULES: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
         ("高频电路", ("高频", "谐振放大", "振荡器", "混频", "超外差", "功率放大器")),
         ("光纤与移动通信", ("光纤", "通信窗口", "移动通信", "1g", "2g", "3g", "4g", "5g")),
     ),
+    "信号与系统": (
+        ("信号与系统基础", ("周期", "幅度", "能量信号", "功率信号")),
+        ("系统性质", ("线性", "时不变", "因果", "稳定")),
+        ("LTI系统与卷积", ("冲激响应", "卷积", "lti", "单位冲激")),
+        ("频域分析", ("傅里叶", "频谱", "频域")),
+        ("拉普拉斯与Z变换", ("拉普拉斯", "z变换", "收敛域", "roc")),
+        ("采样定理", ("采样", "抽样", "混叠", "奈奎斯特频率")),
+    ),
 }
 
 SUBJECT_DEFAULTS = {
@@ -214,6 +240,7 @@ SUBJECT_DEFAULTS = {
     "模拟电子技术": "模拟电子基础",
     "数字电子技术": "数字电子基础",
     "通信原理与高频电子线路": "通信系统基础",
+    "信号与系统": "信号与系统基础",
 }
 
 KNOWLEDGE_POINT_VALUES = frozenset(
@@ -249,6 +276,91 @@ def question_text(
     return normalized_text(*values)
 
 
+NETWORK_TOPIC_FALLBACKS = {
+    "IPv4与子网": "net.subnet-routing",
+    "TCP与UDP": "net.tcp-udp",
+    "DNS与DHCP": "net.dns-dhcp",
+    "网络体系结构": "net.layers-addresses",
+    "数据链路与局域网": "net.frames-switching",
+    "路由与网络诊断": "net.routing",
+    "应用层协议": "net.app-protocols",
+    "物理层与传输介质": "net.media",
+    "网络设备与拓扑": "net.layers-addresses",
+    "计算机网络基础": "net.layers-addresses",
+}
+
+
+def classify_network_topic(question: dict) -> dict[str, str]:
+    if question.get("topic_source") == "manual" and question.get("topic_id") in NETWORK_TOPIC_BY_ID:
+        best = NETWORK_TOPIC_BY_ID[question["topic_id"]]
+        return {
+            "topic_id": best["topic_id"],
+            "topic_title": best["title"],
+            "chapter_id": best["chapter_id"],
+            "required_depth": best["depth"],
+            "topic_order": next(index for index, topic in enumerate(NETWORK_TOPICS) if topic["topic_id"] == best["topic_id"]),
+        }
+    text = question_text(question)
+    best = None
+    best_score = (0, 0, -1)
+    for index, topic in enumerate(NETWORK_TOPICS):
+        matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in text]
+        score = (max((len(normalized_text(keyword)) for keyword in matches), default=0), len(matches), index)
+        if score >= best_score:
+            best = topic
+            best_score = score
+    if best_score[0] == 0:
+        topic_id = NETWORK_TOPIC_FALLBACKS.get(str(question.get("knowledge_point") or ""), "net.layers-addresses")
+        best = NETWORK_TOPIC_BY_ID[topic_id]
+    return {
+        "topic_id": best["topic_id"],
+        "topic_title": best["title"],
+        "chapter_id": best["chapter_id"],
+        "required_depth": best["depth"],
+        "topic_order": next(index for index, topic in enumerate(NETWORK_TOPICS) if topic["topic_id"] == best["topic_id"]),
+    }
+
+
+def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str]:
+    subject = str(question.get("subject") or "")
+    if subject == "计算机网络":
+        return classify_network_topic(question)
+    course = COURSE_BY_SUBJECT.get(subject)
+    if not course or not course.get("topics"):
+        return {}
+    text = question_text(question)
+    topics = list(course["topics"])
+    if question.get("topic_source") == "manual":
+        manual = next((topic for topic in topics if topic["topic_id"] == question.get("topic_id")), None)
+        if manual:
+            return {
+                "topic_id": manual["topic_id"],
+                "topic_title": manual["title"],
+                "chapter_id": manual["chapter_id"],
+                "required_depth": manual["depth"],
+                "topic_order": topics.index(manual),
+            }
+    best = topics[0]
+    best_score = (0, -1)
+    for index, topic in enumerate(topics):
+        matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in text]
+        score = (max((len(normalized_text(keyword)) for keyword in matches), default=0), index)
+        if score >= best_score:
+            best = topic
+            best_score = score
+    if best_score[0] == 0:
+        candidates = [topic for topic in topics if knowledge_point in topic.get("knowledge_points", [])]
+        if candidates:
+            best = candidates[0]
+    return {
+        "topic_id": best["topic_id"],
+        "topic_title": best["title"],
+        "chapter_id": best["chapter_id"],
+        "required_depth": best["depth"],
+        "topic_order": topics.index(best),
+    }
+
+
 def classify_knowledge_point(question: dict) -> str:
     subject = str(question.get("subject") or "")
     text = question_text(question)
@@ -269,6 +381,10 @@ def classify_ability(question: dict) -> str:
         return "读图排障"
     if re.search(r"排障|故障定位|无法访问|不能上网|ping通|nslookup|ipconfig|报错|异常外联|未授权登录", text):
         return "读图排障"
+    if qtype == "简答" and subject == "数据库" and re.search(r"写(?:出)?\s*sql|sql查询|sql语句", text):
+        return "SQL编写"
+    if qtype == "简答" and re.search(r"编写(?:一段)?(?:程序|代码)|写一段.+代码|使用.+编程语言|用(?:python|c\+\+|c语言|java).{0,8}编写", text):
+        return "代码编写"
     if subject == "编程语言" and (
         qtype == "填空"
         or re.search(
@@ -317,7 +433,7 @@ def classify_difficulty(question: dict, ability: str) -> str:
     qid = str(question.get("id") or "")
     score = 0
 
-    if ability in {"直接计算", "场景选型", "机制解释", "过程描述", "程序阅读", "读图排障"}:
+    if ability in {"直接计算", "场景选型", "机制解释", "过程描述", "程序阅读", "代码编写", "SQL编写", "读图排障"}:
         score += 1
     if qtype in {"多选", "简答"}:
         score += 1
@@ -335,13 +451,64 @@ def classify_difficulty(question: dict, ability: str) -> str:
     return "基础"
 
 
-def expected_metadata(question: dict) -> dict[str, str]:
+def derive_short_rubric(question: dict) -> list[dict]:
+    explanation = str(question.get("explanation") or "")
+    answer = str(question.get("answer") or "")
+    match = re.search(r"(?:最低|最小)?得分点(?:为|包括)?[：:]?|评分点[：:]?", explanation)
+    source = explanation[match.end():] if match else answer
+    source = re.split(r"[。\n]", source, maxsplit=1)[0]
+    parts = [part.strip(" ：:①②③④⑤⑥⑦⑧") for part in re.split(r"[、；;]", source)]
+    if len([part for part in parts if len(part) >= 2]) < 2:
+        parts = [part.strip(" ：:①②③④⑤⑥⑦⑧") for part in re.split(r"[；;。]", answer)]
+    if len([part for part in parts if len(part) >= 2]) < 2:
+        parts = [part.strip(" ：:") for part in re.split(r"(?:以及|和)", source)]
+    if len([part for part in parts if len(part) >= 2]) < 2:
+        parts = [part.strip(" ：:") for part in re.split(r"[，,]", answer)]
+    criteria = []
+    for part in parts:
+        part = re.sub(r"^[（(]?[一二三四五六七八九十\d]+[)）.、]?", "", part).strip()
+        if len(part) < 2 or part in criteria:
+            continue
+        criteria.append(part)
+        if len(criteria) >= 8:
+            break
+    if not criteria:
+        criteria = ["覆盖参考答案的核心结论"]
+    return [{"criterion": criterion, "points": 1} for criterion in criteria]
+
+
+def add_scoring_metadata(question: dict, metadata: dict[str, object]) -> dict[str, object]:
+    combined = {**question, **metadata}
+    if combined.get("type") == "简答" and (not combined.get("rubric") or combined.get("rubric_source") == "generated"):
+        rubric = derive_short_rubric(combined)
+        metadata.update({"rubric": rubric, "max_score": sum(item["points"] for item in rubric), "rubric_source": "generated"})
+    elif combined.get("ability") == "直接计算" and combined.get("type") in {"填空", "简答"} and (not combined.get("rubric") or combined.get("rubric_source") == "generated"):
+        rubric = [
+            {"criterion": "写出适用公式或计算关系", "points": 1},
+            {"criterion": "条件判断和单位处理正确", "points": 1},
+            {"criterion": "代入与计算过程正确", "points": 1},
+            {"criterion": "结果、单位或复杂度表达正确", "points": 1},
+        ]
+        metadata.update({"rubric": rubric, "max_score": 4, "rubric_source": "generated"})
+    return metadata
+
+
+def expected_metadata(question: dict) -> dict[str, object]:
+    curated = NETWORK_QUESTIONS.get(question.get("id")) or GAP_QUESTIONS.get(question.get("id"))
+    if curated:
+        source = curated
+        metadata = {key: source[key] for key in ("knowledge_point", "ability", "difficulty")}
+        metadata.update(classify_course_topic({**question, **metadata}, metadata["knowledge_point"]))
+        return add_scoring_metadata(question, metadata)
     ability = classify_ability(question)
-    return {
+    metadata = {
         "knowledge_point": classify_knowledge_point(question),
         "ability": ability,
         "difficulty": classify_difficulty(question, ability),
     }
+    if question.get("subject") in COURSE_BY_SUBJECT:
+        metadata.update(classify_course_topic({**question, **metadata}, metadata["knowledge_point"]))
+    return add_scoring_metadata(question, metadata)
 
 
 def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
@@ -351,10 +518,19 @@ def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
         if not isinstance(question, dict):
             raise ValueError(f"第{index}项不是题目对象")
         metadata = expected_metadata(question)
-        if any(question.get(key) != value for key, value in metadata.items()):
-            changed_ids.append(str(question.get("id") or f"#{index}"))
         item = dict(question)
         item.update(metadata)
+        removed_generated = False
+        keeps_generated = item.get("type") == "简答" or (
+            item.get("ability") == "直接计算" and item.get("type") == "填空"
+        )
+        if item.get("rubric_source") == "generated" and not keeps_generated:
+            for field in ("rubric", "max_score", "rubric_source"):
+                if field in item:
+                    item.pop(field)
+                    removed_generated = True
+        if removed_generated or any(question.get(key) != value for key, value in metadata.items()):
+            changed_ids.append(str(question.get("id") or f"#{index}"))
         enriched.append(item)
     return enriched, changed_ids
 

@@ -3046,6 +3046,12 @@ body:not(.platform-home) {
 
 .home-module-actions a:hover { border-color: var(--home-primary); background: var(--home-primary-soft); }
 .home-module-actions strong { font-size: 14px; }
+.home-continue { display: block; margin-top: 14px; padding: 11px 13px; border-radius: 10px; background: var(--home-primary-soft); color: var(--home-primary); font-size: 13px; font-weight: 750; text-decoration: none; }
+.home-continue:hover { text-decoration: underline; text-underline-offset: 3px; }
+.exam-mode-guide { margin-top: 18px; border-top: 1px solid var(--home-line); color: #526071; font-size: 13px; line-height: 1.7; }
+.exam-mode-guide summary { padding-top: 14px; color: var(--home-deep); font-weight: 750; cursor: pointer; }
+.exam-mode-guide ul { margin: 10px 0 0; padding-left: 20px; }
+.exam-mode-guide li + li { margin-top: 7px; }
 
 #quiz-module-select {
   min-width: 96px;
@@ -3081,6 +3087,6 @@ body:not(.platform-home) {
   .course-launcher h1 { color: var(--home-ink); }
   .home-module-actions a { color: #bfdbfe; }
 }
-/* 课程入口保持简单，考情作为可选阅读入口。 */
+/* 课程入口只保留学生完成学习所需的信息。 */
 .home-scope { max-width: 44rem; color: #526071; line-height: 1.8; font-size: 14px; }
 .home-scope a { color: #1d4ed8; text-underline-offset: 3px; }

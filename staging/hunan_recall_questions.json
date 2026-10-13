@@ -1,0 +1,215 @@
+[
+  {
+    "id": "hn-recall-sy26-001", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "CPU与缓存",
+    "stem": "说明CPU中设置Cache主要要缓解什么性能问题，并解释Cache为什么能够提高平均访存速度。",
+    "options": {}, "answer": "Cache主要缓解CPU处理速度与主存访问速度之间的差距。它利用时间局部性和空间局部性，把近期使用或相邻的数据块放在更快的存储层；命中时无需访问较慢主存，从而降低平均访存时间。",
+    "explanation": "回答要包含速度差、局部性、命中和平均访存时间四个层次。",
+    "max_score": 4, "rubric": [{"criterion": "指出CPU与主存速度差", "points": 1}, {"criterion": "说明时间或空间局部性", "points": 1}, {"criterion": "说明命中时直接访问Cache", "points": 1}, {"criterion": "说明降低平均访存时间", "points": 1}],
+    "subject": "计算机组成原理", "source_chapter": "2026邵阳市直计算机岗主观题回忆", "adaptation_note": "依据考生回忆的CPU与缓存性能问题重新组织题干并复核答案。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a51b9dc00000000110130a2", "source_title": "2026年7月11日邵阳市直计算机岗考试类型回忆", "source_item": "主观题1线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-sy26-002", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "数据挖掘",
+    "stem": "什么是数据挖掘？列出四种常见数据挖掘任务，并各用一句话说明用途。",
+    "options": {}, "answer": "数据挖掘是从数据中发现有用模式、关系或知识的过程。分类预测离散类别，回归预测连续数值，聚类按相似性自动分组，关联分析发现项目或事件之间经常共同出现的关系。",
+    "explanation": "任务名称必须和目标对应，不能把分类与聚类混为一谈。",
+    "max_score": 6, "rubric": [{"criterion": "说明数据挖掘的基本含义", "points": 2}, {"criterion": "说明分类", "points": 1}, {"criterion": "说明回归", "points": 1}, {"criterion": "说明聚类", "points": 1}, {"criterion": "说明关联分析", "points": 1}],
+    "subject": "大数据", "source_chapter": "2026邵阳市直计算机岗主观题回忆", "adaptation_note": "依据数据挖掘概念与主要任务回忆改编，并补足任务边界。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a51b9dc00000000110130a2", "source_title": "2026年7月11日邵阳市直计算机岗考试类型回忆", "source_item": "主观题2线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-sy26-003", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "词频编程",
+    "stem": "使用一种熟悉的编程语言编写代码，统计字符串“hello world, hello python”中每个单词出现的次数。忽略逗号并按小写处理。",
+    "options": {}, "answer": "Python示例：\ntext = 'hello world, hello python'.lower().replace(',', '')\ncounts = {}\nfor word in text.split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n结果为hello:2、world:1、python:1。",
+    "explanation": "关键步骤是规范化标点和大小写、分词、逐词累计。也可使用其他语言或标准库完成。",
+    "max_score": 5, "rubric": [{"criterion": "正确处理逗号和大小写", "points": 1}, {"criterion": "正确分词", "points": 1}, {"criterion": "使用映射结构累计", "points": 1}, {"criterion": "累计逻辑正确", "points": 1}, {"criterion": "结果正确", "points": 1}],
+    "subject": "编程语言", "source_chapter": "2026邵阳市直计算机岗主观题回忆", "adaptation_note": "依据不限语言词频编程回忆改编，补充输入边界。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a51b9dc00000000110130a2", "source_title": "2026年7月11日邵阳市直计算机岗考试类型回忆", "source_item": "主观题4线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "programming.t06"
+  },
+  {
+    "id": "hn-recall-sy26-004", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "HTTP与HTTPS",
+    "stem": "说明HTTP的基本通信方式和直接使用明文HTTP的主要安全风险，再概括HTTPS建立安全通信时证书验证与会话密钥协商的作用。",
+    "options": {}, "answer": "HTTP采用请求—响应方式传输应用数据，协议本身通常不提供传输加密、服务器身份认证和完整性保护，明文通信可能被窃听或篡改。HTTPS先通过TLS证书链验证服务器身份，再用非对称机制或密钥交换建立共享会话密钥，随后使用对称加密和完整性校验保护HTTP数据。",
+    "explanation": "HTTPS不是另一套网页业务语义，而是HTTP在TLS安全通道中传输。",
+    "max_score": 6, "rubric": [{"criterion": "说明HTTP请求响应方式", "points": 1}, {"criterion": "指出窃听风险", "points": 1}, {"criterion": "指出篡改或冒充风险", "points": 1}, {"criterion": "说明证书验证身份", "points": 1}, {"criterion": "说明协商共享会话密钥", "points": 1}, {"criterion": "说明后续对称加密与完整性保护", "points": 1}],
+    "subject": "计算机网络", "source_chapter": "2026邵阳市直计算机岗主观题回忆", "adaptation_note": "依据HTTP安全弊端和HTTPS核心流程回忆改编，避免绑定特定TLS版本。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a51b9dc00000000110130a2", "source_title": "2026年7月11日邵阳市直计算机岗考试类型回忆", "source_item": "主观题5线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "net.http"
+  },
+  {
+    "id": "hn-recall-hn26-001", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "恶意代码",
+    "stem": "什么是计算机病毒？说明计算机病毒常见的四个特征。",
+    "options": {}, "answer": "计算机病毒是能够把自身代码附着或插入其他程序、文件或系统区域，并在满足条件时复制传播、影响系统运行的恶意代码。常见特征包括传染性、潜伏性、触发性、破坏性和隐蔽性，写出其中四项并说明即可。",
+    "explanation": "病毒通常依赖宿主传播，与能够独立利用网络传播的蠕虫应区分。",
+    "max_score": 6, "rubric": [{"criterion": "说明病毒是恶意代码", "points": 1}, {"criterion": "说明依附或插入宿主", "points": 1}, {"criterion": "说明能够复制传播", "points": 1}, {"criterion": "正确列出并解释四个常见特征", "points": 3}],
+    "subject": "信息安全", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据病毒定义与特征简答回忆改编，并补充与蠕虫边界。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "简答题1线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-002", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "VPN",
+    "stem": "说明VPN的主要作用及其实现安全通信的基本原理，并指出VPN不能替代哪两类安全措施。",
+    "options": {}, "answer": "VPN在公共网络上建立逻辑专用通道，使远程用户或不同站点能够安全访问内部资源。它通常通过身份认证、隧道封装、加密和完整性校验保护传输。VPN不能替代终端防恶意代码、账号最小权限、应用漏洞修复等其他安全措施。",
+    "explanation": "VPN保护的是指定通信通道，不会自动消除终端和应用本身的风险。",
+    "max_score": 5, "rubric": [{"criterion": "说明远程或站点互联作用", "points": 1}, {"criterion": "说明隧道封装", "points": 1}, {"criterion": "说明认证、加密或完整性保护", "points": 2}, {"criterion": "指出至少两类不能替代的安全措施", "points": 1}],
+    "subject": "信息安全", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据VPN作用与原理简答回忆改编，并增加安全边界。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "简答题2线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-003", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "内存不足排障",
+    "stem": "某电脑同时打开多个浏览器窗口和一个大型文档后提示内存不足。分别从硬件资源和系统配置角度分析可能原因，并给出排查与处理步骤。",
+    "options": {}, "answer": "可能原因包括物理内存容量不足、某进程异常占用或泄漏、后台程序过多、虚拟内存配置过小、磁盘空间不足影响换页。先用任务管理工具查看内存总量和各进程占用，关闭或修复异常程序，检查启动项与虚拟内存、释放磁盘空间；长期仍不足再评估增加物理内存。",
+    "explanation": "应先测量资源占用再处理，不能看到提示就直接认定硬件损坏。",
+    "max_score": 7, "rubric": [{"criterion": "列出物理内存不足", "points": 1}, {"criterion": "列出进程异常或后台程序原因", "points": 1}, {"criterion": "列出虚拟内存或磁盘原因", "points": 1}, {"criterion": "先查看进程与资源占用", "points": 1}, {"criterion": "处理异常进程和启动项", "points": 1}, {"criterion": "检查虚拟内存与磁盘", "points": 1}, {"criterion": "说明何时考虑升级内存", "points": 1}],
+    "subject": "操作系统", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据多程序运行提示内存不足的分析题回忆改编。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题1线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "operating-system.t06"
+  },
+  {
+    "id": "hn-recall-hn26-004", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "连接超时排障",
+    "stem": "客户端访问服务器出现“连接超时”。按网络层次列出至少四类可能原因，并给出有顺序的排查方法。",
+    "options": {}, "answer": "可能原因包括本机链路或地址配置错误、网关或路由不可达、DNS解析失败、目标端口被防火墙过滤、服务器未监听或负载过高。可依次检查本机链路与IP配置，测试网关和目标IP连通性，核对DNS解析，测试目标端口，再检查服务器进程、监听地址、防火墙和日志。",
+    "explanation": "超时只说明在规定时间未获得响应，不能单凭现象定位到DNS或服务器。",
+    "max_score": 6, "rubric": [{"criterion": "列出至少四类合理原因", "points": 2}, {"criterion": "检查本机链路与地址", "points": 1}, {"criterion": "测试网关和目标IP", "points": 1}, {"criterion": "核对DNS和端口", "points": 1}, {"criterion": "检查服务器进程、防火墙或日志", "points": 1}],
+    "subject": "计算机网络", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据连接超时故障分析回忆改编为按层排查题。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题2(1)线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "net.troubleshooting"
+  },
+  {
+    "id": "hn-recall-hn26-005", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "TCP客户端",
+    "stem": "用Python编写一个最小TCP客户端，连接本机127.0.0.1的9000端口，发送字符串“Hello server”，然后正确关闭连接。",
+    "options": {}, "answer": "示例：\nimport socket\nwith socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n    client.connect(('127.0.0.1', 9000))\n    client.sendall(b'Hello server')\n使用with可在正常结束或异常时关闭套接字。",
+    "explanation": "TCP客户端基本步骤是创建套接字、连接、发送或接收、关闭；端口按题设使用。",
+    "max_score": 5, "rubric": [{"criterion": "创建IPv4 TCP套接字", "points": 1}, {"criterion": "连接127.0.0.1和9000端口", "points": 1}, {"criterion": "把字符串编码为字节", "points": 1}, {"criterion": "正确发送完整数据", "points": 1}, {"criterion": "正确关闭套接字", "points": 1}],
+    "subject": "计算机网络", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据TCP本机客户端代码回忆改编并明确端口。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题2(2)线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "net.tcp-connection"
+  },
+  {
+    "id": "hn-recall-hn26-006", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "SQL分组查询",
+    "stem": "有Reader(reader_id,name)和Borrow(reader_id,book_id)两张表。写SQL查询借阅图书数量超过5本的读者姓名及借阅数量。",
+    "options": {}, "answer": "SELECT r.name, COUNT(*) AS borrow_count\nFROM Reader r JOIN Borrow b ON r.reader_id=b.reader_id\nGROUP BY r.reader_id, r.name\nHAVING COUNT(*) > 5;",
+    "explanation": "WHERE筛明细行，HAVING筛分组结果；读者姓名需通过连接取得。",
+    "max_score": 5, "rubric": [{"criterion": "正确连接Reader与Borrow", "points": 1}, {"criterion": "按读者分组", "points": 1}, {"criterion": "正确使用COUNT", "points": 1}, {"criterion": "使用HAVING筛选大于5", "points": 1}, {"criterion": "输出姓名和借阅数量", "points": 1}],
+    "subject": "数据库", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据借阅数量分组查询回忆改编并补全表结构。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题3(1)线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-007", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "数据库事务",
+    "stem": "借书业务需要新增一条借阅记录，同时把对应图书库存减1。为什么这两个操作应放在同一事务中？还应检查什么条件？",
+    "options": {}, "answer": "两个操作共同构成一次完整业务，应全部成功或全部回滚，否则可能出现有借阅记录但库存未减，或库存减少却没有借阅记录。事务保证原子性并帮助维持一致性。更新前还应检查库存大于0，并通过条件更新、锁或合适隔离控制并发超借。",
+    "explanation": "事务不仅是把SQL写在一起，还要处理业务约束和并发。",
+    "max_score": 5, "rubric": [{"criterion": "指出两个操作属于同一业务", "points": 1}, {"criterion": "说明全部成功或全部回滚", "points": 1}, {"criterion": "说明不一致后果", "points": 1}, {"criterion": "检查库存条件", "points": 1}, {"criterion": "说明并发控制", "points": 1}],
+    "subject": "数据库", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据借阅记录与库存更新事务题回忆改编。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题3(2)线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "database.t08"
+  },
+  {
+    "id": "hn-recall-hn26-008", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "路由转发",
+    "stem": "说明路由器的核心功能，并结合目的网络前缀、下一跳和出接口描述收到一个IP分组后的基本转发过程。",
+    "options": {}, "answer": "路由器连接不同网络并按路由表转发IP分组。收到分组后检查首部并递减TTL，根据目的IP在路由表中进行最长前缀匹配，得到下一跳和出接口；随后解析下一跳链路地址，重新封装链路层帧并从相应接口发送。无匹配且无默认路由时丢弃，并可返回差错信息。",
+    "explanation": "逐跳转发中链路层地址会改变，通常目的IP保持不变；最长前缀决定采用最具体的有效路由。",
+    "max_score": 7, "rubric": [{"criterion": "说明连接不同网络和分组转发", "points": 1}, {"criterion": "检查首部并处理TTL", "points": 1}, {"criterion": "按目的IP最长前缀匹配", "points": 1}, {"criterion": "得到下一跳", "points": 1}, {"criterion": "得到出接口", "points": 1}, {"criterion": "重新封装链路层帧", "points": 1}, {"criterion": "说明无路由时处理", "points": 1}],
+    "subject": "计算机网络", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据路由器核心功能与转发过程回忆改编。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题4线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "net.routing"
+  },
+  {
+    "id": "hn-recall-hn26-009", "source": "湖南笔试回忆改编", "type": "单选", "chapter": "显示刷新率",
+    "stem": "显示器刷新率的常用单位是？",
+    "options": {"A": "Hz", "B": "Byte", "C": "dpi", "D": "bit/s"}, "answer": "A",
+    "explanation": "刷新率表示屏幕每秒更新画面的次数，常用Hz；dpi表示输出或采样密度，bit/s表示数据速率。",
+    "subject": "多媒体", "source_chapter": "湖南计算机岗客观题回忆", "adaptation_note": "依据显示器刷新率客观题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "选择题线索：刷新率", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "multimedia.t05"
+  },
+  {
+    "id": "hn-recall-hn26-010", "source": "湖南笔试回忆改编", "type": "单选", "chapter": "DNS",
+    "stem": "用户输入域名后，负责把域名解析为IP地址的应用层服务是？",
+    "options": {"A": "DNS", "B": "DHCP", "C": "ARP", "D": "FTP"}, "answer": "A",
+    "explanation": "DNS负责名称解析；DHCP分配网络配置，ARP解析本地链路上的IP与MAC映射。",
+    "subject": "计算机网络", "source_chapter": "湖南计算机岗客观题回忆", "adaptation_note": "依据DNS解析域名客观题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "选择题线索：DNS", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "net.dns-dhcp"
+  },
+  {
+    "id": "hn-recall-hn26-011", "source": "湖南笔试回忆改编", "type": "判断", "chapter": "HTTP/1.1",
+    "stem": "HTTP/1.1默认支持持久连接，同一TCP连接在满足条件时可以承载多个HTTP请求和响应。（ ）",
+    "options": {}, "answer": "正确", "explanation": "HTTP/1.1默认使用持久连接，但连接复用仍受协议头、服务器策略、超时和错误等条件影响。",
+    "subject": "计算机网络", "source_chapter": "湖南计算机岗客观题回忆", "adaptation_note": "依据HTTP/1.1客观题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "选择题线索：HTTP/1.1", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "net.http"
+  },
+  {
+    "id": "hn-recall-hn26-012", "source": "湖南笔试回忆改编", "type": "判断", "chapter": "矢量图",
+    "stem": "矢量图主要由几何对象和数学描述构成，在正常矢量绘制流程中放大时可重新绘制边缘，因此不会像位图那样直接出现像素块。（ ）",
+    "options": {}, "answer": "正确", "explanation": "矢量图可按几何描述重新绘制；若先被栅格化为位图，再放大仍可能出现像素化。",
+    "subject": "多媒体", "source_chapter": "湖南计算机岗判断题回忆", "adaptation_note": "依据矢量图缩放判断题线索重新命制并补充栅格化边界。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "判断题线索：矢量图", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-013", "source": "湖南笔试回忆改编", "type": "判断", "chapter": "Word分栏",
+    "stem": "Word或WPS文字中的分栏设置只能作用于整个文档，不能只作用于选定文字或某一节。（ ）",
+    "options": {}, "answer": "错误", "explanation": "分栏可以通过选定内容或分节控制作用范围，并非只能作用于整个文档。",
+    "subject": "办公软件", "source_chapter": "湖南计算机岗判断题回忆", "adaptation_note": "依据Word分栏作用范围判断题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "判断题线索：Word分栏", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "office.t03"
+  },
+  {
+    "id": "hn-recall-hn26-014", "source": "湖南笔试回忆改编", "type": "判断", "chapter": "PowerPoint顺序",
+    "stem": "在PowerPoint或WPS演示中，可以在普通视图或幻灯片浏览视图中调整幻灯片的先后顺序。（ ）",
+    "options": {}, "answer": "正确", "explanation": "拖动幻灯片缩略图即可重新排序；放映顺序通常随幻灯片顺序变化，也可另设自定义放映。",
+    "subject": "办公软件", "source_chapter": "湖南计算机岗判断题回忆", "adaptation_note": "依据演示文稿顺序判断题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "判断题线索：PPT顺序", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-015", "source": "湖南笔试回忆改编", "type": "单选", "chapter": "Excel冻结窗格",
+    "stem": "在较长Excel或WPS表格中滚动数据时，希望标题行保持可见，最合适的功能是？",
+    "options": {"A": "冻结窗格", "B": "保护工作表", "C": "条件格式", "D": "分类汇总"}, "answer": "A",
+    "explanation": "冻结窗格用于滚动时保持指定行列可见，不负责权限保护、格式判断或汇总。",
+    "subject": "办公软件", "source_chapter": "湖南计算机岗判断题回忆", "adaptation_note": "依据Excel冻结窗口线索改为操作情境单选。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "判断题线索：Excel冻结窗格", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-016", "source": "湖南笔试回忆改编", "type": "判断", "chapter": "Windows任务",
+    "stem": "现代桌面版Windows支持多个用户账号，并能够以多任务方式让多个程序在一段时间内并发推进。（ ）",
+    "options": {}, "answer": "正确", "explanation": "多用户指系统支持多个用户账号和权限环境，多任务指多个程序在调度下并发执行；这不表示所有程序始终物理并行。",
+    "subject": "操作系统", "source_chapter": "湖南计算机岗判断题回忆", "adaptation_note": "依据Windows多用户多任务判断题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "判断题线索：Windows", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-017", "source": "湖南笔试回忆改编", "type": "单选", "chapter": "时间复杂度",
+    "stem": "程序只用一个循环从头到尾访问长度为n的数组一次，循环体为常数时间操作，其时间复杂度是？",
+    "options": {"A": "O(1)", "B": "O(log n)", "C": "O(n)", "D": "O(n²)"}, "answer": "C",
+    "explanation": "基本操作随数组长度执行n次，因此增长量级为O(n)。",
+    "subject": "算法与数据结构", "source_chapter": "湖南计算机岗选择题回忆", "adaptation_note": "依据O(n)复杂度客观题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "选择题线索：O(n)", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-018", "source": "湖南笔试回忆改编", "type": "多选", "chapter": "算法特性",
+    "stem": "下列哪些通常属于算法应具备的基本特性？",
+    "options": {"A": "有穷性", "B": "确定性", "C": "可行性", "D": "必须使用某一种编程语言"}, "answer": "ABC",
+    "explanation": "算法通常强调有穷、确定、可行，并具有输入和输出；算法可以用自然语言、流程图、伪代码或程序语言描述。",
+    "subject": "算法与数据结构", "source_chapter": "湖南计算机岗选择题回忆", "adaptation_note": "依据算法特性客观题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "选择题线索：算法特性", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1
+  },
+  {
+    "id": "hn-recall-hn26-019", "source": "湖南笔试回忆改编", "type": "多选", "chapter": "计算机系统",
+    "stem": "从基本组成看，一个完整的计算机系统通常包括哪些部分？",
+    "options": {"A": "硬件系统", "B": "软件系统", "C": "只有互联网", "D": "只有数据库"}, "answer": "AB",
+    "explanation": "计算机系统由硬件系统和软件系统共同构成，互联网和数据库可能是具体环境或应用的一部分。",
+    "subject": "计算机基础", "source_chapter": "湖南计算机岗选择题回忆", "adaptation_note": "依据计算机系统组成客观题线索重新命制。",
+    "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "选择题线索：计算机系统组成", "evidence_level": "考点回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "computer-foundations.t02"
+  },
+  {
+    "id": "hn-recall-cs25-001", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "大文件分块处理",
+    "stem": "需要统计一个远大于可用内存的文本文件中各单词的出现次数。说明程序应怎样分块或流式处理，并指出避免内存占用失控的关键措施。",
+    "options": {}, "answer": "程序应以流式方式逐行或按固定大小块读取，不一次性把文件全部载入内存；处理块边界时保留未完成的单词，及时累计到词频映射；使用上下文管理或异常清理保证文件关闭。若词汇表本身过大，还需分区、外部排序或把中间结果写入磁盘后归并。",
+    "explanation": "分块读取解决输入文件过大，词频映射本身仍可能增长，因此还要考虑中间状态的上限。",
+    "max_score": 6, "rubric": [{"criterion": "说明不能一次性读入全部文件", "points": 1}, {"criterion": "采用逐行或固定块读取", "points": 1}, {"criterion": "正确处理块边界", "points": 1}, {"criterion": "及时累计而不保存全部原文", "points": 1}, {"criterion": "保证文件或资源关闭", "points": 1}, {"criterion": "说明词汇表过大时的外存方案", "points": 1}],
+    "subject": "编程语言", "source_chapter": "2025长沙县信息化管理岗大题回忆", "adaptation_note": "依据分块处理大文件编程题回忆改编为语言无关设计题。",
+    "source_url": "https://www.xiaohongshu.com/explore/67f9eb28000000000f03a197", "source_title": "2025年4月12日长沙县信息化管理岗复盘", "source_item": "专业卷大题编程线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
+    "topic_source": "manual", "topic_id": "programming.t10"
+  }
+]

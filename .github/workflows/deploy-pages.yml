@@ -22,12 +22,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build site artifact
-        run: python scripts/build_site.py --output dist
-      - name: Validate chapter notes and exam sources
-        run: python scripts/validate_color_notes.py
-      - name: Validate question bundle
-        run: python scripts/validate_questions.py --js dist/questions.js
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate and build site artifact
+        run: python scripts/check_all.py
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload GitHub Pages artifact

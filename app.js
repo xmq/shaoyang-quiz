@@ -174,7 +174,8 @@ function isAnswerCorrect(q, given) {
     return [...String(given || "")].sort().join("") === [...String(q.answer || "")].sort().join("");
   }
   if (q.type === "填空") {
-    return normalizeAnswer(given) === normalizeAnswer(q.answer);
+    const accepted = [q.answer, ...(Array.isArray(q.accepted_answers) ? q.accepted_answers : [])];
+    return accepted.some((answer) => normalizeAnswer(given) === normalizeAnswer(answer));
   }
   return given === q.answer;
 }
@@ -199,13 +200,13 @@ function countBy(items, getter) {
 }
 
 function chapterKey(q) {
-  return q.knowledge_point || q.chapter || q.subject || "未分类";
+  return q.topic_title || q.knowledge_point || q.chapter || q.subject || "未分类";
 }
 
 function searchableText(q) {
   const options = q.options ? Object.values(q.options).join(" ") : "";
   return [
-    q.id, q.type, q.subject, chapterKey(q), q.source_chapter, q.stem, options,
+    q.id, q.type, q.subject, chapterKey(q), q.stem, options,
     q.answer, q.explanation,
   ]
     .filter(Boolean)
@@ -226,7 +227,11 @@ function getScope() {
       return parts.every((part) => text.includes(part));
     });
   }
-  return scope;
+  return [...scope].sort((left, right) => {
+    const leftOrder = Number.isInteger(left.topic_order) ? left.topic_order : Number.MAX_SAFE_INTEGER;
+    const rightOrder = Number.isInteger(right.topic_order) ? right.topic_order : Number.MAX_SAFE_INTEGER;
+    return leftOrder - rightOrder;
+  });
 }
 
 function getPool() {
@@ -322,6 +327,7 @@ function applyLaunchParams() {
   const params = new URLSearchParams(location.search);
   const requestedMode = params.get("mode");
   const requestedSubject = params.get("subject");
+  const requestedTopic = params.get("topic");
   let changed = false;
   if (["home", "seq", "rnd", "mock", "review", "wrong", "fav"].includes(requestedMode)) {
     state.mode = requestedMode;
@@ -334,6 +340,15 @@ function applyLaunchParams() {
     state.searchQuery = "";
     if (!requestedMode) state.mode = "seq";
     changed = true;
+  }
+  if (requestedTopic) {
+    const topicQuestion = PUBLIC_QUESTIONS.find((question) => question.topic_id === requestedTopic);
+    if (topicQuestion) {
+      state.subject = topicQuestion.subject;
+      state.chapterFilter = chapterKey(topicQuestion);
+      if (!requestedMode || requestedMode === "home") state.mode = "seq";
+      changed = true;
+    }
   }
   if (changed) resetPosition();
 }
@@ -414,7 +429,7 @@ function announceAnswer(q, correct) {
   live.textContent = "";
   requestAnimationFrame(() => {
     if (q.type === "简答") {
-      live.textContent = correct ? "已标记为基本答到，得分点已展开。" : "已标记为还需复习，参考答案已展开。";
+      live.textContent = correct ? "已标记为已掌握，核对要点已展开。" : "已标记为还需复习，参考答案已展开。";
       return;
     }
     live.textContent = correct ? "回答正确，解析已展开。" : `回答错误，正确答案是 ${q.answer}，解析已展开。`;
@@ -566,26 +581,33 @@ function renderFillQuestion(q, chosen) {
   </div>`;
 }
 
+function checkpointHtml(q) {
+  if (!Array.isArray(q.rubric) || !q.rubric.length) return "";
+  const title = q.type === "简答" ? "核对要点" : "核对步骤";
+  return `<div class="short-rubric"><strong>${title}</strong><ul>${q.rubric.map((item) => `<li>${escapeHtml(item.criterion)}</li>`).join("")}</ul></div>`;
+}
+
 function renderShortAnswerQuestion(q, chosen) {
   const pending = state._pending && state._pending.qid === q.id ? state._pending : null;
   const draft = pending && typeof pending.text === "string" ? pending.text : "";
   const revealed = !!pending?.revealed;
   if (chosen) {
     return `<div class="short-answer short-graded">
-      <strong>${chosen === "掌握" ? "已自评：基本答到" : "已自评：还需复习"}</strong>
-      <span>已按参考得分点记录自评结果。</span>
+      <strong>${chosen === "掌握" ? "已掌握" : "还需复习"}</strong>
+      <span>已记录本题掌握状态。</span>
     </div>`;
   }
   return `<div class="short-answer ${revealed ? "is-revealed" : ""}">
     <label for="short-input">作答要点</label>
     <textarea id="short-input" rows="6" placeholder="写出你的作答要点"${revealed ? " disabled" : ""}>${escapeHtml(draft)}</textarea>
     ${revealed ? `<div class="short-reference">
-        <div class="exp-title">参考得分点</div>
+        <div class="exp-title">参考答案</div>
         <p>${escapeHtml(q.answer)}</p>
+        ${checkpointHtml(q)}
         ${q.explanation ? `<div class="short-rubric"><strong>核对说明</strong>${escapeHtml(q.explanation)}</div>` : ""}
       </div>
       <div class="short-grade-actions" aria-label="简答题自评">
-        <button type="button" class="primary-btn" data-short-grade="掌握">基本答到</button>
+        <button type="button" class="primary-btn" data-short-grade="掌握">已掌握</button>
         <button type="button" class="secondary-btn" data-short-grade="未掌握">还需复习</button>
       </div>` : `<div class="short-draft-actions">
         <button type="button" id="show-short" class="primary-btn">核对参考答案</button>
@@ -600,6 +622,10 @@ function courseNameForSubject(subject) {
     "算法与数据结构": "数据结构与算法",
     "操作系统": "操作系统原理",
     "数据库": "数据库技术",
+    "编程语言": "C与Python程序设计",
+    "计算机基础": "大学计算机基础与新技术",
+    "信息基础": "大学计算机基础与新技术",
+    "大数据": "大学计算机基础与新技术",
   })[subject] || subject;
 }
 
@@ -617,11 +643,12 @@ function feedbackHtml(q, chosen) {
   const badge = wrongCount ? ` · ${isShort ? "需复习" : "已错"} ${wrongCount} 次${ok && remain ? ` · 还需连续答对 ${remain} 次出本` : ""}${grade ? `<span class="wrong-grade">${grade}</span>` : ""}` : "";
   const answer = `答案：${q.answer}`;
   const referenceAnswer = isShort
-    ? `<div class="short-reference feedback-reference"><div class="exp-title">参考得分点</div><p>${escapeHtml(q.answer)}</p></div>`
+    ? `<div class="short-reference feedback-reference"><div class="exp-title">参考答案</div><p>${escapeHtml(q.answer)}</p>${checkpointHtml(q)}</div>`
     : "";
   const explanation = q.explanation && q.explanation.trim()
     ? `<div class="explanation"><div class="exp-title">解析</div>${escapeHtml(q.explanation)}</div>`
     : `<div class="explanation">本题暂无文字解析</div>`;
+  const calculationRubric = !isShort ? checkpointHtml(q) : "";
   const reviewMeta = state.reviewMeta[q.id];
   const reviewMessage = ok && reviewMeta?.nextReviewAt
     ? `已安排 ${new Date(reviewMeta.nextReviewAt).toLocaleDateString("zh-CN", {month: "numeric", day: "numeric"})} 再次练习`
@@ -634,16 +661,19 @@ function feedbackHtml(q, chosen) {
         <div>${Object.entries(ERROR_TAG_LABELS).map(([value, label]) => `<button type="button" data-error-tag="${value}" aria-pressed="${selectedErrorTag === value}">${label}</button>`).join("")}</div>
       </div>`
     : "";
-  const courseHash = `#course=${encodeURIComponent(courseNameForSubject(q.subject))}`;
+  const courseParams = new URLSearchParams({course: courseNameForSubject(q.subject)});
+  if (q.topic_id) courseParams.set("topic", q.topic_id);
+  const courseHash = `#${courseParams.toString()}`;
   const repairLinks = ok ? "" : `<div class="repair-links">
     <span>${reviewMessage}</span>
     <a href="./notes.html${courseHash}">回看讲义</a>
     <a href="./color-notes.html${courseHash}">重点与易错</a>
   </div>`;
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
-    <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已自评为基本答到" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
+    <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已标记为已掌握" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
     ${referenceAnswer}
     ${explanation}
+    ${calculationRubric}
     ${errorTagButtons}
     ${repairLinks}
   </div>`;
@@ -678,10 +708,9 @@ function renderQuestion(q, pool) {
       <span class="badge type-${escapeHtml(q.type)}">${escapeHtml(q.type)}</span>
       <span class="q-pos">${state.cursor + 1} / ${pool.length}</span>
       <div class="question-controls" aria-label="题目导航">
-        <button type="button" id="question-exit">返回</button>
         <button type="button" class="fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
       </div>
-      <span class="chapter">${escapeHtml(q.knowledge_point || q.chapter || "")}</span>
+      <span class="chapter">${escapeHtml(chapterKey(q))}</span>
     </div>
     <div class="stem" id="question-stem" tabindex="-1">${escapeHtml(q.stem)}</div>
     ${mediaHtml(q)}
@@ -815,7 +844,6 @@ function bindQuestionEvents(q, inWrongFresh) {
 
   $("prev").addEventListener("click", prevQuestion);
   $("next").addEventListener("click", nextQuestion);
-  $("question-exit").addEventListener("click", exitRunner);
   $("fav").addEventListener("click", () => {
     if (state.fav[q.id]) delete state.fav[q.id];
     else state.fav[q.id] = true;
@@ -896,7 +924,7 @@ function renderDashboard() {
       <div class="hub-primary-actions">
         <button class="primary mode-card" data-jump-mode="seq">
           <span class="mode-symbol" aria-hidden="true">顺</span>
-          <span class="mode-copy"><strong>顺序刷题</strong><small>按知识点依次练习</small></span>
+          <span class="mode-copy"><strong>继续本课练习</strong><small>按课程顺序完成未做题目</small></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
         <button class="mode-card" data-jump-mode="rnd">
@@ -1360,9 +1388,15 @@ function buildDrawer() {
   if (state.subject) chapterBase = chapterBase.filter((q) => q.subject === state.subject);
   if (state.typeFilter) chapterBase = chapterBase.filter((q) => q.type === state.typeFilter);
   const chapterCounts = countBy(chapterBase, chapterKey);
+  const chapterOrder = new Map();
+  chapterBase.forEach((question) => {
+    const key = chapterKey(question);
+    const order = Number.isInteger(question.topic_order) ? question.topic_order : Number.MAX_SAFE_INTEGER;
+    if (!chapterOrder.has(key) || order < chapterOrder.get(key)) chapterOrder.set(key, order);
+  });
   const chapters = [{value: "", label: "全部知识点", count: chapterBase.length}].concat(
     Object.keys(chapterCounts)
-      .sort((a, b) => a.localeCompare(b, "zh-CN", {numeric: true}))
+      .sort((a, b) => (chapterOrder.get(a) ?? Number.MAX_SAFE_INTEGER) - (chapterOrder.get(b) ?? Number.MAX_SAFE_INTEGER))
       .map((chapter) => ({value: chapter, label: chapter, count: chapterCounts[chapter]}))
   );
   renderDrawerList($("drawer-chapters"), chapters, state.chapterFilter || "", (value) => {
@@ -1448,7 +1482,7 @@ function exportWrong() {
   for (const id of ids) {
     const q = map[id];
     if (!q) continue;
-    const key = q.source_chapter || q.chapter || q.subject || "未分类";
+    const key = chapterKey(q);
     groups[key] = groups[key] || [];
     groups[key].push({q, count: state.wrong[id]});
   }

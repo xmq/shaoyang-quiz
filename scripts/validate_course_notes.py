@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSE_INDEX = ROOT / "course-index.json"
-EXPECTED_COURSE_COUNT = 15
+EXPECTED_COURSE_COUNT = 16
 MIN_COURSE_CHARS = 3800
 MIN_CHAPTER_CHARS = 180
 MIN_PLAIN_EXPLANATIONS = 3
@@ -41,6 +41,12 @@ ALLOWED_QUESTION_TYPES = frozenset({
     "简答",
 })
 REQUIRED_TOPICS = {
+    "大学计算机基础与新技术": (
+        ("信息特征", r"信息特征"), ("计算机系统", r"冯.?诺依曼|系统组成"),
+        ("云计算", r"IaaS.*PaaS.*SaaS"), ("大数据", r"Volume.*Velocity.*Variety.*Value"),
+        ("数据挖掘", r"数据挖掘"), ("人工智能", r"机器学习.*深度学习"),
+        ("物联网", r"物联网"), ("区块链", r"区块链"),
+    ),
     "Office软件操作": (
         ("文字处理", r"Word|WPS文字"), ("电子表格", r"Excel|WPS表格"),
         ("演示文稿", r"PowerPoint|WPS演示"), ("单元格引用", r"单元格引用"),
@@ -73,7 +79,7 @@ REQUIRED_TOPICS = {
         ("栈与队列", r"栈.*队列|队列.*栈"), ("树", r"二叉树"),
         ("图", r"图的|图结构"), ("查找", r"查找"), ("排序", r"排序"),
     ),
-    "编程语言": (
+    "C与Python程序设计": (
         ("C语言", r"C语言|```c"), ("Python", r"Python|```python"),
         ("变量与类型", r"变量.*类型|数据类型"), ("选择结构", r"选择结构|if.*else"),
         ("循环结构", r"循环结构|while|for"), ("函数", r"函数"),
