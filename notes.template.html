@@ -728,6 +728,32 @@
       .chapter-pager { position: sticky; bottom: 8px; z-index: 12; padding: 7px; border: 1px solid #dbe5ed; border-radius: 14px; background: rgba(255, 255, 255, .94); box-shadow: 0 10px 30px rgba(16, 42, 67, .12); backdrop-filter: blur(12px); }
     }
 
+    @media (prefers-color-scheme: dark) {
+      body { background: #0c1724; }
+      .site-header { border-color: #263a50; background: rgba(12, 23, 36, .95); }
+      .brand { color: #edf5fb; }
+      .module-link { color: #a7b7c5; }
+      .module-link[aria-current="page"] { border-color: #275951; background: #143936; color: #a3eee6; }
+      .study-toolbar { background: rgba(12, 23, 36, .95); }
+      .course-guide { border-color: #2a3d52; background: #142234; }
+      .course-guide summary { color: #99e8df; }
+      .chapter-nav, .chapter-nav-head { border-color: #2a3d52; background: #142234; }
+      .chapter-link:hover, .chapter-link.active { background: #143936; color: #a3eee6; }
+      .note { border-color: #2a3d52; background: #142234; box-shadow: 0 12px 34px rgba(0, 0, 0, .22); }
+      .lecture-page .note { background: transparent; }
+      .chapter-toggle { border-left-color: #35b7aa; background: #143936; color: #edf5fb; }
+      .point { border-left-color: #35b7aa; background: #143936; color: #a3eee6; }
+      .topic-study-tag.topic-key { border-color: #76562a; background: #342817; color: #ffd08b; }
+      .table-wrap, .note-figure { border-color: #2a3d52; }
+    }
+
+    @media (max-width: 700px) and (prefers-color-scheme: dark) {
+      .study-toolbar { border-color: #2a3d52; background: rgba(12, 23, 36, .96); box-shadow: 0 8px 24px rgba(0, 0, 0, .24); }
+      .course-guide { border-color: #2a3d52; background: #142234; }
+      .note { background: transparent; box-shadow: none; }
+      .chapter-pager { border-color: #2a3d52; background: rgba(20, 34, 52, .96); box-shadow: 0 10px 30px rgba(0, 0, 0, .28); }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
     }

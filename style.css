@@ -3464,3 +3464,39 @@ body:not(.platform-home) {
   .quiz-hub .hub-primary-actions button { min-height: 66px; }
   .quiz-runner .card { border-radius: 14px; }
 }
+
+@media (prefers-color-scheme: dark) {
+  body:not(.platform-home) {
+    background:
+      radial-gradient(circle at 96% 0, rgba(70, 214, 198, .08), transparent 20rem),
+      #0c1724;
+  }
+  .quiz-hub .topbar,
+  .quiz-hub .hub-tasks,
+  .quiz-hub .hub-review,
+  .quiz-runner .card { border-color: #2a3d52; background: #142234; }
+  .quiz-hub .hub-primary-actions button,
+  .quiz-hub .hub-review-actions button { border-color: #30455b; background: #17283b; }
+  .quiz-hub .hub-primary-actions button.primary { border-color: #1b8178; background: #1b8178; }
+  .quiz-hub .hub-primary-actions .mode-symbol { background: #173f3c; color: #96eee5; }
+  .quiz-hub .hub-section-title span,
+  .quiz-hub .hub-primary-actions .mode-copy small { color: #9fb0bf; }
+  .quiz-runner .option { border-color: #30455b; background: #17283b; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .study-home .study-start-card { border-color: #2a4158; background: #142234; color: #edf5fb; box-shadow: 0 15px 34px rgba(0, 0, 0, .28); }
+  .study-home .study-start-head span,
+  .study-home .selected-course-status { color: #9fb0bf; }
+  .study-home .study-course-select select { border-color: #30475e; background: #101e2e; color: #edf5fb; }
+  .study-home .home-module-actions a { border-color: #30455b; background: #17283b; color: #edf5fb; }
+  .study-home .home-module-actions a:first-child { border-color: #1b8178; background: #1b8178; color: #fff; }
+  .study-home .home-module-actions a:last-child { border-color: #30455b; background: #17283b; color: #edf5fb; }
+  .study-home .home-module-actions a > span,
+  .study-home .home-module-actions small,
+  .study-home .home-module-actions a:last-child > span,
+  .study-home .home-module-actions a:last-child small { color: #94a8b8; }
+  .study-home .home-module-actions a:first-child > span { color: #a1f2e9; }
+  .study-home .home-module-actions a:first-child small { color: rgba(255, 255, 255, .72); }
+  .study-home .home-continue { border-color: #275951; background: #143936; color: #a3eee6; }
+}
