@@ -9,6 +9,7 @@ const CORE_ASSETS = [
   "./quiz.html",
   "./style.css",
   "./build-meta.js",
+  "./home-data.js",
   "./home.js",
   "./app.js",
   "./question-media.js",
@@ -136,7 +137,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(fastNavigation(request, event));
     return;
   }
-  const isCritical = /\/(questions\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);
+  const isCritical = /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);
   const isMedia = request.destination === "image";
   event.respondWith(isCritical ? networkFirst(request) : isMedia ? cacheFirst(request) : networkFirst(request));
 });

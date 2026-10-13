@@ -907,20 +907,28 @@ function renderDashboard() {
   const wrongCount = scope.filter((question) => state.wrong[question.id]).length;
   const favCount = scope.filter((question) => state.fav[question.id]).length;
   const reviewCount = buildReviewPool(scope).length;
+  const doneCount = scope.filter((question) => Object.prototype.hasOwnProperty.call(state.done, question.id)).length;
+  const completionRate = scope.length ? Math.round(doneCount * 100 / scope.length) : 0;
   const hasReviewTasks = Boolean(state.subject && (reviewCount || wrongCount || favCount));
 
   const activeMock = mockSession && !mockSession.finishedAt;
   const remainingMinutes = activeMock ? Math.max(0, Math.ceil(mockRemainingMs() / 60000)) : 0;
 
   $("card-area").innerHTML = `<section class="dashboard quiz-hub-dashboard">
-    <header class="hub-heading">
-      <h1>刷题</h1>
+    <header class="card hub-overview">
+      <div>
+        <span class="hub-kicker">专项训练</span>
+        <h1>${escapeHtml(state.subject || "先选择一门课程")}</h1>
+        <p>${state.subject ? "按知识点练习，答错后回到解析和讲义。" : "在上方选择课程，再开始顺序练习或模拟考试。"}</p>
+      </div>
+      <div class="hub-progress"><strong>${completionRate}%</strong><span>${doneCount}/${scope.length} 已完成</span></div>
     </header>
     ${activeMock ? `<button type="button" class="resume-mock" data-resume-mock>
       <span><strong>继续模拟考试</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
       <b>约 ${remainingMinutes} 分钟 →</b>
     </button>` : ""}
     <article class="card hub-tasks">
+      <div class="hub-section-title"><strong>开始练习</strong><span>先完成本课，再随机检验</span></div>
       <div class="hub-primary-actions">
         <button class="primary mode-card" data-jump-mode="seq">
           <span class="mode-symbol" aria-hidden="true">顺</span>

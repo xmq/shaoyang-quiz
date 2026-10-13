@@ -3,52 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#143b6b">
-  <meta name="description" content="刷题器提供专业知识讲义、重点复习、顺序刷题、随机刷题、模拟考试和错题复习。">
-  <title>刷题器</title>
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="按大学课程系统学习计算机专业知识，支持讲义、重点复习、刷题、错题和模拟考试。">
+  <title>知阶 · 计算机专业课学习台</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="platform-home home-workbench">
+<body class="platform-home study-home">
   <a class="sr-only home-skip" href="#home-main">跳到主要内容</a>
   <header class="home-header">
     <div class="home-header-inner">
       <a class="home-brand" href="./index.html" aria-current="page">
-        <span class="home-brand-mark" aria-hidden="true">题</span>
-        <span><strong>刷题器</strong></span>
+        <span class="home-brand-mark" aria-hidden="true">知</span>
+        <span><strong>知阶</strong><small>计算机专业课学习台</small></span>
       </a>
+      <a class="home-header-action" href="./quiz.html">进入题库</a>
     </div>
   </header>
 
   <main class="home-main" id="home-main">
-    <section class="course-launcher" aria-labelledby="courses-title">
-      <h1 id="courses-title">选择课程</h1>
-      <p class="home-scope">选择课程后，按“讲义 → 重点与易错 → 练习 → 错题复习”完成学习。</p>
-      <label class="course-select-control">
-        <span class="sr-only">课程</span>
-        <select id="home-course-select">
-          <option value="">请选择课程</option>
-        </select>
-      </label>
-      <nav class="home-module-actions hidden" id="home-module-actions" aria-label="学习功能">
-        <a id="home-notes-link" href="./notes.html"><strong>讲义</strong></a>
-        <a id="home-recall-link" href="./color-notes.html"><strong>重点与易错</strong></a>
-        <a id="home-quiz-link" href="./quiz.html"><strong>刷题</strong></a>
+    <section class="study-home-hero" aria-labelledby="home-title">
+      <div class="study-home-copy">
+        <p class="study-home-kicker">大学课程 · 事业单位笔试</p>
+        <h1 id="home-title">学懂知识，<br>再把题做会。</h1>
+        <p>按课程建立知识体系，把重点、简答、计算和练习放在同一条学习路径里。</p>
+        <dl class="study-home-metrics" aria-label="内容规模">
+          <div><dt>16</dt><dd>门课程</dd></div>
+          <div><dt>149</dt><dd>个知识点</dd></div>
+          <div><dt>2519</dt><dd>道练习</dd></div>
+        </dl>
+      </div>
+
+      <aside class="study-start-card" aria-labelledby="start-title">
+        <div class="study-start-head">
+          <span>今天学什么</span>
+          <strong id="start-title">选择一门课程</strong>
+        </div>
+        <label class="study-course-select">
+          <span class="sr-only">课程</span>
+          <select id="home-course-select"><option value="">请选择课程</option></select>
+        </label>
+        <p class="selected-course-status" id="selected-course-status">选课后可直接进入讲义、重点与易错或专项练习。</p>
+        <nav class="home-module-actions hidden" id="home-module-actions" aria-label="学习功能">
+          <a id="home-notes-link" href="./notes.html"><span>01</span><strong>学讲义</strong><small>先理解</small></a>
+          <a id="home-recall-link" href="./color-notes.html"><span>02</span><strong>抓重点</strong><small>再回忆</small></a>
+          <a id="home-quiz-link" href="./quiz.html"><span>03</span><strong>做练习</strong><small>后检验</small></a>
+        </nav>
+        <a class="home-continue hidden" id="home-continue" href="./notes.html"></a>
+      </aside>
+    </section>
+
+    <section class="study-course-section" id="courses" aria-labelledby="courses-title">
+      <div class="study-section-heading">
+        <div><span>课程库</span><h2 id="courses-title">选择当前要学的课程</h2></div>
+        <p>每门课程都能直接进入讲义、重点和对应题库。</p>
+      </div>
+      <nav class="course-jumps" aria-label="筛选课程分类" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-course-filter="all">全部</button>
+        <button type="button" role="tab" aria-selected="false" data-course-filter="计算机专业主干">专业主干</button>
+        <button type="button" role="tab" aria-selected="false" data-course-filter="计算机应用与安全">应用安全</button>
+        <button type="button" role="tab" aria-selected="false" data-course-filter="电子通信方向扩展">电子通信</button>
       </nav>
-      <a class="home-continue hidden" id="home-continue" href="./notes.html"></a>
+      <div class="home-course-grid" id="home-course-grid" data-active-filter="all" aria-live="polite"></div>
+    </section>
+
+    <section class="study-path" aria-labelledby="path-title">
+      <div class="study-section-heading study-section-heading-light">
+        <div><span>学习闭环</span><h2 id="path-title">一章走完四步</h2></div>
+      </div>
+      <ol>
+        <li><b>01</b><div><strong>读讲义</strong><span>先弄懂概念、条件和公式</span></div></li>
+        <li><b>02</b><div><strong>抓重点</strong><span>记结论、步骤和易错边界</span></div></li>
+        <li><b>03</b><div><strong>做练习</strong><span>客观题、简答和计算一起练</span></div></li>
+        <li><b>04</b><div><strong>重做错题</strong><span>说清错因，连续答对再出本</span></div></li>
+      </ol>
       <details class="exam-mode-guide">
-        <summary>报考前先看笔试模式</summary>
-        <ul>
-          <li><strong>分类联考：</strong>职测＋综应，计算机课程用于补专业基础。</li>
-          <li><strong>岗位专业卷：</strong>常见为公基或综合知识＋计算机专业知识，客观题和主观应用题都要练。</li>
-          <li><strong>实操或专业问答：</strong>公告明确要求时，再增加办公、数据库、网络配置或程序调试训练。</li>
-        </ul>
+        <summary>报考前怎么看笔试模式</summary>
+        <p>岗位专业卷重点使用本系统；分类联考可把它作为专业基础补充。公告明确有实操时，再增加办公、数据库、网络配置或程序调试训练。</p>
       </details>
     </section>
   </main>
 
+  <nav class="mobile-tabbar home-mobile-tabbar" aria-label="主导航">
+    <a aria-current="page" href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
+    <a href="./notes.html"><span aria-hidden="true">书</span><strong>讲义</strong></a>
+    <a href="./color-notes.html"><span aria-hidden="true">重</span><strong>重点</strong></a>
+    <a href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
+  </nav>
+
   <script src="./build-meta.js"></script>
+  <script src="./home-data.js"></script>
   <script src="./home.js"></script>
 </body>
 </html>
