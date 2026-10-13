@@ -61,7 +61,7 @@
     try {
       const selected = normalizeCourseName(localStorage.getItem("shaoyang-selected-course-v1"));
       if (COURSES.some((course) => course.name === selected)) return selected;
-      return lastLearning()?.course || "";
+      return lastLearning()?.course || "计算机网络";
     } catch {
       return "";
     }
@@ -111,8 +111,10 @@
   function updateCourseLinks(courseName, progress) {
     const actions = document.getElementById("home-module-actions");
     const status = document.getElementById("selected-course-status");
+    const title = document.getElementById("start-title");
     if (!courseName) {
       actions.classList.add("hidden");
+      title.textContent = "选择一门课程";
       status.textContent = "选课后可直接进入讲义、重点与易错或专项练习。";
       return;
     }
@@ -122,6 +124,7 @@
     document.getElementById("home-notes-link").href = `./notes.html${hash}`;
     document.getElementById("home-recall-link").href = `./color-notes.html${hash}`;
     document.getElementById("home-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
+    title.textContent = courseName;
     status.textContent = stats.done
       ? `已完成 ${stats.done}/${stats.total} 题 · 正确率 ${stats.rate}%${stats.wrong ? ` · 错题 ${stats.wrong}` : ""}`
       : `${stats.total || "—"} 道配套练习，建议先从讲义开始。`;
@@ -181,7 +184,25 @@
 
   function registerServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
-    window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).catch(() => {}));
+    window.addEventListener("load", () => {
+      const hadController = Boolean(navigator.serviceWorker.controller);
+      let reloading = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (!hadController || reloading) return;
+        reloading = true;
+        location.reload();
+      });
+      navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).then((registration) => {
+        if (registration.waiting) registration.waiting.postMessage("SKIP_WAITING");
+        registration.addEventListener("updatefound", () => {
+          const worker = registration.installing;
+          worker?.addEventListener("statechange", () => {
+            if (worker.state === "installed" && navigator.serviceWorker.controller) worker.postMessage("SKIP_WAITING");
+          });
+        });
+        registration.update().catch(() => {});
+      }).catch(() => {});
+    });
   }
 
   const progress = readProgress();

@@ -1,7 +1,8 @@
 importScripts("./build-meta.js");
 
 const CACHE_PREFIX = "shaoyang-quiz-";
-const CACHE_NAME = `${CACHE_PREFIX}${globalThis.SHAOYANG_BUILD?.id || "development"}`;
+const SHELL_REVISION = "mobile-study-2";
+const CACHE_NAME = `${CACHE_PREFIX}${globalThis.SHAOYANG_BUILD?.id || "development"}-${SHELL_REVISION}`;
 const NETWORK_TIMEOUT_MS = 4500;
 const CORE_ASSETS = [
   "./",
