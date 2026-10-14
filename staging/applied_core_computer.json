@@ -289,7 +289,9 @@
   "adaptation_note": "依据基本结构应用考点，原创为服务排队场景。",
   "knowledge_point": "栈与队列",
   "ability": "过程描述",
-  "difficulty": "应用"
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t05"
  },
  {
   "id": "ap-ds-003",
@@ -307,7 +309,9 @@
   "adaptation_note": "依据大纲的链表操作效率分析要求，原创为前提条件判断。",
   "knowledge_point": "图结构与算法",
   "ability": "直接计算",
-  "difficulty": "应用"
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t03"
  },
  {
   "id": "ap-ds-004",
@@ -371,7 +375,9 @@
   "adaptation_note": "依据大纲的时空性能要求，改写为随机访问场景下的数据结构单选题。",
   "knowledge_point": "栈与队列",
   "ability": "直接计算",
-  "difficulty": "应用"
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t02"
  },
  {
   "id": "ap-db-001",

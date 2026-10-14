@@ -343,13 +343,34 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                 "topic_order": topics.index(manual),
             }
     best = topics[0]
-    best_score = (0, -1)
-    for index, topic in enumerate(topics):
-        matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in text]
-        score = (max((len(normalized_text(keyword)) for keyword in matches), default=0), index)
-        if score >= best_score:
-            best = topic
-            best_score = score
+    if subject == "算法与数据结构":
+        core_text = question_text(question, include_options=False)
+        stem_text = normalized_text(question.get("stem"))
+        best_score = (0, 0, 0, 0, 0, 0, 0)
+        for index, topic in enumerate(topics):
+            matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in text]
+            core_matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in core_text]
+            stem_matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in stem_text]
+            score = (
+                max((len(normalized_text(keyword)) for keyword in stem_matches), default=0),
+                len(stem_matches),
+                max((len(normalized_text(keyword)) for keyword in core_matches), default=0),
+                len(core_matches),
+                max((len(normalized_text(keyword)) for keyword in matches), default=0),
+                len(matches),
+                -index,
+            )
+            if score > best_score:
+                best = topic
+                best_score = score
+    else:
+        best_score = (0, -1)
+        for index, topic in enumerate(topics):
+            matches = [keyword for keyword in topic.get("keywords", []) if normalized_text(keyword) in text]
+            score = (max((len(normalized_text(keyword)) for keyword in matches), default=0), index)
+            if score >= best_score:
+                best = topic
+                best_score = score
     if best_score[0] == 0:
         candidates = [topic for topic in topics if knowledge_point in topic.get("knowledge_points", [])]
         if candidates:

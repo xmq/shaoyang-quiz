@@ -3817,7 +3817,7 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -4191,11 +4191,12 @@
   "knowledge_point": "数据结构基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 0
+  "topic_order": 3,
+  "topic_source": "manual"
  },
  {
   "id": "cg-05-s1-q5",
@@ -31401,11 +31402,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "zg-65217",
@@ -31426,11 +31427,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "zg-35267",
@@ -31451,11 +31452,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 0
+  "topic_order": 7
  },
  {
   "id": "zg-65564",
@@ -31476,11 +31477,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 12
  },
  {
   "id": "zg-83993",
@@ -31601,11 +31602,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 7
  },
  {
   "id": "zg-18768",
@@ -31627,7 +31628,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -31647,7 +31648,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -31706,11 +31707,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "zg-81005",
@@ -32151,16 +32152,16 @@
   },
   "answer": "D",
   "explanation": "* 匹配任意字符。",
-  "subject": "算法与数据结构",
+  "subject": "计算机基础",
   "source_chapter": "网络爬取",
-  "knowledge_point": "查找与散列",
+  "knowledge_point": "文件与Windows基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t06",
-  "topic_title": "条件决定算法",
-  "chapter_id": "data-structures.c06",
+  "topic_id": "computer-foundations.t03",
+  "topic_title": "文件、软件与常用操作",
+  "chapter_id": "computer-foundations.c03",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 2
  },
  {
   "id": "web-17",
@@ -32626,16 +32627,17 @@
   },
   "answer": "D",
   "explanation": "最优适应找最小够用的空闲区，需按尺寸从小到大排序。",
-  "subject": "算法与数据结构",
+  "subject": "操作系统",
   "source_chapter": "网络爬取",
-  "knowledge_point": "数据结构基础",
+  "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_id": "operating-system.t06",
+  "topic_title": "分页、缺页与置换",
+  "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 0
+  "topic_order": 5,
+  "topic_source": "manual"
  },
  {
   "id": "web-38",
@@ -45017,7 +45019,7 @@
   "ability": "直接计算",
   "difficulty": "应用",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -45041,11 +45043,11 @@
   "knowledge_point": "线性表",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
   "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 2
  },
  {
   "id": "uf-ds-003",
@@ -45066,11 +45068,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "uf-ds-004",
@@ -45091,11 +45093,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 7
  },
  {
   "id": "uf-ds-005",
@@ -45116,11 +45118,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 7
  },
  {
   "id": "uf-ds-006",
@@ -45141,11 +45143,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "场景选型",
   "difficulty": "应用",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 15
  },
  {
   "id": "uf-ds-007",
@@ -45166,11 +45168,11 @@
   "knowledge_point": "排序算法",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t20",
+  "topic_title": "插入、冒泡与选择排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 19
  },
  {
   "id": "uf-ds-008",
@@ -45191,11 +45193,11 @@
   "knowledge_point": "排序算法",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t18",
+  "topic_title": "二分查找",
+  "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 17
  },
  {
   "id": "uf-pl-001",
@@ -47091,11 +47093,11 @@
   "knowledge_point": "数据结构基础",
   "ability": "场景选型",
   "difficulty": "应用",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
-  "chapter_id": "data-structures.c08",
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 0
  },
  {
   "id": "gap-pl-001",
@@ -48779,11 +48781,11 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 13
  },
  {
   "id": "gap-ds-003",
@@ -48806,11 +48808,11 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 13
  },
  {
   "id": "gap-ds-004",
@@ -48828,11 +48830,11 @@
   "ability": "机制解释",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 13
  },
  {
   "id": "gap-ds-005",
@@ -48866,11 +48868,11 @@
   "ability": "直接计算",
   "difficulty": "基础",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 13
  },
  {
   "id": "gap-ds-006",
@@ -48907,11 +48909,11 @@
   "ability": "比较辨析",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 13
  },
  {
   "id": "gap-ds-007",
@@ -48940,11 +48942,11 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t06",
+  "topic_title": "串与KMP",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 5
  },
  {
   "id": "gap-ds-008",
@@ -48977,11 +48979,11 @@
   "ability": "直接计算",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t07",
+  "topic_title": "数组、稀疏矩阵与广义表",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 6
  },
  {
   "id": "gap-ds-009",
@@ -49014,11 +49016,11 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t06",
-  "topic_title": "条件决定算法",
+  "topic_id": "data-structures.t19",
+  "topic_title": "散列查找",
   "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 18
  },
  {
   "id": "gap-ds-010",
@@ -49054,11 +49056,11 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t20",
+  "topic_title": "插入、冒泡与选择排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 19
  },
  {
   "id": "gap-ds-011",
@@ -49081,11 +49083,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
  },
  {
   "id": "gap-ds-012",
@@ -49130,11 +49132,11 @@
   "ability": "比较辨析",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
  },
  {
   "id": "gap-ds-013",
@@ -49157,11 +49159,11 @@
   "ability": "场景选型",
   "difficulty": "基础",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
  },
  {
   "id": "gap-ds-014",
@@ -49184,11 +49186,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 13
  },
  {
   "id": "gap-ds-015",
@@ -49211,11 +49213,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 15
  },
  {
   "id": "gap-ds-016",
@@ -49238,11 +49240,11 @@
   "ability": "场景选型",
   "difficulty": "进阶",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 15
  },
  {
   "id": "gap-ds-017",
@@ -49265,11 +49267,11 @@
   "ability": "场景选型",
   "difficulty": "进阶",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 15
  },
  {
   "id": "gap-ds-018",
@@ -49292,11 +49294,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t15",
+  "topic_title": "最小生成树",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 14
  },
  {
   "id": "gap-ds-019",
@@ -49319,11 +49321,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t17",
+  "topic_title": "拓扑排序",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 16
  },
  {
   "id": "gap-ds-020",
@@ -49346,11 +49348,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
  },
  {
   "id": "gap-ds-021",
@@ -49373,11 +49375,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
  },
  {
   "id": "gap-ds-022",
@@ -49400,11 +49402,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
  },
  {
   "id": "gap-ds-023",
@@ -49427,11 +49429,11 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t22",
+  "topic_title": "归并排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 21
  },
  {
   "id": "gap-ds-024",
@@ -49468,11 +49470,11 @@
   "ability": "比较辨析",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
+  "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 23
  },
  {
   "id": "gap-ds-025",
@@ -49495,11 +49497,325 @@
   "ability": "场景选型",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "data-structures.t08",
-  "topic_title": "从操作需求选结构",
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
   "chapter_id": "data-structures.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 23
+ },
+ {
+  "id": "gap-ds-026",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "顺序表插入过程",
+  "stem": "写出顺序表在下标i处插入元素x的基本步骤，并说明移动元素的方向和时间复杂度。",
+  "options": {},
+  "answer": "先检查容量和i的合法性；从当前最后一个元素开始向后遍历，把下标i及其后的元素依次右移一位；写入x并令长度加1。必须从后向前移动以避免覆盖，平均和最坏移动量为O(n)。",
+  "explanation": "顺序表过程题要同时说明边界检查、移动方向、写入位置和复杂度。",
+  "max_score": 5,
+  "rubric": [
+   {
+    "criterion": "检查容量和下标",
+    "points": 1
+   },
+   {
+    "criterion": "从后向前右移",
+    "points": 2
+   },
+   {
+    "criterion": "写入并更新长度",
+    "points": 1
+   },
+   {
+    "criterion": "说明O(n)",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "顺序表",
+  "adaptation_note": "补充顺序表基本操作过程题。",
+  "knowledge_point": "线性表",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
+ },
+ {
+  "id": "gap-ds-027",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "遍历还原二叉树",
+  "stem": "二叉树先序序列为ABDEC，中序序列为DBEAC，则根A的右子树根结点是？",
+  "options": {
+   "A": "B",
+   "B": "C",
+   "C": "D",
+   "D": "E"
+  },
+  "answer": "B",
+  "explanation": "先序首项A是根；中序DBE在A左侧、C在A右侧，所以右子树只有C，其根为C。",
+  "subject": "算法与数据结构",
+  "source_chapter": "遍历与树的还原",
+  "adaptation_note": "补充先序与中序还原过程题。",
+  "knowledge_point": "树与二叉树",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t09",
+  "topic_title": "遍历与树的还原",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 8
+ },
+ {
+  "id": "gap-ds-028",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "AVL旋转",
+  "stem": "向空AVL树依次插入30、20、10，完成平衡调整后根结点为________。",
+  "options": {},
+  "answer": "20",
+  "explanation": "在30处形成LL型失衡，对30做一次右旋，20成为根，10和30分别为左右孩子。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "识别LL失衡",
+    "points": 1
+   },
+   {
+    "criterion": "执行右旋",
+    "points": 1
+   },
+   {
+    "criterion": "结果20",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "BST与AVL",
+  "adaptation_note": "补充AVL旋转过程题。",
+  "knowledge_point": "树与二叉树",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t10",
+  "topic_title": "BST与AVL",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 9
+ },
+ {
+  "id": "gap-ds-029",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "堆调整",
+  "stem": "大根堆数组为90、70、80、20、60、50。删除堆顶并用末元素50补到根后，第一次下沉应与________交换。",
+  "options": {},
+  "answer": "80",
+  "explanation": "根50的两个孩子为70和80，应与更大的孩子80交换，才能恢复大根堆父结点不小于孩子的性质。",
+  "max_score": 2,
+  "rubric": [
+   {
+    "criterion": "比较两个孩子70和80",
+    "points": 1
+   },
+   {
+    "criterion": "选择80",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "堆",
+  "adaptation_note": "补充堆下沉过程题。",
+  "knowledge_point": "树与二叉树",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t11",
+  "topic_title": "堆",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 10
+ },
+ {
+  "id": "gap-ds-030",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "Kruskal选边",
+  "stem": "连通无向图边权为AB=1、CD=1、BC=2、AC=4、BD=5。用Kruskal求最小生成树，总权值为________。",
+  "options": {},
+  "answer": "4",
+  "explanation": "按权值选择AB、CD、BC，三条边连接四个顶点且不成环，总权值1+1+2=4。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "选AB和CD",
+    "points": 1
+   },
+   {
+    "criterion": "再选BC并连通全部顶点",
+    "points": 1
+   },
+   {
+    "criterion": "总权值4",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "最小生成树",
+  "adaptation_note": "补充Kruskal逐边选择题。",
+  "knowledge_point": "图结构与算法",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t15",
+  "topic_title": "最小生成树",
+  "chapter_id": "data-structures.c05",
+  "required_depth": "综合应用",
+  "topic_order": 14
+ },
+ {
+  "id": "gap-ds-031",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "Dijkstra松弛",
+  "stem": "有向图边权AB=1、AC=4、BC=2、BD=5、CD=1，均非负。从A执行Dijkstra，A到D的最短距离为________。",
+  "options": {},
+  "answer": "4",
+  "explanation": "A到B为1，经B把C更新为3、D更新为6；再经C把D更新为4，因此最短距离为4。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "A后得到B=1、C=4",
+    "points": 1
+   },
+   {
+    "criterion": "经B更新C=3、D=6",
+    "points": 1
+   },
+   {
+    "criterion": "经C更新D=4",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "最短路径",
+  "adaptation_note": "补充Dijkstra逐轮松弛题。",
+  "knowledge_point": "图结构与算法",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
+  "chapter_id": "data-structures.c05",
+  "required_depth": "综合应用",
+  "topic_order": 15
+ },
+ {
+  "id": "gap-ds-032",
+  "source": "课程缺口补充",
+  "type": "判断",
+  "chapter": "拓扑排序判环",
+  "stem": "对有向图进行拓扑排序时，如果队列已经为空但仍有顶点未输出，则图中存在有向环。",
+  "options": {},
+  "answer": "正确",
+  "explanation": "剩余顶点都没有入度为0者，说明它们位于循环依赖中，无法得到完整拓扑序。",
+  "subject": "算法与数据结构",
+  "source_chapter": "拓扑排序",
+  "adaptation_note": "补充拓扑排序判环过程题。",
+  "knowledge_point": "图结构与算法",
+  "ability": "机制解释",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t17",
+  "topic_title": "拓扑排序",
+  "chapter_id": "data-structures.c05",
+  "required_depth": "综合应用",
+  "topic_order": 16
+ },
+ {
+  "id": "gap-ds-033",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "快速排序划分",
+  "stem": "序列4、2、5、1、3以3为枢轴，若稳定地把小于枢轴、枢轴、大于枢轴三部分依次写出，一趟结果为________。",
+  "options": {},
+  "answer": "2,1,3,4,5",
+  "accepted_answers": [
+   "2，1，3，4，5"
+  ],
+  "explanation": "小于3的元素按原顺序为2、1，随后是枢轴3，大于3的元素为4、5。该题明确采用稳定辅助划分，避免与原地划分步骤混淆。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "小于区为2、1",
+    "points": 1
+   },
+   {
+    "criterion": "枢轴3在中间",
+    "points": 1
+   },
+   {
+    "criterion": "大于区为4、5",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "快速排序",
+  "adaptation_note": "补充快速排序划分过程题。",
+  "knowledge_point": "排序算法",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t21",
+  "topic_title": "快速排序",
+  "chapter_id": "data-structures.c07",
+  "required_depth": "综合应用",
+  "topic_order": 20
+ },
+ {
+  "id": "gap-ds-034",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "归并过程",
+  "stem": "把有序序列2、5、8与1、4、9归并，得到的结果为________。",
+  "options": {},
+  "answer": "1,2,4,5,8,9",
+  "accepted_answers": [
+   "1，2，4，5，8，9"
+  ],
+  "explanation": "用两个指针反复取两段当前较小元素，一段耗尽后复制另一段余项。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "前半结果1、2、4",
+    "points": 1
+   },
+   {
+    "criterion": "继续得到5、8",
+    "points": 1
+   },
+   {
+    "criterion": "最终补9",
+    "points": 1
+   }
+  ],
+  "subject": "算法与数据结构",
+  "source_chapter": "归并排序",
+  "adaptation_note": "补充归并双指针过程题。",
+  "knowledge_point": "排序算法",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t22",
+  "topic_title": "归并排序",
+  "chapter_id": "data-structures.c07",
+  "required_depth": "综合应用",
+  "topic_order": 21
  },
  {
   "id": "ap-os-001",
@@ -49629,6 +49945,7 @@
   "topic_title": "资源、状态与调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "程序是静态指令集合",
@@ -49648,8 +49965,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "ap-os-006",
@@ -49672,6 +49988,7 @@
   "topic_title": "资源、状态与调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "识别临界区",
@@ -49691,8 +50008,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "ap-co-001",
@@ -49822,6 +50138,7 @@
   "topic_title": "数据通路与寻址",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "请求",
@@ -49845,8 +50162,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "ap-co-006",
@@ -49869,6 +50185,7 @@
   "topic_title": "层次、容量与Cache",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
+  "topic_order": 3,
   "rubric": [
    {
     "criterion": "分别对应数据缓存",
@@ -49880,8 +50197,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 3
+  "rubric_source": "generated"
  },
  {
   "id": "ap-ds-001",
@@ -49905,11 +50221,11 @@
   "knowledge_point": "栈与队列",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "ap-ds-002",
@@ -49933,11 +50249,12 @@
   "knowledge_point": "栈与队列",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "ap-ds-003",
@@ -49956,11 +50273,12 @@
   "knowledge_point": "图结构与算法",
   "ability": "直接计算",
   "difficulty": "应用",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
+  "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 0
+  "topic_order": 2
  },
  {
   "id": "ap-ds-004",
@@ -49984,11 +50302,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "ap-ds-005",
@@ -50007,10 +50325,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
+  "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
+  "topic_order": 12,
   "rubric": [
    {
     "criterion": "识别两个不同操作",
@@ -50026,8 +50345,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "ap-ds-006",
@@ -50051,11 +50369,12 @@
   "knowledge_point": "栈与队列",
   "ability": "直接计算",
   "difficulty": "应用",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 0
+  "topic_order": 1
  },
  {
   "id": "ap-db-001",
@@ -50185,6 +50504,7 @@
   "topic_title": "ACID与并发异常",
   "chapter_id": "database.c08",
   "required_depth": "综合应用",
+  "topic_order": 7,
   "rubric": [
    {
     "criterion": "异常名称",
@@ -50200,8 +50520,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 7
+  "rubric_source": "generated"
  },
  {
   "id": "ap-db-006",
@@ -50224,6 +50543,7 @@
   "topic_title": "选择、投影与连接",
   "chapter_id": "database.c04",
   "required_depth": "综合应用",
+  "topic_order": 3,
   "rubric": [
    {
     "criterion": "等值/范围需求差异",
@@ -50243,8 +50563,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 3
+  "rubric_source": "generated"
  },
  {
   "id": "ap-pl-001",
@@ -50374,6 +50693,7 @@
   "topic_title": "条件与分支",
   "chapter_id": "programming.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "先写变量初值，确定运算和类型，沿控制流逐句跟踪循环与分支，最后核对输出格式",
@@ -50385,8 +50705,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "ap-pl-006",
@@ -50409,6 +50728,7 @@
   "topic_title": "错误处理与编码",
   "chapter_id": "programming.c10",
   "required_depth": "综合应用",
+  "topic_order": 9,
   "rubric": [
    {
     "criterion": "易失运行状态与持久化区别",
@@ -50428,8 +50748,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 9
+  "rubric_source": "generated"
  },
  {
   "id": "ap-se-001",
@@ -50559,6 +50878,7 @@
   "topic_title": "方法、层次与覆盖",
   "chapter_id": "software-engineering.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "量化条件",
@@ -50570,8 +50890,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "ap-se-006",
@@ -50594,6 +50913,7 @@
   "topic_title": "方法、层次与覆盖",
   "chapter_id": "software-engineering.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "增量选择",
@@ -50613,8 +50933,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "ap-of-001",
@@ -50744,6 +51063,7 @@
   "topic_title": "筛选、排序与汇总",
   "chapter_id": "office.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "表格负责结构化数据和汇总",
@@ -50771,8 +51091,7 @@
    }
   ],
   "max_score": 6,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "ap-of-006",
@@ -50795,6 +51114,7 @@
   "topic_title": "字符、段落与样式",
   "chapter_id": "office.c02",
   "required_depth": "综合应用",
+  "topic_order": 1,
   "rubric": [
    {
     "criterion": "修订",
@@ -50822,8 +51142,7 @@
    }
   ],
   "max_score": 6,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "ap-mm-001",
@@ -50953,6 +51272,7 @@
   "topic_title": "帧率与编码",
   "chapter_id": "multimedia.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "声波",
@@ -50988,8 +51308,7 @@
    }
   ],
   "max_score": 8,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "ap-mm-006",
@@ -51012,6 +51331,7 @@
   "topic_title": "帧率与编码",
   "chapter_id": "multimedia.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "公式",
@@ -51031,8 +51351,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "ap-nw-001",
@@ -51365,6 +51684,7 @@
   "topic_title": "防注入与恢复能力",
   "chapter_id": "information-security.c07",
   "required_depth": "综合应用",
+  "topic_order": 6,
   "rubric": [
    {
     "criterion": "报告记录",
@@ -51400,8 +51720,7 @@
    }
   ],
   "max_score": 8,
-  "rubric_source": "generated",
-  "topic_order": 6
+  "rubric_source": "generated"
  },
  {
   "id": "ap-is-006",
@@ -51424,6 +51743,7 @@
   "topic_title": "防注入与恢复能力",
   "chapter_id": "information-security.c07",
   "required_depth": "综合应用",
+  "topic_order": 6,
   "rubric": [
    {
     "criterion": "等保流程",
@@ -51443,8 +51763,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 6
+  "rubric_source": "generated"
  },
  {
   "id": "ap-circuit-001",
@@ -51574,6 +51893,7 @@
   "topic_title": "参考方向与功率",
   "chapter_id": "circuit.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "写出电流与功率因数的关系",
@@ -51593,8 +51913,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "ap-circuit-006",
@@ -51617,6 +51936,7 @@
   "topic_title": "KCL、KVL与等效电阻",
   "chapter_id": "circuit.c02",
   "required_depth": "综合应用",
+  "topic_order": 1,
   "rubric": [
    {
     "criterion": "乘积0.81",
@@ -51632,8 +51952,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "ap-analog-001",
@@ -51763,6 +52082,7 @@
   "topic_title": "静态点与失真",
   "chapter_id": "analog-electronics.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "种状态各1点",
@@ -51778,8 +52098,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "ap-analog-006",
@@ -51802,6 +52121,7 @@
   "topic_title": "虚短、虚断与边界",
   "chapter_id": "analog-electronics.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "电压跟随器",
@@ -51821,8 +52141,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "ap-digital-001",
@@ -51952,6 +52271,7 @@
   "topic_title": "状态数量与容量",
   "chapter_id": "digital-electronics.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "时序逻辑",
@@ -51971,8 +52291,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "ap-digital-006",
@@ -51995,6 +52314,7 @@
   "topic_title": "从输入求输出",
   "chapter_id": "digital-electronics.c02",
   "required_depth": "综合应用",
+  "topic_order": 1,
   "rubric": [
    {
     "criterion": "种方式各自的状态特征和典型用途",
@@ -52006,8 +52326,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "ap-comm-001",
@@ -52137,6 +52456,7 @@
   "topic_title": "数字化与载波",
   "chapter_id": "communication.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "FM结论",
@@ -52160,8 +52480,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "ap-comm-006",
@@ -52184,6 +52503,7 @@
   "topic_title": "数字化与载波",
   "chapter_id": "communication.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "传感器",
@@ -52215,8 +52535,7 @@
    }
   ],
   "max_score": 7,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-co-001",
@@ -53502,11 +53821,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "队列及其应用",
   "adaptation_note": "依据公开教学大纲“队列及其应用”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "sp-core-ds-002",
@@ -53530,11 +53849,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "循环队列",
   "adaptation_note": "依据公开教学大纲“循环队列”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 4
  },
  {
   "id": "sp-core-ds-003",
@@ -53558,11 +53877,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "图的存储结构",
   "adaptation_note": "依据公开教学大纲“图的存储结构”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
+  "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 12
  },
  {
   "id": "sp-core-ds-004",
@@ -53586,11 +53905,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "二叉排序树",
   "adaptation_note": "依据公开教学大纲“二叉排序树”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t10",
+  "topic_title": "BST与AVL",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 9
  },
  {
   "id": "sp-core-ds-005",
@@ -53614,11 +53933,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "堆与优先队列",
   "adaptation_note": "依据公开教学大纲“堆与优先队列”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
-  "chapter_id": "data-structures.c03",
+  "topic_id": "data-structures.t11",
+  "topic_title": "堆",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 10
  },
  {
   "id": "sp-core-ds-006",
@@ -53642,11 +53961,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "多路查找树",
   "adaptation_note": "依据公开教学大纲“多路查找树”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t12",
+  "topic_title": "哈夫曼树与B/B+树",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 11
  },
  {
   "id": "sp-core-ds-007",
@@ -53670,11 +53989,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "散列查找",
   "adaptation_note": "依据公开教学大纲“散列查找”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t06",
-  "topic_title": "条件决定算法",
+  "topic_id": "data-structures.t19",
+  "topic_title": "散列查找",
   "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 18
  },
  {
   "id": "sp-core-ds-008",
@@ -53698,11 +54017,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "图的应用与拓扑排序",
   "adaptation_note": "依据公开教学大纲“图的应用与拓扑排序”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t17",
+  "topic_title": "拓扑排序",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 16
  },
  {
   "id": "sp-core-ds-009",
@@ -53727,7 +54046,7 @@
   "source_chapter": "算法的基本概念",
   "adaptation_note": "依据公开教学大纲“算法的基本概念”的知识要求，原创改写为多选题，未照搬原题。",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -53754,11 +54073,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "树和二叉树",
   "adaptation_note": "依据公开教学大纲“树和二叉树”的知识要求，原创改写为多选题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
-  "chapter_id": "data-structures.c04",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
+  "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 12
  },
  {
   "id": "sp-core-ds-011",
@@ -53782,11 +54101,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "栈、队列及其应用",
   "adaptation_note": "依据公开教学大纲“栈、队列及其应用”的知识要求，原创改写为多选题，未照搬原题。",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "sp-core-ds-012",
@@ -53810,11 +54129,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "内部排序",
   "adaptation_note": "依据公开教学大纲“内部排序”的知识要求，原创改写为多选题，未照搬原题。",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t23",
+  "topic_title": "堆、希尔、基数与排序选择",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 22
  },
  {
   "id": "sp-core-ds-013",
@@ -53834,7 +54153,7 @@
   "source_chapter": "数据结构基本概念",
   "adaptation_note": "依据公开教学大纲“数据结构基本概念”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -53856,11 +54175,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "串的基本概念",
   "adaptation_note": "依据公开教学大纲“串的基本概念”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_id": "data-structures.t06",
+  "topic_title": "串与KMP",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 0
+  "topic_order": 5
  },
  {
   "id": "sp-core-ds-015",
@@ -53879,11 +54198,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "循环队列",
   "adaptation_note": "依据公开教学大纲“循环队列”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "sp-core-ds-016",
@@ -53902,11 +54221,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "特殊二叉树",
   "adaptation_note": "依据公开教学大纲“特殊二叉树”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 7
  },
  {
   "id": "sp-core-ds-017",
@@ -53925,11 +54244,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "二叉排序树",
   "adaptation_note": "依据公开教学大纲“二叉排序树”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t10",
+  "topic_title": "BST与AVL",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 9
  },
  {
   "id": "sp-core-ds-018",
@@ -53948,11 +54267,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "图的深度优先遍历",
   "adaptation_note": "依据公开教学大纲“图的深度优先遍历”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 3
  },
  {
   "id": "sp-core-ds-019",
@@ -53971,11 +54290,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "拓扑排序",
   "adaptation_note": "依据公开教学大纲“拓扑排序”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t17",
+  "topic_title": "拓扑排序",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 16
  },
  {
   "id": "sp-core-ds-020",
@@ -53994,11 +54313,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "散列查找",
   "adaptation_note": "依据公开教学大纲“散列查找”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t06",
-  "topic_title": "条件决定算法",
+  "topic_id": "data-structures.t19",
+  "topic_title": "散列查找",
   "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 18
  },
  {
   "id": "sp-core-ds-021",
@@ -54017,11 +54336,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "内部排序",
   "adaptation_note": "依据公开教学大纲“内部排序”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t23",
+  "topic_title": "堆、希尔、基数与排序选择",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 22
  },
  {
   "id": "sp-core-ds-022",
@@ -54040,11 +54359,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "堆",
   "adaptation_note": "依据公开教学大纲“堆”的知识要求，原创改写为判断题，未照搬原题。",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t11",
+  "topic_title": "堆",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 10
  },
  {
   "id": "sp-core-ds-023",
@@ -54063,11 +54382,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "树的基本性质",
   "adaptation_note": "依据公开教学大纲“树的基本性质”的知识要求，原创改写为填空题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "sp-core-ds-024",
@@ -54086,11 +54405,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "图的基本概念",
   "adaptation_note": "依据公开教学大纲“图的基本概念”的知识要求，原创改写为填空题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 12
  },
  {
   "id": "sp-core-ds-025",
@@ -54109,11 +54428,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "二叉树的性质",
   "adaptation_note": "依据公开教学大纲“二叉树的性质”的知识要求，原创改写为填空题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 7
  },
  {
   "id": "sp-core-ds-026",
@@ -54132,11 +54451,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "栈的基本操作",
   "adaptation_note": "依据公开教学大纲“栈的基本操作”的知识要求，原创改写为填空题，未照搬原题。",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "sp-core-ds-027",
@@ -54155,9 +54474,9 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "队列及其应用",
   "adaptation_note": "依据公开教学大纲“队列及其应用”的知识要求，原创改写为简答题，未照搬原题。",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
   "rubric": [
    {
@@ -54171,7 +54490,7 @@
   ],
   "max_score": 2,
   "rubric_source": "generated",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "sp-core-ds-028",
@@ -54190,9 +54509,9 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "图的存储结构",
   "adaptation_note": "依据公开教学大纲“图的存储结构”的知识要求，原创改写为简答题，未照搬原题。",
-  "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
-  "chapter_id": "data-structures.c01",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
+  "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
   "rubric": [
    {
@@ -54206,7 +54525,7 @@
   ],
   "max_score": 2,
   "rubric_source": "generated",
-  "topic_order": 0
+  "topic_order": 12
  },
  {
   "id": "sp-core-ds-029",
@@ -54230,11 +54549,11 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "图的遍历",
   "adaptation_note": "依据公开教学大纲“图的遍历”的知识要求，原创改写为算法选型单选题，未照搬原题。",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 15
  },
  {
   "id": "sp-core-ds-030",
@@ -54253,8 +54572,8 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "二叉排序树与堆",
   "adaptation_note": "依据公开教学大纲“二叉排序树与堆”的知识要求，原创改写为简答题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t10",
+  "topic_title": "BST与AVL",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
   "rubric": [
@@ -54269,7 +54588,7 @@
   ],
   "max_score": 2,
   "rubric_source": "generated",
-  "topic_order": 3
+  "topic_order": 9
  },
  {
   "id": "sp-core-ds-031",
@@ -54288,8 +54607,8 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "多路查找树",
   "adaptation_note": "依据公开教学大纲“多路查找树”的知识要求，原创改写为简答题，未照搬原题。",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
+  "topic_id": "data-structures.t12",
+  "topic_title": "哈夫曼树与B/B+树",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
   "rubric": [
@@ -54308,7 +54627,7 @@
   ],
   "max_score": 3,
   "rubric_source": "generated",
-  "topic_order": 3
+  "topic_order": 11
  },
  {
   "id": "sp-core-ds-032",
@@ -54327,8 +54646,8 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "散列查找",
   "adaptation_note": "依据公开教学大纲“散列查找”的知识要求，原创改写为简答题，未照搬原题。",
-  "topic_id": "data-structures.t06",
-  "topic_title": "条件决定算法",
+  "topic_id": "data-structures.t19",
+  "topic_title": "散列查找",
   "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
   "rubric": [
@@ -54347,7 +54666,7 @@
   ],
   "max_score": 3,
   "rubric_source": "generated",
-  "topic_order": 5
+  "topic_order": 18
  },
  {
   "id": "sp-core-ds-033",
@@ -54366,8 +54685,8 @@
   "source_title": "广西中医药大学《数据结构》理论教学大纲",
   "source_chapter": "内部排序",
   "adaptation_note": "依据公开教学大纲“内部排序”的知识要求，原创改写为简答题，未照搬原题。",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t20",
+  "topic_title": "插入、冒泡与选择排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
   "rubric": [
@@ -54382,7 +54701,7 @@
   ],
   "max_score": 2,
   "rubric_source": "generated",
-  "topic_order": 6
+  "topic_order": 19
  },
  {
   "id": "sp-core-ds-034",
@@ -54402,7 +54721,7 @@
   "source_chapter": "算法复杂度分析",
   "adaptation_note": "依据公开教学大纲“算法复杂度分析”的知识要求，原创改写为简答题，未照搬原题。",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "rubric": [
@@ -61311,7 +61630,7 @@
   "ability": "直接计算",
   "difficulty": "应用",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -61338,11 +61657,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t03",
-  "topic_title": "操作约束",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "uc-ds-003",
@@ -61366,11 +61685,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uc-ds-004",
@@ -61394,11 +61713,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t12",
+  "topic_title": "哈夫曼树与B/B+树",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 11
  },
  {
   "id": "uc-ds-005",
@@ -61422,11 +61741,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "进阶",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t15",
+  "topic_title": "最小生成树",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 14
  },
  {
   "id": "uc-ds-006",
@@ -61450,11 +61769,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "读图排障",
   "difficulty": "进阶",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t16",
+  "topic_title": "最短路径",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 15
  },
  {
   "id": "uc-ds-007",
@@ -61478,11 +61797,11 @@
   "knowledge_point": "排序算法",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t21",
+  "topic_title": "快速排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 20
  },
  {
   "id": "uc-ds-008",
@@ -61506,11 +61825,11 @@
   "knowledge_point": "查找与散列",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
-  "chapter_id": "data-structures.c02",
+  "topic_id": "data-structures.t18",
+  "topic_title": "二分查找",
+  "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 17
  },
  {
   "id": "uc-ds-009",
@@ -61534,11 +61853,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t04",
-  "topic_title": "遍历与结构性质",
-  "chapter_id": "data-structures.c04",
+  "topic_id": "data-structures.t19",
+  "topic_title": "散列查找",
+  "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 18
  },
  {
   "id": "uc-ds-010",
@@ -61562,11 +61881,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 12
  },
  {
   "id": "uc-ds-011",
@@ -61590,11 +61909,12 @@
   "knowledge_point": "排序算法",
   "ability": "直接计算",
   "difficulty": "进阶",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_source": "manual",
+  "topic_id": "data-structures.t23",
+  "topic_title": "堆、希尔、基数与排序选择",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 22
  },
  {
   "id": "uc-ds-012",
@@ -61618,11 +61938,11 @@
   "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uc-ds-013",
@@ -61641,11 +61961,11 @@
   "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t02",
-  "topic_title": "顺序与链式存储",
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
   "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 2
  },
  {
   "id": "uc-ds-014",
@@ -61664,11 +61984,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "进阶",
-  "topic_id": "data-structures.t05",
-  "topic_title": "遍历与路径",
+  "topic_id": "data-structures.t15",
+  "topic_title": "最小生成树",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 14
  },
  {
   "id": "uc-ds-015",
@@ -61687,11 +62007,11 @@
   "knowledge_point": "排序算法",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t07",
-  "topic_title": "稳定性与适用范围",
+  "topic_id": "data-structures.t22",
+  "topic_title": "归并排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 21
  },
  {
   "id": "uc-co-001",
@@ -65531,7 +65851,7 @@
   "ability": "直接计算",
   "difficulty": "应用",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0
@@ -65569,7 +65889,7 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "data-structures.t01",
-  "topic_title": "逻辑结构、存储与复杂度",
+  "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
   "topic_order": 0

@@ -1506,13 +1506,17 @@
         {
           "topic_id": "data-structures.t01",
           "chapter_id": "data-structures.c01",
-          "title": "逻辑结构、存储与复杂度",
+          "title": "数据结构与复杂度",
           "depth": "综合应用",
           "keywords": [
             "逻辑结构",
-            "存储",
-            "复杂度",
-            "存储与复杂度",
+            "存储结构",
+            "抽象数据类型",
+            "ADT",
+            "时间复杂度",
+            "空间复杂度",
+            "递归复杂度",
+            "大O",
             "数据结构基础",
             "算法复杂度"
           ],
@@ -1540,13 +1544,15 @@
         {
           "topic_id": "data-structures.t02",
           "chapter_id": "data-structures.c02",
-          "title": "顺序与链式存储",
+          "title": "顺序表",
           "depth": "综合应用",
           "keywords": [
-            "顺序",
-            "链式存储",
-            "顺序与链式存储",
-            "线性表"
+            "线性表",
+            "顺序表",
+            "数组插入",
+            "数组删除",
+            "随机访问",
+            "动态数组"
           ],
           "knowledge_points": [
             "线性表"
@@ -1572,16 +1578,20 @@
         },
         {
           "topic_id": "data-structures.t03",
-          "chapter_id": "data-structures.c03",
-          "title": "操作约束",
+          "chapter_id": "data-structures.c02",
+          "title": "链表",
           "depth": "综合应用",
           "keywords": [
-            "操作约束",
-            "栈与队列"
+            "链表",
+            "单链表",
+            "双链表",
+            "循环链表",
+            "头结点",
+            "前驱",
+            "指针插入",
+            "指针删除"
           ],
-          "knowledge_points": [
-            "栈与队列"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -1603,17 +1613,21 @@
         },
         {
           "topic_id": "data-structures.t04",
-          "chapter_id": "data-structures.c04",
-          "title": "遍历与结构性质",
+          "chapter_id": "data-structures.c03",
+          "title": "栈与递归",
           "depth": "综合应用",
           "keywords": [
-            "遍历",
-            "结构性质",
-            "遍历与结构性质",
-            "树与二叉树"
+            "栈",
+            "入栈",
+            "出栈",
+            "括号匹配",
+            "表达式",
+            "递归",
+            "调用栈",
+            "栈与队列"
           ],
           "knowledge_points": [
-            "树与二叉树"
+            "栈与队列"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -1636,18 +1650,18 @@
         },
         {
           "topic_id": "data-structures.t05",
-          "chapter_id": "data-structures.c05",
-          "title": "遍历与路径",
+          "chapter_id": "data-structures.c03",
+          "title": "队列与循环队列",
           "depth": "综合应用",
           "keywords": [
-            "遍历",
-            "路径",
-            "遍历与路径",
-            "图结构与算法"
+            "队列",
+            "循环队列",
+            "front",
+            "rear",
+            "先进先出",
+            "假溢出"
           ],
-          "knowledge_points": [
-            "图结构与算法"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -1669,16 +1683,19 @@
         },
         {
           "topic_id": "data-structures.t06",
-          "chapter_id": "data-structures.c06",
-          "title": "条件决定算法",
+          "chapter_id": "data-structures.c03",
+          "title": "串与KMP",
           "depth": "综合应用",
           "keywords": [
-            "条件决定算法",
-            "查找与散列"
+            "字符串",
+            "串",
+            "模式串",
+            "KMP",
+            "next数组",
+            "前缀函数",
+            "模式匹配"
           ],
-          "knowledge_points": [
-            "查找与散列"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -1700,13 +1717,462 @@
         },
         {
           "topic_id": "data-structures.t07",
-          "chapter_id": "data-structures.c07",
-          "title": "稳定性与适用范围",
+          "chapter_id": "data-structures.c03",
+          "title": "数组、稀疏矩阵与广义表",
           "depth": "综合应用",
           "keywords": [
-            "稳定性",
-            "适用范围",
-            "稳定性与适用范围",
+            "二维数组",
+            "行优先",
+            "列优先",
+            "地址计算",
+            "稀疏矩阵",
+            "三元组",
+            "广义表"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t08",
+          "chapter_id": "data-structures.c04",
+          "title": "二叉树性质",
+          "depth": "综合应用",
+          "keywords": [
+            "树",
+            "二叉树",
+            "完全二叉树",
+            "满二叉树",
+            "叶结点",
+            "结点数",
+            "高度",
+            "n0",
+            "n2",
+            "树与二叉树"
+          ],
+          "knowledge_points": [
+            "树与二叉树"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t09",
+          "chapter_id": "data-structures.c04",
+          "title": "遍历与树的还原",
+          "depth": "综合应用",
+          "keywords": [
+            "先序",
+            "前序",
+            "中序",
+            "后序",
+            "层序",
+            "遍历序列",
+            "还原二叉树",
+            "重建二叉树"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t10",
+          "chapter_id": "data-structures.c04",
+          "title": "BST与AVL",
+          "depth": "综合应用",
+          "keywords": [
+            "二叉排序树",
+            "二叉搜索树",
+            "BST",
+            "AVL",
+            "平衡二叉树",
+            "旋转",
+            "LL",
+            "RR",
+            "LR",
+            "RL"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t11",
+          "chapter_id": "data-structures.c04",
+          "title": "堆",
+          "depth": "综合应用",
+          "keywords": [
+            "堆",
+            "大根堆",
+            "小根堆",
+            "上浮",
+            "下沉",
+            "堆顶",
+            "Top K"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t12",
+          "chapter_id": "data-structures.c04",
+          "title": "哈夫曼树与B/B+树",
+          "depth": "综合应用",
+          "keywords": [
+            "哈夫曼",
+            "WPL",
+            "带权路径",
+            "前缀编码",
+            "B树",
+            "B+树",
+            "多路查找树"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t13",
+          "chapter_id": "data-structures.c05",
+          "title": "图的存储",
+          "depth": "综合应用",
+          "keywords": [
+            "图",
+            "顶点",
+            "边",
+            "邻接矩阵",
+            "邻接表",
+            "入度",
+            "出度",
+            "图结构与算法"
+          ],
+          "knowledge_points": [
+            "图结构与算法"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t14",
+          "chapter_id": "data-structures.c05",
+          "title": "DFS与BFS",
+          "depth": "综合应用",
+          "keywords": [
+            "DFS",
+            "BFS",
+            "深度优先",
+            "广度优先",
+            "图遍历",
+            "visited"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t15",
+          "chapter_id": "data-structures.c05",
+          "title": "最小生成树",
+          "depth": "综合应用",
+          "keywords": [
+            "最小生成树",
+            "生成树",
+            "MST",
+            "Prim",
+            "Kruskal",
+            "铺设线路",
+            "总成本"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t16",
+          "chapter_id": "data-structures.c05",
+          "title": "最短路径",
+          "depth": "综合应用",
+          "keywords": [
+            "最短路径",
+            "最少边数",
+            "Dijkstra",
+            "Bellman-Ford",
+            "Floyd",
+            "负权边",
+            "松弛"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t17",
+          "chapter_id": "data-structures.c05",
+          "title": "拓扑排序",
+          "depth": "综合应用",
+          "keywords": [
+            "拓扑排序",
+            "DAG",
+            "有向无环图",
+            "先修",
+            "依赖",
+            "入度为0"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t18",
+          "chapter_id": "data-structures.c06",
+          "title": "二分查找",
+          "depth": "综合应用",
+          "keywords": [
+            "顺序查找",
+            "折半查找",
+            "二分查找",
+            "low",
+            "high",
+            "mid",
+            "有序表",
+            "查找与散列"
+          ],
+          "knowledge_points": [
+            "查找与散列"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t19",
+          "chapter_id": "data-structures.c06",
+          "title": "散列查找",
+          "depth": "综合应用",
+          "keywords": [
+            "散列",
+            "哈希",
+            "装填因子",
+            "线性探测",
+            "开放定址",
+            "拉链法",
+            "删除标记"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t20",
+          "chapter_id": "data-structures.c07",
+          "title": "插入、冒泡与选择排序",
+          "depth": "综合应用",
+          "keywords": [
+            "插入排序",
+            "直接插入",
+            "冒泡排序",
+            "选择排序",
+            "简单选择",
             "排序算法"
           ],
           "knowledge_points": [
@@ -1732,28 +2198,134 @@
           "short_answer": true
         },
         {
-          "topic_id": "data-structures.t08",
-          "chapter_id": "data-structures.c08",
-          "title": "从操作需求选结构",
+          "topic_id": "data-structures.t21",
+          "chapter_id": "data-structures.c07",
+          "title": "快速排序",
           "depth": "综合应用",
           "keywords": [
-            "从操作需求选结构"
+            "快速排序",
+            "快排",
+            "枢轴",
+            "划分",
+            "partition"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
+            "直接计算",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
+            "直接计算",
             "综合应用",
             "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t22",
+          "chapter_id": "data-structures.c07",
+          "title": "归并排序",
+          "depth": "综合应用",
+          "keywords": [
+            "归并排序",
+            "归并",
+            "有序段",
+            "双指针",
+            "外部排序"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t23",
+          "chapter_id": "data-structures.c07",
+          "title": "堆、希尔、基数与排序选择",
+          "depth": "综合应用",
+          "keywords": [
+            "堆排序",
+            "希尔排序",
+            "基数排序",
+            "计数排序",
+            "稳定排序",
+            "排序选择",
+            "排序算法"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "data-structures.t24",
+          "chapter_id": "data-structures.c08",
+          "title": "场景中的结构与算法选择",
+          "depth": "综合应用",
+          "keywords": [
+            "结构选型",
+            "算法选型",
+            "LRU",
+            "Top K",
+            "Trie",
+            "并查集",
+            "动态规划",
+            "贪心",
+            "回溯",
+            "滑动窗口",
+            "场景"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
           ],
           "short_answer": true
         }

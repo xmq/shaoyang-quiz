@@ -167,6 +167,21 @@ net.tcp-connection
 information-security.t07
 """.split())
 
+# 数据结构按独立解题任务拆成细粒度复习卡。题目仍可按章节练习，
+# 重点页和错题回链则定位到具体结构或算法。
+DATA_STRUCTURE_TOPICS = {f"data-structures.t{index:02d}" for index in range(1, 25)}
+KEY_TOPICS.update(DATA_STRUCTURE_TOPICS)
+SHORT_ANSWER_TOPICS.update(DATA_STRUCTURE_TOPICS)
+APPLICATION_TOPICS.update(DATA_STRUCTURE_TOPICS)
+CALCULATION_TOPICS.update({
+    f"data-structures.t{index:02d}"
+    for index in (1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23)
+})
+CODE_TOPICS.update({
+    f"data-structures.t{index:02d}"
+    for index in (2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+})
+
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]
