@@ -182,6 +182,15 @@ CODE_TOPICS.update({
     for index in (2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
 })
 
+OPERATING_SYSTEM_TOPICS = {f"operating-system.t{index:02d}" for index in range(1, 14)}
+KEY_TOPICS.update(OPERATING_SYSTEM_TOPICS)
+SHORT_ANSWER_TOPICS.update(OPERATING_SYSTEM_TOPICS)
+APPLICATION_TOPICS.update(OPERATING_SYSTEM_TOPICS)
+CALCULATION_TOPICS.update({
+    f"operating-system.t{index:02d}" for index in (5, 8, 9, 10, 13)
+})
+CODE_TOPICS.update({"operating-system.t06"})
+
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]

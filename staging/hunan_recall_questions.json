@@ -63,7 +63,7 @@
     "max_score": 7, "rubric": [{"criterion": "列出物理内存不足", "points": 1}, {"criterion": "列出进程异常或后台程序原因", "points": 1}, {"criterion": "列出虚拟内存或磁盘原因", "points": 1}, {"criterion": "先查看进程与资源占用", "points": 1}, {"criterion": "处理异常进程和启动项", "points": 1}, {"criterion": "检查虚拟内存与磁盘", "points": 1}, {"criterion": "说明何时考虑升级内存", "points": 1}],
     "subject": "操作系统", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据多程序运行提示内存不足的分析题回忆改编。",
     "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题1线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
-    "topic_source": "manual", "topic_id": "operating-system.t06"
+    "topic_source": "manual", "topic_id": "operating-system.t10"
   },
   {
     "id": "hn-recall-hn26-004", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "连接超时排障",

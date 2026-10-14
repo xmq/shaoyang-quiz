@@ -12992,11 +12992,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "web-34",
@@ -13017,11 +13017,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q6",
@@ -13042,11 +13042,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 2
  },
  {
   "id": "cg-10-s1-q7",
@@ -13067,11 +13067,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q8",
@@ -13093,7 +13093,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13118,9 +13118,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -13143,7 +13143,7 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13167,11 +13167,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q12",
@@ -13193,9 +13193,9 @@
   "ability": "机制解释",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -13218,7 +13218,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13243,7 +13243,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13268,9 +13268,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -13292,11 +13292,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
-  "chapter_id": "operating-system.c04",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 2
  },
  {
   "id": "cg-10-s1-q17",
@@ -13317,11 +13317,11 @@
   "knowledge_point": "进程与线程",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 2
  },
  {
   "id": "cg-10-s1-q19",
@@ -13342,11 +13342,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t07",
+  "topic_title": "死锁条件与处理",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "cg-10-s1-q20",
@@ -13367,11 +13367,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "cg-10-s1-q21",
@@ -13392,11 +13392,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q22",
@@ -13417,11 +13417,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q24",
@@ -13442,11 +13442,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
+  "topic_id": "operating-system.t06",
+  "topic_title": "同步、互斥与信号量",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 5
  },
  {
   "id": "cg-10-s1-q25",
@@ -13468,7 +13468,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13493,9 +13493,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
+  "topic_title": "用户态、内核态与系统调用",
   "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -13517,11 +13517,11 @@
   "knowledge_point": "设备与I/O管理",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
+  "topic_id": "operating-system.t12",
+  "topic_title": "I/O控制、缓冲与SPOOLing",
   "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 11
  },
  {
   "id": "cg-10-s1-q29",
@@ -13542,11 +13542,11 @@
   "knowledge_point": "设备与I/O管理",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-10-s1-q30",
@@ -13568,7 +13568,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13593,9 +13593,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
+  "topic_title": "用户态、内核态与系统调用",
   "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -13617,11 +13617,11 @@
   "knowledge_point": "进程与线程",
   "ability": "比较辨析",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 2
  },
  {
   "id": "cg-10-s1-q33",
@@ -13642,11 +13642,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "cg-10-s1-q34",
@@ -13667,11 +13667,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q35",
@@ -13692,11 +13692,11 @@
   "knowledge_point": "进程与线程",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t06",
+  "topic_title": "同步、互斥与信号量",
+  "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 5
  },
  {
   "id": "cg-10-s1-q36",
@@ -13717,11 +13717,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q37",
@@ -13742,11 +13742,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
+  "chapter_id": "operating-system.c05",
+  "required_depth": "综合应用",
+  "topic_order": 8
  },
  {
   "id": "cg-10-s1-q38",
@@ -13767,11 +13767,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 8
  },
  {
   "id": "cg-10-s1-q39",
@@ -13792,11 +13792,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "cg-10-s1-q40",
@@ -13817,11 +13817,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
+  "chapter_id": "operating-system.c05",
+  "required_depth": "综合应用",
+  "topic_order": 8
  },
  {
   "id": "cg-10-s1-q41",
@@ -13842,11 +13842,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
-  "chapter_id": "operating-system.c06",
+  "topic_id": "operating-system.t02",
+  "topic_title": "用户态、内核态与系统调用",
+  "chapter_id": "operating-system.c02",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 1
  },
  {
   "id": "cg-10-s1-q42",
@@ -13867,11 +13867,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q43",
@@ -13892,11 +13892,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q45",
@@ -13918,7 +13918,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -13942,11 +13942,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
-  "chapter_id": "operating-system.c04",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q47",
@@ -13967,11 +13967,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "cg-10-s1-q48",
@@ -13992,11 +13992,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 2
  },
  {
   "id": "cg-10-s1-q49",
@@ -14017,11 +14017,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "cg-10-s1-q50",
@@ -14042,11 +14042,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "cg-10-s1-q51",
@@ -14067,11 +14067,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "cg-10-s1-q52",
@@ -14092,11 +14092,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
+  "topic_id": "operating-system.t13",
+  "topic_title": "磁盘调度",
   "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 12
  },
  {
   "id": "cg-10-s1-q53",
@@ -14118,9 +14118,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
+  "topic_title": "用户态、内核态与系统调用",
   "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -14142,11 +14142,11 @@
   "knowledge_point": "死锁",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t08",
+  "topic_title": "银行家算法与安全序列",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "cg-10-s1-q55",
@@ -14167,11 +14167,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t07",
+  "topic_title": "死锁条件与处理",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "cg-10-s1-q56",
@@ -14192,11 +14192,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
-  "chapter_id": "operating-system.c05",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q57",
@@ -14217,11 +14217,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q58",
@@ -14242,11 +14242,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "cg-10-s1-q59",
@@ -14267,11 +14267,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "cg-10-s1-q60",
@@ -14292,11 +14292,11 @@
   "knowledge_point": "设备与I/O管理",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
+  "topic_id": "operating-system.t12",
+  "topic_title": "I/O控制、缓冲与SPOOLing",
   "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 11
  },
  {
   "id": "cg-10-s1-q61",
@@ -14317,11 +14317,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 4
  },
  {
   "id": "cg-10-s1-q62",
@@ -14343,7 +14343,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -14367,11 +14367,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
+  "chapter_id": "operating-system.c05",
+  "required_depth": "综合应用",
+  "topic_order": 8
  },
  {
   "id": "cg-10-s1-q64",
@@ -14392,11 +14392,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "cg-10-s1-q65",
@@ -14417,11 +14417,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q66",
@@ -14443,9 +14443,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
+  "topic_title": "用户态、内核态与系统调用",
   "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -14467,11 +14467,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "cg-10-s1-q68",
@@ -14492,11 +14492,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "cg-11-s1-q5",
@@ -23092,11 +23092,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
-  "chapter_id": "operating-system.c04",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 0
  },
  {
   "id": "cg-14-s1-q7-dup2",
@@ -23118,9 +23118,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23142,11 +23142,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 0
  },
  {
   "id": "cg-14-s1-q9",
@@ -23168,9 +23168,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23192,11 +23192,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "cg-14-s1-q11-dup2",
@@ -23218,9 +23218,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23242,11 +23242,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "zg-89812",
@@ -23293,9 +23293,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23342,11 +23342,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-14-s1-q17-dup2",
@@ -23368,9 +23368,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23392,11 +23392,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q19-dup2",
@@ -23417,11 +23417,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q20-dup2",
@@ -23443,9 +23443,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23467,11 +23467,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q22-dup2",
@@ -23493,9 +23493,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23518,9 +23518,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23543,9 +23543,9 @@
   "ability": "读图排障",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23567,11 +23567,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-14-s1-q26-dup2",
@@ -23592,11 +23592,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-14-s1-q27-dup2",
@@ -23618,9 +23618,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23643,9 +23643,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23668,9 +23668,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23693,9 +23693,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23717,11 +23717,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
-  "chapter_id": "operating-system.c06",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 0
  },
  {
   "id": "cg-14-s1-q32-dup2",
@@ -23743,9 +23743,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23767,11 +23767,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 0
  },
  {
   "id": "cg-14-s1-q34-dup2",
@@ -23793,9 +23793,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23818,9 +23818,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23843,9 +23843,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23867,11 +23867,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-14-s1-q38-dup2",
@@ -23892,11 +23892,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q39-dup2",
@@ -23918,9 +23918,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23943,9 +23943,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -23992,11 +23992,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q43-dup2",
@@ -24017,11 +24017,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q44-dup2",
@@ -24042,11 +24042,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q45-dup2",
@@ -24067,11 +24067,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q46-dup2",
@@ -24093,9 +24093,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24117,11 +24117,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "cg-14-s1-q48",
@@ -24142,11 +24142,11 @@
   "knowledge_point": "设备与I/O管理",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 2
  },
  {
   "id": "zg-25802",
@@ -24193,9 +24193,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24217,11 +24217,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "zg-91871",
@@ -24267,11 +24267,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "zg-24227",
@@ -24318,9 +24318,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24343,9 +24343,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24367,11 +24367,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s2-q7-dup2",
@@ -24392,11 +24392,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s2-q8-dup2",
@@ -24417,11 +24417,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-14-s2-q9-dup2",
@@ -24443,9 +24443,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24468,9 +24468,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24493,9 +24493,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24518,9 +24518,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -24542,11 +24542,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "zg-43670",
@@ -32007,11 +32007,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "web-10",
@@ -32058,9 +32058,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
+  "topic_title": "用户态、内核态与系统调用",
   "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -32507,11 +32507,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
-  "chapter_id": "operating-system.c04",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 0
  },
  {
   "id": "web-32",
@@ -32532,11 +32532,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "web-33",
@@ -32558,9 +32558,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
+  "topic_title": "用户态、内核态与系统调用",
   "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -32582,11 +32582,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "web-36",
@@ -32607,11 +32607,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "web-37",
@@ -32632,11 +32632,11 @@
   "knowledge_point": "操作系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5,
+  "topic_order": 8,
   "topic_source": "manual"
  },
  {
@@ -35750,9 +35750,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35774,9 +35774,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35798,9 +35798,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35822,9 +35822,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35845,11 +35845,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "dy-ed322bb3",
@@ -35870,9 +35870,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35894,9 +35894,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35917,11 +35917,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "dy-c6d6dcd2",
@@ -35942,9 +35942,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -35965,11 +35965,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-9f856c15",
@@ -35989,11 +35989,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-29949c83",
@@ -36014,9 +36014,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36038,9 +36038,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36062,9 +36062,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36086,9 +36086,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36109,11 +36109,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "dy-8690f4d3",
@@ -36133,11 +36133,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
-  "chapter_id": "operating-system.c04",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 0
  },
  {
   "id": "dy-ef866676",
@@ -36158,9 +36158,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36181,11 +36181,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-16a9dbf3",
@@ -36206,9 +36206,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36224,11 +36224,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "dy-7815f73c",
@@ -36244,9 +36244,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36263,9 +36263,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36282,9 +36282,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36301,9 +36301,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36319,11 +36319,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t02",
-  "topic_title": "系统调用、异常与切换",
-  "chapter_id": "operating-system.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "dy-e393765e",
@@ -36339,9 +36339,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36357,11 +36357,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-fd82b546",
@@ -36376,11 +36376,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-144723bb",
@@ -36396,9 +36396,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36414,11 +36414,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-4f40c840",
@@ -36434,9 +36434,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36453,9 +36453,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36471,11 +36471,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "dy-446d41b2",
@@ -36490,11 +36490,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "dy-793e17c6",
@@ -36510,9 +36510,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36529,9 +36529,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -36547,11 +36547,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 0
  },
  {
   "id": "dy-bcad2b80",
@@ -36566,11 +36566,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-a4c3751d",
@@ -36585,11 +36585,11 @@
   "knowledge_point": "Windows系统操作",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
-  "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
+  "chapter_id": "operating-system.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "dy-2ad8e253",
@@ -44623,11 +44623,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_id": "operating-system.t04",
+  "topic_title": "进程状态与切换",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "uf-os-002",
@@ -44648,11 +44648,11 @@
   "knowledge_point": "进程与线程",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
-  "chapter_id": "operating-system.c04",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 2
  },
  {
   "id": "uf-os-003",
@@ -44673,11 +44673,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t06",
+  "topic_title": "同步、互斥与信号量",
+  "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 5
  },
  {
   "id": "uf-os-004",
@@ -44698,11 +44698,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t07",
+  "topic_title": "死锁条件与处理",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "uf-os-005",
@@ -44723,11 +44723,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 8
  },
  {
   "id": "uf-os-006",
@@ -44748,11 +44748,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "uf-os-007",
@@ -44773,11 +44773,11 @@
   "knowledge_point": "文件系统",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
-  "chapter_id": "operating-system.c06",
+  "topic_id": "operating-system.t12",
+  "topic_title": "I/O控制、缓冲与SPOOLing",
+  "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 11
  },
  {
   "id": "uf-os-008",
@@ -44798,11 +44798,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t13",
+  "topic_title": "磁盘调度",
+  "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 12
  },
  {
   "id": "uf-db-001",
@@ -48395,11 +48395,11 @@
   "ability": "直接计算",
   "difficulty": "基础",
   "topic_source": "manual",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 4
  },
  {
   "id": "gap-os-002",
@@ -48436,11 +48436,11 @@
   "ability": "直接计算",
   "difficulty": "应用",
   "topic_source": "manual",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t08",
+  "topic_title": "银行家算法与安全序列",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "gap-os-003",
@@ -48477,11 +48477,11 @@
   "ability": "直接计算",
   "difficulty": "基础",
   "topic_source": "manual",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 8
  },
  {
   "id": "gap-os-004",
@@ -48518,11 +48518,11 @@
   "ability": "直接计算",
   "difficulty": "基础",
   "topic_source": "manual",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "gap-os-005",
@@ -48559,11 +48559,11 @@
   "ability": "直接计算",
   "difficulty": "基础",
   "topic_source": "manual",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
+  "topic_id": "operating-system.t13",
+  "topic_title": "磁盘调度",
   "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 12
  },
  {
   "id": "gap-net-media-001",
@@ -49839,11 +49839,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t03",
+  "topic_title": "进程、线程与PCB",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 2
  },
  {
   "id": "ap-os-002",
@@ -49867,11 +49867,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 4
  },
  {
   "id": "ap-os-003",
@@ -49891,7 +49891,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -49918,11 +49918,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t06",
+  "topic_title": "同步、互斥与信号量",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 5
  },
  {
   "id": "ap-os-005",
@@ -49942,7 +49942,7 @@
   "ability": "比较辨析",
   "difficulty": "应用",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2,
@@ -49984,11 +49984,11 @@
   "knowledge_point": "进程与线程",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t01",
+  "topic_title": "操作系统功能与基本特征",
+  "chapter_id": "operating-system.c01",
   "required_depth": "综合应用",
-  "topic_order": 2,
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "识别临界区",
@@ -60819,11 +60819,11 @@
   "knowledge_point": "进程与线程",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
-  "chapter_id": "operating-system.c07",
+  "topic_id": "operating-system.t05",
+  "topic_title": "处理机调度",
+  "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 4
  },
  {
   "id": "uc-os-002",
@@ -60847,11 +60847,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "场景选型",
   "difficulty": "应用",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 8
  },
  {
   "id": "uc-os-003",
@@ -60875,11 +60875,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "进阶",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "uc-os-004",
@@ -60903,11 +60903,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t08",
+  "topic_title": "银行家算法与安全序列",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uc-os-005",
@@ -60931,11 +60931,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t06",
+  "topic_title": "同步、互斥与信号量",
+  "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 5
  },
  {
   "id": "uc-os-006",
@@ -60960,7 +60960,7 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -60987,11 +60987,11 @@
   "knowledge_point": "进程调度与同步",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
-  "chapter_id": "operating-system.c03",
+  "topic_id": "operating-system.t13",
+  "topic_title": "磁盘调度",
+  "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 12
  },
  {
   "id": "uc-os-008",
@@ -61015,11 +61015,11 @@
   "knowledge_point": "文件系统",
   "ability": "比较辨析",
   "difficulty": "应用",
-  "topic_id": "operating-system.t07",
-  "topic_title": "组织与链接",
+  "topic_id": "operating-system.t11",
+  "topic_title": "文件组织、目录与链接",
   "chapter_id": "operating-system.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "uc-os-009",
@@ -61043,11 +61043,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 8
  },
  {
   "id": "uc-os-010",
@@ -61071,11 +61071,11 @@
   "knowledge_point": "进程与线程",
   "ability": "概念识记",
   "difficulty": "进阶",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t07",
+  "topic_title": "死锁条件与处理",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "uc-os-011",
@@ -61099,11 +61099,11 @@
   "knowledge_point": "进程与线程",
   "ability": "机制解释",
   "difficulty": "进阶",
-  "topic_id": "operating-system.t04",
-  "topic_title": "资源与执行顺序",
+  "topic_id": "operating-system.t06",
+  "topic_title": "同步、互斥与信号量",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 5
  },
  {
   "id": "uc-os-012",
@@ -61127,11 +61127,11 @@
   "knowledge_point": "内存与虚拟存储",
   "ability": "概念识记",
   "difficulty": "进阶",
-  "topic_id": "operating-system.t06",
-  "topic_title": "分页、缺页与置换",
+  "topic_id": "operating-system.t10",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "uc-os-013",
@@ -61151,7 +61151,7 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "operating-system.t03",
-  "topic_title": "资源、状态与调度",
+  "topic_title": "进程、线程与PCB",
   "chapter_id": "operating-system.c03",
   "required_depth": "综合应用",
   "topic_order": 2
@@ -61173,11 +61173,11 @@
   "knowledge_point": "死锁",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t05",
-  "topic_title": "安全性检查",
+  "topic_id": "operating-system.t08",
+  "topic_title": "银行家算法与安全序列",
   "chapter_id": "operating-system.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uc-os-015",
@@ -61196,11 +61196,11 @@
   "knowledge_point": "设备与I/O管理",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "operating-system.t08",
-  "topic_title": "CPU参与和磁头移动",
+  "topic_id": "operating-system.t12",
+  "topic_title": "I/O控制、缓冲与SPOOLing",
   "chapter_id": "operating-system.c07",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 11
  },
  {
   "id": "uc-db-001",
@@ -65230,7 +65230,7 @@
   "answer_reviewed": true,
   "version": 1,
   "topic_source": "manual",
-  "topic_id": "operating-system.t06",
+  "topic_id": "operating-system.t10",
   "exam_event_verified": false,
   "item_text_level": "task_recall",
   "form_confidence": "medium",
@@ -65238,10 +65238,10 @@
   "knowledge_point": "操作系统基础",
   "ability": "读图排障",
   "difficulty": "应用",
-  "topic_title": "分页、缺页与置换",
+  "topic_title": "虚拟存储与页面置换",
   "chapter_id": "operating-system.c05",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "hn-recall-hn26-004",
@@ -65813,9 +65813,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "operating-system.t01",
-  "topic_title": "资源管理与并发",
+  "topic_title": "操作系统功能与基本特征",
   "chapter_id": "operating-system.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {

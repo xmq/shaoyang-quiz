@@ -343,7 +343,7 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                 "topic_order": topics.index(manual),
             }
     best = topics[0]
-    if subject == "算法与数据结构":
+    if subject in {"算法与数据结构", "操作系统"}:
         core_text = question_text(question, include_options=False)
         stem_text = normalized_text(question.get("stem"))
         best_score = (0, 0, 0, 0, 0, 0, 0)

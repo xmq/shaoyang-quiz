@@ -328,7 +328,7 @@
     "max_score": 4, "rubric": [{"criterion": "A完成时刻3", "points": 1}, {"criterion": "B完成时刻4", "points": 1}, {"criterion": "写出两个周转时间", "points": 1}, {"criterion": "平均结果3.5", "points": 1}],
     "subject": "操作系统", "source_chapter": "资源、状态与调度", "adaptation_note": "依据处理机调度补充时间线计算。",
     "knowledge_point": "进程与线程", "ability": "直接计算", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "operating-system.t03"
+    "topic_source": "manual", "topic_id": "operating-system.t05"
   },
   {
     "id": "gap-os-002", "source": "课程缺口补充", "type": "填空", "chapter": "安全性检查",
@@ -337,7 +337,7 @@
     "max_score": 4, "rubric": [{"criterion": "判断P1可先满足", "points": 1}, {"criterion": "P1释放后Work=(2,1)", "points": 1}, {"criterion": "判断P2随后可满足", "points": 1}, {"criterion": "安全序列P1,P2", "points": 1}],
     "subject": "操作系统", "source_chapter": "安全性检查", "adaptation_note": "依据银行家算法补充小规模安全序列计算。",
     "knowledge_point": "死锁", "ability": "直接计算", "difficulty": "应用",
-    "topic_source": "manual", "topic_id": "operating-system.t05"
+    "topic_source": "manual", "topic_id": "operating-system.t08"
   },
   {
     "id": "gap-os-003", "source": "课程缺口补充", "type": "填空", "chapter": "分页、缺页与置换",
@@ -346,7 +346,7 @@
     "max_score": 4, "rubric": [{"criterion": "求出页号2", "points": 1}, {"criterion": "求出偏移452", "points": 1}, {"criterion": "使用页框号5", "points": 1}, {"criterion": "物理地址5572", "points": 1}],
     "subject": "操作系统", "source_chapter": "分页、缺页与置换", "adaptation_note": "依据分页地址转换补充无选项计算。",
     "knowledge_point": "内存与虚拟存储", "ability": "直接计算", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "operating-system.t06"
+    "topic_source": "manual", "topic_id": "operating-system.t09"
   },
   {
     "id": "gap-os-004", "source": "课程缺口补充", "type": "填空", "chapter": "分页、缺页与置换",
@@ -355,7 +355,7 @@
     "max_score": 4, "rubric": [{"criterion": "前三次均缺页", "points": 1}, {"criterion": "第二次访问1命中", "points": 1}, {"criterion": "访问4发生缺页", "points": 1}, {"criterion": "总计4次", "points": 1}],
     "subject": "操作系统", "source_chapter": "分页、缺页与置换", "adaptation_note": "依据FIFO页面置换补充过程计算。",
     "knowledge_point": "内存与虚拟存储", "ability": "直接计算", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "operating-system.t06"
+    "topic_source": "manual", "topic_id": "operating-system.t10"
   },
   {
     "id": "gap-os-005", "source": "课程缺口补充", "type": "填空", "chapter": "CPU参与和磁头移动",
@@ -364,7 +364,7 @@
     "max_score": 4, "rubric": [{"criterion": "先选择40", "points": 1}, {"criterion": "再选择10", "points": 1}, {"criterion": "最后选择70", "points": 1}, {"criterion": "总移动100", "points": 1}],
     "subject": "操作系统", "source_chapter": "CPU参与和磁头移动", "adaptation_note": "依据磁盘调度补充直接计算。",
     "knowledge_point": "设备与I/O管理", "ability": "直接计算", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "operating-system.t08"
+    "topic_source": "manual", "topic_id": "operating-system.t13"
   },
   {
     "id": "gap-net-media-001",
