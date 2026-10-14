@@ -2390,35 +2390,39 @@
       "chapters": [
         {
           "chapter_id": "net-01",
-          "title": "一、网络概述与分类"
+          "title": "第1章 概述"
         },
         {
           "chapter_id": "net-02",
-          "title": "二、网络体系结构"
+          "title": "第2章 物理层"
         },
         {
           "chapter_id": "net-03",
-          "title": "三、物理层与传输介质"
+          "title": "第3章 数据链路层"
         },
         {
           "chapter_id": "net-04",
-          "title": "四、数据链路层与局域网"
+          "title": "第4章 网络层"
         },
         {
           "chapter_id": "net-05",
-          "title": "五、网络层与 IP"
+          "title": "第5章 运输层"
         },
         {
           "chapter_id": "net-06",
-          "title": "六、运输层"
+          "title": "第6章 应用层"
         },
         {
           "chapter_id": "net-07",
-          "title": "七、应用层协议"
+          "title": "第7章 网络安全"
         },
         {
           "chapter_id": "net-08",
-          "title": "八、网络安全与排障"
+          "title": "第8章 互联网上的音频/视频服务"
+        },
+        {
+          "chapter_id": "net-09",
+          "title": "第9章 无线网络和移动网络"
         }
       ],
       "topics": [
@@ -2538,7 +2542,7 @@
         },
         {
           "topic_id": "net.layers-addresses",
-          "chapter_id": "net-02",
+          "chapter_id": "net-01",
           "title": "分层与地址",
           "depth": "综合应用",
           "keywords": [
@@ -2574,7 +2578,7 @@
         },
         {
           "topic_id": "net.protocol-service",
-          "chapter_id": "net-02",
+          "chapter_id": "net-01",
           "title": "协议、服务与封装",
           "depth": "直接应用",
           "keywords": [
@@ -2606,7 +2610,7 @@
         },
         {
           "topic_id": "net.media",
-          "chapter_id": "net-03",
+          "chapter_id": "net-02",
           "title": "介质与传输方向",
           "depth": "直接应用",
           "keywords": [
@@ -2639,7 +2643,7 @@
         },
         {
           "topic_id": "net.symbol-multiplexing",
-          "chapter_id": "net-03",
+          "chapter_id": "net-02",
           "title": "比特率、码元速率与复用",
           "depth": "综合应用",
           "keywords": [
@@ -2677,7 +2681,7 @@
         },
         {
           "topic_id": "net.channel-capacity",
-          "chapter_id": "net-03",
+          "chapter_id": "net-02",
           "title": "信道容量与信噪比",
           "depth": "综合应用",
           "keywords": [
@@ -2713,7 +2717,7 @@
         },
         {
           "topic_id": "net.frames-switching",
-          "chapter_id": "net-04",
+          "chapter_id": "net-03",
           "title": "帧、交换与VLAN",
           "depth": "综合应用",
           "keywords": [
@@ -2752,7 +2756,7 @@
         },
         {
           "topic_id": "net.crc",
-          "chapter_id": "net-04",
+          "chapter_id": "net-03",
           "title": "CRC差错检测",
           "depth": "综合应用",
           "keywords": [
@@ -2787,7 +2791,7 @@
         },
         {
           "topic_id": "net.arq-window",
-          "chapter_id": "net-04",
+          "chapter_id": "net-03",
           "title": "停等与滑动窗口",
           "depth": "综合应用",
           "keywords": [
@@ -2824,18 +2828,16 @@
         },
         {
           "topic_id": "net.ethernet-wifi",
-          "chapter_id": "net-04",
+          "chapter_id": "net-03",
           "title": "以太网与无线接入",
           "depth": "直接应用",
           "keywords": [
             "csma/cd",
             "csma/ca",
-            "802.11",
             "隐藏站",
             "暴露站",
             "以太网",
-            "wi-fi",
-            "wifi"
+            "wi-fi"
           ],
           "importance": "重点掌握",
           "exam_forms": [
@@ -2857,7 +2859,7 @@
         },
         {
           "topic_id": "net.subnet-routing",
-          "chapter_id": "net-05",
+          "chapter_id": "net-04",
           "title": "子网与路由",
           "depth": "综合应用",
           "keywords": [
@@ -2897,7 +2899,7 @@
         },
         {
           "topic_id": "net.arp-forwarding",
-          "chapter_id": "net-05",
+          "chapter_id": "net-04",
           "title": "ARP与逐跳转发",
           "depth": "综合应用",
           "keywords": [
@@ -2936,7 +2938,7 @@
         },
         {
           "topic_id": "net.routing",
-          "chapter_id": "net-05",
+          "chapter_id": "net-04",
           "title": "最长前缀匹配与路由协议",
           "depth": "综合应用",
           "keywords": [
@@ -2974,7 +2976,7 @@
         },
         {
           "topic_id": "net.ip-versions",
-          "chapter_id": "net-05",
+          "chapter_id": "net-04",
           "title": "IPv4与IPv6地址",
           "depth": "综合应用",
           "keywords": [
@@ -3020,7 +3022,7 @@
         },
         {
           "topic_id": "net.rip-update",
-          "chapter_id": "net-05",
+          "chapter_id": "net-04",
           "title": "RIP距离向量更新",
           "depth": "综合应用",
           "keywords": [
@@ -3055,7 +3057,7 @@
         },
         {
           "topic_id": "net.tcp-udp",
-          "chapter_id": "net-06",
+          "chapter_id": "net-05",
           "title": "TCP与UDP",
           "depth": "直接应用",
           "keywords": [
@@ -3086,7 +3088,7 @@
         },
         {
           "topic_id": "net.tcp-connection",
-          "chapter_id": "net-06",
+          "chapter_id": "net-05",
           "title": "TCP序号、确认与连接建立",
           "depth": "综合应用",
           "keywords": [
@@ -3127,7 +3129,7 @@
         },
         {
           "topic_id": "net.flow-congestion",
-          "chapter_id": "net-06",
+          "chapter_id": "net-05",
           "title": "流量控制与拥塞控制",
           "depth": "综合应用",
           "keywords": [
@@ -3167,7 +3169,7 @@
         },
         {
           "topic_id": "net.app-protocols",
-          "chapter_id": "net-07",
+          "chapter_id": "net-06",
           "title": "名称、配置与应用服务",
           "depth": "直接应用",
           "keywords": [
@@ -3207,7 +3209,7 @@
         },
         {
           "topic_id": "net.http",
-          "chapter_id": "net-07",
+          "chapter_id": "net-06",
           "title": "HTTP状态与排障",
           "depth": "综合应用",
           "keywords": [
@@ -3245,7 +3247,7 @@
         },
         {
           "topic_id": "net.dns-dhcp",
-          "chapter_id": "net-07",
+          "chapter_id": "net-06",
           "title": "DNS解析与DHCP配置",
           "depth": "综合应用",
           "keywords": [
@@ -3278,8 +3280,78 @@
           "target_depth": "综合应用"
         },
         {
+          "topic_id": "net.security-boundary",
+          "chapter_id": "net-07",
+          "title": "防火墙与安全边界",
+          "depth": "直接应用",
+          "keywords": [
+            "防火墙",
+            "ids",
+            "ips",
+            "vpn",
+            "acl",
+            "入侵",
+            "攻击",
+            "病毒",
+            "安全威胁"
+          ],
+          "importance": "掌握",
+          "exam_forms": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true,
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "target_depth": "直接应用"
+        },
+        {
+          "topic_id": "net.crypto-signature",
+          "chapter_id": "net-07",
+          "title": "加密、摘要与数字签名",
+          "depth": "直接应用",
+          "keywords": [
+            "加密",
+            "解密",
+            "摘要",
+            "哈希",
+            "数字签名",
+            "证书",
+            "rsa",
+            "des",
+            "md5",
+            "机密性",
+            "完整性"
+          ],
+          "importance": "掌握",
+          "exam_forms": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true,
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "target_depth": "直接应用"
+        },
+        {
           "topic_id": "net.troubleshooting",
-          "chapter_id": "net-08",
+          "chapter_id": "net-07",
           "title": "按层定位",
           "depth": "综合应用",
           "keywords": [
@@ -3315,74 +3387,78 @@
           "target_depth": "综合应用"
         },
         {
-          "topic_id": "net.security-boundary",
+          "topic_id": "net.streaming-qos",
           "chapter_id": "net-08",
-          "title": "防火墙与安全边界",
-          "depth": "直接应用",
+          "title": "流媒体、实时传输与QoS",
+          "depth": "综合应用",
           "keywords": [
-            "防火墙",
-            "ids",
-            "ips",
-            "vpn",
-            "acl",
-            "入侵",
-            "攻击",
-            "病毒",
-            "安全威胁"
+            "流媒体",
+            "播放缓冲",
+            "实时传输",
+            "RTP",
+            "RTCP",
+            "SIP",
+            "QoS",
+            "服务质量",
+            "抖动",
+            "自适应码率"
           ],
-          "importance": "掌握",
-          "exam_forms": [
-            "客观辨析",
-            "简答说明"
-          ],
-          "short_answer": true,
-          "mastery_steps": [
-            "识别概念",
-            "完整说明"
+          "knowledge_points": [
+            "流媒体与服务质量"
           ],
           "core_status": "必学",
           "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
           "practice_modes": [
             "客观辨析",
-            "简答说明"
+            "简答说明",
+            "直接计算",
+            "综合应用"
           ],
-          "target_depth": "直接应用"
+          "short_answer": true
         },
         {
-          "topic_id": "net.crypto-signature",
-          "chapter_id": "net-08",
-          "title": "加密、摘要与数字签名",
-          "depth": "直接应用",
+          "topic_id": "net.wireless-mobile",
+          "chapter_id": "net-09",
+          "title": "WLAN、无线接入与移动网络",
+          "depth": "综合应用",
           "keywords": [
-            "加密",
-            "解密",
-            "摘要",
-            "哈希",
-            "数字签名",
-            "证书",
-            "rsa",
-            "des",
-            "md5",
-            "机密性",
-            "完整性"
+            "无线局域网",
+            "WLAN",
+            "Wi-Fi",
+            "802.11",
+            "CSMA/CA",
+            "RTS/CTS",
+            "隐藏站",
+            "SSID",
+            "AP",
+            "移动IP",
+            "蜂窝网络",
+            "切换"
           ],
-          "importance": "掌握",
-          "exam_forms": [
-            "客观辨析",
-            "简答说明"
-          ],
-          "short_answer": true,
-          "mastery_steps": [
-            "识别概念",
-            "完整说明"
+          "knowledge_points": [
+            "无线与移动网络"
           ],
           "core_status": "必学",
           "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
           "practice_modes": [
             "客观辨析",
-            "简答说明"
+            "简答说明",
+            "综合应用"
           ],
-          "target_depth": "直接应用"
+          "short_answer": true
         }
       ],
       "subjects": [

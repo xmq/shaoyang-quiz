@@ -16,6 +16,10 @@ MIN_COURSE_CHARS = 3800
 MIN_CHAPTER_CHARS = 180
 MIN_PLAIN_EXPLANATIONS = 3
 MAX_PLAIN_EXPLANATIONS = 8
+NETWORK_TEXTBOOK_CHAPTERS = [f"第{number}章 {title}" for number, title in enumerate((
+    "概述", "物理层", "数据链路层", "网络层", "运输层", "应用层", "网络安全",
+    "互联网上的音频/视频服务", "无线网络和移动网络",
+), start=1)]
 
 H1_RE = re.compile(r"^#[ \t]+(.+?)\s*$")
 H2_RE = re.compile(r"^##[ \t]+(.+?)\s*$")
@@ -225,6 +229,20 @@ def main() -> int:
         chapter_positions = [
             position for position, line in enumerate(lines) if H2_RE.match(line.strip())
         ]
+        if name == "计算机网络":
+            actual_titles = [H2_RE.match(lines[position].strip()).group(1).strip() for position in chapter_positions]
+            if actual_titles != NETWORK_TEXTBOOK_CHAPTERS:
+                errors.append("计算机网络：章节必须与谢希仁第8版第1—9章顺序一致")
+            for chapter_index, position in enumerate(chapter_positions):
+                chapter_end = chapter_positions[chapter_index + 1] if chapter_index + 1 < len(chapter_positions) else len(lines)
+                raw_chapter = "\n".join(lines[position + 1:chapter_end])
+                compact = re.sub(r"\s+", "", re.sub(r"<!--.*?-->", "", raw_chapter, flags=re.DOTALL))
+                title = actual_titles[chapter_index]
+                if len(compact) < 800:
+                    errors.append(f"计算机网络 / {title}：不足800字，未达到自学讲义最低深度")
+                for required in ("本章导学", "学习目标", "知识地图", "本章小结与自测", "<details>"):
+                    if required not in raw_chapter:
+                        errors.append(f"计算机网络 / {title}：缺少{required}")
         for position, line in enumerate(lines):
             h2 = H2_RE.match(line.strip())
             if not h2:

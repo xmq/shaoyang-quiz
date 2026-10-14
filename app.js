@@ -20,6 +20,7 @@ const QUESTION_REVISIONS = Object.freeze({
   "cg-14-s2-q3": 1,
 });
 const MAX_IMPORT_BYTES = 5 * 1024 * 1024;
+const CHAPTER_FILTER_PREFIX = "@chapter:";
 const MAX_HISTORY_PER_QUESTION = 50;
 const MASTER_THRESHOLD = 2;
 const REVIEW_INTERVAL_DAYS = [1, 3, 7, 14, 30];
@@ -218,7 +219,12 @@ function getScope() {
   let scope = PUBLIC_QUESTIONS;
   if (state.subject) scope = scope.filter((q) => q.subject === state.subject);
   if (state.typeFilter) scope = scope.filter((q) => q.type === state.typeFilter);
-  if (state.chapterFilter) scope = scope.filter((q) => chapterKey(q) === state.chapterFilter);
+  if (state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)) {
+    const chapterId = state.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length);
+    scope = scope.filter((q) => q.chapter_id === chapterId);
+  } else if (state.chapterFilter) {
+    scope = scope.filter((q) => chapterKey(q) === state.chapterFilter);
+  }
   const query = String(state.searchQuery || "").trim().toLowerCase();
   if (query) {
     const parts = query.split(/\s+/).filter(Boolean);
@@ -328,6 +334,7 @@ function applyLaunchParams() {
   const requestedMode = params.get("mode");
   const requestedSubject = params.get("subject");
   const requestedTopic = params.get("topic");
+  const requestedChapter = params.get("chapter");
   let changed = false;
   if (["home", "seq", "rnd", "mock", "review", "wrong", "fav"].includes(requestedMode)) {
     state.mode = requestedMode;
@@ -346,6 +353,15 @@ function applyLaunchParams() {
     if (topicQuestion) {
       state.subject = topicQuestion.subject;
       state.chapterFilter = chapterKey(topicQuestion);
+      if (!requestedMode || requestedMode === "home") state.mode = "seq";
+      changed = true;
+    }
+  }
+  if (requestedChapter) {
+    const chapterQuestion = PUBLIC_QUESTIONS.find((question) => question.chapter_id === requestedChapter);
+    if (chapterQuestion) {
+      state.subject = chapterQuestion.subject;
+      state.chapterFilter = `${CHAPTER_FILTER_PREFIX}${requestedChapter}`;
       if (!requestedMode || requestedMode === "home") state.mode = "seq";
       changed = true;
     }
@@ -487,9 +503,12 @@ function wrongGrade(count) {
 
 function renderActiveFilters() {
   const container = $("active-filters");
+  const chapterLabel = state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)
+    ? (PUBLIC_QUESTIONS.find((question) => question.chapter_id === state.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length))?.chapter_title || "本章")
+    : state.chapterFilter;
   const filters = [
     ["typeFilter", "题型", state.typeFilter],
-    ["chapterFilter", "知识点", state.chapterFilter],
+    ["chapterFilter", state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX) ? "章节" : "知识点", chapterLabel],
   ].filter(([, , value]) => value);
   container.classList.toggle("hidden", filters.length === 0);
   if (!filters.length) {
@@ -1577,7 +1596,10 @@ function sanitizeState(input, strict = false) {
   if (typeof input.subject === "string" && (!input.subject || allowedSubjects.has(input.subject))) clean.subject = input.subject;
   if (typeof input.typeFilter === "string" && (!input.typeFilter || allowedTypes.has(input.typeFilter))) clean.typeFilter = input.typeFilter;
   if (typeof input.chapterFilter === "string" && input.chapterFilter.length <= 300
-      && (!input.chapterFilter || PUBLIC_QUESTIONS.some((question) => chapterKey(question) === input.chapterFilter))) {
+      && (!input.chapterFilter
+        || PUBLIC_QUESTIONS.some((question) => chapterKey(question) === input.chapterFilter)
+        || (input.chapterFilter.startsWith(CHAPTER_FILTER_PREFIX)
+          && PUBLIC_QUESTIONS.some((question) => question.chapter_id === input.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length))))) {
     clean.chapterFilter = input.chapterFilter;
   }
   if (typeof input.searchQuery === "string" && input.searchQuery.length <= 300) clean.searchQuery = input.searchQuery;

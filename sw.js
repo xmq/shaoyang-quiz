@@ -42,7 +42,15 @@ const CORE_ASSETS = [
   "./media/comm_sampling.svg",
   "./media/comm_modulation.svg",
   "./media/comm_spectrum.svg",
-  "./media/comm_superhet.svg"
+  "./media/comm_superhet.svg",
+  "./media/network_layers.svg",
+  "./media/network_subnet.svg",
+  "./media/ds_tree_traversal.svg",
+  "./media/os_process_states.svg",
+  "./media/computer_memory_hierarchy.svg",
+  "./media/db_relationships.svg",
+  "./media/tcp_handshake.svg",
+  "./media/tcp_congestion.svg"
 ];
 
 self.addEventListener("install", (event) => {

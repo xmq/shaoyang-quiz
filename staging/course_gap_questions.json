@@ -365,5 +365,176 @@
     "subject": "操作系统", "source_chapter": "CPU参与和磁头移动", "adaptation_note": "依据磁盘调度补充直接计算。",
     "knowledge_point": "设备与I/O管理", "ability": "直接计算", "difficulty": "基础",
     "topic_source": "manual", "topic_id": "operating-system.t08"
+  },
+  {
+    "id": "gap-net-media-001",
+    "source": "课程缺口补充",
+    "type": "单选",
+    "chapter": "流媒体、实时传输与QoS",
+    "stem": "RTP首部中的时间戳主要帮助接收方完成什么任务？",
+    "options": {
+      "A": "为IP数据报选择路由",
+      "B": "按媒体采样时刻恢复播放节奏",
+      "C": "为域名分配IP地址",
+      "D": "保证丢失分组一定重传"
+    },
+    "answer": "B",
+    "explanation": "RTP时间戳反映媒体数据的采样或生成时刻，帮助接收方按正确节奏播放。RTP本身不负责路由、DNS或可靠重传。",
+    "subject": "计算机网络",
+    "source_chapter": "第8章 互联网上的音频/视频服务",
+    "adaptation_note": "依据流媒体与RTP基本机制补充。",
+    "knowledge_point": "流媒体与服务质量",
+    "ability": "概念识记",
+    "difficulty": "基础",
+    "topic_source": "manual",
+    "topic_id": "net.streaming-qos"
+  },
+  {
+    "id": "gap-net-media-002",
+    "source": "课程缺口补充",
+    "type": "填空",
+    "chapter": "流媒体、实时传输与QoS",
+    "stem": "某视频平均码率为4 Mbit/s，当前缓冲区有24 Mbit视频数据，网络持续输入速率为3 Mbit/s。忽略其他开销，缓冲区约多少秒后耗尽？只填写数字。",
+    "options": {},
+    "answer": "24",
+    "explanation": "播放每秒消耗4 Mbit，网络每秒补入3 Mbit，净减少1 Mbit/s；24÷1=24 s。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "求出净减少速率1 Mbit/s",
+        "points": 1
+      },
+      {
+        "criterion": "写出24÷1",
+        "points": 1
+      },
+      {
+        "criterion": "结果24秒",
+        "points": 1
+      }
+    ],
+    "subject": "计算机网络",
+    "source_chapter": "第8章 互联网上的音频/视频服务",
+    "adaptation_note": "依据播放缓冲补充直接计算。",
+    "knowledge_point": "流媒体与服务质量",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.streaming-qos"
+  },
+  {
+    "id": "gap-net-media-003",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "流媒体、实时传输与QoS",
+    "stem": "说明实时音视频为什么不能只看平均带宽，并分别说明时延、抖动和丢包对体验的影响。",
+    "options": {},
+    "answer": "平均带宽不能反映短时波动。时延过大会使互动反馈变慢；抖动会使分组到达间隔不均，需要播放缓冲吸收；丢包会造成声音或画面缺失，过度等待重传又可能增加时延。",
+    "explanation": "实时体验由吞吐量、时延、抖动、丢包和缓冲策略共同决定。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "说明平均带宽不能反映短时波动",
+        "points": 1
+      },
+      {
+        "criterion": "说明时延影响",
+        "points": 1
+      },
+      {
+        "criterion": "说明抖动影响",
+        "points": 1
+      },
+      {
+        "criterion": "说明丢包与重传取舍",
+        "points": 1
+      }
+    ],
+    "subject": "计算机网络",
+    "source_chapter": "第8章 互联网上的音频/视频服务",
+    "adaptation_note": "依据实时传输性能指标补充简答。",
+    "knowledge_point": "流媒体与服务质量",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.streaming-qos"
+  },
+  {
+    "id": "gap-net-wireless-001",
+    "source": "课程缺口补充",
+    "type": "单选",
+    "chapter": "WLAN、无线接入与移动网络",
+    "stem": "关于无线接入点AP与家用无线路由器的说法，正确的是？",
+    "options": {
+      "A": "AP必然同时提供NAT和DHCP",
+      "B": "无线路由器通常集成AP、交换、路由、NAT等功能",
+      "C": "AP只能工作在网络层",
+      "D": "二者在任何场景下完全相同"
+    },
+    "answer": "B",
+    "explanation": "AP主要提供无线接入和二层桥接；家用无线路由器通常集成多个网络功能。",
+    "subject": "计算机网络",
+    "source_chapter": "第9章 无线网络和移动网络",
+    "adaptation_note": "依据WLAN设备分工补充。",
+    "knowledge_point": "无线与移动网络",
+    "ability": "比较辨析",
+    "difficulty": "基础",
+    "topic_source": "manual",
+    "topic_id": "net.wireless-mobile"
+  },
+  {
+    "id": "gap-net-wireless-002",
+    "source": "课程缺口补充",
+    "type": "判断",
+    "chapter": "WLAN、无线接入与移动网络",
+    "stem": "802.11使用CSMA/CA后，可以保证无线局域网绝对不会发生碰撞。",
+    "options": {},
+    "answer": "错误",
+    "explanation": "CSMA/CA通过侦听、退避、确认等机制降低碰撞概率，但隐藏站、同时退避结束等情况仍可能产生冲突。",
+    "subject": "计算机网络",
+    "source_chapter": "第9章 无线网络和移动网络",
+    "adaptation_note": "依据无线介质访问边界补充判断。",
+    "knowledge_point": "无线与移动网络",
+    "ability": "比较辨析",
+    "difficulty": "基础",
+    "topic_source": "manual",
+    "topic_id": "net.wireless-mobile"
+  },
+  {
+    "id": "gap-net-wireless-003",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "WLAN、无线接入与移动网络",
+    "stem": "解释隐藏站问题，并说明RTS/CTS为什么只能缓解而不能保证完全消除无线碰撞。",
+    "options": {},
+    "answer": "隐藏站是两个发送站彼此听不到，却都能把信号送到同一接收端，因而可能同时发送并在接收端冲突。RTS/CTS让接收端附近站点获知预约并推迟发送，可降低冲突，但控制帧也可能丢失或碰撞，覆盖和干扰环境也不完全一致，因此不能保证绝对无碰撞。",
+    "explanation": "回答要同时说明形成条件、RTS/CTS作用和机制边界。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "说明发送站彼此听不到",
+        "points": 1
+      },
+      {
+        "criterion": "说明在共同接收端冲突",
+        "points": 1
+      },
+      {
+        "criterion": "说明RTS/CTS预约作用",
+        "points": 1
+      },
+      {
+        "criterion": "说明不能完全消除的原因",
+        "points": 1
+      }
+    ],
+    "subject": "计算机网络",
+    "source_chapter": "第9章 无线网络和移动网络",
+    "adaptation_note": "依据隐藏站与RTS/CTS补充机制简答。",
+    "knowledge_point": "无线与移动网络",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.wireless-mobile"
   }
 ]

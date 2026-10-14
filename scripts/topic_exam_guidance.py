@@ -70,7 +70,7 @@ net.media net.symbol-multiplexing net.channel-capacity net.frames-switching net.
 net.arq-window net.ethernet-wifi net.subnet-routing net.arp-forwarding net.routing
 net.ip-versions net.rip-update net.tcp-udp net.tcp-connection net.flow-congestion
 net.app-protocols net.http net.dns-dhcp net.troubleshooting net.security-boundary
-net.crypto-signature
+net.crypto-signature net.streaming-qos net.wireless-mobile
 circuit.t01 circuit.t03 circuit.t04 circuit.t05 circuit.t06 circuit.t08 circuit.t09
 analog-electronics.t01 analog-electronics.t02 analog-electronics.t03
 analog-electronics.t04 analog-electronics.t05 analog-electronics.t06
@@ -105,7 +105,7 @@ computer-organization.t04 computer-organization.t05 computer-organization.t06
 computer-organization.t07
 net.performance net.switching net.symbol-multiplexing net.channel-capacity
 net.frames-switching net.crc net.arq-window net.subnet-routing net.arp-forwarding
-net.routing net.ip-versions net.rip-update net.tcp-connection net.flow-congestion net.http
+net.routing net.ip-versions net.rip-update net.tcp-connection net.flow-congestion net.http net.streaming-qos
 circuit.t01 circuit.t02 circuit.t03 circuit.t04 circuit.t05 circuit.t06 circuit.t07
 analog-electronics.t02 analog-electronics.t03 analog-electronics.t04
 analog-electronics.t05 analog-electronics.t06 analog-electronics.t07
@@ -136,7 +136,7 @@ computer-organization.t05 computer-organization.t06 computer-organization.t07
 net.performance net.switching net.layers-addresses net.symbol-multiplexing
 net.channel-capacity net.frames-switching net.crc net.arq-window net.subnet-routing
 net.arp-forwarding net.routing net.ip-versions net.rip-update net.tcp-connection
-net.flow-congestion net.http net.dns-dhcp net.troubleshooting
+net.flow-congestion net.http net.dns-dhcp net.troubleshooting net.streaming-qos net.wireless-mobile
 circuit.t01 circuit.t02 circuit.t03 circuit.t04 circuit.t05 circuit.t06 circuit.t07
 circuit.t08 circuit.t09
 analog-electronics.t02 analog-electronics.t03 analog-electronics.t04

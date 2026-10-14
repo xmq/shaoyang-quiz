@@ -241,6 +241,12 @@
       -webkit-box-orient: vertical;
     }
     .chapter-link:hover, .chapter-link.active { background: var(--primary-soft); color: var(--primary); }
+    .section-links { margin: 0 0 7px 12px; padding-left: 8px; border-left: 1px solid var(--border); }
+    .section-link { width: 100%; min-height: 34px; display: block; padding: 6px 8px; overflow: hidden; border: 0; border-radius: 7px; background: transparent; color: var(--muted); text-align: left; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
+    .section-link:hover { background: var(--primary-soft); color: var(--primary); }
+    .chapter-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
+    .chapter-actions .chapter-study-link { margin: 0; padding: 8px 11px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); text-decoration: none; font-weight: 700; }
+    .chapter-actions .chapter-practice-link { border-color: var(--primary); background: var(--primary); color: #fff; }
     .study.nav-collapsed .study-layout { grid-template-columns: 58px minmax(0, 1fr); }
     .study.nav-collapsed .chapter-nav-head { justify-content: center; padding: 7px; }
     .study.nav-collapsed .chapter-nav-label,
@@ -414,6 +420,10 @@
     .lecture-callout.example { border-left-color: #198754; background: #edf8f2; }
     .lecture-callout.warning { border-left-color: #d98716; background: #fff7e8; }
     .lecture-callout > strong:first-child { color: inherit; }
+    .answer-details { margin: 14px 0 20px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
+    .answer-details summary { min-height: 46px; display: flex; align-items: center; padding: 9px 13px; color: var(--primary); font-weight: 750; cursor: pointer; }
+    .answer-details > :not(summary) { margin-right: 13px; margin-left: 13px; }
+    .answer-details[open] { padding-bottom: 5px; }
 
     /* 重点与易错默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
     .color-notes-page .chapter-toggle {
@@ -684,6 +694,7 @@
       .lecture-callout { border-color: #30465e; border-left-color: #67a6e3; background: #15283c; }
       .lecture-callout.example { border-left-color: #55c58a; background: #153128; }
       .lecture-callout.warning { border-left-color: #e5a441; background: #342918; }
+      .answer-details { background: #142234; }
       .recall-prompt { background: #1c3157; color: #bfdbfe; }
       .note mark { background: #854d0e; color: #fef3c7; }
     }
@@ -1018,11 +1029,31 @@
       return `<div class="table-wrap" tabindex="0" aria-label="可横向滚动的表格"><table><thead><tr>${header.map((cell) => `<th scope="col">${formatInline(cell)}</th>`).join("")}</tr></thead><tbody>${bodyRows.map((row) => `<tr>${row.map((cell) => `<td>${formatInline(cell)}</td>`).join("")}</tr>`).join("")}</tbody></table></div><p class="table-hint">↔ 左右滑动查看完整表格</p>`;
     }
 
+    function topicForHeading(title, chapterIndex) {
+      const plainTitle = title.replace(/^\d+(?:\.\d+)*\s*/, "").trim();
+      const exact = currentCourse?.topics?.find((item) => item.title === plainTitle || item.title === title);
+      if (exact) return exact;
+      const chapterId = currentCourse?.learning_chapters?.[chapterIndex]?.chapter_id;
+      const candidates = currentCourse?.topics?.filter((item) => !chapterId || item.chapter_id === chapterId) || [];
+      let best = null;
+      let bestScore = 0;
+      candidates.forEach((topic) => {
+        const terms = [topic.title, ...(topic.keywords || [])].filter((term) => String(term).length >= 2);
+        const score = terms.reduce((total, term) => total + (plainTitle.toLowerCase().includes(String(term).toLowerCase()) ? String(term).length : 0), 0);
+        if (score > bestScore) {
+          best = topic;
+          bestScore = score;
+        }
+      });
+      return bestScore >= 2 ? best : null;
+    }
+
     function renderMarkdown(markdown) {
       const lines = publicMarkdownLines(markdown);
       const output = ["<div class=\"preface\">"];
       let index = 0;
       let chapterOpen = false;
+      let renderedChapterIndex = -1;
       let prefaceOpen = true;
       let listType = null;
 
@@ -1094,6 +1125,26 @@
           continue;
         }
 
+        if (trimmed === "<details>") {
+          closeList();
+          output.push('<details class="answer-details">');
+          index += 1;
+          continue;
+        }
+        const summaryMatch = trimmed.match(/^<summary>(.+)<\/summary>$/);
+        if (summaryMatch) {
+          closeList();
+          output.push(`<summary>${formatInline(summaryMatch[1])}</summary>`);
+          index += 1;
+          continue;
+        }
+        if (trimmed === "</details>") {
+          closeList();
+          output.push("</details>");
+          index += 1;
+          continue;
+        }
+
         const h1 = trimmed.match(/^#\s+(.+)$/);
         const markdownH2 = trimmed.match(/^##\s+(.+)$/);
         const markdownH3 = trimmed.match(/^###\s+(.+)$/);
@@ -1105,6 +1156,7 @@
           closeChapter();
           closePreface();
           const title = markdownH2 ? markdownH2[1] : plainChapter[0];
+          renderedChapterIndex += 1;
           let marker = null;
           for (let lookahead = index + 1; lookahead < Math.min(lines.length, index + 4); lookahead += 1) {
             const candidate = lines[lookahead].trim();
@@ -1128,7 +1180,7 @@
           closeList();
           const rawTitle = markdownH3 ? markdownH3[1] : plainPoint[0];
           const title = colorMode ? rawTitle.replace(/^回忆卡\s*\d+\s*[|｜:：—-]\s*/, "") : rawTitle;
-          const topic = currentCourse?.topics?.find((item) => item.title === title);
+          const topic = topicForHeading(title, renderedChapterIndex);
           output.push(`<h3 class="point"${topic ? ` data-topic-id="${escapeHtml(topic.topic_id)}"` : ""}>${formatInline(title)}</h3>`);
         } else if (colorMode && /^先答[：:]/.test(trimmed)) {
           closeList();
@@ -1200,7 +1252,7 @@
       return cleaned || label;
     }
 
-    function updateStudyPosition({replaceRoute = true} = {}) {
+    function updateStudyPosition({replaceRoute = true, sectionId = ""} = {}) {
       const sections = [...content.querySelectorAll(".chapter-section")];
       activeChapterIndex = Math.max(0, Math.min(activeChapterIndex, Math.max(0, sections.length - 1)));
       const section = sections[activeChapterIndex];
@@ -1255,6 +1307,7 @@
         params.set("course", currentCourse.name);
         params.set("chapter", String(activeChapterIndex + 1));
         if (colorMode) params.set("card", String(activeRecallIndex + 1));
+        if (sectionId) params.set("section", sectionId);
         history.replaceState(history.state, "", `#${params.toString()}`);
         try {
           localStorage.setItem("shaoyang-last-learning", JSON.stringify({
@@ -1264,6 +1317,20 @@
             card: colorMode ? activeRecallIndex + 1 : undefined,
             savedAt: new Date().toISOString(),
           }));
+        } catch {}
+      }
+      if (currentCourse && sections.length) {
+        try {
+          const stored = JSON.parse(localStorage.getItem("shaoyang-reading-progress-v1") || "{}");
+          const progress = stored && typeof stored === "object" ? stored : {};
+          const courseProgress = progress[currentCourse.name] && typeof progress[currentCourse.name] === "object" ? progress[currentCourse.name] : {};
+          const chapterTitle = currentCourse.chapters?.[pageKind]?.[activeChapterIndex];
+          const chapterId = currentCourse.learning_chapters?.find((item) => item.title === chapterTitle)?.chapter_id || `${pageKind}-${activeChapterIndex + 1}`;
+          const visited = new Set(Array.isArray(courseProgress[pageKind]) ? courseProgress[pageKind] : []);
+          visited.add(chapterId);
+          courseProgress[pageKind] = [...visited];
+          progress[currentCourse.name] = courseProgress;
+          localStorage.setItem("shaoyang-reading-progress-v1", JSON.stringify(progress));
         } catch {}
       }
     }
@@ -1413,16 +1480,48 @@
           }
         });
         chapterLinks.appendChild(link);
+        const pointLinks = document.createElement("div");
+        pointLinks.className = "section-links";
+        pointLinks.dataset.chapterIndex = String(index);
+        section.querySelectorAll("h3.point").forEach((point, pointIndex) => {
+          if (!point.id) point.id = `section-${index + 1}-${pointIndex + 1}`;
+          const pointLink = document.createElement("button");
+          pointLink.type = "button";
+          pointLink.className = "section-link";
+          pointLink.textContent = point.textContent.trim();
+          pointLink.addEventListener("click", () => {
+            activeChapterIndex = index;
+            if (mobileMedia.matches) setActiveChapter(index, {replaceRoute: false});
+            section.classList.remove("collapsed");
+            toggle.setAttribute("aria-expanded", "true");
+            updateStudyPosition({replaceRoute: true, sectionId: point.id});
+            closeMobileNav({restoreFocus: false});
+            requestAnimationFrame(() => point.scrollIntoView({block: "start"}));
+          });
+          pointLinks.appendChild(pointLink);
+        });
+        if (pointLinks.childElementCount) chapterLinks.appendChild(pointLinks);
         const otherKind = colorMode ? "lecture" : "color-notes";
         const otherIndex = currentCourse?.chapters?.[otherKind]?.indexOf(title) ?? -1;
+        const actions = document.createElement("div");
+        actions.className = "chapter-actions";
         if (otherIndex >= 0) {
           const companion = document.createElement("a");
           companion.className = "chapter-study-link";
           const route = new URLSearchParams({course: currentCourse.name, chapter: String(otherIndex + 1)});
           companion.href = `./${colorMode ? "notes" : "color-notes"}.html#${route.toString()}`;
           companion.textContent = colorMode ? "查看本章讲义 →" : "查看本章重点与易错 →";
-          section.querySelector(".chapter-body").appendChild(companion);
+          actions.appendChild(companion);
         }
+        const learningChapter = currentCourse?.learning_chapters?.find((item) => item.title === title);
+        if (learningChapter) {
+          const practice = document.createElement("a");
+          practice.className = "chapter-study-link chapter-practice-link";
+          practice.href = `./quiz.html?chapter=${encodeURIComponent(learningChapter.chapter_id)}&mode=seq`;
+          practice.textContent = "练习本章 →";
+          actions.appendChild(practice);
+        }
+        if (actions.childElementCount) section.querySelector(".chapter-body").appendChild(actions);
       });
 
       chapterNav.classList.toggle("hidden", sections.length === 0);
@@ -1452,6 +1551,7 @@
       recallRetryMode = false;
       const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
       const routeTopic = routeParams.get("topic");
+      const routeSection = routeParams.get("section");
       activeChapterIndex = Math.max(0, (Number(routeParams.get("chapter")) || 1) - 1);
       activeRecallIndex = Math.max(0, (Number(routeParams.get("card")) || 1) - 1);
       renderMarkdown(course.text);
@@ -1471,6 +1571,12 @@
         }
         if (sectionIndex >= 0) setActiveChapter(sectionIndex, {replaceRoute: false});
         requestAnimationFrame(() => (point || section)?.scrollIntoView({block: "start"}));
+      } else if (routeSection) {
+        const point = document.getElementById(routeSection);
+        const sections = [...content.querySelectorAll(".chapter-section")];
+        const sectionIndex = sections.indexOf(point?.closest(".chapter-section"));
+        if (sectionIndex >= 0) setActiveChapter(sectionIndex, {replaceRoute: false});
+        requestAnimationFrame(() => point?.scrollIntoView({block: "start"}));
       }
       study.classList.remove("recall-mode");
       study.classList.toggle("color-notes-list", colorMode);
@@ -1490,7 +1596,7 @@
           link.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[course.name] || course.name)}&mode=home`;
         }
       });
-      updateStudyPosition({replaceRoute: mobileMedia.matches});
+      updateStudyPosition({replaceRoute: mobileMedia.matches, sectionId: routeSection || ""});
       try {
         localStorage.setItem("shaoyang-selected-course-v1", course.name);
         localStorage.setItem("shaoyang-last-learning", JSON.stringify({
@@ -1617,6 +1723,10 @@
       }
       searchStatus.textContent = query ? (matches ? `找到 ${matches} 个相关内容区，已定位到首个结果` : "当前科目没有匹配内容") : "";
       chapterLinks.querySelectorAll(".chapter-link").forEach((link, index) => link.classList.toggle("hidden", Boolean(query) && sections[index]?.classList.contains("hidden")));
+      chapterLinks.querySelectorAll(".section-links").forEach((links) => {
+        const index = Number(links.dataset.chapterIndex);
+        links.classList.toggle("hidden", Boolean(query) && sections[index]?.classList.contains("hidden"));
+      });
       if (mobileMedia.matches && firstMatch?.classList.contains("chapter-section")) {
         activeChapterIndex = Math.max(0, sections.indexOf(firstMatch));
         activeRecallIndex = 0;
@@ -1648,6 +1758,10 @@
       navCollapse.querySelector("span").textContent = "×";
       document.body.style.overflow = "hidden";
       navCollapse.focus();
+      requestAnimationFrame(() => {
+        const activeLink = chapterLinks.querySelectorAll(".chapter-link")[activeChapterIndex];
+        if (activeLink) chapterLinks.scrollTop = Math.max(0, activeLink.offsetTop - chapterLinks.clientHeight / 2 + activeLink.offsetHeight / 2);
+      });
     }
 
     function closeMobileNav({restoreFocus = true} = {}) {

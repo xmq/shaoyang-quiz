@@ -2,6 +2,7 @@
   "use strict";
 
   const QUESTION_INDEX = Array.isArray(window.HOME_QUESTION_INDEX) ? window.HOME_QUESTION_INDEX : [];
+  const COURSE_INDEX = Array.isArray(window.HOME_COURSE_INDEX) ? window.HOME_COURSE_INDEX : [];
   const STORE_KEYS = ["shaoyang-quiz-v5", "shaoyang-quiz-v4", "shaoyang-quiz-v3", "shaoyang-quiz-v2", "shaoyang-quiz-v1"];
   const SUBJECT_ALIASES = {
     "Office软件操作": "办公软件",
@@ -44,6 +45,15 @@
       } catch {}
     }
     return {};
+  }
+
+  function readLectureProgress() {
+    try {
+      const value = JSON.parse(localStorage.getItem("shaoyang-reading-progress-v1") || "{}");
+      return value && typeof value === "object" ? value : {};
+    } catch {
+      return {};
+    }
   }
 
   function lastLearning() {
@@ -110,15 +120,20 @@
     document.getElementById("mobile-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
   }
 
-  function buildCourseGrid(progress) {
+  function buildCourseGrid(progress, lectureProgress) {
     const root = document.getElementById("home-course-grid");
     const highlighted = highlightedCourseName();
     root.innerHTML = GROUPS.map((group, groupIndex) => {
       const cards = COURSES.filter((course) => course.group === group).map((course) => {
         const stats = courseStats(progress, course.name);
+        const chapterCount = COURSE_INDEX.find((item) => item.name === course.name)?.chapter_count || 0;
+        const readCount = new Set(lectureProgress[course.name]?.lecture || []).size;
         const noteHash = `#course=${encodeURIComponent(course.name)}`;
         const isCurrent = course.name === highlighted;
-        const progressText = stats.done ? `已做 ${stats.done} 题 · 正确率 ${stats.rate}%` : "未开始";
+        const progressParts = [];
+        if (readCount) progressParts.push(`讲义 ${readCount}/${chapterCount} 章`);
+        if (stats.done) progressParts.push(`做题 ${stats.done} · ${stats.rate}%`);
+        const progressText = progressParts.join(" · ") || "未开始";
         const progressWidth = stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
         return `<article class="home-course-card${isCurrent ? " is-current" : ""}">
           <a class="home-course-main" href="./notes.html${noteHash}" data-course-name="${course.name}">
@@ -177,9 +192,10 @@
   }
 
   const progress = readProgress();
+  const lectureProgress = readLectureProgress();
   document.getElementById("home-reset").addEventListener("click", () => window.clearStudyData());
   updateMobileLinks(selectedCourseName());
-  buildCourseGrid(progress);
+  buildCourseGrid(progress, lectureProgress);
   bindCourseLinks();
   bindCourseFilters();
   registerServiceWorker();

@@ -3,6 +3,12 @@
   "notice": "课程分组和章节重点是学习内容安排，不是湖南统一考试占比；各科分值须以具体岗位大纲或可核验试卷为依据。",
   "references": [
     {
+      "id": "xie-network-8-phei",
+      "title": "谢希仁《计算机网络（第8版）》目录（电子工业出版社）",
+      "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=58234",
+      "use": "作为计算机网络讲义第1至第9章及主要节次的结构基准；本站内容为面向自学和事业单位深度的原创讲解，不复制教材正文。"
+    },
+    {
       "id": "huhst-network",
       "title": "湖南人文科技学院《计算机网络》教学大纲（2015年公开，2012年编写）",
       "url": "https://www.huhst.edu.cn/jsjx/info/1641/19131.htm",
@@ -124,6 +130,7 @@
       "focus": "分层与设备、MAC/IP/端口、IPv4与子网、基础路由、TCP/UDP、常用应用协议、安全及按层排障；保留常见一步计算。",
       "depth": "26个知识点全部学习；公式需默写并说明参数，简答需写出机制与边界，计算达到常见直接计算和基础综合应用深度。",
       "references": [
+        "xie-network-8-phei",
         "huhst-network",
         "hnust-network",
         "hnu-math-network",

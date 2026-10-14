@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" role="img" aria-labelledby="title desc">
+  <title id="title">TCP 拥塞窗口的典型变化</title><desc id="desc">拥塞窗口先在慢开始阶段快速增长，到阈值后线性增长，发生丢包后降低窗口并重新增长。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:3}.line{stroke:#176f68;stroke-width:6;fill:none}.dash{stroke:#d98716;stroke-width:3;stroke-dasharray:9 7}.t{font:19px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}</style></defs>
+  <rect class="bg" x="12" y="12" width="896" height="446" rx="24"/>
+  <path class="axis" d="M95 390V70M95 390H850"/>
+  <text class="s" x="50" y="210" transform="rotate(-90 50 210)" text-anchor="middle">拥塞窗口 cwnd</text><text class="s" x="475" y="430" text-anchor="middle">传输轮次 / 时间</text>
+  <path class="dash" d="M95 225H850"/><text class="s" x="735" y="214">慢开始门限 ssthresh</text>
+  <path class="line" d="M100 375L155 350L210 300L265 220L330 190L395 160L460 130L515 100L525 335L590 300L655 260L720 220L785 185L840 150"/>
+  <text class="t" x="200" y="110" text-anchor="middle" font-weight="700">慢开始</text><text class="s" x="200" y="136" text-anchor="middle">窗口近似按轮次倍增</text>
+  <text class="t" x="420" y="285" text-anchor="middle" font-weight="700">拥塞避免</text><text class="s" x="420" y="310" text-anchor="middle">窗口近似线性增加</text>
+  <text class="t" x="555" y="365" font-weight="700">检测到丢包</text><text class="s" x="555" y="389">降低窗口，再继续探测容量</text>
+  <text class="s" x="470" y="55" text-anchor="middle">具体下降幅度与恢复过程取决于超时、重复确认和TCP实现；图示表达基本阶段</text>
+</svg>

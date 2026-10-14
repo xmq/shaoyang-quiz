@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">TCP 三次握手</title><desc id="desc">客户端发送SYN，服务器返回SYN和ACK，客户端再发送ACK，双方确认收发能力和初始序号。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#176f68"/></marker><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.life{stroke:#64748b;stroke-width:3;stroke-dasharray:8 7}.msg{stroke:#176f68;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:20px system-ui,sans-serif;fill:#102a43}.s{font:16px ui-monospace,monospace;fill:#334155}.n{font:14px system-ui,sans-serif;fill:#526777}</style></defs>
+  <rect class="bg" x="12" y="12" width="736" height="496" rx="24"/>
+  <text class="t" x="180" y="58" text-anchor="middle" font-weight="700">客户端</text><text class="t" x="580" y="58" text-anchor="middle" font-weight="700">服务器</text>
+  <path class="life" d="M180 80V430M580 80V430"/>
+  <path class="msg" d="M180 135L565 195"/><text class="s" x="370" y="145" text-anchor="middle">SYN=1, seq=x</text>
+  <path class="msg" d="M580 245L195 300"/><text class="s" x="380" y="260" text-anchor="middle">SYN=1, ACK=1</text><text class="s" x="380" y="282" text-anchor="middle">seq=y, ack=x+1</text>
+  <path class="msg" d="M180 350L565 405"/><text class="s" x="375" y="370" text-anchor="middle">ACK=1, ack=y+1</text>
+  <text class="n" x="380" y="474" text-anchor="middle">三次的目的：双方都确认自己的发送和接收方向可用，并同步初始序号</text>
+</svg>
