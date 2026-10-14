@@ -1325,5 +1325,403 @@
     "difficulty": "应用",
     "topic_source": "manual",
     "topic_id": "programming.t14"
+  },
+  {
+    "id": "gap-co-001",
+    "source": "课程缺口补充",
+    "type": "填空",
+    "chapter": "数制与编码",
+    "stem": "十六进制数2D转换为8位二进制是________。",
+    "options": {},
+    "answer": "00101101",
+    "explanation": "2对应0010，D对应1101，按4位一组拼接。",
+    "subject": "计算机组成原理",
+    "source_chapter": "数制与编码",
+    "adaptation_note": "按组成原理独立计算任务补充练习。",
+    "knowledge_point": "数据表示与运算",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t03",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "高4位0010",
+        "points": 1
+      },
+      {
+        "criterion": "低4位1101",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-co-002",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "浮点表示",
+    "stem": "按常见规格化二进制浮点模型，说明符号位、阶码和尾数分别主要决定什么。",
+    "options": {},
+    "answer": "符号位决定正负，阶码主要决定数值范围和小数点位置，尾数主要决定有效数字与精度。",
+    "explanation": "浮点值由三个字段共同解释，不能单独把阶码或尾数当作完整数值。",
+    "subject": "计算机组成原理",
+    "source_chapter": "浮点表示",
+    "adaptation_note": "按组成原理独立计算任务补充练习。",
+    "knowledge_point": "数据表示与运算",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t05",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "符号位决定正负",
+        "points": 1
+      },
+      {
+        "criterion": "阶码决定范围/位置",
+        "points": 1
+      },
+      {
+        "criterion": "尾数决定精度",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-co-003",
+    "source": "课程缺口补充",
+    "type": "判断",
+    "chapter": "浮点表示",
+    "stem": "浮点数能够表示很大的范围，因此范围内每个实数都能被精确表示。（ ）",
+    "options": {},
+    "answer": "错误",
+    "explanation": "尾数位数有限，许多十进制小数只能近似表示；范围大不等于精度无限。",
+    "subject": "计算机组成原理",
+    "source_chapter": "浮点表示",
+    "adaptation_note": "按组成原理独立计算任务补充练习。",
+    "knowledge_point": "数据表示与运算",
+    "ability": "概念识记",
+    "difficulty": "基础",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t05"
+  },
+  {
+    "id": "gap-co-004",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "存储层次与局部性",
+    "stem": "程序在循环中顺序访问数组元素，并多次重复同一循环。分别说明空间局部性和时间局部性体现在哪里。",
+    "options": {},
+    "answer": "顺序访问相邻数组元素体现空间局部性；下一轮再次访问近期使用的数组区域体现时间局部性。",
+    "explanation": "局部性解释了为何按块调入并缓存近期数据通常有效。",
+    "subject": "计算机组成原理",
+    "source_chapter": "存储层次与局部性",
+    "adaptation_note": "按组成原理独立计算任务补充练习。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t08",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "说明相邻访问的空间局部性",
+        "points": 1
+      },
+      {
+        "criterion": "说明重复访问的时间局部性",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-co-005",
+    "source": "课程缺口补充",
+    "type": "填空",
+    "chapter": "虚拟地址转换",
+    "stem": "页面大小4KiB时，虚拟地址的页内偏移需要________位。",
+    "options": {},
+    "answer": "12",
+    "explanation": "4KiB=4096B=2^12B，因此低12位为页内偏移。",
+    "subject": "计算机组成原理",
+    "source_chapter": "虚拟地址转换",
+    "adaptation_note": "按组成原理独立计算任务补充练习。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t14",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "写出12位",
+        "points": 2
+      }
+    ]
+  },
+  {
+    "id": "gap-co-006",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "虚拟地址转换",
+    "stem": "依次说明TLB未命中、Cache未命中和缺页后通常去哪里继续查找。",
+    "options": {},
+    "answer": "TLB未命中查页表；Cache未命中访问下一层缓存或主存；缺页由操作系统从外存调入页面。",
+    "explanation": "三种未命中分属地址转换、数据缓存和虚拟存储层次。",
+    "subject": "计算机组成原理",
+    "source_chapter": "虚拟地址转换",
+    "adaptation_note": "按组成原理独立计算任务补充练习。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t14",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "TLB未命中查页表",
+        "points": 1
+      },
+      {
+        "criterion": "Cache未命中查下一层/主存",
+        "points": 1
+      },
+      {
+        "criterion": "缺页访问外存调页",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-co-007",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "IEEE 754浮点",
+    "stem": "IEEE 754单精度位串0｜10000001｜01000000000000000000000表示的十进制数是多少？写出阶码和尾数过程。",
+    "options": {},
+    "answer": "5",
+    "explanation": "符号为正；实际阶129−127=2；隐藏位补成1.01₂=1.25；1.25×2²=5。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "实际阶为2",
+        "points": 1
+      },
+      {
+        "criterion": "有效数1.25",
+        "points": 1
+      },
+      {
+        "criterion": "结果5",
+        "points": 1
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "IEEE 754浮点",
+    "adaptation_note": "补充组成原理逐字段或逐周期计算。",
+    "knowledge_point": "数据表示与运算",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t05"
+  },
+  {
+    "id": "gap-co-008",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "TLB有效访问时间",
+    "stem": "TLB查询1ns，主存访问100ns，TLB命中率90%。忽略Cache和缺页，TLB命中需一次主存，未命中需先查页表再访问数据。求串行模型平均时间。",
+    "options": {},
+    "answer": "111 ns",
+    "explanation": "0.9×(1+100)+0.1×(1+200)=111ns。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "命中路径101ns",
+        "points": 1
+      },
+      {
+        "criterion": "未命中路径201ns",
+        "points": 1
+      },
+      {
+        "criterion": "加权得111ns",
+        "points": 1
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "TLB有效访问时间",
+    "adaptation_note": "补充组成原理逐字段或逐周期计算。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t14"
+  },
+  {
+    "id": "gap-co-009",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "非理想流水线",
+    "stem": "5段流水处理10条指令，时钟周期1.6ns，执行中共插入2个停顿周期。求总周期数和总时间。",
+    "options": {},
+    "answer": "16个周期，25.6ns。",
+    "explanation": "理想周期数5+10−1=14，再加2个停顿得16；16×1.6=25.6ns。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "理想14周期",
+        "points": 1
+      },
+      {
+        "criterion": "加停顿得16周期",
+        "points": 1
+      },
+      {
+        "criterion": "总时间25.6ns",
+        "points": 1
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "非理想流水线",
+    "adaptation_note": "补充组成原理逐字段或逐周期计算。",
+    "knowledge_point": "流水线",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t11"
+  },
+  {
+    "id": "gap-co-010",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "补码与溢出",
+    "stem": "写出8位补码−5，并判断8位补码127+1是否溢出，说明理由。",
+    "options": {},
+    "answer": "−5为11111011；127+1得到10000000，发生有符号溢出。",
+    "explanation": "5为00000101，取反加1；两个正数相加得到符号为负的位模式且真实结果128超出上限127。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出−5补码",
+        "points": 1
+      },
+      {
+        "criterion": "写出127+1位模式",
+        "points": 1
+      },
+      {
+        "criterion": "判断并解释溢出",
+        "points": 1
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "补码与溢出",
+    "adaptation_note": "补充组成原理书面计算步骤。",
+    "knowledge_point": "数据表示与运算",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t04"
+  },
+  {
+    "id": "gap-co-011",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "芯片扩展",
+    "stem": "用8K×8位芯片组成32K×16位存储器，求芯片数、片内地址线数和选择字扩展组所需高位地址线数。",
+    "options": {},
+    "answer": "需8片；片内13根地址线；选择4个字扩展组需2根高位地址线。",
+    "explanation": "字扩4倍、位扩2倍，共8片；8K=2^13，4组=2^2。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "算字扩和位扩倍数",
+        "points": 1
+      },
+      {
+        "criterion": "芯片数8",
+        "points": 1
+      },
+      {
+        "criterion": "片内13线和组选2线",
+        "points": 2
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "芯片扩展",
+    "adaptation_note": "补充组成原理书面计算步骤。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t09"
+  },
+  {
+    "id": "gap-co-012",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "Cache地址拆分",
+    "stem": "32位字节地址，Cache数据容量16KB，块64B，4路组相联。求块内偏移、组索引和标记位数。",
+    "options": {},
+    "answer": "偏移6位，组索引6位，标记20位。",
+    "explanation": "64B=2^6；组数=16KB/(64B×4)=64=2^6；标记=32−6−6=20。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "偏移6位",
+        "points": 1
+      },
+      {
+        "criterion": "算64组和6位索引",
+        "points": 2
+      },
+      {
+        "criterion": "标记20位",
+        "points": 1
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "Cache地址拆分",
+    "adaptation_note": "补充组成原理书面计算步骤。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t10"
+  },
+  {
+    "id": "gap-co-013",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "总线带宽",
+    "stem": "64位数据总线、频率200MHz、每周期传2次，忽略开销，理论带宽是多少GB/s？",
+    "options": {},
+    "answer": "3.2GB/s。",
+    "explanation": "64位=8B，8×200×10^6×2=3.2×10^9B/s。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "64位换8B",
+        "points": 1
+      },
+      {
+        "criterion": "乘频率和每周期2次",
+        "points": 1
+      },
+      {
+        "criterion": "结果3.2GB/s",
+        "points": 1
+      }
+    ],
+    "subject": "计算机组成原理",
+    "source_chapter": "总线带宽",
+    "adaptation_note": "补充组成原理书面计算步骤。",
+    "knowledge_point": "总线与I/O",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-organization.t12"
   }
 ]

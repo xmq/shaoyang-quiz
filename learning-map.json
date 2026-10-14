@@ -3550,79 +3550,93 @@
         {
           "topic_id": "computer-organization.t01",
           "chapter_id": "computer-organization.c01",
-          "title": "硬件、软件与性能",
-          "depth": "直接应用",
-          "keywords": [
-            "硬件",
-            "软件",
-            "性能",
-            "软件与性能",
-            "计算机组成基础",
-            "计算机系统性能"
-          ],
-          "knowledge_points": [
-            "计算机组成基础",
-            "计算机系统性能"
-          ],
-          "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "直接应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "直接计算"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "直接计算"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "computer-organization.t02",
-          "chapter_id": "computer-organization.c02",
-          "title": "进制、补码与溢出",
+          "title": "存储程序与系统组成",
           "depth": "综合应用",
           "keywords": [
-            "进制",
-            "补码",
-            "溢出",
-            "补码与溢出",
-            "数据表示与运算"
+            "冯·诺依曼",
+            "存储程序",
+            "运算器",
+            "控制器",
+            "存储器",
+            "输入设备",
+            "输出设备",
+            "硬件",
+            "软件",
+            "计算机组成基础"
           ],
           "knowledge_points": [
-            "数据表示与运算"
+            "计算机组成基础"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
+            "完整说明",
             "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
+            "简答说明",
             "直接计算",
             "综合应用"
           ],
-          "short_answer": false
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t02",
+          "chapter_id": "computer-organization.c01",
+          "title": "性能指标与时间计算",
+          "depth": "综合应用",
+          "keywords": [
+            "性能",
+            "CPU时间",
+            "指令数",
+            "CPI",
+            "主频",
+            "时钟周期",
+            "MIPS",
+            "吞吐率",
+            "响应时间",
+            "计算机系统性能"
+          ],
+          "knowledge_points": [
+            "计算机系统性能"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
         },
         {
           "topic_id": "computer-organization.t03",
-          "chapter_id": "computer-organization.c03",
-          "title": "数据通路与寻址",
+          "chapter_id": "computer-organization.c02",
+          "title": "数制、编码与位权",
           "depth": "综合应用",
           "keywords": [
-            "数据通路",
-            "寻址",
-            "数据通路与寻址",
-            "指令系统与CPU"
+            "二进制",
+            "八进制",
+            "十六进制",
+            "数制转换",
+            "BCD",
+            "ASCII",
+            "Unicode",
+            "位权"
           ],
-          "knowledge_points": [
-            "指令系统与CPU"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -3642,18 +3656,21 @@
         },
         {
           "topic_id": "computer-organization.t04",
-          "chapter_id": "computer-organization.c04",
-          "title": "层次、容量与Cache",
+          "chapter_id": "computer-organization.c02",
+          "title": "原码、反码、补码与溢出",
           "depth": "综合应用",
           "keywords": [
-            "层次",
-            "容量",
-            "Cache",
-            "容量与",
-            "存储层次与Cache"
+            "原码",
+            "反码",
+            "补码",
+            "溢出",
+            "符号扩展",
+            "带符号数",
+            "无符号数",
+            "数据表示与运算"
           ],
           "knowledge_points": [
-            "存储层次与Cache"
+            "数据表示与运算"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -3674,18 +3691,20 @@
         },
         {
           "topic_id": "computer-organization.t05",
-          "chapter_id": "computer-organization.c05",
-          "title": "重叠执行与冲突",
+          "chapter_id": "computer-organization.c02",
+          "title": "定点与浮点表示",
           "depth": "综合应用",
           "keywords": [
-            "重叠执行",
-            "冲突",
-            "重叠执行与冲突",
-            "流水线"
+            "定点",
+            "浮点",
+            "阶码",
+            "尾数",
+            "规格化",
+            "对阶",
+            "舍入",
+            "IEEE 754"
           ],
-          "knowledge_points": [
-            "流水线"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -3705,17 +3724,24 @@
         },
         {
           "topic_id": "computer-organization.t06",
-          "chapter_id": "computer-organization.c06",
-          "title": "总线带宽和设备传输",
+          "chapter_id": "computer-organization.c03",
+          "title": "CPU部件与指令周期",
           "depth": "综合应用",
           "keywords": [
-            "总线带宽",
-            "设备传输",
-            "总线带宽和设备传输",
-            "总线与I/O"
+            "CPU",
+            "PC",
+            "IR",
+            "MAR",
+            "MDR",
+            "ALU",
+            "取指",
+            "译码",
+            "执行",
+            "指令周期",
+            "指令系统与CPU"
           ],
           "knowledge_points": [
-            "总线与I/O"
+            "指令系统与CPU"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -3736,17 +3762,258 @@
         },
         {
           "topic_id": "computer-organization.t07",
+          "chapter_id": "computer-organization.c03",
+          "title": "指令、寻址与RISC/CISC",
+          "depth": "综合应用",
+          "keywords": [
+            "指令系统",
+            "操作码",
+            "寻址",
+            "立即寻址",
+            "直接寻址",
+            "间接寻址",
+            "基址",
+            "变址",
+            "相对寻址",
+            "RISC",
+            "CISC"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t08",
+          "chapter_id": "computer-organization.c04",
+          "title": "存储层次与局部性",
+          "depth": "综合应用",
+          "keywords": [
+            "存储层次",
+            "寄存器",
+            "主存",
+            "外存",
+            "局部性",
+            "时间局部性",
+            "空间局部性"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t09",
+          "chapter_id": "computer-organization.c04",
+          "title": "主存容量、编址与芯片扩展",
+          "depth": "综合应用",
+          "keywords": [
+            "地址线",
+            "数据线",
+            "存储容量",
+            "按字节编址",
+            "按字编址",
+            "位扩展",
+            "字扩展",
+            "片选",
+            "RAM",
+            "ROM"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t10",
+          "chapter_id": "computer-organization.c04",
+          "title": "Cache映射与平均访存时间",
+          "depth": "综合应用",
+          "keywords": [
+            "Cache",
+            "命中率",
+            "平均访存",
+            "直接映射",
+            "全相联",
+            "组相联",
+            "块内偏移",
+            "标记",
+            "存储层次与Cache"
+          ],
+          "knowledge_points": [
+            "存储层次与Cache"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t11",
+          "chapter_id": "computer-organization.c05",
+          "title": "流水线与相关冲突",
+          "depth": "综合应用",
+          "keywords": [
+            "流水线",
+            "结构冲突",
+            "数据相关",
+            "控制相关",
+            "加速比",
+            "吞吐率",
+            "停顿",
+            "转发"
+          ],
+          "knowledge_points": [
+            "流水线"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t12",
+          "chapter_id": "computer-organization.c06",
+          "title": "总线结构与带宽",
+          "depth": "综合应用",
+          "keywords": [
+            "总线",
+            "地址总线",
+            "数据总线",
+            "控制总线",
+            "总线带宽",
+            "传输率"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t13",
+          "chapter_id": "computer-organization.c06",
+          "title": "I/O控制、中断与DMA",
+          "depth": "综合应用",
+          "keywords": [
+            "I/O",
+            "程序查询",
+            "中断",
+            "DMA",
+            "中断向量",
+            "现场保护",
+            "接口",
+            "总线与I/O"
+          ],
+          "knowledge_points": [
+            "总线与I/O"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "computer-organization.t14",
           "chapter_id": "computer-organization.c07",
-          "title": "虚拟地址与物理地址",
+          "title": "虚拟地址、页表与TLB",
           "depth": "综合应用",
           "keywords": [
             "虚拟地址",
             "物理地址",
-            "虚拟地址与物理地址"
+            "页表",
+            "页框",
+            "页号",
+            "TLB",
+            "缺页",
+            "MMU"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",

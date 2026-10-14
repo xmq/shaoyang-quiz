@@ -66,6 +66,12 @@ SUBJECT_OVERRIDES = {
     "cg-04-s1-q16": "算法与数据结构",
 }
 
+COMPUTER_ORGANIZATION_TOPIC_OVERRIDES = {
+    "uf-co-003": 9, "ap-co-004": 9, "sp-core-co-024": 9,
+    "sp-core-co-004": 6, "sp-core-co-006": 7, "sp-core-co-019": 1,
+    "uf-co-005": 7, "sp-core-co-002": 3, "sp-core-co-001": 2,
+}
+
 ABILITY_VALUES = frozenset({
     "概念识记",
     "比较辨析",
@@ -452,8 +458,42 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                     "chapter_id": best["chapter_id"], "required_depth": best["depth"],
                     "topic_order": topic_number - 1,
                 }
+    if subject == "计算机组成原理":
+        override_number = COMPUTER_ORGANIZATION_TOPIC_OVERRIDES.get(str(question.get("id")))
+        if override_number:
+            best = topics[override_number - 1]
+            return {
+                "topic_id": best["topic_id"], "topic_title": best["title"],
+                "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+                "topic_order": override_number - 1,
+            }
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (14, r"tlb|虚拟地址|物理地址|页表|页框|页号|缺页|mmu"),
+            (13, r"\bdma\b|中断|程序查询|i/o|io方式|设备控制|统一编址|独立编址"),
+            (12, r"总线|数据传输率|地址总线|数据总线|控制总线"),
+            (11, r"流水线|数据相关|控制相关|结构冲突|数据转发|冒险"),
+            (10, r"cache|命中率|失效率|平均访问|直接映射|全相联|组相联|写回|脏块"),
+            (9, r"存储芯片|地址线|存储容量|按字节编址|按字编址|dram|sram|ram|rom|位信息|字扩展|位扩展"),
+            (8, r"存储层次|局部性|寄存器.*cache|主存.*外存"),
+            (7, r"寻址|有效地址|操作码|地址字段|risc|cisc|load/store"),
+            (6, r"指令周期|取指|译码|\bpc\b|\bir\b|\bmar\b|\bmdr\b|\balu\b|运算器|控制器|除零异常"),
+            (5, r"浮点|定点|阶码|尾数|规格化|对阶|ieee"),
+            (4, r"原码|反码|补码|溢出|符号扩展|带符号"),
+            (3, r"二进制|八进制|十六进制|数制|bcd|ascii|unicode|字符编码"),
+            (2, r"\bcpi\b|cpu执行时间|主频|时钟频率|时钟周期|mips|性能"),
+            (1, r"存储程序|冯·诺依曼|计算机系统|硬件系统|软件系统"),
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {
+                    "topic_id": best["topic_id"], "topic_title": best["title"],
+                    "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+                    "topic_order": topic_number - 1,
+                }
     best = topics[0]
-    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言"}:
+    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言", "计算机组成原理"}:
         core_text = question_text(question, include_options=False)
         stem_text = normalized_text(question.get("stem"))
         best_score = (0, 0, 0, 0, 0, 0, 0)

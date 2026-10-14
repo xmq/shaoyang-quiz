@@ -207,6 +207,14 @@ APPLICATION_TOPICS.update(PROGRAMMING_TOPICS)
 CALCULATION_TOPICS.update({f"programming.t{index:02d}" for index in (3, 4, 5, 6, 7, 10, 12)})
 CODE_TOPICS.update({f"programming.t{index:02d}" for index in range(1, 17)})
 
+COMPUTER_ORGANIZATION_TOPICS = {f"computer-organization.t{index:02d}" for index in range(1, 15)}
+KEY_TOPICS.update(COMPUTER_ORGANIZATION_TOPICS)
+SHORT_ANSWER_TOPICS.update(COMPUTER_ORGANIZATION_TOPICS)
+APPLICATION_TOPICS.update(COMPUTER_ORGANIZATION_TOPICS)
+CALCULATION_TOPICS.update({
+    f"computer-organization.t{index:02d}" for index in (2, 3, 4, 5, 7, 9, 10, 11, 12, 14)
+})
+
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]

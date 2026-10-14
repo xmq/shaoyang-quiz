@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
   <title id="title">计算机存储层次</title><desc id="desc">从寄存器到缓存、主存和辅存，越靠上越快越小，越靠下越慢越大。</desc>
-  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.t{font:21px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}.w{fill:#fff;stroke:#176f68;stroke-width:3}</style></defs>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.pyramid{fill:#e7f6f4;stroke:#176f68;stroke-width:4}.t{font:21px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}.w{fill:#fff;stroke:#176f68;stroke-width:3}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.pyramid{fill:#173f3c;stroke:#46d6c6}.w{fill:#17283b;stroke:#46d6c6}.t{fill:#edf4fb}.s{fill:#b8c5d1}}</style></defs>
   <rect class="bg" x="12" y="12" width="876" height="476" rx="24"/>
-  <path d="M450 70L180 420H720Z" fill="#e7f6f4" stroke="#176f68" stroke-width="4"/>
+  <path class="pyramid" d="M450 70L180 420H720Z"/>
   <rect class="w" x="365" y="95" width="170" height="55" rx="10"/><rect class="w" x="315" y="175" width="270" height="60" rx="10"/><rect class="w" x="260" y="260" width="380" height="65" rx="10"/><rect class="w" x="205" y="350" width="490" height="70" rx="10"/>
   <g class="t" text-anchor="middle"><text x="450" y="130">寄存器</text><text x="450" y="213">Cache</text><text x="450" y="301">主存 DRAM</text><text x="450" y="393">辅存 SSD / HDD</text></g>
   <text class="s" x="90" y="120">速度更快</text><text class="s" x="90" y="150">容量更小</text><text class="s" x="90" y="180">每位更贵</text><text class="s" x="720" y="340">速度更慢</text><text class="s" x="720" y="370">容量更大</text><text class="s" x="720" y="400">每位更便宜</text>
