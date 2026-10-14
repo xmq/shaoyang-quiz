@@ -44,12 +44,17 @@
         {
           "topic_id": "office.t01",
           "chapter_id": "office.c01",
-          "title": "格式与兼容",
+          "title": "文件格式与兼容",
           "depth": "直接应用",
           "keywords": [
-            "格式",
+            "文件格式",
             "兼容",
-            "格式与兼容",
+            "扩展名",
+            "docx",
+            "xlsx",
+            "pptx",
+            "pdf",
+            "csv",
             "办公文件与协作"
           ],
           "knowledge_points": [
@@ -70,44 +75,102 @@
         },
         {
           "topic_id": "office.t02",
-          "chapter_id": "office.c02",
-          "title": "字符、段落与样式",
-          "depth": "综合应用",
+          "chapter_id": "office.c01",
+          "title": "保存、恢复与备份",
+          "depth": "直接应用",
           "keywords": [
-            "字符",
-            "段落",
-            "样式",
-            "段落与样式",
-            "Word文字与段落"
+            "保存",
+            "另存为",
+            "自动恢复",
+            "备份",
+            "版本",
+            "恢复"
           ],
-          "knowledge_points": [
-            "Word文字与段落"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
         {
           "topic_id": "office.t03",
+          "chapter_id": "office.c02",
+          "title": "编辑、剪贴板与直接格式",
+          "depth": "识记理解",
+          "keywords": [
+            "剪贴板",
+            "复制",
+            "粘贴",
+            "格式刷",
+            "查找替换",
+            "字符格式",
+            "段落格式",
+            "Word文字与段落"
+          ],
+          "knowledge_points": [
+            "Word文字与段落"
+          ],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "识记理解",
+          "mastery_steps": [
+            "识别概念"
+          ],
+          "practice_modes": [
+            "客观辨析"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t04",
+          "chapter_id": "office.c02",
+          "title": "样式与文档结构",
+          "depth": "综合应用",
+          "keywords": [
+            "样式",
+            "标题级别",
+            "导航窗格",
+            "自动目录",
+            "大纲"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "office.t05",
           "chapter_id": "office.c03",
-          "title": "分页、分节与目录",
+          "title": "分页、分节与页眉页码",
           "depth": "综合应用",
           "keywords": [
             "分页",
             "分节",
-            "目录",
-            "分节与目录",
+            "分页符",
+            "分节符",
+            "页眉",
+            "页脚",
+            "页码",
+            "分栏",
             "Word长文档排版"
           ],
           "knowledge_points": [
@@ -129,79 +192,43 @@
           "short_answer": true
         },
         {
-          "topic_id": "office.t04",
-          "chapter_id": "office.c04",
-          "title": "引用与函数",
-          "depth": "综合应用",
-          "keywords": [
-            "引用",
-            "函数",
-            "引用与函数",
-            "Excel公式与引用"
-          ],
-          "knowledge_points": [
-            "Excel公式与引用"
-          ],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "office.t05",
-          "chapter_id": "office.c05",
-          "title": "筛选、排序与汇总",
-          "depth": "综合应用",
-          "keywords": [
-            "筛选",
-            "排序",
-            "汇总",
-            "排序与汇总",
-            "Excel数据分析"
-          ],
-          "knowledge_points": [
-            "Excel数据分析"
-          ],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": false
-        },
-        {
           "topic_id": "office.t06",
-          "chapter_id": "office.c06",
-          "title": "母版、切换与动画",
+          "chapter_id": "office.c03",
+          "title": "对象、表格与长文档",
+          "depth": "识记理解",
+          "keywords": [
+            "Word表格",
+            "文本框",
+            "图片环绕",
+            "题注",
+            "交叉引用",
+            "长文档"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "识记理解",
+          "mastery_steps": [
+            "识别概念"
+          ],
+          "practice_modes": [
+            "客观辨析"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t07",
+          "chapter_id": "office.c03",
+          "title": "邮件合并、修订与批注",
           "depth": "综合应用",
           "keywords": [
-            "母版",
-            "切换",
-            "动画",
-            "切换与动画",
-            "PowerPoint演示"
+            "邮件合并",
+            "修订",
+            "批注",
+            "审阅",
+            "合并域"
           ],
-          "knowledge_points": [
-            "PowerPoint演示"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "正常练",
           "target_depth": "综合应用",
@@ -218,17 +245,286 @@
           "short_answer": true
         },
         {
-          "topic_id": "office.t07",
-          "chapter_id": "office.c07",
-          "title": "按任务组合工具",
+          "topic_id": "office.t08",
+          "chapter_id": "office.c04",
+          "title": "单元格类型与公式基础",
           "depth": "综合应用",
           "keywords": [
-            "按任务组合工具",
+            "单元格",
+            "公式",
+            "工作表",
+            "工作簿",
+            "填充柄",
+            "文本型数字",
             "Excel工作簿基础"
           ],
           "knowledge_points": [
             "Excel工作簿基础"
           ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "综合应用"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t09",
+          "chapter_id": "office.c04",
+          "title": "相对、绝对与混合引用",
+          "depth": "综合应用",
+          "keywords": [
+            "相对引用",
+            "绝对引用",
+            "混合引用",
+            "$a$1",
+            "a$1",
+            "$a1",
+            "Excel公式与引用"
+          ],
+          "knowledge_points": [
+            "Excel公式与引用"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t10",
+          "chapter_id": "office.c04",
+          "title": "函数、查找与错误值",
+          "depth": "综合应用",
+          "keywords": [
+            "sum",
+            "average",
+            "countif",
+            "if函数",
+            "vlookup",
+            "xlookup",
+            "错误值",
+            "#n/a",
+            "#value"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "office.t11",
+          "chapter_id": "office.c05",
+          "title": "排序、筛选与验证",
+          "depth": "综合应用",
+          "keywords": [
+            "排序",
+            "筛选",
+            "高级筛选",
+            "数据验证",
+            "条件格式",
+            "冻结窗格",
+            "Excel数据分析"
+          ],
+          "knowledge_points": [
+            "Excel数据分析"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "综合应用"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t12",
+          "chapter_id": "office.c05",
+          "title": "分类汇总与数据透视表",
+          "depth": "综合应用",
+          "keywords": [
+            "分类汇总",
+            "数据透视表",
+            "透视图",
+            "刷新",
+            "字段区域"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "office.t13",
+          "chapter_id": "office.c05",
+          "title": "图表、打印与保护边界",
+          "depth": "综合应用",
+          "keywords": [
+            "图表",
+            "打印区域",
+            "页面布局",
+            "工作表保护",
+            "工作簿保护",
+            "文件加密"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "综合应用"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t14",
+          "chapter_id": "office.c06",
+          "title": "主题、母版与版式",
+          "depth": "综合应用",
+          "keywords": [
+            "主题",
+            "幻灯片母版",
+            "母版",
+            "版式",
+            "占位符",
+            "PowerPoint演示"
+          ],
+          "knowledge_points": [
+            "PowerPoint演示"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "office.t15",
+          "chapter_id": "office.c06",
+          "title": "动画、切换与放映",
+          "depth": "综合应用",
+          "keywords": [
+            "动画",
+            "切换",
+            "放映",
+            "排练计时",
+            "演讲者视图"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "综合应用"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "office.t16",
+          "chapter_id": "office.c07",
+          "title": "按任务组合工具",
+          "depth": "综合应用",
+          "keywords": [
+            "综合应用",
+            "邮件合并到pdf",
+            "任务组合",
+            "批量生成"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "office.t17",
+          "chapter_id": "office.c07",
+          "title": "链接、协作与交付检查",
+          "depth": "综合应用",
+          "keywords": [
+            "超链接",
+            "链接对象",
+            "嵌入对象",
+            "协作",
+            "交付",
+            "兼容性检查"
+          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "正常练",
           "target_depth": "综合应用",
@@ -302,7 +598,7 @@
           "topic_id": "computer-foundations.t01",
           "chapter_id": "computer-foundations.c01",
           "title": "数据、信息与可信判断",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "数据",
             "信息",
@@ -323,17 +619,15 @@
             "信息素养"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -360,13 +654,11 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用"
           ],
           "short_answer": true
@@ -375,7 +667,7 @@
           "topic_id": "computer-foundations.t03",
           "chapter_id": "computer-foundations.c02",
           "title": "数制转换与容量计算",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "二进制",
             "八进制",
@@ -393,26 +685,22 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t04",
           "chapter_id": "computer-foundations.c02",
           "title": "字符、图像与声音编码",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "ASCII",
             "Unicode",
@@ -426,27 +714,23 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t05",
           "chapter_id": "computer-foundations.c02",
           "title": "存储程序与系统组成",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "冯·诺依曼",
             "存储程序",
@@ -466,16 +750,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -483,7 +765,7 @@
           "topic_id": "computer-foundations.t06",
           "chapter_id": "computer-foundations.c03",
           "title": "文件、目录、路径与格式",
-          "depth": "综合应用",
+          "depth": "识记理解",
           "keywords": [
             "文件",
             "目录",
@@ -501,18 +783,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "识记理解",
           "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "分析应用"
+            "识别概念"
           ],
           "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "综合应用"
+            "客观辨析"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t07",
@@ -587,7 +865,7 @@
           "topic_id": "computer-foundations.t09",
           "chapter_id": "computer-foundations.c04",
           "title": "公有云、私有云与云边协同",
-          "depth": "综合应用",
+          "depth": "识记理解",
           "keywords": [
             "公有云",
             "私有云",
@@ -600,19 +878,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "识记理解",
           "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "分析应用"
+            "识别概念"
           ],
           "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "综合应用"
+            "客观辨析"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t10",
@@ -654,7 +928,7 @@
           "topic_id": "computer-foundations.t11",
           "chapter_id": "computer-foundations.c05",
           "title": "挖掘任务与分布式处理",
-          "depth": "综合应用",
+          "depth": "识记理解",
           "keywords": [
             "分类",
             "回归",
@@ -675,19 +949,15 @@
             "Spark"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "识记理解",
           "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "分析应用"
+            "识别概念"
           ],
           "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "综合应用"
+            "客观辨析"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t12",
@@ -738,19 +1008,17 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "综合应用"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t14",
@@ -801,19 +1069,17 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "综合应用"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t16",
@@ -861,25 +1127,23 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "综合应用"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t18",
           "chapter_id": "computer-foundations.c09",
           "title": "计算机发展与应用分类",
-          "depth": "综合应用",
+          "depth": "识记理解",
           "keywords": [
             "计算机发展",
             "电子器件",
@@ -893,25 +1157,21 @@
             "计算机发展与应用"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "识记理解",
           "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "分析应用"
+            "识别概念"
           ],
           "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "综合应用"
+            "客观辨析"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-foundations.t19",
           "chapter_id": "computer-foundations.c09",
           "title": "信息系统与数字化建设",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "信息系统",
             "人员",
@@ -926,17 +1186,15 @@
             "信息技术与社会"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -959,7 +1217,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -1016,12 +1274,15 @@
         {
           "topic_id": "multimedia.t01",
           "chapter_id": "multimedia.c01",
-          "title": "媒体与交互",
+          "title": "多媒体特征与系统组成",
           "depth": "直接应用",
           "keywords": [
-            "媒体",
-            "交互",
-            "媒体与交互",
+            "多媒体",
+            "交互性",
+            "集成性",
+            "实时性",
+            "媒体类型",
+            "多媒体系统",
             "多媒体系统与应用"
           ],
           "knowledge_points": [
@@ -1042,105 +1303,103 @@
         },
         {
           "topic_id": "multimedia.t02",
-          "chapter_id": "multimedia.c02",
-          "title": "采样、量化与编码",
-          "depth": "综合应用",
+          "chapter_id": "multimedia.c01",
+          "title": "超文本、超媒体与流媒体",
+          "depth": "直接应用",
           "keywords": [
-            "采样",
-            "量化",
-            "编码",
-            "量化与编码",
-            "音频数字化"
+            "超文本",
+            "超媒体",
+            "流媒体",
+            "非线性",
+            "节点",
+            "链接"
           ],
-          "knowledge_points": [
-            "音频数字化"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
         {
           "topic_id": "multimedia.t03",
-          "chapter_id": "multimedia.c03",
-          "title": "像素、颜色与容量",
-          "depth": "综合应用",
+          "chapter_id": "multimedia.c02",
+          "title": "采样、量化与编码",
+          "depth": "直接应用",
           "keywords": [
-            "像素",
-            "颜色",
-            "容量",
-            "颜色与容量",
-            "图形图像"
-          ],
-          "knowledge_points": [
-            "图形图像"
-          ],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "multimedia.t04",
-          "chapter_id": "multimedia.c04",
-          "title": "PCM容量",
-          "depth": "综合应用",
-          "keywords": [
-            "PCM容量",
-            "PCM",
-            "容量"
+            "采样",
+            "量化",
+            "编码",
+            "奈奎斯特",
+            "数字化"
           ],
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "直接计算",
-            "分析应用"
+            "完整说明",
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
-            "直接计算",
-            "综合应用"
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "multimedia.t04",
+          "chapter_id": "multimedia.c02",
+          "title": "容量、码率与单位",
+          "depth": "直接应用",
+          "keywords": [
+            "容量",
+            "码率",
+            "采样率",
+            "量化位数",
+            "声道",
+            "bit",
+            "byte"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "直接计算"
           ],
           "short_answer": false
         },
         {
           "topic_id": "multimedia.t05",
-          "chapter_id": "multimedia.c05",
-          "title": "帧率与编码",
+          "chapter_id": "multimedia.c03",
+          "title": "位图、矢量与分辨率",
           "depth": "综合应用",
           "keywords": [
-            "帧率",
-            "编码",
-            "帧率与编码",
-            "动画与视频"
+            "位图",
+            "矢量",
+            "像素",
+            "分辨率",
+            "缩放",
+            "锯齿",
+            "图形图像"
           ],
           "knowledge_points": [
-            "动画与视频"
+            "图形图像"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -1148,26 +1407,230 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用"
           ],
           "short_answer": true
         },
         {
           "topic_id": "multimedia.t06",
-          "chapter_id": "multimedia.c06",
-          "title": "无损与有损",
+          "chapter_id": "multimedia.c03",
+          "title": "颜色模型与交付",
+          "depth": "识记理解",
+          "keywords": [
+            "rgb",
+            "cmyk",
+            "hsv",
+            "颜色模型",
+            "印刷",
+            "屏幕"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "识记理解",
+          "mastery_steps": [
+            "识别概念"
+          ],
+          "practice_modes": [
+            "客观辨析"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "multimedia.t07",
+          "chapter_id": "multimedia.c03",
+          "title": "格式、图层与蒙版",
+          "depth": "综合应用",
+          "keywords": [
+            "jpeg",
+            "jpg",
+            "png",
+            "gif",
+            "svg",
+            "psd",
+            "图层",
+            "蒙版",
+            "透明"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "综合应用"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "multimedia.t08",
+          "chapter_id": "multimedia.c04",
+          "title": "声音采集与PCM",
           "depth": "直接应用",
           "keywords": [
-            "无损",
-            "有损",
-            "无损与有损",
+            "pcm",
+            "声音采集",
+            "模数转换",
+            "音频容量",
+            "采样率",
+            "声道数",
+            "音频数字化"
+          ],
+          "knowledge_points": [
+            "音频数字化"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "multimedia.t09",
+          "chapter_id": "multimedia.c04",
+          "title": "波形音频、MIDI与格式",
+          "depth": "识记理解",
+          "keywords": [
+            "midi",
+            "wav",
+            "mp3",
+            "flac",
+            "波形音频",
+            "音频格式"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "识记理解",
+          "mastery_steps": [
+            "识别概念"
+          ],
+          "practice_modes": [
+            "客观辨析"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "multimedia.t10",
+          "chapter_id": "multimedia.c05",
+          "title": "动画时间轴与帧率",
+          "depth": "直接应用",
+          "keywords": [
+            "动画",
+            "关键帧",
+            "补间",
+            "时间轴",
+            "帧率",
+            "flash"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "直接计算"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "multimedia.t11",
+          "chapter_id": "multimedia.c05",
+          "title": "视频参数、编码器与容器",
+          "depth": "综合应用",
+          "keywords": [
+            "视频",
+            "编码器",
+            "解码器",
+            "容器",
+            "mp4",
+            "h.264",
+            "分辨率",
+            "帧率",
+            "动画与视频"
+          ],
+          "knowledge_points": [
+            "动画与视频"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "multimedia.t12",
+          "chapter_id": "multimedia.c05",
+          "title": "流媒体与自适应播放",
+          "depth": "综合应用",
+          "keywords": [
+            "流媒体",
+            "缓冲",
+            "自适应码率",
+            "直播",
+            "点播",
+            "卡顿"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "multimedia.t13",
+          "chapter_id": "multimedia.c06",
+          "title": "无损、有损与冗余",
+          "depth": "直接应用",
+          "keywords": [
+            "无损压缩",
+            "有损压缩",
+            "冗余",
+            "熵编码",
+            "预测编码",
             "多媒体压缩与容量"
           ],
           "knowledge_points": [
@@ -1187,19 +1650,76 @@
           "short_answer": true
         },
         {
-          "topic_id": "multimedia.t07",
-          "chapter_id": "multimedia.c07",
-          "title": "内容、资源与发布",
-          "depth": "综合应用",
+          "topic_id": "multimedia.t14",
+          "chapter_id": "multimedia.c06",
+          "title": "压缩比与格式选择",
+          "depth": "直接应用",
           "keywords": [
-            "内容",
-            "资源",
-            "发布",
-            "资源与发布"
+            "压缩比",
+            "节省率",
+            "格式选择",
+            "压缩后",
+            "原始容量"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "直接计算"
+          ],
+          "short_answer": false
+        },
+        {
+          "topic_id": "multimedia.t15",
+          "chapter_id": "multimedia.c07",
+          "title": "需求、脚本与素材组织",
+          "depth": "综合应用",
+          "keywords": [
+            "需求分析",
+            "脚本",
+            "分镜",
+            "素材",
+            "版权",
+            "作品设计"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "multimedia.t16",
+          "chapter_id": "multimedia.c07",
+          "title": "图层蒙版、测试与交付",
+          "depth": "综合应用",
+          "keywords": [
+            "非破坏编辑",
+            "图层",
+            "蒙版",
+            "测试",
+            "发布",
+            "交付检查"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -1257,7 +1777,7 @@
           "topic_id": "operating-system.t01",
           "chapter_id": "operating-system.c01",
           "title": "操作系统功能与基本特征",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "操作系统",
             "批处理",
@@ -1274,17 +1794,15 @@
             "Windows系统操作"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -1292,7 +1810,7 @@
           "topic_id": "operating-system.t02",
           "chapter_id": "operating-system.c02",
           "title": "用户态、内核态与系统调用",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "用户态",
             "内核态",
@@ -1308,17 +1826,15 @@
             "操作系统基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -1326,7 +1842,7 @@
           "topic_id": "operating-system.t03",
           "chapter_id": "operating-system.c03",
           "title": "进程、线程与PCB",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "进程",
             "线程",
@@ -1342,18 +1858,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -1378,13 +1890,11 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用"
           ],
           "short_answer": true
@@ -1393,7 +1903,7 @@
           "topic_id": "operating-system.t05",
           "chapter_id": "operating-system.c03",
           "title": "处理机调度",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "调度",
             "FCFS",
@@ -1411,18 +1921,16 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -1449,14 +1957,12 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用",
             "代码/语句"
           ],
@@ -1498,7 +2004,7 @@
           "topic_id": "operating-system.t08",
           "chapter_id": "operating-system.c04",
           "title": "银行家算法与安全序列",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "银行家",
             "安全序列",
@@ -1512,18 +2018,16 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -1607,7 +2111,7 @@
           "topic_id": "operating-system.t11",
           "chapter_id": "operating-system.c06",
           "title": "文件组织、目录与链接",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "文件",
             "目录",
@@ -1625,17 +2129,15 @@
             "文件系统"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -1643,7 +2145,7 @@
           "topic_id": "operating-system.t12",
           "chapter_id": "operating-system.c07",
           "title": "I/O控制、缓冲与SPOOLing",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "程序查询",
             "中断方式",
@@ -1660,17 +2162,15 @@
             "设备与I/O管理"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -1760,7 +2260,7 @@
           "topic_id": "database.t01",
           "chapter_id": "database.c01",
           "title": "数据库、DBMS与三级模式",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "数据库",
             "DBMS",
@@ -1775,17 +2275,15 @@
             "数据库系统基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -1812,13 +2310,11 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用"
           ],
           "short_answer": true
@@ -1838,7 +2334,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -1856,7 +2352,7 @@
           "topic_id": "database.t04",
           "chapter_id": "database.c03",
           "title": "关系键与完整性",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "超码",
             "候选码",
@@ -1869,20 +2365,16 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用",
-            "读写语句"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用",
-            "代码/语句"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -1927,7 +2419,7 @@
           "topic_id": "database.t06",
           "chapter_id": "database.c05",
           "title": "SQL定义与约束",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "DDL",
             "DML",
@@ -1941,18 +2433,16 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -1961,7 +2451,7 @@
           "topic_id": "database.t07",
           "chapter_id": "database.c05",
           "title": "SQL筛选、分组与聚合",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "SELECT",
             "WHERE",
@@ -1977,19 +2467,17 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -2033,7 +2521,7 @@
           "topic_id": "database.t09",
           "chapter_id": "database.c06",
           "title": "视图",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "视图",
             "VIEW",
@@ -2043,17 +2531,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -2061,7 +2547,7 @@
           "topic_id": "database.t10",
           "chapter_id": "database.c06",
           "title": "索引与物理设计",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "索引",
             "B+树",
@@ -2077,18 +2563,16 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -2111,7 +2595,7 @@
             "数据库设计"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -2207,7 +2691,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -2314,7 +2798,7 @@
             "数据库恢复"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -2351,7 +2835,7 @@
             "数据库安全"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -2415,7 +2899,7 @@
           "topic_id": "data-structures.t01",
           "chapter_id": "data-structures.c01",
           "title": "数据结构与复杂度",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "逻辑结构",
             "存储结构",
@@ -2434,18 +2918,16 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -2506,14 +2988,12 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用",
             "代码/语句"
           ],
@@ -2627,7 +3107,7 @@
           "topic_id": "data-structures.t07",
           "chapter_id": "data-structures.c03",
           "title": "数组、稀疏矩阵与广义表",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "二维数组",
             "行优先",
@@ -2639,20 +3119,18 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -2661,7 +3139,7 @@
           "topic_id": "data-structures.t08",
           "chapter_id": "data-structures.c04",
           "title": "二叉树性质",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "树",
             "二叉树",
@@ -2679,20 +3157,16 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用",
-            "读写语句"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用",
-            "代码/语句"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -2700,7 +3174,7 @@
           "topic_id": "data-structures.t09",
           "chapter_id": "data-structures.c04",
           "title": "遍历与树的还原",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "先序",
             "前序",
@@ -2714,19 +3188,17 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -2735,7 +3207,7 @@
           "topic_id": "data-structures.t10",
           "chapter_id": "data-structures.c04",
           "title": "BST与AVL",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "二叉排序树",
             "二叉搜索树",
@@ -2751,17 +3223,15 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -2770,7 +3240,7 @@
           "topic_id": "data-structures.t11",
           "chapter_id": "data-structures.c04",
           "title": "堆",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "堆",
             "大根堆",
@@ -2783,19 +3253,17 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -2804,7 +3272,7 @@
           "topic_id": "data-structures.t12",
           "chapter_id": "data-structures.c04",
           "title": "哈夫曼树与B/B+树",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "哈夫曼",
             "WPL",
@@ -2817,18 +3285,16 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -2836,7 +3302,7 @@
           "topic_id": "data-structures.t13",
           "chapter_id": "data-structures.c05",
           "title": "图的存储",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "图",
             "顶点",
@@ -2851,18 +3317,16 @@
             "图结构与算法"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -2983,7 +3447,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -3003,7 +3467,7 @@
           "topic_id": "data-structures.t18",
           "chapter_id": "data-structures.c06",
           "title": "二分查找",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "顺序查找",
             "折半查找",
@@ -3019,19 +3483,17 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3040,7 +3502,7 @@
           "topic_id": "data-structures.t19",
           "chapter_id": "data-structures.c06",
           "title": "散列查找",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "散列",
             "哈希",
@@ -3052,20 +3514,18 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3074,7 +3534,7 @@
           "topic_id": "data-structures.t20",
           "chapter_id": "data-structures.c07",
           "title": "插入、冒泡与选择排序",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "插入排序",
             "直接插入",
@@ -3088,19 +3548,17 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3109,7 +3567,7 @@
           "topic_id": "data-structures.t21",
           "chapter_id": "data-structures.c07",
           "title": "快速排序",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "快速排序",
             "快排",
@@ -3120,19 +3578,17 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3141,7 +3597,7 @@
           "topic_id": "data-structures.t22",
           "chapter_id": "data-structures.c07",
           "title": "归并排序",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "归并排序",
             "归并",
@@ -3152,19 +3608,17 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3173,7 +3627,7 @@
           "topic_id": "data-structures.t23",
           "chapter_id": "data-structures.c07",
           "title": "堆、希尔、基数与排序选择",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "堆排序",
             "希尔排序",
@@ -3185,20 +3639,18 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3223,7 +3675,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -3297,7 +3749,7 @@
           "topic_id": "programming.t01",
           "chapter_id": "programming.c01",
           "title": "算法、流程与执行",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "算法",
             "流程图",
@@ -3313,18 +3765,16 @@
             "程序设计基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3333,7 +3783,7 @@
           "topic_id": "programming.t02",
           "chapter_id": "programming.c01",
           "title": "编译、解释与程序错误",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "编译",
             "解释",
@@ -3348,18 +3798,16 @@
             "程序异常与调试"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3368,7 +3816,7 @@
           "topic_id": "programming.t03",
           "chapter_id": "programming.c02",
           "title": "类型、变量与转换",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "数据类型",
             "变量",
@@ -3386,28 +3834,24 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "programming.t04",
           "chapter_id": "programming.c03",
           "title": "运算符、除法与短路",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "运算符",
             "表达式",
@@ -3421,19 +3865,17 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
           "short_answer": true
@@ -3442,7 +3884,7 @@
           "topic_id": "programming.t05",
           "chapter_id": "programming.c04",
           "title": "输入输出与顺序跟踪",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "input",
             "print",
@@ -3455,22 +3897,18 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "直接计算",
-            "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "直接计算",
-            "综合应用",
             "代码/语句"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "programming.t06",
@@ -3496,19 +3934,17 @@
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "直接计算",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "直接计算",
             "综合应用",
             "代码/语句"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "programming.t07",
@@ -3531,19 +3967,17 @@
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "直接计算",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "直接计算",
             "综合应用",
             "代码/语句"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "programming.t08",
@@ -3672,17 +4106,15 @@
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "综合应用",
             "代码/语句"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "programming.t12",
@@ -3736,21 +4168,19 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
             "综合应用",
             "代码/语句"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "programming.t14",
@@ -3835,7 +4265,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -3895,7 +4325,7 @@
           "topic_id": "computer-organization.t01",
           "chapter_id": "computer-organization.c01",
           "title": "存储程序与系统组成",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "冯·诺依曼",
             "存储程序",
@@ -3912,19 +4342,15 @@
             "计算机组成基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -3969,7 +4395,7 @@
           "topic_id": "computer-organization.t03",
           "chapter_id": "computer-organization.c02",
           "title": "数制、编码与位权",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "二进制",
             "八进制",
@@ -3983,26 +4409,22 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
-          "short_answer": true
+          "short_answer": false
         },
         {
           "topic_id": "computer-organization.t04",
           "chapter_id": "computer-organization.c02",
           "title": "原码、反码、补码与溢出",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "原码",
             "反码",
@@ -4018,18 +4440,16 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -4070,7 +4490,7 @@
           "topic_id": "computer-organization.t06",
           "chapter_id": "computer-organization.c03",
           "title": "CPU部件与指令周期",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "CPU",
             "PC",
@@ -4089,18 +4509,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -4144,7 +4560,7 @@
           "topic_id": "computer-organization.t08",
           "chapter_id": "computer-organization.c04",
           "title": "存储层次与局部性",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "存储层次",
             "寄存器",
@@ -4156,17 +4572,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -4280,7 +4694,7 @@
           "topic_id": "computer-organization.t12",
           "chapter_id": "computer-organization.c06",
           "title": "总线结构与带宽",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "总线",
             "地址总线",
@@ -4291,19 +4705,17 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -5506,44 +5918,42 @@
         {
           "topic_id": "circuit.t01",
           "chapter_id": "circuit.c01",
-          "title": "参考方向与功率",
-          "depth": "综合应用",
+          "title": "参考方向、功率与示波器读数",
+          "depth": "直接应用",
           "keywords": [
             "参考方向",
             "功率",
-            "参考方向与功率",
+            "示波器读数",
+            "功率与示波器读数",
             "电路分析基础"
           ],
           "knowledge_points": [
             "电路分析基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
         {
           "topic_id": "circuit.t02",
           "chapter_id": "circuit.c02",
-          "title": "KCL、KVL与等效电阻",
-          "depth": "综合应用",
+          "title": "串并联、KCL与KVL",
+          "depth": "直接应用",
           "keywords": [
+            "串并联",
             "KCL",
             "KVL",
-            "等效电阻",
-            "与等效电阻",
             "直流电路与功率"
           ],
           "knowledge_points": [
@@ -5551,28 +5961,28 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "直接计算",
-            "分析应用"
+            "完整说明",
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
-            "直接计算",
-            "综合应用"
+            "简答说明",
+            "直接计算"
           ],
-          "short_answer": false
+          "short_answer": true
         },
         {
           "topic_id": "circuit.t03",
           "chapter_id": "circuit.c03",
-          "title": "叠加与戴维南",
+          "title": "节点电压与回路列式",
           "depth": "综合应用",
           "keywords": [
-            "叠加",
-            "戴维南",
-            "叠加与戴维南"
+            "节点电压",
+            "回路列式",
+            "节点电压与回路列式"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -5594,17 +6004,18 @@
         },
         {
           "topic_id": "circuit.t04",
-          "chapter_id": "circuit.c04",
-          "title": "储能与连续性",
+          "chapter_id": "circuit.c03",
+          "title": "叠加、戴维南与最大功率",
           "depth": "综合应用",
           "keywords": [
-            "储能",
-            "连续性",
-            "储能与连续性"
+            "叠加",
+            "戴维南",
+            "最大功率",
+            "戴维南与最大功率"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -5622,13 +6033,40 @@
         },
         {
           "topic_id": "circuit.t05",
+          "chapter_id": "circuit.c04",
+          "title": "电容电感与换路连续性",
+          "depth": "直接应用",
+          "keywords": [
+            "电容电感",
+            "换路连续性",
+            "电容电感与换路连续性"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "circuit.t06",
           "chapter_id": "circuit.c05",
-          "title": "有效值与相位",
+          "title": "正弦相量、阻抗与谐振",
           "depth": "综合应用",
           "keywords": [
-            "有效值",
-            "相位",
-            "有效值与相位",
+            "正弦相量",
+            "阻抗",
+            "谐振",
+            "阻抗与谐振",
             "正弦交流与RLC"
           ],
           "knowledge_points": [
@@ -5636,35 +6074,6 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "circuit.t06",
-          "chapter_id": "circuit.c06",
-          "title": "串并联系统",
-          "depth": "综合应用",
-          "keywords": [
-            "串并联系统",
-            "三相电路与用电"
-          ],
-          "knowledge_points": [
-            "三相电路与用电"
-          ],
-          "core_status": "必学",
-          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -5682,43 +6091,46 @@
         },
         {
           "topic_id": "circuit.t07",
-          "chapter_id": "circuit.c07",
-          "title": "初值、终值与时间常数",
+          "chapter_id": "circuit.c05",
+          "title": "交流功率、三相与变压器",
           "depth": "综合应用",
           "keywords": [
-            "初值",
-            "终值",
-            "时间常数",
-            "终值与时间常数",
-            "一阶动态电路"
+            "交流功率",
+            "三相",
+            "变压器",
+            "三相与变压器",
+            "三相电路与用电"
           ],
           "knowledge_points": [
-            "一阶动态电路"
+            "三相电路与用电"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
+            "完整说明",
             "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
+            "简答说明",
             "直接计算",
             "综合应用"
           ],
-          "short_answer": false
+          "short_answer": true
         },
         {
           "topic_id": "circuit.t08",
-          "chapter_id": "circuit.c08",
-          "title": "测量对象与仪表影响",
+          "chapter_id": "circuit.c05",
+          "title": "电动机控制、保护与安全",
           "depth": "综合应用",
           "keywords": [
-            "测量对象",
-            "仪表影响",
-            "测量对象与仪表影响"
+            "电动机控制",
+            "保护",
+            "安全",
+            "保护与安全"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -5738,15 +6150,99 @@
         },
         {
           "topic_id": "circuit.t09",
-          "chapter_id": "circuit.c09",
-          "title": "分段定位",
+          "chapter_id": "circuit.c06",
+          "title": "串并联系统可靠度",
+          "depth": "直接应用",
+          "keywords": [
+            "串并联系统可靠度"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "circuit.t10",
+          "chapter_id": "circuit.c07",
+          "title": "一阶RC/RL响应",
           "depth": "综合应用",
           "keywords": [
-            "分段定位"
+            "一阶RC",
+            "RL响应",
+            "一阶",
+            "RC",
+            "RL",
+            "响应",
+            "一阶动态电路"
+          ],
+          "knowledge_points": [
+            "一阶动态电路"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "circuit.t11",
+          "chapter_id": "circuit.c08",
+          "title": "万用表与示波器测量",
+          "depth": "直接应用",
+          "keywords": [
+            "万用表",
+            "示波器测量",
+            "万用表与示波器测量"
           ],
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "circuit.t12",
+          "chapter_id": "circuit.c09",
+          "title": "沿信号链分段定位",
+          "depth": "综合应用",
+          "keywords": [
+            "沿信号链分段定位"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -5807,21 +6303,20 @@
         {
           "topic_id": "analog-electronics.t01",
           "chapter_id": "analog-electronics.c01",
-          "title": "模型与工作区",
+          "title": "PN结与器件模型",
           "depth": "直接应用",
           "keywords": [
-            "模型",
-            "工作区",
-            "模型与工作区",
-            "模拟电子基础",
-            "MOSFET"
+            "PN结",
+            "器件模型",
+            "PN",
+            "结与器件模型",
+            "模拟电子基础"
           ],
           "knowledge_points": [
-            "模拟电子基础",
-            "MOSFET"
+            "模拟电子基础"
           ],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "补充练",
           "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
@@ -5836,46 +6331,70 @@
         {
           "topic_id": "analog-electronics.t02",
           "chapter_id": "analog-electronics.c02",
-          "title": "导通、整流与稳压",
-          "depth": "综合应用",
+          "title": "二极管导通、整流滤波稳压",
+          "depth": "直接应用",
           "keywords": [
-            "导通",
-            "整流",
-            "稳压",
-            "整流与稳压",
-            "二极管电路",
-            "直流电源"
+            "二极管导通",
+            "整流滤波稳压",
+            "二极管电路"
           ],
           "knowledge_points": [
-            "二极管电路",
-            "直流电源"
+            "二极管电路"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
         {
           "topic_id": "analog-electronics.t03",
           "chapter_id": "analog-electronics.c03",
-          "title": "静态点与失真",
+          "title": "BJT/MOS工作区与开关",
+          "depth": "直接应用",
+          "keywords": [
+            "BJT",
+            "MOS工作区",
+            "开关",
+            "MOS",
+            "工作区与开关",
+            "MOSFET"
+          ],
+          "knowledge_points": [
+            "MOSFET"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "analog-electronics.t04",
+          "chapter_id": "analog-electronics.c03",
+          "title": "静态工作点、共射增益与削顶",
           "depth": "综合应用",
           "keywords": [
-            "静态点",
-            "失真",
-            "静态点与失真",
+            "静态工作点",
+            "共射增益",
+            "削顶",
+            "共射增益与削顶",
             "三极管放大"
           ],
           "knowledge_points": [
@@ -5883,34 +6402,6 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "analog-electronics.t04",
-          "chapter_id": "analog-electronics.c04",
-          "title": "级间负载与共模",
-          "depth": "综合应用",
-          "keywords": [
-            "级间负载",
-            "共模",
-            "级间负载与共模"
-          ],
-          "knowledge_points": [],
-          "core_status": "必学",
-          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -5928,16 +6419,16 @@
         },
         {
           "topic_id": "analog-electronics.t05",
-          "chapter_id": "analog-electronics.c05",
-          "title": "判断反馈极性",
+          "chapter_id": "analog-electronics.c04",
+          "title": "多级负载、差分与频率响应",
           "depth": "综合应用",
           "keywords": [
-            "判断反馈极性",
-            "负反馈放大"
+            "多级负载",
+            "差分",
+            "频率响应",
+            "差分与频率响应"
           ],
-          "knowledge_points": [
-            "负反馈放大"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -5957,18 +6448,18 @@
         },
         {
           "topic_id": "analog-electronics.t06",
-          "chapter_id": "analog-electronics.c06",
-          "title": "虚短、虚断与边界",
+          "chapter_id": "analog-electronics.c05",
+          "title": "反馈极性、组态与闭环增益",
           "depth": "综合应用",
           "keywords": [
-            "虚短",
-            "虚断",
-            "边界",
-            "虚断与边界",
-            "运算放大器"
+            "反馈极性",
+            "组态",
+            "闭环增益",
+            "组态与闭环增益",
+            "负反馈放大"
           ],
           "knowledge_points": [
-            "运算放大器"
+            "负反馈放大"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -5989,20 +6480,20 @@
         },
         {
           "topic_id": "analog-electronics.t07",
-          "chapter_id": "analog-electronics.c07",
-          "title": "振荡与输出能力",
+          "chapter_id": "analog-electronics.c06",
+          "title": "运放虚短虚断与比例运算",
           "depth": "综合应用",
           "keywords": [
-            "振荡",
-            "输出能力",
-            "振荡与输出能力",
-            "功率放大"
+            "运放虚短虚断",
+            "比例运算",
+            "运放虚短虚断与比例运算",
+            "运算放大器"
           ],
           "knowledge_points": [
-            "功率放大"
+            "运算放大器"
           ],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -6020,24 +6511,88 @@
         },
         {
           "topic_id": "analog-electronics.t08",
-          "chapter_id": "analog-electronics.c08",
-          "title": "按信号链分析",
+          "chapter_id": "analog-electronics.c07",
+          "title": "比较器、迟滞与振荡",
           "depth": "综合应用",
           "keywords": [
-            "按信号链分析"
+            "比较器",
+            "迟滞",
+            "振荡",
+            "迟滞与振荡"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
+            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "analog-electronics.t09",
+          "chapter_id": "analog-electronics.c07",
+          "title": "功率放大与交越失真",
+          "depth": "直接应用",
+          "keywords": [
+            "功率放大",
+            "交越失真",
+            "功率放大与交越失真"
+          ],
+          "knowledge_points": [
+            "功率放大"
+          ],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "analog-electronics.t10",
+          "chapter_id": "analog-electronics.c08",
+          "title": "直流电源、采集链与排障",
+          "depth": "综合应用",
+          "keywords": [
+            "直流电源",
+            "采集链",
+            "排障",
+            "采集链与排障"
+          ],
+          "knowledge_points": [
+            "直流电源"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
             "综合应用"
           ],
           "short_answer": true
@@ -6085,72 +6640,68 @@
         {
           "topic_id": "digital-electronics.t01",
           "chapter_id": "digital-electronics.c01",
-          "title": "二进制与编码",
-          "depth": "综合应用",
+          "title": "数制、BCD与格雷码",
+          "depth": "直接应用",
           "keywords": [
-            "二进制",
-            "编码",
-            "二进制与编码",
+            "数制",
+            "BCD",
+            "格雷码",
+            "与格雷码",
             "数字电子基础"
           ],
           "knowledge_points": [
             "数字电子基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
         {
           "topic_id": "digital-electronics.t02",
           "chapter_id": "digital-electronics.c02",
-          "title": "从输入求输出",
-          "depth": "综合应用",
+          "title": "门电路、有效电平与三态",
+          "depth": "直接应用",
           "keywords": [
-            "从输入求输出",
-            "脉冲与555电路"
+            "门电路",
+            "有效电平",
+            "三态",
+            "有效电平与三态"
           ],
-          "knowledge_points": [
-            "脉冲与555电路"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "综合应用",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
         {
           "topic_id": "digital-electronics.t03",
           "chapter_id": "digital-electronics.c03",
-          "title": "化简与等价",
+          "title": "逻辑代数、最小项与卡诺图",
           "depth": "综合应用",
           "keywords": [
-            "化简",
-            "等价",
-            "化简与等价",
+            "逻辑代数",
+            "最小项",
+            "卡诺图",
+            "最小项与卡诺图",
             "逻辑代数与门电路"
           ],
           "knowledge_points": [
@@ -6176,10 +6727,13 @@
         {
           "topic_id": "digital-electronics.t04",
           "chapter_id": "digital-electronics.c04",
-          "title": "从功能到表达式",
+          "title": "编译码器、MUX与加法器",
           "depth": "综合应用",
           "keywords": [
-            "从功能到表达式",
+            "编译码器",
+            "MUX",
+            "加法器",
+            "与加法器",
             "组合逻辑"
           ],
           "knowledge_points": [
@@ -6204,50 +6758,43 @@
         },
         {
           "topic_id": "digital-electronics.t05",
-          "chapter_id": "digital-electronics.c05",
-          "title": "状态与有效边沿",
+          "chapter_id": "digital-electronics.c04",
+          "title": "组合冒险与采样边界",
           "depth": "综合应用",
           "keywords": [
-            "状态",
-            "有效边沿",
-            "状态与有效边沿",
-            "触发器"
+            "组合冒险",
+            "采样边界",
+            "组合冒险与采样边界"
           ],
-          "knowledge_points": [
-            "触发器"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
             "综合应用"
           ],
           "short_answer": true
         },
         {
           "topic_id": "digital-electronics.t06",
-          "chapter_id": "digital-electronics.c06",
-          "title": "状态数量与容量",
+          "chapter_id": "digital-electronics.c05",
+          "title": "RS、JK、D、T触发器",
           "depth": "综合应用",
           "keywords": [
-            "状态数量",
-            "容量",
-            "状态数量与容量",
-            "时序逻辑",
-            "存储与可编程逻辑"
+            "RS",
+            "JK",
+            "T触发器",
+            "触发器"
           ],
           "knowledge_points": [
-            "时序逻辑",
-            "存储与可编程逻辑"
+            "触发器"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -6268,17 +6815,18 @@
         },
         {
           "topic_id": "digital-electronics.t07",
-          "chapter_id": "digital-electronics.c07",
-          "title": "分辨率与转换",
+          "chapter_id": "digital-electronics.c05",
+          "title": "状态表、状态图与时序分析",
           "depth": "综合应用",
           "keywords": [
-            "分辨率",
-            "转换",
-            "分辨率与转换",
-            "A/D与D/A转换"
+            "状态表",
+            "状态图",
+            "时序分析",
+            "状态图与时序分析",
+            "时序逻辑"
           ],
           "knowledge_points": [
-            "A/D与D/A转换"
+            "时序逻辑"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -6294,6 +6842,126 @@
             "简答说明",
             "直接计算",
             "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "digital-electronics.t08",
+          "chapter_id": "digital-electronics.c06",
+          "title": "寄存器与同步计数器",
+          "depth": "综合应用",
+          "keywords": [
+            "寄存器",
+            "同步计数器",
+            "寄存器与同步计数器"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "digital-electronics.t09",
+          "chapter_id": "digital-electronics.c06",
+          "title": "存储器容量与扩展",
+          "depth": "综合应用",
+          "keywords": [
+            "存储器容量",
+            "扩展",
+            "存储器容量与扩展",
+            "存储与可编程逻辑"
+          ],
+          "knowledge_points": [
+            "存储与可编程逻辑"
+          ],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "digital-electronics.t10",
+          "chapter_id": "digital-electronics.c07",
+          "title": "脉冲、555与施密特触发",
+          "depth": "直接应用",
+          "keywords": [
+            "脉冲",
+            "555",
+            "施密特触发",
+            "与施密特触发",
+            "脉冲与555电路"
+          ],
+          "knowledge_points": [
+            "脉冲与555电路"
+          ],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "digital-electronics.t11",
+          "chapter_id": "digital-electronics.c07",
+          "title": "ADC/DAC分辨率与采样",
+          "depth": "直接应用",
+          "keywords": [
+            "ADC",
+            "DAC分辨率",
+            "采样",
+            "DAC",
+            "分辨率与采样",
+            "A/D与D/A转换"
+          ],
+          "knowledge_points": [
+            "A/D与D/A转换"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
           ],
           "short_answer": true
         }
@@ -6348,17 +7016,19 @@
         {
           "topic_id": "communication.t01",
           "chapter_id": "communication.c01",
-          "title": "各环节的作用",
+          "title": "通信链路与传输方式",
           "depth": "直接应用",
           "keywords": [
-            "各环节的作用",
+            "通信链路",
+            "传输方式",
+            "通信链路与传输方式",
             "通信系统基础"
           ],
           "knowledge_points": [
             "通信系统基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
@@ -6373,49 +7043,103 @@
         {
           "topic_id": "communication.t02",
           "chapter_id": "communication.c02",
-          "title": "速率、带宽与信噪比",
-          "depth": "综合应用",
+          "title": "码元速率、信息速率与可靠性",
+          "depth": "直接应用",
           "keywords": [
-            "速率",
-            "带宽",
-            "信噪比",
-            "带宽与信噪比",
-            "信道容量与香农公式"
+            "码元速率",
+            "信息速率",
+            "可靠性",
+            "信息速率与可靠性"
           ],
-          "knowledge_points": [
-            "信道容量与香农公式"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
         {
           "topic_id": "communication.t03",
+          "chapter_id": "communication.c02",
+          "title": "香农容量与奈奎斯特速率",
+          "depth": "直接应用",
+          "keywords": [
+            "香农容量",
+            "奈奎斯特速率",
+            "香农容量与奈奎斯特速率",
+            "信道容量与香农公式"
+          ],
+          "knowledge_points": [
+            "信道容量与香农公式"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t04",
           "chapter_id": "communication.c03",
-          "title": "数字化与载波",
+          "title": "抽样、量化与PCM码率",
+          "depth": "直接应用",
+          "keywords": [
+            "抽样",
+            "量化",
+            "PCM码率",
+            "量化与",
+            "PCM",
+            "码率",
+            "抽样与PCM"
+          ],
+          "knowledge_points": [
+            "抽样与PCM"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t05",
+          "chapter_id": "communication.c03",
+          "title": "模拟与数字调制选择",
           "depth": "综合应用",
           "keywords": [
-            "数字化",
-            "载波",
-            "数字化与载波",
-            "抽样与PCM",
+            "模拟",
+            "数字调制选择",
+            "模拟与数字调制选择",
             "模拟调制"
           ],
           "knowledge_points": [
-            "抽样与PCM",
             "模拟调制"
           ],
           "core_status": "必学",
@@ -6431,108 +7155,20 @@
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "communication.t04",
-          "chapter_id": "communication.c04",
-          "title": "频率与波长",
-          "depth": "综合应用",
-          "keywords": [
-            "频率",
-            "波长",
-            "频率与波长",
-            "光纤与移动通信"
-          ],
-          "knowledge_points": [
-            "光纤与移动通信"
-          ],
-          "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "communication.t05",
-          "chapter_id": "communication.c05",
-          "title": "接入与资源分配",
-          "depth": "综合应用",
-          "keywords": [
-            "接入",
-            "资源分配",
-            "接入与资源分配",
-            "数字调制"
-          ],
-          "knowledge_points": [
-            "数字调制"
-          ],
-          "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明",
             "综合应用"
           ],
           "short_answer": true
         },
         {
           "topic_id": "communication.t06",
-          "chapter_id": "communication.c06",
-          "title": "调谐与变频",
+          "chapter_id": "communication.c03",
+          "title": "复用、线路编码与同步",
           "depth": "综合应用",
           "keywords": [
-            "调谐",
-            "变频",
-            "调谐与变频",
-            "高频电路"
-          ],
-          "knowledge_points": [
-            "高频电路"
-          ],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明",
-            "直接计算",
-            "分析应用"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明",
-            "直接计算",
-            "综合应用"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "communication.t07",
-          "chapter_id": "communication.c07",
-          "title": "冗余的不同用途",
-          "depth": "综合应用",
-          "keywords": [
-            "冗余的不同用途"
+            "复用",
+            "线路编码",
+            "同步",
+            "线路编码与同步"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -6551,16 +7187,45 @@
           "short_answer": true
         },
         {
-          "topic_id": "communication.t08",
-          "chapter_id": "communication.c08",
-          "title": "码间干扰与判决",
-          "depth": "综合应用",
+          "topic_id": "communication.t07",
+          "chapter_id": "communication.c04",
+          "title": "介质、传播与频谱位置",
+          "depth": "直接应用",
           "keywords": [
-            "码间干扰",
-            "判决",
-            "码间干扰与判决"
+            "介质",
+            "传播",
+            "频谱位置",
+            "传播与频谱位置"
           ],
           "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t08",
+          "chapter_id": "communication.c05",
+          "title": "数字调制与移动代际",
+          "depth": "综合应用",
+          "keywords": [
+            "数字调制",
+            "移动代际",
+            "数字调制与移动代际"
+          ],
+          "knowledge_points": [
+            "数字调制"
+          ],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -6580,11 +7245,212 @@
         },
         {
           "topic_id": "communication.t09",
-          "chapter_id": "communication.c09",
-          "title": "功率预算",
+          "chapter_id": "communication.c06",
+          "title": "调谐放大、混频与超外差",
           "depth": "综合应用",
           "keywords": [
-            "功率预算"
+            "调谐放大",
+            "混频",
+            "超外差",
+            "混频与超外差",
+            "高频电路"
+          ],
+          "knowledge_points": [
+            "高频电路"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t10",
+          "chapter_id": "communication.c06",
+          "title": "振荡器、反馈与锁相环",
+          "depth": "综合应用",
+          "keywords": [
+            "振荡器",
+            "反馈",
+            "锁相环",
+            "反馈与锁相环"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t11",
+          "chapter_id": "communication.c07",
+          "title": "信源编码与信道编码",
+          "depth": "直接应用",
+          "keywords": [
+            "信源编码",
+            "信道编码",
+            "信源编码与信道编码"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t12",
+          "chapter_id": "communication.c07",
+          "title": "奇偶校验、CRC与ARQ",
+          "depth": "综合应用",
+          "keywords": [
+            "奇偶校验",
+            "CRC",
+            "ARQ"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t13",
+          "chapter_id": "communication.c08",
+          "title": "码间串扰与同步层次",
+          "depth": "综合应用",
+          "keywords": [
+            "码间串扰",
+            "同步层次",
+            "码间串扰与同步层次"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t14",
+          "chapter_id": "communication.c08",
+          "title": "眼图判读与链路定位",
+          "depth": "综合应用",
+          "keywords": [
+            "眼图判读",
+            "链路定位",
+            "眼图判读与链路定位"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t15",
+          "chapter_id": "communication.c09",
+          "title": "光纤链路、衰减与色散",
+          "depth": "综合应用",
+          "keywords": [
+            "光纤链路",
+            "衰减",
+            "色散",
+            "衰减与色散",
+            "光纤与移动通信"
+          ],
+          "knowledge_points": [
+            "光纤与移动通信"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "communication.t16",
+          "chapter_id": "communication.c09",
+          "title": "链路预算与测试工具",
+          "depth": "综合应用",
+          "keywords": [
+            "链路预算",
+            "测试工具",
+            "链路预算与测试工具"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -6647,13 +7513,13 @@
         {
           "topic_id": "signals-systems.t01",
           "chapter_id": "signals-systems.c01",
-          "title": "时间、幅度与周期",
-          "depth": "综合应用",
+          "title": "信号分类、周期与能量功率",
+          "depth": "直接应用",
           "keywords": [
-            "时间",
-            "幅度",
+            "信号分类",
             "周期",
-            "幅度与周期",
+            "能量功率",
+            "周期与能量功率",
             "信号与系统基础"
           ],
           "knowledge_points": [
@@ -6661,63 +7527,60 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
         {
           "topic_id": "signals-systems.t02",
-          "chapter_id": "signals-systems.c02",
-          "title": "逐项检验性质",
-          "depth": "综合应用",
+          "chapter_id": "signals-systems.c01",
+          "title": "时间变换与冲激阶跃",
+          "depth": "直接应用",
           "keywords": [
-            "逐项检验性质",
-            "系统性质"
+            "时间变换",
+            "冲激阶跃",
+            "时间变换与冲激阶跃"
           ],
-          "knowledge_points": [
-            "系统性质"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
         {
           "topic_id": "signals-systems.t03",
-          "chapter_id": "signals-systems.c03",
-          "title": "输入与冲激响应",
+          "chapter_id": "signals-systems.c02",
+          "title": "线性、时不变、因果与稳定",
           "depth": "综合应用",
           "keywords": [
-            "输入",
-            "冲激响应",
-            "输入与冲激响应",
-            "LTI系统与卷积"
+            "线性",
+            "时不变",
+            "因果",
+            "稳定",
+            "因果与稳定",
+            "系统性质"
           ],
           "knowledge_points": [
-            "LTI系统与卷积"
+            "系统性质"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -6738,20 +7601,18 @@
         },
         {
           "topic_id": "signals-systems.t04",
-          "chapter_id": "signals-systems.c04",
-          "title": "时域与频域",
+          "chapter_id": "signals-systems.c02",
+          "title": "零输入、零状态与总响应",
           "depth": "综合应用",
           "keywords": [
-            "时域",
-            "频域",
-            "时域与频域",
-            "频域分析"
+            "零输入",
+            "零状态",
+            "总响应",
+            "零状态与总响应"
           ],
-          "knowledge_points": [
-            "频域分析"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -6769,18 +7630,17 @@
         },
         {
           "topic_id": "signals-systems.t05",
-          "chapter_id": "signals-systems.c05",
-          "title": "变换式与收敛域",
+          "chapter_id": "signals-systems.c03",
+          "title": "冲激响应与LTI判据",
           "depth": "综合应用",
           "keywords": [
-            "变换式",
-            "收敛域",
-            "变换式与收敛域",
-            "拉普拉斯与Z变换"
+            "冲激响应",
+            "LTI判据",
+            "冲激响应与",
+            "LTI",
+            "判据"
           ],
-          "knowledge_points": [
-            "拉普拉斯与Z变换"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -6800,17 +7660,18 @@
         },
         {
           "topic_id": "signals-systems.t06",
-          "chapter_id": "signals-systems.c06",
-          "title": "采样条件与抗混叠",
+          "chapter_id": "signals-systems.c03",
+          "title": "卷积反折、平移与重叠",
           "depth": "综合应用",
           "keywords": [
-            "采样条件",
-            "抗混叠",
-            "采样条件与抗混叠",
-            "采样定理"
+            "卷积反折",
+            "平移",
+            "重叠",
+            "平移与重叠",
+            "LTI系统与卷积"
           ],
           "knowledge_points": [
-            "采样定理"
+            "LTI系统与卷积"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -6831,11 +7692,102 @@
         },
         {
           "topic_id": "signals-systems.t07",
-          "chapter_id": "signals-systems.c07",
-          "title": "三种分析视角",
+          "chapter_id": "signals-systems.c04",
+          "title": "傅里叶级数与谱线",
+          "depth": "直接应用",
+          "keywords": [
+            "傅里叶级数",
+            "谱线",
+            "傅里叶级数与谱线"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "signals-systems.t08",
+          "chapter_id": "signals-systems.c04",
+          "title": "傅里叶变换与滤波",
           "depth": "综合应用",
           "keywords": [
-            "三种分析视角"
+            "傅里叶变换",
+            "滤波",
+            "傅里叶变换与滤波",
+            "频域分析"
+          ],
+          "knowledge_points": [
+            "频域分析"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "signals-systems.t09",
+          "chapter_id": "signals-systems.c05",
+          "title": "拉普拉斯变换、极点与ROC",
+          "depth": "综合应用",
+          "keywords": [
+            "拉普拉斯变换",
+            "极点",
+            "ROC",
+            "极点与",
+            "拉普拉斯与Z变换"
+          ],
+          "knowledge_points": [
+            "拉普拉斯与Z变换"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "signals-systems.t10",
+          "chapter_id": "signals-systems.c05",
+          "title": "Z变换与差分方程",
+          "depth": "综合应用",
+          "keywords": [
+            "Z变换",
+            "差分方程",
+            "变换与差分方程"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -6844,12 +7796,99 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
+            "直接计算",
             "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
+            "直接计算",
             "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "signals-systems.t11",
+          "chapter_id": "signals-systems.c06",
+          "title": "采样条件、混叠与重建",
+          "depth": "综合应用",
+          "keywords": [
+            "采样条件",
+            "混叠",
+            "重建",
+            "混叠与重建",
+            "采样定理"
+          ],
+          "knowledge_points": [
+            "采样定理"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "signals-systems.t12",
+          "chapter_id": "signals-systems.c06",
+          "title": "量化步长与数字化链路",
+          "depth": "综合应用",
+          "keywords": [
+            "量化步长",
+            "数字化链路",
+            "量化步长与数字化链路"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "signals-systems.t13",
+          "chapter_id": "signals-systems.c07",
+          "title": "时域、频域与复频域选择",
+          "depth": "直接应用",
+          "keywords": [
+            "时域",
+            "频域",
+            "复频域选择",
+            "频域与复频域选择"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
           ],
           "short_answer": true
         }
@@ -6901,7 +7940,7 @@
           "topic_id": "software-engineering.t01",
           "chapter_id": "software-engineering.c01",
           "title": "软件危机与工程化",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "软件危机",
             "软件工程",
@@ -6916,17 +7955,15 @@
             "软件工程基础"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -6934,7 +7971,7 @@
           "topic_id": "software-engineering.t02",
           "chapter_id": "software-engineering.c01",
           "title": "生命周期与验证确认",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "生命周期",
             "验证",
@@ -6946,17 +7983,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7027,7 +8062,7 @@
           "topic_id": "software-engineering.t05",
           "chapter_id": "software-engineering.c03",
           "title": "可行性与成本效益",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "可行性",
             "技术可行性",
@@ -7038,19 +8073,17 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "直接计算",
-            "分析应用"
+            "直接计算"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "直接计算",
-            "综合应用"
+            "直接计算"
           ],
           "short_answer": true
         },
@@ -7123,7 +8156,7 @@
           "topic_id": "software-engineering.t08",
           "chapter_id": "software-engineering.c04",
           "title": "总体设计与详细设计",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "总体设计",
             "概要设计",
@@ -7135,17 +8168,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7409,7 +8440,7 @@
           "topic_id": "software-engineering.t17",
           "chapter_id": "software-engineering.c07",
           "title": "风险、人员与沟通",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "风险管理",
             "风险识别",
@@ -7423,17 +8454,15 @@
             "项目管理"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7453,7 +8482,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -7483,7 +8512,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -7545,7 +8574,7 @@
           "topic_id": "information-security.t01",
           "chapter_id": "information-security.c01",
           "title": "CIA安全目标",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "机密性",
             "完整性",
@@ -7561,16 +8590,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7578,7 +8605,7 @@
           "topic_id": "information-security.t02",
           "chapter_id": "information-security.c01",
           "title": "风险链与安全原则",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "资产",
             "威胁",
@@ -7592,16 +8619,14 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7609,7 +8634,7 @@
           "topic_id": "information-security.t03",
           "chapter_id": "information-security.c02",
           "title": "控制分类与风险处置",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "预防控制",
             "检测控制",
@@ -7623,17 +8648,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7641,7 +8664,7 @@
           "topic_id": "information-security.t04",
           "chapter_id": "information-security.c02",
           "title": "账号口令与等级保护",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "口令",
             "盐",
@@ -7656,16 +8679,14 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7673,7 +8694,7 @@
           "topic_id": "information-security.t05",
           "chapter_id": "information-security.c03",
           "title": "恶意代码传播机制",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "病毒",
             "蠕虫",
@@ -7690,16 +8711,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7707,7 +8726,7 @@
           "topic_id": "information-security.t06",
           "chapter_id": "information-security.c03",
           "title": "社会工程与感染处置",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "钓鱼",
             "社会工程",
@@ -7719,17 +8738,15 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7759,14 +8776,12 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用",
-            "读写语句"
+            "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用",
-            "代码/语句"
+            "综合应用"
           ],
           "short_answer": true
         },
@@ -7806,7 +8821,7 @@
           "topic_id": "information-security.t09",
           "chapter_id": "information-security.c05",
           "title": "对称、非对称与混合加密",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "对称加密",
             "非对称加密",
@@ -7822,16 +8837,14 @@
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7839,7 +8852,7 @@
           "topic_id": "information-security.t10",
           "chapter_id": "information-security.c05",
           "title": "哈希、MAC、签名与证书",
-          "depth": "综合应用",
+          "depth": "直接应用",
           "keywords": [
             "哈希",
             "摘要",
@@ -7854,16 +8867,14 @@
           "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
+          "target_depth": "直接应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明",
-            "分析应用"
+            "完整说明"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明",
-            "综合应用"
+            "简答说明"
           ],
           "short_answer": true
         },
@@ -7919,7 +8930,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -7949,7 +8960,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -8021,7 +9032,7 @@
             "安全事件响应"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -8054,7 +9065,7 @@
             "隐私合规与责任"
           ],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -8085,7 +9096,7 @@
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "优先练",
+          "practice_priority": "补充练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",

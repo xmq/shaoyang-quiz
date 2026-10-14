@@ -167,72 +167,157 @@ net.tcp-connection
 information-security.t07
 """.split())
 
-# 数据结构按独立解题任务拆成细粒度复习卡。题目仍可按章节练习，
-# 重点页和错题回链则定位到具体结构或算法。
-DATA_STRUCTURE_TOPICS = {f"data-structures.t{index:02d}" for index in range(1, 25)}
-KEY_TOPICS.update(DATA_STRUCTURE_TOPICS)
-SHORT_ANSWER_TOPICS.update(DATA_STRUCTURE_TOPICS)
-APPLICATION_TOPICS.update(DATA_STRUCTURE_TOPICS)
-CALCULATION_TOPICS.update({
-    f"data-structures.t{index:02d}"
-    for index in (1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23)
-})
-CODE_TOPICS.update({
-    f"data-structures.t{index:02d}"
-    for index in (2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
-})
+# 每门课程的知识点都是必学内容。这里仅区分复习顺序和最终掌握深度，
+# 避免把整门课机械标成“优先练＋综合应用”。
+def set_course_guidance(
+    course_id: str,
+    count: int,
+    priority: tuple[int, ...] = (),
+    short_answer: tuple[int, ...] = (),
+    calculation: tuple[int, ...] = (),
+    application: tuple[int, ...] = (),
+    code: tuple[int, ...] = (),
+    supplement: tuple[int, ...] = (),
+) -> None:
+    all_topics = {f"{course_id}.t{index:02d}" for index in range(1, count + 1)}
+    for group in (KEY_TOPICS, SUPPLEMENT_TOPICS, SHORT_ANSWER_TOPICS, CALCULATION_TOPICS, APPLICATION_TOPICS, CODE_TOPICS):
+        group.difference_update(all_topics)
 
-OPERATING_SYSTEM_TOPICS = {f"operating-system.t{index:02d}" for index in range(1, 14)}
-KEY_TOPICS.update(OPERATING_SYSTEM_TOPICS)
-SHORT_ANSWER_TOPICS.update(OPERATING_SYSTEM_TOPICS)
-APPLICATION_TOPICS.update(OPERATING_SYSTEM_TOPICS)
-CALCULATION_TOPICS.update({
-    f"operating-system.t{index:02d}" for index in (5, 8, 9, 10, 13)
-})
-CODE_TOPICS.update({"operating-system.t06"})
+    def selected(numbers: tuple[int, ...]) -> set[str]:
+        return {f"{course_id}.t{index:02d}" for index in numbers}
 
-DATABASE_TOPICS = {f"database.t{index:02d}" for index in range(1, 19)}
-KEY_TOPICS.update(DATABASE_TOPICS)
-SHORT_ANSWER_TOPICS.update(DATABASE_TOPICS)
-APPLICATION_TOPICS.update(DATABASE_TOPICS)
-CALCULATION_TOPICS.update({
-    f"database.t{index:02d}" for index in (4, 5, 7, 8, 10, 12, 13, 14, 16, 17)
-})
-CODE_TOPICS.update({f"database.t{index:02d}" for index in (5, 6, 7, 8, 15, 16, 17, 18)})
+    KEY_TOPICS.update(selected(priority))
+    SUPPLEMENT_TOPICS.update(selected(supplement))
+    SHORT_ANSWER_TOPICS.update(selected(short_answer))
+    CALCULATION_TOPICS.update(selected(calculation))
+    APPLICATION_TOPICS.update(selected(application))
+    CODE_TOPICS.update(selected(code))
 
-PROGRAMMING_TOPICS = {f"programming.t{index:02d}" for index in range(1, 17)}
-KEY_TOPICS.update(PROGRAMMING_TOPICS)
-SHORT_ANSWER_TOPICS.update(PROGRAMMING_TOPICS)
-APPLICATION_TOPICS.update(PROGRAMMING_TOPICS)
-CALCULATION_TOPICS.update({f"programming.t{index:02d}" for index in (3, 4, 5, 6, 7, 10, 12)})
-CODE_TOPICS.update({f"programming.t{index:02d}" for index in range(1, 17)})
 
-COMPUTER_ORGANIZATION_TOPICS = {f"computer-organization.t{index:02d}" for index in range(1, 15)}
-KEY_TOPICS.update(COMPUTER_ORGANIZATION_TOPICS)
-SHORT_ANSWER_TOPICS.update(COMPUTER_ORGANIZATION_TOPICS)
-APPLICATION_TOPICS.update(COMPUTER_ORGANIZATION_TOPICS)
-CALCULATION_TOPICS.update({
-    f"computer-organization.t{index:02d}" for index in (2, 3, 4, 5, 7, 9, 10, 11, 12, 14)
-})
-
-COMPUTER_FOUNDATION_TOPICS = {f"computer-foundations.t{index:02d}" for index in range(1, 21)}
-KEY_TOPICS.update(COMPUTER_FOUNDATION_TOPICS)
-SHORT_ANSWER_TOPICS.update(COMPUTER_FOUNDATION_TOPICS)
-APPLICATION_TOPICS.update(COMPUTER_FOUNDATION_TOPICS)
-CALCULATION_TOPICS.update({"computer-foundations.t03", "computer-foundations.t04"})
-
-INFORMATION_SECURITY_TOPICS = {f"information-security.t{index:02d}" for index in range(1, 18)}
-KEY_TOPICS.update(INFORMATION_SECURITY_TOPICS)
-SHORT_ANSWER_TOPICS.update(INFORMATION_SECURITY_TOPICS)
-APPLICATION_TOPICS.update(INFORMATION_SECURITY_TOPICS)
-CODE_TOPICS.update({"information-security.t13"})
-
-SOFTWARE_ENGINEERING_TOPICS = {f"software-engineering.t{index:02d}" for index in range(1, 20)}
-KEY_TOPICS.update(SOFTWARE_ENGINEERING_TOPICS)
-SHORT_ANSWER_TOPICS.update(SOFTWARE_ENGINEERING_TOPICS)
-APPLICATION_TOPICS.update(SOFTWARE_ENGINEERING_TOPICS)
-CALCULATION_TOPICS.update({"software-engineering.t05", "software-engineering.t12", "software-engineering.t16"})
-
+set_course_guidance(
+    "office", 17,
+    priority=(4, 5, 8, 9, 10, 11, 12, 14, 16),
+    short_answer=(1, 2, 4, 5, 7, 10, 12, 14, 16, 17),
+    calculation=(9, 10, 12),
+    application=(4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17),
+    supplement=(2, 3),
+)
+set_course_guidance(
+    "computer-foundations", 20,
+    priority=(2, 3, 5, 6, 7, 8, 10, 12, 14, 16),
+    short_answer=(1, 2, 5, 7, 8, 10, 12, 14, 16, 19, 20),
+    calculation=(3, 4),
+    application=(2, 7, 8, 10, 12, 13, 14, 15, 16, 17, 20),
+    supplement=(9, 11, 13, 15, 17, 18, 19),
+)
+set_course_guidance(
+    "multimedia", 16,
+    priority=(3, 4, 5, 8, 10, 11, 13, 14),
+    short_answer=(1, 2, 3, 5, 8, 11, 12, 13, 15, 16),
+    calculation=(3, 4, 8, 10, 11, 14),
+    application=(5, 7, 11, 12, 15, 16),
+    supplement=(2, 9, 15, 16),
+)
+set_course_guidance(
+    "operating-system", 13,
+    priority=(3, 4, 5, 6, 7, 8, 9, 10, 13),
+    short_answer=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13),
+    calculation=(5, 8, 9, 10, 13),
+    application=(4, 6, 7, 9, 10, 13),
+    code=(6,),
+    supplement=(2, 12),
+)
+set_course_guidance(
+    "database", 18,
+    priority=(2, 4, 5, 7, 8, 10, 12, 13, 15, 16),
+    short_answer=tuple(range(1, 19)),
+    calculation=(4, 5, 7, 8, 10, 12, 13, 14, 16, 17),
+    application=(2, 3, 5, 8, 11, 12, 13, 14, 15, 16, 17, 18),
+    code=(5, 6, 7, 8, 15, 16, 17, 18),
+    supplement=(9, 11, 18),
+)
+set_course_guidance(
+    "data-structures", 24,
+    priority=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 16, 18, 20, 21, 22),
+    short_answer=tuple(range(1, 25)),
+    calculation=(1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23),
+    application=(2, 3, 4, 5, 6, 14, 15, 16, 17, 24),
+    code=(2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23),
+    supplement=(7, 13),
+)
+set_course_guidance(
+    "programming", 16,
+    priority=(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15),
+    short_answer=(1, 2, 4, 8, 9, 10, 12, 14, 15, 16),
+    calculation=(3, 4, 5, 6, 7, 10, 12),
+    application=(6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16),
+    code=tuple(range(1, 17)),
+    supplement=(1, 2, 13, 16),
+)
+set_course_guidance(
+    "computer-organization", 14,
+    priority=(2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14),
+    short_answer=(1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14),
+    calculation=(2, 3, 4, 5, 7, 9, 10, 11, 12, 14),
+    application=(2, 5, 7, 9, 10, 11, 13, 14),
+    supplement=(8, 12),
+)
+set_course_guidance(
+    "circuit", 12,
+    priority=(2, 3, 4, 5, 6, 7, 10, 12),
+    short_answer=tuple(range(1, 13)),
+    calculation=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11),
+    application=(3, 4, 6, 7, 8, 10, 12),
+    supplement=(9,),
+)
+set_course_guidance(
+    "analog-electronics", 10,
+    priority=(2, 3, 4, 5, 6, 7, 8, 10),
+    short_answer=tuple(range(1, 11)),
+    calculation=(2, 4, 5, 6, 7, 8, 9, 10),
+    application=(4, 5, 6, 7, 8, 10),
+    supplement=(1, 9),
+)
+set_course_guidance(
+    "digital-electronics", 11,
+    priority=(2, 3, 4, 5, 6, 7, 8, 11),
+    short_answer=tuple(range(1, 12)),
+    calculation=(1, 3, 4, 6, 7, 8, 9, 10, 11),
+    application=(3, 4, 5, 6, 7, 8, 9),
+    supplement=(1, 10),
+)
+set_course_guidance(
+    "communication", 16,
+    priority=(2, 3, 4, 5, 8, 9, 11, 14, 15),
+    short_answer=tuple(range(1, 17)),
+    calculation=(2, 3, 4, 5, 7, 8, 9, 11, 12, 14, 15, 16),
+    application=(5, 6, 8, 9, 10, 12, 13, 14, 15, 16),
+    supplement=(7, 13),
+)
+set_course_guidance(
+    "signals-systems", 13,
+    priority=(1, 2, 3, 5, 6, 8, 9, 11),
+    short_answer=tuple(range(1, 14)),
+    calculation=tuple(range(1, 13)),
+    application=(3, 4, 5, 6, 8, 9, 10, 11, 12),
+    supplement=(13,),
+)
+set_course_guidance(
+    "software-engineering", 19,
+    priority=(3, 4, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16),
+    short_answer=tuple(range(1, 20)),
+    calculation=(5, 12, 16),
+    application=(3, 4, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19),
+    supplement=(1, 2, 17),
+)
+set_course_guidance(
+    "information-security", 17,
+    priority=(1, 2, 4, 5, 7, 8, 9, 10, 11, 14),
+    short_answer=tuple(range(1, 18)),
+    application=(7, 8, 11, 12, 13, 14, 15, 16, 17),
+    code=(13,),
+    supplement=(3, 16, 17),
+)
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]

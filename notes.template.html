@@ -1132,6 +1132,13 @@
           continue;
         }
 
+        const inlineDetailsSummary = trimmed.match(/^<details>\s*<summary>(.+)<\/summary>$/);
+        if (inlineDetailsSummary) {
+          closeList();
+          output.push('<details class="answer-details"><summary>' + formatInline(inlineDetailsSummary[1]) + '</summary>');
+          index += 1;
+          continue;
+        }
         if (trimmed === "<details>") {
           closeList();
           output.push('<details class="answer-details">');

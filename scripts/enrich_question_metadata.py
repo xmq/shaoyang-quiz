@@ -61,6 +61,68 @@ PROGRAMMING_TOPIC_OVERRIDES = {
     "hn-recall-cs25-001": 14,
 }
 
+COURSE_TOPIC_OVERRIDES = {
+    "办公软件": {
+        "web-28": 5, "cg-13-s1-q11": 6, "cg-13-s1-q31": 6,
+        "cg-12-s1-q3": 8, "cg-12-s1-q18": 8, "cg-13-s1-q38": 8,
+        "cg-13-s1-q43": 8, "cg-13-s1-q65": 8, "ua-office-015": 11,
+        "ap-of-006": 17,
+    },
+    "多媒体": {
+        "dy-e77f3198": 4, "dy-d93b9d22": 7, "dy-0bd8dc94": 7,
+        "dy-fa7fa77f": 9, "dy-1a9b3e74": 9, "zg-39584": 4,
+        "ap-mm-004": 4, "ua-media-004": 4, "ua-media-008": 11,
+        "cg-02-s3-q2": 3, "cg-14-s1-q46": 10,
+    },
+    "电路分析与电工技术": {
+        "uf-ee-018": 6, "uf-ee-019": 7, "uf-ee-020": 7,
+        "uf-ee-023": 9, "uf-ee-024": 8, "ue-circuit-014": 5,
+        "sp-elec-circuit-001": 11, "sp-elec-circuit-002": 11,
+        "sp-elec-circuit-020": 11, "sp-elec-circuit-021": 11,
+        "sp-elec-circuit-026": 11, "sp-elec-circuit-011": 12,
+        "sp-elec-circuit-012": 12, "sp-elec-circuit-014": 12,
+        "sp-elec-circuit-019": 12, "sp-elec-circuit-023": 12,
+        "sp-elec-circuit-025": 12, "sp-elec-circuit-027": 12,
+        "sp-elec-circuit-030": 12,
+    },
+    "模拟电子技术": {
+        "ue-analog-001": 2, "ue-analog-004": 4, "ue-analog-015": 3,
+        "uf-ae-017": 6, "uf-ae-018": 6, "uf-ae-019": 6,
+        "uf-ae-024": 10, "ap-analog-004": 6,
+        "sp-elec-analog-010": 10, "sp-elec-analog-011": 10,
+        "sp-elec-analog-012": 10, "sp-elec-analog-013": 10,
+        "sp-elec-analog-019": 10, "sp-elec-analog-020": 10,
+        "sp-elec-analog-025": 10, "sp-elec-analog-026": 10,
+        "sp-elec-analog-029": 10, "sp-elec-analog-030": 10,
+    },
+    "数字电子技术": {
+        "sp-elec-digital-002": 2, "sp-elec-digital-003": 10,
+        "sp-elec-digital-028": 10, "sp-elec-digital-011": 11,
+        "sp-elec-digital-012": 11, "sp-elec-digital-018": 11,
+        "sp-elec-digital-024": 11, "sp-elec-digital-025": 11,
+        "sp-elec-digital-029": 11, "sp-elec-digital-030": 11,
+        "ap-digital-006": 10,
+    },
+    "通信原理与高频电子线路": {
+        "uf-cm-003": 2, "uf-cm-020": 11, "ap-comm-002": 6,
+        "ue-comm-001": 11, "ue-comm-006": 5, "ue-comm-008": 9, "ue-comm-009": 9,
+        "sp-elec-comm-004": 12, "sp-elec-comm-005": 12,
+        "sp-elec-comm-006": 12, "sp-elec-comm-007": 12,
+        "sp-elec-comm-015": 12, "sp-elec-comm-016": 12,
+        "sp-elec-comm-021": 12, "sp-elec-comm-026": 12,
+        "sp-elec-comm-008": 13, "sp-elec-comm-009": 14,
+        "sp-elec-comm-017": 13, "sp-elec-comm-019": 13,
+        "sp-elec-comm-020": 14, "sp-elec-comm-023": 13,
+        "sp-elec-comm-027": 14, "sp-elec-comm-028": 14,
+        "sp-elec-comm-011": 15, "sp-elec-comm-012": 15,
+        "sp-elec-comm-013": 15, "sp-elec-comm-014": 15,
+        "sp-elec-comm-018": 16, "sp-elec-comm-022": 16,
+        "sp-elec-comm-029": 16, "sp-elec-comm-030": 16,
+        "gap-comm-002": 16,
+    },
+}
+
+
 SUBJECT_OVERRIDES = {
     "zg-4542": "算法与数据结构",
     "cg-04-s1-q16": "算法与数据结构",
@@ -197,6 +259,14 @@ REMOVED_QUESTION_IDS = {
     "cg-06-s1-q57", "dy-80d7632d", "dy-afba316e", "dy-1057d716",
     "dy-debdaa71", "zg-91871", "zg-24227", "dy-0fdc6c59",
     "zg-68262",
+    # 微控制器、总线与现场调试属于数字系统接口专题，不纳入通用数电核心。
+    "sp-elec-digital-001", "sp-elec-digital-004", "sp-elec-digital-005",
+    "sp-elec-digital-006", "sp-elec-digital-007", "sp-elec-digital-008",
+    "sp-elec-digital-009", "sp-elec-digital-010", "sp-elec-digital-013",
+    "sp-elec-digital-014", "sp-elec-digital-015", "sp-elec-digital-016",
+    "sp-elec-digital-017", "sp-elec-digital-019", "sp-elec-digital-020",
+    "sp-elec-digital-021", "sp-elec-digital-022", "sp-elec-digital-023",
+    "sp-elec-digital-026", "sp-elec-digital-027",
 }
 
 ABILITY_VALUES = frozenset({
@@ -509,6 +579,14 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                 "required_depth": manual["depth"],
                 "topic_order": topics.index(manual),
             }
+    override_number = COURSE_TOPIC_OVERRIDES.get(subject, {}).get(str(question.get("id")))
+    if override_number and override_number <= len(topics):
+        best = topics[override_number - 1]
+        return {
+            "topic_id": best["topic_id"], "topic_title": best["title"],
+            "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+            "topic_order": override_number - 1,
+        }
     if subject == "数据库":
         # 数据库题干中的“选择”“关系”等普通词很容易撞上关系代数。
         # 按独立解题任务使用题干规则，并让恢复、安全等窄主题优先匹配。
@@ -712,7 +790,7 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                 best = topics[topic_number - 1]
                 return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
     best = topics[0]
-    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言", "计算机组成原理", "信息安全", "计算机基础", "信息基础", "大数据", "软件工程"}:
+    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言", "计算机组成原理", "信息安全", "计算机基础", "信息基础", "大数据", "软件工程", "办公软件", "多媒体", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "信号与系统"}:
         core_text = question_text(question, include_options=False)
         stem_text = normalized_text(question.get("stem"))
         best_score = (0, 0, 0, 0, 0, 0, 0)

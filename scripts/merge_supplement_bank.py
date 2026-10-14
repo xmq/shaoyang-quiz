@@ -25,7 +25,7 @@ STAGING_SPECS = {
     ROOT / "staging" / "supplement_electronics_practical.json": {
         "电路分析与电工技术": 30,
         "模拟电子技术": 30,
-        "数字电子技术": 30,
+        "数字电子技术": 10,
         "通信原理与高频电子线路": 30,
     },
 }
@@ -137,8 +137,9 @@ def load_candidates() -> list[dict]:
             # 用三分之一上限防止普通识记点被批量简答化。
             if type_counts[subject]["简答"] > max(2, expected_count // 3):
                 errors.append(f"{path.name}: {subject}简答题超过总量三分之一")
-            if type_counts[subject]["判断"] < 5:
-                errors.append(f"{path.name}: {subject}至少应含5道判断")
+            minimum_judgments = min(5, max(1, expected_count // 6))
+            if type_counts[subject]["判断"] < minimum_judgments:
+                errors.append(f"{path.name}: {subject}至少应含{minimum_judgments}道判断")
     if errors:
         raise ValueError("补充题库校验失败：\n" + "\n".join(errors[:150]))
     return candidates

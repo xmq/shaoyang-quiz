@@ -1,7 +1,7 @@
 importScripts("./build-meta.js");
 
 const CACHE_PREFIX = "shaoyang-quiz-";
-const SHELL_REVISION = "mobile-study-12";
+const SHELL_REVISION = "mobile-study-13";
 const CACHE_NAME = `${CACHE_PREFIX}${globalThis.SHAOYANG_BUILD?.id || "development"}-${SHELL_REVISION}`;
 const NETWORK_TIMEOUT_MS = 4500;
 const CORE_ASSETS = [
@@ -99,7 +99,23 @@ const CORE_ASSETS = [
   "./media/tcp_handshake.svg",
   "./media/tcp_congestion.svg",
   "./media/streaming_buffer.svg",
-  "./media/wlan_hidden_station.svg"
+  "./media/wlan_hidden_station.svg",
+  "./media/office_styles.svg",
+  "./media/office_sections.svg",
+  "./media/office_references.svg",
+  "./media/office_data_flow.svg",
+  "./media/office_master.svg",
+  "./media/multimedia_signal_chain.svg",
+  "./media/multimedia_bitmap_vector.svg",
+  "./media/multimedia_audio_chain.svg",
+  "./media/multimedia_container_codec.svg",
+  "./media/multimedia_compression_choice.svg",
+  "./media/comm_eye_diagram.svg",
+  "./media/signal_time_transform.svg",
+  "./media/signal_convolution.svg",
+  "./media/signal_frequency_filter.svg",
+  "./media/signal_roc.svg",
+  "./media/signal_sampling_alias.svg"
 ];
 
 self.addEventListener("install", (event) => {
