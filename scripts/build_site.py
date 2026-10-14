@@ -21,6 +21,7 @@ STATIC_FILES = (
     "style.css",
     "app.js",
     "home.js",
+    "reset-data.js",
     "question-media.js",
     "sw.js",
     "manifest.webmanifest",

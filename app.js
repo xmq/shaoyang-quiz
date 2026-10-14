@@ -1824,17 +1824,7 @@ function bindGlobalEvents() {
   });
   $("reset").addEventListener("click", () => {
     closeDrawer();
-    if (!confirm("确定重置所有进度？错题、收藏、历史记录将一并清除。")) return;
-    try {
-      localStorage.removeItem(STORE_KEY);
-      for (const key of LEGACY_KEYS) {
-        localStorage.removeItem(key);
-      }
-    } catch {}
-    state = initialState();
-    mockSession = null;
-    persistMockSession();
-    render();
+    window.clearStudyData();
   });
 
   document.addEventListener("keydown", (event) => {

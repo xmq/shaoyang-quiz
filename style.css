@@ -3103,6 +3103,16 @@ body:not(.platform-home) {
 
 .study-home .home-brand strong { color: var(--study-navy); font-size: 17px; letter-spacing: .04em; }
 .study-home .home-brand small { color: #728492; font-size: 10px; letter-spacing: .05em; }
+.home-reset {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid #d8e2ea;
+  border-radius: 999px;
+  background: #fff;
+  color: #667987;
+  font-size: 12px;
+  font-weight: 750;
+}
 .study-home .home-main {
   width: min(1180px, calc(100% - 28px));
   padding: 18px 0 78px;
@@ -3234,6 +3244,7 @@ body:not(.platform-home) {
   .study-home .home-brand-mark { width: 32px; height: 32px; }
   .study-home .home-brand strong { font-size: 15px; }
   .study-home .home-brand small { display: block; font-size: 9px; }
+  .home-reset { min-height: 34px; padding: 5px 11px; font-size: 11px; }
   .study-home .home-main { width: 100%; padding: 10px 12px 24px; }
   .study-home-hero { max-width: none; }
   .study-start-card { padding: 16px; }
@@ -3266,6 +3277,7 @@ body:not(.platform-home) {
   .study-home { --study-paper: #0c1724; --study-card: #142234; --study-line: #263a50; --study-copy: #9fb0bf; }
   .study-home .home-header { background: rgba(12, 23, 36, .94); }
   .study-home .home-brand strong, .study-section-heading h2, .home-course-copy strong { color: #edf5fb; }
+  .home-reset { border-color: #2b4055; background: #142234; color: #b8c6d2; }
   .study-home .course-jumps { background: rgba(12, 23, 36, .95); }
   .study-home .course-jumps button { border-color: #2b4055; background: #142234; color: #b1bfcc; }
   .home-course-icon { background: #173f3c; color: #9aeee5; }

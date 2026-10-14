@@ -17,6 +17,7 @@ CORE_HASHED_ASSETS = [
     "icon.svg",
     "home-data.js",
     "home.js",
+    "reset-data.js",
     "index.html",
     "manifest.webmanifest",
     "notes.html",

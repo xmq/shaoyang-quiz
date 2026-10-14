@@ -193,6 +193,7 @@
   }
 
   const progress = readProgress();
+  document.getElementById("home-reset").addEventListener("click", () => window.clearStudyData());
   buildCourseMenu(progress);
   buildCourseGrid(progress);
   bindCourseFilters();
