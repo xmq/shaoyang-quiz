@@ -563,8 +563,8 @@
   "id": "ua-media-011",
   "source": "大学期末改编",
   "type": "多选",
-  "chapter": "Photoshop图像处理",
-  "stem": "关于Photoshop中的图层和蒙版，正确的有（ ）。",
+  "chapter": "图层与蒙版",
+  "stem": "在支持图层与蒙版的图像编辑软件中，正确的有（ ）。",
   "options": {
    "A": "图层便于独立组织与编辑对象",
    "B": "蒙版可控制内容显示与隐藏而不必直接删除像素",
@@ -572,12 +572,12 @@
    "D": "导出JPEG会完整保留所有图层结构"
   },
   "answer": "ABC",
-  "explanation": "图层、蒙版和调整图层支持可逆编辑；JPEG通常是扁平化输出格式，不保存Photoshop完整图层结构。",
+  "explanation": "图层便于独立组织对象，蒙版通过灰度控制显示与隐藏，调整图层支持非破坏编辑；JPEG通常是扁平化交付格式，不能完整保留可编辑图层结构。",
   "subject": "多媒体",
-  "source_chapter": "图层、通道、滤镜与图像加工",
+  "source_chapter": "图层、蒙版与非破坏编辑",
   "source_url": "https://jwc.ncut.edu.cn/__local/9/73/B8/906A4418D4628200D86DF78001D_A93A62A8_33F9D.pdf",
   "source_title": "北方工业大学《多媒体技术》课程教学大纲",
-  "adaptation_note": "依据Photoshop工具考核要点，重新命制非破坏编辑多选题。",
+  "adaptation_note": "依据图像编辑共同原理，改编为平台无关的非破坏编辑多选题。",
   "knowledge_point": "图形图像",
   "ability": "概念识记",
   "difficulty": "应用"

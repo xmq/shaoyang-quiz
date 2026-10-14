@@ -269,6 +269,63 @@ REMOVED_QUESTION_IDS = {
     "sp-elec-digital-026", "sp-elec-digital-027",
 }
 
+REMOVED_LEGACY_COURSE_IDS = {
+    'cg-02-s2-q6', 'cg-02-s2-q8', 'cg-02-s3-q4', 'cg-02-s3-q5', 'cg-11-s1-q20',
+    'cg-11-s1-q22', 'cg-11-s1-q23', 'cg-11-s1-q33', 'cg-11-s1-q37', 'cg-11-s1-q52',
+    'cg-11-s1-q6', 'cg-11-s1-q69', 'cg-12-s1-q11', 'cg-12-s1-q11-dup2', 'cg-12-s1-q13-dup2',
+    'cg-12-s1-q15-dup2', 'cg-12-s1-q20-dup2', 'cg-12-s1-q21-dup2', 'cg-12-s1-q26-dup2', 'cg-12-s1-q3',
+    'cg-12-s1-q36', 'cg-12-s1-q54', 'cg-12-s1-q72', 'cg-12-s1-q8-dup2', 'cg-12-s2-q11-dup2',
+    'cg-13-s1-q10-dup2', 'cg-13-s1-q12', 'cg-13-s1-q12-dup2', 'cg-13-s1-q13-dup2', 'cg-13-s1-q14-dup2',
+    'cg-13-s1-q15-dup2', 'cg-13-s1-q16-dup2', 'cg-13-s1-q17', 'cg-13-s1-q18-dup2', 'cg-13-s1-q19-dup2',
+    'cg-13-s1-q20-dup2', 'cg-13-s1-q23', 'cg-13-s1-q23-dup2', 'cg-13-s1-q24-dup2', 'cg-13-s1-q26-dup2',
+    'cg-13-s1-q28', 'cg-13-s1-q28-dup2', 'cg-13-s1-q31-dup2', 'cg-13-s1-q32-dup2', 'cg-13-s1-q35-dup2',
+    'cg-13-s1-q36-dup2', 'cg-13-s1-q38-dup2', 'cg-13-s1-q42-dup2', 'cg-13-s1-q43-dup2', 'cg-13-s1-q45',
+    'cg-13-s1-q45-dup2', 'cg-13-s1-q46-dup2', 'cg-13-s1-q47-dup2', 'cg-13-s1-q48-dup2', 'cg-13-s1-q49-dup2',
+    'cg-13-s1-q5-dup2', 'cg-13-s1-q51-dup2', 'cg-13-s1-q54-dup2', 'cg-13-s1-q55', 'cg-13-s1-q57-dup2',
+    'cg-13-s1-q58-dup2', 'cg-13-s1-q59-dup2', 'cg-13-s1-q6-dup2', 'cg-13-s1-q68', 'cg-13-s1-q70',
+    'cg-13-s1-q72', 'cg-13-s1-q73', 'cg-13-s1-q74', 'cg-13-s1-q9', 'cg-13-s1-q9-dup2',
+    'cg-13-s2-q6', 'cg-13-s2-q8', 'cg-13-s2-q9', 'cg-14-s1-q1', 'cg-14-s1-q16',
+    'cg-14-s1-q19', 'cg-14-s1-q2', 'cg-14-s1-q29', 'cg-14-s1-q30', 'cg-14-s1-q31',
+    'cg-14-s1-q37', 'cg-14-s1-q38', 'cg-14-s1-q41', 'cg-14-s1-q42', 'cg-14-s1-q43',
+    'cg-14-s1-q46', 'cg-14-s1-q5', 'cg-14-s2-q3', 'cg-14-s2-q4', 'cg-14-s2-q5',
+    'cg-14-s2-q6', 'cg-14-s2-q8', 'dy-0bd8dc94', 'dy-0ebf6e71', 'dy-10b6e8e8',
+    'dy-188ea520', 'dy-1d579f68', 'dy-21546db0', 'dy-24fdeec6', 'dy-2ad8e253',
+    'dy-2d94b71f', 'dy-361ee2ae', 'dy-451726e5', 'dy-536d6820', 'dy-584a2e52',
+    'dy-5d7db5e4', 'dy-6ce6f7cc', 'dy-8ef348fc', 'dy-981d49ba', 'dy-aa301b99',
+    'dy-c4ba7b78', 'dy-d05820ee', 'dy-d93b9d22', 'dy-f282e911', 'dy-fa96ac76',
+    'dy-fb2048c1', 'web-17', 'zg-16318', 'zg-27203', 'zg-2876',
+    'zg-33638', 'zg-36807', 'zg-41643', 'zg-47150', 'zg-50161',
+    'zg-53795', 'zg-57642', 'zg-6041', 'zg-63177', 'zg-64787',
+    'zg-67040', 'zg-74856', 'zg-75558', 'zg-79192', 'zg-8100',
+    'zg-89154', 'zg-96441', 'zg-97108', 'zg-97592', 'zg-99167',
+    'zg-9989',
+}
+
+REMOVED_OLD_OFFICE_VERSION_IDS = {
+    'cg-11-s1-q10', 'cg-11-s1-q14', 'cg-11-s1-q15', 'cg-11-s1-q24', 'cg-11-s1-q25',
+    'cg-11-s1-q27', 'cg-11-s1-q29', 'cg-11-s1-q39', 'cg-11-s1-q40', 'cg-11-s1-q64',
+    'cg-11-s1-q8', 'cg-12-s1-q13', 'cg-12-s1-q15', 'cg-12-s1-q16', 'cg-12-s1-q18',
+    'cg-12-s1-q18-dup2', 'cg-12-s1-q19-dup2', 'cg-12-s1-q22', 'cg-12-s1-q25', 'cg-12-s1-q27',
+    'cg-12-s1-q28', 'cg-12-s1-q38', 'cg-12-s1-q5', 'dy-76176218', 'zg-12274',
+    'zg-18377', 'zg-21745', 'zg-34814', 'zg-36873', 'zg-65377',
+    'zg-68421', 'zg-82387', 'zg-83962', 'zg-84092', 'zg-86151',
+}
+
+REMOVED_OLD_MEDIA_PRODUCT_IDS = {
+    "zg-61618", "zg-71238", "dy-05a4c679",
+}
+REMOVED_OFFICE_UI_TRIVIA_IDS = {
+    "cg-11-s1-q9", "cg-11-s1-q18", "cg-11-s1-q19", "cg-11-s1-q36",
+    "cg-11-s1-q59", "cg-11-s1-q66", "cg-12-s2-q10", "cg-12-s2-q11",
+    "cg-12-s1-q9-dup2", "cg-12-s1-q27-dup2", "cg-12-s2-q7-dup2",
+    "cg-12-s2-q9-dup2", "cg-13-s1-q3", "cg-13-s1-q4", "cg-13-s1-q5",
+    "cg-13-s1-q11", "cg-13-s1-q18", "cg-13-s1-q19", "cg-13-s1-q33",
+    "cg-13-s1-q37", "cg-13-s1-q38", "cg-13-s1-q43", "cg-13-s1-q47",
+    "cg-13-s1-q48", "cg-13-s1-q49", "cg-13-s1-q56", "cg-13-s1-q58",
+    "cg-13-s1-q59", "cg-13-s1-q60", "cg-13-s1-q62", "cg-13-s1-q63",
+    "cg-13-s1-q64", "zg-777", "dy-d178b8b9", "dy-8d6ad4e0",
+    "dy-deb49e81", "cg-12-s1-q2",
+}
 ABILITY_VALUES = frozenset({
     "概念识记",
     "比较辨析",
@@ -587,6 +644,56 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
             "chapter_id": best["chapter_id"], "required_depth": best["depth"],
             "topic_order": override_number - 1,
         }
+    if subject in {"办公软件", "多媒体"}:
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (
+                (
+                    (17, r"协作|版本冲突|链接对象|嵌入对象|兼容性检查|隐藏信息|交付检查"),
+                    (16, r"跨组件|组合工具|综合任务|经营汇报"),
+                    (15, r"动画|切换|放映|排练计时|演讲者视图"),
+                    (14, r"母版|主题|版式|占位符"),
+                    (13, r"图表|打印|保护|加密"),
+                    (12, r"数据透视|分类汇总"),
+                    (11, r"排序|筛选|数据验证|条件格式|冻结窗格"),
+                    (10, r"vlookup|xlookup|countif|average|sum|if函数|函数|#n/a|#value|max|min"),
+                    (9, r"相对引用|绝对引用|混合引用|$[a-z]"),
+                    (8, r"工作簿|工作表|单元格|公式|填充序列|数据类型"),
+                    (7, r"邮件合并|修订|批注|合并域"),
+                    (6, r"题注|交叉引用|图片环绕|表格.*(?:行|列|单元格)|对象"),
+                    (5, r"分节|页眉|页脚|页码|分页|分栏|页边距"),
+                    (4, r"样式|自动目录|导航窗格|大纲"),
+                    (2, r"自动恢复|备份|另存为|保存|恢复"),
+                    (1, r"文件格式|扩展名|兼容|pdf|csv"),
+                )
+                if subject == "办公软件"
+                else (
+                    (16, r"交付检查|发布测试|版权|多终端"),
+                    (15, r"需求分析|脚本|分镜|素材组织"),
+                    (14, r"压缩比|节省率|格式选择"),
+                    (13, r"无损|有损|冗余|压缩"),
+                    (12, r"自适应|流媒体|缓冲|直播|点播|卡顿"),
+                    (11, r"视频|编码器|容器|h.?264|mp4"),
+                    (10, r"动画|关键帧|补间|时间轴|帧率"),
+                    (9, r"midi|波形音频|wav|mp3|flac"),
+                    (8, r"pcm|声音采集|音频容量|麦克风|声道"),
+                    (7, r"图层|蒙版|透明|jpeg|jpg|png|gif|svg|psd"),
+                    (6, r"rgb|cmyk|hsv|颜色模型|色域"),
+                    (5, r"位图|矢量|像素|分辨率|重采样"),
+                    (4, r"容量|码率|bit|byte"),
+                    (3, r"采样|量化|奈奎斯特|数字化"),
+                    (2, r"超文本|超媒体"),
+                )
+            )
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {
+                    "topic_id": best["topic_id"], "topic_title": best["title"],
+                    "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+                    "topic_order": topic_number - 1,
+                }
     if subject == "数据库":
         # 数据库题干中的“选择”“关系”等普通词很容易撞上关系代数。
         # 按独立解题任务使用题干规则，并让恢复、安全等窄主题优先匹配。
@@ -987,7 +1094,7 @@ def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
     for index, question in enumerate(questions, 1):
         if not isinstance(question, dict):
             raise ValueError(f"第{index}项不是题目对象")
-        if str(question.get("id")) in REMOVED_QUESTION_IDS:
+        if str(question.get("id")) in REMOVED_QUESTION_IDS | REMOVED_LEGACY_COURSE_IDS | REMOVED_OLD_OFFICE_VERSION_IDS | REMOVED_OLD_MEDIA_PRODUCT_IDS | REMOVED_OFFICE_UI_TRIVIA_IDS:
             changed_ids.append(str(question.get("id")))
             continue
         source_question = dict(question)

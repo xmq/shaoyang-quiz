@@ -7162,7 +7162,7 @@
     "points": 2
    }
   ],
-  "subject": "Office软件操作",
+  "subject": "办公软件",
   "source_chapter": "按任务组合工具",
   "adaptation_note": "补齐跨工具综合任务。",
   "topic_source": "manual",
@@ -7197,7 +7197,7 @@
     "points": 1
    }
   ],
-  "subject": "大学计算机基础与新技术",
+  "subject": "计算机基础",
   "source_chapter": "计算思维与算法步骤",
   "adaptation_note": "补齐算法过程题。",
   "topic_source": "manual",
@@ -7232,7 +7232,7 @@
     "points": 2
    }
   ],
-  "subject": "大学计算机基础与新技术",
+  "subject": "计算机基础",
   "source_chapter": "公有云、私有云与云边协同",
   "adaptation_note": "补齐云边场景选型。",
   "topic_source": "manual",
@@ -7267,7 +7267,7 @@
     "points": 1
    }
   ],
-  "subject": "大学计算机基础与新技术",
+  "subject": "计算机基础",
   "source_chapter": "数据流程、4V与质量治理",
   "adaptation_note": "补齐数据治理过程题。",
   "topic_source": "manual",
@@ -7302,7 +7302,7 @@
     "points": 2
    }
   ],
-  "subject": "大学计算机基础与新技术",
+  "subject": "计算机基础",
   "source_chapter": "设备身份、安全与失联",
   "adaptation_note": "补齐物联网失联场景。",
   "topic_source": "manual",
@@ -7337,7 +7337,7 @@
     "points": 1
    }
   ],
-  "subject": "大学计算机基础与新技术",
+  "subject": "计算机基础",
   "source_chapter": "信息系统与数字化建设",
   "adaptation_note": "补齐信息系统建设过程。",
   "topic_source": "manual",
@@ -7372,7 +7372,7 @@
     "points": 1
    }
   ],
-  "subject": "多媒体技术",
+  "subject": "多媒体",
   "source_chapter": "流媒体与自适应播放",
   "adaptation_note": "补齐流媒体机制题。",
   "topic_source": "manual",
@@ -7407,7 +7407,7 @@
     "points": 1
    }
   ],
-  "subject": "多媒体技术",
+  "subject": "多媒体",
   "source_chapter": "需求、脚本与素材组织",
   "adaptation_note": "补齐多媒体项目过程题。",
   "topic_source": "manual",
@@ -7442,7 +7442,7 @@
     "points": 1
    }
   ],
-  "subject": "操作系统原理",
+  "subject": "操作系统",
   "source_chapter": "进程状态与切换",
   "adaptation_note": "补齐状态推演题。",
   "topic_source": "manual",
@@ -7481,7 +7481,7 @@
     "points": 1
    }
   ],
-  "subject": "数据库技术",
+  "subject": "数据库",
   "source_chapter": "分解、无损连接与依赖保持",
   "adaptation_note": "补齐分解双判据。",
   "topic_source": "manual",
@@ -7516,7 +7516,7 @@
     "points": 1
    }
   ],
-  "subject": "数据结构与算法",
+  "subject": "算法与数据结构",
   "source_chapter": "数组、稀疏矩阵与广义表",
   "adaptation_note": "补齐数组地址与稀疏表示。",
   "topic_source": "manual",
@@ -7551,7 +7551,7 @@
     "points": 1
    }
   ],
-  "subject": "数据结构与算法",
+  "subject": "算法与数据结构",
   "source_chapter": "遍历与树的还原",
   "adaptation_note": "补齐树还原过程题。",
   "topic_source": "manual",
@@ -7586,7 +7586,7 @@
     "points": 1
    }
   ],
-  "subject": "C与Python程序设计",
+  "subject": "编程语言",
   "source_chapter": "输入输出与顺序跟踪",
   "adaptation_note": "补齐输入类型代码题。",
   "topic_source": "manual",
@@ -8152,6 +8152,682 @@
   "topic_title": "追踪、反馈与持续改进",
   "knowledge_point": "软件工程基础",
   "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-001",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "邮件合并、修订与批注",
+  "stem": "需要根据学生名单批量生成100份成绩通知书。说明从整理数据源到生成文件的主要步骤，并写出至少两个合并前应检查的项目。",
+  "options": {},
+  "answer": "整理每名学生一行、字段名清楚的数据源；制作主文档并插入姓名、成绩等合并域；预览若干记录，检查空值、日期数字格式和版面；执行合并并抽查结果，按要求保存源文件和交付文件。",
+  "explanation": "邮件合并把固定版式放在主文档，把变化内容放在数据源。预览能在批量生成前发现字段映射和格式问题。",
+  "max_score": 5,
+  "rubric": [
+   {
+    "criterion": "说明一行一条记录且字段名清楚",
+    "points": 1
+   },
+   {
+    "criterion": "制作主文档并插入合并域",
+    "points": 1
+   },
+   {
+    "criterion": "预览合并结果",
+    "points": 1
+   },
+   {
+    "criterion": "检查空值或数据格式",
+    "points": 1
+   },
+   {
+    "criterion": "合并后抽查并保留必要文件",
+    "points": 1
+   }
+  ],
+  "subject": "办公软件",
+  "source_chapter": "邮件合并、修订与批注",
+  "adaptation_note": "补充邮件合并完整操作链。",
+  "topic_source": "manual",
+  "topic_id": "office.t07",
+  "knowledge_point": "Word长文档排版",
+  "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-002",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "邮件合并、修订与批注",
+  "stem": "审阅者删除了一条批注，但原文中被删除的句子仍显示为修订标记。要正式采用这项文字删除，还需要（ ）。",
+  "options": {
+   "A": "接受对应修订",
+   "B": "再次删除批注",
+   "C": "关闭自动保存",
+   "D": "把文档转为图片"
+  },
+  "answer": "A",
+  "explanation": "批注用于交流意见，修订记录实际内容变化。删除批注不会自动接受或拒绝修订。",
+  "subject": "办公软件",
+  "source_chapter": "邮件合并、修订与批注",
+  "adaptation_note": "补充批注与修订的结果辨析。",
+  "topic_source": "manual",
+  "topic_id": "office.t07",
+  "knowledge_point": "Word长文档排版",
+  "ability": "读图排障",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-003",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "函数、查找与错误值",
+  "stem": "A2为学号，学生表位于F2:H100，F列为学号、H列为姓名。要求精确返回姓名，较合适的公式是（ ）。",
+  "options": {
+   "A": "=VLOOKUP(A2,$F$2:$H$100,3,FALSE)",
+   "B": "=VLOOKUP(A2,$F$2:$H$100,1,TRUE)",
+   "C": "=SUM(A2,$F$2:$H$100)",
+   "D": "=COUNTIF(A2,$H$2:$H$100)"
+  },
+  "answer": "A",
+  "explanation": "VLOOKUP在区域第一列查找，姓名位于区域第3列；唯一学号应使用FALSE精确匹配，并固定查找区域便于向下填充。",
+  "subject": "办公软件",
+  "source_chapter": "函数、查找与错误值",
+  "adaptation_note": "补充查找函数公式应用。",
+  "topic_source": "manual",
+  "topic_id": "office.t10",
+  "knowledge_point": "Excel公式与引用",
+  "ability": "代码编写",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-004",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "函数、查找与错误值",
+  "stem": "一个精确查找公式返回#N/A。写出至少三项应依次检查的原因，并说明为什么不应直接把公式改成近似匹配。",
+  "options": {},
+  "answer": "依次检查查找值是否真实存在、两侧数据类型是否一致、是否含前后空格或不可见字符、查找区域是否从关键列开始且范围正确。近似匹配依赖排序和区间规则，不能用来掩盖精确键不匹配，否则可能返回错误记录。",
+  "explanation": "#N/A表示没有得到可用匹配。排障应先验证数据和区域，再判断函数参数，而不是用近似匹配制造看似有结果的答案。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "检查查找值是否存在",
+    "points": 1
+   },
+   {
+    "criterion": "检查数据类型或空格",
+    "points": 1
+   },
+   {
+    "criterion": "检查查找区域与返回列",
+    "points": 1
+   },
+   {
+    "criterion": "说明近似匹配可能返回错误记录",
+    "points": 1
+   }
+  ],
+  "subject": "办公软件",
+  "source_chapter": "函数、查找与错误值",
+  "adaptation_note": "补充#N/A机制排障。",
+  "topic_source": "manual",
+  "topic_id": "office.t10",
+  "knowledge_point": "Excel公式与引用",
+  "ability": "读图排障",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-005",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "分类汇总与数据透视表",
+  "stem": "销售明细含部门、月份、销售额三列。要形成“各部门每月销售额合计”的交叉汇总，数据透视表字段布局应优先设为（ ）。",
+  "options": {
+   "A": "部门放行，月份放列，销售额放值并按求和汇总",
+   "B": "销售额放筛选，其余字段全部删除",
+   "C": "月份放值并按文本计数，销售额放列",
+   "D": "只按原始行号排序"
+  },
+  "answer": "A",
+  "explanation": "行、列字段构成交叉维度，销售额作为数值字段按求和汇总。字段方向可互换，但值字段和汇总方式必须正确。",
+  "subject": "办公软件",
+  "source_chapter": "分类汇总与数据透视表",
+  "adaptation_note": "补充透视表字段布局场景。",
+  "topic_source": "manual",
+  "topic_id": "office.t12",
+  "knowledge_point": "Excel数据分析",
+  "ability": "场景选型",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-006",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "分类汇总与数据透视表",
+  "stem": "源数据新增了本月记录，但数据透视表仍显示旧合计。确认数据源范围已经包含新记录后，下一步优先执行（ ）。",
+  "options": {
+   "A": "刷新数据透视表",
+   "B": "冻结窗格",
+   "C": "接受修订",
+   "D": "修改母版"
+  },
+  "answer": "A",
+  "explanation": "透视表通常不会因源数据变化自动重新计算全部缓存结果；范围正确时应先刷新。",
+  "subject": "办公软件",
+  "source_chapter": "分类汇总与数据透视表",
+  "adaptation_note": "补充透视表刷新排障。",
+  "topic_source": "manual",
+  "topic_id": "office.t12",
+  "knowledge_point": "Excel数据分析",
+  "ability": "读图排障",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-007",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "按任务组合工具",
+  "stem": "要制作一份月度经营汇报：原始销售明细需要核对和汇总，报告需要正式排版，会议上还要展示关键趋势。说明三类办公组件的分工和建议处理顺序。",
+  "options": {},
+  "answer": "先用电子表格清理数据、检查类型和公式、汇总并生成合适图表；再把确认后的表格和图表用于文字报告，使用样式、题注和目录完成正式排版；最后在演示文稿中提炼结论、统一母版并安排展示顺序。各阶段都应保留可编辑源文件并核对链接或嵌入关系。",
+  "explanation": "组件选择取决于主要处理对象：表格负责结构化数据，文字处理负责长文结构，演示负责现场表达。",
+  "max_score": 6,
+  "rubric": [
+   {
+    "criterion": "说明表格负责清理、计算和汇总",
+    "points": 2
+   },
+   {
+    "criterion": "说明文字处理负责正式长文排版",
+    "points": 2
+   },
+   {
+    "criterion": "说明演示文稿负责提炼与展示",
+    "points": 1
+   },
+   {
+    "criterion": "说明顺序或源文件核对",
+    "points": 1
+   }
+  ],
+  "subject": "办公软件",
+  "source_chapter": "按任务组合工具",
+  "adaptation_note": "补充跨组件综合任务。",
+  "topic_source": "manual",
+  "topic_id": "office.t16",
+  "knowledge_point": "办公文件与协作",
+  "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-008",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "按任务组合工具",
+  "stem": "每周都要根据同一模板生成不同部门的通知，收件人信息保存在表格中。最能减少重复劳动且便于复核的做法是（ ）。",
+  "options": {
+   "A": "维护结构化数据源并使用邮件合并",
+   "B": "每周复制粘贴并手工改姓名",
+   "C": "把所有通知做成截图",
+   "D": "只制作幻灯片"
+  },
+  "answer": "A",
+  "explanation": "结构化数据源与主文档分离，能够重复合并、预览和核对，降低手工遗漏风险。",
+  "subject": "办公软件",
+  "source_chapter": "按任务组合工具",
+  "adaptation_note": "补充重复业务的工具组合。",
+  "topic_source": "manual",
+  "topic_id": "office.t16",
+  "knowledge_point": "办公文件与协作",
+  "ability": "场景选型",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-009",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "链接、协作与交付检查",
+  "stem": "演示文稿中的图表需要随外部工作簿更新，但文件要发到另一台电脑。最需要提前处理的风险是（ ）。",
+  "options": {
+   "A": "链接依赖源文件路径，需连同源文件交付或改为嵌入/静态副本",
+   "B": "母版会删除图表",
+   "C": "分页符会改变公式",
+   "D": "批注会自动加密文件"
+  },
+  "answer": "A",
+  "explanation": "链接对象可联动更新，但移动到另一设备后源路径可能失效；交付方式应在联动能力和可携带性之间选择。",
+  "subject": "办公软件",
+  "source_chapter": "链接、协作与交付检查",
+  "adaptation_note": "补充链接对象跨设备排障。",
+  "topic_source": "manual",
+  "topic_id": "office.t17",
+  "knowledge_point": "Excel数据分析",
+  "ability": "读图排障",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-office-clean-010",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "链接、协作与交付检查",
+  "stem": "向外部单位发送最终报告前，说明一个兼顾兼容、隐私和可回退性的最小检查清单。",
+  "options": {},
+  "answer": "在目标软件或设备检查字体、公式、图表、媒体和外部链接；清理批注、未接受修订、隐藏工作表/幻灯片、文档属性和敏感数据；保留受控可编辑源文件与独立版本备份；按交付要求导出PDF等确认版式文件，并抽查打开和打印效果。",
+  "explanation": "交付检查既要保证对方能正确打开，也要避免带出隐藏信息，并保留内部可恢复的受控版本。",
+  "max_score": 6,
+  "rubric": [
+   {
+    "criterion": "检查字体、公式、媒体或外链兼容",
+    "points": 2
+   },
+   {
+    "criterion": "清理批注、修订、隐藏内容或敏感属性",
+    "points": 2
+   },
+   {
+    "criterion": "保留源文件和独立版本备份",
+    "points": 1
+   },
+   {
+    "criterion": "导出并抽查交付文件",
+    "points": 1
+   }
+  ],
+  "subject": "办公软件",
+  "source_chapter": "链接、协作与交付检查",
+  "adaptation_note": "补充交付前完整检查。",
+  "topic_source": "manual",
+  "topic_id": "office.t17",
+  "knowledge_point": "Excel数据分析",
+  "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-001",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "位图、矢量与分辨率",
+  "stem": "同一活动需要制作可无限放大的校徽和包含人物细节的现场照片。分别选择矢量图还是位图，并说明导出照片时为何不能只看文件扩展名判断清晰度。",
+  "options": {},
+  "answer": "校徽优先使用矢量图，缩放时按几何描述重绘，边缘保持清晰；照片使用位图保存连续色调。照片清晰度还取决于像素尺寸、缩放比例、压缩质量和显示或打印尺寸，扩展名不能单独决定。",
+  "explanation": "图像选型先看内容结构和缩放需求，位图质量还受实际像素与重采样影响。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "校徽选择矢量并说明缩放边界",
+    "points": 1
+   },
+   {
+    "criterion": "照片选择位图并说明连续色调",
+    "points": 1
+   },
+   {
+    "criterion": "说明像素尺寸或缩放影响",
+    "points": 1
+   },
+   {
+    "criterion": "说明扩展名不能单独决定清晰度",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "位图、矢量与分辨率",
+  "adaptation_note": "替代软件按钮题，补齐图像类型与分辨率选型。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t05",
+  "chapter_id": "multimedia.c03",
+  "topic_title": "位图、矢量与分辨率",
+  "knowledge_point": "图形图像",
+  "ability": "场景选型",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-002",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "格式、图层与蒙版",
+  "stem": "需要把人物从背景中分离，并保留以后修改边缘的能力。说明一种非破坏编辑流程，以及交付前为什么还要保留可编辑源文件。",
+  "options": {},
+  "answer": "将人物与背景分层，用蒙版控制人物显示范围，通过调整蒙版而不是直接删除像素修正边缘；颜色调整也尽量使用可修改的调整层。交付导出扁平文件，同时保存含图层和蒙版的源文件以便回退和修改。",
+  "explanation": "图层负责独立组织对象，蒙版通过显示与隐藏保留原始像素，源文件与交付文件承担不同任务。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "使用图层组织人物与背景",
+    "points": 1
+   },
+   {
+    "criterion": "使用蒙版而非删除像素",
+    "points": 1
+   },
+   {
+    "criterion": "说明非破坏调整或可回退",
+    "points": 1
+   },
+   {
+    "criterion": "说明保留源文件目的",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "格式、图层与蒙版",
+  "adaptation_note": "补齐平台无关的非破坏编辑流程。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t07",
+  "chapter_id": "multimedia.c03",
+  "topic_title": "格式、图层与蒙版",
+  "knowledge_point": "图形图像",
+  "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-003",
+  "source": "课程缺口补充",
+  "type": "填空",
+  "chapter": "声音采集与PCM",
+  "stem": "立体声PCM音频采样率48 kHz、量化16 bit，不压缩时码率为________kb/s。",
+  "options": {},
+  "answer": "1536",
+  "explanation": "码率=48000×16×2=1536000 bit/s=1536 kb/s，立体声必须乘2个声道。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "使用采样率×位深×声道数",
+    "points": 1
+   },
+   {
+    "criterion": "得到1536000 bit/s",
+    "points": 1
+   },
+   {
+    "criterion": "换算为1536 kb/s",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "声音采集与PCM",
+  "adaptation_note": "补齐PCM码率无提示计算。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t08",
+  "chapter_id": "multimedia.c04",
+  "topic_title": "声音采集与PCM",
+  "knowledge_point": "音频数字化",
+  "ability": "直接计算",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-004",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "波形音频、MIDI与格式",
+  "stem": "录制人声采访和保存可更换乐器音色的电子乐演奏，分别更适合波形音频还是MIDI？说明原因和边界。",
+  "options": {},
+  "answer": "人声采访适合波形音频，因为需要记录实际声压采样；电子乐演奏可用MIDI保存音符、时值、力度等控制事件，便于更换音源。MIDI不保存真实人声波形，播放效果依赖音源。",
+  "explanation": "波形音频保存采样值，MIDI保存演奏事件，二者数据含义不同。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "采访选择波形音频",
+    "points": 1
+   },
+   {
+    "criterion": "说明记录实际声音",
+    "points": 1
+   },
+   {
+    "criterion": "电子乐选择MIDI及可换音源",
+    "points": 1
+   },
+   {
+    "criterion": "说明MIDI边界",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "波形音频、MIDI与格式",
+  "adaptation_note": "替代扩展名识记，补齐音频机制比较。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t09",
+  "chapter_id": "multimedia.c04",
+  "topic_title": "波形音频、MIDI与格式",
+  "knowledge_point": "音频数字化",
+  "ability": "比较辨析",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-005",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "动画时间轴与帧率",
+  "stem": "一个2秒动画以25 fps播放。若从第1帧状态平滑过渡到最后一帧，至少需要多少帧画面？关键帧与中间帧分别承担什么作用？",
+  "options": {},
+  "answer": "2秒×25 fps=50帧画面。关键帧规定重要时刻的对象状态，中间帧描述或由系统计算相邻关键状态之间的变化。具体时间轴是否从0编号不改变总播放帧数。",
+  "explanation": "帧率决定每秒显示帧数，时间轴动画的通用核心是关键状态和状态间过渡。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "计算50帧",
+    "points": 2
+   },
+   {
+    "criterion": "说明关键帧作用",
+    "points": 1
+   },
+   {
+    "criterion": "说明中间帧作用",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "动画时间轴与帧率",
+  "adaptation_note": "替代Flash时间轴图标与快捷键题。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t10",
+  "chapter_id": "multimedia.c05",
+  "topic_title": "动画时间轴与帧率",
+  "knowledge_point": "动画与视频",
+  "ability": "直接计算",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-006",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "视频参数、编码器与容器",
+  "stem": "一分钟视频平均码率8 Mb/s，忽略容器额外开销，估算文件大小；并说明编码器与容器为什么不能混为一谈。",
+  "options": {},
+  "answer": "数据量=8 Mb/s×60 s=480 Mb，除以8约为60 MB。编码器决定视频如何压缩与解压，容器负责封装视频、音频、字幕和时间信息；同一容器可封装不同编码。",
+  "explanation": "容量估算先统一bit与Byte，格式判断还要区分编码方式和封装容器。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "算得480 Mb",
+    "points": 1
+   },
+   {
+    "criterion": "换算约60 MB",
+    "points": 1
+   },
+   {
+    "criterion": "说明编码器作用",
+    "points": 1
+   },
+   {
+    "criterion": "说明容器作用",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "视频参数、编码器与容器",
+  "adaptation_note": "补齐视频码率容量和格式层次。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t11",
+  "chapter_id": "multimedia.c05",
+  "topic_title": "视频参数、编码器与容器",
+  "knowledge_point": "动画与视频",
+  "ability": "直接计算",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-007",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "流媒体与自适应播放",
+  "stem": "播放器缓冲只剩2秒且测得可用带宽持续低于当前视频码率。下一步应怎样调整？为什么不能在每次瞬时波动时都立即切换清晰度？",
+  "options": {},
+  "answer": "应降低到带宽可持续支持的码率并优先恢复缓冲，必要时短暂停播积累数据。瞬时波动可能只是噪声，频繁切换会造成画质震荡和额外请求，应结合一段时间的带宽估计、缓冲余量和滞回策略。",
+  "explanation": "自适应播放同时考虑下载能力和缓冲状态，而不是只看一次测速。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "降低码率并说明带宽原因",
+    "points": 1
+   },
+   {
+    "criterion": "说明恢复缓冲",
+    "points": 1
+   },
+   {
+    "criterion": "说明瞬时波动问题",
+    "points": 1
+   },
+   {
+    "criterion": "提出时间窗口或滞回策略",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "流媒体与自适应播放",
+  "adaptation_note": "补齐自适应码率状态推演。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t12",
+  "chapter_id": "multimedia.c05",
+  "topic_title": "流媒体与自适应播放",
+  "knowledge_point": "动画与视频",
+  "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-008",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "压缩比与格式选择",
+  "stem": "分别为照片网页预览、带半透明背景的图标、需要继续编辑的分层海报选择交付或保存方案，并说明依据。",
+  "options": {},
+  "answer": "照片网页预览可选适当质量的有损照片格式以减小体积；半透明图标选支持透明和无损压缩的格式；分层海报保留支持图层蒙版的可编辑源文件，并另导出通用交付副本。",
+  "explanation": "格式选择要同时看内容、透明度、压缩、编辑性和交付兼容性，不应只背扩展名。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "照片方案与理由",
+    "points": 1
+   },
+   {
+    "criterion": "透明图标方案与理由",
+    "points": 1
+   },
+   {
+    "criterion": "分层源文件方案",
+    "points": 1
+   },
+   {
+    "criterion": "区分源文件和交付副本",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "压缩比与格式选择",
+  "adaptation_note": "替代旧格式碎片题，补齐交付选型。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t14",
+  "chapter_id": "multimedia.c06",
+  "topic_title": "压缩比与格式选择",
+  "knowledge_point": "多媒体压缩与容量",
+  "ability": "场景选型",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-009",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "需求、脚本与素材组织",
+  "stem": "制作手机操作教学视频，在开始大量录屏前应完成哪些准备？说明脚本、分镜和素材命名怎样减少返工。",
+  "options": {},
+  "answer": "先明确受众、学习目标、平台比例和时长，再写操作脚本与旁白，按镜头或步骤制作分镜和素材清单；文件名记录步骤、镜次、内容和版本，录制前统一分辨率、音量和授权要求。",
+  "explanation": "先固定结构和交付约束，才能避免漏录步骤、素材混乱和重复采集。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "明确受众目标与交付约束",
+    "points": 1
+   },
+   {
+    "criterion": "脚本和旁白准备",
+    "points": 1
+   },
+   {
+    "criterion": "分镜或素材清单",
+    "points": 1
+   },
+   {
+    "criterion": "命名版本与统一参数",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "需求、脚本与素材组织",
+  "adaptation_note": "补齐项目组织过程题。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t15",
+  "chapter_id": "multimedia.c07",
+  "topic_title": "需求、脚本与素材组织",
+  "knowledge_point": "多媒体系统与应用",
+  "ability": "过程描述",
+  "difficulty": "应用"
+ },
+ {
+  "id": "gap-media-clean-010",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "图层蒙版、测试与交付",
+  "stem": "同一宣传内容在手机上文字过小、电脑上正常，且导出后透明边缘出现黑底。给出从源文件到重新交付的排查步骤。",
+  "options": {},
+  "answer": "回到可编辑源文件检查画布比例、文字安全尺寸、图层和蒙版边缘；确认目标平台是否支持透明及所选导出格式和颜色设置；分别在手机和电脑预览，核对字体、透明、文件大小和版权素材后重新导出。",
+  "explanation": "交付问题要从版式、非破坏源结构、格式能力和目标设备测试逐层定位。",
+  "max_score": 5,
+  "rubric": [
+   {
+    "criterion": "检查手机版式和文字尺寸",
+    "points": 1
+   },
+   {
+    "criterion": "检查图层蒙版边缘",
+    "points": 1
+   },
+   {
+    "criterion": "检查透明支持与导出格式",
+    "points": 1
+   },
+   {
+    "criterion": "多终端测试",
+    "points": 1
+   },
+   {
+    "criterion": "核对文件与授权后交付",
+    "points": 1
+   }
+  ],
+  "subject": "多媒体",
+  "source_chapter": "图层蒙版、测试与交付",
+  "adaptation_note": "补齐平台无关的交付排障题。",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t16",
+  "chapter_id": "multimedia.c07",
+  "topic_title": "图层蒙版、测试与交付",
+  "knowledge_point": "图形图像",
+  "ability": "读图排障",
   "difficulty": "应用"
  }
 ]

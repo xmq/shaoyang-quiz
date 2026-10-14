@@ -149,24 +149,26 @@
   "id": "ap-mm-002",
   "source": "高校试题提炼",
   "type": "单选",
-  "chapter": "图像格式选择",
-  "stem": "网站需要一个可任意缩放、边缘保持清晰的简单徽标，优先选择（ ）。",
+  "chapter": "多终端交付排障",
+  "stem": "同一张信息图在电脑上正常，但在手机上出现文字过小、按钮难以点击。发布前最有效的处理是（ ）。",
   "options": {
-   "A": "SVG",
-   "B": "JPEG",
-   "C": "WAV",
-   "D": "MP3"
+   "A": "只检查源文件能否打开",
+   "B": "在目标手机尺寸上预览并按可读性、触控区域和资源加载逐项测试",
+   "C": "把所有内容合成一张更大的位图",
+   "D": "只提高背景音乐码率"
   },
-  "answer": "A",
-  "explanation": "SVG以矢量方式描述图形，适合标志、图标和缩放显示。JPEG是位图有损格式，更适合连续色调照片。",
+  "answer": "B",
+  "explanation": "多终端交付必须在目标视口上检查文字可读性、触控区域、布局和资源加载。源文件可打开不能证明实际终端体验合格。",
   "subject": "多媒体",
   "source_url": "https://sx.xxu.edu.cn/13Xduomeitiyingyongjishu-0610304602.pdf",
   "source_title": "新乡学院《多媒体技术应用》教学大纲",
-  "source_chapter": "图形图像基本原理与格式",
-  "adaptation_note": "从图形图像基本原理和应用要求提炼格式选型题。",
-  "knowledge_point": "音频数字化",
-  "ability": "场景选型",
-  "difficulty": "应用"
+  "source_chapter": "作品测试、发布与多终端适配",
+  "adaptation_note": "依据多媒体作品测试共同流程，改编为平台无关的多终端交付排障题。",
+  "knowledge_point": "图形图像",
+  "ability": "读图排障",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "multimedia.t16"
  },
  {
   "id": "ap-mm-003",
@@ -343,11 +345,26 @@
   "explanation": "评分点：借2位、/26或掩码、块大小64、可用62、四个网络边界和对应广播。特殊/31等情形按题干，不在本题范围。",
   "max_score": 6,
   "rubric": [
-   {"criterion": "判断借2位并得到/26", "points": 1},
-   {"criterion": "写出掩码255.255.255.192", "points": 1},
-   {"criterion": "写出每块64个地址、传统可用62个", "points": 1},
-   {"criterion": "写出4个网络地址", "points": 1},
-   {"criterion": "写出4个广播地址", "points": 2}
+   {
+    "criterion": "判断借2位并得到/26",
+    "points": 1
+   },
+   {
+    "criterion": "写出掩码255.255.255.192",
+    "points": 1
+   },
+   {
+    "criterion": "写出每块64个地址、传统可用62个",
+    "points": 1
+   },
+   {
+    "criterion": "写出4个网络地址",
+    "points": 1
+   },
+   {
+    "criterion": "写出4个广播地址",
+    "points": 2
+   }
   ],
   "subject": "计算机网络",
   "source_url": "https://xxy.hbucm.edu.cn/info/1751/12012.htm",
@@ -369,12 +386,30 @@
   "explanation": "评分点：公网IP可达说明基本IP路径可能正常、定位DNS、ipconfig、nslookup、核对或更换DNS、说明DHCP与DNS分工。不能仅凭一次ping断言所有网络层都正常。",
   "max_score": 6,
   "rubric": [
-   {"criterion": "判断优先检查DNS配置或解析", "points": 1},
-   {"criterion": "使用ipconfig核对DNS配置", "points": 1},
-   {"criterion": "使用nslookup验证解析", "points": 1},
-   {"criterion": "核对可用DNS、防火墙或服务", "points": 1},
-   {"criterion": "说明DHCP下发网络参数", "points": 1},
-   {"criterion": "说明DHCP不负责名称解析", "points": 1}
+   {
+    "criterion": "判断优先检查DNS配置或解析",
+    "points": 1
+   },
+   {
+    "criterion": "使用ipconfig核对DNS配置",
+    "points": 1
+   },
+   {
+    "criterion": "使用nslookup验证解析",
+    "points": 1
+   },
+   {
+    "criterion": "核对可用DNS、防火墙或服务",
+    "points": 1
+   },
+   {
+    "criterion": "说明DHCP下发网络参数",
+    "points": 1
+   },
+   {
+    "criterion": "说明DHCP不负责名称解析",
+    "points": 1
+   }
   ],
   "subject": "计算机网络",
   "source_url": "https://xxy.hbucm.edu.cn/info/1751/12012.htm",
