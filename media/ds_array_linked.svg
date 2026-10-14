@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">顺序表移动元素与链表修改指针</title><desc id="desc">顺序表中间插入需要右移元素，单链表在已知前驱时通过两次指针修改插入结点。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.box{fill:#fff;stroke:#64748b;stroke-width:2}.new{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.move{stroke:#d97706;stroke-width:4;fill:none;marker-end:url(#a)}.link{stroke:#2563eb;stroke-width:4;fill:none;marker-end:url(#b)}.h{font:700 25px system-ui,sans-serif;fill:#102a43}.t{font:20px system-ui,sans-serif;fill:#334155}.m{font:19px ui-monospace,monospace;fill:#1d4ed8}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.box{fill:#17283b;stroke:#647b91}.new{fill:#173f3c;stroke:#46d6c6}.h{fill:#edf4fb}.t{fill:#b8c5d1}.m{fill:#a9cbff}}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#d97706"/></marker><marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#2563eb"/></marker></defs>
+  <rect class="bg" x="12" y="12" width="936" height="576" rx="26"/><text class="h" x="48" y="58">同样是“插入”，两种存储方式做的事不同</text>
+  <text class="h" x="48" y="115">顺序表：先从后往前右移</text>
+  <g class="box"><rect x="60" y="145" width="115" height="70"/><rect x="175" y="145" width="115" height="70"/><rect x="290" y="145" width="115" height="70"/><rect x="405" y="145" width="115" height="70"/><rect x="520" y="145" width="115" height="70"/></g>
+  <g class="m" text-anchor="middle"><text x="118" y="188">A</text><text x="233" y="188">B</text><text x="348" y="188">C</text><text x="463" y="188">D</text><text x="578" y="188">空</text></g>
+  <path class="move" d="M463 132H565"/><path class="move" d="M348 118H450"/><rect class="new" x="290" y="255" width="115" height="70"/><text class="m" x="348" y="298" text-anchor="middle">X</text><text class="t" x="435" y="298">插入后：[A,B,X,C,D]</text>
+  <text class="h" x="48" y="385">单链表：已知前驱 p，只改连接关系</text>
+  <g class="box"><rect x="90" y="430" width="145" height="70" rx="12"/><rect x="410" y="430" width="145" height="70" rx="12"/></g><rect class="new" x="250" y="510" width="145" height="58" rx="12"/>
+  <g class="m" text-anchor="middle"><text x="162" y="474">p</text><text x="482" y="474">q</text><text x="322" y="548">s</text></g>
+  <path class="link" d="M235 465H400"/><path class="link" d="M322 510C330 470 365 450 400 450"/><path class="link" d="M235 485C255 500 270 515 285 525"/>
+  <text class="t" x="625" y="454">1. s.next = p.next</text><text class="t" x="625" y="494">2. p.next = s</text><text class="t" x="625" y="534">顺序不能颠倒</text>
+</svg>

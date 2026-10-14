@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">常见时间复杂度增长趋势</title><desc id="desc">随着输入规模增大，常数、对数、线性、线性对数和平方复杂度的增长速度对比。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:3}.grid{stroke:#dbe4ee;stroke-width:1}.t{font:20px system-ui,sans-serif;fill:#334155}.h{font:700 26px system-ui,sans-serif;fill:#102a43}.c1{fill:none;stroke:#176f68;stroke-width:5}.c2{fill:none;stroke:#2563eb;stroke-width:5}.c3{fill:none;stroke:#7c3aed;stroke-width:5}.c4{fill:none;stroke:#d97706;stroke-width:5}.c5{fill:none;stroke:#c2413b;stroke-width:5}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#9fb0bf}.grid{stroke:#273a4e}.t{fill:#b8c5d1}.h{fill:#edf4fb}.c1{stroke:#46d6c6}.c2{stroke:#66a3ff}.c3{stroke:#b9a1ff}.c4{stroke:#ffbd66}.c5{stroke:#ff8f87}}</style></defs>
+  <rect class="bg" x="12" y="12" width="936" height="536" rx="26"/><text class="h" x="48" y="58">规模增大时，增长速度的差距会迅速放大</text>
+  <g class="grid"><path d="M100 455H890M100 365H890M100 275H890M100 185H890M260 95V455M420 95V455M580 95V455M740 95V455"/></g>
+  <path class="axis" d="M100 82V455H900M92 92L100 82L108 92M890 447L900 455L890 463"/><text class="t" x="44" y="105">工作量</text><text class="t" x="825" y="500">输入规模 n</text>
+  <path class="c1" d="M120 420H860"/><path class="c2" d="M120 430C270 410 520 365 860 315"/><path class="c3" d="M120 445L860 245"/><path class="c4" d="M120 448C330 420 620 290 860 145"/><path class="c5" d="M120 450C420 440 700 310 860 75"/>
+  <g class="t"><text x="750" y="414">O(1)</text><text x="760" y="320">O(log n)</text><text x="775" y="250">O(n)</text><text x="720" y="145">O(n log n)</text><text x="815" y="92">O(n²)</text></g>
+</svg>
