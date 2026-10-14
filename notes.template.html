@@ -1637,10 +1637,10 @@
       try {
         sameOriginReferrer = Boolean(document.referrer && new URL(document.referrer, location.href).origin === location.origin);
       } catch {}
-      if (sameOriginReferrer || history.state?.shaoyangStudyPage) return;
+      if (history.state?.shaoyangBackVersion === 2) return;
       const currentUrl = location.href;
-      history.replaceState({shaoyangAppHome: true}, "", "./index.html");
-      history.pushState({shaoyangStudyPage: true}, "", currentUrl);
+      history.replaceState({shaoyangBackBridge: true, sameOriginReferrer}, "", currentUrl);
+      history.pushState({shaoyangStudyPage: true, shaoyangBackVersion: 2}, "", currentUrl);
     }
 
     function courseHash(course) {
@@ -1909,8 +1909,9 @@
     });
 
     window.addEventListener("popstate", (event) => {
-      if (event.state?.shaoyangAppHome) {
-        location.replace("./index.html");
+      if (event.state?.shaoyangBackBridge) {
+        if (event.state.sameOriginReferrer) history.back();
+        else location.replace("./index.html");
         return;
       }
       applyLocation();
@@ -1923,7 +1924,16 @@
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
       window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).catch(() => {});
+        let reloading = false;
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          if (reloading) return;
+          reloading = true;
+          location.reload();
+        });
+        navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).then((registration) => {
+          if (registration.waiting) registration.waiting.postMessage("SKIP_WAITING");
+          registration.update().catch(() => {});
+        }).catch(() => {});
       });
     }
   </script>

@@ -1,7 +1,7 @@
 importScripts("./build-meta.js");
 
 const CACHE_PREFIX = "shaoyang-quiz-";
-const SHELL_REVISION = "mobile-study-11";
+const SHELL_REVISION = "mobile-study-12";
 const CACHE_NAME = `${CACHE_PREFIX}${globalThis.SHAOYANG_BUILD?.id || "development"}-${SHELL_REVISION}`;
 const NETWORK_TIMEOUT_MS = 4500;
 const CORE_ASSETS = [
@@ -57,7 +57,7 @@ const CORE_ASSETS = [
 
 self.addEventListener("install", (event) => {
   const freshRequests = CORE_ASSETS.map((url) => new Request(url, {cache: "reload"}));
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(freshRequests)));
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(freshRequests)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (event) => {
@@ -116,21 +116,6 @@ async function networkFirst(request) {
   }
 }
 
-async function fastNavigation(request, event) {
-  const cached = await readFallback(request);
-  const refresh = fetchWithTimeout(request)
-    .then(async (response) => {
-      await cacheResponse(request, response);
-      return response;
-    })
-    .catch(() => null);
-  if (cached) {
-    event.waitUntil(refresh.then(() => undefined));
-    return cached;
-  }
-  return (await refresh) || Response.error();
-}
-
 async function cacheFirst(request) {
   const cached = await readFallback(request);
   if (cached) return cached;
@@ -146,7 +131,7 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin || url.pathname.includes("/api/")) return;
 
   if (request.mode === "navigate") {
-    event.respondWith(fastNavigation(request, event));
+    event.respondWith(networkFirst(request));
     return;
   }
   const isCritical = /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);

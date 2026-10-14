@@ -133,15 +133,15 @@ function prepareQuizHistory() {
     sameOriginReferrer = Boolean(document.referrer && new URL(document.referrer, location.href).origin === location.origin);
   } catch {}
 
-  if (!sameOriginReferrer && !history.state?.shaoyangQuizView) {
+  if (history.state?.shaoyangBackVersion !== 2) {
     const currentUrl = location.href;
-    history.replaceState({shaoyangAppHome: true}, "", "./index.html");
-    history.pushState({shaoyangQuizView: "hub"}, "", view === "hub" ? currentUrl : quizHubUrl());
+    history.replaceState({shaoyangBackBridge: true, sameOriginReferrer}, "", currentUrl);
+    history.pushState({shaoyangQuizView: "hub", shaoyangBackVersion: 2}, "", view === "hub" ? currentUrl : quizHubUrl());
     if (view === "runner") {
-      history.pushState({shaoyangQuizView: "runner", backToHub: true}, "", currentUrl);
+      history.pushState({shaoyangQuizView: "runner", backToHub: true, shaoyangBackVersion: 2}, "", currentUrl);
     }
   } else {
-    history.replaceState({...history.state, shaoyangQuizView: view, backToHub: false}, "", location.href);
+    history.replaceState({...history.state, shaoyangQuizView: view, backToHub: false, shaoyangBackVersion: 2}, "", location.href);
   }
   return view;
 }
@@ -1311,7 +1311,7 @@ function updateViewState() {
 function render() {
   const nextQuizView = quizViewName();
   if (!restoringQuizHistory && renderedQuizView === "hub" && nextQuizView === "runner") {
-    history.pushState({shaoyangQuizView: "runner", backToHub: true}, "", quizRunnerUrl());
+    history.pushState({shaoyangQuizView: "runner", backToHub: true, shaoyangBackVersion: 2}, "", quizRunnerUrl());
   }
   renderedQuizView = nextQuizView;
   updateViewState();
@@ -1759,7 +1759,7 @@ function exitRunner() {
   state._pending = null;
   clearMockTimer();
   save();
-  history.replaceState({...history.state, shaoyangQuizView: "hub", backToHub: false}, "", quizHubUrl());
+  history.replaceState({...history.state, shaoyangQuizView: "hub", backToHub: false, shaoyangBackVersion: 2}, "", quizHubUrl());
   render();
 }
 
@@ -1770,8 +1770,9 @@ function goBackOrHome() {
 }
 
 function handleNativeBack(event) {
-  if (event.state?.shaoyangAppHome) {
-    location.replace("./index.html");
+  if (event.state?.shaoyangBackBridge) {
+    if (event.state.sameOriginReferrer) history.back();
+    else location.replace("./index.html");
     return;
   }
   if (event.state?.shaoyangQuizView === "hub" && state.mode !== "home") {
@@ -1992,25 +1993,17 @@ if (startupRevisionResetCount) {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     let reloading = false;
-    let reloadForConfirmedUpdate = false;
     navigator.serviceWorker.addEventListener("controllerchange", () => {
-      if (!reloadForConfirmedUpdate || reloading) return;
+      if (reloading) return;
       reloading = true;
       location.reload();
     });
     navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).then((registration) => {
-      const offerUpdate = (worker) => {
-        if (!worker || !navigator.serviceWorker.controller) return;
-        if (confirm("发现新版本和新题库，是否立即更新？")) {
-          reloadForConfirmedUpdate = true;
-          worker.postMessage("SKIP_WAITING");
-        }
-      };
-      if (registration.waiting) offerUpdate(registration.waiting);
+      if (registration.waiting) registration.waiting.postMessage("SKIP_WAITING");
       registration.addEventListener("updatefound", () => {
         const worker = registration.installing;
         worker?.addEventListener("statechange", () => {
-          if (worker.state === "installed") offerUpdate(worker);
+          if (worker.state === "installed" && navigator.serviceWorker.controller) worker.postMessage("SKIP_WAITING");
         });
       });
       registration.update().catch(() => {});
