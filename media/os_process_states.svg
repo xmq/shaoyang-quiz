@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
+  <title id="title">进程的就绪运行和阻塞状态转换</title><desc id="desc">就绪经调度进入运行，运行因等待事件进入阻塞，事件完成后阻塞回到就绪，时间片到使运行回到就绪。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#176f68"/></marker><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.node{fill:#fff;stroke:#176f68;stroke-width:4}.run{fill:#d9f3ef}.a{stroke:#176f68;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:22px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}</style></defs>
+  <rect class="bg" x="12" y="12" width="896" height="406" rx="24"/>
+  <rect class="node" x="80" y="135" width="180" height="90" rx="45"/><rect class="node run" x="370" y="75" width="180" height="90" rx="45"/><rect class="node" x="660" y="225" width="180" height="90" rx="45"/>
+  <g class="t" text-anchor="middle"><text x="170" y="190">就绪</text><text x="460" y="130">运行</text><text x="750" y="280">阻塞</text></g>
+  <path class="a" d="M260 160L365 130"/><text class="s" x="300" y="122">调度</text>
+  <path class="a" d="M390 165C330 260 240 270 190 228"/><text class="s" x="280" y="288">时间片到 / 被抢占</text>
+  <path class="a" d="M535 155L675 230"/><text class="s" x="650" y="173">等待事件</text>
+  <path class="a" d="M660 295C520 375 310 345 235 225"/><text class="s" x="465" y="365">事件完成：先回就绪，不能直接运行</text>
+</svg>

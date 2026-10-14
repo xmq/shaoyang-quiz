@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 480" role="img" aria-labelledby="title desc">
+  <title id="title">一对多和多对多关系转换为关系表</title><desc id="desc">一对多把一端主键放到多端作为外键，多对多建立包含两端主键的联系表。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.box{fill:#fff;stroke:#64748b;stroke-width:3}.link{stroke:#176f68;stroke-width:4;fill:none}.t{font:20px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}.key{font:15px ui-monospace,monospace;fill:#176f68;font-weight:700}</style></defs>
+  <rect class="bg" x="12" y="12" width="956" height="456" rx="24"/>
+  <text class="t" x="245" y="55" text-anchor="middle" font-weight="700">1 : n　外键放在“多”端</text><text class="t" x="735" y="55" text-anchor="middle" font-weight="700">m : n　单独建立联系表</text>
+  <rect class="box" x="55" y="105" width="180" height="125" rx="12"/><rect class="box" x="285" y="105" width="180" height="125" rx="12"/>
+  <text class="t" x="145" y="140" text-anchor="middle">Department</text><text class="key" x="80" y="180">PK id</text><text class="s" x="80" y="210">name</text><text class="t" x="375" y="140" text-anchor="middle">Student</text><text class="key" x="310" y="180">PK id</text><text class="key" x="310" y="210">FK dept_id</text><path class="link" d="M235 168H285"/><text class="s" x="260" y="155" text-anchor="middle">1:n</text>
+  <rect class="box" x="535" y="105" width="150" height="105" rx="12"/><rect class="box" x="795" y="105" width="130" height="105" rx="12"/><rect x="635" y="285" width="230" height="120" rx="12" fill="#e7f6f4" stroke="#176f68" stroke-width="3"/>
+  <text class="t" x="610" y="142" text-anchor="middle">Student</text><text class="key" x="560" y="180">PK sid</text><text class="t" x="860" y="142" text-anchor="middle">Course</text><text class="key" x="820" y="180">PK cid</text><text class="t" x="750" y="320" text-anchor="middle">Enrollment</text><text class="key" x="665" y="357">PK/FK sid</text><text class="key" x="665" y="385">PK/FK cid</text><path class="link" d="M610 210L700 285M860 210L800 285"/>
+  <text class="s" x="490" y="447" text-anchor="middle">联系表还可保存成绩、选课时间等联系自身的属性</text>
+</svg>

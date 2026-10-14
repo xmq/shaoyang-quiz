@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">网络分层封装与解封装</title><desc id="desc">发送端从应用层向下逐层添加控制信息，接收端从物理层向上逐层去除控制信息。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#176f68"/></marker><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.layer{fill:#fff;stroke:#64748b;stroke-width:2}.active{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.t{font:20px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}.a{stroke:#176f68;stroke-width:4;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" x="12" y="12" width="896" height="496" rx="24"/>
+  <text class="t" x="225" y="52" text-anchor="middle" font-weight="700">发送端：逐层封装</text><text class="t" x="695" y="52" text-anchor="middle" font-weight="700">接收端：逐层解封装</text>
+  <g><rect class="layer" x="70" y="76" width="310" height="58" rx="12"/><rect class="layer" x="70" y="151" width="310" height="58" rx="12"/><rect class="layer" x="70" y="226" width="310" height="58" rx="12"/><rect class="layer" x="70" y="301" width="310" height="58" rx="12"/><rect class="layer" x="70" y="376" width="310" height="58" rx="12"/></g>
+  <g><rect class="layer" x="540" y="76" width="310" height="58" rx="12"/><rect class="layer" x="540" y="151" width="310" height="58" rx="12"/><rect class="layer" x="540" y="226" width="310" height="58" rx="12"/><rect class="layer" x="540" y="301" width="310" height="58" rx="12"/><rect class="layer" x="540" y="376" width="310" height="58" rx="12"/></g>
+  <g class="t" text-anchor="middle"><text x="155" y="112">应用层</text><text x="155" y="187">运输层</text><text x="155" y="262">网络层</text><text x="155" y="337">链路层</text><text x="155" y="412">物理层</text><text x="625" y="112">应用层</text><text x="625" y="187">运输层</text><text x="625" y="262">网络层</text><text x="625" y="337">链路层</text><text x="625" y="412">物理层</text></g>
+  <g class="s"><text x="245" y="112">数据</text><text x="245" y="187">段 / 用户数据报</text><text x="245" y="262">IP 数据报</text><text x="245" y="337">帧</text><text x="245" y="412">比特</text><text x="715" y="112">数据</text><text x="715" y="187">去运输层首部</text><text x="715" y="262">去 IP 首部</text><text x="715" y="337">去帧首尾</text><text x="715" y="412">接收比特</text></g>
+  <path class="a" d="M405 105H515"/><path class="a" d="M405 180H515"/><path class="a" d="M405 255H515"/><path class="a" d="M405 330H515"/><path class="a" d="M405 405H515"/>
+  <path class="a" d="M225 136V146M225 211V221M225 286V296M225 361V371"/><path class="a" d="M695 371V361M695 296V286M695 221V211M695 146V136"/>
+  <text class="s" x="460" y="476" text-anchor="middle">每层只处理本层控制信息；接收端按相反顺序还原应用数据</text>
+</svg>

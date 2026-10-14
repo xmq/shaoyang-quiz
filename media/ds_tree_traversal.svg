@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">二叉树四种遍历顺序</title><desc id="desc">示例二叉树及其先序、中序、后序和层序遍历结果。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.edge{stroke:#64748b;stroke-width:4}.node{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.t{font:21px system-ui,sans-serif;fill:#102a43}.s{font:17px ui-monospace,monospace;fill:#334155}</style></defs>
+  <rect class="bg" x="12" y="12" width="876" height="476" rx="24"/>
+  <g class="edge"><path d="M260 100L155 195M260 100L365 195M155 195L95 290M155 195L215 290M365 195L425 290"/></g>
+  <g class="node"><circle cx="260" cy="90" r="38"/><circle cx="155" cy="195" r="38"/><circle cx="365" cy="195" r="38"/><circle cx="95" cy="300" r="38"/><circle cx="215" cy="300" r="38"/><circle cx="425" cy="300" r="38"/></g>
+  <g class="t" text-anchor="middle"><text x="260" y="98">A</text><text x="155" y="203">B</text><text x="365" y="203">C</text><text x="95" y="308">D</text><text x="215" y="308">E</text><text x="425" y="308">F</text></g>
+  <g class="t"><text x="535" y="105" font-weight="700">先序</text><text x="535" y="180" font-weight="700">中序</text><text x="535" y="255" font-weight="700">后序</text><text x="535" y="330" font-weight="700">层序</text></g>
+  <g class="s"><text x="625" y="105">A B D E C F</text><text x="625" y="180">D B E A C F</text><text x="625" y="255">D E B F C A</text><text x="625" y="330">A B C D E F</text></g>
+  <text class="s" x="450" y="435" text-anchor="middle">先、中、后描述“根”的访问位置；层序按层使用队列</text>
+</svg>

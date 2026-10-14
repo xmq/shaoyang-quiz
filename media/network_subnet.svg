@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">把一个二十四位前缀划分为四个二十六位前缀</title><desc id="desc">192.168.10.0/24被均分为四个各含64个地址的/26子网。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.b{stroke:#fff;stroke-width:4}.t{font:20px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}.n{font:17px ui-monospace,monospace;fill:#102a43;font-weight:700}</style></defs>
+  <rect class="bg" x="12" y="12" width="976" height="336" rx="24"/>
+  <text class="t" x="500" y="55" text-anchor="middle" font-weight="700">192.168.10.0/24 借 2 位 → 4 个 /26 子网</text>
+  <rect class="b" x="60" y="105" width="220" height="105" rx="14" fill="#d9f3ef"/><rect class="b" x="280" y="105" width="220" height="105" rx="14" fill="#dbeafe"/><rect class="b" x="500" y="105" width="220" height="105" rx="14" fill="#fef0c7"/><rect class="b" x="720" y="105" width="220" height="105" rx="14" fill="#fce7e3"/>
+  <g class="n" text-anchor="middle"><text x="170" y="146">.0/26</text><text x="390" y="146">.64/26</text><text x="610" y="146">.128/26</text><text x="830" y="146">.192/26</text></g>
+  <g class="s" text-anchor="middle"><text x="170" y="178">地址 .0 ～ .63</text><text x="390" y="178">地址 .64 ～ .127</text><text x="610" y="178">地址 .128 ～ .191</text><text x="830" y="178">地址 .192 ～ .255</text><text x="500" y="260">每块 64 个地址；传统普通子网可用主机数 64 − 2 = 62</text><text x="500" y="296">网络地址是块首，广播地址是块尾；下一个子网按 64 递增</text></g>
+</svg>

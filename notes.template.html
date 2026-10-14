@@ -25,7 +25,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+    html { max-width: 100%; overflow-x: hidden; scroll-behavior: auto; }
     body {
       max-width: 100%;
       overflow-x: hidden;
@@ -401,6 +401,19 @@
       background: transparent;
       color: var(--deep);
     }
+    .lecture-page .note strong { color: var(--deep); font-weight: 800; }
+    .lecture-page .note code { border: 1px solid #d8e6f3; background: #eef5fb; color: #174f78; font-weight: 650; }
+    .lecture-callout {
+      margin: 16px 0 !important;
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+      border-left: 5px solid #3977b7;
+      border-radius: 10px;
+      background: #f1f6fc;
+    }
+    .lecture-callout.example { border-left-color: #198754; background: #edf8f2; }
+    .lecture-callout.warning { border-left-color: #d98716; background: #fff7e8; }
+    .lecture-callout > strong:first-child { color: inherit; }
 
     /* 重点与易错默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
     .color-notes-page .chapter-toggle {
@@ -667,6 +680,10 @@
       .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { color: var(--primary-strong) !important; }
       .note blockquote { background: #202c3d; color: #c8d1dc; }
       .note code { color: #ffb4ab; }
+      .lecture-page .note code { border-color: #31506b; background: #172d42; color: #b8dbff; }
+      .lecture-callout { border-color: #30465e; border-left-color: #67a6e3; background: #15283c; }
+      .lecture-callout.example { border-left-color: #55c58a; background: #153128; }
+      .lecture-callout.warning { border-left-color: #e5a441; background: #342918; }
       .recall-prompt { background: #1c3157; color: #bfdbfe; }
       .note mark { background: #854d0e; color: #fef3c7; }
     }
@@ -1136,8 +1153,20 @@
       closePreface();
       closeChapter();
       content.innerHTML = output.join("");
+      decorateLectureContent();
       bindTopicGuidance();
       bindChapters();
+    }
+
+    function decorateLectureContent() {
+      if (colorMode) return;
+      content.querySelectorAll("p").forEach((paragraph) => {
+        const label = paragraph.querySelector(":scope > strong:first-child")?.textContent.trim().replace(/[：:]$/, "") || "";
+        const text = paragraph.textContent.trim();
+        if (label === "通俗理解") paragraph.classList.add("lecture-callout", "concept");
+        else if (label === "例题" || label === "小例子") paragraph.classList.add("lecture-callout", "example");
+        else if (["注意", "易错"].includes(label) || /^(注意|易错)[：:]/.test(text)) paragraph.classList.add("lecture-callout", "warning");
+      });
     }
 
     function bindTopicGuidance() {
@@ -1250,7 +1279,7 @@
       sections[activeChapterIndex].querySelector(".chapter-toggle")?.setAttribute("aria-expanded", "true");
       updateStudyPosition({replaceRoute});
       if (focus) {
-        window.scrollTo({top: 0, behavior: "smooth"});
+        window.scrollTo({top: 0, behavior: "auto"});
         requestAnimationFrame(() => sections[activeChapterIndex].querySelector(".chapter-title")?.focus?.({preventScroll: true}));
       }
     }
@@ -1263,7 +1292,7 @@
       if (conceal) concealRecallCard(cards[activeRecallIndex]);
       updateStudyPosition({replaceRoute});
       if (focus) {
-        window.scrollTo({top: 0, behavior: "smooth"});
+        window.scrollTo({top: 0, behavior: "auto"});
         requestAnimationFrame(() => cards[activeRecallIndex].querySelector(".point")?.scrollIntoView({block: "start"}));
       }
     }
@@ -1290,7 +1319,7 @@
       sections[nextChapter].classList.remove("collapsed");
       updateStudyPosition();
       if (focus) {
-        window.scrollTo({top: 0, behavior: "smooth"});
+        window.scrollTo({top: 0, behavior: "auto"});
         requestAnimationFrame(() => nextCards[activeRecallIndex]?.querySelector(".point")?.scrollIntoView({block: "start"}));
       }
     }
@@ -1323,7 +1352,7 @@
         const nextCard = sections[activeChapterIndex].querySelector(".recall-card");
         concealRecallCard(nextCard);
         updateStudyPosition();
-        window.scrollTo({top: 0, behavior: "smooth"});
+        window.scrollTo({top: 0, behavior: "auto"});
         return;
       }
       recallRetryMode = false;
