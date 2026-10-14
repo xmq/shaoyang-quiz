@@ -1415,44 +1415,53 @@
         {
           "topic_id": "database.t01",
           "chapter_id": "database.c01",
-          "title": "数据与管理软件",
-          "depth": "直接应用",
+          "title": "数据库、DBMS与三级模式",
+          "depth": "综合应用",
           "keywords": [
-            "数据",
-            "管理软件",
-            "数据与管理软件",
+            "数据库",
+            "DBMS",
+            "DBS",
+            "三级模式",
+            "外模式",
+            "内模式",
+            "数据独立性",
             "数据库系统基础"
           ],
           "knowledge_points": [
             "数据库系统基础"
           ],
           "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "直接应用",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
-            "完整说明"
+            "完整说明",
+            "分析应用"
           ],
           "practice_modes": [
             "客观辨析",
-            "简答说明"
+            "简答说明",
+            "综合应用"
           ],
           "short_answer": true
         },
         {
           "topic_id": "database.t02",
           "chapter_id": "database.c02",
-          "title": "实体与联系转换",
+          "title": "E-R建模",
           "depth": "综合应用",
           "keywords": [
+            "E-R",
+            "ER图",
             "实体",
-            "联系转换",
-            "实体与联系转换",
-            "数据库设计"
+            "属性",
+            "联系",
+            "1:1",
+            "1:n",
+            "m:n",
+            "基数"
           ],
-          "knowledge_points": [
-            "数据库设计"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -1472,12 +1481,16 @@
         },
         {
           "topic_id": "database.t03",
-          "chapter_id": "database.c03",
-          "title": "键与NULL",
+          "chapter_id": "database.c02",
+          "title": "E-R转关系",
           "depth": "综合应用",
           "keywords": [
-            "NULL",
-            "键与"
+            "E-R转关系",
+            "联系表",
+            "多值属性",
+            "外键放置",
+            "概念结构",
+            "逻辑结构"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -1497,108 +1510,126 @@
         },
         {
           "topic_id": "database.t04",
-          "chapter_id": "database.c04",
-          "title": "选择、投影与连接",
+          "chapter_id": "database.c03",
+          "title": "关系键与完整性",
           "depth": "综合应用",
           "keywords": [
-            "选择",
-            "投影",
-            "连接",
-            "投影与连接",
-            "关系模型与代数"
+            "超码",
+            "候选码",
+            "主码",
+            "外码",
+            "实体完整性",
+            "参照完整性",
+            "NULL"
           ],
-          "knowledge_points": [
-            "关系模型与代数"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "直接计算",
-            "分析应用",
-            "读写语句"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "直接计算",
-            "综合应用",
-            "代码/语句"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "database.t05",
-          "chapter_id": "database.c05",
-          "title": "先筛行，再分组",
-          "depth": "综合应用",
-          "keywords": [
-            "先筛行",
-            "再分组",
-            "SQL查询"
-          ],
-          "knowledge_points": [
-            "SQL查询"
-          ],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "直接计算",
-            "分析应用",
-            "读写语句"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "直接计算",
-            "综合应用",
-            "代码/语句"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "database.t06",
-          "chapter_id": "database.c06",
-          "title": "设计阶段与查询成本",
-          "depth": "综合应用",
-          "keywords": [
-            "设计阶段",
-            "查询成本",
-            "设计阶段与查询成本",
-            "索引与存储"
-          ],
-          "knowledge_points": [
-            "索引与存储"
-          ],
-          "core_status": "必学",
-          "practice_priority": "正常练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
             "完整说明",
-            "分析应用"
+            "直接计算",
+            "分析应用",
+            "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
-            "综合应用"
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t05",
+          "chapter_id": "database.c04",
+          "title": "关系代数",
+          "depth": "综合应用",
+          "keywords": [
+            "关系代数",
+            "选择",
+            "投影",
+            "连接",
+            "笛卡尔积",
+            "除法",
+            "并相容",
+            "关系模型与代数"
+          ],
+          "knowledge_points": [
+            "关系模型与代数"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t06",
+          "chapter_id": "database.c05",
+          "title": "SQL定义与约束",
+          "depth": "综合应用",
+          "keywords": [
+            "DDL",
+            "DML",
+            "DCL",
+            "CREATE",
+            "ALTER",
+            "DROP",
+            "PRIMARY KEY",
+            "FOREIGN KEY",
+            "CHECK"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
           ],
           "short_answer": true
         },
         {
           "topic_id": "database.t07",
-          "chapter_id": "database.c07",
-          "title": "函数依赖与范式",
+          "chapter_id": "database.c05",
+          "title": "SQL筛选、分组与聚合",
           "depth": "综合应用",
           "keywords": [
-            "函数依赖",
-            "范式",
-            "函数依赖与范式",
-            "数据库规范化"
+            "SELECT",
+            "WHERE",
+            "GROUP BY",
+            "HAVING",
+            "ORDER BY",
+            "COUNT",
+            "聚合函数",
+            "SQL查询"
           ],
           "knowledge_points": [
-            "数据库规范化"
+            "SQL查询"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -1607,30 +1638,34 @@
             "识别概念",
             "完整说明",
             "直接计算",
-            "分析应用"
+            "分析应用",
+            "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
             "直接计算",
-            "综合应用"
+            "综合应用",
+            "代码/语句"
           ],
           "short_answer": true
         },
         {
           "topic_id": "database.t08",
-          "chapter_id": "database.c08",
-          "title": "ACID与并发异常",
+          "chapter_id": "database.c05",
+          "title": "连接、子查询与集合运算",
           "depth": "综合应用",
           "keywords": [
-            "ACID",
-            "并发异常",
-            "与并发异常",
-            "事务与并发控制"
+            "JOIN",
+            "LEFT JOIN",
+            "子查询",
+            "EXISTS",
+            "IN",
+            "UNION",
+            "INTERSECT",
+            "EXCEPT"
           ],
-          "knowledge_points": [
-            "事务与并发控制"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -1652,17 +1687,19 @@
         },
         {
           "topic_id": "database.t09",
-          "chapter_id": "database.c09",
-          "title": "权限与恢复验证",
+          "chapter_id": "database.c06",
+          "title": "视图",
           "depth": "综合应用",
           "keywords": [
-            "权限",
-            "恢复验证",
-            "权限与恢复验证"
+            "视图",
+            "VIEW",
+            "物化视图",
+            "可更新视图",
+            "逻辑封装"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -1673,6 +1710,316 @@
             "客观辨析",
             "简答说明",
             "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t10",
+          "chapter_id": "database.c06",
+          "title": "索引与物理设计",
+          "depth": "综合应用",
+          "keywords": [
+            "索引",
+            "B+树",
+            "组合索引",
+            "聚簇",
+            "选择性",
+            "物理设计",
+            "存储结构",
+            "索引与存储"
+          ],
+          "knowledge_points": [
+            "索引与存储"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t11",
+          "chapter_id": "database.c06",
+          "title": "数据库设计流程",
+          "depth": "综合应用",
+          "keywords": [
+            "需求分析",
+            "概念设计",
+            "逻辑设计",
+            "物理设计",
+            "数据库设计阶段",
+            "实施",
+            "运行维护",
+            "数据库设计"
+          ],
+          "knowledge_points": [
+            "数据库设计"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t12",
+          "chapter_id": "database.c07",
+          "title": "属性闭包与候选键",
+          "depth": "综合应用",
+          "keywords": [
+            "属性闭包",
+            "闭包",
+            "候选键",
+            "候选码",
+            "超码",
+            "函数依赖",
+            "最小性"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t13",
+          "chapter_id": "database.c07",
+          "title": "范式判断",
+          "depth": "综合应用",
+          "keywords": [
+            "规范化",
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF",
+            "部分依赖",
+            "传递依赖",
+            "主属性",
+            "数据库规范化"
+          ],
+          "knowledge_points": [
+            "数据库规范化"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t14",
+          "chapter_id": "database.c07",
+          "title": "分解、无损连接与依赖保持",
+          "depth": "综合应用",
+          "keywords": [
+            "分解",
+            "无损连接",
+            "依赖保持",
+            "伪元组",
+            "公共属性"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t15",
+          "chapter_id": "database.c08",
+          "title": "ACID与事务边界",
+          "depth": "综合应用",
+          "keywords": [
+            "ACID",
+            "原子性",
+            "一致性",
+            "隔离性",
+            "持久性",
+            "COMMIT",
+            "ROLLBACK",
+            "事务边界"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t16",
+          "chapter_id": "database.c08",
+          "title": "并发异常与隔离级别",
+          "depth": "综合应用",
+          "keywords": [
+            "脏读",
+            "不可重复读",
+            "幻读",
+            "丢失更新",
+            "隔离级别",
+            "并发",
+            "锁",
+            "MVCC",
+            "事务与并发控制"
+          ],
+          "knowledge_points": [
+            "事务与并发控制"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t17",
+          "chapter_id": "database.c08",
+          "title": "WAL与恢复",
+          "depth": "综合应用",
+          "keywords": [
+            "WAL",
+            "日志",
+            "检查点",
+            "REDO",
+            "UNDO",
+            "恢复",
+            "系统故障",
+            "介质故障",
+            "数据库恢复"
+          ],
+          "knowledge_points": [
+            "数据库恢复"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "database.t18",
+          "chapter_id": "database.c09",
+          "title": "认证、授权与审计",
+          "depth": "综合应用",
+          "keywords": [
+            "认证",
+            "授权",
+            "审计",
+            "GRANT",
+            "REVOKE",
+            "角色",
+            "最小权限",
+            "数据库安全"
+          ],
+          "knowledge_points": [
+            "数据库安全"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
           ],
           "short_answer": true
         }
@@ -2605,119 +2952,21 @@
         {
           "topic_id": "programming.t01",
           "chapter_id": "programming.c01",
-          "title": "从算法到执行",
-          "depth": "直接应用",
+          "title": "算法、流程与执行",
+          "depth": "综合应用",
           "keywords": [
-            "从算法到执行",
+            "算法",
+            "流程图",
+            "伪代码",
+            "顺序结构",
+            "选择结构",
+            "循环结构",
+            "输入输出",
+            "终止条件",
             "程序设计基础"
           ],
           "knowledge_points": [
             "程序设计基础"
-          ],
-          "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "直接应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "programming.t02",
-          "chapter_id": "programming.c02",
-          "title": "类型与存储",
-          "depth": "直接应用",
-          "keywords": [
-            "类型",
-            "存储",
-            "类型与存储",
-            "Python数据类型"
-          ],
-          "knowledge_points": [
-            "Python数据类型"
-          ],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "直接应用",
-          "mastery_steps": [
-            "识别概念",
-            "完整说明"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "简答说明"
-          ],
-          "short_answer": true
-        },
-        {
-          "topic_id": "programming.t03",
-          "chapter_id": "programming.c03",
-          "title": "优先级、除法与短路",
-          "depth": "综合应用",
-          "keywords": [
-            "优先级",
-            "除法",
-            "短路",
-            "除法与短路"
-          ],
-          "knowledge_points": [],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "分析应用",
-            "读写语句"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "综合应用",
-            "代码/语句"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "programming.t04",
-          "chapter_id": "programming.c04",
-          "title": "输入转换",
-          "depth": "综合应用",
-          "keywords": [
-            "输入转换"
-          ],
-          "knowledge_points": [],
-          "core_status": "必学",
-          "practice_priority": "正常练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "分析应用",
-            "读写语句"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "综合应用",
-            "代码/语句"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "programming.t05",
-          "chapter_id": "programming.c05",
-          "title": "条件与分支",
-          "depth": "综合应用",
-          "keywords": [
-            "条件",
-            "分支",
-            "条件与分支",
-            "程序控制结构"
-          ],
-          "knowledge_points": [
-            "程序控制结构"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -2731,6 +2980,149 @@
           "practice_modes": [
             "客观辨析",
             "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t02",
+          "chapter_id": "programming.c01",
+          "title": "编译、解释与程序错误",
+          "depth": "综合应用",
+          "keywords": [
+            "编译",
+            "解释",
+            "语法错误",
+            "运行错误",
+            "逻辑错误",
+            "调试",
+            "断点",
+            "程序异常与调试"
+          ],
+          "knowledge_points": [
+            "程序异常与调试"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t03",
+          "chapter_id": "programming.c02",
+          "title": "类型、变量与转换",
+          "depth": "综合应用",
+          "keywords": [
+            "数据类型",
+            "变量",
+            "常量",
+            "标识符",
+            "类型转换",
+            "浮点",
+            "sizeof",
+            "int",
+            "float",
+            "Python数据类型"
+          ],
+          "knowledge_points": [
+            "Python数据类型"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t04",
+          "chapter_id": "programming.c03",
+          "title": "运算符、除法与短路",
+          "depth": "综合应用",
+          "keywords": [
+            "运算符",
+            "表达式",
+            "优先级",
+            "短路",
+            "逻辑运算",
+            "位运算",
+            "整数除法",
+            "取模"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t05",
+          "chapter_id": "programming.c04",
+          "title": "输入输出与顺序跟踪",
+          "depth": "综合应用",
+          "keywords": [
+            "input",
+            "print",
+            "scanf",
+            "printf",
+            "输入输出",
+            "顺序执行",
+            "变量跟踪"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
             "综合应用",
             "代码/语句"
           ],
@@ -2738,43 +3130,22 @@
         },
         {
           "topic_id": "programming.t06",
-          "chapter_id": "programming.c06",
-          "title": "跟踪变量与边界",
+          "chapter_id": "programming.c05",
+          "title": "条件与多分支",
           "depth": "综合应用",
           "keywords": [
-            "跟踪变量",
-            "边界",
-            "跟踪变量与边界"
-          ],
-          "knowledge_points": [],
-          "core_status": "必学",
-          "practice_priority": "优先练",
-          "target_depth": "综合应用",
-          "mastery_steps": [
-            "识别概念",
-            "分析应用",
-            "读写语句"
-          ],
-          "practice_modes": [
-            "客观辨析",
-            "综合应用",
-            "代码/语句"
-          ],
-          "short_answer": false
-        },
-        {
-          "topic_id": "programming.t07",
-          "chapter_id": "programming.c07",
-          "title": "参数与返回",
-          "depth": "综合应用",
-          "keywords": [
-            "参数",
-            "返回",
-            "参数与返回",
-            "C函数与作用域"
+            "if",
+            "else",
+            "elif",
+            "switch",
+            "case",
+            "条件",
+            "分支",
+            "区间",
+            "程序控制结构"
           ],
           "knowledge_points": [
-            "C函数与作用域"
+            "程序控制结构"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -2782,12 +3153,49 @@
           "mastery_steps": [
             "识别概念",
             "完整说明",
+            "直接计算",
             "分析应用",
             "读写语句"
           ],
           "practice_modes": [
             "客观辨析",
             "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t07",
+          "chapter_id": "programming.c06",
+          "title": "循环状态与边界",
+          "depth": "综合应用",
+          "keywords": [
+            "for",
+            "while",
+            "range",
+            "循环",
+            "break",
+            "continue",
+            "迭代",
+            "边界"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
             "综合应用",
             "代码/语句"
           ],
@@ -2795,17 +3203,22 @@
         },
         {
           "topic_id": "programming.t08",
-          "chapter_id": "programming.c08",
-          "title": "下标与共享",
+          "chapter_id": "programming.c07",
+          "title": "函数、参数与返回",
           "depth": "综合应用",
           "keywords": [
-            "下标",
-            "共享",
-            "下标与共享",
-            "C数组与字符串"
+            "函数",
+            "参数",
+            "形参",
+            "实参",
+            "返回值",
+            "return",
+            "传值",
+            "副作用",
+            "C函数与作用域"
           ],
           "knowledge_points": [
-            "C数组与字符串"
+            "C函数与作用域"
           ],
           "core_status": "必学",
           "practice_priority": "优先练",
@@ -2826,18 +3239,19 @@
         },
         {
           "topic_id": "programming.t09",
-          "chapter_id": "programming.c09",
-          "title": "地址与资源",
+          "chapter_id": "programming.c07",
+          "title": "作用域、递归与模块化",
           "depth": "综合应用",
           "keywords": [
-            "地址",
-            "资源",
-            "地址与资源",
-            "C指针与内存"
+            "作用域",
+            "局部变量",
+            "全局变量",
+            "递归",
+            "调用栈",
+            "模块化",
+            "终止条件"
           ],
-          "knowledge_points": [
-            "C指针与内存"
-          ],
+          "knowledge_points": [],
           "core_status": "必学",
           "practice_priority": "优先练",
           "target_depth": "综合应用",
@@ -2857,22 +3271,60 @@
         },
         {
           "topic_id": "programming.t10",
-          "chapter_id": "programming.c10",
-          "title": "错误处理与编码",
+          "chapter_id": "programming.c08",
+          "title": "C数组与字符串",
           "depth": "综合应用",
           "keywords": [
-            "错误处理",
-            "编码",
-            "错误处理与编码",
-            "C文件与结构体",
-            "程序异常与调试"
+            "C数组",
+            "字符数组",
+            "字符串",
+            "下标",
+            "strlen",
+            "sizeof",
+            "空字符",
+            "数组传参",
+            "C数组与字符串"
           ],
           "knowledge_points": [
-            "C文件与结构体",
-            "程序异常与调试"
+            "C数组与字符串"
           ],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t11",
+          "chapter_id": "programming.c08",
+          "title": "Python列表、元组、字典与集合",
+          "depth": "综合应用",
+          "keywords": [
+            "列表",
+            "元组",
+            "字典",
+            "集合",
+            "切片",
+            "浅拷贝",
+            "append",
+            "Python容器"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",
@@ -2889,17 +3341,157 @@
           "short_answer": true
         },
         {
-          "topic_id": "programming.t11",
-          "chapter_id": "programming.c11",
-          "title": "同一算法，不同语义",
+          "topic_id": "programming.t12",
+          "chapter_id": "programming.c09",
+          "title": "C指针与地址",
           "depth": "综合应用",
           "keywords": [
-            "同一算法",
-            "不同语义"
+            "指针",
+            "地址",
+            "解引用",
+            "空指针",
+            "野指针",
+            "指针运算",
+            "malloc",
+            "free",
+            "C指针与内存"
+          ],
+          "knowledge_points": [
+            "C指针与内存"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t13",
+          "chapter_id": "programming.c09",
+          "title": "C结构体",
+          "depth": "综合应用",
+          "keywords": [
+            "结构体",
+            "struct",
+            "成员",
+            "箭头运算符",
+            "内存对齐"
           ],
           "knowledge_points": [],
           "core_status": "必学",
-          "practice_priority": "正常练",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t14",
+          "chapter_id": "programming.c09",
+          "title": "C文件与资源管理",
+          "depth": "综合应用",
+          "keywords": [
+            "fopen",
+            "fclose",
+            "文件指针",
+            "文本文件",
+            "二进制文件",
+            "feof",
+            "资源释放",
+            "C文件与结构体"
+          ],
+          "knowledge_points": [
+            "C文件与结构体"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t15",
+          "chapter_id": "programming.c10",
+          "title": "Python异常、模块与文件",
+          "depth": "综合应用",
+          "keywords": [
+            "异常",
+            "try",
+            "except",
+            "finally",
+            "with open",
+            "编码",
+            "模块",
+            "ValueError"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true
+        },
+        {
+          "topic_id": "programming.t16",
+          "chapter_id": "programming.c11",
+          "title": "C与Python语义比较",
+          "depth": "综合应用",
+          "keywords": [
+            "C与Python",
+            "语言比较",
+            "负下标",
+            "整数除法",
+            "数组长度",
+            "自动内存管理"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
           "target_depth": "综合应用",
           "mastery_steps": [
             "识别概念",

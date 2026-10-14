@@ -34,6 +34,38 @@ NETWORK_COURSE = next(course for course in LEARNING_MAP["courses"] if course["su
 NETWORK_TOPICS = tuple(NETWORK_COURSE["topics"])
 NETWORK_TOPIC_BY_ID = {topic["topic_id"]: topic for topic in NETWORK_TOPICS}
 
+# 题干过短或术语跨主题时，明确指定其实际解题任务。
+DATABASE_TOPIC_OVERRIDES = {
+    "cg-09-s1-q14": 4, "cg-09-s1-q17": 11, "cg-09-s1-q20": 1,
+    "cg-09-s1-q21": 1, "cg-09-s1-q23": 4, "cg-09-s1-q28": 2,
+    "cg-09-s1-q30": 1, "cg-09-s1-q31": 1, "cg-09-s1-q36": 6,
+    "cg-09-s1-q45": 6, "cg-09-s1-q49": 6, "cg-09-s1-q50": 6,
+    "cg-09-s1-q53": 6, "cg-09-s1-q60": 5, "cg-09-s1-q62": 7,
+    "cg-09-s1-q65": 17, "cg-09-s2-q1": 6,
+    "zg-79633": 4, "zg-91256": 4, "zg-5594": 4, "zg-41008": 6,
+    "zg-25661": 4, "zg-27720": 6, "zg-75617": 1, "zg-5212": 7,
+    "zg-77676": 4, "zg-24086": 4, "zg-25187": 6,
+    "uf-db-005": 13, "uc-db-002": 8, "uc-db-003": 13,
+    "uc-db-010": 7, "ap-db-003": 15,
+}
+
+PROGRAMMING_TOPIC_OVERRIDES = {
+    "zg-73534": 5, "cg-04-s1-q6": 4, "cg-04-s1-q8": 6,
+    "cg-04-s1-q9": 6, "cg-04-s1-q13": 7, "cg-04-s3-q1": 1,
+    "cg-04-s3-q6": 1, "cg-04-s2-q4": 1, "cg-04-s1-q14": 7,
+    "cg-04-s2-q5": 4, "uf-pl-001": 4, "ua-program-009": 8,
+    "uf-pl-004": 8, "uf-pl-005": 12, "ua-program-004": 12,
+    "ua-program-005": 8, "ua-program-012": 11,
+    "cg-04-s2-q7": 11, "cg-04-s2-q10": 11, "zg-1554": 6,
+    "ap-pl-001": 12, "ua-program-006": 11, "ua-program-013": 10,
+    "hn-recall-cs25-001": 14,
+}
+
+SUBJECT_OVERRIDES = {
+    "zg-4542": "算法与数据结构",
+    "cg-04-s1-q16": "算法与数据结构",
+}
+
 ABILITY_VALUES = frozenset({
     "概念识记",
     "比较辨析",
@@ -133,6 +165,8 @@ SUBJECT_RULES: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
         ("网络设备与拓扑", ("拓扑", "集线器", "路由器", "网关", "ap", "wlan", "ssid")),
     ),
     "数据库": (
+        ("数据库安全", ("认证", "授权", "审计", "grant", "revoke", "最小权限", "角色")),
+        ("数据库恢复", ("wal", "日志", "检查点", "redo", "undo", "恢复", "备份")),
         ("SQL查询", ("sql", "select", "where", "group by", "having", "join", "查询", "视图")),
         ("事务与并发控制", ("事务", "acid", "并发", "锁", "隔离级别", "提交", "回滚", "死锁")),
         ("关系模型与代数", ("关系模型", "关系代数", "元组", "属性", "主键", "外键", "候选键")),
@@ -342,8 +376,84 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                 "required_depth": manual["depth"],
                 "topic_order": topics.index(manual),
             }
+    if subject == "数据库":
+        # 数据库题干中的“选择”“关系”等普通词很容易撞上关系代数。
+        # 按独立解题任务使用题干规则，并让恢复、安全等窄主题优先匹配。
+        override_number = DATABASE_TOPIC_OVERRIDES.get(str(question.get("id")))
+        if override_number:
+            best = topics[override_number - 1]
+            return {
+                "topic_id": best["topic_id"], "topic_title": best["title"],
+                "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+                "topic_order": override_number - 1,
+            }
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (18, r"grant|revoke|授予.*权限|收回.*权限|授权|审计|最小权限"),
+            (17, r"\bwal\b|日志|后备副本|备份|恢复|\bredo\b|\bundo\b|检查点"),
+            (16, r"并发|排它锁|共享锁|封锁|丢失更新|脏读|不可重复读|幻读|隔离级别|冲突优先图"),
+            (15, r"\bacid\b|事务的.{0,3}(?:4|四)个特征|原子性|不可分割|全部成功|同一事务|逻辑工作单元|持久性|回滚|提交"),
+            (14, r"无损|依赖保持|关系分解|伪元组"),
+            (13, r"范式|规范化|\b1nf\b|\b2nf\b|\b3nf\b|\bbcnf\b|删除操作异常|部分依赖|传递依赖"),
+            (12, r"属性闭包|闭包|函数依赖|候选键"),
+            (11, r"需求分析|概念设计|逻辑设计|物理设计|数据库设计阶段|设计数据库"),
+            (10, r"索引|b\+树|范围.*排序|文件组织|物理设计"),
+            (6, r"\bcreate\b|\balter\b|\bdrop\b|\bdelete\b|\bupdate\b|\binsert\b|primarykey|foreignkey|notnull|\bunique\b|\bcheck\b|数据操纵功能"),
+            (9, r"视图|\bview\b"),
+            (8, r"leftjoin|innerjoin|\bjoin\b|子查询|\bexists\b|\bnotin\b|集合运算"),
+            (7, r"\bselect\b|\bwhere\b|groupby|\bhaving\b|orderby|\bcount\b|\bavg\b|\bmax\b|\bmin\b|通配符|\bdistinct\b|sql语言的功能"),
+            (3, r"e-r.*转|转换为.*关系模式|联系转换|联系表|外键.*(?:多端|n端)"),
+            (2, r"e-r|er图|实体|一对多联系|1:n联系|m:n联系|概念模型"),
+            (5, r"关系代数|投影运算|选择σ|五种基本运算|集合r与s的交|数据操纵即是建立在关系"),
+            (4, r"主码|主键|候选|关键字|外码|外键|完整性|元组|二维表的.行|一行叫做|关系模式至少|关系模型"),
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {
+                    "topic_id": best["topic_id"],
+                    "topic_title": best["title"],
+                    "chapter_id": best["chapter_id"],
+                    "required_depth": best["depth"],
+                    "topic_order": topic_number - 1,
+                }
+    if subject == "编程语言":
+        override_number = PROGRAMMING_TOPIC_OVERRIDES.get(str(question.get("id")))
+        if override_number:
+            best = topics[override_number - 1]
+            return {
+                "topic_id": best["topic_id"], "topic_title": best["title"],
+                "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+                "topic_order": override_number - 1,
+            }
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (16, r"c与python|语言差异|两种语言"),
+            (15, r"\btry\b|\bexcept\b|\bfinally\b|异常|withopen|valueerror|python.*文件"),
+            (14, r"\bfopen\b|\bfclose\b|\bfeof\b|文件指针|文本文件|二进制文件|流式处理"),
+            (13, r"\bstruct\b|结构体|->"),
+            (12, r"指针|int\*|\*p|p\+\d|&x|地址|解引用|\bmalloc\b|\bfree\b"),
+            (11, r"列表|元组|字典|集合|容器|切片|\bappend\b|\bsort\b|\blen\b|\brange\b.*切片"),
+            (10, r"数组|字符数组|字符串|\bstrlen\b|\bsizeof\b"),
+            (9, r"递归|作用域|全局变量|局部变量|调用栈|终止递归"),
+            (8, r"函数|形参|实参|参数|返回值|\breturn\b|默认列表"),
+            (7, r"\bfor\b|\bwhile\b|\brange\b|循环|\bbreak\b|\bcontinue\b"),
+            (6, r"\bif\b|\belse\b|\belif\b|\bswitch\b|\bcase\b|条件分支|三目|\?"),
+            (5, r"\bscanf\b|\bprintf\b|\binput\b|\bprint\b|键盘输入|输入语句|输出结果"),
+            (4, r"运算符|表达式|短路|取模|整数除法|优先级|逗号表达式"),
+            (3, r"变量|常量|数据类型|标识符|\bint\b|\bfloat\b|\bdouble\b|类型转换"),
+            (2, r"编译|解释程序|语法错误|运行错误|逻辑错误|调试"),
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {
+                    "topic_id": best["topic_id"], "topic_title": best["title"],
+                    "chapter_id": best["chapter_id"], "required_depth": best["depth"],
+                    "topic_order": topic_number - 1,
+                }
     best = topics[0]
-    if subject in {"算法与数据结构", "操作系统"}:
+    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言"}:
         core_text = question_text(question, include_options=False)
         stem_text = normalized_text(question.get("stem"))
         best_score = (0, 0, 0, 0, 0, 0, 0)
@@ -540,8 +650,13 @@ def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
     for index, question in enumerate(questions, 1):
         if not isinstance(question, dict):
             raise ValueError(f"第{index}项不是题目对象")
-        metadata = expected_metadata(question)
-        item = dict(question)
+        source_question = dict(question)
+        expected_subject = SUBJECT_OVERRIDES.get(str(question.get("id")))
+        if expected_subject:
+            source_question["subject"] = expected_subject
+            source_question.pop("topic_source", None)
+        metadata = expected_metadata(source_question)
+        item = source_question
         item.update(metadata)
         removed_generated = False
         keeps_generated = item.get("type") == "简答" or (
@@ -552,7 +667,7 @@ def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
                 if field in item:
                     item.pop(field)
                     removed_generated = True
-        if removed_generated or any(question.get(key) != value for key, value in metadata.items()):
+        if removed_generated or item.get("subject") != question.get("subject") or any(question.get(key) != value for key, value in metadata.items()):
             changed_ids.append(str(question.get("id") or f"#{index}"))
         enriched.append(item)
     return enriched, changed_ids

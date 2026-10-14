@@ -3175,181 +3175,6 @@
   "topic_order": 0
  },
  {
-  "id": "cg-02-s1-q3-dup2",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·导论",
-  "stem": "执行 REPEAT 2 [FD 50 RT 90 FD 80 RT 90] 命令，能画出一个（ ）。",
-  "options": {
-   "A": "正方形",
-   "B": "长方形",
-   "C": "梯形",
-   "D": "风车"
-  },
-  "answer": "B",
-  "explanation": "本题考查编程语言相关知识。B项“长方形”与题干要求相符，故选 B。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·导论",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-02-s1-q7-dup2",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·导论",
-  "stem": "能让海龟在任意地方迅速回到母位的命令是（ ）。",
-  "options": {
-   "A": "GO HOME",
-   "B": "HOME",
-   "C": "CS",
-   "D": "PU"
-  },
-  "answer": "B",
-  "explanation": "本题考查编程语言相关知识。B项“HOME”与题干要求相符，故选 B。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·导论",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-03-s1-q1",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·0103",
-  "stem": "在 Scratch 中，关于声音的说法，下列不正确的是（ ）。",
-  "options": {
-   "A": "可以在声音库中选取声音，使角色更加生动",
-   "B": "可以使用指令设置声音的音量大小",
-   "C": "声音可以重命名",
-   "D": "无法上传自己电脑上的声音到 Scratch"
-  },
-  "answer": "D",
-  "explanation": "本题考查编程语言相关知识。D项“无法上传自己电脑上的声音到 Scratch”与题干要求相符，故选 D。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·0103",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-03-s1-q6",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·0103",
-  "stem": "下列关于变量说法错误的是（ ）。",
-  "options": {
-   "A": "变量一旦创建，就不允许再修改名称",
-   "B": "变量是有作用域的，它决定了可以访问变量的范围",
-   "C": "在 Scratch 中，我们可以使用变量来存储或读取数据",
-   "D": "我们可以将变量的值显示在舞台上"
-  },
-  "answer": "A",
-  "explanation": "本题考查编程语言相关知识。A项“变量一旦创建，就不允许再修改名称”与题干要求相符，故选 A。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·0103",
-  "knowledge_point": "C函数与作用域",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
- },
- {
-  "id": "cg-03-s1-q8",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·0103",
-  "stem": "下列哪项不是 scratch3.0 中声音模块下的指令？（ ）",
-  "options": {
-   "A": "播放声音",
-   "B": "停止所有声音",
-   "C": "清除音效",
-   "D": "循环播放声音"
-  },
-  "answer": "D",
-  "explanation": "本题考查编程语言相关知识。D项“循环播放声音”与题干要求相符，故选 D。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·0103",
-  "knowledge_point": "程序控制结构",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
-  "required_depth": "综合应用",
-  "topic_order": 4
- },
- {
-  "id": "cg-03-s1-q13",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·0103",
-  "stem": "小明学习 Scratch 编程两个多月了，他的下列做法正确的是（ ）。",
-  "options": {
-   "A": "每次编写程序，都记得及时保存",
-   "B": "认为注释不是必须的，所以从来不写注释",
-   "C": "不喜欢和同学老师交流合作，觉得浪费时间",
-   "D": "变量随意命名，没有任何规则"
-  },
-  "answer": "A",
-  "explanation": "本题考查编程语言相关知识。A项“每次编写程序，都记得及时保存”与题干要求相符，故选 A。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·0103",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-03-s1-q16",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·0103",
-  "stem": "指令的含义是（ ）。",
-  "options": {
-   "A": "鼠标点击哪里角色移动到哪里",
-   "B": "角色移动到鼠标指针旁边",
-   "C": "角色移动到鼠标指针所在坐标",
-   "D": "将坐标原点移动到鼠标指针处"
-  },
-  "answer": "C",
-  "explanation": "本题考查编程语言相关知识。C项“角色移动到鼠标指针所在坐标”与题干要求相符，故选 C。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·0103",
-  "knowledge_point": "C指针与内存",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
-  "required_depth": "综合应用",
-  "topic_order": 8
- },
- {
   "id": "cg-04-s1-q1",
   "source": "超格",
   "type": "单选",
@@ -3368,11 +3193,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t03",
+  "topic_title": "类型、变量与转换",
+  "chapter_id": "programming.c02",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "zg-73534",
@@ -3393,11 +3218,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t05",
+  "topic_title": "输入输出与顺序跟踪",
+  "chapter_id": "programming.c04",
+  "required_depth": "综合应用",
+  "topic_order": 4
  },
  {
   "id": "cg-04-s1-q6",
@@ -3418,11 +3243,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t04",
+  "topic_title": "运算符、除法与短路",
+  "chapter_id": "programming.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-04-s1-q7",
@@ -3443,11 +3268,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t04",
+  "topic_title": "运算符、除法与短路",
+  "chapter_id": "programming.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-04-s1-q8",
@@ -3468,11 +3293,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-04-s1-q9",
@@ -3493,18 +3318,18 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-04-s1-q10",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·程序填空",
-  "stem": "在 C 语言中，表达式（x=9，x% =x+3）的值是（ ）。",
+  "stem": "在C语言中，表达式(x=9, x %= x+3)的值是（ ）。",
   "options": {
    "A": "6",
    "B": "7",
@@ -3512,17 +3337,17 @@
    "D": "9"
   },
   "answer": "D",
-  "explanation": "本题考查编程语言相关知识。D项“9”与题干要求相符，故选 D。",
+  "explanation": "先令x=9，再计算x %= 12，即x=9%12=9，整个赋值表达式的值为9。",
   "subject": "编程语言",
   "source_chapter": "第二篇 编程·程序填空",
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t04",
+  "topic_title": "运算符、除法与短路",
+  "chapter_id": "programming.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-04-s1-q13",
@@ -3543,34 +3368,36 @@
   "knowledge_point": "程序控制结构",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "cg-04-s1-q14",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·程序填空",
-  "stem": "如下所示程序的功能为从键盘中输入一个整数 a，计算各位数字之和并输出。\n其中横线处应填入的语句为（ ）。\n#include<stdio.h>\nvoid main（ ）\n{\nint a，sum=0；\nscanf（“%d” ，&a）；",
+  "stem": "下列C程序输入一个正整数a，计算各位数字之和。横线处应填入（ ）。\nint main(void) {\n  int a, sum=0;\n  scanf(\"%d\", &a);\n  while (a != 0) {\n    ________\n    a = a / 10;\n  }\n  printf(\"%d\\n\", sum);\n  return 0;\n}",
   "options": {
-   "A": "sum=sum+a%10； B. sum=sum+a/10；",
-   "C": "sum=sum+a%10 D. sum=sum+a/10 while（a ！ =0） { ________ a=a/10； } print（“%d\\n” ，sum）； } A"
+   "A": "sum += a % 10;",
+   "B": "sum += a / 10;",
+   "C": "sum = a % 10;",
+   "D": "sum += a;"
   },
   "answer": "A",
-  "explanation": "本题考查编程语言相关知识。A项“sum=sum+a%10； B. sum=sum+a/10；”与题干要求相符，故选 A。",
+  "explanation": "a%10取得当前个位并累加，随后a/10去掉个位；循环结束后sum是各位数字之和。",
   "subject": "编程语言",
   "source_chapter": "第二篇 编程·程序填空",
   "knowledge_point": "程序控制结构",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "cg-04-s1-q16",
@@ -3586,16 +3413,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“O（n2）”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序控制结构",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "knowledge_point": "数据结构基础",
+  "ability": "概念识记",
+  "difficulty": "基础",
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 0
  },
  {
   "id": "cg-04-s2-q4",
@@ -3616,11 +3443,11 @@
   "knowledge_point": "C函数与作用域",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
-  "chapter_id": "programming.c07",
+  "topic_id": "programming.t01",
+  "topic_title": "算法、流程与执行",
+  "chapter_id": "programming.c01",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 0
  },
  {
   "id": "cg-04-s2-q5",
@@ -3641,18 +3468,18 @@
   "knowledge_point": "Python数据类型",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t04",
+  "topic_title": "运算符、除法与短路",
+  "chapter_id": "programming.c03",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 3
  },
  {
   "id": "cg-04-s2-q6",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·程序填空",
-  "stem": "以下代码的输出结果是（ ）。\nFor i in range（1，6）：\nIf i%4= =0：\ncontinue\nelse：\nprint（i，end=“，”）",
+  "stem": "以下Python代码的输出结果是（ ）。\nfor i in range(1, 6):\n    if i % 4 == 0:\n        continue\n    else:\n        print(i, end=\",\")",
   "options": {
    "A": "1，2，3，",
    "B": "1，2，3，4，",
@@ -3660,24 +3487,24 @@
    "D": "1，2，3，5，6"
   },
   "answer": "C",
-  "explanation": "本题考查编程语言相关知识。C项“1，2，3，5，”与题干要求相符，故选 C。",
+  "explanation": "range(1,6)产生1至5；i=4时continue，其余数字依次输出，所以结果为1,2,3,5,。",
   "subject": "编程语言",
   "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序控制结构",
+  "knowledge_point": "Python数据类型",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "cg-04-s2-q7",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·程序填空",
-  "stem": "以下代码的输出结果是（ ）。\nx=‘R\\0S\\0T’\nprint（len（x））",
+  "stem": "以下Python代码的输出结果是（ ）。\nx=\"R\\0S\\0T\"\nprint(len(x))",
   "options": {
    "A": "3",
    "B": "5",
@@ -3685,17 +3512,17 @@
    "D": "6"
   },
   "answer": "B",
-  "explanation": "本题考查编程语言相关知识。B项“5”与题干要求相符，故选 B。",
+  "explanation": "字符串包含R、空字符、S、空字符、T共5个字符；Python字符串不会把空字符当作结尾，因此长度为5。",
   "subject": "编程语言",
   "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "Python数据类型",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-04-s2-q8",
@@ -3716,43 +3543,18 @@
   "knowledge_point": "C数组与字符串",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
- },
- {
-  "id": "cg-04-s2-q9",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·程序填空",
-  "stem": "下代码绘制的图形是（ ）。\nImport turtle as t\nfor i in range（1，7）:\nt.fd（50）\nt.left（60）",
-  "options": {
-   "A": "正方形",
-   "B": "六边形",
-   "C": "三角形",
-   "D": "五角星"
-  },
-  "answer": "B",
-  "explanation": "本题考查编程语言相关知识。B项“六边形”与题干要求相符，故选 B。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序控制结构",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t10",
+  "topic_title": "C数组与字符串",
+  "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 9
  },
  {
   "id": "cg-04-s2-q10",
   "source": "超格",
   "type": "单选",
   "chapter": "第二篇 编程·程序填空",
-  "stem": "以下代码的输出结果是（ ）。\nd ＝ {“大海”:“蓝色”,“天空”:“灰色”,“大地”:“黑色”}\nprint（d［“大地”］；d.get（“天空”、“黄色”））",
+  "stem": "以下Python代码的输出结果是（ ）。\nd={\"大海\":\"蓝色\",\"天空\":\"灰色\",\"大地\":\"黑色\"}\nprint(d[\"大地\"], d.get(\"天空\",\"黄色\"))",
   "options": {
    "A": "黑色 黑色",
    "B": "黑色 灰色",
@@ -3760,17 +3562,17 @@
    "D": "黑色 蓝色"
   },
   "answer": "B",
-  "explanation": "本题考查编程语言相关知识。B项“黑色 灰色”与题干要求相符，故选 B。",
+  "explanation": "d[\"大地\"]得到黑色；键“天空”存在，所以get返回灰色而非默认值黄色。",
   "subject": "编程语言",
   "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "Python数据类型",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "cg-04-s3-q1",
@@ -3791,11 +3593,11 @@
   "knowledge_point": "程序异常与调试",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t10",
-  "topic_title": "错误处理与编码",
-  "chapter_id": "programming.c10",
+  "topic_id": "programming.t01",
+  "topic_title": "算法、流程与执行",
+  "chapter_id": "programming.c01",
   "required_depth": "综合应用",
-  "topic_order": 9
+  "topic_order": 0
  },
  {
   "id": "zg-48003",
@@ -3842,9 +3644,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -3867,9 +3669,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -3891,11 +3693,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "进阶",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_id": "programming.t02",
+  "topic_title": "编译、解释与程序错误",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "cg-04-s3-q8",
@@ -3916,36 +3718,11 @@
   "knowledge_point": "程序异常与调试",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t10",
-  "topic_title": "错误处理与编码",
-  "chapter_id": "programming.c10",
+  "topic_id": "programming.t02",
+  "topic_title": "编译、解释与程序错误",
+  "chapter_id": "programming.c01",
   "required_depth": "综合应用",
-  "topic_order": 9
- },
- {
-  "id": "cg-04-s3-q10",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·程序填空",
-  "stem": "第一个高级程序设计语言是（ ）。",
-  "options": {
-   "A": "C",
-   "B": "BASIC",
-   "C": "Pascal",
-   "D": "FORTRAN"
-  },
-  "answer": "D",
-  "explanation": "本题考查编程语言相关知识。D项“FORTRAN”与题干要求相符，故选 D。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序控制结构",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
-  "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 1
  },
  {
   "id": "cg-04-s3-q11",
@@ -3967,84 +3744,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-04-s3-q12",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·程序填空",
-  "stem": "当今软件开发的主流语言和技术是（ ）。",
-  "options": {
-   "A": "机器语言",
-   "B": "汇编语言",
-   "C": "面向过程语言",
-   "D": "面向对象语言"
-  },
-  "answer": "D",
-  "explanation": "本题考查编程语言相关知识。D项“面向对象语言”与题干要求相符，故选 D。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序设计基础",
-  "ability": "程序阅读",
-  "difficulty": "进阶",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-04-s3-q13",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·程序填空",
-  "stem": "下列不属于高级语言基本语法单位的是（ ）。",
-  "options": {
-   "A": "常量",
-   "B": "运算符",
-   "C": "标识符",
-   "D": "通配符"
-  },
-  "answer": "D",
-  "explanation": "本题考查编程语言相关知识。D项“通配符”与题干要求相符，故选 D。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序设计基础",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-04-s3-q14",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·程序填空",
-  "stem": "下列选项中属于客户端脚本语言的是（ ）。",
-  "options": {
-   "A": "VB",
-   "B": "JavaScript",
-   "C": "PHP",
-   "D": "EXCEL"
-  },
-  "answer": "B",
-  "explanation": "本题考查编程语言相关知识。B项“JavaScript”与题干要求相符，故选 B。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序设计基础",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -4067,9 +3769,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -4092,9 +3794,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -4116,36 +3818,11 @@
   "knowledge_point": "程序控制结构",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
- },
- {
-  "id": "cg-04-s3-q18",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第二篇 编程·程序填空",
-  "stem": "对象实现了数据和操作的结合，使数据和操作（ ）于对象的统一体中。",
-  "options": {
-   "A": "结合",
-   "B": "隐藏",
-   "C": "封装",
-   "D": "抽象"
-  },
-  "answer": "C",
-  "explanation": "本题考查编程语言相关知识。C项“封装”与题干要求相符，故选 C。",
-  "subject": "编程语言",
-  "source_chapter": "第二篇 编程·程序填空",
-  "knowledge_point": "程序设计基础",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_order": 6
  },
  {
   "id": "cg-04-s3-q21",
@@ -4167,9 +3844,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -4212,16 +3889,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“不仅数据元素所包含的数据项的个数要相同，而且对应数据项的类型要一致”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "数据结构基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q6",
@@ -4237,16 +3914,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“逻辑”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "数据结构基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q7",
@@ -4262,16 +3939,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“树”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C数组与字符串",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
-  "chapter_id": "programming.c08",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q8",
@@ -4287,16 +3964,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“连续是否均可以”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 1
  },
  {
   "id": "cg-05-s1-q9",
@@ -4312,16 +3989,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“线性表中的元素之间是一对一的关系”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "cg-05-s1-q10",
@@ -4337,15 +4014,15 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“线性表采用顺序存储，便于插入和删除操作的实现”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
   "topic_order": 1
  },
  {
@@ -4362,16 +4039,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“O（n）”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "直接计算",
   "difficulty": "应用",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q12",
@@ -4387,16 +4064,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“集合”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "Python数据类型",
+  "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
+  "chapter_id": "data-structures.c05",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "cg-05-s1-q13",
@@ -4412,16 +4089,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“100”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 1
  },
  {
   "id": "cg-05-s1-q14",
@@ -4437,16 +4114,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“n”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "比较辨析",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "cg-05-s1-q15",
@@ -4462,16 +4139,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“各结点的值如何”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "数据结构基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q16",
@@ -4487,16 +4164,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“随机存取”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "查找与散列",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
+  "required_depth": "综合应用",
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q17",
@@ -4512,16 +4189,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“小于 1”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-05-s1-q18",
@@ -4537,16 +4214,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“数据元素”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t02",
+  "topic_title": "顺序表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "cg-05-s1-q19",
@@ -4562,16 +4239,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“通常不会出现栈满的情况”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "栈与队列",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q20",
@@ -4587,16 +4264,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“使空表和非空表的处理统一”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-05-s1-q22",
@@ -4612,16 +4289,16 @@
   },
   "answer": "B",
   "explanation": "单链表插入正确顺序：先 s 指向 p 的下一个，再 p 指向 s（保持链不断）。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C指针与内存",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
+  "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 2
  },
  {
   "id": "cg-05-s1-q23",
@@ -4637,16 +4314,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“s->left=p；s->right=p->right；p->right->left=s；p->right=s；”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C指针与内存",
+  "knowledge_point": "线性表",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
+  "chapter_id": "data-structures.c02",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 2
  },
  {
   "id": "cg-05-s1-q24",
@@ -4662,16 +4339,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“栈具有后进先出的特征”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q25",
@@ -4687,16 +4364,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“栈”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C数组与字符串",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
-  "chapter_id": "programming.c08",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q26",
@@ -4712,16 +4389,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“35421”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "knowledge_point": "栈与队列",
+  "ability": "概念识记",
+  "difficulty": "基础",
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q27",
@@ -4737,16 +4414,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“39、38、P、C、8、7”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "栈与队列",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q28",
@@ -4762,14 +4439,14 @@
   },
   "answer": "B",
   "explanation": "循环队列空：rear==front。区分队空/队满靠 (rear+1)%n==front 来判满。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C指针与内存",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
   "topic_order": 4
  },
@@ -4787,16 +4464,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“循环队列是队列的一种顺序存储结构”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C指针与内存",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t04",
+  "topic_title": "栈与递归",
+  "chapter_id": "data-structures.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-05-s1-q30",
@@ -4812,16 +4489,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“2 和 4”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C数组与字符串",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
-  "chapter_id": "programming.c08",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 4
  },
  {
   "id": "cg-05-s1-q31",
@@ -4837,16 +4514,16 @@
   },
   "answer": "D",
   "explanation": "循环队列满：(rear+1)%N==front。少用一个空间区分空满状态。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C指针与内存",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "data-structures.t05",
+  "topic_title": "队列与循环队列",
+  "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 4
  },
  {
   "id": "cg-05-s1-q33",
@@ -4862,16 +4539,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“层序遍历”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C函数与作用域",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
-  "chapter_id": "programming.c07",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q34",
@@ -4887,16 +4564,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“树”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t03",
+  "topic_title": "链表",
+  "chapter_id": "data-structures.c02",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "cg-05-s1-q35",
@@ -4912,16 +4589,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“8”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q36",
@@ -4937,16 +4614,16 @@
   },
   "answer": "B",
   "explanation": "深度为 k 的二叉树最多有 2^k−1 个结点；30 个结点至少需要深度 5。故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q38",
@@ -4962,16 +4639,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“不确定”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q39",
@@ -4987,16 +4664,16 @@
   },
   "answer": "A",
   "explanation": "本题考查编程语言相关知识。A项“若一个树叶是某二叉树的中序遍历的最后一个结点，则它必是该二叉树的前序遍 历最后一个结点。”与题干要求相符，故选 A。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q40",
@@ -5012,16 +4689,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“350”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q42",
@@ -5037,16 +4714,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“h 或 h+1”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q43",
@@ -5062,16 +4739,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“ABDCEF”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q44",
@@ -5087,16 +4764,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“5”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "树与二叉树",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t08",
+  "topic_title": "二叉树性质",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "综合应用",
+  "topic_order": 7
  },
  {
   "id": "cg-05-s1-q45",
@@ -5112,16 +4789,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“树型结构”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "Python数据类型",
+  "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t13",
+  "topic_title": "图的存储",
+  "chapter_id": "data-structures.c05",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "cg-05-s1-q46",
@@ -5137,16 +4814,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“栈”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "Python数据类型",
+  "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t14",
+  "topic_title": "DFS与BFS",
+  "chapter_id": "data-structures.c05",
+  "required_depth": "综合应用",
+  "topic_order": 13
  },
  {
   "id": "cg-05-s1-q47",
@@ -5162,16 +4839,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“插入类排序法”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "排序算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "data-structures.t23",
+  "topic_title": "堆、希尔、基数与排序选择",
+  "chapter_id": "data-structures.c07",
+  "required_depth": "综合应用",
+  "topic_order": 22
  },
  {
   "id": "cg-05-s1-q48",
@@ -5187,16 +4864,16 @@
   },
   "answer": "C",
   "explanation": "本题考查编程语言相关知识。C项“冒泡”与题干要求相符，故选 C。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "排序算法",
   "ability": "比较辨析",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t20",
+  "topic_title": "插入、冒泡与选择排序",
+  "chapter_id": "data-structures.c07",
+  "required_depth": "综合应用",
+  "topic_order": 19
  },
  {
   "id": "cg-05-s1-q49",
@@ -5212,16 +4889,16 @@
   },
   "answer": "D",
   "explanation": "本题考查编程语言相关知识。D项“6、2、4、1”与题干要求相符，故选 D。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "C数组与字符串",
+  "knowledge_point": "排序算法",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
-  "chapter_id": "programming.c08",
+  "topic_id": "data-structures.t20",
+  "topic_title": "插入、冒泡与选择排序",
+  "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 19
  },
  {
   "id": "cg-05-s1-q50",
@@ -5237,16 +4914,16 @@
   },
   "answer": "B",
   "explanation": "本题考查编程语言相关知识。B项“（24、35、21、54、67、78、63、73、89）”与题干要求相符，故选 B。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第二篇 编程·单选0108",
-  "knowledge_point": "程序设计基础",
+  "knowledge_point": "排序算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "data-structures.t21",
+  "topic_title": "快速排序",
+  "chapter_id": "data-structures.c07",
+  "required_depth": "综合应用",
+  "topic_order": 20
  },
  {
   "id": "cg-06-s1-q5",
@@ -11268,9 +10945,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11293,9 +10970,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11318,9 +10995,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11343,9 +11020,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11368,9 +11045,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11393,9 +11070,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11418,9 +11095,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11443,9 +11120,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11468,9 +11145,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11493,9 +11170,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11517,11 +11194,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "cg-09-s1-q15",
@@ -11543,8 +11220,8 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
-  "chapter_id": "database.c04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
   "topic_order": 3
  },
@@ -11567,11 +11244,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-09-s1-q17",
@@ -11592,11 +11269,11 @@
   "knowledge_point": "数据库设计",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t11",
+  "topic_title": "数据库设计流程",
+  "chapter_id": "database.c06",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 10
  },
  {
   "id": "cg-09-s1-q18",
@@ -11617,11 +11294,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t11",
+  "topic_title": "数据库设计流程",
+  "chapter_id": "database.c06",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 10
  },
  {
   "id": "cg-09-s1-q19",
@@ -11643,7 +11320,7 @@
   "ability": "过程描述",
   "difficulty": "应用",
   "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_title": "E-R建模",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
   "topic_order": 1
@@ -11667,11 +11344,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t01",
+  "topic_title": "数据库、DBMS与三级模式",
+  "chapter_id": "database.c01",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 0
  },
  {
   "id": "cg-09-s1-q21",
@@ -11693,9 +11370,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11718,9 +11395,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11742,11 +11419,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "cg-09-s1-q24",
@@ -11768,7 +11445,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_title": "E-R建模",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
   "topic_order": 1
@@ -11792,11 +11469,11 @@
   "knowledge_point": "数据库设计",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t02",
+  "topic_title": "E-R建模",
+  "chapter_id": "database.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "cg-09-s1-q26",
@@ -11818,34 +11495,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-09-s1-q27",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第三篇 数据库网络·0117",
-  "stem": "非关系型数据库的英文缩写是（ ）。",
-  "options": {
-   "A": "NRDB",
-   "B": "NoSQL",
-   "C": "NoDB",
-   "D": "NoRDB"
-  },
-  "answer": "B",
-  "explanation": "NoSQL 是非关系型数据库通用术语（Not only SQL）。",
-  "subject": "数据库",
-  "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "SQL查询",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11867,11 +11519,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t02",
+  "topic_title": "E-R建模",
+  "chapter_id": "database.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "cg-09-s1-q29",
@@ -11893,7 +11545,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_title": "E-R建模",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
   "topic_order": 1
@@ -11917,11 +11569,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t01",
+  "topic_title": "数据库、DBMS与三级模式",
+  "chapter_id": "database.c01",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 0
  },
  {
   "id": "cg-09-s1-q31",
@@ -11943,9 +11595,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11968,9 +11620,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -11992,11 +11644,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_id": "database.t03",
+  "topic_title": "E-R转关系",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 2
  },
  {
   "id": "cg-09-s1-q34",
@@ -12017,11 +11669,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t09",
+  "topic_title": "视图",
+  "chapter_id": "database.c06",
+  "required_depth": "综合应用",
+  "topic_order": 8
  },
  {
   "id": "cg-09-s1-q35",
@@ -12042,11 +11694,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t09",
+  "topic_title": "视图",
+  "chapter_id": "database.c06",
+  "required_depth": "综合应用",
+  "topic_order": 8
  },
  {
   "id": "cg-09-s1-q36",
@@ -12064,14 +11716,14 @@
   "explanation": "主码、外码用于实体完整性和参照完整性，属于完整性措施。",
   "subject": "数据库",
   "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "SQL查询",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-09-s1-q37",
@@ -12092,11 +11744,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "cg-09-s1-q38",
@@ -12117,11 +11769,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "cg-09-s1-q39",
@@ -12142,11 +11794,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "cg-09-s1-q40",
@@ -12167,11 +11819,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "cg-09-s1-q41",
@@ -12192,11 +11844,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q42",
@@ -12217,43 +11869,18 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-09-s1-q44",
-  "source": "超格",
-  "type": "单选",
-  "chapter": "第三篇 数据库网络·0117",
-  "stem": "SQL 语言规定对数据库中的表能够执行授予权限和收回权限命令的用户\n（ ）。",
-  "options": {
-   "A": "只能是表的使用者",
-   "B": "只能是表的建立者",
-   "C": "只能是 DBA",
-   "D": "是 DBA 和表的建立者"
-  },
-  "answer": "D",
-  "explanation": "GRANT 权限只能由 DBA 或表的建立者执行。",
-  "subject": "数据库",
-  "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "SQL查询",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "database.t09",
-  "topic_title": "权限与恢复验证",
-  "chapter_id": "database.c09",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 3
  },
  {
   "id": "cg-09-s1-q45",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0117",
-  "stem": "删除经销商 1018 的数据记录的代码为：（ ）from distributors where\ndistri num=1018；",
+  "stem": "删除经销商1018的数据记录，应补全为：________ FROM distributors WHERE distri_num=1018；",
   "options": {
    "A": "drop table",
    "B": "delete *",
@@ -12267,11 +11894,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-09-s1-q46",
@@ -12292,11 +11919,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q47",
@@ -12317,23 +11944,23 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q48",
   "source": "超格",
   "type": "单选",
   "chapter": "第三篇 数据库网络·0117",
-  "stem": "在 mysql 中，与语句 SELECT * FROM book b WHERE B. book num NOT\nBETWEEN 200 AND 300；等价的有（ ）。",
+  "stem": "在MySQL中，与 SELECT * FROM book b WHERE b.book_num NOT BETWEEN 200 AND 300 等价的是（ ）。",
   "options": {
-   "A": "SELECT * FROM book b WHERE B. book num < 200 OR B. book num >= 300",
-   "B": "SELECT * FROM book b WHERE B. book num <= 200 OR B. book num > 300",
-   "C": "SELECT * FROM book b WHERE B. book num <= 200 OR B. book num >= 300",
-   "D": "SELECT * FROM book b WHERE B. book num < 200 OR B. book num > 300"
+   "A": "SELECT * FROM book b WHERE b.book_num < 200 OR b.book_num >= 300",
+   "B": "SELECT * FROM book b WHERE b.book_num <= 200 OR b.book_num > 300",
+   "C": "SELECT * FROM book b WHERE b.book_num <= 200 OR b.book_num >= 300",
+   "D": "SELECT * FROM book b WHERE b.book_num < 200 OR b.book_num > 300"
   },
   "answer": "D",
   "explanation": "NOT BETWEEN 200 AND 300 等价于 < 200 OR > 300（端点都排除）。",
@@ -12342,11 +11969,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q49",
@@ -12364,14 +11991,14 @@
   "explanation": "UPDATE 查询可以批量更新满足条件的多条记录。",
   "subject": "数据库",
   "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "SQL查询",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-09-s1-q50",
@@ -12392,11 +12019,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-09-s1-q52",
@@ -12414,14 +12041,14 @@
   "explanation": "GRANT SELECT ON 关系 TO 用户 WITH GRANT OPTION：授权且允许再授权。",
   "subject": "数据库",
   "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "SQL查询",
+  "knowledge_point": "数据库安全",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t09",
-  "topic_title": "权限与恢复验证",
+  "topic_id": "database.t18",
+  "topic_title": "认证、授权与审计",
   "chapter_id": "database.c09",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 17
  },
  {
   "id": "cg-09-s1-q53",
@@ -12442,11 +12069,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-09-s1-q54",
@@ -12467,11 +12094,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
-  "chapter_id": "database.c04",
+  "topic_id": "database.t09",
+  "topic_title": "视图",
+  "chapter_id": "database.c06",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 8
  },
  {
   "id": "cg-09-s1-q55",
@@ -12492,11 +12119,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
+  "chapter_id": "database.c04",
+  "required_depth": "综合应用",
+  "topic_order": 4
  },
  {
   "id": "cg-09-s1-q56",
@@ -12508,7 +12135,7 @@
    "A": "关系 R 的元组数等于关系 S 的元组数",
    "B": "关系 R 的元组数小于关系 S 的元组数",
    "C": "关系 R 的元组数大于或等于关系 S 的元组数",
-   "D": "关系 R 的元组数大于关系 S 的元组数 C 投影操作是从列的角度进行行的运算"
+   "D": "关系R的元组数一定大于关系S的元组数"
   },
   "answer": "C",
   "explanation": "本题考查数据库相关知识。C项“关系 R 的元组数大于或等于关系 S 的元组数”与题干要求相符，故选 C。",
@@ -12517,11 +12144,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
   "chapter_id": "database.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 4
  },
  {
   "id": "cg-09-s1-q57",
@@ -12542,11 +12169,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
-  "chapter_id": "database.c04",
+  "topic_id": "database.t10",
+  "topic_title": "索引与物理设计",
+  "chapter_id": "database.c06",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 9
  },
  {
   "id": "cg-09-s1-q58",
@@ -12567,11 +12194,11 @@
   "knowledge_point": "数据库规范化",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "cg-09-s1-q59",
@@ -12583,7 +12210,7 @@
    "A": "并、差、选择、投影、自然连接",
    "B": "并、差、交、选择、投影",
    "C": "并、差、选择、投影、笛卡尔积",
-   "D": "并、差、交、选择、笛卡尔积 C 关系运算 操作 基本运算 并、差、笛卡尔积、投影和选择 组合运算 交、联接、自然联接和除"
+   "D": "并、差、交、选择、笛卡尔积"
   },
   "answer": "C",
   "explanation": "本题考查数据库相关知识。C项“并、差、选择、投影、笛卡尔积”与题干要求相符，故选 C。",
@@ -12592,11 +12219,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
   "chapter_id": "database.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 4
  },
  {
   "id": "cg-09-s1-q60",
@@ -12617,11 +12244,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
   "chapter_id": "database.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 4
  },
  {
   "id": "cg-09-s1-q61",
@@ -12642,11 +12269,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q62",
@@ -12667,11 +12294,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q63",
@@ -12692,11 +12319,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "cg-09-s1-q64",
@@ -12714,14 +12341,14 @@
   "explanation": "事务的 ACID 特性中，C 表示持久性（Durability），即事务提交后的结果应永久保存。",
   "subject": "数据库",
   "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "事务与并发控制",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t15",
+  "topic_title": "ACID与事务边界",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 14
  },
  {
   "id": "cg-09-s1-q65",
@@ -12739,14 +12366,14 @@
   "explanation": "日志文件记录每次数据库更新操作，用于恢复。",
   "subject": "数据库",
   "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "数据库系统基础",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t17",
+  "topic_title": "WAL与恢复",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 16
  },
  {
   "id": "cg-09-s1-q67",
@@ -12767,11 +12394,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
  },
  {
   "id": "cg-09-s1-q68",
@@ -12792,11 +12419,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
  },
  {
   "id": "cg-09-s1-q69",
@@ -12817,11 +12444,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t15",
+  "topic_title": "ACID与事务边界",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 14
  },
  {
   "id": "cg-09-s1-q70",
@@ -12839,14 +12466,14 @@
   "explanation": "本题考查数据库相关知识。D项“故障恢复”与题干要求相符，故选 D。",
   "subject": "数据库",
   "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "数据库系统基础",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t17",
+  "topic_title": "WAL与恢复",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 16
  },
  {
   "id": "cg-09-s1-q72",
@@ -12867,11 +12494,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t15",
+  "topic_title": "ACID与事务边界",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 14
  },
  {
   "id": "cg-09-s2-q1",
@@ -12892,11 +12519,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "cg-09-s2-q2",
@@ -12918,34 +12545,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "cg-09-s2-q3",
-  "source": "超格",
-  "type": "多选",
-  "chapter": "第三篇 数据库网络·0117",
-  "stem": "在Access数据库管理系统中，下列4个表达式运算结果为数值型的是（ ）。",
-  "options": {
-   "A": "300+700=1000",
-   "B": "LEN(“HAPPY BIRTHDAY”)",
-   "C": "STR(90)",
-   "D": "DATE( )-#1998-5-28#"
-  },
-  "answer": "BD",
-  "explanation": "LEN() 返回数字（字符长度）；DATE()-日期 返回数字（天数）；STR() 返回字符串；表达式比较返回布尔。BD。",
-  "subject": "数据库",
-  "source_chapter": "第三篇 数据库网络·0117",
-  "knowledge_point": "数据库系统基础",
-  "ability": "概念识记",
-  "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -12967,11 +12569,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t03",
-  "topic_title": "键与NULL",
-  "chapter_id": "database.c03",
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 5
  },
  {
   "id": "cg-10-s1-q3",
@@ -30542,9 +30144,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30566,11 +30168,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "zg-47979",
@@ -30592,34 +30194,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "zg-7271",
-  "source": "中公",
-  "type": "单选",
-  "chapter": "第七章 数据库技术",
-  "stem": "工资在 600 元以上并且职称为工程师的纪录，逻辑表达式为（ ）。",
-  "options": {
-   "A": "“工资”>600 OR 职称=“工程师”",
-   "B": "工资>600 AND 职称=工程师",
-   "C": "“工资”>600 AND “职称”=“工程师”",
-   "D": "工资>600AN D 职称=\"工程师\""
-  },
-  "answer": "D",
-  "explanation": "根据语法，AND 查询是：条件一 AND 条件二，字段名不用带引号，数据项\n除数值外需带单引号或双引号。工资、职称是字段名，不用带引号，工程师是数据项，需要带引号。",
-  "subject": "数据库",
-  "source_chapter": "第七章 数据库技术",
-  "knowledge_point": "数据库系统基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30641,11 +30218,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "zg-41202",
@@ -30667,9 +30244,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30692,9 +30269,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30717,9 +30294,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30742,7 +30319,7 @@
   "ability": "读图排障",
   "difficulty": "应用",
   "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_title": "E-R建模",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
   "topic_order": 1
@@ -30766,11 +30343,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "zg-75617",
@@ -30792,9 +30369,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30817,9 +30394,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -30841,11 +30418,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-75515",
@@ -30866,11 +30443,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-45218",
@@ -30892,7 +30469,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_title": "E-R建模",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
   "topic_order": 1
@@ -30916,11 +30493,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-39525",
@@ -30942,7 +30519,7 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_title": "E-R建模",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
   "topic_order": 1
@@ -30966,11 +30543,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-91256",
@@ -30991,11 +30568,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "zg-25187",
@@ -31016,11 +30593,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-78661",
@@ -31042,9 +30619,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31067,11 +30644,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
-  "chapter_id": "database.c04",
+  "topic_id": "database.t02",
+  "topic_title": "E-R建模",
+  "chapter_id": "database.c02",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 1
  },
  {
   "id": "zg-40599",
@@ -31092,11 +30669,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "zg-41008",
@@ -31112,11 +30689,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-23486",
@@ -31133,9 +30710,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31153,9 +30730,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31172,11 +30749,11 @@
   "knowledge_point": "数据库设计",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t02",
+  "topic_title": "E-R建模",
+  "chapter_id": "database.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
  },
  {
   "id": "zg-76998",
@@ -31193,9 +30770,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31212,11 +30789,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
+  "chapter_id": "database.c04",
+  "required_depth": "综合应用",
+  "topic_order": 4
  },
  {
   "id": "zg-89071",
@@ -31232,11 +30809,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-9354",
@@ -31252,11 +30829,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-12988",
@@ -31272,11 +30849,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-25661",
@@ -31292,11 +30869,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
-  "chapter_id": "database.c02",
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 3
  },
  {
   "id": "zg-24086",
@@ -31312,11 +30889,11 @@
   "knowledge_point": "数据库系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "zg-27720",
@@ -31332,11 +30909,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t06",
+  "topic_title": "SQL定义与约束",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-58017",
@@ -31352,11 +30929,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "zg-98793",
@@ -31378,9 +30955,9 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31502,11 +31079,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-71257",
@@ -31527,11 +31104,11 @@
   "knowledge_point": "程序控制结构",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "zg-1554",
@@ -31545,43 +31122,18 @@
    "C": "13",
    "D": "14"
   },
-  "answer": "D",
-  "explanation": "switch 中 i=10 从 case 10 开始执行；因各 case 后没有 break，会继续贯穿执行后续语句，i 共自增 4 次，最终为 14。故选 D。",
+  "answer": "C",
+  "explanation": "i=10时从case 10进入；没有break，因此继续执行case 11和case 12，共自增3次，最终为13。",
   "subject": "编程语言",
   "source_chapter": "第八章 算法与程序设计",
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "zg-49578",
-  "source": "中公",
-  "type": "单选",
-  "chapter": "第八章 算法与程序设计",
-  "stem": "面向对象的程序设计的基本特征不包括下列哪项？（ ）",
-  "options": {
-   "A": "封装",
-   "B": "继承",
-   "C": "重载",
-   "D": "多态"
-  },
-  "answer": "C",
-  "explanation": "面向对象的程序设计基本特征包括封装、继承和多态。\n封装\n把对象的属性和方法结合成一个独立的\n单元，并尽可能隐蔽对象的内部细节。\n封装使数据具有独立性、隐藏性、安全\n性。\n1.数据独立\n2.隐藏性、安全性、易于维护。\n3.但需要更多的输入输出函数。\n继承 继承是采用在已有的类定义基础上建立 1.传递性\n新类定义的技术手段。允许在已有类的\n基础上通过增加新特征而派生出新的\n类，这称为继承。\n2.共享性\n3.层次性\n多态\n对象根据所接收的消息而做出动作，同\n样的消息被不同的对象接收时可导致完\n全不同的行动，该现象称为多态性。\n用户不必知道某个对象所属的类\n就可以执行多态行为，从而为程序\n设计带来更大方便。",
-  "subject": "编程语言",
-  "source_chapter": "第八章 算法与程序设计",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-39603",
@@ -31668,9 +31220,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31688,9 +31240,9 @@
   "ability": "程序阅读",
   "difficulty": "应用",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31727,11 +31279,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
  },
  {
   "id": "zg-4542",
@@ -31742,16 +31294,16 @@
   "options": {},
   "answer": "3",
   "explanation": "3。解析：第一趟排序的过程中 9 和 2 交换，9 和 7 交换。所以第 1 趟排序后结果为：4，\n2，7，9。\n第二趟排序的过程中 2 和 4 交换。所以第 2 趟排序后的结果为：2，4，7，9。\n第三趟排序的过程中 7 和 9 进行了比较，但因为 7<9，所以没有发生交换。第三趟排序后结果为：2，\n4，7，9，也就是最终排好的升序序列。\n综上所述，整个排序过程中进行了 3 次数据交换。",
-  "subject": "编程语言",
+  "subject": "算法与数据结构",
   "source_chapter": "第八章 算法与程序设计",
-  "knowledge_point": "程序设计基础",
-  "ability": "程序阅读",
-  "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "knowledge_point": "排序算法",
+  "ability": "概念识记",
+  "difficulty": "基础",
+  "topic_id": "data-structures.t20",
+  "topic_title": "插入、冒泡与选择排序",
+  "chapter_id": "data-structures.c07",
+  "required_depth": "综合应用",
+  "topic_order": 19
  },
  {
   "id": "zg-10124",
@@ -31767,11 +31319,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t03",
+  "topic_title": "类型、变量与转换",
+  "chapter_id": "programming.c02",
+  "required_depth": "综合应用",
+  "topic_order": 2
  },
  {
   "id": "zg-11699",
@@ -31787,11 +31339,11 @@
   "knowledge_point": "C函数与作用域",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
+  "topic_id": "programming.t09",
+  "topic_title": "作用域、递归与模块化",
   "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 8
  },
  {
   "id": "zg-8065",
@@ -31808,9 +31360,9 @@
   "ability": "直接计算",
   "difficulty": "进阶",
   "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
+  "topic_title": "算法、流程与执行",
   "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -31837,56 +31389,6 @@
   "chapter_id": "net-06",
   "required_depth": "综合应用",
   "topic_order": 21
- },
- {
-  "id": "web-2",
-  "source": "网络",
-  "type": "单选",
-  "chapter": "网络爬取",
-  "stem": "Basic 语言属于：",
-  "options": {
-   "A": "机器语言",
-   "B": "汇编语言",
-   "C": "高级语言",
-   "D": "低级语言"
-  },
-  "answer": "C",
-  "explanation": "Basic、C、Java、Python 等都是高级语言。",
-  "subject": "编程语言",
-  "source_chapter": "网络爬取",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "web-3",
-  "source": "网络",
-  "type": "单选",
-  "chapter": "网络爬取",
-  "stem": "下列哪一个控件没有 Caption 属性：",
-  "options": {
-   "A": "TextBox",
-   "B": "Label",
-   "C": "Frame",
-   "D": "CommandButton"
-  },
-  "answer": "A",
-  "explanation": "TextBox 用 Text 属性显示内容，没有 Caption 属性。",
-  "subject": "数据库",
-  "source_chapter": "网络爬取",
-  "knowledge_point": "关系模型与代数",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
  },
  {
   "id": "web-5",
@@ -32237,56 +31739,6 @@
   "chapter_id": "information-security.c06",
   "required_depth": "综合应用",
   "topic_order": 5
- },
- {
-  "id": "web-21",
-  "source": "网络",
-  "type": "单选",
-  "chapter": "网络爬取",
-  "stem": "Windows 中，在已经打开的应用程序之间交换数据最方便的方法是使用：",
-  "options": {
-   "A": "文件",
-   "B": "窗口",
-   "C": "变量",
-   "D": "剪贴板"
-  },
-  "answer": "D",
-  "explanation": "剪贴板是 Windows 程序间数据交换的标准方式。",
-  "subject": "编程语言",
-  "source_chapter": "网络爬取",
-  "knowledge_point": "程序设计基础",
-  "ability": "概念识记",
-  "difficulty": "基础",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
- },
- {
-  "id": "web-22",
-  "source": "网络",
-  "type": "单选",
-  "chapter": "网络爬取",
-  "stem": "查询信息在信息处理中所属的阶段是：",
-  "options": {
-   "A": "输入",
-   "B": "加工",
-   "C": "输出",
-   "D": "输入或输出"
-  },
-  "answer": "C",
-  "explanation": "查询信息是把信息呈现给用户，属于输出阶段。",
-  "subject": "数据库",
-  "source_chapter": "网络爬取",
-  "knowledge_point": "SQL查询",
-  "ability": "过程描述",
-  "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
  },
  {
   "id": "web-23",
@@ -44823,11 +44275,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "uf-db-002",
@@ -44848,11 +44300,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "uf-db-003",
@@ -44873,11 +44325,11 @@
   "knowledge_point": "SQL查询",
   "ability": "比较辨析",
   "difficulty": "基础",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t08",
+  "topic_title": "连接、子查询与集合运算",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uf-db-004",
@@ -44898,11 +44350,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
   "chapter_id": "database.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 4
  },
  {
   "id": "uf-db-005",
@@ -44923,11 +44375,11 @@
   "knowledge_point": "数据库规范化",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "uf-db-006",
@@ -44948,11 +44400,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t08",
-  "topic_title": "ACID与并发异常",
+  "topic_id": "database.t15",
+  "topic_title": "ACID与事务边界",
   "chapter_id": "database.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 14
  },
  {
   "id": "uf-db-007",
@@ -44973,11 +44425,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
  },
  {
   "id": "uf-db-008",
@@ -44990,14 +44442,14 @@
   "explanation": "索引以额外空间和插入、删除、更新成本换取特定检索、连接或排序速度，不是越多越好。",
   "subject": "数据库",
   "source_chapter": "大学期末·恢复与索引",
-  "knowledge_point": "SQL查询",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t10",
+  "topic_title": "索引与物理设计",
+  "chapter_id": "database.c06",
+  "required_depth": "综合应用",
+  "topic_order": 9
  },
  {
   "id": "uf-ds-001",
@@ -45218,11 +44670,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t01",
-  "topic_title": "从算法到执行",
-  "chapter_id": "programming.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "programming.t04",
+  "topic_title": "运算符、除法与短路",
+  "chapter_id": "programming.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "uf-pl-002",
@@ -45243,11 +44695,11 @@
   "knowledge_point": "程序控制结构",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "uf-pl-003",
@@ -45268,11 +44720,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "programming.t10",
+  "topic_title": "C数组与字符串",
+  "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 9
  },
  {
   "id": "uf-pl-004",
@@ -45293,11 +44745,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
-  "chapter_id": "programming.c09",
+  "topic_id": "programming.t08",
+  "topic_title": "函数、参数与返回",
+  "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 7
  },
  {
   "id": "uf-pl-005",
@@ -45318,11 +44770,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
+  "topic_id": "programming.t12",
+  "topic_title": "C指针与地址",
   "chapter_id": "programming.c09",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 11
  },
  {
   "id": "uf-pl-006",
@@ -45343,11 +44795,11 @@
   "knowledge_point": "程序控制结构",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
   "chapter_id": "programming.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 5
  },
  {
   "id": "uf-pl-007",
@@ -45363,11 +44815,11 @@
   "knowledge_point": "C函数与作用域",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
+  "topic_id": "programming.t09",
+  "topic_title": "作用域、递归与模块化",
   "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 8
  },
  {
   "id": "uf-pl-008",
@@ -45388,11 +44840,11 @@
   "knowledge_point": "C文件与结构体",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t10",
-  "topic_title": "错误处理与编码",
-  "chapter_id": "programming.c10",
+  "topic_id": "programming.t14",
+  "topic_title": "C文件与资源管理",
+  "chapter_id": "programming.c09",
   "required_depth": "综合应用",
-  "topic_order": 9
+  "topic_order": 13
  },
  {
   "id": "uf-co-002",
@@ -47057,11 +46509,11 @@
   "knowledge_point": "索引与存储",
   "ability": "场景选型",
   "difficulty": "应用",
-  "topic_id": "database.t06",
-  "topic_title": "设计阶段与查询成本",
+  "topic_id": "database.t10",
+  "topic_title": "索引与物理设计",
   "chapter_id": "database.c06",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 9
  },
  {
   "id": "gap-ds-001",
@@ -47116,14 +46568,15 @@
   "subject": "编程语言",
   "source_chapter": "优先级、除法与短路",
   "adaptation_note": "依据短路求值补齐程序阅读题。",
+  "topic_source": "manual",
+  "topic_id": "programming.t04",
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "基础",
-  "topic_id": "programming.t03",
-  "topic_title": "优先级、除法与短路",
+  "topic_title": "运算符、除法与短路",
   "chapter_id": "programming.c03",
   "required_depth": "综合应用",
-  "topic_order": 2
+  "topic_order": 3
  },
  {
   "id": "gap-pl-002",
@@ -47145,11 +46598,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "程序阅读",
   "difficulty": "基础",
-  "topic_id": "programming.t04",
-  "topic_title": "输入转换",
-  "chapter_id": "programming.c04",
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 5
  },
  {
   "id": "gap-pl-003",
@@ -47181,11 +46634,11 @@
   "knowledge_point": "程序控制结构",
   "ability": "程序阅读",
   "difficulty": "基础",
-  "topic_id": "programming.t06",
-  "topic_title": "跟踪变量与边界",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
   "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 6
  },
  {
   "id": "gap-pl-004",
@@ -47225,11 +46678,11 @@
   "knowledge_point": "程序设计基础",
   "ability": "比较辨析",
   "difficulty": "应用",
-  "topic_id": "programming.t11",
-  "topic_title": "同一算法，不同语义",
-  "chapter_id": "programming.c11",
+  "topic_id": "programming.t04",
+  "topic_title": "运算符、除法与短路",
+  "chapter_id": "programming.c03",
   "required_depth": "综合应用",
-  "topic_order": 10
+  "topic_order": 3
  },
  {
   "id": "gap-circuit-001",
@@ -49818,6 +49271,853 @@
   "topic_order": 21
  },
  {
+  "id": "gap-db-002",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "E-R建模",
+  "stem": "图书馆有读者、图书和借阅业务：读者可借多本书，一本书在不同时段可被多名读者借阅，借阅还记录借出日期和归还日期。说明实体、联系、基数及联系属性。",
+  "options": {},
+  "answer": "实体是读者和图书；借阅是m:n联系；借出与归还日期属于联系属性。",
+  "explanation": "日期描述一次借阅事实，不是读者或图书的固定属性。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "识别两个实体",
+    "points": 1
+   },
+   {
+    "criterion": "判断m:n联系",
+    "points": 1
+   },
+   {
+    "criterion": "识别联系属性",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "E-R建模",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库设计",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t02",
+  "topic_title": "E-R建模",
+  "chapter_id": "database.c02",
+  "required_depth": "综合应用",
+  "topic_order": 1
+ },
+ {
+  "id": "gap-db-003",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "关系代数",
+  "stem": "对Student(sid,name,dept)写出“计算机系学生姓名”的关系代数表达式，并说明中间结果。",
+  "options": {},
+  "answer": "π_name(σ_dept='CS'(Student))；选择后保留CS元组，投影后只留name并去重。",
+  "explanation": "选择取行，投影取列；先选择可减少后续处理元组。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "写出选择条件",
+    "points": 1
+   },
+   {
+    "criterion": "写出姓名投影",
+    "points": 1
+   },
+   {
+    "criterion": "说明中间结果",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "关系代数",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "关系模型与代数",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
+  "chapter_id": "database.c04",
+  "required_depth": "综合应用",
+  "topic_order": 4
+ },
+ {
+  "id": "gap-db-004",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "关系代数",
+  "stem": "已知SC(sid,cid)和Need(cid)，写出“选修Need中全部课程的学生编号”的关系代数表达式，并解释为何不能用一次等值选择代替。",
+  "options": {},
+  "answer": "SC÷Need；除法要求同一sid与Need中的每个cid都有关联，一次等值选择只能检查某一门课。",
+  "explanation": "除法表达“对给定集合中的所有元素均满足”。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "写出除法",
+    "points": 1
+   },
+   {
+    "criterion": "说明全部语义",
+    "points": 1
+   },
+   {
+    "criterion": "区分等值选择",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "关系代数",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "关系模型与代数",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
+  "chapter_id": "database.c04",
+  "required_depth": "综合应用",
+  "topic_order": 4
+ },
+ {
+  "id": "gap-db-005",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "连接与子查询",
+  "stem": "有Reader(reader_id,name)和Borrow(reader_id,book_id)，写SQL查询从未借书的读者编号和姓名。",
+  "options": {},
+  "answer": "SELECT r.reader_id,r.name FROM Reader r WHERE NOT EXISTS (SELECT 1 FROM Borrow b WHERE b.reader_id=r.reader_id);",
+  "explanation": "NOT EXISTS保留不存在匹配借阅记录的外层读者。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "外层查询Reader",
+    "points": 1
+   },
+   {
+    "criterion": "使用NOT EXISTS",
+    "points": 1
+   },
+   {
+    "criterion": "正确关联reader_id",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "连接与子查询",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "SQL查询",
+  "ability": "SQL编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t08",
+  "topic_title": "连接、子查询与集合运算",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 7
+ },
+ {
+  "id": "gap-db-006",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "连接与子查询",
+  "stem": "Student(sid,name)和SC(sid,cid)，写SQL统计每名学生选课数，并保留未选课学生。",
+  "options": {},
+  "answer": "SELECT s.sid,s.name,COUNT(sc.cid) FROM Student s LEFT JOIN SC sc ON s.sid=sc.sid GROUP BY s.sid,s.name;",
+  "explanation": "LEFT JOIN保留所有学生，COUNT(sc.cid)忽略补出的NULL。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "正确LEFT JOIN",
+    "points": 1
+   },
+   {
+    "criterion": "按学生分组",
+    "points": 1
+   },
+   {
+    "criterion": "使用COUNT(sc.cid)",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "连接与子查询",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "SQL查询",
+  "ability": "SQL编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t08",
+  "topic_title": "连接、子查询与集合运算",
+  "chapter_id": "database.c05",
+  "required_depth": "综合应用",
+  "topic_order": 7
+ },
+ {
+  "id": "gap-db-007",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "数据库设计流程",
+  "stem": "系统先识别学生、课程与选课规则，再把E-R图转成表并规范化，最后按常用查询建立索引。指出三个工作所属设计阶段。",
+  "options": {},
+  "answer": "依次属于概念设计、逻辑设计、物理设计。",
+  "explanation": "三个阶段依次产出概念模型、关系模式和存储访问结构。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "概念设计",
+    "points": 1
+   },
+   {
+    "criterion": "逻辑设计",
+    "points": 1
+   },
+   {
+    "criterion": "物理设计",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "数据库设计流程",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库设计",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t11",
+  "topic_title": "数据库设计流程",
+  "chapter_id": "database.c06",
+  "required_depth": "综合应用",
+  "topic_order": 10
+ },
+ {
+  "id": "gap-db-008",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "闭包与候选键",
+  "stem": "R(A,B,C,D,E)，F={A→B，B→C，AD→E}。求(AD)+并判断AD是否为候选键。",
+  "options": {},
+  "answer": "(AD)+=ABCDE，AD是候选键。",
+  "explanation": "依次加入B、C、E；删A或D都不能推出全部属性，满足最小性。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "逐步推出B、C、E",
+    "points": 2
+   },
+   {
+    "criterion": "闭包正确",
+    "points": 1
+   },
+   {
+    "criterion": "验证最小性",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "闭包与候选键",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库规范化",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t12",
+  "topic_title": "属性闭包与候选键",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 11
+ },
+ {
+  "id": "gap-db-009",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "范式判断",
+  "stem": "R(学号,课程号,姓名,成绩)，候选键为(学号,课程号)，且学号→姓名。判断最高达到的范式并说明。",
+  "options": {},
+  "answer": "满足1NF但不满足2NF。",
+  "explanation": "姓名是非主属性，却只依赖复合候选键的一部分，存在部分依赖。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "判断不满足2NF",
+    "points": 1
+   },
+   {
+    "criterion": "指出部分依赖",
+    "points": 1
+   },
+   {
+    "criterion": "说明非主属性",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "范式判断",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库规范化",
+  "ability": "机制解释",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
+ },
+ {
+  "id": "gap-db-010",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "分解校验",
+  "stem": "R(A,B,C)满足A→B，分解为R1(A,B)与R2(A,C)。判断是否无损，并说明依赖能否保持。",
+  "options": {},
+  "answer": "无损且保持A→B。",
+  "explanation": "公共属性A能决定R1全部属性，因此无损；A→B可在R1中检查。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "找出公共属性A",
+    "points": 1
+   },
+   {
+    "criterion": "判断无损",
+    "points": 1
+   },
+   {
+    "criterion": "判断依赖保持",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "分解校验",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库规范化",
+  "ability": "机制解释",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t14",
+  "topic_title": "分解、无损连接与依赖保持",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 13
+ },
+ {
+  "id": "gap-db-011",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "并发调度",
+  "stem": "调度为r1(X),w1(X),r2(X),w2(X)。画出冲突优先图的边，判断是否冲突可串行化并给出等价顺序。",
+  "options": {},
+  "answer": "只有T1→T2，无环，因此可串行化，等价顺序为T1、T2。",
+  "explanation": "T1对X的写先于T2对X的读写，且没有反向边。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "识别T1→T2",
+    "points": 1
+   },
+   {
+    "criterion": "判断无环",
+    "points": 1
+   },
+   {
+    "criterion": "给出串行顺序",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "并发调度",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "事务与并发控制",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
+ },
+ {
+  "id": "gap-db-012",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "并发调度",
+  "stem": "若优先图同时包含T1→T2和T2→T1，能否判为冲突可串行化？说明理由。",
+  "options": {},
+  "answer": "不能；两条边形成有向环，无法得到满足全部冲突先后的串行顺序。",
+  "explanation": "冲突可串行化当且仅当优先图无环。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "判断不能",
+    "points": 1
+   },
+   {
+    "criterion": "指出有向环",
+    "points": 1
+   },
+   {
+    "criterion": "联系串行顺序",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "并发调度",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "事务与并发控制",
+  "ability": "机制解释",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
+ },
+ {
+  "id": "gap-db-013",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "日志恢复",
+  "stem": "故障前日志为<T1 start>、<T1,A,10,20>、<T1 commit>、<T2 start>、<T2,B,5,8>。说明T1和T2分别需UNDO还是REDO及目标值。",
+  "options": {},
+  "answer": "T1已提交，需要时REDO使A=20；T2未提交，应UNDO使B=5。",
+  "explanation": "先按commit判断状态，再用新值重做已提交事务、用旧值撤销未提交事务。",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "T1 REDO到20",
+    "points": 2
+   },
+   {
+    "criterion": "T2 UNDO到5",
+    "points": 2
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "日志恢复",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库恢复",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t17",
+  "topic_title": "WAL与恢复",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 16
+ },
+ {
+  "id": "gap-db-014",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "认证授权审计",
+  "stem": "用户U获得Student表SELECT权限后，何时可以继续授予V？回收U权限时还应检查什么？",
+  "options": {},
+  "answer": "U同时获得转授权能力（如WITH GRANT OPTION）时才能转授；回收时检查授权链和级联规则。",
+  "explanation": "普通使用权限不自动包含转授权能力。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "指出转授权能力",
+    "points": 1
+   },
+   {
+    "criterion": "写出WITH GRANT OPTION或等价含义",
+    "points": 1
+   },
+   {
+    "criterion": "检查授权链",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "认证授权审计",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库安全",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t18",
+  "topic_title": "认证、授权与审计",
+  "chapter_id": "database.c09",
+  "required_depth": "综合应用",
+  "topic_order": 17
+ },
+ {
+  "id": "gap-db-015",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "认证授权审计",
+  "stem": "报表账号只需查看本院学生汇总，设计最小权限方案，并说明审计作用。",
+  "options": {},
+  "answer": "建立仅暴露必要行列的视图，只授予该视图SELECT权限，可经角色分配；审计记录关键访问和变更。",
+  "explanation": "认证、授权、审计分别回答身份、权限和行为记录。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "使用受限视图",
+    "points": 1
+   },
+   {
+    "criterion": "只授予SELECT/角色",
+    "points": 1
+   },
+   {
+    "criterion": "说明审计追踪",
+    "points": 1
+   }
+  ],
+  "subject": "数据库",
+  "source_chapter": "认证授权审计",
+  "adaptation_note": "数据库重构后补充独立解题过程。",
+  "knowledge_point": "数据库安全",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "database.t18",
+  "topic_title": "认证、授权与审计",
+  "chapter_id": "database.c09",
+  "required_depth": "综合应用",
+  "topic_order": 17
+ },
+ {
+  "id": "gap-pl-005",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "C结构体",
+  "stem": "已定义struct Student{int id; double score;};，变量s和指针p分别表示一个学生。写出用s和p读取score的表达式。",
+  "options": {},
+  "answer": "s.score和p->score。",
+  "explanation": "对象用点号，结构体指针用箭头；p->score等价于(*p).score。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "写出s.score",
+    "points": 1
+   },
+   {
+    "criterion": "写出p->score",
+    "points": 1
+   },
+   {
+    "criterion": "说明箭头等价形式",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "C结构体",
+  "adaptation_note": "按C与Python教材任务补充过程题。",
+  "knowledge_point": "C文件与结构体",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t13",
+  "topic_title": "C结构体",
+  "chapter_id": "programming.c09",
+  "required_depth": "综合应用",
+  "topic_order": 12
+ },
+ {
+  "id": "gap-pl-006",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "Python异常与文件",
+  "stem": "Python把用户输入转换为整数。说明应捕获什么异常，并写出try/except核心结构。",
+  "options": {},
+  "answer": "捕获ValueError；try中执行n=int(input())，except ValueError中提示重新输入或进行受控处理。",
+  "explanation": "输入文本格式不合法时int会抛出ValueError；不应无条件吞掉全部异常。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "指出ValueError",
+    "points": 1
+   },
+   {
+    "criterion": "写出try",
+    "points": 1
+   },
+   {
+    "criterion": "按类型except并处理",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "Python异常与文件",
+  "adaptation_note": "按C与Python教材任务补充过程题。",
+  "knowledge_point": "程序异常与调试",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t15",
+  "topic_title": "Python异常、模块与文件",
+  "chapter_id": "programming.c10",
+  "required_depth": "综合应用",
+  "topic_order": 14
+ },
+ {
+  "id": "gap-pl-007",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "Python异常与文件",
+  "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+  "options": {},
+  "answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。",
+  "explanation": "资源管理、路径错误和编码错误是不同问题，应按异常类型处理。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "说明自动关闭",
+    "points": 1
+   },
+   {
+    "criterion": "指出FileNotFoundError",
+    "points": 1
+   },
+   {
+    "criterion": "指出UnicodeDecodeError",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "Python异常与文件",
+  "adaptation_note": "按C与Python教材任务补充过程题。",
+  "knowledge_point": "程序异常与调试",
+  "ability": "机制解释",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t15",
+  "topic_title": "Python异常、模块与文件",
+  "chapter_id": "programming.c10",
+  "required_depth": "综合应用",
+  "topic_order": 14
+ },
+ {
+  "id": "gap-pl-008",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "C与Python比较",
+  "stem": "比较表达式-7/2在现代C整数运算与Python 3中的结果，并说明Python // 的规则。",
+  "options": {},
+  "answer": "现代C整数-7/2向零截断为-3；Python 3的/得-3.5；Python -7//2向下取整为-4。",
+  "explanation": "迁移代码时必须核对除法类型和负数舍入方向。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "C结果-3",
+    "points": 1
+   },
+   {
+    "criterion": "Python / 结果-3.5",
+    "points": 1
+   },
+   {
+    "criterion": "Python //结果-4并说明向下取整",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "C与Python比较",
+  "adaptation_note": "按C与Python教材任务补充过程题。",
+  "knowledge_point": "程序设计基础",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t16",
+  "topic_title": "C与Python语义比较",
+  "chapter_id": "programming.c11",
+  "required_depth": "综合应用",
+  "topic_order": 15
+ },
+ {
+  "id": "gap-pl-009",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "程序错误与调试",
+  "stem": "程序无法通过语法检查、运行时除以零、能够运行但最大值初始值选错，分别属于哪类错误？",
+  "options": {},
+  "answer": "依次为语法错误、运行错误、逻辑错误。",
+  "explanation": "先按错误发生阶段分类，再选择检查语法、异常信息或变量跟踪。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "语法错误",
+    "points": 1
+   },
+   {
+    "criterion": "运行错误",
+    "points": 1
+   },
+   {
+    "criterion": "逻辑错误",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "程序错误与调试",
+  "adaptation_note": "按C与Python教材任务补充过程题。",
+  "knowledge_point": "程序异常与调试",
+  "ability": "比较辨析",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t02",
+  "topic_title": "编译、解释与程序错误",
+  "chapter_id": "programming.c01",
+  "required_depth": "综合应用",
+  "topic_order": 1
+ },
+ {
+  "id": "gap-pl-010",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "条件与多分支",
+  "stem": "用Python写出成绩分档：90分及以上输出A，60至89输出B，其余输出C。",
+  "options": {},
+  "answer": "if score >= 90:\n    print(\"A\")\nelif score >= 60:\n    print(\"B\")\nelse:\n    print(\"C\")",
+  "explanation": "从高阈值到低阈值判断，避免宽条件提前接走高分。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "先判断>=90",
+    "points": 1
+   },
+   {
+    "criterion": "再判断>=60",
+    "points": 1
+   },
+   {
+    "criterion": "覆盖其余情况",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "条件与多分支",
+  "adaptation_note": "补充从阅读代码到独立编写的练习。",
+  "knowledge_point": "程序控制结构",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t06",
+  "topic_title": "条件与多分支",
+  "chapter_id": "programming.c05",
+  "required_depth": "综合应用",
+  "topic_order": 5
+ },
+ {
+  "id": "gap-pl-011",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "循环状态与边界",
+  "stem": "用C语言写循环计算1到100中所有偶数之和，给出核心代码。",
+  "options": {},
+  "answer": "int sum=0;\nfor (int i=2; i<=100; i+=2) {\n    sum += i;\n}",
+  "explanation": "初始化、继续条件、更新和累加对象都要正确；也可遍历1至100后判断偶数。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "sum正确初始化",
+    "points": 1
+   },
+   {
+    "criterion": "循环边界含100",
+    "points": 1
+   },
+   {
+    "criterion": "只累加偶数",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "循环状态与边界",
+  "adaptation_note": "补充从阅读代码到独立编写的练习。",
+  "knowledge_point": "程序控制结构",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
+  "required_depth": "综合应用",
+  "topic_order": 6
+ },
+ {
+  "id": "gap-pl-012",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "函数参数与返回",
+  "stem": "用Python定义函数maximum(a,b)，返回较大值；不要在函数内只打印结果。",
+  "options": {},
+  "answer": "def maximum(a, b):\n    if a >= b:\n        return a\n    return b",
+  "explanation": "函数通过return把值交给调用者，调用者可继续使用结果。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "函数定义与两个参数",
+    "points": 1
+   },
+   {
+    "criterion": "比较正确",
+    "points": 1
+   },
+   {
+    "criterion": "使用return",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "函数参数与返回",
+  "adaptation_note": "补充从阅读代码到独立编写的练习。",
+  "knowledge_point": "C函数与作用域",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t08",
+  "topic_title": "函数、参数与返回",
+  "chapter_id": "programming.c07",
+  "required_depth": "综合应用",
+  "topic_order": 7
+ },
+ {
+  "id": "gap-pl-013",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "C文件与资源",
+  "stem": "用C语言给出打开文本文件data.txt逐行读取并关闭的核心代码，必须处理打开失败。",
+  "options": {},
+  "answer": "FILE *fp=fopen(\"data.txt\",\"r\");\nif (fp==NULL) return 1;\nchar buf[256];\nwhile (fgets(buf,sizeof buf,fp)!=NULL) { /*处理buf*/ }\nfclose(fp);",
+  "explanation": "以读取模式打开，检查NULL，按fgets返回值控制循环，最后关闭。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "fopen并检查失败",
+    "points": 1
+   },
+   {
+    "criterion": "按fgets返回值循环",
+    "points": 1
+   },
+   {
+    "criterion": "fclose关闭",
+    "points": 1
+   }
+  ],
+  "subject": "编程语言",
+  "source_chapter": "C文件与资源",
+  "adaptation_note": "补充从阅读代码到独立编写的练习。",
+  "knowledge_point": "C文件与结构体",
+  "ability": "代码编写",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "programming.t14",
+  "topic_title": "C文件与资源管理",
+  "chapter_id": "programming.c09",
+  "required_depth": "综合应用",
+  "topic_order": 13
+ },
+ {
   "id": "ap-os-001",
   "source": "高校试题提炼",
   "type": "单选",
@@ -50398,11 +50698,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t08",
-  "topic_title": "ACID与并发异常",
+  "topic_id": "database.t15",
+  "topic_title": "ACID与事务边界",
   "chapter_id": "database.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 14
  },
  {
   "id": "ap-db-002",
@@ -50426,11 +50726,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t10",
+  "topic_title": "索引与物理设计",
+  "chapter_id": "database.c06",
+  "required_depth": "综合应用",
+  "topic_order": 9
  },
  {
   "id": "ap-db-003",
@@ -50449,11 +50749,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t15",
+  "topic_title": "ACID与事务边界",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 14
  },
  {
   "id": "ap-db-004",
@@ -50477,11 +50777,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
  },
  {
   "id": "ap-db-005",
@@ -50500,11 +50800,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "database.t08",
-  "topic_title": "ACID与并发异常",
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
   "chapter_id": "database.c08",
   "required_depth": "综合应用",
-  "topic_order": 7,
+  "topic_order": 15,
   "rubric": [
    {
     "criterion": "异常名称",
@@ -50539,11 +50839,11 @@
   "knowledge_point": "SQL查询",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
-  "chapter_id": "database.c04",
+  "topic_id": "database.t10",
+  "topic_title": "索引与物理设计",
+  "chapter_id": "database.c06",
   "required_depth": "综合应用",
-  "topic_order": 3,
+  "topic_order": 9,
   "rubric": [
    {
     "criterion": "等值/范围需求差异",
@@ -50587,11 +50887,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
+  "topic_id": "programming.t12",
+  "topic_title": "C指针与地址",
   "chapter_id": "programming.c09",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 11
  },
  {
   "id": "ap-pl-002",
@@ -50615,11 +50915,11 @@
   "knowledge_point": "Python数据类型",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 10
  },
  {
   "id": "ap-pl-003",
@@ -50638,11 +50938,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
+  "topic_id": "programming.t08",
+  "topic_title": "函数、参数与返回",
   "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 7
  },
  {
   "id": "ap-pl-004",
@@ -50666,11 +50966,11 @@
   "knowledge_point": "C数组与字符串",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
   "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 10
  },
  {
   "id": "ap-pl-005",
@@ -50689,11 +50989,11 @@
   "knowledge_point": "Python数据类型",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t16",
+  "topic_title": "C与Python语义比较",
+  "chapter_id": "programming.c11",
   "required_depth": "综合应用",
-  "topic_order": 4,
+  "topic_order": 15,
   "rubric": [
    {
     "criterion": "先写变量初值，确定运算和类型，沿控制流逐句跟踪循环与分支，最后核对输出格式",
@@ -50724,11 +51024,11 @@
   "knowledge_point": "C文件与结构体",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "programming.t10",
-  "topic_title": "错误处理与编码",
+  "topic_id": "programming.t15",
+  "topic_title": "Python异常、模块与文件",
   "chapter_id": "programming.c10",
   "required_depth": "综合应用",
-  "topic_order": 9,
+  "topic_order": 14,
   "rubric": [
    {
     "criterion": "易失运行状态与持久化区别",
@@ -53522,6 +53822,7 @@
   "topic_title": "硬件、软件与性能",
   "chapter_id": "computer-organization.c01",
   "required_depth": "直接应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "“先存储",
@@ -53541,8 +53842,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-co-040",
@@ -53565,6 +53865,7 @@
   "topic_title": "数据通路与寻址",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "控制器译码并发出控制信号",
@@ -53588,8 +53889,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-co-041",
@@ -53612,6 +53912,7 @@
   "topic_title": "硬件、软件与性能",
   "chapter_id": "computer-organization.c01",
   "required_depth": "直接应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "CPU时间=指令数×平均CPI÷主频",
@@ -53623,8 +53924,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-co-042",
@@ -53675,6 +53975,7 @@
   "topic_title": "层次、容量与Cache",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
+  "topic_order": 3,
   "rubric": [
    {
     "criterion": "局部性",
@@ -53686,8 +53987,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 3
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-co-044",
@@ -53710,6 +54010,7 @@
   "topic_title": "层次、容量与Cache",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
+  "topic_order": 3,
   "rubric": [
    {
     "criterion": "直接映射位置固定",
@@ -53733,8 +54034,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 3
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-co-045",
@@ -53785,6 +54085,7 @@
   "topic_title": "数据通路与寻址",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "两个场景的选择",
@@ -53796,8 +54097,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-001",
@@ -54478,6 +54778,7 @@
   "topic_title": "栈与递归",
   "chapter_id": "data-structures.c03",
   "required_depth": "综合应用",
+  "topic_order": 3,
   "rubric": [
    {
     "criterion": "优先队列",
@@ -54489,8 +54790,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 3
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-028",
@@ -54513,6 +54813,7 @@
   "topic_title": "图的存储",
   "chapter_id": "data-structures.c05",
   "required_depth": "综合应用",
+  "topic_order": 12,
   "rubric": [
    {
     "criterion": "邻接矩阵空间O(n²)，判定两点是否相邻快，适合稠密图",
@@ -54524,8 +54825,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 12
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-029",
@@ -54576,6 +54876,7 @@
   "topic_title": "BST与AVL",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
+  "topic_order": 9,
   "rubric": [
    {
     "criterion": "不同不变量",
@@ -54587,8 +54888,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 9
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-031",
@@ -54611,6 +54911,7 @@
   "topic_title": "哈夫曼树与B/B+树",
   "chapter_id": "data-structures.c04",
   "required_depth": "综合应用",
+  "topic_order": 11,
   "rubric": [
    {
     "criterion": "多路低高度",
@@ -54626,8 +54927,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 11
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-032",
@@ -54650,6 +54950,7 @@
   "topic_title": "散列查找",
   "chapter_id": "data-structures.c06",
   "required_depth": "综合应用",
+  "topic_order": 18,
   "rubric": [
    {
     "criterion": "关键字空间通常大于地址空间，不同关键字可能映射同址",
@@ -54665,8 +54966,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 18
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-033",
@@ -54689,6 +54989,7 @@
   "topic_title": "插入、冒泡与选择排序",
   "chapter_id": "data-structures.c07",
   "required_depth": "综合应用",
+  "topic_order": 19,
   "rubric": [
    {
     "criterion": "稳定性含义",
@@ -54700,8 +55001,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 19
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-ds-034",
@@ -54724,6 +55024,7 @@
   "topic_title": "数据结构与复杂度",
   "chapter_id": "data-structures.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "总次数为1+2+…+n=n(n+1)/2",
@@ -54739,8 +55040,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-se-001",
@@ -55347,6 +55647,7 @@
   "topic_title": "需求是否可验证",
   "chapter_id": "software-engineering.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "不擅自拍板",
@@ -55366,8 +55667,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-se-025",
@@ -55441,6 +55741,7 @@
   "topic_title": "需求是否可验证",
   "chapter_id": "software-engineering.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "两个概念",
@@ -55452,8 +55753,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-se-028",
@@ -55476,6 +55776,7 @@
   "topic_title": "方法、层次与覆盖",
   "chapter_id": "software-engineering.c05",
   "required_depth": "综合应用",
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "有效/无效等价类和边界内",
@@ -55491,8 +55792,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 4
+  "rubric_source": "generated"
  },
  {
   "id": "sp-core-se-029",
@@ -55571,6 +55871,7 @@
   "topic_title": "需求是否可验证",
   "chapter_id": "software-engineering.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "授权",
@@ -55594,8 +55895,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-circuit-001",
@@ -56237,6 +56537,7 @@
   "topic_title": "初值、终值与时间常数",
   "chapter_id": "circuit.c07",
   "required_depth": "综合应用",
+  "topic_order": 6,
   "rubric": [
    {
     "criterion": "写出适用公式或计算关系",
@@ -56256,8 +56557,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 6
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-circuit-025",
@@ -56303,6 +56603,7 @@
   "topic_title": "KCL、KVL与等效电阻",
   "chapter_id": "circuit.c02",
   "required_depth": "综合应用",
+  "topic_order": 1,
   "rubric": [
    {
     "criterion": "电压并联及高内阻",
@@ -56318,8 +56619,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-circuit-027",
@@ -56342,6 +56642,7 @@
   "topic_title": "参考方向与功率",
   "chapter_id": "circuit.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "断电确认",
@@ -56369,8 +56670,7 @@
    }
   ],
   "max_score": 6,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-circuit-028",
@@ -56393,6 +56693,7 @@
   "topic_title": "初值、终值与时间常数",
   "chapter_id": "circuit.c07",
   "required_depth": "综合应用",
+  "topic_order": 6,
   "rubric": [
    {
     "criterion": "初值",
@@ -56416,8 +56717,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 6
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-circuit-029",
@@ -56440,6 +56740,7 @@
   "topic_title": "串并联系统",
   "chapter_id": "circuit.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "断电",
@@ -56459,8 +56760,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-circuit-030",
@@ -56483,6 +56783,7 @@
   "topic_title": "参考方向与功率",
   "chapter_id": "circuit.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "公共条件",
@@ -56506,8 +56807,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-analog-001",
@@ -57149,6 +57449,7 @@
   "topic_title": "虚短、虚断与边界",
   "chapter_id": "analog-electronics.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "写出适用公式或计算关系",
@@ -57168,8 +57469,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-analog-025",
@@ -57215,6 +57515,7 @@
   "topic_title": "导通、整流与稳压",
   "chapter_id": "analog-electronics.c02",
   "required_depth": "综合应用",
+  "topic_order": 1,
   "rubric": [
    {
     "criterion": "断电",
@@ -57238,8 +57539,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-analog-027",
@@ -57262,6 +57562,7 @@
   "topic_title": "静态点与失真",
   "chapter_id": "analog-electronics.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "供电输入",
@@ -57285,8 +57586,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-analog-028",
@@ -57309,6 +57609,7 @@
   "topic_title": "虚短、虚断与边界",
   "chapter_id": "analog-electronics.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "反复翻转原因",
@@ -57328,8 +57629,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-analog-029",
@@ -57352,6 +57652,7 @@
   "topic_title": "虚短、虚断与边界",
   "chapter_id": "analog-electronics.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "完整顺序",
@@ -57371,8 +57672,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-analog-030",
@@ -57395,6 +57695,7 @@
   "topic_title": "虚短、虚断与边界",
   "chapter_id": "analog-electronics.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "反冲原因",
@@ -57418,8 +57719,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-digital-001",
@@ -58107,6 +58407,7 @@
   "topic_title": "二进制与编码",
   "chapter_id": "digital-electronics.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "接口特征",
@@ -58118,8 +58419,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-digital-027",
@@ -58142,6 +58442,7 @@
   "topic_title": "二进制与编码",
   "chapter_id": "digital-electronics.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "效率",
@@ -58161,8 +58462,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-digital-028",
@@ -58185,6 +58485,7 @@
   "topic_title": "二进制与编码",
   "chapter_id": "digital-electronics.c01",
   "required_depth": "综合应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "抖动现象",
@@ -58204,8 +58505,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-digital-029",
@@ -58228,6 +58528,7 @@
   "topic_title": "从输入求输出",
   "chapter_id": "digital-electronics.c02",
   "required_depth": "综合应用",
+  "topic_order": 1,
   "rubric": [
    {
     "criterion": "占空比",
@@ -58247,8 +58548,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 1
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-digital-030",
@@ -58271,6 +58571,7 @@
   "topic_title": "分辨率与转换",
   "chapter_id": "digital-electronics.c07",
   "required_depth": "综合应用",
+  "topic_order": 6,
   "rubric": [
    {
     "criterion": "量程",
@@ -58294,8 +58595,7 @@
    }
   ],
   "max_score": 5,
-  "rubric_source": "generated",
-  "topic_order": 6
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-comm-001",
@@ -58937,6 +59237,7 @@
   "topic_title": "数字化与载波",
   "chapter_id": "communication.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "写出适用公式或计算关系",
@@ -58956,8 +59257,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-comm-025",
@@ -59003,6 +59303,7 @@
   "topic_title": "各环节的作用",
   "chapter_id": "communication.c01",
   "required_depth": "直接应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "包括四种机制的目的",
@@ -59018,8 +59319,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-comm-027",
@@ -59042,6 +59342,7 @@
   "topic_title": "数字化与载波",
   "chapter_id": "communication.c03",
   "required_depth": "综合应用",
+  "topic_order": 2,
   "rubric": [
    {
     "criterion": "包括载波",
@@ -59057,8 +59358,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 2
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-comm-028",
@@ -59081,6 +59381,7 @@
   "topic_title": "调谐与变频",
   "chapter_id": "communication.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "开口",
@@ -59092,8 +59393,7 @@
    }
   ],
   "max_score": 2,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-comm-029",
@@ -59116,6 +59416,7 @@
   "topic_title": "各环节的作用",
   "chapter_id": "communication.c01",
   "required_depth": "直接应用",
+  "topic_order": 0,
   "rubric": [
    {
     "criterion": "完整链路",
@@ -59131,8 +59432,7 @@
    }
   ],
   "max_score": 3,
-  "rubric_source": "generated",
-  "topic_order": 0
+  "rubric_source": "generated"
  },
  {
   "id": "sp-elec-comm-030",
@@ -59155,6 +59455,7 @@
   "topic_title": "调谐与变频",
   "chapter_id": "communication.c06",
   "required_depth": "综合应用",
+  "topic_order": 5,
   "rubric": [
    {
     "criterion": "光功率",
@@ -59174,8 +59475,7 @@
    }
   ],
   "max_score": 4,
-  "rubric_source": "generated",
-  "topic_order": 5
+  "rubric_source": "generated"
  },
  {
   "id": "ua-office-001",
@@ -60009,11 +60309,11 @@
   "knowledge_point": "C文件与结构体",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "programming.t13",
+  "topic_title": "C结构体",
+  "chapter_id": "programming.c09",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "ua-program-002",
@@ -60037,11 +60337,11 @@
   "knowledge_point": "程序控制结构",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t05",
-  "topic_title": "条件与分支",
-  "chapter_id": "programming.c05",
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "ua-program-003",
@@ -60065,11 +60365,11 @@
   "knowledge_point": "C数组与字符串",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
+  "topic_id": "programming.t10",
+  "topic_title": "C数组与字符串",
   "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 9
  },
  {
   "id": "ua-program-004",
@@ -60093,11 +60393,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t09",
-  "topic_title": "地址与资源",
+  "topic_id": "programming.t12",
+  "topic_title": "C指针与地址",
   "chapter_id": "programming.c09",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 11
  },
  {
   "id": "ua-program-005",
@@ -60121,11 +60421,11 @@
   "knowledge_point": "C指针与内存",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
+  "topic_id": "programming.t08",
+  "topic_title": "函数、参数与返回",
   "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 7
  },
  {
   "id": "ua-program-006",
@@ -60149,11 +60449,11 @@
   "knowledge_point": "C数组与字符串",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
   "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 10
  },
  {
   "id": "ua-program-007",
@@ -60177,11 +60477,11 @@
   "knowledge_point": "Python数据类型",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "ua-program-008",
@@ -60205,11 +60505,11 @@
   "knowledge_point": "Python数据类型",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "programming.t07",
+  "topic_title": "循环状态与边界",
+  "chapter_id": "programming.c06",
+  "required_depth": "综合应用",
+  "topic_order": 6
  },
  {
   "id": "ua-program-009",
@@ -60234,8 +60534,8 @@
   "ability": "概念识记",
   "difficulty": "基础",
   "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
-  "chapter_id": "programming.c08",
+  "topic_title": "函数、参数与返回",
+  "chapter_id": "programming.c07",
   "required_depth": "综合应用",
   "topic_order": 7
  },
@@ -60261,11 +60561,11 @@
   "knowledge_point": "C函数与作用域",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
+  "topic_id": "programming.t08",
+  "topic_title": "函数、参数与返回",
   "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 7
  },
  {
   "id": "ua-program-011",
@@ -60289,11 +60589,11 @@
   "knowledge_point": "C文件与结构体",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
-  "chapter_id": "programming.c07",
+  "topic_id": "programming.t14",
+  "topic_title": "C文件与资源管理",
+  "chapter_id": "programming.c09",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 13
  },
  {
   "id": "ua-program-012",
@@ -60317,11 +60617,11 @@
   "knowledge_point": "Python数据类型",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "programming.t02",
-  "topic_title": "类型与存储",
-  "chapter_id": "programming.c02",
-  "required_depth": "直接应用",
-  "topic_order": 1
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
+  "required_depth": "综合应用",
+  "topic_order": 10
  },
  {
   "id": "ua-program-013",
@@ -60340,11 +60640,11 @@
   "knowledge_point": "C数组与字符串",
   "ability": "读图排障",
   "difficulty": "应用",
-  "topic_id": "programming.t08",
-  "topic_title": "下标与共享",
+  "topic_id": "programming.t10",
+  "topic_title": "C数组与字符串",
   "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 9
  },
  {
   "id": "ua-program-014",
@@ -60363,11 +60663,11 @@
   "knowledge_point": "Python数据类型",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
-  "chapter_id": "programming.c07",
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 10
  },
  {
   "id": "ua-program-015",
@@ -60386,11 +60686,11 @@
   "knowledge_point": "C函数与作用域",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "programming.t07",
-  "topic_title": "参数与返回",
+  "topic_id": "programming.t09",
+  "topic_title": "作用域、递归与模块化",
   "chapter_id": "programming.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 8
  },
  {
   "id": "ua-security-001",
@@ -61224,11 +61524,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t07",
-  "topic_title": "函数依赖与范式",
+  "topic_id": "database.t12",
+  "topic_title": "属性闭包与候选键",
   "chapter_id": "database.c07",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 11
  },
  {
   "id": "uc-db-002",
@@ -61252,11 +61552,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t08",
+  "topic_title": "连接、子查询与集合运算",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uc-db-003",
@@ -61280,11 +61580,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "uc-db-004",
@@ -61308,11 +61608,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t04",
-  "topic_title": "选择、投影与连接",
+  "topic_id": "database.t05",
+  "topic_title": "关系代数",
   "chapter_id": "database.c04",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 4
  },
  {
   "id": "uc-db-005",
@@ -61336,11 +61636,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
  },
  {
   "id": "uc-db-006",
@@ -61364,11 +61664,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t02",
-  "topic_title": "实体与联系转换",
+  "topic_id": "database.t03",
+  "topic_title": "E-R转关系",
   "chapter_id": "database.c02",
   "required_depth": "综合应用",
-  "topic_order": 1
+  "topic_order": 2
  },
  {
   "id": "uc-db-007",
@@ -61392,11 +61692,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "uc-db-008",
@@ -61420,11 +61720,11 @@
   "knowledge_point": "索引与存储",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t10",
+  "topic_title": "索引与物理设计",
+  "chapter_id": "database.c06",
+  "required_depth": "综合应用",
+  "topic_order": 9
  },
  {
   "id": "uc-db-009",
@@ -61445,14 +61745,14 @@
   "source_url": "https://xxy.hbucm.edu.cn/info/1751/12092.htm",
   "source_title": "湖北中医药大学《数据库原理》考试大纲及样卷",
   "adaptation_note": "依据恢复技术考点改编日志时序判断。",
-  "knowledge_point": "事务与并发控制",
+  "knowledge_point": "数据库恢复",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t17",
+  "topic_title": "WAL与恢复",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 16
  },
  {
   "id": "uc-db-010",
@@ -61476,11 +61776,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "uc-db-011",
@@ -61505,9 +61805,9 @@
   "ability": "概念识记",
   "difficulty": "应用",
   "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
+  "topic_title": "数据库、DBMS与三级模式",
   "chapter_id": "database.c01",
-  "required_depth": "直接应用",
+  "required_depth": "综合应用",
   "topic_order": 0
  },
  {
@@ -61532,11 +61832,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t16",
+  "topic_title": "并发异常与隔离级别",
+  "chapter_id": "database.c08",
+  "required_depth": "综合应用",
+  "topic_order": 15
  },
  {
   "id": "uc-db-013",
@@ -61555,11 +61855,11 @@
   "knowledge_point": "数据库规范化",
   "ability": "概念识记",
   "difficulty": "进阶",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t13",
+  "topic_title": "范式判断",
+  "chapter_id": "database.c07",
+  "required_depth": "综合应用",
+  "topic_order": 12
  },
  {
   "id": "uc-db-014",
@@ -61578,11 +61878,11 @@
   "knowledge_point": "关系模型与代数",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t01",
-  "topic_title": "数据与管理软件",
-  "chapter_id": "database.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "database.t04",
+  "topic_title": "关系键与完整性",
+  "chapter_id": "database.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "uc-db-015",
@@ -61601,11 +61901,11 @@
   "knowledge_point": "SQL查询",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t08",
+  "topic_title": "连接、子查询与集合运算",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 7
  },
  {
   "id": "uc-ds-001",
@@ -65000,7 +65300,7 @@
   "answer_reviewed": true,
   "version": 1,
   "topic_source": "manual",
-  "topic_id": "programming.t06",
+  "topic_id": "programming.t11",
   "exam_event_verified": true,
   "item_text_level": "task_recall",
   "form_confidence": "medium",
@@ -65008,10 +65308,10 @@
   "knowledge_point": "C数组与字符串",
   "ability": "代码编写",
   "difficulty": "应用",
-  "topic_title": "跟踪变量与边界",
-  "chapter_id": "programming.c06",
+  "topic_title": "Python列表、元组、字典与集合",
+  "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 10
  },
  {
   "id": "hn-recall-sy26-004",
@@ -65407,11 +65707,11 @@
   "knowledge_point": "SQL查询",
   "ability": "SQL编写",
   "difficulty": "应用",
-  "topic_id": "database.t05",
-  "topic_title": "先筛行，再分组",
+  "topic_id": "database.t07",
+  "topic_title": "SQL筛选、分组与聚合",
   "chapter_id": "database.c05",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 6
  },
  {
   "id": "hn-recall-hn26-007",
@@ -65457,7 +65757,7 @@
   "answer_reviewed": true,
   "version": 1,
   "topic_source": "manual",
-  "topic_id": "database.t08",
+  "topic_id": "database.t15",
   "exam_event_verified": false,
   "item_text_level": "task_recall",
   "form_confidence": "medium",
@@ -65465,10 +65765,10 @@
   "knowledge_point": "事务与并发控制",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_title": "ACID与并发异常",
+  "topic_title": "ACID与事务边界",
   "chapter_id": "database.c08",
   "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_order": 14
  },
  {
   "id": "hn-recall-hn26-008",
@@ -65981,7 +66281,7 @@
   "answer_reviewed": true,
   "version": 1,
   "topic_source": "manual",
-  "topic_id": "programming.t10",
+  "topic_id": "programming.t14",
   "exam_event_verified": true,
   "item_text_level": "task_recall",
   "form_confidence": "medium",
@@ -65989,9 +66289,9 @@
   "knowledge_point": "程序设计基础",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_title": "错误处理与编码",
-  "chapter_id": "programming.c10",
+  "topic_title": "C文件与资源管理",
+  "chapter_id": "programming.c09",
   "required_depth": "综合应用",
-  "topic_order": 9
+  "topic_order": 13
  }
 ]

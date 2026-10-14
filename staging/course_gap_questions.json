@@ -22,6 +22,7 @@
     "options": {"A": "0", "B": "1", "C": "未定义", "D": "编译错误"}, "answer": "A",
     "explanation": "逻辑与左操作数为假时发生短路，右侧++x不执行，因此x仍为0。",
     "subject": "编程语言", "source_chapter": "优先级、除法与短路", "adaptation_note": "依据短路求值补齐程序阅读题。",
+    "topic_source": "manual", "topic_id": "programming.t04",
     "knowledge_point": "程序设计基础", "ability": "程序阅读", "difficulty": "基础"
   },
   {
@@ -569,5 +570,760 @@
   {"id": "gap-ds-031", "source": "课程缺口补充", "type": "填空", "chapter": "Dijkstra松弛", "stem": "有向图边权AB=1、AC=4、BC=2、BD=5、CD=1，均非负。从A执行Dijkstra，A到D的最短距离为________。", "options": {}, "answer": "4", "explanation": "A到B为1，经B把C更新为3、D更新为6；再经C把D更新为4，因此最短距离为4。", "max_score": 3, "rubric": [{"criterion": "A后得到B=1、C=4", "points": 1}, {"criterion": "经B更新C=3、D=6", "points": 1}, {"criterion": "经C更新D=4", "points": 1}], "subject": "算法与数据结构", "source_chapter": "最短路径", "adaptation_note": "补充Dijkstra逐轮松弛题。", "knowledge_point": "图结构与算法", "ability": "直接计算", "difficulty": "应用", "topic_source": "manual", "topic_id": "data-structures.t16", "topic_title": "最短路径", "chapter_id": "data-structures.c05"},
   {"id": "gap-ds-032", "source": "课程缺口补充", "type": "判断", "chapter": "拓扑排序判环", "stem": "对有向图进行拓扑排序时，如果队列已经为空但仍有顶点未输出，则图中存在有向环。", "options": {}, "answer": "正确", "explanation": "剩余顶点都没有入度为0者，说明它们位于循环依赖中，无法得到完整拓扑序。", "subject": "算法与数据结构", "source_chapter": "拓扑排序", "adaptation_note": "补充拓扑排序判环过程题。", "knowledge_point": "图结构与算法", "ability": "机制解释", "difficulty": "应用", "topic_source": "manual", "topic_id": "data-structures.t17", "topic_title": "拓扑排序", "chapter_id": "data-structures.c05"},
   {"id": "gap-ds-033", "source": "课程缺口补充", "type": "填空", "chapter": "快速排序划分", "stem": "序列4、2、5、1、3以3为枢轴，若稳定地把小于枢轴、枢轴、大于枢轴三部分依次写出，一趟结果为________。", "options": {}, "answer": "2,1,3,4,5", "accepted_answers": ["2，1，3，4，5"], "explanation": "小于3的元素按原顺序为2、1，随后是枢轴3，大于3的元素为4、5。该题明确采用稳定辅助划分，避免与原地划分步骤混淆。", "max_score": 3, "rubric": [{"criterion": "小于区为2、1", "points": 1}, {"criterion": "枢轴3在中间", "points": 1}, {"criterion": "大于区为4、5", "points": 1}], "subject": "算法与数据结构", "source_chapter": "快速排序", "adaptation_note": "补充快速排序划分过程题。", "knowledge_point": "排序算法", "ability": "过程描述", "difficulty": "应用", "topic_source": "manual", "topic_id": "data-structures.t21", "topic_title": "快速排序", "chapter_id": "data-structures.c07"},
-  {"id": "gap-ds-034", "source": "课程缺口补充", "type": "填空", "chapter": "归并过程", "stem": "把有序序列2、5、8与1、4、9归并，得到的结果为________。", "options": {}, "answer": "1,2,4,5,8,9", "accepted_answers": ["1，2，4，5，8，9"], "explanation": "用两个指针反复取两段当前较小元素，一段耗尽后复制另一段余项。", "max_score": 3, "rubric": [{"criterion": "前半结果1、2、4", "points": 1}, {"criterion": "继续得到5、8", "points": 1}, {"criterion": "最终补9", "points": 1}], "subject": "算法与数据结构", "source_chapter": "归并排序", "adaptation_note": "补充归并双指针过程题。", "knowledge_point": "排序算法", "ability": "过程描述", "difficulty": "应用", "topic_source": "manual", "topic_id": "data-structures.t22", "topic_title": "归并排序", "chapter_id": "data-structures.c07"}
+  {"id": "gap-ds-034", "source": "课程缺口补充", "type": "填空", "chapter": "归并过程", "stem": "把有序序列2、5、8与1、4、9归并，得到的结果为________。", "options": {}, "answer": "1,2,4,5,8,9", "accepted_answers": ["1，2，4，5，8，9"], "explanation": "用两个指针反复取两段当前较小元素，一段耗尽后复制另一段余项。", "max_score": 3, "rubric": [{"criterion": "前半结果1、2、4", "points": 1}, {"criterion": "继续得到5、8", "points": 1}, {"criterion": "最终补9", "points": 1}], "subject": "算法与数据结构", "source_chapter": "归并排序", "adaptation_note": "补充归并双指针过程题。", "knowledge_point": "排序算法", "ability": "过程描述", "difficulty": "应用", "topic_source": "manual", "topic_id": "data-structures.t22", "topic_title": "归并排序", "chapter_id": "data-structures.c07"},
+  {
+    "id": "gap-db-002",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "E-R建模",
+    "stem": "图书馆有读者、图书和借阅业务：读者可借多本书，一本书在不同时段可被多名读者借阅，借阅还记录借出日期和归还日期。说明实体、联系、基数及联系属性。",
+    "options": {},
+    "answer": "实体是读者和图书；借阅是m:n联系；借出与归还日期属于联系属性。",
+    "explanation": "日期描述一次借阅事实，不是读者或图书的固定属性。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "识别两个实体",
+        "points": 1
+      },
+      {
+        "criterion": "判断m:n联系",
+        "points": 1
+      },
+      {
+        "criterion": "识别联系属性",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "E-R建模",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库设计",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t02"
+  },
+  {
+    "id": "gap-db-003",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "关系代数",
+    "stem": "对Student(sid,name,dept)写出“计算机系学生姓名”的关系代数表达式，并说明中间结果。",
+    "options": {},
+    "answer": "π_name(σ_dept='CS'(Student))；选择后保留CS元组，投影后只留name并去重。",
+    "explanation": "选择取行，投影取列；先选择可减少后续处理元组。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出选择条件",
+        "points": 1
+      },
+      {
+        "criterion": "写出姓名投影",
+        "points": 1
+      },
+      {
+        "criterion": "说明中间结果",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "关系代数",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "关系模型与代数",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t05"
+  },
+  {
+    "id": "gap-db-004",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "关系代数",
+    "stem": "已知SC(sid,cid)和Need(cid)，写出“选修Need中全部课程的学生编号”的关系代数表达式，并解释为何不能用一次等值选择代替。",
+    "options": {},
+    "answer": "SC÷Need；除法要求同一sid与Need中的每个cid都有关联，一次等值选择只能检查某一门课。",
+    "explanation": "除法表达“对给定集合中的所有元素均满足”。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出除法",
+        "points": 1
+      },
+      {
+        "criterion": "说明全部语义",
+        "points": 1
+      },
+      {
+        "criterion": "区分等值选择",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "关系代数",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "关系模型与代数",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t05"
+  },
+  {
+    "id": "gap-db-005",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "连接与子查询",
+    "stem": "有Reader(reader_id,name)和Borrow(reader_id,book_id)，写SQL查询从未借书的读者编号和姓名。",
+    "options": {},
+    "answer": "SELECT r.reader_id,r.name FROM Reader r WHERE NOT EXISTS (SELECT 1 FROM Borrow b WHERE b.reader_id=r.reader_id);",
+    "explanation": "NOT EXISTS保留不存在匹配借阅记录的外层读者。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "外层查询Reader",
+        "points": 1
+      },
+      {
+        "criterion": "使用NOT EXISTS",
+        "points": 1
+      },
+      {
+        "criterion": "正确关联reader_id",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "连接与子查询",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "SQL查询",
+    "ability": "SQL编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t08"
+  },
+  {
+    "id": "gap-db-006",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "连接与子查询",
+    "stem": "Student(sid,name)和SC(sid,cid)，写SQL统计每名学生选课数，并保留未选课学生。",
+    "options": {},
+    "answer": "SELECT s.sid,s.name,COUNT(sc.cid) FROM Student s LEFT JOIN SC sc ON s.sid=sc.sid GROUP BY s.sid,s.name;",
+    "explanation": "LEFT JOIN保留所有学生，COUNT(sc.cid)忽略补出的NULL。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "正确LEFT JOIN",
+        "points": 1
+      },
+      {
+        "criterion": "按学生分组",
+        "points": 1
+      },
+      {
+        "criterion": "使用COUNT(sc.cid)",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "连接与子查询",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "SQL查询",
+    "ability": "SQL编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t08"
+  },
+  {
+    "id": "gap-db-007",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "数据库设计流程",
+    "stem": "系统先识别学生、课程与选课规则，再把E-R图转成表并规范化，最后按常用查询建立索引。指出三个工作所属设计阶段。",
+    "options": {},
+    "answer": "依次属于概念设计、逻辑设计、物理设计。",
+    "explanation": "三个阶段依次产出概念模型、关系模式和存储访问结构。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "概念设计",
+        "points": 1
+      },
+      {
+        "criterion": "逻辑设计",
+        "points": 1
+      },
+      {
+        "criterion": "物理设计",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "数据库设计流程",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库设计",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t11"
+  },
+  {
+    "id": "gap-db-008",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "闭包与候选键",
+    "stem": "R(A,B,C,D,E)，F={A→B，B→C，AD→E}。求(AD)+并判断AD是否为候选键。",
+    "options": {},
+    "answer": "(AD)+=ABCDE，AD是候选键。",
+    "explanation": "依次加入B、C、E；删A或D都不能推出全部属性，满足最小性。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "逐步推出B、C、E",
+        "points": 2
+      },
+      {
+        "criterion": "闭包正确",
+        "points": 1
+      },
+      {
+        "criterion": "验证最小性",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "闭包与候选键",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库规范化",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t12"
+  },
+  {
+    "id": "gap-db-009",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "范式判断",
+    "stem": "R(学号,课程号,姓名,成绩)，候选键为(学号,课程号)，且学号→姓名。判断最高达到的范式并说明。",
+    "options": {},
+    "answer": "满足1NF但不满足2NF。",
+    "explanation": "姓名是非主属性，却只依赖复合候选键的一部分，存在部分依赖。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "判断不满足2NF",
+        "points": 1
+      },
+      {
+        "criterion": "指出部分依赖",
+        "points": 1
+      },
+      {
+        "criterion": "说明非主属性",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "范式判断",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库规范化",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t13"
+  },
+  {
+    "id": "gap-db-010",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "分解校验",
+    "stem": "R(A,B,C)满足A→B，分解为R1(A,B)与R2(A,C)。判断是否无损，并说明依赖能否保持。",
+    "options": {},
+    "answer": "无损且保持A→B。",
+    "explanation": "公共属性A能决定R1全部属性，因此无损；A→B可在R1中检查。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "找出公共属性A",
+        "points": 1
+      },
+      {
+        "criterion": "判断无损",
+        "points": 1
+      },
+      {
+        "criterion": "判断依赖保持",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "分解校验",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库规范化",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t14"
+  },
+  {
+    "id": "gap-db-011",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "并发调度",
+    "stem": "调度为r1(X),w1(X),r2(X),w2(X)。画出冲突优先图的边，判断是否冲突可串行化并给出等价顺序。",
+    "options": {},
+    "answer": "只有T1→T2，无环，因此可串行化，等价顺序为T1、T2。",
+    "explanation": "T1对X的写先于T2对X的读写，且没有反向边。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "识别T1→T2",
+        "points": 1
+      },
+      {
+        "criterion": "判断无环",
+        "points": 1
+      },
+      {
+        "criterion": "给出串行顺序",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "并发调度",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "事务与并发控制",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t16"
+  },
+  {
+    "id": "gap-db-012",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "并发调度",
+    "stem": "若优先图同时包含T1→T2和T2→T1，能否判为冲突可串行化？说明理由。",
+    "options": {},
+    "answer": "不能；两条边形成有向环，无法得到满足全部冲突先后的串行顺序。",
+    "explanation": "冲突可串行化当且仅当优先图无环。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "判断不能",
+        "points": 1
+      },
+      {
+        "criterion": "指出有向环",
+        "points": 1
+      },
+      {
+        "criterion": "联系串行顺序",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "并发调度",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "事务与并发控制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t16"
+  },
+  {
+    "id": "gap-db-013",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "日志恢复",
+    "stem": "故障前日志为<T1 start>、<T1,A,10,20>、<T1 commit>、<T2 start>、<T2,B,5,8>。说明T1和T2分别需UNDO还是REDO及目标值。",
+    "options": {},
+    "answer": "T1已提交，需要时REDO使A=20；T2未提交，应UNDO使B=5。",
+    "explanation": "先按commit判断状态，再用新值重做已提交事务、用旧值撤销未提交事务。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "T1 REDO到20",
+        "points": 2
+      },
+      {
+        "criterion": "T2 UNDO到5",
+        "points": 2
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "日志恢复",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库恢复",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t17"
+  },
+  {
+    "id": "gap-db-014",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "认证授权审计",
+    "stem": "用户U获得Student表SELECT权限后，何时可以继续授予V？回收U权限时还应检查什么？",
+    "options": {},
+    "answer": "U同时获得转授权能力（如WITH GRANT OPTION）时才能转授；回收时检查授权链和级联规则。",
+    "explanation": "普通使用权限不自动包含转授权能力。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出转授权能力",
+        "points": 1
+      },
+      {
+        "criterion": "写出WITH GRANT OPTION或等价含义",
+        "points": 1
+      },
+      {
+        "criterion": "检查授权链",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "认证授权审计",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库安全",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t18"
+  },
+  {
+    "id": "gap-db-015",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "认证授权审计",
+    "stem": "报表账号只需查看本院学生汇总，设计最小权限方案，并说明审计作用。",
+    "options": {},
+    "answer": "建立仅暴露必要行列的视图，只授予该视图SELECT权限，可经角色分配；审计记录关键访问和变更。",
+    "explanation": "认证、授权、审计分别回答身份、权限和行为记录。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "使用受限视图",
+        "points": 1
+      },
+      {
+        "criterion": "只授予SELECT/角色",
+        "points": 1
+      },
+      {
+        "criterion": "说明审计追踪",
+        "points": 1
+      }
+    ],
+    "subject": "数据库",
+    "source_chapter": "认证授权审计",
+    "adaptation_note": "数据库重构后补充独立解题过程。",
+    "knowledge_point": "数据库安全",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t18"
+  },
+  {
+    "id": "gap-pl-005",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "C结构体",
+    "stem": "已定义struct Student{int id; double score;};，变量s和指针p分别表示一个学生。写出用s和p读取score的表达式。",
+    "options": {},
+    "answer": "s.score和p->score。",
+    "explanation": "对象用点号，结构体指针用箭头；p->score等价于(*p).score。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出s.score",
+        "points": 1
+      },
+      {
+        "criterion": "写出p->score",
+        "points": 1
+      },
+      {
+        "criterion": "说明箭头等价形式",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "C结构体",
+    "adaptation_note": "按C与Python教材任务补充过程题。",
+    "knowledge_point": "C文件与结构体",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t13"
+  },
+  {
+    "id": "gap-pl-006",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "Python异常与文件",
+    "stem": "Python把用户输入转换为整数。说明应捕获什么异常，并写出try/except核心结构。",
+    "options": {},
+    "answer": "捕获ValueError；try中执行n=int(input())，except ValueError中提示重新输入或进行受控处理。",
+    "explanation": "输入文本格式不合法时int会抛出ValueError；不应无条件吞掉全部异常。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出ValueError",
+        "points": 1
+      },
+      {
+        "criterion": "写出try",
+        "points": 1
+      },
+      {
+        "criterion": "按类型except并处理",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "Python异常与文件",
+    "adaptation_note": "按C与Python教材任务补充过程题。",
+    "knowledge_point": "程序异常与调试",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t15"
+  },
+  {
+    "id": "gap-pl-007",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "Python异常与文件",
+    "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+    "options": {},
+    "answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。",
+    "explanation": "资源管理、路径错误和编码错误是不同问题，应按异常类型处理。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "说明自动关闭",
+        "points": 1
+      },
+      {
+        "criterion": "指出FileNotFoundError",
+        "points": 1
+      },
+      {
+        "criterion": "指出UnicodeDecodeError",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "Python异常与文件",
+    "adaptation_note": "按C与Python教材任务补充过程题。",
+    "knowledge_point": "程序异常与调试",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t15"
+  },
+  {
+    "id": "gap-pl-008",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "C与Python比较",
+    "stem": "比较表达式-7/2在现代C整数运算与Python 3中的结果，并说明Python // 的规则。",
+    "options": {},
+    "answer": "现代C整数-7/2向零截断为-3；Python 3的/得-3.5；Python -7//2向下取整为-4。",
+    "explanation": "迁移代码时必须核对除法类型和负数舍入方向。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "C结果-3",
+        "points": 1
+      },
+      {
+        "criterion": "Python / 结果-3.5",
+        "points": 1
+      },
+      {
+        "criterion": "Python //结果-4并说明向下取整",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "C与Python比较",
+    "adaptation_note": "按C与Python教材任务补充过程题。",
+    "knowledge_point": "程序设计基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t16"
+  },
+  {
+    "id": "gap-pl-009",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "程序错误与调试",
+    "stem": "程序无法通过语法检查、运行时除以零、能够运行但最大值初始值选错，分别属于哪类错误？",
+    "options": {},
+    "answer": "依次为语法错误、运行错误、逻辑错误。",
+    "explanation": "先按错误发生阶段分类，再选择检查语法、异常信息或变量跟踪。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "语法错误",
+        "points": 1
+      },
+      {
+        "criterion": "运行错误",
+        "points": 1
+      },
+      {
+        "criterion": "逻辑错误",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "程序错误与调试",
+    "adaptation_note": "按C与Python教材任务补充过程题。",
+    "knowledge_point": "程序异常与调试",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t02"
+  },
+  {
+    "id": "gap-pl-010",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "条件与多分支",
+    "stem": "用Python写出成绩分档：90分及以上输出A，60至89输出B，其余输出C。",
+    "options": {},
+    "answer": "if score >= 90:\n    print(\"A\")\nelif score >= 60:\n    print(\"B\")\nelse:\n    print(\"C\")",
+    "explanation": "从高阈值到低阈值判断，避免宽条件提前接走高分。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "先判断>=90",
+        "points": 1
+      },
+      {
+        "criterion": "再判断>=60",
+        "points": 1
+      },
+      {
+        "criterion": "覆盖其余情况",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "条件与多分支",
+    "adaptation_note": "补充从阅读代码到独立编写的练习。",
+    "knowledge_point": "程序控制结构",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t06"
+  },
+  {
+    "id": "gap-pl-011",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "循环状态与边界",
+    "stem": "用C语言写循环计算1到100中所有偶数之和，给出核心代码。",
+    "options": {},
+    "answer": "int sum=0;\nfor (int i=2; i<=100; i+=2) {\n    sum += i;\n}",
+    "explanation": "初始化、继续条件、更新和累加对象都要正确；也可遍历1至100后判断偶数。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "sum正确初始化",
+        "points": 1
+      },
+      {
+        "criterion": "循环边界含100",
+        "points": 1
+      },
+      {
+        "criterion": "只累加偶数",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "循环状态与边界",
+    "adaptation_note": "补充从阅读代码到独立编写的练习。",
+    "knowledge_point": "程序控制结构",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t07"
+  },
+  {
+    "id": "gap-pl-012",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "函数参数与返回",
+    "stem": "用Python定义函数maximum(a,b)，返回较大值；不要在函数内只打印结果。",
+    "options": {},
+    "answer": "def maximum(a, b):\n    if a >= b:\n        return a\n    return b",
+    "explanation": "函数通过return把值交给调用者，调用者可继续使用结果。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "函数定义与两个参数",
+        "points": 1
+      },
+      {
+        "criterion": "比较正确",
+        "points": 1
+      },
+      {
+        "criterion": "使用return",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "函数参数与返回",
+    "adaptation_note": "补充从阅读代码到独立编写的练习。",
+    "knowledge_point": "C函数与作用域",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t08"
+  },
+  {
+    "id": "gap-pl-013",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "C文件与资源",
+    "stem": "用C语言给出打开文本文件data.txt逐行读取并关闭的核心代码，必须处理打开失败。",
+    "options": {},
+    "answer": "FILE *fp=fopen(\"data.txt\",\"r\");\nif (fp==NULL) return 1;\nchar buf[256];\nwhile (fgets(buf,sizeof buf,fp)!=NULL) { /*处理buf*/ }\nfclose(fp);",
+    "explanation": "以读取模式打开，检查NULL，按fgets返回值控制循环，最后关闭。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "fopen并检查失败",
+        "points": 1
+      },
+      {
+        "criterion": "按fgets返回值循环",
+        "points": 1
+      },
+      {
+        "criterion": "fclose关闭",
+        "points": 1
+      }
+    ],
+    "subject": "编程语言",
+    "source_chapter": "C文件与资源",
+    "adaptation_note": "补充从阅读代码到独立编写的练习。",
+    "knowledge_point": "C文件与结构体",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "programming.t14"
+  }
 ]

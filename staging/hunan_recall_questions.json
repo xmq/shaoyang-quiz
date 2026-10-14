@@ -25,7 +25,7 @@
     "max_score": 5, "rubric": [{"criterion": "正确处理逗号和大小写", "points": 1}, {"criterion": "正确分词", "points": 1}, {"criterion": "使用映射结构累计", "points": 1}, {"criterion": "累计逻辑正确", "points": 1}, {"criterion": "结果正确", "points": 1}],
     "subject": "编程语言", "source_chapter": "2026邵阳市直计算机岗主观题回忆", "adaptation_note": "依据不限语言词频编程回忆改编，补充输入边界。",
     "source_url": "https://www.xiaohongshu.com/explore/6a51b9dc00000000110130a2", "source_title": "2026年7月11日邵阳市直计算机岗考试类型回忆", "source_item": "主观题4线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
-    "topic_source": "manual", "topic_id": "programming.t06"
+    "topic_source": "manual", "topic_id": "programming.t11"
   },
   {
     "id": "hn-recall-sy26-004", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "HTTP与HTTPS",
@@ -102,7 +102,7 @@
     "max_score": 5, "rubric": [{"criterion": "指出两个操作属于同一业务", "points": 1}, {"criterion": "说明全部成功或全部回滚", "points": 1}, {"criterion": "说明不一致后果", "points": 1}, {"criterion": "检查库存条件", "points": 1}, {"criterion": "说明并发控制", "points": 1}],
     "subject": "数据库", "source_chapter": "湖南计算机岗考生回忆", "adaptation_note": "依据借阅记录与库存更新事务题回忆改编。",
     "source_url": "https://www.xiaohongshu.com/explore/6a92b7960000000025038884", "source_title": "2026年8月29日计算机岗位考生回忆版", "source_item": "分析题3(2)线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
-    "topic_source": "manual", "topic_id": "database.t08"
+    "topic_source": "manual", "topic_id": "database.t15"
   },
   {
     "id": "hn-recall-hn26-008", "source": "湖南笔试回忆改编", "type": "简答", "chapter": "路由转发",
@@ -210,6 +210,6 @@
     "max_score": 6, "rubric": [{"criterion": "说明不能一次性读入全部文件", "points": 1}, {"criterion": "采用逐行或固定块读取", "points": 1}, {"criterion": "正确处理块边界", "points": 1}, {"criterion": "及时累计而不保存全部原文", "points": 1}, {"criterion": "保证文件或资源关闭", "points": 1}, {"criterion": "说明词汇表过大时的外存方案", "points": 1}],
     "subject": "编程语言", "source_chapter": "2025长沙县信息化管理岗大题回忆", "adaptation_note": "依据分块处理大文件编程题回忆改编为语言无关设计题。",
     "source_url": "https://www.xiaohongshu.com/explore/67f9eb28000000000f03a197", "source_title": "2025年4月12日长沙县信息化管理岗复盘", "source_item": "专业卷大题编程线索", "evidence_level": "考生回忆改编", "review_status": "已复核", "origin_verified": false, "answer_reviewed": true, "version": 1,
-    "topic_source": "manual", "topic_id": "programming.t10"
+    "topic_source": "manual", "topic_id": "programming.t14"
   }
 ]

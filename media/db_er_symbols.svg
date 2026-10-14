@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">E-R图的实体、属性、联系与基数</title>
+  <desc id="desc">学生和课程是矩形实体，学号是椭圆属性，选课是菱形联系，两侧标注多对多基数。</desc>
+  <defs><style>
+    .bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.entity{fill:#fff;stroke:#2563eb;stroke-width:4}.attr{fill:#eff6ff;stroke:#2563eb;stroke-width:3}.rel{fill:#e7f6f4;stroke:#176f68;stroke-width:4}.line{stroke:#526777;stroke-width:4}.title{font:700 28px system-ui;fill:#102a43}.text{font:24px system-ui;fill:#102a43}.small{font:20px system-ui;fill:#526777}.mark{font:700 24px system-ui;fill:#176f68}
+    @media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.entity{fill:#17283b;stroke:#78b7ff}.attr{fill:#17304a;stroke:#78b7ff}.rel{fill:#173f3c;stroke:#46d6c6}.line{stroke:#9fb0c0}.title,.text{fill:#edf4fb}.small{fill:#b8c5d1}.mark{fill:#73e2d6}}
+  </style></defs>
+  <rect class="bg" x="10" y="10" width="700" height="410" rx="24"/>
+  <text class="title" x="35" y="54">E-R图先画业务含义，再转关系表</text>
+  <rect class="entity" x="55" y="150" width="160" height="86" rx="8"/>
+  <text class="text" x="135" y="202" text-anchor="middle">学生</text>
+  <ellipse class="attr" cx="135" cy="320" rx="90" ry="48"/>
+  <text class="text" x="135" y="329" text-anchor="middle">学号</text>
+  <polygon class="rel" points="360,145 460,193 360,241 260,193"/>
+  <text class="text" x="360" y="202" text-anchor="middle">选课</text>
+  <rect class="entity" x="505" y="150" width="160" height="86" rx="8"/>
+  <text class="text" x="585" y="202" text-anchor="middle">课程</text>
+  <line class="line" x1="215" y1="193" x2="260" y2="193"/><line class="line" x1="460" y1="193" x2="505" y2="193"/><line class="line" x1="135" y1="236" x2="135" y2="272"/>
+  <text class="mark" x="232" y="181">m</text><text class="mark" x="477" y="181">n</text>
+  <text class="small" x="360" y="390" text-anchor="middle">矩形＝实体　椭圆＝属性　菱形＝联系　m:n＝多对多</text>
+</svg>

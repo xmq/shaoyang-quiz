@@ -191,6 +191,22 @@ CALCULATION_TOPICS.update({
 })
 CODE_TOPICS.update({"operating-system.t06"})
 
+DATABASE_TOPICS = {f"database.t{index:02d}" for index in range(1, 19)}
+KEY_TOPICS.update(DATABASE_TOPICS)
+SHORT_ANSWER_TOPICS.update(DATABASE_TOPICS)
+APPLICATION_TOPICS.update(DATABASE_TOPICS)
+CALCULATION_TOPICS.update({
+    f"database.t{index:02d}" for index in (4, 5, 7, 8, 10, 12, 13, 14, 16, 17)
+})
+CODE_TOPICS.update({f"database.t{index:02d}" for index in (5, 6, 7, 8, 15, 16, 17, 18)})
+
+PROGRAMMING_TOPICS = {f"programming.t{index:02d}" for index in range(1, 17)}
+KEY_TOPICS.update(PROGRAMMING_TOPICS)
+SHORT_ANSWER_TOPICS.update(PROGRAMMING_TOPICS)
+APPLICATION_TOPICS.update(PROGRAMMING_TOPICS)
+CALCULATION_TOPICS.update({f"programming.t{index:02d}" for index in (3, 4, 5, 6, 7, 10, 12)})
+CODE_TOPICS.update({f"programming.t{index:02d}" for index in range(1, 17)})
+
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]
