@@ -46,6 +46,7 @@ const CORE_ASSETS = [
   "./media/network_layers.svg",
   "./media/network_subnet.svg",
   "./media/ds_tree_traversal.svg",
+  "./media/ds_graph_traversal.svg",
   "./media/os_process_states.svg",
   "./media/computer_memory_hierarchy.svg",
   "./media/db_relationships.svg",

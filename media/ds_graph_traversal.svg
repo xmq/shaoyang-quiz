@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">同一无向图的深度优先与广度优先遍历</title>
+  <desc id="desc">顶点A到F组成的无向图。邻接点按字母升序时，DFS序列为A、B、D、E、F、C，BFS序列为A、B、C、D、E、F。</desc>
+  <defs>
+    <style>
+      .panel{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.edge{stroke:#64748b;stroke-width:5;stroke-linecap:round}.node{fill:#e7f6f4;stroke:#176f68;stroke-width:4}.label{font:700 25px system-ui,sans-serif;fill:#102a43}.head{font:700 27px system-ui,sans-serif;fill:#102a43}.copy{font:21px system-ui,sans-serif;fill:#334155}.step{fill:#eaf2ff;stroke:#2563eb;stroke-width:2}.mono{font:20px ui-monospace,monospace;fill:#1d4ed8}
+      @media (prefers-color-scheme:dark){.panel{fill:#142234;stroke:#30455b}.edge{stroke:#8aa0b5}.node{fill:#173f3c;stroke:#46d6c6}.label,.head{fill:#edf4fb}.copy{fill:#b8c5d1}.step{fill:#172f50;stroke:#66a3ff}.mono{fill:#a9cbff}}
+    </style>
+  </defs>
+  <rect class="panel" x="12" y="12" width="936" height="576" rx="26"/>
+  <text class="head" x="48" y="62">示例图：邻接点按字母升序</text>
+  <g class="edge">
+    <path d="M180 145L360 110M180 145L360 250M360 110L550 65M360 110L550 175M360 250L550 325M550 175L550 325"/>
+  </g>
+  <g class="node">
+    <circle cx="180" cy="145" r="38"/><circle cx="360" cy="110" r="38"/><circle cx="360" cy="250" r="38"/>
+    <circle cx="550" cy="65" r="38"/><circle cx="550" cy="175" r="38"/><circle cx="550" cy="325" r="38"/>
+  </g>
+  <g class="label" text-anchor="middle">
+    <text x="180" y="154">A</text><text x="360" y="119">B</text><text x="360" y="259">C</text>
+    <text x="550" y="74">D</text><text x="550" y="184">E</text><text x="550" y="334">F</text>
+  </g>
+  <text class="head" x="660" y="105">DFS</text>
+  <text class="mono" x="660" y="145">A B D E F C</text>
+  <text class="copy" x="660" y="180">深入到底，再回退</text>
+  <text class="head" x="660" y="255">BFS</text>
+  <text class="mono" x="660" y="295">A B C D E F</text>
+  <text class="copy" x="660" y="330">逐层扩展，使用队列</text>
+  <rect class="step" x="48" y="405" width="864" height="132" rx="18"/>
+  <text class="copy" x="76" y="446">BFS队列：</text>
+  <text class="mono" x="205" y="446">[A] → [B,C] → [C,D,E] → [D,E,F]</text>
+  <text class="copy" x="76" y="493">标记时机：</text>
+  <text class="mono" x="205" y="493">DFS进入即标记；BFS入队即标记</text>
+</svg>
