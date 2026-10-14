@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" role="img" aria-labelledby="title desc">
+  <title id="title">无线局域网隐藏站问题</title><desc id="desc">站点A和C彼此听不到，但都能向接入点发送，可能在接入点发生冲突。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#176f68"/></marker><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.node{fill:#fff;stroke:#176f68;stroke-width:4}.a{stroke:#176f68;stroke-width:4;fill:none;marker-end:url(#a)}.no{stroke:#d64545;stroke-width:4;stroke-dasharray:9 7}.t{font:21px system-ui,sans-serif;fill:#102a43}.s{font:15px system-ui,sans-serif;fill:#526777}</style></defs>
+  <rect class="bg" x="12" y="12" width="736" height="366" rx="24"/>
+  <circle class="node" cx="110" cy="185" r="55"/><circle class="node" cx="380" cy="115" r="62"/><circle class="node" cx="650" cy="185" r="55"/>
+  <text class="t" x="110" y="193" text-anchor="middle">站点 A</text><text class="t" x="380" y="108" text-anchor="middle">AP</text><text class="s" x="380" y="137" text-anchor="middle">共同接收端</text><text class="t" x="650" y="193" text-anchor="middle">站点 C</text>
+  <path class="a" d="M155 152L320 125"/><path class="a" d="M605 152L440 125"/>
+  <path class="no" d="M165 235H595"/><text class="s" x="380" y="265" text-anchor="middle">A 与 C 彼此听不到，可能同时发送</text>
+  <text class="s" x="380" y="326" text-anchor="middle">RTS/CTS让AP附近站点获知预约，可缓解冲突但不能保证完全消除</text>
+</svg>

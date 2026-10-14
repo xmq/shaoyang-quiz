@@ -50,7 +50,9 @@ const CORE_ASSETS = [
   "./media/computer_memory_hierarchy.svg",
   "./media/db_relationships.svg",
   "./media/tcp_handshake.svg",
-  "./media/tcp_congestion.svg"
+  "./media/tcp_congestion.svg",
+  "./media/streaming_buffer.svg",
+  "./media/wlan_hidden_station.svg"
 ];
 
 self.addEventListener("install", (event) => {
