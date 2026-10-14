@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">项目网络与关键路径</title><desc id="desc">A完成后B和C并行，之后汇合到D，A-B-D路径9天长于A-C-D路径7天。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.node{fill:#fff;stroke:#2563eb;stroke-width:3}.key{fill:#e7f6f4;stroke:#176f68;stroke-width:4}.line{stroke:#94a3b8;stroke-width:5;fill:none}.hot{stroke:#176f68;stroke-width:7;fill:none}.h{font:700 27px system-ui;fill:#102a43}.t{font:21px system-ui;fill:#102a43}.s{font:18px system-ui;fill:#526777}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.node{fill:#17283b;stroke:#78b7ff}.key{fill:#173f3c;stroke:#46d6c6}.line{stroke:#647b91}.hot{stroke:#46d6c6}.h,.t{fill:#edf4fb}.s{fill:#b8c5d1}}</style></defs>
+  <rect class="bg" x="10" y="10" width="700" height="410" rx="24"/><text class="h" x="35" y="55">最长依赖路径决定项目最短总工期</text>
+  <path class="hot" d="M125 215L305 125L580 215"/><path class="line" d="M125 215L305 305L580 215"/>
+  <g class="t" text-anchor="middle"><circle class="key" cx="125" cy="215" r="45"/><text x="125" y="222">A 2天</text><circle class="key" cx="305" cy="125" r="45"/><text x="305" y="132">B 4天</text><circle class="node" cx="305" cy="305" r="45"/><text x="305" y="312">C 2天</text><circle class="key" cx="580" cy="215" r="45"/><text x="580" y="222">D 3天</text></g>
+  <text class="t" x="365" y="100">A-B-D = 9天</text><text class="t" x="365" y="338">A-C-D = 7天</text><text class="s" x="35" y="395">关键路径A-B-D的任务延误会直接推迟总工期</text>
+</svg>

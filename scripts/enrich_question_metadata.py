@@ -64,12 +64,139 @@ PROGRAMMING_TOPIC_OVERRIDES = {
 SUBJECT_OVERRIDES = {
     "zg-4542": "算法与数据结构",
     "cg-04-s1-q16": "算法与数据结构",
+    "cg-06-s1-q5": "软件工程", "cg-06-s1-q8": "软件工程",
+    "cg-06-s1-q9": "软件工程", "cg-06-s1-q10": "软件工程",
+    "cg-06-s1-q12": "软件工程", "cg-06-s1-q13": "软件工程",
+    "cg-06-s1-q14": "软件工程", "cg-06-s1-q15": "软件工程",
+    "cg-06-s1-q16": "软件工程", "cg-06-s1-q17": "软件工程",
+    "cg-06-s1-q18": "软件工程", "cg-06-s2-q1": "软件工程",
+    "cg-06-s1-q6": "软件工程", "cg-06-s1-q7": "软件工程",
+    "dy-6ff41d09": "操作系统", "dy-ebc6d4f4": "操作系统",
+    "zg-32499": "操作系统", "dy-e43d68bb": "操作系统",
+    "dy-bd96ef41": "操作系统", "dy-ca4e8ea5": "操作系统",
+    "dy-d9f15556": "操作系统", "dy-3d38882f": "操作系统",
+    "dy-58750fc1": "操作系统",
+    "cg-02-s4-q28": "多媒体", "cg-02-s4-q29": "多媒体",
+    "cg-02-s4-q30": "多媒体", "zg-53822": "多媒体",
+    "cg-06-s1-q11": "软件工程",
+    "dy-cad45571": "办公软件", "dy-ceb37dcf": "办公软件",
 }
 
 COMPUTER_ORGANIZATION_TOPIC_OVERRIDES = {
     "uf-co-003": 9, "ap-co-004": 9, "sp-core-co-024": 9,
     "sp-core-co-004": 6, "sp-core-co-006": 7, "sp-core-co-019": 1,
     "uf-co-005": 7, "sp-core-co-002": 3, "sp-core-co-001": 2,
+}
+
+SOFTWARE_ENGINEERING_TOPIC_OVERRIDES = {
+    "uf-se-001": 3, "uf-se-006": 13, "ap-se-001": 3, "ap-se-004": 15,
+    "sp-core-se-005": 13, "sp-core-se-022": 6, "se-gen-q02": 6,
+    "se-gen-q04": 9, "uf-se-003": 9, "sp-core-se-025": 5,
+    "sp-core-se-031": 15, "se-gen-q06": 12, "sp-core-se-001": 6,
+    "sp-core-se-004": 11, "uf-se-007": 14, "ap-se-003": 4,
+    "sp-core-se-029": 13, "uc-se-008": 16, "uc-se-015": 17,
+    "se-gen-q13": 16, "sp-core-se-006": 2, "gap-se-005": 9,
+    "se-gen-q11": 15, "cg-06-s1-q5": 5, "cg-06-s1-q8": 15,
+    "cg-06-s1-q9": 10, "cg-06-s1-q10": 9, "cg-06-s1-q12": 6,
+    "cg-06-s1-q13": 8, "cg-06-s1-q14": 15, "cg-06-s1-q15": 13,
+    "cg-06-s1-q16": 13, "cg-06-s1-q17": 11, "cg-06-s1-q18": 14,
+    "cg-06-s2-q1": 2, "cg-06-s1-q7": 6,
+    "cg-06-s1-q6": 6, "cg-06-s1-q11": 7,
+}
+
+INFORMATION_SECURITY_TOPIC_OVERRIDES = {
+    "cg-02-s5-q10": 5, "cg-02-s5-q31": 4, "zg-67463": 4,
+    "zg-86566": 9, "dy-ed4ba4a8": 11, "dy-fc9c9344": 12,
+    "ua-security-008": 13, "zg-99117": 6, "ua-security-013": 11,
+    "cg-02-s5-q34": 6, "uf-is-008": 14, "dy-a49aea0d": 1,
+    "ap-is-001": 6, "ap-is-005": 15, "gap-sec-001": 2,
+    "ap-is-003": 4, "ua-security-007": 11,
+    "cg-02-s5-q36": 17, "cg-02-s5-q38": 17, "zg-87787": 17,
+    "zg-64566": 17, "cg-02-s5-q42": 4, "dy-f0bf2432": 4,
+    "dy-8307738b": 5, "zg-15807": 11, "ua-security-001": 1,
+    "cg-02-s5-q41": 17, "dy-bbde8ae8": 17, "dy-7f065639": 6,
+    "dy-254e4516": 3, "cg-02-s5-q24": 11,
+    "dy-c5f2395e": 2, "dy-06eb99e1": 2,
+    "zg-61071": 3,
+}
+
+COMPUTER_FOUNDATION_TOPIC_OVERRIDES = {
+    "gap-found-012": 20, "gap-found-013": 17, "gap-found-014": 3,
+    "gap-found-015": 7, "gap-found-016": 18,
+    "hn-recall-hn26-019": 5, "dy-d0f42341": 1,
+    "cg-06-s1-q110": 4, "cg-06-s1-q113": 4, "cg-06-s2-q14": 5,
+    "zg-11096": 7, "zg-10890": 5, "zg-13337": 7,
+    "dy-787d8c1c": 7, "dy-d9f15556": 7, "bd-004": 11,
+    "cg-02-s4-q29": 18, "cg-02-s4-q8": 1, "cg-06-s2-q11": 5,
+    "zg-34499": 5, "dy-a34990fe": 18, "bd-012": 10,
+    "cg-06-s1-q7-dup2": 5, "cg-06-s1-q53": 5, "cg-06-s1-q55": 4,
+    "cg-06-s1-q56": 4, "cg-06-s1-q57": 5, "cg-06-s1-q59": 5,
+    "cg-06-s1-q71": 7, "cg-06-s1-q73": 7, "cg-06-s1-q75": 7,
+    "cg-06-s1-q79": 5, "cg-06-s1-q82": 3, "cg-06-s1-q85": 5,
+    "cg-06-s1-q92": 5, "cg-06-s1-q109": 4, "cg-06-s1-q115": 4,
+    "cg-06-s1-q120": 4, "cg-06-s1-q123": 5, "cg-06-s1-q124": 7,
+    "cg-06-s1-q125": 8, "cg-06-s1-q127": 7, "cg-06-s2-q9": 5,
+    "zg-89812": 7, "zg-48939": 12, "zg-14524": 12, "zg-35316": 6,
+    "zg-34558": 5, "dy-b94730f1": 5, "dy-80d7632d": 5,
+    "dy-afba316e": 5, "dy-cad45571": 7, "dy-054f157b": 3,
+    "dy-bd550aaa": 4, "dy-61f909a0": 5, "dy-e4ba04f5": 12,
+    "dy-a9948f58": 19, "dy-debdaa71": 5, "dy-5ae4aebc": 4,
+    "dy-ea8b6f42": 5, "dy-ceb37dcf": 7, "dy-045071ea": 5,
+    "dy-a330b096": 1, "dy-2435453e": 4, "dy-8c289d6a": 5,
+    "dy-dcc5d2d0": 18, "dy-fb0af697": 5, "dy-ed0b8d0c": 18,
+    "dy-f55f74f2": 7, "dy-ae13649a": 5, "dy-12ac6095": 7,
+    "cg-02-s1-q29": 18, "cg-02-s1-q33": 14, "cg-02-s1-q39": 14,
+    "cg-02-s4-q2": 1, "cg-02-s4-q5": 1, "cg-02-s4-q7": 1,
+    "cg-02-s4-q9": 1, "cg-02-s4-q10": 1, "cg-02-s4-q12": 18,
+    "cg-02-s4-q13": 12, "cg-02-s4-q15": 12, "cg-02-s4-q17": 18,
+    "cg-02-s4-q18": 12, "cg-02-s4-q23": 14, "cg-02-s4-q24": 14,
+    "cg-02-s4-q34": 4, "cg-06-s1-q14-dup2": 5,
+    "zg-7462": 1, "zg-71472": 1, "zg-39116": 1, "zg-63645": 19,
+    "zg-96001": 4, "zg-99635": 1, "zg-98060": 1, "zg-53822": 18,
+    "web-15": 1, "web-39": 18, "dy-335e6a07": 5, "dy-94760839": 5,
+    "dy-c8552785": 12, "dy-1df18068": 19,
+    "gap-found-005": 8, "cg-06-s1-q91": 3, "zg-82870": 3,
+    "dy-2987416e": 3, "zg-68914": 4, "zg-76959": 4, "zg-68489": 4,
+    "zg-75106": 1, "zg-21588": 1, "dy-fc9f80bb": 7,
+    "zg-11096": 1, "zg-98509": 18, "cg-06-s1-q37": 5,
+    "cg-06-s1-q41": 5, "cg-06-s1-q50": 5, "cg-06-s2-q12": 5,
+    "dy-db4045b7": 5, "zg-32272": 7, "zg-91871": 7,
+    "zg-24227": 7, "cg-06-s1-q72": 7, "cg-02-s1-q39": 1,
+    "zg-37965": 5, "cg-06-s1-q27": 5, "cg-06-s1-q29": 5,
+    "cg-06-s1-q60": 5, "cg-06-s1-q65": 5, "cg-06-s2-q13": 5,
+    "web-5": 5, "dy-066977aa": 5, "dy-24ad9ede": 5,
+    "dy-ff93663e": 5, "dy-963a7c67": 5, "dy-62555133": 5,
+    "dy-80efea9a": 5, "cg-06-s1-q87": 3, "cg-06-s1-q88": 3,
+    "dy-2ebd08bc": 3, "cg-06-s1-q108": 4, "dy-1b6211b9": 4,
+    "zg-95580": 18, "dy-0574dff5": 18, "dy-60fa8fa5": 12,
+    "cg-06-s1-q107": 4, "cg-06-s1-q117": 4, "cg-06-s1-q121": 4,
+    "dy-9b84fc08": 4, "dy-580bc45f": 4, "dy-85006573": 1,
+    "cg-06-s1-q118": 4,
+    "cg-06-s1-q17-dup2": 5, "cg-06-s1-q64": 5, "web-7": 4,
+    "cg-06-s1-q70": 5, "cg-06-s1-q77": 3, "cg-06-s2-q22": 4,
+}
+
+REMOVED_QUESTION_IDS = {
+    "zg-6305", "dy-a34a3129", "dy-ae14613b",
+    "zg-84677", "zg-84991", "zg-88625", "zg-92120", "dy-47c582f3",
+    "cg-02-s5-q44", "dy-4adfd2a8", "cg-02-s5-q10", "cg-02-s5-q8",
+    "dy-329ccda4", "dy-ce04a943", "dy-c908dd34", "zg-77636", "dy-ed4ba4a8",
+    "cg-02-s5-q36", "cg-02-s5-q38", "zg-87787", "zg-64566",
+    "bd-014",
+    "zg-21718", "zg-49738", "zg-20789", "cg-02-s5-q42",
+    "cg-02-s5-q13", "cg-02-s5-q37", "dy-f7dba4a4", "zg-26051",
+    "zg-48687", "uf-is-002",
+    "cg-06-s1-q8",
+    "bd-003", "bd-004", "bd-005", "bd-006", "bd-007", "bd-008",
+    "bd-009", "bd-010", "bd-012", "bd-013", "bd-015",
+    "cg-02-s4-q24", "dy-1e0130fb", "cg-02-s4-q12",
+    "cg-06-s1-q126", "dy-dcc5d2d0", "cg-02-s4-q31", "cg-02-s4-q33",
+    "zg-63645", "dy-a9948f58", "dy-1df18068",
+    "cg-02-s5-q45",
+    "bd-011", "cg-06-s1-q124", "cg-06-s1-q127", "dy-b1fdb3e1",
+    "cg-06-s1-q57", "dy-80d7632d", "dy-afba316e", "dy-1057d716",
+    "dy-debdaa71", "zg-91871", "zg-24227", "dy-0fdc6c59",
+    "zg-68262",
 }
 
 ABILITY_VALUES = frozenset({
@@ -492,8 +619,100 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
                     "chapter_id": best["chapter_id"], "required_depth": best["depth"],
                     "topic_order": topic_number - 1,
                 }
+    if subject == "信息安全":
+        override_number = INFORMATION_SECURITY_TOPIC_OVERRIDES.get(str(question.get("id")))
+        if override_number:
+            best = topics[override_number - 1]
+            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": override_number - 1}
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (17, r"授权范围|合法目的|公开信息|知识产权|职业责任|合规|单位制度"),
+            (16, r"个人信息|敏感个人信息|最小必要|去标识|匿名化|重新识别"),
+            (15, r"事件响应|遏制|根除|复盘|保留证据|安全事件"),
+            (14, r"\brpo\b|\brto\b|全量备份|增量备份|差异备份|3-2-1|备份恢复|raid"),
+            (13, r"sql注入|xss|参数化查询|输出编码|主机加固|补丁|服务端校验"),
+            (12, r"ddos|dos攻击|中间人|arp欺骗|dns欺骗|异常流量|误报|漏报"),
+            (11, r"防火墙|\bids\b|\bips\b|\bdmz\b|\bvpn\b|\btls\b|网络分区"),
+            (10, r"数字签名|证书|\bca\b|信任链|\bmac\b|哈希|摘要|防抵赖"),
+            (9, r"对称加密|非对称加密|公钥|私钥|会话密钥|混合加密|密钥分发"),
+            (8, r"访问控制|\bdac\b|\bmac\b|\brbac\b|\babac\b|角色|权限复核|授权"),
+            (7, r"认证因素|多因素|\bmfa\b|会话|cookie|令牌|生物特征|账号恢复"),
+            (6, r"社会工程|钓鱼|感染处置|隔离主机|勒索.*处置"),
+            (5, r"病毒|蠕虫|木马|勒索软件|恶意代码|后门"),
+            (4, r"口令|盐|慢散列|账号锁定|等级保护|等保|定级|测评"),
+            (3, r"预防控制|检测控制|纠正控制|风险处置|风险规避|风险转移|风险接受"),
+            (2, r"资产|威胁|脆弱性|攻击|风险|纵深防御|职责分离|最小权限"),
+            (1, r"机密性|完整性|可用性|\bcia\b"),
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
+    if subject in {"计算机基础", "信息基础", "大数据"}:
+        override_number = COMPUTER_FOUNDATION_TOPIC_OVERRIDES.get(str(question.get("id")))
+        if override_number:
+            best = topics[override_number - 1]
+            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": override_number - 1}
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (20, r"技术选型|组合技术|目标.*约束|时延.*隐私|可靠性.*风险|综合方案"),
+            (19, r"信息系统|数字化转型|人员.*流程|系统建设"),
+            (18, r"计算机发展|电子管|晶体管|集成电路|科学计算|数据处理|过程控制|辅助设计"),
+            (17, r"智能合约|联盟链|公有链|私有链|普通数据库|多方共同"),
+            (16, r"区块链|区块|共识|链式|上链|哈希.*篡改|数字签名.*区块"),
+            (15, r"设备身份|固件|物联网安全|设备失联|安全状态|异常读数"),
+            (14, r"物联网|传感器|执行器|网关|感知层|闭环控制"),
+            (13, r"训练集|验证集|测试集|模型训练|模型推理|过拟合|生成式ai|幻觉"),
+            (12, r"人工智能|机器学习|深度学习|监督学习|无监督学习|强化学习"),
+            (11, r"数据挖掘|分类任务|回归|聚类|关联分析|异常检测|hadoop|hdfs|mapreduce|yarn|spark"),
+            (10, r"大数据|\b4v\b|数据采集|数据清洗|缺失值|重复值|数据治理|数据仓库|流处理"),
+            (9, r"公有云|私有云|混合云|边缘计算|云边协同|断网"),
+            (8, r"云计算|\biaas\b|\bpaas\b|\bsaas\b|资源池|弹性|虚拟化"),
+            (7, r"操作系统|任务管理器|资源管理器|\bipconfig\b|\bping\b|\bnslookup\b|系统软件|应用软件"),
+            (6, r"文件|文件夹|目录|路径|扩展名|压缩包|格式转换"),
+            (5, r"冯·诺依曼|存储程序|cpu|运算器|控制器|主存|外存|输入设备|输出设备|计算机硬件"),
+            (4, r"ascii|unicode|utf-8|字符编码|像素|rgb|图像容量|采样|量化|声音编码"),
+            (3, r"二进制|八进制|十六进制|数制转换|\bbit\b|\bbyte\b|容量计算"),
+            (2, r"计算思维|问题分解|抽象|算法步骤|流程图|循环状态"),
+            (1, r"数据.*信息|信息特征|信息载体|信息素养|可信|统计口径|时效性|共享性"),
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
+    if subject == "软件工程":
+        override_number = SOFTWARE_ENGINEERING_TOPIC_OVERRIDES.get(str(question.get("id")))
+        if override_number:
+            best = topics[override_number - 1]
+            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": override_number - 1}
+        stem = normalized_text(question.get("stem"))
+        rules = (
+            (19, r"追踪矩阵|需求到测试|持续改进|度量反馈|复盘"),
+            (18, r"方法选择|组合工程方法|业务变化|按证据|演进式"),
+            (17, r"风险管理|风险识别|风险应对|人员组织|团队沟通"),
+            (16, r"关键路径|\bcpm\b|网络图|甘特图|工作量估算|项目估算|进度计划|成本估算"),
+            (15, r"配置项|基线|版本控制|变更控制|配置管理|质量保证|质量审计"),
+            (14, r"纠错性维护|适应性维护|完善性维护|预防性维护|软件维护|重构|再工程|逆向工程"),
+            (13, r"单元测试|集成测试|系统测试|验收测试|桩模块|驱动模块|回归测试|调试"),
+            (12, r"语句覆盖|分支覆盖|判定覆盖|条件覆盖|路径覆盖|环形复杂度|控制流图|白盒"),
+            (11, r"等价类|边界值|决策表|因果图|黑盒"),
+            (10, r"面向对象|\buml\b|类图|时序图|用例图|对象模型"),
+            (9, r"内聚|耦合|信息隐藏|模块化|单一职责"),
+            (8, r"总体设计|概要设计|详细设计|体系结构|接口设计|伪代码"),
+            (7, r"\bdfd\b|数据流图|数据字典|数据流|数据存储|加工.*需求"),
+            (6, r"需求获取|功能需求|非功能需求|需求规格|\bsrs\b|需求质量|需求变更|可验证需求"),
+            (5, r"可行性|成本效益|投资回收期|技术可行|经济可行|操作可行"),
+            (4, r"敏捷|scrum|迭代|持续集成|用户故事|短周期"),
+            (3, r"瀑布|原型模型|增量模型|螺旋模型|统一过程|过程模型"),
+            (2, r"生命周期|验证与确认|verification|validation|阶段评审"),
+            (1, r"软件危机|软件工程|软件特点|工程化"),
+        )
+        for topic_number, pattern in rules:
+            if re.search(pattern, stem, re.I):
+                best = topics[topic_number - 1]
+                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
     best = topics[0]
-    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言", "计算机组成原理"}:
+    if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言", "计算机组成原理", "信息安全", "计算机基础", "信息基础", "大数据", "软件工程"}:
         core_text = question_text(question, include_options=False)
         stem_text = normalized_text(question.get("stem"))
         best_score = (0, 0, 0, 0, 0, 0, 0)
@@ -690,6 +909,9 @@ def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
     for index, question in enumerate(questions, 1):
         if not isinstance(question, dict):
             raise ValueError(f"第{index}项不是题目对象")
+        if str(question.get("id")) in REMOVED_QUESTION_IDS:
+            changed_ids.append(str(question.get("id")))
+            continue
         source_question = dict(question)
         expected_subject = SUBJECT_OVERRIDES.get(str(question.get("id")))
         if expected_subject:

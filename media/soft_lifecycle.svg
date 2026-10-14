@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">软件生命周期及反馈</title><desc id="desc">从可行性、需求、设计、实现、测试到交付维护，相邻阶段可反馈修正。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.box{fill:#fff;stroke:#2563eb;stroke-width:3}.hot{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.line{stroke:#2563eb;stroke-width:4;fill:none}.back{stroke:#d97706;stroke-width:3;fill:none;stroke-dasharray:8 6}.h{font:700 27px system-ui;fill:#102a43}.t{font:21px system-ui;fill:#102a43}.s{font:18px system-ui;fill:#526777}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.box{fill:#17283b;stroke:#78b7ff}.hot{fill:#173f3c;stroke:#46d6c6}.line{stroke:#78b7ff}.back{stroke:#f4b45f}.h,.t{fill:#edf4fb}.s{fill:#b8c5d1}}</style></defs>
+  <rect class="bg" x="10" y="10" width="700" height="410" rx="24"/><text class="h" x="35" y="55">生命周期是可反馈的工程闭环</text>
+  <g class="t" text-anchor="middle"><rect class="box" x="35" y="115" width="120" height="70" rx="12"/><text x="95" y="158">可行性</text><rect class="box" x="170" y="115" width="120" height="70" rx="12"/><text x="230" y="158">需求</text><rect class="box" x="305" y="115" width="120" height="70" rx="12"/><text x="365" y="158">设计</text><rect class="box" x="440" y="115" width="120" height="70" rx="12"/><text x="500" y="158">实现</text><rect class="hot" x="575" y="115" width="110" height="70" rx="12"/><text x="630" y="158">测试</text></g>
+  <path class="line" d="M155 150H170M290 150H305M425 150H440M560 150H575"/><path class="back" d="M630 195V245H365V195M500 195V285H230V195"/>
+  <rect class="hot" x="230" y="305" width="260" height="65" rx="14"/><text class="t" x="360" y="345" text-anchor="middle">交付 · 运行 · 维护 · 退役</text>
+  <text class="s" x="35" y="225">测试可反馈设计，维护中的变化可重新进入需求分析</text><text class="s" x="35" y="397">验证：按规格构造　确认：满足真实需要</text>
+</svg>

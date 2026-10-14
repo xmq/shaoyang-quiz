@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">订单查询数据流图</title><desc id="desc">用户把查询条件送给查询订单加工，加工读取订单库后返回订单结果。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.entity{fill:#fff;stroke:#2563eb;stroke-width:3}.process{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.store{fill:#fff7ed;stroke:#d97706;stroke-width:3}.line{stroke:#526777;stroke-width:4;fill:none}.h{font:700 27px system-ui;fill:#102a43}.t{font:21px system-ui;fill:#102a43}.s{font:18px system-ui;fill:#526777}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.entity{fill:#17283b;stroke:#78b7ff}.process{fill:#173f3c;stroke:#46d6c6}.store{fill:#402d18;stroke:#f4b45f}.line{stroke:#9fb0c0}.h,.t{fill:#edf4fb}.s{fill:#b8c5d1}}</style></defs>
+  <rect class="bg" x="10" y="10" width="700" height="410" rx="24"/><text class="h" x="35" y="55">DFD描述数据怎样进入、加工、存储和输出</text>
+  <rect class="entity" x="45" y="150" width="130" height="80" rx="8"/><text class="t" x="110" y="198" text-anchor="middle">用户</text>
+  <circle class="process" cx="360" cy="190" r="85"/><text class="t" x="360" y="182" text-anchor="middle">1.0</text><text class="t" x="360" y="212" text-anchor="middle">查询订单</text>
+  <path class="store" d="M535 140H680M535 140V225M535 225H680"/><text class="t" x="608" y="190" text-anchor="middle">D1 订单库</text>
+  <path class="line" d="M175 175H270M270 210H175M445 170H535M535 210H445"/>
+  <text class="s" x="195" y="158">查询条件</text><text class="s" x="195" y="240">订单结果</text><text class="s" x="465" y="153">读取条件</text><text class="s" x="465" y="242">订单数据</text>
+  <text class="s" x="45" y="335">箭头表示数据流，不表示程序语句的先后控制</text><text class="s" x="45" y="375">数据字典继续定义“订单号、查询条件、订单结果”的结构和规则</text>
+</svg>

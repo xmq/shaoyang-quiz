@@ -21,6 +21,7 @@ const QUESTION_REVISIONS = Object.freeze({
 });
 const MAX_IMPORT_BYTES = 5 * 1024 * 1024;
 const CHAPTER_FILTER_PREFIX = "@chapter:";
+const TOPIC_FILTER_PREFIX = "@topic:";
 const MAX_HISTORY_PER_QUESTION = 50;
 const MASTER_THRESHOLD = 2;
 const REVIEW_INTERVAL_DAYS = [1, 3, 7, 14, 30];
@@ -128,20 +129,16 @@ function quizRunnerUrl() {
 
 function prepareQuizHistory() {
   const view = quizViewName();
-  let sameOriginReferrer = false;
-  try {
-    sameOriginReferrer = Boolean(document.referrer && new URL(document.referrer, location.href).origin === location.origin);
-  } catch {}
-
-  if (history.state?.shaoyangBackVersion !== 2) {
+  if (history.state?.shaoyangBackVersion !== 3) {
     const currentUrl = location.href;
-    history.replaceState({shaoyangBackBridge: true, sameOriginReferrer}, "", currentUrl);
-    history.pushState({shaoyangQuizView: "hub", shaoyangBackVersion: 2}, "", view === "hub" ? currentUrl : quizHubUrl());
     if (view === "runner") {
-      history.pushState({shaoyangQuizView: "runner", backToHub: true, shaoyangBackVersion: 2}, "", currentUrl);
+      history.replaceState({shaoyangQuizView: "hub", shaoyangBackVersion: 3}, "", quizHubUrl());
+      history.pushState({shaoyangQuizView: "runner", backToHub: true, shaoyangBackVersion: 3}, "", currentUrl);
+    } else {
+      history.replaceState({shaoyangQuizView: "hub", shaoyangBackVersion: 3}, "", currentUrl);
     }
   } else {
-    history.replaceState({...history.state, shaoyangQuizView: view, backToHub: false, shaoyangBackVersion: 2}, "", location.href);
+    history.replaceState({...history.state, shaoyangQuizView: view, backToHub: false, shaoyangBackVersion: 3}, "", location.href);
   }
   return view;
 }
@@ -258,9 +255,14 @@ function searchableText(q) {
 
 function getScope() {
   let scope = PUBLIC_QUESTIONS;
-  if (state.subject) scope = scope.filter((q) => q.subject === state.subject);
+  const hasStableIdFilter = state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)
+    || state.chapterFilter?.startsWith(TOPIC_FILTER_PREFIX);
+  if (state.subject && !hasStableIdFilter) scope = scope.filter((q) => q.subject === state.subject);
   if (state.typeFilter) scope = scope.filter((q) => q.type === state.typeFilter);
-  if (state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)) {
+  if (state.chapterFilter?.startsWith(TOPIC_FILTER_PREFIX)) {
+    const topicId = state.chapterFilter.slice(TOPIC_FILTER_PREFIX.length);
+    scope = scope.filter((q) => q.topic_id === topicId);
+  } else if (state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)) {
     const chapterId = state.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length);
     scope = scope.filter((q) => q.chapter_id === chapterId);
   } else if (state.chapterFilter) {
@@ -393,7 +395,7 @@ function applyLaunchParams() {
     const topicQuestion = PUBLIC_QUESTIONS.find((question) => question.topic_id === requestedTopic);
     if (topicQuestion) {
       state.subject = topicQuestion.subject;
-      state.chapterFilter = chapterKey(topicQuestion);
+      state.chapterFilter = `${TOPIC_FILTER_PREFIX}${requestedTopic}`;
       if (!requestedMode || requestedMode === "home") state.mode = "seq";
       changed = true;
     }
@@ -528,7 +530,7 @@ function updateStats() {
 
 function updateCourseModuleLinks() {
   const moduleSelect = $("quiz-module-select");
-  const hasLearningContent = Boolean(state.subject && !["信息基础", "计算机基础", "大数据"].includes(state.subject));
+  const hasLearningContent = Boolean(state.subject);
   [...moduleSelect.options].forEach((option) => {
     if (option.value !== "quiz") option.disabled = !hasLearningContent;
   });
@@ -544,12 +546,16 @@ function wrongGrade(count) {
 
 function renderActiveFilters() {
   const container = $("active-filters");
-  const chapterLabel = state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)
-    ? (PUBLIC_QUESTIONS.find((question) => question.chapter_id === state.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length))?.chapter_title || "本章")
-    : state.chapterFilter;
+  const isTopicId = state.chapterFilter?.startsWith(TOPIC_FILTER_PREFIX);
+  const isChapterId = state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX);
+  const chapterLabel = isTopicId
+    ? (PUBLIC_QUESTIONS.find((question) => question.topic_id === state.chapterFilter.slice(TOPIC_FILTER_PREFIX.length))?.topic_title || "本知识点")
+    : (isChapterId
+      ? (PUBLIC_QUESTIONS.find((question) => question.chapter_id === state.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length))?.chapter_title || "本章")
+      : state.chapterFilter);
   const filters = [
     ["typeFilter", "题型", state.typeFilter],
-    ["chapterFilter", state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX) ? "章节" : "知识点", chapterLabel],
+    ["chapterFilter", isChapterId ? "章节" : "知识点", chapterLabel],
   ].filter(([, , value]) => value);
   container.classList.toggle("hidden", filters.length === 0);
   if (!filters.length) {
@@ -1311,7 +1317,7 @@ function updateViewState() {
 function render() {
   const nextQuizView = quizViewName();
   if (!restoringQuizHistory && renderedQuizView === "hub" && nextQuizView === "runner") {
-    history.pushState({shaoyangQuizView: "runner", backToHub: true, shaoyangBackVersion: 2}, "", quizRunnerUrl());
+    history.pushState({shaoyangQuizView: "runner", backToHub: true, shaoyangBackVersion: 3}, "", quizRunnerUrl());
   }
   renderedQuizView = nextQuizView;
   updateViewState();
@@ -1644,6 +1650,8 @@ function sanitizeState(input, strict = false) {
   if (typeof input.chapterFilter === "string" && input.chapterFilter.length <= 300
       && (!input.chapterFilter
         || PUBLIC_QUESTIONS.some((question) => chapterKey(question) === input.chapterFilter)
+        || (input.chapterFilter.startsWith(TOPIC_FILTER_PREFIX)
+          && PUBLIC_QUESTIONS.some((question) => question.topic_id === input.chapterFilter.slice(TOPIC_FILTER_PREFIX.length)))
         || (input.chapterFilter.startsWith(CHAPTER_FILTER_PREFIX)
           && PUBLIC_QUESTIONS.some((question) => question.chapter_id === input.chapterFilter.slice(CHAPTER_FILTER_PREFIX.length))))) {
     clean.chapterFilter = input.chapterFilter;
@@ -1759,22 +1767,17 @@ function exitRunner() {
   state._pending = null;
   clearMockTimer();
   save();
-  history.replaceState({...history.state, shaoyangQuizView: "hub", backToHub: false, shaoyangBackVersion: 2}, "", quizHubUrl());
+  history.replaceState({...history.state, shaoyangQuizView: "hub", backToHub: false, shaoyangBackVersion: 3}, "", quizHubUrl());
   render();
 }
 
 function goBackOrHome() {
   const referrer = document.referrer ? new URL(document.referrer, location.href) : null;
-  if ((referrer?.origin === location.origin || history.state?.shaoyangQuizView) && history.length > 1) history.back();
+  if (referrer?.origin === location.origin && history.length > 1) history.back();
   else location.href = "./index.html";
 }
 
 function handleNativeBack(event) {
-  if (event.state?.shaoyangBackBridge) {
-    if (event.state.sameOriginReferrer) history.back();
-    else location.replace("./index.html");
-    return;
-  }
   if (event.state?.shaoyangQuizView === "hub" && state.mode !== "home") {
     restoringQuizHistory = true;
     state.mode = "home";

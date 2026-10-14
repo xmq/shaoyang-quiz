@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">边界值与测试层次</title><desc id="desc">年龄有效范围18到60使用17、18、19、59、60、61测试；测试从单元逐步到验收。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.valid{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.bad{fill:#fff1f2;stroke:#dc2626;stroke-width:3}.level{fill:#fff;stroke:#2563eb;stroke-width:3}.h{font:700 27px system-ui;fill:#102a43}.t{font:21px system-ui;fill:#102a43}.s{font:18px system-ui;fill:#526777}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.valid{fill:#173f3c;stroke:#46d6c6}.bad{fill:#421d24;stroke:#fb7185}.level{fill:#17283b;stroke:#78b7ff}.h,.t{fill:#edf4fb}.s{fill:#b8c5d1}}</style></defs>
+  <rect class="bg" x="10" y="10" width="700" height="410" rx="24"/><text class="h" x="35" y="55">测试既要选好输入，也要逐层检查协作</text>
+  <text class="t" x="35" y="105">年龄有效范围 18—60</text>
+  <g class="t" text-anchor="middle"><circle class="bad" cx="95" cy="165" r="31"/><text x="95" y="173">17</text><circle class="valid" cx="195" cy="165" r="31"/><text x="195" y="173">18</text><circle class="valid" cx="295" cy="165" r="31"/><text x="295" y="173">19</text><circle class="valid" cx="425" cy="165" r="31"/><text x="425" y="173">59</text><circle class="valid" cx="525" cy="165" r="31"/><text x="525" y="173">60</text><circle class="bad" cx="625" cy="165" r="31"/><text x="625" y="173">61</text></g>
+  <g class="t" text-anchor="middle"><rect class="level" x="40" y="270" width="135" height="60" rx="10"/><text x="108" y="308">单元</text><rect class="level" x="210" y="270" width="135" height="60" rx="10"/><text x="278" y="308">集成</text><rect class="level" x="380" y="270" width="135" height="60" rx="10"/><text x="448" y="308">系统</text><rect class="valid" x="550" y="270" width="135" height="60" rx="10"/><text x="618" y="308">验收</text></g>
+  <text class="s" x="40" y="375">回归测试发生在修改之后，可跨越多个层次重新检查受影响功能</text>
+</svg>

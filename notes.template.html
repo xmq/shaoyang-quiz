@@ -1634,19 +1634,12 @@
 
     function goBackOrHome() {
       const referrer = document.referrer ? new URL(document.referrer, location.href) : null;
-      if ((referrer?.origin === location.origin || history.state?.shaoyangStudyPage) && history.length > 1) history.back();
+      if (referrer?.origin === location.origin && history.length > 1) history.back();
       else showDirectory();
     }
 
     function prepareStudyHistory() {
-      let sameOriginReferrer = false;
-      try {
-        sameOriginReferrer = Boolean(document.referrer && new URL(document.referrer, location.href).origin === location.origin);
-      } catch {}
-      if (history.state?.shaoyangBackVersion === 2) return;
-      const currentUrl = location.href;
-      history.replaceState({shaoyangBackBridge: true, sameOriginReferrer}, "", currentUrl);
-      history.pushState({shaoyangStudyPage: true, shaoyangBackVersion: 2}, "", currentUrl);
+      history.replaceState({...history.state, shaoyangStudyPage: true, shaoyangBackVersion: 3}, "", location.href);
     }
 
     function courseHash(course) {
@@ -1915,11 +1908,6 @@
     });
 
     window.addEventListener("popstate", (event) => {
-      if (event.state?.shaoyangBackBridge) {
-        if (event.state.sameOriginReferrer) history.back();
-        else location.replace("./index.html");
-        return;
-      }
       applyLocation();
     });
     window.addEventListener("pageshow", () => closeMobileNav({restoreFocus: false}));

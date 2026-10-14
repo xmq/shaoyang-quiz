@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">高内聚模块与稳定接口</title><desc id="desc">订单协调模块通过清晰接口调用库存、支付和通知模块，每个模块职责集中。</desc>
+  <defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.core{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.box{fill:#fff;stroke:#2563eb;stroke-width:3}.line{stroke:#526777;stroke-width:4;fill:none}.h{font:700 27px system-ui;fill:#102a43}.t{font:21px system-ui;fill:#102a43}.s{font:18px system-ui;fill:#526777}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.core{fill:#173f3c;stroke:#46d6c6}.box{fill:#17283b;stroke:#78b7ff}.line{stroke:#9fb0c0}.h,.t{fill:#edf4fb}.s{fill:#b8c5d1}}</style></defs>
+  <rect class="bg" x="10" y="10" width="700" height="410" rx="24"/><text class="h" x="35" y="55">职责集中，依赖通过稳定接口连接</text>
+  <rect class="core" x="255" y="105" width="210" height="80" rx="14"/><text class="t" x="360" y="152" text-anchor="middle">订单协调</text>
+  <g class="t" text-anchor="middle"><rect class="box" x="45" y="275" width="170" height="75" rx="12"/><text x="130" y="320">库存模块</text><rect class="box" x="275" y="275" width="170" height="75" rx="12"/><text x="360" y="320">支付模块</text><rect class="box" x="505" y="275" width="170" height="75" rx="12"/><text x="590" y="320">通知模块</text></g>
+  <path class="line" d="M300 185L150 275M360 185V275M420 185L570 275"/>
+  <text class="s" x="80" y="235">预占/释放</text><text class="s" x="330" y="235">扣款/退款</text><text class="s" x="520" y="235">发送结果</text>
+  <text class="s" x="45" y="392">通知渠道变化不应迫使库存算法一起修改；低耦合并非零通信</text>
+</svg>

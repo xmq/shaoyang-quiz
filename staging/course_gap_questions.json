@@ -282,7 +282,7 @@
     "max_score": 4, "rubric": [{"criterion": "说明边缘侧任务", "points": 1}, {"criterion": "说明边缘侧低时延或离线理由", "points": 1}, {"criterion": "说明云端任务", "points": 1}, {"criterion": "说明云端资源或集中管理理由", "points": 1}],
     "subject": "信息基础", "source_chapter": "按场景选择技术", "adaptation_note": "依据云边协同补充场景简答。",
     "knowledge_point": "信息技术与社会", "ability": "场景选型", "difficulty": "应用",
-    "topic_source": "manual", "topic_id": "computer-foundations.t10"
+    "topic_source": "manual", "topic_id": "computer-foundations.t20"
   },
   {
     "id": "gap-found-013", "source": "课程缺口补充", "type": "单选", "chapter": "按场景选择技术",
@@ -291,7 +291,7 @@
     "explanation": "单一可信主体、少量结构化数据适合普通数据库。选择技术应由目标、规模和信任关系决定，不能为了使用热门技术增加复杂度。",
     "subject": "计算机基础", "source_chapter": "按场景选择技术", "adaptation_note": "依据技术适用边界补充场景选择题。",
     "knowledge_point": "计算机发展与应用", "ability": "场景选型", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "computer-foundations.t10"
+    "topic_source": "manual", "topic_id": "computer-foundations.t17"
   },
   {
     "id": "gap-found-014", "source": "课程缺口补充", "type": "填空", "chapter": "数制、编码与系统组成",
@@ -300,7 +300,7 @@
     "max_score": 3, "rubric": [{"criterion": "识别F表示15", "points": 1}, {"criterion": "写出2×16+15", "points": 1}, {"criterion": "结果47", "points": 1}],
     "subject": "计算机基础", "source_chapter": "数制、编码与系统组成", "adaptation_note": "依据通用教材补充无选项数制计算。",
     "knowledge_point": "数制与编码", "ability": "直接计算", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "computer-foundations.t02"
+    "topic_source": "manual", "topic_id": "computer-foundations.t03"
   },
   {
     "id": "gap-found-015", "source": "课程缺口补充", "type": "简答", "chapter": "文件、软件与常用操作",
@@ -310,7 +310,7 @@
     "max_score": 5, "rubric": [{"criterion": "指出直接删除的残留风险", "points": 1}, {"criterion": "先记录报错和检查基础条件", "points": 1}, {"criterion": "优先使用修复或正规卸载", "points": 1}, {"criterion": "必要时清理后重装", "points": 1}, {"criterion": "强调可信安装来源", "points": 1}],
     "subject": "计算机基础", "source_chapter": "文件、软件与常用操作", "adaptation_note": "依据文件与软件管理补充故障场景题。",
     "knowledge_point": "文件与Windows基础", "ability": "场景选型", "difficulty": "应用",
-    "topic_source": "manual", "topic_id": "computer-foundations.t03"
+    "topic_source": "manual", "topic_id": "computer-foundations.t07"
   },
   {
     "id": "gap-found-016", "source": "课程缺口补充", "type": "简答", "chapter": "计算机发展与应用",
@@ -320,7 +320,7 @@
     "max_score": 6, "rubric": [{"criterion": "说明科学计算并举例", "points": 2}, {"criterion": "说明数据处理并举例", "points": 2}, {"criterion": "说明过程控制并举例", "points": 2}],
     "subject": "计算机基础", "source_chapter": "计算机发展与应用", "adaptation_note": "依据大学计算机基础通用内容补充应用分类简答。",
     "knowledge_point": "计算机发展与应用", "ability": "比较辨析", "difficulty": "基础",
-    "topic_source": "manual", "topic_id": "computer-foundations.t09"
+    "topic_source": "manual", "topic_id": "computer-foundations.t18"
   },
   {
     "id": "gap-os-001", "source": "课程缺口补充", "type": "填空", "chapter": "资源、状态与调度",
@@ -1723,5 +1723,1370 @@
     "difficulty": "应用",
     "topic_source": "manual",
     "topic_id": "computer-organization.t12"
+  },
+  {
+    "id": "gap-se-002",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "可行性与成本效益",
+    "stem": "项目一次投入12万元，投产后每年净收益4万元，忽略折现，静态投资回收期是多少？还应评估哪两类非经济可行性？",
+    "options": {},
+    "answer": "回收期为3年；还应评估技术可行性和操作/组织可行性。",
+    "explanation": "12÷4=3；成本收益只是经济可行性，不能代替技术和组织判断。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "算出3年",
+        "points": 1
+      },
+      {
+        "criterion": "技术可行性",
+        "points": 1
+      },
+      {
+        "criterion": "操作或组织可行性",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "可行性与成本效益",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "需求工程",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t05"
+  },
+  {
+    "id": "gap-se-003",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "需求质量",
+    "stem": "把“系统应尽快响应查询”改写为一条可验证的非功能需求，并说明增加了哪些判定条件。",
+    "options": {},
+    "answer": "示例：在正常负载下，95%的查询应在2秒内返回。增加了负载前提、响应时间阈值和统计比例。",
+    "explanation": "可验证需求必须能用测试或度量判断是否达成。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出明确阈值",
+        "points": 1
+      },
+      {
+        "criterion": "写出负载或场景",
+        "points": 1
+      },
+      {
+        "criterion": "写出比例或测量方法",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "需求质量",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "需求工程",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t06"
+  },
+  {
+    "id": "gap-se-004",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "DFD与数据字典",
+    "stem": "父层DFD中“订单查询”从用户接收查询条件并返回结果。子图分解后需要满足什么平衡要求？数据字典起什么作用？",
+    "options": {},
+    "answer": "子图对外输入输出应与父加工保持平衡；数据字典统一定义数据流、数据项和存储的含义与结构。",
+    "explanation": "分解可以增加内部流，但不能凭空改变系统边界上的数据。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "说明外部输入一致",
+        "points": 1
+      },
+      {
+        "criterion": "说明外部输出一致",
+        "points": 1
+      },
+      {
+        "criterion": "说明数据字典统一定义",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "DFD与数据字典",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "需求工程",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t07"
+  },
+  {
+    "id": "gap-se-005",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "总体与详细设计",
+    "stem": "订单系统需要接收订单、计算价格、保存订单和发送通知。给出一个高内聚的模块划分，并说明接口应隐藏什么。",
+    "options": {},
+    "answer": "可拆为订单接收、计价、持久化、通知模块；接口只暴露必要输入输出，隐藏数据库结构和内部算法。",
+    "explanation": "模块按职责划分，变化原因不同的工作不应堆入一个模块。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "给出职责划分",
+        "points": 1
+      },
+      {
+        "criterion": "接口暴露必要数据",
+        "points": 1
+      },
+      {
+        "criterion": "隐藏内部实现",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "总体与详细设计",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件设计与UML",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t09"
+  },
+  {
+    "id": "gap-se-006",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "黑盒测试",
+    "stem": "输入年龄合法范围为18至60。用边界值法列出至少5个代表值，并说明预期。",
+    "options": {},
+    "answer": "可取17、18、19、59、60、61；18至60有效，17和61无效。",
+    "explanation": "边界值覆盖边界本身和紧邻边界的位置。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "覆盖下界外/界/内",
+        "points": 1
+      },
+      {
+        "criterion": "覆盖上界内/界/外",
+        "points": 1
+      },
+      {
+        "criterion": "说明有效范围",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "黑盒测试",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件测试",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t11"
+  },
+  {
+    "id": "gap-se-007",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "白盒覆盖",
+    "stem": "某控制流图有10条边、8个结点且为单连通，环形复杂度是多少？它表示什么？",
+    "options": {},
+    "answer": "V(G)=E−N+2=10−8+2=4，表示基本独立路径数量为4。",
+    "explanation": "环形复杂度用于指导基本路径测试，不等于必须穷举所有可能路径。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出公式",
+        "points": 1
+      },
+      {
+        "criterion": "算出4",
+        "points": 1
+      },
+      {
+        "criterion": "说明独立路径含义",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "白盒覆盖",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件测试",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t12"
+  },
+  {
+    "id": "gap-se-008",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "集成测试",
+    "stem": "自顶向下集成与自底向上集成分别更常需要桩模块还是驱动模块？说明原因。",
+    "options": {},
+    "answer": "自顶向下常用桩模拟尚未接入的下层；自底向上常用驱动调用已完成的下层模块。",
+    "explanation": "替身承担缺失调用方或被调用方的角色。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "自顶向下用桩",
+        "points": 1
+      },
+      {
+        "criterion": "自底向上用驱动",
+        "points": 1
+      },
+      {
+        "criterion": "说明模拟角色",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "集成测试",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件测试",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t13"
+  },
+  {
+    "id": "gap-se-009",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "基线与变更",
+    "stem": "一个已基线化的需求要修改，写出从申请到发布的受控变更步骤。",
+    "options": {},
+    "answer": "提交变更申请，分析影响，审批决策，修改受影响配置项和测试，验证后更新基线并记录发布。",
+    "explanation": "基线不是禁止修改，而是要求变更可评估、可批准、可追踪。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "申请与影响分析",
+        "points": 1
+      },
+      {
+        "criterion": "审批和实施",
+        "points": 1
+      },
+      {
+        "criterion": "验证并更新基线",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "基线与变更",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件维护与配置",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t15"
+  },
+  {
+    "id": "gap-se-010",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "关键路径",
+    "stem": "项目网络有两条路径A-B-D为8天，A-C-D为11天。关键路径是哪条？A-C-D上的活动延迟2天会怎样？",
+    "options": {},
+    "answer": "关键路径为A-C-D；若无可用时差，延迟2天使项目总工期延长2天。",
+    "explanation": "最长路径决定最短完工时间，关键活动通常总时差为0。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "选出A-C-D",
+        "points": 1
+      },
+      {
+        "criterion": "说明最长路径",
+        "points": 1
+      },
+      {
+        "criterion": "说明总工期延长2天",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "关键路径",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "项目管理",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t16"
+  },
+  {
+    "id": "gap-se-011",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "工程方法选择",
+    "stem": "需求高度不确定、用户可频繁反馈，但核心支付模块风险很高。说明可怎样组合原型、迭代和风险分析。",
+    "options": {},
+    "answer": "用原型澄清界面与需求，短迭代持续交付可验证增量，对支付等高风险部分先做风险分析和验证。",
+    "explanation": "过程模型可按证据组合，不能只凭项目名称机械选择。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "原型澄清需求",
+        "points": 1
+      },
+      {
+        "criterion": "迭代获取反馈",
+        "points": 1
+      },
+      {
+        "criterion": "高风险部分先分析验证",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "工程方法选择",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件过程模型",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t18"
+  },
+  {
+    "id": "gap-se-012",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "追踪与反馈",
+    "stem": "需求R1变更后，追踪矩阵应帮助找到哪些对象？发布后缺陷数据又如何用于改进？",
+    "options": {},
+    "answer": "应追到设计模块、代码提交、测试用例和发布版本；缺陷趋势用于定位薄弱阶段并调整评审、测试和流程。",
+    "explanation": "追踪支持影响分析，反馈数据支持持续改进。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "追到设计/代码",
+        "points": 1
+      },
+      {
+        "criterion": "追到测试/版本",
+        "points": 1
+      },
+      {
+        "criterion": "用缺陷反馈改进流程",
+        "points": 1
+      }
+    ],
+    "subject": "软件工程",
+    "source_chapter": "追踪与反馈",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "软件工程基础",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "software-engineering.t19"
+  },
+  {
+    "id": "gap-sec-002",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "控制与风险处置",
+    "stem": "门禁、防火墙告警和备份恢复分别更接近预防、检测、纠正中的哪类控制？",
+    "options": {},
+    "answer": "门禁偏预防，告警偏检测，备份恢复偏纠正。",
+    "explanation": "同一措施可能兼有多种作用，按题目中的主要目标判断。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "门禁预防",
+        "points": 1
+      },
+      {
+        "criterion": "告警检测",
+        "points": 1
+      },
+      {
+        "criterion": "备份恢复纠正",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "控制与风险处置",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "安全目标与风险",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t03"
+  },
+  {
+    "id": "gap-sec-003",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "账号口令",
+    "stem": "说明盐和慢散列如何保护口令，并指出MFA解决的另一层风险。",
+    "options": {},
+    "answer": "每个口令使用随机盐后做慢散列，降低彩虹表复用和批量猜测效率；MFA使口令泄露后攻击者仍缺少另一因素。",
+    "explanation": "口令不应可逆保存，MFA也不能替代会话和恢复流程保护。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "随机盐",
+        "points": 1
+      },
+      {
+        "criterion": "慢散列",
+        "points": 1
+      },
+      {
+        "criterion": "MFA增加独立因素",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "账号口令",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "身份认证与访问控制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t04"
+  },
+  {
+    "id": "gap-sec-004",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "钓鱼与处置",
+    "stem": "员工点击钓鱼链接并提交账号后，按顺序写出四项首要处置。",
+    "options": {},
+    "answer": "停止继续操作并上报，隔离或控制受影响会话，重置凭据并撤销会话，检查日志与影响范围并保留证据。",
+    "explanation": "只改密码不足以查清会话、横向访问和数据影响。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "上报与停止",
+        "points": 1
+      },
+      {
+        "criterion": "控制会话/隔离",
+        "points": 1
+      },
+      {
+        "criterion": "重置凭据",
+        "points": 1
+      },
+      {
+        "criterion": "查日志留证",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "钓鱼与处置",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "恶意代码与社会工程",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t06"
+  },
+  {
+    "id": "gap-sec-005",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "访问控制",
+    "stem": "财务人员可审批本部门10万元以下付款，超过金额需主管。RBAC和ABAC分别表达哪部分？",
+    "options": {},
+    "answer": "RBAC表达财务人员/主管角色的基础权限；ABAC用部门、金额等属性和条件限制具体操作。",
+    "explanation": "角色适合稳定职责，属性适合环境和业务条件。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "RBAC表达角色权限",
+        "points": 1
+      },
+      {
+        "criterion": "ABAC表达部门金额条件",
+        "points": 1
+      },
+      {
+        "criterion": "说明二者可组合",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "访问控制",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "身份认证与访问控制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t08"
+  },
+  {
+    "id": "gap-sec-006",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "混合加密",
+    "stem": "为什么HTTPS等协议常用非对称机制协商会话密钥，再用对称加密传大量数据？",
+    "options": {},
+    "answer": "非对称机制便于认证和安全协商但开销大；对称加密速度快，适合大数据量；组合兼顾密钥分发和性能。",
+    "explanation": "公钥加密不等于所有通信数据都必须直接用公钥算法处理。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "非对称便于协商认证",
+        "points": 1
+      },
+      {
+        "criterion": "对称适合批量数据",
+        "points": 1
+      },
+      {
+        "criterion": "说明组合目标",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "混合加密",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "密码技术",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t09"
+  },
+  {
+    "id": "gap-sec-007",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "签名与证书",
+    "stem": "数字签名能证明什么，不能自动保证什么？证书在其中承担什么作用？",
+    "options": {},
+    "answer": "签名验证来源、完整性并支持防抵赖；不自动保密内容。证书把主体身份与公钥绑定并由信任链验证。",
+    "explanation": "加密、哈希、签名和证书解决不同目标。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "来源与完整性",
+        "points": 1
+      },
+      {
+        "criterion": "不保证保密",
+        "points": 1
+      },
+      {
+        "criterion": "证书绑定身份公钥",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "签名与证书",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "密码技术",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t10"
+  },
+  {
+    "id": "gap-sec-008",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "网络分区",
+    "stem": "面向互联网的Web服务为何放DMZ，数据库为何放更内层？写一条最小开放规则。",
+    "options": {},
+    "answer": "DMZ隔离外部暴露服务，数据库置于内层减少直接攻击面；只允许Web服务器按必要端口访问数据库，禁止互联网直连数据库。",
+    "explanation": "分区通过限制路径降低横向移动影响。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "说明DMZ隔离",
+        "points": 1
+      },
+      {
+        "criterion": "数据库内层",
+        "points": 1
+      },
+      {
+        "criterion": "给出最小开放规则",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "网络分区",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "网络安全防护",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t11"
+  },
+  {
+    "id": "gap-sec-009",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "攻击排障",
+    "stem": "服务突然变慢且请求量暴增，为什么不能立刻断言DDoS？应先核对哪些证据？",
+    "options": {},
+    "answer": "业务突发、配置或故障也可能造成现象；应核对流量来源、协议分布、历史基线、资源指标、日志和告警。",
+    "explanation": "结论要从现象、证据和基线推出。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "说明其他可能",
+        "points": 1
+      },
+      {
+        "criterion": "核对流量/基线",
+        "points": 1
+      },
+      {
+        "criterion": "核对资源日志",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "攻击排障",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "网络安全防护",
+    "ability": "读图排障",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t12"
+  },
+  {
+    "id": "gap-sec-010",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "应用防护",
+    "stem": "登录查询把用户输入直接拼入SQL。给出主要风险和两项修复。",
+    "options": {},
+    "answer": "存在SQL注入风险；使用参数化查询，并在服务端按类型、长度和范围校验输入，同时执行最小数据库权限。",
+    "explanation": "转义或客户端校验不能单独替代参数化和服务端控制。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出SQL注入",
+        "points": 1
+      },
+      {
+        "criterion": "参数化查询",
+        "points": 1
+      },
+      {
+        "criterion": "服务端校验或最小权限",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "应用防护",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "网络安全防护",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t13"
+  },
+  {
+    "id": "gap-sec-012",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "事件响应",
+    "stem": "把隔离受感染主机、修补漏洞、从可信备份恢复、复盘改进分别归入事件响应阶段。",
+    "options": {},
+    "answer": "隔离属遏制，修补漏洞属根除，从备份恢复属恢复，复盘改进属事后总结。",
+    "explanation": "阶段按动作目标区分，而非只背名称。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "隔离-遏制",
+        "points": 1
+      },
+      {
+        "criterion": "修补-根除",
+        "points": 1
+      },
+      {
+        "criterion": "备份-恢复",
+        "points": 1
+      },
+      {
+        "criterion": "复盘-改进",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "事件响应",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "安全事件响应",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t15"
+  },
+  {
+    "id": "gap-sec-013",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "重新识别",
+    "stem": "数据删除姓名后仍保留精确生日、邮编和罕见职位，为什么仍可能重新识别？",
+    "options": {},
+    "answer": "这些准标识符组合可能与外部数据匹配到具体个人；应按最小必要降低粒度、删除或泛化字段，并评估攻击者背景知识。",
+    "explanation": "去掉直接标识符不自动成为匿名数据。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出准标识符组合",
+        "points": 1
+      },
+      {
+        "criterion": "外部数据匹配",
+        "points": 1
+      },
+      {
+        "criterion": "提出最小化/泛化",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "重新识别",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "隐私合规与责任",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t16"
+  },
+  {
+    "id": "gap-sec-014",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "授权边界",
+    "stem": "获得系统管理员口令后，是否可以查看与工作无关的个人数据？说明判断依据。",
+    "options": {},
+    "answer": "不可以。能力不等于授权，应以岗位职责、合法目的、最小必要、单位制度和审批范围判断并保留审计。",
+    "explanation": "公开可见或技术上可访问也不代表可任意使用。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "能力不等于授权",
+        "points": 1
+      },
+      {
+        "criterion": "岗位目的最小必要",
+        "points": 1
+      },
+      {
+        "criterion": "制度审批与审计",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "授权边界",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "隐私合规与责任",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t17"
+  },
+  {
+    "id": "gap-found-017",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "计算思维",
+    "stem": "输入n=4，执行s=0；对i从1到n重复s=s+i。列出每轮s并给出输出。",
+    "options": {},
+    "answer": "四轮后s依次为1、3、6、10，输出10。",
+    "explanation": "状态追踪要写初值、每轮更新和终止条件。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "初值0",
+        "points": 1
+      },
+      {
+        "criterion": "四轮状态正确",
+        "points": 1
+      },
+      {
+        "criterion": "输出10",
+        "points": 1
+      }
+    ],
+    "subject": "计算机基础",
+    "source_chapter": "计算思维",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "计算机发展与应用",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t02"
+  },
+  {
+    "id": "gap-found-018",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "图像容量",
+    "stem": "未压缩RGB图像分辨率1920×1080，每像素24位，容量约多少MiB？",
+    "options": {},
+    "answer": "1920×1080×24÷8÷1024²≈5.93MiB。",
+    "explanation": "先把每像素位数换成字节，再除以二进制容量单位。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写乘法",
+        "points": 1
+      },
+      {
+        "criterion": "bit换Byte",
+        "points": 1
+      },
+      {
+        "criterion": "结果约5.93MiB",
+        "points": 1
+      }
+    ],
+    "subject": "计算机基础",
+    "source_chapter": "图像容量",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "数制与编码",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t03"
+  },
+  {
+    "id": "gap-found-019",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "字符编码",
+    "stem": "Unicode码位与UTF-8字节序列是什么关系？为什么字符数不等于UTF-8字节数？",
+    "options": {},
+    "answer": "Unicode为字符分配码位，UTF-8按规则把码位编码为1至多个字节；不同字符占用字节数不同。",
+    "explanation": "码位是抽象编号，编码是存储传输表示。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "区分码位",
+        "points": 1
+      },
+      {
+        "criterion": "说明UTF-8编码",
+        "points": 1
+      },
+      {
+        "criterion": "说明变长字节",
+        "points": 1
+      }
+    ],
+    "subject": "计算机基础",
+    "source_chapter": "字符编码",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "数制与编码",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t04"
+  },
+  {
+    "id": "gap-found-020",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "云服务边界",
+    "stem": "团队只想上传代码，由平台管理运行环境和扩缩容，应选IaaS、PaaS还是SaaS？说明边界。",
+    "options": {},
+    "answer": "选PaaS；用户管理应用代码和数据，平台管理操作系统、运行时和底层资源。",
+    "explanation": "判断服务模型要看用户仍负责哪些层。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "选择PaaS",
+        "points": 1
+      },
+      {
+        "criterion": "用户负责代码数据",
+        "points": 1
+      },
+      {
+        "criterion": "平台负责运行环境",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "云服务边界",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t08"
+  },
+  {
+    "id": "gap-found-021",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "云边协同",
+    "stem": "设备需要毫秒级停机保护且网络可能中断，边缘侧和云端分别承担什么？",
+    "options": {},
+    "answer": "边缘侧实时采集、判断和安全停机；云端做长期汇总、模型训练和跨设备分析。",
+    "explanation": "时延和断网安全决定关键闭环不能只放云端。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "边缘实时控制",
+        "points": 1
+      },
+      {
+        "criterion": "云端长期分析",
+        "points": 1
+      },
+      {
+        "criterion": "说明时延失联理由",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "云边协同",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t09"
+  },
+  {
+    "id": "gap-found-022",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "数据质量",
+    "stem": "订单表含重复订单、缺失金额和不同日期格式，写出清洗顺序及每步核验。",
+    "options": {},
+    "answer": "先确认业务主键去重，再按规则处理缺失金额，统一日期格式与时区，最后抽样和统计核验数量、范围与一致性。",
+    "explanation": "清洗不能盲删，必须保留规则和质量记录。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "主键去重",
+        "points": 1
+      },
+      {
+        "criterion": "处理缺失与格式",
+        "points": 1
+      },
+      {
+        "criterion": "核验结果",
+        "points": 1
+      }
+    ],
+    "subject": "大数据",
+    "source_chapter": "数据质量",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "数据仓库",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t10"
+  },
+  {
+    "id": "gap-found-023",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "挖掘任务",
+    "stem": "垃圾邮件识别、客户自动分群、发现异常交易分别属于什么任务？",
+    "options": {},
+    "answer": "垃圾邮件是分类，客户分群是聚类，异常交易是异常检测。",
+    "explanation": "先看是否有标签和期望输出，再选择算法任务。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "分类",
+        "points": 1
+      },
+      {
+        "criterion": "聚类",
+        "points": 1
+      },
+      {
+        "criterion": "异常检测",
+        "points": 1
+      }
+    ],
+    "subject": "大数据",
+    "source_chapter": "挖掘任务",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "Hadoop与HDFS",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t11"
+  },
+  {
+    "id": "gap-found-024",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "AI学习范式",
+    "stem": "给有标签猫狗图片训练分类器、无标签客户自动分群、智能体按奖励学策略，分别是什么学习范式？",
+    "options": {},
+    "answer": "依次是监督学习、无监督学习和强化学习。",
+    "explanation": "标签、结构发现和奖励反馈是三类任务的关键线索。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "监督学习",
+        "points": 1
+      },
+      {
+        "criterion": "无监督学习",
+        "points": 1
+      },
+      {
+        "criterion": "强化学习",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "AI学习范式",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t12"
+  },
+  {
+    "id": "gap-found-025",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "训练与推理",
+    "stem": "模型训练集准确率99%，测试集只有70%，可能是什么问题？应怎样处理？",
+    "options": {},
+    "answer": "可能过拟合或数据分布差异；应检查数据划分与泄漏，增加代表性数据、正则化/简化模型并用独立验证测试集评估。",
+    "explanation": "训练表现高不等于泛化可靠。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出过拟合或分布问题",
+        "points": 1
+      },
+      {
+        "criterion": "检查划分泄漏",
+        "points": 1
+      },
+      {
+        "criterion": "给出改进并独立评估",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "训练与推理",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t13"
+  },
+  {
+    "id": "gap-found-026",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "物联网闭环",
+    "stem": "智慧灌溉从湿度到开阀形成怎样的闭环？",
+    "options": {},
+    "answer": "传感器采集湿度，经网络/网关送平台或边缘判断，控制器向执行器发开阀命令，再采集新状态反馈。",
+    "explanation": "闭环必须包含感知、判断、执行和反馈。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "感知",
+        "points": 1
+      },
+      {
+        "criterion": "传输判断",
+        "points": 1
+      },
+      {
+        "criterion": "执行反馈",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "物联网闭环",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t14"
+  },
+  {
+    "id": "gap-found-027",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "物联网失联",
+    "stem": "云端失联时，现场温度超过安全阈值，设备应怎样设计？",
+    "options": {},
+    "answer": "边缘侧保留本地阈值和安全停机规则，进入明确降级状态并记录告警，恢复连接后再同步，不能等待云端指令。",
+    "explanation": "安全关键行为需要失联可控和默认安全状态。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "本地安全规则",
+        "points": 1
+      },
+      {
+        "criterion": "降级告警",
+        "points": 1
+      },
+      {
+        "criterion": "恢复后同步",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "物联网失联",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t15"
+  },
+  {
+    "id": "gap-found-028",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "链式记录",
+    "stem": "篡改旧区块的一条记录后，为什么后续校验会失败？",
+    "options": {},
+    "answer": "旧区块内容改变会改变其哈希，后一区块保存的前块哈希不再匹配，并沿链影响后续校验。",
+    "explanation": "哈希链能暴露修改，不保证最初写入事实真实。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "旧块哈希变化",
+        "points": 1
+      },
+      {
+        "criterion": "后块引用失配",
+        "points": 1
+      },
+      {
+        "criterion": "说明真实性边界",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "链式记录",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t16"
+  },
+  {
+    "id": "gap-found-029",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "区块链选型",
+    "stem": "单一可信部门管理少量联系人与多机构共同维护可追溯记录，分别更适合什么？",
+    "options": {},
+    "answer": "前者用普通数据库更简单；后者可评估联盟链，并仍需治理身份、权限和上链真实性。",
+    "explanation": "是否多方协作和缺少单一可信中心是重要边界。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "普通数据库",
+        "points": 1
+      },
+      {
+        "criterion": "联盟链场景",
+        "points": 1
+      },
+      {
+        "criterion": "说明治理边界",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "区块链选型",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t17"
+  },
+  {
+    "id": "gap-found-030",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "信息系统建设",
+    "stem": "医院预约冲突可能由人员、流程、数据和技术中的哪些问题造成？各举一例。",
+    "options": {},
+    "answer": "人员培训不足、流程未规定并发确认、数据号源不同步、技术缺少事务或冲突检测都可能造成。",
+    "explanation": "信息系统问题不能只归咎于软件按钮。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "人员或流程例子",
+        "points": 1
+      },
+      {
+        "criterion": "数据例子",
+        "points": 1
+      },
+      {
+        "criterion": "技术例子",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "信息系统建设",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t19"
+  },
+  {
+    "id": "gap-found-031",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "综合技术选型",
+    "stem": "校园能耗系统需实时控制、长期分析和隐私保护。给出云边物联网组合，并写一项风险控制。",
+    "options": {},
+    "answer": "传感器与执行器构成物联网，边缘侧实时判断控制，云端汇总分析；按最小必要上传数据并加认证、加密和权限控制。",
+    "explanation": "每项技术都应对应一个目标或约束。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "物联网采集执行",
+        "points": 1
+      },
+      {
+        "criterion": "边缘实时云端分析",
+        "points": 1
+      },
+      {
+        "criterion": "隐私安全控制",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "综合技术选型",
+    "adaptation_note": "按重构后的独立学习任务补充迁移练习。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t20"
+  },
+  {
+    "id": "gap-sec-015",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "强制访问控制",
+    "stem": "在“主体和客体带安全标签，系统按级别规则决定能否访问”的语境中，MAC全称和作用是什么？",
+    "options": {},
+    "answer": "MAC指Mandatory Access Control，即强制访问控制；由系统依据安全标签和规则强制决定访问，普通用户不能自行转授。",
+    "explanation": "此处MAC属于访问控制模型，不是密码学中的消息认证码。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出强制访问控制",
+        "points": 1
+      },
+      {
+        "criterion": "说明标签/规则",
+        "points": 1
+      },
+      {
+        "criterion": "说明不可自行转授",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "强制访问控制",
+    "adaptation_note": "区分同一MAC缩写在不同安全语境中的含义。",
+    "knowledge_point": "身份认证与访问控制",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t08"
+  },
+  {
+    "id": "gap-sec-016",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "消息认证码",
+    "stem": "通信双方共享密钥并为消息计算MAC以发现篡改。这里MAC全称和主要保证是什么？",
+    "options": {},
+    "answer": "MAC指Message Authentication Code，即消息认证码；用共享密钥验证消息完整性和来源真实性，不提供数字签名的公开验证与防抵赖。",
+    "explanation": "此处MAC属于密码学机制，不是强制访问控制。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出消息认证码",
+        "points": 1
+      },
+      {
+        "criterion": "完整性和来源认证",
+        "points": 1
+      },
+      {
+        "criterion": "说明非公开签名",
+        "points": 1
+      }
+    ],
+    "subject": "信息安全",
+    "source_chapter": "消息认证码",
+    "adaptation_note": "区分同一MAC缩写在不同安全语境中的含义。",
+    "knowledge_point": "密码技术",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "information-security.t10"
+  },
+  {
+    "id": "gap-found-032",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "综合技术选型",
+    "stem": "山区水质监测点网络不稳定，需要现场超标告警、跨区域长期趋势分析，并防止无关人员查看位置数据。给出技术组合及理由。",
+    "options": {},
+    "answer": "传感器采集形成物联网；边缘网关在断网时完成阈值判断和本地告警；云端汇总多站点数据做长期分析；对位置和监测数据采用最小必要上传、认证、加密和权限控制。",
+    "explanation": "选型要逐项对应时延、断网、数据规模和隐私约束，不能只罗列技术名。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "物联网采集",
+        "points": 1
+      },
+      {
+        "criterion": "边缘离线告警",
+        "points": 1
+      },
+      {
+        "criterion": "云端长期分析",
+        "points": 1
+      },
+      {
+        "criterion": "隐私与访问控制",
+        "points": 1
+      }
+    ],
+    "subject": "信息基础",
+    "source_chapter": "综合技术选型",
+    "adaptation_note": "补充第二道跨技术综合迁移题。",
+    "knowledge_point": "信息技术与社会",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "computer-foundations.t20"
   }
 ]

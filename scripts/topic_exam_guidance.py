@@ -215,6 +215,24 @@ CALCULATION_TOPICS.update({
     f"computer-organization.t{index:02d}" for index in (2, 3, 4, 5, 7, 9, 10, 11, 12, 14)
 })
 
+COMPUTER_FOUNDATION_TOPICS = {f"computer-foundations.t{index:02d}" for index in range(1, 21)}
+KEY_TOPICS.update(COMPUTER_FOUNDATION_TOPICS)
+SHORT_ANSWER_TOPICS.update(COMPUTER_FOUNDATION_TOPICS)
+APPLICATION_TOPICS.update(COMPUTER_FOUNDATION_TOPICS)
+CALCULATION_TOPICS.update({"computer-foundations.t03", "computer-foundations.t04"})
+
+INFORMATION_SECURITY_TOPICS = {f"information-security.t{index:02d}" for index in range(1, 18)}
+KEY_TOPICS.update(INFORMATION_SECURITY_TOPICS)
+SHORT_ANSWER_TOPICS.update(INFORMATION_SECURITY_TOPICS)
+APPLICATION_TOPICS.update(INFORMATION_SECURITY_TOPICS)
+CODE_TOPICS.update({"information-security.t13"})
+
+SOFTWARE_ENGINEERING_TOPICS = {f"software-engineering.t{index:02d}" for index in range(1, 20)}
+KEY_TOPICS.update(SOFTWARE_ENGINEERING_TOPICS)
+SHORT_ANSWER_TOPICS.update(SOFTWARE_ENGINEERING_TOPICS)
+APPLICATION_TOPICS.update(SOFTWARE_ENGINEERING_TOPICS)
+CALCULATION_TOPICS.update({"software-engineering.t05", "software-engineering.t12", "software-engineering.t16"})
+
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]
