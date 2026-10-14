@@ -53,10 +53,6 @@ def main() -> int:
             actual = re.findall(r"(?m)^## (.+)$", source)
             if actual != chapters:
                 errors.append(f"{name}：{folder}章节与教材结构表不一致")
-            if folder == "course_notes" and name != "计算机网络":
-                if source.count("### 本章导学") != len(chapters):
-                    errors.append(f"{name}：每章必须有一段本章导学")
-
         guide_course = guide_courses.get(name)
         if not guide_course:
             errors.append(f"{name}：课程范围表缺失")

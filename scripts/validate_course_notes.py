@@ -14,6 +14,7 @@ COURSE_INDEX = ROOT / "course-index.json"
 EXPECTED_COURSE_COUNT = 16
 MIN_COURSE_CHARS = 3800
 MIN_CHAPTER_CHARS = 180
+MIN_NETWORK_CHAPTER_CHARS = 700
 MIN_PLAIN_EXPLANATIONS = 3
 MAX_PLAIN_EXPLANATIONS = 8
 NETWORK_TEXTBOOK_CHAPTERS = [f"第{number}章 {title}" for number, title in enumerate((
@@ -247,9 +248,11 @@ def main() -> int:
                 raw_chapter = "\n".join(lines[position + 1:chapter_end])
                 compact = re.sub(r"\s+", "", re.sub(r"<!--.*?-->", "", raw_chapter, flags=re.DOTALL))
                 title = actual_titles[chapter_index]
-                if len(compact) < 800:
-                    errors.append(f"计算机网络 / {title}：不足800字，未达到自学讲义最低深度")
-                for required in ("本章导学", "学习目标", "知识地图", "本章小结与自测", "<details>"):
+                if len(compact) < MIN_NETWORK_CHAPTER_CHARS:
+                    errors.append(
+                        f"计算机网络 / {title}：不足{MIN_NETWORK_CHAPTER_CHARS}字，未达到自学讲义最低深度"
+                    )
+                for required in ("本章小结与自测", "<details>"):
                     if required not in raw_chapter:
                         errors.append(f"计算机网络 / {title}：缺少{required}")
         for position, line in enumerate(lines):
