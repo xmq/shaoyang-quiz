@@ -13,22 +13,22 @@
     "数据库技术": "数据库",
   };
   const COURSES = [
-    {name: "计算机组成原理", group: "计算机专业主干", icon: "组", topics: 7},
-    {name: "操作系统原理", group: "计算机专业主干", icon: "OS", topics: 8},
-    {name: "数据结构与算法", group: "计算机专业主干", icon: "算", topics: 8},
-    {name: "计算机网络", group: "计算机专业主干", icon: "网", topics: 26},
-    {name: "数据库技术", group: "计算机专业主干", icon: "库", topics: 9},
-    {name: "C与Python程序设计", group: "计算机专业主干", icon: "码", topics: 11},
-    {name: "软件工程", group: "计算机专业主干", icon: "软", topics: 8},
-    {name: "信息安全", group: "计算机应用与安全", icon: "安", topics: 8},
-    {name: "Office软件操作", group: "计算机应用与安全", icon: "O", topics: 7},
-    {name: "大学计算机基础与新技术", group: "计算机应用与安全", icon: "基", topics: 10},
-    {name: "多媒体技术", group: "计算机应用与安全", icon: "媒", topics: 7},
-    {name: "数字电子技术", group: "电子通信方向扩展", icon: "数", topics: 7},
-    {name: "电路分析与电工技术", group: "电子通信方向扩展", icon: "电", topics: 9},
-    {name: "模拟电子技术", group: "电子通信方向扩展", icon: "模", topics: 8},
-    {name: "通信原理与高频电子线路", group: "电子通信方向扩展", icon: "通", topics: 9},
-    {name: "信号与系统", group: "电子通信方向扩展", icon: "信", topics: 7},
+    {name: "计算机组成原理", group: "计算机专业主干", icon: "组"},
+    {name: "操作系统原理", group: "计算机专业主干", icon: "OS"},
+    {name: "数据结构与算法", group: "计算机专业主干", icon: "算"},
+    {name: "计算机网络", group: "计算机专业主干", icon: "网"},
+    {name: "数据库技术", group: "计算机专业主干", icon: "库"},
+    {name: "C与Python程序设计", group: "计算机专业主干", icon: "码"},
+    {name: "软件工程", group: "计算机专业主干", icon: "软"},
+    {name: "信息安全", group: "计算机应用与安全", icon: "安"},
+    {name: "Office软件操作", group: "计算机应用与安全", icon: "O"},
+    {name: "大学计算机基础与新技术", group: "计算机应用与安全", icon: "基"},
+    {name: "多媒体技术", group: "计算机应用与安全", icon: "媒"},
+    {name: "数字电子技术", group: "电子通信方向扩展", icon: "数"},
+    {name: "电路分析与电工技术", group: "电子通信方向扩展", icon: "电"},
+    {name: "模拟电子技术", group: "电子通信方向扩展", icon: "模"},
+    {name: "通信原理与高频电子线路", group: "电子通信方向扩展", icon: "通"},
+    {name: "信号与系统", group: "电子通信方向扩展", icon: "信"},
   ];
   const GROUPS = ["计算机专业主干", "计算机应用与安全", "电子通信方向扩展"];
 
@@ -67,6 +67,16 @@
     }
   }
 
+  function highlightedCourseName() {
+    try {
+      const selected = normalizeCourseName(localStorage.getItem("shaoyang-selected-course-v1"));
+      if (COURSES.some((course) => course.name === selected)) return selected;
+      return lastLearning()?.course || "";
+    } catch {
+      return "";
+    }
+  }
+
   function normalizeAnswer(value) {
     return String(value || "").replace(/\s+/g, "").toLowerCase().replace(/[，、；,;]/g, "|").replace(/[(（].*?[)）]/g, "");
   }
@@ -92,73 +102,44 @@
     };
   }
 
-  function updateCourseLinks(courseName, progress) {
-    const actions = document.getElementById("home-module-actions");
-    const status = document.getElementById("selected-course-status");
-    if (!courseName) {
-      actions.classList.add("hidden");
-      status.textContent = "选课后可直接进入讲义、重点与易错或专项练习。";
-      return;
-    }
+  function updateMobileLinks(courseName) {
     const subject = SUBJECT_ALIASES[courseName] || courseName;
     const hash = `#course=${encodeURIComponent(courseName)}`;
-    const stats = courseStats(progress, courseName);
-    const course = COURSES.find((item) => item.name === courseName);
-    const notesLink = document.getElementById("home-notes-link");
-    notesLink.href = `./notes.html${hash}`;
-    notesLink.innerHTML = "<strong>开始讲义</strong><small>进入 →</small>";
-    document.getElementById("home-recall-link").href = `./color-notes.html${hash}`;
-    document.getElementById("home-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
     document.getElementById("mobile-notes-link").href = `./notes.html${hash}`;
     document.getElementById("mobile-recall-link").href = `./color-notes.html${hash}`;
     document.getElementById("mobile-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
-    const last = lastLearning();
-    if (last?.course === courseName) {
-      const path = last.module === "color-notes" ? "color-notes.html" : "notes.html";
-      const moduleName = last.module === "color-notes" ? "重点" : "讲义";
-      const route = new URLSearchParams({course: last.course, chapter: String(last.chapter || 1)});
-      if (last.module === "color-notes" && last.card) route.set("card", String(last.card));
-      notesLink.href = `./${path}#${route.toString()}`;
-      notesLink.innerHTML = `<strong>继续第${last.chapter || 1}章</strong><small>${moduleName} →</small>`;
-    }
-    status.textContent = stats.done
-      ? `已完成 ${stats.done}/${stats.total} 题 · 正确率 ${stats.rate}%${stats.wrong ? ` · 错题 ${stats.wrong}` : ""}`
-      : `${course?.topics || "—"} 个知识点 · ${stats.total || "—"} 道题`;
-    actions.classList.remove("hidden");
-  }
-
-  function buildCourseMenu(progress) {
-    const select = document.getElementById("home-course-select");
-    select.insertAdjacentHTML("beforeend", GROUPS.map((group) => `<optgroup label="${group}">${COURSES.filter((course) => course.group === group).map((course) => `<option value="${course.name}">${course.name}</option>`).join("")}</optgroup>`).join(""));
-    select.value = selectedCourseName();
-    updateCourseLinks(select.value, progress);
-    select.addEventListener("change", () => {
-      try {
-        if (select.value) localStorage.setItem("shaoyang-selected-course-v1", select.value);
-        else localStorage.removeItem("shaoyang-selected-course-v1");
-      } catch {}
-      updateCourseLinks(select.value, progress);
-    });
   }
 
   function buildCourseGrid(progress) {
     const root = document.getElementById("home-course-grid");
+    const highlighted = highlightedCourseName();
     root.innerHTML = GROUPS.map((group, groupIndex) => {
       const cards = COURSES.filter((course) => course.group === group).map((course) => {
         const stats = courseStats(progress, course.name);
         const noteHash = `#course=${encodeURIComponent(course.name)}`;
-        const progressText = stats.done ? `已做 ${stats.done}/${stats.total} · ${stats.rate}%` : `${course.topics} 个知识点 · ${stats.total || "—"} 题`;
+        const isCurrent = course.name === highlighted;
+        const progressText = stats.done ? `已做 ${stats.done} 题 · 正确率 ${stats.rate}%` : "未开始";
         const progressWidth = stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
-        return `<article class="home-course-card">
-          <a class="home-course-main" href="./notes.html${noteHash}">
+        return `<article class="home-course-card${isCurrent ? " is-current" : ""}">
+          <a class="home-course-main" href="./notes.html${noteHash}" data-course-name="${course.name}">
             <span class="home-course-icon" aria-hidden="true">${course.icon}</span>
-            <span class="home-course-copy"><strong>${course.name}</strong><small>${progressText}</small><i><b style="width:${progressWidth}%"></b></i></span>
+            <span class="home-course-copy"><strong>${course.name}${isCurrent ? '<em>最近</em>' : ""}</strong><small>${progressText}</small>${stats.done ? `<i><b style="width:${progressWidth}%"></b></i>` : ""}</span>
             <span class="course-card-arrow" aria-hidden="true">›</span>
           </a>
         </article>`;
       }).join("");
       return `<section class="home-course-group" data-course-group="${group}" aria-labelledby="course-group-${groupIndex}"><h3 id="course-group-${groupIndex}">${group}</h3><div>${cards}</div></section>`;
     }).join("");
+  }
+
+  function bindCourseLinks() {
+    document.querySelectorAll("[data-course-name]").forEach((link) => {
+      link.addEventListener("click", () => {
+        try {
+          localStorage.setItem("shaoyang-selected-course-v1", link.dataset.courseName);
+        } catch {}
+      });
+    });
   }
 
   function bindCourseFilters() {
@@ -197,8 +178,9 @@
 
   const progress = readProgress();
   document.getElementById("home-reset").addEventListener("click", () => window.clearStudyData());
-  buildCourseMenu(progress);
+  updateMobileLinks(selectedCourseName());
   buildCourseGrid(progress);
+  bindCourseLinks();
   bindCourseFilters();
   registerServiceWorker();
 })();
