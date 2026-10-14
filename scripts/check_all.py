@@ -19,6 +19,7 @@ COMMANDS = (
     (sys.executable, "scripts/add_network_questions.py", "--check"),
     (sys.executable, "scripts/merge_course_gap_questions.py", "--check"),
     (sys.executable, "scripts/merge_hunan_recall_questions.py", "--check"),
+    (sys.executable, "scripts/validate_textbook_structure.py"),
     (sys.executable, "scripts/build_learning_map.py", "--check"),
     (sys.executable, "scripts/enrich_question_metadata.py", "--check"),
     (sys.executable, "scripts/report_learning_coverage.py"),
@@ -33,7 +34,7 @@ COMMANDS = (
 
 
 def main() -> int:
-    for name in ("questions.json", "manifest.webmanifest", "network-exam-sources.json", "learning-map.json"):
+    for name in ("questions.json", "manifest.webmanifest", "network-exam-sources.json", "learning-map.json", "textbook-map.json"):
         json.loads((ROOT / name).read_text(encoding="utf-8"))
         print(f"JSON有效：{name}", flush=True)
     for command in COMMANDS:

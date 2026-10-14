@@ -13,31 +13,31 @@
       "chapters": [
         {
           "chapter_id": "office.c01",
-          "title": "一、办公软件与文件基础"
+          "title": "第1章 办公环境与文件管理"
         },
         {
           "chapter_id": "office.c02",
-          "title": "二、Word/WPS文字：编辑与格式"
+          "title": "第2章 文字编辑与格式"
         },
         {
           "chapter_id": "office.c03",
-          "title": "三、Word/WPS文字：页面与对象"
+          "title": "第3章 页面排版、表格与对象"
         },
         {
           "chapter_id": "office.c04",
-          "title": "四、Excel/WPS表格：对象、数据与引用"
+          "title": "第4章 电子表格基础与公式"
         },
         {
           "chapter_id": "office.c05",
-          "title": "五、Excel/WPS表格：数据管理与图表"
+          "title": "第5章 数据管理、分析与图表"
         },
         {
           "chapter_id": "office.c06",
-          "title": "六、PowerPoint/WPS演示基础"
+          "title": "第6章 演示文稿设计与制作"
         },
         {
           "chapter_id": "office.c07",
-          "title": "七、典型办公任务选择与操作链"
+          "title": "第7章 Office综合应用"
         }
       ],
       "topics": [
@@ -258,43 +258,43 @@
       "chapters": [
         {
           "chapter_id": "computer-foundations.c01",
-          "title": "一、信息特征与数字素养"
+          "title": "第1章 信息、计算与计算思维"
         },
         {
           "chapter_id": "computer-foundations.c02",
-          "title": "二、数制、编码与系统组成"
+          "title": "第2章 信息表示与计算机系统"
         },
         {
           "chapter_id": "computer-foundations.c03",
-          "title": "三、文件、软件与常用操作"
+          "title": "第3章 操作系统、文件与软件"
         },
         {
           "chapter_id": "computer-foundations.c04",
-          "title": "四、IaaS、PaaS与SaaS"
+          "title": "第4章 云计算与服务模型"
         },
         {
           "chapter_id": "computer-foundations.c05",
-          "title": "五、4V、数据挖掘与分布式处理"
+          "title": "第5章 大数据与数据处理"
         },
         {
           "chapter_id": "computer-foundations.c06",
-          "title": "六、训练、推理与生成式AI"
+          "title": "第6章 人工智能与机器学习"
         },
         {
           "chapter_id": "computer-foundations.c07",
-          "title": "七、感知、网络与物联网平台"
+          "title": "第7章 物联网"
         },
         {
           "chapter_id": "computer-foundations.c08",
-          "title": "八、区块、共识与智能合约"
+          "title": "第8章 区块链"
         },
         {
           "chapter_id": "computer-foundations.c09",
-          "title": "九、计算机发展与应用"
+          "title": "第9章 计算机发展与典型应用"
         },
         {
           "chapter_id": "computer-foundations.c10",
-          "title": "十、按场景选择技术"
+          "title": "第10章 新一代信息技术的综合应用"
         }
       ],
       "topics": [
@@ -641,31 +641,31 @@
       "chapters": [
         {
           "chapter_id": "multimedia.c01",
-          "title": "一、多媒体基本概念"
+          "title": "第1章 多媒体技术概论"
         },
         {
           "chapter_id": "multimedia.c02",
-          "title": "二、媒体数字化"
+          "title": "第2章 多媒体计算机系统与数字化"
         },
         {
           "chapter_id": "multimedia.c03",
-          "title": "三、数字图形与图像"
+          "title": "第3章 数字图形与图像"
         },
         {
           "chapter_id": "multimedia.c04",
-          "title": "四、数字音频"
+          "title": "第4章 数字音频"
         },
         {
           "chapter_id": "multimedia.c05",
-          "title": "五、动画与视频"
+          "title": "第5章 动画与数字视频"
         },
         {
           "chapter_id": "multimedia.c06",
-          "title": "六、多媒体压缩"
+          "title": "第6章 多媒体数据压缩"
         },
         {
           "chapter_id": "multimedia.c07",
-          "title": "七、多媒体作品与应用"
+          "title": "第7章 多媒体作品设计与应用"
         }
       ],
       "topics": [
@@ -881,31 +881,31 @@
       "chapters": [
         {
           "chapter_id": "operating-system.c01",
-          "title": "一、操作系统概述"
+          "title": "第1章 操作系统引论"
         },
         {
           "chapter_id": "operating-system.c02",
-          "title": "二、用户态、内核态和系统接口"
+          "title": "第2章 操作系统结构与用户接口"
         },
         {
           "chapter_id": "operating-system.c03",
-          "title": "三、进程与线程"
+          "title": "第3章 进程、线程与处理机调度"
         },
         {
           "chapter_id": "operating-system.c04",
-          "title": "四、同步、互斥与死锁"
+          "title": "第4章 进程同步与死锁"
         },
         {
           "chapter_id": "operating-system.c05",
-          "title": "五、存储管理"
+          "title": "第5章 存储器与虚拟存储器"
         },
         {
           "chapter_id": "operating-system.c06",
-          "title": "六、文件系统"
+          "title": "第6章 文件管理"
         },
         {
           "chapter_id": "operating-system.c07",
-          "title": "七、设备与磁盘管理"
+          "title": "第7章 输入输出与磁盘管理"
         }
       ],
       "topics": [
@@ -1159,39 +1159,39 @@
       "chapters": [
         {
           "chapter_id": "database.c01",
-          "title": "一、数据库系统基础"
+          "title": "第1章 数据库系统概论"
         },
         {
           "chapter_id": "database.c02",
-          "title": "二、概念模型与 E-R 图"
+          "title": "第2章 概念模型与E-R方法"
         },
         {
           "chapter_id": "database.c03",
-          "title": "三、关系模型与完整性"
+          "title": "第3章 关系模型与完整性"
         },
         {
           "chapter_id": "database.c04",
-          "title": "四、关系运算基础"
+          "title": "第4章 关系代数"
         },
         {
           "chapter_id": "database.c05",
-          "title": "五、SQL 基础"
+          "title": "第5章 关系数据库标准语言SQL"
         },
         {
           "chapter_id": "database.c06",
-          "title": "六、视图、索引与设计"
+          "title": "第6章 视图、索引与数据库设计"
         },
         {
           "chapter_id": "database.c07",
-          "title": "七、规范化基础"
+          "title": "第7章 关系数据理论"
         },
         {
           "chapter_id": "database.c08",
-          "title": "八、事务、并发与恢复"
+          "title": "第8章 事务、并发控制与恢复"
         },
         {
           "chapter_id": "database.c09",
-          "title": "九、安全管理"
+          "title": "第9章 数据库安全性"
         }
       ],
       "topics": [
@@ -1471,35 +1471,35 @@
       "chapters": [
         {
           "chapter_id": "data-structures.c01",
-          "title": "一、基本概念"
+          "title": "第1章 绪论与算法分析"
         },
         {
           "chapter_id": "data-structures.c02",
-          "title": "二、线性表"
+          "title": "第2章 线性表"
         },
         {
           "chapter_id": "data-structures.c03",
-          "title": "三、栈、队列、串与数组"
+          "title": "第3章 栈、队列、串与数组"
         },
         {
           "chapter_id": "data-structures.c04",
-          "title": "四、树与二叉树"
+          "title": "第4章 树与二叉树"
         },
         {
           "chapter_id": "data-structures.c05",
-          "title": "五、图"
+          "title": "第5章 图"
         },
         {
           "chapter_id": "data-structures.c06",
-          "title": "六、查找"
+          "title": "第6章 查找"
         },
         {
           "chapter_id": "data-structures.c07",
-          "title": "七、排序"
+          "title": "第7章 内部排序"
         },
         {
           "chapter_id": "data-structures.c08",
-          "title": "八、结构组合与复杂度分析"
+          "title": "第8章 数据结构选择与复杂度分析"
         }
       ],
       "topics": [
@@ -1769,47 +1769,47 @@
       "chapters": [
         {
           "chapter_id": "programming.c01",
-          "title": "一、程序与编程语言"
+          "title": "第1章 程序设计与算法"
         },
         {
           "chapter_id": "programming.c02",
-          "title": "二、标识符、变量与数据类型"
+          "title": "第2章 数据类型、变量与常量"
         },
         {
           "chapter_id": "programming.c03",
-          "title": "三、运算符与表达式"
+          "title": "第3章 运算符与表达式"
         },
         {
           "chapter_id": "programming.c04",
-          "title": "四、输入、输出与顺序结构"
+          "title": "第4章 顺序结构与输入输出"
         },
         {
           "chapter_id": "programming.c05",
-          "title": "五、选择结构"
+          "title": "第5章 选择结构"
         },
         {
           "chapter_id": "programming.c06",
-          "title": "六、循环结构"
+          "title": "第6章 循环结构"
         },
         {
           "chapter_id": "programming.c07",
-          "title": "七、函数与作用范围"
+          "title": "第7章 函数与模块化程序设计"
         },
         {
           "chapter_id": "programming.c08",
-          "title": "八、数组、字符串与Python容器"
+          "title": "第8章 数组、字符串与Python组合数据"
         },
         {
           "chapter_id": "programming.c09",
-          "title": "九、C指针、结构体与文本文件"
+          "title": "第9章 C指针、结构体与文件"
         },
         {
           "chapter_id": "programming.c10",
-          "title": "十、Python异常与文本文件"
+          "title": "第10章 Python异常、模块与文件"
         },
         {
           "chapter_id": "programming.c11",
-          "title": "十一、C与Python基本区别"
+          "title": "第11章 C与Python程序模型比较"
         }
       ],
       "topics": [
@@ -2138,31 +2138,31 @@
       "chapters": [
         {
           "chapter_id": "computer-organization.c01",
-          "title": "一、计算机系统概述"
+          "title": "第1章 计算机系统概论"
         },
         {
           "chapter_id": "computer-organization.c02",
-          "title": "二、数据表示"
+          "title": "第2章 数据表示与运算"
         },
         {
           "chapter_id": "computer-organization.c03",
-          "title": "三、CPU 组成与指令执行"
+          "title": "第3章 指令系统与CPU"
         },
         {
           "chapter_id": "computer-organization.c04",
-          "title": "四、存储系统"
+          "title": "第4章 存储器"
         },
         {
           "chapter_id": "computer-organization.c05",
-          "title": "五、控制器与流水线基础"
+          "title": "第5章 控制单元与指令流水"
         },
         {
           "chapter_id": "computer-organization.c06",
-          "title": "六、总线与 I/O"
+          "title": "第6章 系统总线与输入输出"
         },
         {
           "chapter_id": "computer-organization.c07",
-          "title": "七、虚拟存储基础"
+          "title": "第7章 存储系统扩展"
         }
       ],
       "topics": [
@@ -3475,39 +3475,39 @@
       "chapters": [
         {
           "chapter_id": "circuit.c01",
-          "title": "一、电路和基本物理量"
+          "title": "第1章 电路模型和基本物理量"
         },
         {
           "chapter_id": "circuit.c02",
-          "title": "二、基本定律与连接方式"
+          "title": "第2章 电路定律与等效连接"
         },
         {
           "chapter_id": "circuit.c03",
-          "title": "三、线性电阻电路的常用分析方法"
+          "title": "第3章 电阻电路的分析方法与电路定理"
         },
         {
           "chapter_id": "circuit.c04",
-          "title": "四、电阻、电容与电感"
+          "title": "第4章 电阻、电容与电感元件"
         },
         {
           "chapter_id": "circuit.c05",
-          "title": "五、交流、电工控制与安全"
+          "title": "第5章 正弦稳态、电工控制与安全"
         },
         {
           "chapter_id": "circuit.c06",
-          "title": "六、可靠性基础"
+          "title": "第6章 工程可靠性基础"
         },
         {
           "chapter_id": "circuit.c07",
-          "title": "七、一阶动态电路"
+          "title": "第7章 一阶动态电路"
         },
         {
           "chapter_id": "circuit.c08",
-          "title": "八、万用表、示波器与安全测量"
+          "title": "第8章 万用表、示波器与安全测量"
         },
         {
           "chapter_id": "circuit.c09",
-          "title": "九、按信号路径排查简单故障"
+          "title": "第9章 电路故障分析"
         }
       ],
       "topics": [
@@ -3780,35 +3780,35 @@
       "chapters": [
         {
           "chapter_id": "analog-electronics.c01",
-          "title": "一、模拟信号与半导体基础"
+          "title": "第1章 绪论与半导体基础"
         },
         {
           "chapter_id": "analog-electronics.c02",
-          "title": "二、二极管及其应用"
+          "title": "第2章 半导体二极管及其应用"
         },
         {
           "chapter_id": "analog-electronics.c03",
-          "title": "三、三极管和基本放大器"
+          "title": "第3章 晶体管与基本放大电路"
         },
         {
           "chapter_id": "analog-electronics.c04",
-          "title": "四、多级放大、差分放大与频率响应"
+          "title": "第4章 多级放大、差分放大与频率响应"
         },
         {
           "chapter_id": "analog-electronics.c05",
-          "title": "五、反馈"
+          "title": "第5章 放大电路中的反馈"
         },
         {
           "chapter_id": "analog-electronics.c06",
-          "title": "六、集成运算放大器"
+          "title": "第6章 集成运算放大与信号处理"
         },
         {
           "chapter_id": "analog-electronics.c07",
-          "title": "七、波形产生与功率放大"
+          "title": "第7章 波形发生与功率放大"
         },
         {
           "chapter_id": "analog-electronics.c08",
-          "title": "八、器件应用、测量与信号调理"
+          "title": "第8章 直流电源、测量与电路读图"
         }
       ],
       "topics": [
@@ -4062,31 +4062,31 @@
       "chapters": [
         {
           "chapter_id": "digital-electronics.c01",
-          "title": "一、数字信号与数制"
+          "title": "第1章 数制和码制"
         },
         {
           "chapter_id": "digital-electronics.c02",
-          "title": "二、基本逻辑门"
+          "title": "第2章 逻辑代数与门电路"
         },
         {
           "chapter_id": "digital-electronics.c03",
-          "title": "三、逻辑代数基础"
+          "title": "第3章 逻辑函数的表示与化简"
         },
         {
           "chapter_id": "digital-electronics.c04",
-          "title": "四、组合逻辑电路"
+          "title": "第4章 组合逻辑电路"
         },
         {
           "chapter_id": "digital-electronics.c05",
-          "title": "五、触发器与时序逻辑"
+          "title": "第5章 触发器与时序逻辑电路"
         },
         {
           "chapter_id": "digital-electronics.c06",
-          "title": "六、寄存器、计数器与半导体存储器"
+          "title": "第6章 寄存器、计数器与存储器"
         },
         {
           "chapter_id": "digital-electronics.c07",
-          "title": "七、脉冲电路与数模、模数转换"
+          "title": "第7章 脉冲波形与数模、模数转换"
         }
       ],
       "topics": [
@@ -4317,39 +4317,39 @@
       "chapters": [
         {
           "chapter_id": "communication.c01",
-          "title": "一、通信系统基础"
+          "title": "第1章 通信系统概论"
         },
         {
           "chapter_id": "communication.c02",
-          "title": "二、信号、信道与性能指标"
+          "title": "第2章 信号、信道与噪声"
         },
         {
           "chapter_id": "communication.c03",
-          "title": "三、抽样、编码与调制"
+          "title": "第3章 模拟信号数字化与调制"
         },
         {
           "chapter_id": "communication.c04",
-          "title": "四、传输介质与电磁波谱"
+          "title": "第4章 传输媒质与电磁波谱"
         },
         {
           "chapter_id": "communication.c05",
-          "title": "五、移动通信与常见制式"
+          "title": "第5章 数字调制与移动通信"
         },
         {
           "chapter_id": "communication.c06",
-          "title": "六、高频电子线路基础"
+          "title": "第6章 高频小信号、功率放大与混频"
         },
         {
           "chapter_id": "communication.c07",
-          "title": "七、信源编码、信道编码与差错控制"
+          "title": "第7章 信源编码与信道编码"
         },
         {
           "chapter_id": "communication.c08",
-          "title": "八、基带传输、同步与眼图"
+          "title": "第8章 基带传输、同步与眼图"
         },
         {
           "chapter_id": "communication.c09",
-          "title": "九、光纤链路组成与排障"
+          "title": "第9章 光纤通信与链路分析"
         }
       ],
       "topics": [
@@ -4624,31 +4624,31 @@
       "chapters": [
         {
           "chapter_id": "signals-systems.c01",
-          "title": "一、信号的描述与分类"
+          "title": "第1章 信号与系统概述"
         },
         {
           "chapter_id": "signals-systems.c02",
-          "title": "二、系统与五个基本性质"
+          "title": "第2章 连续时间系统的时域分析"
         },
         {
           "chapter_id": "signals-systems.c03",
-          "title": "三、卷积与零状态响应"
+          "title": "第3章 卷积与零状态响应"
         },
         {
           "chapter_id": "signals-systems.c04",
-          "title": "四、傅里叶变换与频谱"
+          "title": "第4章 傅里叶变换与频域分析"
         },
         {
           "chapter_id": "signals-systems.c05",
-          "title": "五、拉普拉斯变换与Z变换"
+          "title": "第5章 拉普拉斯变换与Z变换"
         },
         {
           "chapter_id": "signals-systems.c06",
-          "title": "六、抽样定理与A/D链路"
+          "title": "第6章 抽样定理与离散化"
         },
         {
           "chapter_id": "signals-systems.c07",
-          "title": "七、核心概念的联系与边界"
+          "title": "第7章 系统分析方法的联系"
         }
       ],
       "topics": [
@@ -4873,35 +4873,35 @@
       "chapters": [
         {
           "chapter_id": "software-engineering.c01",
-          "title": "一、软件与软件工程"
+          "title": "第1章 软件工程概述"
         },
         {
           "chapter_id": "software-engineering.c02",
-          "title": "二、生命周期与过程模型"
+          "title": "第2章 软件过程与生命周期模型"
         },
         {
           "chapter_id": "software-engineering.c03",
-          "title": "三、可行性与需求工程"
+          "title": "第3章 可行性研究与需求工程"
         },
         {
           "chapter_id": "software-engineering.c04",
-          "title": "四、分析与设计"
+          "title": "第4章 总体设计与详细设计"
         },
         {
           "chapter_id": "software-engineering.c05",
-          "title": "五、软件测试"
+          "title": "第5章 软件实现与软件测试"
         },
         {
           "chapter_id": "software-engineering.c06",
-          "title": "六、维护、质量与配置管理"
+          "title": "第6章 软件维护、质量与配置管理"
         },
         {
           "chapter_id": "software-engineering.c07",
-          "title": "七、软件项目与风险基础"
+          "title": "第7章 项目管理与风险管理"
         },
         {
           "chapter_id": "software-engineering.c08",
-          "title": "八、工程方法的场景选择"
+          "title": "第8章 面向变化的软件开发方法"
         }
       ],
       "topics": [
@@ -5135,35 +5135,35 @@
       "chapters": [
         {
           "chapter_id": "information-security.c01",
-          "title": "一、信息安全基本概念"
+          "title": "第1章 信息安全概论"
         },
         {
           "chapter_id": "information-security.c02",
-          "title": "二、安全管理与风险处置"
+          "title": "第2章 安全管理与风险管理"
         },
         {
           "chapter_id": "information-security.c03",
-          "title": "三、恶意代码与社会工程"
+          "title": "第3章 恶意代码与社会工程"
         },
         {
           "chapter_id": "information-security.c04",
-          "title": "四、身份认证与访问控制"
+          "title": "第4章 身份认证与访问控制"
         },
         {
           "chapter_id": "information-security.c05",
-          "title": "五、密码技术基础"
+          "title": "第5章 密码学基础"
         },
         {
           "chapter_id": "information-security.c06",
-          "title": "六、网络安全基础"
+          "title": "第6章 网络安全"
         },
         {
           "chapter_id": "information-security.c07",
-          "title": "七、系统、应用、数据与备份安全"
+          "title": "第7章 系统、应用与数据安全"
         },
         {
           "chapter_id": "information-security.c08",
-          "title": "八、个人信息、法律与职业责任"
+          "title": "第8章 隐私保护、法律与职业责任"
         }
       ],
       "topics": [
