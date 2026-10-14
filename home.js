@@ -109,6 +109,9 @@
     notesLink.innerHTML = "<strong>开始讲义</strong><small>进入 →</small>";
     document.getElementById("home-recall-link").href = `./color-notes.html${hash}`;
     document.getElementById("home-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
+    document.getElementById("mobile-notes-link").href = `./notes.html${hash}`;
+    document.getElementById("mobile-recall-link").href = `./color-notes.html${hash}`;
+    document.getElementById("mobile-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
     const last = lastLearning();
     if (last?.course === courseName) {
       const path = last.module === "color-notes" ? "color-notes.html" : "notes.html";

@@ -1494,30 +1494,6 @@
       else showDirectory();
     }
 
-    function bindEdgeBack() {
-      let startX = 0;
-      let startY = 0;
-      let tracking = false;
-      document.addEventListener("touchstart", (event) => {
-        const touch = event.touches[0];
-        const target = event.target instanceof Element ? event.target : null;
-        const blocked = target?.closest("input, textarea, select, [contenteditable='true'], .table-wrap, .chapter-links");
-        tracking = Boolean(touch && touch.clientX <= 24 && !blocked && !study.classList.contains("mobile-nav-open"));
-        if (!tracking) return;
-        startX = touch.clientX;
-        startY = touch.clientY;
-      }, {passive: true});
-      document.addEventListener("touchend", (event) => {
-        if (!tracking) return;
-        tracking = false;
-        const touch = event.changedTouches[0];
-        if (!touch) return;
-        const dx = touch.clientX - startX;
-        const dy = touch.clientY - startY;
-        if (dx >= 80 && Math.abs(dx) > Math.abs(dy) * 1.5) goBackOrHome();
-      }, {passive: true});
-    }
-
     function courseHash(course) {
       return `#course=${encodeURIComponent(course.name)}`;
     }
@@ -1780,7 +1756,6 @@
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
     applyLocation();
-    bindEdgeBack();
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
       window.addEventListener("load", () => {
