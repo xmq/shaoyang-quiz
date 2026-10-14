@@ -1690,7 +1690,43 @@ function exitRunner() {
   render();
 }
 
+function goBackOrHome() {
+  const referrer = document.referrer ? new URL(document.referrer, location.href) : null;
+  if (referrer?.origin === location.origin && history.length > 1) history.back();
+  else location.href = "./index.html";
+}
+
+function handleBackNavigation() {
+  if (document.body.classList.contains("quiz-runner")) exitRunner();
+  else goBackOrHome();
+}
+
+function bindEdgeBack() {
+  let startX = 0;
+  let startY = 0;
+  let tracking = false;
+  document.addEventListener("touchstart", (event) => {
+    const touch = event.touches[0];
+    const target = event.target instanceof Element ? event.target : null;
+    const blocked = target?.closest("input, textarea, select, [contenteditable='true'], .drawer, .table-wrap, .options");
+    tracking = Boolean(touch && touch.clientX <= 24 && !blocked && !document.body.classList.contains("drawer-open"));
+    if (!tracking) return;
+    startX = touch.clientX;
+    startY = touch.clientY;
+  }, {passive: true});
+  document.addEventListener("touchend", (event) => {
+    if (!tracking) return;
+    tracking = false;
+    const touch = event.changedTouches[0];
+    if (!touch) return;
+    const dx = touch.clientX - startX;
+    const dy = touch.clientY - startY;
+    if (dx >= 80 && Math.abs(dx) > Math.abs(dy) * 1.5) handleBackNavigation();
+  }, {passive: true});
+}
+
 function bindGlobalEvents() {
+  $("page-back").addEventListener("click", handleBackNavigation);
   $("drawer-toggle").addEventListener("click", openDrawer);
   $("drawer-close").addEventListener("click", closeDrawer);
   $("drawer-mask").addEventListener("click", closeDrawer);
@@ -1892,6 +1928,7 @@ function bindGlobalEvents() {
 const startupRevisionResetCount = state._revisionResetCount || 0;
 delete state._revisionResetCount;
 bindGlobalEvents();
+bindEdgeBack();
 render();
 if (startupRevisionResetCount) {
   setTimeout(() => alert(`题库已更新：${startupRevisionResetCount} 道修订题的旧作答记录已清除，并重新加入待练。`), 0);

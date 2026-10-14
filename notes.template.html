@@ -190,6 +190,7 @@
     }
     .text-button:hover { border-color: #84adff; color: var(--primary); }
     .mobile-nav-toggle,
+    .mobile-back-button,
     .mobile-search-toggle,
     .mobile-course-context,
     .mobile-module-context,
@@ -493,6 +494,20 @@
         border-bottom: 1px solid var(--border);
         background: rgba(244, 247, 251, .98);
       }
+      .mobile-back-button {
+        width: 44px;
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--panel);
+        color: var(--text);
+        font-size: 26px;
+        line-height: 1;
+      }
       .mobile-nav-toggle {
         width: 100%;
         min-width: 0;
@@ -663,11 +678,11 @@
     }
 
     @media (max-width: 700px) {
-      .study-toolbar { grid-template-columns: 66px minmax(0, 1fr) 104px; grid-template-rows: 44px 42px; height: calc(108px + env(safe-area-inset-top)); }
-      .search-area { display: block; grid-column: 1 / 3; grid-row: 2; min-width: 0; }
+      .study-toolbar { grid-template-columns: 44px 66px minmax(0, 1fr) 104px; grid-template-rows: 44px 42px; height: calc(108px + env(safe-area-inset-top)); }
+      .search-area { display: block; grid-column: 1 / 4; grid-row: 2; min-width: 0; }
       .search-box { height: 42px; min-height: 42px; }
       .search-status { position: absolute; top: 100%; left: 8px; right: 8px; margin: 0; background: var(--bg); font-size: 12px; }
-      .toolbar-actions { display: flex; grid-column: 3; grid-row: 2; }
+      .toolbar-actions { display: flex; grid-column: 4; grid-row: 2; }
       .toolbar-actions #back { display: none; }
       .toolbar-actions #recall-toggle { width: 100%; min-height: 42px; height: 42px; font-size: 13px; padding: 0 6px; }
       .toolbar-actions #recall-toggle::before { content: none; }
@@ -710,7 +725,7 @@
       .module-link { min-height: 36px; font-size: 11px; }
       main { padding-right: 8px; padding-left: 8px; }
       .study-toolbar { margin: -8px 0 12px; padding: 8px; border: 1px solid #dbe5ed; border-radius: 0 0 15px 15px; background: rgba(244, 247, 250, .96); box-shadow: 0 8px 24px rgba(16, 42, 67, .055); }
-      .mobile-nav-toggle, .text-button, .mobile-course-context, .mobile-module-context { border-radius: 10px; }
+      .mobile-back-button, .mobile-nav-toggle, .text-button, .mobile-course-context, .mobile-module-context { border-radius: 10px; }
       .search-box { border-radius: 10px; box-shadow: none; }
       .note { padding: 18px 15px 24px; border-radius: 16px; box-shadow: 0 7px 24px rgba(16, 42, 67, .055); }
       .lecture-page .note { padding: 10px 7px 28px; }
@@ -768,6 +783,7 @@
   <main id="main">
     <section class="study hidden" id="study" aria-label="科目内容">
       <div class="study-toolbar">
+        <button class="mobile-back-button" id="mobile-back" type="button" aria-label="返回上一页">‹</button>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><span aria-hidden="true">☰</span><strong id="mobile-chapter-progress">章节</strong></button>
         <label class="mobile-course-context"><select id="mobile-course-select" aria-label="切换课程"></select><span id="mobile-card-progress"></span></label>
         <label class="mobile-module-context"><select id="mobile-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">重点与易错</option><option value="quiz">刷题</option></select></label>
@@ -838,6 +854,7 @@
     const chapterLinks = document.getElementById("chapter-links");
     const navCollapse = document.getElementById("nav-collapse");
     const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+    const mobileBack = document.getElementById("mobile-back");
     const mobileCourseSelect = document.getElementById("mobile-course-select");
     const mobileModuleSelect = document.getElementById("mobile-module-select");
     const mobileChapterProgress = document.getElementById("mobile-chapter-progress");
@@ -1471,6 +1488,36 @@
       location.href = "./index.html";
     }
 
+    function goBackOrHome() {
+      const referrer = document.referrer ? new URL(document.referrer, location.href) : null;
+      if (referrer?.origin === location.origin && history.length > 1) history.back();
+      else showDirectory();
+    }
+
+    function bindEdgeBack() {
+      let startX = 0;
+      let startY = 0;
+      let tracking = false;
+      document.addEventListener("touchstart", (event) => {
+        const touch = event.touches[0];
+        const target = event.target instanceof Element ? event.target : null;
+        const blocked = target?.closest("input, textarea, select, [contenteditable='true'], .table-wrap, .chapter-links");
+        tracking = Boolean(touch && touch.clientX <= 24 && !blocked && !study.classList.contains("mobile-nav-open"));
+        if (!tracking) return;
+        startX = touch.clientX;
+        startY = touch.clientY;
+      }, {passive: true});
+      document.addEventListener("touchend", (event) => {
+        if (!tracking) return;
+        tracking = false;
+        const touch = event.changedTouches[0];
+        if (!touch) return;
+        const dx = touch.clientX - startX;
+        const dy = touch.clientY - startY;
+        if (dx >= 80 && Math.abs(dx) > Math.abs(dy) * 1.5) goBackOrHome();
+      }, {passive: true});
+    }
+
     function courseHash(course) {
       return `#course=${encodeURIComponent(course.name)}`;
     }
@@ -1682,6 +1729,7 @@
     backButton.addEventListener("click", () => {
       showDirectory();
     });
+    mobileBack.addEventListener("click", goBackOrHome);
     recallToggle.addEventListener("click", () => {
       if (search.value.trim()) {
         search.value = "";
@@ -1732,6 +1780,7 @@
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
     applyLocation();
+    bindEdgeBack();
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
       window.addEventListener("load", () => {
