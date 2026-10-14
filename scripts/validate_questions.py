@@ -48,6 +48,12 @@ def normalized_stem(value):
     return re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", text)
 
 
+def template_stem(value):
+    text = unicodedata.normalize("NFKC", str(value or "")).lower()
+    text = re.sub(r"[-+]?\d+(?:\.\d+)?", "<n>", text)
+    return re.sub(r"[^a-z\u4e00-\u9fff<>]+", "", text)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--questions", type=Path, default=QUESTION_FILE)
@@ -80,6 +86,7 @@ def main():
             errors.append(f"duplicate id: {qid}")
 
     normalized = {}
+    templates = {}
     for q in qs:
         key = (str(q.get("subject") or ""), normalized_stem(q.get("stem")))
         if key[1] and key in normalized:
@@ -89,6 +96,14 @@ def main():
             )
         else:
             normalized[key] = q
+        template_key = (str(q.get("subject") or ""), template_stem(q.get("stem")))
+        if template_key[1] and template_key in templates:
+            errors.append(
+                f"duplicate numeric template in {template_key[0]}: "
+                f"{templates[template_key].get('id')} / {q.get('id')}"
+            )
+        else:
+            templates[template_key] = q
 
     for index, q in enumerate(qs, 1):
         qid = q.get("id") or f"#{index}"

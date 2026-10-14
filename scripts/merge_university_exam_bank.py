@@ -13,9 +13,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
-REPORT = ROOT / "大学期末题库去重报告.md"
-SOURCE_REPORT = ROOT / "大学期末改编题来源汇总.md"
-NETWORK_REPORT = ROOT / "staging" / "network_research.md"
 STAGING_SPECS = {
     ROOT / "staging" / "university_applied.json": (
         "ua-", {"办公软件", "多媒体", "编程语言", "信息安全"},
@@ -28,11 +25,6 @@ STAGING_SPECS = {
     ),
 }
 STAGING_FILES = tuple(STAGING_SPECS)
-SOURCE_FILES = (
-    ROOT / "staging" / "university_applied_sources.md",
-    ROOT / "staging" / "university_corecs_sources.md",
-    ROOT / "staging" / "university_electronics_sources.md",
-)
 PROGRAMMING_REMOVAL_FILE = ROOT / "staging" / "programming_vb_remove_ids.json"
 MANAGED_PREFIXES = ("ua-", "uc-", "ue-")
 DERIVED_METADATA_FIELDS = ("topic_id", "topic_title", "chapter_id", "required_depth", "topic_order", "rubric", "max_score", "rubric_source")
@@ -232,55 +224,6 @@ def merge(base: list[dict], candidates: list[dict]):
     return kept, accepted, removed_base, skipped_exact, skipped_fuzzy
 
 
-def pair_lines(pairs, fuzzy=False):
-    if not pairs:
-        return ["- 无"]
-    lines = []
-    for item in pairs:
-        left, right = item[0], item[1]
-        suffix = ""
-        if fuzzy:
-            ratio, jaccard, option_ratio = item[2]
-            suffix = f"（题干{ratio:.3f} / 三元组{jaccard:.3f} / 选项{option_ratio:.3f}）"
-        lines.append(f"- `{left.get('id')}` ↔ `{right.get('id')}`：{left.get('stem')}{suffix}")
-    return lines
-
-
-def render_report(before, staged, final, accepted, removal_ids, removed_base, skipped_exact, skipped_fuzzy):
-    counts = Counter(q["subject"] for q in accepted)
-    subject_rows = ["| 科目 | 暂存后实际入库 |", "|---|---:|"]
-    for subject, count in sorted(counts.items()):
-        subject_rows.append(f"| {subject} | {count} |")
-    return "\n".join([
-        "# 大学期末题库去重报告", "",
-        f"- 合并前主库：{before}题", f"- 暂存候选：{staged}题",
-        f"- 实际新增：{len(accepted)}题", f"- 合并后主库：{final}题",
-        f"- 编程范围校准（移除 VB 主线旧题）：{len(removal_ids)}题",
-        f"- 主库原有精确重复移除：{len(removed_base)}题",
-        f"- 新题精确重复跳过：{len(skipped_exact)}题",
-        f"- 新题高相似重复跳过：{len(skipped_fuzzy)}题", "",
-        "## 实际入库分布", "", *subject_rows, "",
-        "## 编程范围校准移除", "", *(
-            [f"- `{qid}`" for qid in sorted(removal_ids)] or ["- 无"]
-        ), "",
-        "## 主库原有精确重复", "", *pair_lines(removed_base), "",
-        "## 新题精确重复", "", *pair_lines(skipped_exact), "",
-        "## 新题高相似重复", "", *pair_lines(skipped_fuzzy, fuzzy=True), "",
-        "## 去重口径", "",
-        "同科目内先对题干做Unicode NFKC、大小写、空白、标点和题号归一化；精确相同直接去重。高相似比较同时要求题干序列相似、三字符集合相似、选项相似，并要求数字参数序列相同。数字不同的计算变式不会仅因措辞相近而被误删。", "",
-    ])
-
-
-def render_source_report():
-    sections = ["# 大学期末改编题来源汇总", "", "公开材料用于分析考查范围和题型；入库题均重新命制，不整卷转载。", ""]
-    if NETWORK_REPORT.is_file():
-        sections.extend([NETWORK_REPORT.read_text(encoding="utf-8").strip(), ""])
-    for path in SOURCE_FILES:
-        if path.is_file():
-            sections.extend([f"## {path.stem}", "", path.read_text(encoding="utf-8").strip(), ""])
-    return "\n".join(sections)
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="只校验暂存题和当前合并结果")
@@ -303,12 +246,6 @@ def main():
         for question in all_current
     }
     merged = [{**question, **derived_by_id.get(str(question.get("id") or ""), {})} for question in merged]
-    report = render_report(
-        len(all_current), len(candidates), len(merged), accepted, removal_ids,
-        removed_base, skipped_exact, skipped_fuzzy,
-    )
-    source_report = render_source_report()
-
     if args.check:
         if all_current != merged:
             raise SystemExit("questions.json 与去重合并结果不同步")
@@ -319,10 +256,6 @@ def main():
                 "window.QUESTIONS=" + json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + ";"
             ):
                 raise SystemExit(f"{args.question_js.name} 与去重合并结果不同步")
-        if not REPORT.is_file() or "# 大学期末题库去重报告" not in REPORT.read_text(encoding="utf-8"):
-            raise SystemExit("缺少大学期末题库去重报告.md")
-        if SOURCE_REPORT.read_text(encoding="utf-8") != source_report:
-            raise SystemExit("大学期末改编题来源汇总.md 不同步")
         print(f"去重合并结果已同步：候选{len(candidates)}，入库{len(accepted)}，总题量{len(merged)}")
         return
 
@@ -333,8 +266,6 @@ def main():
             "window.QUESTIONS=" + json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + ";\n",
             encoding="utf-8", newline="\n",
         )
-    REPORT.write_text(report, encoding="utf-8", newline="\n")
-    SOURCE_REPORT.write_text(source_report, encoding="utf-8", newline="\n")
     print(
         f"候选{len(candidates)}题，入库{len(accepted)}题，跳过精确{len(skipped_exact)}题、"
         f"高相似{len(skipped_fuzzy)}题；主库{len(base)}→{len(merged)}题。"

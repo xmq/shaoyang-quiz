@@ -48,10 +48,10 @@ def validate():
         lecture_text = (ROOT / lecture["file"]).read_text(encoding="utf-8")
         lecture_titles = re.findall(r"(?m)^## (.+)$", lecture_text)
         sections = re.split(r"(?m)^## (.+)\n", text)
+        preface = text.split("## ", 1)[0]
+        if len(re.sub(r"\s+|[#*`]", "", preface)) > 30:
+            errors.append(f"{item['name']}：重点页前言过长，应直接进入复习卡")
         if item["name"] == "计算机网络":
-            preface = text.split("## ", 1)[0]
-            if len(re.sub(r"\s+|[#*`]", "", preface)) > 80:
-                errors.append("计算机网络：重点页前言过长，应直接进入复习卡")
             if text.count("![") < 6:
                 errors.append("计算机网络：图解复习卡不足6张")
         titles = sections[1::2]
@@ -66,10 +66,9 @@ def validate():
                 errors.append(f"{item['name']}/{title}：缺少知识点")
             for point, detail in zip(points[1::2], points[2::2]):
                 cards += 1
-                if item["name"] == "计算机网络":
-                    visible = re.sub(r"!\[[^\]]*\]\([^)]+\)|\s+|[*#`🔴🔵⚫-]", "", detail)
-                    if len(visible) > 220:
-                        errors.append(f"计算机网络/{point}：复习卡超过220字，不符合一屏复习要求")
+                visible = re.sub(r"!\[[^\]]*\]\([^)]+\)|\s+|[*#`🔴🔵⚫-]", "", detail)
+                if len(visible) > 220:
+                    errors.append(f"{item['name']}/{point}：复习卡超过220字，不符合一屏复习要求")
                 for marker, label in (("🔴", "核心知识"), ("🔵", "方法与例题"), ("⚫", "易混易错")):
                     matches = re.findall(rf"(?m)^- {marker} \*\*{label}\*\*：(.+)$", detail)
                     if len(matches) != 1 or len(matches[0]) < 25:

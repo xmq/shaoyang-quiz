@@ -170,6 +170,7 @@ def main() -> int:
 
     try:
         entries = json.loads(COURSE_INDEX.read_text(encoding="utf-8"))
+        learning_map = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         print(f"无法读取 {COURSE_INDEX.name}：{exc}", file=sys.stderr)
         return 1
@@ -229,8 +230,16 @@ def main() -> int:
         chapter_positions = [
             position for position, line in enumerate(lines) if H2_RE.match(line.strip())
         ]
+        actual_titles = [H2_RE.match(lines[position].strip()).group(1).strip() for position in chapter_positions]
+        course = next(
+            (item for item in learning_map["courses"] if item["course_name"] == name),
+            None,
+        )
+        if course:
+            expected_titles = [chapter["title"] for chapter in course["chapters"]]
+            if actual_titles != expected_titles:
+                errors.append(f"{name}：讲义章节必须与学习地图一致，不得附加考前速记或串讲章节")
         if name == "计算机网络":
-            actual_titles = [H2_RE.match(lines[position].strip()).group(1).strip() for position in chapter_positions]
             if actual_titles != NETWORK_TEXTBOOK_CHAPTERS:
                 errors.append("计算机网络：章节必须与谢希仁第8版第1—9章顺序一致")
             for chapter_index, position in enumerate(chapter_positions):
