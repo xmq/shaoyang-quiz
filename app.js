@@ -105,7 +105,48 @@ let drawerFiltersDirty = false;
 let drawerFilterSnapshot = null;
 let focusQuestionAfterRender = false;
 let focusFeedbackAfterRender = false;
+let restoringQuizHistory = false;
 save({silent: true});
+
+function quizViewName() {
+  return state.mode === "home" ? "hub" : "runner";
+}
+
+function quizHubUrl() {
+  const url = new URL(location.href);
+  url.searchParams.set("mode", "home");
+  url.searchParams.delete("topic");
+  url.searchParams.delete("chapter");
+  return url.href;
+}
+
+function quizRunnerUrl() {
+  const url = new URL(location.href);
+  url.searchParams.set("mode", state.mode);
+  return url.href;
+}
+
+function prepareQuizHistory() {
+  const view = quizViewName();
+  let sameOriginReferrer = false;
+  try {
+    sameOriginReferrer = Boolean(document.referrer && new URL(document.referrer, location.href).origin === location.origin);
+  } catch {}
+
+  if (!sameOriginReferrer && !history.state?.shaoyangQuizView) {
+    const currentUrl = location.href;
+    history.replaceState({shaoyangAppHome: true}, "", "./index.html");
+    history.pushState({shaoyangQuizView: "hub"}, "", view === "hub" ? currentUrl : quizHubUrl());
+    if (view === "runner") {
+      history.pushState({shaoyangQuizView: "runner", backToHub: true}, "", currentUrl);
+    }
+  } else {
+    history.replaceState({...history.state, shaoyangQuizView: view, backToHub: false}, "", location.href);
+  }
+  return view;
+}
+
+let renderedQuizView = prepareQuizHistory();
 
 function save({silent = false} = {}) {
   const persisted = {...state};
@@ -1268,6 +1309,11 @@ function updateViewState() {
 }
 
 function render() {
+  const nextQuizView = quizViewName();
+  if (!restoringQuizHistory && renderedQuizView === "hub" && nextQuizView === "runner") {
+    history.pushState({shaoyangQuizView: "runner", backToHub: true}, "", quizRunnerUrl());
+  }
+  renderedQuizView = nextQuizView;
   updateViewState();
   if (!PUBLIC_QUESTIONS.length) {
     $("card-area").innerHTML = `<div class="card empty"><strong>题库未加载</strong>请确认 questions.js 与 app.js 在同一目录。</div>`;
@@ -1705,17 +1751,38 @@ function downloadText(filename, content, type) {
 function exitRunner() {
   if (isMockActive() && !confirm("模拟考试仍在计时，返回刷题主页？稍后可以继续作答。")) return;
   if (!isMockActive() && state._pending?.text && !confirm("当前输入尚未提交，确定返回吗？")) return;
+  if (history.state?.shaoyangQuizView === "runner" && history.state?.backToHub) {
+    history.back();
+    return;
+  }
   state.mode = "home";
   state._pending = null;
   clearMockTimer();
   save();
+  history.replaceState({...history.state, shaoyangQuizView: "hub", backToHub: false}, "", quizHubUrl());
   render();
 }
 
 function goBackOrHome() {
   const referrer = document.referrer ? new URL(document.referrer, location.href) : null;
-  if (referrer?.origin === location.origin && history.length > 1) history.back();
+  if ((referrer?.origin === location.origin || history.state?.shaoyangQuizView) && history.length > 1) history.back();
   else location.href = "./index.html";
+}
+
+function handleNativeBack(event) {
+  if (event.state?.shaoyangAppHome) {
+    location.replace("./index.html");
+    return;
+  }
+  if (event.state?.shaoyangQuizView === "hub" && state.mode !== "home") {
+    restoringQuizHistory = true;
+    state.mode = "home";
+    state._pending = null;
+    clearMockTimer();
+    save();
+    render();
+    restoringQuizHistory = false;
+  }
 }
 
 function handleBackNavigation() {
@@ -1724,6 +1791,7 @@ function handleBackNavigation() {
 }
 
 function bindGlobalEvents() {
+  window.addEventListener("popstate", handleNativeBack);
   $("page-back").addEventListener("click", handleBackNavigation);
   $("drawer-toggle").addEventListener("click", openDrawer);
   $("drawer-close").addEventListener("click", closeDrawer);

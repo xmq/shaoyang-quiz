@@ -2780,7 +2780,7 @@ body.drawer-open {
 .quiz-runner .runner-header > button { min-height: 42px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-weight: 700; }
 .quiz-runner .runner-header > div { min-width: 0; display: grid; line-height: 1.35; }
 .quiz-runner .runner-header span { overflow: hidden; color: var(--muted); text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
-.quiz-question-active .runner-header { display: none; }
+.quiz-question-active .runner-header { display: flex; }
 .quiz-runner .topbar, .quiz-runner .desktop-module-switcher, .quiz-runner .active-filters, .quiz-runner .quiz-mobile-tabbar { display: none; }
 
 @media (max-width: 700px) {

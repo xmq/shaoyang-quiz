@@ -1628,8 +1628,19 @@
 
     function goBackOrHome() {
       const referrer = document.referrer ? new URL(document.referrer, location.href) : null;
-      if (referrer?.origin === location.origin && history.length > 1) history.back();
+      if ((referrer?.origin === location.origin || history.state?.shaoyangStudyPage) && history.length > 1) history.back();
       else showDirectory();
+    }
+
+    function prepareStudyHistory() {
+      let sameOriginReferrer = false;
+      try {
+        sameOriginReferrer = Boolean(document.referrer && new URL(document.referrer, location.href).origin === location.origin);
+      } catch {}
+      if (sameOriginReferrer || history.state?.shaoyangStudyPage) return;
+      const currentUrl = location.href;
+      history.replaceState({shaoyangAppHome: true}, "", "./index.html");
+      history.pushState({shaoyangStudyPage: true}, "", currentUrl);
     }
 
     function courseHash(course) {
@@ -1897,10 +1908,17 @@
       syncRecallTargets();
     });
 
-    window.addEventListener("popstate", applyLocation);
+    window.addEventListener("popstate", (event) => {
+      if (event.state?.shaoyangAppHome) {
+        location.replace("./index.html");
+        return;
+      }
+      applyLocation();
+    });
     window.addEventListener("pageshow", () => closeMobileNav({restoreFocus: false}));
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
+    prepareStudyHistory();
     applyLocation();
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
