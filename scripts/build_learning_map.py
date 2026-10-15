@@ -339,8 +339,7 @@ def read_structure(course_name: str):
     chapter_id = None
     for line in lines:
         if line.startswith("## "):
-            chapter_id = (f"net-{len(chapters) + 1:02d}" if course_name == "计算机网络"
-                          else f"{COURSES[course_name][0]}.c{len(chapters) + 1:02d}")
+            chapter_id = TOPIC_IDS[course_name]["chapters"][line[3:].strip()]
             chapters.append({"chapter_id": chapter_id, "title": line[3:].strip()})
         elif line.startswith("### ") and chapter_id:
             topics.append({
@@ -358,7 +357,7 @@ def read_structure(course_name: str):
         chapter_id = chapter["chapter_id"]
         prefix = TOPIC_IDS[course_name]["chapter_prefix"].get(chapter_id, [])
         chapter_ids = [topic["topic_id"] for topic in topics if topic["chapter_id"] == chapter_id]
-        if chapter_ids[:len(prefix)] != prefix:
+        if not TOPIC_IDS[course_name].get("layout_revision") and chapter_ids[:len(prefix)] != prefix:
             raise ValueError(f"Existing review card order changed: {chapter_id}")
     return chapters, topics
 
@@ -420,6 +419,7 @@ def build():
             "subjects": list(subjects),
             "chapters": chapters,
             "topics": topics,
+            **{key: TOPIC_IDS[course_name][key] for key in ("layout_revision", "previous_layout", "keep_completed") if key in TOPIC_IDS[course_name]},
         })
     topic_ids = {topic["topic_id"] for course in courses for topic in course["topics"]}
     unknown_ids = validate_guidance(topic_ids)

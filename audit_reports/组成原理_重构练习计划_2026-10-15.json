@@ -1,0 +1,630 @@
+{
+  "course": "计算机组成原理",
+  "book": "唐朔飞第3版",
+  "old_topic_destinations": {
+    "computer-organization.t01": "第1章 计算机系统概论",
+    "computer-organization.t02": "第1章 计算机系统概论",
+    "computer-organization.t12": "第3章 系统总线",
+    "computer-organization.t08": "第4章 存储器",
+    "computer-organization.t09": "第4章 存储器",
+    "computer-organization.t10": "第4章 存储器",
+    "computer-organization.t14": "第4章 存储器",
+    "computer-organization.t15": "第4章 存储器",
+    "computer-organization.t16": "第4章 存储器",
+    "computer-organization.t13": "第5章 输入输出系统",
+    "computer-organization.t03": "第6章 计算机的运算方法",
+    "computer-organization.t04": "第6章 计算机的运算方法",
+    "computer-organization.t05": "第6章 计算机的运算方法",
+    "computer-organization.t07": "第7章 指令系统",
+    "computer-organization.t06": "第8章 CPU的结构和功能",
+    "computer-organization.t11": "第8章 CPU的结构和功能",
+    "computer-organization.t17": "第8章 CPU的结构和功能",
+    "computer-organization.t18": "第8章 CPU的结构和功能"
+  },
+  "new_topics": [
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第2章 计算机的发展及应用",
+      "title": "器件演进与软硬件层次",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-01-1",
+          "type": "简答",
+          "stem": "按主要电子器件写出常见计算机四代顺序。",
+          "answer": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+          "explanation": "按器件特征分类，不是按机器外壳大小分类。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        },
+        {
+          "id": "gap-co-textbook-01-2",
+          "type": "简答",
+          "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+          "answer": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+          "explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "computer-organization.t19",
+      "chapter_id": "computer-organization.c08"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第2章 计算机的发展及应用",
+      "title": "应用场景与并行加速边界",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-02-1",
+          "type": "简答",
+          "stem": "程序80%的时间可4倍并行加速，20%必须串行，忽略开销，整体加速比多少？",
+          "answer": "2.5倍。",
+          "explanation": "新时间比例0.2+0.8/4=0.4，加速比1/0.4=2.5。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-02-2",
+          "type": "简答",
+          "stem": "工业控制必须在规定毫秒内响应传感器，离线统计每天记录更关注批量处理。这两类主要要求各是什么？",
+          "answer": "前者实时控制，重响应期限；后者数据处理，重吞吐和完成时间。",
+          "explanation": "同样使用计算机，判断依据是任务目标，不是设备是否联网。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t20",
+      "chapter_id": "computer-organization.c08"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第3章 系统总线",
+      "title": "总线仲裁决定谁先传",
+      "parent_topic_id": "computer-organization.t12",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-03-1",
+          "type": "简答",
+          "stem": "链式查询总线，设备1比设备3靠近仲裁器，两者同时请求时谁先？长期可能出现什么问题？",
+          "answer": "设备1先；固定优先级可能使远端设备长期等待或饥饿。",
+          "explanation": "允许信号先遇到近端请求者，近端反复请求会延迟后级。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-03-2",
+          "type": "简答",
+          "stem": "为什么独立请求仲裁通常比链式需要更多连线？是否意味着所有设备可同时驱动共享数据总线？",
+          "answer": "每设备有独立请求/允许线；仍需选定一个主设备，不能同时驱动同一共享数据线。",
+          "explanation": "独立的是请求线路，不是给每设备增加独占数据通道。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "computer-organization.t21",
+      "chapter_id": "computer-organization.c06"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第3章 系统总线",
+      "title": "异步总线四相握手",
+      "parent_topic_id": "computer-organization.t12",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-04-1",
+          "type": "简答",
+          "stem": "异步四相互锁读传输中REQ已置1但ACK仍为0，主设备能否按该协议采样？后续撤销顺序是什么？",
+          "answer": "不能，应等ACK确认数据有效；采样后主设备先撤REQ，从设备再撤ACK。",
+          "explanation": "REQ只代表请求，ACK才是从设备准备完成的确认。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-04-2",
+          "type": "简答",
+          "stem": "半同步总线遇慢设备时用WAIT延长等待，它是否完全取消统一时钟？",
+          "answer": "否。半同步仍按统一时钟工作，用等待信号延长特定访问。",
+          "explanation": "异步以应答推进，半同步结合统一时钟和可变等待，不可等同。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "computer-organization.t22",
+      "chapter_id": "computer-organization.c06"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第4章 存储器",
+      "title": "低位交叉存储的模块定位",
+      "parent_topic_id": "computer-organization.t09",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-05-1",
+          "type": "简答",
+          "stem": "4路低位交叉存储按字地址编排，字地址13的模块号与模块内地址是多少？",
+          "answer": "模块1，模块内地址3。",
+          "explanation": "13mod4=1，⌊13/4⌋=3；若给的是字节地址须先按字长换算。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-05-2",
+          "type": "简答",
+          "stem": "4路低位交叉存储中，顺序访问0、1、2、3和访问0、4、8、12，哪组更易并行？说明原因。",
+          "answer": "0、1、2、3分别落四个模块，较易重叠；0、4、8、12都落模块0，冲突较多。",
+          "explanation": "交叉存储提升取决于地址分布，不是模块数增加就保证每组访问加速。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t23",
+      "chapter_id": "computer-organization.c04"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第4章 存储器",
+      "title": "奇偶校验与汉明纠错",
+      "parent_topic_id": "computer-organization.t09",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-06-1",
+          "type": "简答",
+          "stem": "4个数据位用普通汉明码纠正单比特错，至少需几个校验位？写不等式。",
+          "answer": "3个，2³=8≥4+3+1=8；r=2时4<7，不足。",
+          "explanation": "需为每一位错误及无错误留不同综合状态。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-06-2",
+          "type": "简答",
+          "stem": "偶校验能否保证发现两个位同时翻转？普通汉明码遇双错能否无条件纠正？",
+          "answer": "均不能。两个翻转可能保持奇偶；普通汉明码双错可能被误纠。",
+          "explanation": "奇偶只能保证检测奇数个位错，SECDED的整体奇偶位用于进一步区分双错。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "computer-organization.t24",
+      "chapter_id": "computer-organization.c04"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第4章 存储器",
+      "title": "磁盘定位与平均访问时间",
+      "parent_topic_id": "computer-organization.t08",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-07-1",
+          "type": "简答",
+          "stem": "7200rpm磁盘平均寻道6ms，平均传输1ms，忽略其他开销，平均访问时间约多少？",
+          "answer": "11.17ms。",
+          "explanation": "一转60/7200s=8.33ms，半转4.17ms；6+4.17+1≈11.17ms。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-07-2",
+          "type": "简答",
+          "stem": "传统CHS模型每柱面4磁头、每磁道16扇区，LBA=70，柱面和磁头从0编号、扇区从1编号，位置是什么？",
+          "answer": "柱面1，磁头0，扇区7。",
+          "explanation": "70÷64得1余6，6÷16得0余6，扇区从1编号故6+1=7。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t25",
+      "chapter_id": "computer-organization.c04"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第5章 输入输出系统",
+      "title": "I/O接口的三个寄存器",
+      "parent_topic_id": "computer-organization.t13",
+      "existing_qids": [
+        "sp-core-co-012"
+      ],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-08-1",
+          "type": "简答",
+          "stem": "CPU要判断键盘接口是否已有新字符、读取字符、允许中断，分别主要访问哪类寄存器？",
+          "answer": "分别为状态、数据、控制寄存器。",
+          "explanation": "状态说明是否就绪，数据给出字符内容，控制改变接口工作方式。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t26",
+      "chapter_id": "computer-organization.c09"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第5章 输入输出系统",
+      "title": "程序查询的忙等开销",
+      "parent_topic_id": "computer-organization.t13",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-09-1",
+          "type": "简答",
+          "stem": "CPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？",
+          "answer": "1%。",
+          "explanation": "2000×10÷(2×10⁶)=0.01；未计数据搬运和处理。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-09-2",
+          "type": "简答",
+          "stem": "程序查询到设备READY=0时为何不能直接读数据作为新输入？若查询间隔太长有什么风险？",
+          "answer": "数据可能还是旧值或未稳定，应继续等就绪；间隔过长可能缓冲溢出、覆盖或丢失数据。",
+          "explanation": "轮询须同时满足CPU成本与设备响应时限，不是越少越好。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t27",
+      "chapter_id": "computer-organization.c09"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第6章 计算机的运算方法",
+      "title": "移位先辨符号与位宽",
+      "parent_topic_id": "computer-organization.t04",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-10-1",
+          "type": "简答",
+          "stem": "8位补码11110100算术右移一位得到什么位串和真值？若逻辑右移呢？",
+          "answer": "算术右移11111010，−6；逻辑右移01111010，无符号为122。",
+          "explanation": "算术复制符号1，逻辑高位补0；同位串解释须说明类型。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-10-2",
+          "type": "简答",
+          "stem": "8位补码01111110左移一位得到11111100，能否解释为126×2的正确有符号结果？",
+          "answer": "不能，真实252超过8位补码最大127，已溢出。",
+          "explanation": "左移低位补0只是位操作，结果超范围后不能继续当精确乘2。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "computer-organization.t28",
+      "chapter_id": "computer-organization.c02"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第6章 计算机的运算方法",
+      "title": "移位相加逐位求乘积",
+      "parent_topic_id": "computer-organization.t04",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-11-1",
+          "type": "简答",
+          "stem": "按移位相加计算无符号6×3，写出两次非零部分积与最终8位结果。",
+          "answer": "部分积6与12，累加18，8位00010010。",
+          "explanation": "乘数0011的第0、1位为1，分别加入6×2⁰和6×2¹。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-11-2",
+          "type": "简答",
+          "stem": "无符号4位15×15若只留4位，得到的位串是否代表真实积？写真实积和至少需要的积宽。",
+          "answer": "真实225=11100001₂，需8位；仅留4位0001不代表真实225。",
+          "explanation": "n位乘n位的无符号积最多需2n位，截断不能默认为数学结果。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t29",
+      "chapter_id": "computer-organization.c02"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第6章 计算机的运算方法",
+      "title": "逐位试商与余数恢复",
+      "parent_topic_id": "computer-organization.t04",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-12-1",
+          "type": "简答",
+          "stem": "用无符号逐位试商计算11÷3，给出商、余数和验证式。",
+          "answer": "商3，余2；11=3×3+2，且0≤2<3。",
+          "explanation": "被除数1011逐位带入，商0011；最终余数必须小于除数。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-12-2",
+          "type": "简答",
+          "stem": "不恢复余数法最终商已形成但余数为−2、除数为3，最终余数应如何修正？为什么不能直接报−2？",
+          "answer": "加除数3，最终余数为1；无符号除法最终余数应满足0≤R<D。",
+          "explanation": "负余数是加减交替过程的中间形式，末尾需恢复到标准余数。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t30",
+      "chapter_id": "computer-organization.c02"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第6章 计算机的运算方法",
+      "title": "浮点加减的对阶与规格化",
+      "parent_topic_id": "computer-organization.t05",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-13-1",
+          "type": "简答",
+          "stem": "用二进制规格化过程计算6+2.5，写对阶、尾数加法和规格化三步。",
+          "answer": "1.100×2²+0.101×2²；尾数相加10.001；右规1.0001×2³=8.5。",
+          "explanation": "向大阶2对齐，小阶尾数右移一位，出现10开头则右规。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-13-2",
+          "type": "简答",
+          "stem": "1.1₂×2²−1.01₂×2¹，对阶后得0.111₂×2²，规格化应怎样调整，真值多少？",
+          "answer": "左规为1.11₂×2¹，真值3.5。",
+          "explanation": "尾数左移一位乘2，阶减1除2，两者抵消保持数值。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t31",
+      "chapter_id": "computer-organization.c02"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第6章 计算机的运算方法",
+      "title": "ALU加减与状态标志",
+      "parent_topic_id": "computer-organization.t04",
+      "existing_qids": [
+        "uc-co-002"
+      ],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-14-1",
+          "type": "简答",
+          "stem": "ALU要用同一加法器完成A+B和A−B，怎样处理B与最低位输入进位？",
+          "answer": "加法原样输入B且低位进位0；减法输入反B且低位进位1，即A+反B+1。",
+          "explanation": "通过控制位异或B并同时控制初始进位，可统一加减。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t32",
+      "chapter_id": "computer-organization.c02"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第7章 指令系统",
+      "title": "指令字段位数与编码",
+      "parent_topic_id": "computer-organization.t07",
+      "existing_qids": [
+        "uc-co-007"
+      ],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-15-1",
+          "type": "简答",
+          "stem": "32位指令包含6位操作码、两个5位寄存器字段，余位为补码立即数。立即数位数和范围是什么？",
+          "answer": "16位，−32768至32767。",
+          "explanation": "32−6−5−5=16；n位补码范围−2^(n−1)到2^(n−1)−1。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t33",
+      "chapter_id": "computer-organization.c03"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第8章 CPU的结构和功能",
+      "title": "中断屏蔽与嵌套顺序",
+      "parent_topic_id": "computer-organization.t06",
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-16-1",
+          "type": "简答",
+          "stem": "B服务期间A请求，A优先级更高且未屏蔽、允许嵌套，执行返回顺序是什么？",
+          "answer": "主程序→B前半→A→B后半→主程序。",
+          "explanation": "A返回被打断的B，B完成才回主程序，不能A直接跳过B。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-16-2",
+          "type": "简答",
+          "stem": "中断服务尚未保护返回地址和寄存器就开放嵌套，可能出现什么问题？",
+          "answer": "高优先级中断可能覆盖返回信息或寄存器，恢复错误位置或错误数据。",
+          "explanation": "嵌套每一层都须保有自己的现场，不能只保存最外层。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t34",
+      "chapter_id": "computer-organization.c10"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第9章 控制单元的功能",
+      "title": "微操作按通路安排节拍",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-17-1",
+          "type": "简答",
+          "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+          "answer": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+          "explanation": "用Y保存第一操作数、Z暂存结果，避免同拍竞争同一总线。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-17-2",
+          "type": "简答",
+          "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+          "answer": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+          "explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t35",
+      "chapter_id": "computer-organization.c05"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第9章 控制单元的功能",
+      "title": "控制时序与就绪等待",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-18-1",
+          "type": "简答",
+          "stem": "在READ_WAIT状态，READY=0与READY=1时分别如何转移？为什么？",
+          "answer": "READY=0留等待态，READY=1锁存有效数据后继续。",
+          "explanation": "未就绪数据可能未稳定，固定一拍强行推进会读到旧值。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-18-2",
+          "type": "简答",
+          "stem": "为什么只知道当前指令是ADD仍不足以确定本拍全部控制信号？",
+          "answer": "还要知道取指/执行等当前状态、条件标志和外部READY等状态。",
+          "explanation": "同一ADD在取指与执行的动作不同，控制是译码、时序和条件的组合。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "computer-organization.t36",
+      "chapter_id": "computer-organization.c05"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第10章 控制单元的设计",
+      "title": "硬布线控制方程从状态表来",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-19-1",
+          "type": "简答",
+          "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+          "answer": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+          "explanation": "读请求在等待期间保持，锁存必须等READY有效。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-19-2",
+          "type": "简答",
+          "stem": "设计硬布线控制器，为何在列状态表前应先明确单总线还是多总线、ALU输入通路？",
+          "answer": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+          "explanation": "状态表不能忽略硬件约束，否则逻辑方程形式正确也会触发资源冲突。",
+          "ability": "场景应用",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t37",
+      "chapter_id": "computer-organization.c11"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第10章 控制单元的设计",
+      "title": "微程序入口与下一微地址",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-20-1",
+          "type": "简答",
+          "stem": "控存公共取指入口00，ADD执行入口20，ADD微程序结束应回00。这里回00是否把用户程序PC清0？",
+          "answer": "否，改变的是微PC，使控制器重新取下一条机器指令；机器PC仍按程序执行流保持。",
+          "explanation": "机器PC与微PC属于不同地址空间，不能混为同一寄存器。",
+          "ability": "概念辨析",
+          "difficulty": "基础"
+        },
+        {
+          "id": "gap-co-textbook-20-2",
+          "type": "简答",
+          "stem": "写出三种下一微地址来源，并解释条件等待态为何可指向自身。",
+          "answer": "顺序微PC+1、微指令显式下地址、条件或操作码入口映射；未READY时回自身等待。",
+          "explanation": "还可有微子程序返回地址等，地址选择由条件与顺序控制字段共同决定。",
+          "ability": "过程推演",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t38",
+      "chapter_id": "computer-organization.c11"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_title": "第10章 控制单元的设计",
+      "title": "微指令编码与控存容量",
+      "parent_topic_id": null,
+      "existing_qids": [],
+      "new_questions": [
+        {
+          "id": "gap-co-textbook-21-1",
+          "type": "简答",
+          "stem": "同一微指令字段需选择4种互斥动作之一或不动作，最少几位？为什么不是2位？",
+          "answer": "3位；共5种状态，2位只能4种，3位可8种。",
+          "explanation": "若无不动作且保证必选一个才可能2位，题目条件不能省。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-co-textbook-21-2",
+          "type": "简答",
+          "stem": "控制存储器64条微指令，每条24位，容量多少bit与B？若要直接编码64个下地址，需几位？",
+          "answer": "1536bit=192B；下地址6位。",
+          "explanation": "64×24=1536，除8换字节；2⁶=64。",
+          "ability": "计算求解",
+          "difficulty": "应用"
+        }
+      ],
+      "topic_id": "computer-organization.t39",
+      "chapter_id": "computer-organization.c11"
+    }
+  ],
+  "notes": [
+    "旧题按实际任务迁入新卡，答案与解析不变时保留ID",
+    "新增练习均为原创结构化简答，不冒充真题",
+    "每新卡现有题与新题总计至少2道，稳定topic_id交由root注册后加入题库"
+  ],
+  "student_review_additions": [
+    {
+      "topic_id": "computer-organization.t40",
+      "title": "Booth位对判断与整体右移",
+      "chapter_title": "第6章 计算机的运算方法",
+      "question_ids": [
+        "gap-co-textbook-booth-01"
+      ],
+      "reason": "讲义已有有符号乘法执行，须有独立短卡和中间状态迁移练习。"
+    }
+  ]
+}

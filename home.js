@@ -3,6 +3,7 @@
 
   const QUESTION_INDEX = Array.isArray(window.HOME_QUESTION_INDEX) ? window.HOME_QUESTION_INDEX : [];
   const COURSE_INDEX = Array.isArray(window.HOME_COURSE_INDEX) ? window.HOME_COURSE_INDEX : [];
+  StudyReview.migrateLayouts(COURSE_INDEX);
   const STORE_KEYS = ["shaoyang-quiz-v5", "shaoyang-quiz-v4", "shaoyang-quiz-v3", "shaoyang-quiz-v2", "shaoyang-quiz-v1"];
   const SUBJECT_ALIASES = {
     "Office软件操作": "办公软件",
@@ -65,11 +66,6 @@
     }
   }
 
-  function chapterNumberFromId(value) {
-    const match = String(value || "").match(/(\d+)$/);
-    return match ? Number(match[1]) : 0;
-  }
-
   function resumeChapter(courseName, lectureProgress) {
     const chapterCount = COURSE_INDEX.find((item) => item.name === courseName)?.chapter_count || 0;
     const courseProgress = lectureProgress[courseName];
@@ -77,7 +73,8 @@
     const recent = lastLearning();
     if (!chapter && recent?.course === courseName) chapter = Number(recent.chapter) || 0;
     if (!chapter && Array.isArray(courseProgress?.lecture) && courseProgress.lecture.length) {
-      chapter = chapterNumberFromId(courseProgress.lecture.at(-1));
+      const course = COURSE_INDEX.find((item) => item.name === courseName);
+      chapter = (course?.chapter_ids || []).indexOf(courseProgress.lecture.at(-1)) + 1;
     }
     return chapter > 0 && chapter <= chapterCount ? chapter : 1;
   }
@@ -143,7 +140,8 @@
 
   function updateMobileLinks(courseName, lectureProgress = readLectureProgress()) {
     const chapter = resumeChapter(courseName, lectureProgress);
-    const hash = `#course=${encodeURIComponent(courseName)}&chapter=${chapter}`;
+    const course = COURSE_INDEX.find((item) => item.name === courseName);
+    const hash = `#course=${encodeURIComponent(courseName)}&chapter=${chapter}${course?.layout_revision ? `&layout=${encodeURIComponent(course.layout_revision)}` : ""}`;
     document.getElementById("mobile-notes-link").href = `./notes.html${hash}`;
     document.getElementById("mobile-recall-link").href = `./color-notes.html${hash}`;
     document.getElementById("mobile-quiz-link").href = `./quiz.html?course=${encodeURIComponent(courseName)}&mode=home`;
@@ -170,9 +168,10 @@
       const cards = COURSES.filter((course) => course.group === group).map((course) => {
         const stats = courseStats(progress, course.name);
         const chapterCount = COURSE_INDEX.find((item) => item.name === course.name)?.chapter_count || 0;
-        const completedCount = new Set(lectureProgress[course.name]?.completed || []).size;
+        const courseData = COURSE_INDEX.find((item) => item.name === course.name);
+        const completedCount = new Set((lectureProgress[course.name]?.completed || []).filter(id => courseData?.chapter_ids?.includes(id))).size;
         const resumeAt = resumeChapter(course.name, lectureProgress);
-        const noteHash = `#course=${encodeURIComponent(course.name)}&chapter=${resumeAt}`;
+        const noteHash = `#course=${encodeURIComponent(course.name)}&chapter=${resumeAt}${courseData?.layout_revision ? `&layout=${encodeURIComponent(courseData.layout_revision)}` : ""}`;
         const isCurrent = course.name === highlighted;
         const progressParts = [];
         if (completedCount) progressParts.push(`讲义 ${completedCount}/${chapterCount} 章`);
@@ -260,6 +259,7 @@
       if (dueCards.length) {
         const [, chapter, card] = dueCards[0][0].split("::");
         const params = new URLSearchParams({course: course.name, chapter, card, recall: "due"});
+        if (course.layout_revision) params.set("layout", course.layout_revision);
         entries.push({label: `${course.name} · 回忆 ${dueCards.length} 个知识点`, href: `./color-notes.html#${params}`, count: dueCards.length});
       }
       if (dueQuestions) entries.push({label: `${course.name} · 重练 ${dueQuestions} 题`, href: `./quiz.html?${new URLSearchParams({course: course.name, mode: "review"})}`, count: dueQuestions});

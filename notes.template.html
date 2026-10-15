@@ -903,6 +903,7 @@
     let pendingStudyScroll = 0;
     let mobileNavReturnFocus = null;
     const readingProgressKey = "shaoyang-reading-progress-v1";
+    StudyReview.migrateLayouts(items);
     const recallRatings = StudyReview.read();
 
     function escapeHtml(value) {
@@ -1388,6 +1389,7 @@
             if (!link.pathname.endsWith(`/${file}`)) continue;
             const targetIndex = currentCourse.chapters?.[kind]?.indexOf(title) ?? -1;
             const target = new URLSearchParams({course: currentCourse.name});
+            if (currentCourse.layout_revision) target.set("layout", currentCourse.layout_revision);
             if (targetIndex >= 0) target.set("chapter", String(targetIndex + 1));
             link.href = `./${file}#${target.toString()}`;
           }
@@ -1398,6 +1400,7 @@
         const params = new URLSearchParams();
         params.set("course", currentCourse.name);
         params.set("chapter", String(activeChapterIndex + 1));
+        if (currentCourse.layout_revision) params.set("layout", currentCourse.layout_revision);
         if (colorMode) params.set("card", String(activeRecallIndex + 1));
         if (sectionId) params.set("section", sectionId);
         history.replaceState(history.state, "", `#${params.toString()}`);
@@ -1408,6 +1411,7 @@
             chapter: activeChapterIndex + 1,
             card: colorMode ? activeRecallIndex + 1 : undefined,
             savedAt: new Date().toISOString(),
+            layoutRevision: currentCourse.layout_revision,
           }));
         } catch {}
       }
@@ -1645,6 +1649,7 @@
           const companion = document.createElement("a");
           companion.className = "chapter-study-link";
           const route = new URLSearchParams({course: currentCourse.name, chapter: String(otherIndex + 1)});
+          if (currentCourse.layout_revision) route.set("layout", currentCourse.layout_revision);
           companion.href = `./${colorMode ? "notes" : "color-notes"}.html#${route.toString()}`;
           companion.textContent = colorMode ? "查看本章讲义 →" : "查看本章重点与易错 →";
           actions.appendChild(companion);
@@ -1696,6 +1701,14 @@
       recallRetryQueue = [];
       recallRetryMode = false;
       const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
+      if (course.layout_revision && routeParams.has("chapter") && !routeParams.has("topic") && routeParams.get("layout") !== course.layout_revision) {
+        const target = StudyReview.mapOldPosition(course, routeParams.get("chapter"), colorMode ? routeParams.get("card") || 1 : 1);
+        routeParams.set("chapter", String(target.chapter));
+        routeParams.set("card", String(target.card));
+        routeParams.set("layout", course.layout_revision);
+        routeParams.delete("section");
+        history.replaceState(history.state, "", `#${routeParams}`);
+      }
       dueRecallQueue = null;
       document.getElementById("recall-status").hidden = true;
       const routeTopic = routeParams.get("topic");
@@ -1718,7 +1731,14 @@
             section = sections[sectionIndex];
           }
         }
-        if (sectionIndex >= 0) setActiveChapter(sectionIndex, {replaceRoute: false});
+        if (sectionIndex >= 0) {
+          setActiveChapter(sectionIndex, {replaceRoute: false});
+          if (colorMode && point) {
+            const card = point.closest(".recall-card");
+            const cardIndex = [...section.querySelectorAll(".recall-card")].indexOf(card);
+            if (cardIndex >= 0) activeRecallIndex = cardIndex;
+          }
+        }
         scrollToStudyTarget(point || section);
       } else if (routeSection) {
         const point = document.getElementById(routeSection);
@@ -1754,6 +1774,7 @@
           chapter: activeChapterIndex + 1,
           card: colorMode ? activeRecallIndex + 1 : undefined,
           savedAt: new Date().toISOString(),
+          layoutRevision: course.layout_revision,
         }));
       } catch {}
       study.classList.remove("hidden");
@@ -1971,6 +1992,7 @@
       const chapterTitle = currentCourse.chapters?.[pageKind]?.[activeChapterIndex];
       const targetIndex = currentCourse.chapters?.[targetKind]?.indexOf(chapterTitle) ?? -1;
       const targetRoute = new URLSearchParams({course: currentCourse.name});
+      if (currentCourse.layout_revision) targetRoute.set("layout", currentCourse.layout_revision);
       if (targetIndex >= 0) targetRoute.set("chapter", String(targetIndex + 1));
       const courseHash = `#${targetRoute.toString()}`;
       if (mobileModuleSelect.value === "lecture") location.href = `./notes.html${courseHash}`;

@@ -1,0 +1,1855 @@
+{
+  "course": "计算机组成原理",
+  "book": "唐朔飞《计算机组成原理》第3版，高等教育出版社",
+  "source": "https://icc.hep.com.cn/loadShowHome.action?courseInfoId=5000003401",
+  "verified": "2026-10-15 via official publisher HTML",
+  "chapter_count": 10,
+  "section_count": 38,
+  "rows": [
+    {
+      "textbook_section": "1.1 计算机系统简介",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第1章 计算机系统概论",
+      "learner_outcome": "软硬件层次和翻译/解释",
+      "mechanism": "软硬件层次和翻译/解释",
+      "example": "区分编译器与CPU角色",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有软硬件定义但语义跳步；从同电脑换任务解释，再讲编译器、CPU和接口层次。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "1.1",
+          "status": "本节任务可解释",
+          "evidence": {
+            "mechanism_actually_read": "认识硬件/软件/CPU/寄存器，区分ISA接口与实现；正文先解释寄存器是少量快速位置。",
+            "student_execution_or_limit": "我能说软件换动作、硬件执行动作；高级语言不是CPU原生指令。",
+            "linked_evidence": "01-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "1.1",
+          "status": "已通读支持",
+          "evidence": "同电脑切换文档与3+5解释软硬件；编译器/解释器到机器指令路径已给。已作01-2，CPU不直接执行源文件。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t01"
+      ],
+      "chapter_id": "computer-organization.c01",
+      "question_ids": [
+        "sp-core-co-013",
+        "sp-core-co-019",
+        "sp-core-co-039"
+      ]
+    },
+    {
+      "textbook_section": "1.2 计算机的基本组成",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第1章 计算机系统概论",
+      "learner_outcome": "五部件连接、取指和执行",
+      "mechanism": "五部件连接、取指和执行",
+      "example": "按PC追踪ADD",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原五部件可用，但PC/IR/R1先用未解释；现先声明地址、内容和ADD写回，再跟踪。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "1.2",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "PC给地址→主存读指令→IR保存→ALU相加→R1写回；PC与数据分开。",
+            "student_execution_or_limit": "PC100按4B到104，3+5写R1=8，R2不变。",
+            "linked_evidence": "sp-core-co-001"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "1.2",
+          "status": "已通读且有状态复现",
+          "evidence": "ADD R1,R2先约定写回R1；PC100取4B后104，R1由3变8、R2保持5。区分地址、指令内容与结果。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t01"
+      ],
+      "chapter_id": "computer-organization.c01",
+      "question_ids": [
+        "sp-core-co-013",
+        "sp-core-co-019",
+        "sp-core-co-039"
+      ]
+    },
+    {
+      "textbook_section": "1.3 计算机硬件的主要技术指标",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第1章 计算机系统概论",
+      "learner_outcome": "IC/CPI/频率与单位",
+      "mechanism": "IC/CPI/频率与单位",
+      "example": "100万条/CPI2/1GHz",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有性能公式与算例；补CPI每条几拍、加权比例的因果和单位衔接。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "1.3",
+          "status": "本节任务可计算",
+          "evidence": {
+            "mechanism_actually_read": "CPI按比例加权，IC×CPI/f把条数换拍再换秒，区分响应/吞吐。",
+            "student_execution_or_limit": "100万条CPI2、1GHz=2ms；另10^9×2/2GHz=1s。",
+            "linked_evidence": "uf-co-006"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "1.3",
+          "status": "已独立迁移",
+          "evidence": "正文先解释CPI为每条几拍、比例加权再到IC×CPI/f；新做200万×1.5/1GHz=3ms。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t02"
+      ],
+      "chapter_id": "computer-organization.c01",
+      "question_ids": [
+        "uf-co-006",
+        "sp-core-co-001",
+        "sp-core-co-018",
+        "sp-core-co-041",
+        "uc-co-009"
+      ]
+    },
+    {
+      "textbook_section": "2.1 计算机的发展史",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第2章 计算机的发展及应用",
+      "learner_outcome": "器件演变和软件层次",
+      "mechanism": "器件演变和软件层次",
+      "example": "按器件判断代际并解释速度与集成度",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原七章无发展史；补器件代际、软件演变及历史“第一”的限定条件。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "2.1",
+          "status": "本节任务可解释",
+          "evidence": {
+            "mechanism_actually_read": "主要器件四代，语言翻译路径，历史第一需限定。",
+            "student_execution_or_limit": "不用主频排序：电子管→晶体管→集成→大规模集成。",
+            "linked_evidence": "01-1"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "2.1",
+          "status": "已作链接题",
+          "evidence": "器件演进与语言层次有因果；01-1复现四代，01-2复述CPU/编译分工。未把历史所有“第一”泛化同一机器。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t19"
+      ],
+      "chapter_id": "computer-organization.c08",
+      "question_ids": [
+        "gap-co-textbook-01-1",
+        "gap-co-textbook-01-2"
+      ]
+    },
+    {
+      "textbook_section": "2.2 计算机的应用和展望",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第2章 计算机的发展及应用",
+      "learner_outcome": "科学计算、控制、信息管理与并行边界",
+      "mechanism": "科学计算、控制、信息管理与并行边界",
+      "example": "选择实时控制和批量处理",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原缺应用和展望；补任务分类与串行部分限制多核加速的数值例。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "2.2",
+          "status": "本节任务可计算",
+          "evidence": {
+            "mechanism_actually_read": "分类按主要任务，并行仅缩短p部分，总时间合并求倒数。",
+            "student_execution_or_limit": "20%不变+80%/4=40%，2.5倍。",
+            "linked_evidence": "02-1/02-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "2.2",
+          "status": "已独立迁移",
+          "evidence": "80%/4案例之后新做75%/3：时间0.5、加速2倍；02-2区分实时响应期限与离线批量吞吐。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t20"
+      ],
+      "chapter_id": "computer-organization.c08",
+      "question_ids": [
+        "gap-co-textbook-02-1",
+        "gap-co-textbook-02-2"
+      ]
+    },
+    {
+      "textbook_section": "3.1 总线的基本概念",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第3章 系统总线",
+      "learner_outcome": "主从设备与共享连接",
+      "mechanism": "主从设备与共享连接",
+      "example": "两个主设备争用同一总线",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原只列总线信号；补共享路径、主从角色及多源电气冲突。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "3.1",
+          "status": "剩余跳步：三态/高阻未解释",
+          "evidence": {
+            "mechanism_actually_read": "主从发起与访问、共享数据线不能多源驱动；三态控制术语未展开。",
+            "student_execution_or_limit": "仲裁决定一个主设备；DMA也可获准。",
+            "linked_evidence": "03-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "3.1",
+          "status": "已通读支持",
+          "evidence": "主从由本次发起访问角色定义，DMA获权可成主设备；同组数据线多源同时输出冲突，能解释仲裁必要。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t12"
+      ],
+      "chapter_id": "computer-organization.c06",
+      "question_ids": [
+        "gap-co-013",
+        "ap-co-002",
+        "sp-core-co-016",
+        "sp-core-co-022",
+        "sp-core-co-023",
+        "sp-core-co-036"
+      ]
+    },
+    {
+      "textbook_section": "3.2 总线的分类",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第3章 系统总线",
+      "learner_outcome": "片内/系统/通信及三类信号",
+      "mechanism": "片内/系统/通信及三类信号",
+      "example": "区分地址与数据宽度",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有地址/数据/控制分类；补连接范围、串并行及并行不必更快的边界。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "3.2",
+          "status": "本节分类可说明",
+          "evidence": {
+            "mechanism_actually_read": "地址选位置、数据传内容、控制传命令；范围分类与信号分类不是一回事。",
+            "student_execution_or_limit": "32数据位不等于32位地址，串行不必然慢。",
+            "linked_evidence": "03-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "3.2",
+          "status": "已通读支持",
+          "evidence": "连接范围和信号职责为两种分类；地址选单元、数据传内容、控制携读写/请求/应答。串并行不是同步异步分类。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t12"
+      ],
+      "chapter_id": "computer-organization.c06",
+      "question_ids": [
+        "gap-co-013",
+        "ap-co-002",
+        "sp-core-co-016",
+        "sp-core-co-022",
+        "sp-core-co-023",
+        "sp-core-co-036"
+      ]
+    },
+    {
+      "textbook_section": "3.3 总线性能及性能指标",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第3章 系统总线",
+      "learner_outcome": "宽度×传输率×利用率",
+      "mechanism": "宽度×传输率×利用率",
+      "example": "32bit×100MHz×利用率80%",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有宽度乘传输率；补每周期次数和利用率，区分bit/s与B/s。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "3.3",
+          "status": "本节任务可计算",
+          "evidence": {
+            "mechanism_actually_read": "宽度除8×每秒传次数，再乘利用率；明确Mb与MB。",
+            "student_execution_or_limit": "32bit100MHz双拍80%得640MB/s。",
+            "linked_evidence": "章内带宽手算"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "3.3",
+          "status": "已独立迁移",
+          "evidence": "64bit/50MHz/双传/75%推600MB/s；链接gap-co-013的200MHz双传得3.2GB/s，bit→B先除8。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t12"
+      ],
+      "chapter_id": "computer-organization.c06",
+      "question_ids": [
+        "gap-co-013",
+        "ap-co-002",
+        "sp-core-co-016",
+        "sp-core-co-022",
+        "sp-core-co-023",
+        "sp-core-co-036"
+      ]
+    },
+    {
+      "textbook_section": "3.4 总线结构",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第3章 系统总线",
+      "learner_outcome": "单总线争用、多总线并行",
+      "mechanism": "单总线争用、多总线并行",
+      "example": "单总线两对设备能否同时传",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原缺总线结构；补单总线、多总线及桥接处争用。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "3.4",
+          "status": "本节任务可解释",
+          "evidence": {
+            "mechanism_actually_read": "单路争用、分层与桥接仍可能形成瓶颈；USB/PCIe不照传统共享并行定义。",
+            "student_execution_or_limit": "可解释两条路径经过同一桥为何仍排队。",
+            "linked_evidence": "正文车道反例"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "3.4",
+          "status": "已通读支持",
+          "evidence": "单总线共享资源与多总线桥接争用给出场景；PCIe点对点串行例提醒名称不能代替拓扑。此节为概念比较，未伪造新的数值执行题。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t12"
+      ],
+      "chapter_id": "computer-organization.c06",
+      "question_ids": [
+        "gap-co-013",
+        "ap-co-002",
+        "sp-core-co-016",
+        "sp-core-co-022",
+        "sp-core-co-023",
+        "sp-core-co-036"
+      ]
+    },
+    {
+      "textbook_section": "3.5 总线控制",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第3章 系统总线",
+      "learner_outcome": "链式/计数/独立仲裁；同步、握手、半同步",
+      "mechanism": "链式/计数/独立仲裁；同步、握手、半同步",
+      "example": "请求/应答四阶段与近端优先",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原只点名链式/独立仲裁；补计数仲裁、同步/异步握手/半同步状态。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "3.5",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "链式/计数/独立请求的授权，四相REQ/ACK握手，半同步WAIT。",
+            "student_execution_or_limit": "先设备1；REQ1 ACK0不采样；采样后先撤REQ再撤ACK。",
+            "linked_evidence": "03-1/04-1/04-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "3.5",
+          "status": "已复现过程",
+          "evidence": "按REQ→ACK→撤REQ→撤ACK复述四相；03-1设备1先且可能饿死3，04-2半同步保留时钟。图与同四步一致。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t21",
+        "computer-organization.t22"
+      ],
+      "chapter_id": "computer-organization.c06",
+      "question_ids": [
+        "gap-co-textbook-03-1",
+        "gap-co-textbook-03-2",
+        "gap-co-textbook-04-1",
+        "gap-co-textbook-04-2"
+      ]
+    },
+    {
+      "textbook_section": "4.1 概述",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第4章 存储器",
+      "learner_outcome": "层次、局部性和存储周期",
+      "mechanism": "层次、局部性和存储周期",
+      "example": "辨别Cache/TLB/缺页",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原存储层次和局部性可用；保留层次图及预测任务。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "4.1",
+          "status": "原阻断已修，改数据任务可独立完成",
+          "evidence": {
+            "textbook_section": "4.1",
+            "fresh_task": "0x2B每块8B，块号与偏移？8种位置需几位？",
+            "independent_answer": "2×16+11=43；43÷8=5余3，块5偏移3；2³=8需3位。",
+            "result": "0x、取整、取余和编号约定已在使用前定义，能在尚未进入第6章时先做本章地址算术。",
+            "read_revised_body_with_details_removed": true,
+            "status": "原阻断任务复测通过"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "4.1",
+          "status": "已作链接题",
+          "evidence": "层次速度/容量/位价及局部性定义；gap-co-004以邻接元素和循环重访分别解释空间/时间。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t08"
+      ],
+      "chapter_id": "computer-organization.c04",
+      "question_ids": [
+        "gap-co-004",
+        "sp-core-co-007",
+        "sp-core-co-015"
+      ]
+    },
+    {
+      "textbook_section": "4.2 主存储器",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第4章 存储器",
+      "learner_outcome": "芯片扩展、DRAM刷新、交叉存储、校验",
+      "mechanism": "芯片扩展、DRAM刷新、交叉存储、校验",
+      "example": "8片扩展；4路交叉；汉明1011",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有芯片扩展和刷新；补周期、片选、低位交叉、奇偶和汉明校验流程。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "4.2",
+          "status": "原阻断已修，改数据任务可独立完成",
+          "evidence": {
+            "textbook_section": "4.2",
+            "fresh_task": "数据1010填位置3/5/6/7，按位置1→7给偶校验汉明码。",
+            "independent_answer": "p1组数据1/0/0→p1=1；p2组1/1/0→p2=0；p4组0/1/0→p4=1；最终1011010。",
+            "result": "能由位置表自行圈组与补奇偶，不再从折叠答案倒猜。",
+            "read_revised_body_with_details_removed": true,
+            "status": "原阻断任务复测通过"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "4.2",
+          "status": "机制/修复定点复验通过",
+          "evidence": "8K×8→32K×16是字4倍×位2倍=8片；4路地址13余1商3；汉明4数据r=3，新增分组表后数据1100得0111100并逐组核验。新做0101得0100101。初版组规则太短，现源已补表。 新构建28f33c9ea0cfe108已在390/1280明暗页面实际确认；t40的卡→纯题池和参考状态另完成真点击复测。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t09",
+        "computer-organization.t23",
+        "computer-organization.t24"
+      ],
+      "chapter_id": "computer-organization.c04",
+      "question_ids": [
+        "uf-co-003",
+        "gap-co-011",
+        "gap-co-textbook-05-1",
+        "gap-co-textbook-05-2",
+        "gap-co-textbook-06-1",
+        "gap-co-textbook-06-2",
+        "ap-co-004",
+        "sp-core-co-024",
+        "sp-core-co-025",
+        "sp-core-co-026",
+        "sp-core-co-035",
+        "sp-core-co-037",
+        "sp-core-co-042",
+        "uc-co-003"
+      ]
+    },
+    {
+      "textbook_section": "4.3 高速缓冲存储器",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第4章 存储器",
+      "learner_outcome": "三种映射、替换、写策略与AMAT",
+      "mechanism": "三种映射、替换、写策略与AMAT",
+      "example": "0x1234拆分；访问序列",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原Cache地址拆分及访问序列可用；保留有效配图、命中判定与AMAT口径。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "4.3",
+          "status": "原阻断已修，改数据任务可独立完成",
+          "evidence": {
+            "textbook_section": "4.3",
+            "fresh_task": "2行直接映射，每块8B，字节地址0x2B，应查何处？该行有效但标记1时命中吗？",
+            "independent_answer": "地址43→块5偏移3；5mod2=行1、tag=floor(5/2)=2。有效但tag1不是块5，未命中。",
+            "result": "新正文先讲块/行/组/路/有效位，小十进制例已能推到改数据的十六进制例。",
+            "read_revised_body_with_details_removed": true,
+            "status": "原阻断任务复测通过"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "4.3",
+          "status": "机制/修复定点复验通过",
+          "evidence": "0x2345在64B/64组中偏移5、组13、标记2；0,1,0,2,0直接映射仅第3次命中，20%；2+0.2×50=12ns。源已补块/行/组/路定义，需新构建确认。 新构建28f33c9ea0cfe108已在390/1280明暗页面实际确认；t40的卡→纯题池和参考状态另完成真点击复测。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t10",
+        "computer-organization.t15",
+        "computer-organization.t16"
+      ],
+      "chapter_id": "computer-organization.c04",
+      "question_ids": [
+        "uf-co-004",
+        "gap-co-012",
+        "gap-accept-card-core-24-1",
+        "sp-core-co-008",
+        "sp-core-co-009",
+        "sp-core-co-027",
+        "sp-core-co-028",
+        "sp-core-co-029",
+        "sp-core-co-043",
+        "sp-core-co-044",
+        "uc-co-004",
+        "uc-co-005",
+        "uc-co-010",
+        "hn-recall-sy26-001"
+      ]
+    },
+    {
+      "textbook_section": "4.4 辅助存储器",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第4章 存储器",
+      "learner_outcome": "磁盘柱面磁头扇区、平均延迟；光盘和Flash",
+      "mechanism": "磁盘柱面磁头扇区、平均延迟；光盘和Flash",
+      "example": "7200rpm平均等待与LBA定位",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原无辅存完整节；补磁盘几何/LBA、旋转等待、容量及SSD和光盘边界。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "4.4",
+          "status": "本节任务可计算；除余符号需4章统一前置",
+          "evidence": {
+            "mechanism_actually_read": "寻道+随机半转等待+传输；CHS/LBA除余，SSD无机械等待。",
+            "student_execution_or_limit": "7200rpm→半转4.17ms；6+4.17+1=11.17ms；LBA70→1/0/7。",
+            "linked_evidence": "07-1/07-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "4.4",
+          "status": "已作链接题",
+          "evidence": "7200rpm半转4.167ms，题07-1加6+1得11.167ms；LBA70、H4/S16得柱面1/磁头0/扇区7。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t25"
+      ],
+      "chapter_id": "computer-organization.c04",
+      "question_ids": [
+        "gap-co-textbook-07-1",
+        "gap-co-textbook-07-2"
+      ]
+    },
+    {
+      "textbook_section": "5.1 概述",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第5章 输入输出系统",
+      "learner_outcome": "I/O组织和控制方式",
+      "mechanism": "I/O组织和控制方式",
+      "example": "偶发按键和磁盘大块数据",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原I/O混入总线章；独立解释I/O系统、编址、控制方式与通道。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "5.1",
+          "status": "本节任务可解释",
+          "evidence": {
+            "mechanism_actually_read": "统一/独立编址与查询/中断/DMA两类控制维度分开，介绍通道边界。",
+            "student_execution_or_limit": "能够说端口的空间分配不是设备内容，串并行不等于通知方式。",
+            "linked_evidence": "08-1"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "5.1",
+          "status": "已通读支持",
+          "evidence": "接口连接CPU/内存与设备，统一编址用访存指令，独立编址用I/O指令；端口寄存器非普通数据。通道与基本DMA职责有区分。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t13"
+      ],
+      "chapter_id": "computer-organization.c09",
+      "question_ids": [
+        "uf-co-008",
+        "ap-co-003",
+        "ap-co-005",
+        "sp-core-co-011",
+        "sp-core-co-032",
+        "sp-core-co-034",
+        "sp-core-co-046",
+        "uc-co-012"
+      ]
+    },
+    {
+      "textbook_section": "5.2 I/O设备",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第5章 输入输出系统",
+      "learner_outcome": "输入、输出与块/字符设备",
+      "mechanism": "输入、输出与块/字符设备",
+      "example": "显示帧缓存容量",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原缺设备节；补输入输出、块字符及帧缓存容量的参数含义。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "5.2",
+          "status": "补做不同数据迁移任务通过；不等于该节全部细任务均测",
+          "evidence": {
+            "mechanism_actually_read": "输入输出与块/字符交换，帧缓容量像素×位数。",
+            "student_execution_or_limit": "知道触摸屏两用，刷新率不代替颜色位数；本节暂无自己独立帧缓数值题。",
+            "linked_evidence": "正文容量规则"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "5.2",
+          "status": "已通读支持",
+          "evidence": "触摸屏兼输入输出；块设备与字符流用途区别、显示缓存像素×位数已列。没有独立尝试新容量题，不能将章节两题当此节已独立算题。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t13"
+      ],
+      "chapter_id": "computer-organization.c09",
+      "question_ids": [
+        "uf-co-008",
+        "ap-co-003",
+        "ap-co-005",
+        "sp-core-co-011",
+        "sp-core-co-032",
+        "sp-core-co-034",
+        "sp-core-co-046",
+        "uc-co-012"
+      ]
+    },
+    {
+      "textbook_section": "5.3 I/O接口",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第5章 输入输出系统",
+      "learner_outcome": "数据/状态/控制寄存器、编址与握手",
+      "mechanism": "数据/状态/控制寄存器、编址与握手",
+      "example": "状态就绪→读数据寄存器",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原只讲编址；补接口数据/状态/控制寄存器与一次输入握手。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "5.3",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "状态/数据/控制三类接口寄存器，写命令→设备→READY→读数据，清状态依协议。",
+            "student_execution_or_limit": "键盘判断就绪/字符/允许中断对应三寄存器。",
+            "linked_evidence": "08-1"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "5.3",
+          "status": "已作链接题",
+          "evidence": "08-1逐一答状态/数据/控制寄存器；输入链写启动→设备采集→置READY→查状态→读内容，清除规则按设备。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t26"
+      ],
+      "chapter_id": "computer-organization.c09",
+      "question_ids": [
+        "gap-co-textbook-08-1",
+        "sp-core-co-012"
+      ]
+    },
+    {
+      "textbook_section": "5.4 程序查询方式",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第5章 输入输出系统",
+      "learner_outcome": "轮询流程、CPU时间比例",
+      "mechanism": "轮询流程、CPU时间比例",
+      "example": "1k次查询×20拍",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原查询一句带过；补忙等循环、占CPU比例及响应太迟的失败条件。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "5.4",
+          "status": "本节任务可计算",
+          "evidence": {
+            "mechanism_actually_read": "反复读状态，查询成本Nc/f，旧值不能当新值，间隔与开销折中。",
+            "student_execution_or_limit": "2MHz每秒2000次每次10拍=1%；未就绪不读。",
+            "linked_evidence": "09-1/09-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "5.4",
+          "status": "已作链接题",
+          "evidence": "09-1为2000×10/2MHz=1%；09-2 READY=0旧数据不读取、慢查询可能溢出。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t27"
+      ],
+      "chapter_id": "computer-organization.c09",
+      "question_ids": [
+        "gap-co-textbook-09-1",
+        "gap-co-textbook-09-2"
+      ]
+    },
+    {
+      "textbook_section": "5.5 程序中断方式",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第5章 输入输出系统",
+      "learner_outcome": "请求、响应、向量、现场、屏蔽",
+      "mechanism": "请求、响应、向量、现场、屏蔽",
+      "example": "中断保存与返回轨迹",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有中断流程；补保护现场、响应边界和请求屏蔽语义。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "5.5",
+          "status": "本节过程可解释",
+          "evidence": {
+            "mechanism_actually_read": "请求响应、断点保护、入口、服务、恢复，先保存后开嵌套。",
+            "student_execution_or_limit": "未保存就嵌套会覆盖自己返回状态。",
+            "linked_evidence": "16-2跨8.4证据"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "5.5",
+          "status": "已通读并与8.4衔接",
+          "evidence": "按请求→允许边界响应→保存断点/状态→服务→恢复返回复述；寄存器在服务前保护，嵌套前先保现场。具体嵌套实做见8.4。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t13"
+      ],
+      "chapter_id": "computer-organization.c09",
+      "question_ids": [
+        "uf-co-008",
+        "ap-co-003",
+        "ap-co-005",
+        "sp-core-co-011",
+        "sp-core-co-032",
+        "sp-core-co-034",
+        "sp-core-co-046",
+        "uc-co-012"
+      ]
+    },
+    {
+      "textbook_section": "5.6 DMA方式",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第5章 输入输出系统",
+      "learner_outcome": "初始化、仲裁、传输、结束；周期挪用",
+      "mechanism": "初始化、仲裁、传输、结束；周期挪用",
+      "example": "256B一块的总线占用",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有DMA分工图；补地址计数变化、突发/挪用/交替传送。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "5.6",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "DMA初始化→申请总线→传送→地址/计数更新→完成中断，三类传送方式。",
+            "student_execution_or_limit": "1000起搬10B到1010，剩246；CPU不是逐字节搬运者。",
+            "linked_evidence": "DMA章内手算"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "5.6",
+          "status": "已独立迁移",
+          "evidence": "DMA新起址2000/长度256/已送16，下一2016剩240；图数据不逐字经CPU，与文字资源竞争边界一致。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t13"
+      ],
+      "chapter_id": "computer-organization.c09",
+      "question_ids": [
+        "uf-co-008",
+        "ap-co-003",
+        "ap-co-005",
+        "sp-core-co-011",
+        "sp-core-co-032",
+        "sp-core-co-034",
+        "sp-core-co-046",
+        "uc-co-012"
+      ]
+    },
+    {
+      "textbook_section": "6.1 无符号数和有符号数",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第6章 计算机的运算方法",
+      "learner_outcome": "位权、字符码、机器数与溢出",
+      "mechanism": "位权、字符码、机器数与溢出",
+      "example": "8位−5与范围",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有补码和数制名词；补小数位权、除2倒读/乘2顺读与编码区别。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "6.1",
+          "status": "本节任务可复现；出现在4章之后导致先修倒置",
+          "evidence": {
+            "mechanism_actually_read": "二十六进制位权转换、负补码、扩展、定宽范围与端序。",
+            "student_execution_or_limit": "11110100是−12，符号扩展复制1；小数0.101=.625。",
+            "linked_evidence": "10-1"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "6.1",
+          "status": "已作链接题",
+          "evidence": "2D→00101101；11110110取反加1得10故−10；范围/符号扩展与无符号解释区分。补码原/反定义和端序先后完整。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t03",
+        "computer-organization.t04",
+        "computer-organization.t28"
+      ],
+      "chapter_id": "computer-organization.c02",
+      "question_ids": [
+        "uf-co-002",
+        "gap-co-001",
+        "gap-co-010",
+        "gap-co-textbook-10-1",
+        "gap-co-textbook-10-2",
+        "sp-core-co-002",
+        "sp-core-co-003",
+        "sp-core-co-038",
+        "uc-co-001"
+      ]
+    },
+    {
+      "textbook_section": "6.2 数的定点表示和浮点表示",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第6章 计算机的运算方法",
+      "learner_outcome": "定点范围、IEEE字段及特殊值",
+      "mechanism": "定点范围、IEEE字段及特殊值",
+      "example": "6.5编码",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原IEEE字段可用；补补码纯小数的固定点位置与范围。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "6.2",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "规格化1.M、偏置阶、特殊阶模式，整数与纯小数范围区分。",
+            "student_execution_or_limit": "6.5=1.101×2²，符号0阶129小数字段101补零。",
+            "linked_evidence": "IEEE章内字段手算"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "6.2",
+          "status": "已复现字段",
+          "evidence": "6.5=110.1=1.101×2²；S0/E129=10000001/M101后20零，图与例同数据。纯小数符号位权−1区别整数范围；特殊E值不能套隐藏1。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t05"
+      ],
+      "chapter_id": "computer-organization.c02",
+      "question_ids": [
+        "gap-co-002",
+        "gap-co-003",
+        "gap-co-007"
+      ]
+    },
+    {
+      "textbook_section": "6.3 定点运算",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第6章 计算机的运算方法",
+      "learner_outcome": "逻辑/算术/循环移位、加减乘除中间状态",
+      "mechanism": "逻辑/算术/循环移位、加减乘除中间状态",
+      "example": "4位3×5、13÷3、8位减法",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原乘除仅名词；补移位边界、补码加减、逐轮Booth乘法及两种除法。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "6.3",
+          "status": "乘除任务及新增Booth独立题可复现",
+          "evidence": {
+            "mechanism_actually_read": "补码加减、移位、移位相加、Booth及恢复/不恢复余数，数值中间状态明确。",
+            "student_execution_or_limit": "6×3加6和12；11÷3按1011带位R=1/2/2/2商0011；Booth已看表但未用新输入独立手算。",
+            "linked_evidence": "10-1/11-1/12-1/12-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "6.3",
+          "status": "机制/修复定点复验通过",
+          "evidence": "实推Booth−2×3第二轮A0000/Q1000/q−1=1、最终−6；11÷3恢复余数链1,2,2,2；不恢复13÷3为−2,0,−3,−2末+3得1。39新题未直接练Booth，已要求独立卡题。 新构建28f33c9ea0cfe108已在390/1280明暗页面实际确认；t40的卡→纯题池和参考状态另完成真点击复测。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t29",
+        "computer-organization.t30",
+        "computer-organization.t40"
+      ],
+      "chapter_id": "computer-organization.c02",
+      "question_ids": [
+        "gap-co-textbook-11-1",
+        "gap-co-textbook-11-2",
+        "gap-co-textbook-12-1",
+        "gap-co-textbook-12-2",
+        "gap-co-textbook-booth-01"
+      ]
+    },
+    {
+      "textbook_section": "6.4 浮点四则运算",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第6章 计算机的运算方法",
+      "learner_outcome": "对阶、尾数运算、规格化、舍入、乘除",
+      "mechanism": "对阶、尾数运算、规格化、舍入、乘除",
+      "example": "1.1×2²+1.01×2¹",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原只有表示及对阶名称；补浮点加减中间状态、舍入平局与乘除阶码。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "6.4",
+          "status": "补做不同数据迁移任务通过；不等于该节全部细任务均测",
+          "evidence": {
+            "mechanism_actually_read": "对阶尾数右移、加减、左/右规配阶、舍入；乘除阶与符号规则。",
+            "student_execution_or_limit": "6+2.5=1.0001×2³；6−2.5=1.11×2¹=3.5。",
+            "linked_evidence": "13-1/13-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "6.4",
+          "status": "已独立核算",
+          "evidence": "6+2.5对阶1.100+0.101=10.001，右规8.5；相减0.111左规3.5。另用现有二进制乘法规则算1.1₂×1.1₂=10.01₂，右规1.001₂×2¹=2.25，支持乘法机制。最近偶数例1.0001→1.000正确；特殊值细目未深展开。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t31"
+      ],
+      "chapter_id": "computer-organization.c02",
+      "question_ids": [
+        "gap-co-textbook-13-1",
+        "gap-co-textbook-13-2"
+      ]
+    },
+    {
+      "textbook_section": "6.5 算术逻辑单元",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第6章 计算机的运算方法",
+      "learner_outcome": "全加器、进位、逻辑功能和标志",
+      "mechanism": "全加器、进位、逻辑功能和标志",
+      "example": "四位全加器进位和溢出",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原ALU只列功能；补全加器、进位、复用加减与CF/OF区别。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "6.5",
+          "status": "原阻断已修，改数据任务可独立完成",
+          "evidence": {
+            "textbook_section": "6.5",
+            "fresh_task": "全加器输入Ai=0、Bi=1、Ci=1；三个输入全1呢？",
+            "independent_answer": "前者S=0、Cout=1；后者S=1、Cout=1。逻辑或不将两个真条件加成2。",
+            "result": "⊕、相邻与、加号或已用自然语言和输入例说明，可独立代其他输入。",
+            "read_revised_body_with_details_removed": true,
+            "status": "原阻断任务复测通过"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "6.5",
+          "status": "机制/修复定点复验通过",
+          "evidence": "初版直接⊕与相乘/加号逻辑式易误读，源已补异或、逻辑与/或及AiBiCi三全1时Si1/Ci+1为1；已有4位7+1得到1000/CF0/OF1。新做Ai1/Bi0/Ci1得Si0/进位1。 新构建28f33c9ea0cfe108已在390/1280明暗页面实际确认；t40的卡→纯题池和参考状态另完成真点击复测。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t32"
+      ],
+      "chapter_id": "computer-organization.c02",
+      "question_ids": [
+        "gap-co-textbook-14-1",
+        "uc-co-002"
+      ]
+    },
+    {
+      "textbook_section": "7.1 机器指令",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第7章 指令系统",
+      "learner_outcome": "地址字段、指令长度和扩展操作码",
+      "mechanism": "地址字段、指令长度和扩展操作码",
+      "example": "16位指令字段与最大操作数",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原有地址字段定义；补指令长度及扩展操作码前缀例，防重复计数。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "7.1",
+          "status": "补做不同数据迁移任务通过；不等于该节全部细任务均测",
+          "evidence": {
+            "mechanism_actually_read": "机器指令操作码/地址字段，指令长度与字长不同，操作码定长/扩展约束。",
+            "student_execution_or_limit": "可说明6位最多64个定长编码；具体扩展操作码构造本轮未独立做。",
+            "linked_evidence": "15-1"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "7.1",
+          "status": "已通读并复现字段边界",
+          "evidence": "16位指令4bit操作码+3个4bit地址；15个短码留1111，扩展后16种二地址码；再保留一个前缀时减少该层数量，避免重复计数。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t07",
+        "computer-organization.t33"
+      ],
+      "chapter_id": "computer-organization.c03",
+      "question_ids": [
+        "uf-co-005",
+        "gap-co-textbook-15-1",
+        "gap-audit26-system-006",
+        "sp-core-co-005",
+        "sp-core-co-006",
+        "sp-core-co-017",
+        "uc-co-006",
+        "uc-co-007",
+        "uc-co-013"
+      ]
+    },
+    {
+      "textbook_section": "7.2 操作数类型和操作类型",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第7章 指令系统",
+      "learner_outcome": "传送、运算、移位、转移、调用返回",
+      "mechanism": "传送、运算、移位、转移、调用返回",
+      "example": "调用时保存返回地址",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原缺操作类型系统说明；补调用返回与栈减法的操作数顺序。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "7.2",
+          "status": "本节具体任务可解释",
+          "evidence": {
+            "mechanism_actually_read": "数据解释由类型，传送/算术/移位/调用区别，零地址栈机SUB的弹出顺序。",
+            "student_execution_or_limit": "先压7再2，SUB按7−2而非2−7。",
+            "linked_evidence": "栈机章内可见例"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "7.2",
+          "status": "已通读支持",
+          "evidence": "数值/字符/地址位串按类型解释；栈先压7再2，SUB按先弹出右操作数算7−2=5；调用保存返回地址不同普通跳转。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t07"
+      ],
+      "chapter_id": "computer-organization.c03",
+      "question_ids": [
+        "uf-co-005",
+        "gap-audit26-system-006",
+        "sp-core-co-005",
+        "sp-core-co-006",
+        "sp-core-co-017",
+        "uc-co-006",
+        "uc-co-013"
+      ]
+    },
+    {
+      "textbook_section": "7.3 寻址方式",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第7章 指令系统",
+      "learner_outcome": "EA公式、访存次数及数组和分支算例",
+      "mechanism": "EA公式、访存次数及数组和分支算例",
+      "example": "基址/变址/相对EA",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原寻址只有列表；补EA符号、实际取数、负位移及数据访存次数。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "7.3",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "EA与M[x]先释符号，立即/直接/间接/基变址/相对路径明确。",
+            "student_execution_or_limit": "A100,M100400,M4009：立即100/直接400/间接9；PC104−8=96。",
+            "linked_evidence": "uf-co-005与章内寻址例"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "7.3",
+          "status": "已作链接题",
+          "evidence": "A40/R100/M40=300/M100=500分别立即40、直接300、寄存器100、寄存器间接500；相对地址需按取完指令PC与符号位移。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t07"
+      ],
+      "chapter_id": "computer-organization.c03",
+      "question_ids": [
+        "uf-co-005",
+        "gap-audit26-system-006",
+        "sp-core-co-005",
+        "sp-core-co-006",
+        "sp-core-co-017",
+        "uc-co-006",
+        "uc-co-013"
+      ]
+    },
+    {
+      "textbook_section": "7.4 指令格式举例",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第7章 指令系统",
+      "learner_outcome": "自定义定长指令编码/译码",
+      "mechanism": "自定义定长指令编码/译码",
+      "example": "16位ADD指令编码",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原无指令格式编码例；补16位切字段与32位立即数范围。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "7.4",
+          "status": "本节任务可计算",
+          "evidence": {
+            "mechanism_actually_read": "自定义16位字段切分，以及32位剩余立即数字段范围。",
+            "student_execution_or_limit": "32−6−5−5=16，补码范围−32768..32767。",
+            "linked_evidence": "15-1"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "7.4",
+          "status": "已独立迁移",
+          "evidence": "0001 011 010 000000按16位格式等于0x1680；32位扣6+5+5剩16bit补码−32768…32767；新20位扣4+3+3剩10bit−512…511。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t07",
+        "computer-organization.t33"
+      ],
+      "chapter_id": "computer-organization.c03",
+      "question_ids": [
+        "uf-co-005",
+        "gap-co-textbook-15-1",
+        "gap-audit26-system-006",
+        "sp-core-co-005",
+        "sp-core-co-006",
+        "sp-core-co-017",
+        "uc-co-006",
+        "uc-co-007",
+        "uc-co-013"
+      ]
+    },
+    {
+      "textbook_section": "7.5 RISC技术",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第7章 指令系统",
+      "learner_outcome": "Load/Store、规整编码及非绝对性能",
+      "mechanism": "Load/Store、规整编码及非绝对性能",
+      "example": "Load/ADD/Store三条完成内存相加",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原RISC比较可用；补Load/ADD/Store具体三步，避免仅名词比较。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "7.5",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "Load/Store先从存储器装到寄存器再运算再写回；RISC规整与速度不绝对。",
+            "student_execution_or_limit": "A加1要LOAD、ADD、STORE，算术不直接等同访存。",
+            "linked_evidence": "正文三指令例"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "7.5",
+          "status": "已通读并复现指令链",
+          "evidence": "内存A加1：LOAD R1,[A]→ADD R1,#1→STORE [A],R1；不能让Load/Store型算术直接改内存。性能仍看IC/CPI/f。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t07"
+      ],
+      "chapter_id": "computer-organization.c03",
+      "question_ids": [
+        "uf-co-005",
+        "gap-audit26-system-006",
+        "sp-core-co-005",
+        "sp-core-co-006",
+        "sp-core-co-017",
+        "uc-co-006",
+        "uc-co-013"
+      ]
+    },
+    {
+      "textbook_section": "8.1 CPU的结构",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第8章 CPU的结构和功能",
+      "learner_outcome": "寄存器、单总线数据通路与暂存器",
+      "mechanism": "寄存器、单总线数据通路与暂存器",
+      "example": "ADD R1,R2逐拍通路",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原寄存器有定义；补Y/Z单总线三拍，解释两个源不能同拍原因。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "8.1",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "MAR地址/MDR内容和PC/IR、Y/Z分工；取指路径与单总线加法。",
+            "student_execution_or_limit": "R1先到Y，R2+Y进Z，Z回R1；MAR不能装成指令正文。",
+            "linked_evidence": "17-1跨9.1证据"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "8.1",
+          "status": "已作链接题",
+          "evidence": "PC/MAR给地址，MDR传指令到IR；ap-co-001A、sp-core-co-004A；单总线R1→Y、Y+R2→Z、Z→R1。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t06"
+      ],
+      "chapter_id": "computer-organization.c10",
+      "question_ids": [
+        "ap-co-001",
+        "sp-core-co-004",
+        "sp-core-co-010",
+        "sp-core-co-014",
+        "sp-core-co-020",
+        "sp-core-co-021",
+        "sp-core-co-033",
+        "sp-core-co-040"
+      ]
+    },
+    {
+      "textbook_section": "8.2 指令周期",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第8章 CPU的结构和功能",
+      "learner_outcome": "取指、间址、执行、中断微操作",
+      "mechanism": "取指、间址、执行、中断微操作",
+      "example": "间接ADD四类周期",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原指令周期只有取指/执行；补间址/中断与ACC从3到12的实际访存。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "8.2",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "间接指令分取指/间址/执行，EA400不是最终9。",
+            "student_execution_or_limit": "ACC3+M4009=12，误加400会漏一个访存。",
+            "linked_evidence": "章内间接ADD例"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "8.2",
+          "status": "已复现中间地址",
+          "evidence": "间接ADD A100、M100=400/M400=9/ACC3：间址读出有效地址400，执行再取9得到ACC12。可指出403来自把地址当操作数。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t06"
+      ],
+      "chapter_id": "computer-organization.c10",
+      "question_ids": [
+        "ap-co-001",
+        "sp-core-co-004",
+        "sp-core-co-010",
+        "sp-core-co-014",
+        "sp-core-co-020",
+        "sp-core-co-021",
+        "sp-core-co-033",
+        "sp-core-co-040"
+      ]
+    },
+    {
+      "textbook_section": "8.3 指令流水",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第8章 CPU的结构和功能",
+      "learner_outcome": "时空图、三类冲突、停顿和时间",
+      "mechanism": "时空图、三类冲突、停顿和时间",
+      "example": "5段20条与数据等待",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原流水较完整；保留填充、停顿、冲突、最慢阶段与配图。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "8.3",
+          "status": "具体数值可算；图中英文阶段缩写应给完整中文释义",
+          "evidence": {
+            "mechanism_actually_read": "流水吞吐、理想k+n−1、数据等写回、时序条件与不等长拍。",
+            "student_execution_or_limit": "5级20条24ns；10条加2停顿16拍×1.6=25.6ns。",
+            "linked_evidence": "流水章内两题"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "8.3",
+          "status": "已独立迁移",
+          "evidence": "5级8条理想12拍+停顿3=15拍，2ns为30ns；原图SUB在第3/4拍等R1，第5拍WB前半写、ID后半读，新旧数据条件一致。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t11",
+        "computer-organization.t17",
+        "computer-organization.t18"
+      ],
+      "chapter_id": "computer-organization.c10",
+      "question_ids": [
+        "uf-co-007",
+        "gap-co-009",
+        "sp-core-co-030",
+        "sp-core-co-031",
+        "sp-core-co-045",
+        "uc-co-008",
+        "uc-co-011",
+        "uc-co-014"
+      ]
+    },
+    {
+      "textbook_section": "8.4 中断系统",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第8章 CPU的结构和功能",
+      "learner_outcome": "优先级、屏蔽字与嵌套顺序",
+      "mechanism": "优先级、屏蔽字与嵌套顺序",
+      "example": "A高B低时嵌套及屏蔽",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原没有处理优先级和嵌套过程；补屏蔽条件及A打断B返回轨迹。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "8.4",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "屏蔽与请求优先分开，允许嵌套才B被A打断，现场配对。",
+            "student_execution_or_limit": "主程序→B前→A→B后→主程序，不只按优先级排列完成顺序。",
+            "linked_evidence": "16-1/16-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "8.4",
+          "status": "已作链接题",
+          "evidence": "16-1复现主程序→B前半→A→B后半→主程序；16-2先保每层现场，否则返回信息/寄存器错。屏蔽与请求优先级分开讲。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t34"
+      ],
+      "chapter_id": "computer-organization.c10",
+      "question_ids": [
+        "gap-co-textbook-16-1",
+        "gap-co-textbook-16-2"
+      ]
+    },
+    {
+      "textbook_section": "9.1 操作命令的分析",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第9章 控制单元的功能",
+      "learner_outcome": "逐周期列微操作、资源冲突",
+      "mechanism": "逐周期列微操作、资源冲突",
+      "example": "ADD [A]取指和执行时序",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原控制单元未单列；补微操作、同拍条件、总线冲突和控制线释义。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "9.1",
+          "status": "给定动作可手推；图需对照具体端口路径",
+          "evidence": {
+            "mechanism_actually_read": "out使能与in锁存、单总线Y/Z、等待READY，资源决定可并行。",
+            "student_execution_or_limit": "R1→Y与R2→Z冲突；独立PC增量可和MDR→IR并行。",
+            "linked_evidence": "17-1/17-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "9.1",
+          "status": "已独立迁移",
+          "evidence": "R1=4/R2=7，Y4→Z11→R1=11；禁止R1out/R2out同拍；MDR→IR与PC增量仅独立增量器且无资源冲突才可并行。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t35"
+      ],
+      "chapter_id": "computer-organization.c05",
+      "question_ids": [
+        "gap-co-textbook-17-1",
+        "gap-co-textbook-17-2"
+      ]
+    },
+    {
+      "textbook_section": "9.2 控制单元的功能",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第9章 控制单元的功能",
+      "learner_outcome": "译码×状态×条件→控制；同步/异步时序",
+      "mechanism": "译码×状态×条件→控制；同步/异步时序",
+      "example": "T0控制信号与等待READY",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原没有时序功能教学；补状态/译码/条件输入、就绪自环和时钟约束。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "9.2",
+          "status": "本节任务可复现",
+          "evidence": {
+            "mechanism_actually_read": "状态/操作码/条件决定输出，等待自环，稳定数据才能锁存。",
+            "student_execution_or_limit": "READY0留READ_WAIT，1锁存再前进。",
+            "linked_evidence": "18-1/18-2"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "9.2",
+          "status": "已作链接题",
+          "evidence": "18-1 READY0自环、1锁存再转；18-2操作码还需状态/标志/外部状态。组合路径延迟约束时钟期，不能靠加频忽略数据稳定。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t36"
+      ],
+      "chapter_id": "computer-organization.c05",
+      "question_ids": [
+        "gap-co-textbook-18-1",
+        "gap-co-textbook-18-2"
+      ]
+    },
+    {
+      "textbook_section": "10.1 组合逻辑设计",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第10章 控制单元的设计",
+      "learner_outcome": "状态表、控制方程、连线与修改代价",
+      "mechanism": "状态表、控制方程、连线与修改代价",
+      "example": "LOAD/ADD状态表推导MemRead",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原硬布线一句话；补设计步骤、状态表、控制方程及非法状态。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "10.1",
+          "status": "原阻断已修，改数据任务可独立完成",
+          "evidence": {
+            "textbook_section": "10.1",
+            "fresh_task": "F2末尾锁存了ADD，新IR何时参与分派？F1中READY0时MDRin值？",
+            "independent_answer": "F2固定到DISPATCH，下一拍读取已稳定ADD再去E0；READY0时MDRin=(1∨0)∧0=0，留F1。",
+            "result": "分派态明确，逻辑∧∨已定义，不用假设同拍新IR瞬时生效。",
+            "read_revised_body_with_details_removed": true,
+            "status": "原阻断任务复测通过"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "10.1",
+          "status": "机制/修复定点复验通过",
+          "evidence": "源新表增加DISPATCH，E2补LOAD MDRout/ACCin与ADD专用输入；∨/∧释义补到方程前。重推LOAD读9→ACC9、ADD初ACC3+9→12可以得到正确路径；还须页面确认。 新构建28f33c9ea0cfe108已在390/1280明暗页面实际确认；t40的卡→纯题池和参考状态另完成真点击复测。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t37"
+      ],
+      "chapter_id": "computer-organization.c11",
+      "question_ids": [
+        "gap-co-textbook-19-1",
+        "gap-co-textbook-19-2"
+      ]
+    },
+    {
+      "textbook_section": "10.2 微程序设计",
+      "scope": "included, common university core with reduced proof depth",
+      "site_chapter": "第10章 控制单元的设计",
+      "learner_outcome": "控制存储器、微地址、编码、水平/垂直与微程序跟踪",
+      "mechanism": "控制存储器、微地址、编码、水平/垂直与微程序跟踪",
+      "example": "微地址00→01→02→20→00、字段位数",
+      "visual": "正文对应SVG或数值状态表；非空间概念用短任务，未强制插图",
+      "existing_gap": "原微程序一句话；补机器PC/微PC、微步跟踪、下址来源、编码及控存容量。",
+      "practice": [
+        "recognition",
+        "explanation",
+        "process/calculation where relevant"
+      ],
+      "student_evidence": {
+        "beginner": {
+          "report": "audit_reports/组成原理_新生试学_2026-10-15.json",
+          "section": "10.2",
+          "status": "原阻断已修，改数据任务可独立完成",
+          "evidence": {
+            "textbook_section": "10.2",
+            "fresh_task": "PC100、4B长ADD直接地址200，M200=7，ACC5；逐地址执行并给最终PC与微PC。",
+            "independent_answer": "00:MAR100→01等就绪MDR取ADD200→02:IR装ADD200且PC104→03分派20→20:MAR200→21等就绪MDR7→22:Y7→23:Z12→24:ACC12且μPC00；机器PC仍104。",
+            "result": "00..03和20..24逐条能走，22/23/24各单源，锁存/分派不再抢拍。",
+            "read_revised_body_with_details_removed": true,
+            "status": "原阻断任务复测通过"
+          }
+        },
+        "applied": {
+          "report": "audit_reports/组成原理_独立试学_2026-10-15.json",
+          "section": "10.2",
+          "status": "机制/修复定点复验通过",
+          "evidence": "源新微序00/01等待/02装IR/03分派/20置地址/21读/22Y/23Z/24ACC→00；PC100取4B后104、M40=9/ACC3经Y9/Z12/ACC12，μPC回00不改变机器PC。39题字段/控存计算已核。图第一框已恢复机器PC100/104，待新候选图核对。 新构建28f33c9ea0cfe108已在390/1280明暗页面实际确认；t40的卡→纯题池和参考状态另完成真点击复测。"
+        }
+      },
+      "status": "accepted",
+      "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
+      "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
+      "topic_ids": [
+        "computer-organization.t38",
+        "computer-organization.t39"
+      ],
+      "chapter_id": "computer-organization.c11",
+      "question_ids": [
+        "gap-co-textbook-20-1",
+        "gap-co-textbook-20-2",
+        "gap-co-textbook-21-1",
+        "gap-co-textbook-21-2"
+      ]
+    }
+  ],
+  "extension": "虚拟存储保留在第4章，未冒充教材新增章",
+  "change_note": "先建官方38节矩阵后实施；实现不等于学生验收通过，证据待root回填。",
+  "acceptance_scope": "出版社38节逐节教学机制覆盖核对；两个独立代理模拟新生，完成逐章代表任务、链接题和修后复测。不是教材所有细节/所有题型的穷尽证明，也不是现实学生长期学习效果。",
+  "source_hashes": {
+    "course_notes/计算机组成原理.md": "f3a5c458c1421c49eb7f61eeb86d30e48a459151bc07d0d0befe2e4ff48c8aad",
+    "color_notes/计算机组成原理.md": "28d3435c766ccbcef36154c04120f54c85bdb57ff92c699954ca92515c6e658c",
+    "media/co_coverage_control_store.svg": "5e40cfaf412112545782554b5e49cf20e16f4cd5ebf221072e7029ed624eec01"
+  },
+  "accepted_at": "2026-10-15"
+}

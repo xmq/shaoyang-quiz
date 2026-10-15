@@ -53,6 +53,15 @@
           "office.t16",
           "office.t17"
         ]
+      },
+      "chapters": {
+        "第1章 办公环境与文件管理": "office.c01",
+        "第2章 文字编辑与格式": "office.c02",
+        "第3章 页面排版、表格与对象": "office.c03",
+        "第4章 电子表格基础与公式": "office.c04",
+        "第5章 数据管理、分析与图表": "office.c05",
+        "第6章 演示文稿设计与制作": "office.c06",
+        "第7章 Office综合应用": "office.c07"
       }
     },
     "大学计算机基础与新技术": {
@@ -132,6 +141,18 @@
           "关键词",
           "书签"
         ]
+      },
+      "chapters": {
+        "第1章 信息、计算与计算思维": "computer-foundations.c01",
+        "第2章 信息表示与计算机系统": "computer-foundations.c02",
+        "第3章 操作系统、文件与软件": "computer-foundations.c03",
+        "第4章 云计算与服务模型": "computer-foundations.c04",
+        "第5章 大数据与数据处理": "computer-foundations.c05",
+        "第6章 人工智能与机器学习": "computer-foundations.c06",
+        "第7章 物联网": "computer-foundations.c07",
+        "第8章 区块链": "computer-foundations.c08",
+        "第9章 计算机发展与典型应用": "computer-foundations.c09",
+        "第10章 新一代信息技术的综合应用": "computer-foundations.c10"
       }
     },
     "多媒体技术": {
@@ -185,6 +206,15 @@
           "multimedia.t15",
           "multimedia.t16"
         ]
+      },
+      "chapters": {
+        "第1章 多媒体技术概论": "multimedia.c01",
+        "第2章 多媒体计算机系统与数字化": "multimedia.c02",
+        "第3章 数字图形与图像": "multimedia.c03",
+        "第4章 数字音频": "multimedia.c04",
+        "第5章 动画与数字视频": "multimedia.c05",
+        "第6章 多媒体数据压缩": "multimedia.c06",
+        "第7章 多媒体作品设计与应用": "multimedia.c07"
       }
     },
     "操作系统原理": {
@@ -272,6 +302,15 @@
           "SCAN",
           "LOOK"
         ]
+      },
+      "chapters": {
+        "第1章 操作系统引论": "operating-system.c01",
+        "第2章 操作系统结构与用户接口": "operating-system.c02",
+        "第3章 进程、线程与处理机调度": "operating-system.c03",
+        "第4章 进程同步与死锁": "operating-system.c04",
+        "第5章 存储器与虚拟存储器": "operating-system.c05",
+        "第6章 文件管理": "operating-system.c06",
+        "第7章 输入输出与磁盘管理": "operating-system.c07"
       }
     },
     "数据库技术": {
@@ -348,6 +387,17 @@
           "2PL",
           "两段锁"
         ]
+      },
+      "chapters": {
+        "第1章 数据库系统概论": "database.c01",
+        "第2章 概念模型与E-R方法": "database.c02",
+        "第3章 关系模型与完整性": "database.c03",
+        "第4章 关系代数": "database.c04",
+        "第5章 关系数据库标准语言SQL": "database.c05",
+        "第6章 视图、索引与数据库设计": "database.c06",
+        "第7章 关系数据理论": "database.c07",
+        "第8章 事务、并发控制与恢复": "database.c08",
+        "第9章 数据库安全性": "database.c09"
       }
     },
     "数据结构与算法": {
@@ -497,6 +547,16 @@
         "data-structures.t38": [
           "基数"
         ]
+      },
+      "chapters": {
+        "第1章 绪论与算法分析": "data-structures.c01",
+        "第2章 线性表": "data-structures.c02",
+        "第3章 栈、队列、串与数组": "data-structures.c03",
+        "第4章 树与二叉树": "data-structures.c04",
+        "第5章 图": "data-structures.c05",
+        "第6章 查找": "data-structures.c06",
+        "第7章 内部排序": "data-structures.c07",
+        "第8章 数据结构与算法选择": "data-structures.c08"
       }
     },
     "C与Python程序设计": {
@@ -586,6 +646,19 @@
           "文件",
           "编码"
         ]
+      },
+      "chapters": {
+        "第1章 程序设计与算法": "programming.c01",
+        "第2章 数据类型、变量与常量": "programming.c02",
+        "第3章 运算符与表达式": "programming.c03",
+        "第4章 顺序结构与输入输出": "programming.c04",
+        "第5章 选择结构": "programming.c05",
+        "第6章 循环结构": "programming.c06",
+        "第7章 函数与模块化程序设计": "programming.c07",
+        "第8章 数组、字符串与Python组合数据": "programming.c08",
+        "第9章 C指针、结构体与文件": "programming.c09",
+        "第10章 Python异常、模块与文件": "programming.c10",
+        "第11章 C与Python程序模型比较": "programming.c11"
       }
     },
     "计算机组成原理": {
@@ -607,7 +680,29 @@
         "Cache地址拆分与命中": "computer-organization.t15",
         "平均访存时间按口径算": "computer-organization.t16",
         "理想流水线填充与排空": "computer-organization.t17",
-        "流水线停顿与总时间": "computer-organization.t18"
+        "流水线停顿与总时间": "computer-organization.t18",
+        "器件演进与软硬件层次": "computer-organization.t19",
+        "应用场景与并行加速边界": "computer-organization.t20",
+        "总线仲裁决定谁先传": "computer-organization.t21",
+        "异步总线四相握手": "computer-organization.t22",
+        "低位交叉存储的模块定位": "computer-organization.t23",
+        "奇偶校验与汉明纠错": "computer-organization.t24",
+        "磁盘定位与平均访问时间": "computer-organization.t25",
+        "I/O接口的三个寄存器": "computer-organization.t26",
+        "程序查询的忙等开销": "computer-organization.t27",
+        "移位先辨符号与位宽": "computer-organization.t28",
+        "移位相加逐位求乘积": "computer-organization.t29",
+        "逐位试商与余数恢复": "computer-organization.t30",
+        "浮点加减的对阶与规格化": "computer-organization.t31",
+        "ALU加减与状态标志": "computer-organization.t32",
+        "指令字段位数与编码": "computer-organization.t33",
+        "中断屏蔽与嵌套顺序": "computer-organization.t34",
+        "微操作按通路安排节拍": "computer-organization.t35",
+        "控制时序与就绪等待": "computer-organization.t36",
+        "硬布线控制方程从状态表来": "computer-organization.t37",
+        "微程序入口与下一微地址": "computer-organization.t38",
+        "微指令编码与控存容量": "computer-organization.t39",
+        "Booth位对判断与整体右移": "computer-organization.t40"
       },
       "chapter_prefix": {
         "computer-organization.c01": [
@@ -643,7 +738,29 @@
         "computer-organization.t15": "computer-organization.t10",
         "computer-organization.t16": "computer-organization.t10",
         "computer-organization.t17": "computer-organization.t11",
-        "computer-organization.t18": "computer-organization.t11"
+        "computer-organization.t18": "computer-organization.t11",
+        "computer-organization.t19": "computer-organization.t01",
+        "computer-organization.t20": "computer-organization.t01",
+        "computer-organization.t21": "computer-organization.t12",
+        "computer-organization.t22": "computer-organization.t12",
+        "computer-organization.t23": "computer-organization.t09",
+        "computer-organization.t24": "computer-organization.t09",
+        "computer-organization.t25": "computer-organization.t08",
+        "computer-organization.t26": "computer-organization.t13",
+        "computer-organization.t27": "computer-organization.t13",
+        "computer-organization.t28": "computer-organization.t04",
+        "computer-organization.t29": "computer-organization.t04",
+        "computer-organization.t30": "computer-organization.t04",
+        "computer-organization.t31": "computer-organization.t05",
+        "computer-organization.t32": "computer-organization.t04",
+        "computer-organization.t33": "computer-organization.t07",
+        "computer-organization.t34": "computer-organization.t06",
+        "computer-organization.t35": "computer-organization.t06",
+        "computer-organization.t36": "computer-organization.t06",
+        "computer-organization.t37": "computer-organization.t06",
+        "computer-organization.t38": "computer-organization.t06",
+        "computer-organization.t39": "computer-organization.t06",
+        "computer-organization.t40": "computer-organization.t04"
       },
       "keywords": {
         "computer-organization.t15": [
@@ -662,8 +779,147 @@
         "computer-organization.t18": [
           "停顿",
           "转发"
+        ],
+        "computer-organization.t19": [
+          "器件演进与软硬件层次"
+        ],
+        "computer-organization.t20": [
+          "应用场景与并行加速边界"
+        ],
+        "computer-organization.t21": [
+          "总线仲裁决定谁先传"
+        ],
+        "computer-organization.t22": [
+          "异步总线四相握手"
+        ],
+        "computer-organization.t23": [
+          "低位交叉存储的模块定位"
+        ],
+        "computer-organization.t24": [
+          "奇偶校验与汉明纠错"
+        ],
+        "computer-organization.t25": [
+          "磁盘定位与平均访问时间"
+        ],
+        "computer-organization.t26": [
+          "I/O接口的三个寄存器"
+        ],
+        "computer-organization.t27": [
+          "程序查询的忙等开销"
+        ],
+        "computer-organization.t28": [
+          "移位先辨符号与位宽"
+        ],
+        "computer-organization.t29": [
+          "移位相加逐位求乘积"
+        ],
+        "computer-organization.t30": [
+          "逐位试商与余数恢复"
+        ],
+        "computer-organization.t31": [
+          "浮点加减的对阶与规格化"
+        ],
+        "computer-organization.t32": [
+          "ALU加减与状态标志"
+        ],
+        "computer-organization.t33": [
+          "指令字段位数与编码"
+        ],
+        "computer-organization.t34": [
+          "中断屏蔽与嵌套顺序"
+        ],
+        "computer-organization.t35": [
+          "微操作按通路安排节拍"
+        ],
+        "computer-organization.t36": [
+          "控制时序与就绪等待"
+        ],
+        "computer-organization.t37": [
+          "硬布线控制方程从状态表来"
+        ],
+        "computer-organization.t38": [
+          "微程序入口与下一微地址"
+        ],
+        "computer-organization.t39": [
+          "微指令编码与控存容量"
+        ],
+        "computer-organization.t40": [
+          "Booth",
+          "位对",
+          "附加位"
         ]
-      }
+      },
+      "chapters": {
+        "第1章 计算机系统概论": "computer-organization.c01",
+        "第2章 计算机的发展及应用": "computer-organization.c08",
+        "第3章 系统总线": "computer-organization.c06",
+        "第4章 存储器": "computer-organization.c04",
+        "第5章 输入输出系统": "computer-organization.c09",
+        "第6章 计算机的运算方法": "computer-organization.c02",
+        "第7章 指令系统": "computer-organization.c03",
+        "第8章 CPU的结构和功能": "computer-organization.c10",
+        "第9章 控制单元的功能": "computer-organization.c05",
+        "第10章 控制单元的设计": "computer-organization.c11"
+      },
+      "layout_revision": "tang3-10-chapters-v1",
+      "previous_layout": [
+        {
+          "chapter_id": "computer-organization.c01",
+          "topic_ids": [
+            "computer-organization.t01",
+            "computer-organization.t02"
+          ]
+        },
+        {
+          "chapter_id": "computer-organization.c02",
+          "topic_ids": [
+            "computer-organization.t03",
+            "computer-organization.t04",
+            "computer-organization.t05"
+          ]
+        },
+        {
+          "chapter_id": "computer-organization.c03",
+          "topic_ids": [
+            "computer-organization.t06",
+            "computer-organization.t07"
+          ]
+        },
+        {
+          "chapter_id": "computer-organization.c04",
+          "topic_ids": [
+            "computer-organization.t08",
+            "computer-organization.t09",
+            "computer-organization.t10",
+            "computer-organization.t15",
+            "computer-organization.t16"
+          ]
+        },
+        {
+          "chapter_id": "computer-organization.c05",
+          "topic_ids": [
+            "computer-organization.t11",
+            "computer-organization.t17",
+            "computer-organization.t18"
+          ]
+        },
+        {
+          "chapter_id": "computer-organization.c06",
+          "topic_ids": [
+            "computer-organization.t12",
+            "computer-organization.t13"
+          ]
+        },
+        {
+          "chapter_id": "computer-organization.c07",
+          "topic_ids": [
+            "computer-organization.t14"
+          ]
+        }
+      ],
+      "keep_completed": [
+        "computer-organization.c01"
+      ]
     },
     "计算机网络": {
       "titles": {
@@ -788,6 +1044,17 @@
           "缓冲区",
           "缓存"
         ]
+      },
+      "chapters": {
+        "第1章 概述": "net-01",
+        "第2章 物理层": "net-02",
+        "第3章 数据链路层": "net-03",
+        "第4章 网络层": "net-04",
+        "第5章 运输层": "net-05",
+        "第6章 应用层": "net-06",
+        "第7章 网络安全": "net-07",
+        "第8章 互联网上的音频/视频服务": "net-08",
+        "第9章 无线网络和移动网络": "net-09"
       }
     },
     "电路分析与电工技术": {
@@ -857,6 +1124,17 @@
       "parents": {
         "circuit.t13": "circuit.t03",
         "circuit.t14": "circuit.t04"
+      },
+      "chapters": {
+        "第1章 电路模型和基本物理量": "circuit.c01",
+        "第2章 电路定律与等效连接": "circuit.c02",
+        "第3章 电阻电路的分析方法与电路定理": "circuit.c03",
+        "第4章 电阻、电容与电感元件": "circuit.c04",
+        "第5章 正弦稳态、电工控制与安全": "circuit.c05",
+        "第6章 工程可靠性基础": "circuit.c06",
+        "第7章 一阶动态电路": "circuit.c07",
+        "第8章 万用表、示波器与安全测量": "circuit.c08",
+        "第9章 电路故障分析": "circuit.c09"
       }
     },
     "模拟电子技术": {
@@ -964,6 +1242,16 @@
         "analog-electronics.t22": [
           "二极管挡安全初检"
         ]
+      },
+      "chapters": {
+        "第1章 绪论与半导体基础": "analog-electronics.c01",
+        "第2章 半导体二极管及其应用": "analog-electronics.c02",
+        "第3章 晶体管与基本放大电路": "analog-electronics.c03",
+        "第4章 多级放大、差分放大与频率响应": "analog-electronics.c04",
+        "第5章 放大电路中的反馈": "analog-electronics.c05",
+        "第6章 集成运算放大与信号处理": "analog-electronics.c06",
+        "第7章 波形发生与功率放大": "analog-electronics.c07",
+        "第8章 直流电源、测量与电路读图": "analog-electronics.c08"
       }
     },
     "数字电子技术": {
@@ -1048,6 +1336,15 @@
         "digital-electronics.t18": [
           "施密特双阈值整形"
         ]
+      },
+      "chapters": {
+        "第1章 数制和码制": "digital-electronics.c01",
+        "第2章 逻辑代数与门电路": "digital-electronics.c02",
+        "第3章 逻辑函数的表示与化简": "digital-electronics.c03",
+        "第4章 组合逻辑电路": "digital-electronics.c04",
+        "第5章 触发器与时序逻辑电路": "digital-electronics.c05",
+        "第6章 寄存器、计数器与存储器": "digital-electronics.c06",
+        "第7章 脉冲波形与数模、模数转换": "digital-electronics.c07"
       }
     },
     "通信原理与高频电子线路": {
@@ -1144,6 +1441,17 @@
           "dB",
           "链路预算与余量"
         ]
+      },
+      "chapters": {
+        "第1章 通信系统概论": "communication.c01",
+        "第2章 信号、信道与噪声": "communication.c02",
+        "第3章 模拟信号数字化与调制": "communication.c03",
+        "第4章 传输媒质与电磁波谱": "communication.c04",
+        "第5章 数字调制与移动通信": "communication.c05",
+        "第6章 高频小信号、功率放大与混频": "communication.c06",
+        "第7章 信源编码与信道编码": "communication.c07",
+        "第8章 基带传输、同步与眼图": "communication.c08",
+        "第9章 光纤通信与链路分析": "communication.c09"
       }
     },
     "信号与系统": {
@@ -1209,6 +1517,15 @@
         "signals-systems.t16": [
           "部分分式与反变换"
         ]
+      },
+      "chapters": {
+        "第1章 信号与系统概述": "signals-systems.c01",
+        "第2章 连续时间系统的时域分析": "signals-systems.c02",
+        "第3章 卷积与零状态响应": "signals-systems.c03",
+        "第4章 傅里叶变换与频域分析": "signals-systems.c04",
+        "第5章 拉普拉斯变换与Z变换": "signals-systems.c05",
+        "第6章 抽样定理与离散化": "signals-systems.c06",
+        "第7章 系统分析方法的联系": "signals-systems.c07"
       }
     },
     "软件工程": {
@@ -1292,6 +1609,16 @@
           "关键路径",
           "工期"
         ]
+      },
+      "chapters": {
+        "第1章 软件工程概述": "software-engineering.c01",
+        "第2章 软件过程与生命周期模型": "software-engineering.c02",
+        "第3章 可行性研究与需求工程": "software-engineering.c03",
+        "第4章 总体设计与详细设计": "software-engineering.c04",
+        "第5章 软件实现与软件测试": "software-engineering.c05",
+        "第6章 软件维护、质量与配置管理": "software-engineering.c06",
+        "第7章 项目管理与风险管理": "software-engineering.c07",
+        "第8章 面向变化的软件开发方法": "software-engineering.c08"
       }
     },
     "信息安全": {
@@ -1359,6 +1686,16 @@
           "隧道",
           "虚拟专用网"
         ]
+      },
+      "chapters": {
+        "第1章 信息安全概论": "information-security.c01",
+        "第2章 安全管理与风险管理": "information-security.c02",
+        "第3章 恶意代码与社会工程": "information-security.c03",
+        "第4章 身份认证与访问控制": "information-security.c04",
+        "第5章 密码学基础": "information-security.c05",
+        "第6章 网络安全": "information-security.c06",
+        "第7章 系统、应用与数据安全": "information-security.c07",
+        "第8章 隐私保护、法律与职业责任": "information-security.c08"
       }
     }
   }

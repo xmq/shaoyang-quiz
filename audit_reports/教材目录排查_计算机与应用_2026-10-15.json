@@ -1,0 +1,1592 @@
+{
+  "date": "2026-10-15",
+  "review_type": "外部教材目录独立排查及教学跳步审查",
+  "scope": "八门课程的知识域与章节对照；逐课一段原文教学跳步及教师改写示例；只读审查，非浏览器/题库/真实学生验收",
+  "baseline": {
+    "head": "62dd3b01b568b1e42522fd165a2e543fc3983bdf",
+    "textbook_map_sha256": "9c00f80dcd9401200ff927e7a3ed6a0f818a20dabb6dc08e167fdf2620ce633e"
+  },
+  "status": "发现真实遗漏，不能沿用此前全量验收的教材完整结论",
+  "classification": {
+    "已归属或合并": "存在内容归属，不代表节内五项能力全部达标",
+    "真正未讲": "正文通读和目标词上下文共同证明缺机制/知识域",
+    "只有术语或结论": "名字、选择结论、用途或端口不等于完成过程教学",
+    "跨课拆分": "可合理不重复，但应记录目标课并提供学习连通",
+    "映射证据不足": "未拿到完整目录或版本，不虚构已核验"
+  },
+  "sources": {
+    "ds": "https://www.tup.com.cn/booksCenter/bookcatalog?id=00236807",
+    "os": "https://www.xduph.com/pages/BookDetail.aspx?doi=e560378d-83d1-4e43-9bbc-73a3e9b3881d",
+    "os_syllabus": "https://xinxi.jlau.edu.cn/nongda/profile/nongda/2024/09/19/7be3300729d32b881d11b99efb84ac18.pdf",
+    "db": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=62e959d4938b7cc2960eef97",
+    "c": "https://www.tup.com.cn/bookscenter/bookcatalog?id=07645004",
+    "python": "https://2d.hep.com.cn/mobile/book/show/java1514",
+    "python_identity": "https://abook.hep.com.cn/loadShowHome.action?courseInfoId=5000002390",
+    "soft": "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406",
+    "net": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=58234",
+    "foundation": "https://www.jiaodapress.com.cn/Data/BookContent/19593",
+    "office": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=5f07525ab0b2bda7c523ccc5"
+  },
+  "courses": [
+    {
+      "course": "数据结构与算法",
+      "textbook": "严蔚敏、吴伟民《数据结构（C语言版）》",
+      "source_urls": [
+        "https://www.tup.com.cn/booksCenter/bookcatalog?id=00236807"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/数据结构与算法.md",
+      "lecture_sha256": "9140aba93c3dc05dc9dbb5db8de78a5e1b872cf15eed95cbe13adc7f4b8ee135",
+      "site_chapters": [
+        "第1章 绪论与算法分析",
+        "第2章 线性表",
+        "第3章 栈、队列、串与数组",
+        "第4章 树与二叉树",
+        "第5章 图",
+        "第6章 查找",
+        "第7章 内部排序",
+        "第8章 数据结构与算法选择"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "教材1：绪论",
+          "site_location": "本站1",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材2：线性表",
+          "site_location": "本站2",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材3：栈队列",
+          "site_location": "本站3.1—3.2",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材4：字符串",
+          "site_location": "本站3.3",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材5：数组及广义表",
+          "site_location": "本站3.4",
+          "status": "合并但部分过程缺失"
+        },
+        {
+          "textbook_unit": "教材6：树、二叉树、森林",
+          "site_location": "本站4",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材7：图",
+          "site_location": "本站5",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材8：动态内存组织",
+          "site_location": "无",
+          "status": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材9：检索结构",
+          "site_location": "本站6及4的BST/AVL",
+          "status": "合并但B树过程缺失"
+        },
+        {
+          "textbook_unit": "教材10：内存排序",
+          "site_location": "本站7",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材11：外存排序",
+          "site_location": "无；本站8仅一句适用场景",
+          "status": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材12：文件组织",
+          "site_location": "无",
+          "status": "整章知识域缺失"
+        }
+      ],
+      "findings": [
+        {
+          "title": "动态存储管理未教",
+          "status": "真正未讲",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "动态存储",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "边界标识",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "伙伴系统",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "原教材第8章的空闲空间组织、分配与回收无讲义。操作系统有首次适应等并不自动替代数据结构中空闲表操作。",
+          "recommendation": "增加动态存储管理单元，讲空闲块分裂/合并及伙伴判定例题；可以低深度讲算法，不需要实现完整分配器。"
+        },
+        {
+          "title": "外部排序与文件组织缺失",
+          "status": "真正未讲",
+          "site_location": "本站8场景表",
+          "evidence": [
+            {
+              "term": "外部排序",
+              "occurrences": [
+                {
+                  "line": 777,
+                  "text": "| 必须稳定，能接受辅助空间 | 归并排序 | 最坏O(n log n)，适合稳定排序和外部排序的归并阶段 |"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "顺序文件",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "索引文件",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "倒排文件",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "外部排序仅出现在“归并适合外部排序”的选型结论，没有初始归并段、多路归并、归并趟数或I/O成本；文件域没有正文。",
+          "recommendation": "增加外存排序与文件组织，至少展示初始段→两路/多路归并→趟数和顺序/索引/散列文件选择；败者树与复杂ISAM细节可低深度识别。"
+        },
+        {
+          "title": "树与森林、线索二叉树缺失",
+          "status": "真正未讲",
+          "site_location": "本站4",
+          "evidence": [
+            {
+              "term": "线索",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "森林",
+              "occurrences": [
+                {
+                  "line": 347,
+                  "text": "若图不连通，从一个起点只能访问所在连通分量。要遍历整个图，需要按顶点顺序检查：每遇到一个尚未访问的顶点，就以它为新起点再执行一次 DFS 或 BFS。这样得到的是深度优先森林或广度优先森林。"
+                },
+                {
+                  "line": 417,
+                  "text": "此时已选4条边，结束；若继续检查BD4，B、D已连通，再选会形成 `B—C—D—B` 环。排序通常决定总时间 `O(E log E)`，适合稀疏图。图不连通时，算法只能得到最小生成森林。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "孩子兄弟",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "“森林”只在图的遍历结果出现，未讲一般树/森林转换、孩子兄弟表示、线索标记与遍历。",
+          "recommendation": "补树森林互转和线索指针小例题，不能用图的生成森林充当树森林单元。"
+        },
+        {
+          "title": "AOE关键路径缺失",
+          "status": "真正未讲",
+          "site_location": "本站5",
+          "evidence": [
+            {
+              "term": "关键路径",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "最早",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "最迟",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "只讲AOV拓扑排序，未讲活动持续时间、事件最早/最迟时间及关键活动判定。",
+          "recommendation": "补AOE网络前推后推及零余量活动例题；软件工程关键路径不是本课已经讲解的证据。"
+        },
+        {
+          "title": "B/B+树只有性质",
+          "status": "只有术语或结论",
+          "site_location": "本站4特殊树",
+          "evidence": [
+            {
+              "term": "B 树/B+ 树",
+              "occurrences": [
+                {
+                  "line": 248,
+                  "text": "- B 树/B+ 树：多路平衡查找树，适合磁盘索引；B+ 树记录通常在叶层，叶结点有序相连，便于范围查询。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "分裂",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "说明适合磁盘索引和叶层有序，没有多路检索、结点容量约束、插入分裂过程；B+树应理解范围扫描。",
+          "recommendation": "至少给一棵小阶数B树查询与分裂例子、B+树范围访问图。"
+        }
+      ],
+      "notes": "广义表长度/深度/表头表尾实际已有例子，未误报整块缺失；动态规划目前诚实标为拓展识别，本轮不把高级DP实现当教材必修缺口。",
+      "teaching_jump_example": {
+        "source_line": 248,
+        "original_paragraph": "B 树/B+ 树：多路平衡查找树，适合磁盘索引；B+ 树记录通常在叶层，叶结点有序相连，便于范围查询。",
+        "missing_learning_step": "从“分支多”直接跳到“减少外存访问”，没有解释一次访问通常读取一个结点页、如何按分隔键选孩子，也没让学生顺叶层找范围。",
+        "teacher_rewrite_example": "把一页能容纳的多个分隔键看成路标：根有20、40三个分支，找35先选20到40之间的孩子，而不是逐页扫全部记录。若叶层依次存10、20、30、40、50，查25到45，先定位含30的叶页，再沿叶链读到40，遇50停止。B+树的叶链帮助顺序扫描；磁盘访问仍按页发生，不能把每读一个键都算一次磁盘访问。",
+        "student_transfer_task": "给根分隔键30和60，找45该走哪一支？范围35—55为什么不能只读命中的第一个键？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "操作系统原理",
+      "textbook": "汤小丹等《计算机操作系统》第4版",
+      "source_urls": [
+        "https://www.xduph.com/pages/BookDetail.aspx?doi=e560378d-83d1-4e43-9bbc-73a3e9b3881d",
+        "https://xinxi.jlau.edu.cn/nongda/profile/nongda/2024/09/19/7be3300729d32b881d11b99efb84ac18.pdf"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/操作系统原理.md",
+      "lecture_sha256": "5f29577e1b8e7a4ad66bbcacd4fd5e4e3d1ec3c9f7e4cd6cc9104892f46f70e2",
+      "site_chapters": [
+        "第1章 操作系统引论",
+        "第2章 操作系统结构与用户接口",
+        "第3章 进程、线程与处理机调度",
+        "第4章 进程同步与死锁",
+        "第5章 存储器与虚拟存储器",
+        "第6章 文件管理",
+        "第7章 输入输出与磁盘管理"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "教材1：导论",
+          "site_location": "本站1",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材2：进程与同步",
+          "site_location": "本站3—4",
+          "status": "合并但同步过程不齐"
+        },
+        {
+          "textbook_unit": "教材3：调度与死锁",
+          "site_location": "本站3—4",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材4：基本存储管理",
+          "site_location": "本站5",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材5：虚拟存储",
+          "site_location": "本站5",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材6：I/O层次",
+          "site_location": "本站7",
+          "status": "合并但过程不齐"
+        },
+        {
+          "textbook_unit": "教材7：文件系统",
+          "site_location": "本站6",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材8：磁盘与外存",
+          "site_location": "本站6—7",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材9：用户接口",
+          "site_location": "本站2；部分命令在大学基础课",
+          "status": "合并但归属未记"
+        },
+        {
+          "textbook_unit": "教材10：多处理机系统",
+          "site_location": "无",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材11：网络及多媒体系统",
+          "site_location": "本站1仅分类；另有网络课不等同此域",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材12：系统安全",
+          "site_location": "本站2特权态与6文件权限少量提及",
+          "status": "知识域缺失"
+        }
+      ],
+      "findings": [
+        {
+          "title": "多处理机与系统安全域缺少完整单元",
+          "status": "真正未讲",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "多处理",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "安全性",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "访问矩阵",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "原书末三章并非本站7章的简单重命名。没有SMP/非对称、处理器亲和/负载均衡、OS保护域和访问控制模型。",
+          "recommendation": "补多处理机调度、网络/分布系统与系统安全基础；深层分布协议和安全形式化可以不推导，但核心机制不能全部删除。"
+        },
+        {
+          "title": "经典同步问题被压成名称",
+          "status": "只有术语或结论",
+          "site_location": "本站4",
+          "evidence": [
+            {
+              "term": "读者—写者",
+              "occurrences": [
+                {
+                  "line": 155,
+                  "text": "- 读者—写者：多个读者可以同时读，写者与其他读写必须互斥。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "管程",
+              "occurrences": [
+                {
+                  "line": 156,
+                  "text": "- 管程：把共享数据和操作封装起来，由系统保证管程内部互斥。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "哲学家",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "生产者消费者已有P/V过程，但读者写者只有一句规则，管程只有封装互斥定义，哲学家未讲。",
+          "recommendation": "补读计数/首读者与末读者加解锁、饥饿边界、管程条件变量等待唤醒，并给一个哲学家死锁及破环方案。"
+        },
+        {
+          "title": "I/O缓冲只给目的",
+          "status": "只有术语或结论",
+          "site_location": "本站7",
+          "evidence": [
+            {
+              "term": "缓冲用于",
+              "occurrences": [
+                {
+                  "line": 306,
+                  "text": "缓冲用于协调 CPU 与设备速度差、减少中断次数，但不会改变设备本身速度。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "SPOOLing",
+              "occurrences": [
+                {
+                  "line": 308,
+                  "text": "普通软件缓冲区通常在主存中暂存待处理数据；磁盘上的SPOOLing输入井、输出井承担另一层排队与假脱机管理。例如应用先把打印任务写入磁盘队列，后台程序再分批读到内存缓冲区并发送打印机。二者可以配合，但不能因为SPOOLing使用磁盘，就把所有软件缓冲都说成磁盘空间。"
+                },
+                {
+                  "line": 324,
+                  "text": "中断使 CPU 不必一直等待慢速设备，但每次数据处理仍可能需要 CPU 参与；DMA 更适合成块高速传输。脱机 I/O、假脱机 SPOOLing 则利用外存把独占设备改造成逻辑上的共享设备，打印队列是常见例子。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "区分内存缓冲与磁盘队列已讲，未展示单缓冲/双缓冲的重叠及耗时比较。",
+          "recommendation": "补生产输入T、CPU处理C、传送M的时间线和条件，讲清哪个阶段可重叠。"
+        }
+      ],
+      "notes": "12→7中前9章大多有跨章归并，不能一律报缺章。官方出版社正文简介可核验末三章范围；末三章内容应低深度补齐，不要求现代内核源码。",
+      "teaching_jump_example": {
+        "source_line": 156,
+        "original_paragraph": "管程：把共享数据和操作封装起来，由系统保证管程内部互斥。",
+        "missing_learning_step": "“互斥”不能解释消费者在空缓冲区里等什么、等待时是否仍占锁、谁唤醒；初学者可能以为进管程就什么同步问题都解决。",
+        "teacher_rewrite_example": "缓冲区空时，消费者不能取数据，也不能抱着锁一直等，否则生产者进不来。消费者在条件notEmpty上wait：暂时释放管程锁并睡眠；生产者获得锁、放入数据后发signal通知。消费者醒来还要重新获得锁，并用while再次检查是否为空，因为唤醒不保证此刻条件仍成立。互斥解决同一时刻谁能改数据，条件变量解决此刻能不能做。",
+        "student_transfer_task": "消费者wait时释放什么？醒来为什么还要再检查空不空？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "数据库技术",
+      "textbook": "王珊、杜小勇、陈红《数据库系统概论》第6版（18章）",
+      "source_urls": [
+        "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=62e959d4938b7cc2960eef97"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/数据库技术.md",
+      "lecture_sha256": "b59a3b82fadd0c7f7c6b4ddfe1bc9b44b15977ea80004d19610fec35b033a455",
+      "site_chapters": [
+        "第1章 数据库系统概论",
+        "第2章 概念模型与E-R方法",
+        "第3章 关系模型与完整性",
+        "第4章 关系代数",
+        "第5章 关系数据库标准语言SQL",
+        "第6章 视图、索引与数据库设计",
+        "第7章 关系数据理论",
+        "第8章 事务、并发控制与恢复",
+        "第9章 数据库安全性"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "教材1：概论",
+          "site_location": "本站1",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材2：关系模型",
+          "site_location": "本站3—4",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "教材3：SQL",
+          "site_location": "本站5—6",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "教材4：安全",
+          "site_location": "本站9",
+          "status": "移序"
+        },
+        {
+          "textbook_unit": "教材5：完整性",
+          "site_location": "本站3、5",
+          "status": "合并但触发机制缺失"
+        },
+        {
+          "textbook_unit": "教材6：依赖与范式",
+          "site_location": "本站7",
+          "status": "合并但多值依赖缺失"
+        },
+        {
+          "textbook_unit": "教材7：设计",
+          "site_location": "本站2、6",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "教材8：数据库程序",
+          "site_location": "无",
+          "status": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材9：记录、块及存取组织",
+          "site_location": "本站6仅索引选型",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材10：查询执行与优化",
+          "site_location": "无",
+          "status": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材11：恢复",
+          "site_location": "本站8",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材12：并发",
+          "site_location": "本站8",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材13：DBMS内部",
+          "site_location": "本站1只有组成定义",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材14：数据库演进",
+          "site_location": "本站1有模型分类，非数据库发展机制",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材15：非关系大数据存储",
+          "site_location": "无",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材16：仓库与分析",
+          "site_location": "无",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材17：内存数据库",
+          "site_location": "无",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材18：区块链与数据库",
+          "site_location": "本课无；大学基础8仅通用链原理",
+          "status": "跨课部分提及但数据库比较缺失"
+        }
+      ],
+      "findings": [
+        {
+          "title": "数据库编程与触发器未讲",
+          "status": "真正未讲",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "编程",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "游标",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "存储过程",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "触发器",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "应用能写SELECT不等于懂数据库编程；没有过程块、存储过程参数、游标生命周期和触发自动执行。",
+          "recommendation": "增加基础过程与触发场景，声明方言、给简单完整过程/触发效果例子；JDBC给连接→参数化→执行→结果→关闭的流程。"
+        },
+        {
+          "title": "查询处理与优化整域缺失",
+          "status": "真正未讲",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "查询优化",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "执行计划",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "嵌套循环",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "缓冲池",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "索引“可能更快”没有解释查询解析、逻辑改写、物理计划、扫描/连接算法和I/O成本。",
+          "recommendation": "补选择下推的中间结果对比与嵌套循环/索引连接条件；不用实现复杂成本优化器。"
+        },
+        {
+          "title": "存储与DBMS内部不足",
+          "status": "只有术语或结论",
+          "site_location": "本站1、6",
+          "evidence": [
+            {
+              "term": "记录表示",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "块的组织",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "缓冲区管理",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "索引选型有内容，但记录→页块→表组织、DBMS缓冲/存储分工没有。",
+          "recommendation": "增加页块及缓冲示意；区分聚集/非聚集、稠密/稀疏基础并有定位任务。"
+        },
+        {
+          "title": "第14—18章没有数据库视角",
+          "status": "真正未讲",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "OLAP",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "数据仓库",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "文档数据库",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "内存数据库",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "大学基础的大数据/区块链术语不构成数据库中OLTP/OLAP、多模型、内存持久化、链与库适用边界。",
+          "recommendation": "保留概念/场景深度的独立新技术单元，讲行列存/键值文档图时序/仓库与事务/内存不等于无持久化。"
+        },
+        {
+          "title": "4NF及多值依赖未覆盖",
+          "status": "真正未讲",
+          "site_location": "本站7",
+          "evidence": [
+            {
+              "term": "4NF",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "多值依赖",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "范式已有1NF—BCNF、闭包和无损依赖保持，不应把第6章全部说缺失；但第6版非星号多值依赖/4NF没有讲。",
+          "recommendation": "补独立多值事实造成笛卡尔冗余的小表例子与4NF分解；不要求完整公理证明。"
+        }
+      ],
+      "notes": "",
+      "teaching_jump_example": {
+        "source_line": 338,
+        "original_paragraph": "联合索引还受列顺序影响，不能看到多个查询列就任意建索引。",
+        "missing_learning_step": "“有影响”没有给排序含义和过滤条件；学生知道警告却不会判断(a,b)索引何时能缩小连续范围。",
+        "teacher_rewrite_example": "把联合索引(a,b)看成先按a、同a再按b排好的名单：(1,2)、(1,8)、(2,1)、(2,9)。查a=2可直接定位后一段；查a=2且b=9可继续缩小。只查b=9时，相同b散在不同a段，通常不能直接形成一段定位范围，数据库也可能采用全索引扫描或特定优化，所以不是“绝对用不上”。先写排列顺序，再判断条件能否确定有序起点。",
+        "student_transfer_task": "给索引(dept,score)，查某部门成绩范围与只查成绩范围，哪一个更容易确定连续范围？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "C与Python程序设计",
+      "textbook": "谭浩强《C程序设计》第5版 + 嵩天等《Python语言程序设计基础》第2版",
+      "source_urls": [
+        "https://www.tup.com.cn/bookscenter/bookcatalog?id=07645004",
+        "https://2d.hep.com.cn/mobile/book/show/java1514",
+        "https://abook.hep.com.cn/loadShowHome.action?courseInfoId=5000002390"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/C与Python程序设计.md",
+      "lecture_sha256": "b26b6f10870d98ecb02cb0c3e6925d0e1ab615d8f49a98871272fcdec6ba57f7",
+      "site_chapters": [
+        "第1章 程序设计与算法",
+        "第2章 数据类型、变量与常量",
+        "第3章 运算符与表达式",
+        "第4章 顺序结构与输入输出",
+        "第5章 选择结构",
+        "第6章 循环结构",
+        "第7章 函数与模块化程序设计",
+        "第8章 数组、字符串与Python组合数据",
+        "第9章 C指针、结构体与文件",
+        "第10章 Python异常、模块与文件",
+        "第11章 C与Python程序模型比较"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "C教材1—2：程序与算法",
+          "site_location": "本站1",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "C教材3：顺序结构",
+          "site_location": "本站2—4",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "C教材4—5：分支及循环",
+          "site_location": "本站5—6",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "C教材6：数组",
+          "site_location": "本站8",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "C教材7：函数",
+          "site_location": "本站7",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "C教材8：指针",
+          "site_location": "本站9",
+          "status": "合并但较多过程缺失"
+        },
+        {
+          "textbook_unit": "C教材9：自定义类型",
+          "site_location": "本站9",
+          "status": "合并但联合枚举缺失"
+        },
+        {
+          "textbook_unit": "C教材10：文件I/O",
+          "site_location": "本站9",
+          "status": "合并但二进制定位缺失"
+        },
+        {
+          "textbook_unit": "Python教材1—6：基本语法、控制、函数及容器",
+          "site_location": "本站1—8",
+          "status": "重新组合"
+        },
+        {
+          "textbook_unit": "Python教材7：文件和格式化",
+          "site_location": "本站10及8",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "Python教材8：设计方法",
+          "site_location": "本站1及少量场景",
+          "status": "部分缺失"
+        },
+        {
+          "textbook_unit": "Python计算生态及应用资源：科学计算、可视化、网络自动化",
+          "site_location": "无",
+          "status": "知识域缺失；正式二维码资源证实主题，章号需完整目录进一步核验"
+        }
+      ],
+      "findings": [
+        {
+          "title": "C函数相关预处理与存储类别未教",
+          "status": "真正未讲",
+          "site_location": "本站7",
+          "evidence": [
+            {
+              "term": "预处理",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "define",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "static",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "extern",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "只有头文件include用途一句，无宏展开、条件包含；作用域已有讲述，但存储期与static局部保持值未讲。",
+          "recommendation": "补宏与函数差别、参数加括号、static局部的跨调用变化，区分作用域与生命周期。"
+        },
+        {
+          "title": "指针高频组合和类型缺口",
+          "status": "真正未讲",
+          "site_location": "本站9",
+          "evidence": [
+            {
+              "term": "函数指针",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "union",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "enum",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "typedef",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "目前有单指针和线性数组移动，不含指针数组/数组指针、二维数组参数、结构体数组与链式结构；联合、枚举、类型别名未讲。",
+          "recommendation": "至少补可手算的二维数组/指针组合与结构体数组；函数指针基础选择过程可浅讲，复杂声明技巧不必堆叠。"
+        },
+        {
+          "title": "文件与数据格式化缺过程",
+          "status": "只有术语或结论",
+          "site_location": "本站9—10",
+          "evidence": [
+            {
+              "term": "fread",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "fseek",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "CSV",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "json",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "C文本读写已有，二进制结构化读取和定位无操作；Python只有写hello和read/readline名称，没有CSV二维数据读入→转换→统计→输出。",
+          "recommendation": "补返回值驱动的文件循环、二进制定位和Python CSV小任务；编码/异常边界沿用已讲内容。"
+        },
+        {
+          "title": "Python计算生态和应用完全没有",
+          "status": "真正未讲",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "random",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "turtle",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "numpy",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "matplotlib",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "书的正式配套资源包含科学计算可视化与网络自动化，本课连标准库选择、图形/图像示例都没有。",
+          "recommendation": "补标准库和第三方库的引入/安装区别及随机模拟或图形小任务、一个基础可视化；爬虫/复杂GUI可明确列扩展，不假称全书已覆盖。"
+        }
+      ],
+      "notes": "Python二维码资源不是完整目录，报告不杜撰其所有章号。不能据此强加Python面向对象为指定书独立必修章；需要完整目录再定。C第5版位运算移在辅导书，不能误报主教材丢掉整章。",
+      "teaching_jump_example": {
+        "source_line": 545,
+        "original_paragraph": "`malloc`申请的动态内存要检查返回指针并在不再使用时`free`；释放后原指针成为悬空指针，不能继续解引用或重复释放。函数内普通局部变量在函数返回后生命周期结束，因此不能返回其地址供调用者继续使用。",
+        "missing_learning_step": "既没展示malloc的参数/返回值/头文件，也没说明指针变量与分配对象生命周期；这句话需要学生先会动态分配才能听懂。",
+        "teacher_rewrite_example": "要保存运行时才知道长度的n个整数，可以向堆申请n*sizeof(int)字节：int *p=malloc(n*sizeof *p)。先确认n合法，再判断p是否为NULL；成功后p[0]到p[n-1]可用。free(p)释放那块对象，并没有自动把变量p改为空；此后*p无效。把p置NULL只处理这个变量，其他指向同一对象的指针也已失效。此例还需在代码前说明stdlib.h声明malloc/free。",
+        "student_transfer_task": "n=3且int占4字节要申请多少？free后p所保存的地址值即使没变，能不能读*p？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "软件工程",
+      "textbook": "张海藩、牟永敏《软件工程导论》第6版",
+      "source_urls": [
+        "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/软件工程.md",
+      "lecture_sha256": "e007ad68f68ab2cd2db8be9e78882b0ba3038c3f87cef42d2f53e0802fec2fbd",
+      "site_chapters": [
+        "第1章 软件工程概述",
+        "第2章 软件过程与生命周期模型",
+        "第3章 可行性研究与需求工程",
+        "第4章 总体设计与详细设计",
+        "第5章 软件实现与软件测试",
+        "第6章 软件维护、质量与配置管理",
+        "第7章 项目管理与风险管理",
+        "第8章 面向变化的软件开发方法"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "教材1：工程与过程",
+          "site_location": "本站1—2",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "教材2—3：可行性、需求",
+          "site_location": "本站3",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "教材4：形式化描述",
+          "site_location": "无",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材5—6：总体/详细设计",
+          "site_location": "本站4",
+          "status": "合并但过程不足"
+        },
+        {
+          "textbook_unit": "教材7：实现验证",
+          "site_location": "本站5",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材8：维护",
+          "site_location": "本站6",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材9：面向对象方法",
+          "site_location": "本站4.4",
+          "status": "压缩"
+        },
+        {
+          "textbook_unit": "教材10：对象分析",
+          "site_location": "本站4.4",
+          "status": "只有概括"
+        },
+        {
+          "textbook_unit": "教材11：对象设计",
+          "site_location": "本站4.4",
+          "status": "只有概括"
+        },
+        {
+          "textbook_unit": "教材12：对象实现测试",
+          "site_location": "无独立讲解",
+          "status": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材13：项目管理",
+          "site_location": "本站7及6",
+          "status": "拆分"
+        }
+      ],
+      "findings": [
+        {
+          "title": "对象分析、设计、实现三章压成一节",
+          "status": "只有术语或结论",
+          "site_location": "本站4.4",
+          "evidence": [
+            {
+              "term": "面向对象分析",
+              "occurrences": [
+                {
+                  "line": 147,
+                  "text": "### 4. 面向对象分析、设计与UML"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "关联",
+              "occurrences": [
+                {
+                  "line": 149,
+                  "text": "面向对象方法用对象、类、封装、继承和多态组织系统。分析阶段从需求中识别候选类、关联、属性、状态和服务；设计阶段确定类职责、接口、协作、持久化和部署。不能机械地把需求中的每个名词都变成类。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "顺序图",
+              "occurrences": [
+                {
+                  "line": 151,
+                  "text": "常用UML图各自回答不同问题：用例图描述参与者目标，类图描述静态结构，顺序图描述一次场景中按时间发生的消息，状态图描述对象状态迁移，活动图描述工作流，部署图描述软件到硬件结点的分布。DFD不是UML图，程序流程图也不等同活动图。"
+                },
+                {
+                  "line": 155,
+                  "text": "先读类图：`amount`是订单的数据，`pay()`是它提供的操作；`−`与`+`分别表示私有和公有。再沿顺序图从上往下读：用户请求付款，订单向支付服务发出扣款请求，支付服务返回结果。类图不告诉你谁先发消息，顺序图也不能替代所有类的静态结构。图中的调用是简化示例，实际支付还需要处理失败、幂等与结果核验。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "现有类图/顺序图能认识私有公有和消息顺序，但没有从需求抽类、关联多重性/继承组合选择、状态模型构造及对象测试。",
+          "recommendation": "分独立对象方法单元，用同一借阅/订单任务演进需求→对象→状态/协作→职责接口→测试。深度降低可缩小例子，不能删除整个方法阶段。"
+        },
+        {
+          "title": "形式化说明停在名称识别",
+          "status": "只有术语或结论",
+          "site_location": "本站3需求分析的一句",
+          "evidence": [
+            {
+              "term": "形式化",
+              "occurrences": [
+                {
+                  "line": 109,
+                  "text": "分析还可使用实体联系图描述数据对象、状态图描述“状态—事件—迁移”、用例描述参与者目标。形式化说明可减少歧义，但有穷状态机、Petri网和Z语言需要按项目风险选择；本课程要求能识别其用途，不展开数学证明。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "有穷状态机",
+              "occurrences": [
+                {
+                  "line": 109,
+                  "text": "分析还可使用实体联系图描述数据对象、状态图描述“状态—事件—迁移”、用例描述参与者目标。形式化说明可减少歧义，但有穷状态机、Petri网和Z语言需要按项目风险选择；本课程要求能识别其用途，不展开数学证明。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "Petri",
+              "occurrences": [
+                {
+                  "line": 109,
+                  "text": "分析还可使用实体联系图描述数据对象、状态图描述“状态—事件—迁移”、用例描述参与者目标。形式化说明可减少歧义，但有穷状态机、Petri网和Z语言需要按项目风险选择；本课程要求能识别其用途，不展开数学证明。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "Z语言",
+              "occurrences": [
+                {
+                  "line": 109,
+                  "text": "分析还可使用实体联系图描述数据对象、状态图描述“状态—事件—迁移”、用例描述参与者目标。形式化说明可减少歧义，但有穷状态机、Petri网和Z语言需要按项目风险选择；本课程要求能识别其用途，不展开数学证明。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "讲义确实提到形式化、有穷状态机、Petri网和Z语言，但没有可执行状态/事件/守卫的状态转移表；不能把提到名字误报成从未出现，也不能据此当作完整教过。",
+          "recommendation": "最低补有穷状态机的转移与非法路径判断、形式化用途；Petri/Z只做基本识别可明确深度，不必复杂证明。"
+        },
+        {
+          "title": "结构化设计图形只有名词和适用句",
+          "status": "只有术语或结论",
+          "site_location": "本站4.3",
+          "evidence": [
+            {
+              "term": "变换分析",
+              "occurrences": [
+                {
+                  "line": 138,
+                  "text": "面向数据流的设计从DFD识别输入、变换中心和输出，把处理映射成模块结构。变换分析适合“输入—变换—输出”主线，事务分析适合一个事务中心按类型分派不同动作。结构图表达模块调用、传入和传出信息，不等同于组织结构图。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "判定表",
+              "occurrences": [
+                {
+                  "line": 140,
+                  "text": "详细设计可用程序流程图、N-S图、PAD图、判定表、判定树和伪代码。条件组合较多时，判定表能系统列出条件与动作；流程图适合控制过程，但连线过多会降低可读性。人机界面设计应保持一致、提供反馈、防止高代价误操作，并支持撤销或恢复。"
+                },
+                {
+                  "line": 168,
+                  "text": "等价类把输入划分为预期处理相同的有效类和无效类，每类选代表值；边界值选择边界及其相邻值；判定表覆盖多个条件组合；错误推测依据历史经验补充容易出错的位置。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "N-S图",
+              "occurrences": [
+                {
+                  "line": 140,
+                  "text": "详细设计可用程序流程图、N-S图、PAD图、判定表、判定树和伪代码。条件组合较多时，判定表能系统列出条件与动作；流程图适合控制过程，但连线过多会降低可读性。人机界面设计应保持一致、提供反馈、防止高代价误操作，并支持撤销或恢复。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "说明输入变换输出、列出流程图/N-S/PAD/判定表，没有从DFD转模块的实际步骤和判定表构造。",
+          "recommendation": "补一个输入变换输出DFD转结构图示例和二条件判定表，用结果可核验的小任务串起来。"
+        }
+      ],
+      "notes": "",
+      "teaching_jump_example": {
+        "source_line": 149,
+        "original_paragraph": "分析阶段从需求中识别候选类、关联、属性、状态和服务；设计阶段确定类职责、接口、协作、持久化和部署。",
+        "missing_learning_step": "一串待识别名词，没有演示怎样从一句业务规则做一次建模决定、为什么不能把所有名词当类。",
+        "teacher_rewrite_example": "规则是“学生可借多本书，每次借阅需记借出日和归还日”。先选学生、图书两个需要持续管理的对象；日期属于一次借阅关系，不应塞进学生唯一的日期字段，否则第二次借书会覆盖。于是增加借阅记录，关联一名学生和一本图书，日期作为记录属性。再问还书要改谁：归还动作更新这条借阅记录，图书状态同步变可借。这才是从需求到对象职责的一次可检查决定。",
+        "student_transfer_task": "两人先后借同一本书，归还日期应该属于图书、学生还是某条借阅记录？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "计算机网络",
+      "textbook": "谢希仁《计算机网络》第8版",
+      "source_urls": [
+        "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=58234"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/计算机网络.md",
+      "lecture_sha256": "6283f4216431cad988c26597b518c17102b1e97fe454f78e2c94c32613d2ac62",
+      "site_chapters": [
+        "第1章 概述",
+        "第2章 物理层",
+        "第3章 数据链路层",
+        "第4章 网络层",
+        "第5章 运输层",
+        "第6章 应用层",
+        "第7章 网络安全",
+        "第8章 互联网上的音频/视频服务",
+        "第9章 无线网络和移动网络"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "教材1：网络概论",
+          "site_location": "本站第1章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材2：物理传输",
+          "site_location": "本站第2章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材3：链路",
+          "site_location": "本站第3章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材4：网络互连",
+          "site_location": "本站第4章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材5：端到端传输",
+          "site_location": "本站第5章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材6：应用",
+          "site_location": "本站第6章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材7：安全",
+          "site_location": "本站第7章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材8：音视频",
+          "site_location": "本站第8章",
+          "status": "章级存在；不能据此判断节级完整"
+        },
+        {
+          "textbook_unit": "教材9：无线移动",
+          "site_location": "本站第9章",
+          "status": "章级存在；不能据此判断节级完整"
+        }
+      ],
+      "findings": [
+        {
+          "title": "IP多播与成员管理缺失",
+          "status": "真正未讲",
+          "site_location": "本站4",
+          "evidence": [
+            {
+              "term": "IGMP",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "多播",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "组播",
+              "occurrences": [
+                {
+                  "line": 306,
+                  "text": "**历史分类编址先认格式：** A类最高位0，普通单播首字节常见1—126，默认/8；B类最高两位10，首字节128—191，默认/16，去掉格式位后有14位网络号；C类最高三位110，首字节192—223，默认/24；D类首字节224—239用于组播。0和127段等有特殊用途，不能当普通A类网络任意分配。"
+                },
+                {
+                  "line": 350,
+                  "text": "传统分类编址中，A类地址首个八位组通常为1—126，默认前缀/8；B类为128—191，默认前缀/16；C类为192—223，默认前缀/24；D类224—239用于组播，E类240—255保留作实验等用途。127.0.0.0/8是环回地址，不能机械地当作普通A类网络。现代互联网转发主要采用CIDR，A/B/C分类仍用于理解传统编址和默认掩码。"
+                },
+                {
+                  "line": 395,
+                  "text": "IPv6 没有广播，使用组播和任播；路由器不对 IPv6 数据报分片。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "D类地址及IPv6无广播仅作性质判断，没有组成员关系、单播复制和多播转发区别；教材4.7整个机制域无正文。",
+          "recommendation": "补组播加入/离开、IGMP与多播路由分工，一对多分发的小拓扑；不要求复杂协议状态机。"
+        },
+        {
+          "title": "接入技术与码分只有标签或无正文",
+          "status": "真正未讲或名称未展开",
+          "site_location": "本站2",
+          "evidence": [
+            {
+              "term": "ADSL",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "HFC",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "FTTx",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "码分",
+              "occurrences": [
+                {
+                  "line": 159,
+                  "text": "频分复用 FDM 按频带划分，时分复用 TDM 按时隙划分，波分复用 WDM 是光纤中的频分思想，码分复用 CDM 用不同码片区分用户。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "书2.5—2.6数字传输/宽带接入未归属；CDM只有用不同码片区分用户，无法做相关解码。",
+          "recommendation": "补光纤/铜缆/同轴接入路径和上下行特点；码片正交与内积解码一个小例子。"
+        },
+        {
+          "title": "网络管理仅端口号",
+          "status": "只有术语或结论",
+          "site_location": "本站6",
+          "evidence": [
+            {
+              "term": "SNMP",
+              "occurrences": [
+                {
+                  "line": 578,
+                  "text": "远程终端Telnet常用TCP 23，传统传输缺少加密；SSH常用TCP 22，提供安全远程登录。SNMP用于设备管理，请求响应通常用UDP 161，设备主动告警Trap通常发到UDP 162。端口只是默认约定，不能据此保证认证和权限安全。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "MIB",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "仅一句SNMP用于设备管理和161/162，没有管理者代理、MIB对象、读写/通知的交互。",
+          "recommendation": "补一次读取接口计数器和Trap告警流程；OID/详细PDU无需展开。"
+        },
+        {
+          "title": "PPP透明传输缺执行例子",
+          "status": "只有术语或结论",
+          "site_location": "本站3.2",
+          "evidence": [
+            {
+              "term": "PPP",
+              "occurrences": [
+                {
+                  "line": 211,
+                  "text": "### 3.2 PPP 与链路层的三个基本问题"
+                },
+                {
+                  "line": 213,
+                  "text": "链路层面对的是一段相邻链路。它需要解决三个基本问题：怎样划分帧边界，怎样让数据中的特殊比特不被误认成边界，以及怎样发现传输差错。PPP 常用于点到点链路，帧中包含标志、地址、控制、协议、信息和检验字段；它提供成帧与差错检测，但不依靠序号和确认实现可靠传输。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "填充",
+              "occurrences": [
+                {
+                  "line": 215,
+                  "text": "透明传输的意思是：无论上层交来什么比特模式，都能作为数据传送。面向字节的协议可用字节填充，面向比特的协议可用零比特填充。二者都是为了避免数据内容与帧定界符冲突。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "帧字段和三个基本问题有定义，但缺给出包含标志字节/连续1的数据如何填充还原的可执行小例子。",
+          "recommendation": "给字节填充与同步零比特填充的具体前后比对，区分使用环境。"
+        }
+      ],
+      "notes": "9个大章并未缺章；属于章内教材节漏项。IPv4分片已存在正确数值例题，不能误报缺失。",
+      "teaching_jump_example": {
+        "source_line": 159,
+        "original_paragraph": "频分复用 FDM 按频带划分，时分复用 TDM 按时隙划分，波分复用 WDM 是光纤中的频分思想，码分复用 CDM 用不同码片区分用户。",
+        "missing_learning_step": "没说明码片序列与数据比特的对应、多个发送者如何叠加、接收者怎么分离；只记CDM名字不会做码分计算。",
+        "teacher_rewrite_example": "先约定A码片为(+1,+1)，B为(+1,-1)，两码内积为0。发比特1发送原码片，发0发送相反码片。A发1、B发0，信道相加得到(0,2)。接收A时与A做内积再除码片数：(0×1+2×1)/2=+1，判为1；接收B得(0×1+2×(-1))/2=-1，判为0。这个理想小例子依赖同步与正交，真实无线还受噪声等影响。",
+        "student_transfer_task": "若收到(2,0)，A与B各发什么？先算相关值，不能只看第一个分量。",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "textbook": "上海交通大学出版社《大学计算机基础》（原映射未记作者/版次）",
+      "source_urls": [
+        "https://www.jiaodapress.com.cn/Data/BookContent/19593"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/大学计算机基础与新技术.md",
+      "lecture_sha256": "801e1bd075cf26be20cceadc4ba772259d3ed10982e760ab3de351365dea13d5",
+      "site_chapters": [
+        "第1章 信息、计算与计算思维",
+        "第2章 信息表示与计算机系统",
+        "第3章 操作系统、文件与软件",
+        "第4章 云计算与服务模型",
+        "第5章 大数据与数据处理",
+        "第6章 人工智能与机器学习",
+        "第7章 物联网",
+        "第8章 区块链",
+        "第9章 计算机发展与典型应用",
+        "第10章 新一代信息技术的综合应用"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "正式目录模块1：计算思维",
+          "site_location": "本站1及9",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "模块2：计算系统",
+          "site_location": "本站2、3",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "模块3：编码及处理",
+          "site_location": "本站2",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "模块4：网络与安全",
+          "site_location": "本课没有完整单元；其他独立课有",
+          "status": "跨课拆分未记录"
+        },
+        {
+          "textbook_unit": "模块5：操作环境",
+          "site_location": "本站3",
+          "status": "合并"
+        },
+        {
+          "textbook_unit": "模块6—8：办公应用",
+          "site_location": "Office独立课",
+          "status": "合理拆分但未记外部归属"
+        },
+        {
+          "textbook_unit": "后续应用拓展模块",
+          "site_location": "本站4—10部分主题",
+          "status": "具体版次及模块目录仍需核实"
+        }
+      ],
+      "findings": [
+        {
+          "title": "网络与安全基础没有本课归属",
+          "status": "真正未讲（本课）",
+          "site_location": "无",
+          "evidence": [
+            {
+              "term": "TCP",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "IP地址",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "病毒",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "版权",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            },
+            {
+              "term": "伦理",
+              "occurrences": [],
+              "absence_is_only_supporting_evidence": true
+            }
+          ],
+          "reason": "本课出现ping/DNS排障但没有先教IP/域名基本含义、网络分类、常见风险；教材模块4明确存在。独立网络/安全课有更深内容，但本课当前没有连接解释。",
+          "recommendation": "增加简短网络安全基础单元或本课正式导向对应既有入门章节；明确跨课拆分，不能在教材矩阵默默消失。"
+        },
+        {
+          "title": "教材身份与跨课范围记录不足",
+          "status": "映射证据不足",
+          "site_location": "textbook-map.json",
+          "evidence": [],
+          "reason": "只写书名出版社、没有作者ISBN版次；本站10章大量新技术重组，与出版社模块不能一一对照。",
+          "recommendation": "补精确书目、目录版本和Office/网络/多媒体跨课去向；先核验完整正式目录再宣称整书同步。"
+        }
+      ],
+      "notes": "出版社页面直接打开间歇失败，但搜索引擎索引中的正式出版社目录可核验模块1—8；无法读取部分不冒充完整目录。跨课合理分拆不应重复大量内容。",
+      "teaching_jump_example": {
+        "source_line": 239,
+        "original_paragraph": "HDFS把大文件分块并在多节点保存副本，MapReduce把批处理分为Map与Reduce阶段，YARN负责资源管理和调度；Spark可在内存中组织多阶段计算。",
+        "missing_learning_step": "四个陌生系统名挤在一句，没有Map输出什么和Reduce按什么组合，学生只能背用途表；计算思维主线中断。",
+        "teacher_rewrite_example": "先做一个问题：两份记录分别是“苹果 苹果”和“苹果 梨”，求每种水果总次数。Map逐词输出(苹果,1)等键值对；系统把同一个键的数收在一起，苹果得到[1,1,1]、梨得到[1]；Reduce分别求和，得到苹果3、梨1。分组是关键中间步，Map输出不能直接当最终结果。再说明HDFS负责把输入分块存好，YARN负责给任务安排资源，避免一开始就背四种产品。",
+        "student_transfer_task": "若第二份记录是“梨 梨”，分组后苹果和梨各有几项，Reduce输出什么？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    },
+    {
+      "course": "Office软件操作",
+      "textbook": "姜永生《大学计算机基础（Windows 10+Office 2019）》2020年，ISBN 9787040545272",
+      "source_urls": [
+        "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=5f07525ab0b2bda7c523ccc5"
+      ],
+      "source_status": "已浏览正式出版社目录或教材配套目录；不是从本站目录推导",
+      "lecture_file": "course_notes/Office软件操作.md",
+      "lecture_sha256": "23ad4805811c64b9404f4defb6c45a03f9507c9746493ffbf17999de78b1a614",
+      "site_chapters": [
+        "第1章 办公环境与文件管理",
+        "第2章 文字编辑与格式",
+        "第3章 页面排版、表格与对象",
+        "第4章 电子表格基础与公式",
+        "第5章 数据管理、分析与图表",
+        "第6章 演示文稿设计与制作",
+        "第7章 Office综合应用"
+      ],
+      "chapter_crosswalk": [
+        {
+          "textbook_unit": "教材1：计算机基础",
+          "site_location": "大学基础课1—3及9",
+          "status": "跨课拆分"
+        },
+        {
+          "textbook_unit": "教材2：操作环境",
+          "site_location": "大学基础3；Office1部分",
+          "status": "跨课拆分"
+        },
+        {
+          "textbook_unit": "教材3：Word",
+          "site_location": "Office2—3",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "教材4：Excel",
+          "site_location": "Office4—5",
+          "status": "拆分"
+        },
+        {
+          "textbook_unit": "教材5：PowerPoint",
+          "site_location": "Office6",
+          "status": "已归属"
+        },
+        {
+          "textbook_unit": "教材6：网络应用",
+          "site_location": "独立网络课及大学基础少量工具",
+          "status": "跨课拆分"
+        }
+      ],
+      "findings": [
+        {
+          "title": "邮件合并欠可执行教学",
+          "status": "只有术语或结论",
+          "site_location": "Office3和7",
+          "evidence": [
+            {
+              "term": "邮件合并",
+              "occurrences": [
+                {
+                  "line": 128,
+                  "text": "- 邮件合并由主文档、数据源和合并域组成，可批量生成信函、标签或证书。"
+                },
+                {
+                  "line": 334,
+                  "text": "| 同一模板批量生成通知、证书或信封 | Word/WPS文字的邮件合并 | 主文档负责固定版式，数据源提供姓名等变化字段 | 少量一次性文档可手工制作；数据源必须字段清楚、记录准确 |"
+                },
+                {
+                  "line": 359,
+                  "text": "先在表格中清理收件人数据，用文字处理的邮件合并生成并抽查通知，保留主文档和数据源，再导出PDF交付。PDF用于确认版式，可编辑源文件用于后续修订；敏感字段和隐藏内容需在分享前检查。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "介绍三组成并在选型表/交付案例建议使用，但没有创建主文档、链接字段/筛选收件人、预览、完成合并逐步过程。",
+          "recommendation": "补三条收件人数据→插入合并域→预览第二人→输出结果示例，并说清数据源字段与占位符。"
+        },
+        {
+          "title": "分类汇总和透视表缺独立操作任务",
+          "status": "只有术语或结论",
+          "site_location": "Office5",
+          "evidence": [
+            {
+              "term": "分类汇总",
+              "occurrences": [
+                {
+                  "line": 232,
+                  "text": "### 2. 分类汇总与数据透视表"
+                },
+                {
+                  "line": 234,
+                  "text": "传统分类汇总通常先按分类字段排序，再计算每组的和、平均值或计数。数据透视表可通过拖放字段快速分组、汇总和交叉分析，源数据改变后通常需要刷新。"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            },
+            {
+              "term": "数据透视表",
+              "occurrences": [
+                {
+                  "line": 232,
+                  "text": "### 2. 分类汇总与数据透视表"
+                },
+                {
+                  "line": 234,
+                  "text": "传统分类汇总通常先按分类字段排序，再计算每组的和、平均值或计数。数据透视表可通过拖放字段快速分组、汇总和交叉分析，源数据改变后通常需要刷新。"
+                },
+                {
+                  "line": 268,
+                  "text": "优先使用数据透视表，把部门和月份放入行列区域，把销售额放入值区域；源数据变化后刷新。若只需要一个固定条件总额，可使用SUMIF等公式，不能把筛选后肉眼相加当成可重复流程。"
+                },
+                {
+                  "line": 336,
+                  "text": "| 汇总考勤、销售或成绩并找异常数据 | Excel/WPS表格的公式、筛选、条件格式、数据透视表 | 结构化记录便于计算、筛选和分组汇总 | 关键编号宜按文本存储；排序必须扩展整条记录 |"
+                }
+              ],
+              "absence_is_only_supporting_evidence": false
+            }
+          ],
+          "reason": "能判断先排序和拖放字段，但没有一张小原表与实际输出，无法验证汇总行列和值区构造。",
+          "recommendation": "给部门×月份×金额四行数据，展示排序后分类汇总及透视表行/列/值放置和刷新结果。"
+        }
+      ],
+      "notes": "Office教材链接、作者、软件版本已由正式HEP移动页核实正确。7章不是漏了教材章：办公域主要重新拆分，计算基础与网络域由其他课承接，需记录。不能把宏VBA高级开发强加为本课必修缺章。",
+      "teaching_jump_example": {
+        "source_line": 234,
+        "original_paragraph": "数据透视表可通过拖放字段快速分组、汇总和交叉分析，源数据改变后通常需要刷新。",
+        "missing_learning_step": "没有一张实际原表和字段区域的对应，学生无法判断行/列/值是什么，也无法预先算出结果验证界面操作。",
+        "teacher_rewrite_example": "原表四行：技术部一月10、技术部二月20、行政部一月5、行政部二月8。创建透视表后把部门放行、月份放列、金额放值且汇总方式选求和。先手算技术部行应为10、20、合计30；一月列合计15。若值区显示计数而不是求和，先检查金额是否混成文本。给原表增加技术部一月7，刷新后对应格应由10变17；增加到原数据范围外还需扩展数据源。",
+        "student_transfer_task": "把月份放行、部门放列后总金额变吗？新增记录后只保存文件为什么不一定更新结果？",
+        "status": "改写提案，未写入产品也未冒充学生复测通过"
+      }
+    }
+  ]
+}

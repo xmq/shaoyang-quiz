@@ -23,7 +23,7 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
             pass
 
 
-def main(browser_path):
+def main(browser_path, report_path='audit_reports/全量验收_离线_2026-10-15.json'):
     courses=json.loads((ROOT/'course-index.json').read_text(encoding='utf-8'))
     teaching_refs={p for folder in ['course_notes','color_notes'] for f in (ROOT/folder).glob('*.md') for p in re.findall(r'!\[[^]]*\]\(\.\./([^)]*)\)',f.read_text(encoding='utf-8'))}
     media_text=(ROOT/'question-media.js').read_text(encoding='utf-8')
@@ -77,11 +77,13 @@ def main(browser_path):
     assert not errors and offline_question_image,errors
     build=(ROOT/'dist/build-meta.js').read_text(encoding='utf-8').split('"id":"')[1].split('"')[0]
     report={'build':build,'teaching_assets':len(teaching_refs),'question_assets':len(question_refs),'offline_question_image':offline_question_image,'cached':cached,'pages':len(rows),'errors':errors,'results':rows}
-    (ROOT/'audit_reports/全量验收_离线_2026-10-15.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (ROOT/report_path).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({key:value for key,value in report.items() if key!='results'},ensure_ascii=False))
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--browser-path',default='C:/Program Files/Google/Chrome/Application/chrome.exe')
-    main(parser.parse_args().browser_path)
+    parser.add_argument('--report',default='audit_reports/全量验收_离线_2026-10-15.json')
+    args=parser.parse_args()
+    main(args.browser_path,args.report)

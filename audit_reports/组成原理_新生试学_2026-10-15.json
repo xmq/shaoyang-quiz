@@ -1,0 +1,1596 @@
+{
+  "date": "2026-10-15",
+  "reviewer": "代理模拟首次学组成原理的新生；不是现实学生",
+  "scope": "读完10章及39复习卡，39道新题先作答后核，手机390网页逐章讲义/重点/章练；另7课各1处教师改写交叉复核",
+  "status": "本轮主要阻断和最后三项迁移复测通过；保留细任务覆盖边界",
+  "independent_question_attempts": [
+    {
+      "id": "gap-co-textbook-01-1",
+      "independent_answer": "电子管→晶体管→集成电路→大规模/超大规模集成电路",
+      "reason": "按主要器件代际排，不用主频替代。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+      "reference_explanation": "按器件特征分类，不是按机器外壳大小分类。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-01-2",
+      "independent_answer": "错误；编译器把源程序翻译为目标程序，CPU执行机器指令",
+      "reason": "第1章分清源表达式与CPU动作，第2章再复习语言路径。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+      "reference_explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-02-1",
+      "independent_answer": "2.5倍",
+      "reason": "新时间占原0.2+0.8/4=0.4，倒数2.5。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "2.5倍。",
+      "reference_explanation": "新时间比例0.2+0.8/4=0.4，加速比1/0.4=2.5。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-02-2",
+      "independent_answer": "前者响应期限/实时性；后者吞吐及批量完成时间",
+      "reason": "毫秒截止不能靠平均吞吐代替，离线批次看完成量。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "前者实时控制，重响应期限；后者数据处理，重吞吐和完成时间。",
+      "reference_explanation": "同样使用计算机，判断依据是任务目标，不是设备是否联网。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-03-1",
+      "independent_answer": "设备1；设备3等远端可能长期等不到",
+      "reason": "允许沿链先到近端，固定优先的后果是饥饿。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "设备1先；固定优先级可能使远端设备长期等待或饥饿。",
+      "reference_explanation": "允许信号先遇到近端请求者，近端反复请求会延迟后级。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-03-2",
+      "independent_answer": "各设备有独立请求/允许线；不能同时驱动同一数据总线",
+      "reason": "增加的是控制选择线，不是将共享数据通路变成多路。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "每设备有独立请求/允许线；仍需选定一个主设备，不能同时驱动同一共享数据线。",
+      "reference_explanation": "独立的是请求线路，不是给每设备增加独占数据通道。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-04-1",
+      "independent_answer": "不能；ACK=1后采样，主设备撤REQ，再由从设备撤ACK",
+      "reason": "请求仅说明开始，ACK才表示数据就绪。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "不能，应等ACK确认数据有效；采样后主设备先撤REQ，从设备再撤ACK。",
+      "reference_explanation": "REQ只代表请求，ACK才是从设备准备完成的确认。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-04-2",
+      "independent_answer": "没有；保留统一时钟，用WAIT增加等待拍",
+      "reason": "半同步不是纯异步。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "否。半同步仍按统一时钟工作，用等待信号延长特定访问。",
+      "reference_explanation": "异步以应答推进，半同步结合统一时钟和可变等待，不可等同。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-05-1",
+      "independent_answer": "模块1，模块内地址3",
+      "reason": "13=4×3+1；但mod及取整符号在本章首次没有解释，我用小学除余才完成。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "模块1，模块内地址3。",
+      "reference_explanation": "13mod4=1，⌊13/4⌋=3；若给的是字节地址须先按字长换算。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-05-2",
+      "independent_answer": "0、1、2、3",
+      "reason": "取余分别0/1/2/3；0/4/8/12全落模块0而冲突。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "0、1、2、3分别落四个模块，较易重叠；0、4、8、12都落模块0，冲突较多。",
+      "reference_explanation": "交叉存储提升取决于地址分布，不是模块数增加就保证每组访问加速。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-06-1",
+      "independent_answer": "r=3；2^r≥4+r+1",
+      "reason": "r2给4<7，r3给8=8。仅这道位数题可代公式，不能证明我会构造校验组。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "3个，2³=8≥4+3+1=8；r=2时4<7，不足。",
+      "reference_explanation": "需为每一位错误及无错误留不同综合状态。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-06-2",
+      "independent_answer": "均不能保证",
+      "reason": "两位翻转可保持总奇偶；普通汉明未带整体校验时双错可能误纠。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "均不能。两个翻转可能保持奇偶；普通汉明码双错可能被误纠。",
+      "reference_explanation": "奇偶只能保证检测奇数个位错，SECDED的整体奇偶位用于进一步区分双错。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-07-1",
+      "independent_answer": "约11.17ms",
+      "reason": "平均旋转30/7200秒=4.17ms，加6+1。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "11.17ms。",
+      "reference_explanation": "一转60/7200s=8.33ms，半转4.17ms；6+4.17+1≈11.17ms。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-07-2",
+      "independent_answer": "柱面1、磁头0、扇区7",
+      "reason": "70÷64=1余6，6÷16=0余6，扇区从1起再加1。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "柱面1，磁头0，扇区7。",
+      "reference_explanation": "70÷64得1余6，6÷16得0余6，扇区从1编号故6+1=7。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-08-1",
+      "independent_answer": "状态寄存器、数据寄存器、控制寄存器",
+      "reason": "判断就绪读状态，字符是数据，允许中断是控制命令。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "分别为状态、数据、控制寄存器。",
+      "reference_explanation": "状态说明是否就绪，数据给出字符内容，控制改变接口工作方式。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-09-1",
+      "independent_answer": "1%",
+      "reason": "2000×10/2000000=0.01，仅查询未计搬运。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "1%。",
+      "reference_explanation": "2000×10÷(2×10⁶)=0.01；未计数据搬运和处理。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-09-2",
+      "independent_answer": "读到旧值或无效数据；间隔长可能缓冲溢出丢数据",
+      "reason": "要用状态确认新输入存在。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "数据可能还是旧值或未稳定，应继续等就绪；间隔过长可能缓冲溢出、覆盖或丢失数据。",
+      "reference_explanation": "轮询须同时满足CPU成本与设备响应时限，不是越少越好。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-10-1",
+      "independent_answer": "算术11111010为−6；逻辑01111010为122",
+      "reason": "先复制符号/补0，再按补码/无符号位权读；原数−12。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "算术右移11111010，−6；逻辑右移01111010，无符号为122。",
+      "reference_explanation": "算术复制符号1，逻辑高位补0；同位串解释须说明类型。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-10-2",
+      "independent_answer": "不能；真实252超8位有符号上限127，位串按补码是−4",
+      "reason": "左移丢位后不能把环绕值当数学积。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "不能，真实252超过8位补码最大127，已溢出。",
+      "reference_explanation": "左移低位补0只是位操作，结果超范围后不能继续当精确乘2。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-11-1",
+      "independent_answer": "6和12；18=00010010",
+      "reason": "乘数0011两轮最低位均1，先加6，移位后再加12。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "部分积6与12，累加18，8位00010010。",
+      "reference_explanation": "乘数0011的第0、1位为1，分别加入6×2⁰和6×2¹。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-11-2",
+      "independent_answer": "不能；225=11100001，需8位，低4位0001只剩1",
+      "reason": "两个4位无符号数乘积可需要2n位。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "真实225=11100001₂，需8位；仅留4位0001不代表真实225。",
+      "reference_explanation": "n位乘n位的无符号积最多需2n位，截断不能默认为数学结果。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-12-1",
+      "independent_answer": "商0011=3余2；11=3×3+2",
+      "reason": "带入1011：保留余数1、2、2、2，对应商0、0、1、1。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "商3，余2；11=3×3+2，且0≤2<3。",
+      "reference_explanation": "被除数1011逐位带入，商0011；最终余数必须小于除数。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-12-2",
+      "independent_answer": "加除数3，得到1",
+      "reason": "不恢复法末尾负余数是中间表示，最终无符号余数需在0到2。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "加除数3，最终余数为1；无符号除法最终余数应满足0≤R<D。",
+      "reference_explanation": "负余数是加减交替过程的中间形式，末尾需恢复到标准余数。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-13-1",
+      "independent_answer": "1.1×2²+0.101×2²=10.001×2²=1.0001×2³=8.5",
+      "reason": "小阶尾数右移对齐，加完超过2需右规并加阶。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "1.100×2²+0.101×2²；尾数相加10.001；右规1.0001×2³=8.5。",
+      "reference_explanation": "向大阶2对齐，小阶尾数右移一位，出现10开头则右规。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-13-2",
+      "independent_answer": "1.11₂×2¹=3.5",
+      "reason": "尾数左移一位乘2，阶减1保持真值。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "左规为1.11₂×2¹，真值3.5。",
+      "reference_explanation": "尾数左移一位乘2，阶减1除2，两者抵消保持数值。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-14-1",
+      "independent_answer": "加法B不变、Cin0；减法B逐位取反、Cin1",
+      "reason": "A−B=A+反B+1，SUB同时控制异或与Cin。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "加法原样输入B且低位进位0；减法输入反B且低位进位1，即A+反B+1。",
+      "reference_explanation": "通过控制位异或B并同时控制初始进位，可统一加减。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-15-1",
+      "independent_answer": "16位，−32768至32767",
+      "reason": "32−6−5−5=16，补码范围−2^15至2^15−1。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "16位，−32768至32767。",
+      "reference_explanation": "32−6−5−5=16；n位补码范围−2^(n−1)到2^(n−1)−1。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-16-1",
+      "independent_answer": "主程序→B前半→A→B后半→主程序",
+      "reason": "A返回恢复B保存位置，B最终回主程序。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "主程序→B前半→A→B后半→主程序。",
+      "reference_explanation": "A返回被打断的B，B完成才回主程序，不能A直接跳过B。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-16-2",
+      "independent_answer": "嵌套覆盖断点/寄存器，无法正确恢复原上下文",
+      "reason": "先保存再开嵌套是为了每一层有自己的现场。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "高优先级中断可能覆盖返回信息或寄存器，恢复错误位置或错误数据。",
+      "reference_explanation": "嵌套每一层都须保有自己的现场，不能只保存最外层。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-17-1",
+      "independent_answer": "不能；R1→Y，R2与Y相加→Z，Z→R1",
+      "reason": "同拍双源驱动冲突；三步中每拍仅一个源。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+      "reference_explanation": "用Y保存第一操作数、Z暂存结果，避免同拍竞争同一总线。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-17-2",
+      "independent_answer": "满足条件时可以：独立PC增量器、不争用ALU/总线、不同目的寄存器",
+      "reason": "正文声明独立PC资源时可并行；共享ALU不能照搬。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+      "reference_explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-18-1",
+      "independent_answer": "0自环等待，1锁存数据再转后续态",
+      "reason": "未就绪提前离开会取旧值而不是“仅慢一点”。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "READY=0留等待态，READY=1锁存有效数据后继续。",
+      "reference_explanation": "未就绪数据可能未稳定，固定一拍强行推进会读到旧值。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-18-2",
+      "independent_answer": "还要知道当前节拍/状态、标志与外部就绪",
+      "reason": "同ADD在取指、读数、执行期输出不同。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "还要知道取指/执行等当前状态、条件标志和外部READY等状态。",
+      "reference_explanation": "同一ADD在取指与执行的动作不同，控制是译码、时序和条件的组合。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-19-1",
+      "independent_answer": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY",
+      "reason": "读状态任一为真需读，锁存还要求READY。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+      "reference_explanation": "读请求在等待期间保持，锁存必须等READY有效。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-19-2",
+      "independent_answer": "先确认哪些传送可并行以及ALU输入来源，才能排合法节拍",
+      "reason": "单总线双源不能同拍；专用输入与Y/Z分拍不同。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+      "reference_explanation": "状态表不能忽略硬件约束，否则逻辑方程形式正确也会触发资源冲突。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-20-1",
+      "independent_answer": "不是；回的是微PC/控存地址00",
+      "reason": "机器PC仍保存下一用户指令地址，主存和CM是不同空间。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "否，改变的是微PC，使控制器重新取下一条机器指令；机器PC仍按程序执行流保持。",
+      "reference_explanation": "机器PC与微PC属于不同地址空间，不能混为同一寄存器。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-20-2",
+      "independent_answer": "微PC+1、显式下地址、操作码分派入口；也可条件/返回地址",
+      "reason": "等待条件未满足时重复同微指令维持读状态，满足才前进。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "顺序微PC+1、微指令显式下地址、条件或操作码入口映射；未READY时回自身等待。",
+      "reference_explanation": "还可有微子程序返回地址等，地址选择由条件与顺序控制字段共同决定。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-21-1",
+      "independent_answer": "3位",
+      "reason": "4动作+不动作=5种，2位仅4种，3位8种够。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "3位；共5种状态，2位只能4种，3位可8种。",
+      "reference_explanation": "若无不动作且保证必选一个才可能2位，题目条件不能省。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    },
+    {
+      "id": "gap-co-textbook-21-2",
+      "independent_answer": "1536bit=192B；6位",
+      "reason": "64×24，除8得B；2^6=64个地址。",
+      "answer_saved_before_gold": true,
+      "reference_answer": "1536bit=192B；下地址6位。",
+      "reference_explanation": "64×24=1536，除8换字节；2⁶=64。",
+      "comparison": "逐项人工核对：结论与关键推导一致；不据此判定所有教学机制完整"
+    }
+  ],
+  "teacher_cross_review": [
+    {
+      "course": "电路分析与电工技术",
+      "independent_answer": "2A，电流超前电压约53.1°",
+      "reason": "Z=6−j8，模仍10；相角变−53.1°，除法使电流相角+53.1°。",
+      "lecture_sufficiency": "可完成；正文给了相角与负号关系，容量电抗负号需本章此前已教。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    },
+    {
+      "course": "模拟电子技术",
+      "independent_answer": "0.5V三极管区；2.5V饱和区",
+      "reason": "过驱动3−1=2V，分别小于和大于2。",
+      "lecture_sufficiency": "可完成，判区边界和MOS/BJT术语差别已经解释。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    },
+    {
+      "course": "数字电子技术",
+      "independent_answer": "脉宽翻倍，从约1.1s到2.2s",
+      "reason": "C不变，t≈1.1RC，R两倍。",
+      "lecture_sufficiency": "可完成；能理解阈值充电达到2/3，不用先会推ln也能应用。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "independent_answer": "r=1−1.2=−0.2，判0，发生误码",
+      "reason": "r小于门限0，负噪声将正样值推过界。",
+      "lecture_sufficiency": "可完成，先用采样值判决再补术语比直接误码公式易懂。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    },
+    {
+      "course": "信号与系统",
+      "independent_answer": "零初始y3=0.125；y−1=2时y0=2",
+      "reason": "单位样值x0=1，其他0；依次减半，非零初始代0.5×2+1。",
+      "lecture_sufficiency": "目标递推可独立完成；已核对例前正文先给离散有理因果ROC包含单位圆的稳定判据，撤回初步疑虑，不登记为本次实缺口。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    },
+    {
+      "course": "多媒体技术",
+      "independent_answer": "01110→0|11|10→A C B；另一码01可B或A+C",
+      "reason": "前缀码从左到右走，禁止一个完整码字成为另一开头。",
+      "lecture_sufficiency": "可完成，有可实际还原的小数据和歧义反例。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    },
+    {
+      "course": "信息安全",
+      "independent_answer": "普通文字插入防XSS；诱导已登录请求防CSRF；HTTPS不能独立解决",
+      "reason": "问题各在代码解释边界和凭据随请求自动携带，不是传输被窃听。",
+      "lecture_sufficiency": "可完成；网页新手仍需知道Cookie是浏览器保存并随请求带出的会话凭据，本文已解释自动携带作用。",
+      "answered_before_details": true,
+      "gold_comparison": "答案与折叠参考一致，具体理由见独立答案"
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "系统概论",
+      "own_explanation": "程序在内存，PC找动作，IR存动作，R1/R2存数，控制器安排ALU算和。",
+      "state_reason": "PC100→104是下一条4B指令地址，不是结果8。",
+      "unknown_or_skipped_steps": [],
+      "chosen_practice_ids": [
+        "uf-co-006",
+        "sp-core-co-001"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "本章所做任务可完成；非全节完备声明",
+      "worked_example_recalculation": "PC104、R1=8、R2=5；性能题CPI2、2ms。"
+    },
+    {
+      "chapter": 2,
+      "title": "发展应用",
+      "own_explanation": "换器件让硬件更小更可靠；应用按主要任务区分，多核只加速可并行部分。",
+      "state_reason": "串行20%不变，并行80%缩到20%，总剩40%。",
+      "unknown_or_skipped_steps": [],
+      "chosen_practice_ids": [
+        "gap-co-textbook-01-1",
+        "gap-co-textbook-02-1"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "本章所做任务可完成；非全节完备声明",
+      "worked_example_recalculation": "器件排电子管到大规模集成；4核题2.5倍。"
+    },
+    {
+      "chapter": 3,
+      "title": "系统总线",
+      "own_explanation": "大家共用路，先仲裁谁走，再握手确认什么时候数据可拿。",
+      "state_reason": "REQ1但ACK0还没确认有效，必须等。",
+      "unknown_or_skipped_steps": [
+        "三态控制在第一句出现未解释高阻是什么意思；不影响本次握手但会卡住初学者。"
+      ],
+      "chosen_practice_ids": [
+        "gap-co-textbook-03-1",
+        "gap-co-textbook-04-1"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "需修复",
+      "worked_example_recalculation": "双拍带宽640MB/s；近端1先获总线；数据有效才撤REQ再撤ACK。"
+    },
+    {
+      "chapter": 4,
+      "title": "存储器",
+      "own_explanation": "大而慢和小而快分层；Cache存副本，页表换地址，缺页才从盘调页。",
+      "state_reason": "13除4商3余1，对应模块1内部第3字；Cache十六进制例无法在未学数制时独立推。",
+      "unknown_or_skipped_steps": [
+        "二进制/十六进制与mod取整先修在第6章才讲。",
+        "Cache块、行、路、标记没有从连续数据如何装块举最小例子。",
+        "汉明码没有展开位置二进制到参与组的过程。"
+      ],
+      "chosen_practice_ids": [
+        "gap-co-textbook-05-1",
+        "gap-co-textbook-07-1"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "需修复",
+      "worked_example_recalculation": "磁盘11.17ms；交叉定位1/3。汉明构造只知要分组却不知道每组具体成员；未偷看折叠答案来冒充会做。"
+    },
+    {
+      "chapter": 5,
+      "title": "输入输出",
+      "own_explanation": "状态告诉能不能读，数据是字符本身，控制是发启动等指令；DMA负责搬块。",
+      "state_reason": "每次1B搬10次，地址1000→1010、剩246B。",
+      "unknown_or_skipped_steps": [],
+      "chosen_practice_ids": [
+        "gap-co-textbook-08-1",
+        "gap-co-textbook-09-1"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "本章所做任务可完成；非全节完备声明",
+      "worked_example_recalculation": "查询题1000×20/1MHz=2%；DMA10B后1010/246。"
+    },
+    {
+      "chapter": 6,
+      "title": "运算方法",
+      "own_explanation": "位串先约定有符号规则；补码统一减法，乘法逐位累加，浮点把阶对齐再动尾数。",
+      "state_reason": "乘数0011当前最低位1加6，移位后再加12，总18；除1011每轮R为1/2/2/2。",
+      "unknown_or_skipped_steps": [
+        "全加器一下写⊕、AiBi+(Ai⊕Bi)Ci，没有先明确⊕异或、相邻变量为与、此+为或；初学者会按算术乘加读。",
+        "规格化“1.M”的M与前后尾数/小数字段术语需保持一致；一般表示已给例子，主要是控制符号跳步。"
+      ],
+      "chosen_practice_ids": [
+        "gap-co-textbook-10-1",
+        "gap-co-textbook-13-1"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "需修复",
+      "worked_example_recalculation": "6×3=00010010；11÷3商0011余2；浮点相减左规得3.5。"
+    },
+    {
+      "chapter": 7,
+      "title": "指令系统",
+      "own_explanation": "指令分动作和数从哪来，寻址规则给真正操作数位置，不同字段不要混。",
+      "state_reason": "A100→M100=400只是间接EA，还要读M400=9。",
+      "unknown_or_skipped_steps": [],
+      "chosen_practice_ids": [
+        "gap-co-textbook-15-1",
+        "uf-co-005"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "本章所做任务可完成；非全节完备声明",
+      "worked_example_recalculation": "立即100、直接400、间接9、寄存器间接9；相对96；16位立即范围−32768..32767。"
+    },
+    {
+      "chapter": 8,
+      "title": "CPU结构",
+      "own_explanation": "寄存器分工取指/读数/运算，流水让几条指令不同阶段重叠，中断保存当前进度。",
+      "state_reason": "SUB要等ADD第5拍写R1；题明确前半写后半读，所以第5拍能解等待。",
+      "unknown_or_skipped_steps": [
+        "IF/ID/EX/MEM/WB首次集中在图，需在文字或图内完整中文对照；正文只解释WB/ID局部。"
+      ],
+      "chosen_practice_ids": [
+        "gap-co-textbook-16-1",
+        "gap-co-textbook-16-2"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "需修复",
+      "worked_example_recalculation": "5级3条7拍；20条24ns；间接ADD得12；嵌套B→A→B。"
+    },
+    {
+      "chapter": 9,
+      "title": "控制功能",
+      "own_explanation": "把一条大动作拆成只有一个源可驱动总线的小动作，状态决定本拍信号。",
+      "state_reason": "R1→Y先保留第一数，R2上总线与Y加到Z，再Z回R1，双源同拍不行。",
+      "unknown_or_skipped_steps": [
+        "能按给定动作复现三步，但图应标清Y的ALU固定输入、Z的结果锁存及ACC与总线的连线，免得仅背文字顺序。"
+      ],
+      "chosen_practice_ids": [
+        "gap-co-textbook-17-1",
+        "gap-co-textbook-18-1"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "需修复",
+      "worked_example_recalculation": "READ_WAIT就绪0自环，1锁存再转；独立PC增量可与MDR→IR并行。"
+    },
+    {
+      "chapter": 10,
+      "title": "控制设计",
+      "own_explanation": "硬布线把状态等输入变控制线；微程序用控存每条微指令发控制动作，微PC和机器PC不是同一位置。",
+      "state_reason": "F1或E1才发读，而且READY1才装MDR；4动作加空是5种所以3位。",
+      "unknown_or_skipped_steps": [
+        "10.1表F2同拍装IR并按新操作码分派，没给独立分派态，实际按何时采样无法照表实现。",
+        "10.2 00/01/02/20..24只有起终和概述，20..24各微地址到底做什么/下地址是什么没有展开，不能独立逐地址手推。",
+        "∧/∨在本章方程出现，正文未释为与/或；即便第6章ALU式子有更早同类符号也未教该记号。"
+      ],
+      "chosen_practice_ids": [
+        "gap-co-textbook-19-1",
+        "gap-co-textbook-21-2"
+      ],
+      "card_review": "阅读对应卡；能压缩复习已学任务，但卡不负责弥补正文缺失先修",
+      "status": "需修复",
+      "worked_example_recalculation": "控存1536bit192B、6位下地址；回00不是把用户PC清0。"
+    }
+  ],
+  "browser": {
+    "status": "已实际执行",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "build_meta_js": "globalThis.SHAOYANG_BUILD=Object.freeze({\"id\":\"cbbcd71341b10e57\",\"questionCount\":2480,\"mediaAssets\":[\"./media/analog_bjt_states.svg\",\"./media/analog_common_emitter.svg\",\"./media/analog_diode_iv.svg\",\"./media/analog_feedback_block.svg\",\"./media/analog_load_line.svg\",\"./media/analog_opamp_inverting.svg\",\"./media/analog_pn_bias.svg\",\"./media/analog_power_supply.svg\",\"./media/cg-04-s3-q21.svg\",\"./media/circuit_mesh_currents.svg\",\"./media/co_cache_address.svg\",\"./media/co_cache_lookup.svg\",\"./media/co_coverage_bus_handshake.svg\",\"./media/co_coverage_control_store.svg\",\"./media/co_coverage_microsteps.svg\",\"./media/co_dma_transfer.svg\",\"./media/co_float_fields.svg\",\"./media/co_instruction_cycle.svg\",\"./media/co_pipeline.svg\",\"./media/co_pipeline_stall.svg\",\"./media/co_virtual_address.svg\",\"./media/comm_eye_diagram.svg\",\"./media/comm_eye_jitter.svg\",\"./media/comm_mirror_frequency.svg\",\"./media/comm_modulation.svg\",\"./media/comm_sampling.svg\",\"./media/comm_spectrum.svg\",\"./media/comm_superhet.svg\",\"./media/comm_system.svg\",\"./media/computer_memory_hierarchy.svg\",\"./media/db_algebra_rows.svg\",\"./media/db_er_symbols.svg\",\"./media/db_index_choice.svg\",\"./media/db_isolation.svg\",\"./media/db_isolation_compare.svg\",\"./media/db_join_rows.svg\",\"./media/db_many_to_many.svg\",\"./media/db_normalization.svg\",\"./media/db_relationships.svg\",\"./media/db_sql_order.svg\",\"./media/db_wal.svg\",\"./media/digital_adc_process.svg\",\"./media/digital_comb_seq.svg\",\"./media/digital_counter_states.svg\",\"./media/digital_flipflop_timing.svg\",\"./media/digital_kmap.svg\",\"./media/digital_quantization_steps.svg\",\"./media/ds_algorithm_choice.svg\",\"./media/ds_array_linked.svg\",\"./media/ds_array_sparse.svg\",\"./media/ds_circular_queue.svg\",\"./media/ds_complexity_growth.svg\",\"./media/ds_graph_steps.svg\",\"./media/ds_graph_traversal.svg\",\"./media/ds_hash_probe.svg\",\"./media/ds_heap_steps.svg\",\"./media/ds_insertion_sort.svg\",\"./media/ds_kmp_prefix.svg\",\"./media/ds_linked_insert.svg\",\"./media/ds_linked_recall.svg\",\"./media/ds_merge_steps.svg\",\"./media/ds_prim_steps.svg\",\"./media/ds_quick_partition.svg\",\"./media/ds_sparse_triples.svg\",\"./media/ds_stack_queue.svg\",\"./media/ds_topological_order.svg\",\"./media/ds_tree_traversal.svg\",\"./media/ds_weighted_graph.svg\",\"./media/ee_kcl_node.svg\",\"./media/ee_parallel_current.svg\",\"./media/ee_rc_discharge.svg\",\"./media/ee_rc_response.svg\",\"./media/ee_rlc_phasor.svg\",\"./media/ee_self_hold_control.svg\",\"./media/ee_series_parallel.svg\",\"./media/foundations_ai_workflow.svg\",\"./media/foundations_blockchain_chain.svg\",\"./media/foundations_cloud_layers.svg\",\"./media/foundations_computer_system.svg\",\"./media/foundations_data_pipeline.svg\",\"./media/foundations_information_chain.svg\",\"./media/foundations_iot_loop.svg\",\"./media/multimedia_audio_chain.svg\",\"./media/multimedia_bitmap_vector.svg\",\"./media/multimedia_compression_choice.svg\",\"./media/multimedia_container_codec.svg\",\"./media/multimedia_pixel_storage.svg\",\"./media/multimedia_signal_chain.svg\",\"./media/multimedia_video_size.svg\",\"./media/network_arp_hop.svg\",\"./media/network_congestion_review.svg\",\"./media/network_crc_steps.svg\",\"./media/network_handshake_review.svg\",\"./media/network_layers.svg\",\"./media/network_subnet.svg\",\"./media/network_subnet_review.svg\",\"./media/network_tcp_window.svg\",\"./media/network_tdm_slots.svg\",\"./media/office_data_flow.svg\",\"./media/office_master.svg\",\"./media/office_references.svg\",\"./media/office_sections.svg\",\"./media/office_styles.svg\",\"./media/os_banker_steps.svg\",\"./media/os_disk_scan.svg\",\"./media/os_io_disk.svg\",\"./media/os_page_replacement.svg\",\"./media/os_paging_address.svg\",\"./media/os_paging_card.svg\",\"./media/os_process_states.svg\",\"./media/os_rr_timeline.svg\",\"./media/os_semaphore_buffer.svg\",\"./media/program_function_args.svg\",\"./media/program_loop_trace.svg\",\"./media/program_pointer.svg\",\"./media/program_pointer_array.svg\",\"./media/program_pointer_card.svg\",\"./media/program_python_binding.svg\",\"./media/program_recursion_stack.svg\",\"./media/security_access_flow.svg\",\"./media/security_backup_time.svg\",\"./media/security_cia_risk.svg\",\"./media/security_crypto_goals.svg\",\"./media/security_incident_response.svg\",\"./media/security_malware_compare.svg\",\"./media/security_network_layers.svg\",\"./media/security_risk_cycle.svg\",\"./media/security_signature_flow.svg\",\"./media/signal_convolution.svg\",\"./media/signal_convolution_result.svg\",\"./media/signal_frequency_filter.svg\",\"./media/signal_roc.svg\",\"./media/signal_sampling_alias.svg\",\"./media/signal_time_scale.svg\",\"./media/signal_time_transform.svg\",\"./media/soft_change_trace.svg\",\"./media/soft_critical_path.svg\",\"./media/soft_design_flow.svg\",\"./media/soft_dfd.svg\",\"./media/soft_lifecycle.svg\",\"./media/soft_testing.svg\",\"./media/soft_uml_example.svg\",\"./media/soft_whitebox_paths.svg\",\"./media/streaming_buffer.svg\",\"./media/tcp_congestion.svg\",\"./media/tcp_handshake.svg\",\"./media/wlan_hidden_station.svg\"]});\n",
+    "chapters": [
+      {
+        "chapter": 1,
+        "chapter_id": "computer-organization.c01",
+        "practice_attempts": [
+          {
+            "id": "uf-co-006",
+            "stem": "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+            "independent_answer": "B",
+            "input_before_reveal": true,
+            "rendered_feedback": "单选\n待练 8 题\n☆\n性能指标与时间计算\nCPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。\nA\n0.5 s\nB\n1 s\nC\n2 s\nD\n4 s\n✓ 正确\n解析\nCPU时间=指令数×CPI/主频=10⁹×2/(2×10⁹)=1 s。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "sp-core-co-001",
+            "stem": "某处理器字长为32位，这一指标首先表示（ ）。",
+            "independent_answer": "A",
+            "input_before_reveal": true,
+            "rendered_feedback": "单选\n待练 7 题\n☆\n性能指标与时间计算\n某处理器字长为32位，这一指标首先表示（ ）。\nA\nCPU一次能处理的基本二进制位数\nB\n主存一定只有32个单元\nC\n地址总线一定为32根\nD\n每秒执行32条指令\n✓ 正确\n解析\n字长反映处理器基本运算和寄存器处理的数据位数；它与地址线、主存容量和执行速度不是同一指标。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第1章 计算机系统概论课程核心练习形式：单选 · 判断 · 简答 · 计算▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第1章 计算机系统概论\n课程核心\n练习形式：单选 · 判断 · 简答 · 计算\n1.1 计算机系统简介\n\n同一台电脑为什么既能编辑文档，又能算3+5？硬件提供保存、传送、运算的能力，换一段软件就换了要"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第1章 计算机系统概论▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "存储程序与系统组成\n正常练\n核心知识：冯·诺依曼机把指令和数据存入存储器，由运算器、控制器、存储器、输入和输出部件协同工作；CPU由运算器、控制器和寄存器等组成。\n方法与例题：沿“输入程序和数据→存入"
+        },
+        "chapter_pool_count": 8,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 2,
+        "chapter_id": "computer-organization.c08",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-01-1",
+            "stem": "按主要电子器件写出常见计算机四代顺序。",
+            "independent_answer": "电子管→晶体管→集成电路→大规模/超大规模集成电路",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 4 题\n☆\n器件演进与软硬件层次\n按主要电子器件写出常见计算机四代顺序。\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n电子管→晶体管→集成电路→大规模/超大规模集成电路。\n\n解析\n按器件特征分类，不是按机器外壳大小分类。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-02-1",
+            "stem": "程序80%的时间可4倍并行加速，20%必须串行，忽略开销，整体加速比多少？",
+            "independent_answer": "2.5倍",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 3 题\n☆\n应用场景与并行加速边界\n程序80%的时间可4倍并行加速，20%必须串行，忽略开销，整体加速比多少？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n2.5倍。\n\n解析\n新时间比例0.2+0.8/4=0.4，加速比1/0.4=2.5。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=2&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第2章 计算机的发展及应用课程基础练习形式：单选 · 判断 · 简答 · 场景题 · 计算▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第2章 计算机的发展及应用\n课程基础\n练习形式：单选 · 判断 · 简答 · 场景题 · 计算\n2.1 计算机的发展史\n\n按主要电子器件，常见代际顺序是电子管→晶体管→集成电路→大规模/超大规模集成电"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=2&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第2章 计算机的发展及应用▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "器件演进与软硬件层次\n正常练\n核心知识：主要器件常按电子管、晶体管、集成电路、大规模集成演进；语言层次说明程序到硬件的实现路径。\n方法与例题：识别代际看主要电子器件；高级语言需经编译或解释，汇编需汇编"
+        },
+        "chapter_pool_count": 4,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 3,
+        "chapter_id": "computer-organization.c06",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-03-1",
+            "stem": "链式查询总线，设备1比设备3靠近仲裁器，两者同时请求时谁先？长期可能出现什么问题？",
+            "independent_answer": "设备1；设备3等远端可能长期等不到",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 10 题\n☆\n总线仲裁决定谁先传\n链式查询总线，设备1比设备3靠近仲裁器，两者同时请求时谁先？长期可能出现什么问题？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n设备1先；固定优先级可能使远端设备长期等待或饥饿。\n\n解析\n允许信号先遇到近端请求者，近端反复请求会延迟后级。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-04-1",
+            "stem": "异步四相互锁读传输中REQ已置1但ACK仍为0，主设备能否按该协议采样？后续撤销顺序是什么？",
+            "independent_answer": "不能；ACK=1后采样，主设备撤REQ，再由从设备撤ACK",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 9 题\n☆\n异步总线四相握手\n异步四相互锁读传输中REQ已置1但ACK仍为0，主设备能否按该协议采样？后续撤销顺序是什么？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n不能，应等ACK确认数据有效；采样后主设备先撤REQ，从设备再撤ACK。\n\n解析\nREQ只代表请求，ACK才是从设备准备完成的确认。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=3&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第3章 系统总线课程核心练习形式：单选 · 判断 · 简答 · 计算 · 状态判断▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第3章 系统总线\n课程核心\n练习形式：单选 · 判断 · 简答 · 计算 · 状态判断\n3.1 总线的基本概念\n\n总线是一组由多个部件共享的传输通路和通信规则。发起一次传输的叫主设备，被访问的叫从设备"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=3&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第3章 系统总线▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "总线结构与带宽\n补充练\n核心知识：地址总线选择对象，数据总线传送内容，控制总线携带读写和时序信号；总线带宽由数据宽度、频率和每周期传输次数共同决定。\n方法与例题：32位总线每周期传1次、100MHz时"
+        },
+        "chapter_pool_count": 10,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 4,
+        "chapter_id": "computer-organization.c04",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-05-1",
+            "stem": "4路低位交叉存储按字地址编排，字地址13的模块号与模块内地址是多少？",
+            "independent_answer": "模块1，模块内地址3",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 38 题\n☆\n低位交叉存储的模块定位\n4路低位交叉存储按字地址编排，字地址13的模块号与模块内地址是多少？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n模块1，模块内地址3。\n\n解析\n13mod4=1，⌊13/4⌋=3；若给的是字节地址须先按字长换算。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-07-1",
+            "stem": "7200rpm磁盘平均寻道6ms，平均传输1ms，忽略其他开销，平均访问时间约多少？",
+            "independent_answer": "约11.17ms",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 37 题\n☆\n磁盘定位与平均访问时间\n7200rpm磁盘平均寻道6ms，平均传输1ms，忽略其他开销，平均访问时间约多少？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n11.17ms。\n\n解析\n一转60/7200s=8.33ms，半转4.17ms；6+4.17+1≈11.17ms。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第4章 存储器课程核心练习形式：单选 · 判断 · 填空 · 计算 · 简答▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第4章 存储器\n课程核心\n练习形式：单选 · 判断 · 填空 · 计算 · 简答\n4.1 概述\n\n从上到下通常为：寄存器 → Cache → 主存 → 辅存。越靠上速度越快、容量越小、每位价格越高；越"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第4章 存储器▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "存储层次与局部性\n补充练\n核心知识：寄存器、Cache、主存、外存按速度、容量和成本分层；时间局部性是近期访问可能再访问，空间局部性是邻近地址可能被访问。\n方法与例题：循环重复访问数组兼有时间和空间局"
+        },
+        "chapter_pool_count": 38,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 5,
+        "chapter_id": "computer-organization.c09",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-08-1",
+            "stem": "CPU要判断键盘接口是否已有新字符、读取字符、允许中断，分别主要访问哪类寄存器？",
+            "independent_answer": "状态寄存器、数据寄存器、控制寄存器",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 12 题\n☆\nI/O接口的三个寄存器\nCPU要判断键盘接口是否已有新字符、读取字符、允许中断，分别主要访问哪类寄存器？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n分别为状态、数据、控制寄存器。\n\n解析\n状态说明是否就绪，数据给出字符内容，控制改变接口工作方式。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-09-1",
+            "stem": "CPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？",
+            "independent_answer": "1%",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 11 题\n☆\n程序查询的忙等开销\nCPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n1%。\n\n解析\n2000×10÷(2×10⁶)=0.01；未计数据搬运和处理。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=5&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第5章 输入输出系统课程核心练习形式：单选 · 判断 · 简答 · 场景题 · 状态判断▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第5章 输入输出系统\n课程核心\n练习形式：单选 · 判断 · 简答 · 场景题 · 状态判断\n5.1 概述\n\nI/O系统把CPU和主存与外部设备连接，必须解决速度、数据格式和工作方式的差异。CPU发命"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=5&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第5章 输入输出系统▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "I/O控制、中断与DMA\n优先练\n按一次I/O流程比较查询、中断与DMA，说明CPU何时参与。\n核心知识：程序查询让CPU反复检查设备，中断由设备就绪后通知CPU，DMA由控制器成块搬运内存与设备数据"
+        },
+        "chapter_pool_count": 12,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 6,
+        "chapter_id": "computer-organization.c02",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-10-1",
+            "stem": "8位补码11110100算术右移一位得到什么位串和真值？若逻辑右移呢？",
+            "independent_answer": "算术11111010为−6；逻辑01111010为122",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 20 题\n☆\n移位先辨符号与位宽\n8位补码11110100算术右移一位得到什么位串和真值？若逻辑右移呢？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n算术右移11111010，−6；逻辑右移01111010，无符号为122。\n\n解析\n算术复制符号1，逻辑高位补0；同位串解释须说明类型。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-13-1",
+            "stem": "用二进制规格化过程计算6+2.5，写对阶、尾数加法和规格化三步。",
+            "independent_answer": "1.1×2²+0.101×2²=10.001×2²=1.0001×2³=8.5",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 19 题\n☆\n浮点加减的对阶与规格化\n用二进制规格化过程计算6+2.5，写对阶、尾数加法和规格化三步。\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n1.100×2²+0.101×2²；尾数相加10.001；右规1.0001×2³=8.5。\n\n解析\n向大阶2对齐，小阶尾数右移一位，出现10开头则右规。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第6章 计算机的运算方法课程核心练习形式：单选 · 判断 · 填空 · 计算 · 状态判断▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第6章 计算机的运算方法\n课程核心\n练习形式：单选 · 判断 · 填空 · 计算 · 状态判断\n6.1 无符号数和有符号数\n\n计算机内部采用二进制，因为电子器件容易稳定表示两种状态。八进制和十六进制常"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第6章 计算机的运算方法▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "数制、编码与位权\n优先练\n核心知识：二、八、十六进制按位权表示数，二进制与十六进制可每4位互换；BCD编码十进制数字，ASCII和Unicode处理字符。\n方法与例题：二进制101101按位权得45，"
+        },
+        "chapter_pool_count": 20,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 7,
+        "chapter_id": "computer-organization.c03",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-15-1",
+            "stem": "32位指令包含6位操作码、两个5位寄存器字段，余位为补码立即数。立即数位数和范围是什么？",
+            "independent_answer": "16位，−32768至32767",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 9 题\n☆\n指令字段位数与编码\n32位指令包含6位操作码、两个5位寄存器字段，余位为补码立即数。立即数位数和范围是什么？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n16位，−32768至32767。\n\n解析\n32−6−5−5=16；n位补码范围−2^(n−1)到2^(n−1)−1。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "uf-co-005",
+            "stem": "指令中给出的地址是操作数所在存储单元地址，这种方式是（ ）。",
+            "independent_answer": "B",
+            "input_before_reveal": true,
+            "rendered_feedback": "单选\n待练 8 题\n☆\n指令、寻址与RISC/CISC\n指令中给出的地址是操作数所在存储单元地址，这种方式是（ ）。\nA\n立即寻址\nB\n直接寻址\nC\n间接寻址\nD\n寄存器寻址\n✓ 正确\n解析\n直接寻址的地址码就是有效地址；立即寻址的地址字段本身就是操作数。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=7&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第7章 指令系统课程核心练习形式：单选 · 判断 · 填空 · 计算 · 简答▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第7章 指令系统\n课程核心\n练习形式：单选 · 判断 · 填空 · 计算 · 简答\n7.1 机器指令\n\n一条指令通常由操作码和地址码组成。操作码指出做什么，地址码指出操作数在哪里或如何寻找。\n\n按地址"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=7&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第7章 指令系统▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "指令、寻址与RISC/CISC\n优先练\n按寻址方式求有效地址和操作数，比较RISC与CISC的设计特点。\n核心知识：指令含操作码和地址字段；立即、直接、间接、寄存器、基址、变址和相对寻址用不同路径形成"
+        },
+        "chapter_pool_count": 9,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 8,
+        "chapter_id": "computer-organization.c10",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-16-1",
+            "stem": "B服务期间A请求，A优先级更高且未屏蔽、允许嵌套，执行返回顺序是什么？",
+            "independent_answer": "主程序→B前半→A→B后半→主程序",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 18 题\n☆\n中断屏蔽与嵌套顺序\nB服务期间A请求，A优先级更高且未屏蔽、允许嵌套，执行返回顺序是什么？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n主程序→B前半→A→B后半→主程序。\n\n解析\nA返回被打断的B，B完成才回主程序，不能A直接跳过B。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-16-2",
+            "stem": "中断服务尚未保护返回地址和寄存器就开放嵌套，可能出现什么问题？",
+            "independent_answer": "嵌套覆盖断点/寄存器，无法正确恢复原上下文",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 17 题\n☆\n中断屏蔽与嵌套顺序\n中断服务尚未保护返回地址和寄存器就开放嵌套，可能出现什么问题？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n高优先级中断可能覆盖返回信息或寄存器，恢复错误位置或错误数据。\n\n解析\n嵌套每一层都须保有自己的现场，不能只保存最外层。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=8&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第8章 CPU的结构和功能课程核心练习形式：单选 · 判断 · 简答 · 计算 · 状态判断▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第8章 CPU的结构和功能\n课程核心\n练习形式：单选 · 判断 · 简答 · 计算 · 状态判断\n8.1 CPU的结构\n算术逻辑单元 ALU：执行算术和逻辑运算。\n控制器 CU：取出、分析指令并控制执"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=8&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第8章 CPU的结构和功能▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "CPU部件与指令周期\n优先练\n沿取指、译码和执行说明寄存器与数据通路的变化。\n核心知识：PC保存下一条指令地址，IR保存当前指令，MAR/MDR参与访存，ALU运算，控制器按时序发出控制信号；指令经历"
+        },
+        "chapter_pool_count": 18,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 9,
+        "chapter_id": "computer-organization.c05",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-17-1",
+            "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+            "independent_answer": "不能；R1→Y，R2与Y相加→Z，Z→R1",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 4 题\n☆\n微操作按通路安排节拍\n单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。\n\n解析\n用Y保存第一操作数、Z暂存结果，避免同拍竞争同一总线。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-18-1",
+            "stem": "在READ_WAIT状态，READY=0与READY=1时分别如何转移？为什么？",
+            "independent_answer": "0自环等待，1锁存数据再转后续态",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 3 题\n☆\n控制时序与就绪等待\n在READ_WAIT状态，READY=0与READY=1时分别如何转移？为什么？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\nREADY=0留等待态，READY=1锁存有效数据后继续。\n\n解析\n未就绪数据可能未稳定，固定一拍强行推进会读到旧值。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=9&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第9章 控制单元的功能课程核心练习形式：单选 · 判断 · 简答 · 状态判断▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第9章 控制单元的功能\n课程核心\n练习形式：单选 · 判断 · 简答 · 状态判断\n9.1 操作命令的分析\n\n机器指令描述一个可见动作，微操作是寄存器传送、ALU计算、发起读写等更小动作；微操作命令是"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=9&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第9章 控制单元的功能▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "微操作按通路安排节拍\n优先练\n核心知识：微操作是寄存器传送或ALU等基本动作；安排节拍先查依赖、总线源和端口，只有资源不冲突才可并行。\n方法与例题：单总线算R1+R2可先R1送Y，再R2与Y相加进Z，"
+        },
+        "chapter_pool_count": 4,
+        "only_current_chapter": true
+      },
+      {
+        "chapter": 10,
+        "chapter_id": "computer-organization.c11",
+        "practice_attempts": [
+          {
+            "id": "gap-co-textbook-19-1",
+            "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+            "independent_answer": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 6 题\n☆\n硬布线控制方程从状态表来\nF1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\nMemRead=F1∨E1；MDRin=(F1∨E1)∧READY。\n\n解析\n读请求在等待期间保持，锁存必须等READY有效。\n上一题\n下一题\n题目有误\n重新作答"
+          },
+          {
+            "id": "gap-co-textbook-21-2",
+            "stem": "控制存储器64条微指令，每条24位，容量多少bit与B？若要直接编码64个下地址，需几位？",
+            "independent_answer": "1536bit=192B；6位",
+            "input_before_reveal": true,
+            "rendered_feedback": "简答\n待练 5 题\n☆\n微指令编码与控存容量\n控制存储器64条微指令，每条24位，容量多少bit与B？若要直接编码64个下地址，需几位？\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n1536bit=192B；下地址6位。\n\n解析\n64×24=1536，除8换字节；2⁶=64。\n上一题\n下一题\n题目有误\n重新作答"
+          }
+        ],
+        "notes.html": {
+          "url": "http://127.0.0.1:5183/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1",
+          "visible_headings": [
+            "第10章 控制单元的设计课程核心练习形式：单选 · 判断 · 简答 · 计算 · 状态判断▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "第10章 控制单元的设计\n课程核心\n练习形式：单选 · 判断 · 简答 · 计算 · 状态判断\n10.1 组合逻辑设计\n\n硬布线控制把指令译码、状态译码和条件输入直接组合成控制信号。设计顺序是：确定指"
+        },
+        "color-notes.html": {
+          "url": "http://127.0.0.1:5183/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1&card=1",
+          "visible_headings": [
+            "第10章 控制单元的设计▾"
+          ],
+          "overflow": false,
+          "visible_text_sample": "硬布线控制方程从状态表来\n优先练\n核心知识：硬布线设计先列指令微操作和状态，再写输出与转移方程；译码线、节拍与条件组合产生寄存器和总线控制。\n方法与例题：若F1、E1均是读等待态，可写MemRead="
+        },
+        "chapter_pool_count": 6,
+        "only_current_chapter": true
+      }
+    ],
+    "page_errors": [],
+    "execution_note": "实际390×844 Chrome模拟手机，逐章进入讲义、重点和对应章练；在章内池中切至已选题，再通过页面选项/展开参考并自评完成。简答的独立答案在报告保存，网页采用核对后自评，不伪称产品接受了文字输入。"
+  },
+  "review_limit": "首次通读原始CO Markdown时折叠答案也被读取；章节例题记录是重新手算，不声称全部属于盲做。39道新增题与7处跨课教师迁移任务均先保存独立答案再核参考。未以专业常识填补正文先修；能代公式不等于会解释机制。",
+  "source_sha256": {
+    "course_notes/计算机组成原理.md": "f3a5c458c1421c49eb7f61eeb86d30e48a459151bc07d0d0befe2e4ff48c8aad",
+    "color_notes/计算机组成原理.md": "28d3435c766ccbcef36154c04120f54c85bdb57ff92c699954ca92515c6e658c"
+  },
+  "summary": {
+    "chapters_read": 10,
+    "review_cards_read": 39,
+    "new_questions_independently_solved": 40,
+    "new_question_answer_mismatches": 0,
+    "phone_chapter_question_attempts": 20,
+    "teacher_transfer_tasks": 7,
+    "teacher_task_mismatches": 0,
+    "status": "本轮主要阻断和最后三项迁移复测通过；保留细任务覆盖边界"
+  },
+  "section_checks": [
+    {
+      "textbook_section": "1.1",
+      "status": "本节任务可解释",
+      "evidence": {
+        "mechanism_actually_read": "认识硬件/软件/CPU/寄存器，区分ISA接口与实现；正文先解释寄存器是少量快速位置。",
+        "student_execution_or_limit": "我能说软件换动作、硬件执行动作；高级语言不是CPU原生指令。",
+        "linked_evidence": "01-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "1.2",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "PC给地址→主存读指令→IR保存→ALU相加→R1写回；PC与数据分开。",
+        "student_execution_or_limit": "PC100按4B到104，3+5写R1=8，R2不变。",
+        "linked_evidence": "sp-core-co-001"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "1.3",
+      "status": "本节任务可计算",
+      "evidence": {
+        "mechanism_actually_read": "CPI按比例加权，IC×CPI/f把条数换拍再换秒，区分响应/吞吐。",
+        "student_execution_or_limit": "100万条CPI2、1GHz=2ms；另10^9×2/2GHz=1s。",
+        "linked_evidence": "uf-co-006"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "2.1",
+      "status": "本节任务可解释",
+      "evidence": {
+        "mechanism_actually_read": "主要器件四代，语言翻译路径，历史第一需限定。",
+        "student_execution_or_limit": "不用主频排序：电子管→晶体管→集成→大规模集成。",
+        "linked_evidence": "01-1"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "2.2",
+      "status": "本节任务可计算",
+      "evidence": {
+        "mechanism_actually_read": "分类按主要任务，并行仅缩短p部分，总时间合并求倒数。",
+        "student_execution_or_limit": "20%不变+80%/4=40%，2.5倍。",
+        "linked_evidence": "02-1/02-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "3.1",
+      "status": "剩余跳步：三态/高阻未解释",
+      "evidence": {
+        "mechanism_actually_read": "主从发起与访问、共享数据线不能多源驱动；三态控制术语未展开。",
+        "student_execution_or_limit": "仲裁决定一个主设备；DMA也可获准。",
+        "linked_evidence": "03-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "3.2",
+      "status": "本节分类可说明",
+      "evidence": {
+        "mechanism_actually_read": "地址选位置、数据传内容、控制传命令；范围分类与信号分类不是一回事。",
+        "student_execution_or_limit": "32数据位不等于32位地址，串行不必然慢。",
+        "linked_evidence": "03-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "3.3",
+      "status": "本节任务可计算",
+      "evidence": {
+        "mechanism_actually_read": "宽度除8×每秒传次数，再乘利用率；明确Mb与MB。",
+        "student_execution_or_limit": "32bit100MHz双拍80%得640MB/s。",
+        "linked_evidence": "章内带宽手算"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "3.4",
+      "status": "本节任务可解释",
+      "evidence": {
+        "mechanism_actually_read": "单路争用、分层与桥接仍可能形成瓶颈；USB/PCIe不照传统共享并行定义。",
+        "student_execution_or_limit": "可解释两条路径经过同一桥为何仍排队。",
+        "linked_evidence": "正文车道反例"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "3.5",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "链式/计数/独立请求的授权，四相REQ/ACK握手，半同步WAIT。",
+        "student_execution_or_limit": "先设备1；REQ1 ACK0不采样；采样后先撤REQ再撤ACK。",
+        "linked_evidence": "03-1/04-1/04-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "4.1",
+      "status": "原阻断已修，改数据任务可独立完成",
+      "evidence": {
+        "mechanism_actually_read": "分层速度/容量/单价方向有图；局部性只用名称开场，具体时间/空间定义先在卡出现。",
+        "student_execution_or_limit": "能复述越近CPU越快小贵，但“为什么近期内容值得存”需两个访问轨迹。",
+        "linked_evidence": "讲义存储层次图及卡"
+      },
+      "is_complete_textbook_proof": false,
+      "initial_status": "修后待复测：补局部性先修",
+      "retest_evidence": {
+        "textbook_section": "4.1",
+        "fresh_task": "0x2B每块8B，块号与偏移？8种位置需几位？",
+        "independent_answer": "2×16+11=43；43÷8=5余3，块5偏移3；2³=8需3位。",
+        "result": "0x、取整、取余和编号约定已在使用前定义，能在尚未进入第6章时先做本章地址算术。",
+        "read_revised_body_with_details_removed": true,
+        "status": "原阻断任务复测通过"
+      }
+    },
+    {
+      "textbook_section": "4.2",
+      "status": "原阻断已修，改数据任务可独立完成",
+      "evidence": {
+        "mechanism_actually_read": "主存芯片扩展、刷新、存取周期、交叉模块及检纠错均有内容。",
+        "student_execution_or_limit": "8K×8到32K×16需8片；13mod4=1；汉明构造无法仅凭一句分组描述生成。",
+        "linked_evidence": "05-1/06-1/06-2"
+      },
+      "is_complete_textbook_proof": false,
+      "initial_status": "修后待复测：除余及汉明组",
+      "retest_evidence": {
+        "textbook_section": "4.2",
+        "fresh_task": "数据1010填位置3/5/6/7，按位置1→7给偶校验汉明码。",
+        "independent_answer": "p1组数据1/0/0→p1=1；p2组1/1/0→p2=0；p4组0/1/0→p4=1；最终1011010。",
+        "result": "能由位置表自行圈组与补奇偶，不再从折叠答案倒猜。",
+        "read_revised_body_with_details_removed": true,
+        "status": "原阻断任务复测通过"
+      }
+    },
+    {
+      "textbook_section": "4.3",
+      "status": "原阻断已修，改数据任务可独立完成",
+      "evidence": {
+        "mechanism_actually_read": "映射/写回/标记有效位/AMAT都有，但一开始缺块/行/组/路的最小可执行来源。",
+        "student_execution_or_limit": "位宽例可代公式；0x1234需前面没有教的十六进制，不能靠答案4660倒推会做。",
+        "linked_evidence": "Cache16KiB64B4路例"
+      },
+      "is_complete_textbook_proof": false,
+      "initial_status": "修后待复测：术语与十六进制前置",
+      "retest_evidence": {
+        "textbook_section": "4.3",
+        "fresh_task": "2行直接映射，每块8B，字节地址0x2B，应查何处？该行有效但标记1时命中吗？",
+        "independent_answer": "地址43→块5偏移3；5mod2=行1、tag=floor(5/2)=2。有效但tag1不是块5，未命中。",
+        "result": "新正文先讲块/行/组/路/有效位，小十进制例已能推到改数据的十六进制例。",
+        "read_revised_body_with_details_removed": true,
+        "status": "原阻断任务复测通过"
+      }
+    },
+    {
+      "textbook_section": "4.4",
+      "status": "本节任务可计算；除余符号需4章统一前置",
+      "evidence": {
+        "mechanism_actually_read": "寻道+随机半转等待+传输；CHS/LBA除余，SSD无机械等待。",
+        "student_execution_or_limit": "7200rpm→半转4.17ms；6+4.17+1=11.17ms；LBA70→1/0/7。",
+        "linked_evidence": "07-1/07-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "5.1",
+      "status": "本节任务可解释",
+      "evidence": {
+        "mechanism_actually_read": "统一/独立编址与查询/中断/DMA两类控制维度分开，介绍通道边界。",
+        "student_execution_or_limit": "能够说端口的空间分配不是设备内容，串并行不等于通知方式。",
+        "linked_evidence": "08-1"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "5.2",
+      "status": "补做不同数据迁移任务通过；不等于该节全部细任务均测",
+      "evidence": {
+        "mechanism_actually_read": "输入输出与块/字符交换，帧缓容量像素×位数。",
+        "student_execution_or_limit": "知道触摸屏两用，刷新率不代替颜色位数；本节暂无自己独立帧缓数值题。",
+        "linked_evidence": "正文容量规则"
+      },
+      "is_complete_textbook_proof": false,
+      "previous_limited_status": "概念已读；数值迁移本轮未做",
+      "additional_transfer_evidence": {
+        "textbook_section": "5.2",
+        "task": "单缓冲显示图像1280×720像素，真彩每像素16bit；忽略行填充、对齐和额外控制开销。至少需多少B？60Hz是否还要乘60作为该帧容量？",
+        "independent_answer": "1280×720=921600像素；每像素16/8=2B；单帧1843200B（1800KiB，约1.758MiB）。60Hz不乘入单帧容量；若问每秒完整刷新传送量才另乘刷新率，并考虑具体传输开销。",
+        "lecture_support": "5.2明确像素数×每像素位数，第1章已教bit/B；只需把乘积位数除8。",
+        "status": "凭正文可独立完成",
+        "independent_check": "先保存手推答案，后用整数/Fraction精确算术核对，结果一致；未改题库产品"
+      }
+    },
+    {
+      "textbook_section": "5.3",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "状态/数据/控制三类接口寄存器，写命令→设备→READY→读数据，清状态依协议。",
+        "student_execution_or_limit": "键盘判断就绪/字符/允许中断对应三寄存器。",
+        "linked_evidence": "08-1"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "5.4",
+      "status": "本节任务可计算",
+      "evidence": {
+        "mechanism_actually_read": "反复读状态，查询成本Nc/f，旧值不能当新值，间隔与开销折中。",
+        "student_execution_or_limit": "2MHz每秒2000次每次10拍=1%；未就绪不读。",
+        "linked_evidence": "09-1/09-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "5.5",
+      "status": "本节过程可解释",
+      "evidence": {
+        "mechanism_actually_read": "请求响应、断点保护、入口、服务、恢复，先保存后开嵌套。",
+        "student_execution_or_limit": "未保存就嵌套会覆盖自己返回状态。",
+        "linked_evidence": "16-2跨8.4证据"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "5.6",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "DMA初始化→申请总线→传送→地址/计数更新→完成中断，三类传送方式。",
+        "student_execution_or_limit": "1000起搬10B到1010，剩246；CPU不是逐字节搬运者。",
+        "linked_evidence": "DMA章内手算"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "6.1",
+      "status": "本节任务可复现；出现在4章之后导致先修倒置",
+      "evidence": {
+        "mechanism_actually_read": "二十六进制位权转换、负补码、扩展、定宽范围与端序。",
+        "student_execution_or_limit": "11110100是−12，符号扩展复制1；小数0.101=.625。",
+        "linked_evidence": "10-1"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "6.2",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "规格化1.M、偏置阶、特殊阶模式，整数与纯小数范围区分。",
+        "student_execution_or_limit": "6.5=1.101×2²，符号0阶129小数字段101补零。",
+        "linked_evidence": "IEEE章内字段手算"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "6.3",
+      "status": "乘除任务及新增Booth独立题可复现",
+      "evidence": {
+        "mechanism_actually_read": "补码加减、移位、移位相加、Booth及恢复/不恢复余数，数值中间状态明确。",
+        "student_execution_or_limit": "6×3加6和12；11÷3按1011带位R=1/2/2/2商0011；Booth已看表但未用新输入独立手算。",
+        "linked_evidence": "10-1/11-1/12-1/12-2"
+      },
+      "is_complete_textbook_proof": false,
+      "booth_evidence": "booth_new_question"
+    },
+    {
+      "textbook_section": "6.4",
+      "status": "补做不同数据迁移任务通过；不等于该节全部细任务均测",
+      "evidence": {
+        "mechanism_actually_read": "对阶尾数右移、加减、左/右规配阶、舍入；乘除阶与符号规则。",
+        "student_execution_or_limit": "6+2.5=1.0001×2³；6−2.5=1.11×2¹=3.5。",
+        "linked_evidence": "13-1/13-2"
+      },
+      "is_complete_textbook_proof": false,
+      "previous_limited_status": "加减已独立完成；浮点乘除本轮未单做迁移",
+      "additional_transfer_evidence": {
+        "textbook_section": "6.4",
+        "task": "正常有限数且精度足够不舍入，取Bias=7。先算(1.1₂×2¹)×(1.1₂×2²)；再算(1.001₂×2²)/(1.1₂×2¹)。均给尾数、实际阶与偏置阶的规格化前后过程。",
+        "independent_answer": "乘法：尾数1.1×1.1=10.01₂，实际阶1+2=3，故10.01×2³；右规1位得1.001×2⁴=18。原阶字段8与9，预阶8+9−7=10，右规后字段11。除法：尾数1.001/1.1=(9/8)/(3/2)=3/4=0.11₂；实际阶2−1=1，故0.11×2¹；左规1位得1.1×2⁰=1.5。原阶字段9与8，预阶9−8+7=8，左规后字段7。两例均正，符号异或为0；未触及特殊值/下溢/舍入。",
+        "lecture_support": "6.4已给乘法阶相加/除法阶相减与偏置式，且紧邻加减例解释左右规配阶；6.1/6.3提供二进制算术基础，能组合规则，不需外加专业常识。",
+        "status": "凭正文可独立完成",
+        "independent_check": "先保存手推答案，后用整数/Fraction精确算术核对，结果一致；未改题库产品"
+      }
+    },
+    {
+      "textbook_section": "6.5",
+      "status": "原阻断已修，改数据任务可独立完成",
+      "evidence": {
+        "mechanism_actually_read": "B与SUB异或、Cin=SUB复用加法器，CF/OF例；逻辑符号缺定义。",
+        "student_execution_or_limit": "能回答反B+1，但不能从未定义⊕及相邻变量直接推全加器进位式。",
+        "linked_evidence": "14-1及CF/OF章内例"
+      },
+      "is_complete_textbook_proof": false,
+      "initial_status": "修后待复测：逻辑记号",
+      "retest_evidence": {
+        "textbook_section": "6.5",
+        "fresh_task": "全加器输入Ai=0、Bi=1、Ci=1；三个输入全1呢？",
+        "independent_answer": "前者S=0、Cout=1；后者S=1、Cout=1。逻辑或不将两个真条件加成2。",
+        "result": "⊕、相邻与、加号或已用自然语言和输入例说明，可独立代其他输入。",
+        "read_revised_body_with_details_removed": true,
+        "status": "原阻断任务复测通过"
+      }
+    },
+    {
+      "textbook_section": "7.1",
+      "status": "补做不同数据迁移任务通过；不等于该节全部细任务均测",
+      "evidence": {
+        "mechanism_actually_read": "机器指令操作码/地址字段，指令长度与字长不同，操作码定长/扩展约束。",
+        "student_execution_or_limit": "可说明6位最多64个定长编码；具体扩展操作码构造本轮未独立做。",
+        "linked_evidence": "15-1"
+      },
+      "is_complete_textbook_proof": false,
+      "previous_limited_status": "概念已读；扩展编码迁移未做",
+      "additional_transfer_evidence": {
+        "textbook_section": "7.1",
+        "task": "20bit固定长指令原为5bit操作码加三个5bit地址。现要提供70种二地址指令，以保留的5bit短前缀向后再扩5bit形成10bit操作码。为容纳这些二地址指令，最少保留几个短前缀？其余最多多少种三地址短操作码？",
+        "independent_answer": "每个保留前缀可扩2^5=32种二地址操作码；70/32向上取整为3个前缀。原共有2^5=32个短码，扣3后最多29种三地址指令；三个长分支有96个槽位，分配70后还余26。可令11101、11110、11111为扩展前缀，短码仅用00000到11100；长分支仍留20−10=10bit给两个5bit地址。",
+        "lecture_support": "7.1给16bit的4→8bit扩展并强调保留前缀不能重复计算，能改为5→10bit自行计数；本任务没有假定任意长码都可直接使用。",
+        "status": "凭正文可独立完成",
+        "independent_check": "先保存手推答案，后用整数/Fraction精确算术核对，结果一致；未改题库产品"
+      }
+    },
+    {
+      "textbook_section": "7.2",
+      "status": "本节具体任务可解释",
+      "evidence": {
+        "mechanism_actually_read": "数据解释由类型，传送/算术/移位/调用区别，零地址栈机SUB的弹出顺序。",
+        "student_execution_or_limit": "先压7再2，SUB按7−2而非2−7。",
+        "linked_evidence": "栈机章内可见例"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "7.3",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "EA与M[x]先释符号，立即/直接/间接/基变址/相对路径明确。",
+        "student_execution_or_limit": "A100,M100400,M4009：立即100/直接400/间接9；PC104−8=96。",
+        "linked_evidence": "uf-co-005与章内寻址例"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "7.4",
+      "status": "本节任务可计算",
+      "evidence": {
+        "mechanism_actually_read": "自定义16位字段切分，以及32位剩余立即数字段范围。",
+        "student_execution_or_limit": "32−6−5−5=16，补码范围−32768..32767。",
+        "linked_evidence": "15-1"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "7.5",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "Load/Store先从存储器装到寄存器再运算再写回；RISC规整与速度不绝对。",
+        "student_execution_or_limit": "A加1要LOAD、ADD、STORE，算术不直接等同访存。",
+        "linked_evidence": "正文三指令例"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "8.1",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "MAR地址/MDR内容和PC/IR、Y/Z分工；取指路径与单总线加法。",
+        "student_execution_or_limit": "R1先到Y，R2+Y进Z，Z回R1；MAR不能装成指令正文。",
+        "linked_evidence": "17-1跨9.1证据"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "8.2",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "间接指令分取指/间址/执行，EA400不是最终9。",
+        "student_execution_or_limit": "ACC3+M4009=12，误加400会漏一个访存。",
+        "linked_evidence": "章内间接ADD例"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "8.3",
+      "status": "具体数值可算；图中英文阶段缩写应给完整中文释义",
+      "evidence": {
+        "mechanism_actually_read": "流水吞吐、理想k+n−1、数据等写回、时序条件与不等长拍。",
+        "student_execution_or_limit": "5级20条24ns；10条加2停顿16拍×1.6=25.6ns。",
+        "linked_evidence": "流水章内两题"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "8.4",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "屏蔽与请求优先分开，允许嵌套才B被A打断，现场配对。",
+        "student_execution_or_limit": "主程序→B前→A→B后→主程序，不只按优先级排列完成顺序。",
+        "linked_evidence": "16-1/16-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "9.1",
+      "status": "给定动作可手推；图需对照具体端口路径",
+      "evidence": {
+        "mechanism_actually_read": "out使能与in锁存、单总线Y/Z、等待READY，资源决定可并行。",
+        "student_execution_or_limit": "R1→Y与R2→Z冲突；独立PC增量可和MDR→IR并行。",
+        "linked_evidence": "17-1/17-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "9.2",
+      "status": "本节任务可复现",
+      "evidence": {
+        "mechanism_actually_read": "状态/操作码/条件决定输出，等待自环，稳定数据才能锁存。",
+        "student_execution_or_limit": "READY0留READ_WAIT，1锁存再前进。",
+        "linked_evidence": "18-1/18-2"
+      },
+      "is_complete_textbook_proof": false
+    },
+    {
+      "textbook_section": "10.1",
+      "status": "原阻断已修，改数据任务可独立完成",
+      "evidence": {
+        "mechanism_actually_read": "状态表到读/装载方程，但F2新IR分派未给实际独立状态。",
+        "student_execution_or_limit": "能列MemRead=F1∨E1；无法在未释∧∨且新IR未锁存的拍直接实现表。",
+        "linked_evidence": "19-1/19-2"
+      },
+      "is_complete_textbook_proof": false,
+      "initial_status": "修后待复测：符号和分派态",
+      "retest_evidence": {
+        "textbook_section": "10.1",
+        "fresh_task": "F2末尾锁存了ADD，新IR何时参与分派？F1中READY0时MDRin值？",
+        "independent_answer": "F2固定到DISPATCH，下一拍读取已稳定ADD再去E0；READY0时MDRin=(1∨0)∧0=0，留F1。",
+        "result": "分派态明确，逻辑∧∨已定义，不用假设同拍新IR瞬时生效。",
+        "read_revised_body_with_details_removed": true,
+        "status": "原阻断任务复测通过"
+      }
+    },
+    {
+      "textbook_section": "10.2",
+      "status": "原阻断已修，改数据任务可独立完成",
+      "evidence": {
+        "mechanism_actually_read": "PC与微PC空间分开、控存/微指令、下地址来源与字段位宽。",
+        "student_execution_or_limit": "00→01等→02→20..24→00概述可说，20..24每条动作未列，不能逐地址实际走。",
+        "linked_evidence": "20-1/20-2/21-1/21-2"
+      },
+      "is_complete_textbook_proof": false,
+      "initial_status": "修后待复测：明确每个微地址动作",
+      "retest_evidence": {
+        "textbook_section": "10.2",
+        "fresh_task": "PC100、4B长ADD直接地址200，M200=7，ACC5；逐地址执行并给最终PC与微PC。",
+        "independent_answer": "00:MAR100→01等就绪MDR取ADD200→02:IR装ADD200且PC104→03分派20→20:MAR200→21等就绪MDR7→22:Y7→23:Z12→24:ACC12且μPC00；机器PC仍104。",
+        "result": "00..03和20..24逐条能走，22/23/24各单源，锁存/分派不再抢拍。",
+        "read_revised_body_with_details_removed": true,
+        "status": "原阻断任务复测通过"
+      }
+    }
+  ],
+  "section_scope_note": "38个教材节均逐项记录了实际内容/学生状态与剩余跳步；本轮没有独立做过的细分任务明确标注，不把38行齐全称为38节完整能力全部通过。虚拟存储TLB属教材外保留扩展，另在第4章章级记录。",
+  "retests": [
+    {
+      "textbook_section": "4.1",
+      "fresh_task": "0x2B每块8B，块号与偏移？8种位置需几位？",
+      "independent_answer": "2×16+11=43；43÷8=5余3，块5偏移3；2³=8需3位。",
+      "result": "0x、取整、取余和编号约定已在使用前定义，能在尚未进入第6章时先做本章地址算术。",
+      "read_revised_body_with_details_removed": true,
+      "status": "原阻断任务复测通过"
+    },
+    {
+      "textbook_section": "4.2",
+      "fresh_task": "数据1010填位置3/5/6/7，按位置1→7给偶校验汉明码。",
+      "independent_answer": "p1组数据1/0/0→p1=1；p2组1/1/0→p2=0；p4组0/1/0→p4=1；最终1011010。",
+      "result": "能由位置表自行圈组与补奇偶，不再从折叠答案倒猜。",
+      "read_revised_body_with_details_removed": true,
+      "status": "原阻断任务复测通过"
+    },
+    {
+      "textbook_section": "4.3",
+      "fresh_task": "2行直接映射，每块8B，字节地址0x2B，应查何处？该行有效但标记1时命中吗？",
+      "independent_answer": "地址43→块5偏移3；5mod2=行1、tag=floor(5/2)=2。有效但tag1不是块5，未命中。",
+      "result": "新正文先讲块/行/组/路/有效位，小十进制例已能推到改数据的十六进制例。",
+      "read_revised_body_with_details_removed": true,
+      "status": "原阻断任务复测通过"
+    },
+    {
+      "textbook_section": "6.5",
+      "fresh_task": "全加器输入Ai=0、Bi=1、Ci=1；三个输入全1呢？",
+      "independent_answer": "前者S=0、Cout=1；后者S=1、Cout=1。逻辑或不将两个真条件加成2。",
+      "result": "⊕、相邻与、加号或已用自然语言和输入例说明，可独立代其他输入。",
+      "read_revised_body_with_details_removed": true,
+      "status": "原阻断任务复测通过"
+    },
+    {
+      "textbook_section": "10.1",
+      "fresh_task": "F2末尾锁存了ADD，新IR何时参与分派？F1中READY0时MDRin值？",
+      "independent_answer": "F2固定到DISPATCH，下一拍读取已稳定ADD再去E0；READY0时MDRin=(1∨0)∧0=0，留F1。",
+      "result": "分派态明确，逻辑∧∨已定义，不用假设同拍新IR瞬时生效。",
+      "read_revised_body_with_details_removed": true,
+      "status": "原阻断任务复测通过"
+    },
+    {
+      "textbook_section": "10.2",
+      "fresh_task": "PC100、4B长ADD直接地址200，M200=7，ACC5；逐地址执行并给最终PC与微PC。",
+      "independent_answer": "00:MAR100→01等就绪MDR取ADD200→02:IR装ADD200且PC104→03分派20→20:MAR200→21等就绪MDR7→22:Y7→23:Z12→24:ACC12且μPC00；机器PC仍104。",
+      "result": "00..03和20..24逐条能走，22/23/24各单源，锁存/分派不再抢拍。",
+      "read_revised_body_with_details_removed": true,
+      "status": "原阻断任务复测通过"
+    }
+  ],
+  "booth_new_question": {
+    "id": "gap-co-textbook-booth-01",
+    "independent_answer": "第1轮A/Q/q=0001/0001/1；第2轮0000/1000/1；第3轮1111/0100/0；第4轮1111/1010/0；乘积11111010为8位补码−6。",
+    "reason": "初始位对10，A减M即0−(−2)=2，再整体右移；次轮11不加；第三轮01加−2；第四轮00不加。每轮只整体右移一次并复制A符号位。",
+    "saved_before_gold": true,
+    "reference_answer": "第一轮0001/0001/1；第二轮0000/1000/1；最终乘积11111010，即−6。",
+    "reference_explanation": "第一轮位对10，A−M=0010，整体算术右移得0001/0001/1。第二轮位对11，不加减，整体右移得0000/1000/1。第三轮位对01，A+M=1110，移位得1111/0100/0；第四轮00，移位得1111/1010/0。拼接A与Q得到11111010。符号位复制，q仅参与位对判断，不属于最终乘积。",
+    "comparison": "逐轮与gold一致；额外计算第3/4轮中间状态也与−6相符"
+  },
+  "retest_browser": {
+    "build_meta_js": "globalThis.SHAOYANG_BUILD=Object.freeze({\"id\":\"28f33c9ea0cfe108\",\"questionCount\":2481,\"mediaAssets\":[\"./media/analog_bjt_states.svg\",\"./media/analog_common_emitter.svg\",\"./media/analog_diode_iv.svg\",\"./media/analog_feedback_block.svg\",\"./media/analog_load_line.svg\",\"./media/analog_opamp_inverting.svg\",\"./media/analog_pn_bias.svg\",\"./media/analog_power_supply.svg\",\"./media/cg-04-s3-q21.svg\",\"./media/circuit_mesh_currents.svg\",\"./media/co_cache_address.svg\",\"./media/co_cache_lookup.svg\",\"./media/co_coverage_bus_handshake.svg\",\"./media/co_coverage_control_store.svg\",\"./media/co_coverage_microsteps.svg\",\"./media/co_dma_transfer.svg\",\"./media/co_float_fields.svg\",\"./media/co_instruction_cycle.svg\",\"./media/co_pipeline.svg\",\"./media/co_pipeline_stall.svg\",\"./media/co_virtual_address.svg\",\"./media/comm_eye_diagram.svg\",\"./media/comm_eye_jitter.svg\",\"./media/comm_mirror_frequency.svg\",\"./media/comm_modulation.svg\",\"./media/comm_sampling.svg\",\"./media/comm_spectrum.svg\",\"./media/comm_superhet.svg\",\"./media/comm_system.svg\",\"./media/computer_memory_hierarchy.svg\",\"./media/db_algebra_rows.svg\",\"./media/db_er_symbols.svg\",\"./media/db_index_choice.svg\",\"./media/db_isolation.svg\",\"./media/db_isolation_compare.svg\",\"./media/db_join_rows.svg\",\"./media/db_many_to_many.svg\",\"./media/db_normalization.svg\",\"./media/db_relationships.svg\",\"./media/db_sql_order.svg\",\"./media/db_wal.svg\",\"./media/digital_adc_process.svg\",\"./media/digital_comb_seq.svg\",\"./media/digital_counter_states.svg\",\"./media/digital_flipflop_timing.svg\",\"./media/digital_kmap.svg\",\"./media/digital_quantization_steps.svg\",\"./media/ds_algorithm_choice.svg\",\"./media/ds_array_linked.svg\",\"./media/ds_array_sparse.svg\",\"./media/ds_circular_queue.svg\",\"./media/ds_complexity_growth.svg\",\"./media/ds_graph_steps.svg\",\"./media/ds_graph_traversal.svg\",\"./media/ds_hash_probe.svg\",\"./media/ds_heap_steps.svg\",\"./media/ds_insertion_sort.svg\",\"./media/ds_kmp_prefix.svg\",\"./media/ds_linked_insert.svg\",\"./media/ds_linked_recall.svg\",\"./media/ds_merge_steps.svg\",\"./media/ds_prim_steps.svg\",\"./media/ds_quick_partition.svg\",\"./media/ds_sparse_triples.svg\",\"./media/ds_stack_queue.svg\",\"./media/ds_topological_order.svg\",\"./media/ds_tree_traversal.svg\",\"./media/ds_weighted_graph.svg\",\"./media/ee_kcl_node.svg\",\"./media/ee_parallel_current.svg\",\"./media/ee_rc_discharge.svg\",\"./media/ee_rc_response.svg\",\"./media/ee_rlc_phasor.svg\",\"./media/ee_self_hold_control.svg\",\"./media/ee_series_parallel.svg\",\"./media/foundations_ai_workflow.svg\",\"./media/foundations_blockchain_chain.svg\",\"./media/foundations_cloud_layers.svg\",\"./media/foundations_computer_system.svg\",\"./media/foundations_data_pipeline.svg\",\"./media/foundations_information_chain.svg\",\"./media/foundations_iot_loop.svg\",\"./media/multimedia_audio_chain.svg\",\"./media/multimedia_bitmap_vector.svg\",\"./media/multimedia_compression_choice.svg\",\"./media/multimedia_container_codec.svg\",\"./media/multimedia_pixel_storage.svg\",\"./media/multimedia_signal_chain.svg\",\"./media/multimedia_video_size.svg\",\"./media/network_arp_hop.svg\",\"./media/network_congestion_review.svg\",\"./media/network_crc_steps.svg\",\"./media/network_handshake_review.svg\",\"./media/network_layers.svg\",\"./media/network_subnet.svg\",\"./media/network_subnet_review.svg\",\"./media/network_tcp_window.svg\",\"./media/network_tdm_slots.svg\",\"./media/office_data_flow.svg\",\"./media/office_master.svg\",\"./media/office_references.svg\",\"./media/office_sections.svg\",\"./media/office_styles.svg\",\"./media/os_banker_steps.svg\",\"./media/os_disk_scan.svg\",\"./media/os_io_disk.svg\",\"./media/os_page_replacement.svg\",\"./media/os_paging_address.svg\",\"./media/os_paging_card.svg\",\"./media/os_process_states.svg\",\"./media/os_rr_timeline.svg\",\"./media/os_semaphore_buffer.svg\",\"./media/program_function_args.svg\",\"./media/program_loop_trace.svg\",\"./media/program_pointer.svg\",\"./media/program_pointer_array.svg\",\"./media/program_pointer_card.svg\",\"./media/program_python_binding.svg\",\"./media/program_recursion_stack.svg\",\"./media/security_access_flow.svg\",\"./media/security_backup_time.svg\",\"./media/security_cia_risk.svg\",\"./media/security_crypto_goals.svg\",\"./media/security_incident_response.svg\",\"./media/security_malware_compare.svg\",\"./media/security_network_layers.svg\",\"./media/security_risk_cycle.svg\",\"./media/security_signature_flow.svg\",\"./media/signal_convolution.svg\",\"./media/signal_convolution_result.svg\",\"./media/signal_frequency_filter.svg\",\"./media/signal_roc.svg\",\"./media/signal_sampling_alias.svg\",\"./media/signal_time_scale.svg\",\"./media/signal_time_transform.svg\",\"./media/soft_change_trace.svg\",\"./media/soft_critical_path.svg\",\"./media/soft_design_flow.svg\",\"./media/soft_dfd.svg\",\"./media/soft_lifecycle.svg\",\"./media/soft_testing.svg\",\"./media/soft_uml_example.svg\",\"./media/soft_whitebox_paths.svg\",\"./media/streaming_buffer.svg\",\"./media/tcp_congestion.svg\",\"./media/tcp_handshake.svg\",\"./media/wlan_hidden_station.svg\"]});\n",
+    "pages": [
+      {
+        "chapter": 4,
+        "module": "notes.html",
+        "url": "http://127.0.0.1:3663/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1",
+        "visible_heading": "第4章 存储器\n课程核心\n练习形式：单选 · 判断 · 填空 · 计算 · 简答",
+        "overflow": false,
+        "text_length": 5306
+      },
+      {
+        "chapter": 4,
+        "module": "color-notes.html",
+        "url": "http://127.0.0.1:3663/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1&card=1",
+        "visible_heading": "第4章 存储器▾",
+        "overflow": false,
+        "text_length": 1839
+      },
+      {
+        "chapter": 6,
+        "module": "notes.html",
+        "url": "http://127.0.0.1:3663/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1",
+        "visible_heading": "第6章 计算机的运算方法\n课程核心\n练习形式：单选 · 判断 · 填空 · 计算 · 状态判断",
+        "overflow": false,
+        "text_length": 4687
+      },
+      {
+        "chapter": 6,
+        "module": "color-notes.html",
+        "url": "http://127.0.0.1:3663/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1&card=1",
+        "visible_heading": "第6章 计算机的运算方法▾",
+        "overflow": false,
+        "text_length": 1880
+      },
+      {
+        "chapter": 10,
+        "module": "notes.html",
+        "url": "http://127.0.0.1:3663/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1",
+        "visible_heading": "第10章 控制单元的设计\n课程核心\n练习形式：单选 · 判断 · 简答 · 计算 · 状态判断",
+        "overflow": false,
+        "text_length": 2521
+      },
+      {
+        "chapter": 10,
+        "module": "color-notes.html",
+        "url": "http://127.0.0.1:3663/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1&card=1",
+        "visible_heading": "第10章 控制单元的设计▾",
+        "overflow": false,
+        "text_length": 595
+      }
+    ],
+    "booth_visible_stem": "用4位补码Booth算法计算−2×3。设M=1110、A=0000、Q=0011、附加位q=0，每轮先按(Q最低位,q)执行01加M、10减M、00/11不加，再对A、Q、q整体算术右移。写出前两轮移位后的A/Q/q，以及4轮结束后的8位乘积。",
+    "booth_feedback": "简答\n待练 1 题\n☆\nBooth位对判断与整体右移\n用4位补码Booth算法计算−2×3。设M=1110、A=0000、Q=0011、附加位q=0，每轮先按(Q最低位,q)执行01加M、10减M、00/11不加，再对A、Q、q整体算术右移。写出前两轮移位后的A/Q/q，以及4轮结束后的8位乘积。\n本次能独立答出\n已记录本次自评。\n✓ 本次能独立答出\n参考答案\n\n第一轮0001/0001/1；第二轮0000/1000/1；最终乘积11111010，即−6。\n\n核对要点\n前两轮状态及最终乘积正确，说明先加减再整体算术右移。\n解析\n第一轮位对10，A−M=0010，整体算术右移得0001/0001/1。第二轮位对11，不加减，整体右移得0000/1000/1。第三轮位对01，A+M=1110，移位得1111/0100/0；第四轮00，移位得1111/1010/0。拼接A与Q得到11111010。符号位复制，q仅参与位对判断，不属于最终乘积。\n上一题\n下一题\n题目有误\n重新作答",
+    "page_errors": []
+  },
+  "section_retest_note": "仅复测修订的4.1/4.2/4.3/6.5/10.1/10.2及独立Booth卡题；未再次扫全站。",
+  "retest_source_sha256": {
+    "course_notes/计算机组成原理.md": "f3a5c458c1421c49eb7f61eeb86d30e48a459151bc07d0d0befe2e4ff48c8aad",
+    "color_notes/计算机组成原理.md": "28d3435c766ccbcef36154c04120f54c85bdb57ff92c699954ca92515c6e658c"
+  },
+  "final_conclusion": "本轮主要教学阻断修后复测通过；补做显示容量、扩展操作码、浮点乘除三项新数据迁移也均可凭正文完成。40道新增题独立过程正确，7处教师改写迁移可完成。38节均有逐节内容证据，但没有声称每节每种任务全验收；三态高阻和图中流水阶段缩写仍可进一步易懂化。",
+  "initial_status": "初轮发现教学阻断，尚非通过验收",
+  "last_three_transfer_tasks": [
+    {
+      "textbook_section": "5.2",
+      "task": "单缓冲显示图像1280×720像素，真彩每像素16bit；忽略行填充、对齐和额外控制开销。至少需多少B？60Hz是否还要乘60作为该帧容量？",
+      "independent_answer": "1280×720=921600像素；每像素16/8=2B；单帧1843200B（1800KiB，约1.758MiB）。60Hz不乘入单帧容量；若问每秒完整刷新传送量才另乘刷新率，并考虑具体传输开销。",
+      "lecture_support": "5.2明确像素数×每像素位数，第1章已教bit/B；只需把乘积位数除8。",
+      "status": "凭正文可独立完成",
+      "independent_check": "先保存手推答案，后用整数/Fraction精确算术核对，结果一致；未改题库产品"
+    },
+    {
+      "textbook_section": "7.1",
+      "task": "20bit固定长指令原为5bit操作码加三个5bit地址。现要提供70种二地址指令，以保留的5bit短前缀向后再扩5bit形成10bit操作码。为容纳这些二地址指令，最少保留几个短前缀？其余最多多少种三地址短操作码？",
+      "independent_answer": "每个保留前缀可扩2^5=32种二地址操作码；70/32向上取整为3个前缀。原共有2^5=32个短码，扣3后最多29种三地址指令；三个长分支有96个槽位，分配70后还余26。可令11101、11110、11111为扩展前缀，短码仅用00000到11100；长分支仍留20−10=10bit给两个5bit地址。",
+      "lecture_support": "7.1给16bit的4→8bit扩展并强调保留前缀不能重复计算，能改为5→10bit自行计数；本任务没有假定任意长码都可直接使用。",
+      "status": "凭正文可独立完成",
+      "independent_check": "先保存手推答案，后用整数/Fraction精确算术核对，结果一致；未改题库产品"
+    },
+    {
+      "textbook_section": "6.4",
+      "task": "正常有限数且精度足够不舍入，取Bias=7。先算(1.1₂×2¹)×(1.1₂×2²)；再算(1.001₂×2²)/(1.1₂×2¹)。均给尾数、实际阶与偏置阶的规格化前后过程。",
+      "independent_answer": "乘法：尾数1.1×1.1=10.01₂，实际阶1+2=3，故10.01×2³；右规1位得1.001×2⁴=18。原阶字段8与9，预阶8+9−7=10，右规后字段11。除法：尾数1.001/1.1=(9/8)/(3/2)=3/4=0.11₂；实际阶2−1=1，故0.11×2¹；左规1位得1.1×2⁰=1.5。原阶字段9与8，预阶9−8+7=8，左规后字段7。两例均正，符号异或为0；未触及特殊值/下溢/舍入。",
+      "lecture_support": "6.4已给乘法阶相加/除法阶相减与偏置式，且紧邻加减例解释左右规配阶；6.1/6.3提供二进制算术基础，能组合规则，不需外加专业常识。",
+      "status": "凭正文可独立完成",
+      "independent_check": "先保存手推答案，后用整数/Fraction精确算术核对，结果一致；未改题库产品"
+    }
+  ]
+}

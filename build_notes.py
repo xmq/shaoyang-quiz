@@ -96,6 +96,7 @@ def render_html(courses, config):
     }
     payload_items = []
     for item in courses:
+        learning_course = next(course for course in learning_map["courses"] if course["course_name"] == item["name"])
         payload_items.append({
             "name": item["name"], "text": item["text"],
             "chapters": {kind: values[item["name"]] for kind, values in chapters.items()},
@@ -104,6 +105,12 @@ def render_html(courses, config):
                 [],
             ),
             "topics": topics_by_course.get(item["name"], []),
+            "chapter_ids": [chapter["chapter_id"] for chapter in learning_course["chapters"]],
+            "review_topic_ids": [
+                [topic["topic_id"] for topic in learning_course["topics"] if topic["chapter_id"] == chapter["chapter_id"]]
+                for chapter in learning_course["chapters"]
+            ],
+            **{key: learning_course[key] for key in ("layout_revision", "previous_layout", "keep_completed") if key in learning_course},
         })
     payload = json.dumps(payload_items, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     image_sizes = {}

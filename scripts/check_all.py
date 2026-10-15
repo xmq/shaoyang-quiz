@@ -26,6 +26,8 @@ COMMANDS = (
     (sys.executable, "scripts/merge_hunan_recall_questions.py", "--check"),
     (sys.executable, "scripts/apply_explanation_overrides.py", "--check"),
     (sys.executable, "scripts/validate_textbook_structure.py"),
+    (sys.executable, "scripts/validate_textbook_coverage.py"),
+    (sys.executable, "scripts/validate_textbook_coverage.py", "--course", "计算机组成原理", "--require-complete"),
     (sys.executable, "scripts/build_learning_map.py", "--check"),
     (sys.executable, "scripts/enrich_question_metadata.py", "--check"),
     (sys.executable, "scripts/validate_question_reviews.py"),
@@ -42,7 +44,7 @@ COMMANDS = (
 
 
 def main() -> int:
-    for name in ("questions.json", "manifest.webmanifest", "network-exam-sources.json", "exam-profiles.json", "learning-map.json", "textbook-map.json", "topic-ids.json", "staging/topic_assignment_acceptance.json", "staging/reviewed_topic_baseline.json"):
+    for name in ("questions.json", "manifest.webmanifest", "network-exam-sources.json", "exam-profiles.json", "learning-map.json", "textbook-map.json", "textbook-coverage.json", "topic-ids.json", "staging/topic_assignment_acceptance.json", "staging/reviewed_topic_baseline.json"):
         json.loads((ROOT / name).read_text(encoding="utf-8"))
         print(f"JSON有效：{name}", flush=True)
     for command in COMMANDS:
@@ -50,7 +52,7 @@ def main() -> int:
         result = subprocess.run(command, cwd=ROOT)
         if result.returncode:
             return result.returncode
-    print("全部检查通过")
+    print("发布结构与数据检查通过；教材内容完整性以外部覆盖审查的明确结论为准。")
     return 0
 
 

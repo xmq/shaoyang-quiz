@@ -66,7 +66,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print(f"教材结构校验通过：{len(courses)}门课程，{chapter_total}章，讲义与重点页顺序一致。")
+    print(f"站内章节一致性通过：{len(courses)}门课程，{chapter_total}章。此结果不证明外部教材内容完整，另见教材覆盖审查。")
     return 0
 
 

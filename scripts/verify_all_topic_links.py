@@ -25,8 +25,11 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
             pass
 
 
-def main(browser_path):
+def main(browser_path, course_name=None, report_path="audit_reports/全量验收_知识点浏览器_2026-10-15.json"):
     courses = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))["courses"]
+    if course_name:
+        courses = [course for course in courses if course["course_name"] == course_name]
+        assert courses, course_name
     server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(QuietHandler, directory=str(ROOT / "dist")))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     base = f"http://127.0.0.1:{server.server_port}"
@@ -84,11 +87,14 @@ def main(browser_path):
         server.shutdown()
     assert not errors, errors
     report = {"build": (ROOT / "dist/build-meta.js").read_text(encoding="utf-8").split('"id":"')[1].split('"')[0], "card_contexts": len(cards), "topic_pools": len(pools), "max_phone_card_height": max(c["height"] for c in cards if c["viewport"] == 390), "errors": errors, "cards": cards, "pools": pools}
-    (ROOT / "audit_reports/全量验收_知识点浏览器_2026-10-15.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ROOT / report_path).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: value for key, value in report.items() if key not in {"cards", "pools"}}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser-path", default="C:/Program Files/Google/Chrome/Application/chrome.exe")
-    main(parser.parse_args().browser_path)
+    parser.add_argument("--course")
+    parser.add_argument("--report", default="audit_reports/全量验收_知识点浏览器_2026-10-15.json")
+    args = parser.parse_args()
+    main(args.browser_path, args.course, args.report)

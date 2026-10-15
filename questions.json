@@ -36735,7 +36735,7 @@
   "topic_title": "原码、反码、补码与溢出",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 20
  },
  {
   "id": "uf-co-003",
@@ -36810,7 +36810,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 28
  },
  {
   "id": "uf-co-006",
@@ -36858,9 +36858,9 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t11",
   "topic_title": "流水线与相关冲突",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 12
+  "topic_order": 31
  },
  {
   "id": "uf-co-008",
@@ -36883,7 +36883,7 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16
  },
@@ -41949,7 +41949,7 @@
   "topic_title": "数制、编码与位权",
   "chapter_id": "computer-organization.c02",
   "required_depth": "直接应用",
-  "topic_order": 2
+  "topic_order": 19
  },
  {
   "id": "gap-co-002",
@@ -41986,7 +41986,7 @@
   "topic_title": "定点与浮点表示",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 21
  },
  {
   "id": "gap-co-003",
@@ -42008,7 +42008,7 @@
   "topic_title": "定点与浮点表示",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 21
  },
  {
   "id": "gap-co-004",
@@ -42069,9 +42069,9 @@
   ],
   "answer_revision": "audit-577578f8c594",
   "topic_title": "虚拟地址、页表与TLB",
-  "chapter_id": "computer-organization.c07",
+  "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 17
+  "topic_order": 10
  },
  {
   "id": "gap-co-006",
@@ -42106,9 +42106,9 @@
    }
   ],
   "topic_title": "虚拟地址、页表与TLB",
-  "chapter_id": "computer-organization.c07",
+  "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 17
+  "topic_order": 10
  },
  {
   "id": "gap-co-007",
@@ -42145,7 +42145,7 @@
   "topic_title": "定点与浮点表示",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_order": 21
  },
  {
   "id": "gap-co-008",
@@ -42181,9 +42181,9 @@
   "topic_id": "computer-organization.t14",
   "answer_revision": "audit-c945e40a2ca7",
   "topic_title": "虚拟地址、页表与TLB",
-  "chapter_id": "computer-organization.c07",
+  "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 17
+  "topic_order": 10
  },
  {
   "id": "gap-co-009",
@@ -42218,9 +42218,9 @@
   "topic_source": "manual",
   "topic_id": "computer-organization.t18",
   "topic_title": "流水线停顿与总时间",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 14
+  "topic_order": 33
  },
  {
   "id": "gap-co-010",
@@ -42257,7 +42257,7 @@
   "topic_title": "原码、反码、补码与溢出",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 20
  },
  {
   "id": "gap-co-011",
@@ -42331,7 +42331,7 @@
   "topic_title": "Cache地址拆分与命中",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 10
+  "topic_order": 11
  },
  {
   "id": "gap-co-013",
@@ -42368,7 +42368,7 @@
   "topic_title": "总线结构与带宽",
   "chapter_id": "computer-organization.c06",
   "required_depth": "直接应用",
-  "topic_order": 15
+  "topic_order": 4
  },
  {
   "id": "gap-se-002",
@@ -50330,7 +50330,7 @@
   "topic_title": "平均访存时间按口径算",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 11
+  "topic_order": 12
  },
  {
   "id": "gap-accept-card-core-28-1",
@@ -51985,6 +51985,1166 @@
   ]
  },
  {
+  "id": "gap-co-textbook-01-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t19",
+  "source_chapter": "第2章 计算机的发展及应用",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "按主要电子器件写出常见计算机四代顺序。",
+  "options": {},
+  "answer": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+  "explanation": "按器件特征分类，不是按机器外壳大小分类。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "概念识记",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t19",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+    "points": 1
+   }
+  ],
+  "topic_title": "器件演进与软硬件层次",
+  "chapter_id": "computer-organization.c08",
+  "required_depth": "直接应用",
+  "topic_order": 2
+ },
+ {
+  "id": "gap-co-textbook-01-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t19",
+  "source_chapter": "第2章 计算机的发展及应用",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+  "options": {},
+  "answer": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+  "explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t19",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+    "points": 1
+   }
+  ],
+  "topic_title": "器件演进与软硬件层次",
+  "chapter_id": "computer-organization.c08",
+  "required_depth": "直接应用",
+  "topic_order": 2
+ },
+ {
+  "id": "gap-co-textbook-02-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t20",
+  "source_chapter": "第2章 计算机的发展及应用",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "程序80%的时间可4倍并行加速，20%必须串行，忽略开销，整体加速比多少？",
+  "options": {},
+  "answer": "2.5倍。",
+  "explanation": "新时间比例0.2+0.8/4=0.4，加速比1/0.4=2.5。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t20",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "2.5倍。",
+    "points": 1
+   }
+  ],
+  "topic_title": "应用场景与并行加速边界",
+  "chapter_id": "computer-organization.c08",
+  "required_depth": "直接应用",
+  "topic_order": 3
+ },
+ {
+  "id": "gap-co-textbook-02-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t20",
+  "source_chapter": "第2章 计算机的发展及应用",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "工业控制必须在规定毫秒内响应传感器，离线统计每天记录更关注批量处理。这两类主要要求各是什么？",
+  "options": {},
+  "answer": "前者实时控制，重响应期限；后者数据处理，重吞吐和完成时间。",
+  "explanation": "同样使用计算机，判断依据是任务目标，不是设备是否联网。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t20",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "前者实时控制，重响应期限；后者数据处理，重吞吐和完成时间。",
+    "points": 1
+   }
+  ],
+  "topic_title": "应用场景与并行加速边界",
+  "chapter_id": "computer-organization.c08",
+  "required_depth": "直接应用",
+  "topic_order": 3
+ },
+ {
+  "id": "gap-co-textbook-03-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t21",
+  "source_chapter": "第3章 系统总线",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "链式查询总线，设备1比设备3靠近仲裁器，两者同时请求时谁先？长期可能出现什么问题？",
+  "options": {},
+  "answer": "设备1先；固定优先级可能使远端设备长期等待或饥饿。",
+  "explanation": "允许信号先遇到近端请求者，近端反复请求会延迟后级。",
+  "knowledge_point": "总线与I/O",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t21",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "设备1先；固定优先级可能使远端设备长期等待或饥饿。",
+    "points": 1
+   }
+  ],
+  "topic_title": "总线仲裁决定谁先传",
+  "chapter_id": "computer-organization.c06",
+  "required_depth": "直接应用",
+  "topic_order": 5
+ },
+ {
+  "id": "gap-co-textbook-03-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t21",
+  "source_chapter": "第3章 系统总线",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "为什么独立请求仲裁通常比链式需要更多连线？是否意味着所有设备可同时驱动共享数据总线？",
+  "options": {},
+  "answer": "每设备有独立请求/允许线；仍需选定一个主设备，不能同时驱动同一共享数据线。",
+  "explanation": "独立的是请求线路，不是给每设备增加独占数据通道。",
+  "knowledge_point": "总线与I/O",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t21",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "每设备有独立请求/允许线；仍需选定一个主设备，不能同时驱动同一共享数据线。",
+    "points": 1
+   }
+  ],
+  "topic_title": "总线仲裁决定谁先传",
+  "chapter_id": "computer-organization.c06",
+  "required_depth": "直接应用",
+  "topic_order": 5
+ },
+ {
+  "id": "gap-co-textbook-04-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t22",
+  "source_chapter": "第3章 系统总线",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "异步四相互锁读传输中REQ已置1但ACK仍为0，主设备能否按该协议采样？后续撤销顺序是什么？",
+  "options": {},
+  "answer": "不能，应等ACK确认数据有效；采样后主设备先撤REQ，从设备再撤ACK。",
+  "explanation": "REQ只代表请求，ACK才是从设备准备完成的确认。",
+  "knowledge_point": "总线与I/O",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t22",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "不能，应等ACK确认数据有效；采样后主设备先撤REQ，从设备再撤ACK。",
+    "points": 1
+   }
+  ],
+  "topic_title": "异步总线四相握手",
+  "chapter_id": "computer-organization.c06",
+  "required_depth": "直接应用",
+  "topic_order": 6
+ },
+ {
+  "id": "gap-co-textbook-04-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t22",
+  "source_chapter": "第3章 系统总线",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "半同步总线遇慢设备时用WAIT延长等待，它是否完全取消统一时钟？",
+  "options": {},
+  "answer": "否。半同步仍按统一时钟工作，用等待信号延长特定访问。",
+  "explanation": "异步以应答推进，半同步结合统一时钟和可变等待，不可等同。",
+  "knowledge_point": "总线与I/O",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t22",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "否。半同步仍按统一时钟工作，用等待信号延长特定访问。",
+    "points": 1
+   }
+  ],
+  "topic_title": "异步总线四相握手",
+  "chapter_id": "computer-organization.c06",
+  "required_depth": "直接应用",
+  "topic_order": 6
+ },
+ {
+  "id": "gap-co-textbook-05-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t23",
+  "source_chapter": "第4章 存储器",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "4路低位交叉存储按字地址编排，字地址13的模块号与模块内地址是多少？",
+  "options": {},
+  "answer": "模块1，模块内地址3。",
+  "explanation": "13mod4=1，⌊13/4⌋=3；若给的是字节地址须先按字长换算。",
+  "knowledge_point": "计算机组成基础",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t23",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "模块1，模块内地址3。",
+    "points": 1
+   }
+  ],
+  "topic_title": "低位交叉存储的模块定位",
+  "chapter_id": "computer-organization.c04",
+  "required_depth": "综合应用",
+  "topic_order": 13
+ },
+ {
+  "id": "gap-co-textbook-05-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t23",
+  "source_chapter": "第4章 存储器",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "4路低位交叉存储中，顺序访问0、1、2、3和访问0、4、8、12，哪组更易并行？说明原因。",
+  "options": {},
+  "answer": "0、1、2、3分别落四个模块，较易重叠；0、4、8、12都落模块0，冲突较多。",
+  "explanation": "交叉存储提升取决于地址分布，不是模块数增加就保证每组访问加速。",
+  "knowledge_point": "计算机组成基础",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t23",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "0、1、2、3分别落四个模块，较易重叠；0、4、8、12都落模块0，冲突较多。",
+    "points": 1
+   }
+  ],
+  "topic_title": "低位交叉存储的模块定位",
+  "chapter_id": "computer-organization.c04",
+  "required_depth": "综合应用",
+  "topic_order": 13
+ },
+ {
+  "id": "gap-co-textbook-06-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t24",
+  "source_chapter": "第4章 存储器",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "4个数据位用普通汉明码纠正单比特错，至少需几个校验位？写不等式。",
+  "options": {},
+  "answer": "3个，2³=8≥4+3+1=8；r=2时4<7，不足。",
+  "explanation": "需为每一位错误及无错误留不同综合状态。",
+  "knowledge_point": "计算机组成基础",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t24",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "3个，2³=8≥4+3+1=8；r=2时4<7，不足。",
+    "points": 1
+   }
+  ],
+  "topic_title": "奇偶校验与汉明纠错",
+  "chapter_id": "computer-organization.c04",
+  "required_depth": "综合应用",
+  "topic_order": 14
+ },
+ {
+  "id": "gap-co-textbook-06-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t24",
+  "source_chapter": "第4章 存储器",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "偶校验能否保证发现两个位同时翻转？普通汉明码遇双错能否无条件纠正？",
+  "options": {},
+  "answer": "均不能。两个翻转可能保持奇偶；普通汉明码双错可能被误纠。",
+  "explanation": "奇偶只能保证检测奇数个位错，SECDED的整体奇偶位用于进一步区分双错。",
+  "knowledge_point": "计算机组成基础",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t24",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "均不能。两个翻转可能保持奇偶；普通汉明码双错可能被误纠。",
+    "points": 1
+   }
+  ],
+  "topic_title": "奇偶校验与汉明纠错",
+  "chapter_id": "computer-organization.c04",
+  "required_depth": "综合应用",
+  "topic_order": 14
+ },
+ {
+  "id": "gap-co-textbook-07-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t25",
+  "source_chapter": "第4章 存储器",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "7200rpm磁盘平均寻道6ms，平均传输1ms，忽略其他开销，平均访问时间约多少？",
+  "options": {},
+  "answer": "11.17ms。",
+  "explanation": "一转60/7200s=8.33ms，半转4.17ms；6+4.17+1≈11.17ms。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t25",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "11.17ms。",
+    "points": 1
+   }
+  ],
+  "topic_title": "磁盘定位与平均访问时间",
+  "chapter_id": "computer-organization.c04",
+  "required_depth": "直接应用",
+  "topic_order": 15
+ },
+ {
+  "id": "gap-co-textbook-07-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t25",
+  "source_chapter": "第4章 存储器",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "传统CHS模型每柱面4磁头、每磁道16扇区，LBA=70，柱面和磁头从0编号、扇区从1编号，位置是什么？",
+  "options": {},
+  "answer": "柱面1，磁头0，扇区7。",
+  "explanation": "70÷64得1余6，6÷16得0余6，扇区从1编号故6+1=7。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t25",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "柱面1，磁头0，扇区7。",
+    "points": 1
+   }
+  ],
+  "topic_title": "磁盘定位与平均访问时间",
+  "chapter_id": "computer-organization.c04",
+  "required_depth": "直接应用",
+  "topic_order": 15
+ },
+ {
+  "id": "gap-co-textbook-08-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t26",
+  "source_chapter": "第5章 输入输出系统",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "CPU要判断键盘接口是否已有新字符、读取字符、允许中断，分别主要访问哪类寄存器？",
+  "options": {},
+  "answer": "分别为状态、数据、控制寄存器。",
+  "explanation": "状态说明是否就绪，数据给出字符内容，控制改变接口工作方式。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t26",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "分别为状态、数据、控制寄存器。",
+    "points": 1
+   }
+  ],
+  "topic_title": "I/O接口的三个寄存器",
+  "chapter_id": "computer-organization.c09",
+  "required_depth": "综合应用",
+  "topic_order": 17
+ },
+ {
+  "id": "gap-co-textbook-09-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t27",
+  "source_chapter": "第5章 输入输出系统",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "CPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？",
+  "options": {},
+  "answer": "1%。",
+  "explanation": "2000×10÷(2×10⁶)=0.01；未计数据搬运和处理。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t27",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "1%。",
+    "points": 1
+   }
+  ],
+  "topic_title": "程序查询的忙等开销",
+  "chapter_id": "computer-organization.c09",
+  "required_depth": "综合应用",
+  "topic_order": 18
+ },
+ {
+  "id": "gap-co-textbook-09-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t27",
+  "source_chapter": "第5章 输入输出系统",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "程序查询到设备READY=0时为何不能直接读数据作为新输入？若查询间隔太长有什么风险？",
+  "options": {},
+  "answer": "数据可能还是旧值或未稳定，应继续等就绪；间隔过长可能缓冲溢出、覆盖或丢失数据。",
+  "explanation": "轮询须同时满足CPU成本与设备响应时限，不是越少越好。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t27",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "数据可能还是旧值或未稳定，应继续等就绪；间隔过长可能缓冲溢出、覆盖或丢失数据。",
+    "points": 1
+   }
+  ],
+  "topic_title": "程序查询的忙等开销",
+  "chapter_id": "computer-organization.c09",
+  "required_depth": "综合应用",
+  "topic_order": 18
+ },
+ {
+  "id": "gap-co-textbook-10-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t28",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "8位补码11110100算术右移一位得到什么位串和真值？若逻辑右移呢？",
+  "options": {},
+  "answer": "算术右移11111010，−6；逻辑右移01111010，无符号为122。",
+  "explanation": "算术复制符号1，逻辑高位补0；同位串解释须说明类型。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t28",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "算术右移11111010，−6；逻辑右移01111010，无符号为122。",
+    "points": 1
+   }
+  ],
+  "topic_title": "移位先辨符号与位宽",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 22
+ },
+ {
+  "id": "gap-co-textbook-10-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t28",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "8位补码01111110左移一位得到11111100，能否解释为126×2的正确有符号结果？",
+  "options": {},
+  "answer": "不能，真实252超过8位补码最大127，已溢出。",
+  "explanation": "左移低位补0只是位操作，结果超范围后不能继续当精确乘2。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t28",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "不能，真实252超过8位补码最大127，已溢出。",
+    "points": 1
+   }
+  ],
+  "topic_title": "移位先辨符号与位宽",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 22
+ },
+ {
+  "id": "gap-co-textbook-11-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t29",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "按移位相加计算无符号6×3，写出两次非零部分积与最终8位结果。",
+  "options": {},
+  "answer": "部分积6与12，累加18，8位00010010。",
+  "explanation": "乘数0011的第0、1位为1，分别加入6×2⁰和6×2¹。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t29",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "部分积6与12，累加18，8位00010010。",
+    "points": 1
+   }
+  ],
+  "topic_title": "移位相加逐位求乘积",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 23
+ },
+ {
+  "id": "gap-co-textbook-11-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t29",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "无符号4位15×15若只留4位，得到的位串是否代表真实积？写真实积和至少需要的积宽。",
+  "options": {},
+  "answer": "真实225=11100001₂，需8位；仅留4位0001不代表真实225。",
+  "explanation": "n位乘n位的无符号积最多需2n位，截断不能默认为数学结果。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t29",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "真实225=11100001₂，需8位；仅留4位0001不代表真实225。",
+    "points": 1
+   }
+  ],
+  "topic_title": "移位相加逐位求乘积",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 23
+ },
+ {
+  "id": "gap-co-textbook-12-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t30",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "用无符号逐位试商计算11÷3，给出商、余数和验证式。",
+  "options": {},
+  "answer": "商3，余2；11=3×3+2，且0≤2<3。",
+  "explanation": "被除数1011逐位带入，商0011；最终余数必须小于除数。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t30",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "商3，余2；11=3×3+2，且0≤2<3。",
+    "points": 1
+   }
+  ],
+  "topic_title": "逐位试商与余数恢复",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 24
+ },
+ {
+  "id": "gap-co-textbook-12-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t30",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "不恢复余数法最终商已形成但余数为−2、除数为3，最终余数应如何修正？为什么不能直接报−2？",
+  "options": {},
+  "answer": "加除数3，最终余数为1；无符号除法最终余数应满足0≤R<D。",
+  "explanation": "负余数是加减交替过程的中间形式，末尾需恢复到标准余数。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t30",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "加除数3，最终余数为1；无符号除法最终余数应满足0≤R<D。",
+    "points": 1
+   }
+  ],
+  "topic_title": "逐位试商与余数恢复",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 24
+ },
+ {
+  "id": "gap-co-textbook-13-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t31",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "用二进制规格化过程计算6+2.5，写对阶、尾数加法和规格化三步。",
+  "options": {},
+  "answer": "1.100×2²+0.101×2²；尾数相加10.001；右规1.0001×2³=8.5。",
+  "explanation": "向大阶2对齐，小阶尾数右移一位，出现10开头则右规。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t31",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "1.100×2²+0.101×2²；尾数相加10.001；右规1.0001×2³=8.5。",
+    "points": 1
+   }
+  ],
+  "topic_title": "浮点加减的对阶与规格化",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 25
+ },
+ {
+  "id": "gap-co-textbook-13-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t31",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "1.1₂×2²−1.01₂×2¹，对阶后得0.111₂×2²，规格化应怎样调整，真值多少？",
+  "options": {},
+  "answer": "左规为1.11₂×2¹，真值3.5。",
+  "explanation": "尾数左移一位乘2，阶减1除2，两者抵消保持数值。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t31",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "左规为1.11₂×2¹，真值3.5。",
+    "points": 1
+   }
+  ],
+  "topic_title": "浮点加减的对阶与规格化",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 25
+ },
+ {
+  "id": "gap-co-textbook-14-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t32",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "ALU要用同一加法器完成A+B和A−B，怎样处理B与最低位输入进位？",
+  "options": {},
+  "answer": "加法原样输入B且低位进位0；减法输入反B且低位进位1，即A+反B+1。",
+  "explanation": "通过控制位异或B并同时控制初始进位，可统一加减。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t32",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "加法原样输入B且低位进位0；减法输入反B且低位进位1，即A+反B+1。",
+    "points": 1
+   }
+  ],
+  "topic_title": "ALU加减与状态标志",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 26
+ },
+ {
+  "id": "gap-co-textbook-15-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t33",
+  "source_chapter": "第7章 指令系统",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "32位指令包含6位操作码、两个5位寄存器字段，余位为补码立即数。立即数位数和范围是什么？",
+  "options": {},
+  "answer": "16位，−32768至32767。",
+  "explanation": "32−6−5−5=16；n位补码范围−2^(n−1)到2^(n−1)−1。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t33",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "16位，−32768至32767。",
+    "points": 1
+   }
+  ],
+  "topic_title": "指令字段位数与编码",
+  "chapter_id": "computer-organization.c03",
+  "required_depth": "综合应用",
+  "topic_order": 29
+ },
+ {
+  "id": "gap-co-textbook-16-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t34",
+  "source_chapter": "第8章 CPU的结构和功能",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "B服务期间A请求，A优先级更高且未屏蔽、允许嵌套，执行返回顺序是什么？",
+  "options": {},
+  "answer": "主程序→B前半→A→B后半→主程序。",
+  "explanation": "A返回被打断的B，B完成才回主程序，不能A直接跳过B。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t34",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "主程序→B前半→A→B后半→主程序。",
+    "points": 1
+   }
+  ],
+  "topic_title": "中断屏蔽与嵌套顺序",
+  "chapter_id": "computer-organization.c10",
+  "required_depth": "综合应用",
+  "topic_order": 34
+ },
+ {
+  "id": "gap-co-textbook-16-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t34",
+  "source_chapter": "第8章 CPU的结构和功能",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "中断服务尚未保护返回地址和寄存器就开放嵌套，可能出现什么问题？",
+  "options": {},
+  "answer": "高优先级中断可能覆盖返回信息或寄存器，恢复错误位置或错误数据。",
+  "explanation": "嵌套每一层都须保有自己的现场，不能只保存最外层。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t34",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "高优先级中断可能覆盖返回信息或寄存器，恢复错误位置或错误数据。",
+    "points": 1
+   }
+  ],
+  "topic_title": "中断屏蔽与嵌套顺序",
+  "chapter_id": "computer-organization.c10",
+  "required_depth": "综合应用",
+  "topic_order": 34
+ },
+ {
+  "id": "gap-co-textbook-17-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t35",
+  "source_chapter": "第9章 控制单元的功能",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+  "options": {},
+  "answer": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+  "explanation": "用Y保存第一操作数、Z暂存结果，避免同拍竞争同一总线。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t35",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+    "points": 1
+   }
+  ],
+  "topic_title": "微操作按通路安排节拍",
+  "chapter_id": "computer-organization.c05",
+  "required_depth": "综合应用",
+  "topic_order": 35
+ },
+ {
+  "id": "gap-co-textbook-17-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t35",
+  "source_chapter": "第9章 控制单元的功能",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+  "options": {},
+  "answer": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+  "explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t35",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+    "points": 1
+   }
+  ],
+  "topic_title": "微操作按通路安排节拍",
+  "chapter_id": "computer-organization.c05",
+  "required_depth": "综合应用",
+  "topic_order": 35
+ },
+ {
+  "id": "gap-co-textbook-18-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t36",
+  "source_chapter": "第9章 控制单元的功能",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "在READ_WAIT状态，READY=0与READY=1时分别如何转移？为什么？",
+  "options": {},
+  "answer": "READY=0留等待态，READY=1锁存有效数据后继续。",
+  "explanation": "未就绪数据可能未稳定，固定一拍强行推进会读到旧值。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t36",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "READY=0留等待态，READY=1锁存有效数据后继续。",
+    "points": 1
+   }
+  ],
+  "topic_title": "控制时序与就绪等待",
+  "chapter_id": "computer-organization.c05",
+  "required_depth": "综合应用",
+  "topic_order": 36
+ },
+ {
+  "id": "gap-co-textbook-18-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t36",
+  "source_chapter": "第9章 控制单元的功能",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "为什么只知道当前指令是ADD仍不足以确定本拍全部控制信号？",
+  "options": {},
+  "answer": "还要知道取指/执行等当前状态、条件标志和外部READY等状态。",
+  "explanation": "同一ADD在取指与执行的动作不同，控制是译码、时序和条件的组合。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t36",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "还要知道取指/执行等当前状态、条件标志和外部READY等状态。",
+    "points": 1
+   }
+  ],
+  "topic_title": "控制时序与就绪等待",
+  "chapter_id": "computer-organization.c05",
+  "required_depth": "综合应用",
+  "topic_order": 36
+ },
+ {
+  "id": "gap-co-textbook-19-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t37",
+  "source_chapter": "第10章 控制单元的设计",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+  "options": {},
+  "answer": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+  "explanation": "读请求在等待期间保持，锁存必须等READY有效。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t37",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+    "points": 1
+   }
+  ],
+  "topic_title": "硬布线控制方程从状态表来",
+  "chapter_id": "computer-organization.c11",
+  "required_depth": "综合应用",
+  "topic_order": 37
+ },
+ {
+  "id": "gap-co-textbook-19-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t37",
+  "source_chapter": "第10章 控制单元的设计",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "设计硬布线控制器，为何在列状态表前应先明确单总线还是多总线、ALU输入通路？",
+  "options": {},
+  "answer": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+  "explanation": "状态表不能忽略硬件约束，否则逻辑方程形式正确也会触发资源冲突。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "场景选型",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t37",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+    "points": 1
+   }
+  ],
+  "topic_title": "硬布线控制方程从状态表来",
+  "chapter_id": "computer-organization.c11",
+  "required_depth": "综合应用",
+  "topic_order": 37
+ },
+ {
+  "id": "gap-co-textbook-20-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t38",
+  "source_chapter": "第10章 控制单元的设计",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "控存公共取指入口00，ADD执行入口20，ADD微程序结束应回00。这里回00是否把用户程序PC清0？",
+  "options": {},
+  "answer": "否，改变的是微PC，使控制器重新取下一条机器指令；机器PC仍按程序执行流保持。",
+  "explanation": "机器PC与微PC属于不同地址空间，不能混为同一寄存器。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "比较辨析",
+  "difficulty": "基础",
+  "topic_id": "computer-organization.t38",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "否，改变的是微PC，使控制器重新取下一条机器指令；机器PC仍按程序执行流保持。",
+    "points": 1
+   }
+  ],
+  "topic_title": "微程序入口与下一微地址",
+  "chapter_id": "computer-organization.c11",
+  "required_depth": "综合应用",
+  "topic_order": 38
+ },
+ {
+  "id": "gap-co-textbook-20-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t38",
+  "source_chapter": "第10章 控制单元的设计",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "写出三种下一微地址来源，并解释条件等待态为何可指向自身。",
+  "options": {},
+  "answer": "顺序微PC+1、微指令显式下地址、条件或操作码入口映射；未READY时回自身等待。",
+  "explanation": "还可有微子程序返回地址等，地址选择由条件与顺序控制字段共同决定。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t38",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "顺序微PC+1、微指令显式下地址、条件或操作码入口映射；未READY时回自身等待。",
+    "points": 1
+   }
+  ],
+  "topic_title": "微程序入口与下一微地址",
+  "chapter_id": "computer-organization.c11",
+  "required_depth": "综合应用",
+  "topic_order": 38
+ },
+ {
+  "id": "gap-co-textbook-21-1",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t39",
+  "source_chapter": "第10章 控制单元的设计",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "同一微指令字段需选择4种互斥动作之一或不动作，最少几位？为什么不是2位？",
+  "options": {},
+  "answer": "3位；共5种状态，2位只能4种，3位可8种。",
+  "explanation": "若无不动作且保证必选一个才可能2位，题目条件不能省。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t39",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "3位；共5种状态，2位只能4种，3位可8种。",
+    "points": 1
+   }
+  ],
+  "topic_title": "微指令编码与控存容量",
+  "chapter_id": "computer-organization.c11",
+  "required_depth": "综合应用",
+  "topic_order": 39
+ },
+ {
+  "id": "gap-co-textbook-21-2",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t39",
+  "source_chapter": "第10章 控制单元的设计",
+  "adaptation_note": "按唐朔飞第3版教材章节补充的原创练习，不是招聘原题。",
+  "stem": "控制存储器64条微指令，每条24位，容量多少bit与B？若要直接编码64个下地址，需几位？",
+  "options": {},
+  "answer": "1536bit=192B；下地址6位。",
+  "explanation": "64×24=1536，除8换字节；2⁶=64。",
+  "knowledge_point": "指令系统与CPU",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t39",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "1536bit=192B；下地址6位。",
+    "points": 1
+   }
+  ],
+  "topic_title": "微指令编码与控存容量",
+  "chapter_id": "computer-organization.c11",
+  "required_depth": "综合应用",
+  "topic_order": 39
+ },
+ {
+  "id": "gap-co-textbook-booth-01",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "计算机组成原理",
+  "chapter": "computer-organization.t40",
+  "source_chapter": "第6章 计算机的运算方法",
+  "adaptation_note": "教材过程迁移原创题，不是招聘真题。",
+  "stem": "用4位补码Booth算法计算−2×3。设M=1110、A=0000、Q=0011、附加位q=0，每轮先按(Q最低位,q)执行01加M、10减M、00/11不加，再对A、Q、q整体算术右移。写出前两轮移位后的A/Q/q，以及4轮结束后的8位乘积。",
+  "options": {},
+  "answer": "第一轮0001/0001/1；第二轮0000/1000/1；最终乘积11111010，即−6。",
+  "explanation": "第一轮位对10，A−M=0010，整体算术右移得0001/0001/1。第二轮位对11，不加减，整体右移得0000/1000/1。第三轮位对01，A+M=1110，移位得1111/0100/0；第四轮00，移位得1111/1010/0。拼接A与Q得到11111010。符号位复制，q仅参与位对判断，不属于最终乘积。",
+  "knowledge_point": "数据表示与运算",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_id": "computer-organization.t40",
+  "topic_source": "manual",
+  "max_score": 1,
+  "rubric": [
+   {
+    "criterion": "前两轮状态及最终乘积正确，说明先加减再整体算术右移。",
+    "points": 1
+   }
+  ],
+  "topic_title": "Booth位对判断与整体右移",
+  "chapter_id": "computer-organization.c02",
+  "required_depth": "综合应用",
+  "topic_order": 27
+ },
+ {
   "id": "gap-audit26-system-001",
   "source": "课程缺口补充",
   "type": "简答",
@@ -52187,7 +53347,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6,
+  "topic_order": 28,
   "topic_source": "manual",
   "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
   "max_score": 3,
@@ -52786,9 +53946,9 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "ap-co-002",
@@ -52816,7 +53976,7 @@
   "topic_title": "总线结构与带宽",
   "chapter_id": "computer-organization.c06",
   "required_depth": "直接应用",
-  "topic_order": 15
+  "topic_order": 4
  },
  {
   "id": "ap-co-003",
@@ -52837,7 +53997,7 @@
   "difficulty": "基础",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16
  },
@@ -52888,7 +54048,7 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16,
   "rubric": [
@@ -52936,9 +54096,9 @@
   "answer_revision": "audit-b02b98dd3bed",
   "topic_id": "computer-organization.t14",
   "topic_title": "虚拟地址、页表与TLB",
-  "chapter_id": "computer-organization.c07",
+  "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 17,
+  "topic_order": 10,
   "rubric": [
    {
     "criterion": "先发生TLB未命中，需要查页表",
@@ -55251,7 +56411,7 @@
   "topic_title": "数制、编码与位权",
   "chapter_id": "computer-organization.c02",
   "required_depth": "直接应用",
-  "topic_order": 2
+  "topic_order": 19
  },
  {
   "id": "sp-core-co-003",
@@ -55279,7 +56439,7 @@
   "topic_title": "原码、反码、补码与溢出",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 20
  },
  {
   "id": "sp-core-co-004",
@@ -55305,9 +56465,9 @@
   "adaptation_note": "依据公开教学大纲“CPU组成与数据通路”的知识要求，原创改写为单选题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "sp-core-co-005",
@@ -55335,7 +56495,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 28
  },
  {
   "id": "sp-core-co-006",
@@ -55363,7 +56523,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 28
  },
  {
   "id": "sp-core-co-007",
@@ -55473,9 +56633,9 @@
   "adaptation_note": "依据公开教学大纲“指令执行过程”的知识要求，原创改写为单选题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "sp-core-co-011",
@@ -55501,7 +56661,7 @@
   "adaptation_note": "依据公开教学大纲“中断系统”的知识要求，原创改写为单选题，未照搬原题。",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16
  },
@@ -55527,11 +56687,11 @@
   "source_title": "上海建桥学院《计算机组成原理》课程教学大纲",
   "source_chapter": "输入输出接口",
   "adaptation_note": "依据公开教学大纲“输入输出接口”的知识要求，原创改写为单选题，未照搬原题。",
-  "topic_id": "computer-organization.t13",
-  "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "topic_id": "computer-organization.t26",
+  "topic_title": "I/O接口的三个寄存器",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
-  "topic_order": 16
+  "topic_order": 17
  },
  {
   "id": "sp-core-co-013",
@@ -55585,9 +56745,9 @@
   "adaptation_note": "依据公开教学大纲“CPU组成与寄存器”的知识要求，原创改写为多选题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "sp-core-co-015",
@@ -55643,7 +56803,7 @@
   "topic_title": "总线结构与带宽",
   "chapter_id": "computer-organization.c06",
   "required_depth": "直接应用",
-  "topic_order": 15
+  "topic_order": 4
  },
  {
   "id": "sp-core-co-017",
@@ -55671,7 +56831,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 28
  },
  {
   "id": "sp-core-co-018",
@@ -55743,9 +56903,9 @@
   "adaptation_note": "依据公开教学大纲“CPU组成与寄存器”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "sp-core-co-021",
@@ -55766,9 +56926,9 @@
   "adaptation_note": "依据公开教学大纲“运算器”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "sp-core-co-022",
@@ -55791,7 +56951,7 @@
   "topic_title": "总线结构与带宽",
   "chapter_id": "computer-organization.c06",
   "required_depth": "直接应用",
-  "topic_order": 15
+  "topic_order": 4
  },
  {
   "id": "sp-core-co-023",
@@ -55814,7 +56974,7 @@
   "topic_title": "总线结构与带宽",
   "chapter_id": "computer-organization.c06",
   "required_depth": "直接应用",
-  "topic_order": 15
+  "topic_order": 4
  },
  {
   "id": "sp-core-co-024",
@@ -55973,9 +57133,9 @@
   "adaptation_note": "依据公开教学大纲“指令流水线”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t11",
   "topic_title": "流水线与相关冲突",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 12
+  "topic_order": 31
  },
  {
   "id": "sp-core-co-031",
@@ -55996,9 +57156,9 @@
   "adaptation_note": "依据公开教学大纲“流水线基本冲突”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t18",
   "topic_title": "流水线停顿与总时间",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 14
+  "topic_order": 33
  },
  {
   "id": "sp-core-co-032",
@@ -56019,7 +57179,7 @@
   "adaptation_note": "依据公开教学大纲“输入输出控制”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16
  },
@@ -56042,9 +57202,9 @@
   "adaptation_note": "依据公开教学大纲“异常与中断”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5
+  "topic_order": 30
  },
  {
   "id": "sp-core-co-034",
@@ -56065,7 +57225,7 @@
   "adaptation_note": "依据公开教学大纲“输入输出接口”的知识要求，原创改写为判断题，未照搬原题。",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16
  },
@@ -56134,7 +57294,7 @@
   "topic_title": "总线结构与带宽",
   "chapter_id": "computer-organization.c06",
   "required_depth": "直接应用",
-  "topic_order": 15,
+  "topic_order": 4,
   "rubric": [
    {
     "criterion": "写出适用公式或计算关系",
@@ -56226,7 +57386,7 @@
   "topic_title": "数制、编码与位权",
   "chapter_id": "computer-organization.c02",
   "required_depth": "直接应用",
-  "topic_order": 2,
+  "topic_order": 19,
   "rubric": [
    {
     "criterion": "写出适用公式或计算关系",
@@ -56312,9 +57472,9 @@
   "adaptation_note": "依据公开教学大纲“CPU组成与数据通路”的知识要求，原创改写为简答题，未照搬原题。",
   "topic_id": "computer-organization.t06",
   "topic_title": "CPU部件与指令周期",
-  "chapter_id": "computer-organization.c03",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 5,
+  "topic_order": 30,
   "rubric": [
    {
     "criterion": "控制器译码并发出控制信号",
@@ -56509,9 +57669,9 @@
   "adaptation_note": "依据公开教学大纲“指令流水线”的知识要求，原创改写为冲突类型单选题，未照搬原题。",
   "topic_id": "computer-organization.t11",
   "topic_title": "流水线与相关冲突",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 12
+  "topic_order": 31
  },
  {
   "id": "sp-core-co-046",
@@ -56532,7 +57692,7 @@
   "adaptation_note": "依据公开教学大纲“输入输出控制”的知识要求，原创改写为简答题，未照搬原题。",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16,
   "rubric": [
@@ -63957,7 +65117,7 @@
   "topic_title": "原码、反码、补码与溢出",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 20
  },
  {
   "id": "uc-co-002",
@@ -63981,12 +65141,12 @@
   "knowledge_point": "数据表示与运算",
   "ability": "直接计算",
   "difficulty": "应用",
+  "topic_id": "computer-organization.t32",
   "answer_revision": "audit-a55dec387fe2",
-  "topic_id": "computer-organization.t04",
-  "topic_title": "原码、反码、补码与溢出",
+  "topic_title": "ALU加减与状态标志",
   "chapter_id": "computer-organization.c02",
   "required_depth": "综合应用",
-  "topic_order": 3
+  "topic_order": 26
  },
  {
   "id": "uc-co-003",
@@ -64042,7 +65202,7 @@
   "topic_title": "Cache地址拆分与命中",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 10
+  "topic_order": 11
  },
  {
   "id": "uc-co-005",
@@ -64070,7 +65230,7 @@
   "topic_title": "平均访存时间按口径算",
   "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 11
+  "topic_order": 12
  },
  {
   "id": "uc-co-006",
@@ -64098,7 +65258,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 28
  },
  {
   "id": "uc-co-007",
@@ -64122,11 +65282,11 @@
   "knowledge_point": "指令系统与CPU",
   "ability": "直接计算",
   "difficulty": "应用",
-  "topic_id": "computer-organization.t07",
-  "topic_title": "指令、寻址与RISC/CISC",
+  "topic_id": "computer-organization.t33",
+  "topic_title": "指令字段位数与编码",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 29
  },
  {
   "id": "uc-co-008",
@@ -64152,9 +65312,9 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t17",
   "topic_title": "理想流水线填充与排空",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 13
+  "topic_order": 32
  },
  {
   "id": "uc-co-009",
@@ -64238,9 +65398,9 @@
   "answer_revision": "audit-59adffc92640",
   "topic_id": "computer-organization.t11",
   "topic_title": "流水线与相关冲突",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 12
+  "topic_order": 31
  },
  {
   "id": "uc-co-012",
@@ -64266,7 +65426,7 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t13",
   "topic_title": "I/O控制、中断与DMA",
-  "chapter_id": "computer-organization.c06",
+  "chapter_id": "computer-organization.c09",
   "required_depth": "综合应用",
   "topic_order": 16
  },
@@ -64291,7 +65451,7 @@
   "topic_title": "指令、寻址与RISC/CISC",
   "chapter_id": "computer-organization.c03",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 28
  },
  {
   "id": "uc-co-014",
@@ -64312,9 +65472,9 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t17",
   "topic_title": "理想流水线填充与排空",
-  "chapter_id": "computer-organization.c05",
+  "chapter_id": "computer-organization.c10",
   "required_depth": "综合应用",
-  "topic_order": 13
+  "topic_order": 32
  },
  {
   "id": "uc-co-015",
@@ -64335,9 +65495,9 @@
   "difficulty": "应用",
   "topic_id": "computer-organization.t14",
   "topic_title": "虚拟地址、页表与TLB",
-  "chapter_id": "computer-organization.c07",
+  "chapter_id": "computer-organization.c04",
   "required_depth": "综合应用",
-  "topic_order": 17
+  "topic_order": 10
  },
  {
   "id": "uc-net-001",
