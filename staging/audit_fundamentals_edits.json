@@ -2396,7 +2396,10 @@
     "id": "cg-06-s1-q52",
     "explanation": "录音机是记录播放声音的设备，磁盘磁带U盘是存储介质。录音机也可能内置存储，因此设备与介质的分类不能解读成录音机不能存信息。",
     "stem": "下列哪项属于记录和播放声音的设备，而不是磁盘、磁带等存储介质？",
-    "answer": "C"
+    "answer": "C",
+    "topic_id": "computer-foundations.t05",
+    "topic_source": "manual",
+    "knowledge_point": "计算机硬件"
   },
   {
     "id": "dy-1969eb6a",
@@ -3077,7 +3080,10 @@
   {
     "id": "cg-06-s1-q62",
     "explanation": "n根二进制地址线可区分2^n地址，按字节编址才对应2^n字节，实际已装内存可小于上限。",
-    "stem": "按字节编址的传统总线系统中，可直接区分的最大内存地址数量主要与哪项宽度有关？"
+    "stem": "按字节编址的传统总线系统中，可直接区分的最大内存地址数量主要与哪项宽度有关？",
+    "topic_id": "computer-foundations.t05",
+    "topic_source": "manual",
+    "knowledge_point": "计算机硬件"
   },
   {
     "id": "cg-06-s1-q64",
@@ -3666,7 +3672,10 @@
   },
   {
     "id": "dy-787d8c1c",
-    "explanation": "BIOS设置配置启动顺序、存储设备等硬件参数，不保证任何改动必然更好，应依据硬件需求设置。"
+    "explanation": "BIOS设置配置启动顺序、存储设备等硬件参数，不保证任何改动必然更好，应依据硬件需求设置。",
+    "topic_id": "computer-foundations.t05",
+    "topic_source": "manual",
+    "knowledge_point": "计算机硬件"
   },
   {
     "id": "dy-80319fc9",

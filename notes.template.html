@@ -692,13 +692,14 @@
       }
       .recall-card-pager .reveal-card { border-color: var(--primary); background: var(--primary); color: #fff; }
       .recall-rating { display: none; }
-      .recall-card-pager.is-rating { grid-template-columns: 1fr; }
+      .study.recall-mode .recall-card-pager.is-rating { grid-template-columns: minmax(0, 1fr); }
       .recall-card-pager.is-rating > #recall-prev,
       .recall-card-pager.is-rating > #reveal-card,
       .recall-card-pager.is-rating > #recall-next { display: none; }
-      .recall-card-pager.is-rating .recall-rating { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+      .recall-card-pager.is-rating .recall-rating { display: grid; grid-column: 1 / -1; min-width: 0; width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+      .recall-rating button { min-width: 0; padding: 8px 4px; white-space: nowrap; font-size: 14px; }
       .recall-rating button[data-recall-rating="again"] { border-color: #f0b4ae; color: var(--red); }
-      .recall-rating button[data-recall-rating="known"] { border-color: #8fd0b2; color: #067647; }
+      .recall-rating button[data-recall-rating="known"] { border-color: var(--primary); color: var(--primary); }
       .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) { pointer-events: none; }
 
       .study.color-notes-list .recall-prompt { margin: 9px 0 6px !important; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--blue); }
@@ -1306,8 +1307,9 @@
         tag.textContent = priority;
         const copy = document.createElement("span");
         copy.className = "topic-study-copy";
-        copy.textContent = topic.study_task || `${topic.target_depth || "识记理解"} · ${(topic.practice_modes || ["客观辨析"]).join(" / ")}`;
-        meta.append(tag, copy);
+        copy.textContent = topic.study_task || "";
+        meta.appendChild(tag);
+        if (copy.textContent) meta.appendChild(copy);
         point.insertAdjacentElement("afterend", meta);
         if (!topic.question_count) return;
         const link = document.createElement("a");

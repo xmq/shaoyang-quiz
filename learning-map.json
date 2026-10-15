@@ -791,7 +791,7 @@
             "简答说明"
           ],
           "short_answer": true,
-          "common_trap": "CPU不等于主机或整个系统，RAM与SSD不都是内存；主频高不保证程序快，硬件、系统软件和应用软件的范围不同。"
+          "common_trap": "BIOS/UEFI先初始化再引导操作系统；CPU不等于主机，RAM不等于SSD，主频高不保证整机快。"
         },
         {
           "topic_id": "computer-foundations.t06",
@@ -823,7 +823,7 @@
             "客观辨析"
           ],
           "short_answer": false,
-          "common_trap": "复制产生副本，快捷方式只保存引用；压缩包不一定能直接安装，删除目标会让链接失效，改扩展名不会完成格式转换。"
+          "common_trap": "删除目标会让快捷方式失效，改扩展名不转换内容；拖放要看对象、权限和提示，不能把默认行为推广到所有场景。"
         },
         {
           "topic_id": "computer-foundations.t07",
@@ -6724,7 +6724,7 @@
           ],
           "short_answer": true,
           "study_task": "先求静态工作点再分析交流增益，判断截止或饱和失真的方向。",
-          "common_trap": "输出削顶不只由输入过大造成；旁路RE提高交流增益，也会削弱本地负反馈。"
+          "common_trap": "β关系限放大区；RE未旁路时不能套此增益简式；rbe不是外接RB，削顶还要查工作点与摆幅。"
         },
         {
           "topic_id": "analog-electronics.t05",
@@ -6754,7 +6754,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "共模信号不等于噪声的全部；级数增加可能提高增益，也会收窄带宽并增加相移。"
+          "common_trap": "空载增益不可机械相乘；0.707倍电压对应半功率；共模抑制不等于消除全部噪声。"
         },
         {
           "topic_id": "analog-electronics.t06",
@@ -6788,7 +6788,7 @@
           ],
           "short_answer": true,
           "study_task": "用瞬时极性法判断反馈正负，辨别组态并计算满足条件时的闭环增益。",
-          "common_trap": "不能只看反馈接正端或负端；负反馈不消除环外噪声，环路相移过大还可能振荡。"
+          "common_trap": "先验负反馈，再分取样与接法；不能只看接正端或负端，环外噪声和稳定性仍需检查。"
         },
         {
           "topic_id": "analog-electronics.t07",
@@ -6851,7 +6851,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "正反馈不凭空提供能量；振荡条件不是普通线性放大的增益公式。"
+          "common_trap": "输入在两阈之间且历史未知时不能唯一判输出；比较器饱和不可虚短，正反馈不凭空供能。"
         },
         {
           "topic_id": "analog-electronics.t09",
@@ -6912,7 +6912,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "ADC位数高不消除前端噪声；万用表平均值正常不证明波形无失真，在路测二极管会受并联支路影响。"
+          "common_trap": "二极管挡先断电放电、必要时脱一端；MOS防静电；平均值正常不证明波形正常，ADC位数高不消除前端噪声。"
         }
       ]
     },
@@ -7076,7 +7076,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "使能端未满足时器件不执行正常功能；低有效输出要先取反理解。"
+          "common_trap": "使能和有效电平按器件规定；MUX的S是选择端，加法器的S是和位，同一字母不代表同一作用。"
         },
         {
           "topic_id": "digital-electronics.t05",

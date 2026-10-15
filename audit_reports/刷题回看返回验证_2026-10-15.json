@@ -1,0 +1,140 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "mode": "seq",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 390,
+      "mode": "seq",
+      "scope": {
+        "chapter": "data-structures.c07"
+      },
+      "question": "cg-05-s1-q48",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 390,
+      "mode": "rnd",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "ap-analog-002",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 390,
+      "mode": "priority",
+      "scope": {
+        "course": "计算机网络"
+      },
+      "question": "cg-08-s1-q44",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 390,
+      "mode": "wrong",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 390,
+      "mode": "review",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 390,
+      "mode": "fav",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "seq",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "seq",
+      "scope": {
+        "chapter": "data-structures.c07"
+      },
+      "question": "cg-05-s1-q48",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "rnd",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "ue-analog-011",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "priority",
+      "scope": {
+        "course": "计算机网络"
+      },
+      "question": "cg-08-s1-q44",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "wrong",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "review",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "width": 1280,
+      "mode": "fav",
+      "scope": {
+        "topic": "analog-electronics.t07"
+      },
+      "question": "uf-ae-013",
+      "return_reload_next": "pass"
+    },
+    {
+      "mode": "review",
+      "due": 100,
+      "keep_answered_question": "pass"
+    },
+    {
+      "mode": "seq",
+      "finished_topic_reload_stays_finished": "pass"
+    }
+  ],
+  "errors": []
+}

@@ -134,6 +134,7 @@ function persistMockSession() {
 
 let state = initialState();
 applyLaunchParams();
+restoreQuestionPosition();
 let mockSession = loadMockSession();
 let mockTimerId = null;
 let saveWarningShown = false;
@@ -382,10 +383,16 @@ function buildInterleavedIds(pool) {
 }
 
 function buildReviewPool(scope) {
-  return scope
+  const due = scope
     .filter((q) => !state.flagged[q.id] && (isReviewDue(q.id) || state._stickyId === q.id))
-    .sort((a, b) => reviewScore(b) - reviewScore(a))
-    .slice(0, 80);
+    .sort((a, b) => reviewScore(b) - reviewScore(a));
+  const pool = due.slice(0, 80);
+  const current = due.find((question) => question.id === state._stickyId);
+  if (current && !pool.includes(current)) {
+    pool.unshift(current);
+    pool.pop();
+  }
+  return pool;
 }
 
 function isReviewDue(id, now = Date.now()) {
@@ -410,6 +417,37 @@ function resetPosition() {
   state._pending = null;
   state._shuffled = false;
   state._navBack = [];
+}
+
+function rememberQuestionPosition(question) {
+  if (state.mode === "mock") return;
+  const position = {url: location.href, currentId: question.id, answered: Boolean(state.done[question.id]) && !needsReviewAnswer(question)};
+  for (const key of ["mode", "subject", "typeFilter", "chapterFilter", "searchQuery"]) position[key] = state[key];
+  history.replaceState({...history.state, quizQuestion: position}, "", location.href);
+}
+
+function restoreQuestionPosition() {
+  const position = history.state?.quizQuestion;
+  if (!position || position.url !== location.href) return;
+  const saved = sanitizeState(position, false);
+  if (!saved.currentId || saved.mode === "home" || saved.mode === "mock") return;
+  const fields = ["mode", "subject", "typeFilter", "chapterFilter", "searchQuery"];
+  const previous = Object.fromEntries(fields.map((key) => [key, state[key]]));
+  for (const key of fields) state[key] = saved[key];
+  if (!getScope().some((question) => question.id === saved.currentId)) {
+    Object.assign(state, previous);
+    return;
+  }
+  state.currentId = saved.currentId;
+  state._stickyId = ["wrong", "review"].includes(saved.mode) && position.answered !== true ? null : saved.currentId;
+}
+
+function forgetQuestionPosition() {
+  if (history.state?.quizQuestion) history.replaceState({...history.state, quizQuestion: null}, "", location.href);
+}
+
+function needsReviewAnswer(question) {
+  return ["wrong", "review"].includes(state.mode) && state._stickyId !== question.id;
 }
 
 function applyLaunchParams() {
@@ -632,7 +670,7 @@ function optionKeys(q) {
     .sort((a, b) => a.localeCompare(b, "en"));
 }
 
-function renderChoiceQuestion(q, chosen, inWrongFresh) {
+function renderChoiceQuestion(q, chosen) {
   const isMulti = q.type === "多选";
   const concealResult = isMockActive();
   const pending = state._pending && state._pending.qid === q.id
@@ -794,16 +832,17 @@ function mediaHtml(q) {
 }
 
 function renderQuestion(q, pool) {
-  const inWrongFresh = state.mode === "wrong" && state._stickyId !== q.id;
+  rememberQuestionPosition(q);
+  const reviewNeedsAnswer = needsReviewAnswer(q);
   const chosen = isMockActive()
     ? mockSession.answers[q.id]
-    : (inWrongFresh ? null : state.done[q.id]);
+    : (reviewNeedsAnswer ? null : state.done[q.id]);
   const isFav = !!state.fav[q.id];
   const isFlagged = !!state.flagged[q.id];
   const canGoBack = isMockActive() ? state.cursor > 0 : Boolean(state._navBack && state._navBack.length);
   let body = "";
 
-  if (q.type === "单选" || q.type === "多选") body = renderChoiceQuestion(q, chosen, inWrongFresh);
+  if (q.type === "单选" || q.type === "多选") body = renderChoiceQuestion(q, chosen);
   else if (q.type === "判断") body = renderJudgeQuestion(q, chosen);
   else if (q.type === "填空") body = renderFillQuestion(q, chosen);
   else if (q.type === "简答") body = renderShortAnswerQuestion(q, chosen);
@@ -831,7 +870,7 @@ function renderQuestion(q, pool) {
     </div>`}
   </article>`;
 
-  bindQuestionEvents(q, inWrongFresh);
+  bindQuestionEvents(q, reviewNeedsAnswer);
   if (focusFeedbackAfterRender && chosen) {
     focusFeedbackAfterRender = false;
     requestAnimationFrame(() => {
@@ -849,8 +888,8 @@ function renderQuestion(q, pool) {
   }
 }
 
-function bindQuestionEvents(q, inWrongFresh) {
-  const canAnswer = isMockActive() ? true : (!state.done[q.id] || inWrongFresh);
+function bindQuestionEvents(q, reviewNeedsAnswer) {
+  const canAnswer = isMockActive() ? true : (!state.done[q.id] || reviewNeedsAnswer);
   document.querySelectorAll("[data-letter]").forEach((el) => {
     el.addEventListener("click", () => {
       if (!canAnswer) return;
@@ -983,6 +1022,7 @@ function bindQuestionEvents(q, inWrongFresh) {
 }
 
 function renderEmpty() {
+  forgetQuestionPosition();
   let title = "当前条件下题目已全部刷完";
   let text = "可以切换科目、题型、章节，或进入错题本继续练。";
   if (state.searchQuery) {
@@ -1009,6 +1049,7 @@ function renderEmpty() {
 }
 
 function renderDashboard() {
+  forgetQuestionPosition();
   updateStats();
   updateModeTabs();
   const scope = getScope();
@@ -1992,8 +2033,8 @@ function bindGlobalEvents() {
     const pool = getPool();
     const q = pool[state.cursor];
     if (!q) return;
-    const inWrongFresh = state.mode === "wrong" && state._stickyId !== q.id;
-    const canAnswer = isMockActive() ? true : (!state.done[q.id] || inWrongFresh);
+    const reviewNeedsAnswer = needsReviewAnswer(q);
+    const canAnswer = isMockActive() ? true : (!state.done[q.id] || reviewNeedsAnswer);
     const keys = optionKeys(q);
     const typedLetter = event.key.length === 1 ? event.key.toUpperCase() : "";
     const numericIndex = /^\d$/.test(event.key) ? Number(event.key) - 1 : -1;
