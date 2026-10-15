@@ -112,7 +112,7 @@ def render_html(courses, config):
         if len(box) == 4 and float(box[2]) > 0 and float(box[3]) > 0:
             image_sizes[path.relative_to(ROOT).as_posix()] = [float(box[2]), float(box[3])]
     replacements = {
-        "__IMAGE_SIZES__": json.dumps(image_sizes, separators=(",", ":")),
+        "__IMAGE_SIZES__": json.dumps(image_sizes, sort_keys=True, separators=(",", ":")),
         "__COURSE_DATA__": payload,
         "__DOCUMENT_TITLE__": config["document_title"],
         "__COLOR_MODE__": "true" if config["use_color_markup"] else "false",
