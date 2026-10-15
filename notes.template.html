@@ -197,6 +197,10 @@
     .chapter-pager,
     .recall-card-pager { display: none; }
     @media (min-width: 701px) {
+      .study:not(.recall-mode) .study-content .chapter-section:last-child {
+        min-height: calc(100vh - var(--study-scroll-offset, 137px));
+        min-height: calc(100dvh - var(--study-scroll-offset, 137px));
+      }
       .study.due-recall .chapter-section:not(.mobile-active),
       .study.due-recall .recall-card:not(.mobile-active),
       .study.due-recall .chapter-pager,
@@ -371,7 +375,7 @@
     .table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
     .table-hint { margin: -8px 0 12px !important; color: var(--muted); font-size: 13px; }
     .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); text-align: center; }
-    .note-figure img { display: block; width: 100%; max-width: 920px; max-height: 560px; margin: 0 auto; object-fit: contain; }
+    .note-figure img { display: block; width: 100%; height: auto; max-width: 920px; max-height: 560px; margin: 0 auto; object-fit: contain; }
     .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--panel); font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
@@ -888,6 +892,7 @@
   <script src="./study-review.js"></script>
   <script>
     const items = __COURSE_DATA__;
+    const imageSizes = __IMAGE_SIZES__;
     const colorMode = __COLOR_MODE__;
     const pageKind = "__PAGE_KIND__";
     const subjectAliases = {
@@ -938,6 +943,7 @@
     let recallRetryMode = false;
     let dueRecallQueue = null;
     let searchTimer = null;
+    let pendingStudyScroll = 0;
     let mobileNavReturnFocus = null;
     const readingProgressKey = "shaoyang-reading-progress-v1";
     const recallRatings = StudyReview.read();
@@ -1213,7 +1219,9 @@
           const rawSource = imageMatch[2].trim();
           const normalizedSource = rawSource.replace(/^\.\.\/media\//, "media/");
           if (/^media\/[a-zA-Z0-9_./-]+\.svg$/i.test(normalizedSource)) {
-            output.push(`<figure class="note-figure"><img src="${escapeHtml(normalizedSource)}" alt="${escapeHtml(caption)}" loading="lazy" decoding="async">${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
+            const size = imageSizes[normalizedSource];
+            const dimensions = size ? ` width="${size[0]}" height="${size[1]}"` : "";
+            output.push(`<figure class="note-figure"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="lazy" decoding="async">${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
           }
           index += 1;
           continue;
@@ -1448,6 +1456,30 @@
       syncChapterCompleteButtons();
     }
 
+    function scrollToStudyTarget(target) {
+      const request = ++pendingStudyScroll;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (request !== pendingStudyScroll || !target?.isConnected) return;
+        const heading = target.matches(".chapter-section") ? target.querySelector(".chapter-title") : null;
+        const anchor = heading ? (heading.getBoundingClientRect().height ? heading : target.querySelector(".point")) : target;
+        if (!anchor) return;
+        const pinnedBottom = (element) => {
+          const rect = element.getBoundingClientRect();
+          if (!rect.height) return 0;
+          const style = getComputedStyle(element);
+          return ["sticky", "fixed"].includes(style.position)
+            ? (parseFloat(style.top) || 0) + rect.height
+            : rect.bottom;
+        };
+        const toolbarBottom = pinnedBottom(studyToolbar);
+        const headerBottom = pinnedBottom(siteHeader);
+        const offset = Math.max(0, toolbarBottom, headerBottom) + 12;
+        studyContent.style.setProperty("--study-scroll-offset", `${offset}px`);
+        const top = scrollY + anchor.getBoundingClientRect().top - offset;
+        window.scrollTo({top: Math.max(0, top), behavior: "auto"});
+      }));
+    }
+
     function setActiveChapter(index, {replaceRoute = true, focus = false} = {}) {
       const sections = [...content.querySelectorAll(".chapter-section")];
       if (!sections.length) return;
@@ -1598,7 +1630,7 @@
             activeChapterIndex = index;
             updateStudyPosition({replaceRoute: true});
             closeMobileNav({restoreFocus: false});
-            section.scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToStudyTarget(section);
             return;
           }
           if (mobileMedia.matches) {
@@ -1609,7 +1641,7 @@
             updateStudyPosition({replaceRoute: true});
             section.classList.remove("collapsed");
             toggle.setAttribute("aria-expanded", "true");
-            section.scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToStudyTarget(section);
           }
         });
         chapterLinks.appendChild(link);
@@ -1629,7 +1661,7 @@
             toggle.setAttribute("aria-expanded", "true");
             updateStudyPosition({replaceRoute: true, sectionId: point.id});
             closeMobileNav({restoreFocus: false});
-            requestAnimationFrame(() => point.scrollIntoView({block: "start"}));
+            scrollToStudyTarget(point);
           });
           pointLinks.appendChild(pointLink);
         });
@@ -1716,13 +1748,13 @@
           }
         }
         if (sectionIndex >= 0) setActiveChapter(sectionIndex, {replaceRoute: false});
-        requestAnimationFrame(() => (point || section)?.scrollIntoView({block: "start"}));
+        scrollToStudyTarget(point || section);
       } else if (routeSection) {
         const point = document.getElementById(routeSection);
         const sections = [...content.querySelectorAll(".chapter-section")];
         const sectionIndex = sections.indexOf(point?.closest(".chapter-section"));
         if (sectionIndex >= 0) setActiveChapter(sectionIndex, {replaceRoute: false});
-        requestAnimationFrame(() => point?.scrollIntoView({block: "start"}));
+        scrollToStudyTarget(point);
       }
       study.classList.remove("recall-mode");
       study.classList.toggle("color-notes-list", colorMode);
@@ -1760,8 +1792,8 @@
       searchStatus.textContent = "";
       window.scrollTo({top: 0, behavior: "auto"});
       content.focus({preventScroll: true});
-      if (routeParams.has("chapter")) {
-        requestAnimationFrame(() => content.querySelectorAll(".chapter-section")[activeChapterIndex]?.scrollIntoView({block: "start"}));
+      if (routeParams.has("chapter") && !routeTopic && !routeSection) {
+        scrollToStudyTarget(content.querySelectorAll(".chapter-section")[activeChapterIndex]);
       }
       if (colorMode && routeParams.get("recall") === "due") recallToggle.click();
     }
@@ -1883,7 +1915,7 @@
         activeRecallIndex = 0;
         updateStudyPosition();
       }
-      if (firstMatch) requestAnimationFrame(() => firstMatch.scrollIntoView({behavior: "smooth", block: "start"}));
+      if (firstMatch) scrollToStudyTarget(firstMatch);
     }
 
     function setDesktopNavCollapsed(collapsed) {

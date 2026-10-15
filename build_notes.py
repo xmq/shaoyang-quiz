@@ -5,6 +5,7 @@ import argparse
 import json
 import re
 import sys
+import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parent
@@ -105,7 +106,13 @@ def render_html(courses, config):
             "topics": topics_by_course.get(item["name"], []),
         })
     payload = json.dumps(payload_items, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    image_sizes = {}
+    for path in (ROOT / "media").rglob("*.svg"):
+        box = ET.parse(path).getroot().get("viewBox", "").replace(",", " ").split()
+        if len(box) == 4 and float(box[2]) > 0 and float(box[3]) > 0:
+            image_sizes[path.relative_to(ROOT).as_posix()] = [float(box[2]), float(box[3])]
     replacements = {
+        "__IMAGE_SIZES__": json.dumps(image_sizes, separators=(",", ":")),
         "__COURSE_DATA__": payload,
         "__DOCUMENT_TITLE__": config["document_title"],
         "__COLOR_MODE__": "true" if config["use_color_markup"] else "false",
