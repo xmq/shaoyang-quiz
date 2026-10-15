@@ -13,7 +13,16 @@ def render():
     fields = ("id", "subject", "type", "answer")
     index = [{key: item.get(key, "") for key in fields} for item in questions]
     courses = [
-        {"name": course["course_name"], "chapter_count": len(course.get("chapters", []))}
+        {
+            "name": course["course_name"],
+            "subject": course["subject"],
+            "subjects": course.get("subjects", [course["subject"]]),
+            "chapter_count": len(course.get("chapters", [])),
+            "priority_topics": [
+                topic["topic_id"] for topic in course.get("topics", [])
+                if topic.get("practice_priority") == "优先练"
+            ],
+        }
         for course in learning_map["courses"]
     ]
     return (

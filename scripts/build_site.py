@@ -20,6 +20,7 @@ STATIC_FILES = (
     "quiz.html",
     "style.css",
     "app.js",
+    "quiz-loader.js",
     "home.js",
     "reset-data.js",
     "question-media.js",

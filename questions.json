@@ -1018,11 +1018,11 @@
   "knowledge_point": "图形图像",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "multimedia.t10",
-  "topic_title": "动画时间轴与帧率",
-  "chapter_id": "multimedia.c05",
+  "topic_id": "multimedia.t14",
+  "topic_title": "压缩比与格式选择",
+  "chapter_id": "multimedia.c06",
   "required_depth": "直接应用",
-  "topic_order": 9
+  "topic_order": 13
  },
  {
   "id": "cg-02-s2-q10",
@@ -1118,11 +1118,11 @@
   "knowledge_point": "音频数字化",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "multimedia.t08",
-  "topic_title": "声音采集与PCM",
+  "topic_id": "multimedia.t09",
+  "topic_title": "波形音频、MIDI与格式",
   "chapter_id": "multimedia.c04",
-  "required_depth": "直接应用",
-  "topic_order": 7
+  "required_depth": "识记理解",
+  "topic_order": 8
  },
  {
   "id": "cg-02-s2-q14",
@@ -1168,11 +1168,11 @@
   "knowledge_point": "多媒体压缩与容量",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "multimedia.t13",
-  "topic_title": "无损、有损与冗余",
-  "chapter_id": "multimedia.c06",
+  "topic_id": "multimedia.t04",
+  "topic_title": "容量、码率与单位",
+  "chapter_id": "multimedia.c02",
   "required_depth": "直接应用",
-  "topic_order": 12
+  "topic_order": 3
  },
  {
   "id": "cg-02-s2-q16",
@@ -1993,11 +1993,11 @@
   "knowledge_point": "安全目标与风险",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "information-security.t01",
-  "topic_title": "CIA安全目标",
-  "chapter_id": "information-security.c01",
+  "topic_id": "information-security.t03",
+  "topic_title": "控制分类与风险处置",
+  "chapter_id": "information-security.c02",
   "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_order": 2
  },
  {
   "id": "zg-36158",
@@ -2993,11 +2993,11 @@
   "knowledge_point": "C数组与字符串",
   "ability": "程序阅读",
   "difficulty": "应用",
-  "topic_id": "programming.t10",
-  "topic_title": "C数组与字符串",
+  "topic_id": "programming.t11",
+  "topic_title": "Python列表、元组、字典与集合",
   "chapter_id": "programming.c08",
   "required_depth": "综合应用",
-  "topic_order": 9
+  "topic_order": 10
  },
  {
   "id": "cg-04-s2-q10",
@@ -3519,11 +3519,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t13",
-  "topic_title": "图的存储",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
   "required_depth": "直接应用",
-  "topic_order": 12
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q13",
@@ -3994,11 +3994,11 @@
   "knowledge_point": "栈与队列",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t08",
-  "topic_title": "二叉树性质",
+  "topic_id": "data-structures.t09",
+  "topic_title": "遍历与树的还原",
   "chapter_id": "data-structures.c04",
   "required_depth": "直接应用",
-  "topic_order": 7
+  "topic_order": 8
  },
  {
   "id": "cg-05-s1-q34",
@@ -4244,11 +4244,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "data-structures.t13",
-  "topic_title": "图的存储",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
   "required_depth": "直接应用",
-  "topic_order": 12
+  "topic_order": 0
  },
  {
   "id": "cg-05-s1-q46",
@@ -7694,11 +7694,11 @@
   "knowledge_point": "计算机网络基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.layers-addresses",
-  "topic_title": "分层与地址",
+  "topic_id": "net.overview",
+  "topic_title": "网络组成、功能与拓扑",
   "chapter_id": "net-01",
-  "required_depth": "综合应用",
-  "topic_order": 3
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "cg-08-s1-q9",
@@ -7769,11 +7769,11 @@
   "knowledge_point": "DNS与DHCP",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.dns-dhcp",
-  "topic_title": "DNS解析与DHCP配置",
-  "chapter_id": "net-06",
+  "topic_id": "net.routing",
+  "topic_title": "最长前缀匹配与路由协议",
+  "chapter_id": "net-04",
   "required_depth": "综合应用",
-  "topic_order": 22
+  "topic_order": 14
  },
  {
   "id": "cg-08-s1-q13",
@@ -7844,11 +7844,11 @@
   "knowledge_point": "计算机网络基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.layers-addresses",
-  "topic_title": "分层与地址",
+  "topic_id": "net.overview",
+  "topic_title": "网络组成、功能与拓扑",
   "chapter_id": "net-01",
-  "required_depth": "综合应用",
-  "topic_order": 3
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "cg-08-s1-q16",
@@ -8119,11 +8119,11 @@
   "knowledge_point": "TCP与UDP",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.ip-versions",
-  "topic_title": "IPv4与IPv6地址",
-  "chapter_id": "net-04",
-  "required_depth": "综合应用",
-  "topic_order": 15
+  "topic_id": "net.tcp-udp",
+  "topic_title": "TCP与UDP",
+  "chapter_id": "net-05",
+  "required_depth": "直接应用",
+  "topic_order": 17
  },
  {
   "id": "cg-08-s1-q28",
@@ -8144,11 +8144,11 @@
   "knowledge_point": "应用层协议",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.http",
-  "topic_title": "HTTP状态与排障",
-  "chapter_id": "net-06",
-  "required_depth": "综合应用",
-  "topic_order": 21
+  "topic_id": "net.crypto-signature",
+  "topic_title": "加密、摘要与数字签名",
+  "chapter_id": "net-07",
+  "required_depth": "直接应用",
+  "topic_order": 24
  },
  {
   "id": "cg-08-s1-q29",
@@ -8319,11 +8319,11 @@
   "knowledge_point": "计算机网络基础",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "net.flow-congestion",
-  "topic_title": "流量控制与拥塞控制",
-  "chapter_id": "net-05",
-  "required_depth": "综合应用",
-  "topic_order": 19
+  "topic_id": "net.media",
+  "topic_title": "介质与传输方向",
+  "chapter_id": "net-02",
+  "required_depth": "直接应用",
+  "topic_order": 5
  },
  {
   "id": "cg-08-s1-q36",
@@ -8344,11 +8344,11 @@
   "knowledge_point": "TCP与UDP",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.http",
-  "topic_title": "HTTP状态与排障",
+  "topic_id": "net.app-protocols",
+  "topic_title": "名称、配置与应用服务",
   "chapter_id": "net-06",
-  "required_depth": "综合应用",
-  "topic_order": 21
+  "required_depth": "直接应用",
+  "topic_order": 20
  },
  {
   "id": "cg-08-s1-q37",
@@ -8394,11 +8394,11 @@
   "knowledge_point": "TCP与UDP",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.http",
-  "topic_title": "HTTP状态与排障",
-  "chapter_id": "net-06",
-  "required_depth": "综合应用",
-  "topic_order": 21
+  "topic_id": "net.tcp-udp",
+  "topic_title": "TCP与UDP",
+  "chapter_id": "net-05",
+  "required_depth": "直接应用",
+  "topic_order": 17
  },
  {
   "id": "cg-08-s1-q40",
@@ -9819,11 +9819,11 @@
   "knowledge_point": "数据链路与局域网",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.frames-switching",
-  "topic_title": "帧、交换与VLAN",
+  "topic_id": "net.ethernet-wifi",
+  "topic_title": "以太网与无线接入",
   "chapter_id": "net-03",
-  "required_depth": "综合应用",
-  "topic_order": 8
+  "required_depth": "直接应用",
+  "topic_order": 11
  },
  {
   "id": "cg-08-s1-q97",
@@ -9969,11 +9969,11 @@
   "knowledge_point": "路由与网络诊断",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.rip-update",
-  "topic_title": "RIP距离向量更新",
-  "chapter_id": "net-04",
+  "topic_id": "net.http",
+  "topic_title": "HTTP状态与排障",
+  "chapter_id": "net-06",
   "required_depth": "综合应用",
-  "topic_order": 16
+  "topic_order": 21
  },
  {
   "id": "cg-08-s1-q103",
@@ -9994,11 +9994,11 @@
   "knowledge_point": "路由与网络诊断",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.rip-update",
-  "topic_title": "RIP距离向量更新",
-  "chapter_id": "net-04",
-  "required_depth": "综合应用",
-  "topic_order": 16
+  "topic_id": "net.app-protocols",
+  "topic_title": "名称、配置与应用服务",
+  "chapter_id": "net-06",
+  "required_depth": "直接应用",
+  "topic_order": 20
  },
  {
   "id": "cg-08-s1-q104",
@@ -10019,11 +10019,11 @@
   "knowledge_point": "路由与网络诊断",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.rip-update",
-  "topic_title": "RIP距离向量更新",
-  "chapter_id": "net-04",
-  "required_depth": "综合应用",
-  "topic_order": 16
+  "topic_id": "net.app-protocols",
+  "topic_title": "名称、配置与应用服务",
+  "chapter_id": "net-06",
+  "required_depth": "直接应用",
+  "topic_order": 20
  },
  {
   "id": "cg-08-s1-q105",
@@ -11719,11 +11719,11 @@
   "knowledge_point": "事务与并发控制",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "database.t16",
-  "topic_title": "并发异常与隔离级别",
-  "chapter_id": "database.c08",
-  "required_depth": "综合应用",
-  "topic_order": 15
+  "topic_id": "database.t01",
+  "topic_title": "数据库、DBMS与三级模式",
+  "chapter_id": "database.c01",
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "cg-09-s1-q68",
@@ -12594,11 +12594,11 @@
   "knowledge_point": "文件系统",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "operating-system.t11",
-  "topic_title": "文件组织、目录与链接",
-  "chapter_id": "operating-system.c06",
-  "required_depth": "直接应用",
-  "topic_order": 10
+  "topic_id": "operating-system.t09",
+  "topic_title": "连续分配、分页与分段",
+  "chapter_id": "operating-system.c05",
+  "required_depth": "综合应用",
+  "topic_order": 8
  },
  {
   "id": "cg-10-s1-q35",
@@ -13444,11 +13444,11 @@
   "knowledge_point": "Excel工作簿基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t08",
-  "topic_title": "单元格类型与公式基础",
-  "chapter_id": "office.c04",
-  "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_id": "office.t01",
+  "topic_title": "文件格式与兼容",
+  "chapter_id": "office.c01",
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "cg-11-s1-q11",
@@ -13469,11 +13469,11 @@
   "knowledge_point": "Word长文档排版",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t05",
-  "topic_title": "分页、分节与页眉页码",
-  "chapter_id": "office.c03",
-  "required_depth": "综合应用",
-  "topic_order": 4
+  "topic_id": "office.t03",
+  "topic_title": "编辑、剪贴板与直接格式",
+  "chapter_id": "office.c02",
+  "required_depth": "识记理解",
+  "topic_order": 2
  },
  {
   "id": "cg-11-s1-q12",
@@ -13769,11 +13769,11 @@
   "knowledge_point": "Excel工作簿基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t08",
-  "topic_title": "单元格类型与公式基础",
-  "chapter_id": "office.c04",
-  "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_id": "office.t06",
+  "topic_title": "对象、表格与长文档",
+  "chapter_id": "office.c03",
+  "required_depth": "识记理解",
+  "topic_order": 5
  },
  {
   "id": "cg-11-s1-q41",
@@ -13844,11 +13844,11 @@
   "knowledge_point": "Excel公式与引用",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t09",
-  "topic_title": "相对、绝对与混合引用",
-  "chapter_id": "office.c04",
-  "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_id": "office.t03",
+  "topic_title": "编辑、剪贴板与直接格式",
+  "chapter_id": "office.c02",
+  "required_depth": "识记理解",
+  "topic_order": 2
  },
  {
   "id": "cg-11-s1-q47",
@@ -13944,11 +13944,11 @@
   "knowledge_point": "Word文字与段落",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t14",
-  "topic_title": "主题、母版与版式",
-  "chapter_id": "office.c06",
-  "required_depth": "综合应用",
-  "topic_order": 13
+  "topic_id": "office.t06",
+  "topic_title": "对象、表格与长文档",
+  "chapter_id": "office.c03",
+  "required_depth": "识记理解",
+  "topic_order": 5
  },
  {
   "id": "cg-11-s1-q56",
@@ -14144,11 +14144,11 @@
   "knowledge_point": "Excel数据分析",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t11",
-  "topic_title": "排序、筛选与验证",
-  "chapter_id": "office.c05",
-  "required_depth": "综合应用",
-  "topic_order": 10
+  "topic_id": "office.t03",
+  "topic_title": "编辑、剪贴板与直接格式",
+  "chapter_id": "office.c02",
+  "required_depth": "识记理解",
+  "topic_order": 2
  },
  {
   "id": "cg-11-s1-q71",
@@ -14194,11 +14194,11 @@
   "knowledge_point": "Excel数据分析",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t13",
-  "topic_title": "图表、打印与保护边界",
-  "chapter_id": "office.c05",
+  "topic_id": "office.t17",
+  "topic_title": "链接、协作与交付检查",
+  "chapter_id": "office.c07",
   "required_depth": "综合应用",
-  "topic_order": 12
+  "topic_order": 16
  },
  {
   "id": "cg-11-s1-q73",
@@ -14394,11 +14394,11 @@
   "knowledge_point": "Word文字与段落",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "office.t14",
-  "topic_title": "主题、母版与版式",
-  "chapter_id": "office.c06",
-  "required_depth": "综合应用",
-  "topic_order": 13
+  "topic_id": "office.t03",
+  "topic_title": "编辑、剪贴板与直接格式",
+  "chapter_id": "office.c02",
+  "required_depth": "识记理解",
+  "topic_order": 2
  },
  {
   "id": "cg-11-s2-q9",
@@ -14544,11 +14544,11 @@
   "knowledge_point": "Excel工作簿基础",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "office.t08",
-  "topic_title": "单元格类型与公式基础",
-  "chapter_id": "office.c04",
-  "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_id": "office.t06",
+  "topic_title": "对象、表格与长文档",
+  "chapter_id": "office.c03",
+  "required_depth": "识记理解",
+  "topic_order": 5
  },
  {
   "id": "cg-11-s2-q16",
@@ -14719,11 +14719,11 @@
   "knowledge_point": "Excel数据分析",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t11",
-  "topic_title": "排序、筛选与验证",
-  "chapter_id": "office.c05",
+  "topic_id": "office.t08",
+  "topic_title": "单元格类型与公式基础",
+  "chapter_id": "office.c04",
   "required_depth": "综合应用",
-  "topic_order": 10
+  "topic_order": 7
  },
  {
   "id": "cg-12-s1-q12",
@@ -14744,11 +14744,11 @@
   "knowledge_point": "Excel公式与引用",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t09",
-  "topic_title": "相对、绝对与混合引用",
+  "topic_id": "office.t08",
+  "topic_title": "单元格类型与公式基础",
   "chapter_id": "office.c04",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 7
  },
  {
   "id": "cg-12-s1-q14",
@@ -14844,11 +14844,11 @@
   "knowledge_point": "Excel公式与引用",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t09",
-  "topic_title": "相对、绝对与混合引用",
+  "topic_id": "office.t08",
+  "topic_title": "单元格类型与公式基础",
   "chapter_id": "office.c04",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 7
  },
  {
   "id": "cg-12-s1-q21",
@@ -16019,11 +16019,11 @@
   "knowledge_point": "PowerPoint演示",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t14",
-  "topic_title": "主题、母版与版式",
+  "topic_id": "office.t15",
+  "topic_title": "动画、切换与放映",
   "chapter_id": "office.c06",
   "required_depth": "综合应用",
-  "topic_order": 13
+  "topic_order": 14
  },
  {
   "id": "cg-12-s1-q5-dup2",
@@ -16044,11 +16044,11 @@
   "knowledge_point": "PowerPoint演示",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "office.t14",
-  "topic_title": "主题、母版与版式",
+  "topic_id": "office.t15",
+  "topic_title": "动画、切换与放映",
   "chapter_id": "office.c06",
   "required_depth": "综合应用",
-  "topic_order": 13
+  "topic_order": 14
  },
  {
   "id": "cg-12-s1-q6-dup2",
@@ -23613,11 +23613,11 @@
   "knowledge_point": "路由与网络诊断",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.frames-switching",
-  "topic_title": "帧、交换与VLAN",
-  "chapter_id": "net-03",
-  "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_id": "net.media",
+  "topic_title": "介质与传输方向",
+  "chapter_id": "net-02",
+  "required_depth": "直接应用",
+  "topic_order": 5
  },
  {
   "id": "zg-21512",
@@ -23688,11 +23688,11 @@
   "knowledge_point": "计算机网络基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.frames-switching",
-  "topic_title": "帧、交换与VLAN",
-  "chapter_id": "net-03",
+  "topic_id": "net.layers-addresses",
+  "topic_title": "分层与地址",
+  "chapter_id": "net-01",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 3
  },
  {
   "id": "zg-97748",
@@ -24423,11 +24423,11 @@
   "knowledge_point": "安全目标与风险",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "information-security.t01",
-  "topic_title": "CIA安全目标",
-  "chapter_id": "information-security.c01",
+  "topic_id": "information-security.t03",
+  "topic_title": "控制分类与风险处置",
+  "chapter_id": "information-security.c02",
   "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_order": 2
  },
  {
   "id": "zg-18084",
@@ -24448,11 +24448,11 @@
   "knowledge_point": "安全目标与风险",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "information-security.t01",
-  "topic_title": "CIA安全目标",
+  "topic_id": "information-security.t02",
+  "topic_title": "风险链与安全原则",
   "chapter_id": "information-security.c01",
   "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_order": 1
  },
  {
   "id": "zg-67463",
@@ -25629,11 +25629,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "data-structures.t13",
-  "topic_title": "图的存储",
-  "chapter_id": "data-structures.c05",
+  "topic_id": "data-structures.t01",
+  "topic_title": "数据结构与复杂度",
+  "chapter_id": "data-structures.c01",
   "required_depth": "直接应用",
-  "topic_order": 12
+  "topic_order": 0
  },
  {
   "id": "zg-83993",
@@ -26409,11 +26409,11 @@
   "knowledge_point": "路由与网络诊断",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.frames-switching",
-  "topic_title": "帧、交换与VLAN",
-  "chapter_id": "net-03",
+  "topic_id": "net.routing",
+  "topic_title": "最长前缀匹配与路由协议",
+  "chapter_id": "net-04",
   "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_order": 14
  },
  {
   "id": "web-28",
@@ -31993,11 +31993,11 @@
   "knowledge_point": "IPv4与子网",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "net.frames-switching",
-  "topic_title": "帧、交换与VLAN",
-  "chapter_id": "net-03",
-  "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_id": "net.overview",
+  "topic_title": "网络组成、功能与拓扑",
+  "chapter_id": "net-01",
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "dy-2d788ce1",
@@ -32353,11 +32353,11 @@
   "knowledge_point": "数据链路与局域网",
   "ability": "概念识记",
   "difficulty": "应用",
-  "topic_id": "net.frames-switching",
-  "topic_title": "帧、交换与VLAN",
-  "chapter_id": "net-03",
-  "required_depth": "综合应用",
-  "topic_order": 8
+  "topic_id": "net.overview",
+  "topic_title": "网络组成、功能与拓扑",
+  "chapter_id": "net-01",
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "dy-b5852adf",
@@ -35121,11 +35121,11 @@
   "knowledge_point": "三极管放大",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
+  "topic_id": "analog-electronics.t03",
+  "topic_title": "BJT/MOS工作区与开关",
+  "chapter_id": "analog-electronics.c03",
   "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_order": 2
  },
  {
   "id": "uf-ae-006",
@@ -36116,11 +36116,11 @@
   "knowledge_point": "时序逻辑",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "digital-electronics.t07",
-  "topic_title": "状态表、状态图与时序分析",
-  "chapter_id": "digital-electronics.c05",
+  "topic_id": "digital-electronics.t08",
+  "topic_title": "寄存器与同步计数器",
+  "chapter_id": "digital-electronics.c06",
   "required_depth": "综合应用",
-  "topic_order": 6
+  "topic_order": 7
  },
  {
   "id": "uf-de-022",
@@ -40249,11 +40249,11 @@
   "knowledge_point": "信号与系统基础",
   "ability": "比较辨析",
   "difficulty": "应用",
-  "topic_id": "signals-systems.t08",
-  "topic_title": "傅里叶变换与滤波",
-  "chapter_id": "signals-systems.c04",
-  "required_depth": "综合应用",
-  "topic_order": 7
+  "topic_id": "signals-systems.t13",
+  "topic_title": "时域、频域与复频域选择",
+  "chapter_id": "signals-systems.c07",
+  "required_depth": "直接应用",
+  "topic_order": 12
  },
  {
   "id": "gap-se-001",
@@ -49946,11 +49946,11 @@
   "knowledge_point": "图结构与算法",
   "ability": "过程描述",
   "difficulty": "应用",
-  "topic_id": "data-structures.t13",
-  "topic_title": "图的存储",
-  "chapter_id": "data-structures.c05",
-  "required_depth": "直接应用",
-  "topic_order": 12,
+  "topic_id": "data-structures.t24",
+  "topic_title": "场景中的结构与算法选择",
+  "chapter_id": "data-structures.c08",
+  "required_depth": "综合应用",
+  "topic_order": 23,
   "rubric": [
    {
     "criterion": "识别两个不同操作",
@@ -56489,11 +56489,11 @@
   "knowledge_point": "二极管电路",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "analog-electronics.t10",
-  "topic_title": "直流电源、采集链与排障",
-  "chapter_id": "analog-electronics.c08",
-  "required_depth": "综合应用",
-  "topic_order": 9
+  "topic_id": "analog-electronics.t01",
+  "topic_title": "PN结与器件模型",
+  "chapter_id": "analog-electronics.c01",
+  "required_depth": "直接应用",
+  "topic_order": 0
  },
  {
   "id": "sp-elec-analog-014",
@@ -56517,11 +56517,11 @@
   "knowledge_point": "模拟电子基础",
   "ability": "读图排障",
   "difficulty": "应用",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "analog-electronics.t10",
+  "topic_title": "直流电源、采集链与排障",
+  "chapter_id": "analog-electronics.c08",
+  "required_depth": "综合应用",
+  "topic_order": 9
  },
  {
   "id": "sp-elec-analog-015",
@@ -56563,11 +56563,11 @@
   "knowledge_point": "模拟电子基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "analog-electronics.t10",
+  "topic_title": "直流电源、采集链与排障",
+  "chapter_id": "analog-electronics.c08",
+  "required_depth": "综合应用",
+  "topic_order": 9
  },
  {
   "id": "sp-elec-analog-017",
@@ -56586,11 +56586,11 @@
   "knowledge_point": "模拟电子基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_id": "analog-electronics.t10",
+  "topic_title": "直流电源、采集链与排障",
+  "chapter_id": "analog-electronics.c08",
+  "required_depth": "综合应用",
+  "topic_order": 9
  },
  {
   "id": "sp-elec-analog-018",
@@ -57463,11 +57463,11 @@
   "knowledge_point": "通信系统基础",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "communication.t12",
-  "topic_title": "奇偶校验、CRC与ARQ",
+  "topic_id": "communication.t11",
+  "topic_title": "信源编码与信道编码",
   "chapter_id": "communication.c07",
-  "required_depth": "综合应用",
-  "topic_order": 11
+  "required_depth": "直接应用",
+  "topic_order": 10
  },
  {
   "id": "sp-elec-comm-005",
@@ -62743,11 +62743,11 @@
   "knowledge_point": "三极管放大",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
+  "topic_id": "analog-electronics.t03",
+  "topic_title": "BJT/MOS工作区与开关",
+  "chapter_id": "analog-electronics.c03",
   "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_order": 2
  },
  {
   "id": "ue-analog-003",

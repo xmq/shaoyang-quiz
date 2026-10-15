@@ -34,6 +34,28 @@ NETWORK_COURSE = next(course for course in LEARNING_MAP["courses"] if course["su
 NETWORK_TOPICS = tuple(NETWORK_COURSE["topics"])
 NETWORK_TOPIC_BY_ID = {topic["topic_id"]: topic for topic in NETWORK_TOPICS}
 
+# 旧题题干过短或包含跨层术语时，关键词分类会把首题放到错误专题。
+# 这里只保留能够从题干解题任务直接确认的覆盖。
+NETWORK_TOPIC_OVERRIDES = {
+    "cg-08-s1-q8": "net.overview",
+    "cg-08-s1-q96": "net.ethernet-wifi",
+    "cg-08-s1-q27": "net.tcp-udp",
+    "cg-08-s1-q102": "net.http",
+    "cg-08-s1-q35": "net.media",
+    "cg-08-s1-q28": "net.crypto-signature",
+    "cg-08-s1-q12": "net.routing",
+    "cg-08-s1-q15": "net.overview",
+    "zg-33738": "net.media",
+    "cg-08-s1-q103": "net.app-protocols",
+    "cg-08-s1-q36": "net.app-protocols",
+    "zg-66746": "net.layers-addresses",
+    "cg-08-s1-q104": "net.app-protocols",
+    "cg-08-s1-q39": "net.tcp-udp",
+    "web-27": "net.routing",
+    "dy-be79e543": "net.overview",
+    "dy-3bb220bd": "net.overview",
+}
+
 # 题干过短或术语跨主题时，明确指定其实际解题任务。
 DATABASE_TOPIC_OVERRIDES = {
     "cg-09-s1-q14": 4, "cg-09-s1-q17": 11, "cg-09-s1-q20": 1,
@@ -41,7 +63,7 @@ DATABASE_TOPIC_OVERRIDES = {
     "cg-09-s1-q30": 1, "cg-09-s1-q31": 1, "cg-09-s1-q36": 6,
     "cg-09-s1-q45": 6, "cg-09-s1-q49": 6, "cg-09-s1-q50": 6,
     "cg-09-s1-q53": 6, "cg-09-s1-q60": 5, "cg-09-s1-q62": 7,
-    "cg-09-s1-q65": 17, "cg-09-s2-q1": 6,
+    "cg-09-s1-q65": 17, "cg-09-s1-q67": 1, "cg-09-s2-q1": 6,
     "zg-79633": 4, "zg-91256": 4, "zg-5594": 4, "zg-41008": 6,
     "zg-25661": 4, "zg-27720": 6, "zg-75617": 1, "zg-5212": 7,
     "zg-77676": 4, "zg-24086": 4, "zg-25187": 6,
@@ -56,23 +78,38 @@ PROGRAMMING_TOPIC_OVERRIDES = {
     "cg-04-s2-q5": 4, "uf-pl-001": 4, "ua-program-009": 8,
     "uf-pl-004": 8, "uf-pl-005": 12, "ua-program-004": 12,
     "ua-program-005": 8, "ua-program-012": 11,
-    "cg-04-s2-q7": 11, "cg-04-s2-q10": 11, "zg-1554": 6,
+    "cg-04-s2-q7": 11, "cg-04-s2-q8": 11, "cg-04-s2-q10": 11, "zg-1554": 6,
     "ap-pl-001": 12, "ua-program-006": 11, "ua-program-013": 10,
     "hn-recall-cs25-001": 14,
 }
 
 COURSE_TOPIC_OVERRIDES = {
     "办公软件": {
+        "cg-11-s1-q5": 1, "cg-11-s1-q11": 3, "cg-11-s1-q43": 3,
+        "cg-11-s1-q55": 6, "cg-11-s1-q72": 17,
+        "cg-11-s1-q38": 6, "cg-12-s1-q12": 8,
+        "cg-11-s1-q70": 3, "cg-11-s2-q8": 3,
+        "cg-11-s2-q14": 6, "cg-12-s1-q20": 8,
+        "cg-12-s1-q10": 8, "cg-12-s1-q3-dup2": 15,
+        "cg-12-s1-q5-dup2": 15,
         "web-28": 5, "cg-13-s1-q11": 6, "cg-13-s1-q31": 6,
         "cg-12-s1-q3": 8, "cg-12-s1-q18": 8, "cg-13-s1-q38": 8,
         "cg-13-s1-q43": 8, "cg-13-s1-q65": 8, "ua-office-015": 11,
         "ap-of-006": 17,
     },
     "多媒体": {
+        "cg-02-s2-q13": 9, "cg-02-s2-q9": 14, "cg-02-s2-q15": 4,
         "dy-e77f3198": 4, "dy-d93b9d22": 7, "dy-0bd8dc94": 7,
         "dy-fa7fa77f": 9, "dy-1a9b3e74": 9, "zg-39584": 4,
         "ap-mm-004": 4, "ua-media-004": 4, "ua-media-008": 11,
         "cg-02-s3-q2": 3, "cg-14-s1-q46": 10,
+    },
+    "算法与数据结构": {
+        "cg-05-s1-q12": 1, "cg-05-s1-q33": 9,
+        "cg-05-s1-q45": 1, "zg-65564": 1, "ap-ds-005": 24,
+    },
+    "操作系统": {
+        "cg-10-s1-q34": 9,
     },
     "电路分析与电工技术": {
         "uf-ee-018": 6, "uf-ee-019": 7, "uf-ee-020": 7,
@@ -86,16 +123,20 @@ COURSE_TOPIC_OVERRIDES = {
         "sp-elec-circuit-030": 12,
     },
     "模拟电子技术": {
+        "uf-ae-005": 3, "sp-elec-analog-013": 1,
+        "sp-elec-analog-014": 10, "sp-elec-analog-016": 10,
+        "sp-elec-analog-017": 10, "ue-analog-002": 3,
         "ue-analog-001": 2, "ue-analog-004": 4, "ue-analog-015": 3,
         "uf-ae-017": 6, "uf-ae-018": 6, "uf-ae-019": 6,
         "uf-ae-024": 10, "ap-analog-004": 6,
         "sp-elec-analog-010": 10, "sp-elec-analog-011": 10,
-        "sp-elec-analog-012": 10, "sp-elec-analog-013": 10,
+        "sp-elec-analog-012": 10,
         "sp-elec-analog-019": 10, "sp-elec-analog-020": 10,
         "sp-elec-analog-025": 10, "sp-elec-analog-026": 10,
         "sp-elec-analog-029": 10, "sp-elec-analog-030": 10,
     },
     "数字电子技术": {
+        "uf-de-021": 8,
         "sp-elec-digital-002": 2, "sp-elec-digital-003": 10,
         "sp-elec-digital-028": 10, "sp-elec-digital-011": 11,
         "sp-elec-digital-012": 11, "sp-elec-digital-018": 11,
@@ -104,9 +145,10 @@ COURSE_TOPIC_OVERRIDES = {
         "ap-digital-006": 10,
     },
     "通信原理与高频电子线路": {
+        "sp-elec-comm-004": 11,
         "uf-cm-003": 2, "uf-cm-020": 11, "ap-comm-002": 6,
         "ue-comm-001": 11, "ue-comm-006": 5, "ue-comm-008": 9, "ue-comm-009": 9,
-        "sp-elec-comm-004": 12, "sp-elec-comm-005": 12,
+        "sp-elec-comm-005": 12,
         "sp-elec-comm-006": 12, "sp-elec-comm-007": 12,
         "sp-elec-comm-015": 12, "sp-elec-comm-016": 12,
         "sp-elec-comm-021": 12, "sp-elec-comm-026": 12,
@@ -119,6 +161,12 @@ COURSE_TOPIC_OVERRIDES = {
         "sp-elec-comm-018": 16, "sp-elec-comm-022": 16,
         "sp-elec-comm-029": 16, "sp-elec-comm-030": 16,
         "gap-comm-002": 16,
+    },
+    "信号与系统": {
+        "gap-signal-007": 13,
+    },
+    "信息安全": {
+        "zg-56133": 3, "zg-20143": 3, "zg-18084": 2,
     },
 }
 
@@ -589,6 +637,16 @@ NETWORK_TOPIC_FALLBACKS = {
 def classify_network_topic(question: dict) -> dict[str, str]:
     if question.get("topic_source") == "manual" and question.get("topic_id") in NETWORK_TOPIC_BY_ID:
         best = NETWORK_TOPIC_BY_ID[question["topic_id"]]
+        return {
+            "topic_id": best["topic_id"],
+            "topic_title": best["title"],
+            "chapter_id": best["chapter_id"],
+            "required_depth": best["depth"],
+            "topic_order": next(index for index, topic in enumerate(NETWORK_TOPICS) if topic["topic_id"] == best["topic_id"]),
+        }
+    override_id = NETWORK_TOPIC_OVERRIDES.get(str(question.get("id")))
+    if override_id:
+        best = NETWORK_TOPIC_BY_ID[override_id]
         return {
             "topic_id": best["topic_id"],
             "topic_title": best["title"],

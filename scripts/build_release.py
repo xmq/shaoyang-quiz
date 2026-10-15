@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CORE_HASHED_ASSETS = [
     "app.js",
+    "quiz-loader.js",
     "icon-192.png",
     "icon-512.png",
     "icon.svg",

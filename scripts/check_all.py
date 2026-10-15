@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 COMMANDS = (
     ("node", "--check", "app.js"),
+    ("node", "--check", "quiz-loader.js"),
     ("node", "--check", "home.js"),
     ("node", "--check", "question-media.js"),
     ("node", "--check", "sw.js"),

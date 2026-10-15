@@ -56,6 +56,23 @@
     }
   }
 
+  function chapterNumberFromId(value) {
+    const match = String(value || "").match(/(\d+)$/);
+    return match ? Number(match[1]) : 0;
+  }
+
+  function resumeChapter(courseName, lectureProgress) {
+    const chapterCount = COURSE_INDEX.find((item) => item.name === courseName)?.chapter_count || 0;
+    const courseProgress = lectureProgress[courseName];
+    let chapter = Number(courseProgress?.lastLectureChapter) || 0;
+    const recent = lastLearning();
+    if (!chapter && recent?.course === courseName) chapter = Number(recent.chapter) || 0;
+    if (!chapter && Array.isArray(courseProgress?.lecture) && courseProgress.lecture.length) {
+      chapter = chapterNumberFromId(courseProgress.lecture.at(-1));
+    }
+    return chapter > 0 && chapter <= chapterCount ? chapter : 1;
+  }
+
   function lastLearning() {
     try {
       const value = JSON.parse(localStorage.getItem("shaoyang-last-learning") || "null");
@@ -99,8 +116,11 @@
   }
 
   function courseStats(progress, courseName) {
-    const subject = SUBJECT_ALIASES[courseName] || courseName;
-    const questions = QUESTION_INDEX.filter((question) => question.subject === subject);
+    const course = COURSE_INDEX.find((item) => item.name === courseName);
+    const subjects = Array.isArray(course?.subjects) && course.subjects.length
+      ? course.subjects
+      : [course?.subject || SUBJECT_ALIASES[courseName] || courseName];
+    const questions = QUESTION_INDEX.filter((question) => subjects.includes(question.subject));
     const done = progress.done || {};
     const completed = questions.filter((question) => Object.prototype.hasOwnProperty.call(done, question.id));
     const correct = completed.filter((question) => isCorrect(question, done[question.id])).length;
@@ -112,12 +132,12 @@
     };
   }
 
-  function updateMobileLinks(courseName) {
-    const subject = SUBJECT_ALIASES[courseName] || courseName;
-    const hash = `#course=${encodeURIComponent(courseName)}`;
+  function updateMobileLinks(courseName, lectureProgress = readLectureProgress()) {
+    const chapter = resumeChapter(courseName, lectureProgress);
+    const hash = `#course=${encodeURIComponent(courseName)}&chapter=${chapter}`;
     document.getElementById("mobile-notes-link").href = `./notes.html${hash}`;
     document.getElementById("mobile-recall-link").href = `./color-notes.html${hash}`;
-    document.getElementById("mobile-quiz-link").href = `./quiz.html?subject=${encodeURIComponent(subject)}&mode=home`;
+    document.getElementById("mobile-quiz-link").href = `./quiz.html?course=${encodeURIComponent(courseName)}&mode=home`;
   }
 
   function buildCourseGrid(progress, lectureProgress) {
@@ -127,18 +147,21 @@
       const cards = COURSES.filter((course) => course.group === group).map((course) => {
         const stats = courseStats(progress, course.name);
         const chapterCount = COURSE_INDEX.find((item) => item.name === course.name)?.chapter_count || 0;
-        const readCount = new Set(lectureProgress[course.name]?.lecture || []).size;
-        const noteHash = `#course=${encodeURIComponent(course.name)}`;
+        const completedCount = new Set(lectureProgress[course.name]?.completed || []).size;
+        const resumeAt = resumeChapter(course.name, lectureProgress);
+        const noteHash = `#course=${encodeURIComponent(course.name)}&chapter=${resumeAt}`;
         const isCurrent = course.name === highlighted;
         const progressParts = [];
-        if (readCount) progressParts.push(`讲义 ${readCount}/${chapterCount} 章`);
+        if (completedCount) progressParts.push(`讲义 ${completedCount}/${chapterCount} 章`);
         if (stats.done) progressParts.push(`做题 ${stats.done} · ${stats.rate}%`);
         const progressText = progressParts.join(" · ") || "未开始";
-        const progressWidth = stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
+        const progressWidth = completedCount && chapterCount
+          ? Math.min(100, Math.round(completedCount * 100 / chapterCount))
+          : stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
         return `<article class="home-course-card${isCurrent ? " is-current" : ""}">
           <a class="home-course-main" href="./notes.html${noteHash}" data-course-name="${course.name}">
             <span class="home-course-icon" aria-hidden="true">${course.icon}</span>
-            <span class="home-course-copy"><strong>${course.name}${isCurrent ? '<em>最近</em>' : ""}</strong><small>${progressText}</small>${stats.done ? `<i><b style="width:${progressWidth}%"></b></i>` : ""}</span>
+            <span class="home-course-copy"><strong>${course.name}${isCurrent ? '<em>最近</em>' : ""}</strong><small>${progressText}</small>${completedCount || stats.done ? `<i><b style="width:${progressWidth}%"></b></i>` : ""}</span>
             <span class="course-card-arrow" aria-hidden="true">›</span>
           </a>
         </article>`;
@@ -183,8 +206,9 @@
     const root = document.getElementById("home-course-grid");
     const activeFilter = root.dataset.activeFilter || "all";
     const courseName = selectedCourseName();
-    updateMobileLinks(courseName);
-    buildCourseGrid(readProgress(), readLectureProgress());
+    const lectureProgress = readLectureProgress();
+    updateMobileLinks(courseName, lectureProgress);
+    buildCourseGrid(readProgress(), lectureProgress);
     bindCourseLinks();
     applyCourseFilter(activeFilter);
   }
@@ -210,7 +234,7 @@
   renderHome();
   window.addEventListener("pageshow", renderHome);
   window.addEventListener("storage", (event) => {
-    if (!event.key || event.key === "shaoyang-selected-course-v1" || event.key === "shaoyang-last-learning") renderHome();
+    if (!event.key || ["shaoyang-selected-course-v1", "shaoyang-last-learning", "shaoyang-reading-progress-v1"].includes(event.key)) renderHome();
   });
   registerServiceWorker();
 })();

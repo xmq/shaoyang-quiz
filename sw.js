@@ -14,6 +14,7 @@ const CORE_ASSETS = [
   "./home.js",
   "./reset-data.js",
   "./app.js",
+  "./quiz-loader.js",
   "./question-media.js",
   "./questions.js",
   "./manifest.webmanifest",
@@ -118,8 +119,10 @@ const CORE_ASSETS = [
   "./media/signal_sampling_alias.svg"
 ];
 
+const INSTALL_ASSETS = CORE_ASSETS.filter((url) => !url.startsWith("./media/"));
+
 self.addEventListener("install", (event) => {
-  const freshRequests = CORE_ASSETS.map((url) => new Request(url, {cache: "reload"}));
+  const freshRequests = INSTALL_ASSETS.map((url) => new Request(url, {cache: "reload"}));
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(freshRequests)).then(() => self.skipWaiting()));
 });
 
@@ -197,7 +200,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(networkFirst(request));
     return;
   }
-  const isCritical = /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|app\.js|home\.js)$/.test(url.pathname);
+  const isCritical = /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|quiz-loader\.js|app\.js|home\.js)$/.test(url.pathname);
   const isMedia = request.destination === "image";
   event.respondWith(isCritical ? networkFirst(request) : isMedia ? cacheFirst(request) : networkFirst(request));
 });

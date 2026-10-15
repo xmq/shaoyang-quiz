@@ -81,16 +81,15 @@
         <div><strong id="runner-title">练习</strong><span id="runner-scope">全部课程</span></div>
       </header>
 
-      <section id="card-area"></section>
+      <section id="card-area"><section class="card empty quiz-load-status"><strong>正在加载题库</strong><p>首次打开或版本更新时可能需要几秒。</p></section></section>
     </main>
   </div>
 
   <input id="progress-file" type="file" accept="application/json,.json" hidden>
   <div class="sr-only" id="answer-live" role="status" aria-live="assertive" aria-atomic="true"></div>
   <script src="./build-meta.js"></script>
-  <script src="./questions.js"></script>
-  <script src="./question-media.js"></script>
+  <script src="./home-data.js"></script>
   <script src="./reset-data.js"></script>
-  <script src="./app.js"></script>
+  <script src="./quiz-loader.js"></script>
 </body>
 </html>

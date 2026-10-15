@@ -32,11 +32,46 @@ const ERROR_TAG_LABELS = Object.freeze({
   calculation: "计算/操作失误",
   recall: "想不起来",
 });
-const SUBJECT_ORDER = ["信息基础", "计算机基础", "办公软件", "多媒体", "编程语言", "算法与数据结构", "计算机组成原理", "操作系统", "数据库", "计算机网络", "软件工程", "信息安全", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "信号与系统", "大数据", "其他"];
+const COURSE_ORDER = [
+  "计算机组成原理", "操作系统原理", "数据结构与算法", "计算机网络", "数据库技术", "C与Python程序设计", "软件工程",
+  "信息安全", "Office软件操作", "大学计算机基础与新技术", "多媒体技术",
+  "数字电子技术", "电路分析与电工技术", "模拟电子技术", "通信原理与高频电子线路", "信号与系统",
+];
+const FALLBACK_COURSES = [
+  ["Office软件操作", ["办公软件"]], ["大学计算机基础与新技术", ["计算机基础", "信息基础", "大数据"]],
+  ["多媒体技术", ["多媒体"]], ["操作系统原理", ["操作系统"]], ["数据库技术", ["数据库"]],
+  ["数据结构与算法", ["算法与数据结构"]], ["C与Python程序设计", ["编程语言"]],
+  ["计算机组成原理", ["计算机组成原理"]], ["计算机网络", ["计算机网络"]],
+  ["电路分析与电工技术", ["电路分析与电工技术"]], ["模拟电子技术", ["模拟电子技术"]],
+  ["数字电子技术", ["数字电子技术"]], ["通信原理与高频电子线路", ["通信原理与高频电子线路"]],
+  ["信号与系统", ["信号与系统"]], ["软件工程", ["软件工程"]], ["信息安全", ["信息安全"]],
+].map(([name, subjects]) => ({name, subject: subjects[0], subjects, priority_topics: []}));
+const COURSE_CATALOG = (Array.isArray(window.HOME_COURSE_INDEX) && window.HOME_COURSE_INDEX.length
+  ? window.HOME_COURSE_INDEX
+  : FALLBACK_COURSES
+).map((course) => ({
+  name: String(course.name || ""),
+  subject: String(course.subject || course.subjects?.[0] || course.name || ""),
+  subjects: [...new Set((Array.isArray(course.subjects) && course.subjects.length ? course.subjects : [course.subject || course.name]).map(String))],
+  priorityTopics: Array.isArray(course.priority_topics) ? course.priority_topics.map(String) : [],
+})).sort((left, right) => COURSE_ORDER.indexOf(left.name) - COURSE_ORDER.indexOf(right.name));
 const TYPE_ORDER = ["单选", "多选", "判断", "填空", "简答"];
 const PROGRESS_FIELDS = ["done", "wrong", "streak", "fav", "flagged", "history", "reviewMeta", "errorTags"];
 
 const $ = (id) => document.getElementById(id);
+
+function courseForSelection(value) {
+  const name = String(value || "");
+  return COURSE_CATALOG.find((course) => course.name === name || course.subjects.includes(name)) || null;
+}
+
+function selectedSubjects() {
+  return new Set(courseForSelection(state.subject)?.subjects || []);
+}
+
+function questionInSelectedCourse(question) {
+  return !state.subject || selectedSubjects().has(question.subject);
+}
 
 function readStore(key, fallback = {}) {
   try {
@@ -83,7 +118,7 @@ function loadMockSession() {
     answers: Object.fromEntries(Object.entries(stored.answers).filter(([id]) => validIds.has(id))),
     startedAt: stored.startedAt,
     durationMinutes: stored.durationMinutes,
-    subject: String(stored.subject || "全部课程"),
+    subject: courseNameForSubject(String(stored.subject || "")) || "未指定课程",
     finishedAt: Number.isFinite(stored.finishedAt) ? stored.finishedAt : null,
     result: isRecord(stored.result) ? stored.result : null,
   };
@@ -257,7 +292,7 @@ function getScope() {
   let scope = PUBLIC_QUESTIONS;
   const hasStableIdFilter = state.chapterFilter?.startsWith(CHAPTER_FILTER_PREFIX)
     || state.chapterFilter?.startsWith(TOPIC_FILTER_PREFIX);
-  if (state.subject && !hasStableIdFilter) scope = scope.filter((q) => q.subject === state.subject);
+  if (state.subject && !hasStableIdFilter) scope = scope.filter(questionInSelectedCourse);
   if (state.typeFilter) scope = scope.filter((q) => q.type === state.typeFilter);
   if (state.chapterFilter?.startsWith(TOPIC_FILTER_PREFIX)) {
     const topicId = state.chapterFilter.slice(TOPIC_FILTER_PREFIX.length);
@@ -295,6 +330,9 @@ function getPool() {
     pool = pool.filter((q) => state.wrong[q.id] || state._stickyId === q.id);
   } else if (state.mode === "fav") {
     pool = pool.filter((q) => state.fav[q.id]);
+  } else if (state.mode === "priority") {
+    const priorityTopics = new Set(courseForSelection(state.subject)?.priorityTopics || []);
+    pool = pool.filter((q) => priorityTopics.has(q.topic_id) && (!state.done[q.id] || state._stickyId === q.id));
   } else {
     pool = pool.filter((q) => state.searchQuery || !state.done[q.id] || state._stickyId === q.id);
   }
@@ -376,15 +414,17 @@ function applyLaunchParams() {
   const params = new URLSearchParams(location.search);
   const requestedMode = params.get("mode");
   const requestedSubject = params.get("subject");
+  const requestedCourse = params.get("course");
   const requestedTopic = params.get("topic");
   const requestedChapter = params.get("chapter");
   let changed = false;
-  if (["home", "seq", "rnd", "mock", "review", "wrong", "fav"].includes(requestedMode)) {
+  if (["home", "seq", "rnd", "mock", "priority", "review", "wrong", "fav"].includes(requestedMode)) {
     state.mode = requestedMode;
     changed = true;
   }
-  if (requestedSubject && PUBLIC_QUESTIONS.some((question) => question.subject === requestedSubject)) {
-    state.subject = requestedSubject;
+  const launchCourse = courseForSelection(requestedCourse || requestedSubject);
+  if (launchCourse) {
+    state.subject = launchCourse.name;
     state.typeFilter = "";
     state.chapterFilter = "";
     state.searchQuery = "";
@@ -394,7 +434,7 @@ function applyLaunchParams() {
   if (requestedTopic) {
     const topicQuestion = PUBLIC_QUESTIONS.find((question) => question.topic_id === requestedTopic);
     if (topicQuestion) {
-      state.subject = topicQuestion.subject;
+      state.subject = courseNameForSubject(topicQuestion.subject);
       state.chapterFilter = `${TOPIC_FILTER_PREFIX}${requestedTopic}`;
       if (!requestedMode || requestedMode === "home") state.mode = "seq";
       changed = true;
@@ -403,7 +443,7 @@ function applyLaunchParams() {
   if (requestedChapter) {
     const chapterQuestion = PUBLIC_QUESTIONS.find((question) => question.chapter_id === requestedChapter);
     if (chapterQuestion) {
-      state.subject = chapterQuestion.subject;
+      state.subject = courseNameForSubject(chapterQuestion.subject);
       state.chapterFilter = `${CHAPTER_FILTER_PREFIX}${requestedChapter}`;
       if (!requestedMode || requestedMode === "home") state.mode = "seq";
       changed = true;
@@ -497,10 +537,12 @@ function announceAnswer(q, correct) {
 
 function updateSubjectSelect() {
   const select = $("subject-select");
-  const counts = countBy(PUBLIC_QUESTIONS, (q) => q.subject);
-  const subjects = orderedValues(new Set(Object.keys(counts)), SUBJECT_ORDER);
+  const courses = COURSE_CATALOG.map((course) => ({
+    ...course,
+    count: PUBLIC_QUESTIONS.filter((question) => course.subjects.includes(question.subject)).length,
+  })).filter((course) => course.count);
   select.innerHTML = `<option value="">选择课程</option>` +
-    subjects.map((s) => `<option value="${escapeHtml(s)}">${escapeHtml(s)} (${counts[s]})</option>`).join("");
+    courses.map((course) => `<option value="${escapeHtml(course.name)}">${escapeHtml(course.name)} (${course.count})</option>`).join("");
   select.value = state.subject || "";
 }
 
@@ -653,6 +695,17 @@ function checkpointHtml(q) {
   return `<div class="short-rubric"><strong>${title}</strong><ul>${q.rubric.map((item) => `<li>${escapeHtml(item.criterion)}</li>`).join("")}</ul></div>`;
 }
 
+function studyLinksHtml(q, label = "需要回顾？") {
+  const params = new URLSearchParams({course: courseNameForSubject(q.subject)});
+  if (q.topic_id) params.set("topic", q.topic_id);
+  const hash = `#${params.toString()}`;
+  return `<div class="repair-links short-study-links">
+    <span>${label}</span>
+    <a href="./notes.html${hash}">回看讲义</a>
+    <a href="./color-notes.html${hash}">重点与易错</a>
+  </div>`;
+}
+
 function renderShortAnswerQuestion(q, chosen) {
   const pending = state._pending && state._pending.qid === q.id ? state._pending : null;
   const draft = pending && typeof pending.text === "string" ? pending.text : "";
@@ -671,6 +724,7 @@ function renderShortAnswerQuestion(q, chosen) {
         <p>${escapeHtml(q.answer)}</p>
         ${checkpointHtml(q)}
         ${q.explanation ? `<div class="short-rubric"><strong>核对说明</strong>${escapeHtml(q.explanation)}</div>` : ""}
+        ${studyLinksHtml(q)}
       </div>
       <div class="short-grade-actions" aria-label="简答题自评">
         <button type="button" class="primary-btn" data-short-grade="掌握">已掌握</button>
@@ -682,17 +736,7 @@ function renderShortAnswerQuestion(q, chosen) {
 }
 
 function courseNameForSubject(subject) {
-  return ({
-    "办公软件": "Office软件操作",
-    "多媒体": "多媒体技术",
-    "算法与数据结构": "数据结构与算法",
-    "操作系统": "操作系统原理",
-    "数据库": "数据库技术",
-    "编程语言": "C与Python程序设计",
-    "计算机基础": "大学计算机基础与新技术",
-    "信息基础": "大学计算机基础与新技术",
-    "大数据": "大学计算机基础与新技术",
-  })[subject] || subject;
+  return courseForSelection(subject)?.name || subject;
 }
 
 function feedbackHtml(q, chosen) {
@@ -727,14 +771,7 @@ function feedbackHtml(q, chosen) {
         <div>${Object.entries(ERROR_TAG_LABELS).map(([value, label]) => `<button type="button" data-error-tag="${value}" aria-pressed="${selectedErrorTag === value}">${label}</button>`).join("")}</div>
       </div>`
     : "";
-  const courseParams = new URLSearchParams({course: courseNameForSubject(q.subject)});
-  if (q.topic_id) courseParams.set("topic", q.topic_id);
-  const courseHash = `#${courseParams.toString()}`;
-  const repairLinks = ok ? "" : `<div class="repair-links">
-    <span>${reviewMessage}</span>
-    <a href="./notes.html${courseHash}">回看讲义</a>
-    <a href="./color-notes.html${courseHash}">重点与易错</a>
-  </div>`;
+  const repairLinks = ok ? "" : studyLinksHtml(q, reviewMessage);
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
     <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已标记为已掌握" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
     ${referenceAnswer}
@@ -962,6 +999,9 @@ function renderEmpty() {
   } else if (state.mode === "review") {
     title = "暂无到期复习";
     text = "作答后系统会按间隔安排再次练习；标记有问题的题会暂停复习，等待核对。";
+  } else if (state.mode === "priority") {
+    title = "优先知识点已完成";
+    text = "当前课程的优先题已做完，可以进入错题本或切换到顺序练习。";
   }
   $("card-area").innerHTML = `<div class="card empty"><strong>${title}</strong>${text}</div>`;
 }
@@ -975,14 +1015,23 @@ function renderDashboard() {
   const reviewCount = buildReviewPool(scope).length;
   const doneCount = scope.filter((question) => Object.prototype.hasOwnProperty.call(state.done, question.id)).length;
   const completionRate = scope.length ? Math.round(doneCount * 100 / scope.length) : 0;
-  const hasReviewTasks = Boolean(state.subject && (reviewCount || wrongCount || favCount));
+  const hasReviewTasks = Boolean(state.subject);
+  const weakTopicCounts = new Map();
+  scope.forEach((question) => {
+    const wrong = state.wrong[question.id] || 0;
+    if (!wrong || !question.topic_id) return;
+    const current = weakTopicCounts.get(question.topic_id) || {title: question.topic_title || chapterKey(question), count: 0};
+    current.count += wrong;
+    weakTopicCounts.set(question.topic_id, current);
+  });
+  const weakTopics = [...weakTopicCounts.entries()].sort((left, right) => right[1].count - left[1].count).slice(0, 3);
 
   const activeMock = mockSession && !mockSession.finishedAt;
   const remainingMinutes = activeMock ? Math.max(0, Math.ceil(mockRemainingMs() / 60000)) : 0;
 
   $("card-area").innerHTML = `<section class="dashboard quiz-hub-dashboard">
     ${activeMock ? `<button type="button" class="resume-mock" data-resume-mock>
-      <span><strong>继续模拟考试</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
+      <span><strong>继续课程自测</strong><small>${escapeHtml(mockSession.subject)} · 已答 ${Object.keys(mockSession.answers).length}/${mockSession.ids.length}</small></span>
       <b>约 ${remainingMinutes} 分钟 →</b>
     </button>` : ""}
     <article class="card hub-tasks">
@@ -998,26 +1047,32 @@ function renderDashboard() {
           <span class="mode-copy"><strong>随机练习</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
+        <button class="mode-card" data-jump-mode="priority">
+          <span class="mode-symbol" aria-hidden="true">重</span>
+          <span class="mode-copy"><strong>优先知识点</strong></span>
+          <span class="mode-arrow" aria-hidden="true">→</span>
+        </button>
         <button class="mode-card" data-jump-mode="mock">
           <span class="mode-symbol" aria-hidden="true">考</span>
-          <span class="mode-copy"><strong>模拟考试</strong></span>
+          <span class="mode-copy"><strong>课程自测</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
       </div>
     </article>
     ${hasReviewTasks ? `<article class="card hub-review">
       <div class="hub-review-actions">
-        ${reviewCount ? `<button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>` : ""}
-        ${wrongCount ? `<button data-jump-mode="wrong"><span>错题本</span><b>${wrongCount}</b></button>` : ""}
-        ${favCount ? `<button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>` : ""}
+        <button data-jump-mode="review"><span>到期复习</span><b>${reviewCount}</b></button>
+        <button data-jump-mode="wrong"><span>错题本</span><b>${wrongCount}</b></button>
+        <button data-jump-mode="fav"><span>收藏题</span><b>${favCount}</b></button>
       </div>
+      ${weakTopics.length ? `<div class="hub-weak-topics"><strong>薄弱知识点</strong>${weakTopics.map(([topicId, item]) => `<button type="button" data-weak-topic="${escapeHtml(topicId)}"><span>${escapeHtml(item.title)}</span><b>${item.count}</b></button>`).join("")}</div>` : ""}
     </article>` : ""}
   </section>`;
 
   document.querySelectorAll("[data-jump-mode]").forEach((button) => {
     button.addEventListener("click", () => {
       const mode = button.dataset.jumpMode;
-      if (!state.subject && ["seq", "rnd", "mock"].includes(mode)) {
+      if (!state.subject && ["seq", "rnd", "mock", "priority"].includes(mode)) {
         $("subject-select").focus();
         $("subject-select").classList.add("needs-subject");
         window.setTimeout(() => $("subject-select").classList.remove("needs-subject"), 900);
@@ -1026,6 +1081,15 @@ function renderDashboard() {
       state.mode = mode;
       resetPosition();
       focusQuestionAfterRender = true;
+      save();
+      render();
+    });
+  });
+  document.querySelectorAll("[data-weak-topic]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.chapterFilter = `${TOPIC_FILTER_PREFIX}${button.dataset.weakTopic}`;
+      state.mode = "wrong";
+      resetPosition();
       save();
       render();
     });
@@ -1045,7 +1109,7 @@ function availableMockQuestions() {
   if (!state.subject) return [];
   return PUBLIC_QUESTIONS.filter((question) => {
     if (question.type === "简答" || state.flagged[question.id]) return false;
-    return question.subject === state.subject;
+    return questionInSelectedCourse(question);
   });
 }
 
@@ -1175,6 +1239,7 @@ function renderMockSetup() {
   if (scope.length && !choices.length) choices.push(scope.length);
   $("card-area").innerHTML = `<section class="mock-setup card">
     <div class="mock-setup-heading"><h2>${state.subject ? "选择题量" : "请先选择课程"}</h2>${state.subject ? `<span>可抽 ${scope.length} 题</span>` : ""}</div>
+    <p class="mock-notice">按当前课程题库抽题，用于限时自测；不代表某个地区或岗位的真实分值结构。</p>
     <div class="mock-choices">
       ${choices.map((count) => `<button type="button" data-mock-count="${count}"><strong>${count}题</strong><span>${Math.max(20, Math.ceil(count * 1.5))}分钟</span></button>`).join("")}
     </div>
@@ -1261,8 +1326,8 @@ function renderMock() {
   state.cursor = pool.indexOf(question);
   renderQuestion(question, pool);
   const answered = Object.keys(mockSession.answers).length;
-  $("card-area").insertAdjacentHTML("afterbegin", `<section class="mock-toolbar" aria-label="模拟进度">
-    <div><span>模拟进度</span><strong>${answered} / ${mockSession.ids.length}</strong></div>
+  $("card-area").insertAdjacentHTML("afterbegin", `<section class="mock-toolbar" aria-label="自测进度">
+    <div><span>自测进度</span><strong>${answered} / ${mockSession.ids.length}</strong></div>
     <div><span>剩余时间</span><strong id="mock-clock">--:--</strong></div>
     <button type="button" class="mock-sheet-button" id="mock-sheet-toggle" aria-controls="mock-answer-sheet" aria-expanded="false">答题卡</button>
     <button type="button" class="mock-finish-button" id="mock-finish">交卷</button>
@@ -1308,7 +1373,8 @@ function updateViewState() {
     review: "到期复习",
     wrong: "错题本",
     fav: "收藏题",
-    mock: "模拟考试",
+    mock: "课程自测",
+    priority: "优先知识点",
   };
   if ($("runner-title")) $("runner-title").textContent = labels[state.mode] || "练习";
   if ($("runner-scope")) $("runner-scope").textContent = isMockActive() ? mockSession.subject : (state.subject || "全部课程");
@@ -1440,7 +1506,7 @@ function renderDrawerList(el, items, active, onPick) {
 }
 
 function buildDrawer() {
-  const typeBase = state.subject ? PUBLIC_QUESTIONS.filter((q) => q.subject === state.subject) : PUBLIC_QUESTIONS;
+  const typeBase = state.subject ? PUBLIC_QUESTIONS.filter(questionInSelectedCourse) : PUBLIC_QUESTIONS;
   const typeCounts = countBy(typeBase, (q) => q.type);
   const types = [{value: "", label: "全部题型", count: typeBase.length}].concat(
     orderedValues(new Set(Object.keys(typeCounts)), TYPE_ORDER).map((t) => ({value: t, label: t, count: typeCounts[t]}))
@@ -1454,7 +1520,7 @@ function buildDrawer() {
   });
 
   let chapterBase = PUBLIC_QUESTIONS;
-  if (state.subject) chapterBase = chapterBase.filter((q) => q.subject === state.subject);
+  if (state.subject) chapterBase = chapterBase.filter(questionInSelectedCourse);
   if (state.typeFilter) chapterBase = chapterBase.filter((q) => q.type === state.typeFilter);
   const chapterCounts = countBy(chapterBase, chapterKey);
   const chapterOrder = new Map();
@@ -1642,10 +1708,13 @@ function sanitizeState(input, strict = false) {
   clean.errorTags = Object.fromEntries(entries("errorTags")
     .filter(([, value]) => typeof value === "string" && Object.prototype.hasOwnProperty.call(ERROR_TAG_LABELS, value)));
 
-  if (["home", "seq", "rnd", "mock", "review", "wrong", "fav"].includes(input.mode)) clean.mode = input.mode;
-  const allowedSubjects = new Set(PUBLIC_QUESTIONS.map((q) => q.subject));
+  if (["home", "seq", "rnd", "mock", "priority", "review", "wrong", "fav"].includes(input.mode)) clean.mode = input.mode;
+  const allowedCourses = new Set(COURSE_CATALOG.map((course) => course.name));
   const allowedTypes = new Set(PUBLIC_QUESTIONS.map((q) => q.type));
-  if (typeof input.subject === "string" && (!input.subject || allowedSubjects.has(input.subject))) clean.subject = input.subject;
+  if (typeof input.subject === "string") {
+    const savedCourse = courseForSelection(input.subject);
+    if (!input.subject || (savedCourse && allowedCourses.has(savedCourse.name))) clean.subject = savedCourse?.name || "";
+  }
   if (typeof input.typeFilter === "string" && (!input.typeFilter || allowedTypes.has(input.typeFilter))) clean.typeFilter = input.typeFilter;
   if (typeof input.chapterFilter === "string" && input.chapterFilter.length <= 300
       && (!input.chapterFilter
@@ -1757,7 +1826,7 @@ function downloadText(filename, content, type) {
 }
 
 function exitRunner() {
-  if (isMockActive() && !confirm("模拟考试仍在计时，返回刷题主页？稍后可以继续作答。")) return;
+  if (isMockActive() && !confirm("课程自测仍在计时，返回刷题主页？稍后可以继续作答。")) return;
   if (!isMockActive() && state._pending?.text && !confirm("当前输入尚未提交，确定返回吗？")) return;
   if (history.state?.shaoyangQuizView === "runner" && history.state?.backToHub) {
     history.back();
@@ -1810,7 +1879,7 @@ function bindGlobalEvents() {
       $("subject-select").focus();
       return;
     }
-    const course = courseNameForSubject(state.subject);
+    const course = state.subject;
     const target = module === "lecture" ? "notes.html" : "color-notes.html";
     location.href = `./${target}#course=${encodeURIComponent(course)}`;
   });
@@ -1822,7 +1891,7 @@ function bindGlobalEvents() {
     state.searchQuery = "";
     $("search-input").value = "";
     try {
-      if (state.subject) localStorage.setItem("shaoyang-selected-course-v1", courseNameForSubject(state.subject));
+      if (state.subject) localStorage.setItem("shaoyang-selected-course-v1", state.subject);
     } catch {}
     resetPosition();
     save();

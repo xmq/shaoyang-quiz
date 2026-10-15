@@ -247,6 +247,8 @@
     .chapter-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
     .chapter-actions .chapter-study-link { margin: 0; padding: 8px 11px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); text-decoration: none; font-weight: 700; }
     .chapter-actions .chapter-practice-link { border-color: var(--primary); background: var(--primary); color: #fff; }
+    .chapter-complete-button { min-height: 38px; padding: 8px 11px; border: 1px solid var(--primary); border-radius: 9px; background: var(--panel); color: var(--primary); font: inherit; font-weight: 700; cursor: pointer; }
+    .chapter-complete-button.is-complete { border-color: #176f68; background: #e8f7f5; color: #176f68; }
     .study.nav-collapsed .study-layout { grid-template-columns: 58px minmax(0, 1fr); }
     .study.nav-collapsed .chapter-nav-head { justify-content: center; padding: 7px; }
     .study.nav-collapsed .chapter-nav-label,
@@ -791,6 +793,8 @@
       .study-toolbar { border-color: #2a3d52; background: rgba(12, 23, 36, .96); box-shadow: 0 8px 24px rgba(0, 0, 0, .24); }
       .note { background: transparent; box-shadow: none; }
       .chapter-pager { border-color: #2a3d52; background: rgba(20, 34, 52, .96); box-shadow: 0 10px 30px rgba(0, 0, 0, .28); }
+      .chapter-complete-button { border-color: #66a3ff; background: #142234; color: #a9cbff; }
+      .chapter-complete-button.is-complete { border-color: #46d6c6; background: #173f3c; color: #a3eee6; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -917,6 +921,7 @@
     let recallRetryMode = false;
     let searchTimer = null;
     let mobileNavReturnFocus = null;
+    const readingProgressKey = "shaoyang-reading-progress-v1";
     const recallRatings = (() => {
       try {
         const stored = JSON.parse(localStorage.getItem("shaoyang-recall-ratings-v2") || "{}");
@@ -930,6 +935,49 @@
       return String(value ?? "").replace(/[&<>"']/g, (char) => ({
         "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
       }[char]));
+    }
+
+    function readReadingProgress() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(readingProgressKey) || "{}");
+        return stored && typeof stored === "object" ? stored : {};
+      } catch {
+        return {};
+      }
+    }
+
+    function chapterProgressId(index = activeChapterIndex) {
+      const title = currentCourse?.chapters?.[pageKind]?.[index];
+      return currentCourse?.learning_chapters?.find((item) => item.title === title)?.chapter_id || `${pageKind}-${index + 1}`;
+    }
+
+    function isChapterCompleted(chapterId) {
+      if (!currentCourse || !chapterId) return false;
+      const progress = readReadingProgress();
+      return Array.isArray(progress[currentCourse.name]?.completed) && progress[currentCourse.name].completed.includes(chapterId);
+    }
+
+    function syncChapterCompleteButtons() {
+      if (colorMode) return;
+      content.querySelectorAll(".chapter-complete-button").forEach((button) => {
+        const complete = isChapterCompleted(button.dataset.chapterId);
+        button.classList.toggle("is-complete", complete);
+        button.setAttribute("aria-pressed", String(complete));
+        button.textContent = complete ? "取消完成" : "完成本章";
+      });
+    }
+
+    function toggleChapterComplete(chapterId) {
+      if (!currentCourse || !chapterId) return;
+      const progress = readReadingProgress();
+      const courseProgress = progress[currentCourse.name] && typeof progress[currentCourse.name] === "object" ? progress[currentCourse.name] : {};
+      const completed = new Set(Array.isArray(courseProgress.completed) ? courseProgress.completed : []);
+      if (completed.has(chapterId)) completed.delete(chapterId);
+      else completed.add(chapterId);
+      courseProgress.completed = [...completed];
+      progress[currentCourse.name] = courseProgress;
+      try { localStorage.setItem(readingProgressKey, JSON.stringify(progress)); } catch {}
+      syncChapterCompleteButtons();
     }
 
     function syncRecallTargets() {
@@ -952,6 +1000,27 @@
       return currentCourse ? `${currentCourse.name}::${chapterIndex + 1}::${cardIndex + 1}` : "";
     }
 
+    function pendingRecallCards() {
+      if (!currentCourse) return [];
+      const prefix = `${currentCourse.name}::`;
+      return Object.entries(recallRatings)
+        .filter(([key, rating]) => key.startsWith(prefix) && rating?.value && rating.value !== "known")
+        .map(([key]) => {
+          const [, chapter, card] = key.split("::");
+          return {chapterIndex: Number(chapter) - 1, cardIndex: Number(card) - 1};
+        })
+        .filter((item) => Number.isInteger(item.chapterIndex) && Number.isInteger(item.cardIndex))
+        .sort((left, right) => left.chapterIndex - right.chapterIndex || left.cardIndex - right.cardIndex);
+    }
+
+    function updateRecallToggleLabel(active = study.classList.contains("recall-mode")) {
+      if (active) recallToggle.textContent = "显示全文";
+      else {
+        const pending = pendingRecallCards().length;
+        recallToggle.textContent = pending ? `回忆模式 · ${pending}` : "回忆模式";
+      }
+    }
+
     function saveRecallRating(value) {
       const key = recallRatingKey();
       if (!key) return;
@@ -959,6 +1028,7 @@
       try {
         localStorage.setItem("shaoyang-recall-ratings-v2", JSON.stringify(recallRatings));
       } catch {}
+      updateRecallToggleLabel();
     }
 
     function concealRecallCard(card) {
@@ -1335,18 +1405,18 @@
       }
       if (currentCourse && sections.length) {
         try {
-          const stored = JSON.parse(localStorage.getItem("shaoyang-reading-progress-v1") || "{}");
-          const progress = stored && typeof stored === "object" ? stored : {};
+          const progress = readReadingProgress();
           const courseProgress = progress[currentCourse.name] && typeof progress[currentCourse.name] === "object" ? progress[currentCourse.name] : {};
-          const chapterTitle = currentCourse.chapters?.[pageKind]?.[activeChapterIndex];
-          const chapterId = currentCourse.learning_chapters?.find((item) => item.title === chapterTitle)?.chapter_id || `${pageKind}-${activeChapterIndex + 1}`;
+          const chapterId = chapterProgressId();
           const visited = new Set(Array.isArray(courseProgress[pageKind]) ? courseProgress[pageKind] : []);
           visited.add(chapterId);
           courseProgress[pageKind] = [...visited];
+          if (pageKind === "lecture") courseProgress.lastLectureChapter = activeChapterIndex + 1;
           progress[currentCourse.name] = courseProgress;
-          localStorage.setItem("shaoyang-reading-progress-v1", JSON.stringify(progress));
+          localStorage.setItem(readingProgressKey, JSON.stringify(progress));
         } catch {}
       }
+      syncChapterCompleteButtons();
     }
 
     function setActiveChapter(index, {replaceRoute = true, focus = false} = {}) {
@@ -1534,6 +1604,16 @@
           practice.href = `./quiz.html?chapter=${encodeURIComponent(learningChapter.chapter_id)}&mode=seq`;
           practice.textContent = "练习本章 →";
           actions.appendChild(practice);
+          if (!colorMode) {
+            const complete = document.createElement("button");
+            complete.type = "button";
+            complete.className = "chapter-complete-button";
+            complete.dataset.chapterId = learningChapter.chapter_id;
+            complete.setAttribute("aria-pressed", "false");
+            complete.textContent = "完成本章";
+            complete.addEventListener("click", () => toggleChapterComplete(learningChapter.chapter_id));
+            actions.appendChild(complete);
+          }
         }
         if (actions.childElementCount) section.querySelector(".chapter-body").appendChild(actions);
       });
@@ -1596,7 +1676,7 @@
       study.classList.toggle("color-notes-list", colorMode);
       recallToggle.classList.toggle("hidden", !colorMode);
       recallToggle.setAttribute("aria-pressed", "false");
-      recallToggle.textContent = "回忆模式";
+      updateRecallToggleLabel(false);
       recallPager.hidden = true;
       recallPager.classList.add("hidden");
       syncRecallTargets();
@@ -1607,7 +1687,7 @@
         if (link.getAttribute("href") === "./notes.html" || link.pathname.endsWith("/notes.html")) link.href = `./notes.html${courseHash}`;
         if (link.getAttribute("href") === "./color-notes.html" || link.pathname.endsWith("/color-notes.html")) link.href = `./color-notes.html${courseHash}`;
         if (link.getAttribute("href") === "./quiz.html" || link.pathname.endsWith("/quiz.html")) {
-          link.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[course.name] || course.name)}&mode=home`;
+          link.href = `./quiz.html?course=${encodeURIComponent(course.name)}&mode=home`;
         }
       });
       updateStudyPosition({replaceRoute: mobileMedia.matches, sectionId: routeSection || ""});
@@ -1839,7 +1919,7 @@
       const courseHash = `#${targetRoute.toString()}`;
       if (mobileModuleSelect.value === "lecture") location.href = `./notes.html${courseHash}`;
       else if (mobileModuleSelect.value === "color-notes") location.href = `./color-notes.html${courseHash}`;
-      else location.href = `./quiz.html?subject=${encodeURIComponent(subjectAliases[currentCourse.name] || currentCourse.name)}&mode=home`;
+      else location.href = `./quiz.html?course=${encodeURIComponent(currentCourse.name)}&mode=home`;
     });
     chapterPrev.addEventListener("click", () => setActiveChapter(activeChapterIndex - 1, {focus: true}));
     chapterNext.addEventListener("click", () => setActiveChapter(activeChapterIndex + 1, {focus: true}));
@@ -1877,9 +1957,17 @@
       recallPager.hidden = !active;
       recallPager.classList.toggle("hidden", !active);
       recallToggle.setAttribute("aria-pressed", String(active));
-      recallToggle.textContent = active ? "显示全文" : "回忆模式";
+      updateRecallToggleLabel(active);
       syncRecallTargets();
-      updateStudyPosition();
+      if (active) {
+        const sections = [...content.querySelectorAll(".chapter-section")];
+        const pending = pendingRecallCards().find((item) => sections[item.chapterIndex]?.querySelectorAll(".recall-card")[item.cardIndex]);
+        if (pending) {
+          activeChapterIndex = pending.chapterIndex;
+          activeRecallIndex = pending.cardIndex;
+          setActiveRecallCard(activeRecallIndex, {focus: true});
+        } else updateStudyPosition();
+      } else updateStudyPosition();
     });
     content.addEventListener("click", (event) => revealRecallItem(event.target.closest(".red, .blue, .black")));
     content.addEventListener("keydown", (event) => {

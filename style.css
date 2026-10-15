@@ -2689,7 +2689,7 @@ body.drawer-open {
 .hub-section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .hub-section-title strong { font-size: 18px; }
 .hub-section-title span { color: var(--muted); font-size: 12px; }
-.hub-primary-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.hub-primary-actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
 .hub-primary-actions button {
   min-height: 80px;
   display: grid;
@@ -2721,6 +2721,10 @@ body.drawer-open {
   font-weight: 700;
 }
 .hub-review-actions b { min-width: 28px; color: var(--primary); font-size: 18px; text-align: right; }
+.hub-weak-topics { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 10px; }
+.hub-weak-topics > strong { width: 100%; color: var(--muted); font-size: 12px; }
+.hub-weak-topics button { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 7px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); }
+.hub-weak-topics button b { color: var(--red); }
 .hub-insights { padding: 0; }
 .hub-insights > summary { min-height: 52px; display: flex; align-items: center; padding: 10px 20px; font-weight: 750; cursor: pointer; }
 .hub-insights > .dash-grid, .hub-insights > .error-summary, .hub-insights > .subject-table { margin-right: 20px; margin-left: 20px; }
@@ -2873,7 +2877,7 @@ body:not(.platform-home) {
 
 .hub-heading span { color: var(--muted); font-size: 12px; }
 .hub-tasks, .hub-review { padding: 12px; }
-.hub-primary-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hub-primary-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .hub-primary-actions button {
   min-height: 76px;
   grid-template-columns: auto minmax(0, 1fr) auto;
