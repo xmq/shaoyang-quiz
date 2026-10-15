@@ -1,12 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="title desc">
-  <title id="title">上升沿D触发器时序图</title><desc id="desc">D输入可在时钟周期内变化，Q只在每个上升沿采样D并保持到下一个有效边沿。</desc>
-  <style>.axis{stroke:#98a2b3;stroke-width:1;stroke-dasharray:6 6}.clk{stroke:#344054;stroke-width:4;fill:none}.d{stroke:#1565c0;stroke-width:4;fill:none}.q{stroke:#c62828;stroke-width:4;fill:none}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
-  <rect x="18" y="18" width="944" height="464" rx="18" fill="#fff" stroke="#d0d5dd"/>
-  <text x="490" y="48" text-anchor="middle" class="t" font-weight="700">上升沿D触发器：只在 ↑ 时刻采样D，其他时间Q保持</text>
-  <g><line class="axis" x1="180" y1="70" x2="180" y2="440"/><line class="axis" x1="340" y1="70" x2="340" y2="440"/><line class="axis" x1="500" y1="70" x2="500" y2="440"/><line class="axis" x1="660" y1="70" x2="660" y2="440"/><line class="axis" x1="820" y1="70" x2="820" y2="440"/></g>
-  <text x="65" y="135" class="t">CLK</text><path class="clk" d="M120 160H180V100H260V160H340V100H420V160H500V100H580V160H660V100H740V160H820V100H900"/>
-  <text x="65" y="285" class="t">D</text><path class="d" d="M120 310H150V250H300V310H450V250H620V310H760V250H900"/>
-  <text x="65" y="420" class="t">Q</text><path class="q" d="M120 445H180V385H340V445H500V385H660V445H820V385H900"/>
-  <text x="180" y="82" text-anchor="middle" class="t">↑</text><text x="340" y="82" text-anchor="middle" class="t">↑</text><text x="500" y="82" text-anchor="middle" class="t">↑</text><text x="660" y="82" text-anchor="middle" class="t">↑</text><text x="820" y="82" text-anchor="middle" class="t">↑</text>
-  <text x="490" y="475" text-anchor="middle" class="s">真实器件还要求D在有效边沿前后满足建立时间与保持时间，否则可能出现亚稳态</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 496" role="img" aria-labelledby="title desc"><title id="title">上升沿D：只在↑处取样</title><desc id="desc">上升沿D：只在↑处取样</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="496" rx="12"/>
+<text class="h" x="20" y="33">上升沿D：只在↑处取样</text>
+<text class="t" x="20" y="65">初始Q=0；异步控制无效</text>
+<text class="t" x="15" y="140">CLK</text>
+<path class="wire dash" d="M70 160L375 160"/>
+<text class="t" x="15" y="230">D</text>
+<path class="wire dash" d="M70 250L375 250"/>
+<text class="t" x="15" y="320">Q</text>
+<path class="wire dash" d="M70 340L375 340"/>
+<path class="wire dash" d="M110 90L110 355"/>
+<path class="wire dash" d="M190 90L190 355"/>
+<path class="wire dash" d="M270 90L270 355"/>
+<path class="wire dash" d="M350 90L350 355"/>
+<path class="blue" d="M70 160H110V125H145V160H190V125H225V160H270V125H305V160H350V125H375"/>
+<path class="orange" d="M70 250H90V215H160V250H240V215H320V250H375"/>
+<path class="green" d="M70 340H110V305H190V340H270V305H350V340H375"/>
+<text class="t" x="110" y="384" text-anchor="middle">1</text>
+<text class="t" x="190" y="384" text-anchor="middle">0</text>
+<text class="t" x="270" y="384" text-anchor="middle">1</text>
+<text class="t" x="350" y="384" text-anchor="middle">0</text>
+<text class="t" x="20" y="421">每个虚线处读取D：1、0、1、0。</text>
+<text class="t" x="20" y="451">沿之间D变化，Q不跟随；真实器件还须满足</text>
+<text class="t" x="20" y="476">建立/保持时间。</text>
 </svg>

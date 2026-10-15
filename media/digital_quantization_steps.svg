@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 510" role="img" aria-labelledby="title desc"><title id="title">量化台阶：输入不等于代表值</title><desc id="desc">量化台阶：输入不等于代表值</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="510" rx="12"/>
+<text class="h" x="20" y="33">量化台阶：输入不等于代表值</text>
+<text class="t" x="20" y="66">2位，0～4 V；每档宽1 V</text>
+<path class="wire" d="M55 370L370 370" marker-end="url(#arrow)"/>
+<path class="wire" d="M55 370L55 90" marker-end="url(#arrow)"/>
+<text class="t" x="12" y="92">输出/V</text>
+<text class="t" x="299" y="411">输入/V</text>
+<path class="wire dash" d="M55 370L335 90"/>
+<path class="blue" d="M55 335.0L125 335.0"/>
+<path class="blue" d="M125 265.0L195 265.0"/>
+<path class="blue" d="M195 195.0L265 195.0"/>
+<path class="blue" d="M265 125.0L335 125.0"/>
+<text class="t" x="55" y="398" text-anchor="middle">0</text>
+<text class="t" x="125" y="398" text-anchor="middle">1</text>
+<text class="t" x="195" y="398" text-anchor="middle">2</text>
+<text class="t" x="265" y="398" text-anchor="middle">3</text>
+<text class="t" x="335" y="398" text-anchor="middle">4</text>
+<circle class="dot" cx="216.0" cy="195.0" r="6"/>
+<path class="orange dash" d="M216.0 370L216.0 195.0"/>
+<path class="orange dash" d="M55 195.0L216.0 195.0"/>
+<text class="t" x="15" y="201.0">2.5</text>
+<text class="b" x="230" y="157">码10</text>
+<text class="t" x="20" y="449">2.3 V落在[2,3)档，代表值2.5 V，编码10。</text>
+<text class="t" x="20" y="474">误差0.2 V；这里未发生超量程。</text>
+</svg>

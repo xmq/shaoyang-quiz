@@ -1,29 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
-  <title id="title">电阻串联与并联示意图</title>
-  <desc id="desc">左侧为两个电阻串联分压，右侧为三个电阻并联分流。</desc>
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker>
-    <style>.wire{stroke:#344054;stroke-width:4;fill:none;stroke-linecap:round}.res{stroke:#c62828;stroke-width:4;fill:#fff}.lbl{font:20px system-ui,sans-serif;fill:#101828}.sub{font:16px system-ui,sans-serif;fill:#475467}.flow{stroke:#1565c0;stroke-width:3;fill:none;marker-end:url(#arrow)}</style>
-  </defs>
-  <rect x="15" y="15" width="445" height="400" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <text x="238" y="50" text-anchor="middle" class="lbl" font-weight="700">串联：同一电流，按电阻分压</text>
-  <path class="wire" d="M80 140H145M315 140H390V330H80V140"/>
-  <rect class="res" x="145" y="115" width="75" height="50" rx="6"/>
-  <rect class="res" x="240" y="115" width="75" height="50" rx="6"/>
-  <text x="182" y="105" text-anchor="middle" class="lbl">R₁</text><text x="277" y="105" text-anchor="middle" class="lbl">R₂</text>
-  <circle cx="80" cy="235" r="30" fill="#fff" stroke="#344054" stroke-width="4"/><text x="80" y="242" text-anchor="middle" class="lbl">U</text>
-  <path class="flow" d="M115 190H205"/><text x="160" y="215" text-anchor="middle" class="sub">I</text>
-  <text x="238" y="375" text-anchor="middle" class="lbl">Rₑq = R₁ + R₂</text>
-  <text x="238" y="401" text-anchor="middle" class="sub">U₁ = U·R₁/(R₁+R₂)</text>
-
-  <rect x="500" y="15" width="445" height="400" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <text x="722" y="50" text-anchor="middle" class="lbl" font-weight="700">并联：同一电压，支路分流</text>
-  <path class="wire" d="M555 105H885M555 340H885M555 105V340M885 105V340"/>
-  <circle cx="555" cy="222" r="30" fill="#fff" stroke="#344054" stroke-width="4"/><text x="555" y="229" text-anchor="middle" class="lbl">U</text>
-  <rect class="res" x="635" y="150" width="55" height="145" rx="6"/><rect class="res" x="710" y="150" width="55" height="145" rx="6"/><rect class="res" x="785" y="150" width="55" height="145" rx="6"/>
-  <text x="662" y="137" text-anchor="middle" class="lbl">R</text><text x="737" y="137" text-anchor="middle" class="lbl">R</text><text x="812" y="137" text-anchor="middle" class="lbl">R</text>
-  <path class="flow" d="M662 175V245"/><path class="flow" d="M737 175V245"/><path class="flow" d="M812 175V245"/>
-  <text x="662" y="320" text-anchor="middle" class="sub">I₁</text><text x="737" y="320" text-anchor="middle" class="sub">I₂</text><text x="812" y="320" text-anchor="middle" class="sub">I₃</text>
-  <text x="722" y="375" text-anchor="middle" class="lbl">三个相同R并联：Rₑq = R/3</text>
-  <text x="722" y="401" text-anchor="middle" class="sub">三个6 Ω并联得到2 Ω</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 390" role="img" aria-labelledby="title desc"><title id="title">串联：同一条电流路径</title><desc id="desc">串联：同一条电流路径</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="390" rx="12"/>
+<text class="h" x="20" y="33">串联：同一条电流路径</text>
+<text class="b" x="20" y="64">12 V → 两个电阻，途中没有分支</text>
+<path class="wire" d="M45 130L85 130"/>
+<path class="wire" d="M85 130L95 130"/>
+<rect class="panel" x="95" y="121" width="70" height="18" rx="0"/>
+<path class="wire" d="M165 130L175 130"/>
+<text class="t" x="130.0" y="111" text-anchor="middle">2 Ω</text>
+<path class="wire" d="M190 130L200 130"/>
+<rect class="panel" x="200" y="121" width="80" height="18" rx="0"/>
+<path class="wire" d="M280 130L290 130"/>
+<text class="t" x="240.0" y="111" text-anchor="middle">4 Ω</text>
+<path class="wire" d="M175 130L190 130"/>
+<path class="wire" d="M290 130H350V245H45V130"/>
+<rect class="panel" x="24" y="159" width="42" height="54" rx="10"/>
+<text class="t" x="45" y="182" text-anchor="middle">12</text>
+<text class="t" x="45" y="204" text-anchor="middle">V</text>
+<path class="wire" d="M220 245L100 245" marker-end="url(#arrow)"/>
+<text class="t" x="160" y="274" text-anchor="middle">I = 2 A</text>
+<text class="t" x="45" y="151" text-anchor="middle">+</text>
+<text class="t" x="45" y="233" text-anchor="middle">−</text>
+<text class="t" x="20" y="310">① 总电阻 2+4=6 Ω</text>
+<text class="t" x="20" y="335">② 电流 12/6=2 A</text>
+<text class="t" x="20" y="360">③ 4 Ω上的电压 2×4=8 V</text>
 </svg>

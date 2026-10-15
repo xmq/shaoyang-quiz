@@ -1,15 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
-  <title id="title">接触器自锁控制回路</title><desc id="desc">停止按钮常闭，启动按钮常开，接触器辅助常开触点与启动按钮并联形成自锁，热继电器常闭触点提供过载保护。</desc>
-  <style>.wire{stroke:#344054;stroke-width:4;fill:none}.dev{stroke:#1565c0;stroke-width:4;fill:#fff}.coil{stroke:#c62828;stroke-width:4;fill:#fff}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
-  <rect x="18" y="18" width="924" height="394" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <line class="wire" x1="90" y1="75" x2="90" y2="355"/><line class="wire" x1="870" y1="75" x2="870" y2="355"/>
-  <text x="90" y="58" text-anchor="middle" class="t">L</text><text x="870" y="58" text-anchor="middle" class="t">N</text>
-  <path class="wire" d="M90 150H170M235 150H320M385 150H560M625 150H700"/>
-  <line class="dev" x1="170" y1="150" x2="205" y2="130"/><line class="dev" x1="205" y1="130" x2="235" y2="150"/><text x="202" y="105" text-anchor="middle" class="t">停止SB₁（常闭）</text>
-  <line class="dev" x1="320" y1="150" x2="350" y2="125"/><line class="dev" x1="355" y1="150" x2="385" y2="150"/><text x="352" y="105" text-anchor="middle" class="t">启动SB₂（常开）</text>
-  <line class="dev" x1="560" y1="150" x2="592" y2="130"/><line class="dev" x1="595" y1="150" x2="625" y2="150"/><text x="593" y="105" text-anchor="middle" class="t">热继电器FR（常闭）</text>
-  <path class="coil" d="M700 120C735 120 735 180 700 180M810 120C775 120 775 180 810 180"/><line class="wire" x1="810" y1="150" x2="870" y2="150"/><text x="755" y="205" text-anchor="middle" class="t">接触器线圈KM</text>
-  <path class="wire" d="M285 150V280H420M520 280H555V150"/>
-  <line class="dev" x1="420" y1="280" x2="465" y2="255"/><line class="dev" x1="475" y1="280" x2="520" y2="280"/><text x="470" y="325" text-anchor="middle" class="t">KM辅助常开触点（自锁）</text>
-  <text x="480" y="375" text-anchor="middle" class="s">按下启动：KM吸合，辅助触点闭合；松开启动后，电流仍经辅助触点维持线圈得电</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 540" role="img" aria-labelledby="title desc"><title id="title">自锁：松开启动仍有通路</title><desc id="desc">自锁：松开启动仍有通路</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="540" rx="12"/>
+<text class="h" x="20" y="33">自锁：松开启动仍有通路</text>
+<text class="t" x="20" y="66">图中触点均画未按下/未吸合状态</text>
+<path class="wire" d="M50 105L350 105"/>
+<text class="t" x="25" y="111">L</text>
+<path class="wire" d="M50 440L350 440"/>
+<text class="t" x="25" y="446">N</text>
+<path class="wire" d="M200 105L200 135"/>
+<path class="wire" d="M180 135L220 135"/>
+<path class="wire" d="M180 152L220 152"/>
+<path class="wire" d="M185 130L215 157"/>
+<path class="wire" d="M200 152L200 190"/>
+<text class="t" x="230" y="146">停止：常闭</text>
+<path class="wire" d="M200 190H110V230M200 190H290V230"/>
+<circle class="dot" cx="200" cy="190" r="4"/>
+<path class="wire" d="M90 230L130 230"/>
+<path class="wire" d="M90 250L130 250"/>
+<path class="wire" d="M110 250L110 290"/>
+<path class="wire" d="M270 230L310 230"/>
+<path class="wire" d="M270 250L310 250"/>
+<path class="wire" d="M290 250L290 290"/>
+<text class="t" x="25" y="218">启动：常开</text>
+<text class="t" x="244" y="218">KM常开</text>
+<path class="wire" d="M110 290H290M200 290V310M200 328V345"/>
+<circle class="dot" cx="200" cy="290" r="4"/>
+<path class="wire" d="M180 310L220 310"/>
+<path class="wire" d="M180 328L220 328"/>
+<path class="wire" d="M183 305L217 333"/>
+<text class="t" x="237" y="324">FR常闭</text>
+<rect class="panel" x="164" y="345" width="72" height="50" rx="10"/>
+<text class="t" x="200" y="377" text-anchor="middle">KM</text>
+<path class="wire" d="M200 395L200 440"/>
+<text class="t" x="20" y="482">按启动→KM吸合→右支路闭合。</text>
+<text class="t" x="20" y="507">松开启动仍走右支路；按停止则两路都断电。</text>
 </svg>

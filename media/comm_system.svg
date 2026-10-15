@@ -1,10 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 350" role="img" aria-labelledby="title desc">
-  <title id="title">通信系统基本模型</title><desc id="desc">消息从信源经过发送设备进入信道，在噪声影响后由接收设备恢复并送到信宿。</desc>
-  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.b{fill:#fff;stroke:#344054;stroke-width:3}.ch{fill:#eff8ff;stroke:#1565c0;stroke-width:4}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.noise{stroke:#c62828;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style></defs>
-  <rect x="18" y="18" width="984" height="314" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <rect class="b" x="45" y="120" width="130" height="75" rx="12"/><rect class="b" x="230" y="100" width="170" height="115" rx="12"/><rect class="ch" x="455" y="100" width="130" height="115" rx="12"/><rect class="b" x="640" y="100" width="170" height="115" rx="12"/><rect class="b" x="865" y="120" width="110" height="75" rx="12"/>
-  <text x="110" y="165" text-anchor="middle" class="t">信源</text><text x="315" y="145" text-anchor="middle" class="t">发送设备</text><text x="315" y="178" text-anchor="middle" class="s">编码/调制/放大</text><text x="520" y="165" text-anchor="middle" class="t">信道</text><text x="725" y="145" text-anchor="middle" class="t">接收设备</text><text x="725" y="178" text-anchor="middle" class="s">解调/译码/判决</text><text x="920" y="165" text-anchor="middle" class="t">信宿</text>
-  <path class="w" d="M175 158H230M400 158H455M585 158H640M810 158H865"/>
-  <path class="noise" d="M520 285V215"/><text x="520" y="310" text-anchor="middle" class="t" fill="#c62828">噪声n(t)</text>
-  <text x="510" y="55" text-anchor="middle" class="t" font-weight="700">通信的目的：可靠、有效地把信息从一处传到另一处</text><text x="510" y="255" text-anchor="middle" class="s">发送端“适配信道”，接收端“从受噪信号中恢复消息”</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 612" role="img" aria-labelledby="title desc"><title id="title">一条通信链：消息怎样回来</title><desc id="desc">一条通信链：消息怎样回来</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="612" rx="12"/>
+<text class="h" x="20" y="33">一条通信链：消息怎样回来</text>
+<rect class="panel" x="20" y="75" width="360" height="75" rx="10"/>
+<text class="b" x="35" y="102">消息比特</text>
+<text class="t" x="200" y="133" text-anchor="middle">1　0　1</text>
+<path class="wire" d="M200 151L200 166" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="169" width="360" height="75" rx="10"/>
+<text class="b" x="35" y="196">发送：用正负脉冲表示</text>
+<text class="t" x="200" y="227" text-anchor="middle">+1　−1　+1</text>
+<path class="wire" d="M200 245L200 260" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="263" width="360" height="75" rx="10"/>
+<text class="b" x="35" y="290">信道：叠加噪声后的样值</text>
+<text class="t" x="200" y="321" text-anchor="middle">+0.8　−0.6　+1.1</text>
+<path class="wire" d="M200 339L200 354" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="357" width="360" height="75" rx="10"/>
+<text class="b" x="35" y="384">接收：以0为判决门限</text>
+<text class="t" x="200" y="415" text-anchor="middle">正→1，负→0</text>
+<path class="wire" d="M200 433L200 448" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="451" width="360" height="75" rx="10"/>
+<text class="b" x="35" y="478">恢复消息</text>
+<text class="t" x="200" y="509" text-anchor="middle">1　0　1</text>
+<text class="t" x="20" y="567">示例约定1对应正脉冲、0对应负脉冲；实际</text>
+<text class="t" x="20" y="592">系统还可能调制到载波上传送。</text>
 </svg>

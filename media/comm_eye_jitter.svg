@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 465" role="img" aria-labelledby="title desc"><title id="title">眼高相近，交叉点却横向散开</title><desc id="desc">眼高相近，交叉点却横向散开</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="465" rx="12"/>
+<text class="h" x="20" y="33">眼高相近，交叉点却横向散开</text>
+<path class="wire dash" d="M45 215L355 215"/>
+<path class="wire dash" d="M200 115L200 320"/>
+<path class="blue" d="M29 215 C84 90 284 90 339 215"/>
+<path class="blue" d="M29 215 C84 340 284 340 339 215"/>
+<path class="blue" d="M37 215 C92 90 292 90 347 215"/>
+<path class="blue" d="M37 215 C92 340 292 340 347 215"/>
+<path class="blue" d="M45 215 C100 90 300 90 355 215"/>
+<path class="blue" d="M45 215 C100 340 300 340 355 215"/>
+<path class="blue" d="M53 215 C108 90 308 90 363 215"/>
+<path class="blue" d="M53 215 C108 340 308 340 363 215"/>
+<path class="blue" d="M61 215 C116 90 316 90 371 215"/>
+<path class="blue" d="M61 215 C116 340 316 340 371 215"/>
+<text class="t" x="201" y="344" text-anchor="middle">采样时刻</text>
+<text class="t" x="20" y="389">更像定时抖动增加，而非单纯幅度噪声增加。</text>
+<text class="t" x="20" y="414">眼图只是症状，还需测时钟和分段验证，不</text>
+<text class="t" x="20" y="439">能据此认定某个元件损坏。</text>
+</svg>

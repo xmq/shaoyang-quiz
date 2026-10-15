@@ -1,14 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
-  <title id="title">RLC串联电路电压相量图</title><desc id="desc">以电流为参考，电阻电压同相，电感电压向上，电容电压向下，总电压为矢量和。</desc>
-  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><style>.axis{stroke:#98a2b3;stroke-width:2}.v{fill:none;stroke-width:5;marker-end:url(#arr)}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:16px system-ui,sans-serif;fill:#475467}</style></defs>
-  <rect x="18" y="18" width="864" height="384" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <line class="axis" x1="100" y1="235" x2="820" y2="235"/><line class="axis" x1="260" y1="360" x2="260" y2="60"/>
-  <line class="v" x1="260" y1="235" x2="500" y2="235" stroke="#344054"/><text x="470" y="260" class="t">Uᴿ（与I同相）</text>
-  <line class="v" x1="260" y1="235" x2="260" y2="80" stroke="#1565c0"/><text x="275" y="95" class="t">Uᴸ</text>
-  <line class="v" x1="260" y1="235" x2="260" y2="330" stroke="#c62828"/><text x="275" y="330" class="t">Uᶜ</text>
-  <line class="v" x1="260" y1="235" x2="500" y2="175" stroke="#7f56d9"/><text x="510" y="175" class="t">总电压U</text>
-  <path d="M345 235A85 85 0 0 0 342 214" fill="none" stroke="#7f56d9" stroke-width="3"/><text x="355" y="215" class="t">φ</text>
-  <text x="610" y="95" class="t" font-weight="700">判断口诀</text>
-  <text x="610" y="135" class="s">Uᴸ &gt; Uᶜ：感性，电流滞后</text><text x="610" y="170" class="s">Uᴸ &lt; Uᶜ：容性，电流超前</text><text x="610" y="205" class="s">Uᴸ = Uᶜ：串联谐振</text>
-  <text x="610" y="255" class="s">谐振时φ=0</text><text x="610" y="290" class="s">Z=R，功率因数=1</text><text x="610" y="325" class="s">电流达到最大</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" role="img" aria-labelledby="title desc"><title id="title">串联RLC：相量不能直接相加</title><desc id="desc">串联RLC：相量不能直接相加</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="460" rx="12"/>
+<text class="h" x="20" y="33">串联RLC：相量不能直接相加</text>
+<text class="t" x="20" y="66">R=6 Ω，XL=12 Ω，XC=4 Ω</text>
+<path class="wire" d="M65 310L350 310" marker-end="url(#arrow)"/>
+<path class="wire" d="M65 330L65 90" marker-end="url(#arrow)"/>
+<text class="t" x="294" y="337">实部</text>
+<text class="t" x="23" y="90">虚部</text>
+<path class="blue" d="M65 310L215 310" marker-end="url(#arrow)"/>
+<text class="b" x="115" y="340">R=6</text>
+<path class="orange" d="M215 310L215 110" marker-end="url(#arrow)"/>
+<text class="t" x="228" y="211">X=8</text>
+<path class="green" d="M65 310L215 110" marker-end="url(#arrow)"/>
+<text class="g" x="74" y="173">|Z|=10</text>
+<text class="t" x="20" y="378">Z = 6 + j(12−4) = 6+j8 Ω</text>
+<text class="t" x="20" y="407">|Z| = √(6²+8²) = 10 Ω</text>
+<text class="t" x="20" y="436">U=20 V时，I=20/10=2 A</text>
 </svg>

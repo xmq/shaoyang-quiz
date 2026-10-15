@@ -1,1 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430"><defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:2}.sig{stroke:#2563eb;stroke-width:4;fill:none}.alt{stroke:#0f766e;stroke-width:4;fill:none}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7}.box{fill:#fff;stroke:#64748b;stroke-width:2}.hot{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.tt{font:700 24px system-ui;fill:#102a43}.t{font:18px system-ui;fill:#334155}.s{font:15px system-ui;fill:#475569}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#8ea3b7}.sig{stroke:#78aefc}.alt{stroke:#46d6c6}.dash{stroke:#647b91}.box{fill:#17283b;stroke:#647b91}.hot{fill:#173f3c;stroke:#46d6c6}.tt{fill:#edf4fb}.t{fill:#d2dce6}.s{fill:#b8c5d1}}</style></defs><rect class="bg" x="12" y="12" width="876" height="406" rx="24"/><text class="tt" x="45" y="55">卷积的核心是滑动后的重叠面积</text><path class="axis" d="M55 275H845"/><path class="sig" d="M90 275V135H310V275"/><path class="alt" d="M245 275V175H500V275"/><rect x="245" y="175" width="65" height="100" fill="#14b8a6" opacity=".28"/><text class="t" x="200" y="115" text-anchor="middle">x(τ)</text><text class="t" x="430" y="155" text-anchor="middle">h(t−τ)</text><text class="t" x="650" y="145">重叠区：相乘后积分</text><text class="s" x="650" y="185">左边沿进入 → 重叠增大</text><text class="s" x="650" y="220">完全覆盖 → 达到峰值</text><text class="s" x="650" y="255">右边沿离开 → 重叠减小</text><text class="s" x="450" y="345" text-anchor="middle">矩形与矩形卷积常得到三角形或梯形</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 642" role="img" aria-labelledby="title desc"><title id="title">卷积：每次量一遍重叠长度</title><desc id="desc">卷积：每次量一遍重叠长度</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="642" rx="12"/>
+<text class="h" x="20" y="33">卷积：每次量一遍重叠长度</text>
+<text class="t" x="20" y="67">x(τ)和h(τ)均在[0,1]内为1</text>
+<text class="b" x="20" y="105">t=0.5：h(t−τ)位于[-0.5,0.5]</text>
+<path class="wire" d="M35 180L370 180" marker-end="url(#arrow)"/>
+<text class="t" x="365" y="210">τ</text>
+<rect class="shade" x="135" y="135" width="45.0" height="45" rx="0"/>
+<path class="blue" d="M135 180V135H225V180"/>
+<path class="orange" d="M90.0 180V125H180.0V180"/>
+<text class="t" x="45" y="210" text-anchor="middle">-1</text>
+<text class="t" x="135" y="210" text-anchor="middle">0</text>
+<text class="t" x="225" y="210" text-anchor="middle">1</text>
+<text class="t" x="315" y="210" text-anchor="middle">2</text>
+<text class="g" x="20" y="243">重叠长度=0.5，所以y(0.5)=0.5</text>
+<text class="b" x="20" y="265">t=1：h(t−τ)位于[0,1]</text>
+<path class="wire" d="M35 340L370 340" marker-end="url(#arrow)"/>
+<text class="t" x="365" y="370">τ</text>
+<rect class="shade" x="135" y="295" width="90" height="45" rx="0"/>
+<path class="blue" d="M135 340V295H225V340"/>
+<path class="orange" d="M135 340V285H225V340"/>
+<text class="t" x="45" y="370" text-anchor="middle">-1</text>
+<text class="t" x="135" y="370" text-anchor="middle">0</text>
+<text class="t" x="225" y="370" text-anchor="middle">1</text>
+<text class="t" x="315" y="370" text-anchor="middle">2</text>
+<text class="g" x="20" y="403">重叠长度=1，所以y(1)=1</text>
+<text class="b" x="20" y="425">t=1.5：h(t−τ)位于[0.5,1.5]</text>
+<path class="wire" d="M35 500L370 500" marker-end="url(#arrow)"/>
+<text class="t" x="365" y="530">τ</text>
+<rect class="shade" x="180.0" y="455" width="45.0" height="45" rx="0"/>
+<path class="blue" d="M135 500V455H225V500"/>
+<path class="orange" d="M180.0 500V445H270.0V500"/>
+<text class="t" x="45" y="530" text-anchor="middle">-1</text>
+<text class="t" x="135" y="530" text-anchor="middle">0</text>
+<text class="t" x="225" y="530" text-anchor="middle">1</text>
+<text class="t" x="315" y="530" text-anchor="middle">2</text>
+<text class="g" x="20" y="563">重叠长度=0.5，所以y(1.5)=0.5</text>
+<text class="t" x="20" y="597">蓝框固定，橙框滑动；绿色重叠区内1×1，面</text>
+<text class="t" x="20" y="622">积就是卷积值。</text>
+</svg>

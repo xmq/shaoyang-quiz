@@ -1,21 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
-  <title id="title">四变量卡诺图相邻关系</title><desc id="desc">行列按格雷码顺序排列，左右边界和上下边界相邻，四角相邻，对角不相邻。</desc>
-  <style>.cell{fill:#fff;stroke:#344054;stroke-width:2}.group{fill:#dbeafe;stroke:#1565c0;stroke-width:4;opacity:.8}.wrap{fill:#fee2e2;stroke:#c62828;stroke-width:4;opacity:.7}.t{font:18px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style>
-  <rect x="18" y="18" width="864" height="484" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <text x="450" y="48" text-anchor="middle" class="t" font-weight="700">四变量卡诺图：行列均按 00、01、11、10 排列</text>
-  <text x="345" y="82" class="t">CD →</text><text x="75" y="265" class="t" transform="rotate(-90 75 265)">AB →</text>
-  <g transform="translate(150 105)">
-    <text x="45" y="-12" text-anchor="middle" class="t">00</text><text x="135" y="-12" text-anchor="middle" class="t">01</text><text x="225" y="-12" text-anchor="middle" class="t">11</text><text x="315" y="-12" text-anchor="middle" class="t">10</text>
-    <text x="-25" y="52" text-anchor="middle" class="t">00</text><text x="-25" y="142" text-anchor="middle" class="t">01</text><text x="-25" y="232" text-anchor="middle" class="t">11</text><text x="-25" y="322" text-anchor="middle" class="t">10</text>
-    <g>
-      <rect class="cell" x="0" y="0" width="90" height="90"/><rect class="cell" x="90" y="0" width="90" height="90"/><rect class="cell" x="180" y="0" width="90" height="90"/><rect class="cell" x="270" y="0" width="90" height="90"/>
-      <rect class="cell" x="0" y="90" width="90" height="90"/><rect class="cell" x="90" y="90" width="90" height="90"/><rect class="cell" x="180" y="90" width="90" height="90"/><rect class="cell" x="270" y="90" width="90" height="90"/>
-      <rect class="cell" x="0" y="180" width="90" height="90"/><rect class="cell" x="90" y="180" width="90" height="90"/><rect class="cell" x="180" y="180" width="90" height="90"/><rect class="cell" x="270" y="180" width="90" height="90"/>
-      <rect class="cell" x="0" y="270" width="90" height="90"/><rect class="cell" x="90" y="270" width="90" height="90"/><rect class="cell" x="180" y="270" width="90" height="90"/><rect class="cell" x="270" y="270" width="90" height="90"/>
-    </g>
-    <rect class="group" x="95" y="5" width="170" height="170" rx="30"/><text x="135" y="52" text-anchor="middle" class="t">1</text><text x="225" y="52" text-anchor="middle" class="t">1</text><text x="135" y="142" text-anchor="middle" class="t">1</text><text x="225" y="142" text-anchor="middle" class="t">1</text>
-    <rect class="wrap" x="5" y="185" width="80" height="80" rx="20"/><rect class="wrap" x="275" y="185" width="80" height="80" rx="20"/><text x="45" y="232" text-anchor="middle" class="t">1</text><text x="315" y="232" text-anchor="middle" class="t">1</text>
-  </g>
-  <text x="555" y="135" class="s">蓝圈：4格成组</text><text x="555" y="180" class="s">红圈：左右边界相邻</text><text x="555" y="225" class="s">分组数量只能是1、2、4、8…</text><text x="555" y="270" class="s">尽量圈大，可以重叠</text><text x="555" y="315" class="s">上下边界也相邻</text><text x="555" y="360" class="s">四个角彼此相邻</text><text x="555" y="405" class="s">对角线不相邻</text>
-  <text x="450" y="485" text-anchor="middle" class="s">每个圈写出“圈内保持不变”的变量，发生变化的变量被消去</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" role="img" aria-labelledby="title desc"><title id="title">卡诺图：圈内谁没有变？</title><desc id="desc">卡诺图：圈内谁没有变？</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="470" rx="12"/>
+<text class="h" x="20" y="33">卡诺图：圈内谁没有变？</text>
+<text class="t" x="20" y="67">F(A,B,C)=Σm(1,3,5,7)</text>
+<text class="t" x="33" y="114">A</text>
+<text class="t" x="235" y="103" text-anchor="middle">BC（格雷顺序）</text>
+<text class="t" x="125" y="136" text-anchor="middle">00</text>
+<text class="t" x="192" y="136" text-anchor="middle">01</text>
+<text class="t" x="259" y="136" text-anchor="middle">11</text>
+<text class="t" x="326" y="136" text-anchor="middle">10</text>
+<text class="t" x="40" y="195" text-anchor="middle">0</text>
+<rect class="panel" x="92" y="155" width="67" height="70" rx="0"/>
+<text class="t" x="125" y="197" text-anchor="middle">0</text>
+<rect class="panel" x="159" y="155" width="67" height="70" rx="0"/>
+<text class="t" x="192" y="197" text-anchor="middle">1</text>
+<rect class="panel" x="226" y="155" width="67" height="70" rx="0"/>
+<text class="t" x="259" y="197" text-anchor="middle">1</text>
+<rect class="panel" x="293" y="155" width="67" height="70" rx="0"/>
+<text class="t" x="326" y="197" text-anchor="middle">0</text>
+<text class="t" x="40" y="265" text-anchor="middle">1</text>
+<rect class="panel" x="92" y="225" width="67" height="70" rx="0"/>
+<text class="t" x="125" y="267" text-anchor="middle">0</text>
+<rect class="panel" x="159" y="225" width="67" height="70" rx="0"/>
+<text class="t" x="192" y="267" text-anchor="middle">1</text>
+<rect class="panel" x="226" y="225" width="67" height="70" rx="0"/>
+<text class="t" x="259" y="267" text-anchor="middle">1</text>
+<rect class="panel" x="293" y="225" width="67" height="70" rx="0"/>
+<text class="t" x="326" y="267" text-anchor="middle">0</text>
+<rect x="159" y="155" width="134" height="140" rx="8" fill="none" stroke="var(--green)" stroke-width="4"/>
+<text class="g" x="20" y="337">绿框四格：C始终为1</text>
+<text class="t" x="20" y="369">A、B都变化，被消去 → F=C</text>
+<text class="t" x="20" y="407">相邻格仅一位不同；可以跨左右/上下边界，</text>
+<text class="t" x="20" y="432">但对角线不相邻。</text>
 </svg>

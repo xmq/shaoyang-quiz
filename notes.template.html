@@ -375,7 +375,7 @@
     .table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
     .table-hint { margin: -8px 0 12px !important; color: var(--muted); font-size: 13px; }
     .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); text-align: center; }
-    .note-figure img { display: block; width: 100%; height: auto; max-width: 920px; max-height: 560px; margin: 0 auto; object-fit: contain; }
+    .note-figure img { display: block; width: 100%; height: auto; max-width: min(100%, var(--figure-width, 920px)); margin: 0 auto; object-fit: contain; }
     .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--panel); font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
@@ -443,6 +443,7 @@
     .answer-details { margin: 14px 0 20px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
     .answer-details summary { min-height: 46px; display: flex; align-items: center; padding: 9px 13px; color: var(--primary); font-weight: 750; cursor: pointer; }
     .answer-details > :not(summary) { margin-right: 13px; margin-left: 13px; }
+    .answer-details > .note-figure { margin-right: 0; margin-left: 0; }
     .answer-details[open] { padding-bottom: 5px; }
 
     /* 重点与易错默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
@@ -453,7 +454,7 @@
     .color-notes-page .chapter-chevron { display: none; }
     .color-notes-page .chapter-section.collapsed .chapter-body { display: block; }
     .color-notes-page .note-figure { margin: 10px 0 14px; padding: 8px; }
-    .color-notes-page .note-figure img { max-height: 220px; }
+    .color-notes-page .note-figure img { max-height: none; }
     .color-notes-page .note-figure figcaption { display: none; }
 
     @media (max-width: 900px) {
@@ -515,7 +516,8 @@
       .note p { line-height: 1.85; }
       .table-wrap { margin-right: -3px; }
       .note-figure { padding: 8px; }
-      .lecture-page .note-figure img { width: 100%; max-width: 100%; max-height: 48vh; margin: 0 auto; }
+      .color-notes-page .note-figure { padding: 0; border: 0; background: transparent; }
+      .lecture-page .note-figure img { width: 100%; max-width: min(100%, var(--figure-width, 920px)); margin: 0 auto; }
 
       body { padding-bottom: env(safe-area-inset-bottom); }
       .site-header { position: sticky; }
@@ -1220,7 +1222,7 @@
           const normalizedSource = rawSource.replace(/^\.\.\/media\//, "media/");
           if (/^media\/[a-zA-Z0-9_./-]+\.svg$/i.test(normalizedSource)) {
             const size = imageSizes[normalizedSource];
-            const dimensions = size ? ` width="${size[0]}" height="${size[1]}"` : "";
+            const dimensions = size ? ` width="${size[0]}" height="${size[1]}" style="--figure-width:${size[0]}px"` : "";
             output.push(`<figure class="note-figure"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="lazy" decoding="async">${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
           }
           index += 1;

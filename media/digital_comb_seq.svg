@@ -1,7 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 430" role="img" aria-labelledby="title desc">
-  <title id="title">组合逻辑与时序逻辑对比</title><desc id="desc">组合逻辑输出只由当前输入决定，时序逻辑还含存储单元并由当前状态反馈。</desc>
-  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.box{fill:#fff;stroke:#344054;stroke-width:3}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.fb{stroke:#c62828;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:19px system-ui,sans-serif;fill:#101828}.s{font:15px system-ui,sans-serif;fill:#475467}</style></defs>
-  <rect x="18" y="18" width="434" height="394" rx="18" fill="#f8fafc" stroke="#d0d5dd"/><rect x="488" y="18" width="434" height="394" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <text x="235" y="55" text-anchor="middle" class="t" font-weight="700">组合逻辑：没有记忆</text><rect class="box" x="150" y="135" width="180" height="110" rx="12"/><text x="240" y="185" text-anchor="middle" class="t">逻辑门网络</text><text x="240" y="215" text-anchor="middle" class="s">Y=f(X)</text><path class="w" d="M55 190H150"/><path class="w" d="M330 190H415"/><text x="55" y="170" class="t">当前输入X</text><text x="350" y="170" class="t">输出Y</text><text x="235" y="320" text-anchor="middle" class="s">例：加法器、编码器、译码器、MUX</text>
-  <text x="705" y="55" text-anchor="middle" class="t" font-weight="700">时序逻辑：具有状态</text><rect class="box" x="620" y="115" width="180" height="90" rx="12"/><text x="710" y="168" text-anchor="middle" class="t">组合逻辑</text><rect class="box" x="650" y="275" width="120" height="70" rx="12"/><text x="710" y="317" text-anchor="middle" class="t">存储单元</text><path class="w" d="M520 160H620"/><path class="w" d="M800 160H890"/><path class="fb" d="M750 205V275"/><path class="fb" d="M670 275V230H620"/><text x="520" y="140" class="t">输入X</text><text x="825" y="140" class="t">输出Y</text><text x="785" y="250" class="s">次态</text><text x="590" y="250" class="s">现态反馈</text><text x="705" y="390" text-anchor="middle" class="s">Y=f(X,Q)，Q⁺=g(X,Q)；例：计数器、寄存器</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-labelledby="title desc"><title id="title">组合与时序：是否记住过去</title><desc id="desc">组合与时序：是否记住过去</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="500" rx="12"/>
+<text class="h" x="20" y="33">组合与时序：是否记住过去</text>
+<rect class="panel" x="20" y="80" width="360" height="175" rx="10"/>
+<text class="b" x="36" y="112">组合：只看现在</text>
+<text class="t" x="36" y="152">输入 A=1，B=0</text>
+<text class="t" x="36" y="187">或门输出=1</text>
+<text class="t" x="36" y="222">输入都恢复0，输出也变0</text>
+<rect class="panel" x="20" y="290" width="360" height="175" rx="10"/>
+<text class="b" x="36" y="322">时序：还有状态Q</text>
+<text class="t" x="36" y="362">报警脉冲来了 → Q置1</text>
+<text class="t" x="36" y="397">传感器恢复0 → Q仍为1</text>
+<text class="t" x="36" y="432">按复位 → Q清0</text>
 </svg>

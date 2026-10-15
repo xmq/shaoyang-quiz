@@ -34602,12 +34602,13 @@
   "knowledge_point": "三极管放大",
   "ability": "概念识记",
   "difficulty": "基础",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0,
-  "answer_revision": "audit-3c8cd069af84"
+  "topic_id": "analog-electronics.t04",
+  "topic_title": "静态工作点、共射增益与削顶",
+  "chapter_id": "analog-electronics.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3,
+  "answer_revision": "audit-3c8cd069af84",
+  "topic_source": "manual"
  },
  {
   "id": "uf-ae-010",
@@ -37457,11 +37458,12 @@
   "knowledge_point": "TCP与UDP",
   "ability": "机制解释",
   "difficulty": "应用",
-  "topic_id": "net.arq-window",
-  "topic_title": "停等与滑动窗口",
-  "chapter_id": "net-03",
+  "topic_id": "net.tcp-connection",
+  "topic_title": "TCP序号、确认与连接建立",
+  "chapter_id": "net-05",
   "required_depth": "综合应用",
-  "topic_order": 10
+  "topic_order": 18,
+  "topic_source": "manual"
  },
  {
   "id": "uf-nw-007",
@@ -51434,6 +51436,33 @@
   ]
  },
  {
+  "id": "gap-audit26-visual-pn",
+  "source": "课程缺口补充",
+  "type": "单选",
+  "chapter": "PN结与器件模型",
+  "stem": "普通PN结在未击穿的条件下受到反向偏置，其耗尽层和势垒怎样变化？",
+  "options": {
+   "A": "耗尽层变窄，势垒降低",
+   "B": "耗尽层变宽，势垒升高",
+   "C": "耗尽层消失，电流无限增大",
+   "D": "只改变电流方向，内部状态不变"
+  },
+  "answer": "B",
+  "explanation": "反向偏置使多数载流子远离结区，耗尽层变宽、势垒升高，多数载流子扩散受抑。未击穿时仍可能有很小的少数载流子反向电流，不能说反向偏置时电流严格为零。",
+  "subject": "模拟电子技术",
+  "source_chapter": "PN结与器件模型",
+  "adaptation_note": "配图学生复测发现NPN工作点题误归第一章，移回后补充真正PN结基础识别任务；原创非招聘原题。",
+  "knowledge_point": "二极管电路",
+  "ability": "机制解释",
+  "difficulty": "基础",
+  "topic_id": "analog-electronics.t01",
+  "topic_source": "manual",
+  "topic_title": "PN结与器件模型",
+  "chapter_id": "analog-electronics.c01",
+  "required_depth": "直接应用",
+  "topic_order": 0
+ },
+ {
   "id": "ap-os-001",
   "source": "高校试题提炼",
   "type": "单选",
@@ -64691,12 +64720,13 @@
   "knowledge_point": "三极管放大",
   "ability": "概念识记",
   "difficulty": "应用",
+  "topic_id": "analog-electronics.t04",
+  "topic_source": "manual",
   "answer_revision": "audit-a9690d6e6c56",
-  "topic_id": "analog-electronics.t01",
-  "topic_title": "PN结与器件模型",
-  "chapter_id": "analog-electronics.c01",
-  "required_depth": "直接应用",
-  "topic_order": 0
+  "topic_title": "静态工作点、共射增益与削顶",
+  "chapter_id": "analog-electronics.c03",
+  "required_depth": "综合应用",
+  "topic_order": 3
  },
  {
   "id": "ue-analog-013",

@@ -2385,5 +2385,10 @@
   {
     "id": "gap-db-013",
     "stem": "采用传统立即更新UNDO/REDO恢复模型，故障后内存丢失，磁盘可能包含未提交修改，也可能缺少已提交修改。稳定日志为<T1 start>、<T1,A,10,20>、<T1 commit>、<T2 start>、<T2,B,5,8>，更新记录依次写旧值、新值。说明两事务的恢复处理及目标值。"
+  },
+  {
+    "id": "uf-nw-006",
+    "topic_id": "net.tcp-connection",
+    "topic_source": "manual"
   }
 ]

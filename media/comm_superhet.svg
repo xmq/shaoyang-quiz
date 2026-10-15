@@ -1,11 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 420" role="img" aria-labelledby="title desc">
-  <title id="title">超外差接收机方框图</title><desc id="desc">天线信号经高频选频放大，与本地振荡信号在混频器中产生固定中频，再经中频放大、解调和低频放大输出。</desc>
-  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1565c0"/></marker><style>.b{fill:#fff;stroke:#344054;stroke-width:3}.mix{fill:#eff8ff;stroke:#1565c0;stroke-width:4}.w{stroke:#1565c0;stroke-width:4;fill:none;marker-end:url(#a)}.lo{stroke:#c62828;stroke-width:4;fill:none;marker-end:url(#a)}.t{font:17px system-ui,sans-serif;fill:#101828}.s{font:14px system-ui,sans-serif;fill:#475467}</style></defs>
-  <rect x="18" y="18" width="1004" height="384" rx="18" fill="#f8fafc" stroke="#d0d5dd"/>
-  <rect class="b" x="55" y="120" width="135" height="90" rx="12"/><rect class="mix" x="245" y="120" width="120" height="90" rx="12"/><rect class="b" x="420" y="120" width="135" height="90" rx="12"/><rect class="b" x="610" y="120" width="120" height="90" rx="12"/><rect class="b" x="785" y="120" width="150" height="90" rx="12"/>
-  <text x="122" y="158" text-anchor="middle" class="t">高频选频</text><text x="122" y="185" text-anchor="middle" class="t">与放大</text><text x="305" y="175" text-anchor="middle" class="t">混频器</text><text x="487" y="158" text-anchor="middle" class="t">中频选频</text><text x="487" y="185" text-anchor="middle" class="t">与放大</text><text x="670" y="175" text-anchor="middle" class="t">解调</text><text x="860" y="158" text-anchor="middle" class="t">低频放大</text><text x="860" y="185" text-anchor="middle" class="t">与输出</text>
-  <path class="w" d="M25 165H55M190 165H245M365 165H420M555 165H610M730 165H785M935 165H1010"/>
-  <rect class="b" x="245" y="285" width="120" height="65" rx="12"/><text x="305" y="325" text-anchor="middle" class="t">本地振荡器</text><path class="lo" d="M305 285V210"/>
-  <text x="520" y="60" text-anchor="middle" class="t" font-weight="700">不同射频统一变为固定中频，便于获得稳定的增益与选择性</text>
-  <text x="305" y="245" text-anchor="middle" class="s">fIF = |fLO − fRF|</text><text x="520" y="385" text-anchor="middle" class="s">混频改变中心频率而保留调制信息；解调才是恢复基带消息</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 589" role="img" aria-labelledby="title desc"><title id="title">超外差：先换频，再解调</title><desc id="desc">超外差：先换频，再解调</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="589" rx="12"/>
+<text class="h" x="20" y="33">超外差：先换频，再解调</text>
+<rect class="panel" x="20" y="80" width="360" height="87" rx="10"/>
+<text class="b" x="36" y="110">射频选频放大</text>
+<text class="t" x="36" y="145">目标1000 kHz</text>
+<path class="wire" d="M200 168L200 188" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="192" width="360" height="87" rx="10"/>
+<text class="b" x="36" y="222">混频</text>
+<text class="t" x="36" y="257">本振1465 kHz从右输入</text>
+<path class="wire" d="M200 280L200 300" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="304" width="360" height="87" rx="10"/>
+<text class="b" x="36" y="334">中频选频放大</text>
+<text class="t" x="36" y="369">取差频465 kHz</text>
+<path class="wire" d="M200 392L200 412" marker-end="url(#arrow)"/>
+<rect class="panel" x="20" y="416" width="360" height="87" rx="10"/>
+<text class="b" x="36" y="446">解调</text>
+<text class="t" x="36" y="481">从调制信号中恢复消息</text>
+<text class="t" x="20" y="544">|1465−1000|=465 kHz。换到固定中频便于</text>
+<text class="t" x="20" y="569">选频放大；恢复消息是解调的任务。</text>
 </svg>

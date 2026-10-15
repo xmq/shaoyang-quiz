@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 570" role="img" aria-labelledby="title desc"><title id="title">时间压缩：先改宽度再平移</title><desc id="desc">时间压缩：先改宽度再平移</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="570" rx="12"/>
+<text class="h" x="20" y="33">时间压缩：先改宽度再平移</text>
+<text class="b" x="20" y="87">① 原信号在[0,3]非零</text>
+<path class="wire" d="M35 155L375 155" marker-end="url(#arrow)"/>
+<path class="blue" d="M45 155V115H273V155"/>
+<text class="t" x="45" y="184" text-anchor="middle">0</text>
+<text class="t" x="121" y="184" text-anchor="middle">1</text>
+<text class="t" x="197" y="184" text-anchor="middle">2</text>
+<text class="t" x="273" y="184" text-anchor="middle">3</text>
+<text class="t" x="349" y="184" text-anchor="middle">4</text>
+<text class="b" x="20" y="232">② x(2t)：宽度压成一半</text>
+<path class="wire" d="M35 300L375 300" marker-end="url(#arrow)"/>
+<path class="blue" d="M45 300V260H159.0V300"/>
+<text class="t" x="45" y="329" text-anchor="middle">0</text>
+<text class="t" x="121" y="329" text-anchor="middle">1</text>
+<text class="t" x="197" y="329" text-anchor="middle">2</text>
+<text class="t" x="273" y="329" text-anchor="middle">3</text>
+<text class="t" x="349" y="329" text-anchor="middle">4</text>
+<text class="b" x="20" y="377">③ x(2t−4)=x(2(t−2))</text>
+<path class="wire" d="M35 445L375 445" marker-end="url(#arrow)"/>
+<path class="blue" d="M197 445V405H311.0V445"/>
+<text class="t" x="45" y="474" text-anchor="middle">0</text>
+<text class="t" x="121" y="474" text-anchor="middle">1</text>
+<text class="t" x="197" y="474" text-anchor="middle">2</text>
+<text class="t" x="273" y="474" text-anchor="middle">3</text>
+<text class="t" x="349" y="474" text-anchor="middle">4</text>
+<text class="t" x="20" y="512">第二步再向右移2，区间变[2,3.5]。也可直</text>
+<text class="t" x="20" y="537">接解0≤2t−4≤3核对，不把“−4”直接当右移4。</text>
+</svg>

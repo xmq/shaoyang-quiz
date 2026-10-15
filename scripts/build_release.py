@@ -59,7 +59,7 @@ def render(asset_root=ROOT, question_file=None):
         digest.update(b"\0")
     questions = json.loads(question_file.read_text(encoding="utf-8"))
     build_id = digest.hexdigest()[:16]
-    payload = {"id": build_id, "questionCount": len(questions)}
+    payload = {"id": build_id, "questionCount": len(questions), "mediaAssets": ["./" + name for name in hashed_assets(asset_root) if name.startswith("media/")]}
     return "globalThis.SHAOYANG_BUILD=Object.freeze(" + json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + ");\n"
 
 

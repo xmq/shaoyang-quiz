@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-labelledby="title desc"><title id="title">镜像干扰：另一个信号也进来</title><desc id="desc">镜像干扰：另一个信号也进来</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="420" rx="12"/>
+<text class="h" x="20" y="33">镜像干扰：另一个信号也进来</text>
+<text class="t" x="20" y="69">本振固定在1465 kHz</text>
+<path class="wire" d="M35 200L370 200" marker-end="url(#arrow)"/>
+<path class="wire" d="M65 190L65 210"/>
+<text class="t" x="65" y="244" text-anchor="middle">1000</text>
+<path class="wire" d="M200 190L200 210"/>
+<text class="t" x="200" y="244" text-anchor="middle">1465</text>
+<path class="wire" d="M335 190L335 210"/>
+<text class="t" x="335" y="244" text-anchor="middle">1930</text>
+<text class="t" x="63" y="280" text-anchor="middle">目标</text>
+<text class="t" x="200" y="280" text-anchor="middle">本振</text>
+<text class="t" x="335" y="280" text-anchor="middle">镜像</text>
+<text class="b" x="95" y="155">差465</text>
+<text class="b" x="245" y="155">差465</text>
+<text class="t" x="20" y="330">两者混频后都产生465 kHz。须在混频前用</text>
+<text class="t" x="20" y="355">射频选频抑制1930 kHz镜像，不能只靠中频</text>
+<text class="t" x="20" y="380">滤波区分。</text>
+</svg>

@@ -52,8 +52,13 @@ def validate():
         if len(re.sub(r"\s+|[#*`]", "", preface)) > 30:
             errors.append(f"{item['name']}：重点页前言过长，应直接进入复习卡")
         if item["name"] == "计算机网络":
-            if text.count("![") < 6:
-                errors.append("计算机网络：图解复习卡不足6张")
+            for image, task in (
+                ("network_subnet_review.svg", "子网边界"),
+                ("network_handshake_review.svg", "TCP序号与握手"),
+                ("network_congestion_review.svg", "拥塞窗口变化"),
+            ):
+                if f"../media/{image}" not in text:
+                    errors.append(f"计算机网络：缺少{task}复习图")
         titles = sections[1::2]
         if not titles or len(set(titles)) != len(titles):
             errors.append(f"{item['name']}：章节为空或重复")

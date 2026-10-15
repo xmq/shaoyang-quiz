@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430"><defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:2}.sig{stroke:#2563eb;stroke-width:4;fill:none}.alt{stroke:#0f766e;stroke-width:4;fill:none}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7}.box{fill:#fff;stroke:#64748b;stroke-width:2}.hot{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.tt{font:700 24px system-ui;fill:#102a43}.t{font:18px system-ui;fill:#334155}.s{font:15px system-ui;fill:#475569}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#8ea3b7}.sig{stroke:#78aefc}.alt{stroke:#46d6c6}.dash{stroke:#647b91}.box{fill:#17283b;stroke:#647b91}.hot{fill:#173f3c;stroke:#46d6c6}.tt{fill:#edf4fb}.t{fill:#d2dce6}.s{fill:#b8c5d1}}</style></defs><rect class="bg" x="12" y="12" width="876" height="406" rx="24"/><text class="tt" x="45" y="55">眼图把许多码元周期叠加观察</text><path class="axis" d="M65 300H835M450 90V330"/><path class="sig" d="M90 135C210 135 300 280 450 280S690 135 810 135M90 280C210 280 300 135 450 135S690 280 810 280M90 135C260 135 300 135 450 280S650 280 810 280M90 280C260 280 300 280 450 135S650 135 810 135"/><path class="dash" d="M450 105V310M360 207H540"/><text class="t" x="570" y="110">眼高：幅度余量</text><text class="t" x="570" y="330">眼宽：定时余量</text><text class="s" x="180" y="355">最佳采样点在眼睛中央附近</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 463" role="img" aria-labelledby="title desc"><title id="title">眼图：看幅度和时间余量</title><desc id="desc">眼图：看幅度和时间余量</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="463" rx="12"/>
+<text class="h" x="20" y="33">眼图：看幅度和时间余量</text>
+<path class="wire dash" d="M45 220L355 220"/>
+<path class="wire dash" d="M200 120L200 325"/>
+<path class="blue" d="M45 220 C100 95 300 95 355 220"/>
+<path class="blue" d="M45 220 C100 345 300 345 355 220"/>
+<text class="t" x="201" y="349" text-anchor="middle">采样时刻</text>
+<path class="green" d="M200 130L200 310" marker-end="url(#arrow)"/>
+<text class="g" x="217" y="217">眼高</text>
+<path class="orange" d="M70 220L330 220" marker-end="url(#arrow)"/>
+<text class="t" x="200" y="200" text-anchor="middle">眼宽</text>
+<text class="t" x="20" y="393">把许多码元周期的波形叠加。垂直开口反映</text>
+<text class="t" x="20" y="418">幅度判决余量，水平开口反映定时余量；不</text>
+<text class="t" x="20" y="443">是一段单独波形。</text>
+</svg>

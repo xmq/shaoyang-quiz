@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 505" role="img" aria-labelledby="title desc"><title id="title">负载线：Q点在哪里？</title><desc id="desc">负载线：Q点在哪里？</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="505" rx="12"/>
+<text class="h" x="20" y="33">负载线：Q点在哪里？</text>
+<text class="t" x="20" y="66">VCC=12 V，RC=2 kΩ，发射极接地</text>
+<path class="wire" d="M60 340L370 340" marker-end="url(#arrow)"/>
+<path class="wire" d="M60 340L60 90" marker-end="url(#arrow)"/>
+<text class="t" x="85" y="95">IC/mA</text>
+<text class="t" x="270" y="395">UCE/V</text>
+<path class="blue" d="M60 100L350 340"/>
+<text class="t" x="30" y="105">6</text>
+<text class="t" x="350" y="366" text-anchor="middle">12</text>
+<circle class="dot" cx="253.33333333333334" cy="260.0" r="6"/>
+<path class="wire dash" d="M60 260.0L253.33333333333334 260.0"/>
+<path class="wire dash" d="M253.33333333333334 260.0L253.33333333333334 340"/>
+<text class="t" x="32" y="266.0">2</text>
+<text class="t" x="253.33333333333334" y="366" text-anchor="middle">8</text>
+<text class="t" x="265.33333333333337" y="250.0">Q</text>
+<text class="t" x="88" y="128">IC增大时，UCE减小</text>
+<text class="t" x="20" y="435">IB=20 μA且β=100：IC≈2 mA，UCE=12−2×</text>
+<text class="t" x="20" y="460">2=8 V。Q点应在放大区，不能把公式外推到</text>
+<text class="t" x="20" y="485">饱和。</text>
+</svg>

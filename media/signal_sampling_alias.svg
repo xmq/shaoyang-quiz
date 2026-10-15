@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430"><defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:2}.sig{stroke:#2563eb;stroke-width:4;fill:none}.alt{stroke:#0f766e;stroke-width:4;fill:none}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7}.box{fill:#fff;stroke:#64748b;stroke-width:2}.hot{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.tt{font:700 24px system-ui;fill:#102a43}.t{font:18px system-ui;fill:#334155}.s{font:15px system-ui;fill:#475569}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#8ea3b7}.sig{stroke:#78aefc}.alt{stroke:#46d6c6}.dash{stroke:#647b91}.box{fill:#17283b;stroke:#647b91}.hot{fill:#173f3c;stroke:#46d6c6}.tt{fill:#edf4fb}.t{fill:#d2dce6}.s{fill:#b8c5d1}}</style></defs><rect class="bg" x="12" y="12" width="876" height="406" rx="24"/><text class="tt" x="45" y="55">采样让原频谱按采样频率周期复制</text><path class="axis" d="M55 285H845M220 100V315M650 100V315"/><path class="sig" d="M120 285L175 210L220 145L265 210L320 285"/><path class="alt" d="M475 285L545 200L600 150L650 215L700 150L755 200L825 285"/><text class="t" x="220" y="340" text-anchor="middle">fs 足够：频谱副本分离</text><text class="t" x="650" y="340" text-anchor="middle">fs 过低：副本重叠混叠</text><path class="dash" d="M585 115V295M715 115V295"/><text class="s" x="450" y="390" text-anchor="middle">抗混叠滤波应发生在采样之前</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 543" role="img" aria-labelledby="title desc"><title id="title">混叠：频谱副本挤在一起</title><desc id="desc">混叠：频谱副本挤在一起</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="543" rx="12"/>
+<text class="h" x="20" y="33">混叠：频谱副本挤在一起</text>
+<text class="t" x="20" y="67">原信号仅在−4到4 kHz内有频谱</text>
+<text class="b" x="20" y="110">fs=10 kHz：副本分开</text>
+<path class="wire" d="M25 205L377 205" marker-end="url(#arrow)"/>
+<path class="orange" d="M46 205L90 147L134 205"/>
+<text class="t" x="90" y="234" text-anchor="middle">-10</text>
+<path class="blue" d="M156 205L200 147L244 205"/>
+<text class="t" x="200" y="234" text-anchor="middle">0</text>
+<path class="orange" d="M266 205L310 147L354 205"/>
+<text class="t" x="310" y="234" text-anchor="middle">10</text>
+<text class="t" x="290" y="263">f / kHz</text>
+<text class="b" x="20" y="310">fs=6 kHz：副本重叠</text>
+<path class="wire" d="M25 405L377 405" marker-end="url(#arrow)"/>
+<path class="orange" d="M90 405L134 347L178 405"/>
+<text class="t" x="134" y="434" text-anchor="middle">-6</text>
+<path class="blue" d="M156 405L200 347L244 405"/>
+<text class="t" x="200" y="434" text-anchor="middle">0</text>
+<path class="orange" d="M222 405L266 347L310 405"/>
+<text class="t" x="266" y="434" text-anchor="middle">6</text>
+<rect class="shade" x="156" y="355" width="22" height="50" rx="0"/>
+<rect class="shade" x="222" y="355" width="22" height="50" rx="0"/>
+<text class="t" x="290" y="463">f / kHz</text>
+<text class="t" x="20" y="498">这里fm=4 kHz，临界采样率8 kHz。10高于</text>
+<text class="t" x="20" y="523">临界，6低于临界；绿色为副本重叠频段。</text>
+</svg>

@@ -1,1 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430"><defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:2}.sig{stroke:#2563eb;stroke-width:4;fill:none}.alt{stroke:#0f766e;stroke-width:4;fill:none}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7}.box{fill:#fff;stroke:#64748b;stroke-width:2}.hot{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.tt{font:700 24px system-ui;fill:#102a43}.t{font:18px system-ui;fill:#334155}.s{font:15px system-ui;fill:#475569}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#8ea3b7}.sig{stroke:#78aefc}.alt{stroke:#46d6c6}.dash{stroke:#647b91}.box{fill:#17283b;stroke:#647b91}.hot{fill:#173f3c;stroke:#46d6c6}.tt{fill:#edf4fb}.t{fill:#d2dce6}.s{fill:#b8c5d1}}</style></defs><rect class="bg" x="12" y="12" width="876" height="406" rx="24"/><text class="tt" x="45" y="55">反折、尺度与平移要追踪关键点</text><path class="axis" d="M45 180H855M450 85V350"/><path class="sig" d="M90 180H180V105H300V180H405"/><path class="alt" d="M495 180H615V105H735V180H830"/><text class="t" x="245" y="225" text-anchor="middle">x(t)：0 到 2 的矩形</text><text class="t" x="665" y="225" text-anchor="middle">x(−t+3)：反折后右移</text><text class="s" x="450" y="315" text-anchor="middle">关键点法：令原来的 0、2 分别等于 −t+3，再解新位置</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 590" role="img" aria-labelledby="title desc"><title id="title">反折再平移：跟踪两个端点</title><desc id="desc">反折再平移：跟踪两个端点</desc>
+<defs><style>
+        :root{--ink:#17324b;--muted:#456075;--paper:#fff;--panel:#edf5fa;--blue:#1464ba;--green:#087c67;--orange:#ad5200;--red:#b42318;--border:#cad8e5}
+        @media(prefers-color-scheme:dark){:root{--ink:#edf4fb;--muted:#b5c8d8;--paper:#132334;--panel:#1b3349;--blue:#9bcaff;--green:#7de1c4;--orange:#ffc079;--red:#ffab9b;--border:#527087}}
+        .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
+        .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
+        </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
+<rect class="paper" width="400" height="590" rx="12"/>
+<text class="h" x="20" y="33">反折再平移：跟踪两个端点</text>
+<text class="b" x="20" y="90">① x(t)：0到2</text>
+<path class="wire" d="M35 155L370 155" marker-end="url(#arrow)"/>
+<path class="blue" d="M173 155V117H265V155"/>
+<path class="wire" d="M35 155L35 160"/>
+<text class="t" x="35" y="185" text-anchor="middle">-3</text>
+<path class="wire" d="M81 155L81 160"/>
+<text class="t" x="81" y="185" text-anchor="middle">-2</text>
+<path class="wire" d="M127 155L127 160"/>
+<text class="t" x="127" y="185" text-anchor="middle">-1</text>
+<path class="wire" d="M173 155L173 160"/>
+<text class="t" x="173" y="185" text-anchor="middle">0</text>
+<path class="wire" d="M219 155L219 160"/>
+<text class="t" x="219" y="185" text-anchor="middle">1</text>
+<path class="wire" d="M265 155L265 160"/>
+<text class="t" x="265" y="185" text-anchor="middle">2</text>
+<path class="wire" d="M311 155L311 160"/>
+<text class="t" x="311" y="185" text-anchor="middle">3</text>
+<path class="wire" d="M357 155L357 160"/>
+<text class="t" x="357" y="185" text-anchor="middle">4</text>
+<text class="b" x="20" y="240">② x(−t)：−2到0</text>
+<path class="wire" d="M35 305L370 305" marker-end="url(#arrow)"/>
+<path class="blue" d="M81 305V267H173V305"/>
+<path class="wire" d="M35 305L35 310"/>
+<text class="t" x="35" y="335" text-anchor="middle">-3</text>
+<path class="wire" d="M81 305L81 310"/>
+<text class="t" x="81" y="335" text-anchor="middle">-2</text>
+<path class="wire" d="M127 305L127 310"/>
+<text class="t" x="127" y="335" text-anchor="middle">-1</text>
+<path class="wire" d="M173 305L173 310"/>
+<text class="t" x="173" y="335" text-anchor="middle">0</text>
+<path class="wire" d="M219 305L219 310"/>
+<text class="t" x="219" y="335" text-anchor="middle">1</text>
+<path class="wire" d="M265 305L265 310"/>
+<text class="t" x="265" y="335" text-anchor="middle">2</text>
+<path class="wire" d="M311 305L311 310"/>
+<text class="t" x="311" y="335" text-anchor="middle">3</text>
+<path class="wire" d="M357 305L357 310"/>
+<text class="t" x="357" y="335" text-anchor="middle">4</text>
+<text class="b" x="20" y="390">③ x(−t+3)：1到3</text>
+<path class="wire" d="M35 455L370 455" marker-end="url(#arrow)"/>
+<path class="blue" d="M219 455V417H311V455"/>
+<path class="wire" d="M35 455L35 460"/>
+<text class="t" x="35" y="485" text-anchor="middle">-3</text>
+<path class="wire" d="M81 455L81 460"/>
+<text class="t" x="81" y="485" text-anchor="middle">-2</text>
+<path class="wire" d="M127 455L127 460"/>
+<text class="t" x="127" y="485" text-anchor="middle">-1</text>
+<path class="wire" d="M173 455L173 460"/>
+<text class="t" x="173" y="485" text-anchor="middle">0</text>
+<path class="wire" d="M219 455L219 460"/>
+<text class="t" x="219" y="485" text-anchor="middle">1</text>
+<path class="wire" d="M265 455L265 460"/>
+<text class="t" x="265" y="485" text-anchor="middle">2</text>
+<path class="wire" d="M311 455L311 460"/>
+<text class="t" x="311" y="485" text-anchor="middle">3</text>
+<path class="wire" d="M357 455L357 460"/>
+<text class="t" x="357" y="485" text-anchor="middle">4</text>
+<text class="t" x="20" y="533">关键点：令−t+3=0得t=3；令−t+3=2得t=1。</text>
+<text class="t" x="20" y="558">端点顺序反过来了。</text>
+</svg>

@@ -1,0 +1,438 @@
+{
+  "figures": 36,
+  "checks": [
+    {
+      "path": "media/ee_series_parallel.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_parallel_current.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_kcl_node.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_rlc_phasor.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_self_hold_control.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_rc_response.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_rc_discharge.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_pn_bias.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_diode_iv.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_bjt_states.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_load_line.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_common_emitter.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_feedback_block.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_opamp_inverting.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_power_supply.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_kmap.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_comb_seq.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_flipflop_timing.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_counter_states.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_adc_process.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_quantization_steps.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_system.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_sampling.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_modulation.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_spectrum.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_superhet.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_mirror_frequency.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_eye_diagram.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_eye_jitter.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_time_transform.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_time_scale.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_convolution.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_convolution_result.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_frequency_filter.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_roc.svg",
+      "mode": "light",
+      "min_effective_font": 14.114285714285714,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_sampling_alias.svg",
+      "mode": "light",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_series_parallel.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_parallel_current.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_kcl_node.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_rlc_phasor.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_self_hold_control.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_rc_response.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/ee_rc_discharge.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_pn_bias.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_diode_iv.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_bjt_states.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_load_line.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_common_emitter.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_feedback_block.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_opamp_inverting.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/analog_power_supply.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_kmap.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_comb_seq.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_flipflop_timing.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_counter_states.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_adc_process.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/digital_quantization_steps.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_system.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_sampling.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_modulation.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_spectrum.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_superhet.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_mirror_frequency.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_eye_diagram.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/comm_eye_jitter.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_time_transform.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_time_scale.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_convolution.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_convolution_result.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_frequency_filter.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_roc.svg",
+      "mode": "dark",
+      "min_effective_font": 14.114285714285714,
+      "outside": 0
+    },
+    {
+      "path": "media/signal_sampling_alias.svg",
+      "mode": "dark",
+      "min_effective_font": 14.04,
+      "outside": 0
+    }
+  ],
+  "bad": []
+}
