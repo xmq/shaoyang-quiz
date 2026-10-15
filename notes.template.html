@@ -377,6 +377,23 @@
     .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); text-align: center; }
     .note-figure img { display: block; width: 100%; height: auto; max-width: min(100%, var(--figure-width, 920px)); margin: 0 auto; object-fit: contain; }
     .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .figure-open { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+    @media (min-width: 901px) {
+      .note-figure img { max-width: min(100%, calc(var(--figure-width, 560px) * 1.3)); }
+    }
+    body.image-viewer-open { overflow: hidden; }
+    .image-viewer { width: min(1200px, calc(100vw - 24px)); height: calc(100dvh - 24px); max-width: none; max-height: none; margin: auto; padding: 0; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); }
+    .image-viewer[open] { display: flex; flex-direction: column; }
+    .image-viewer::backdrop { background: rgba(9, 19, 34, .78); }
+    .image-viewer-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+    .image-viewer-title { flex: 1 1 180px; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
+    .image-viewer-controls { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+    .image-viewer-controls button { min-width: 44px; min-height: 44px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--panel); color: var(--text); }
+    .image-viewer-controls button:disabled { opacity: .4; cursor: default; }
+    .image-viewer-scale { min-width: 46px; text-align: center; font-size: 13px; font-variant-numeric: tabular-nums; }
+    .image-viewer-stage { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--bg); }
+    .image-viewer-canvas { width: max-content; min-width: 100%; padding: 16px; }
+    .image-viewer-image { display: block; max-width: none; height: auto; margin: 0 auto; }
     .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--panel); font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
     .note tr:last-child td { border-bottom: 0; }
@@ -891,6 +908,22 @@
     </section>
   </main>
 
+  <dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title">
+    <div class="image-viewer-toolbar">
+      <h2 class="image-viewer-title" id="image-viewer-title">配图</h2>
+      <div class="image-viewer-controls">
+        <button type="button" id="image-zoom-out" aria-label="缩小图片">−</button>
+        <output class="image-viewer-scale" id="image-viewer-scale" aria-live="polite"></output>
+        <button type="button" id="image-zoom-in" aria-label="放大图片">＋</button>
+        <button type="button" id="image-zoom-reset">重置</button>
+        <button type="button" id="image-viewer-close" aria-label="关闭图片" autofocus>关闭</button>
+      </div>
+    </div>
+    <div class="image-viewer-stage" id="image-viewer-stage" tabindex="0" aria-label="图片区域，可滚动查看">
+      <div class="image-viewer-canvas"><img class="image-viewer-image" id="image-viewer-image" alt=""></div>
+    </div>
+  </dialog>
+
   <script src="./study-review.js"></script>
   <script>
     const items = __COURSE_DATA__;
@@ -909,6 +942,17 @@
     const recallToggle = document.getElementById("recall-toggle");
     const study = document.getElementById("study");
     const content = document.getElementById("content");
+    const imageViewer = document.getElementById("image-viewer");
+    const viewerImage = document.getElementById("image-viewer-image");
+    const viewerStage = document.getElementById("image-viewer-stage");
+    const viewerScale = document.getElementById("image-viewer-scale");
+    const zoomOut = document.getElementById("image-zoom-out");
+    const zoomIn = document.getElementById("image-zoom-in");
+    let imageScale = 1;
+    let imageStartScale = 1;
+    let imageWidth = 400;
+    let imageReturnFocus = null;
+    let imageClosePending = false;
     const search = document.getElementById("search");
     const searchClear = document.getElementById("search-clear");
     const searchStatus = document.getElementById("search-status");
@@ -1223,7 +1267,7 @@
           if (/^media\/[a-zA-Z0-9_./-]+\.svg$/i.test(normalizedSource)) {
             const size = imageSizes[normalizedSource];
             const dimensions = size ? ` width="${size[0]}" height="${size[1]}" style="--figure-width:${size[0]}px"` : "";
-            output.push(`<figure class="note-figure"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="lazy" decoding="async">${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
+            output.push(`<figure class="note-figure"><button class="figure-open" type="button" aria-label="放大查看：${escapeHtml(caption || "配图")}" title="点击放大"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="lazy" decoding="async"></button>${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
           }
           index += 1;
           continue;
@@ -2069,7 +2113,81 @@
         } else updateStudyPosition();
       } else updateStudyPosition();
     });
-    content.addEventListener("click", (event) => revealRecallItem(event.target.closest(".red, .blue, .black")));
+    function setImageScale(value, {keepCenter = true} = {}) {
+      const stageBox = viewerStage.getBoundingClientRect();
+      const imageBox = viewerImage.getBoundingClientRect();
+      const centerLeft = stageBox.left + viewerStage.clientLeft + viewerStage.clientWidth / 2;
+      const centerTop = stageBox.top + viewerStage.clientTop + viewerStage.clientHeight / 2;
+      const centerX = imageBox.width ? (centerLeft - imageBox.left) / imageBox.width : .5;
+      const centerY = imageBox.height ? (centerTop - imageBox.top) / imageBox.height : .5;
+      imageScale = Math.max(.25, Math.min(6, value));
+      viewerImage.style.width = `${imageWidth * imageScale}px`;
+      viewerScale.textContent = `${Math.round(imageScale * 100)}%`;
+      zoomOut.disabled = imageScale <= .25;
+      zoomIn.disabled = imageScale >= 6;
+      if (keepCenter) {
+        const nextBox = viewerImage.getBoundingClientRect();
+        viewerStage.scrollBy(nextBox.left + centerX * nextBox.width - centerLeft, nextBox.top + centerY * nextBox.height - centerTop);
+      } else {
+        viewerStage.scrollTo(0, 0);
+      }
+    }
+
+    function openImageViewer(preview, {fromHistory = false} = {}) {
+      if (!imageViewer.open) imageReturnFocus = document.activeElement;
+      imageWidth = Number(preview.width) || 400;
+      viewerImage.src = preview.src;
+      viewerImage.alt = preview.alt;
+      document.getElementById("image-viewer-title").textContent = preview.alt || "配图";
+      if (!imageViewer.open) imageViewer.showModal();
+      document.body.classList.add("image-viewer-open");
+      imageClosePending = false;
+      imageStartScale = Math.max(.25, Math.min(2, (viewerStage.clientWidth - 32) / imageWidth));
+      setImageScale(imageStartScale, {keepCenter: false});
+      if (!fromHistory) history.pushState({...history.state, imagePreview: preview}, "", location.href);
+    }
+
+    function closeImageViewer() {
+      imageViewer.close();
+      document.body.classList.remove("image-viewer-open");
+      imageClosePending = false;
+      if (imageReturnFocus?.isConnected) imageReturnFocus.focus({preventScroll: true});
+      imageReturnFocus = null;
+    }
+
+    function requestImageClose() {
+      if (imageClosePending) return;
+      if (history.state?.imagePreview) {
+        imageClosePending = true;
+        history.back();
+      } else closeImageViewer();
+    }
+
+    zoomOut.addEventListener("click", () => setImageScale(imageScale / 1.25));
+    zoomIn.addEventListener("click", () => setImageScale(imageScale * 1.25));
+    document.getElementById("image-zoom-reset").addEventListener("click", () => {
+      imageStartScale = Math.max(.25, Math.min(2, (viewerStage.clientWidth - 32) / imageWidth));
+      setImageScale(imageStartScale, {keepCenter: false});
+    });
+    document.getElementById("image-viewer-close").addEventListener("click", requestImageClose);
+    imageViewer.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      requestImageClose();
+    });
+    imageViewer.addEventListener("click", (event) => {
+      if (event.target !== imageViewer) return;
+      const box = imageViewer.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) requestImageClose();
+    });
+    content.addEventListener("click", (event) => {
+      const button = event.target.closest(".figure-open");
+      if (button) {
+        const image = button.querySelector("img");
+        openImageViewer({src: image.getAttribute("src"), alt: image.alt, width: image.getAttribute("width")});
+        return;
+      }
+      revealRecallItem(event.target.closest(".red, .blue, .black"));
+    });
     content.addEventListener("keydown", (event) => {
       if (event.key !== "Enter" && event.key !== " ") return;
       const item = event.target.closest(".red, .blue, .black");
@@ -2101,6 +2219,14 @@
     });
 
     window.addEventListener("popstate", (event) => {
+      if (event.state?.imagePreview) {
+        openImageViewer(event.state.imagePreview, {fromHistory: true});
+        return;
+      }
+      if (imageViewer.open) {
+        closeImageViewer();
+        return;
+      }
       applyLocation();
     });
     window.addEventListener("pageshow", (event) => {
@@ -2111,6 +2237,7 @@
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
     prepareStudyHistory();
     applyLocation();
+    if (history.state?.imagePreview) openImageViewer(history.state.imagePreview, {fromHistory: true});
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
       window.addEventListener("load", () => {

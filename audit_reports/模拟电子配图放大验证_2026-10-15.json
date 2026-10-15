@@ -1,0 +1,86 @@
+{
+  "checks": 16,
+  "errors": [],
+  "rows": [
+    {
+      "theme": "light",
+      "src": "media/analog_pn_bias.svg",
+      "chapter": 1
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_diode_iv.svg",
+      "chapter": 2
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_bjt_states.svg",
+      "chapter": 3
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_load_line.svg",
+      "chapter": 3
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_common_emitter.svg",
+      "chapter": 3
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_feedback_block.svg",
+      "chapter": 5
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_opamp_inverting.svg",
+      "chapter": 6
+    },
+    {
+      "theme": "light",
+      "src": "media/analog_power_supply.svg",
+      "chapter": 8
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_pn_bias.svg",
+      "chapter": 1
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_diode_iv.svg",
+      "chapter": 2
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_bjt_states.svg",
+      "chapter": 3
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_load_line.svg",
+      "chapter": 3
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_common_emitter.svg",
+      "chapter": 3
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_feedback_block.svg",
+      "chapter": 5
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_opamp_inverting.svg",
+      "chapter": 6
+    },
+    {
+      "theme": "dark",
+      "src": "media/analog_power_supply.svg",
+      "chapter": 8
+    }
+  ]
+}
