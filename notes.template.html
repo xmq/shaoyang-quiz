@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#143b6b">
+  <meta name="theme-color" content="#f5f7f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10191e" media="(prefers-color-scheme: dark)">
   <title>__DOCUMENT_TITLE__</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./vendor/photoswipe/photoswipe.css">
   <style>
     :root {
       --bg: #f4f7fb;
@@ -22,6 +24,10 @@
       --blue: #2563eb;
       --black: #182230;
       --shadow: 0 10px 30px rgba(16, 24, 40, .08);
+      --image-safe-top: env(safe-area-inset-top, 0px);
+      --image-safe-bottom: env(safe-area-inset-bottom, 0px);
+      --image-safe-left: env(safe-area-inset-left, 0px);
+      --image-safe-right: env(safe-area-inset-right, 0px);
     }
 
     * { box-sizing: border-box; }
@@ -374,26 +380,18 @@
     }
     .table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
     .table-hint { margin: -8px 0 12px !important; color: var(--muted); font-size: 13px; }
-    .note-figure { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); text-align: center; }
-    .note-figure img { display: block; width: 100%; height: auto; max-width: min(100%, var(--figure-width, 920px)); margin: 0 auto; object-fit: contain; }
+    .note-figure { width: fit-content; max-width: 100%; margin: 20px auto; padding: 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); text-align: center; }
+    .note-figure img { display: block; width: auto; height: auto; max-width: 100%; max-height: min(72svh, 640px); margin: 0 auto; }
     .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
-    .figure-open { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
-    @media (min-width: 901px) {
-      .note-figure img { max-width: min(100%, calc(var(--figure-width, 560px) * 1.3)); }
-    }
+    .figure-open { display: block; max-width: 100%; margin: 0 auto; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
     body.image-viewer-open { overflow: hidden; }
-    .image-viewer { width: min(1200px, calc(100vw - 24px)); height: calc(100dvh - 24px); max-width: none; max-height: none; margin: auto; padding: 0; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); }
-    .image-viewer[open] { display: flex; flex-direction: column; }
-    .image-viewer::backdrop { background: rgba(9, 19, 34, .78); }
-    .image-viewer-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--border); }
-    .image-viewer-title { flex: 1 1 180px; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
-    .image-viewer-controls { display: flex; align-items: center; gap: 6px; margin-left: auto; }
-    .image-viewer-controls button { min-width: 44px; min-height: 44px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--panel); color: var(--text); }
-    .image-viewer-controls button:disabled { opacity: .4; cursor: default; }
-    .image-viewer-scale { min-width: 46px; text-align: center; font-size: 13px; font-variant-numeric: tabular-nums; }
-    .image-viewer-stage { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--bg); }
-    .image-viewer-canvas { width: max-content; min-width: 100%; padding: 16px; }
-    .image-viewer-image { display: block; max-width: none; height: auto; margin: 0 auto; }
+    .study-image-viewer .pswp__top-bar { height: auto; align-items: center; gap: 4px; padding: calc(8px + env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 8px max(16px, env(safe-area-inset-left)); }
+    .study-image-viewer .pswp__button { width: 44px; height: 44px; margin: 0; border-radius: 8px; background: rgba(255,255,255,.08); }
+    .study-image-viewer .pswp__icn { top: 7px; left: 7px; }
+    .study-image-viewer .pswp__button--fit { width: auto; padding: 0 12px; color: #fff; font-size: 13px; white-space: nowrap; }
+    .study-image-viewer .image-viewer-title { flex: 1; min-width: 0; margin: 0 8px 0 0; overflow: hidden; color: #fff; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; font-weight: 500; }
+    .study-image-viewer .pswp__button--zoom { display: block; }
+    .study-image-viewer .pswp__preloader { position: absolute; top: calc(64px + env(safe-area-inset-top)); right: 16px; }
     .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--panel); font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
     .note tr:last-child td { border-bottom: 0; }
@@ -460,7 +458,7 @@
     .answer-details { margin: 14px 0 20px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
     .answer-details summary { min-height: 46px; display: flex; align-items: center; padding: 9px 13px; color: var(--primary); font-weight: 750; cursor: pointer; }
     .answer-details > :not(summary) { margin-right: 13px; margin-left: 13px; }
-    .answer-details > .note-figure { margin-right: 0; margin-left: 0; }
+    .answer-details > .note-figure { margin-right: auto; margin-left: auto; }
     .answer-details[open] { padding-bottom: 5px; }
 
     /* 重点与易错默认是一份连续清单：章节标题仅作分隔，目录只负责快速定位。 */
@@ -470,8 +468,7 @@
     }
     .color-notes-page .chapter-chevron { display: none; }
     .color-notes-page .chapter-section.collapsed .chapter-body { display: block; }
-    .color-notes-page .note-figure { margin: 10px 0 14px; padding: 8px; }
-    .color-notes-page .note-figure img { max-height: none; }
+    .color-notes-page .note-figure { margin: 12px auto 16px; padding: 8px; }
     .color-notes-page .note-figure figcaption { display: none; }
 
     @media (max-width: 900px) {
@@ -534,7 +531,6 @@
       .table-wrap { margin-right: -3px; }
       .note-figure { padding: 8px; }
       .color-notes-page .note-figure { padding: 0; border: 0; background: transparent; }
-      .lecture-page .note-figure img { width: 100%; max-width: min(100%, var(--figure-width, 920px)); margin: 0 auto; }
 
       body { padding-bottom: env(safe-area-inset-bottom); }
       .site-header { position: sticky; }
@@ -766,78 +762,11 @@
       .chapter-section { scroll-margin-top: 145px; }
     }
 
-    /* Mobile-first reading surface */
-    body {
-      background:
-        radial-gradient(circle at 96% 0, rgba(70, 214, 198, .1), transparent 20rem),
-        #f4f7fa;
-    }
-    .site-header { border-color: rgba(16, 42, 67, .08); box-shadow: 0 5px 18px rgba(16, 42, 67, .04); }
-    .brand-mark { border-radius: 11px; background: #102a43; box-shadow: 3px 3px 0 rgba(70, 214, 198, .55); }
-    .brand { color: #102a43; letter-spacing: .04em; }
-    .module-link { border-color: transparent; background: transparent; color: #5d7282; }
-    .module-link[aria-current="page"] { border-color: #b8e8e2; background: #e8f7f5; color: #176f68; }
-    main { width: min(1220px, 100%); }
-    .study-toolbar { border-radius: 15px; }
-    .study-layout { grid-template-columns: 246px minmax(0, 1fr); gap: 20px; }
-    .chapter-nav { border-color: #dbe5ed; border-radius: 18px; box-shadow: 0 8px 28px rgba(16, 42, 67, .055); }
-    .chapter-link:hover, .chapter-link.active { background: #e8f7f5; color: #176f68; }
-    .note { border-color: #dbe5ed; border-radius: 20px; box-shadow: 0 12px 34px rgba(16, 42, 67, .065); }
-    .chapter-toggle { border-left-color: #176f68; background: #e8f7f5; color: #102a43; }
-    .point { border-left-color: #176f68; background: #eef8f7; color: #155f5a; }
-    .topic-study-tag.topic-key { border-color: #f0c17e; background: #fff6e8; color: #9a5b0b; }
-    .chapter-pager button, .recall-card-pager button { border-radius: 12px; }
-
-    @media (max-width: 700px) {
-      body { background: #f4f7fa; }
-      .site-header { position: sticky; }
-      .header-inner { min-height: 54px; flex-wrap: nowrap; gap: 8px; }
-      .header-brand { flex: 0 0 auto; }
-      .brand-mark { width: 32px; height: 32px; }
-      .brand { font-size: 15px; }
-      .desktop-module-nav { flex: 1; width: auto; margin-left: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .module-link { min-height: 36px; font-size: 11px; }
-      main { padding-right: 8px; padding-left: 8px; }
-      .study-toolbar { margin: -8px 0 12px; padding: 8px; border: 1px solid #dbe5ed; border-radius: 0 0 15px 15px; background: rgba(244, 247, 250, .96); box-shadow: 0 8px 24px rgba(16, 42, 67, .055); }
-      .mobile-back-button, .mobile-nav-toggle, .text-button, .mobile-course-context, .mobile-module-context { border-radius: 10px; }
-      .search-box { border-radius: 10px; box-shadow: none; }
-      .note { padding: 18px 15px 24px; border-radius: 16px; box-shadow: 0 7px 24px rgba(16, 42, 67, .055); }
-      .lecture-page .note { padding: 10px 7px 28px; }
-      .chapter-toggle { border-radius: 12px; }
-      .topic-study-meta { gap: 5px; margin-bottom: 9px; }
-      .topic-study-tag { min-height: 22px; }
-      .chapter-pager { position: sticky; bottom: 8px; z-index: 12; padding: 7px; border: 1px solid #dbe5ed; border-radius: 14px; background: rgba(255, 255, 255, .94); box-shadow: 0 10px 30px rgba(16, 42, 67, .12); backdrop-filter: blur(12px); }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body { background: #0c1724; }
-      .site-header { border-color: #263a50; background: rgba(12, 23, 36, .95); }
-      .brand { color: #edf5fb; }
-      .module-link { color: #a7b7c5; }
-      .module-link[aria-current="page"] { border-color: #275951; background: #143936; color: #a3eee6; }
-      .study-toolbar { background: rgba(12, 23, 36, .95); }
-      .chapter-nav, .chapter-nav-head { border-color: #2a3d52; background: #142234; }
-      .chapter-link:hover, .chapter-link.active { background: #143936; color: #a3eee6; }
-      .note { border-color: #2a3d52; background: #142234; box-shadow: 0 12px 34px rgba(0, 0, 0, .22); }
-      .lecture-page .note { background: transparent; }
-      .chapter-toggle { border-left-color: #35b7aa; background: #143936; color: #edf5fb; }
-      .point { border-left-color: #35b7aa; background: #143936; color: #a3eee6; }
-      .topic-study-tag.topic-key { border-color: #76562a; background: #342817; color: #ffd08b; }
-      .table-wrap, .note-figure { border-color: #2a3d52; }
-    }
-
-    @media (max-width: 700px) and (prefers-color-scheme: dark) {
-      .study-toolbar { border-color: #2a3d52; background: rgba(12, 23, 36, .96); box-shadow: 0 8px 24px rgba(0, 0, 0, .24); }
-      .note { background: transparent; box-shadow: none; }
-      .chapter-pager { border-color: #2a3d52; background: rgba(20, 34, 52, .96); box-shadow: 0 10px 30px rgba(0, 0, 0, .28); }
-      .chapter-complete-button { border-color: #66a3ff; background: #142234; color: #a9cbff; }
-      .chapter-complete-button.is-complete { border-color: #46d6c6; background: #173f3c; color: #a3eee6; }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
     }
   </style>
+  <link rel="stylesheet" href="./ui.css">
 </head>
 <body class="__PAGE_BODY_CLASS__">
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -859,13 +788,13 @@
   <main id="main">
     <section class="study hidden" id="study" aria-label="科目内容">
       <div class="study-toolbar">
-        <button class="mobile-back-button" id="mobile-back" type="button" aria-label="返回上一页">‹</button>
-        <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><span aria-hidden="true">☰</span><strong id="mobile-chapter-progress">章节</strong></button>
+        <button class="mobile-back-button" id="mobile-back" type="button" aria-label="返回上一页"><svg class="ui-icon" aria-hidden="true"><use href="./ui-icons.svg#arrow-left"></use></svg></button>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="打开章节目录" aria-controls="chapter-nav" aria-expanded="false"><svg class="ui-icon" aria-hidden="true"><use href="./ui-icons.svg#menu"></use></svg><strong class="sr-only" id="mobile-chapter-progress">章节</strong></button>
         <label class="mobile-course-context"><select id="mobile-course-select" aria-label="切换课程"></select><span id="mobile-card-progress"></span></label>
-        <label class="mobile-module-context"><select id="mobile-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">重点与易错</option><option value="quiz">刷题</option></select></label>
+        <label class="mobile-module-context"><select id="mobile-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">重点</option><option value="quiz">刷题</option></select></label>
         <div class="search-area">
           <div class="search-box">
-            <span class="search-icon" aria-hidden="true">⌕</span>
+            <svg class="search-icon ui-icon" aria-hidden="true"><use href="./ui-icons.svg#search"></use></svg>
             <input id="search" type="search" aria-label="搜索当前科目内容" placeholder="搜索当前科目" autocomplete="off">
             <button class="icon-button hidden" id="search-clear" type="button" aria-label="清空内容搜索">×</button>
           </div>
@@ -908,22 +837,7 @@
     </section>
   </main>
 
-  <dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title">
-    <div class="image-viewer-toolbar">
-      <h2 class="image-viewer-title" id="image-viewer-title">配图</h2>
-      <div class="image-viewer-controls">
-        <button type="button" id="image-zoom-out" aria-label="缩小图片">−</button>
-        <output class="image-viewer-scale" id="image-viewer-scale" aria-live="polite"></output>
-        <button type="button" id="image-zoom-in" aria-label="放大图片">＋</button>
-        <button type="button" id="image-zoom-reset">重置</button>
-        <button type="button" id="image-viewer-close" aria-label="关闭图片" autofocus>关闭</button>
-      </div>
-    </div>
-    <div class="image-viewer-stage" id="image-viewer-stage" tabindex="0" aria-label="图片区域，可滚动查看">
-      <div class="image-viewer-canvas"><img class="image-viewer-image" id="image-viewer-image" alt=""></div>
-    </div>
-  </dialog>
-
+  <script src="./vendor/photoswipe/photoswipe.umd.min.js"></script>
   <script src="./study-review.js"></script>
   <script>
     const items = __COURSE_DATA__;
@@ -942,15 +856,8 @@
     const recallToggle = document.getElementById("recall-toggle");
     const study = document.getElementById("study");
     const content = document.getElementById("content");
-    const imageViewer = document.getElementById("image-viewer");
-    const viewerImage = document.getElementById("image-viewer-image");
-    const viewerStage = document.getElementById("image-viewer-stage");
-    const viewerScale = document.getElementById("image-viewer-scale");
-    const zoomOut = document.getElementById("image-zoom-out");
-    const zoomIn = document.getElementById("image-zoom-in");
-    let imageScale = 1;
-    let imageStartScale = 1;
-    let imageWidth = 400;
+    let imageViewer = null;
+    let imageCloseFromHistory = false;
     let imageReturnFocus = null;
     let imageClosePending = false;
     const search = document.getElementById("search");
@@ -1266,7 +1173,7 @@
           const normalizedSource = rawSource.replace(/^\.\.\/media\//, "media/");
           if (/^media\/[a-zA-Z0-9_./-]+\.svg$/i.test(normalizedSource)) {
             const size = imageSizes[normalizedSource];
-            const dimensions = size ? ` width="${size[0]}" height="${size[1]}" style="--figure-width:${size[0]}px"` : "";
+            const dimensions = size ? ` width="${size[0]}" height="${size[1]}"` : "";
             output.push(`<figure class="note-figure"><button class="figure-open" type="button" aria-label="放大查看：${escapeHtml(caption || "配图")}" title="点击放大"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="lazy" decoding="async"></button>${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
           }
           index += 1;
@@ -1368,6 +1275,10 @@
       decorateLectureContent();
       bindTopicGuidance();
       bindChapters();
+      if (colorMode) content.querySelectorAll(".recall-card").forEach((card) => {
+        const practice = card.querySelector(".point-practice-link");
+        if (practice) card.appendChild(practice);
+      });
     }
 
     function decorateLectureContent() {
@@ -2113,77 +2024,95 @@
         } else updateStudyPosition();
       } else updateStudyPosition();
     });
-    function setImageScale(value, {keepCenter = true} = {}) {
-      const stageBox = viewerStage.getBoundingClientRect();
-      const imageBox = viewerImage.getBoundingClientRect();
-      const centerLeft = stageBox.left + viewerStage.clientLeft + viewerStage.clientWidth / 2;
-      const centerTop = stageBox.top + viewerStage.clientTop + viewerStage.clientHeight / 2;
-      const centerX = imageBox.width ? (centerLeft - imageBox.left) / imageBox.width : .5;
-      const centerY = imageBox.height ? (centerTop - imageBox.top) / imageBox.height : .5;
-      imageScale = Math.max(.25, Math.min(6, value));
-      viewerImage.style.width = `${imageWidth * imageScale}px`;
-      viewerScale.textContent = `${Math.round(imageScale * 100)}%`;
-      zoomOut.disabled = imageScale <= .25;
-      zoomIn.disabled = imageScale >= 6;
-      if (keepCenter) {
-        const nextBox = viewerImage.getBoundingClientRect();
-        viewerStage.scrollBy(nextBox.left + centerX * nextBox.width - centerLeft, nextBox.top + centerY * nextBox.height - centerTop);
-      } else {
-        viewerStage.scrollTo(0, 0);
-      }
-    }
-
     function openImageViewer(preview, {fromHistory = false} = {}) {
-      if (!imageViewer.open) imageReturnFocus = document.activeElement;
-      imageWidth = Number(preview.width) || 400;
-      viewerImage.src = preview.src;
-      viewerImage.alt = preview.alt;
-      document.getElementById("image-viewer-title").textContent = preview.alt || "配图";
-      if (!imageViewer.open) imageViewer.showModal();
-      document.body.classList.add("image-viewer-open");
+      if (imageViewer) return;
+      imageReturnFocus = document.activeElement;
+      const size = imageSizes[preview.src] || [Number(preview.width), Number(preview.height)];
+      if (!size[0] || !size[1]) return;
+      imageCloseFromHistory = false;
       imageClosePending = false;
-      imageStartScale = Math.max(.25, Math.min(2, (viewerStage.clientWidth - 32) / imageWidth));
-      setImageScale(imageStartScale, {keepCenter: false});
+      const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const viewer = new PhotoSwipe({
+        dataSource: [{src: preview.src, width: size[0], height: size[1], alt: preview.alt}],
+        mainClass: "study-image-viewer",
+        index: 0,
+        initialZoomLevel: "fit",
+        secondaryZoomLevel: (zoom) => Math.min(2, Math.max(1, zoom.fit * 1.8)),
+        maxZoomLevel: 4,
+        paddingFn: (viewport) => {
+          const style = getComputedStyle(document.documentElement);
+          const inset = (side) => parseFloat(style.getPropertyValue(`--image-safe-${side}`)) || 0;
+          const space = viewport.x < 700 ? 12 : 32;
+          return {top: 76 + inset("top"), bottom: 24 + inset("bottom"), left: space + inset("left"), right: space + inset("right")};
+        },
+        bgOpacity: .9,
+        wheelToZoom: false,
+        imageClickAction: "zoom",
+        doubleTapAction: "zoom",
+        tapAction: "toggle-controls",
+        bgClickAction: "close",
+        closeOnVerticalDrag: false,
+        pinchToClose: false,
+        showHideAnimationType: "none",
+        zoomAnimationDuration: reducedMotion ? 0 : 180,
+        closeTitle: "关闭图片",
+        zoomTitle: "放大或恢复图片",
+        errorMsg: "图片暂时无法加载",
+        counter: false,
+        arrowPrev: false,
+        arrowNext: false,
+        returnFocus: false,
+      });
+      viewer.on("uiRegister", () => {
+        viewer.ui.registerElement({
+          name: "imageTitle", className: "image-viewer-title", order: 1, isButton: false,
+          onInit: (element) => { element.textContent = preview.alt || "配图"; },
+        });
+        viewer.ui.registerElement({
+          name: "fit", order: 9, isButton: true, title: "适应屏幕", html: "适应",
+          onClick: () => {
+            const slide = viewer.currSlide;
+            if (slide) slide.zoomTo(slide.zoomLevels.initial, undefined, reducedMotion ? 0 : 180);
+          },
+        });
+      });
+      viewer.on("close", () => {
+        if (!imageCloseFromHistory && history.state?.imagePreview && !imageClosePending) {
+          imageClosePending = true;
+          history.back();
+        }
+      });
+      viewer.on("afterInit", () => {
+        viewer.element.setAttribute("aria-label", preview.alt || "查看配图");
+        viewer.element.setAttribute("aria-modal", "true");
+      });
+      viewer.on("destroy", () => {
+        imageViewer = null;
+        document.body.classList.remove("image-viewer-open");
+        document.getElementById("main").inert = false;
+        siteHeader.inert = false;
+        if (imageReturnFocus?.isConnected) imageReturnFocus.focus({preventScroll: true});
+        imageReturnFocus = null;
+      });
+      imageViewer = viewer;
+      document.body.classList.add("image-viewer-open");
+      document.getElementById("main").inert = true;
+      siteHeader.inert = true;
       if (!fromHistory) history.pushState({...history.state, imagePreview: preview}, "", location.href);
+      viewer.init();
     }
 
     function closeImageViewer() {
+      if (!imageViewer) return;
+      imageCloseFromHistory = true;
       imageViewer.close();
-      document.body.classList.remove("image-viewer-open");
-      imageClosePending = false;
-      if (imageReturnFocus?.isConnected) imageReturnFocus.focus({preventScroll: true});
-      imageReturnFocus = null;
     }
 
-    function requestImageClose() {
-      if (imageClosePending) return;
-      if (history.state?.imagePreview) {
-        imageClosePending = true;
-        history.back();
-      } else closeImageViewer();
-    }
-
-    zoomOut.addEventListener("click", () => setImageScale(imageScale / 1.25));
-    zoomIn.addEventListener("click", () => setImageScale(imageScale * 1.25));
-    document.getElementById("image-zoom-reset").addEventListener("click", () => {
-      imageStartScale = Math.max(.25, Math.min(2, (viewerStage.clientWidth - 32) / imageWidth));
-      setImageScale(imageStartScale, {keepCenter: false});
-    });
-    document.getElementById("image-viewer-close").addEventListener("click", requestImageClose);
-    imageViewer.addEventListener("cancel", (event) => {
-      event.preventDefault();
-      requestImageClose();
-    });
-    imageViewer.addEventListener("click", (event) => {
-      if (event.target !== imageViewer) return;
-      const box = imageViewer.getBoundingClientRect();
-      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) requestImageClose();
-    });
     content.addEventListener("click", (event) => {
       const button = event.target.closest(".figure-open");
       if (button) {
         const image = button.querySelector("img");
-        openImageViewer({src: image.getAttribute("src"), alt: image.alt, width: image.getAttribute("width")});
+        openImageViewer({src: image.getAttribute("src"), alt: image.alt, width: image.getAttribute("width"), height: image.getAttribute("height")});
         return;
       }
       revealRecallItem(event.target.closest(".red, .blue, .black"));
@@ -2223,8 +2152,13 @@
         openImageViewer(event.state.imagePreview, {fromHistory: true});
         return;
       }
-      if (imageViewer.open) {
+      if (imageViewer) {
+        imageClosePending = false;
         closeImageViewer();
+        return;
+      }
+      if (imageClosePending) {
+        imageClosePending = false;
         return;
       }
       applyLocation();
@@ -2232,6 +2166,7 @@
     window.addEventListener("pageshow", (event) => {
       closeMobileNav({restoreFocus: false});
       if (event.persisted) applyLocation();
+      if (imageViewer) { document.getElementById("main").inert = true; siteHeader.inert = true; }
     });
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";

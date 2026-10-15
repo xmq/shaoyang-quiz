@@ -1,0 +1,37 @@
+{
+  "simulated_browser_input": true,
+  "checks": [
+    {
+      "input": "two-finger pinch",
+      "before": 0.915,
+      "after": 2.4786075949367086
+    },
+    {
+      "input": "double-tap",
+      "zoom": 1.647
+    },
+    {
+      "input": "orientation resize and fit",
+      "result": {
+        "zoom": 0.4603174603174603,
+        "fit": 0.4603174603174603,
+        "h": 630,
+        "area": {
+          "x": 780,
+          "y": 290
+        }
+      }
+    },
+    {
+      "input": "Ctrl+wheel",
+      "before": 1,
+      "after": 1.2834258975629043
+    },
+    {
+      "input": "mouse drag",
+      "before": 76,
+      "after": 60
+    }
+  ],
+  "errors": []
+}

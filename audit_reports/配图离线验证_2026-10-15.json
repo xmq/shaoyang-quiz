@@ -1,9 +1,27 @@
 {
   "teaching_assets": 142,
   "cached": {
-    "count": 228,
+    "count": 232,
     "missing": []
   },
+  "cached_runtime": [
+    {
+      "path": "ui.css",
+      "cached": true
+    },
+    {
+      "path": "ui-icons.svg",
+      "cached": true
+    },
+    {
+      "path": "vendor/photoswipe/photoswipe.css",
+      "cached": true
+    },
+    {
+      "path": "vendor/photoswipe/photoswipe.umd.min.js",
+      "cached": true
+    }
+  ],
   "offline_pages": [
     {
       "file": "notes.html",

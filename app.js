@@ -544,7 +544,7 @@ function updateSubjectSelect() {
     count: PUBLIC_QUESTIONS.filter((question) => course.subjects.includes(question.subject)).length,
   })).filter((course) => course.count);
   select.innerHTML = `<option value="">选择课程</option>` +
-    courses.map((course) => `<option value="${escapeHtml(course.name)}">${escapeHtml(course.name)} (${course.count})</option>`).join("");
+    courses.map((course) => `<option value="${escapeHtml(course.name)}">${escapeHtml(course.name)}</option>`).join("");
   select.value = state.subject || "";
 }
 
@@ -1040,22 +1040,22 @@ function renderDashboard() {
       <div class="hub-section-title"><strong>练习方式</strong><span>${doneCount}/${scope.length} · ${completionRate}%</span></div>
       <div class="hub-primary-actions">
         <button class="primary mode-card" data-jump-mode="seq">
-          <span class="mode-symbol" aria-hidden="true">顺</span>
+          <span class="mode-symbol" aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#book"></use></svg></span>
           <span class="mode-copy"><strong>顺序练习</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
         <button class="mode-card" data-jump-mode="rnd">
-          <span class="mode-symbol" aria-hidden="true">随</span>
+          <span class="mode-symbol" aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#shuffle"></use></svg></span>
           <span class="mode-copy"><strong>随机练习</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
         <button class="mode-card" data-jump-mode="priority">
-          <span class="mode-symbol" aria-hidden="true">重</span>
+          <span class="mode-symbol" aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#layers"></use></svg></span>
           <span class="mode-copy"><strong>优先知识点</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>
         <button class="mode-card" data-jump-mode="mock">
-          <span class="mode-symbol" aria-hidden="true">考</span>
+          <span class="mode-symbol" aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#pen"></use></svg></span>
           <span class="mode-copy"><strong>课程自测</strong></span>
           <span class="mode-arrow" aria-hidden="true">→</span>
         </button>

@@ -149,6 +149,20 @@
     document.getElementById("mobile-quiz-link").href = `./quiz.html?course=${encodeURIComponent(courseName)}&mode=home`;
   }
 
+  function courseIcon(name) {
+    if (name.includes("网络")) return "network";
+    if (name.includes("数据库")) return "database";
+    if (name.includes("Office")) return "office";
+    if (name.includes("程序") || name.includes("软件")) return "code";
+    if (name.includes("安全")) return "shield";
+    if (name.includes("多媒体")) return "media";
+    if (name.includes("信号")) return "wave";
+    if (name.includes("通信")) return "signal";
+    if (name.includes("电子") || name.includes("电路")) return "chip";
+    if (name.includes("数据结构")) return "layers";
+    return "cpu";
+  }
+
   function buildCourseGrid(progress, lectureProgress) {
     const root = document.getElementById("home-course-grid");
     const highlighted = highlightedCourseName();
@@ -169,9 +183,9 @@
           : stats.total ? Math.min(100, Math.round(stats.done * 100 / stats.total)) : 0;
         return `<article class="home-course-card${isCurrent ? " is-current" : ""}">
           <a class="home-course-main" href="./notes.html${noteHash}" data-course-name="${course.name}">
-            <span class="home-course-icon" aria-hidden="true">${course.icon}</span>
+            <span class="home-course-icon" aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#${courseIcon(course.name)}"></use></svg></span>
             <span class="home-course-copy"><strong>${course.name}${isCurrent ? '<em>最近</em>' : ""}</strong><small>${progressText}</small>${completedCount || stats.done ? `<i><b style="width:${progressWidth}%"></b></i>` : ""}</span>
-            <span class="course-card-arrow" aria-hidden="true">›</span>
+            <span class="course-card-arrow" aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#arrow-right"></use></svg></span>
           </a>
         </article>`;
       }).join("");

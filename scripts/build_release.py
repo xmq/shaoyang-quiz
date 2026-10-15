@@ -28,6 +28,10 @@ CORE_HASHED_ASSETS = [
     "question-media.js",
     "questions.js",
     "style.css",
+    "ui.css",
+    "ui-icons.svg",
+    "vendor/photoswipe/photoswipe.umd.min.js",
+    "vendor/photoswipe/photoswipe.css",
     "sw.js",
 ]
 

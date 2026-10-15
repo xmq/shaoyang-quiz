@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#143b6b">
+  <meta name="theme-color" content="#f5f7f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10191e" media="(prefers-color-scheme: dark)">
   <meta name="description" content="围绕事业单位专业知识常见考点，按科目、题型和复习状态练习，支持错题、收藏、到期复习与进度备份。">
   <title>知阶 · 专项练习</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./ui.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="筛选和操作" aria-hidden="true" tabindex="-1" inert>
       <div class="drawer-head">
         <strong>练习设置</strong>
-        <button class="icon-btn" id="drawer-close" aria-label="关闭">×</button>
+        <button class="icon-btn" id="drawer-close" aria-label="关闭"><svg class="ui-icon" aria-hidden="true"><use href="./ui-icons.svg#close"></use></svg></button>
       </div>
 
       <section class="drawer-section drawer-search-section">
@@ -57,8 +59,8 @@
     <main class="main" id="app-main">
       <header class="topbar" id="topbar">
         <div class="topbar-row">
-          <button class="icon-btn page-back" id="page-back" aria-label="返回上一页"><span aria-hidden="true">‹</span></button>
-          <button class="icon-btn filter-trigger" id="drawer-toggle" aria-label="打开筛选" aria-controls="drawer" aria-expanded="false"><span aria-hidden="true">☷</span></button>
+          <button class="icon-btn page-back" id="page-back" aria-label="返回上一页"><svg class="ui-icon" aria-hidden="true"><use href="./ui-icons.svg#arrow-left"></use></svg></button>
+          <button class="icon-btn filter-trigger" id="drawer-toggle" aria-label="打开筛选" aria-controls="drawer" aria-expanded="false"><svg class="ui-icon" aria-hidden="true"><use href="./ui-icons.svg#filter"></use></svg></button>
           <select id="subject-select" aria-label="科目"></select>
           <select id="quiz-module-select" aria-label="切换学习模块"><option value="lecture">讲义</option><option value="color-notes">重点与易错</option><option value="quiz" selected>刷题</option></select>
           <span class="mini-stat" id="mini-stat">0/0 · 0%</span>

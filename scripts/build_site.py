@@ -19,6 +19,11 @@ STATIC_FILES = (
     "index.html",
     "quiz.html",
     "style.css",
+    "ui.css",
+    "ui-icons.svg",
+    "vendor/photoswipe/photoswipe.umd.min.js",
+    "vendor/photoswipe/photoswipe.css",
+    "vendor/photoswipe/LICENSE",
     "app.js",
     "quiz-loader.js",
     "home.js",
@@ -55,7 +60,9 @@ def copy_runtime_sources(output):
         source = ROOT / rel
         if not source.is_file():
             raise FileNotFoundError(f"缺少运行源文件：{rel}")
-        shutil.copy2(source, output / rel)
+        target = output / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
     shutil.copytree(ROOT / "media", output / "media")
 
 

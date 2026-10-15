@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "theme": "light",
+      "home_course_search_review_quiz_filter_wrong_repair_favorite_mock": "pass"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "home_course_search_review_quiz_filter_wrong_repair_favorite_mock": "pass"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "home_course_search_review_quiz_filter_wrong_repair_favorite_mock": "pass"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "home_course_search_review_quiz_filter_wrong_repair_favorite_mock": "pass"
+    }
+  ],
+  "errors": []
+}

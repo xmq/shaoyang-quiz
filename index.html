@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#102a43">
+  <meta name="theme-color" content="#f5f7f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10191e" media="(prefers-color-scheme: dark)">
   <meta name="description" content="面向计算机事业编笔试，按大学教材学习、练题与间隔复习。">
   <title>知阶 · 计算机专业课学习台</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./ui.css">
 </head>
 <body class="platform-home study-home">
   <a class="sr-only home-skip" href="#home-main">跳到主要内容</a>
@@ -40,10 +42,10 @@
   </main>
 
   <nav class="mobile-tabbar home-mobile-tabbar" aria-label="主导航">
-    <a aria-current="page" href="./index.html"><span aria-hidden="true">⌂</span><strong>课程</strong></a>
-    <a id="mobile-notes-link" href="./notes.html"><span aria-hidden="true">书</span><strong>讲义</strong></a>
-    <a id="mobile-recall-link" href="./color-notes.html"><span aria-hidden="true">重</span><strong>重点</strong></a>
-    <a id="mobile-quiz-link" href="./quiz.html"><span aria-hidden="true">练</span><strong>刷题</strong></a>
+    <a aria-current="page" href="./index.html"><span aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#home"></use></svg></span><strong>课程</strong></a>
+    <a id="mobile-notes-link" href="./notes.html"><span aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#book"></use></svg></span><strong>讲义</strong></a>
+    <a id="mobile-recall-link" href="./color-notes.html"><span aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#layers"></use></svg></span><strong>重点</strong></a>
+    <a id="mobile-quiz-link" href="./quiz.html"><span aria-hidden="true"><svg class="ui-icon"><use href="./ui-icons.svg#pen"></use></svg></span><strong>刷题</strong></a>
   </nav>
 
   <script src="./build-meta.js"></script>
