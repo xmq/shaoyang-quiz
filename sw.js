@@ -48,6 +48,8 @@ const CORE_ASSETS = [
   "./media/network_subnet.svg",
   "./media/ds_tree_traversal.svg",
   "./media/ds_graph_traversal.svg",
+  "./media/ds_weighted_graph.svg",
+  "./media/ds_topological_order.svg",
   "./media/ds_complexity_growth.svg",
   "./media/ds_array_linked.svg",
   "./media/ds_stack_queue.svg",

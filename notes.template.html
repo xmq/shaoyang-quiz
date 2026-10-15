@@ -913,6 +913,7 @@
     const moduleLinks = [...document.querySelectorAll(".module-link")];
     const mobileMedia = window.matchMedia("(max-width: 700px)");
     let currentCourse = null;
+    let requestedRecallTopic = "";
     let activeObserver = null;
     let collapsedBeforeSearch = null;
     let activeChapterIndex = 0;
@@ -1232,6 +1233,7 @@
         const h1 = trimmed.match(/^#\s+(.+)$/);
         const markdownH2 = trimmed.match(/^##\s+(.+)$/);
         const markdownH3 = trimmed.match(/^###\s+(.+)$/);
+        const markdownSubheading = trimmed.match(/^(#{4,6})\s+(.+)$/);
         const plainChapter = trimmed.match(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?.*$/);
         const plainPoint = trimmed.match(/^(?:考点|专题|模块)\s*\d+[：:]?.*$/);
         const examMarker = trimmed.match(/^<!--\s*exam:\s*([ABC])\s*\|\s*(.+?)\s*-->$/i);
@@ -1266,6 +1268,10 @@
           const title = colorMode ? rawTitle.replace(/^回忆卡\s*\d+\s*[|｜:：—-]\s*/, "") : rawTitle;
           const topic = topicForHeading(title, renderedChapterIndex);
           output.push(`<h3 class="point"${topic ? ` data-topic-id="${escapeHtml(topic.topic_id)}"` : ""}>${formatInline(title)}</h3>`);
+        } else if (markdownSubheading) {
+          closeList();
+          const level = markdownSubheading[1].length;
+          output.push(`<h${level}>${formatInline(markdownSubheading[2])}</h${level}>`);
         } else if (colorMode && /^先答[：:]/.test(trimmed)) {
           closeList();
           output.push(`<p class="recall-prompt">${formatInline(trimmed)}</p>`);
@@ -1645,6 +1651,7 @@
       recallRetryMode = false;
       const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
       const routeTopic = routeParams.get("topic");
+      requestedRecallTopic = routeTopic || "";
       const routeSection = routeParams.get("section");
       activeChapterIndex = Math.max(0, (Number(routeParams.get("chapter")) || 1) - 1);
       activeRecallIndex = Math.max(0, (Number(routeParams.get("card")) || 1) - 1);
@@ -1961,6 +1968,16 @@
       syncRecallTargets();
       if (active) {
         const sections = [...content.querySelectorAll(".chapter-section")];
+        const routeTopic = requestedRecallTopic;
+        requestedRecallTopic = "";
+        const targetPoint = routeTopic ? [...content.querySelectorAll(".point[data-topic-id]")].find((point) => point.dataset.topicId === routeTopic) : null;
+        const targetCard = targetPoint?.closest(".recall-card");
+        if (targetCard) {
+          activeChapterIndex = sections.indexOf(targetCard.closest(".chapter-section"));
+          activeRecallIndex = [...sections[activeChapterIndex].querySelectorAll(".recall-card")].indexOf(targetCard);
+          setActiveRecallCard(activeRecallIndex, {focus: true});
+          return;
+        }
         const pending = pendingRecallCards().find((item) => sections[item.chapterIndex]?.querySelectorAll(".recall-card")[item.cardIndex]);
         if (pending) {
           activeChapterIndex = pending.chapterIndex;

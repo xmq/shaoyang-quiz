@@ -293,5 +293,15 @@
     "id": "ap-comm-006",
     "topic_id": "communication.t04",
     "reason": "题干同时考声音数字化与位/帧同步，暂按前半段完整过程主映射到抽样、量化与PCM码率；待拆题后将同步部分归communication.t13。"
+  },
+  {
+    "id": "cg-04-s2-q4",
+    "topic_id": "programming.t02",
+    "reason": "题干考Python缩进与代码块语法，错误缩进会引发语法错误，归入编译、解释与程序错误。"
+  },
+  {
+    "id": "cg-02-s3-q3",
+    "topic_id": "multimedia.t07",
+    "reason": "题干逐项辨别JPG、WAV、HTML和DOC是否属于图像文件格式，不考PCM采样。"
   }
 ]

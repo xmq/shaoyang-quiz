@@ -2725,6 +2725,9 @@ body.drawer-open {
 .hub-weak-topics > strong { width: 100%; color: var(--muted); font-size: 12px; }
 .hub-weak-topics button { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 7px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); }
 .hub-weak-topics button b { color: var(--red); }
+.mock-weak-topics { margin: 16px 0; }
+.mock-weak-topics > div { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.mock-weak-topics .repair-links { margin-top: 8px; }
 .hub-insights { padding: 0; }
 .hub-insights > summary { min-height: 52px; display: flex; align-items: center; padding: 10px 20px; font-weight: 750; cursor: pointer; }
 .hub-insights > .dash-grid, .hub-insights > .error-summary, .hub-insights > .subject-table { margin-right: 20px; margin-left: 20px; }

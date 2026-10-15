@@ -8829,5 +8829,83 @@
   "knowledge_point": "图形图像",
   "ability": "读图排障",
   "difficulty": "应用"
+ },
+ {
+  "id": "gap-retest-rip-001",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "RIP距离向量更新",
+  "stem": "路由器R与邻居N相距1跳。R当前经邻居M到目的网络X的距离为5跳。现在N通告自己到X的距离为2跳。请逐步说明R如何计算候选距离、选择下一跳并更新路由。更新后，N又通告到X的距离为16，且R已没有其他可用的替代路由，R应如何处理？说明RIP中16的含义。",
+  "options": {},
+  "answer": "经N到X的候选距离为1+2=3跳，小于原来经M的5跳，因此把到X的路由更新为下一跳N、距离3跳。随后当前下一跳N通告16，表示它到X不可达；在没有替代路由时，R也应将到X的距离标记为16（不可达），不能继续保留旧的3跳。RIP的最大有效跳数为15，16表示无穷大。",
+  "explanation": "距离向量更新先把邻居通告的距离加上到邻居的代价，再比较候选路由。当前下一跳的路由已经失效时，不能因为旧值更小就继续使用它。RIP的度量在16处表示不可达，因此不能把16再加1后当作有效的17跳路由。",
+  "subject": "计算机网络",
+  "source_chapter": "RIP距离向量更新",
+  "adaptation_note": "补充大学期末常见的距离向量逐步更新简答题。",
+  "knowledge_point": "路由与网络诊断",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "net.rip-update",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "计算候选距离1+2=3跳",
+    "points": 1
+   },
+   {
+    "criterion": "比较3与5并更新下一跳N和距离3",
+    "points": 1
+   },
+   {
+    "criterion": "当前下一跳失效且无替代时标记不可达",
+    "points": 1
+   },
+   {
+    "criterion": "说明16代表不可达、最大有效跳数15",
+    "points": 1
+   }
+  ]
+ },
+ {
+  "id": "gap-retest-tdm-001",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "复用、线路编码与同步",
+  "stem": "4路独立信号均以8 kHz采样，每个样值编码为8 bit，采用同步时分复用，每帧固定从每路取1个样值。计算帧率、每帧有效数据位数以及有效数据传输速率。若每帧再加入1 bit帧同步位，且无其他开销，计算线路传输速率，并说明帧同步的作用。",
+  "options": {},
+  "answer": "每帧从每路取1个样值，因此帧率等于每路采样率，为8000帧/s。每帧有效数据为4×8=32 bit，有效数据速率为8000×32=256000 bit/s，即256 kbit/s。加入同步位后，每帧共33 bit，线路速率为8000×33=264000 bit/s，即264 kbit/s。帧同步帮助接收端识别帧的起始边界，结合固定时隙次序，把各样值正确分配回对应支路。",
+  "explanation": "帧率不是4路采样率之和：一帧已经包含4路各一个样值。有效数据速率只计32 bit样值数据，线路速率还要计入每帧1 bit同步开销，增加8000 bit/s。帧同步位用于定位帧边界，不是新增一路采样信号。",
+  "subject": "通信原理与高频电子线路",
+  "source_chapter": "复用、线路编码与同步",
+  "adaptation_note": "补充大学期末常见的同步TDM帧结构、码率和同步作用计算题。",
+  "knowledge_point": "通信系统基础",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "topic_source": "manual",
+  "topic_id": "communication.t06",
+  "max_score": 5,
+  "rubric": [
+   {
+    "criterion": "求出帧率8000帧/s",
+    "points": 1
+   },
+   {
+    "criterion": "求出每帧32 bit有效数据",
+    "points": 1
+   },
+   {
+    "criterion": "求出有效数据速率256 kbit/s",
+    "points": 1
+   },
+   {
+    "criterion": "计入同步位后求出线路速率264 kbit/s",
+    "points": 1
+   },
+   {
+    "criterion": "说明帧边界识别与正确分路作用",
+    "points": 1
+   }
+  ]
  }
 ]

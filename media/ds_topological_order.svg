@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="title desc">
+  <title id="title">课程先修关系的有向无环图</title>
+  <desc id="desc">有向边A到C、A到D、B到D、C到E、D到E。A和B的入度为零，C入度一，D和E入度二。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+  <style>
+    .bg{fill:#f8fafc;stroke:#cbd5e1}.edge{stroke:#64748b;stroke-width:3;marker-end:url(#arrow)}.node{fill:#e6f5f1;stroke:#087f70;stroke-width:3}.label{font:700 25px system-ui,sans-serif;fill:#123047;text-anchor:middle;dominant-baseline:middle}.caption{font:19px system-ui,sans-serif;fill:#334155;text-anchor:middle}
+    @media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#334b63}.edge{stroke:#99aec3}.node{fill:#173f3c;stroke:#46d6c6}.label{fill:#edf4fb}.caption{fill:#c4d2df}}
+  </style>
+  <rect class="bg" x="2" y="2" width="556" height="316" rx="18"/>
+  <g class="edge"><path d="M105 85H247"/><path d="M100 103L249 209"/><path d="M105 225H247"/><path d="M300 94L448 143"/><path d="M300 216L448 167"/></g>
+  <g class="node"><circle cx="80" cy="85" r="25"/><circle cx="80" cy="225" r="25"/><circle cx="275" cy="85" r="25"/><circle cx="275" cy="225" r="25"/><circle cx="475" cy="155" r="25"/></g>
+  <g class="label"><text x="80" y="86">A</text><text x="80" y="226">B</text><text x="275" y="86">C</text><text x="275" y="226">D</text><text x="475" y="156">E</text></g>
+  <text class="caption" x="280" y="284">箭头表示“先完成起点，再完成终点”</text>
+</svg>

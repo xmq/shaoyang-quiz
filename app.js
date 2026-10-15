@@ -809,7 +809,7 @@ function renderQuestion(q, pool) {
   $("card-area").innerHTML = `<article class="card" aria-labelledby="question-stem">
     <div class="meta">
       <span class="badge type-${escapeHtml(q.type)}">${escapeHtml(q.type)}</span>
-      <span class="q-pos">${state.cursor + 1} / ${pool.length}</span>
+      <span class="q-pos">${isMockActive() ? `${state.cursor + 1} / ${pool.length}` : `待练 ${pool.length} 题`}</span>
       <div class="question-controls" aria-label="题目导航">
         <button type="button" class="fav ${isFav ? "active" : ""}" id="fav" aria-label="收藏" aria-pressed="${isFav}">${isFav ? "★" : "☆"}</button>
       </div>
@@ -1206,7 +1206,7 @@ function finishMock(autoSubmitted = false) {
   const answered = rows.filter((row) => row.answer !== undefined);
   const correct = answered.filter((row) => isAnswerCorrect(row.question, row.answer)).length;
   const weakAbilities = {};
-  rows.filter((row) => row.answer === undefined || !isAnswerCorrect(row.question, row.answer)).forEach(({question}) => {
+  answered.filter((row) => !isAnswerCorrect(row.question, row.answer)).forEach(({question}) => {
     const ability = question.ability || "待归类";
     weakAbilities[ability] = (weakAbilities[ability] || 0) + 1;
   });
@@ -1222,11 +1222,6 @@ function finishMock(autoSubmitted = false) {
   persistMockSession();
   clearMockTimer();
   answered.forEach(({question, answer}) => handleAnswer(question, answer));
-  rows.filter((row) => row.answer === undefined).forEach(({question}) => {
-    state.wrong[question.id] = (state.wrong[question.id] || 0) + 1;
-    state.streak[question.id] = 0;
-    updateReviewSchedule(question.id, false);
-  });
   save();
   render();
 }
@@ -1264,8 +1259,16 @@ function renderMockResult() {
     .sort((a, b) => b[1] - a[1])
     .map(([ability, count]) => `<span>${escapeHtml(ability)} <b>${count}</b></span>`)
     .join("");
+  const topicMistakes = new Map();
+  reviewRows.filter(({answer}) => answer !== undefined).forEach(({question}) => {
+    if (!question.topic_id) return;
+    const item = topicMistakes.get(question.topic_id) || {question, count: 0};
+    item.count += 1;
+    topicMistakes.set(question.topic_id, item);
+  });
+  const weakTopics = [...topicMistakes.values()].sort((left, right) => right.count - left.count);
   $("card-area").innerHTML = `<section class="mock-result card">
-    <h2>考试结果</h2>
+    <h2>自测结果</h2>
     <div class="mock-score"><strong>${result.score}</strong><span>分</span></div>
     <div class="mock-result-grid">
       <div><strong>${result.correct}</strong><span>答对</span></div>
@@ -1274,9 +1277,11 @@ function renderMockResult() {
       <div><strong>${result.total}</strong><span>总题数</span></div>
     </div>
     ${result.autoSubmitted ? '<p class="mock-notice">时间到，系统已自动交卷。</p>' : ""}
-    ${weak ? `<div class="mock-weak"><strong>失分能力类型</strong>${weak}</div>` : '<p class="mock-notice success">本卷全部答对。</p>'}
+    ${weak ? `<div class="mock-weak"><strong>已答错题的能力类型</strong>${weak}</div>` : `<p class="mock-notice success">${result.answered === result.total ? "本卷全部答对。" : "已答题全部正确。"}</p>`}
+    ${result.total > result.answered ? '<p class="mock-notice">未答题不计分，单独保留为待完成；不会自动加入错题本。</p>' : ""}
+    ${weakTopics.length ? `<div class="mock-weak-topics"><strong>本次需补的知识点</strong>${weakTopics.map(({question, count}) => `<div><b>${escapeHtml(question.topic_title || chapterKey(question))} · ${count}题</b>${studyLinksHtml(question)}</div>`).join("")}</div>` : ""}
     ${reviewRows.length ? `<details class="mock-review">
-      <summary>查看本卷错题与解析（${reviewRows.length}）</summary>
+      <summary>查看本卷错题、未答题与解析（${reviewRows.length}）</summary>
       <div class="mock-review-list">${reviewRows.map(({index, question, answer}) => `<article>
         <strong>${index + 1}. ${escapeHtml(question.stem)}</strong>
         <p><span>你的答案</span>${answer === undefined ? "未作答" : escapeHtml(answer)}</p>
@@ -1296,6 +1301,10 @@ function renderMockResult() {
     render();
   });
   $("mock-wrong").addEventListener("click", () => {
+    state.subject = courseNameForSubject(mockSession.subject);
+    state.chapterFilter = "";
+    state.typeFilter = "";
+    state.searchQuery = "";
     state.mode = "wrong";
     resetPosition();
     save();

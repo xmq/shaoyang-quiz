@@ -41,6 +41,7 @@ NETWORK_TOPIC_BY_ID = {topic["topic_id"]: topic for topic in NETWORK_TOPICS}
 # 旧题题干过短或包含跨层术语时，关键词分类会把首题放到错误专题。
 # 这里只保留能够从题干解题任务直接确认的覆盖。
 NETWORK_TOPIC_OVERRIDES = {
+    "cg-08-s1-q30": "net.flow-congestion",
     "cg-08-s1-q8": "net.overview",
     "cg-08-s1-q96": "net.ethernet-wifi",
     "cg-08-s1-q27": "net.tcp-udp",

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="title desc">
+  <title id="title">五顶点无向带权图</title>
+  <desc id="desc">无向边AB权2、AC权5、BC权1、BD权4、CD权2、CE权6、DE权3。Prim、Kruskal、Dijkstra和Floyd示例使用同一组边。</desc>
+  <style>
+    .bg{fill:#f8fafc;stroke:#cbd5e1}.edge{stroke:#64748b;stroke-width:3}.node{fill:#e6f5f1;stroke:#087f70;stroke-width:3}.label{font:700 25px system-ui,sans-serif;fill:#123047;text-anchor:middle;dominant-baseline:middle}.weight{font:700 23px system-ui,sans-serif;fill:#1d4ed8;text-anchor:middle;paint-order:stroke;stroke:#f8fafc;stroke-width:9;stroke-linejoin:round}.caption{font:19px system-ui,sans-serif;fill:#334155;text-anchor:middle}
+    @media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#334b63}.edge{stroke:#99aec3}.node{fill:#173f3c;stroke:#46d6c6}.label{fill:#edf4fb}.weight{fill:#a9cbff;stroke:#142234}.caption{fill:#c4d2df}}
+  </style>
+  <rect class="bg" x="2" y="2" width="556" height="356" rx="18"/>
+  <g class="edge"><path d="M55 170L205 65L205 275L55 170M205 65L355 170L205 275M205 275L505 170L355 170" fill="none"/></g>
+  <g class="weight"><text x="123" y="106">2</text><text x="123" y="245">5</text><text x="205" y="178">1</text><text x="287" y="106">4</text><text x="286" y="244">2</text><text x="361" y="241">6</text><text x="430" y="161">3</text></g>
+  <g class="node"><circle cx="55" cy="170" r="24"/><circle cx="205" cy="65" r="24"/><circle cx="205" cy="275" r="24"/><circle cx="355" cy="170" r="24"/><circle cx="505" cy="170" r="24"/></g>
+  <g class="label"><text x="55" y="171">A</text><text x="205" y="66">B</text><text x="205" y="276">C</text><text x="355" y="171">D</text><text x="505" y="171">E</text></g>
+  <text class="caption" x="280" y="333">数字是边权；线段长度不代表费用</text>
+</svg>
