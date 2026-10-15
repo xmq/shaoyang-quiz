@@ -1,0 +1,84 @@
+{
+  "reviewed": 901,
+  "additions": 18,
+  "removals": 14,
+  "topics": 53,
+  "topics_without_output": [],
+  "validators": "gap.validate + KNOWLEDGE_POINT_VALUES + ABILITY_VALUES pass",
+  "numeric_rechecks": [
+    "80kB PCM",
+    "5.292MB PCM",
+    "960kB PCM",
+    "2.25MiB image",
+    "2AF=687",
+    "1111011111=991"
+  ],
+  "student_checks": [
+    {
+      "perspective": "模拟初学者，不是真实招募学生",
+      "task": "独立先算16kHz 16bit 单声道30秒PCM",
+      "attempt": "16000×16=256000bit/s；×30÷8=960000B=960kB；双声道1920kB",
+      "result": "与新增题答案一致，采样率/位深/声道/时间和单位条件完整"
+    },
+    {
+      "perspective": "模拟备考生，不是真实招募学生",
+      "task": "独立推演D2公式=$B2*C$1复制到F5",
+      "attempt": "右移2下移3；B列锁定，2变5；C变E，第1行锁定；=$B5*E$1",
+      "result": "与新题一致，未使用原题同一位置与数值"
+    },
+    {
+      "perspective": "模拟初学者，不是真实招募学生",
+      "task": "独立解释分节页码与页面方向",
+      "attempt": "分节后分别设页面方向；关闭页脚链接只是独立内容，另设起始1；分页不产生独立设置范围",
+      "result": "能区分链接、页码起始和分节，避免旧解析混淆"
+    },
+    {
+      "perspective": "模拟备考生，不是真实招募学生",
+      "task": "无损与有损选型并给理由",
+      "attempt": "CSV无损确保字节相同；视频可有损兼顾体积和质量；相邻像素/帧具有空间/时间相关",
+      "result": "与新增题一致，覆盖概念解释与场景输出"
+    }
+  ],
+  "official_checks": [
+    {
+      "topic": "格式刷可用于绘图对象，不只文字",
+      "url": "https://support.microsoft.com/en-us/word/use-the-format-painter"
+    },
+    {
+      "topic": "Word Insert改写控制需要启用设置",
+      "url": "https://support.microsoft.com/en-us/word/type-over-text-in-word-for-windows"
+    },
+    {
+      "topic": "Excel自定义序列",
+      "url": "https://support.microsoft.com/en-us/excel/create-or-delete-a-custom-list-for-sorting-and-filling-data"
+    },
+    {
+      "topic": "Excel公式复制及引用变化",
+      "url": "https://support.microsoft.com/en-us/excel/move-or-copy-a-formula-in-excel"
+    },
+    {
+      "topic": "Excel1900日期序列1",
+      "url": "https://support.microsoft.com/en-gb/excel/functions/date-function"
+    },
+    {
+      "topic": "Animate图形元件声音交互与影片剪辑边界",
+      "url": "https://helpx.adobe.com/animate/desktop/using/elements.html"
+    },
+    {
+      "topic": "Photoshop前景背景X切换",
+      "url": "https://helpx.adobe.com/photoshop/web/get-set-up/preferences-and-settings/keyboard-shortcuts.html"
+    },
+    {
+      "topic": "UTF-8有效标量1至4字节",
+      "url": "https://www.unicode.org/faq/utf_bom.html"
+    },
+    {
+      "topic": "IaaS PaaS SaaS责任层级",
+      "url": "https://csrc.nist.gov/pubs/sp/800/145/final"
+    },
+    {
+      "topic": "HDFS及副本容错",
+      "url": "https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html"
+    }
+  ]
+}

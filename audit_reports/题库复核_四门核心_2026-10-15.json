@@ -1,0 +1,5585 @@
+{
+  "reviewed": 797,
+  "method": "按知识点顺序读取题干、全部选项、答案和解析，再独立检查；理由逐题记录。未读取的题不进入记录。",
+  "questions": [
+    {
+      "id": "cg-08-s1-q1",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "微视频供下载是共享数据，不涉及分布式协同；原解析跨层无关。"
+    },
+    {
+      "id": "cg-08-s1-q8",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "网络资源包含硬件、软件、数据三类，D完整。"
+    },
+    {
+      "id": "cg-08-s1-q11",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "路由器连接局域和广域IP网络；其余不能替代跨网转发。"
+    },
+    {
+      "id": "cg-08-s1-q15",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "常见C/S模型由客户端请求、服务器应答；原解析未解释模型。"
+    },
+    {
+      "id": "cg-08-s1-q16",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "病毒可沿局域网传播，B错误；A速率范围不应硬性定义。"
+    },
+    {
+      "id": "cg-08-s1-q17",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "互联网多网络多路径互联，网状比单一星形恰当。"
+    },
+    {
+      "id": "cg-08-s1-q18",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "D列举的四种均为拓扑；路径型、局域型并非所列分类。"
+    },
+    {
+      "id": "cg-08-s1-q19",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "全国电话网覆盖跨地区，按范围归广域网。"
+    },
+    {
+      "id": "cg-08-s1-q37",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "网络适配器负责终端入网，不要求主机自带路由器。"
+    },
+    {
+      "id": "cg-08-s1-q43",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "校园内联网按覆盖范围属LAN。"
+    },
+    {
+      "id": "cg-08-s1-q48",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "单中心星形无冗余时中心故障影响全部节点；需明确无冗余。"
+    },
+    {
+      "id": "cg-08-s1-q80",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "加入WiFi不保证出口可用；其他接入方式也需明确互联网可达条件。"
+    },
+    {
+      "id": "cg-08-s1-q95",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "设计、系统、设备、协议、共享为给定选项中合理依赖顺序。"
+    },
+    {
+      "id": "cg-08-s1-q99",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "关键词少不保证结果少；需避免解析反过来绝对断言关键词越多结果一定越少。"
+    },
+    {
+      "id": "zg-49532",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "数据通信为跨机共享和协同的基础，C成立。"
+    },
+    {
+      "id": "zg-53166",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "主干汇聚流量通常容量更大，C将关系写反。"
+    },
+    {
+      "id": "zg-87097",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "多部门协作拆分数据处理对应分布处理，而非仅文件共享。"
+    },
+    {
+      "id": "zg-31679",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "removed",
+      "reason": "网卡为主机接入接口；与第8题重复，标记后续去重。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "zg-35092",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "点到中心是星形；原解析夸大网状全连接及环网故障绝对性。"
+    },
+    {
+      "id": "zg-3912",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "HUB不读目的MAC，在物理层复制信号，判断错误正确。"
+    },
+    {
+      "id": "zg-43176",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "所有设备连同一家庭中心设备，对应星形物理组织。"
+    },
+    {
+      "id": "zg-55249",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "公共干线加两端终结器是总线，解析末尾无图引用应删。"
+    },
+    {
+      "id": "web-38",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "B与D均表达强客户端弱服务端，原单选不唯一。"
+    },
+    {
+      "id": "dy-4ac13314",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "网络范围不按计算机台数确定，B错误。"
+    },
+    {
+      "id": "dy-be79e543",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "主机承担资源处理，其他均通信设备，C成立。"
+    },
+    {
+      "id": "dy-e222d101",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "学校小型网不必然星形，需补中央交换机连接条件。"
+    },
+    {
+      "id": "dy-068fc972",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "覆盖城市不足以区分MAN/WAN，应改跨城市国家的完整题干。"
+    },
+    {
+      "id": "dy-2ff14673",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "有线无线按通信介质区分，C；不应将范围与使用范围概念混乱。"
+    },
+    {
+      "id": "dy-4a6436c1",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "LAN为Local Area Network；原解析未展开缩写。"
+    },
+    {
+      "id": "dy-b63aad8d",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "corrected",
+      "reason": "覆盖小是LAN；原解析误称城域网为远程网并绝对比较速度。"
+    },
+    {
+      "id": "dy-3bb220bd",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "三要素设备、链路连接设备、协议，交换机路由器已包含在C。"
+    },
+    {
+      "id": "dy-0e293313",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "给定四项仅星形、总线是规范拓扑名。"
+    },
+    {
+      "id": "dy-60fff34e",
+      "subject": "计算机网络",
+      "topic_id": "net.overview",
+      "verdict": "checked",
+      "reason": "电子邮件C/S由服务器保存和中继，非客户端为核心。"
+    },
+    {
+      "id": "cg-08-s1-q44",
+      "subject": "计算机网络",
+      "topic_id": "net.performance",
+      "verdict": "checked",
+      "reason": "bps表示bit/s，MHz频率和Byte容量不替代速率。"
+    },
+    {
+      "id": "dy-48021ee9",
+      "subject": "计算机网络",
+      "topic_id": "net.performance",
+      "verdict": "corrected",
+      "reason": "网络Mbps用十进制，2Mbps=250kB/s不是256；答案应错误。"
+    },
+    {
+      "id": "nw-national-012",
+      "subject": "计算机网络",
+      "topic_id": "net.performance",
+      "verdict": "checked",
+      "reason": "1500×8/100e6=120微秒，核算成立。"
+    },
+    {
+      "id": "uc-net-001",
+      "subject": "计算机网络",
+      "topic_id": "net.performance",
+      "verdict": "checked",
+      "reason": "12000/6e6=0.002秒即2毫秒。"
+    },
+    {
+      "id": "cg-08-s1-q47",
+      "subject": "计算机网络",
+      "topic_id": "net.switching",
+      "verdict": "corrected",
+      "reason": "广域数据网以分组交换为主，报文交换与分组不应混称。"
+    },
+    {
+      "id": "gap-final-thin-014",
+      "subject": "计算机网络",
+      "topic_id": "net.switching",
+      "verdict": "checked",
+      "reason": "电路预留vs分组统计复用区分成立；持续业务不必强制电路。"
+    },
+    {
+      "id": "cg-08-s1-q20",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "路由器在网络层选路和转发，D正确。"
+    },
+    {
+      "id": "cg-08-s1-q21",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "TCP/IP四层没有独立物理层；原解析误将四层中的物理层说成最低层。"
+    },
+    {
+      "id": "cg-08-s1-q29",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "微波中继到空间，映射应为传输介质而非地址分层。"
+    },
+    {
+      "id": "cg-08-s1-q31",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "TCP/IP是协议族，HTTP/FTP为其中应用协议，HTML不是通信协议。"
+    },
+    {
+      "id": "zg-95689",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "ROM和RAM为存储器，其他为历史网络协议族。"
+    },
+    {
+      "id": "cg-08-s1-q33",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "对等层读其协议首部，因此接收第3层；原解析需直接解释。"
+    },
+    {
+      "id": "cg-08-s1-q45",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "标称10M为10Mbit/s上限，1.25MB/s换算正确；映射性能。"
+    },
+    {
+      "id": "cg-08-s1-q59",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "首字节192在传统C类范围；原通用解析不支撑答案。"
+    },
+    {
+      "id": "cg-08-s1-q62",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "127/8为本机回环，不可作公网接口地址。"
+    },
+    {
+      "id": "cg-08-s1-q91",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "SMTP发送中继，POP3取信，应用服务映射应修正。"
+    },
+    {
+      "id": "cg-08-s1-q92",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "邮件存储转发非实时聊天，映射应为应用服务。"
+    },
+    {
+      "id": "cg-08-s1-q101",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "removed",
+      "reason": "alink为旧HTML活动链接色，现代应CSS；原题缺历史边界。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "cg-08-s1-q107",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "网站信息集成顺序②①③④，非协议分层。"
+    },
+    {
+      "id": "cg-08-s1-q110",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "统一通信标准使表达规范化，D成立。"
+    },
+    {
+      "id": "cg-08-s1-q111",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "4G为第四代移动通信，与内存容量无关。"
+    },
+    {
+      "id": "zg-66746",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "网络层PDU为分组，帧为链路层。"
+    },
+    {
+      "id": "zg-97748",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "七层序列中表示层紧邻会话层之上。"
+    },
+    {
+      "id": "zg-99323",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "OSI为开放系统互连，ISO为组织名称，A正确。"
+    },
+    {
+      "id": "zg-97264",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "接收自下而上解封装，A；应映射协议服务。"
+    },
+    {
+      "id": "zg-93630",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "TCP为传输层可靠字节流协议。"
+    },
+    {
+      "id": "zg-63333",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "加入Internet需TCP/IP族，非旧NetWare协议。"
+    },
+    {
+      "id": "zg-61274",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "Windows NT为OS而非网络协议。"
+    },
+    {
+      "id": "zg-37151",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "语法格式、语义含义、时序次序，C三要素完整。"
+    },
+    {
+      "id": "zg-71082",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "SMTP邮件协议工作在应用层，D。"
+    },
+    {
+      "id": "zg-27285",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "ABD按教材协议软件系统分类可选；原解析误把协议规范等同程序。"
+    },
+    {
+      "id": "zg-22893",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "电信、广播电视、互联网三网，填空成立；同意应统一。"
+    },
+    {
+      "id": "zg-89180",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "通信双方规则集合定义网络协议，填空成立。"
+    },
+    {
+      "id": "zg-87605",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "FTP对应文件传输；映射应应用服务。"
+    },
+    {
+      "id": "web-13",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "removed",
+      "reason": "Internet依赖TCP/IP；与第59题同知识辨识重复。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "web-24",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "给定协议族中TCP/IP为Internet互通基础。"
+    },
+    {
+      "id": "dy-93407259",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "网络融合计算机与现代通信技术；应映射概述。"
+    },
+    {
+      "id": "dy-1a53061f",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "ARPANET军事赞助不等于最初专为核战；按ISOC改问资助方。"
+    },
+    {
+      "id": "dy-df751f5c",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "资源共享是网络核心目的；映射应概述。"
+    },
+    {
+      "id": "dy-a2b16c00",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "三网融合非三个物理网络必然合一，原题前提错误。"
+    },
+    {
+      "id": "dy-89ef5496",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "传输层衔接通信子网和高层；原解析虚构给网络层目的地站点信息。"
+    },
+    {
+      "id": "dy-792d37ae",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "同等层功能一致、下层服务上层、实现透明；C成立。"
+    },
+    {
+      "id": "dy-d4df3be1",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "OSI七层数目正确。"
+    },
+    {
+      "id": "dy-3e26bc1a",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "数据链路不保证任何情况下无错无丢失；需改为成帧和差错检测职责。"
+    },
+    {
+      "id": "dy-63566fa1",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "TCP/IP为协议族，选项C可保留但应改准确名称。"
+    },
+    {
+      "id": "dy-69be03f9",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "应用程序属应用层非网际层，D。"
+    },
+    {
+      "id": "dy-01c4efd0",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "removed",
+      "reason": "修复OCR后与cg-08-s1-q110题干、选项、答案相同，保留后者，移除重复。"
+    },
+    {
+      "id": "dy-abc830e2",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "BC成立；协议规则本身不保证所有传输可靠，应改协调通信表述。"
+    },
+    {
+      "id": "dy-02fc576c",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "removed",
+      "reason": "内容、布局、交互、视觉为网站评价各维度，全选。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "dy-edef41ec",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "A选项混入B且html是根元素非第三个并列元素，需重写题干选项。"
+    },
+    {
+      "id": "dy-fe47807b",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "硬件侧由终端、链路、互连节点构成，判断成立；映射概述。"
+    },
+    {
+      "id": "dy-ccd9f16a",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "物理层透明传送比特流，铜线无线介质均可。"
+    },
+    {
+      "id": "dy-084d1cb8",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "默认网关负责三层转发、DHCP才分配IP，原解析混淆网关各义。"
+    },
+    {
+      "id": "dy-9df9cc78",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "removed",
+      "reason": "Word可编辑代码但需纯文本保存；原解析遗漏格式条件。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "uf-nw-004",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "同链路IPv4到MAC由ARP完成；映射ARP。"
+    },
+    {
+      "id": "ap-nw-004",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "checked",
+      "reason": "TCP可靠字节流、IP路由、DNS名字查询，ABC而非ARP解析域名。"
+    },
+    {
+      "id": "uc-net-013",
+      "subject": "计算机网络",
+      "topic_id": "net.layers-addresses",
+      "verdict": "corrected",
+      "reason": "异网首跳目的MAC取网关，ARP不查询远端MAC。"
+    },
+    {
+      "id": "cg-08-s1-q24",
+      "subject": "计算机网络",
+      "topic_id": "net.protocol-service",
+      "verdict": "checked",
+      "reason": "物理层传比特，不像上层添加分组首尾，A。"
+    },
+    {
+      "id": "cg-08-s1-q25",
+      "subject": "计算机网络",
+      "topic_id": "net.protocol-service",
+      "verdict": "corrected",
+      "reason": "协议约束不同节点的对等实体，D比B更精确。"
+    },
+    {
+      "id": "cg-08-s1-q34",
+      "subject": "计算机网络",
+      "topic_id": "net.protocol-service",
+      "verdict": "checked",
+      "reason": "过程特性说明操作事件次序，C。"
+    },
+    {
+      "id": "zg-49279",
+      "subject": "计算机网络",
+      "topic_id": "net.protocol-service",
+      "verdict": "corrected",
+      "reason": "成帧添加首尾成立，原解析不考虑帧长错误，帧协议有长短限制。"
+    },
+    {
+      "id": "dy-7c423127",
+      "subject": "计算机网络",
+      "topic_id": "net.protocol-service",
+      "verdict": "corrected",
+      "reason": "顺/顿是帧OCR损坏，答案概念可保留但必须修文。"
+    },
+    {
+      "id": "dy-496c078e",
+      "subject": "计算机网络",
+      "topic_id": "net.protocol-service",
+      "verdict": "corrected",
+      "reason": "网卡确是网络适配器；解析由MAC推出物理层错误。"
+    },
+    {
+      "id": "cg-08-s1-q4",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "所列历史以太网段长500>185>100，需限定题列旧标准。"
+    },
+    {
+      "id": "cg-08-s1-q9",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "HUB本身是多口中继器，原单选B与A功能重叠需明确双端口。"
+    },
+    {
+      "id": "cg-08-s1-q35",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "线路模拟到主机数字为解调，B。"
+    },
+    {
+      "id": "cg-08-s1-q46",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "带宽为标称最高率非平均率，A；映射性能。"
+    },
+    {
+      "id": "zg-85522",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "checked",
+      "reason": "红外无线，其余三种有线，C。"
+    },
+    {
+      "id": "zg-67669",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "checked",
+      "reason": "光纤低损耗而非大损耗，A。"
+    },
+    {
+      "id": "zg-33738",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "checked",
+      "reason": "调制解调器完成信号转换，D。"
+    },
+    {
+      "id": "zg-73199",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "无线电、同轴、光纤是介质，集成线路不是网络介质分类。"
+    },
+    {
+      "id": "dy-4c9f7d86",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "checked",
+      "reason": "双绞同轴光缆是有线，短波是无线，ABC。"
+    },
+    {
+      "id": "dy-5c6c5119",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "checked",
+      "reason": "光纤低损耗抗电磁干扰小体轻，四项成立。"
+    },
+    {
+      "id": "dy-6cc9fae5",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "OS1应OSI；七层次序成立但映射应分层。"
+    },
+    {
+      "id": "dy-c569f2fc",
+      "subject": "计算机网络",
+      "topic_id": "net.media",
+      "verdict": "corrected",
+      "reason": "普通无线局域网采用电磁波；需限定范围避免水下声学网络反例。"
+    },
+    {
+      "id": "cg-08-s1-q42",
+      "subject": "计算机网络",
+      "topic_id": "net.symbol-multiplexing",
+      "verdict": "corrected",
+      "reason": "波特率为每秒码元数，不等同真实信号变化次数；必须修B。"
+    },
+    {
+      "id": "gap-final-thin-015",
+      "subject": "计算机网络",
+      "topic_id": "net.symbol-multiplexing",
+      "verdict": "checked",
+      "reason": "2400×log2(8)=7200bit/s；TDM分时FDM分频。"
+    },
+    {
+      "id": "nw-national-001",
+      "subject": "计算机网络",
+      "topic_id": "net.channel-capacity",
+      "verdict": "checked",
+      "reason": "2000×log2(32)=10000，C。"
+    },
+    {
+      "id": "nw-national-011",
+      "subject": "计算机网络",
+      "topic_id": "net.channel-capacity",
+      "verdict": "checked",
+      "reason": "C=B log2(1+S/N)，dB以10次幂还原，单位齐全。"
+    },
+    {
+      "id": "nw-national-013",
+      "subject": "计算机网络",
+      "topic_id": "net.channel-capacity",
+      "verdict": "checked",
+      "reason": "3000×log2(1001)=29901.7bit/s，29.9kbit/s。"
+    },
+    {
+      "id": "uc-net-002",
+      "subject": "计算机网络",
+      "topic_id": "net.channel-capacity",
+      "verdict": "checked",
+      "reason": "2×3000×log2(16)=24000bit/s，A。"
+    },
+    {
+      "id": "cg-08-s1-q13",
+      "subject": "计算机网络",
+      "topic_id": "net.frames-switching",
+      "verdict": "corrected",
+      "reason": "网卡实现帧收发同时包含物理层功能，不能绝对说仅链路。"
+    },
+    {
+      "id": "dy-4a95dd28",
+      "subject": "计算机网络",
+      "topic_id": "net.frames-switching",
+      "verdict": "corrected",
+      "reason": "需限定普通二层交换机，多层交换机可工作网络层。"
+    },
+    {
+      "id": "dy-32a66171",
+      "subject": "计算机网络",
+      "topic_id": "net.frames-switching",
+      "verdict": "corrected",
+      "reason": "普通二层交换机与网桥属链路，集线物理路由网络。"
+    },
+    {
+      "id": "nw-national-002",
+      "subject": "计算机网络",
+      "topic_id": "net.crc",
+      "verdict": "checked",
+      "reason": "1101000模2除1011余001，码字1101001复除为0。"
+    },
+    {
+      "id": "gap-final-thin-016",
+      "subject": "计算机网络",
+      "topic_id": "net.crc",
+      "verdict": "corrected",
+      "reason": "生成式次数3补3零，001正确；余零不保证绝无错。"
+    },
+    {
+      "id": "uf-nw-006",
+      "subject": "计算机网络",
+      "topic_id": "net.arq-window",
+      "verdict": "checked",
+      "reason": "序号、ACK、超时和窗口均可靠传输机制，D绝对丢弃错误。"
+    },
+    {
+      "id": "nw-national-016",
+      "subject": "计算机网络",
+      "topic_id": "net.arq-window",
+      "verdict": "checked",
+      "reason": "一周期发送1加往返9=10毫秒，有效发送占10%。"
+    },
+    {
+      "id": "cg-08-s1-q7",
+      "subject": "计算机网络",
+      "topic_id": "net.ethernet-wifi",
+      "verdict": "corrected",
+      "reason": "共享半双工可以碰撞，B级联长度和D不能发送需限定避免歧义。"
+    },
+    {
+      "id": "cg-08-s1-q23",
+      "subject": "计算机网络",
+      "topic_id": "net.ethernet-wifi",
+      "verdict": "checked",
+      "reason": "经典以太MAC为48位。"
+    },
+    {
+      "id": "cg-08-s1-q96",
+      "subject": "计算机网络",
+      "topic_id": "net.ethernet-wifi",
+      "verdict": "corrected",
+      "reason": "单宽带NAT路由共享比双线路经济；需限定给定ADSL方案。"
+    },
+    {
+      "id": "zg-64035",
+      "subject": "计算机网络",
+      "topic_id": "net.ethernet-wifi",
+      "verdict": "removed",
+      "reason": "48位正确；与122重复，可后续去重。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "nw-national-007",
+      "subject": "计算机网络",
+      "topic_id": "net.ethernet-wifi",
+      "verdict": "checked",
+      "reason": "半双工CD与802.11CA对比准确，全双工无需CD。"
+    },
+    {
+      "id": "cg-08-s1-q54",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "/26块64，128至191末地址广播191。"
+    },
+    {
+      "id": "cg-08-s1-q64",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "130与128掩码按位与为128。"
+    },
+    {
+      "id": "cg-08-s1-q70",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "原B类/16扩/26借10位1024网，每网62普通主机。"
+    },
+    {
+      "id": "zg-25",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "corrected",
+      "reason": "硬软数据共享正确；映射概述非子网。"
+    },
+    {
+      "id": "dy-2d788ce1",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "corrected",
+      "reason": "拓扑取决通信子网节点链路排列，映射概述且原解析无推理。"
+    },
+    {
+      "id": "dy-b5852adf",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "corrected",
+      "reason": "按功能分资源子网通信子网，映射概述。"
+    },
+    {
+      "id": "dy-60ed5b71",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "corrected",
+      "reason": "传输为通信子网职责非资源子网，判断错误正确；映射概述。"
+    },
+    {
+      "id": "uf-nw-002",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "/26块64，130落128至191，C。"
+    },
+    {
+      "id": "nw-national-003",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "/11第二段掩码224，77与224=64，A。"
+    },
+    {
+      "id": "nw-national-014",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "/26六位主机，64减首尾为62。"
+    },
+    {
+      "id": "ap-nw-005",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "借两位、四段起点0/64/128/192，广播63/127/191/255正确。"
+    },
+    {
+      "id": "uc-net-003",
+      "subject": "计算机网络",
+      "topic_id": "net.subnet-routing",
+      "verdict": "checked",
+      "reason": "/27块32，77落64至95，A。"
+    },
+    {
+      "id": "uf-nw-008",
+      "subject": "计算机网络",
+      "topic_id": "net.arp-forwarding",
+      "verdict": "checked",
+      "reason": "二层按MAC三层按IP，判断正确。"
+    },
+    {
+      "id": "nw-national-018",
+      "subject": "计算机网络",
+      "topic_id": "net.arp-forwarding",
+      "verdict": "corrected",
+      "reason": "同网解析目的MAC异网解析网关MAC；应说明使用选定下一跳不总是默认网关。"
+    },
+    {
+      "id": "uc-net-009",
+      "subject": "计算机网络",
+      "topic_id": "net.arp-forwarding",
+      "verdict": "checked",
+      "reason": "未知单播在同VLAN除入端口泛洪并学习源地址，A。"
+    },
+    {
+      "id": "cg-08-s1-q12",
+      "subject": "计算机网络",
+      "topic_id": "net.routing",
+      "verdict": "corrected",
+      "reason": "普通路由转发不进行DNS解析，A；改解析明确路由和逐跳封装。"
+    },
+    {
+      "id": "cg-08-s1-q14",
+      "subject": "计算机网络",
+      "topic_id": "net.routing",
+      "verdict": "corrected",
+      "reason": "三层路由可跨网，需限定普通二层交换机。"
+    },
+    {
+      "id": "web-27",
+      "subject": "计算机网络",
+      "topic_id": "net.routing",
+      "verdict": "checked",
+      "reason": "互联网由路由器互联网络，B。"
+    },
+    {
+      "id": "nw-national-005",
+      "subject": "计算机网络",
+      "topic_id": "net.routing",
+      "verdict": "checked",
+      "reason": "10.4.7.20三项均命中，/24最长正确。"
+    },
+    {
+      "id": "uc-net-005",
+      "subject": "计算机网络",
+      "topic_id": "net.routing",
+      "verdict": "checked",
+      "reason": "10.1.2.99三项均命中，选择/24。"
+    },
+    {
+      "id": "hn-recall-hn26-008",
+      "subject": "计算机网络",
+      "topic_id": "net.routing",
+      "verdict": "corrected",
+      "reason": "递减TTL查最长前缀重封装正确，TTL到零需丢弃边界可补。"
+    },
+    {
+      "id": "cg-08-s1-q49",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "IP标识接口不是每个节点唯一一个；NAT和多接口反例使原解析过强。"
+    },
+    {
+      "id": "cg-08-s1-q50",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "128位共有2^128种组合正确；无须保留争议历史序言。"
+    },
+    {
+      "id": "cg-08-s1-q51",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "128/8=16字节，D。"
+    },
+    {
+      "id": "cg-08-s1-q52",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "288超过IPv4八位组255上限，B。"
+    },
+    {
+      "id": "cg-08-s1-q53",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "传统分类最高位0为A类格式，特定0/8和127/8保留需说明。"
+    },
+    {
+      "id": "cg-08-s1-q55",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "首字节202在192至223传统C类范围。"
+    },
+    {
+      "id": "cg-08-s1-q56",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "缺位在末段*56；156合法而256/356/456越界，原解析看错第三段。"
+    },
+    {
+      "id": "cg-08-s1-q57",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "未给掩码不能断定192.5.91.255广播；需明确传统分类默认掩码。"
+    },
+    {
+      "id": "cg-08-s1-q58",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "B类网络字段14位共16384，原16383无依据，改D及解释。"
+    },
+    {
+      "id": "cg-08-s1-q60",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "IPv4 D类224至239用于组播，C。"
+    },
+    {
+      "id": "cg-08-s1-q61",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "127回环不属C类，C正确。"
+    },
+    {
+      "id": "cg-08-s1-q63",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "同一子网用同一前缀掩码与运算得到同网络地址。"
+    },
+    {
+      "id": "cg-08-s1-q65",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "241二进制11110001不连续，C；D选项混入正文表必须清掉。"
+    },
+    {
+      "id": "cg-08-s1-q71",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "IP访问成功域名失败优先DNS，映射排障或DNS。"
+    },
+    {
+      "id": "cg-08-s1-q72",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "IP成功排除明显链路和地址故障，①为最合理。"
+    },
+    {
+      "id": "cg-08-s1-q74",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "名称到地址由DNS，A。"
+    },
+    {
+      "id": "zg-74774",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "BC规范点分IPv4；A历史库可能接受三段缩写需限定规范四段。"
+    },
+    {
+      "id": "cg-08-s2-q9",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "单播IPv4地址分网络前缀和主机部分，BC。"
+    },
+    {
+      "id": "zg-25284",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "网络和主机部分正确，旧分类非CIDR通用形式需修解释。"
+    },
+    {
+      "id": "zg-3438",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "当前Internet含IPv6，题干应明确IPv4才能答32。"
+    },
+    {
+      "id": "zg-47220",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "第二段263超界，错误成立。"
+    },
+    {
+      "id": "dy-bfac1faf",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "ARP将IPv4映射MAC，映射ARP；请求常广播应答通常单播。"
+    },
+    {
+      "id": "dy-3617dfbb",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "一域名可多IP一IP可多域名，原解析把一个域名唯一IP说错。"
+    },
+    {
+      "id": "dy-a985c02c",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "私有IP可重复且NAT上网，原全因特网唯一断言错误，应判错误。"
+    },
+    {
+      "id": "uf-nw-003",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "/27五位主机32减2=30，映射子网。"
+    },
+    {
+      "id": "nw-national-008",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "IPv6 128位、路由器不分片、基本头40B，B。"
+    },
+    {
+      "id": "ap-nw-001",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "/24分四块借2位为/26可用62，映射子网。"
+    },
+    {
+      "id": "uc-net-004",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "corrected",
+      "reason": "2^6-2=62首次满足50，/26，映射子网。"
+    },
+    {
+      "id": "uc-net-006",
+      "subject": "计算机网络",
+      "topic_id": "net.ip-versions",
+      "verdict": "checked",
+      "reason": "(620-20)/8整除得75个8字节，600B，A。"
+    },
+    {
+      "id": "nw-national-004",
+      "subject": "计算机网络",
+      "topic_id": "net.rip-update",
+      "verdict": "checked",
+      "reason": "当前下一跳通告4加链路1得5，必须更新较差值。"
+    },
+    {
+      "id": "gap-retest-rip-001",
+      "subject": "计算机网络",
+      "topic_id": "net.rip-update",
+      "verdict": "checked",
+      "reason": "新邻居2加1优于5为3；随后16不可达，度量饱和16正确。"
+    },
+    {
+      "id": "cg-08-s1-q27",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "checked",
+      "reason": "TCP在应用进程间提供可靠字节流，D。"
+    },
+    {
+      "id": "cg-08-s1-q39",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "corrected",
+      "reason": "确认重传流控拥塞控制指TCP，C；题干网络拥塞漏控制。"
+    },
+    {
+      "id": "dy-b582fe9c",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "corrected",
+      "reason": "TCP与UDP为传输层，RARP在链路承载不应绝对归网络层。"
+    },
+    {
+      "id": "uf-nw-001",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "corrected",
+      "reason": "帧IP分组TCP段依次二三四层，映射分层。"
+    },
+    {
+      "id": "nw-national-017",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "checked",
+      "reason": "TCP字节流可靠、UDP数据报边界尽力交付，比较完整。"
+    },
+    {
+      "id": "ap-nw-002",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "checked",
+      "reason": "TCP可靠有序非业务恰好一次，A。"
+    },
+    {
+      "id": "ap-nw-003",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "checked",
+      "reason": "重连后应用可重放请求，TCP不保扣款恰好一次，错误成立。"
+    },
+    {
+      "id": "uc-net-007",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "corrected",
+      "reason": "连续收到SEQ3000起500字节下一期望3500；需补前序连续与无SYN/FIN。"
+    },
+    {
+      "id": "uc-net-011",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "corrected",
+      "reason": "TCP流、窗口min、SYN/FIN耗序号成立，write/read不一一对应。"
+    },
+    {
+      "id": "uc-net-014",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-udp",
+      "verdict": "checked",
+      "reason": "UDP校验不提供重传有序，判断错误。"
+    },
+    {
+      "id": "uf-nw-005",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-connection",
+      "verdict": "checked",
+      "reason": "三次握手同步初始序号验证双向通信，A。"
+    },
+    {
+      "id": "nw-national-015",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-connection",
+      "verdict": "checked",
+      "reason": "1000至1499后期待1500，条件已清楚。"
+    },
+    {
+      "id": "uc-net-008",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-connection",
+      "verdict": "checked",
+      "reason": "第三次确认服务器SYN故y+1，A。"
+    },
+    {
+      "id": "uc-net-015",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-connection",
+      "verdict": "checked",
+      "reason": "TIME_WAIT重答FIN及旧段寿命，2MSL解释成立。"
+    },
+    {
+      "id": "hn-recall-hn26-005",
+      "subject": "计算机网络",
+      "topic_id": "net.tcp-connection",
+      "verdict": "checked",
+      "reason": "socket上下文管理、connect、sendall会正确释放资源，代码语法成立。"
+    },
+    {
+      "id": "cg-08-s1-q30",
+      "subject": "计算机网络",
+      "topic_id": "net.flow-congestion",
+      "verdict": "checked",
+      "reason": "过载可能导致有效吞吐下降，D为拥塞证据，非只看包数。"
+    },
+    {
+      "id": "nw-national-006",
+      "subject": "计算机网络",
+      "topic_id": "net.flow-congestion",
+      "verdict": "checked",
+      "reason": "min(12,8)-3=5KB，B。"
+    },
+    {
+      "id": "nw-national-020",
+      "subject": "计算机网络",
+      "topic_id": "net.flow-congestion",
+      "verdict": "checked",
+      "reason": "接收窗口保护接收缓存、拥塞窗口保护网络，区别和共同限制正确。"
+    },
+    {
+      "id": "cg-08-s1-q26",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "浏览器HTTP请求响应网页，B。"
+    },
+    {
+      "id": "cg-08-s1-q36",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "文件传输协议英文FTP，C。"
+    },
+    {
+      "id": "cg-08-s1-q41",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "MHT可封装网页资源，B；需明确支持MHT保存的浏览器。"
+    },
+    {
+      "id": "cg-08-s1-q75",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "FTP无需知道服务器地理距离，A。"
+    },
+    {
+      "id": "cg-08-s1-q78",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "邮件不保证即发即收，改为网络存储转发减少地理耗时。"
+    },
+    {
+      "id": "cg-08-s1-q81",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "标准FTP无内建版本历史，但扩展服务器可有，应问协议内建。"
+    },
+    {
+      "id": "cg-08-s1-q84",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "回形针通常表示附件，与层次无关需针对性解析。"
+    },
+    {
+      "id": "cg-08-s1-q86",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "qwer为local-part本地账号部分，B。"
+    },
+    {
+      "id": "cg-08-s1-q87",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "制作动画非邮件服务职责，C。"
+    },
+    {
+      "id": "cg-08-s1-q88",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "IE现已退役，题干当前常用错误；改历史产品辨认。"
+    },
+    {
+      "id": "cg-08-s1-q89",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "服务器代收存储所以收件电脑不必开机，B。"
+    },
+    {
+      "id": "cg-08-s1-q90",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "电子邮件非即时通讯，C；逗号分隔依客户端需避免固定限定。"
+    },
+    {
+      "id": "cg-08-s1-q100",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "C正确；D定期强制改密并非通用要求需改为密码永不泄露保证避免双答案。"
+    },
+    {
+      "id": "cg-08-s1-q103",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "removed",
+      "reason": "script的src加载JS，C；闭合标签需补。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "cg-08-s1-q104",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "removed",
+      "reason": "ASP服务器端；JS亦可Node服务端，不能宣称JS只在客户端。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "zg-27343",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "HTTP为超文本传输；HTTP/3不基于TCP，原解释全称需修。"
+    },
+    {
+      "id": "zg-5971",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "SNMP通常UDP但有TCP传输映射，原绝对句需限定常见默认映射。"
+    },
+    {
+      "id": "zg-19259",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "HTTP用于万维网资源通信，填空成立。"
+    },
+    {
+      "id": "zg-97942",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "远程登录不仅Telnet还有SSH，需补Telnet明文终端协议条件。"
+    },
+    {
+      "id": "web-12",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "local-part@域，A。"
+    },
+    {
+      "id": "web-26",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "FTP展开为文件传输，C。"
+    },
+    {
+      "id": "dy-253de650",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "D不保证任意地址投递，C邮箱别名非一一人；需限定能尝试发送非保证送达。"
+    },
+    {
+      "id": "dy-c5d3ca69",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "removed",
+      "reason": "ASP/JSP是服务器端技术非语言，改问开发技术/语言。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "dy-492f9772",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "静态网页可表单或JS交互，原D错误分类不成立；必须改D为服务端实时生成。"
+    },
+    {
+      "id": "dy-fc643099",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "最高为应用层非表示，判断错误正确。"
+    },
+    {
+      "id": "dy-9caafdfc",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "邮件发送中继SMTP而非POP3，判断错误。"
+    },
+    {
+      "id": "dy-e2ff715a",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "姓名邮编非电子邮件必填，判断错误。"
+    },
+    {
+      "id": "dy-32d91ae3",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "@后是邮箱域不一定实际服务器主机名，判断应错误并讲MX。"
+    },
+    {
+      "id": "dy-33a5aed8",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "corrected",
+      "reason": "无论是否接收永存不成立，队列退信到期和配置会删除，判断应错误。"
+    },
+    {
+      "id": "dy-44fd2211",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "邮件主题允许空，判断错误正确。"
+    },
+    {
+      "id": "uc-net-012",
+      "subject": "计算机网络",
+      "topic_id": "net.app-protocols",
+      "verdict": "checked",
+      "reason": "ABC常见DNS/SMTP/HTTPS职责成立，DHCP可从未配置地址开始。"
+    },
+    {
+      "id": "cg-08-s1-q40",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "HTTPS提供TLS保护，C将内容与URL地址混淆，B。"
+    },
+    {
+      "id": "cg-08-s1-q67",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": ".gov政府域，映射DNS。"
+    },
+    {
+      "id": "cg-08-s1-q73",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": ".cn国家顶级，原URL空格损坏需修。"
+    },
+    {
+      "id": "cg-08-s1-q76",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "removed",
+      "reason": "HTML标记而非服务器动态生成技术，B；去掉当前主流时效限定。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "cg-08-s1-q77",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "www为惯用Web主机名，并非协议强制，C。"
+    },
+    {
+      "id": "cg-08-s1-q79",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": "绝对HTTP URL含scheme，选A需ASCII冒号。"
+    },
+    {
+      "id": "cg-08-s1-q85",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": "scheme、主机、路径目录及文件对应C，修http缺冒号和主机空格。"
+    },
+    {
+      "id": "cg-08-s1-q102",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "removed",
+      "reason": "style嵌入CSS，C，非HTTP协议本身。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "cg-08-s1-q105",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": "网站是相关网页资源集合非服务器同义词，重写题干。"
+    },
+    {
+      "id": "cg-08-s1-q106",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": "超链接跨网页跳转，C；反野应反馈。"
+    },
+    {
+      "id": "cg-08-s1-q108",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "removed",
+      "reason": "多兴趣可多选应用复选框，原解析讲HTTP无关。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "cg-08-s1-q109",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "removed",
+      "reason": "给定工具中FrontPage专门网页制作，原解析无关。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "zg-73141",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "278超过八位组255，D；题干可限定点分IPv4语法。"
+    },
+    {
+      "id": "zg-23651",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "HTML是文本、标签有语义且能编网页，ABC。"
+    },
+    {
+      "id": "web-1",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "HTML标记语言不同HTTP协议，C。"
+    },
+    {
+      "id": "dy-53153f96",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": "URL不只是邮箱地址或主机名，AD；资源未必唯一URL需修解析。"
+    },
+    {
+      "id": "dy-0bd85370",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "removed",
+      "reason": "网页内容布局新意均可考虑，丰富颜色非必要；题干三原则非规范应改合理设计。；删除重复辨识题或已退役工具的细枝末节，不作为编制学习核心练习。"
+    },
+    {
+      "id": "dy-2fa7623e",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "corrected",
+      "reason": "URL scheme为http不是www，判断错误；修ASCII语法。"
+    },
+    {
+      "id": "dy-340ea980",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "图像可放a元素内形成超链接，判断正确。"
+    },
+    {
+      "id": "nw-national-010",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "收到404已HTTP响应，未找到目标而不能判DNS或断网，B。"
+    },
+    {
+      "id": "hn-recall-sy26-004",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "HTTPS验证身份、协商密钥、加密完整性；应说明域名和有效期也要验证。"
+    },
+    {
+      "id": "hn-recall-hn26-011",
+      "subject": "计算机网络",
+      "topic_id": "net.http",
+      "verdict": "checked",
+      "reason": "HTTP/1.1默认持久连接成立但可关闭和超时。"
+    },
+    {
+      "id": "cg-08-s1-q66",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "CNNIC为.cn/.中国注册管理机构，非中国所有域名分配者，题干应收窄。"
+    },
+    {
+      "id": "cg-08-s1-q68",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "不知道DNS服务器名字仍可按IP查询，原选C不严谨；改I为IP地址保留C。"
+    },
+    {
+      "id": "cg-08-s1-q69",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "checked",
+      "reason": "缓存命中不从根开始，C错误。"
+    },
+    {
+      "id": "cg-08-s1-q82",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "邮箱@分隔本地部分与域，映射邮件服务。"
+    },
+    {
+      "id": "cg-08-s1-q83",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "并非所有ISP必需账号口令，应限定使用账号认证拨号。"
+    },
+    {
+      "id": "zg-91239",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "checked",
+      "reason": ".gov政府.edu教育成立，填空。"
+    },
+    {
+      "id": "zg-61952",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "www只惯用服务标签不保证主机功能，原多空题需改准确域名分解。"
+    },
+    {
+      "id": "dy-58ef37de",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "AB为合法标签点分，逗号非法；20字符旧限制错误，应63八位组标签上限。"
+    },
+    {
+      "id": "dy-771131ac",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "ASCII域名大小写不敏感，原20字符限制错误需去掉。"
+    },
+    {
+      "id": "nw-national-019",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "checked",
+      "reason": "DNS解析DHCP配置，169.254常自分配；不能断言所有链路本地必DHCP失败。"
+    },
+    {
+      "id": "ap-nw-006",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "checked",
+      "reason": "ping IP成功域名失败优先DNS，ipconfig/nslookup分步合理。"
+    },
+    {
+      "id": "uc-net-010",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "corrected",
+      "reason": "链路Ethernet网络IP传输TCP，ABC；映射分层。"
+    },
+    {
+      "id": "hn-recall-hn26-010",
+      "subject": "计算机网络",
+      "topic_id": "net.dns-dhcp",
+      "verdict": "checked",
+      "reason": "应用名称解析DNS，A。"
+    },
+    {
+      "id": "nw-national-021",
+      "subject": "计算机网络",
+      "topic_id": "net.security-boundary",
+      "verdict": "checked",
+      "reason": "防火墙规则、IDS检测、IPS阻断，需配合补丁权限和恢复。"
+    },
+    {
+      "id": "gap-final-thin-017",
+      "subject": "计算机网络",
+      "topic_id": "net.security-boundary",
+      "verdict": "checked",
+      "reason": "Web置DMZ，DB内网，仅开放必要方向端口，规则合理。"
+    },
+    {
+      "id": "cg-08-s1-q28",
+      "subject": "计算机网络",
+      "topic_id": "net.crypto-signature",
+      "verdict": "corrected",
+      "reason": "PGP/MOSS同样可数字签名，原无法抵赖单选不唯一，应改问电子交易SET全称用途。"
+    },
+    {
+      "id": "nw-national-009",
+      "subject": "计算机网络",
+      "topic_id": "net.crypto-signature",
+      "verdict": "checked",
+      "reason": "私钥签名、公钥绑定验证身份与完整性，B。"
+    },
+    {
+      "id": "gap-final-thin-018",
+      "subject": "计算机网络",
+      "topic_id": "net.crypto-signature",
+      "verdict": "checked",
+      "reason": "加密保密摘要检变签名来源；签名不自动保密正确。"
+    },
+    {
+      "id": "cg-08-s1-q93",
+      "subject": "计算机网络",
+      "topic_id": "net.troubleshooting",
+      "verdict": "checked",
+      "reason": "ping测试ICMP可达，不成功也不能证明目标整体不可达。"
+    },
+    {
+      "id": "cg-08-s1-q94",
+      "subject": "计算机网络",
+      "topic_id": "net.troubleshooting",
+      "verdict": "corrected",
+      "reason": "所有GSM不可用优先覆盖或基站故障，B；D也可能故障需保留最可能。"
+    },
+    {
+      "id": "uf-nw-007",
+      "subject": "计算机网络",
+      "topic_id": "net.troubleshooting",
+      "verdict": "checked",
+      "reason": "tracert逐步增TTL获取中间路由ICMP，B。"
+    },
+    {
+      "id": "hn-recall-hn26-004",
+      "subject": "计算机网络",
+      "topic_id": "net.troubleshooting",
+      "verdict": "checked",
+      "reason": "超时多层原因，按链路配置路由DNS端口服务查找，回答覆盖。"
+    },
+    {
+      "id": "gap-net-media-001",
+      "subject": "计算机网络",
+      "topic_id": "net.streaming-qos",
+      "verdict": "checked",
+      "reason": "RTP时间戳用于媒体播放时序非路由可靠，B。"
+    },
+    {
+      "id": "gap-net-media-002",
+      "subject": "计算机网络",
+      "topic_id": "net.streaming-qos",
+      "verdict": "checked",
+      "reason": "净消耗4-3=1Mbit/s，24/1=24秒。"
+    },
+    {
+      "id": "gap-net-media-003",
+      "subject": "计算机网络",
+      "topic_id": "net.streaming-qos",
+      "verdict": "checked",
+      "reason": "平均带宽不足描述延迟抖动丢包，解释对应体验正确。"
+    },
+    {
+      "id": "cg-08-s1-q97",
+      "subject": "计算机网络",
+      "topic_id": "net.wireless-mobile",
+      "verdict": "corrected",
+      "reason": "应用实现不可一概认定秘密收集，改明确用户授权分享密码模式。"
+    },
+    {
+      "id": "cg-08-s1-q98",
+      "subject": "计算机网络",
+      "topic_id": "net.wireless-mobile",
+      "verdict": "checked",
+      "reason": "天线数不能独定性能，D错误。"
+    },
+    {
+      "id": "zg-21512",
+      "subject": "计算机网络",
+      "topic_id": "net.wireless-mobile",
+      "verdict": "corrected",
+      "reason": "教室网络按范围LAN；映射概述非无线，原MAN远程网错误。"
+    },
+    {
+      "id": "gap-net-wireless-001",
+      "subject": "计算机网络",
+      "topic_id": "net.wireless-mobile",
+      "verdict": "checked",
+      "reason": "家用路由集成AP/交换/路由/NAT，而AP不必具备NAT，B。"
+    },
+    {
+      "id": "gap-net-wireless-002",
+      "subject": "计算机网络",
+      "topic_id": "net.wireless-mobile",
+      "verdict": "checked",
+      "reason": "CA减少概率不消灭碰撞，错误正确。"
+    },
+    {
+      "id": "gap-net-wireless-003",
+      "subject": "计算机网络",
+      "topic_id": "net.wireless-mobile",
+      "verdict": "checked",
+      "reason": "隐藏站双方不闻共同接收端，RTS/CTS仍可能碰撞丢失，回答边界正确。"
+    },
+    {
+      "id": "cg-04-s1-q16",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "内层和为n(n+1)/2，二次量级；题干最短时间应改紧确量级。"
+    },
+    {
+      "id": "zg-48003",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "分析到设计实现调试验证完整流程为C，解析无图引用应删。"
+    },
+    {
+      "id": "cg-05-s1-q5",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "同类型记录的数据项数及对应类型一致，B；解析偏题。"
+    },
+    {
+      "id": "cg-05-s1-q6",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "逻辑关系独立存储实现，C；应区分关系与物理布局。"
+    },
+    {
+      "id": "cg-05-s1-q7",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "树一对多为非线性；其他线性，A。"
+    },
+    {
+      "id": "cg-05-s1-q11",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "第i位插入移动n-i+1个，末尾可O(1)，应问最坏O(n)。"
+    },
+    {
+      "id": "cg-05-s1-q12",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "集合无特定前后关系，A。"
+    },
+    {
+      "id": "cg-05-s1-q15",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "取决规模操作实现而非某个元素取值，A为教材常规语境。"
+    },
+    {
+      "id": "cg-05-s1-q16",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "顺序表按偏移直接定位是随机存取，D选项混入对比表。"
+    },
+    {
+      "id": "cg-05-s1-q34",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "单一父多孩子是树关系，C；原题缺无环且单根条件。"
+    },
+    {
+      "id": "cg-05-s1-q45",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "01根，02/03/04子结点，其余唯一父且连通无环，B。"
+    },
+    {
+      "id": "zg-97573",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "二叉树非线性而链栈队线性，D。"
+    },
+    {
+      "id": "zg-65564",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "算法是明确解题步骤，不限语言或数值计算，D。"
+    },
+    {
+      "id": "zg-18768",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "算法可零输入，A错误。"
+    },
+    {
+      "id": "zg-34137",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "三种结构成立；Bohm/Jacopini年份应1966非1996。"
+    },
+    {
+      "id": "uf-ds-001",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "i翻倍，轮数log2n，B。"
+    },
+    {
+      "id": "gap-ds-001",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "corrected",
+      "reason": "撤销栈、FIFO队列、等值散列，选择与需求一致；映射应选型。"
+    },
+    {
+      "id": "sp-core-ds-009",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "有穷确定可行至少一输出，ABCD。"
+    },
+    {
+      "id": "sp-core-ds-013",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "同一逻辑关系可数组或链式实现，正确。"
+    },
+    {
+      "id": "sp-core-ds-034",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "1至n求和二次复杂度正确。"
+    },
+    {
+      "id": "uc-ds-001",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "removed",
+      "reason": "翻倍至n需ceil(log2n)，A。；与现有题同一输入或同一任务，未提供不同边界，删除语义重复。"
+    },
+    {
+      "id": "hn-recall-hn26-017",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "一次数组扫描常数循环体为O(n)，C。"
+    },
+    {
+      "id": "hn-recall-hn26-018",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t01",
+      "verdict": "checked",
+      "reason": "算法与编程语言无关，ABC。"
+    },
+    {
+      "id": "cg-05-s1-q8",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "corrected",
+      "reason": "链式地址可连续可不连续，D；映射链表。"
+    },
+    {
+      "id": "cg-05-s1-q9",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "corrected",
+      "reason": "线性表可空且端点缺前驱后继，一对一关系A。"
+    },
+    {
+      "id": "cg-05-s1-q10",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "corrected",
+      "reason": "顺序表中间插删移动，C错误；链式仍需说明定位前提。"
+    },
+    {
+      "id": "cg-05-s1-q13",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "checked",
+      "reason": "首址90加5×2=100，B。"
+    },
+    {
+      "id": "cg-05-s1-q14",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "corrected",
+      "reason": "查找第i个需i次比较移动n-i，合计n；须补顺序表且x存在且只删第一个。"
+    },
+    {
+      "id": "cg-05-s1-q18",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "corrected",
+      "reason": "线性表有限数据元素序列，C；解析偏题。"
+    },
+    {
+      "id": "gap-ds-026",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "checked",
+      "reason": "尾向前移避免覆盖，长度容量边界与O(n)正确。"
+    },
+    {
+      "id": "ap-ds-001",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "checked",
+      "reason": "动态数组索引常数追加均摊常数，A。"
+    },
+    {
+      "id": "ap-ds-006",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t02",
+      "verdict": "checked",
+      "reason": "顺序表随机访问O(1)，其他链表按位O(n)，A。"
+    },
+    {
+      "id": "cg-05-s1-q17",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "corrected",
+      "reason": "结点数据占用少于数据加指针，密度小于1，D混入解释。"
+    },
+    {
+      "id": "cg-05-s1-q20",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "checked",
+      "reason": "哨兵头统一空表首元插删，不提高随机访问，B。"
+    },
+    {
+      "id": "cg-05-s1-q22",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "checked",
+      "reason": "先s.next保存后继再p.next=s，B。"
+    },
+    {
+      "id": "cg-05-s1-q23",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "corrected",
+      "reason": "D四指针顺序正确；p后继不存在会空指针，应限定。"
+    },
+    {
+      "id": "uf-ds-002",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "removed",
+      "reason": "与34同指针任务，B成立；去重候选。；与现有题同一输入或同一任务，未提供不同边界，删除语义重复。"
+    },
+    {
+      "id": "ap-ds-003",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "checked",
+      "reason": "定位前驱可O(n)，故任何情况O(1)错误。"
+    },
+    {
+      "id": "uc-ds-013",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t03",
+      "verdict": "checked",
+      "reason": "已知前驱只改常数指针，正确。"
+    },
+    {
+      "id": "zg-852",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "corrected",
+      "reason": "自调用为递归，解析把递归叫迭代错误。"
+    },
+    {
+      "id": "cg-05-s1-q19",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "corrected",
+      "reason": "动态链栈不受固定数组上限但受可用内存限制，B应收窄。"
+    },
+    {
+      "id": "cg-05-s1-q24",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "栈后进先出，D。"
+    },
+    {
+      "id": "cg-05-s1-q25",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "调用返回顺序后进先出，用栈B。"
+    },
+    {
+      "id": "cg-05-s1-q26",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "跟踪出栈3/5/4/2/1，C。"
+    },
+    {
+      "id": "cg-05-s1-q27",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "corrected",
+      "reason": "全入后出逆序39/38/P/C/8/7，C。"
+    },
+    {
+      "id": "zg-65217",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "ABCD预先入栈，相对弹出固定DCBA，只有B插入E位置合法。"
+    },
+    {
+      "id": "uf-ds-003",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "表达式和函数现场使用栈B。"
+    },
+    {
+      "id": "sp-core-ds-001",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "corrected",
+      "reason": "按优先级取任务为优先队列，应映射堆/选型非递归。"
+    },
+    {
+      "id": "sp-core-ds-011",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "栈FIFO队列双端队列优先队列四场景成立。"
+    },
+    {
+      "id": "sp-core-ds-018",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "DFS递归空间随深度增，可栈溢出，正确。"
+    },
+    {
+      "id": "sp-core-ds-026",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "checked",
+      "reason": "push A/B pop B push C，栈顶C。"
+    },
+    {
+      "id": "sp-core-ds-027",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t04",
+      "verdict": "corrected",
+      "reason": "复合键优先级加到达序号满足同级FIFO，合理；映射堆。"
+    },
+    {
+      "id": "cg-05-s1-q28",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "corrected",
+      "reason": "front=rear判空依牺牲单元约定，题干必须明确。"
+    },
+    {
+      "id": "cg-05-s1-q29",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "checked",
+      "reason": "循环队列一般是数组顺序存储，B。"
+    },
+    {
+      "id": "cg-05-s1-q30",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "checked",
+      "reason": "出队front3到4；两入rear0到2，A。"
+    },
+    {
+      "id": "cg-05-s1-q31",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "corrected",
+      "reason": "牺牲单元满为(rear+1)%N=front，D；原N/n混用。"
+    },
+    {
+      "id": "zg-70127",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "corrected",
+      "reason": "栈后进先出，填空成立；映射栈。"
+    },
+    {
+      "id": "ap-ds-002",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "checked",
+      "reason": "按取号服务FIFO队列，A。"
+    },
+    {
+      "id": "sp-core-ds-002",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "checked",
+      "reason": "循环复用空位解决假溢出非无限容量，A。"
+    },
+    {
+      "id": "sp-core-ds-015",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "checked",
+      "reason": "数组有限会满，判断错误。"
+    },
+    {
+      "id": "uc-ds-002",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t05",
+      "verdict": "checked",
+      "reason": "(2-7+10)%10=5，A。"
+    },
+    {
+      "id": "gap-ds-007",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t06",
+      "verdict": "checked",
+      "reason": "ABABC无相等非空真前后缀，pi最后0。"
+    },
+    {
+      "id": "sp-core-ds-014",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t06",
+      "verdict": "checked",
+      "reason": "空格长度1空串0，判断错误。"
+    },
+    {
+      "id": "gap-ds-008",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t07",
+      "verdict": "checked",
+      "reason": "(2×4+1)×4+1000=1036。"
+    },
+    {
+      "id": "gap-final-thin-011",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t07",
+      "verdict": "checked",
+      "reason": "(2×5+3)×4+1000=1052；稀疏三元组只存非零。"
+    },
+    {
+      "id": "cg-05-s1-q35",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "n0=1+n2+2n3+3n4=8，D。"
+    },
+    {
+      "id": "cg-05-s1-q36",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "4层15不足，5层31足，B；应说明根第1层。"
+    },
+    {
+      "id": "cg-05-s1-q38",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "n1不决定n2，叶数无法定，D。"
+    },
+    {
+      "id": "cg-05-s1-q39",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "中序最末叶沿最右路径且无左子树，必先序末；A解析缺证明。"
+    },
+    {
+      "id": "cg-05-s1-q40",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "编号350至699是叶，共350，B。"
+    },
+    {
+      "id": "cg-05-s1-q42",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "完全树左比右最多多一层，C；原解析无具体原因。"
+    },
+    {
+      "id": "cg-05-s1-q43",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "中序分DBA/CE，层序根F左D右E，后序ABDCEF，D。"
+    },
+    {
+      "id": "cg-05-s1-q44",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "三结点树Catalan数5，中序不能定形，D。"
+    },
+    {
+      "id": "zg-35267",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "四类是逻辑结构，映射基础非二叉树。"
+    },
+    {
+      "id": "zg-39603",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "二叉树可空，A错误；解析五形态最后应左右都有非完全。"
+    },
+    {
+      "id": "uf-ds-004",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "先序首元素A为根，映射遍历。"
+    },
+    {
+      "id": "uf-ds-005",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "n非空链式二叉树2n指针减n-1边=n+1；需限定非空。"
+    },
+    {
+      "id": "sp-core-ds-016",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "完全末层可不满，非必满，错误。"
+    },
+    {
+      "id": "sp-core-ds-023",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "树n-1=24条边。"
+    },
+    {
+      "id": "sp-core-ds-025",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "n0=n2+1=8。"
+    },
+    {
+      "id": "uc-ds-003",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "corrected",
+      "reason": "A为根中序右仅C，A选项。"
+    },
+    {
+      "id": "uc-ds-012",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t08",
+      "verdict": "checked",
+      "reason": "叶等式、完全顺存、先后不唯一正确，普通BST可链状，ABC。"
+    },
+    {
+      "id": "cg-05-s1-q33",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t09",
+      "verdict": "checked",
+      "reason": "FIFO输出逐层入孩子实现层序，D。"
+    },
+    {
+      "id": "gap-ds-027",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t09",
+      "verdict": "removed",
+      "reason": "同80仅选项顺序变，应标记重复。；与现有题同一输入或同一任务，未提供不同边界，删除语义重复。"
+    },
+    {
+      "id": "gap-final-thin-012",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t09",
+      "verdict": "checked",
+      "reason": "A根左B子D/E右C，后序DEBCA正确。"
+    },
+    {
+      "id": "gap-ds-028",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t10",
+      "verdict": "checked",
+      "reason": "30/20/10为LL右旋20根。"
+    },
+    {
+      "id": "sp-core-ds-004",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t10",
+      "verdict": "checked",
+      "reason": "BST左根右输出递增，A。"
+    },
+    {
+      "id": "sp-core-ds-017",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t10",
+      "verdict": "checked",
+      "reason": "普通BST最坏高n，错误。"
+    },
+    {
+      "id": "sp-core-ds-030",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t10",
+      "verdict": "checked",
+      "reason": "BST全局左右分界而堆仅父子偏序，支持操作不同。"
+    },
+    {
+      "id": "gap-ds-029",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t11",
+      "verdict": "checked",
+      "reason": "替根50与最大孩子80交换后恢复堆，正确。"
+    },
+    {
+      "id": "sp-core-ds-005",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t11",
+      "verdict": "checked",
+      "reason": "小根堆根是最小，读取O(1)。"
+    },
+    {
+      "id": "sp-core-ds-022",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t11",
+      "verdict": "checked",
+      "reason": "堆数组未全序，判断错误。"
+    },
+    {
+      "id": "sp-core-ds-006",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t12",
+      "verdict": "checked",
+      "reason": "叶有序相连利范围扫描，A。"
+    },
+    {
+      "id": "sp-core-ds-031",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t12",
+      "verdict": "checked",
+      "reason": "B+多路低高减少块I/O，有序叶适合范围，答案合理。"
+    },
+    {
+      "id": "uc-ds-004",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t12",
+      "verdict": "checked",
+      "reason": "合并5/12/20求和37，A。"
+    },
+    {
+      "id": "sp-core-ds-003",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t13",
+      "verdict": "checked",
+      "reason": "稀疏图邻接表O(V+E)节省固定V²空间，A。"
+    },
+    {
+      "id": "sp-core-ds-010",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t13",
+      "verdict": "corrected",
+      "reason": "ABC都为树性质，映射二叉树非图存储。"
+    },
+    {
+      "id": "sp-core-ds-024",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t13",
+      "verdict": "checked",
+      "reason": "无向边每条贡献2，12边度和24。"
+    },
+    {
+      "id": "sp-core-ds-028",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t13",
+      "verdict": "checked",
+      "reason": "邻接表稀疏省空间、矩阵判边常数，比较合理。"
+    },
+    {
+      "id": "cg-05-s1-q46",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "DFS沿深度回退需栈，C。"
+    },
+    {
+      "id": "gap-ds-002",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "按字母DFS A B D E F C，B。"
+    },
+    {
+      "id": "gap-ds-003",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "A展开后B/C，B展开后C/D/E，B。"
+    },
+    {
+      "id": "gap-ds-004",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "出队才标记可能重复发现入队，判断错误。"
+    },
+    {
+      "id": "gap-ds-005",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "每点边常数次检查，邻接表O(V+E)。"
+    },
+    {
+      "id": "gap-ds-006",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "DFS栈深入BFS队列分层，非连通需多启动，合理。"
+    },
+    {
+      "id": "gap-ds-014",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t14",
+      "verdict": "checked",
+      "reason": "等权最少边数用BFS，A。"
+    },
+    {
+      "id": "gap-ds-018",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t15",
+      "verdict": "corrected",
+      "reason": "连接全体最小总权是MST，Kruskal并查集；需明确无向连通。"
+    },
+    {
+      "id": "gap-ds-030",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t15",
+      "verdict": "checked",
+      "reason": "选AB/CD/BC权1+1+2=4。"
+    },
+    {
+      "id": "uc-ds-005",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t15",
+      "verdict": "checked",
+      "reason": "6顶点树5边，A。"
+    },
+    {
+      "id": "uc-ds-014",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t15",
+      "verdict": "checked",
+      "reason": "边权互异保证MST唯一，正确且非必要条件。"
+    },
+    {
+      "id": "uf-ds-006",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "checked",
+      "reason": "无权最少边数BFS，B；与105/115重复。"
+    },
+    {
+      "id": "gap-ds-015",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "checked",
+      "reason": "非负单源最短用Dijkstra，A。"
+    },
+    {
+      "id": "gap-ds-016",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "checked",
+      "reason": "允许负权并检可达负环Bellman-Ford，A。"
+    },
+    {
+      "id": "gap-ds-017",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "corrected",
+      "reason": "小规模全源Floyd，A；应限定无负环最短路定义。"
+    },
+    {
+      "id": "gap-ds-031",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "checked",
+      "reason": "A到B1/C3/D4，最短路径ABCD成本4。"
+    },
+    {
+      "id": "sp-core-ds-029",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "removed",
+      "reason": "同110无权最短场景，仅措辞变；重复候选。；与现有题同一输入或同一任务，未提供不同边界，删除语义重复。"
+    },
+    {
+      "id": "uc-ds-006",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t16",
+      "verdict": "checked",
+      "reason": "经典Dijkstra要求非负边，A。"
+    },
+    {
+      "id": "gap-ds-019",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t17",
+      "verdict": "checked",
+      "reason": "先修依赖DAG拓扑排序，A。"
+    },
+    {
+      "id": "gap-ds-032",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t17",
+      "verdict": "corrected",
+      "reason": "Kahn队空未输出完有环，但剩余非全部在环上，解释应改。"
+    },
+    {
+      "id": "sp-core-ds-008",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t17",
+      "verdict": "checked",
+      "reason": "完整拓扑失败说明有向环，A。"
+    },
+    {
+      "id": "sp-core-ds-019",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t17",
+      "verdict": "checked",
+      "reason": "多零入度可多序，判断错误。"
+    },
+    {
+      "id": "uf-ds-008",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t18",
+      "verdict": "corrected",
+      "reason": "长度100固定谈n复杂度略不严谨，应改长度n，B。"
+    },
+    {
+      "id": "uc-ds-008",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t18",
+      "verdict": "checked",
+      "reason": "31=2^5-1成功最多5比较，A。"
+    },
+    {
+      "id": "gap-ds-009",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t19",
+      "verdict": "checked",
+      "reason": "mod7三键都3，探测3/4/5，24在5。"
+    },
+    {
+      "id": "sp-core-ds-007",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t19",
+      "verdict": "checked",
+      "reason": "装填因子高冲突探测通常增，A。"
+    },
+    {
+      "id": "sp-core-ds-020",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t19",
+      "verdict": "checked",
+      "reason": "任意大键域映小表不能保证无冲突，错误。"
+    },
+    {
+      "id": "sp-core-ds-032",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t19",
+      "verdict": "checked",
+      "reason": "开放表内探测/拉链桶内链接区别正确。"
+    },
+    {
+      "id": "uc-ds-009",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t19",
+      "verdict": "checked",
+      "reason": "已删除墓碑不阻断探测，A。"
+    },
+    {
+      "id": "cg-05-s1-q48",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t20",
+      "verdict": "corrected",
+      "reason": "冒泡需相邻比较，原只两两不唯一需补相邻。"
+    },
+    {
+      "id": "cg-05-s1-q49",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t20",
+      "verdict": "corrected",
+      "reason": "首轮最大6与2交换变6/2/4/1，D，解析偏题。"
+    },
+    {
+      "id": "zg-4542",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t20",
+      "verdict": "checked",
+      "reason": "逆序对(4,2)(9,2)(9,7)共3次交换。"
+    },
+    {
+      "id": "uf-ds-007",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t20",
+      "verdict": "checked",
+      "reason": "常规插入归并稳定堆快不稳定，AB。"
+    },
+    {
+      "id": "gap-ds-010",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t20",
+      "verdict": "checked",
+      "reason": "插入2得2/5/4/3，插4得2/4/5/3。"
+    },
+    {
+      "id": "sp-core-ds-033",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t20",
+      "verdict": "checked",
+      "reason": "相等键保持原序是稳定性，归并空间边界合理。"
+    },
+    {
+      "id": "cg-05-s1-q50",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t21",
+      "verdict": "corrected",
+      "reason": "双指针挖坑结果24/35/21/54/67/78/63/73/89；原未定划分规则导致不唯一。"
+    },
+    {
+      "id": "gap-ds-033",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t21",
+      "verdict": "checked",
+      "reason": "明确稳定辅助划分，2/1/3/4/5正确。"
+    },
+    {
+      "id": "uc-ds-007",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t21",
+      "verdict": "corrected",
+      "reason": "枢轴9最终右端仅保证分区，需限定最终归位划分而非Hoare边界。"
+    },
+    {
+      "id": "gap-ds-023",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t22",
+      "verdict": "checked",
+      "reason": "超内存分段排序多路归并，A。"
+    },
+    {
+      "id": "gap-ds-034",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t22",
+      "verdict": "checked",
+      "reason": "双指针取最小依次1/2/4/5/8/9。"
+    },
+    {
+      "id": "uc-ds-015",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t22",
+      "verdict": "corrected",
+      "reason": "标准数组归并稳定需O(n)辅助，题干限定数组。"
+    },
+    {
+      "id": "cg-05-s1-q47",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t23",
+      "verdict": "corrected",
+      "reason": "希尔为分组插入，B；原解析无具体机制。"
+    },
+    {
+      "id": "sp-core-ds-012",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t23",
+      "verdict": "checked",
+      "reason": "插入基本有序/归并稳定/堆最坏好，ABC；快排最坏平方。"
+    },
+    {
+      "id": "sp-core-ds-021",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t23",
+      "verdict": "checked",
+      "reason": "不需同键顺序时不稳定也可符合业务，正确。"
+    },
+    {
+      "id": "uc-ds-011",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t23",
+      "verdict": "checked",
+      "reason": "快平均、归并、堆O(nlogn)，选择平方，ABC。"
+    },
+    {
+      "id": "gap-ds-011",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "LRU散列定位加双向链表移动淘汰，A。"
+    },
+    {
+      "id": "gap-ds-012",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "等值散列平均快、树有序最坏log，范围树，合理。"
+    },
+    {
+      "id": "gap-ds-013",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "操作/顺序/时空决定结构，ABC。"
+    },
+    {
+      "id": "gap-ds-020",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "最大100保小根堆，超过堆顶替换，A。"
+    },
+    {
+      "id": "gap-ds-021",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "corrected",
+      "reason": "Trie前缀匹配合适，A；列出全部结果仍有输出代价。"
+    },
+    {
+      "id": "gap-ds-022",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "并查集合并和同组查询，优化后近常数均摊，A。"
+    },
+    {
+      "id": "gap-ds-024",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "最短路优化路径，MST优化总连通成本，两者不可换。"
+    },
+    {
+      "id": "gap-ds-025",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "BFS无权、DAG拓扑、有序树范围成立，ACD。"
+    },
+    {
+      "id": "ap-ds-004",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "撤销栈/等值散列/稀疏邻接表，ABC。"
+    },
+    {
+      "id": "ap-ds-005",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "数组顺序加散列索引合理，移动删除要维护索引。"
+    },
+    {
+      "id": "uc-ds-010",
+      "subject": "算法与数据结构",
+      "topic_id": "data-structures.t24",
+      "verdict": "checked",
+      "reason": "BFS队列DFS栈DAG有拓扑正确，无向边贡献2不是1，ABC。"
+    },
+    {
+      "id": "cg-10-s1-q3",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "checked",
+      "reason": "OS目标为方便有效扩展，信道多路复用不是目标，D。"
+    },
+    {
+      "id": "web-34",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "checked",
+      "reason": "批处理优先吞吐利用率，B。"
+    },
+    {
+      "id": "cg-10-s1-q7",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "分时特征独立性非独占性，C原文导致双错误需改。"
+    },
+    {
+      "id": "cg-10-s1-q9",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "同一时间段并发，非同一瞬间并行，C；解析偏题。"
+    },
+    {
+      "id": "cg-10-s1-q11",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "打印过程通常不可强占，B；要排除SPOOLing逻辑共享歧义。"
+    },
+    {
+      "id": "cg-10-s1-q12",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "时间片切换实现宏观多任务，A。"
+    },
+    {
+      "id": "cg-10-s1-q15",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "程序一次执行活动是进程，C；映射进程。"
+    },
+    {
+      "id": "cg-10-s1-q21",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "9:30比值A1.444/B2.25/C1，先B到9:54，A1.711大于C1.4，实际BAC非BCA。"
+    },
+    {
+      "id": "cg-10-s1-q22",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "信号量可同步可互斥，C；映射信号量。"
+    },
+    {
+      "id": "cg-10-s1-q46",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "不可剥夺资源竞争才符合题意，原C宽泛且解析对应B；需重写唯一选项。"
+    },
+    {
+      "id": "cg-10-s1-q64",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "FCB记录文件属性位置，B；映射文件。"
+    },
+    {
+      "id": "cg-14-s1-q6",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "checked",
+      "reason": "OS管理控制资源，C。"
+    },
+    {
+      "id": "cg-14-s1-q7-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "硬盘空间管理属外存文件系统非内存管理，C；映射内存。"
+    },
+    {
+      "id": "cg-14-s1-q8-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "时间片轮流提供交互为分时，C；CPU有感觉应改用户。"
+    },
+    {
+      "id": "cg-14-s1-q9",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7无密码账户可登录，B错误；旧版本操作题建议移除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q10-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "休眠写磁盘、睡眠留RAM，B；原解析无关。"
+    },
+    {
+      "id": "cg-14-s1-q11-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "右键对象快捷菜单，B；基础界面题非OS原理。"
+    },
+    {
+      "id": "cg-14-s1-q14-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "同一目标可多快捷方式，D；旧版本图标识别建议去冗余。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q17-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Ctrl+S保存正确，题干夹剪切复制无关。"
+    },
+    {
+      "id": "cg-14-s1-q20-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "大写锁CapsLock，C；不能输入汉字与输入法有关原断言过强。"
+    },
+    {
+      "id": "cg-14-s1-q22-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Win+D显示桌面，B；应针对性解释。"
+    },
+    {
+      "id": "cg-14-s1-q23-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Ctrl+X剪切，C；与基础已有重复可能大。"
+    },
+    {
+      "id": "cg-14-s1-q24-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Alt+PrintScreen当前窗口，B。"
+    },
+    {
+      "id": "cg-14-s1-q26-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "全半角Shift+Space取决输入法，不是OS统一默认；建议删除旧版题。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q27-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Win键开开始菜单，D，浅重复。"
+    },
+    {
+      "id": "cg-14-s1-q28-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "开始搜索可找系统信息并启动工具，D不可以硬件信息过强；旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q29-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "桌面也可真实文件系统对象，非全快捷方式，C错误；需明确.lnk。"
+    },
+    {
+      "id": "cg-14-s1-q30-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7五图标设置含用户/计算机/网络/回收站/控制面板无IE，旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q31-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "任务按钮在任务栏非开始菜单，B；旧界面题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q32-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Aero Snap顶端最大化B，需启用条件；旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q33-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "CPU使用率非典型通用窗口结构，D；旧版本识图题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q34-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "单活动窗口仍可后台运行，A；图标颜色受主题不固定。"
+    },
+    {
+      "id": "cg-14-s1-q35-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "当前接收输入为活动窗口C，成立。"
+    },
+    {
+      "id": "cg-14-s1-q36-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "现代有可调整/可最小化对话框，未限定普通无按钮传统框；旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q39-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "硬件设置应设备管理器/控制面板，非资源管理器C，修正B。"
+    },
+    {
+      "id": "cg-14-s1-q40-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7导航窗格节点位置A，旧产品界面题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q46-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "剪贴板为RAM临时交换，C，原解释偏题。"
+    },
+    {
+      "id": "cg-14-s1-q50",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "计算机名称在系统属性D，旧版菜单路径删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q51",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "任务栏不显示所有后台程序，B/D双错，旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q55",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Administrator为内置管理员，D；不等于绕过所有保护。"
+    },
+    {
+      "id": "cg-14-s2-q5-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "粘贴需内容格式兼容且目标可写，原ABD缺条件需补。"
+    },
+    {
+      "id": "cg-14-s2-q9-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "只读共享不必给更改权，共享名不必重命名，BD；旧UI题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s2-q10",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "回收站磁盘存储且可还原AD；补非所有删除都进入。"
+    },
+    {
+      "id": "cg-14-s2-q11",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "回收站含文件文件夹可恢复可清空BD；与42重复。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s2-q12",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Aero Snap启用时ACD都可最大化，原AC漏D。"
+    },
+    {
+      "id": "cg-14-s2-q13",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7 Aero启用四法切窗成立；与54/57重复，旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "zg-32499",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "并发共享正确，但随机性不是常用四特征完整体系，应改简答四特征。"
+    },
+    {
+      "id": "web-31",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "OS接口能方便编程，原D不是错误；改D为直接编译高级语言。"
+    },
+    {
+      "id": "dy-e43d68bb",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "虚拟存储A正确，但解析完全是相机采集无关，应重写。"
+    },
+    {
+      "id": "dy-bd96ef41",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "C控制性D同步性均非通常四特征，需将D改异步性。"
+    },
+    {
+      "id": "dy-bec92112",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "注销重启休眠锁定不全是关闭且休眠可禁用，旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-7d5faed7",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7三系统图标ABC成立；旧题重复删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-4bda8522",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "快捷方式记录目标信息且可复制CD，正确。"
+    },
+    {
+      "id": "dy-4d9dffea",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Windows可能跟踪移动目标，B必失效过强，需明确不自动更新路径。"
+    },
+    {
+      "id": "dy-c095801c",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "切窗与45重复；旧产品Aero路径题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-ed322bb3",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "标题图标双击关闭传统窗口ABCD；旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-ed514974",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "A不可恢复绝对错误，原只BD漏A；改A仅不进回收站保BD。"
+    },
+    {
+      "id": "dy-4b6f85ea",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "同45切窗重复，Win+Tab版本相关，删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-c6d6dcd2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "可调整窗口ABC，D仅点击空白不改大小，补普通可调整条件。"
+    },
+    {
+      "id": "dy-29949c83",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "复制后可多次粘贴、传统剪贴板RAM，AD。"
+    },
+    {
+      "id": "dy-58bf1b4e",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "无密码账号或替代认证也可登录，A需限定已设密码且密码认证。"
+    },
+    {
+      "id": "dy-2c24e437",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7资源管理器入口ABC，旧路径题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-41dba5ab",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7记事本仅文本，写字板可图文画图可文字，ABD错误，旧工具题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-7aeecfe1",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "选项符号OCR缺失，但可修√和圆点；菜单行为旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-8690f4d3",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "计算机是Shell命名空间特殊文件夹，CD；过细旧UI删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-ef866676",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "最小化不等于关闭缩小几何尺寸，ABD错误；旧表述易混删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-16a9dbf3",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "四种可删除普通文件，A快捷键误为快捷菜单，补本地权限条件。"
+    },
+    {
+      "id": "dy-9431713a",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "休眠CPU非保持运行，判断错误；睡眠休眠混同需明确S3/S4。"
+    },
+    {
+      "id": "dy-7815f73c",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Win7任务栏只能四边非任意位置，错误；旧产品布局删除。"
+    },
+    {
+      "id": "dy-f9fc09ca",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "双击时间阈值触发不同命令，非简单两单击；解析两次单击一般重命名过强。"
+    },
+    {
+      "id": "dy-a3302687",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7最右是显示桌面窄按钮非时间，旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-a0c54185",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "对话框并非全部不可最小化，现代反例多，旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-8a52a074",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Win+D显示/隐藏桌面非轮转切窗，错误。"
+    },
+    {
+      "id": "dy-e393765e",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "多窗口可能耗资源而非一定降速，判断应补可能。"
+    },
+    {
+      "id": "dy-144723bb",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "传统剪贴板内存不是C盘，错误。"
+    },
+    {
+      "id": "dy-4f40c840",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "Win7普通U盘删除默认不进回收站，错误；删除并不必不可恢复。"
+    },
+    {
+      "id": "dy-2e618059",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "传统剪贴板RAM回收站磁盘区，正确。"
+    },
+    {
+      "id": "dy-793e17c6",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "removed",
+      "reason": "Win7名为计算机不是此电脑，文件管理不止硬件，错误；旧重复题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "dy-8900c9aa",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "只有需要或控件配置时滚动条出现，非所有窗口，错误。"
+    },
+    {
+      "id": "dy-c5794f7e",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "单桌面输入焦点一活动窗口，后台仍可执行，正确。"
+    },
+    {
+      "id": "ap-os-006",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "corrected",
+      "reason": "内存库存读改写临界区要互斥，不保跨服务器恰好一次；映射信号量。"
+    },
+    {
+      "id": "hn-recall-hn26-016",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t01",
+      "verdict": "checked",
+      "reason": "Windows支持多个账号和调度并发成立，正确。"
+    },
+    {
+      "id": "cg-10-s1-q26",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t02",
+      "verdict": "checked",
+      "reason": "特权指令限内核态，C；不是所有调用都直接I/O指令。"
+    },
+    {
+      "id": "cg-10-s1-q31",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t02",
+      "verdict": "corrected",
+      "reason": "页块同大偏移不变，C；映射内存。"
+    },
+    {
+      "id": "cg-10-s1-q53",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t02",
+      "verdict": "corrected",
+      "reason": "固定分区预先划分可不等大，C；原解析偏题。"
+    },
+    {
+      "id": "cg-10-s1-q66",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t02",
+      "verdict": "corrected",
+      "reason": "原语原子不可中途破坏，B；多核不能只关本核中断。"
+    },
+    {
+      "id": "web-11",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t02",
+      "verdict": "corrected",
+      "reason": "Ctrl+C/V复制粘贴，B；迁到计算机基础。"
+    },
+    {
+      "id": "web-33",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t02",
+      "verdict": "corrected",
+      "reason": "教材指令周期末检查可屏蔽外中断，B；所有中断笼统说法需收窄。"
+    },
+    {
+      "id": "cg-10-s1-q6",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "多道让CPU在I/O等待执行他者，D；解析偏题。"
+    },
+    {
+      "id": "cg-10-s1-q8",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "一段时间多个进程推进为并发，B。"
+    },
+    {
+      "id": "cg-10-s1-q10",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "PCB描述进程状态资源管理信息，为存在标志C。"
+    },
+    {
+      "id": "cg-10-s1-q13",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "时间片用完运行转就绪，B；映射状态。"
+    },
+    {
+      "id": "cg-10-s1-q14",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "假定12个中一个运行，最多11就绪，D；需明确假定。"
+    },
+    {
+      "id": "cg-10-s1-q16",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "临界资源以互斥访问实现共享，D；映射同步。"
+    },
+    {
+      "id": "cg-10-s1-q17",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "创建只需PCB分配入就绪，不必立刻CPU调度，B。"
+    },
+    {
+      "id": "cg-10-s1-q25",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "普通全局变量各进程独立，不是直接IPC；共享内存消息管道是。"
+    },
+    {
+      "id": "cg-10-s1-q29",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "系统调用驱动发起中断完成I/O，B；映射I/O。"
+    },
+    {
+      "id": "cg-10-s1-q30",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "软件选调度无需专用调度硬件，但实现仍需CPU时钟等，题干应改算法选择逻辑。"
+    },
+    {
+      "id": "cg-10-s1-q32",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "checked",
+      "reason": "进程动态程序静态，A。"
+    },
+    {
+      "id": "cg-10-s1-q45",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "进程可多线程C；B线程拥有进程概念不当但为干扰可改明确。"
+    },
+    {
+      "id": "cg-10-s1-q48",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "虚拟内存扩逻辑地址非无条件解决容量，题干应问按需调页机制。"
+    },
+    {
+      "id": "cg-10-s1-q62",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "强制撤下即抢占调度D，映射调度。"
+    },
+    {
+      "id": "cg-14-s1-q16-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "Alt+F4关活动顶层窗口A，原解析无关。"
+    },
+    {
+      "id": "cg-14-s1-q25-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "Ctrl+Esc开开始B，原解析讲进程错误。"
+    },
+    {
+      "id": "cg-14-s1-q37-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "removed",
+      "reason": "管理系统资源表述控制面板也符合，原C不唯一；旧题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q48",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "removed",
+      "reason": "Win7程序和功能卸载C，旧路径题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q53",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "删快捷方式及主文件不能清理依赖注册配置，A不恰当。"
+    },
+    {
+      "id": "web-32",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "设备I/O实际由OS驱动控制，C；标准库封装非实际硬件管理。"
+    },
+    {
+      "id": "web-36",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "动态重定位支持装入后运行地址变换，D；应映射内存。"
+    },
+    {
+      "id": "dy-ca4e8ea5",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "单线程模型进程资源和调度ABC；现代线程模型应说明边界。"
+    },
+    {
+      "id": "dy-d9f15556",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "三基本状态运行就绪阻塞BCD，后备为作业状态。"
+    },
+    {
+      "id": "dy-c3945a35",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "removed",
+      "reason": "控制面板可卸载正确；Win7入口原名写错，旧重复题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "uf-os-002",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "同到达SJF短2/4/6，B；映射调度。"
+    },
+    {
+      "id": "ap-os-001",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "checked",
+      "reason": "同程序可多进程不同PCB，A。"
+    },
+    {
+      "id": "ap-os-003",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "共享内存仍需互斥，判断错误；映射同步。"
+    },
+    {
+      "id": "ap-os-005",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "checked",
+      "reason": "程序静态进程资源线程执行流，切换少换地址空间，合理。"
+    },
+    {
+      "id": "uc-os-006",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "corrected",
+      "reason": "磁盘I/O待完成运行转阻塞，A；映射状态。"
+    },
+    {
+      "id": "uc-os-013",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t03",
+      "verdict": "checked",
+      "reason": "同进程共享地址文件、独立栈寄存器，正确。"
+    },
+    {
+      "id": "uf-os-001",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t04",
+      "verdict": "removed",
+      "reason": "运行等待I/O转阻塞，B；与116语义重复。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "gap-final-thin-009",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t04",
+      "verdict": "checked",
+      "reason": "运行阻塞就绪再运行状态及触发正确。"
+    },
+    {
+      "id": "cg-10-s1-q20",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "corrected",
+      "reason": "所有同到达非抢占CPU作业SJF最小平均周转，需限定已知运行时间无I/O。"
+    },
+    {
+      "id": "cg-10-s1-q58",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "corrected",
+      "reason": "SSTF调磁头，C；映射磁盘。"
+    },
+    {
+      "id": "cg-10-s1-q59",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "corrected",
+      "reason": "HRRN=(等待+服务)/服务兼顾二者，C；不是绝对公平。"
+    },
+    {
+      "id": "cg-10-s1-q61",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "corrected",
+      "reason": "磁盘本体服务时间寻道旋转传输，不含CPU调度，B。"
+    },
+    {
+      "id": "web-35",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "removed",
+      "reason": "时间片到期就绪A，与91重复。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "gap-os-001",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "checked",
+      "reason": "FCFS完工3/4，平均周转3.5。"
+    },
+    {
+      "id": "gap-exam-os-scheduling",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "checked",
+      "reason": "非抢占P1 0-6/P3 6-7/P2 7-9，等待0/4/6平均10/3，正确。"
+    },
+    {
+      "id": "ap-os-002",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "corrected",
+      "reason": "周转7等待4须无I/O阻塞条件，不然等待=周转-CPU-I/O。"
+    },
+    {
+      "id": "uc-os-001",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t05",
+      "verdict": "corrected",
+      "reason": "RR初队顺序未在题干给，应明确P1/P2/P3；模拟完成3/2/1。"
+    },
+    {
+      "id": "cg-10-s1-q24",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "S=1尚余资源且无阻塞，B。"
+    },
+    {
+      "id": "cg-10-s1-q35",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "临界区为代码段非数据区，D。"
+    },
+    {
+      "id": "uf-os-003",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "记录型P减后负数阻塞，B，语义明确。"
+    },
+    {
+      "id": "gap-exam-os-semaphore",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "两产0/2/1，第三P空=-1阻塞，消费后0/1/1含预约，正确。"
+    },
+    {
+      "id": "ap-os-004",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "互斥/同步/有序资源预防死锁ABC。"
+    },
+    {
+      "id": "uc-os-005",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "空缓冲8故empty8/full0/mutex1，A。"
+    },
+    {
+      "id": "uc-os-011",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t06",
+      "verdict": "checked",
+      "reason": "P/V原子不可拆，ABC。"
+    },
+    {
+      "id": "cg-10-s1-q19",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t07",
+      "verdict": "checked",
+      "reason": "天然互斥资源难摒弃互斥条件，A，属一般教材语境。"
+    },
+    {
+      "id": "cg-10-s1-q55",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t07",
+      "verdict": "checked",
+      "reason": "检测非预防，C错，解除需额外操作。"
+    },
+    {
+      "id": "dy-ebc6d4f4",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t07",
+      "verdict": "corrected",
+      "reason": "互斥保持不剥夺循环四必要条件全选，解析合理。"
+    },
+    {
+      "id": "dy-58750fc1",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t07",
+      "verdict": "corrected",
+      "reason": "进程多非必要原因，资源分配和推进不当BD；B应收窄。"
+    },
+    {
+      "id": "uf-os-004",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t07",
+      "verdict": "removed",
+      "reason": "四条件全选，与138完全任务重复。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "uc-os-010",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t07",
+      "verdict": "checked",
+      "reason": "预防顺序/避免银行家/检测解除ABC，时间片不能根治。"
+    },
+    {
+      "id": "cg-10-s1-q54",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t08",
+      "verdict": "checked",
+      "reason": "死锁必不安全而不安全未必死锁，D。"
+    },
+    {
+      "id": "gap-os-002",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t08",
+      "verdict": "corrected",
+      "reason": "初始P1/P2都可完成，因此两种安全序列均可，填空应改简答接受等价。"
+    },
+    {
+      "id": "uc-os-004",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t08",
+      "verdict": "checked",
+      "reason": "P1可释放后P2可，A；也可P2先但B说只能所以错误。"
+    },
+    {
+      "id": "uc-os-014",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t08",
+      "verdict": "checked",
+      "reason": "不安全非当前死锁，判断错误。"
+    },
+    {
+      "id": "cg-10-s1-q34",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "checked",
+      "reason": "内存分配回收属于存储器管理B。"
+    },
+    {
+      "id": "cg-10-s1-q37",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "8×1024=8192字节按字节地址13位，需明确编址单位。"
+    },
+    {
+      "id": "cg-10-s1-q38",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "单级页表无快表先查表后数据两次，B；需限定单级不缺页。"
+    },
+    {
+      "id": "cg-10-s1-q40",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "首适按地址升序找到首个够大块D，原解释偏题。"
+    },
+    {
+      "id": "cg-10-s1-q41",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "静态重定位装入时完成C。"
+    },
+    {
+      "id": "cg-10-s1-q63",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "逻辑转物理为地址映射B。"
+    },
+    {
+      "id": "web-37",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "最佳适应选最小够用，空闲表按大小递增D；并非所有实现必须排序。"
+    },
+    {
+      "id": "dy-3d38882f",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "corrected",
+      "reason": "基本分页非请求分页，ABD；A应说每进程尾页碎片非所有系统总共一页。"
+    },
+    {
+      "id": "uf-os-005",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "checked",
+      "reason": "8196/4096商2余4，B。"
+    },
+    {
+      "id": "gap-os-003",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "checked",
+      "reason": "2500余452映物理5×1024+452=5572。"
+    },
+    {
+      "id": "gap-exam-os-address",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "checked",
+      "reason": "6300=3×2048+156，7×2048+156=14492，TLB漏不等缺页。"
+    },
+    {
+      "id": "uc-os-002",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "checked",
+      "reason": "2500/1024商2余452，A。"
+    },
+    {
+      "id": "uc-os-009",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t09",
+      "verdict": "checked",
+      "reason": "TLB漏还查页表，A非必缺页。"
+    },
+    {
+      "id": "cg-10-s1-q33",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "请求分页实现虚存C。"
+    },
+    {
+      "id": "cg-10-s1-q39",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "corrected",
+      "reason": "用户逻辑分段、段内分页管理物理，B；映射分段分页。"
+    },
+    {
+      "id": "cg-10-s1-q47",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "改进Clock优先未访问未修改00，A。"
+    },
+    {
+      "id": "cg-10-s1-q49",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "corrected",
+      "reason": "实际脚本FIFO3框12引用缺9，C；需展示命中缺页向量。"
+    },
+    {
+      "id": "cg-10-s1-q50",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "corrected",
+      "reason": "实际脚本LRU5框14引用缺11，C；原解析偏题。"
+    },
+    {
+      "id": "cg-10-s1-q51",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "访问时空集中不均匀为局部性B。"
+    },
+    {
+      "id": "dy-6ff41d09",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "corrected",
+      "reason": "ABC三存储管理，原解析错贴CPU流程和输出设备，必须替换。"
+    },
+    {
+      "id": "uf-os-006",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "FIFO可Belady而LRU/OPT栈算法不会，C。"
+    },
+    {
+      "id": "gap-os-004",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "FIFO序1/2/3/1/4缺4，命中1不刷新队序。"
+    },
+    {
+      "id": "uc-os-003",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "序1/2/3/1/4/2缺4，末2命中，A。"
+    },
+    {
+      "id": "uc-os-012",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "OPT未来/FIFO异常/LRU过去ABC，FIFO与LRU无恒定优劣。"
+    },
+    {
+      "id": "hn-recall-hn26-003",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t10",
+      "verdict": "checked",
+      "reason": "内存容量异常进程虚存磁盘空间排查步骤合理。"
+    },
+    {
+      "id": "cg-10-s1-q36",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "记录式文件逻辑视角C，但数据库底层仍字节文件需限定教材逻辑组织。"
+    },
+    {
+      "id": "cg-10-s1-q42",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "可执行文件亦可系统或库，原A不唯一，应改用户自建程序用途。"
+    },
+    {
+      "id": "cg-10-s1-q43",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "checked",
+      "reason": "链接文件沿指针定位，B。"
+    },
+    {
+      "id": "cg-10-s1-q56",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "位图可管理RAM或磁盘，B/C均成立，原单选C错误应改多选BC。"
+    },
+    {
+      "id": "cg-10-s1-q57",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "块号是否1起未给，100若1起则字4位4，需补块号从1。"
+    },
+    {
+      "id": "cg-10-s1-q65",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "checked",
+      "reason": "文件系统负责磁盘文件创建读写删除D。"
+    },
+    {
+      "id": "cg-10-s1-q67",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "checked",
+      "reason": "多级目录不同路径可同名B。"
+    },
+    {
+      "id": "cg-10-s1-q68",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "不考虑链接多级目录呈树形D。"
+    },
+    {
+      "id": "cg-14-s1-q12-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "跨卷默认复制，A；限定普通左拖无修饰键。"
+    },
+    {
+      "id": "cg-14-s1-q18-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "Ctrl+A全选A，迁基础。"
+    },
+    {
+      "id": "cg-14-s1-q19-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "Alt拖动创建快捷方式C，原解析无关。"
+    },
+    {
+      "id": "cg-14-s1-q21-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "ShiftDelete绕过回收站不等于物理不可恢复，题干必须修。"
+    },
+    {
+      "id": "cg-14-s1-q38-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "removed",
+      "reason": "组织布局无新建菜单C，旧UI路径题删除。；删除Win7界面细节、歧义陈旧题或与保留题重复的知识任务。"
+    },
+    {
+      "id": "cg-14-s1-q42-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "详细信息大小时间D，选项混入表格，修文。"
+    },
+    {
+      "id": "cg-14-s1-q43-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "Ctrl配合不连续多选C。"
+    },
+    {
+      "id": "cg-14-s1-q44-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "文件属性也可查找，原A错误，改多选属性名称位置时间均可。"
+    },
+    {
+      "id": "cg-14-s1-q45-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "人事*.*匹配名前缀，B，需通配符旧规则且有扩展条件。"
+    },
+    {
+      "id": "cg-14-s1-q47",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "回收站可清空永久删除C，原D只桌面错误。"
+    },
+    {
+      "id": "cg-14-s2-q6-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "只读隐藏属于文件属性AD，共享为权限/服务非基本标志。"
+    },
+    {
+      "id": "cg-14-s2-q7-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "默认同目录不能同名不同目录可同名，ABD不当；需排除大小写敏感目录。"
+    },
+    {
+      "id": "cg-14-s2-q8-dup2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "只读隐藏存档ABC，D串入E需清理。"
+    },
+    {
+      "id": "web-9",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "连字符可用，星管斜不可，B。"
+    },
+    {
+      "id": "dy-fc1cb1a5",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "DOC可无扩展、123.音乐可中文，AC，解析禁空格开头错误。"
+    },
+    {
+      "id": "dy-9f856c15",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "默认Win同目录可不同名跨目录可同名，ABD。"
+    },
+    {
+      "id": "dy-10421cd8",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "123.1也是合法文件名，原漏D，应ABD；解析明显OCR损坏。"
+    },
+    {
+      "id": "dy-396aa2de",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "*.n不是a前缀，错误；可用a*匹配名称。"
+    },
+    {
+      "id": "dy-fd82b546",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "文件可无扩展，改“必须有扩展”判断错误，避免概括不准确。"
+    },
+    {
+      "id": "dy-ce03ac57",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "不是所有删除入回收站，错误；物理恢复仍可能。"
+    },
+    {
+      "id": "dy-446d41b2",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "隐藏仅属性不释放空间，错误。"
+    },
+    {
+      "id": "dy-bcad2b80",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "文件夹名字可带点后缀，判断不允许错误；特殊后缀可影响Shell。"
+    },
+    {
+      "id": "dy-a4c3751d",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "corrected",
+      "reason": "文件夹一般不需扩展名成立，但不是所有后缀完全无意义。"
+    },
+    {
+      "id": "uc-os-008",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t11",
+      "verdict": "checked",
+      "reason": "索引分配支持随机及离散增长A。"
+    },
+    {
+      "id": "cg-10-s1-q27",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t12",
+      "verdict": "checked",
+      "reason": "软件缓冲通常内存B错误。"
+    },
+    {
+      "id": "cg-10-s1-q60",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t12",
+      "verdict": "corrected",
+      "reason": "DMA减逐字节CPU搬运D，但CPU仍设置处理完成。"
+    },
+    {
+      "id": "uf-os-007",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t12",
+      "verdict": "checked",
+      "reason": "SPOOLing磁盘排队虚拟共享独占设备A。"
+    },
+    {
+      "id": "uc-os-015",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t12",
+      "verdict": "checked",
+      "reason": "DMA前设置后处理CPU仍参与，正确。"
+    },
+    {
+      "id": "cg-10-s1-q52",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t13",
+      "verdict": "corrected",
+      "reason": "SSTF先服务40零移再43/19/11/4/76/79总117，B，原解释有问号。"
+    },
+    {
+      "id": "uf-os-008",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t13",
+      "verdict": "checked",
+      "reason": "最近55距离5，B。"
+    },
+    {
+      "id": "gap-os-005",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t13",
+      "verdict": "corrected",
+      "reason": "先40后10或70有等距，总10+30+60=100；应声明平局可两序。"
+    },
+    {
+      "id": "uc-os-007",
+      "subject": "操作系统",
+      "topic_id": "operating-system.t13",
+      "verdict": "checked",
+      "reason": "50至48最近，再10距离38小于90的42，A。"
+    },
+    {
+      "id": "cg-09-s1-q4",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "超市财务人事均常用数据库，D；不应声称所有实现必然数据库。"
+    },
+    {
+      "id": "cg-09-s1-q5",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "数据管理由人工到文件再数据库，A。"
+    },
+    {
+      "id": "cg-09-s1-q6",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "用户与数据间管理软件为DBMS，D。"
+    },
+    {
+      "id": "cg-09-s1-q7",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "DBMS依赖OS文件内存等服务，B。"
+    },
+    {
+      "id": "cg-09-s1-q8",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "存储查询管理共享均能力，D；规模和效率非无条件保证。"
+    },
+    {
+      "id": "cg-09-s1-q9",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "结构化低冗余独立性是数据库特征，程序标准化非特征D。"
+    },
+    {
+      "id": "cg-09-s1-q10",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "数据项和记录间均可表达联系B，不是每一项间必有联系。"
+    },
+    {
+      "id": "cg-09-s1-q11",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "两级映像支持逻辑物理独立性C。"
+    },
+    {
+      "id": "cg-09-s1-q12",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "全局逻辑模式为概念模式C。"
+    },
+    {
+      "id": "cg-09-s1-q13",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "内模式物理组织最接近存储B；原解析无具体解释。"
+    },
+    {
+      "id": "cg-09-s1-q20",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "层次网状传统链接表示D，关系用键联系。"
+    },
+    {
+      "id": "cg-09-s1-q21",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "E-R概念非DBMS逻辑模型C。"
+    },
+    {
+      "id": "cg-09-s1-q22",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "按数据模型可分关系层次网状A，不排除其他分类轴。"
+    },
+    {
+      "id": "cg-09-s1-q26",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "面向对象数据模型属于逻辑模型B。"
+    },
+    {
+      "id": "cg-09-s1-q30",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "数据结构操作约束三要素D。"
+    },
+    {
+      "id": "cg-09-s1-q31",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "基本层次联系记录型间一对多B。"
+    },
+    {
+      "id": "cg-09-s1-q32",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "关系行列逻辑次序无关D，查询有序需ORDER BY。"
+    },
+    {
+      "id": "cg-09-s1-q67",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "并发完整安全属于数据库保护B。"
+    },
+    {
+      "id": "cg-09-s2-q2",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "四种历史/现有产品均DBMS，ABCD。"
+    },
+    {
+      "id": "zg-74915",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "完全禁止冗余过强C，合理受控冗余可取；非必然都存在。"
+    },
+    {
+      "id": "zg-47979",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "DBS包含DB/DBMS/人员应用等B；DBMS核心为DB表述不当。"
+    },
+    {
+      "id": "zg-41202",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "DBMS为系统控制软件核心B。"
+    },
+    {
+      "id": "zg-39627",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "目录管理非人工文件数据库发展三阶段D；题干应数据管理技术发展。"
+    },
+    {
+      "id": "zg-43261",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "A为最接近概括但漏应用硬件，应完善A及解释。"
+    },
+    {
+      "id": "zg-75617",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "逻辑模式变应用可不变为逻辑独立性D。"
+    },
+    {
+      "id": "zg-77574",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "Excel电子表格非通用DBMS，D。"
+    },
+    {
+      "id": "zg-78661",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "AB能力正确，操作难维护复杂非优势；占空间少并非无条件。"
+    },
+    {
+      "id": "zg-23486",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "结构操作约束三要素，填空三个应简答支持表达。"
+    },
+    {
+      "id": "zg-25061",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "概念模型连接现实语义与逻辑模型，正确；映射E-R。"
+    },
+    {
+      "id": "zg-76998",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "corrected",
+      "reason": "系统核心DBMS，解析DBMS核心数据误导需删。"
+    },
+    {
+      "id": "uc-db-011",
+      "subject": "数据库",
+      "topic_id": "database.t01",
+      "verdict": "checked",
+      "reason": "外用户、概念全局、内物理，ABC，概念模式不等同SQL schema命名空间。"
+    },
+    {
+      "id": "cg-09-s1-q19",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "checked",
+      "reason": "给定选项建模顺序实体属性联系到图B，可迭代并非唯一方法。"
+    },
+    {
+      "id": "cg-09-s1-q24",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "checked",
+      "reason": "属性描述实体，联系描述实体关联，B错误。"
+    },
+    {
+      "id": "cg-09-s1-q25",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "checked",
+      "reason": "概念模型独立机器和DBMS，A。"
+    },
+    {
+      "id": "cg-09-s1-q28",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "corrected",
+      "reason": "从班级到学生1:N，B；应解释方向。"
+    },
+    {
+      "id": "cg-09-s1-q29",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "corrected",
+      "reason": "多供应商多零件为M:N，但需明确业务假设。"
+    },
+    {
+      "id": "zg-9930",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "corrected",
+      "reason": "Chen E-R菱形表示联系C；原实体关系可误实体型需修词。"
+    },
+    {
+      "id": "zg-45218",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "checked",
+      "reason": "一父多孩子一对多B，其他M:N和1:1。"
+    },
+    {
+      "id": "zg-39525",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "checked",
+      "reason": "E-R属概念模型A。"
+    },
+    {
+      "id": "zg-42658",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "checked",
+      "reason": "Chen符号矩形实体椭圆属性菱形联系，BDE。"
+    },
+    {
+      "id": "zg-73364",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "corrected",
+      "reason": "实体属性联系为E-R要素，解析属性漏定义。"
+    },
+    {
+      "id": "gap-db-002",
+      "subject": "数据库",
+      "topic_id": "database.t02",
+      "verdict": "corrected",
+      "reason": "读者图书M:N借阅，但重复借同一本应借阅实例编号，原答案过简。"
+    },
+    {
+      "id": "cg-09-s1-q33",
+      "subject": "数据库",
+      "topic_id": "database.t03",
+      "verdict": "checked",
+      "reason": "1:N单独联系关系可用N端键C。"
+    },
+    {
+      "id": "uc-db-006",
+      "subject": "数据库",
+      "topic_id": "database.t03",
+      "verdict": "checked",
+      "reason": "常规1端键下放N端作外键A。"
+    },
+    {
+      "id": "cg-09-s1-q14",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "列为属性非实体D，行也可联系实例非总实体。"
+    },
+    {
+      "id": "cg-09-s1-q15",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "选中候选键为主键A。"
+    },
+    {
+      "id": "cg-09-s1-q16",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "主键非空唯一C允许空错误；定义可能隐式加非空需避免语法歧义。"
+    },
+    {
+      "id": "cg-09-s1-q23",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "关系表可表示实体和联系C。"
+    },
+    {
+      "id": "cg-09-s1-q37",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "行是元组C。"
+    },
+    {
+      "id": "cg-09-s1-q40",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "实体完整性主键非空唯一A。"
+    },
+    {
+      "id": "cg-09-s1-q42",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "同部门员工号唯一且跨部门可重复，组合键A；需补部门内唯一条件。"
+    },
+    {
+      "id": "zg-79633",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "二维表表达关系模型C。"
+    },
+    {
+      "id": "zg-77676",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "三数据行故3条记录，表误入D选项需移题干。"
+    },
+    {
+      "id": "zg-75515",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "纯关系无重复且无序D；SQL表可以有重复需限定。"
+    },
+    {
+      "id": "zg-5594",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "主键可单属性或集合唯一识别行D；解析混入下一题22B需删。"
+    },
+    {
+      "id": "zg-91256",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "学生一课一次注册时组合键学号课程号C；重修需另学期。"
+    },
+    {
+      "id": "zg-89071",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "行记录列字段，填空两空可简答。"
+    },
+    {
+      "id": "zg-9354",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "原问完整性定义答三类不匹配；改问三类。"
+    },
+    {
+      "id": "zg-12988",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "主键非空唯一实体完整性，正确。"
+    },
+    {
+      "id": "zg-25661",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "实体表行是实例列属性，普通关系还可表示联系，题干应收窄。"
+    },
+    {
+      "id": "zg-24086",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "corrected",
+      "reason": "数据库物理最小存储单位非统一“值”，题干层次混乱需改关系逻辑单元。"
+    },
+    {
+      "id": "uf-db-001",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "唯一且最小为候选码B。"
+    },
+    {
+      "id": "uc-db-014",
+      "subject": "数据库",
+      "topic_id": "database.t04",
+      "verdict": "checked",
+      "reason": "外键可NULL若未NOT NULL，判断错误。"
+    },
+    {
+      "id": "cg-09-s1-q55",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "corrected",
+      "reason": "集合交=R-(R-S)，A，须并相容。"
+    },
+    {
+      "id": "cg-09-s1-q56",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "corrected",
+      "reason": "投影去重使元组数≤原数，C；SQL不加DISTINCT区别。"
+    },
+    {
+      "id": "cg-09-s1-q59",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "corrected",
+      "reason": "五基本并差选择投影笛卡尔积C，自然连接可推导。"
+    },
+    {
+      "id": "cg-09-s1-q60",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "checked",
+      "reason": "投影连接选择均关系运算D。"
+    },
+    {
+      "id": "zg-7295",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "checked",
+      "reason": "DML插删改查，填查询。"
+    },
+    {
+      "id": "uf-db-004",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "checked",
+      "reason": "选择行投影列并去重A。"
+    },
+    {
+      "id": "gap-db-003",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "corrected",
+      "reason": "dept='CS'前提题干未给CS编码，应补。"
+    },
+    {
+      "id": "gap-db-004",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "checked",
+      "reason": "除法SC÷Need全包含，回答正确，空Need范围依关系代数除法定义。"
+    },
+    {
+      "id": "uc-db-004",
+      "subject": "数据库",
+      "topic_id": "database.t05",
+      "verdict": "checked",
+      "reason": "满足C的元组筛选σ，A。"
+    },
+    {
+      "id": "cg-09-s1-q36",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "checked",
+      "reason": "主外键为完整性措施A。"
+    },
+    {
+      "id": "cg-09-s1-q45",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "checked",
+      "reason": "DELETE FROM删除行，D；DROP删结构。"
+    },
+    {
+      "id": "cg-09-s1-q49",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "checked",
+      "reason": "UPDATE可一次多行A，回滚需事务未提交。"
+    },
+    {
+      "id": "cg-09-s1-q50",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "corrected",
+      "reason": "标准SQL DELETE FROM无星，B；Access方言需明确标准。"
+    },
+    {
+      "id": "cg-09-s1-q53",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "corrected",
+      "reason": "PostgreSQL DROP COLUMN CASCADE可删依赖，原未限定方言且选项夹注释。"
+    },
+    {
+      "id": "cg-09-s2-q1",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "checked",
+      "reason": "SQL定义操作查询控制四类功能ABCD。"
+    },
+    {
+      "id": "cg-09-s2-q4",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "corrected",
+      "reason": "NOT NULL与UNIQUE不等PRIMARY KEY，BD；INT不存姓名。"
+    },
+    {
+      "id": "zg-56841",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "checked",
+      "reason": "按含查询DML口径CREATE TABLE属DDL，B。"
+    },
+    {
+      "id": "zg-25187",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "corrected",
+      "reason": "毕业学生为记录，删除行非列或库D；记录并非必应删业务需题设。"
+    },
+    {
+      "id": "zg-41008",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "corrected",
+      "reason": "DROP TABLE删表，单写DROP不完整，填空应问关键字。"
+    },
+    {
+      "id": "zg-27720",
+      "subject": "数据库",
+      "topic_id": "database.t06",
+      "verdict": "checked",
+      "reason": "UPDATE修改行，MODIFY非SQLServer DML，错误。"
+    },
+    {
+      "id": "cg-09-s1-q41",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "SELECT返回结果集可重复，不能称必纯集合关系，A应改结果集。"
+    },
+    {
+      "id": "cg-09-s1-q46",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "SELECT INTO SQLServer建新表，B；标准/其他方言差别需限定。"
+    },
+    {
+      "id": "cg-09-s1-q47",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "LIKE第二字符大A需大小写敏感，David在不敏感时也匹配，补排序规则。"
+    },
+    {
+      "id": "cg-09-s1-q48",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "checked",
+      "reason": "NOT BETWEEN端点外<200或>300，D，NULL仍UNKNOWN。"
+    },
+    {
+      "id": "cg-09-s1-q61",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "MAX不支持任意类型，D“不限制”错误，改为DBMS定义支持可比较类型。"
+    },
+    {
+      "id": "cg-09-s1-q62",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "DISTINCT去重按所有输出列组合C，原解析偏题。"
+    },
+    {
+      "id": "cg-09-s1-q63",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "HAVING筛聚合组A，WHERE可含子查询聚合不能绝对所有聚合都禁。"
+    },
+    {
+      "id": "zg-5212",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "检索学生查询B，但筛选C同义功能，需改选项区分，解析Access过强。"
+    },
+    {
+      "id": "zg-45920",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "%匹配零/一/多字符D，原解析偏题。"
+    },
+    {
+      "id": "zg-40599",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "SELECT1可无FROM，因此ABCD均可选，原只BCD错误。"
+    },
+    {
+      "id": "uf-db-002",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "checked",
+      "reason": "AVG分组用HAVING B。"
+    },
+    {
+      "id": "gap-exam-db-groupjoin",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "checked",
+      "reason": "LEFT JOIN ON薪资过滤COUNT非空ID，保无达标部门为0，SQL可执行。"
+    },
+    {
+      "id": "uc-db-007",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "removed",
+      "reason": "班AVG筛HAVING A，与93仅对象替换属重复。；与已保留题的任务重复，其中NULL反例版或完整SQL版已覆盖更强边界。"
+    },
+    {
+      "id": "uc-db-010",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "checked",
+      "reason": "IS NULL、COUNT列忽NULL、COUNT星计行ABC，NULL=0未知。"
+    },
+    {
+      "id": "hn-recall-hn26-006",
+      "subject": "数据库",
+      "topic_id": "database.t07",
+      "verdict": "corrected",
+      "reason": "COUNT记录不等不同书本数，需声明Borrow复合唯一且非空。"
+    },
+    {
+      "id": "uf-db-003",
+      "subject": "数据库",
+      "topic_id": "database.t08",
+      "verdict": "checked",
+      "reason": "左外保留未匹配左行补NULL，A。"
+    },
+    {
+      "id": "gap-db-005",
+      "subject": "数据库",
+      "topic_id": "database.t08",
+      "verdict": "removed",
+      "reason": "NOT EXISTS按reader_id排不存在，SQL正确，与101边界版重复可删。；与已保留题的任务重复，其中NULL反例版或完整SQL版已覆盖更强边界。"
+    },
+    {
+      "id": "gap-db-006",
+      "subject": "数据库",
+      "topic_id": "database.t08",
+      "verdict": "corrected",
+      "reason": "左连COUNT(cid)需cid非空保证真实选课均计数，补主键定义。"
+    },
+    {
+      "id": "gap-exam-db-notexists",
+      "subject": "数据库",
+      "topic_id": "database.t08",
+      "verdict": "checked",
+      "reason": "NOT EXISTS能避NULL NOT IN陷阱，相关谓词正确。"
+    },
+    {
+      "id": "uc-db-002",
+      "subject": "数据库",
+      "topic_id": "database.t08",
+      "verdict": "corrected",
+      "reason": "左连COUNT(cid)需SC.cid非空，A；补主键定义。"
+    },
+    {
+      "id": "uc-db-015",
+      "subject": "数据库",
+      "topic_id": "database.t08",
+      "verdict": "checked",
+      "reason": "右表条件移WHERE可能去补NULL行，判断错误。"
+    },
+    {
+      "id": "cg-09-s1-q34",
+      "subject": "数据库",
+      "topic_id": "database.t09",
+      "verdict": "corrected",
+      "reason": "视图定义强于表无精确定义，原题无法客观判，改视图机制题。"
+    },
+    {
+      "id": "cg-09-s1-q35",
+      "subject": "数据库",
+      "topic_id": "database.t09",
+      "verdict": "checked",
+      "reason": "视图可收窄可见行列辅助安全D，但还须授权。"
+    },
+    {
+      "id": "cg-09-s1-q54",
+      "subject": "数据库",
+      "topic_id": "database.t09",
+      "verdict": "corrected",
+      "reason": "已有效定义且有权限的普通视图可查询，增删改不全可，B。"
+    },
+    {
+      "id": "cg-09-s1-q57",
+      "subject": "数据库",
+      "topic_id": "database.t10",
+      "verdict": "checked",
+      "reason": "索引用于特定查询加速D，并非保证任何查询快。"
+    },
+    {
+      "id": "uf-db-008",
+      "subject": "数据库",
+      "topic_id": "database.t10",
+      "verdict": "checked",
+      "reason": "查询收益换存储写维护，正确。"
+    },
+    {
+      "id": "gap-db-001",
+      "subject": "数据库",
+      "topic_id": "database.t10",
+      "verdict": "checked",
+      "reason": "索引文件组织物理设计D。"
+    },
+    {
+      "id": "ap-db-002",
+      "subject": "数据库",
+      "topic_id": "database.t10",
+      "verdict": "checked",
+      "reason": "时间范围有序B+，A。"
+    },
+    {
+      "id": "ap-db-006",
+      "subject": "数据库",
+      "topic_id": "database.t10",
+      "verdict": "checked",
+      "reason": "等值唯一性与范围有序需求不同，索引空间写维护代价合理。"
+    },
+    {
+      "id": "uc-db-008",
+      "subject": "数据库",
+      "topic_id": "database.t10",
+      "verdict": "removed",
+      "reason": "同110范围B+，仅字段变为price，语义重复。；与已保留题的任务重复，其中NULL反例版或完整SQL版已覆盖更强边界。"
+    },
+    {
+      "id": "cg-09-s1-q17",
+      "subject": "数据库",
+      "topic_id": "database.t11",
+      "verdict": "checked",
+      "reason": "需求到DBMS结构建立数据库是设计A。"
+    },
+    {
+      "id": "cg-09-s1-q18",
+      "subject": "数据库",
+      "topic_id": "database.t11",
+      "verdict": "checked",
+      "reason": "ER表示实体属性联系D；与38同知识但设计场景可留。"
+    },
+    {
+      "id": "gap-db-007",
+      "subject": "数据库",
+      "topic_id": "database.t11",
+      "verdict": "corrected",
+      "reason": "概念逻辑物理顺序正确，但识别规则有需求阶段，题干补绘ER。"
+    },
+    {
+      "id": "gap-db-008",
+      "subject": "数据库",
+      "topic_id": "database.t12",
+      "verdict": "checked",
+      "reason": "AD闭包ABCDE，删A或D均不全，候选键成立。"
+    },
+    {
+      "id": "uc-db-001",
+      "subject": "数据库",
+      "topic_id": "database.t12",
+      "verdict": "corrected",
+      "reason": "A闭包ABC单属性无多余，候选码A；需F仅所列防空决定等额外依赖。"
+    },
+    {
+      "id": "cg-09-s1-q38",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "checked",
+      "reason": "1NF要求属性值原子B。"
+    },
+    {
+      "id": "cg-09-s1-q39",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "checked",
+      "reason": "2NF且非主不传递依赖候选键为3NF B。"
+    },
+    {
+      "id": "cg-09-s1-q58",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "corrected",
+      "reason": "删除异常是删除所需记录同时丢失其他应保留事实A，非普通误删。"
+    },
+    {
+      "id": "zg-58017",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "corrected",
+      "reason": "1NF基本要求正确，但解析把非主属性写非主键列错误需修。"
+    },
+    {
+      "id": "uf-db-005",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "corrected",
+      "reason": "仅A→B/B→C且原子时最高2NF，B；未列全部依赖可能变键，须明确。"
+    },
+    {
+      "id": "gap-db-009",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "corrected",
+      "reason": "已1NF且姓名部分依赖复合键，最高1NF；须声明原子。"
+    },
+    {
+      "id": "uc-db-003",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "checked",
+      "reason": "部分函数依赖违反2NF A。"
+    },
+    {
+      "id": "uc-db-013",
+      "subject": "数据库",
+      "topic_id": "database.t13",
+      "verdict": "checked",
+      "reason": "BCNF每非平凡决定者超键蕴含3NF，正确。"
+    },
+    {
+      "id": "gap-db-010",
+      "subject": "数据库",
+      "topic_id": "database.t14",
+      "verdict": "checked",
+      "reason": "交集A决定AB，二元无损，依赖本地可检，正确。"
+    },
+    {
+      "id": "gap-final-thin-010",
+      "subject": "数据库",
+      "topic_id": "database.t14",
+      "verdict": "checked",
+      "reason": "交集B决定BC，依赖分别本地可检，无损保依赖正确。"
+    },
+    {
+      "id": "cg-09-s1-q64",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "ACID缺持久性，选项C，解析字母区别正确。"
+    },
+    {
+      "id": "cg-09-s1-q69",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "corrected",
+      "reason": "全或无原子性D，原解析未针对事务。"
+    },
+    {
+      "id": "cg-09-s1-q72",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "逻辑工作单元为事务C。"
+    },
+    {
+      "id": "uf-db-006",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "原子一致隔离持久ABCD，与128补缺不同可留。"
+    },
+    {
+      "id": "gap-exam-db-transfer",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "转账同事务两UPDATE全部成功commit失败rollback，题设排除并发正确。"
+    },
+    {
+      "id": "ap-db-001",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "全成功或撤销直接原子性A。"
+    },
+    {
+      "id": "ap-db-003",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "TCP不代替事务唯一约束幂等，错误。"
+    },
+    {
+      "id": "hn-recall-hn26-007",
+      "subject": "数据库",
+      "topic_id": "database.t15",
+      "verdict": "checked",
+      "reason": "借阅与库存同事务，库存条件更新锁防超借，回答合理。"
+    },
+    {
+      "id": "cg-09-s1-q68",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "corrected",
+      "reason": "持有X锁本事务可读写C，原解析无支撑。"
+    },
+    {
+      "id": "uf-db-007",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "两方读取旧值后覆盖为丢失更新C。"
+    },
+    {
+      "id": "gap-db-011",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "冲突均T1到T2无环可串行T1/T2，正确。"
+    },
+    {
+      "id": "gap-db-012",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "双向形成环非冲突可串行，正确。"
+    },
+    {
+      "id": "ap-db-004",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "事务锁原子更新唯一号ABC，索引无穷多错误。"
+    },
+    {
+      "id": "ap-db-005",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "库存10双售最终9为丢失更新，锁/原子条件更新可解决。"
+    },
+    {
+      "id": "uc-db-005",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "同138顺序冲突T1到T2，客观辨识补充可留。"
+    },
+    {
+      "id": "uc-db-012",
+      "subject": "数据库",
+      "topic_id": "database.t16",
+      "verdict": "checked",
+      "reason": "严格2PL持X到结束、2PL可串行、X互斥ABD但仍可死锁。"
+    },
+    {
+      "id": "cg-09-s1-q65",
+      "subject": "数据库",
+      "topic_id": "database.t17",
+      "verdict": "checked",
+      "reason": "恢复日志记录更新B，实际逻辑/物理记录不同不必每条SQL一条。"
+    },
+    {
+      "id": "cg-09-s1-q70",
+      "subject": "数据库",
+      "topic_id": "database.t17",
+      "verdict": "corrected",
+      "reason": "备份用于故障恢复D，原解析无支撑。"
+    },
+    {
+      "id": "gap-db-013",
+      "subject": "数据库",
+      "topic_id": "database.t17",
+      "verdict": "corrected",
+      "reason": "需明示日志四元旧新值及UNDO/REDO模型，T1重做20/T2撤销5正确。"
+    },
+    {
+      "id": "uc-db-009",
+      "subject": "数据库",
+      "topic_id": "database.t17",
+      "verdict": "checked",
+      "reason": "WAL先稳定日志后数据页，未提交亦可刷页，A。"
+    },
+    {
+      "id": "cg-09-s1-q52",
+      "subject": "数据库",
+      "topic_id": "database.t18",
+      "verdict": "checked",
+      "reason": "GRANT SELECT ON S TO WANG WITH GRANT OPTION，D语法正确。"
+    },
+    {
+      "id": "gap-db-014",
+      "subject": "数据库",
+      "topic_id": "database.t18",
+      "verdict": "checked",
+      "reason": "使用权限与再授权不同，回收检查授权链级联，合理。"
+    },
+    {
+      "id": "gap-db-015",
+      "subject": "数据库",
+      "topic_id": "database.t18",
+      "verdict": "checked",
+      "reason": "视图加最小SELECT授权审计记录合理，需确保基础表无额外权限。"
+    }
+  ]
+}

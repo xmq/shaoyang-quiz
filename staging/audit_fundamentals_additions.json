@@ -1,0 +1,668 @@
+[
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Excel工作簿基础",
+    "chapter_id": "office.c01",
+    "topic_title": "文件格式与兼容",
+    "required_depth": "直接应用",
+    "topic_order": 0,
+    "id": "gap-audit26-found-001",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "文件格式与兼容",
+    "stem": "现有XLSX工作簿含3张表、公式和图表，需交付可编辑源文件及供系统导入的当前表纯数据。给出保存方案，并说明仅改扩展名为什么不行。",
+    "options": {},
+    "answer": "保留XLSX工作簿作为源件，另导出当前工作表CSV并检查编码、分隔符和关键数据。CSV不能保留多工作表结构、公式及图表。只改扩展名不改变内部编码与结构。",
+    "explanation": "文件选型看保留能力；源件和数据交换副本用途不同。",
+    "source_chapter": "文件格式与兼容",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t01",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "保留XLSX源件",
+        "points": 1
+      },
+      {
+        "criterion": "另导CSV并核验编码数据",
+        "points": 1
+      },
+      {
+        "criterion": "说明CSV能力和改扩展名边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Word文字与段落",
+    "chapter_id": "office.c01",
+    "topic_title": "保存、恢复与备份",
+    "required_depth": "直接应用",
+    "topic_order": 1,
+    "id": "gap-audit26-found-002",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "保存、恢复与备份",
+    "stem": "某云同步文档被误改后，错误内容已同步到所有设备。写出恢复及避免再次发生的步骤，并区分保存、同步、备份。",
+    "options": {},
+    "answer": "停止继续覆盖，查找并恢复可用历史版本或独立备份，核对内容再继续编辑。保存记录当前修改，同步传播设备间状态，独立版本备份提供回退点；定期备份并测试恢复。",
+    "explanation": "同步可能传播错误，自动保存不等于能回到任意历史状态。",
+    "source_chapter": "保存、恢复与备份",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t02",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "寻找并核验历史或备份恢复",
+        "points": 1
+      },
+      {
+        "criterion": "区分保存同步备份",
+        "points": 1
+      },
+      {
+        "criterion": "提出独立备份或恢复验证",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Word文字与段落",
+    "chapter_id": "office.c02",
+    "topic_title": "编辑、剪贴板与直接格式",
+    "required_depth": "识记理解",
+    "topic_order": 2,
+    "id": "gap-audit26-found-003",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "编辑、剪贴板与直接格式",
+    "stem": "Word有三段正文。要求每段首行缩进2字符且段后6磅，段内需手动换行时不能开启新段。说明设置方法、快捷键，以及为什么不应用空格和连续回车凑版面。",
+    "options": {},
+    "answer": "选中三段，在段落设置中设首行缩进2字符、段后6磅。段内手动换行用Shift+Enter，Enter才产生新段。空格和空段会随字体、分页及编辑改变而错位，格式属性更稳定。",
+    "explanation": "字符、段落和换行是不同层级的排版任务。",
+    "source_chapter": "编辑、剪贴板与直接格式",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t03",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "段落属性设置正确",
+        "points": 1
+      },
+      {
+        "criterion": "Shift+Enter及Enter区别",
+        "points": 1
+      },
+      {
+        "criterion": "解释空格空段不稳定",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Word文字与段落",
+    "chapter_id": "office.c02",
+    "topic_title": "样式与文档结构",
+    "required_depth": "综合应用",
+    "topic_order": 3,
+    "id": "gap-audit26-found-004",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "样式与文档结构",
+    "stem": "论文标题已经加粗放大，但导航窗格没有标题，自动目录也不全。如何修复？正文分页变化后怎样维护目录？",
+    "options": {},
+    "answer": "按层级给各标题应用标题1、标题2等样式，或显式配置对应大纲级别；检查层级顺序并重新生成或更新目录。分页变化后更新页码，标题文字或结构变化后更新整个目录，不宜手工写死页码。",
+    "explanation": "外观加粗不建立结构层级，目录字段需要读取可识别的标题结构。",
+    "source_chapter": "样式与文档结构",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t04",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "建立正确标题结构",
+        "points": 1
+      },
+      {
+        "criterion": "重新生成或更新目录",
+        "points": 1
+      },
+      {
+        "criterion": "区分页码更新和整个目录更新",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Word长文档排版",
+    "chapter_id": "office.c03",
+    "topic_title": "分页、分节与页眉页码",
+    "required_depth": "综合应用",
+    "topic_order": 4,
+    "id": "gap-audit26-found-005",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "分页、分节与页眉页码",
+    "stem": "Word报告封面无页码，正文从1开始，附录需要横向且前文仍纵向。给出主要步骤，并区分分节符与分页符。",
+    "options": {},
+    "answer": "在封面正文及附录边界合理插入分节符，分别设置各节方向；需要独立页眉页脚内容时关闭链接到前一节，正文设置页码起始1，封面去页码并核查。分页符只换页，分节符建立可独立设置页面属性的范围。",
+    "explanation": "页码起始值与页眉页脚链接不是同一个开关，需分别检查。",
+    "source_chapter": "分页、分节与页眉页码",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t05",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "按边界分节并设方向",
+        "points": 1
+      },
+      {
+        "criterion": "独立页脚及正文起始1",
+        "points": 1
+      },
+      {
+        "criterion": "说明分页和分节区别",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Word文字与段落",
+    "chapter_id": "office.c03",
+    "topic_title": "对象、表格与长文档",
+    "required_depth": "识记理解",
+    "topic_order": 5,
+    "id": "gap-audit26-found-006",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "对象、表格与长文档",
+    "stem": "Word表格有4行，每行保存一条记录。只想清空第2行文字，再考虑彻底删除第2行，分别怎样操作？说明结果有何不同。",
+    "options": {},
+    "answer": "先选第2行单元格内容并清除文字，例如选中该行按Delete保留结构；要移除行用表格删除行命令。清空后仍4行，删除该行后为3行，其他行位置上移。",
+    "explanation": "文字清除与表格结构删除不同，操作前确认选区范围。",
+    "source_chapter": "对象、表格与长文档",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t06",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "清空文字保留行",
+        "points": 1
+      },
+      {
+        "criterion": "用删除行移除结构",
+        "points": 1
+      },
+      {
+        "criterion": "给出4行与3行结果",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Excel工作簿基础",
+    "chapter_id": "office.c04",
+    "topic_title": "单元格类型与公式基础",
+    "required_depth": "综合应用",
+    "topic_order": 7,
+    "id": "gap-audit26-found-007",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "单元格类型与公式基础",
+    "stem": "Excel常规格式中直接录入学号001023，另在B2录入100+300/2。前者前导0可能丢失，后者不计算。怎样修复并解释原因？",
+    "options": {},
+    "answer": "学号按标识符设文本格式再重录001023，或用英文单引号前缀；单纯事后改格式不能自动恢复丢失的0。B2改为=100+300/2，结果250。类型决定存储语义，等号使表达式作为公式计算。",
+    "explanation": "外观和底层数据类型需区分；标识符不应用来做数量运算。",
+    "source_chapter": "单元格类型与公式基础",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t08",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "学号文本且重新恢复原值",
+        "points": 1
+      },
+      {
+        "criterion": "公式及250正确",
+        "points": 1
+      },
+      {
+        "criterion": "解释类型与公式起始",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Excel公式与引用",
+    "chapter_id": "office.c04",
+    "topic_title": "相对、绝对与混合引用",
+    "required_depth": "综合应用",
+    "topic_order": 8,
+    "id": "gap-audit26-found-008",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "相对、绝对与混合引用",
+    "stem": "D2公式为=$B2*C$1。把它复制到F5，写出新公式并说明每一部分为什么改变或不变。",
+    "options": {},
+    "answer": "新公式=$B5*E$1。复制从D2到F5右移2列、下移3行；$B固定B列而行2变5，C列相对右移为E，$1固定第1行。",
+    "explanation": "美元符号只约束引用的行列变化，并不锁住数据内容。",
+    "source_chapter": "相对、绝对与混合引用",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t09",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "偏移右2下3",
+        "points": 1
+      },
+      {
+        "criterion": "得到$B5",
+        "points": 1
+      },
+      {
+        "criterion": "得到E$1及完整公式",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Excel数据分析",
+    "chapter_id": "office.c05",
+    "topic_title": "排序、筛选与验证",
+    "required_depth": "综合应用",
+    "topic_order": 10,
+    "id": "gap-audit26-found-009",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "排序、筛选与验证",
+    "stem": "学生成绩表A列学号、B列姓名、C列分数，每行一个学生。要按分数降序并筛选60至79分，说明操作范围、条件及如何限制新录分在0至100。",
+    "options": {},
+    "answer": "排序应选择整条记录所在区域并以C列降序，保持姓名学号和分数同步。筛选C>=60且C<80，未匹配行仅隐藏。对录入区设置数据验证0至100并合理选择错误提示，已有数据另核验。",
+    "explanation": "排序、筛选、输入验证用途不同；数据验证可能被复制粘贴等绕过，不能替代核对。",
+    "source_chapter": "排序、筛选与验证",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t11",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "整行排序保持对应",
+        "points": 1
+      },
+      {
+        "criterion": "筛选双条件且不删除",
+        "points": 1
+      },
+      {
+        "criterion": "设置验证并核验边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Excel数据分析",
+    "chapter_id": "office.c05",
+    "topic_title": "分类汇总与数据透视表",
+    "required_depth": "综合应用",
+    "topic_order": 11,
+    "id": "gap-audit26-found-010",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "分类汇总与数据透视表",
+    "stem": "明细表每行含部门、月份、销售额。写出生成各部门逐月销售额合计的数据透视表布局；新增记录后合计未变，应检查什么？",
+    "options": {},
+    "answer": "部门放行、月份放列，销售额放值并按求和汇总；行列互换亦可。确认销售额是数值、新记录已包含在数据源，再刷新透视表，抽查一个部门月份的合计。",
+    "explanation": "字段布局决定统计维度，范围及刷新共同决定新数据能否纳入。",
+    "source_chapter": "分类汇总与数据透视表",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t12",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "正确维度和值求和",
+        "points": 1
+      },
+      {
+        "criterion": "检查类型及源范围",
+        "points": 1
+      },
+      {
+        "criterion": "刷新并抽查合计",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "Excel数据分析",
+    "chapter_id": "office.c05",
+    "topic_title": "图表、打印与保护边界",
+    "required_depth": "综合应用",
+    "topic_order": 12,
+    "id": "gap-audit26-found-011",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "图表、打印与保护边界",
+    "stem": "需展示五个月价格趋势以及各品类占销售总额的比例，并打印跨页销售表，每页重复表头。分别选择图表及打印设置，并说明保护工作表能否保证公式正确。",
+    "options": {},
+    "answer": "价格趋势用折线图，品类占比可用饼图并检查总量和标签；设置打印标题行并预览分页缩放，冻结窗格不代替打印标题。工作表保护限制编辑，不验证公式、数据或统计逻辑。",
+    "explanation": "图表取决于表达目标，打印与屏幕显示的设置也不同。",
+    "source_chapter": "图表、打印与保护边界",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t13",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "两种图表选择及理由",
+        "points": 1
+      },
+      {
+        "criterion": "打印标题与冻结区别",
+        "points": 1
+      },
+      {
+        "criterion": "保护不能保证公式正确",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "PowerPoint演示",
+    "chapter_id": "office.c06",
+    "topic_title": "主题、母版与版式",
+    "required_depth": "综合应用",
+    "topic_order": 13,
+    "id": "gap-audit26-found-012",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "主题、母版与版式",
+    "stem": "修改幻灯片母版标题字体后，某页标题没改变。说明应依次检查哪些设置，以及母版、版式、普通文本框之间的关系。",
+    "options": {},
+    "answer": "检查该页是否使用目标母版及对应版式，标题是否确为标题占位符，是否有单页直接格式覆盖。母版提供公共默认，版式安排占位符；普通文本框不是自动继承相同结构规则的标题占位符，可重新应用版式或清理覆盖后复核。",
+    "explanation": "母版不意味着每个对象都强制相同，先查层次和对象类型再改。",
+    "source_chapter": "主题、母版与版式",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t14",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "检查母版版式",
+        "points": 1
+      },
+      {
+        "criterion": "检查占位符和直接格式",
+        "points": 1
+      },
+      {
+        "criterion": "解释层次并合理修复",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "办公软件",
+    "knowledge_point": "PowerPoint演示",
+    "chapter_id": "office.c06",
+    "topic_title": "动画、切换与放映",
+    "required_depth": "综合应用",
+    "topic_order": 14,
+    "id": "gap-audit26-found-013",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "动画、切换与放映",
+    "stem": "一个幻灯片流程图要求节点按点击依次出现，随后切换下一页需要淡化效果。说明分别设置何种功能；如果无人值守自动播放，还要补充什么？",
+    "options": {},
+    "answer": "节点设对象动画并安排顺序和开始方式，页间淡化设切换。无人值守还需把对象开始改为自动衔接、设置换片计时或排练计时并启用使用计时，最后完整预览；按需求设置展台循环。",
+    "explanation": "页内动画、页间切换和自动时间安排是三个不同控制点。",
+    "source_chapter": "动画、切换与放映",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "office.t15",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "页内对象动画顺序",
+        "points": 1
+      },
+      {
+        "criterion": "页间切换",
+        "points": 1
+      },
+      {
+        "criterion": "自动动画及换片时间并预览",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "多媒体",
+    "knowledge_point": "多媒体系统与应用",
+    "chapter_id": "multimedia.c01",
+    "topic_title": "多媒体特征与系统组成",
+    "required_depth": "直接应用",
+    "topic_order": 0,
+    "id": "gap-audit26-found-014",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "多媒体特征与系统组成",
+    "stem": "某教学页面统一呈现文字、示意图与音频，学生点击选项后页面提供不同反馈。分别指出它体现的多样性、集成性和交互性；是否必须联网才能称多媒体？",
+    "options": {},
+    "answer": "文字图音多种形式体现多样性，统一组织处理体现集成性，用户输入导致不同反馈体现交互性。多媒体并不要求联网，可离线运行。",
+    "explanation": "媒体种类、组织方式和响应机制要分别找证据，不能只记三个名词。",
+    "source_chapter": "多媒体特征与系统组成",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "multimedia.t01",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出多种媒体",
+        "points": 1
+      },
+      {
+        "criterion": "说明组织与反馈",
+        "points": 1
+      },
+      {
+        "criterion": "说明联网非必要条件",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "多媒体",
+    "knowledge_point": "多媒体系统与应用",
+    "chapter_id": "multimedia.c01",
+    "topic_title": "超文本、超媒体与流媒体",
+    "required_depth": "直接应用",
+    "topic_order": 1,
+    "id": "gap-audit26-found-015",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "超文本、超媒体与流媒体",
+    "stem": "一本电子教程允许点击文字链接跳到其他章节，也允许点击图像进入视频。解释超文本与超媒体的关系，以及这种导航为何是非线性的。",
+    "options": {},
+    "answer": "超文本用超链接连接文本节点，超媒体把这种链接组织扩展到图像音视频等内容。学生可按链接选择路径而不只顺序翻页，体现非线性；非线性不意味着完全没有组织。",
+    "explanation": "区别在节点包含的媒体类型，链接机制支持用户选择阅读路径。",
+    "source_chapter": "超文本、超媒体与流媒体",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "multimedia.t02",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "定义文本链接",
+        "points": 1
+      },
+      {
+        "criterion": "说明扩展到多媒体节点",
+        "points": 1
+      },
+      {
+        "criterion": "解释路径选择非线性",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "多媒体",
+    "knowledge_point": "多媒体压缩与容量",
+    "chapter_id": "multimedia.c02",
+    "topic_title": "容量、码率与单位",
+    "required_depth": "直接应用",
+    "topic_order": 3,
+    "id": "gap-audit26-found-016",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "容量、码率与单位",
+    "stem": "一段单声道未压缩PCM，采样率16kHz、每样本16bit、时长30秒。不计文件头，求码率和十进制kB容量；再说改为双声道会怎样。",
+    "options": {},
+    "answer": "码率16000×16=256000bit/s=256kbit/s，容量256000×30/8=960000B=960kB。其他条件相同改双声道，码率和容量都乘2，为512kbit/s及1920kB。",
+    "explanation": "采样率每秒样本数，位深每样本位数；bit转Byte除8，k按1000。",
+    "source_chapter": "容量、码率与单位",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "multimedia.t04",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "单声道码率256kbit/s",
+        "points": 1
+      },
+      {
+        "criterion": "容量960kB",
+        "points": 1
+      },
+      {
+        "criterion": "双声道倍增及数值",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "多媒体",
+    "knowledge_point": "图形图像",
+    "chapter_id": "multimedia.c03",
+    "topic_title": "颜色模型与交付",
+    "required_depth": "识记理解",
+    "topic_order": 5,
+    "id": "gap-audit26-found-017",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "颜色模型与交付",
+    "stem": "屏幕上的RGB海报用于印刷后颜色变暗或偏色。解释RGB与CMYK的主要差异，并给出交付前应做的检查；仅把扩展名改为.tif能否解决？",
+    "options": {},
+    "answer": "RGB以光加色常用于显示，CMYK以油墨减色常用于印刷，色域与输出条件不同。按印刷方要求使用合适颜色配置转换、软打样或实物打样，检查超色域和纸张油墨条件。仅改扩展名不转换像素颜色或配置文件，不能保证解决。",
+    "explanation": "颜色管理与图像容器文件名不同，需以目标输出流程为准。",
+    "source_chapter": "颜色模型与交付",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "multimedia.t06",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "加色减色及应用场景",
+        "points": 1
+      },
+      {
+        "criterion": "配置转换打样检查",
+        "points": 1
+      },
+      {
+        "criterion": "解释改后缀无效",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "subject": "多媒体",
+    "knowledge_point": "图形图像",
+    "chapter_id": "multimedia.c06",
+    "topic_title": "无损、有损与冗余",
+    "required_depth": "直接应用",
+    "topic_order": 12,
+    "id": "gap-audit26-found-018",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "无损、有损与冗余",
+    "stem": "财务CSV要求解压后每个字节相同，短视频预览允许少量画质损失且需小体积。分别选无损还是有损压缩？图像空间冗余与视频时间冗余是什么？",
+    "options": {},
+    "answer": "CSV用无损以确保精确恢复，视频预览可用有损并按质量码率权衡。空间冗余指邻近像素等存在相关，时间冗余指相邻帧内容常相似；有损还会主动舍弃部分信息。",
+    "explanation": "压缩选型看可接受误差，不保证无损能使每种输入都变小，也不保证同名格式固定压缩比。",
+    "source_chapter": "无损、有损与冗余",
+    "adaptation_note": "全量逐题复核后补充的原创独立输出练习，非湖南真题。",
+    "topic_source": "manual",
+    "topic_id": "multimedia.t13",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "CSV无损视频可有损",
+        "points": 1
+      },
+      {
+        "criterion": "解释空间相关",
+        "points": 1
+      },
+      {
+        "criterion": "解释时间相关及有损边界",
+        "points": 1
+      }
+    ]
+  }
+]

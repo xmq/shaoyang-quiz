@@ -6,6 +6,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
+from question_reviews import apply_reviews
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
@@ -109,7 +110,7 @@ def main():
     args = parser.parse_args()
     existing = json.loads(QUESTION_JSON.read_text(encoding="utf-8"))
     candidates = [add_confidence(question) for question in json.loads(STAGING.read_text(encoding="utf-8"))]
-    merged = build(existing, candidates)
+    merged = apply_reviews(build(existing, apply_reviews(candidates)))
     if args.check:
         if merged != existing:
             raise SystemExit("湖南笔试回忆改编题与questions.json不同步")

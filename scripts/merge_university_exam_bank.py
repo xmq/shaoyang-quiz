@@ -9,6 +9,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
+from question_reviews import apply_reviews
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -237,7 +238,7 @@ def main():
         if not str(q.get("id") or "").startswith(MANAGED_PREFIXES)
         and str(q.get("id") or "") not in removal_ids
     ]
-    candidates = load_staging()
+    candidates = apply_reviews(load_staging())
     merged, accepted, removed_base, skipped_exact, skipped_fuzzy = merge(base, candidates)
     hunan_recall = [q for q in merged if str(q.get("id") or "").startswith("hn-recall-")]
     merged = [q for q in merged if not str(q.get("id") or "").startswith("hn-recall-")] + hunan_recall
@@ -245,7 +246,7 @@ def main():
         str(question.get("id") or ""): {key: question[key] for key in DERIVED_METADATA_FIELDS if key in question}
         for question in all_current
     }
-    merged = [{**question, **derived_by_id.get(str(question.get("id") or ""), {})} for question in merged]
+    merged = apply_reviews([{**question, **derived_by_id.get(str(question.get("id") or ""), {})} for question in merged])
     if args.check:
         if all_current != merged:
             raise SystemExit("questions.json 与去重合并结果不同步")

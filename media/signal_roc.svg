@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430"><defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#64748b;stroke-width:2}.sig{stroke:#2563eb;stroke-width:4;fill:none}.alt{stroke:#0f766e;stroke-width:4;fill:none}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7}.box{fill:#fff;stroke:#64748b;stroke-width:2}.hot{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.tt{font:700 24px system-ui;fill:#102a43}.t{font:18px system-ui;fill:#334155}.s{font:15px system-ui;fill:#475569}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#8ea3b7}.sig{stroke:#78aefc}.alt{stroke:#46d6c6}.dash{stroke:#647b91}.box{fill:#17283b;stroke:#647b91}.hot{fill:#173f3c;stroke:#46d6c6}.tt{fill:#edf4fb}.t{fill:#d2dce6}.s{fill:#b8c5d1}}</style></defs><rect class="bg" x="12" y="12" width="876" height="406" rx="24"/><text class="tt" x="45" y="55">极点与收敛域要一起判断</text><path class="axis" d="M450 85V345M80 215H820"/><circle cx="340" cy="215" r="10" fill="none" stroke="#ef4444" stroke-width="4"/><circle cx="560" cy="215" r="10" fill="none" stroke="#ef4444" stroke-width="4"/><rect x="572" y="92" width="230" height="246" fill="#14b8a6" opacity=".2"/><text class="t" x="340" y="190" text-anchor="middle">极点</text><text class="t" x="560" y="190" text-anchor="middle">最外极点</text><text class="t" x="690" y="130" text-anchor="middle">因果系统ROC</text><text class="s" x="690" y="165" text-anchor="middle">在最外极点右侧</text><text class="s" x="450" y="380" text-anchor="middle">稳定还要求ROC包含 jω 轴；极点永远不属于ROC</text></svg>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 350" role="img" aria-labelledby="title desc">
+<title id="title">连续因果系统的拉普拉斯收敛域</title><desc id="desc">横轴实部，纵轴虚部。因果有理系统ROC在最右极点右方；本图不含虚轴，系统不稳定。</desc>
+<defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1}.axis{stroke:#64748b;stroke-width:2}.pole{stroke:#d92d20;stroke-width:3}.shade{fill:#14b8a6;opacity:.15}.dash{stroke:#0f766e;stroke-width:2;stroke-dasharray:5 4}.h{font:700 21px system-ui,sans-serif;fill:#102a43}.t{font:17px system-ui,sans-serif;fill:#334155}.a{font:700 19px system-ui,sans-serif;fill:#0f766e}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.axis{stroke:#a1b1c2}.pole{stroke:#ff9688}.dash{stroke:#46d6c6}.h{fill:#edf4fb}.t{fill:#d2dce6}.a{fill:#80e4ce}}</style></defs>
+<rect class="bg" x="5" y="5" width="410" height="340" rx="16"/>
+<text class="h" x="22" y="36">s平面：比较实部，不比较模长</text>
+<rect class="shade" x="241" y="62" width="150" height="196"/>
+<path class="axis" d="M24 180H397M150 62V260"/>
+<text class="t" x="365" y="203">Re(s)</text><text class="t" x="157" y="79">jω</text>
+<path class="pole" d="M82 172l16 16m0-16l-16 16M232 172l16 16m0-16l-16 16"/>
+<path class="dash" d="M240 62V258"/>
+<text class="t" x="71" y="163">p₁</text><text class="t" x="204" y="229">最右极点 p₂</text>
+<text class="a" x="278" y="107">因果ROC</text><text class="t" x="269" y="136">在虚线右侧</text>
+<text class="t" x="22" y="285">ROC：Re(s) &gt; max Re(pᵢ)</text>
+<text class="t" x="22" y="313">本图不含jω轴：因果，但不稳定。</text>
+</svg>

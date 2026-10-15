@@ -9,6 +9,7 @@ import unicodedata
 from collections import Counter
 from difflib import SequenceMatcher
 from pathlib import Path
+from question_reviews import apply_reviews
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -201,8 +202,8 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="仅校验questions.json是否与暂存题库同步")
     args = parser.parse_args()
     existing = json.loads(QUESTION_JSON.read_text(encoding="utf-8"))
-    candidates = load_candidates()
-    merged = build_merged(existing, candidates)
+    candidates = apply_reviews(load_candidates())
+    merged = apply_reviews(build_merged(existing, candidates))
     if args.check:
         if merged != existing:
             print(f"应用题库未同步：候选{len(candidates)}，合并后{len(merged)}，当前{len(existing)}")

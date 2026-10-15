@@ -1,0 +1,222 @@
+{
+  "numeric_cases": [
+    {
+      "id": "uf-ee-001",
+      "independent_value": 2.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-002",
+      "independent_value": 8.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-003",
+      "independent_value": 3.5,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-007",
+      "independent_value": 5.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-010",
+      "independent_value": 1.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-011",
+      "independent_value": 7.585446705942692,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-015",
+      "independent_value": 31.830988618379067,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-017",
+      "independent_value": 25.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-019",
+      "independent_value": 320.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-020",
+      "independent_value": 5.2654344550093874,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ee-022",
+      "independent_value": 1500.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ae-004",
+      "independent_value": 4.501581580785531,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ae-007",
+      "independent_value": 2.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-ae-015",
+      "independent_value": 5.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-analog-003",
+      "independent_value": 7.191489361702128,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-analog-006",
+      "independent_value": 10.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-analog-009",
+      "independent_value": 12,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-de-001",
+      "independent_value": 45,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-de-010",
+      "independent_value": 3.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-de-022",
+      "independent_value": 256,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "sp-elec-digital-011",
+      "independent_value": 0.8056640625,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "sp-elec-digital-012",
+      "independent_value": 25.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-cm-003",
+      "independent_value": 3.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-cm-004",
+      "independent_value": 9600.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-cm-005",
+      "independent_value": 1000.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-cm-006",
+      "independent_value": 29.90167877650798,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "uf-cm-017",
+      "independent_value": 36,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-comm-001",
+      "independent_value": 1.5,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-comm-002",
+      "independent_value": 4.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-comm-004",
+      "independent_value": 4800.0,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-comm-005",
+      "independent_value": 10,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-comm-006",
+      "independent_value": 180,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "ue-comm-009",
+      "independent_value": 15.915494309189533,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "gap-signal-001",
+      "independent_value": 0.5,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "gap-final-sig-001",
+      "independent_value": 0.25,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "gap-final-sig-003",
+      "independent_value": 5,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "gap-final-sig-017",
+      "independent_value": 1,
+      "unit": "按题目选项单位"
+    },
+    {
+      "id": "gap-final-sig-018",
+      "independent_value": 19.53125,
+      "unit": "按题目选项单位"
+    }
+  ],
+  "mux_truth_table": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "convolution": [
+    1,
+    1,
+    -2
+  ],
+  "gray13": "1011"
+}

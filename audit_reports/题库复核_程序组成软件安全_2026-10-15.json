@@ -1,0 +1,4274 @@
+{
+  "date": "2026-10-15",
+  "scope": [
+    "编程语言",
+    "计算机组成原理",
+    "软件工程",
+    "信息安全"
+  ],
+  "method": "逐知识点读取每道题干、选项、答案和解析，独立推演结果与概念边界；疑义查官方技术资料；不是由字数、覆盖数量或原答案自动推定正确。",
+  "reviewed_count": 394,
+  "revised_count": 70,
+  "questions": [
+    {
+      "id": "sp-core-co-013",
+      "topic_id": "computer-organization.t01",
+      "verdict": "pass",
+      "independent_check": "存储指令数据、按地址取指、转移改流程均属程序控制，输入设备不代替ALU运算。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-019",
+      "topic_id": "computer-organization.t01",
+      "verdict": "pass",
+      "independent_check": "顺序取指是默认路径而非唯一，转移与中断可改PC，故错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-039",
+      "topic_id": "computer-organization.t01",
+      "verdict": "pass",
+      "independent_check": "先存指令数据，再由PC驱动取指译码执行，能解释自动连续而非只诉速度。",
+      "original_answer": "指令和数据先以二进制存入存储器；PC给出指令地址；控制器自动取指、译码并发出控制信号；通常顺序执行，遇到转移或中断改变后续地址。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-001",
+      "topic_id": "computer-organization.t02",
+      "verdict": "pass",
+      "independent_check": "32位字长首先是基本数据处理宽度，不能由此推出地址线或内存容量。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-018",
+      "topic_id": "computer-organization.t02",
+      "verdict": "pass",
+      "independent_check": "CPU时间随IC、CPI、频率变化，整机还受内存与负载，四项均应考虑。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-041",
+      "topic_id": "computer-organization.t02",
+      "verdict": "pass",
+      "independent_check": "IC×CPI/f公式正确且三个因素共同决定，主频独立无法比较同任务总时间。",
+      "original_answer": "CPU时间=指令数×平均CPI÷主频。主频只决定时钟快慢，程序还受指令数、CPI、存储等待和体系结构影响。",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-009",
+      "topic_id": "computer-organization.t02",
+      "verdict": "pass",
+      "independent_check": "4e9×1.5/3e9=2秒，A，不误将GHz视为3而漏10^9。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-006",
+      "topic_id": "computer-organization.t02",
+      "verdict": "pass",
+      "independent_check": "10^9×2/(2×10^9)=1s，量纲指令×周期/指令÷周期/s成立。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-001",
+      "topic_id": "computer-organization.t03",
+      "verdict": "pass",
+      "independent_check": "2=0010,D=1101，拼8位00101101，表示45。",
+      "original_answer": "00101101",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-002",
+      "topic_id": "computer-organization.t03",
+      "verdict": "pass",
+      "independent_check": "统一多文字码点采用Unicode，7位ASCII不容汉字，BCD是十进制数字编码。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-038",
+      "topic_id": "computer-organization.t03",
+      "verdict": "pass",
+      "independent_check": "3→0011,A→1010，按顺序拼00111010。",
+      "original_answer": "00111010",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-010",
+      "topic_id": "computer-organization.t04",
+      "verdict": "pass",
+      "independent_check": "5取反加一为11111011；127+1最高位变1且真值超上限，答点完整。",
+      "original_answer": "−5为11111011；127+1得到10000000，发生有符号溢出。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-003",
+      "topic_id": "computer-organization.t04",
+      "verdict": "pass",
+      "independent_check": "负补码高位复制1、正数复制0，真值不变；一律补0会改负数。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-001",
+      "topic_id": "computer-organization.t04",
+      "verdict": "pass",
+      "independent_check": "11110110按无符号246减256=-10，与取反加一法一致。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-002",
+      "topic_id": "computer-organization.t04",
+      "verdict": "pass",
+      "independent_check": "124+8=132超127，结果符号负，是正溢出不是负溢出。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-002",
+      "topic_id": "computer-organization.t04",
+      "verdict": "pass",
+      "independent_check": "127+1真值128超范围[-128,127]，位模式10000000，为正溢出B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-002",
+      "topic_id": "computer-organization.t05",
+      "verdict": "pass",
+      "independent_check": "符号控制正负、阶控制范围、尾数控制有效精度，常规模型限制已给。",
+      "original_answer": "符号位决定正负，阶码主要决定数值范围和小数点位置，尾数主要决定有效数字与精度。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-003",
+      "topic_id": "computer-organization.t05",
+      "verdict": "pass",
+      "independent_check": "有限尾数给有限可表示点，不覆盖区间全部实数，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-007",
+      "topic_id": "computer-organization.t05",
+      "verdict": "pass",
+      "independent_check": "阶129-127=2，尾数1.01二进制=1.25，乘4=5。",
+      "original_answer": "5",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-co-001",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "PC地址送MAR，主存数据经MDR入IR，A的基本路径与寄存器角色一致。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-004",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "待访问地址进MAR，MDR是数据，IR指令，ACC累加器，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-010",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "取到执行完为指令周期，频率/字长/空间均非时间阶段名。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-014",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "PC下一取指地址、IR当前指令、ALU算术逻辑均对，MDR不是文件名寄存器。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-020",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "IR暂存正译码/执行指令，PC与IR职责分清，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-021",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "ALU含逻辑运算功能，与或异或在其典型操作中，题干只算术错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-033",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "除零由当前执行指令触发为内部异常，与外设异步中断相区别。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-040",
+      "topic_id": "computer-organization.t06",
+      "verdict": "pass",
+      "independent_check": "控制器译码、寄存器供操作数、ALU加、结果写回，组成合理且不强制固定微操作。",
+      "original_answer": "控制器译码并发出控制信号；寄存器提供操作数；ALU完成加法；结果写回寄存器或经MDR写主存；PC组织下一条指令。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-005",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "操作数字面直接置指令中为立即，与直接主存地址不同。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-006",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "寄存器中存主存地址，再读内存即寄存器间接；寄存器寻址直接取其内容为值。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-017",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "规整、较少寻址、Load/Store是典型RISC；所有实现均单周期过绝对，D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-006",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "执行寻址时PC已明确为1000，位移-20相加980，不额外加指令长度。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-007",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "5位仅32种不足50，6位64种足够，最少6。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-013",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "RISC设计倾向不保证缓存等待和冒险都不存在，所以判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-005",
+      "topic_id": "computer-organization.t07",
+      "verdict": "pass",
+      "independent_check": "地址码就是有效主存地址称直接寻址，立即则是值本身。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-004",
+      "topic_id": "computer-organization.t08",
+      "verdict": "pass",
+      "independent_check": "邻接元素顺序访问为空间；跨轮重复同区域为时间，具体情境对应正确。",
+      "original_answer": "顺序访问相邻数组元素体现空间局部性；下一轮再次访问近期使用的数组区域体现时间局部性。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-007",
+      "topic_id": "computer-organization.t08",
+      "verdict": "pass",
+      "independent_check": "主存大容量且重成本采用DRAM，SRAM更快却密度成本不利。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-015",
+      "topic_id": "computer-organization.t08",
+      "verdict": "pass",
+      "independent_check": "循环同指令和重访数据为时间、邻接元素为空间，随机要求D不体现局部性。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-co-004",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "Cache SRAM、主存DRAM、固件Flash匹配；CPU寄存器通常易失不能存断电文件。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-011",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "8K=2^13片内13线，4组需2位选择，两片并联位扩，共8片。",
+      "original_answer": "需8片；片内13根地址线；选择4个字扩展组需2根高位地址线。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-024",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "PROM一次编程及EPROM/EEPROM可擦写使绝不改写不成立，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-025",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "DRAM电容泄漏需刷新，SRAM静态保存无刷新但仍供电，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-026",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "无需刷新不等于无需供电，SRAM易失，题干错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-035",
+      "topic_id": "computer-organization.t09",
+      "verdict": "revised",
+      "independent_check": "2^20=1048576个字节地址；原答案把地址个数与1MiB容量括注混合，填整数更准确。",
+      "original_answer": "2^20（即1 MiB）",
+      "revised_fields": [
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "sp-core-co-037",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "1024×8=8192位，题目问位不问字节。",
+      "original_answer": "8192",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-042",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "SRAM快无需刷新用于Cache，DRAM需刷新主存，二者易失，C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-003",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "存储字编址下片内13线，4字组2线，位宽并联不新增地址线，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-003",
+      "topic_id": "computer-organization.t09",
+      "verdict": "pass",
+      "independent_check": "字扩4×位扩2=8片，不是容量比4或位比2单独结果。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-012",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "64B偏移6位，16KiB/(64×4)=64组索引6，32-6-6=20标记。",
+      "original_answer": "偏移6位，组索引6位，标记20位。",
+      "revised_fields": []
+    },
+    {
+      "id": "hn-recall-sy26-001",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "速度差→局部性→命中→平均时间链条完整，概念简答答案可用。",
+      "original_answer": "Cache主要缓解CPU处理速度与主存访问速度之间的差距。它利用时间局部性和空间局部性，把近期使用或相邻的数据块放在更快的存储层；命中时无需访问较慢主存，从而降低平均访存时间。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-008",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "固定映射下空行无法利用是冲突失效，而非容量不足或虚拟缺页。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-009",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "写直达更新下层，写回脏块驱逐再更新，不写分配是另一独立维度。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-027",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "Cache小而快缓解主存速度差是通常层次，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-028",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "直接映射一块固定一行，任意行是全相联，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-029",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "写回标脏并驱逐落下层是正确写策略，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-043",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "时间/空间局部性提高命中，随机或超容量会弱化；未误说增主存容量。",
+      "original_answer": "程序具有时间和空间局部性，近期或相邻数据被再次访问时可在高速Cache命中，减少平均访存时间；随机访问、工作集过大或冲突严重时效果会下降。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-044",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "放置自由度、冲突与比较硬件成本三维取舍正确，全相联仍会容量/强制失效。",
+      "original_answer": "直接映射位置固定、硬件简单但冲突多；全相联可放任意行、冲突少但比较硬件复杂；组相联固定组内任选，是成本与冲突的折中。",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-004",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "组数256块/4路=64，log2=6，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-005",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "定义miss penalty额外60ns，AMAT2+0.05×60=5，避免重复加hit成本。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-010",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "相联度减冲突、写回脏位均真；强制首次失效不随容量消失，D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-004",
+      "topic_id": "computer-organization.t10",
+      "verdict": "pass",
+      "independent_check": "950/1000=0.95，选95%，不是失效率5%。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-009",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "5+10-1=14理想周期，加2停顿16，乘1.6=25.6ns。",
+      "original_answer": "16个周期，25.6ns。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-030",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "最慢段加寄存开销制约节拍，不均衡会闲等，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-031",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "转发不能消除资源争用与分支不确定，部分数据冒险亦需停顿，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-045",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "后条等待前条结果是数据冲突，非共享单资源的结构冲突。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-008",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "5段20指令需24拍，每拍1ns共24ns，填A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-011",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "结构/数据/控制三类冒险，文件碎片无关，ABC。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-014",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "重叠提高吞吐但单条路径长度未必缩短，流水寄存开销可增延迟，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-007",
+      "topic_id": "computer-organization.t11",
+      "verdict": "pass",
+      "independent_check": "三冒险来自资源、数据依赖、控制流，文件相关不在指令流水三类。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-co-002",
+      "topic_id": "computer-organization.t12",
+      "verdict": "pass",
+      "independent_check": "32bit=4B，4×2e6=8e6B/s即8MB/s，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-013",
+      "topic_id": "computer-organization.t12",
+      "verdict": "pass",
+      "independent_check": "64bit/8=8B，8×200e6×2=3.2e9B/s即3.2十进制GB/s。",
+      "original_answer": "3.2GB/s。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-016",
+      "topic_id": "computer-organization.t12",
+      "verdict": "pass",
+      "independent_check": "地址、数据、控制三类功能均对，数据常双向且控制信号方向不同，D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-022",
+      "topic_id": "computer-organization.t12",
+      "verdict": "pass",
+      "independent_check": "2^(n+1)/2^n=2，编址单位不变前提充分。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-023",
+      "topic_id": "computer-organization.t12",
+      "verdict": "pass",
+      "independent_check": "64位数据宽仅单次量，2^64容量需地址宽和编址条件，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-036",
+      "topic_id": "computer-organization.t12",
+      "verdict": "pass",
+      "independent_check": "16bit÷8=2B，只计算单次宽度，填2。",
+      "original_answer": "2",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-co-003",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "设备↔内存DMA块传，CPU设置/收尾边界正确，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-co-005",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "请求、保存现场、向量入口、服务、恢复五步成立；减少轮询解释CPU利用率。",
+      "original_answer": "设备请求；CPU在允许时机响应并保存现场；按中断向量转入服务程序；处理后恢复现场并返回。中断让CPU无需持续轮询等待设备，可先执行其他工作。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-011",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "向量用于定位ISR入口，页偏移与总线宽无此职责。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-012",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "设备寄存器进入存储地址空间为统一编址/MMIO，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-032",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "中断免持续轮询但服务仍占CPU，判断有边界为真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-034",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "地址组织形式不能推出速度，必然更快因果不成立。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-co-046",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "偶发键盘中断、大块磁盘DMA，与避免忙等/逐字搬运一致，CPU边界完整。",
+      "original_answer": "键盘低速且事件偶发，适合中断通知；高速磁盘大块数据适合DMA在设备与主存间传送。查询适合极简单或等待极短场景。DMA仍需CPU初始化和收尾，中断服务也占CPU时间。",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-co-012",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "初始化和周期挪用可有，逐字CPU搬运不再必要，ABC。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-co-008",
+      "topic_id": "computer-organization.t13",
+      "verdict": "pass",
+      "independent_check": "DMA块传绕开CPU逐字搬运，但设置和通知仍需要CPU，选A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-co-006",
+      "topic_id": "computer-organization.t14",
+      "verdict": "revised",
+      "independent_check": "原Cache失效直接主存忽略多级，补下一级；缺页也可能零页分配不一定读盘。",
+      "original_answer": "Cache未命中是数据块不在Cache，通常查主存；TLB未命中是地址转换项不在TLB，查页表；缺页是目标页面不在主存，需要从辅存调入。",
+      "revised_fields": [
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-co-005",
+      "topic_id": "computer-organization.t14",
+      "verdict": "revised",
+      "independent_check": "4KiB为4096字节须字节编址才能推出12位，补此前隐含前提。",
+      "original_answer": "12",
+      "revised_fields": [
+        "stem"
+      ]
+    },
+    {
+      "id": "gap-co-006",
+      "topic_id": "computer-organization.t14",
+      "verdict": "pass",
+      "independent_check": "TLB查页表、Cache下一级/主存、缺页OS调入，三层职责正确。",
+      "original_answer": "TLB未命中查页表；Cache未命中访问下一层缓存或主存；缺页由操作系统从外存调入页面。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-co-008",
+      "topic_id": "computer-organization.t14",
+      "verdict": "revised",
+      "independent_check": "一级页表缺失成本1+200，命中1+100，0.9×101+0.1×201=111ns；补一级以排多级歧义。",
+      "original_answer": "111 ns",
+      "revised_fields": [
+        "stem"
+      ]
+    },
+    {
+      "id": "uc-co-015",
+      "topic_id": "computer-organization.t14",
+      "verdict": "pass",
+      "independent_check": "三事件不等同，TLB缺失可页表命中且无需磁盘，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-0c0a712a",
+      "topic_id": "information-security.t01",
+      "verdict": "revised",
+      "independent_check": "修改破坏数据对应完整性D；原解析把审计等同不可否认，删错误扩展。",
+      "original_answer": "D",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-3b54725d",
+      "topic_id": "information-security.t01",
+      "verdict": "revised",
+      "independent_check": "B网络入侵事实成立；手机与电脑风险不完全相同，重写不严谨绝对和侵权解析。",
+      "original_answer": "B",
+      "revised_fields": [
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-6ee0941e",
+      "topic_id": "information-security.t01",
+      "verdict": "revised",
+      "independent_check": "四项是通用或扩展安全属性，ABCD；清理C/D开头OCR标点。",
+      "original_answer": "ABCD",
+      "revised_fields": [
+        "options"
+      ]
+    },
+    {
+      "id": "dy-8d5af0b5",
+      "topic_id": "information-security.t01",
+      "verdict": "pass",
+      "independent_check": "第三核心目标是完整性，非独立性，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-a49aea0d",
+      "topic_id": "information-security.t01",
+      "verdict": "pass",
+      "independent_check": "不向未授权者泄露直接对应保密性，B；完整防篡改，可用防异常拒绝。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-001",
+      "topic_id": "information-security.t01",
+      "verdict": "pass",
+      "independent_check": "偷偷改分是未授权修改，最直接完整性B，不必发生泄露或服务中断。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-001",
+      "topic_id": "information-security.t01",
+      "verdict": "pass",
+      "independent_check": "防泄露/篡改/不可访问分别CIA，A对应准确。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-51797",
+      "topic_id": "information-security.t01",
+      "verdict": "revised",
+      "independent_check": "D语义正确非本题通用安全目标；解析可审查性不等于不可否认性，纠正混淆。",
+      "original_answer": "D",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-02-s5-q14",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "遥控技术入侵未授权取款主要攻击D，非自然灾害或必有病毒。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q29",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "正常宣传图书本身非机密完整可用威胁，其他为典型恶意活动，D。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-06eb99e1",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "非法复制来源不能保障，A错误行为；其余基础措施降低但不保证全安全。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-2998131f",
+      "topic_id": "information-security.t02",
+      "verdict": "revised",
+      "independent_check": "AB需明确攻击意图，完整性破坏也可无意，因此补恶意篡改限定。",
+      "original_answer": "AB",
+      "revised_fields": [
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-7d8af3d7",
+      "topic_id": "information-security.t02",
+      "verdict": "revised",
+      "independent_check": "四项保护/检测/恢复均参与防护；IDS默认检测不必拦截、备份不直接阻止，改解析边界。",
+      "original_answer": "ABCD",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-9d0d0774",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "物业直接给第三方业主数据为泄露D，无需假定外部黑客。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-c5f2395e",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "恶意攻击确属威胁D；误操作也可威胁，病毒人为非天然，破坏传送有影响。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-001",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "认证→身份、授权→能做、边界→路径、终端→主机、日志→检测、备份→恢复映射正确。",
+      "original_answer": "身份认证确认使用者身份；最小权限限制账号可执行的操作；边界防护控制网络访问；终端防护降低恶意代码和主机入侵风险；日志监控用于发现、追踪异常；备份恢复用于在故障或攻击后恢复数据与业务。",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-005",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "任务必需最低权限为最小权限A，不能永久/全员管理员。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-006",
+      "topic_id": "information-security.t02",
+      "verdict": "pass",
+      "independent_check": "边界、身份、终端、监测恢复互补，ABCD体现纵深。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-18084",
+      "topic_id": "information-security.t02",
+      "verdict": "revised",
+      "independent_check": "原最重要基础措施缺客观比较；改整体策略管理职责使A明确，保留其余具体措施价值。",
+      "original_answer": "A",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-85728",
+      "topic_id": "information-security.t02",
+      "verdict": "revised",
+      "independent_check": "随意安装风险高A；原把端口=后门及开机密码防远控属错误保证，重写解析。",
+      "original_answer": "A",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-254e4516",
+      "topic_id": "information-security.t03",
+      "verdict": "pass",
+      "independent_check": "物理与逻辑是常用防护划分，访问权限/加密属逻辑B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-002",
+      "topic_id": "information-security.t03",
+      "verdict": "pass",
+      "independent_check": "门禁防发生、告警发现、备份恢复纠后果，按主要作用分类且允许兼有，正确。",
+      "original_answer": "门禁偏预防，告警偏检测，备份恢复偏纠正。",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-20143",
+      "topic_id": "information-security.t03",
+      "verdict": "revised",
+      "independent_check": "原程序安全不应整体算物理；改设备/供电/环境防盗防雷仍唯一物理B。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-56133",
+      "topic_id": "information-security.t03",
+      "verdict": "pass",
+      "independent_check": "法规、技术、管理三支柱，与单一设备/网络管理不同，B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-61071",
+      "topic_id": "information-security.t03",
+      "verdict": "pass",
+      "independent_check": "访问控制、加密、认证ACD安全技术，虚拟光驱模拟介质不是本题防护措施。",
+      "original_answer": "ACD",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-is-003",
+      "topic_id": "information-security.t04",
+      "verdict": "pass",
+      "independent_check": "测评非永久免维护，持续威胁和业务变化需整改响应，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-is-004",
+      "topic_id": "information-security.t04",
+      "verdict": "pass",
+      "independent_check": "失陷需记录、撤会话/重置、MFA范围日志ABC；删证据D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q31",
+      "topic_id": "information-security.t04",
+      "verdict": "revised",
+      "independent_check": "长度随机性原未限定，字符种类不能独断更安全；补同长随机后C成立。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-f0bf2432",
+      "topic_id": "information-security.t04",
+      "verdict": "revised",
+      "independent_check": "原控制字符与混合字符必安全误导且混入他题解析；改绝对安全判断为错并强调长独特。",
+      "original_answer": "正确",
+      "revised_fields": [
+        "stem",
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-sec-003",
+      "topic_id": "information-security.t04",
+      "verdict": "pass",
+      "independent_check": "盐防同口令预计算复用，慢散列增加每猜成本，MFA降低单密码泄露影响，合机制。",
+      "original_answer": "每个口令使用随机盐后做慢散列，降低彩虹表复用和批量猜测效率；MFA使口令泄露后攻击者仍缺少另一因素。",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-67463",
+      "topic_id": "information-security.t04",
+      "verdict": "revised",
+      "independent_check": "原短复杂样例非可靠最高安全，改密码管理器足长独特随机D，消除姓名生日可猜性。",
+      "original_answer": "D",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-02-s5-q12",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "C断网不能杜绝介质既有病毒；其余可信更新过滤降低风险。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q16",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "D外部内容交互存在传播路径，不等于每次必感染，解析已明确触发条件。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q20",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "木马恶意代码伪装植入为植入威胁B，不以自复制为必要。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q28",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "病毒是代码程序C；万能杀毒和免疫绝对错，感染程序不等于病毒只是坏程序。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q40",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "允许下载A也是合理需考虑事项，补限恶意代码检查维度后D唯一。",
+      "original_answer": "D",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-02-s5-q43",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "B邮件不会传恶意代码明确错；原D核心仅OS过窄，改为重要基础并保留应用数据。",
+      "original_answer": "B",
+      "revised_fields": [
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-02-s5-q9",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "运行外来程序B可触发代码，电源灰尘和单纯统计输入不产生病毒。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-0ca9165d",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "主要对象程序与数据B，物理盘片CPU非一般恶意代码直接对象。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-532b473a",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "危险下载捆绑附件ABD为投递途径，文件大本身不导致感染。",
+      "original_answer": "ABD",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-7321fbdb",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "AB复制变种及D可能条件发作成立；C必须发作后才可查杀错误，ABD。",
+      "original_answer": "ABD",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-8307738b",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "OS应用漏洞可被利用执行恶意代码，故原因之一判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-a43a6132",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "CPU磁盘空间访问异常可作为线索ABD但非确诊；电源不亮优先硬件故障。",
+      "original_answer": "ABD",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-a9cd11af",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "U盘、网络资料、光盘可承载恶意内容ABD，物理清灰非代码传播途径。",
+      "original_answer": "ABD",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-ac105d6a",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "教材通用寄生传播潜伏，不把智能性作必备普遍特征，D。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-b321f902",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "不易察觉侧重隐蔽B，原硬件破坏和所有寄生扩展过度，改清潜伏与隐蔽。",
+      "original_answer": "B",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-bd4f5c5b",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "B永久不上网非完整防护；原把所有勒索都当能复制病毒不对，解析改恶意程序分类。",
+      "original_answer": "B",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-c8de56cd",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "介质传播可行但非插入自动感染，重写以执行/漏洞触发前提，避免单机网络硬划分。",
+      "original_answer": "正确",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-e47ac7bc",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "格式化不保证全清除判错；原CIH感染BIOS躲格式化因果错误，换固件/其他介质边界。",
+      "original_answer": "错误",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-ff86ef0b",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "杀毒工具覆盖有限，扫描不保证所有未知恶意代码都清除，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "hn-recall-hn26-001",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "附宿主复制是病毒定义，四个特征可说明；与独立网络蠕虫区分正确。",
+      "original_answer": "计算机病毒是能够把自身代码附着或插入其他程序、文件或系统区域，并在满足条件时复制传播、影响系统运行的恶意代码。常见特征包括传染性、潜伏性、触发性、破坏性和隐蔽性，写出其中四项并说明即可。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-010",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "培训过滤、补丁最权、离线备份ABC互补；管理员普授扩大勒索影响D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-14974",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "开放性不是病毒通用特性C；原末尾混进下一题答案21/B须删除。",
+      "original_answer": "C",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-17033",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "独立判C感染不必立即症状、D万能查杀也错，必须多选CD，不应继续单选C。",
+      "original_answer": "C",
+      "revised_fields": [
+        "type",
+        "stem",
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-19092",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "B全面不联网防护不充分；去只能付赎金错误前提，备份可恢复且付费无保证。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-36158",
+      "topic_id": "information-security.t05",
+      "verdict": "pass",
+      "independent_check": "病毒人为代码D，可经宏文档与介质，不限可执行或网络，更不感染人。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-49389",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "病毒也可泄密，不能无条件只完整；改明确改删场景得C。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-81043",
+      "topic_id": "information-security.t05",
+      "verdict": "revised",
+      "independent_check": "未被查杀不等潜伏，改进入到延时发作为潜伏B，去病毒不能变种的错误解析。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "ap-is-001",
+      "topic_id": "information-security.t06",
+      "verdict": "pass",
+      "independent_check": "独立可信渠道核实上报C，验证码不可交付来路不明者。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q22",
+      "topic_id": "information-security.t06",
+      "verdict": "pass",
+      "independent_check": "仿站骗登录C最贴钓鱼；盗号木马可能结果但非钓鱼定义。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q23",
+      "topic_id": "information-security.t06",
+      "verdict": "revised",
+      "independent_check": "qq.com的子域为mail.qq.com，其他尾部域不同；只判断层级不能保证页面可信，补限定。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-02-s5-q34",
+      "topic_id": "information-security.t06",
+      "verdict": "pass",
+      "independent_check": "不点击且独立核验可疑消息C；杀软存在不保证链接无害。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-7f065639",
+      "topic_id": "information-security.t06",
+      "verdict": "revised",
+      "independent_check": "编码可载恶意链接；原扫描到目前很安全绝对，改明确后续行为及解码器漏洞边界。",
+      "original_answer": "正确",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-acd122da",
+      "topic_id": "information-security.t06",
+      "verdict": "revised",
+      "independent_check": "原全国机制难以制止无法客观判断，改HTTPS不能证明业务身份的可检验真命题。",
+      "original_answer": "正确",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-sec-004",
+      "topic_id": "information-security.t06",
+      "verdict": "pass",
+      "independent_check": "停止报告、控制失陷会话、重置撤销、范围日志，流程按目标合理且超越只改密码。",
+      "original_answer": "停止继续操作并上报，隔离或控制受影响会话，重置凭据并撤销会话，检查日志与影响范围并保留证据。",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-99117",
+      "topic_id": "information-security.t06",
+      "verdict": "pass",
+      "independent_check": "付款前走独立电话确认D，聊天显示身份或系统版本无法防全部社工。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-2c3dac30",
+      "topic_id": "information-security.t07",
+      "verdict": "revised",
+      "independent_check": "输入PIN最具体为身份认证D，但A上位也泛成立，补最直接具体措辞去歧义。",
+      "original_answer": "D",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "ua-security-003",
+      "topic_id": "information-security.t07",
+      "verdict": "pass",
+      "independent_check": "密码所知+硬件钥所持，B；用户名昵称不为安全因素。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-004",
+      "topic_id": "information-security.t07",
+      "verdict": "pass",
+      "independent_check": "不同类别因素如密码+令牌B，双密码同所知不算真正MFA。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-005",
+      "topic_id": "information-security.t08",
+      "verdict": "pass",
+      "independent_check": "角色定基本职责RBAC，部门/金额条件ABAC，二者可组合而非只能选一。",
+      "original_answer": "RBAC表达财务人员/主管角色的基础权限；ABAC用部门、金额等属性和条件限制具体操作。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-015",
+      "topic_id": "information-security.t08",
+      "verdict": "pass",
+      "independent_check": "标签级别系统强制是Mandatory Access Control，不是MAC消息码，答案准确。",
+      "original_answer": "MAC指Mandatory Access Control，即强制访问控制；由系统依据安全标签和规则强制决定访问，普通用户不能自行转授。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-006",
+      "topic_id": "information-security.t09",
+      "verdict": "pass",
+      "independent_check": "认证/协商与大数据加密分工正确，HTTPS并不要求所有载荷RSA直接加密。",
+      "original_answer": "非对称机制便于认证和安全协商但开销大；对称加密速度快，适合大数据量；组合兼顾密钥分发和性能。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-004",
+      "topic_id": "information-security.t09",
+      "verdict": "pass",
+      "independent_check": "对称大数据+公钥保护会话密钥B，Base64不保密，私钥不得公开。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-46628",
+      "topic_id": "information-security.t09",
+      "verdict": "pass",
+      "independent_check": "混合加密主体数据由对称会话密钥B高效处理，公钥机制用于协商/封装。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-86566",
+      "topic_id": "information-security.t09",
+      "verdict": "pass",
+      "independent_check": "对称共享密钥，公开密钥非对称；不同密钥也不意味着不同算法，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q27",
+      "topic_id": "information-security.t10",
+      "verdict": "revised",
+      "independent_check": "原C保证传输安全泛含完整可成立，改具体保密以独立A支持防抵赖。",
+      "original_answer": "A",
+      "revised_fields": [
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-6af73715",
+      "topic_id": "information-security.t10",
+      "verdict": "revised",
+      "independent_check": "原A/B重复来源、C/D重复完整，AD不唯一；重写四项后AD真实，B保密C业务真均假。",
+      "original_answer": "AD",
+      "revised_fields": [
+        "stem",
+        "options",
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-sec-007",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "签名来源完整性、防抵赖；证书绑身份公钥；不保密，边界清楚。",
+      "original_answer": "签名验证来源、完整性并支持防抵赖；不自动保密内容。证书把主体身份与公钥绑定并由信任链验证。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-016",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "共享密钥MAC给完整/来源，不公开验证防抵赖；全称Message Authentication Code。",
+      "original_answer": "MAC指Message Authentication Code，即消息认证码；用共享密钥验证消息完整性和来源真实性，不提供数字签名的公开验证与防抵赖。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-005",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "安全哈希定长摘要、单向抗碰撞B，不是可逆加密或Base64。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-006",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "私钥签对应公钥验，A签名者公钥，不是接收者私钥。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-012",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "链/根、主机名/期限、用途/撤销ABC；背景色与信任无关。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-015",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "签名可附明文，不必然保密，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-003",
+      "topic_id": "information-security.t10",
+      "verdict": "pass",
+      "independent_check": "来源完整性防抵赖A在合适信任条件下成立，不直接保密或防恶意软件。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q17",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "原内部威胁和病毒全不防过宽；改未经过出口的内网流量A说明具体控制边界。",
+      "original_answer": "A",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-02-s5-q24",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "最基本安全技术无唯一，改按地址端口策略过滤边界C防火墙的具体职责。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-0127e364",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "普通防火墙非终端万能杀毒，不能保证进入前杀全部，题干错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-564533f5",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "传统内外网或专公边界策略屏障定义成立，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-5e2ee9fd",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "原A防火墙/B杀软也不普遍阻被动监听，换TLS/IPsec/端到端加密对扫描D，唯一明确。",
+      "original_answer": "D",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-826139cf",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "监听取得密文仍难读明文，正确加密A最直接保护内容，非只杀软或无线。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-c2173873",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "边界防火墙仅管经过流量，未过的内部流量不覆盖；原两防火墙必构DMZ错误扩展删除。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "type",
+        "options",
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-d60c0492",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "网速掉线C并非漏洞证据；也可能攻击表现，原不会安全问题绝对，限定观察本身。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-ff37ac1e",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "一切攻击与病毒绝对保证为假；规则允许渠道、未知攻击仍有风险。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-008",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "外露Web在DMZ，DB内层且仅Web必要端口访问，能具体限制横移路径。",
+      "original_answer": "DMZ隔离外部暴露服务，数据库置于内层减少直接攻击面；只允许Web服务器按必要端口访问数据库，禁止互联网直连数据库。",
+      "revised_fields": []
+    },
+    {
+      "id": "hn-recall-hn26-002",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "隧道封装+认证加密完整性保护指定通道，不替终端权限补丁，原答完整。",
+      "original_answer": "VPN在公共网络上建立逻辑专用通道，使远程用户或不同站点能够安全访问内部资源。它通常通过身份认证、隧道封装、加密和完整性校验保护传输。VPN不能替代终端防恶意代码、账号最小权限、应用漏洞修复等其他安全措施。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-007",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "旁路告警不默认阻断是IDS，IPS通常在路径上阻断，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-013",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "VPN仅相应通信隧道，不能修终端漏洞/弱口令，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "web-20",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "内外网间信息通信监控D为传统防火墙定义，非防火物理墙或协议翻译。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-12697",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "软件防火墙C为专门安全产品；公约规范非产品、网卡办公为其他用途。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-15807",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "C防火墙可过滤未授权流量，但不保证所有通过均无害，去绝对安全保证。",
+      "original_answer": "C",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-17382",
+      "topic_id": "information-security.t11",
+      "verdict": "pass",
+      "independent_check": "保护整个校内网对外入口，应在局域网外网边界B，不只特定服务器前。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-54074",
+      "topic_id": "information-security.t11",
+      "verdict": "revised",
+      "independent_check": "加密A为安全防护机制；原主动被动二分把认证等错置，改机制解释。",
+      "original_answer": "A",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "dy-fc9c9344",
+      "topic_id": "information-security.t12",
+      "verdict": "revised",
+      "independent_check": "原误认为C无法分IP与ARP；明确IP首部源地址后D唯一，排ARP映射欺骗。",
+      "original_answer": "D",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-sec-009",
+      "topic_id": "information-security.t12",
+      "verdict": "pass",
+      "independent_check": "暴涨慢可业务突发/故障，需流量基线来源资源日志证据才判攻击，答案审慎正确。",
+      "original_answer": "业务突发、配置或故障也可能造成现象；应核对流量来源、协议分布、历史基线、资源指标、日志和告警。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-010",
+      "topic_id": "information-security.t13",
+      "verdict": "pass",
+      "independent_check": "拼接SQL存在注入，参数化与服务端约束并最权，修复与根因匹配。",
+      "original_answer": "存在SQL注入风险；使用参数化查询，并在服务端按类型、长度和范围校验输入，同时执行最小数据库权限。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-002",
+      "topic_id": "information-security.t13",
+      "verdict": "pass",
+      "independent_check": "可利用弱点为脆弱性B；资产是服务器数据、威胁是利用事件。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-008",
+      "topic_id": "information-security.t13",
+      "verdict": "pass",
+      "independent_check": "参数化/绑定使输入不作SQL结构，A最核心，其余界面隐藏不提供安全。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-007",
+      "topic_id": "information-security.t13",
+      "verdict": "pass",
+      "independent_check": "参数化区分结构数据，配验证最权，A；改背景或关闭备份无注入防护。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-009",
+      "topic_id": "information-security.t14",
+      "verdict": "pass",
+      "independent_check": "丢失窗口RPO15min，恢复服务时限RTO2h，B顺序正确。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-014",
+      "topic_id": "information-security.t14",
+      "verdict": "pass",
+      "independent_check": "RAID冗余不对抗误删勒索或站点灾害，不能替备份，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-is-008",
+      "topic_id": "information-security.t14",
+      "verdict": "pass",
+      "independent_check": "离线/不可变副本减同步加密风险且需演练，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-is-002",
+      "topic_id": "information-security.t15",
+      "verdict": "pass",
+      "independent_check": "首轮记录报告授权隔离确认范围B，直接删日志/支付/放任不合处置。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-is-005",
+      "topic_id": "information-security.t15",
+      "verdict": "pass",
+      "independent_check": "报告范围证据遏制根除恢复复盘有序，立即格式化毁证据掩盖根因，边界说明正确。",
+      "original_answer": "立即报告并记录时间、告警、主机和网络状态；分析确认事件与范围；按授权隔离遏制；保全日志等证据；根除恶意代码、漏洞和失陷凭据；验证后恢复并监控；最后复盘整改。立即格式化会破坏证据且可能掩盖根因和影响范围。",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-is-006",
+      "topic_id": "information-security.t15",
+      "verdict": "pass",
+      "independent_check": "等保持续保护体系vs具体事件处置边界明确，流程定备案建设测评监督可用。",
+      "original_answer": "等保基础流程为定级、备案、建设整改、等级测评、监督检查和持续改进；它按系统等级建立持续保护体系。事件响应针对已经发生的具体事件进行发现报告、分析、遏制、根除、恢复和复盘。等保中的制度、技术和预案为响应提供基础，但不能代替具体处置。",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-655c7e47",
+      "topic_id": "information-security.t15",
+      "verdict": "pass",
+      "independent_check": "报告不能以补救失败才触发；启动补救并按规定报，题干错误，现行报告办法另核实。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-012",
+      "topic_id": "information-security.t15",
+      "verdict": "pass",
+      "independent_check": "隔离遏制、补漏洞根除、备份恢复、复盘总结四目标对应正确。",
+      "original_answer": "隔离属遏制，修补漏洞属根除，从备份恢复属恢复，复盘改进属事后总结。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-security-011",
+      "topic_id": "information-security.t15",
+      "verdict": "pass",
+      "independent_check": "隔离、保全时间线、范围分级ABC，未分析删日志破证D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q32",
+      "topic_id": "information-security.t16",
+      "verdict": "pass",
+      "independent_check": "谨慎下载APP降低授权隐私风险D，随扫、抢、排名信任都不稳妥。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-sec-013",
+      "topic_id": "information-security.t16",
+      "verdict": "pass",
+      "independent_check": "生日邮编罕见职组合准标识符可重识别，删除姓名不足，降低粒度与评估恰当。",
+      "original_answer": "这些准标识符组合可能与外部数据匹配到具体个人；应按最小必要降低粒度、删除或泛化字段，并评估攻击者背景知识。",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-02-s5-q41",
+      "topic_id": "information-security.t17",
+      "verdict": "pass",
+      "independent_check": "正常聊天C不当然犯罪，具体窃密诈骗恶意传播才需法律评价。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "dy-bbde8ae8",
+      "topic_id": "information-security.t17",
+      "verdict": "revised",
+      "independent_check": "原所有行为直接定罪忽略法定要件；改可能违法犯罪的故意行为，保ABD风险判断。",
+      "original_answer": "ABD",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-sec-014",
+      "topic_id": "information-security.t17",
+      "verdict": "pass",
+      "independent_check": "有口令技术能力不等授权，岗位目的最小必要审批审计限制数据访问，答正确。",
+      "original_answer": "不可以。能力不等于授权，应以岗位职责、合法目的、最小必要、单位制度和审批范围判断并保留审计。",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q1",
+      "topic_id": "programming.t01",
+      "verdict": "pass",
+      "independent_check": "详细且有限的解决步骤属于算法设计，写代码、运行与检测均属后续不同活动。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q11",
+      "topic_id": "programming.t01",
+      "verdict": "pass",
+      "independent_check": "高级语言提供抽象数据与控制结构；其移植性和可读性优于机器语言，D忽略翻译。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q15",
+      "topic_id": "programming.t01",
+      "verdict": "pass",
+      "independent_check": "算法可手工执行，不等于程序；无二义是确定性而非可行性，故ABC均错选D。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q16",
+      "topic_id": "programming.t01",
+      "verdict": "revised",
+      "independent_check": "原C仅给操作次数不是复杂度增长阶；重写选项为基本操作次数随n增长的数量级。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-04-s3-q21",
+      "topic_id": "programming.t01",
+      "verdict": "revised",
+      "independent_check": "核对SVG节点，首次①②③④⑥返回②，再②③④⑤；原泛谈算法解析不能解释路径，补具体分支。",
+      "original_answer": "C",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-04-s3-q5",
+      "topic_id": "programming.t01",
+      "verdict": "pass",
+      "independent_check": "直接以0和1编码指令为机器语言，BASIC与数据库语言不是二进制机器指令。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q6",
+      "topic_id": "programming.t01",
+      "verdict": "revised",
+      "independent_check": "语言名称不能决定实际效率；改考机器指令直接执行才能唯一选择B。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "uf-pl-006",
+      "topic_id": "programming.t01",
+      "verdict": "pass",
+      "independent_check": "结构化基本结构为顺序、选择、循环，任意goto跳转不属于第三种之外的新基本结构。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-16995",
+      "topic_id": "programming.t01",
+      "verdict": "revised",
+      "independent_check": "处理器识别机器指令编码；手编语言别称无助且容易误导，保留准确概念。",
+      "original_answer": "机器语言",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-36196",
+      "topic_id": "programming.t01",
+      "verdict": "revised",
+      "independent_check": "源程序到目标代码为编译；补目标文件可能仍需链接，避免把编译与可执行交付混同。",
+      "original_answer": "编译",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-8065",
+      "topic_id": "programming.t01",
+      "verdict": "revised",
+      "independent_check": "汇编需汇编器翻译；低级指接近硬件，不代表汇编和机器代码都直接运行。",
+      "original_answer": "错误",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-98793",
+      "topic_id": "programming.t01",
+      "verdict": "pass",
+      "independent_check": "结构化基本块用单入口单出口组合，可嵌套，也能表达复杂程序。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s2-q4",
+      "topic_id": "programming.t02",
+      "verdict": "pass",
+      "independent_check": "顶层语句从列首开始；if/for/def块才按一致缩进嵌套，D的所有行至少一空格错误。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q7",
+      "topic_id": "programming.t02",
+      "verdict": "pass",
+      "independent_check": "解释器在执行过程中处理高级语言，汇编目标翻译不是其本题功能，C唯一匹配。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s3-q8",
+      "topic_id": "programming.t02",
+      "verdict": "pass",
+      "independent_check": "编译主要实现语义等价的目标形式翻译，可报错但不自动纠正源语法，选C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-009",
+      "topic_id": "programming.t02",
+      "verdict": "pass",
+      "independent_check": "语法未通过、除零时异常、初值致错误结果分别发生在语法、运行、逻辑三个层面。",
+      "original_answer": "依次为语法错误、运行错误、逻辑错误。",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s1-q1",
+      "topic_id": "programming.t03",
+      "verdict": "revised",
+      "independent_check": "含&的词法非法；原_Int涉及实现保留命名，替换其余名称以排除保留标识符争议。",
+      "original_answer": "C",
+      "revised_fields": [
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-10124",
+      "topic_id": "programming.t03",
+      "verdict": "pass",
+      "independent_check": "教材按值是否可变区分常量与变量；不是按声明类型粗分这两类类型，判断成立。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s1-q10",
+      "topic_id": "programming.t04",
+      "verdict": "pass",
+      "independent_check": "逗号先赋9；右侧x+3为12，9模12仍9，复合赋值结果9。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s1-q6",
+      "topic_id": "programming.t04",
+      "verdict": "revised",
+      "independent_check": "i++给出旧值1，负号后j=-1，表达式完成i=2；补j声明以使C片段有效。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-04-s1-q7",
+      "topic_id": "programming.t04",
+      "verdict": "pass",
+      "independent_check": "a先赋12，a*3仅求36不回写，最后a+5=17是逗号表达式结果。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s2-q5",
+      "topic_id": "programming.t04",
+      "verdict": "revised",
+      "independent_check": "Python链式比较两项均真，结果True；原泛谈运算符解析未给链式规则，补明。",
+      "original_answer": "C",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-pl-001",
+      "topic_id": "programming.t04",
+      "verdict": "pass",
+      "independent_check": "0为逻辑与假左项，++x不求值，x保持0，无未定义行为。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-004",
+      "topic_id": "programming.t04",
+      "verdict": "pass",
+      "independent_check": "C99起整除向0，-7/2=-3；Python真除-3.5，地板除-4，四种结果均符语言规则。",
+      "original_answer": "现代C中整数7/2为3，-7/2向零截断为-3。Python 3的/执行真除法，7/2为3.5、-7/2为-3.5；//执行向下取整，7//2为3，-7//2为-4。",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-pl-001",
+      "topic_id": "programming.t04",
+      "verdict": "pass",
+      "independent_check": "整数7/2先得3，再赋double为3.0，目标变量类型不反向改变除法。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-final-thin-013",
+      "topic_id": "programming.t05",
+      "verdict": "pass",
+      "independent_check": "先int转换两次输入，再相加；输出15；原字符串拼接示例输出123正确。",
+      "original_answer": "可写a=int(input()); b=int(input()); print(a+b)。input返回字符串，若不转换，a+b执行字符串拼接，例如输入12和3输出123。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-002",
+      "topic_id": "programming.t05",
+      "verdict": "pass",
+      "independent_check": "两次input均给str，'12'+'3'为'123'，不是15。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-73534",
+      "topic_id": "programming.t05",
+      "verdict": "pass",
+      "independent_check": "scanf的%d需int地址，只有B为三个变量分别取址；选项以表达式而非完整分号语句理解。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s1-q8",
+      "topic_id": "programming.t06",
+      "verdict": "revised",
+      "independent_check": "原其中之一有恰好一个歧义，改至少一个后D逻辑或唯一，包含二者都小于c。",
+      "original_answer": "D",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-04-s1-q9",
+      "topic_id": "programming.t06",
+      "verdict": "pass",
+      "independent_check": "7>9是假，条件运算符取b=9，选C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-010",
+      "topic_id": "programming.t06",
+      "verdict": "revised",
+      "independent_check": "先90后60覆盖整数90/89/60/59；限定整数以排除原60至89对89.5的表述缺口。",
+      "original_answer": "if score >= 90:\n    print(\"A\")\nelif score >= 60:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-1554",
+      "topic_id": "programming.t06",
+      "verdict": "pass",
+      "independent_check": "从case10进入后无break，执行10、11、12三次加1，11→12→13。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-81005",
+      "topic_id": "programming.t06",
+      "verdict": "pass",
+      "independent_check": "3>5为假，取冒号后b=5，填5。",
+      "original_answer": "5",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-83993",
+      "topic_id": "programming.t06",
+      "verdict": "pass",
+      "independent_check": "首条min(11,12)=11，第二条min(11,3)=3，最终C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s1-q13",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "t从1至100且更新不受continue阻断，体100次；负输入只跳本次printf。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s1-q14",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "逐位必须累加a%10，随后a/10去个位；以123手算1轮3、2轮5、3轮6。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s2-q6",
+      "topic_id": "programming.t07",
+      "verdict": "revised",
+      "independent_check": "遍历1至5跳4，实际输出1,2,3,5,；选项原中文逗号与输出英文不符，统一。",
+      "original_answer": "C",
+      "revised_fields": [
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-04-s3-q17",
+      "topic_id": "programming.t07",
+      "verdict": "revised",
+      "independent_check": "三结构任意组合成立，且不专属循环状态；移到算法与整体控制结构t01。",
+      "original_answer": "C",
+      "revised_fields": [
+        "topic_id",
+        "explanation",
+        "topic_source"
+      ]
+    },
+    {
+      "id": "gap-pl-003",
+      "topic_id": "programming.t07",
+      "verdict": "revised",
+      "independent_check": "原分号后for非法，改实际三行Python；range1到4累加10。",
+      "original_answer": "10",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-pl-011",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "i=2,4,...,100共50数，累加2550，给出核心循环可满足写码任务。",
+      "original_answer": "int sum=0;\nfor (int i=2; i<=100; i+=2) {\n    sum += i;\n}",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-002",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "只有i=2、4使i%2==0成立，s累加6，选B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-008",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "range(1,6,2)为1,3,5，和9，终点6不含。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-pl-002",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "i=1..5，sum依次1、3、6、10、15，选C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "zg-71257",
+      "topic_id": "programming.t07",
+      "verdict": "pass",
+      "independent_check": "while内k=0是赋值且结果为0，首轮条件即假，循环体0次。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-pl-003",
+      "topic_id": "programming.t08",
+      "verdict": "pass",
+      "independent_check": "修改普通形参自身不改实参对象，故有通常限定的判断成立。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-012",
+      "topic_id": "programming.t08",
+      "verdict": "pass",
+      "independent_check": "分支返回a或b且覆盖相等情况，不依赖print；最大值函数示例正确。",
+      "original_answer": "def maximum(a, b):\n    if a >= b:\n        return a\n    return b",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-005",
+      "topic_id": "programming.t08",
+      "verdict": "pass",
+      "independent_check": "B指针形参可接收地址并修改两个int；A仅副本，C/D无可用两个对象入口。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-009",
+      "topic_id": "programming.t08",
+      "verdict": "pass",
+      "independent_check": "默认列表定义时生成一次；None分支每次无参调用新建列表，B避免共享。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-010",
+      "topic_id": "programming.t08",
+      "verdict": "pass",
+      "independent_check": "return和关键字实参成立，普通局部名先查局部；形参重新绑定不影响调用方绑定，D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-pl-004",
+      "topic_id": "programming.t08",
+      "verdict": "pass",
+      "independent_check": "普通int值形参只是副本；传地址并解引用才能交换调用方两个对象。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-015",
+      "topic_id": "programming.t09",
+      "verdict": "revised",
+      "independent_check": "原同类递归判断重复，替换成f(4)=4+3+2+1+0=10的过程输出题。",
+      "original_answer": "正确",
+      "revised_fields": [
+        "stem",
+        "type",
+        "options",
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "uf-pl-007",
+      "topic_id": "programming.t09",
+      "verdict": "revised",
+      "independent_check": "可正常终止的递归需基本情形且递归向其推进；改掉未限定终止的绝对必须措辞。",
+      "original_answer": "正确",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "zg-11699",
+      "topic_id": "programming.t09",
+      "verdict": "pass",
+      "independent_check": "文件与块作用域区分正确；解析还明确static局部存储期与作用域差异，不需改答案。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-003",
+      "topic_id": "programming.t10",
+      "verdict": "pass",
+      "independent_check": "code有4字符加终止空字符，共5；sizeof(char)依标准为1。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-013",
+      "topic_id": "programming.t10",
+      "verdict": "pass",
+      "independent_check": "C并不保证每次边界检查；越界访问可编译通过后未定义，判断为错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-pl-003",
+      "topic_id": "programming.t10",
+      "verdict": "pass",
+      "independent_check": "abc有3字符加终止空字符，共4个char字节。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-pl-002",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "append8后长度4，负下标-1取8，print输出8 4。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-pl-004",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "序列下标列表、主键映射字典、去重集合均合需求；集合不保证业务排序。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s2-q10",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "大地键对应黑色，天空存在故get取灰色不用黄色默认，输出B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s2-q7",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "R、NUL、S、NUL、T共5个字符；Python len不在NUL截断。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-04-s2-q8",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "list/tuple/str为序列；dict是映射，排除含字典的B/D，A位置访问成立。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "hn-recall-sy26-003",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "规范后词序hello/world/hello/python，字典计数2/1/1；给定逗号处理足够。",
+      "original_answer": "Python示例：\ntext = 'hello world, hello python'.lower().replace(',', '')\ncounts = {}\nfor word in text.split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n结果为hello:2、world:1、python:1。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-006",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "下标区间[1,5)，步长2取1、3，即b、d。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-007",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "b=a形成同一列表别名，原地append同时可由a看到[1,2,3]。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-012",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "列表可变有序、字典键访问、集合去重为真；元组可引用可变列表，D错。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-014",
+      "topic_id": "programming.t11",
+      "verdict": "pass",
+      "independent_check": "list.sort修改原对象并返回None，与sorted新建列表不同，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-pl-001",
+      "topic_id": "programming.t12",
+      "verdict": "pass",
+      "independent_check": "p=&x，*p写同一对象x=5，printf得到5。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-004",
+      "topic_id": "programming.t12",
+      "verdict": "pass",
+      "independent_check": "p从a[0]前移3元素指a[3]，在六元素数组内部合法。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-pl-005",
+      "topic_id": "programming.t12",
+      "verdict": "revised",
+      "independent_check": "p=a指首元素，p+2为&a[2]，按int步长；补完整int*声明。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem"
+      ]
+    },
+    {
+      "id": "gap-pl-005",
+      "topic_id": "programming.t13",
+      "verdict": "pass",
+      "independent_check": "结构对象用s.score，结构指针用p->score，后者即(*p).score。",
+      "original_answer": "s.score和p->score。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-001",
+      "topic_id": "programming.t13",
+      "verdict": "pass",
+      "independent_check": "s为结构体对象不是指针，用点号访问88.5成绩成员，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-013",
+      "topic_id": "programming.t14",
+      "verdict": "revised",
+      "independent_check": "fopen/fgets/fclose流程正确；限定每行<255字符，否则缓冲区读取可能截断一行。",
+      "original_answer": "FILE *fp=fopen(\"data.txt\",\"r\");\nif (fp==NULL) return 1;\nchar buf[256];\nwhile (fgets(buf,sizeof buf,fp)!=NULL) { /*处理buf*/ }\nfclose(fp);",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "hn-recall-cs25-001",
+      "topic_id": "programming.t14",
+      "verdict": "pass",
+      "independent_check": "流式控制输入大小仍不能约束词典总空间，需外排或分区归并，原答案覆盖该边界。",
+      "original_answer": "程序应以流式方式逐行或按固定大小块读取，不一次性把文件全部载入内存；处理块边界时保留未完成的单词，及时累计到词频映射；使用上下文管理或异常清理保证文件关闭。若词汇表本身过大，还需分区、外部排序或把中间结果写入磁盘后归并。",
+      "revised_fields": []
+    },
+    {
+      "id": "ua-program-011",
+      "topic_id": "programming.t14",
+      "verdict": "pass",
+      "independent_check": "开、读状态、关资源均应检查；w截断且不是只读，D错误。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-pl-008",
+      "topic_id": "programming.t14",
+      "verdict": "pass",
+      "independent_check": "a模式追加写，w截断，r/rb不提供追加，C唯一。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-pl-006",
+      "topic_id": "programming.t15",
+      "verdict": "pass",
+      "independent_check": "进程内对象不持久；C查NULL并关闭，Python with，w有截断风险，答点完整。",
+      "original_answer": "变量或列表通常在进程结束后丢失，应写入文件或数据库持久保存。C用fopen后检查返回值并fclose；Python可用with open自动关闭。两者使用w模式都可能清空原文件。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-006",
+      "topic_id": "programming.t15",
+      "verdict": "revised",
+      "independent_check": "应捕ValueError且题干要求写结构；原答仅文字，补合法缩进try/except。",
+      "original_answer": "捕获ValueError；try中执行n=int(input())，except ValueError中提示重新输入或进行受控处理。",
+      "revised_fields": [
+        "answer",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-pl-007",
+      "topic_id": "programming.t15",
+      "verdict": "pass",
+      "independent_check": "with退出即关闭资源；不存在FileNotFoundError，解码非法UnicodeDecodeError，各不混淆。",
+      "original_answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-pl-005",
+      "topic_id": "programming.t16",
+      "verdict": "pass",
+      "independent_check": "先初值类型再控制流最后格式；/、缩进、逻辑、input至少两项真实差异，答案足够。",
+      "original_answer": "先写变量初值，确定运算和类型，沿控制流逐句跟踪循环与分支，最后核对输出格式。差异可写C整数除法与Python 3的/、代码块大括号与缩进、逻辑运算符、输入返回类型等。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-pl-008",
+      "topic_id": "programming.t16",
+      "verdict": "pass",
+      "independent_check": "负C整除-3、Python真除-3.5、地板除-4均正确；与t04题交叉复习但核心相同已记录。",
+      "original_answer": "现代C整数-7/2向零截断为-3；Python 3的/得-3.5；Python -7//2向下取整为-4。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-final-thin-026",
+      "topic_id": "software-engineering.t01",
+      "verdict": "pass",
+      "independent_check": "延期、口头变更、无测试文档对应工程管理失控；需求控制、计划估算、测试追踪能具体对应缺陷。",
+      "original_answer": "体现规模复杂性、需求失控、质量不可见和维护困难；应建立需求与变更管理、迭代计划和估算、分层测试与持续集成，并维护设计和追踪文档。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q01",
+      "topic_id": "software-engineering.t01",
+      "verdict": "pass",
+      "independent_check": "软件工程在成本进度约束下追求质量和可维护性，不能绝对消除缺陷，B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s2-q1",
+      "topic_id": "software-engineering.t02",
+      "verdict": "revised",
+      "independent_check": "既有ABC答案与单选类型冲突；限定传统三期口径后ABC不属开发期，改多选。",
+      "original_answer": "ABC",
+      "revised_fields": [
+        "type",
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "sp-core-se-006",
+      "topic_id": "software-engineering.t02",
+      "verdict": "pass",
+      "independent_check": "实际用户需要属validation确认，不是verification构造符合规格，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-012",
+      "topic_id": "software-engineering.t02",
+      "verdict": "pass",
+      "independent_check": "提出到退役包括开发后运行维护，生命周期不以交付终止，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-se-001",
+      "topic_id": "software-engineering.t03",
+      "verdict": "pass",
+      "independent_check": "先可演示界面帮助未知业务反馈为原型，不是直接最终编码。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q12",
+      "topic_id": "software-engineering.t03",
+      "verdict": "pass",
+      "independent_check": "需求不明时原型促反馈澄清，适配情境，判断正确。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-013",
+      "topic_id": "software-engineering.t03",
+      "verdict": "pass",
+      "independent_check": "瀑布顺序并不禁止反馈返工，只是变更代价通常较高，绝对不允许错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-014",
+      "topic_id": "software-engineering.t03",
+      "verdict": "pass",
+      "independent_check": "用户认可外观不证明架构安全性能及质量，不能省设计测试，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-001",
+      "topic_id": "software-engineering.t03",
+      "verdict": "pass",
+      "independent_check": "显式逐轮风险分析是螺旋核心，相比一次瀑布和无过程更匹配，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-001",
+      "topic_id": "software-engineering.t03",
+      "verdict": "pass",
+      "independent_check": "稳定且阶段审查适合瀑布；其他选项取消过程或永不演化，A唯一。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-se-003",
+      "topic_id": "software-engineering.t04",
+      "verdict": "pass",
+      "independent_check": "敏捷仍需有价值文档、测试与配置管理，不能由响应变化推无纪律。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-se-006",
+      "topic_id": "software-engineering.t04",
+      "verdict": "pass",
+      "independent_check": "订单→付款→报表是功能增量，每增量分析设计测试、接反馈，适配而不机械唯一。",
+      "original_answer": "可采用增量开发，把可运行功能分批交付，先提供核心查询并在每批反馈后调整后续需求；每个增量仍要完成必要的分析、设计、编码、测试和配置管理。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-001",
+      "topic_id": "software-engineering.t04",
+      "verdict": "pass",
+      "independent_check": "短迭代和可运行增量满足早反馈、频变化，B，不以敏捷取消需求。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q10",
+      "topic_id": "software-engineering.t04",
+      "verdict": "pass",
+      "independent_check": "Scrum团队三职责为PO、SM、Developers，项目出纳不是框架角色。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-013",
+      "topic_id": "software-engineering.t04",
+      "verdict": "pass",
+      "independent_check": "可工作软件优先不等于设计与质量控制归零，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q5",
+      "topic_id": "software-engineering.t05",
+      "verdict": "pass",
+      "independent_check": "功能性能限制在技术设备人员下能否实现为技术可行性，不是收益或组织接受。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-002",
+      "topic_id": "software-engineering.t05",
+      "verdict": "pass",
+      "independent_check": "静态回收12/4=3年，技术与操作两类非经济维度正确。",
+      "original_answer": "回收期为3年；还应评估技术可行性和操作/组织可行性。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-008",
+      "topic_id": "software-engineering.t05",
+      "verdict": "pass",
+      "independent_check": "能否实现、收益、接受、许可进度都构成可行约束，ABCD。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-025",
+      "topic_id": "software-engineering.t05",
+      "verdict": "pass",
+      "independent_check": "现有平台接口人员能力直接关技术可行，A；组织接受与成本另论。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-se-005",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "结账请求度量+网络负载+比例时间使模糊快成为测试判据，答点齐全。",
+      "original_answer": "示例：在规定的正常负载和网络环境下，95%的结账请求应在2秒内返回结果。它给出了适用条件、度量对象、比例和阈值，可据此设计性能测试并判断通过与否。",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q12",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "需求规格说明是需求分析形成可评审基线，设计书和可行报告阶段不同。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q6",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "需求中心是做什么，输入界面规模是其子细节，核心选择C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q7",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "需求确定功能和质量约束，而工具人员方法是开发管理选择，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-003",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "正常负载+95%+2秒给场景、比例、阈值，可客观验证。",
+      "original_answer": "示例：在正常负载下，95%的查询应在2秒内返回。增加了负载前提、响应时间阈值和统计比例。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q02",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "瀑布需求分析主要产物SRS，源代码测试报告为后阶段。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q03",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "2秒响应比尽快/美观更可度量；选项比较C最好，实际仍应补负载条件。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-001",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "限定现有国产OS是运行/实现约束，不是业务动作，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-009",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "明确、可验证、一致可追踪都对，主观形容不能替代客观标准。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-022",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "SRS记录做什么和约束，软件需求规格说明书全称正确。",
+      "original_answer": "SRS（软件需求规格说明书）",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-024",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "人工复核与全部自动矛盾，必须干系人协商风险并确认基线，不能两边照抄。",
+      "original_answer": "记录双方需求和理由，识别冲突及风险；组织相关干系人澄清业务规则和优先级；形成可验证方案并获授权确认；更新SRS、验收标准和追踪关系。",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-002",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "95%正常负载2秒可产生验收数据，其余非常/尽量/永不主观或绝对。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-002",
+      "topic_id": "software-engineering.t06",
+      "verdict": "pass",
+      "independent_check": "95%请求2秒属于性能非功能要求，不描述哪项业务功能。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q11",
+      "topic_id": "software-engineering.t07",
+      "verdict": "revised",
+      "independent_check": "答案数据定义A正确但解析是数据库DDL跑题，改定义DFD数据项/流/存储结构。",
+      "original_answer": "A",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-se-004",
+      "topic_id": "software-engineering.t07",
+      "verdict": "pass",
+      "independent_check": "父边界流应在子边界保持，内部可新流；字典统一语义，与DFD分解相符。",
+      "original_answer": "子图对外输入输出应与父加工保持平衡；数据字典统一定义数据流、数据项和存储的含义与结构。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-023",
+      "topic_id": "software-engineering.t07",
+      "verdict": "pass",
+      "independent_check": "DFD四元实体、加工、流、存储，缺项数据存储。",
+      "original_answer": "数据存储",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-026",
+      "topic_id": "software-engineering.t07",
+      "verdict": "pass",
+      "independent_check": "DFD箭头是数据流，不代表控制语句时间顺序，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-003",
+      "topic_id": "software-engineering.t07",
+      "verdict": "pass",
+      "independent_check": "父子边界输入输出保持称平衡，不是数据库冗余或继承，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q13",
+      "topic_id": "software-engineering.t08",
+      "verdict": "revised",
+      "independent_check": "详细设计确定模块内部算法数据结构C，补总体与详细设计区别提升解析针对性。",
+      "original_answer": "C",
+      "revised_fields": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "se-gen-q14",
+      "topic_id": "software-engineering.t08",
+      "verdict": "pass",
+      "independent_check": "分层职责、替换和依赖控制ABD，任意跨层访问实现会破封装C错。",
+      "original_answer": "ABD",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q10",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "模块内部集中职责、外部少依赖，为低耦高内聚B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-005",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "接收计价持久通知按变化原因划分，接口隐藏库结构算法，信息隐藏对应正确。",
+      "original_answer": "可拆为订单接收、计价、持久化、通知模块；接口只暴露必要输入输出，隐藏数据库结构和内部算法。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q04",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "职责单一高内聚低耦ABC可维护，全局变量过多增加隐式耦合。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-015",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "模块必需交互依旧存在；低耦减少不必要依赖而非零交互，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-027",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "职责集中易定位修改，少依赖减传播，变更情境论证完整。",
+      "original_answer": "高内聚使模块职责集中，便于理解、测试和定位修改；低耦合使模块间依赖少且接口稳定，需求变化时连带影响较小，提高可维护性和复用性。",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-004",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "仅计算订单总价是明确单一功能，共同成分功能内聚而非仅同时间。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-003",
+      "topic_id": "software-engineering.t09",
+      "verdict": "pass",
+      "independent_check": "A单一职责集中和依赖清晰，其余大小绝对和无接口不合设计。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q9",
+      "topic_id": "software-engineering.t10",
+      "verdict": "pass",
+      "independent_check": "对象生命周期事件状态转换用状态图，顺序是对象间消息交互，B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-002",
+      "topic_id": "software-engineering.t10",
+      "verdict": "pass",
+      "independent_check": "用例外部角色可人也可外部系统，称参与者。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-003",
+      "topic_id": "software-engineering.t10",
+      "verdict": "pass",
+      "independent_check": "报销流程含分支适合活动图，类和部署不刻画工作流。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-016",
+      "topic_id": "software-engineering.t10",
+      "verdict": "pass",
+      "independent_check": "用例图表示系统功能边界，消息时序由顺序图，判断错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-005",
+      "topic_id": "software-engineering.t10",
+      "verdict": "pass",
+      "independent_check": "多个对象沿时间消息交互顺序图A，类/部署/构件静态不适合。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-004",
+      "topic_id": "software-engineering.t10",
+      "verdict": "pass",
+      "independent_check": "时间顺序消息和生命线为顺序图C，不是静态类图。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q17",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "不关内部逻辑而从功能说明设计用例是黑盒C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-006",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "18,60边界，17/19/59/61邻界，答案6个满足至少5个；区间有效判定正确。",
+      "original_answer": "可取17、18、19、59、60、61；18至60有效，17和61无效。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q05",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "黑盒基于需求和可见行为，源代码覆盖属白盒，C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-004",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "小于/合法/大于按预期相同类别分是等价类，而非语句覆盖。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-028",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "有效50，无效越界/非整数，再0/1/2/99/100/101鲁棒边界，覆盖条件完整。",
+      "original_answer": "等价类可选有效类代表值如50，以及小于1、大于100、非整数等无效类代表；边界值选择0、1、2、99、100、101。",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-006",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "鲁棒下边界需越界0、边界1、内邻2，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-005",
+      "topic_id": "software-engineering.t11",
+      "verdict": "pass",
+      "independent_check": "输入输出边界独立内部结构，是黑盒A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-007",
+      "topic_id": "software-engineering.t12",
+      "verdict": "pass",
+      "independent_check": "连通图E-N+2=10-8+2=4，不是全部路径总量。",
+      "original_answer": "V(G)=E−N+2=10−8+2=4，表示基本独立路径数量为4。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q06",
+      "topic_id": "software-engineering.t12",
+      "verdict": "revised",
+      "independent_check": "圈复杂度8对应8条图上独立路径；原至少用例措辞忽略不可行路径，改问集合大小。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "sp-core-se-017",
+      "topic_id": "software-engineering.t12",
+      "verdict": "pass",
+      "independent_check": "白盒内部控制结构需要逻辑信息，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-018",
+      "topic_id": "software-engineering.t12",
+      "verdict": "pass",
+      "independent_check": "每个分支结果出现不意味着跨分支组合及循环全路径，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-007",
+      "topic_id": "software-engineering.t12",
+      "verdict": "pass",
+      "independent_check": "12-10+2=4，图连通前提充分，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-se-002",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "改付款后重跑既有相关用例是回归测试，用来防已完功能受破坏。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q15",
+      "topic_id": "software-engineering.t13",
+      "verdict": "revised",
+      "independent_check": "原A评价质量也是正当测试目的；改明确发现缺陷并替换A，消除A/B双真。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "cg-06-s1-q16",
+      "topic_id": "software-engineering.t13",
+      "verdict": "revised",
+      "independent_check": "接口集成问题可来自设计和实现，原只归设计过窄；改题考交互缺陷唯一C。",
+      "original_answer": "C",
+      "revised_fields": [
+        "stem",
+        "options",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-se-008",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "顶向下缺被调用方用桩，底向上缺调用方用驱动，角色对应正确。",
+      "original_answer": "自顶向下常用桩模拟尚未接入的下层；自底向上常用驱动调用已完成的下层模块。",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-005",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "不开程序会议评需求歧义为静态评审，不是动态执行。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-011",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "内部/接口/整系统/业务接收分别对应四测试层次，ABCD。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-019",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "用户业务标准决定接受性，开发支持非替代用户，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-029",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "真需求是否满足为确认B，不是仅按规格构造验证。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-030",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "用户依据合同业务接受完整系统为验收测试D，系统测试不等于用户验收。",
+      "original_answer": "D",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-010",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "可复现且有判据需条件、步骤、预期ABC，仅姓名不构成用例。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-014",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "有限输入环境只提供有限证据，复杂程序不能因此证明绝无缺陷，真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-006",
+      "topic_id": "software-engineering.t13",
+      "verdict": "pass",
+      "independent_check": "单元→集成→系统→验收是常用层次，ABCD不是互斥方法。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q18",
+      "topic_id": "software-engineering.t14",
+      "verdict": "revised",
+      "independent_check": "长期软件维护往往最长最多成本；原断言所有项目不成立，补长期持续演化条件。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "se-gen-q07",
+      "topic_id": "software-engineering.t14",
+      "verdict": "pass",
+      "independent_check": "改正适应完善预防为常见四类，ABCD。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-007",
+      "topic_id": "software-engineering.t14",
+      "verdict": "pass",
+      "independent_check": "不改行为重构并补测试降低未来风险，主要预防性A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-009",
+      "topic_id": "software-engineering.t14",
+      "verdict": "pass",
+      "independent_check": "适配新环境=适应性，修bug才纠错，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-011",
+      "topic_id": "software-engineering.t14",
+      "verdict": "pass",
+      "independent_check": "模块化、追踪和自动回归利于维护；复制业务规则导致修改散布，D反面。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-007",
+      "topic_id": "software-engineering.t14",
+      "verdict": "pass",
+      "independent_check": "新OS导致外部环境适配为适应性，不是原缺陷修复。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "ap-se-004",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "新增退款需记录影响、授权、测试版本文档ABC，直接覆盖无记录不合配置控制。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "cg-06-s1-q14",
+      "topic_id": "software-engineering.t15",
+      "verdict": "revised",
+      "independent_check": "原可理解性也会受文档影响，重写场景为后续修改维护以使B独立明确。",
+      "original_answer": "B",
+      "revised_fields": [
+        "stem",
+        "explanation"
+      ]
+    },
+    {
+      "id": "gap-se-009",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "申请→影响→审批→改配置测试→验证更新基线发布，有可追踪控制链。",
+      "original_answer": "提交变更申请，分析影响，审批决策，修改受影响配置项和测试，验证后更新基线并记录发布。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q08",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "基线可受控变更，非绝对冻结，判断错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q11",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "McCall维护、灵活、测试归产品修订，区别运行与转移，B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-010",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "需求、代码构建、测试配置、发布包均可唯一标识受控，ABCD。",
+      "original_answer": "ABCD",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-020",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "版本管理不自动包含运行库及灾备，不能替独立备份，错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-031",
+      "topic_id": "software-engineering.t15",
+      "verdict": "pass",
+      "independent_check": "紧急仍应授权、评审测试、回退、部署验证和留痕，最小流程足够。",
+      "original_answer": "记录事件和影响，授权紧急变更；从受控版本修复并评审；执行针对性测试和必要回归；发布前准备回退方案；部署后验证监控；补齐版本、配置和文档记录。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-010",
+      "topic_id": "software-engineering.t16",
+      "verdict": "pass",
+      "independent_check": "最长11天路径关键，若其单活动净增2且无时差工期13，原答条件足够。",
+      "original_answer": "关键路径为A-C-D；若无可用时差，延迟2天使项目总工期延长2天。",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q09",
+      "topic_id": "software-engineering.t16",
+      "verdict": "pass",
+      "independent_check": "关键路径约束完工时间，常规无外部截止时总时差0，B。",
+      "original_answer": "B",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q13",
+      "topic_id": "software-engineering.t16",
+      "verdict": "pass",
+      "independent_check": "LOC是软件规模，其余成本/人月/工时是投入，C。",
+      "original_answer": "C",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-008",
+      "topic_id": "software-engineering.t16",
+      "verdict": "pass",
+      "independent_check": "A3+max(B4,C6)+D2=11，关键A-C-D，A。",
+      "original_answer": "A",
+      "revised_fields": []
+    },
+    {
+      "id": "se-gen-q15",
+      "topic_id": "software-engineering.t17",
+      "verdict": "pass",
+      "independent_check": "缓解降低概率或影响，不等于所有风险归零，判断真。",
+      "original_answer": "正确",
+      "revised_fields": []
+    },
+    {
+      "id": "sp-core-se-021",
+      "topic_id": "software-engineering.t17",
+      "verdict": "pass",
+      "independent_check": "已经发生的不确定事件成为问题，需要实际应急而不只未来风险登记，错。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-012",
+      "topic_id": "software-engineering.t17",
+      "verdict": "pass",
+      "independent_check": "识别排序、多种策略和持续监控ABC；已发生仍只能风险D错误。",
+      "original_answer": "ABC",
+      "revised_fields": []
+    },
+    {
+      "id": "uc-se-015",
+      "topic_id": "software-engineering.t17",
+      "verdict": "pass",
+      "independent_check": "新成员培训沟通增加短期负担，是否增员取决可分性关键路径，绝对赶上错误。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "uf-se-008",
+      "topic_id": "software-engineering.t17",
+      "verdict": "pass",
+      "independent_check": "风险状态随项目变，应持续识别应对监控，结束一次远不足。",
+      "original_answer": "错误",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-final-thin-027",
+      "topic_id": "software-engineering.t18",
+      "verdict": "pass",
+      "independent_check": "变化快用短迭代，安全关键保需求架构测试证据，两要求不矛盾，答案合题。",
+      "original_answer": "可用短迭代和用户反馈应对变化，同时对安全需求、架构决策、测试证据和发布基线进行严格记录与评审；方法应按风险和证据需求组合。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-011",
+      "topic_id": "software-engineering.t18",
+      "verdict": "pass",
+      "independent_check": "原型澄清、迭代反馈、高风险先验证可组合，正对应三个不同要求。",
+      "original_answer": "用原型澄清界面与需求，短迭代持续交付可验证增量，对支付等高风险部分先做风险分析和验证。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-final-thin-028",
+      "topic_id": "software-engineering.t19",
+      "verdict": "pass",
+      "independent_check": "缺陷记录→追踪根因→补修复/回归→改规范→趋势验证，避免仅现象修补。",
+      "original_answer": "记录缺陷与影响，追踪到需求、设计、代码和测试，分析根因并修复，补回归测试和监控，更新规范或评审清单，随后用缺陷趋势验证改进效果。",
+      "revised_fields": []
+    },
+    {
+      "id": "gap-se-012",
+      "topic_id": "software-engineering.t19",
+      "verdict": "pass",
+      "independent_check": "R1追到设计代码测试发布支持影响评估，缺陷趋势驱动过程改进，闭环完整。",
+      "original_answer": "应追到设计模块、代码提交、测试用例和发布版本；缺陷趋势用于定位薄弱阶段并调整评审、测试和流程。",
+      "revised_fields": []
+    }
+  ],
+  "references": [
+    {
+      "title": "Python复合语句语法",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html"
+    },
+    {
+      "title": "NIST口令管理与认证",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+    },
+    {
+      "title": "NIST数字签名标准",
+      "url": "https://csrc.nist.gov/pubs/fips/186-5/final"
+    },
+    {
+      "title": "CISA勒索软件防护恢复",
+      "url": "https://www.cisa.gov/stopransomware/ransomware-guide"
+    },
+    {
+      "title": "国家网络安全事件报告管理办法",
+      "url": "https://www.samr.gov.cn/kjxxhs/zcwj/art/2025/art_462dca5b809940549bf0f44d82bf6835.html"
+    }
+  ],
+  "execution": {
+    "python": "actual interpreter execution",
+    "c": "未找到gcc/clang/cl；C题按C99及之后语义逐表达式手工推演；Python数值模型不宣称为C编译验证。",
+    "checks": [
+      {
+        "id": "cg-04-s2-q5",
+        "check": "链式比较实际求值",
+        "actual": true,
+        "expected": true,
+        "result": "pass"
+      },
+      {
+        "id": "cg-04-s2-q6",
+        "check": "实际执行题干代码与末尾逗号",
+        "actual": "1,2,3,5,",
+        "expected": "1,2,3,5,",
+        "result": "pass"
+      },
+      {
+        "id": "cg-04-s2-q7",
+        "check": "Python内嵌NUL长度",
+        "actual": 5,
+        "expected": 5,
+        "result": "pass"
+      },
+      {
+        "id": "cg-04-s2-q10",
+        "check": "实际执行字典访问代码",
+        "actual": "黑色 灰色\n",
+        "expected": "黑色 灰色\n",
+        "result": "pass"
+      },
+      {
+        "id": "ap-pl-002",
+        "check": "列表尾部和长度",
+        "actual": "8 4\n",
+        "expected": "8 4\n",
+        "result": "pass"
+      },
+      {
+        "id": "ua-program-006",
+        "check": "切片边界和步长",
+        "actual": "bd",
+        "expected": "bd",
+        "result": "pass"
+      },
+      {
+        "id": "ua-program-007",
+        "check": "列表别名原地修改",
+        "actual": [
+          1,
+          2,
+          3
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "ua-program-014",
+        "check": "sort返回与原地排序",
+        "actual": [
+          null,
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          null,
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "ua-program-008",
+        "check": "range步长求和",
+        "actual": 9,
+        "expected": 9,
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-003",
+        "check": "原题代码确实抛SyntaxError",
+        "result": "confirmed-defect"
+      },
+      {
+        "id": "gap-pl-003",
+        "check": "修复后代码实际运行",
+        "actual": 10,
+        "expected": 10,
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-012",
+        "check": "返回较大值含负数相等",
+        "actual": [
+          -3,
+          4,
+          2
+        ],
+        "expected": [
+          -3,
+          4,
+          2
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-010",
+        "check": "分档边界59",
+        "actual": "C\n",
+        "expected": "C\n",
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-010",
+        "check": "分档边界60",
+        "actual": "B\n",
+        "expected": "B\n",
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-010",
+        "check": "分档边界89",
+        "actual": "B\n",
+        "expected": "B\n",
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-010",
+        "check": "分档边界90",
+        "actual": "A\n",
+        "expected": "A\n",
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-010",
+        "check": "分档边界100",
+        "actual": "A\n",
+        "expected": "A\n",
+        "result": "pass"
+      },
+      {
+        "id": "ua-program-015",
+        "check": "新递归题实际返回",
+        "actual": [
+          0,
+          10
+        ],
+        "expected": [
+          0,
+          10
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "ua-program-009",
+        "check": "无参两次调用未共享默认列表",
+        "actual": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "expected": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "gap-pl-004",
+        "check": "Python真除和地板除",
+        "actual": [
+          3.5,
+          -3.5,
+          3,
+          -4
+        ],
+        "expected": [
+          3.5,
+          -3.5,
+          3,
+          -4
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "hn-recall-sy26-003",
+        "check": "词频输出",
+        "actual": {
+          "hello": 2,
+          "world": 1,
+          "python": 1
+        },
+        "expected": {
+          "hello": 2,
+          "world": 1,
+          "python": 1
+        },
+        "result": "pass"
+      },
+      {
+        "id": "uc-co-001",
+        "check": "补码位串转真值",
+        "actual": -10,
+        "expected": -10,
+        "result": "pass"
+      },
+      {
+        "id": "gap-co-007",
+        "check": "IEEE754真实二进制解包",
+        "actual": 5.0,
+        "expected": 5.0,
+        "result": "pass"
+      },
+      {
+        "id": "gap-co-011",
+        "check": "芯片扩展与地址线",
+        "actual": [
+          8,
+          13,
+          2
+        ],
+        "expected": [
+          8,
+          13,
+          2
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "gap-co-012",
+        "check": "组相联三字段",
+        "actual": [
+          6,
+          6,
+          20
+        ],
+        "expected": [
+          6,
+          6,
+          20
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "uc-co-005",
+        "check": "AMAT",
+        "actual": 5.0,
+        "expected": 5.0,
+        "result": "pass"
+      },
+      {
+        "id": "gap-co-009",
+        "check": "流水停顿",
+        "actual": [
+          16,
+          25.6
+        ],
+        "expected": [
+          16,
+          25.6
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "gap-co-013",
+        "check": "DDR总线十进制GB/s",
+        "actual": 3.2,
+        "expected": 3.2,
+        "result": "pass"
+      },
+      {
+        "id": "gap-co-008",
+        "check": "TLB一级串行均时",
+        "actual": 111.0,
+        "expected": 111.0,
+        "result": "pass"
+      },
+      {
+        "id": "uc-co-009",
+        "check": "CPU时间",
+        "actual": 2.0,
+        "expected": 2.0,
+        "result": "pass"
+      },
+      {
+        "id": "uc-co-007",
+        "check": "操作码最少位数",
+        "actual": 6,
+        "expected": 6,
+        "result": "pass"
+      },
+      {
+        "id": "uc-se-008",
+        "check": "并行活动关键路径",
+        "actual": 11,
+        "expected": 11,
+        "result": "pass"
+      },
+      {
+        "id": "gap-se-007",
+        "check": "控制流复杂度",
+        "actual": 4,
+        "expected": 4,
+        "result": "pass"
+      },
+      {
+        "id": "gap-se-002",
+        "check": "静态投资回收",
+        "actual": 3.0,
+        "expected": 3.0,
+        "result": "pass"
+      },
+      {
+        "id": "audit26-system-012",
+        "check": "风险期望延误",
+        "actual": 3.0,
+        "expected": 3.0,
+        "result": "pass"
+      },
+      {
+        "id": "audit26-system-004",
+        "check": "独立按C字面量布局与首NUL计数",
+        "actual": [
+          6,
+          2
+        ],
+        "expected": [
+          6,
+          2
+        ],
+        "result": "pass"
+      },
+      {
+        "id": "audit26-system-001",
+        "check": "全负数max初值场景",
+        "actual": -3,
+        "expected": -3,
+        "result": "pass"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "topic_id": "computer-organization.t01",
+      "independent_output_ids": [
+        "sp-core-co-039"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t02",
+      "independent_output_ids": [
+        "sp-core-co-041"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t03",
+      "independent_output_ids": [
+        "gap-co-001",
+        "sp-core-co-038"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t04",
+      "independent_output_ids": [
+        "gap-co-010"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t05",
+      "independent_output_ids": [
+        "gap-co-002",
+        "gap-co-007"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t06",
+      "independent_output_ids": [
+        "sp-core-co-040"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t07",
+      "independent_output_ids": [
+        "audit26-system-006"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t08",
+      "independent_output_ids": [
+        "gap-co-004"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t09",
+      "independent_output_ids": [
+        "gap-co-011",
+        "sp-core-co-035",
+        "sp-core-co-037"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t10",
+      "independent_output_ids": [
+        "gap-co-012",
+        "sp-core-co-043",
+        "sp-core-co-044",
+        "hn-recall-sy26-001"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t11",
+      "independent_output_ids": [
+        "gap-co-009"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t12",
+      "independent_output_ids": [
+        "gap-co-013",
+        "sp-core-co-036"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t13",
+      "independent_output_ids": [
+        "ap-co-005",
+        "sp-core-co-046"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t14",
+      "independent_output_ids": [
+        "gap-co-005",
+        "gap-co-006",
+        "gap-co-008",
+        "ap-co-006"
+      ]
+    },
+    {
+      "topic_id": "information-security.t01",
+      "independent_output_ids": [
+        "audit26-system-013"
+      ]
+    },
+    {
+      "topic_id": "information-security.t02",
+      "independent_output_ids": [
+        "gap-sec-001"
+      ]
+    },
+    {
+      "topic_id": "information-security.t03",
+      "independent_output_ids": [
+        "gap-sec-002"
+      ]
+    },
+    {
+      "topic_id": "information-security.t04",
+      "independent_output_ids": [
+        "gap-sec-003"
+      ]
+    },
+    {
+      "topic_id": "information-security.t05",
+      "independent_output_ids": [
+        "hn-recall-hn26-001"
+      ]
+    },
+    {
+      "topic_id": "information-security.t06",
+      "independent_output_ids": [
+        "gap-sec-004"
+      ]
+    },
+    {
+      "topic_id": "information-security.t07",
+      "independent_output_ids": [
+        "audit26-system-014"
+      ]
+    },
+    {
+      "topic_id": "information-security.t08",
+      "independent_output_ids": [
+        "gap-sec-005",
+        "gap-sec-015"
+      ]
+    },
+    {
+      "topic_id": "information-security.t09",
+      "independent_output_ids": [
+        "gap-sec-006"
+      ]
+    },
+    {
+      "topic_id": "information-security.t10",
+      "independent_output_ids": [
+        "gap-sec-007",
+        "gap-sec-016"
+      ]
+    },
+    {
+      "topic_id": "information-security.t11",
+      "independent_output_ids": [
+        "dy-c2173873",
+        "gap-sec-008",
+        "hn-recall-hn26-002"
+      ]
+    },
+    {
+      "topic_id": "information-security.t12",
+      "independent_output_ids": [
+        "gap-sec-009"
+      ]
+    },
+    {
+      "topic_id": "information-security.t13",
+      "independent_output_ids": [
+        "gap-sec-010"
+      ]
+    },
+    {
+      "topic_id": "information-security.t14",
+      "independent_output_ids": [
+        "audit26-system-015"
+      ]
+    },
+    {
+      "topic_id": "information-security.t15",
+      "independent_output_ids": [
+        "gap-sec-012",
+        "ap-is-005",
+        "ap-is-006"
+      ]
+    },
+    {
+      "topic_id": "information-security.t16",
+      "independent_output_ids": [
+        "gap-sec-013"
+      ]
+    },
+    {
+      "topic_id": "information-security.t17",
+      "independent_output_ids": [
+        "gap-sec-014"
+      ]
+    },
+    {
+      "topic_id": "programming.t01",
+      "independent_output_ids": [
+        "zg-36196",
+        "zg-16995",
+        "audit26-system-001"
+      ]
+    },
+    {
+      "topic_id": "programming.t02",
+      "independent_output_ids": [
+        "gap-pl-009"
+      ]
+    },
+    {
+      "topic_id": "programming.t03",
+      "independent_output_ids": [
+        "audit26-system-002"
+      ]
+    },
+    {
+      "topic_id": "programming.t04",
+      "independent_output_ids": [
+        "gap-pl-004"
+      ]
+    },
+    {
+      "topic_id": "programming.t05",
+      "independent_output_ids": [
+        "gap-final-thin-013"
+      ]
+    },
+    {
+      "topic_id": "programming.t06",
+      "independent_output_ids": [
+        "zg-81005",
+        "gap-pl-010"
+      ]
+    },
+    {
+      "topic_id": "programming.t07",
+      "independent_output_ids": [
+        "gap-pl-003",
+        "gap-pl-011"
+      ]
+    },
+    {
+      "topic_id": "programming.t08",
+      "independent_output_ids": [
+        "gap-pl-012"
+      ]
+    },
+    {
+      "topic_id": "programming.t09",
+      "independent_output_ids": [
+        "audit26-system-003"
+      ]
+    },
+    {
+      "topic_id": "programming.t10",
+      "independent_output_ids": [
+        "audit26-system-004"
+      ]
+    },
+    {
+      "topic_id": "programming.t11",
+      "independent_output_ids": [
+        "hn-recall-sy26-003"
+      ]
+    },
+    {
+      "topic_id": "programming.t12",
+      "independent_output_ids": [
+        "audit26-system-005"
+      ]
+    },
+    {
+      "topic_id": "programming.t13",
+      "independent_output_ids": [
+        "gap-pl-005"
+      ]
+    },
+    {
+      "topic_id": "programming.t14",
+      "independent_output_ids": [
+        "gap-pl-013",
+        "hn-recall-cs25-001"
+      ]
+    },
+    {
+      "topic_id": "programming.t15",
+      "independent_output_ids": [
+        "gap-pl-006",
+        "gap-pl-007",
+        "ap-pl-006"
+      ]
+    },
+    {
+      "topic_id": "programming.t16",
+      "independent_output_ids": [
+        "gap-pl-008",
+        "ap-pl-005"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t01",
+      "independent_output_ids": [
+        "gap-final-thin-026"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t02",
+      "independent_output_ids": [
+        "audit26-system-007"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t03",
+      "independent_output_ids": [
+        "audit26-system-008"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t04",
+      "independent_output_ids": [
+        "ap-se-006"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t05",
+      "independent_output_ids": [
+        "gap-se-002"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t06",
+      "independent_output_ids": [
+        "gap-se-003",
+        "ap-se-005",
+        "sp-core-se-022",
+        "sp-core-se-024"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t07",
+      "independent_output_ids": [
+        "gap-se-004",
+        "sp-core-se-023"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t08",
+      "independent_output_ids": [
+        "audit26-system-009"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t09",
+      "independent_output_ids": [
+        "gap-se-005",
+        "sp-core-se-027"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t10",
+      "independent_output_ids": [
+        "audit26-system-010"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t11",
+      "independent_output_ids": [
+        "gap-se-006",
+        "sp-core-se-028"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t12",
+      "independent_output_ids": [
+        "gap-se-007"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t13",
+      "independent_output_ids": [
+        "gap-se-008"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t14",
+      "independent_output_ids": [
+        "audit26-system-011"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t15",
+      "independent_output_ids": [
+        "gap-se-009",
+        "sp-core-se-031"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t16",
+      "independent_output_ids": [
+        "gap-se-010"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t17",
+      "independent_output_ids": [
+        "audit26-system-012"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t18",
+      "independent_output_ids": [
+        "gap-se-011",
+        "gap-final-thin-027"
+      ]
+    },
+    {
+      "topic_id": "software-engineering.t19",
+      "independent_output_ids": [
+        "gap-se-012",
+        "gap-final-thin-028"
+      ]
+    }
+  ],
+  "additions": {
+    "count": 15,
+    "ids": [
+      "audit26-system-001",
+      "audit26-system-002",
+      "audit26-system-003",
+      "audit26-system-004",
+      "audit26-system-005",
+      "audit26-system-006",
+      "audit26-system-007",
+      "audit26-system-008",
+      "audit26-system-009",
+      "audit26-system-010",
+      "audit26-system-011",
+      "audit26-system-012",
+      "audit26-system-013",
+      "audit26-system-014",
+      "audit26-system-015"
+    ],
+    "policy": "补独立作答的具体任务，已有简答/计算/过程输出的不按题数凑题；未声称覆盖一门课所有变式。"
+  },
+  "student_trials": [
+    {
+      "role": "大学新生模拟",
+      "id": "audit26-system-001",
+      "attempt": "先设0会返回0，与全负输入不符；改初始-8，再-3，最终-3。",
+      "result": "pass",
+      "detail": "先输出中间状态再核对参考答案。"
+    },
+    {
+      "role": "大学新生模拟",
+      "id": "audit26-system-004",
+      "attempt": "先按可见字符误估5；逐字符列a,b,NUL,c,d,NUL后sizeof6、strlen2。",
+      "result": "pass-after-explanation",
+      "detail": "保留两个NUL的展开解释，复测xy\\0z得容量5、长度2。"
+    },
+    {
+      "role": "大学新生模拟",
+      "id": "audit26-system-007",
+      "attempt": "符合报表规格属于验证；满足用户可编辑需求属于确认，需澄清并变更需求。",
+      "result": "pass"
+    },
+    {
+      "role": "大学新生模拟",
+      "id": "audit26-system-013",
+      "attempt": "改分完整性，外发保密性，服务瘫痪可用性。",
+      "result": "pass"
+    },
+    {
+      "role": "编制备考者模拟",
+      "id": "audit26-system-006",
+      "attempt": "直接取M[40]为300，立即40，寄存器100，寄存器间接M[100]为500。",
+      "result": "pass"
+    },
+    {
+      "role": "编制备考者模拟",
+      "id": "audit26-system-012",
+      "attempt": "0.3×10=3天期望延误；提前联调，备用接口，盯里程碑。事件发生时仍可能延误10天。",
+      "result": "pass"
+    },
+    {
+      "role": "编制备考者模拟",
+      "id": "audit26-system-014",
+      "attempt": "密码+安全钥不同类别；不能只改密码，还要撤销失陷会话并核查恢复渠道。",
+      "result": "pass"
+    },
+    {
+      "role": "编制备考者模拟",
+      "id": "audit26-system-015",
+      "attempt": "RPO15min/RTO2h；每日一次不够，增日志恢复点、隔离权限、实际恢复演练计时。",
+      "result": "pass"
+    }
+  ],
+  "limitations": [
+    "两类学习体验为维护者模拟，非实际大学生招募，也非独立代理盲审。",
+    "C代码未在本机C编译器执行，已明确保留此验证边界。"
+  ],
+  "metadata_validation": {
+    "addition_count": 15,
+    "method": "question_reviews.load_additions → merge_course_gap_questions.validate + KNOWLEDGE_POINT_VALUES / ABILITY_VALUES membership",
+    "result": "pass",
+    "notes": "15题补adaptation_note、具体rubric、max_score，保留原题干答案及精确topic_id。每题3条明确核对点，每点1分仅作为隐藏答案自查结构。"
+  }
+}

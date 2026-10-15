@@ -1,0 +1,2754 @@
+[
+  {
+    "id": "uf-ee-001",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "并联6/3=2Ω",
+    "original_hash": "66b2d71d8fd46da1558dba1c16b86ddd6fcef672b2a8cb07c728652fd8c98cb2"
+  },
+  {
+    "id": "uf-ee-002",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "串流2A故4Ω分压8V",
+    "original_hash": "638e74407678d9ead46fb10799d9520653ef2078380edff87bf93c1d5afe4f5a"
+  },
+  {
+    "id": "uf-ee-003",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "2+3-1.5=3.5A流出",
+    "original_hash": "bac6f09277be11cb9fdf8ca58e24f680d7cf8a1e248ff1749310050fbf711a6e"
+  },
+  {
+    "id": "uf-ee-004",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t01",
+    "verdict": "核对通过",
+    "check": "关联功率10×(-2)=-20W发出",
+    "original_hash": "f6746b388583dee67d4a5376ee7a3a025ce10f578c1ac4700d352a0a6d28d217"
+  },
+  {
+    "id": "uf-ee-005",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t04",
+    "verdict": "核对通过",
+    "check": "电压源零伏短路",
+    "original_hash": "83713d5b48975e75dfe2138c82977751ed7a0ea41e82a4b749bebc072b0cd116"
+  },
+  {
+    "id": "uf-ee-006",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t01",
+    "verdict": "修订",
+    "check": "功率二次项不能线性叠加；归定理",
+    "original_hash": "ace0a455c84581137558d9322b2e307a36a1ecd144f3aee02f09636b1f0677f6"
+  },
+  {
+    "id": "uf-ee-007",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t04",
+    "verdict": "核对通过",
+    "check": "10/(5+5)=1A，负载5W",
+    "original_hash": "a008460422bb011c68f76b6994f2cfd0ce5774d5ff49d72a679cea3cff40d71e"
+  },
+  {
+    "id": "uf-ee-008",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "保留受控源；测试源法且排除0/0",
+    "original_hash": "aa2b219dd51d027c20e6c27cb272b0cf0926dbcdb9ef7fba84aefaf5ee5c9a4b"
+  },
+  {
+    "id": "uf-ee-009",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "无冲激时uC和iL连续；归储能",
+    "original_hash": "003003976ab92872bc8ac6202daff34ab157bf5be643c70c2a2fbfc48afd8485"
+  },
+  {
+    "id": "uf-ee-010",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "100k×10μ=1s",
+    "original_hash": "94c6f1027dc5212fbe502146fad18a655a804719e8cee386a44766e0386d0f01"
+  },
+  {
+    "id": "uf-ee-011",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "12(1-e^-1)=7.59V",
+    "original_hash": "96f97160a842569623eb3d8145c0018e70eb2149ae26f6d58e6e77cae4ab11f2"
+  },
+  {
+    "id": "uf-ee-012",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "三要素初终值与τ",
+    "original_hash": "c1403ace9aca92dd96f1cc5b9173e2fb26420fce0ee1577198b00c6e9ba3f668"
+  },
+  {
+    "id": "uf-ee-013",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "正弦幅值频率初相；归相量",
+    "original_hash": "f981d326ab3e0a14a6d03260bb331614a21a6a27b7f60d08e04d7e0f711f547c"
+  },
+  {
+    "id": "uf-ee-014",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "311/√2≈220V；归相量",
+    "original_hash": "0c59794e8b069da6ce911aad811b6a857391ca00689ae25d64647bad89cd9d88"
+  },
+  {
+    "id": "uf-ee-015",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "核对通过",
+    "check": "1/(2π50×100μ)=31.8Ω",
+    "original_hash": "e3012e6a58cfb4d1f96f80839563e3bd78a72f3c80c4bf0305ea8c2cfaf73fb6"
+  },
+  {
+    "id": "uf-ee-016",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "电感u超前i90度；归相量",
+    "original_hash": "8e8154f9fa7e9c16e6214fc12902f1bc49c90f38a212f335e186ed820647ff2f"
+  },
+  {
+    "id": "uf-ee-017",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "核对通过",
+    "check": "sqrt(20²+15²)=25Ω",
+    "original_hash": "caeeff461df09c828606af49d09dac7cc80e349043494dcac22818203fa474af"
+  },
+  {
+    "id": "uf-ee-018",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "核对通过",
+    "check": "串联谐振电抗消，阻抗最小",
+    "original_hash": "0809516fb15959ec082537907ceb1ddf820f674f33217e30fd701daf1e8831ca"
+  },
+  {
+    "id": "uf-ee-019",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "修订",
+    "check": "有效值100×4×0.8=320W",
+    "original_hash": "0b661afabe4f0208421b962e455802af0f2c0b67ca4f1ea4ce3c5858fee7f9ae"
+  },
+  {
+    "id": "uf-ee-020",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "核对通过",
+    "check": "√3×380×10×.8≈5.27kW",
+    "original_hash": "45633ab404073232156c7e57f610364975537c15c3ef983102c63c723b7e11fc"
+  },
+  {
+    "id": "uf-ee-021",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "修订",
+    "check": "Y接线压√3倍相压；归三相",
+    "original_hash": "b96f87d549872bf5eb39bc976b1d2aa65a98cb49dc9da240eb7b44315f822548"
+  },
+  {
+    "id": "uf-ee-022",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "4极即2对，60×50/2=1500",
+    "original_hash": "d443db0508a91b64cf84d7fac76bba391f39fdf9f77de379536eaec84f81cdcc"
+  },
+  {
+    "id": "uf-ee-023",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t09",
+    "verdict": "核对通过",
+    "check": "全部成功独立乘积.81",
+    "original_hash": "7d25f527f44d1386a3b79bb9b93f53329953a5ace838965dd462426b51a389ac"
+  },
+  {
+    "id": "uf-ee-024",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "互锁常闭交叉串防同时吸合",
+    "original_hash": "255c685790d75ff039c18f839e02ab3c62f258df46e3ed60e74b729f71bbe663"
+  },
+  {
+    "id": "uf-ae-001",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "恒压降模型硅管.7V而非普遍常数",
+    "original_hash": "af52c9295034325527b9c14e345f0b5e225251d2cf6e93ec079751ea78b92b80"
+  },
+  {
+    "id": "uf-ae-002",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "阳2阴5逆偏截止",
+    "original_hash": "5e25a18cf0dfbf005b50db2a064beb2c680a6fe5407cb1b3aea90048495cc75b"
+  },
+  {
+    "id": "uf-ae-003",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "稳压二极管反向击穿限流",
+    "original_hash": "b0ad3f5cf8bb2e23e2c201b70cf2e5b66f79c2d427b337ddbb07983c0d4f8354"
+  },
+  {
+    "id": "uf-ae-004",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "半波峰值/π=.45×10=4.5V",
+    "original_hash": "8c1a1c93bcffd377cf8995ea0cc2f64a81a4f680dd8c55c596dc9f9a5633887b"
+  },
+  {
+    "id": "uf-ae-005",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "NPN放大BE正BC反",
+    "original_hash": "d1f7e52ab67e71ad97f8ae7098a110c0971b3b92be5056c0da1d2f54b37d731c"
+  },
+  {
+    "id": "uf-ae-006",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "修订",
+    "check": "截止断开饱和导通；归器件状态",
+    "original_hash": "5322274df02e1b21f4c1f53f878a4f164d1f097c0bcb104b38f9e3051dee3f24"
+  },
+  {
+    "id": "uf-ae-007",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "100×20μ=2mA且须验放大区",
+    "original_hash": "9b4ac6d65bc9a0de48168aafe44e045b747636e0d029059c43048b235be40c13"
+  },
+  {
+    "id": "uf-ae-008",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "共射集流升使集压降，反相",
+    "original_hash": "95958f2a471ec19346ad0c1d9169510f03ccb5e6d1a0b87475ae43989475e969"
+  },
+  {
+    "id": "uf-ae-009",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "修订",
+    "check": "限定NPN低静态电流避免Q低歧义",
+    "original_hash": "76112214e245b240fd9a0ece5849ec73f78afddee769f2d9434d2b977f38fd4b"
+  },
+  {
+    "id": "uf-ae-010",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "RE形成直流负反馈",
+    "original_hash": "a2ab0874cddeb6723638098c2886512034c6810ebe979cf737c42dcced5670f0"
+  },
+  {
+    "id": "uf-ae-011",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "旁路只对交流，保留直流偏置",
+    "original_hash": "8266e9a11d26f4ae596094b7f4f3fef233cced5056fd7e01f65cb034744bdce1"
+  },
+  {
+    "id": "uf-ae-012",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "修订",
+    "check": "FET压控高输入阻；归器件",
+    "original_hash": "f44e5cc13ae60a3e6d1c5494774298754f8f38a0a48073a690be1b91e4a0c1d5"
+  },
+  {
+    "id": "uf-ae-013",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "线性负反馈才可虚短虚断",
+    "original_hash": "1d4fe89b09fd438add2478f050c765d657abbde36493307d55a6901d1d278d2f"
+  },
+  {
+    "id": "uf-ae-014",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "移除重复",
+    "check": "限定理想线性，-50/10×.2=-1",
+    "original_hash": "109b0da7c6d9e8138c09ab2a387270bf4a5ef9a57773c0fcbd66fe0ad533642b"
+  },
+  {
+    "id": "uf-ae-015",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "修订",
+    "check": "同相1+40/10=5且限定线性",
+    "original_hash": "197ca118625a627f62a11022bd2ea56955b94a04575a92aba847373c9641d91d"
+  },
+  {
+    "id": "uf-ae-016",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "比较器非线性高低态不套虚短",
+    "original_hash": "8155ae9128a35346649c8c0914d7f3e351259889060c15d5b6b3b58a25f82f42"
+  },
+  {
+    "id": "uf-ae-017",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "电压串联提高Ri降低Ro",
+    "original_hash": "d0a2137b34edc87ec3477f591668a793d3f5f563f77bb867caa553ad64f4029a"
+  },
+  {
+    "id": "uf-ae-018",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "深负反馈闭环约1/F",
+    "original_hash": "4450bfe023a3b1fbfd69c54142731b0cfef97ba03e284c787eb664deddfe2e31"
+  },
+  {
+    "id": "uf-ae-019",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "通常以减增益换稳定线性带宽",
+    "original_hash": "4cf38671a91c297a2be014ca3102527f39f9a5b880d243dcd04a068c30a43f31"
+  },
+  {
+    "id": "uf-ae-020",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t09",
+    "verdict": "核对通过",
+    "check": "乙类零点死区交越",
+    "original_hash": "a6fac6cb1d513663b0a1d31a6c280cc389a4660f2210822db78adfbff91a8c00"
+  },
+  {
+    "id": "uf-ae-021",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t09",
+    "verdict": "核对通过",
+    "check": "功放关注输出效率散热安全",
+    "original_hash": "700b916a7629eb9c409abba50bd62d988cb882517fdc93260219e234356162c9"
+  },
+  {
+    "id": "uf-ae-022",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "桥式一管开路仅一半周导通",
+    "original_hash": "4b42f94b30be11288de14d2fb1d26bcff086ee099cc2f9dac6ae0f98b317c404"
+  },
+  {
+    "id": "uf-ae-023",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "电容大放电慢纹波减但冲击增",
+    "original_hash": "13efe8c3e27f83acec2f6d81b2f89756d27aaa810c96adde4c3ce739c3d23aae"
+  },
+  {
+    "id": "uf-ae-024",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "典型工频线性电源变整滤稳",
+    "original_hash": "9c1ab55e1c66a87da7873087f9abcb7d49bf9e7b37dd3350e25d1fa76d875251"
+  },
+  {
+    "id": "uf-de-001",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t01",
+    "verdict": "核对通过",
+    "check": "101101₂=32+8+4+1=45",
+    "original_hash": "6a1ba2094da1452d16854956865eea85f9d9d5eca8eab0143e9c2b1768da944b"
+  },
+  {
+    "id": "uf-de-002",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "A+AB吸收为A",
+    "original_hash": "31f751ff21a9ae28509147a40334c2fb702ecfa29758119edac9aba4dc013d88"
+  },
+  {
+    "id": "uf-de-003",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t01",
+    "verdict": "修订",
+    "check": "和反为反积；归逻辑代数",
+    "original_hash": "fde7753fc207f6459258edb125061026a8a8b975938b2bcd7989ced74fe6d3e3"
+  },
+  {
+    "id": "uf-de-004",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "修订",
+    "check": "不相等为XOR；归基本门",
+    "original_hash": "7aaafc1e745d254c6eaa85153489c140621fdaf9a2841f8985586b17786bf153"
+  },
+  {
+    "id": "uf-de-005",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t01",
+    "verdict": "修订",
+    "check": "传统TTL悬空近高但工程禁浮；归门电平",
+    "original_hash": "e1cb4de7bc6b6a76230acc79c2c82942fc0ba46b377735a1e0ebf8fcedbae268"
+  },
+  {
+    "id": "uf-de-006",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "格雷相邻只变1位",
+    "original_hash": "fb35fef1c1e8df16ecf6559a21bd77affe0273531f41295bb25659eb6a303c4a"
+  },
+  {
+    "id": "uf-de-007",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "2幂矩形可跨边可重叠",
+    "original_hash": "d72982adaecfb23e55d0516be7a6082f6cca72cb38f178a5ee458b9de9f62108"
+  },
+  {
+    "id": "uf-de-008",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "半加和XOR进位AND",
+    "original_hash": "7466c66297ba7e9418b0900d739417b38d1d33e7dcf751a356f108b7680c2e3b"
+  },
+  {
+    "id": "uf-de-009",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "3输入编码可选8输出",
+    "original_hash": "c043f561dec26d6b63c44336539cef3141a58d429d053d50cfc7173ea6b49c18"
+  },
+  {
+    "id": "uf-de-010",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "8=2³需3选择位",
+    "original_hash": "351337e125208b6295b39730911940584f32e2a2831a25a9c725e9e87eca2ac1"
+  },
+  {
+    "id": "uf-de-011",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "修订",
+    "check": "限定理想稳态组合无记忆",
+    "original_hash": "223f4a7ce1cbd46cd2f872187f49a1ef7a43cee0ed5430ee8168147b735b9b15"
+  },
+  {
+    "id": "uf-de-012",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "修订",
+    "check": "冗余滤波选通抑制毛刺；归冒险",
+    "original_hash": "b9e6e9a94948589445837aa4819c2218bdea2d9a337ff8f443b676323bb0e323"
+  },
+  {
+    "id": "uf-de-013",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "NOR高有效RS=11禁用",
+    "original_hash": "36a51396ca5053913991395e43fb4e30c681b0dbf23b786de13b6fb9a04a7d63"
+  },
+  {
+    "id": "uf-de-014",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "JK=11有效沿翻转",
+    "original_hash": "2fd78e5499edbda2c5c6399c95dac80d49da2062651db9d1a6e6a65000f133f9"
+  },
+  {
+    "id": "uf-de-015",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "D有效沿Q+=D",
+    "original_hash": "dbc23c74d8b0bac0f4862edf00f54e02ba711dba6e9e4e9cef2b698760b796ed"
+  },
+  {
+    "id": "uf-de-016",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "T=0保持1翻转",
+    "original_hash": "31dcd8c43f6d413e52ddb92bf41c284aa4e809d8c5a3c27f9173e1f81a7fe8ca"
+  },
+  {
+    "id": "uf-de-017",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "修订",
+    "check": "排除异步且满足建立保持再按沿更新",
+    "original_hash": "9ccc195892baa76989d53295220d6c4eae8b73442aca805d11cabc4d044bfd30"
+  },
+  {
+    "id": "uf-de-018",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "异步控制无须等沿但仍有传播延迟",
+    "original_hash": "c0f1a32aa26a4b98e55758274400de399bc972bb1eb3c54d15c4106c4f82aed9"
+  },
+  {
+    "id": "uf-de-019",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t08",
+    "verdict": "移除重复",
+    "check": "2³<10≤2⁴需4位",
+    "original_hash": "d418704cb8dd4a985513ccb9a51af12581af88f960f532151d12bbcd40d1e5b5"
+  },
+  {
+    "id": "uf-de-020",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t08",
+    "verdict": "核对通过",
+    "check": "同步同钟减少逐级累计延时",
+    "original_hash": "fe6f391ce5e6eaad07f737f3c5b7991e3ad269ab34d26f0f7d6a3206a99495a0"
+  },
+  {
+    "id": "uf-de-021",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t07",
+    "verdict": "核对通过",
+    "check": "无效态有限步回有效集合为自启动",
+    "original_hash": "006583d2549712e34a16c01b255ad50821b680ab0e369b26707fbcdc1b3c23a0"
+  },
+  {
+    "id": "uf-de-022",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "2⁸=256",
+    "original_hash": "d6a51a928600626cee3b70d65af80df3dd109d956667e54981a15b915768a346"
+  },
+  {
+    "id": "uf-de-023",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "采样保持再量化编码",
+    "original_hash": "23dffb9a59ee8e612b83323c365da73924f612c62a19064cf67cecfcd98dd0ac"
+  },
+  {
+    "id": "uf-de-024",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": "555无稳态连续矩形",
+    "original_hash": "89293ace1fcb26c03723fea28ed39e6c4eed266b567e62df0f147c7eea30f98f"
+  },
+  {
+    "id": "uf-cm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "核对通过",
+    "check": "发送设备将消息转合信道信号",
+    "original_hash": "5a06ce8a12f2f8bd1c6db1b89649ef7a6d4e08f68e713a375769a1e0b161070e"
+  },
+  {
+    "id": "uf-cm-002",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "核对通过",
+    "check": "按键对讲双向交替半双工",
+    "original_hash": "c282f892c5ab77d237cc5aea8544d593a0022d0f7e2e7ebf198f780237d4dbc0"
+  },
+  {
+    "id": "uf-cm-003",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t02",
+    "verdict": "核对通过",
+    "check": "log2(8)=3bit",
+    "original_hash": "6abddef6f5e92802f63aeb550f48abf6fe660c967ac1e251908137237061c6b3"
+  },
+  {
+    "id": "uf-cm-004",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t02",
+    "verdict": "修订",
+    "check": "2400×log2(16)=9600，澄清M状态",
+    "original_hash": "ac04c2e9194d0be84ad5525b68d731fcdc4bb319e56cfc14003132d5b54e87da"
+  },
+  {
+    "id": "uf-cm-005",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "核对通过",
+    "check": "10^(30/10)=1000",
+    "original_hash": "30df749e07bfbfe35eea9fb4ca824d9cfa6f3a76e386f8ddc82efea23815e933"
+  },
+  {
+    "id": "uf-cm-006",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "核对通过",
+    "check": "3000log2(1001)≈29.9k",
+    "original_hash": "57b20e9f4e845b29b146e1bbfa01b085f1115d8b8a57e6edaf24cc0eb69c9925"
+  },
+  {
+    "id": "uf-cm-007",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "核对通过",
+    "check": "固定另一量提高B或SNR提高容量",
+    "original_hash": "1e80702a5ad2962d0904cf84bd504753e70378677b44537b6b45fdf68612684a"
+  },
+  {
+    "id": "uf-cm-008",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "修订",
+    "check": "临界2×4=8k，补临界不保任意相位",
+    "original_hash": "c8821d6f8f4bd65d75db3dc2b73e54f7f21323d69f8ef89c6d0cd26fbf0cc038"
+  },
+  {
+    "id": "uf-cm-009",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "核对通过",
+    "check": "抽样时间离散量化幅离散再编码",
+    "original_hash": "52652dee49191b51a2cb00c0279366f578231012fb4dcd39341d36833b48920e"
+  },
+  {
+    "id": "uf-cm-010",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "移除重复",
+    "check": "8000×8=64k",
+    "original_hash": "e8555f77dc591eed4f46c87ee28faf3bc3feb0eb5a7fd0cf8407efe2590068f9"
+  },
+  {
+    "id": "uf-cm-011",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "核对通过",
+    "check": "固定范围抽样率多级减量化但增位数",
+    "original_hash": "90aac6102ac9f07388cfef6550f41e97ddabd37f20efc5f601ea9192cf4b1188"
+  },
+  {
+    "id": "uf-cm-012",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "修订",
+    "check": "A律改善小信号量化；归抽样PCM",
+    "original_hash": "959d6b36e86be0de8c3a5cab8edf16ca7a1d92fb7e67790184574f90910cff1d"
+  },
+  {
+    "id": "uf-cm-013",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "双边带AM宽2fm",
+    "original_hash": "0b9aa584649324ba999da56c870aec54ef432e320bdab520b26ca318dd91d04a"
+  },
+  {
+    "id": "uf-cm-014",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "修订",
+    "check": "DSB相干须同频同相；归调制",
+    "original_hash": "a7f7b8cd4a83b49abfefc52c077d9275c54eb02fb3cdddcdf1de59ae1798be7a"
+  },
+  {
+    "id": "uf-cm-015",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "抑制载波SSB节频带功率非最简接收",
+    "original_hash": "97701ba0bb3d7bc512c81b6f70f57cb8457ba0a38d179f807fe1d368dd780b01"
+  },
+  {
+    "id": "uf-cm-016",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "理想FM包络恒幅以频变承载",
+    "original_hash": "2d51c213e6666cee14b54a1285ec1393bd9e565c5e01a8b2bb20a661717d26a5"
+  },
+  {
+    "id": "uf-cm-017",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "2(5×3+3)=36k",
+    "original_hash": "8327ed0fec685ebdef2fef1df8d91ab6c9f62e7776c42d9c73d51d720f0dd14d"
+  },
+  {
+    "id": "uf-cm-018",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t08",
+    "verdict": "核对通过",
+    "check": "固定相干能量条件BPSK通常胜ASK",
+    "original_hash": "da861435aa44265fac0cbd68d8f187f32c97962b37ca19ad7efde2412f3c1acd"
+  },
+  {
+    "id": "uf-cm-019",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t08",
+    "verdict": "核对通过",
+    "check": "log2(4)=2bit",
+    "original_hash": "5fc16726f00c032bcc05976390aa052f9b7ca1a46166305d794583cd068245e7"
+  },
+  {
+    "id": "uf-cm-020",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t11",
+    "verdict": "核对通过",
+    "check": "信道编码加结构冗余检纠错",
+    "original_hash": "e85ba759740ea5a41738ea8ebc1e88893ef0d0f001eef50863cb1fdd5cc15594"
+  },
+  {
+    "id": "uf-cm-021",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t07",
+    "verdict": "修订",
+    "check": "1310/1550nm石英低损窗；归光纤",
+    "original_hash": "a777b3eda1b1763bec6d7b7c696ad73777406bb0eca8dc15bb48c88dc7614937"
+  },
+  {
+    "id": "uf-cm-022",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "修订",
+    "check": "无线电红外可见紫外递增；归频谱",
+    "original_hash": "4e20a5d6a244c47f1aac5deca898bf689125242c7c62b0aa66adbe53349a40cf"
+  },
+  {
+    "id": "uf-cm-023",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "核对通过",
+    "check": "射频与可调LO混到固定IF",
+    "original_hash": "4ee10e368d7cfb4162179daaa9229f964d236a0aec499d4b035219ea9475c7b9"
+  },
+  {
+    "id": "uf-cm-024",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "核对通过",
+    "check": "调谐放大同时放大和选频",
+    "original_hash": "2caefa55d379b02c6d19ba740be3025f38feca8ce986f033339b2daf36a79d90"
+  },
+  {
+    "id": "gap-circuit-001",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "电压并联无限阻，电流串联零阻",
+    "original_hash": "e6d499b9c91cddb140cec02371e9376e7c303593efb221e60722780f07564e52"
+  },
+  {
+    "id": "gap-circuit-002",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "已知电源正常，开关两端落差先查触点",
+    "original_hash": "498d93e18070aacdf0979958be416fa957d06465a99db76d47a13396076d80e3"
+  },
+  {
+    "id": "gap-analog-001",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t05",
+    "verdict": "核对通过",
+    "check": "后级负载分压与差分抑制共模不同概念",
+    "original_hash": "9fb8001a1ed5d568a829cac7c0c40867ef56e51a4d4e9827fbb66109f30a11da"
+  },
+  {
+    "id": "gap-analog-002",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "削顶从输入偏置摆幅逐级查",
+    "original_hash": "b7602744ed8038fc052c2da217bbbd35f47daf7cd0811e52ac3f754202d7ea1b"
+  },
+  {
+    "id": "gap-comm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t11",
+    "verdict": "核对通过",
+    "check": "信源去统计冗余信道加检纠错冗余",
+    "original_hash": "eb0237d29d1e91b9733528a6ad4c9be0f1276a9001685f8164eff2c8c06eba5a"
+  },
+  {
+    "id": "gap-comm-002",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t16",
+    "verdict": "核对通过",
+    "check": "10+2+2-80-2=-68dBm",
+    "original_hash": "6a1d715a9e8e492b3df1baff3840a69d1ed74845a9d240d0ae6b2386d7885c17"
+  },
+  {
+    "id": "gap-signal-001",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t01",
+    "verdict": "核对通过",
+    "check": "2π/(4π)=.5s",
+    "original_hash": "feb8c4be3dc0c333cc3741592734a0c31b48c72ecf2a46c95693e9a6c0686abe"
+  },
+  {
+    "id": "gap-signal-002",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t03",
+    "verdict": "核对通过",
+    "check": "延时线性时不变因果有界稳定",
+    "original_hash": "f2b976c6e53356c7f73d52e3c36d06d8f6979c40c5b5b85ecfa4b1d52bb0db4f"
+  },
+  {
+    "id": "gap-signal-003",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t05",
+    "verdict": "核对通过",
+    "check": "移位冲激卷积得h(t-1)",
+    "original_hash": "27f51c1cc32a2b1c6f1e619a72e0776f631eeb91e9f5296b9010692182734614"
+  },
+  {
+    "id": "gap-signal-004",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t13",
+    "verdict": "核对通过",
+    "check": "卷积频域相乘",
+    "original_hash": "5f8c5389f817c7cf44008b47e86dc25f5aaca60cff0a8f41b2f5b5e46c1d3b98"
+  },
+  {
+    "id": "gap-signal-005",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t09",
+    "verdict": "修订",
+    "check": "连续s域因果ROC最右极点右而非模外",
+    "original_hash": "e430349baf4a1244a436f9a686a88c8ecb00658602f5e3e520c30011f4814ec9"
+  },
+  {
+    "id": "gap-signal-006",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t11",
+    "verdict": "修订",
+    "check": "2×4=8k为临界值",
+    "original_hash": "1daf7650b7cd81227cfff2ffa31fcaad4d83abc7ffb316985f6e3578b3aeea49"
+  },
+  {
+    "id": "gap-signal-007",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t13",
+    "verdict": "核对通过",
+    "check": "时域响应频域谱与s/z复频域各工具",
+    "original_hash": "337ece96c4d931f63d3e07f33fe3de654a2369875ba087fc1990e3ef86950068"
+  },
+  {
+    "id": "gap-eg-circuit-001",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t03",
+    "verdict": "核对通过",
+    "check": "(U-6)/2+U/3=0得3.6V",
+    "original_hash": "1362b034f797536b6985db40bf56b3cde54658f444ed9fc11ec557a8c025366c"
+  },
+  {
+    "id": "gap-eg-circuit-002",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t04",
+    "verdict": "核对通过",
+    "check": "12/3=4Ω，144/16=9W",
+    "original_hash": "bf9ace39000c34d8bf6f3b8e108ccc392691099285eaff86d33a907f482579a5"
+  },
+  {
+    "id": "gap-eg-circuit-003",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "核对通过",
+    "check": "20+j15模25Ω感性",
+    "original_hash": "de6977dce6aa4e644e488ac4927c2982687f39c430adbf39f2e56ff1bfab72a1"
+  },
+  {
+    "id": "gap-eg-circuit-004",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "自锁常开触点旁路启动按钮",
+    "original_hash": "21b26efd043541b25195144e3c2ac48a8cf8b9f9f0dbc797f53a1bf1f319bde4"
+  },
+  {
+    "id": "gap-eg-circuit-005",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t09",
+    "verdict": "核对通过",
+    "check": "1-(1-.9)^2=.99",
+    "original_hash": "8760153be05d066dfc973d2ff5e1580965d7443602763b9f58cfb8e70a02a94a"
+  },
+  {
+    "id": "gap-eg-circuit-006",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "高阻分压并联仪表改变等效阻值",
+    "original_hash": "ca0b271e4ac651482bb6935f5e7d80a70a3df3fce69c2d6f42396c17e61bef55"
+  },
+  {
+    "id": "gap-eg-analog-001",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "11.3/565k=20μA，2mA，UCE8V放大",
+    "original_hash": "feeecd9bf75c5db0b800c13b42fa2770893bcc570f9cc06545e382383956c84b"
+  },
+  {
+    "id": "gap-eg-analog-002",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t05",
+    "verdict": "核对通过",
+    "check": "10k与10k对1V分压.5V",
+    "original_hash": "fd213941aa31ffda88e1aff4e2ba591e73c9e2bd01ea857a28f74d9723fa3f79"
+  },
+  {
+    "id": "gap-eg-analog-003",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "200/(1+4)=40",
+    "original_hash": "2e8d195748dabde9a4a24e2369c05f71d4d8e115e1ad484ffa26eadaa32da627"
+  },
+  {
+    "id": "gap-eg-analog-004",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "线性-20V超±10V摆幅，负饱和",
+    "original_hash": "7d9c477bf89b115a22b9aceb9bbfb6b7e077e15b92af7791c2fae81fafbde8cd"
+  },
+  {
+    "id": "gap-eg-analog-005",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "迟滞双阈值减少噪声反复切换但有回差",
+    "original_hash": "48ac0e47c823b60f8c127d6c0289d6771622a730febb875234a8ae18642f197c"
+  },
+  {
+    "id": "gap-eg-analog-006",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "变整滤稳顺序",
+    "original_hash": "ab933e401eb7610ad3f0db8cdcdd30b950edc6e2c2a3cb7bd9733c30cf606034"
+  },
+  {
+    "id": "gap-eg-digital-001",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "奇数最小项末位C=1故F=C",
+    "original_hash": "4d22e8cc7bcd0684e0309b9b955a6ad2570ecfb145bdd92e716aebb7915015b3"
+  },
+  {
+    "id": "gap-eg-digital-002",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "A作选择D0=B,D1=非B",
+    "original_hash": "eda03fb56631be5d414b6c47156dbe8c9ce1af3efb9949d5d1dd1333f5c8c26d"
+  },
+  {
+    "id": "gap-eg-digital-003",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t05",
+    "verdict": "核对通过",
+    "check": "逻辑路径延迟不同引毛刺，可冗余或选通",
+    "original_hash": "51365e0c32faafb87328ff2ad9952378d95ff9261768a5aedfdc0adb1d05d5cd"
+  },
+  {
+    "id": "gap-eg-digital-004",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "三个沿读取D得110",
+    "original_hash": "2729fa390b2ac3c832647e3d872c9bfc71582b677e1f7ad67e20c956f02437b5"
+  },
+  {
+    "id": "gap-eg-digital-005",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t08",
+    "verdict": "核对通过",
+    "check": "模6需3位并处理两无效态",
+    "original_hash": "6ccda1e5354ada526cff99798f632e6f405031b02e377282b45ecb7c52137513"
+  },
+  {
+    "id": "gap-eg-digital-006",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t09",
+    "verdict": "核对通过",
+    "check": "位扩2字扩4共8片地址12根",
+    "original_hash": "5667acc480ecd6cece4fa53f739dfb91118be04e012700e25982f2141eb99cf1"
+  },
+  {
+    "id": "gap-final-sig-001",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t01",
+    "verdict": "核对通过",
+    "check": "∫e^-4t=1/4",
+    "original_hash": "ac811f6816935a3a0b073bed59512b3c410448dcae9b8f61b1224535ea24521f"
+  },
+  {
+    "id": "gap-final-sig-002",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t02",
+    "verdict": "修订",
+    "check": "0≤2t-4≤3得2至3.5且补非零前提",
+    "original_hash": "47dca003f255a5b2a1f0b94644254f1981aa626dc47bbeb73a53da497863069a"
+  },
+  {
+    "id": "gap-final-sig-003",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t02",
+    "verdict": "核对通过",
+    "check": "冲激筛选x(2)=5",
+    "original_hash": "53212f423d53551c120440993ef6a7516ebda5d85200ac85f4c00284ef024b0b"
+  },
+  {
+    "id": "gap-final-sig-004",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t03",
+    "verdict": "核对通过",
+    "check": "乘t满足叠加但时移不交换",
+    "original_hash": "117eda684f6998aff245e10b8f4e49b57d9030b9ac87e8e687f952613fbf2290"
+  },
+  {
+    "id": "gap-final-sig-005",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t04",
+    "verdict": "修订",
+    "check": "齐次方程K e^-2t，0+确定3；改自核",
+    "original_hash": "cde7dc7503e0e3efa00ff8298c3c73d575409ebcdbd2a1cc9813364aac98ac90"
+  },
+  {
+    "id": "gap-final-sig-006",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t04",
+    "verdict": "修订",
+    "check": "限定LTI才由卷积给零状态",
+    "original_hash": "f785211609e8e5be37036ccd6bbaa2a88e2b183c015932ff86025d18f6b847e8"
+  },
+  {
+    "id": "gap-final-sig-007",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t05",
+    "verdict": "核对通过",
+    "check": "负时间h非零非因果，绝对积分1稳定",
+    "original_hash": "9bbe18be041929608bff78fe46737aaf44fc15e7f266083113d6986d9c3992ed"
+  },
+  {
+    "id": "gap-final-sig-008",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t06",
+    "verdict": "修订",
+    "check": "卷积[1,-1]+[0,2,-2]=[1,1,-2]",
+    "original_hash": "93a2ed7f6d0ffd3cda990c2e1449f46bb42cbd878fd1d717a56e7400ccaf054c"
+  },
+  {
+    "id": "gap-final-sig-009",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t06",
+    "verdict": "核对通过",
+    "check": "矩形重叠先t后2-t",
+    "original_hash": "21b813f7de5a49db745fbd5a817d593ae6021c47b6cb0e2e5a17a3a05f790937"
+  },
+  {
+    "id": "gap-final-sig-010",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t07",
+    "verdict": "修订",
+    "check": "频率栅格500Hz，区别非零奇谐波间距",
+    "original_hash": "d580ff21325de7149d2554c181e2865511f14a8ce103ec33d14e15bfd43092cc"
+  },
+  {
+    "id": "gap-final-sig-011",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t07",
+    "verdict": "核对通过",
+    "check": "实奇函数DC与cos系数0",
+    "original_hash": "071f415a305aecb60fca03bf6796a51ba9dae85ce3ab4f2e22ec95737f6ff110"
+  },
+  {
+    "id": "gap-final-sig-012",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t08",
+    "verdict": "核对通过",
+    "check": "低通3k保1k去8k",
+    "original_hash": "4eecc5aa7cfeaa4cb57440be580930e976ee9db33d922aea29d8c076f856cbec"
+  },
+  {
+    "id": "gap-final-sig-013",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t08",
+    "verdict": "核对通过",
+    "check": "时移乘e^-jωt0模1",
+    "original_hash": "f16ed3b4cda70ff9dff6d42a04bdcb3e9aab28c15076789d7763a025c959a6e8"
+  },
+  {
+    "id": "gap-final-sig-014",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t09",
+    "verdict": "核对通过",
+    "check": "因果ROC Re(s)>-2含虚轴稳定",
+    "original_hash": "36816e8dfa06eb018c16c8ef888b02b135079982f4859e6490bc816f7f55e693"
+  },
+  {
+    "id": "gap-final-sig-015",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t10",
+    "verdict": "核对通过",
+    "check": "H=1/(1-.25z^-1)，ROC>.25含单位圆",
+    "original_hash": "5e6904a084afb8fee7469d2040a4eecd06e8d7b68989e42cabfaba3b965ebafb"
+  },
+  {
+    "id": "gap-final-sig-016",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t10",
+    "verdict": "核对通过",
+    "check": "因果外侧ROC为z的模大于.8",
+    "original_hash": "5bf4569ed82d1805ded3609f28ffa9c772cec15aad11888635767daac6a1e2f3"
+  },
+  {
+    "id": "gap-final-sig-017",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t11",
+    "verdict": "核对通过",
+    "check": "9k采10k折到1k",
+    "original_hash": "87f764365d2dbb16a98233ebad01b33a11ee1834c0d98ee600b00983b548a2ee"
+  },
+  {
+    "id": "gap-final-sig-018",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t12",
+    "verdict": "核对通过",
+    "check": "5/256×1000=19.53125约19.5",
+    "original_hash": "925227b43a97923280412c7bd4d0340bf7baa72408cd0dcd83477f00a366d9ef"
+  },
+  {
+    "id": "gap-final-sig-019",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t12",
+    "verdict": "核对通过",
+    "check": "位数不补时间采样混叠损失",
+    "original_hash": "0770de7eb1748e9420c06781312ef4f62fa141e61df89adf9253f225724699aa"
+  },
+  {
+    "id": "gap-final-sig-020",
+    "subject": "信号与系统",
+    "topic_id": "signals-systems.t13",
+    "verdict": "核对通过",
+    "check": "瞬态时域、滤波频域、极点ROC复频域",
+    "original_hash": "1dc2f840f40efc3e319f570f8b02c7b0d0ba7c3fb3b65f7297d5594ead1597c8"
+  },
+  {
+    "id": "gap-final-comm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t10",
+    "verdict": "核对通过",
+    "check": "PLL鉴相滤波控VCO反馈，捕获有限",
+    "original_hash": "944ab30525b37338bef7d01d7d81d127bda30cbbf6f0f7fb23751e760bc9b184"
+  },
+  {
+    "id": "gap-final-comm-002",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "修订",
+    "check": "LO=1465k镜像=1930k；多值改自核",
+    "original_hash": "14b57774ebf5b308f1c33cf5e38bee5d556df6c23694105142f85f4a7d2b0d86"
+  },
+  {
+    "id": "gap-final-comm-003",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t14",
+    "verdict": "核对通过",
+    "check": "眼高近不变交叉水平散为时抖",
+    "original_hash": "8f31c5298c0db126d1d12df6143bb4b58c1de4b4653d640a45b704cef6228927"
+  },
+  {
+    "id": "gap-final-comm-004",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t15",
+    "verdict": "核对通过",
+    "check": "功率足而高速闭眼先疑色散非仅衰减",
+    "original_hash": "1db9bd96ac8340be5a40d76f5b305794cd24a717bfd94c45b381656fe8816664"
+  },
+  {
+    "id": "gap-final-comm-005",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "修订",
+    "check": "Shannon9k与Nyquist12k取9k；改自核",
+    "original_hash": "59d2277dac993f73398d233d09a85d4c8e64ce90f61bfa3bdf0faa9017a3a017"
+  },
+  {
+    "id": "gap-final-thin-019",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t03",
+    "verdict": "核对通过",
+    "check": "(U-10)+U/4=0得8V",
+    "original_hash": "95323b6ec6514cad6f7888c864f4d2d9c4ac32fa9c1be2492a0be0a07e070de8"
+  },
+  {
+    "id": "gap-final-thin-020",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t05",
+    "verdict": "修订",
+    "check": "由无冲激条件保留uC=6V和iL=.4A；补严谨条件",
+    "original_hash": "09bc47b2b8298d9369d951843729da89d6ae878acd864901ef37aa0194b90a2c"
+  },
+  {
+    "id": "gap-final-thin-021",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t02",
+    "verdict": "核对通过",
+    "check": "低有效EN=0驱动，EN=1高阻非逻辑0",
+    "original_hash": "fd6780331d8b3c7efce1640ea5baef17b390e4af128377dab67ade0bff5c759b"
+  },
+  {
+    "id": "gap-final-thin-022",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t05",
+    "verdict": "核对通过",
+    "check": "异步复位窄毛刺来自路径延迟，冗余或同步选通",
+    "original_hash": "dd05d76f08b117265089c9f1007e79c7b8e853b99872a3c14c006504fab80140"
+  },
+  {
+    "id": "gap-final-thin-023",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t07",
+    "verdict": "核对通过",
+    "check": "Moore输出按现态，S0两输入出0，S1两输入出1",
+    "original_hash": "46c6529ef8b9a0792429721e57ecc895117b0077badf7e86fdd3b297af366ec2"
+  },
+  {
+    "id": "gap-final-thin-024",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t07",
+    "verdict": "核对通过",
+    "check": "介质按EMI带宽布线移动性取舍而非只比速率",
+    "original_hash": "3f3d86ff1bf1012cb546b37166c5f9df0b5474ec3bd6669701e967778e306b95"
+  },
+  {
+    "id": "gap-final-thin-025",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t10",
+    "verdict": "核对通过",
+    "check": "捕获进入锁定，保持维持锁定范围通常更大",
+    "original_hash": "6b6e50c8467172b2b329236d68c1a99d835d0f3097cfecfc77199ccc02114d34"
+  },
+  {
+    "id": "gap-retest-tdm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t06",
+    "verdict": "核对通过",
+    "check": "8000帧/s、32bit/帧、256k有效、33×8000=264k线路",
+    "original_hash": "337d77e0f9890f17f061a6c734498c919382104fa43b0f84bb80836d2a9caf88"
+  },
+  {
+    "id": "ap-circuit-001",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "分流5×6/10=3A",
+    "original_hash": "15a10c76db411ad38f3feeb1944d0dfda91aae56d872961b122749f5858b0215"
+  },
+  {
+    "id": "ap-circuit-002",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "核对通过",
+    "check": "2π50×.1=31.4Ω",
+    "original_hash": "9eedcb62d33aa3255e98246c7e4d4d50d860b34dc1f2148a0aea678996a4e705"
+  },
+  {
+    "id": "ap-circuit-003",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "中节点分支不保证同流串联",
+    "original_hash": "f9aa469f8aaf182b21fe564656d259489216f7de5a94be7ebc5901df9a538ae7"
+  },
+  {
+    "id": "ap-circuit-004",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "核对通过",
+    "check": "条件单位量级检查正确，dB不可直接代比值",
+    "original_hash": "6d87414494e70b5df8fe238e7d9adbb3c8ad2b9610fa346f936f8c0ff43695bb"
+  },
+  {
+    "id": "ap-circuit-005",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "核对通过",
+    "check": "固定P/U电流随cosφ增大而下降",
+    "original_hash": "a26d8212a7f3116a45f3106b357ba8bfa835d9df20c7a9b88e5a3d8bc98c888c"
+  },
+  {
+    "id": "ap-circuit-006",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t09",
+    "verdict": "核对通过",
+    "check": "独立全部成功.81，逻辑串联不同物理串联",
+    "original_hash": "48f823e4b8e4006ae6aff84a41677f3cdc0fa1fe8546e87c1ba700b937bd6555"
+  },
+  {
+    "id": "ap-analog-001",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "(5-2)/.01=300Ω",
+    "original_hash": "4b4c78c74ca3d18d1e9c7e4591d838ab44f2ede8a698999632bc62cd1c21becf"
+  },
+  {
+    "id": "ap-analog-002",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "负反馈未饱和-5×.2=-1V",
+    "original_hash": "56c8a6ac48a74b26931e02f3cfdc35a45e0e8818d34e5395783cd624a042bd27"
+  },
+  {
+    "id": "ap-analog-003",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "阈值只开始沟道非零阻导通",
+    "original_hash": "1da7329427b836b86c3f38d92fc4ec663029629ec71b96c0fde69480b641bbd4"
+  },
+  {
+    "id": "ap-analog-004",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "负反馈改善ABC不能消环外全部噪声",
+    "original_hash": "ce270929bc527ab53c7e6be848194406164ddb316b469dda7370ff7e714c9cf8"
+  },
+  {
+    "id": "ap-analog-005",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "β关系只在放大区，截止饱和是开关",
+    "original_hash": "315c28c450dc73c74e7abeb2203148bbe42594646278d1781fd83c9516937bd4"
+  },
+  {
+    "id": "ap-analog-006",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "跟随器缓冲高Ri低Ro受摆幅电流限制",
+    "original_hash": "74854fe4c16f373eaf88a39204c46c833fcc7079e66a4a1a1269820c2b1ad5a8"
+  },
+  {
+    "id": "ap-digital-001",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "修订",
+    "check": "任一高报警为OR无须记忆；归门",
+    "original_hash": "048362a32d7e9e64b5ffe08871dbe19d4918796486c8af48c9430f74df8b2f73"
+  },
+  {
+    "id": "ap-digital-002",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "修订",
+    "check": "串入并出移位寄存器；归寄存器",
+    "original_hash": "8589fdf43a6871d7a7b02ef769a24f29859e4023d19e77f8f6563877eedbbe8e"
+  },
+  {
+    "id": "ap-digital-003",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "沿间输入变化不直接改变Q",
+    "original_hash": "32135d1a149464883bb200217d27b15657a49ad9fe1417a113062a3425256c24"
+  },
+  {
+    "id": "ap-digital-004",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "译码暂存计数正确，组合无历史",
+    "original_hash": "9cc6f30061599b8046751519bbcd72c0ba06f0aa6191cddc9e7cc3983515c239"
+  },
+  {
+    "id": "ap-digital-005",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t07",
+    "verdict": "核对通过",
+    "check": "保持报警需要时序状态与复位",
+    "original_hash": "15dd613ac0973b3bb20d5ff4e13c5f6cfb362aa6fdf32591ab01697acf2d1e44"
+  },
+  {
+    "id": "ap-digital-006",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": "555单稳定时、无稳时钟、施密特整形",
+    "original_hash": "1148a087549f30e7d3c4b109444e781a18b11f6b67780e91900c396f92237eb0"
+  },
+  {
+    "id": "ap-comm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "核对通过",
+    "check": "1MHz×log2(4)=2Mb/s",
+    "original_hash": "36e3127534ecff6e83003e2f5480e3edc2fcfcc2e78f196d579f30736c20dd64"
+  },
+  {
+    "id": "ap-comm-002",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t06",
+    "verdict": "核对通过",
+    "check": "固定轮流时隙需同步为TDM",
+    "original_hash": "af3fcaf47a3e3c24e46f306d3d7f6704f5d750d799fe5c21d76c1aadd302fc5c"
+  },
+  {
+    "id": "ap-comm-003",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "核对通过",
+    "check": "信息表示不同于物理载体",
+    "original_hash": "0c674acd746e9bca9b54a12f5a20269b5872d8b1156bdfa7317399e9f85f6188"
+  },
+  {
+    "id": "ap-comm-004",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "修订",
+    "check": "声音传感调理再ADC；归PCM",
+    "original_hash": "c18923e5d375422490e70ba7e8985b2b3e1c383002ccab20c4f725459013c9d0"
+  },
+  {
+    "id": "ap-comm-005",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "FM频率承载可限幅但有带宽阈值代价",
+    "original_hash": "cd0198cb7c2123c4f8853ba7a19e7a34b6fd002281a8d82848057602914e3708"
+  },
+  {
+    "id": "ap-comm-006",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "核对通过",
+    "check": "传感调理PCM与位帧同步边界",
+    "original_hash": "b254f6c1cc990a8a13722c65c78696c603db05a708d9a36e71030491f4e3b8b0"
+  },
+  {
+    "id": "sp-elec-circuit-001",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "直流压并联而非电流跨电源",
+    "original_hash": "ff1a01c28369f5f12558755f2e0f2b385ad33ab82564ada1b9dec90e6e8e9edb"
+  },
+  {
+    "id": "sp-elec-circuit-002",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "电流须串支路且核对端口",
+    "original_hash": "0406f5e2422e94fed4ad30e45e40a0981c0cef1a16cb1a01e4f974fb9236f13a"
+  },
+  {
+    "id": "sp-elec-circuit-003",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "电阻挡内源不得带电；归仪表",
+    "original_hash": "43c73b98b5f78b6c9c139a91ca5889848df0ed2e3b086d5f41b15894cc29c1f5"
+  },
+  {
+    "id": "sp-elec-circuit-004",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t01",
+    "verdict": "核对通过",
+    "check": "4格×.5=2V峰峰",
+    "original_hash": "75becb4b97f3d06cb0d29bfdbee61d83fd583ead9b026b3e3931862e3b4838e7"
+  },
+  {
+    "id": "sp-elec-circuit-005",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t01",
+    "verdict": "核对通过",
+    "check": "5×.2ms=1ms，倒数1kHz",
+    "original_hash": "746f1969fe54760fff3277666d8ba0bec113a84b3bbb1f0b2b8b4a7dcaabc638"
+  },
+  {
+    "id": "sp-elec-circuit-006",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "修订",
+    "check": "熔丝复断先查原因；归保护",
+    "original_hash": "b2ce637ff587bcc4fa9313e6da1e458a91f6d7bcf07b50910745318126eb68f4"
+  },
+  {
+    "id": "sp-elec-circuit-007",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "10k×100μ=1s",
+    "original_hash": "2ecee21c903a0b3bd4948fe9db6a119711952103933e0aecb5f4d07490be9880"
+  },
+  {
+    "id": "sp-elec-circuit-008",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "2H/4Ω=.5s",
+    "original_hash": "01eb47bf1cb08ab7c9aa7be117e67210fc7c18e10531a9bd9b45124e641a90e0"
+  },
+  {
+    "id": "sp-elec-circuit-009",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "无冲激电流时电容电压连续；归储能",
+    "original_hash": "615732172dd8ca9b98e59b0c1f6ed1d25ef4b4c3dbff3d311c569133e3f9217f"
+  },
+  {
+    "id": "sp-elec-circuit-010",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "无冲激电压保留iL=.8A；归储能",
+    "original_hash": "14858ead08b6b95bf8aff9bcf1bb8b3ad7d0bac0317ad219c9ae74ad893611d4"
+  },
+  {
+    "id": "sp-elec-circuit-011",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "触发源电平决定扫描稳定",
+    "original_hash": "b2c41954a7a6adbb232b34326d62fb09c615844ba02f1e0c777384708c317a7f"
+  },
+  {
+    "id": "sp-elec-circuit-012",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "多级同时无输出先查公共条件",
+    "original_hash": "bb534fedbec3098cd15978d5d8b27508416214545a801c0dbf5c77a27b592d22"
+  },
+  {
+    "id": "sp-elec-circuit-013",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "保护地防壳体危险电位不代替保护",
+    "original_hash": "eb6bf3812bd6fd734b2f2bab53acebed33acfe7aa5a11a1f84a32ac2e30cb902"
+  },
+  {
+    "id": "sp-elec-circuit-014",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "先定位最后正常至首异常级",
+    "original_hash": "1126e175346c8d6ee538d74203e3e1e60634f2b8188778d2cbf8125c7c491d13"
+  },
+  {
+    "id": "sp-elec-circuit-015",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "未知量先大量程不永久最大",
+    "original_hash": "e7e89ce2cbfab4627a87f3cc39401bb519d7942e4c5eace9b28ddfe23e8ba944"
+  },
+  {
+    "id": "sp-elec-circuit-016",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "台式地夹通常接PE不可任夹",
+    "original_hash": "39b138aaa19dd6d5e11b98432c4e454fa1a9041fff7c43e3f8f5acc6c83363f0"
+  },
+  {
+    "id": "sp-elec-circuit-017",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "一个τ只完成63.2%变化",
+    "original_hash": "0e431b8a0bc17a794541d058eb6b7fcbca84379c7385775831e4d4e5faf5ae91"
+  },
+  {
+    "id": "sp-elec-circuit-018",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "铜丝破坏熔断保护",
+    "original_hash": "0a5b7214decf9a486eb7d84c7a1e6d30fdf357700cbdea61905d519977de259b"
+  },
+  {
+    "id": "sp-elec-circuit-019",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "直流均值不证明无纹波",
+    "original_hash": "010c018098573bcfcbaf97ed714bc09324860e1b47d51147a260a2a8a2c768a1"
+  },
+  {
+    "id": "sp-elec-circuit-020",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "类型插孔接法量程与带电条件均须核",
+    "original_hash": "754391ef58663652a3509c1924be3a18f906f89a9dd58e109ca0d024378caf13"
+  },
+  {
+    "id": "sp-elec-circuit-021",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "垂直水平倍率和触发共同影响测量",
+    "original_hash": "2209c8ed0806efd752202db0412161386accbbb802bc28b0aea3385fbd84e641"
+  },
+  {
+    "id": "sp-elec-circuit-022",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "一阶RC=RC，RL=L/R；高阶不止一τ",
+    "original_hash": "993ef8de274ea29e183388d25b410831f19163f0a31764c5461d4420195fb6c6"
+  },
+  {
+    "id": "sp-elec-circuit-023",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "先检查测量，不整机盲换",
+    "original_hash": "55c334bc9b9f6bac66aac2ebe826449eec1943946e513b0d3de55820adb3dbbb"
+  },
+  {
+    "id": "sp-elec-circuit-024",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "20k×50μ=1s",
+    "original_hash": "00775a5d74f7df06c1005214c552f1386b1294cdd99c11577220b3b3bc0145d9"
+  },
+  {
+    "id": "sp-elec-circuit-025",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "修订",
+    "check": "未补偿时3格×1×10=30V；补偿不重复乘",
+    "original_hash": "781893e6f2148851b485058fe9230453585698384efebc8d30c5a95d38c1e179"
+  },
+  {
+    "id": "sp-elec-circuit-026",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t11",
+    "verdict": "核对通过",
+    "check": "高内阻并联压、低内阻串联流",
+    "original_hash": "4322ae1d68d0edca2a4587d24909d4643b38a5f4c12a21da9cc0e707d435356a"
+  },
+  {
+    "id": "sp-elec-circuit-027",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "断电分段通断定位，带电用电压挡",
+    "original_hash": "6825857c22bc850221cb9fe6e4b35dfaf8238db86f41a974bea057f2eb60b3e8"
+  },
+  {
+    "id": "sp-elec-circuit-028",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "从0到终值一τ完成63.2%",
+    "original_hash": "2baf7287249dd80c3204ae53ef5dc1d6166cdc7649c3d99affa52398987de288"
+  },
+  {
+    "id": "sp-elec-circuit-029",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t08",
+    "verdict": "核对通过",
+    "check": "冒烟先安全断电隔离专业处置",
+    "original_hash": "729e0b451ed2c2152a7f77e74fa7c9e523a1c81fc579f300fa1569ed0848e979"
+  },
+  {
+    "id": "sp-elec-circuit-030",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t12",
+    "verdict": "核对通过",
+    "check": "先共同供电再沿级跟踪复测",
+    "original_hash": "039c01145b1b1a16e817b2373684bcbf2869984c5cf34afc247bac0523607ed7"
+  },
+  {
+    "id": "sp-elec-analog-001",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "断电离线测PN结单向压降初检",
+    "original_hash": "5560fc2fac46bf779c8bd92252f9ab53d827392bf8ae03a92bf5a842fd6706b9"
+  },
+  {
+    "id": "sp-elec-analog-002",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "移除重复",
+    "check": "3V/.01A=300Ω；与ap001近似重复",
+    "original_hash": "96182b4125e1dbce0b65d2e4347099ed4fe1911780776abd5606f8d71accd36c"
+  },
+  {
+    "id": "sp-elec-analog-003",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "电解更换需极性耐压放电",
+    "original_hash": "3768b5cab2f85e526da93bbf24713fda2a196c522026537061019bbc0fbe92f8"
+  },
+  {
+    "id": "sp-elec-analog-004",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "栅绝缘需ESD等电位",
+    "original_hash": "20fcf6a282a291b191726d31997fb471648b3bc6cfbe2d27bd2dbc6f942de26b"
+  },
+  {
+    "id": "sp-elec-analog-005",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "单侧削顶查工作点与输入",
+    "original_hash": "ccd449db80dd49aa0414dd7eda5b57df209ef3baae62adf4902564b03870ec1b"
+  },
+  {
+    "id": "sp-elec-analog-006",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "修订",
+    "check": "纹波恶化查滤波电容；归直流源",
+    "original_hash": "db12e1cfed2442eea6731408d9f42552bb900de06b8503f7601162bfeb300690"
+  },
+  {
+    "id": "sp-elec-analog-007",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "阈值噪声用施密特回差",
+    "original_hash": "f81588b44142ebd24df3b3d28d79f590c2383d7b4ad3fa2c28c5d4cf50702ebe"
+  },
+  {
+    "id": "sp-elec-analog-008",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "20V超±5V供电会饱和",
+    "original_hash": "bf0366e5819e604ae353b86177d0db724c0ecd8af3ef807c3438be580493e5d7"
+  },
+  {
+    "id": "sp-elec-analog-009",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "跟随器高Ri缓冲驱动ADC",
+    "original_hash": "1fd08e464f7fb929eed86d82c015e50d9295c1bf2d10fa7871ef595cad3a66e1"
+  },
+  {
+    "id": "sp-elec-analog-010",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "ADC前限带防混叠而非消全部噪声",
+    "original_hash": "fca4cbd4fc83ffc63835e517e7d923214f2ee0d9b16d78e88af7276114df3925"
+  },
+  {
+    "id": "sp-elec-analog-011",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "续流为感性关断电流提供路",
+    "original_hash": "84f684c75ab859511b0d8999b1e77f0d710c1a4550b33900e4d5b8a59476e7b2"
+  },
+  {
+    "id": "sp-elec-analog-012",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "局部去耦降低供电瞬态回路",
+    "original_hash": "802a063adc802e20a051a00d0d0797360df46d469ddd0ee582e0059d8503db33"
+  },
+  {
+    "id": "sp-elec-analog-013",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t01",
+    "verdict": "修订",
+    "check": "NPN两个PN结以基极公共；归器件",
+    "original_hash": "71fd3406b0aeb7aa4b09e3484913068d71d4358ef26c9745472debb659503353"
+  },
+  {
+    "id": "sp-elec-analog-014",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "一级无输出查供电偏置负载耦合",
+    "original_hash": "2c6b6a885661e5b0072a2b8cf6812086518fdf22e44751c549e72a3d2cd96ce9"
+  },
+  {
+    "id": "sp-elec-analog-015",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "电阻或二极管挡须断电",
+    "original_hash": "ea443a64e61188a32ec5a19323ed604b655a226cc61dad57f54850da6afa9b33"
+  },
+  {
+    "id": "sp-elec-analog-016",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "极性电解反接可严重损坏",
+    "original_hash": "f3f4ef3f82f8a36673185bdb6f52f6810925a9b09445d1aff85060d3fc5bbc62"
+  },
+  {
+    "id": "sp-elec-analog-017",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "更多位不自动提高全部精度",
+    "original_hash": "58211381c63aab3b48ab7cd18c640370f927eb26744f746bcbfe307141932ffb"
+  },
+  {
+    "id": "sp-elec-analog-018",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "非线性比较器不能虚短",
+    "original_hash": "37b5489fc0967a4e25dc0e7bab1ee8fe93824f6d5a7c08acbc5429929925935c"
+  },
+  {
+    "id": "sp-elec-analog-019",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "正常截止反冲导通保护",
+    "original_hash": "f020261c2124d0fec1f6f15fc99292e1f1eaa3fc18ff8eaf52c3f5cbf2e123db"
+  },
+  {
+    "id": "sp-elec-analog-020",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "保护调理滤波ADC链皆合理",
+    "original_hash": "d953277322559486171d887a0827529311b0ae95665ac16a04ef2422227a9d2e"
+  },
+  {
+    "id": "sp-elec-analog-021",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "削顶须测供电偏置波形",
+    "original_hash": "0d23f13c6d125ba4b21d3d3ca304e60e73d5a717ed7326528330da9e5437d182"
+  },
+  {
+    "id": "sp-elec-analog-022",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "安全极性ESD而非外观全参数",
+    "original_hash": "6c2ccde1a8ce8ba38cd1477b328d6cf14a171239bb24dbae4c054111054c0579"
+  },
+  {
+    "id": "sp-elec-analog-023",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "双阈值正反馈与虚短互斥",
+    "original_hash": "8483ca2baf2dccba3200b2884b24ab6e03cb50ab79afe9ae6a68650cd54ede25"
+  },
+  {
+    "id": "sp-elec-analog-024",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "理想线性Au=-20/5=-4",
+    "original_hash": "f926cc1bfa77b16cb831c03696e09cce8d66d3a1a82d9d9323610e2f812694de"
+  },
+  {
+    "id": "sp-elec-analog-025",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t01",
+    "verdict": "修订",
+    "check": "恒压模型硅.7非理想零；归二极管",
+    "original_hash": "47af6c92c3b44f8360fa37caa3b3660af9644700f4a19cf8d4b4fe9e827dc004"
+  },
+  {
+    "id": "sp-elec-analog-026",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "正反向初检不能证明耐压动态全正常",
+    "original_hash": "4dc41ebf5eace6f95b286541b42c304bf1912f5424cbbfe555ed0a13a82ccafe"
+  },
+  {
+    "id": "sp-elec-analog-027",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "修订",
+    "check": "具体NPN集电极输出上削顶截止下削顶饱和",
+    "original_hash": "4c87524b45097d0c815ff8128269fac78eb71ef693689daf172fcacf3671aa29"
+  },
+  {
+    "id": "sp-elec-analog-028",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "迟滞减少抖动但有切换回差",
+    "original_hash": "fbfcd24d2734cf420d03d6f9f1250ac972dc7edfdf90d390302574f91e659dae"
+  },
+  {
+    "id": "sp-elec-analog-029",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "前端增益利用量程过大饱和，ADC不消噪",
+    "original_hash": "af6f7337c9cf6bfab332940771b64df1f3010ea8f5acc809cb8caf92134b333d"
+  },
+  {
+    "id": "sp-elec-analog-030",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t10",
+    "verdict": "核对通过",
+    "check": "二极管反并正常截止关断导通，非通用交流方案",
+    "original_hash": "0ed21bf8bcbc4df62b1967cdc21381925732002c16d32ec51ac2b812248b31c0"
+  },
+  {
+    "id": "sp-elec-digital-002",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t02",
+    "verdict": "核对通过",
+    "check": "上拉下拉给悬空输入默认状态",
+    "original_hash": "219d7db059147c95603c027ca3a05d20cfaf771e3f893bb16cc124feb7e8636f"
+  },
+  {
+    "id": "sp-elec-digital-003",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": "机械多次跳变须软硬件消抖",
+    "original_hash": "03d885e8e32ec07c9ebb49ec968ff428d202e4cd33c617a3d69276b31a494ec7"
+  },
+  {
+    "id": "sp-elec-digital-011",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "3.3/4096=.806mV而非绝对精度",
+    "original_hash": "615da439278c0bab40d2522427cd368c66786e21ccacbde3c42c968586b28e9f"
+  },
+  {
+    "id": "sp-elec-digital-012",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": ".5ms/2ms=.25",
+    "original_hash": "c6e2804ad1dfbe95acb1510fde235fd828fbf44d54c56d0de4ab1f5e2fa09e66"
+  },
+  {
+    "id": "sp-elec-digital-018",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "12位码宽不等于12位ENOB",
+    "original_hash": "83dc270e05adb092e6774c07443c72c83119d557fc7f70b8cfa3b2bee72d65ef"
+  },
+  {
+    "id": "sp-elec-digital-024",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "2⁸=256级",
+    "original_hash": "e92174291472462812f6e9fb8d6b04999c3e6cf733add02841f291c5679625d2"
+  },
+  {
+    "id": "sp-elec-digital-025",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": "2/8×100%=25%",
+    "original_hash": "5ade5d91276319c280cf2db006f49da30b490c69456b08bb1604d070f3625a45"
+  },
+  {
+    "id": "sp-elec-digital-028",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": "触点弹跳、RC施密特或延时状态机，时间须合理",
+    "original_hash": "874a2f1a690c69bf3fd540d9650990ff466b9caf9d635243a69f1afd2bea7bac"
+  },
+  {
+    "id": "sp-elec-digital-029",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t10",
+    "verdict": "核对通过",
+    "check": "PWM改占空比而非幅值，频率影响纹波和损耗",
+    "original_hash": "b7d5b374dd8b702f708ccfa0db4ae516991ac1b4f407c2cd7f0fd7878e817ca2"
+  },
+  {
+    "id": "sp-elec-digital-030",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "满码先查输入量程参考地再通道时序",
+    "original_hash": "c76d012bb4f8c0b97d014e90fbf64d235e204b499e8772b2fd7423556f7e8480"
+  },
+  {
+    "id": "sp-elec-comm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t02",
+    "verdict": "核对通过",
+    "check": "1000×2=2000bit/s",
+    "original_hash": "f74503de9aeb53e7e568e3380b36762e35d4d8d67c354e80d551c808cd067e1f"
+  },
+  {
+    "id": "sp-elec-comm-002",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "修订",
+    "check": "10log10(10)=10dB；归容量",
+    "original_hash": "a6efd23e59697e4ccfde7baffe9fe60e044893222b5544814a0c4e70e07fd2a3"
+  },
+  {
+    "id": "sp-elec-comm-003",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "移除重复",
+    "check": "8k×8=64k与uf010同任务",
+    "original_hash": "77e26cc098be5d6e7486d770be0edd422b947149cfc82689d03ca70473c95761"
+  },
+  {
+    "id": "sp-elec-comm-004",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t11",
+    "verdict": "核对通过",
+    "check": "语音去冗余为信源编码",
+    "original_hash": "6631350d5611cc3c0e6adf9e7475f29fa009a21eaa9867abc4c5a96810b2d1ed"
+  },
+  {
+    "id": "sp-elec-comm-005",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "核对通过",
+    "check": "检错加冗余信道编码",
+    "original_hash": "8bb84b7c4e44b7f5c2e8f3ef3fd87f5c40f1de74ab6adcf4bc7c552057060eae"
+  },
+  {
+    "id": "sp-elec-comm-006",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "核对通过",
+    "check": "奇数翻转改变奇偶性，偶数可能漏",
+    "original_hash": "7d90802ff0797d0f6f8dae9df72e8cee2ebfce8e3728a43c76b3ab2880ea75f3"
+  },
+  {
+    "id": "sp-elec-comm-007",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "核对通过",
+    "check": "CRC主要检错非绝对无错",
+    "original_hash": "6e8bfbf06c8e9aeb6ddce274f5a8d8b4483bf0bea0c4adf99253232136bd74a5"
+  },
+  {
+    "id": "sp-elec-comm-008",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t13",
+    "verdict": "核对通过",
+    "check": "位同步给码元判决节拍",
+    "original_hash": "6b10276b9e829831dedd3f927c811d97cecf7ad24593d81810c41e8ae5fcd2df"
+  },
+  {
+    "id": "sp-elec-comm-009",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t13",
+    "verdict": "核对通过",
+    "check": "帧同步找数据块边界",
+    "original_hash": "c51be366a86d4d9c7c07cb04daea7696945b7ed04c4f486d8a5bbde3e286aaf4"
+  },
+  {
+    "id": "sp-elec-comm-010",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t14",
+    "verdict": "核对通过",
+    "check": "眼开口大判决幅度时间裕量大",
+    "original_hash": "6359b5faa847168a587212119d9a01aa167d0180aec709998765485f603fdd18"
+  },
+  {
+    "id": "sp-elec-comm-011",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t15",
+    "verdict": "核对通过",
+    "check": "发端电到调制光",
+    "original_hash": "117825fe8f5465d96cb41560da6ef876bada471229485378d9335dd2dafa6f43"
+  },
+  {
+    "id": "sp-elec-comm-012",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t15",
+    "verdict": "核对通过",
+    "check": "接端光电二极管光到电流",
+    "original_hash": "2cb04dc48c89e3456c9d746c240edf73634bc56a77ab835fdf01d378a0e7b568"
+  },
+  {
+    "id": "sp-elec-comm-013",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t15",
+    "verdict": "核对通过",
+    "check": "小弯半径增弯损",
+    "original_hash": "e0aca23f5267e3ee3aa3dfc3d93c19b11f4672c8f2b361751cdd1b00e163c550"
+  },
+  {
+    "id": "sp-elec-comm-014",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t15",
+    "verdict": "核对通过",
+    "check": "OTDR散射反射定位盲区有限",
+    "original_hash": "9c90adf82f0b675c104baf1c44a6f286fd18c00df4d7b61722d284ccc603f91a"
+  },
+  {
+    "id": "sp-elec-comm-015",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "核对通过",
+    "check": "生成多项式倍数错误可漏检",
+    "original_hash": "a193bce39f3a564da5359638ed22d339e88873cbecd4e5965a301dfe2496cf95"
+  },
+  {
+    "id": "sp-elec-comm-016",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "修订",
+    "check": "去源冗余与加信道冗余不同；归编码",
+    "original_hash": "8e8c8c30966af6b3af24b05651caae66b205970775a86da3ed980b123fbf0cf8"
+  },
+  {
+    "id": "sp-elec-comm-017",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t13",
+    "verdict": "核对通过",
+    "check": "物理同步不保证业务恰一次",
+    "original_hash": "df9e689289d3f76f82edce7c6a6ffb4fe91b33b3760e3face53139d64c2b339a"
+  },
+  {
+    "id": "sp-elec-comm-018",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t16",
+    "verdict": "核对通过",
+    "check": "1550nm不可见仍伤眼不可直视",
+    "original_hash": "3b5a981c7dcf94a500c29cfe894ce048562c9a0304f1d5ae102fd2aecec7bc73"
+  },
+  {
+    "id": "sp-elec-comm-019",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t14",
+    "verdict": "核对通过",
+    "check": "闭眼多种原因不可唯一定位坏件",
+    "original_hash": "8b36d7355d9e4e53e0569fb93e8224c919f77e9e7b53e37ea269ecbc7b2f8a7e"
+  },
+  {
+    "id": "sp-elec-comm-020",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t13",
+    "verdict": "核对通过",
+    "check": "载波码元帧均同步非数据库事务",
+    "original_hash": "87e71e5b9e66e7b0599b97b053ff77f978c36730ce9347bbdcb26842e2f3d88f"
+  },
+  {
+    "id": "sp-elec-comm-021",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "核对通过",
+    "check": "检错纠错及ARQ均差错控制",
+    "original_hash": "899a87980d064fc2939118244c695dc58e77344f21f52b5679737fa9f7da2973"
+  },
+  {
+    "id": "sp-elec-comm-022",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t16",
+    "verdict": "核对通过",
+    "check": "脏弯熔接光源故障均降功率",
+    "original_hash": "063c7767ac30bfb5fa46031c5142a7951ea010bb631c6c3907426786415e4357"
+  },
+  {
+    "id": "sp-elec-comm-023",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t14",
+    "verdict": "核对通过",
+    "check": "噪声ISI抖动限带均可闭眼",
+    "original_hash": "c294f59a595d4b951ee83c35945cf45b4b8a171e13ecc38c4f60ab2013689d3b"
+  },
+  {
+    "id": "sp-elec-comm-024",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "核对通过",
+    "check": "16×8=128k",
+    "original_hash": "6758afcf51787263027889f1f009fe9079fcc17647b414f2215026602a23264b"
+  },
+  {
+    "id": "sp-elec-comm-025",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "核对通过",
+    "check": "10log10(100)=20dB",
+    "original_hash": "151e242817abf389757f0085b764e052d7e38d68cda6e4c0f0f79d7e3ebdae4b"
+  },
+  {
+    "id": "sp-elec-comm-026",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t12",
+    "verdict": "核对通过",
+    "check": "四机制目的代价与可靠性边界",
+    "original_hash": "f407f2076624d27a2d69bec7a220c4861c564180891af964e64b088b2323942a"
+  },
+  {
+    "id": "sp-elec-comm-027",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t13",
+    "verdict": "核对通过",
+    "check": "载波同频相、码元节拍、帧边界",
+    "original_hash": "38608273b5e5e03016b3c9c87b50ab9d6c2c6ee639b08915766679b9c94c995a"
+  },
+  {
+    "id": "sp-elec-comm-028",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t14",
+    "verdict": "核对通过",
+    "check": "眼图症状不能替代逐段验证",
+    "original_hash": "113b2f43edc58801fb70b5043b8e74a9719907fad32311aa81f0aab2321aed96"
+  },
+  {
+    "id": "sp-elec-comm-029",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t15",
+    "verdict": "核对通过",
+    "check": "电光纤光电链，衰减功率色散展宽",
+    "original_hash": "5c29f131d45e7252331cc0a5dd6bab2addf453bca31a02c430ac04a642df5733"
+  },
+  {
+    "id": "sp-elec-comm-030",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t16",
+    "verdict": "核对通过",
+    "check": "先光功率再OTDR与接收同步格式",
+    "original_hash": "f83c59b7d276b785b7faaeabfa7102de56653d35958b87d670ae6014528f0211"
+  },
+  {
+    "id": "ue-circuit-001",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "6并3为2再串2为4Ω",
+    "original_hash": "f241348c060db124550014445a987c758d7bca8aad7d1b1c545c3457fc798daa"
+  },
+  {
+    "id": "ue-circuit-002",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "核对通过",
+    "check": "2+5-4=3A",
+    "original_hash": "fdad9a7b27907dccce2f2d2e305e198f2ad9fe104373bbc291e4c74ad5a35f71"
+  },
+  {
+    "id": "ue-circuit-003",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "12/3=4A并3Ω；归源等效",
+    "original_hash": "684b4e17c11dbdd15f9a71ce8970f63cd9ba1602704d5c9189b5d22e44b8b5c1"
+  },
+  {
+    "id": "ue-circuit-004",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t04",
+    "verdict": "核对通过",
+    "check": "10/2=5Ω与10V",
+    "original_hash": "902c169a00ce4e74f61f3632c79cee3ea68654945bd65aeea0aea7c7018306f6"
+  },
+  {
+    "id": "ue-circuit-005",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "移除重复",
+    "check": "容抗31.8Ω且-j；与uf015近似重复",
+    "original_hash": "43e13df413b4312e80187616225d5eb472d64594f3f8d20a53c652b1f5fd858f"
+  },
+  {
+    "id": "ue-circuit-006",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t06",
+    "verdict": "核对通过",
+    "check": "LC=1e-6，f≈159Hz",
+    "original_hash": "2fa2b8594d591ec47fbb3b28959e6f95647418844b1a6c9c4cf1cf474f849ad6"
+  },
+  {
+    "id": "ue-circuit-007",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "修订",
+    "check": "不提前舍入，380²×.8/22=5.25kW",
+    "original_hash": "f071c75ac7888047eb7af1d173842572d560a3669a368beaf418a8b62eda4a66"
+  },
+  {
+    "id": "ue-circuit-008",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t10",
+    "verdict": "核对通过",
+    "check": "10(1-e^-1)=6.32V",
+    "original_hash": "c6f6cba901e328d694e75c821816dee99f5c88418f007a0e3911338e2f443bb4"
+  },
+  {
+    "id": "ue-circuit-009",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t09",
+    "verdict": "移除重复",
+    "check": "独立串联系统.81；与uf023近似重复",
+    "original_hash": "5d97d26cf21447c312a40816c6ad31ab3e11d9cb72554af92c3a06de993e7fbd"
+  },
+  {
+    "id": "ue-circuit-010",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t01",
+    "verdict": "核对通过",
+    "check": "参考负值守恒及关联功率，KVL不只DC",
+    "original_hash": "35389b7184998829e72ce59ee923f819f47624068a936fe12d89325e59cfe63d"
+  },
+  {
+    "id": "ue-circuit-011",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t07",
+    "verdict": "核对通过",
+    "check": "固定P下补容降低电源侧Q/I与线损",
+    "original_hash": "914c0084c8fddd53ae2b4e4c24061cf551d7f9ec73a7630739859a14bd5f864d"
+  },
+  {
+    "id": "ue-circuit-012",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t02",
+    "verdict": "修订",
+    "check": "停止NC串联、启动NO与自锁并；归控制",
+    "original_hash": "2634c31b14e19b8543612418fb623193bfa4e376219abf15a8254193e1428a1a"
+  },
+  {
+    "id": "ue-circuit-013",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t01",
+    "verdict": "核对通过",
+    "check": "平方功率不满足独立源叠加",
+    "original_hash": "188c6f55f73d1283e24ac70a6098089e40d64ac7dc3cfe5c7b78259b0e76c9ff"
+  },
+  {
+    "id": "ue-circuit-014",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t05",
+    "verdict": "核对通过",
+    "check": "无冲激时电容压连续",
+    "original_hash": "68727885fe6729737f8a9a2eb1858edbd39ea9708d8c0ce009873aacede0e8f9"
+  },
+  {
+    "id": "ue-circuit-015",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t04",
+    "verdict": "修订",
+    "check": "正Rth纯阻负载最大功率匹配，补正电阻条件",
+    "original_hash": "cb8393ffee7c63e7abeaa0cefb22cc56a86e9a74569132f0bf5ec3709bc7484d"
+  },
+  {
+    "id": "ue-analog-001",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "(5-.7)/1k=4.3mA",
+    "original_hash": "b72b9a55d70c2772bc5e64f367fbd509c338ee6ebfd3eb3388716503ac7cfe0b"
+  },
+  {
+    "id": "ue-analog-002",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "BE=.75V及BC=.55V均正偏为饱和",
+    "original_hash": "f641331dfb8daf4e6c78ec6d2835b97b3d1fe7aeb2918e92c3ef56ccccb5f0a4"
+  },
+  {
+    "id": "ue-analog-003",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "11.3/470k≈24μ，UCE≈7.2V",
+    "original_hash": "6c362a4b8a3f7492958f430a01d3dedd2ae9d8202ff3e89d449f02be2886d28e"
+  },
+  {
+    "id": "ue-analog-004",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "核对通过",
+    "check": "旁路Au=-100×2/1=-200",
+    "original_hash": "5412c042f454ca66a6de2b1e62c05840ca0b99c5b60c2b78605e833995dd368d"
+  },
+  {
+    "id": "ue-analog-005",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "反相-4×(-.5)=2V",
+    "original_hash": "25d468e7d342797b1c9cc56dce304d29e074f442c38f74fdf0c36d0d9c05d2a6"
+  },
+  {
+    "id": "ue-analog-006",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "100/(1+9)=10",
+    "original_hash": "030a1948532d378b34fb2ee5a5537ef61f1b07d648774d23bb93827b080cefdd"
+  },
+  {
+    "id": "ue-analog-007",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "无滤波全波.9×10=9V",
+    "original_hash": "3a12e3546d4a8ae261ac3f64240123a5e12b4c0c588a89ea644060c58d0d0a65"
+  },
+  {
+    "id": "ue-analog-008",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t09",
+    "verdict": "核对通过",
+    "check": "乙类ηmax=π/4≈.785",
+    "original_hash": "5f5bdd1ce1cc7723f46c82f61d7bf0a1689b4858b14f976c44846b5804693f37"
+  },
+  {
+    "id": "ue-analog-009",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t08",
+    "verdict": "核对通过",
+    "check": "同相输入负到正，输出-12到+12",
+    "original_hash": "51a6a3bd09b952d81937a350e8e76943c002fdf91164ae09bada74028af40a9c"
+  },
+  {
+    "id": "ue-analog-010",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t06",
+    "verdict": "核对通过",
+    "check": "环路稳定时负反馈ABC不提高增益",
+    "original_hash": "a02283c9d70be6385ac3a0819b1483250d5d02a90116ce644055e556599d8744"
+  },
+  {
+    "id": "ue-analog-011",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "系数要求R1=Rf/2,R2=2Rf",
+    "original_hash": "5d717e17db10a6192d0814ffb26b7d8e45e0b9b2168bebc75edf9e014959da7f"
+  },
+  {
+    "id": "ue-analog-012",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t04",
+    "verdict": "修订",
+    "check": "明确ICQ高低避免坐标歧义，ABD",
+    "original_hash": "2a37a9f83e9b8826c58e2500d45110854ade03500e5fbbfb63bc0d7d62aa54d1"
+  },
+  {
+    "id": "ue-analog-013",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t07",
+    "verdict": "核对通过",
+    "check": "理想线性负反馈虚短虚断",
+    "original_hash": "2b37ea4baf31d329d8787116294c3df39715bf0451e5fac2e01bdf28fe8abccb"
+  },
+  {
+    "id": "ue-analog-014",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t02",
+    "verdict": "核对通过",
+    "check": "真实硅压降随I/T变不恒.7",
+    "original_hash": "7ba6442aa7557b343420c6060beb28e7884830c917c41b5aa47fc125999e22f4"
+  },
+  {
+    "id": "ue-analog-015",
+    "subject": "模拟电子技术",
+    "topic_id": "analog-electronics.t03",
+    "verdict": "核对通过",
+    "check": "饱和IC受外电路限制不随IB无限增",
+    "original_hash": "debe2b438f96efd8ee75257f99805e600a4eb115282663e2e36b1ef45d127870"
+  },
+  {
+    "id": "ue-digital-001",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t01",
+    "verdict": "核对通过",
+    "check": "45+.25=45.25",
+    "original_hash": "d2f1a211dae15da3f909a507e3d99b188aa8b7216923308e31d797a344f4919c"
+  },
+  {
+    "id": "ue-digital-002",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "A+非AB=A+B",
+    "original_hash": "1836cce6d19a70d5f72b8e2a7772d81b7237133f04c2920e4d42c103b34d104c"
+  },
+  {
+    "id": "ue-digital-003",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "1,3,5,7均C=1",
+    "original_hash": "b5e0d477deb61ae777093607a41191d6df3841cf88405bf39cc6e047ca05a015"
+  },
+  {
+    "id": "ue-digital-004",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "A=0取B，A=1取非B",
+    "original_hash": "a523ae1153f486e3f7daecc4d05335e634cdd989f4d08d7cb153f54683a411e1"
+  },
+  {
+    "id": "ue-digital-005",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "Q0=0，JK11翻转得1",
+    "original_hash": "2e64c7dca348d6f303d82c1ea94b57260035b7bd5307cbfb56585d87cc1ea876"
+  },
+  {
+    "id": "ue-digital-006",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "修订",
+    "check": "三个有效沿依D读取101，明确题干时序",
+    "original_hash": "556a97440dabca5034a2c830fbbcd473c5e38189b6cc96107007b51218773f7c"
+  },
+  {
+    "id": "ue-digital-007",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t08",
+    "verdict": "核对通过",
+    "check": "模10需4位；与uf019重复任务",
+    "original_hash": "77eece0d410b3425f4f415d2d4119ff25bedc61a87f5901d151bd4e0efb5ce94"
+  },
+  {
+    "id": "ue-digital-008",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "修订",
+    "check": "临界采样率16k，补边界相位条件",
+    "original_hash": "006f0f6877de51bfc5d80c1b128e9727bdcb7db7a8d2c22708a76477ce0510f9"
+  },
+  {
+    "id": "ue-digital-009",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "128/256×10.24=5.12V",
+    "original_hash": "53c8a32244a3725d7475da0d127497b301203c33f97c98b723d4f1a17661a6e9"
+  },
+  {
+    "id": "ue-digital-010",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t04",
+    "verdict": "核对通过",
+    "check": "组合稳态无记忆仍有门延迟",
+    "original_hash": "5a51a83b34326b352fed73e62c04e27644ce9b1a449d2043636a43188dd96d44"
+  },
+  {
+    "id": "ue-digital-011",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "D、JK特性与异步清零ABC",
+    "original_hash": "683dee8de4b2770dafaabcce3afc10b92ed507cd8fefcab3fe8e0d7be2c480cf"
+  },
+  {
+    "id": "ue-digital-012",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t09",
+    "verdict": "核对通过",
+    "check": "4组每组2片共8且12地址线",
+    "original_hash": "4a9d8e28a4076c80876eaeb7939ff832729b4ef559b10d835cea33396340b391"
+  },
+  {
+    "id": "ue-digital-013",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t06",
+    "verdict": "核对通过",
+    "check": "异步清零不等时钟",
+    "original_hash": "5a40f739fba79361aae2e31a0fc533fa8bece79c7cd46e20cd74e800d0abbe9d"
+  },
+  {
+    "id": "ue-digital-014",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t03",
+    "verdict": "核对通过",
+    "check": "XOR为模2和看1个数奇偶",
+    "original_hash": "0203e6b6d4bc747a35e45433dc340bebd6673d9bde1de990ded85b47df5298b9"
+  },
+  {
+    "id": "ue-digital-015",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t11",
+    "verdict": "核对通过",
+    "check": "采样率不改变每样值量化级",
+    "original_hash": "e56fc938382c1a8213163b3dcb74c530896c3dfafd7019884c8bbac73fbd8a7e"
+  },
+  {
+    "id": "ue-comm-001",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t11",
+    "verdict": "核对通过",
+    "check": "熵.5×1+.25×2+.25×2=1.5",
+    "original_hash": "c5bae0300dffde824d748409582977880e2276793a70319db3ca64bc7cdf86d6"
+  },
+  {
+    "id": "ue-comm-002",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t03",
+    "verdict": "核对通过",
+    "check": "1MHz×log2(16)=4Mb/s",
+    "original_hash": "c94fd8d5c56f55bbd4d4265f015b16ca2b2e36dd57fb0a62606afced093ac899"
+  },
+  {
+    "id": "ue-comm-003",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "修订",
+    "check": "临界2×3.4=6.8k，补工程裕量",
+    "original_hash": "68eeb8270261a7215bd60e3147afa97a2db03ad67aaa254a0188e46774fe94d7"
+  },
+  {
+    "id": "ue-comm-004",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t02",
+    "verdict": "核对通过",
+    "check": "2400×2=4800bit/s",
+    "original_hash": "cb4fef028c72cc984d3c8b470ed1265ef59dd8260093df16465034ef7aa7be5b"
+  },
+  {
+    "id": "ue-comm-005",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "双边带2×5=10k",
+    "original_hash": "43d5a0747645f7fa06344c1084cb9c919b90ff1531ee04f19c57fcf24fed349e"
+  },
+  {
+    "id": "ue-comm-006",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "Carson2(75+15)=180k",
+    "original_hash": "589c24700218e92a5145cc359191ce122dc3044ee8355e527e20ef4b8ad6abba"
+  },
+  {
+    "id": "ue-comm-007",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t04",
+    "verdict": "核对通过",
+    "check": "8k×8=64k近似重复PCM任务",
+    "original_hash": "1e4adae16944ac3f32d478c78957e085b7c3cbe4a4f83e7365feba887c468a70"
+  },
+  {
+    "id": "ue-comm-008",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "核对通过",
+    "check": "高侧LO=1000+465=1465，镜像1930",
+    "original_hash": "39aee2341f48ef273008eb92091a14dacbe2bb886406b82567074a6ac09acf92"
+  },
+  {
+    "id": "ue-comm-009",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "修订",
+    "check": "LC=1e-16，f≈15.9MHz；归振荡",
+    "original_hash": "3426b6427ede16dd7ae5e699bc36fe648d465433eaf34e855a5f971177f58ddb"
+  },
+  {
+    "id": "ue-comm-010",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t07",
+    "verdict": "核对通过",
+    "check": "半双工频谱光窗ABC，代际非只倍频",
+    "original_hash": "57286146d39d2caba540a7e53a27fa5b3c278fdae82f4722b43ac9b559f4f38f"
+  },
+  {
+    "id": "ue-comm-011",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t13",
+    "verdict": "核对通过",
+    "check": "奈氏零ISI、rolloff增带宽、sinc无限长",
+    "original_hash": "bf382325a21817d62261a825fede9798db1cf5d25be4acba1189fc86cf2ccda2"
+  },
+  {
+    "id": "ue-comm-012",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t09",
+    "verdict": "核对通过",
+    "check": "振荡条件混频选频与不过调AM包络",
+    "original_hash": "599ccb8e33b4ab6e2db91a6d590319f64037cfaa2f72f28819874794ff25fd53"
+  },
+  {
+    "id": "ue-comm-013",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t01",
+    "verdict": "核对通过",
+    "check": "半双工交替双向",
+    "original_hash": "033a0956b03fc347a7b21b32f09d69637a98392f7f6f2a01e13b61b49c7d4363"
+  },
+  {
+    "id": "ue-comm-014",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t02",
+    "verdict": "核对通过",
+    "check": "固定B/SNR的容量有限不随M无限增",
+    "original_hash": "1f175d67022d5334e8aacacf3a44362c6662685ac014d91c1513ba2d0ae222de"
+  },
+  {
+    "id": "ue-comm-015",
+    "subject": "通信原理与高频电子线路",
+    "topic_id": "communication.t05",
+    "verdict": "核对通过",
+    "check": "AM m>1包络可反转检波失真",
+    "original_hash": "3774ce9ae818b6952b4db3c7634f9921d36d5033da831a0f08bfce56e212aee8"
+  }
+]

@@ -41,7 +41,16 @@
     for (const key of STORE_KEYS) {
       try {
         const parsed = JSON.parse(localStorage.getItem(key) || "null");
-        if (parsed && typeof parsed === "object") return parsed.state && typeof parsed.state === "object" ? parsed.state : parsed;
+        if (parsed && typeof parsed === "object") {
+          const progress = parsed.state && typeof parsed.state === "object" ? parsed.state : parsed;
+          QUESTION_INDEX.forEach((question) => {
+            if (!question.answer_revision || parsed.questionRevisions?.[question.id] === question.answer_revision) return;
+            ["done", "wrong", "streak", "history", "reviewMeta", "errorTags"].forEach((field) => {
+              if (progress[field]) delete progress[field][question.id];
+            });
+          });
+          return progress;
+        }
       } catch {}
     }
     return {};
@@ -105,13 +114,13 @@
   }
 
   function normalizeAnswer(value) {
-    return String(value || "").replace(/\s+/g, "").toLowerCase().replace(/[，、；,;]/g, "|").replace(/[(（].*?[)）]/g, "");
+    return String(value || "").normalize("NFKC").replace(/\s+/g, "").toLowerCase().replace(/[，、；,;]/g, "|").replace(/[−–]/g, "-");
   }
 
   function isCorrect(question, given) {
     if (question.type === "简答") return given === "掌握";
     if (question.type === "多选") return [...String(given || "")].sort().join("") === [...String(question.answer || "")].sort().join("");
-    if (question.type === "填空") return normalizeAnswer(given) === normalizeAnswer(question.answer);
+    if (question.type === "填空") return [question.answer, ...(Array.isArray(question.accepted_answers) ? question.accepted_answers : [])].some((answer) => normalizeAnswer(given) === normalizeAnswer(answer));
     return given === question.answer;
   }
 

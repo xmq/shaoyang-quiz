@@ -1,0 +1,890 @@
+[
+  {
+    "id": "audit26-core-net-topology",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "网络组成、功能与拓扑",
+    "stem": "机房20台电脑分别连接到同一台交换机。说明物理拓扑；一台电脑网线断开与中心交换机断电，影响范围有何不同？再解释“所有电脑都能访问同一打印服务”体现什么网络功能。",
+    "options": {},
+    "answer": "物理拓扑为星型。单条终端链路断开通常只影响对应电脑；中心交换机断电且没有冗余时，全部终端失去通过该交换机通信的能力。共同访问打印服务体现资源共享。",
+    "explanation": "先画出终端到中心的独立链路，再分别切断边和中心。故障影响由连接关系决定，资源共享则是网络用途。",
+    "subject": "计算机网络",
+    "source_chapter": "网络组成、功能与拓扑",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "网络设备与拓扑",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.overview",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "辨认星型物理连接",
+        "points": 1
+      },
+      {
+        "criterion": "说明单链路与中心故障范围",
+        "points": 1
+      },
+      {
+        "criterion": "判定打印服务为资源共享",
+        "points": 1
+      }
+    ],
+    "topic_title": "网络组成、功能与拓扑",
+    "chapter_id": "net-01",
+    "required_depth": "直接应用",
+    "topic_order": 0
+  },
+  {
+    "id": "audit26-core-net-layers",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "分层与地址",
+    "stem": "主机通过以太网发送一个TCP报文段。按从应用数据到线路比特的顺序，写出传输层、网络层、数据链路层的主要封装单位及地址依据。说明路由器转发时是否必然改变TCP源端口。",
+    "options": {},
+    "answer": "传输层把应用字节封装为TCP报文段，用端口区分进程；网络层封装为IP数据报，用IP地址寻址；链路层封装为以太网帧，用MAC地址交付当前链路下一跳；物理层传送比特。普通无NAT路由转发不必改变TCP源端口。",
+    "explanation": "数据单位、地址和职责要按层对应。跨路由通常重新封装帧，但端口是端到端传输标识，不由普通逐跳转发必然修改。",
+    "subject": "计算机网络",
+    "source_chapter": "分层与地址",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "网络体系结构",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.layers-addresses",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "报文段端口对应传输层",
+        "points": 1
+      },
+      {
+        "criterion": "IP分组地址对应网络层",
+        "points": 1
+      },
+      {
+        "criterion": "帧MAC对应链路层并说明不必改端口",
+        "points": 1
+      }
+    ],
+    "topic_title": "分层与地址",
+    "chapter_id": "net-01",
+    "required_depth": "综合应用",
+    "topic_order": 3
+  },
+  {
+    "id": "audit26-core-net-protocol-service",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "协议、服务与封装",
+    "stem": "用“网购订单”举例，解释网络协议、层间服务、封装的区别：HTTP客户端与服务器遵守的消息规则属于哪一种？HTTP调用TCP发送数据属于哪一种关系？TCP添加序号等首部属于哪一种过程？",
+    "options": {},
+    "answer": "HTTP双方约定请求响应格式和含义属于对等实体的协议；HTTP使用TCP提供的可靠字节流，属于上层使用下层服务；TCP在应用字节前添加含端口、序号等控制信息是封装。",
+    "explanation": "协议描述对等实体怎么交互，服务描述下层向上层提供什么，封装是实际增加控制信息的操作。三者相关但不是同义词。",
+    "subject": "计算机网络",
+    "source_chapter": "协议、服务与封装",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "网络体系结构",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.protocol-service",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "正确识别协议",
+        "points": 1
+      },
+      {
+        "criterion": "正确识别层间服务",
+        "points": 1
+      },
+      {
+        "criterion": "正确识别封装",
+        "points": 1
+      }
+    ],
+    "topic_title": "协议、服务与封装",
+    "chapter_id": "net-01",
+    "required_depth": "直接应用",
+    "topic_order": 4
+  },
+  {
+    "id": "audit26-core-net-media-direction",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "介质与传输方向",
+    "stem": "两栋楼相距800米，需要高速连接，周围电磁干扰较强。在普通铜双绞线直连与光纤中选择较合理方案并说明原因。再说明半双工和全双工的区别，光纤是否天然只允许单向传输？",
+    "options": {},
+    "answer": "选择适合距离的光纤链路及配套收发模块；光纤抗电磁干扰，普通以太网铜双绞线单段距离通常不足800米。半双工允许双向但不能同时，全双工允许同时双向。光纤可以通过双纤或合适波分等方式实现双向通信，不等于只能单向。",
+    "explanation": "介质选择要考虑距离、速率和干扰，收发方向由链路实现决定，不能从“用光传输”直接推出单工。",
+    "subject": "计算机网络",
+    "source_chapter": "介质与传输方向",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "物理层与传输介质",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.media",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "根据距离干扰选择光纤",
+        "points": 1
+      },
+      {
+        "criterion": "区分半双工和全双工",
+        "points": 1
+      },
+      {
+        "criterion": "说明光纤可实现双向",
+        "points": 1
+      }
+    ],
+    "topic_title": "介质与传输方向",
+    "chapter_id": "net-02",
+    "required_depth": "直接应用",
+    "topic_order": 5
+  },
+  {
+    "id": "audit26-core-net-vlan-learning",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "帧、交换与VLAN",
+    "stem": "一台二层交换机有端口1、2属于VLAN10，端口3属于VLAN20。MAC表初始为空。端口1收到源MAC=A、目的MAC=B的帧，B连接端口2。写出学习和转发行为；B回复A后表中应有哪些关联？VLAN20能否收到第一帧？",
+    "options": {},
+    "answer": "交换机学习A属于VLAN10、位于端口1；B未知，第一帧仅向VLAN10除入端口外的端口2泛洪。端口3属于VLAN20，不接收此次泛洪。B从端口2回复时学习B→端口2，查到A→端口1后定向转发。",
+    "explanation": "交换机学习源地址，转发查目的地址；未知单播的泛洪仍受VLAN边界限制。第一次收到帧不能仅由目的MAC猜出B所在端口。",
+    "subject": "计算机网络",
+    "source_chapter": "帧、交换与VLAN",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "数据链路与局域网",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.frames-switching",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "学习源A与端口1",
+        "points": 1
+      },
+      {
+        "criterion": "同VLAN未知单播泛洪并隔离VLAN20",
+        "points": 1
+      },
+      {
+        "criterion": "回复时学习B并定向转发A",
+        "points": 1
+      }
+    ],
+    "topic_title": "帧、交换与VLAN",
+    "chapter_id": "net-03",
+    "required_depth": "综合应用",
+    "topic_order": 8
+  },
+  {
+    "id": "audit26-core-net-cd-ca",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "以太网与无线接入",
+    "stem": "说明为什么传统共享半双工以太网需要CSMA/CD，而普通交换式全双工链路不需要运行它。802.11常用CSMA/CA后是否保证绝不碰撞？",
+    "options": {},
+    "answer": "共享半双工链路上多个站争用同一介质，可能同时发送，所以要侦听并检测碰撞、退避重发。交换式全双工点到点链路可同时双向传输，没有这种共享介质碰撞，通常不运行CSMA/CD。802.11用侦听、退避和确认等方式降低碰撞概率，但隐藏站或同时退避结束仍会碰撞。",
+    "explanation": "必须带上“共享半双工”“全双工”的条件。冲突避免是降低概率，不是绝对消除，且不同接入机制不能只凭网络名称套用。",
+    "subject": "计算机网络",
+    "source_chapter": "以太网与无线接入",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "数据链路与局域网",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.ethernet-wifi",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "解释共享半双工的争用",
+        "points": 1
+      },
+      {
+        "criterion": "解释全双工无需碰撞检测",
+        "points": 1
+      },
+      {
+        "criterion": "说明CA仍可能碰撞",
+        "points": 1
+      }
+    ],
+    "topic_title": "以太网与无线接入",
+    "chapter_id": "net-03",
+    "required_depth": "直接应用",
+    "topic_order": 11
+  },
+  {
+    "id": "audit26-core-net-ipv6-fragment",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "IPv4与IPv6地址",
+    "stem": "一个IPv6数据包太大，无法通过下一跳链路。中间路由器能否像IPv4那样直接分片？它应如何反馈，源主机可怎样处理？再写出IPv4和IPv6地址位数及IPv6基本首部长度。",
+    "options": {},
+    "answer": "IPv6中间路由器不进行分片，丢弃过大包并返回ICMPv6 Packet Too Big及相关MTU。源端据此调整报文大小或在需要时使用分片扩展首部。IPv4地址32位，IPv6地址128位，IPv6基本首部40字节。",
+    "explanation": "地址长度与首部长度不是一回事。路径MTU发现让源端调整，不能要求中间IPv6路由器直接切片。",
+    "subject": "计算机网络",
+    "source_chapter": "IPv4与IPv6地址",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "IPv4与子网",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.ip-versions",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "IPv6路由器不分片",
+        "points": 1
+      },
+      {
+        "criterion": "Packet Too Big反馈及源端调整",
+        "points": 1
+      },
+      {
+        "criterion": "32位128位与40字节正确",
+        "points": 1
+      }
+    ],
+    "topic_title": "IPv4与IPv6地址",
+    "chapter_id": "net-04",
+    "required_depth": "综合应用",
+    "topic_order": 15
+  },
+  {
+    "id": "audit26-core-net-mail-flow",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "名称、配置与应用服务",
+    "stem": "甲用邮件客户端给乙发送邮件，乙当时电脑关机。描述邮件从甲到乙后来读取的基本流程，写出SMTP与POP3/IMAP的分工；邮箱地址@后的域名是否一定就是实际接收服务器主机名？",
+    "options": {},
+    "answer": "甲客户端通过SMTP提交到发送服务器，服务器按收件域的DNS MX等信息找到接收服务器并通过SMTP中继；邮件可保存在接收服务器，乙开机后通过IMAP或POP3读取。@后是邮箱域，实际邮件服务器主机名可由MX记录指定，不必相同。",
+    "explanation": "邮件是存储转发，不要求双方同时在线。客户端取信与服务器之间投递是不同方向的业务，不能用POP3代替SMTP中继。",
+    "subject": "计算机网络",
+    "source_chapter": "名称、配置与应用服务",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "应用层协议",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "net.app-protocols",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "SMTP提交和服务器中继",
+        "points": 1
+      },
+      {
+        "criterion": "服务器暂存及POP3或IMAP取信",
+        "points": 1
+      },
+      {
+        "criterion": "邮箱域与实际MX主机区别",
+        "points": 1
+      }
+    ],
+    "topic_title": "名称、配置与应用服务",
+    "chapter_id": "net-06",
+    "required_depth": "直接应用",
+    "topic_order": 20
+  },
+  {
+    "id": "audit26-core-ds-linked-delete",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "链表",
+    "stem": "带头结点的单链表为H→A→B→C→NULL，p已指向A。写出删除B的关键伪代码及删除后的链。若要删除末结点C但只知道头指针，为何不能笼统说全过程O(1)？",
+    "options": {},
+    "answer": "q=p->next；p->next=q->next；释放q。结果为H→A→C→NULL。已知前驱p时修改指针和释放可为O(1)；只知头指针需先遍历寻找C的前驱，通常O(n)。",
+    "explanation": "先保存被删结点，改前驱指针后再释放，不能释放后继续读取q->next。复杂度要包含定位代价。",
+    "subject": "算法与数据结构",
+    "source_chapter": "链表",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "线性表",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t03",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "保存B并先接回后继再释放",
+        "points": 1
+      },
+      {
+        "criterion": "给出H到A到C链",
+        "points": 1
+      },
+      {
+        "criterion": "说明寻找前驱需线性遍历",
+        "points": 1
+      }
+    ],
+    "topic_title": "链表",
+    "chapter_id": "data-structures.c02",
+    "required_depth": "综合应用",
+    "topic_order": 2
+  },
+  {
+    "id": "audit26-core-ds-circular-trace",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "队列与循环队列",
+    "stem": "长度为6的数组实现循环队列，front指队头，rear指下一入队位置，牺牲一格。初始front=4、rear=1。依次出队一次、入队两次，求最终front、rear、元素数，并写队满条件。",
+    "options": {},
+    "answer": "初始元素数(1-4+6)%6=3。出队后front=5；两次入队rear依次2、3。最终front=5、rear=3，元素数(3-5+6)%6=4。队满条件(rear+1)%6==front，最大容量为5。",
+    "explanation": "用模运算处理回绕，队头随出队走、队尾随入队走。数组长度6不是实际可存6个元素。",
+    "subject": "算法与数据结构",
+    "source_chapter": "队列与循环队列",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "栈与队列",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t05",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "正确更新front与rear",
+        "points": 1
+      },
+      {
+        "criterion": "算出最终4元素",
+        "points": 1
+      },
+      {
+        "criterion": "写出取模判满和最大容量5",
+        "points": 1
+      }
+    ],
+    "topic_title": "队列与循环队列",
+    "chapter_id": "data-structures.c03",
+    "required_depth": "综合应用",
+    "topic_order": 4
+  },
+  {
+    "id": "audit26-core-ds-kmp-prefix",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "串与KMP",
+    "stem": "模式串P=ABABAC，采用从0开始的前缀函数pi，pi[i]为P[0..i]最长相等真前后缀长度。求完整pi数组。若已匹配ABABA而下一字符失配，已匹配长度j应先回退为多少？",
+    "options": {},
+    "answer": "pi=[0,0,1,2,3,0]。失配前j=5，应回退到pi[j-1]=pi[4]=3，保留ABA这个已匹配前后缀，再尝试当前文本字符，不回退文本指针。",
+    "explanation": "“真”表示不能取整个子串自身。P末尾C使最后项回到0，但失配发生在已匹配前5字符时，应查pi[4]而不是整串最后项。",
+    "subject": "算法与数据结构",
+    "source_chapter": "串与KMP",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "查找与散列",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t06",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "完整pi六项正确",
+        "points": 1
+      },
+      {
+        "criterion": "失配时j回退到3",
+        "points": 1
+      },
+      {
+        "criterion": "解释不回退文本及保存ABA",
+        "points": 1
+      }
+    ],
+    "topic_title": "串与KMP",
+    "chapter_id": "data-structures.c03",
+    "required_depth": "综合应用",
+    "topic_order": 5
+  },
+  {
+    "id": "audit26-core-ds-prim-steps",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "最小生成树",
+    "stem": "连通无向图仅有AB=2、AC=5、BC=1、BD=4、CD=3四个顶点的这些边。从A执行Prim，写每次加入的顶点和所选边，求总权值，并解释为何不能选连接两个已加入顶点的边。",
+    "options": {},
+    "answer": "先加入A；选AB=2加入B；当前跨割候选AC=5、BC=1、BD=4，选BC=1加入C；再选CD=3加入D。生成树边AB、BC、CD，总权6。连接两个已在树中的顶点不会增加新顶点，加入树边会形成环，不符合Prim跨割扩展规则。",
+    "explanation": "Prim每一步比较树内到树外的边，不是全图随便找最轻边，也不是求A到各点最短路径。",
+    "subject": "算法与数据结构",
+    "source_chapter": "最小生成树",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "图结构与算法",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t15",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "顶点加入A/B/C/D",
+        "points": 1
+      },
+      {
+        "criterion": "三边权2/1/3且总6",
+        "points": 1
+      },
+      {
+        "criterion": "解释跨割新增与不成环",
+        "points": 1
+      }
+    ],
+    "topic_title": "最小生成树",
+    "chapter_id": "data-structures.c05",
+    "required_depth": "综合应用",
+    "topic_order": 14
+  },
+  {
+    "id": "audit26-core-ds-bellman-negative",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "最短路径",
+    "stem": "有向图A→B权4、A→C权5、B→C权-2、C→D权3，无其他边。从A求最短路，说明为何应选能处理负权边的算法，并给出B、C、D最终距离及一轮按所列边序松弛的变化。",
+    "options": {},
+    "answer": "可用Bellman-Ford；经典Dijkstra要求非负边，不能仅凭此图某次恰好算对就忽略条件。初始A=0其他无穷；按边序松弛后B=4、C先5再2、D=5。最终B=4、C=2、D=5；后续无改动。还可额外一轮检查是否存在可达负环，本图无环。",
+    "explanation": "负权边与负权环不同。松弛比较dist[u]+w与dist[v]；此题边序允许一轮把最短值传播到D，其他边序可能需要更多轮。",
+    "subject": "算法与数据结构",
+    "source_chapter": "最短路径",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "图结构与算法",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t16",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "选择可处理负边方法并说明条件",
+        "points": 1
+      },
+      {
+        "criterion": "给出4/2/5距离",
+        "points": 1
+      },
+      {
+        "criterion": "展示C从5降2和D得到5",
+        "points": 1
+      }
+    ],
+    "topic_title": "最短路径",
+    "chapter_id": "data-structures.c05",
+    "required_depth": "综合应用",
+    "topic_order": 15
+  },
+  {
+    "id": "audit26-core-ds-topo-trace",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "拓扑排序",
+    "stem": "课程依赖为A→C、B→C、C→D。用Kahn拓扑排序，初始零入度顶点按字母序入队，后续使用FIFO。写出输出顺序和处理B后队列内容。若再加D→B，能否输出全部顶点？",
+    "options": {},
+    "answer": "初始队列[A,B]。输出A后C入度由2到1，队列[B]；输出B后C入度到0入队，队列[C]。最终输出A,B,C,D。加D→B后形成B→C→D→B环，只能先输出A，随后无零入度顶点，不能完成。",
+    "explanation": "每次输出顶点都要删除其出边并减少相邻入度。不是简单把所有顶点按字母排序；环下游顶点也可能被阻塞。",
+    "subject": "算法与数据结构",
+    "source_chapter": "拓扑排序",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "图结构与算法",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t17",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "输出A/B/C/D",
+        "points": 1
+      },
+      {
+        "criterion": "处理B后队列C",
+        "points": 1
+      },
+      {
+        "criterion": "识别新增边产生环并无法完成",
+        "points": 1
+      }
+    ],
+    "topic_title": "拓扑排序",
+    "chapter_id": "data-structures.c05",
+    "required_depth": "综合应用",
+    "topic_order": 16
+  },
+  {
+    "id": "audit26-core-ds-binary-steps",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "二分查找",
+    "stem": "有序数组[3,8,12,17,25,31,40]，下标0～6。用闭区间二分查找25，mid=floor((low+high)/2)。列出每轮low、high、mid及比较值；再说明找不存在的26何时结束。",
+    "options": {},
+    "answer": "找25：先(0,6,3)比较17，小于25令low=4；再(4,6,5)比较31，大于25令high=4；再(4,4,4)比较25成功，共3次。找26同样比较17、31、25，最后low=5、high=4，low>high时失败。",
+    "explanation": "闭区间未命中时必须将边界越过mid，即low=mid+1或high=mid-1。若只设low=mid，可能死循环；边界规则不能与半开区间混用。",
+    "subject": "算法与数据结构",
+    "source_chapter": "二分查找",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "查找与散列",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t18",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "三轮边界与中点正确",
+        "points": 1
+      },
+      {
+        "criterion": "25成功且3比较",
+        "points": 1
+      },
+      {
+        "criterion": "26以low5大于high4终止",
+        "points": 1
+      }
+    ],
+    "topic_title": "二分查找",
+    "chapter_id": "data-structures.c06",
+    "required_depth": "直接应用",
+    "topic_order": 17
+  },
+  {
+    "id": "audit26-core-ds-sort-choice",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "堆、希尔、基数与排序选择",
+    "stem": "三组任务分别为：①200条基本有序记录；②要求最坏O(nlogn)、辅助空间尽量常数且不要求稳定；③整数键只有3位，允许按位分配桶并要求稳定。各选一种合适排序，说明条件和一项边界。",
+    "options": {},
+    "answer": "①可用直接插入，基本有序时移动少；逆序时仍O(n²)。②可用堆排序，最坏O(nlogn)且数组原地，但不稳定。③可用稳定的LSD基数排序，按个位十位百位稳定分配收集；需可分解的有限位键、桶空间，每轮必须稳定。",
+    "explanation": "算法选择取决于输入与约束。希尔是分组插入，通常不稳定；不能把所有O(nlogn)算法都认为常数空间或最坏有保证。",
+    "subject": "算法与数据结构",
+    "source_chapter": "堆、希尔、基数与排序选择",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "排序算法",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "data-structures.t23",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "基本有序选插入及平方边界",
+        "points": 1
+      },
+      {
+        "criterion": "最坏常数空间选堆且不稳定",
+        "points": 1
+      },
+      {
+        "criterion": "基数按位稳定及键域桶条件",
+        "points": 1
+      }
+    ],
+    "topic_title": "堆、希尔、基数与排序选择",
+    "chapter_id": "data-structures.c07",
+    "required_depth": "直接应用",
+    "topic_order": 22
+  },
+  {
+    "id": "audit26-core-os-system-call",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "用户态、内核态与系统调用",
+    "stem": "用户程序调用read读取磁盘文件。说明库函数、系统调用和内核态的关系；为何普通用户代码不能直接执行修改页表等特权操作？系统调用是否必然导致进程切换？",
+    "options": {},
+    "answer": "库函数可封装系统调用；需要内核服务时通过受控入口从用户态进入内核态，由内核检查权限并执行。页表等涉及全系统保护，任意用户修改会破坏隔离，所以受特权限制。进入内核不必然换进程：请求可立即完成并返回；等待I/O等情况下才可能阻塞并调度其他进程。",
+    "explanation": "模式切换改变权限级别，进程切换改变执行主体，二者不是同义。部分库函数可在用户态完成，不是每次库调用都系统调用。",
+    "subject": "操作系统",
+    "source_chapter": "用户态、内核态与系统调用",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "操作系统基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "operating-system.t02",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "区分库封装与受控系统入口",
+        "points": 1
+      },
+      {
+        "criterion": "说明特权保护目的",
+        "points": 1
+      },
+      {
+        "criterion": "区分模式切换和进程切换",
+        "points": 1
+      }
+    ],
+    "topic_title": "用户态、内核态与系统调用",
+    "chapter_id": "operating-system.c02",
+    "required_depth": "直接应用",
+    "topic_order": 1
+  },
+  {
+    "id": "audit26-core-os-deadlock-order",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "死锁条件与处理",
+    "stem": "P先持有R1等待R2，Q先持有R2等待R1；两资源各一份且不可剥夺。指出等待环和四必要条件，给出一种预防方案并说明打破哪个条件。仅把时间片缩短能否保证解决？",
+    "options": {},
+    "answer": "等待环为P→Q→P。资源互斥、持有一个再请求另一个、不可剥夺及循环等待同时出现。可规定所有进程都先申请R1再R2，破坏循环等待；或一次申请全部资源破坏请求保持。缩短时间片不会自动释放持有资源，不能保证解决。",
+    "explanation": "需要具体对应条件，不能只说“加强调度”。预防改变申请规则，检测后撤销进程则属于另一处理阶段。",
+    "subject": "操作系统",
+    "source_chapter": "死锁条件与处理",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "死锁",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "operating-system.t07",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "识别环及四必要条件",
+        "points": 1
+      },
+      {
+        "criterion": "具体预防方法和被破坏条件",
+        "points": 1
+      },
+      {
+        "criterion": "说明短时间片不能自动释放资源",
+        "points": 1
+      }
+    ],
+    "topic_title": "死锁条件与处理",
+    "chapter_id": "operating-system.c04",
+    "required_depth": "综合应用",
+    "topic_order": 6
+  },
+  {
+    "id": "audit26-core-os-file-allocation",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "文件组织、目录与链接",
+    "stem": "文件有逻辑块0～3，索引块记录物理块[8,20,5,13]，每块1024 B。访问文件内字节偏移2500应取哪个物理块、块内偏移多少？若新增一个块，说明索引分配与连续分配的不同限制。",
+    "options": {},
+    "answer": "2500=2×1024+452，访问逻辑块2，对应物理块5，块内偏移452。索引分配可在其他空闲位置分配新块并追加映射，受索引容量等限制；连续分配通常要求末尾有相邻空闲块，否则需扩展区或搬移。",
+    "explanation": "文件块映射与内存分页不是同一管理对象，但都应先做除法拆分编号和偏移。索引表下标从0开始，不能把第三个块误取物理20。",
+    "subject": "操作系统",
+    "source_chapter": "文件组织、目录与链接",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "文件系统",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "operating-system.t11",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "逻辑块2和偏移452",
+        "points": 1
+      },
+      {
+        "criterion": "查得物理块5",
+        "points": 1
+      },
+      {
+        "criterion": "比较索引扩展与连续空间限制",
+        "points": 1
+      }
+    ],
+    "topic_title": "文件组织、目录与链接",
+    "chapter_id": "operating-system.c06",
+    "required_depth": "综合应用",
+    "topic_order": 10
+  },
+  {
+    "id": "audit26-core-os-spool-flow",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "I/O控制、缓冲与SPOOLing",
+    "stem": "三名用户同时提交打印作业。解释SPOOLing如何在只有一台打印机时让用户感觉可以共享，写出提交、暂存、排队、实际输出的流程。为什么这不等于打印机能同时物理打印三个作业？",
+    "options": {},
+    "answer": "用户把作业提交给打印服务，数据先存入磁盘等队列；后台打印进程按调度取作业，依次驱动打印机输出。用户程序不必独占等待整个打印过程。逻辑上多人提交共享服务，物理设备仍按任务串行工作，不能把逻辑并发当成同时打印。",
+    "explanation": "SPOOLing用缓冲存储和后台服务把独占设备虚拟化。排队不增加打印机本体数量，也不取消失败重试、队列容量和权限管理需求。",
+    "subject": "操作系统",
+    "source_chapter": "I/O控制、缓冲与SPOOLing",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "设备与I/O管理",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "operating-system.t12",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "提交到暂存队列",
+        "points": 1
+      },
+      {
+        "criterion": "后台逐作业驱动打印",
+        "points": 1
+      },
+      {
+        "criterion": "逻辑共享与物理串行区别",
+        "points": 1
+      }
+    ],
+    "topic_title": "I/O控制、缓冲与SPOOLing",
+    "chapter_id": "operating-system.c07",
+    "required_depth": "直接应用",
+    "topic_order": 11
+  },
+  {
+    "id": "audit26-core-db-three-levels",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "数据库、DBMS与三级模式",
+    "stem": "学生系统只对学生展示本人姓名和成绩，管理员维护全校学生选课关系，DBA把底层文件改为新索引组织。分别对应哪种模式？底层变化通常依靠哪级映像维持应用不变？",
+    "options": {},
+    "answer": "学生看到的受限视图对应外模式；全校学生选课的全局逻辑结构对应模式（概念模式）；文件与索引存储对应内模式。调整模式/内模式映像可在物理组织改变时保持概念模式和应用接口不变，体现物理数据独立性。",
+    "explanation": "教材“模式”不等于某产品SQL schema命名空间。外、概念、内描述抽象层次，独立性也不是不受限制的任意模式修改。",
+    "subject": "数据库",
+    "source_chapter": "数据库、DBMS与三级模式",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "数据库系统基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t01",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "三种情形对应外概念内",
+        "points": 1
+      },
+      {
+        "criterion": "正确模式内模式映像",
+        "points": 1
+      },
+      {
+        "criterion": "解释物理独立性",
+        "points": 1
+      }
+    ],
+    "topic_title": "数据库、DBMS与三级模式",
+    "chapter_id": "database.c01",
+    "required_depth": "直接应用",
+    "topic_order": 0
+  },
+  {
+    "id": "audit26-core-db-er-convert",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "E-R转关系",
+    "stem": "学生Student(sid,name)与课程Course(cid,title)为M:N选课联系，联系属性为grade，同一学生每课最多选一次。请转换为关系模式，指出选课表主键和两个外键；若改成班级对学生1:N，应把班级编号放哪端？",
+    "options": {},
+    "answer": "保留Student(sid,name)、Course(cid,title)，新增SC(sid,cid,grade)。SC主键为(sid,cid)，sid参照Student.sid，cid参照Course.cid。班级对学生1:N时，通常把班级主键class_id加入学生表作外键。",
+    "explanation": "M:N需关联表容纳组合标识及联系属性；1:N通常把1端键放入N端。不能把多门课的列表直接塞进学生表单个原子列。",
+    "subject": "数据库",
+    "source_chapter": "E-R转关系",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "数据库设计",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t03",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "M:N关联表及grade",
+        "points": 1
+      },
+      {
+        "criterion": "组合主键和两个外键",
+        "points": 1
+      },
+      {
+        "criterion": "1:N外键放学生端",
+        "points": 1
+      }
+    ],
+    "topic_title": "E-R转关系",
+    "chapter_id": "database.c02",
+    "required_depth": "综合应用",
+    "topic_order": 2
+  },
+  {
+    "id": "audit26-core-db-create-constraints",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "SQL定义与约束",
+    "stem": "用通用SQL写表Enrollment(sid INT,cid INT,score INT)：sid、cid组成主键，sid参照已存在的Student(sid主键)，score允许NULL但有值时必须在0～100。说明score的CHECK是否自动禁止NULL。",
+    "options": {},
+    "answer": "CREATE TABLE Enrollment (sid INT, cid INT, score INT, PRIMARY KEY (sid,cid), FOREIGN KEY (sid) REFERENCES Student(sid), CHECK (score BETWEEN 0 AND 100)); 主键使sid、cid非空且组合唯一；CHECK在条件不为FALSE时通常通过，NULL使比较UNKNOWN，故不自动禁止NULL。若要禁止应加NOT NULL。",
+    "explanation": "完整性约束要写到对应对象上。主键是组合整体唯一，不要求sid单列唯一；CHECK和NOT NULL的职责不同。",
+    "subject": "数据库",
+    "source_chapter": "SQL定义与约束",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "关系模型与代数",
+    "ability": "SQL编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t06",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "DDL列和组合主键正确",
+        "points": 1
+      },
+      {
+        "criterion": "sid外键正确",
+        "points": 1
+      },
+      {
+        "criterion": "范围CHECK并解释NULL不自动禁止",
+        "points": 1
+      }
+    ],
+    "topic_title": "SQL定义与约束",
+    "chapter_id": "database.c05",
+    "required_depth": "直接应用",
+    "topic_order": 5
+  },
+  {
+    "id": "audit26-core-db-view-permissions",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "视图",
+    "stem": "Employee(emp_id,dept_id,name,salary)中，部门10的报表账号只应看到部门10的编号、姓名，不应看工资。写出视图定义与查询授权思路，并说明为何仅建视图而仍给账号基础表SELECT权限不能达到目的。",
+    "options": {},
+    "answer": "CREATE VIEW Dept10Report AS SELECT emp_id,name FROM Employee WHERE dept_id=10; 向报表账号只授予该视图SELECT权限，不授予Employee基础表SELECT，核查角色继承是否另有权限。若还能查基础表，账号可绕过视图读取工资和其他部门。",
+    "explanation": "普通视图通常保存查询定义而非独立完整副本；数据隔离由视图筛选与实际授权共同实现。不同DBMS的视图安全执行规则仍需核对。",
+    "subject": "数据库",
+    "source_chapter": "视图",
+    "adaptation_note": "依据通用教材知识结构原创应用练习，非历年真题。",
+    "knowledge_point": "SQL查询",
+    "ability": "SQL编写",
+    "difficulty": "应用",
+    "topic_source": "manual",
+    "topic_id": "database.t09",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "视图只筛dept10和所需两列",
+        "points": 1
+      },
+      {
+        "criterion": "只授予视图查询权限",
+        "points": 1
+      },
+      {
+        "criterion": "解释基础表或角色权限可绕过",
+        "points": 1
+      }
+    ],
+    "topic_title": "视图",
+    "chapter_id": "database.c06",
+    "required_depth": "直接应用",
+    "topic_order": 8
+  }
+]

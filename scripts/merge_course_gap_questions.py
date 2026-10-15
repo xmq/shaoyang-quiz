@@ -6,6 +6,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
+from question_reviews import apply_reviews, load_gap_questions
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JSON = ROOT / "questions.json"
@@ -81,8 +82,8 @@ def main():
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     existing = json.loads(QUESTION_JSON.read_text(encoding="utf-8"))
-    candidates = json.loads(STAGING.read_text(encoding="utf-8"))
-    merged = build(existing, candidates)
+    candidates = load_gap_questions()
+    merged = apply_reviews(build(existing, candidates))
     if args.check:
         if merged != existing:
             raise SystemExit("课程缺口题与questions.json不同步")

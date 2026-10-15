@@ -1,0 +1,398 @@
+[
+  {
+    "id": "audit26-elec-kcl",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "circuit.t02",
+    "stem": "节点有1.2 A、0.8 A流入，另有0.5 A流出。未知支路电流I的参考方向规定为流入。列KCL求I，说明正负号的物理含义。",
+    "options": {},
+    "answer": "I+1.2+0.8=0.5，I=-1.5 A。负号表示实际电流与流入参考方向相反，即1.5 A流出。",
+    "explanation": "统一参考方向列代数方程，负电流不是违反守恒；实际流入2 A、流出0.5+1.5=2 A。",
+    "subject": "电路分析与电工技术",
+    "source_chapter": "circuit.t02",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "circuit.t02",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "列代数KCL",
+        "points": 1
+      },
+      {
+        "criterion": "I=-1.5 A",
+        "points": 1
+      },
+      {
+        "criterion": "解释实际流出",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-impedance",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "circuit.t06",
+    "stem": "串联RLC正弦稳态电路，R=30 Ω，XL=20 Ω，XC=60 Ω，端电压有效值100 V。写总阻抗、阻抗模、电流有效值和电路性质。",
+    "options": {},
+    "answer": "Z=30-j40 Ω，|Z|=50 Ω；I=100/50=2 A；XC>XL，整体为容性，电流超前电压。",
+    "explanation": "电抗应相减，不能把30、20、60直接相加。阻抗模由实部与虚部平方和开方求得。",
+    "subject": "电路分析与电工技术",
+    "source_chapter": "circuit.t06",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "正弦交流与RLC",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "circuit.t06",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "复阻抗30-j40",
+        "points": 1
+      },
+      {
+        "criterion": "模50 Ω及2 A",
+        "points": 1
+      },
+      {
+        "criterion": "容性及超前",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-pn",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "analog-electronics.t01",
+    "stem": "普通PN结加正向与反向偏置时，耗尽层和多数载流子运动分别怎样变化？反向截止为什么不等于任何电压下电流严格为零？",
+    "options": {},
+    "answer": "正向偏置降低势垒、耗尽层变窄，多数载流子扩散增强；反向偏置提高势垒、耗尽层变宽，多数载流子扩散受抑。反向仍有少数载流子造成的小反向电流，电压过大还可能击穿。",
+    "explanation": "区分物理器件与理想二极管模型，截止不能被理解为无限耐压。",
+    "subject": "模拟电子技术",
+    "source_chapter": "analog-electronics.t01",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "二极管电路",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "analog-electronics.t01",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "正向势垒降低及耗尽层变窄",
+        "points": 1
+      },
+      {
+        "criterion": "反向势垒提高及耗尽层变宽",
+        "points": 1
+      },
+      {
+        "criterion": "反向小电流和击穿边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-rectifier",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "analog-electronics.t02",
+    "stem": "理想桥式整流器接有效值12 V、50 Hz的正弦电源，负载为纯电阻且未接滤波电容。求输出平均电压及脉动基频，说明加滤波电容后为何不能继续直接套平均值公式。",
+    "options": {},
+    "answer": "平均电压=2√2×12/π≈10.8 V，脉动基频100 Hz。加入电容后输出依靠峰值附近充电与峰间放电，平均值与电容、负载有关，不能仍直接套0.9Urms。",
+    "explanation": "全波整流取正负两个半周绝对值，平均值与有效值不同；电容滤波改变了输出波形。",
+    "subject": "模拟电子技术",
+    "source_chapter": "analog-electronics.t02",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "二极管电路",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "analog-electronics.t02",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "平均10.8 V",
+        "points": 1
+      },
+      {
+        "criterion": "脉动100 Hz",
+        "points": 1
+      },
+      {
+        "criterion": "滤波后模型改变",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-classb",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "analog-electronics.t09",
+    "stem": "乙类互补推挽功放为什么在输入过零附近容易产生交越失真？甲乙类如何改善，代价是什么？",
+    "options": {},
+    "answer": "乙类两管理想静态电流近零，实际器件有导通门槛，输入过零附近可能两管都未充分导通，形成死区。甲乙类施加适当静态偏置，使两管在零点附近有小的导通重叠，减小交越失真；代价是静态功耗增加，需注意温漂与热稳定。",
+    "explanation": "改善需要适度偏置，并非偏置越大越好，也不能消除所有其他类型失真。",
+    "subject": "模拟电子技术",
+    "source_chapter": "analog-electronics.t09",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "功率放大",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "analog-electronics.t09",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "说明导通门槛及死区",
+        "points": 1
+      },
+      {
+        "criterion": "甲乙类适当偏置",
+        "points": 1
+      },
+      {
+        "criterion": "静态损耗与热稳定",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-gray",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "digital-electronics.t01",
+    "stem": "写出十进制13的8421 BCD码和无符号4位二进制码；再把二进制1101转换为格雷码，说明两种编码用途不同。",
+    "options": {},
+    "answer": "8421 BCD为0001 0011；4位二进制为1101；格雷码最高位不变，其余为相邻二进制位异或，得1011。BCD逐个十进制数字编码，格雷码用于相邻码字仅变一位的场景。",
+    "explanation": "不能把13的二进制1101当作合法的单个8421 BCD数字码；逐位异或是b3、b3⊕b2、b2⊕b1、b1⊕b0。",
+    "subject": "数字电子技术",
+    "source_chapter": "digital-electronics.t01",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "数字电子基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "digital-electronics.t01",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "BCD 0001 0011",
+        "points": 1
+      },
+      {
+        "criterion": "二进制1101",
+        "points": 1
+      },
+      {
+        "criterion": "格雷1011及用途",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-mux",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "digital-electronics.t04",
+    "stem": "用2选1数据选择器实现F=A+B（+表示逻辑或），选择端接A，A=0选择D0，A=1选择D1。确定D0、D1，列出四组输入验证。",
+    "options": {},
+    "answer": "A=0时F=B，所以D0=B；A=1时F=1，所以D1=1。AB=00、01、10、11时F依次0、1、1、1。",
+    "explanation": "先固定选择变量求数据端函数，再核对真值表；不能把逻辑或当作普通整数加法。",
+    "subject": "数字电子技术",
+    "source_chapter": "digital-electronics.t04",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "组合逻辑",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "digital-electronics.t04",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "D0=B",
+        "points": 1
+      },
+      {
+        "criterion": "D1=1",
+        "points": 1
+      },
+      {
+        "criterion": "真值表0111",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-duplex",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "communication.t01",
+    "stem": "从允许的传输方向和同时性，比较单工、半双工、全双工，并各举一个符合条件的场景。",
+    "options": {},
+    "answer": "单工仅固定一个方向，如单向广播；半双工可双向但不能同时，如按键对讲机；全双工可同时双向，如正常电话通话。要按链路运行方式而不是仅看设备名称判断。",
+    "explanation": "无线不等于半双工，双向也不等于全双工；例子需要明确实际运行方式。",
+    "subject": "通信原理与高频电子线路",
+    "source_chapter": "communication.t01",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "通信系统基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_id": "communication.t01",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "单工固定单向",
+        "points": 1
+      },
+      {
+        "criterion": "半双工交替双向",
+        "points": 1
+      },
+      {
+        "criterion": "全双工同时双向",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-baud",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "communication.t02",
+    "stem": "某数字调制每个码元有8种等可能状态，码元速率2000 Bd，不计编码冗余。求每码元比特数、比特率；若改成16种状态且码元速率不变，比特率是多少？",
+    "options": {},
+    "answer": "每码元log2(8)=3 bit，Rb=2000×3=6000 bit/s。16种状态每码元4 bit，Rb=8000 bit/s。",
+    "explanation": "波特率描述每秒码元数，比特率还取决于每个码元携带的信息量；增加状态数会提高接收判决要求，不保证在任意噪声下都可实现。",
+    "subject": "通信原理与高频电子线路",
+    "source_chapter": "communication.t02",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "通信系统基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "communication.t02",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "3 bit/码元",
+        "points": 1
+      },
+      {
+        "criterion": "6000 bit/s",
+        "points": 1
+      },
+      {
+        "criterion": "8000 bit/s及噪声边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-shannon",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "communication.t03",
+    "stem": "写出加性高斯白噪声信道的香农容量公式，说明C、B、S/N及单位；若给出功率信噪比20 dB，应先怎样转换？",
+    "options": {},
+    "answer": "C=B log2(1+S/N)。C为理论容量，单位bit/s；B为带宽，单位Hz；S/N为同一带宽内接收信号功率与噪声功率之比，是无量纲线性值。20 dB对应S/N=10^(20/10)=100，不能直接把20代入。",
+    "explanation": "容量是可靠传输速率的理论上限，不是某设备必然能达到的实际吞吐率；使用10log处理功率比。",
+    "subject": "通信原理与高频电子线路",
+    "source_chapter": "communication.t03",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "信道容量与香农公式",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "communication.t03",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "公式正确",
+        "points": 1
+      },
+      {
+        "criterion": "C/B/线性SNR参数单位",
+        "points": 1
+      },
+      {
+        "criterion": "20dB转换100及理论边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-qpsk",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "communication.t08",
+    "stem": "未计编码开销，BPSK与QPSK都以1200 Bd发送等概码元。分别求比特率；若传输相同比特率，QPSK的码元速率与BPSK是什么关系？这是否意味着QPSK在任何信道都无代价地更好？",
+    "options": {},
+    "answer": "BPSK每码元1 bit，为1200 bit/s；QPSK每码元2 bit，为2400 bit/s。相同比特率下，QPSK码元速率为BPSK的一半。不能推成任何信道无代价更好，还要考虑同步、相位误差和收发实现等条件。",
+    "explanation": "四种相位提供2 bit/码元；比较带宽或抗误码性能时还要固定脉冲成形、能量与检测条件。",
+    "subject": "通信原理与高频电子线路",
+    "source_chapter": "communication.t08",
+    "adaptation_note": "逐知识点复核后补充的原创独立作答题，不是招聘原题。",
+    "knowledge_point": "数字调制",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "communication.t08",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "1200/2400 bit/s",
+        "points": 1
+      },
+      {
+        "criterion": "等比特率时一半码元率",
+        "points": 1
+      },
+      {
+        "criterion": "比较条件与实现边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-elec-reference",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "chapter": "参考方向、功率与示波器读数",
+    "stem": "元件电压、电流采用关联参考方向，u=3 V、i=-2 A，计算功率并说明吸收还是发出。另用10倍探头测量周期电压，示波器已经补偿探头衰减，屏幕标示0.5 V/div，峰峰值占4格。被测峰峰值是多少？为何不能再乘10？",
+    "options": {},
+    "answer": "p=ui=3×(-2)=-6 W，元件发出6 W。峰峰值为0.5×4=2 V；标示刻度已经包含探头补偿，再乘10会重复计入倍率。",
+    "explanation": "功率正负须先确认关联参考方向；负号表示发出。示波器倍率计算取决于屏幕刻度是否已经补偿，不能只看到10倍探头就无条件再乘10。",
+    "subject": "电路分析与电工技术",
+    "source_chapter": "参考方向、功率与示波器读数",
+    "adaptation_note": "逐知识点覆盖终检补充的原创独立作答题，非招聘原题。",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "circuit.t01",
+    "topic_source": "manual",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "关联方向功率为-6 W，发出6 W",
+        "points": 1
+      },
+      {
+        "criterion": "峰峰值2 V",
+        "points": 1
+      },
+      {
+        "criterion": "已经补偿，不能重复乘10",
+        "points": 1
+      }
+    ]
+  }
+]

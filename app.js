@@ -18,6 +18,7 @@ const QUESTION_REVISIONS = Object.freeze({
   "cg-14-s1-q37": 1,
   "cg-14-s1-q41": 1,
   "cg-14-s2-q3": 1,
+  ...Object.fromEntries(QUESTIONS.filter((question) => question.answer_revision).map((question) => [question.id, question.answer_revision])),
 });
 const MAX_IMPORT_BYTES = 5 * 1024 * 1024;
 const CHAPTER_FILTER_PREFIX = "@chapter:";
@@ -236,10 +237,11 @@ function escapeHtml(value) {
 
 function normalizeAnswer(value) {
   return String(value || "")
+    .normalize("NFKC")
     .replace(/\s+/g, "")
     .toLowerCase()
     .replace(/[，、；,;]/g, "|")
-    .replace(/[(（].*?[)）]/g, "");
+    .replace(/[−–]/g, "-");
 }
 
 function isAnswerCorrect(q, given) {

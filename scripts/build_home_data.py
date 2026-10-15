@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def render():
     questions = json.loads((ROOT / "questions.json").read_text(encoding="utf-8"))
     learning_map = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
-    fields = ("id", "subject", "type", "answer")
+    fields = ("id", "subject", "type", "answer", "accepted_answers", "answer_revision")
     index = [{key: item.get(key, "") for key in fields} for item in questions]
     courses = [
         {

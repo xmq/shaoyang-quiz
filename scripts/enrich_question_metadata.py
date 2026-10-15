@@ -13,6 +13,7 @@ import re
 import unicodedata
 from collections import Counter
 from pathlib import Path
+from question_reviews import apply_reviews, load_edits, load_gap_questions
 
 from add_network_questions import NEW_QUESTIONS
 
@@ -22,8 +23,9 @@ QUESTION_FILE = ROOT / "questions.json"
 NETWORK_QUESTIONS = {question["id"]: question for question in NEW_QUESTIONS}
 GAP_QUESTIONS = {
     question["id"]: question
-    for question in json.loads((ROOT / "staging" / "course_gap_questions.json").read_text(encoding="utf-8"))
+    for question in load_gap_questions()
 }
+AUDIT_EDITS = load_edits()
 # The reviewed source banks already assign the ability from the actual task.
 # Keep those human labels; apply stem heuristics only to legacy imported items.
 MAINTAINED_QUESTIONS = {
@@ -705,6 +707,13 @@ def classify_network_topic(question: dict) -> dict[str, str]:
 
 def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str]:
     subject = str(question.get("subject") or "")
+    reviewed_id = AUDIT_EDITS.get(question.get("id"), {}).get("topic_id")
+    if reviewed_id:
+        course = COURSE_BY_SUBJECT.get(subject, {})
+        for index, topic in enumerate(course.get("topics", [])):
+            if topic["topic_id"] == reviewed_id:
+                return {"topic_id": reviewed_id, "topic_title": topic["title"], "chapter_id": topic["chapter_id"], "required_depth": topic["depth"], "topic_order": index}
+        raise ValueError(f"复核知识点不属于本科目：{question['id']} -> {reviewed_id}")
     if subject == "计算机网络":
         return classify_network_topic(question)
     course = COURSE_BY_SUBJECT.get(subject)
@@ -1170,15 +1179,16 @@ def add_scoring_metadata(question: dict, metadata: dict[str, object]) -> dict[st
 def expected_metadata(question: dict) -> dict[str, object]:
     curated = NETWORK_QUESTIONS.get(question.get("id")) or GAP_QUESTIONS.get(question.get("id")) or MAINTAINED_QUESTIONS.get(question.get("id"))
     if curated:
-        source = curated
+        source = {**curated, **AUDIT_EDITS.get(question.get("id"), {})}
         metadata = {key: source[key] for key in ("knowledge_point", "ability", "difficulty")}
         metadata.update(classify_course_topic({**question, **metadata}, metadata["knowledge_point"]))
         return add_scoring_metadata(question, metadata)
-    ability = classify_ability(question)
+    edit = AUDIT_EDITS.get(question.get("id"), {})
+    ability = edit.get("ability") or classify_ability(question)
     metadata = {
-        "knowledge_point": classify_knowledge_point(question),
+        "knowledge_point": edit.get("knowledge_point") or classify_knowledge_point(question),
         "ability": ability,
-        "difficulty": classify_difficulty(question, ability),
+        "difficulty": edit.get("difficulty") or classify_difficulty(question, ability),
     }
     if question.get("subject") in COURSE_BY_SUBJECT:
         metadata.update(classify_course_topic({**question, **metadata}, metadata["knowledge_point"]))
@@ -1188,17 +1198,18 @@ def expected_metadata(question: dict) -> dict[str, object]:
 def enrich_questions(questions: list[dict]) -> tuple[list[dict], list[str]]:
     enriched: list[dict] = []
     changed_ids: list[str] = []
-    for index, question in enumerate(questions, 1):
+    for index, question in enumerate(apply_reviews(questions), 1):
         if not isinstance(question, dict):
             raise ValueError(f"第{index}项不是题目对象")
         if str(question.get("id")) in REMOVED_QUESTION_IDS | REMOVED_LEGACY_COURSE_IDS | REMOVED_OLD_OFFICE_VERSION_IDS | REMOVED_OLD_MEDIA_PRODUCT_IDS | REMOVED_OFFICE_UI_TRIVIA_IDS:
             changed_ids.append(str(question.get("id")))
             continue
         source_question = dict(question)
-        expected_subject = SUBJECT_OVERRIDES.get(str(question.get("id")))
+        expected_subject = AUDIT_EDITS.get(question.get("id"), {}).get("subject") or SUBJECT_OVERRIDES.get(str(question.get("id")))
         if expected_subject:
             source_question["subject"] = expected_subject
-            source_question.pop("topic_source", None)
+            if not AUDIT_EDITS.get(question.get("id"), {}).get("topic_id"):
+                source_question.pop("topic_source", None)
         metadata = expected_metadata(source_question)
         item = source_question
         item.update(metadata)

@@ -1,0 +1,2389 @@
+[
+  {
+    "id": "cg-08-s1-q1",
+    "explanation": "供学生下载教师制作的视频，是让多名用户使用同一份数据资源，体现资源共享。数据通信是共享的传输基础；本题没有把一个计算任务分给多台计算机。"
+  },
+  {
+    "id": "cg-08-s1-q15",
+    "stem": "在典型的客户机/服务器网络应用中，客户端发起请求，服务器提供服务。这属于（ ）。",
+    "explanation": "C/S即客户机/服务器模型。客户端负责发起请求和用户交互，服务器集中提供数据或处理服务。"
+  },
+  {
+    "id": "cg-08-s1-q16",
+    "options": {
+      "A": "通常覆盖范围较小，可采用高速链路",
+      "B": "局域网不会被病毒感染",
+      "C": "可采用星型、总线型等拓扑",
+      "D": "通常由同一组织管理"
+    }
+  },
+  {
+    "id": "cg-08-s1-q48",
+    "stem": "一个无冗余中心节点的局域网，所有终端分别连接到该中心。中心故障会使所有终端无法通过它通信，该拓扑是（ ）。"
+  },
+  {
+    "id": "cg-08-s1-q80",
+    "stem": "以下哪项操作仅能说明终端已接入本地无线网络，仍不能判断该网络是否有可用的互联网出口？",
+    "options": {
+      "A": "通过浏览器成功访问公网网站",
+      "B": "使用正确密码加入本地WiFi热点",
+      "C": "成功接收公网服务器返回的业务数据",
+      "D": "通过可用代理成功访问公网网站"
+    },
+    "explanation": "加入WiFi只表明无线关联和认证成功。热点可能没有互联网出口，或出口认证、路由、DNS等仍有问题。其他三项已经完成公网业务通信。"
+  },
+  {
+    "id": "cg-08-s1-q99",
+    "explanation": "D把关键词数量和结果数量写成了必然关系。结果数量取决于关键词含义、检索方式和搜索引擎；通常增加有效限制可缩小范围，但不能只凭关键词多少判断。"
+  },
+  {
+    "id": "zg-35092",
+    "explanation": "星型拓扑中，每个外围节点通过独立链路连接中央节点，节点间通信经过中心转发。网状结构具有多条互连路径；总线共用一条干线；环型沿闭合链路组织节点。"
+  },
+  {
+    "id": "zg-55249",
+    "explanation": "总线型使用一条公共干线，各节点接入干线；早期同轴以太网在干线两端安装终结器以减少信号反射。"
+  },
+  {
+    "id": "web-38",
+    "options": {
+      "A": "强服务器/弱客户机",
+      "B": "对等计算模式",
+      "C": "胖服务器/瘦客户机",
+      "D": "胖客户机/瘦服务器"
+    },
+    "explanation": "胖客户机承担较多本地计算和业务逻辑，瘦服务器承担相对较少的处理。本题客户端处理能力强，故选D。"
+  },
+  {
+    "id": "dy-e222d101",
+    "stem": "学校机房各台计算机分别用一条网线连接到同一台中央交换机，忽略交换机以外的连接。该物理拓扑为（ ）。"
+  },
+  {
+    "id": "dy-068fc972",
+    "stem": "覆盖多个城市、跨越国家甚至洲际，通过远距离链路连接网络的网络类型称为（ ）。"
+  },
+  {
+    "id": "dy-4a6436c1",
+    "explanation": "LAN是Local Area Network（局域网）；MAN是城域网，WAN是广域网，WWW是万维网服务。"
+  },
+  {
+    "id": "dy-b63aad8d",
+    "stem": "按照覆盖范围分类，通常在一间机房、一栋楼或一个校园内部组建的网络属于（ ）。",
+    "explanation": "局域网LAN覆盖相对有限的区域；城域网MAN连接城市范围内的网络，广域网WAN跨越更大地域。传输速率受具体链路技术影响，不能仅按范围断言快慢。"
+  },
+  {
+    "id": "dy-48021ee9",
+    "stem": "按网络速率使用的十进制单位计算，2 Mbit/s等于256 kB/s（1 kB=1000 B），忽略协议开销。（ ）",
+    "answer": "错误",
+    "explanation": "2 Mbit/s=2,000,000 bit/s，除以8得到250,000 B/s，即250 kB/s，约244.14 KiB/s。网络速率的M、k通常为十进制，不能把2 Mbit/s当成2048 kbit/s。"
+  },
+  {
+    "id": "cg-08-s1-q47",
+    "options": {
+      "A": "编码解码",
+      "B": "电路交换",
+      "C": "分组交换",
+      "D": "令牌总线"
+    },
+    "explanation": "现代广域数据网普遍采用分组交换：把数据分成分组，经路由节点逐跳存储转发，并统计复用链路。报文交换以整个报文为单位，不应与分组交换混为一谈。"
+  },
+  {
+    "id": "cg-08-s1-q21",
+    "explanation": "典型TCP/IP四层为应用层、传输层、网际层和网络接口层。网际层核心是IP；传输层有TCP、UDP等。四层模型不单列物理层，不能称其为最高层。"
+  },
+  {
+    "id": "cg-08-s1-q29",
+    "topic_id": "net.media",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q45",
+    "topic_id": "net.performance",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q59",
+    "topic_id": "net.ip-versions",
+    "topic_source": "manual",
+    "explanation": "按历史分类编址，C类地址首字节范围为192～223，192.168.0.12属于C类格式，同时落在192.168.0.0/16私有地址块。实际子网前缀应由掩码或CIDR前缀确定。"
+  },
+  {
+    "id": "cg-08-s1-q91",
+    "topic_id": "net.app-protocols",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q92",
+    "topic_id": "net.app-protocols",
+    "topic_source": "manual",
+    "explanation": "电子邮件采用存储转发，不要求双方同时在线，不属于实时聊天。其他三个选项是题目所列历史即时通信产品。"
+  },
+  {
+    "id": "cg-08-s1-q101",
+    "topic_id": "net.http",
+    "topic_source": "manual",
+    "stem": "在旧版HTML中，body元素的哪个属性用于指定正在激活的超链接颜色？（该属性现已废弃，现代网页应使用CSS。）",
+    "explanation": "旧版body的alink属性指定活动链接颜色，link指定未访问链接，vlink指定已访问链接。现代网页使用CSS的a:active等伪类设置。"
+  },
+  {
+    "id": "cg-08-s1-q107",
+    "topic_id": "net.http",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q111",
+    "topic_id": "net.wireless-mobile",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-97264",
+    "topic_id": "net.protocol-service",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-37151",
+    "topic_id": "net.protocol-service",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-71082",
+    "topic_id": "net.app-protocols",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-27285",
+    "topic_id": "net.protocol-service",
+    "topic_source": "manual",
+    "explanation": "网络协议是通信双方遵守的规范，在教材网络系统分类中归入软件体系，具体由协议软件或硬件实现。TCP/IP用于Internet。三要素为语法、语义、时序，C中的“语句”不正确。"
+  },
+  {
+    "id": "zg-22893",
+    "topic_id": "net.overview",
+    "topic_source": "manual",
+    "stem": "三网融合通常指________、广播电视网和________的互相渗透、互联互通和业务融合。",
+    "type": "简答",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "写出电信网",
+        "points": 1
+      },
+      {
+        "criterion": "写出计算机互联网并与广播电视网区分",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "zg-89180",
+    "topic_id": "net.protocol-service",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-87605",
+    "topic_id": "net.app-protocols",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-93407259",
+    "topic_id": "net.overview",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-1a53061f",
+    "topic_id": "net.overview",
+    "topic_source": "manual",
+    "stem": "互联网的重要前身ARPANET最初由美国哪个机构资助建设？",
+    "options": {
+      "A": "国家航空航天局NASA",
+      "B": "国家科学基金会NSF",
+      "C": "能源部DOE",
+      "D": "国防部高级研究计划局ARPA"
+    },
+    "explanation": "ARPANET由美国国防部的ARPA资助，用于连接研究机构并共享计算资源。不能把军事资助背景简化为“互联网最初专为核战争指挥设计”；互联网历史协会明确指出这一说法混淆了不同研究项目。"
+  },
+  {
+    "id": "dy-df751f5c",
+    "topic_id": "net.overview",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-a2b16c00",
+    "topic_id": "net.overview",
+    "topic_source": "manual",
+    "stem": "通常所说的“三网融合”，指电信网、计算机互联网和（ ）在技术与业务上的融合及互联互通。",
+    "explanation": "三网指电信网、计算机互联网、广播电视网。融合强调技术、网络和业务的协同，并非要求三张物理网络完全合并。"
+  },
+  {
+    "id": "dy-01c4efd0",
+    "topic_id": "net.protocol-service",
+    "topic_source": "manual",
+    "stem": "在网络上交流信息需要遵循一定的标准，目的是为了信息表达（ ）。"
+  },
+  {
+    "id": "dy-02fc576c",
+    "topic_id": "net.http",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-edef41ec",
+    "topic_id": "net.http",
+    "topic_source": "manual",
+    "stem": "下列哪些是基本HTML文档结构中的根元素及其主要子元素？",
+    "options": {
+      "A": "head",
+      "B": "font",
+      "C": "html",
+      "D": "body"
+    },
+    "explanation": "html是文档根元素，head放元信息，body放页面主体内容。font是旧版样式元素，已被CSS替代，不属于基本文档骨架。"
+  },
+  {
+    "id": "dy-fe47807b",
+    "topic_id": "net.overview",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-9df9cc78",
+    "topic_id": "net.http",
+    "topic_source": "manual",
+    "stem": "记事本可以编辑HTML源代码；Word也能输入源代码，但要保存为纯文本并使用合适编码和.html扩展名，才可直接作为HTML源文件解析。（ ）",
+    "explanation": "HTML源文件本质上是文本。记事本直接编辑纯文本；在Word中输入代码后不能直接把.docx改名为.html，应导出纯文本或使用其HTML导出功能，并检查输出。"
+  },
+  {
+    "id": "uf-nw-004",
+    "topic_id": "net.arp-forwarding",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uc-net-013",
+    "topic_id": "net.arp-forwarding",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q46",
+    "topic_id": "net.performance",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-6cc9fae5",
+    "topic_id": "net.layers-addresses",
+    "topic_source": "manual",
+    "stem": "OSI参考模型从底层往上依次为物理层、数据链路层、网络层、传输层、会话层、表示层和应用层。（ ）"
+  },
+  {
+    "id": "zg-25",
+    "topic_id": "net.overview",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-2d788ce1",
+    "topic_id": "net.overview",
+    "topic_source": "manual",
+    "explanation": "网络拓扑描述节点与通信链路的连接关系，主要由承担数据传输的通信子网结构决定；资源子网描述主机等提供的数据处理和共享资源。"
+  },
+  {
+    "id": "dy-b5852adf",
+    "topic_id": "net.overview",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-60ed5b71",
+    "topic_id": "net.overview",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q63",
+    "topic_id": "net.subnet-routing",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q65",
+    "topic_id": "net.subnet-routing",
+    "topic_source": "manual",
+    "options": {
+      "A": "255.255.255.0",
+      "B": "255.255.0.0",
+      "C": "255.241.0.0",
+      "D": "255.255.254.0"
+    }
+  },
+  {
+    "id": "cg-08-s1-q71",
+    "topic_id": "net.dns-dhcp",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q72",
+    "topic_id": "net.dns-dhcp",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q74",
+    "topic_id": "net.dns-dhcp",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-bfac1faf",
+    "topic_id": "net.arp-forwarding",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-nw-003",
+    "topic_id": "net.subnet-routing",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ap-nw-001",
+    "topic_id": "net.subnet-routing",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uc-net-004",
+    "topic_id": "net.subnet-routing",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-nw-001",
+    "topic_id": "net.layers-addresses",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uc-net-007",
+    "topic_id": "net.tcp-connection",
+    "topic_source": "manual",
+    "stem": "TCP报文段SEQ=3000，携带500 B数据且无SYN、FIN；此前字节已全部连续到达，本段也被完整接收。按累计确认，接收方期望返回的ACK是（ ）。"
+  },
+  {
+    "id": "uc-net-011",
+    "topic_id": "net.tcp-connection",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q67",
+    "topic_id": "net.dns-dhcp",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q73",
+    "topic_id": "net.dns-dhcp",
+    "topic_source": "manual",
+    "stem": "在网址http://www.china.edu.cn中，表示国家或地区的顶级域名是（ ）。"
+  },
+  {
+    "id": "cg-08-s1-q82",
+    "topic_id": "net.app-protocols",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uc-net-010",
+    "topic_id": "net.layers-addresses",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-08-s1-q94",
+    "topic_id": "net.wireless-mobile",
+    "topic_source": "manual",
+    "explanation": "GSM手机需在可用基站覆盖内完成接入。空旷区域所有GSM终端都无法通信时，优先考虑没有覆盖或基站故障；单凭空旷不能直接判定手机硬件损坏，具体原因仍需检测。"
+  },
+  {
+    "id": "zg-21512",
+    "topic_id": "net.overview",
+    "topic_source": "manual",
+    "explanation": "题目按地理范围分类，学校计算机教室属于局域网LAN。WLAN强调无线接入方式，不能替代本题的地理范围分类；城域网覆盖城市范围，广域网跨越更大地域。"
+  },
+  {
+    "id": "cg-08-s1-q33",
+    "explanation": "发送端第3层添加的首部包含第3层协议控制信息；接收端沿协议栈向上解封装，到第3层由对应协议读取并处理。上下层负责各自的控制信息。"
+  },
+  {
+    "id": "dy-89ef5496",
+    "explanation": "传输层位于网络层之上、会话层之下，向高层屏蔽通信子网的具体实现，提供端到端的传输服务。路由和下一跳选择属于网络层，不是传输层向网络层提供目的地信息。"
+  },
+  {
+    "id": "dy-3e26bc1a",
+    "stem": "下列哪项属于OSI数据链路层的典型职责？",
+    "options": {
+      "A": "封装成帧、帧定界及差错检测",
+      "B": "定义物理接口的电信号特性",
+      "C": "提供用户邮件收发界面",
+      "D": "选择IP分组经过的路由"
+    },
+    "explanation": "数据链路层在相邻节点之间组织帧，并可进行差错检测、介质访问控制等。是否提供确认重传依具体协议而定，不能认为所有数据链路协议都保证无错无丢失。B属物理层，C属应用，D属网络层。"
+  },
+  {
+    "id": "dy-63566fa1",
+    "options": {
+      "A": "一种网络操作系统",
+      "B": "一个网络地址",
+      "C": "一组网络通信协议",
+      "D": "一个网络硬件部件"
+    }
+  },
+  {
+    "id": "dy-abc830e2",
+    "options": {
+      "A": "网络协议就是网络通信的内容",
+      "B": "制定网络协议是为了使通信双方按约定协调数据交换",
+      "C": "计算机网络的分层结构及其协议的集合称为网络体系结构",
+      "D": "网络协议由语义、语法和变换规则三个要素构成"
+    },
+    "explanation": "协议约定数据格式、含义和交互时序，用于协调通信；分层结构及其协议构成网络体系结构，故选B、C。协议是规则而非传输内容；三要素为语法、语义、时序。是否提供可靠传输取决于具体协议。"
+  },
+  {
+    "id": "dy-084d1cb8",
+    "explanation": "“网关”含义依语境而定，不能统一断定工作在应用层。主机配置的默认网关通常是承担网络层转发的路由器接口；动态分配IP等配置主要由DHCP完成，不能把网关和DHCP服务器的职责等同。"
+  },
+  {
+    "id": "cg-08-s1-q25",
+    "explanation": "协议规定不同节点的对等实体怎样交换信息。相邻上下层之间通过接口提供和使用服务；这不是题目所问的对等实体协议关系。"
+  },
+  {
+    "id": "zg-49279",
+    "explanation": "典型数据链路协议将网络层数据封装成帧，添加首部和尾部，承载地址、控制和校验等信息。帧格式及最大、最小长度由具体协议规定，不能说封装时不考虑帧长。"
+  },
+  {
+    "id": "dy-7c423127",
+    "stem": "典型数据链路协议的传输单位是帧，封装时添加帧首部和帧尾部。（ ）",
+    "explanation": "帧首部和尾部可携带定界、寻址、控制或校验信息；具体字段及长度依协议而定。添加控制信息用于接收端定位帧边界、识别交付对象或检测传输差错。"
+  },
+  {
+    "id": "dy-496c078e",
+    "explanation": "NIC是网络接口控制器，也称网络适配器、网卡。典型以太网卡同时实现数据链路层的MAC及帧处理功能和物理层收发功能；具有MAC地址不能推出它只属于物理层。"
+  },
+  {
+    "id": "cg-08-s1-q4",
+    "stem": "在选项列出的历史以太网介质及其最大单段长度中，哪一种允许的段长最大？"
+  },
+  {
+    "id": "cg-08-s1-q9",
+    "stem": "用一个双端口设备连接同类介质的两段链路，只对物理信号再生、整形并转发，不读取MAC或IP地址。该设备称为（ ）。",
+    "explanation": "中继器在物理层再生和转发信号以延长传输距离。集线器本质上是多端口中继器；题干限定双端口，避免与集线器的功能重叠。"
+  },
+  {
+    "id": "cg-08-s1-q35",
+    "explanation": "调制把数字信息映射到载波信号；解调从线路接收的已调制模拟信号中恢复数字信息。题目问模拟信号还原数字信号，选解调。"
+  },
+  {
+    "id": "zg-73199",
+    "explanation": "无线电波属于无线传输方式，同轴电缆和光纤属于有线传输介质。“集成线路”指电路实现形式，不是题目所列网络传输介质类型。"
+  },
+  {
+    "id": "dy-c569f2fc",
+    "stem": "普通WiFi无线局域网使用超声波作为信息传输载体。（ ）",
+    "explanation": "WiFi使用无线电波，属于电磁波通信，而不是超声波。超声波可用于特殊声学通信场景，因此不能把结论扩展到所有广义无线通信。"
+  },
+  {
+    "id": "cg-08-s1-q42",
+    "options": {
+      "A": "每秒传输的比特数",
+      "B": "每秒传输的码元数",
+      "C": "每秒传输的载波周期数",
+      "D": "每秒传输的字节数"
+    },
+    "explanation": "波特率即码元速率，单位Baud，表示每秒传输的码元数。相邻码元可以相同，不能简单等同实际波形变化次数。若每码元有M种等概状态，理想比特率为码元速率×log₂M。"
+  },
+  {
+    "id": "cg-08-s1-q13",
+    "explanation": "网络适配器负责接入介质、帧收发、MAC控制和缓存等。典型网卡同时包含数据链路层与物理层功能；本题强调帧处理，选网络适配器。"
+  },
+  {
+    "id": "dy-4a95dd28",
+    "stem": "普通二层以太网交换机按MAC地址转发帧，其主要工作层次是（ ）。"
+  },
+  {
+    "id": "dy-32a66171",
+    "options": {
+      "A": "集线器",
+      "B": "普通二层交换机",
+      "C": "路由器",
+      "D": "网桥"
+    }
+  },
+  {
+    "id": "gap-final-thin-016",
+    "explanation": "生成式次数为3，先补3个0，进行不进位、不借位的异或长除法，余数001；发送1101001，接收端复除为0表示未检测到差错。CRC存在漏检可能，余数为0不等于绝对无误。"
+  },
+  {
+    "id": "cg-08-s1-q7",
+    "options": {
+      "A": "集线器只能放大信号，不能将信号转发到其他端口",
+      "B": "集线器级联受相应以太网标准规定的长度和中继数量限制",
+      "C": "集线器不依据MAC地址进行帧转发决策",
+      "D": "共享半双工以太网中，多个节点同时发送可能产生碰撞"
+    },
+    "explanation": "集线器不仅再生信号，还把接收到的信号转发到其他端口，A错误。它不读取MAC地址；共享半双工网中节点可能同时起发并发生碰撞，不能说其他节点绝对不能发送。"
+  },
+  {
+    "id": "cg-08-s1-q96",
+    "stem": "在选项给出的传统ADSL接入方案中，两台电脑需要共享一条已开通的宽带，哪种方案一般较经济合理？",
+    "options": {
+      "A": "申请两条电话线路分别拨号",
+      "B": "申请两条ADSL宽带",
+      "C": "使用支持NAT的宽带路由器共享一条ADSL连接",
+      "D": "一台用ADSL，另一台另付费拨号"
+    },
+    "explanation": "支持NAT的宽带路由器可以让多台内网设备共享一条宽带出口，无须每台电脑单独申请接入线路。此结论比较的是题目列出的历史ADSL方案。"
+  },
+  {
+    "id": "nw-national-018",
+    "answer": "同一子网时，主机通过ARP解析目标主机的MAC，首跳以太网帧的目的MAC为目标MAC。不同子网时，先按本机路由表选下一跳；常见情形为默认网关，再ARP解析该网关接口的MAC。首跳帧目的MAC为下一跳MAC，而IP目的地址仍是远端目标。每经一个路由器，通常重新封装链路层帧。"
+  },
+  {
+    "id": "cg-08-s1-q12",
+    "explanation": "典型IP转发按目的地址查路由表，得到下一跳和出接口，再按出链路格式重新封装。DNS域名解析是应用层服务，不是每个IP数据报转发必须进行的操作。"
+  },
+  {
+    "id": "cg-08-s1-q14",
+    "options": {
+      "A": "集线器",
+      "B": "中继器",
+      "C": "路由器",
+      "D": "普通二层交换机"
+    }
+  },
+  {
+    "id": "hn-recall-hn26-008",
+    "explanation": "转发应进行最长前缀匹配并重新封装下一跳链路帧。IPv4中TTL递减到0必须丢弃，通常返回ICMP超时；有适用默认路由时才使用它，不能无路由仍转发。"
+  },
+  {
+    "id": "cg-08-s1-q49",
+    "stem": "在不考虑NAT等地址转换的基本IP转发模型中，路由器主要依靠数据报中的哪类地址定位目的网络？",
+    "explanation": "IP转发主要使用目的IP地址及路由表前缀。IP地址通常分配给接口，一台主机可以有多个接口和地址；私有地址可在不同网络重复，不能说每台节点全世界只有唯一一个IP。"
+  },
+  {
+    "id": "cg-08-s1-q50",
+    "stem": "IPv6地址由128个二进制位组成，其地址位组合总数为（ ）。"
+  },
+  {
+    "id": "cg-08-s1-q53",
+    "stem": "按历史IPv4分类编址，仅从地址格式判断，第一字节最高位为0的地址属于哪类格式？",
+    "explanation": "传统A类格式首位是0，后续网络字段有7位；0/8与127/8有特殊用途，普通A类首字节常写为1～126。题目问格式而非所有地址均可分配。"
+  },
+  {
+    "id": "cg-08-s1-q56",
+    "explanation": "“*”位于最后一个八位组*56。依次代入得到156、256、356、456；IPv4每个八位组必须在0～255之间，只有156合法，故缺位为1。"
+  },
+  {
+    "id": "cg-08-s1-q57",
+    "stem": "按历史IPv4分类地址的默认掩码判断，并排除回环及网络、广播地址，下列哪个可作为普通单播主机地址？",
+    "explanation": "29.9.255.15按A类默认/8，主机部分既不全0也不全1。127.21.19.109属回环；192.5.91.255按C类默认/24为广播；220.103.256.56含越界八位组。不给前缀时，不能普遍断言所有末段255都为广播。"
+  },
+  {
+    "id": "cg-08-s1-q58",
+    "stem": "按历史IPv4分类编址，B类地址格式中的网络号共有多少种二进制组合？",
+    "options": {
+      "A": "126",
+      "B": "127",
+      "C": "256",
+      "D": "16384"
+    },
+    "explanation": "B类地址固定前两位为10，其后还有14位可构成网络号，共2¹⁴=16384种。不能无依据再减1；这与每个网络扣除网络地址、广播地址的主机数计算不同。"
+  },
+  {
+    "id": "zg-74774",
+    "stem": "以下哪些符合规范的四段点分十进制IPv4地址书写格式？"
+  },
+  {
+    "id": "cg-08-s2-q9",
+    "stem": "在通常的单播IPv4地址前缀划分中，地址包含哪两部分？"
+  },
+  {
+    "id": "zg-25284",
+    "explanation": "通常按子网前缀把IPv4地址分为网络部分和主机部分。网络部分长度由前缀或子网掩码确定，不局限于历史A、B、C类默认边界。"
+  },
+  {
+    "id": "zg-3438",
+    "stem": "IPv4地址由（ ）位二进制数组成。",
+    "explanation": "IPv4地址为32位，常写成四个十进制八位组；IPv6为128位。题目必须明确版本，不能把当前Internet地址一概认为32位。"
+  },
+  {
+    "id": "dy-3617dfbb",
+    "explanation": "域名和IP不是一一对应：一个域名可通过多个A/AAAA记录对应多个地址，多个域名也可指向同一个地址。多网卡主机和双栈主机还可同时拥有多个IP，私有地址可跨独立网络重复。"
+  },
+  {
+    "id": "dy-a985c02c",
+    "answer": "错误",
+    "explanation": "IP通信需要IP配置，一台主机也可在不同时间取得不同地址；但“IP地址在整个因特网上都是唯一的”过于绝对。不同私有网络可重复使用相同私有地址，并通过NAT访问Internet，一台主机也可拥有多个地址。"
+  },
+  {
+    "id": "cg-08-s1-q39",
+    "stem": "某协议通过序号、确认与重传提供可靠字节流，并具有流量控制和拥塞控制机制。该协议简称是（ ）。"
+  },
+  {
+    "id": "dy-b582fe9c",
+    "explanation": "TCP与UDP工作在传输层，分别提供可靠字节流和尽力交付数据报。IP属于网际层；RARP用于历史链路地址到协议地址的映射，不是传输层协议。"
+  },
+  {
+    "id": "cg-08-s1-q41",
+    "stem": "以下关于支持MHT网页存档功能的浏览器、网页格式和邮件协议的说法，正确的是（ ）。"
+  },
+  {
+    "id": "cg-08-s1-q78",
+    "stem": "下列哪种通信方式通过网络和邮件服务器存储转发，不需要像纸质邮件一样按地理距离运输信件？",
+    "explanation": "电子邮件通过网络传输，服务器可暂存再投递，通常比纸质邮递快。它不保证即发即收，投递仍会受网络、服务器队列和策略影响。"
+  },
+  {
+    "id": "cg-08-s1-q81",
+    "stem": "下列哪项不是标准FTP协议内建提供的功能？",
+    "explanation": "标准FTP支持登录、目录浏览、文件上传下载等，权限可分别限制上传和下载。查询文档历史版本需要版本管理系统或服务器扩展，不能由FTP本身直接保证。"
+  },
+  {
+    "id": "cg-08-s1-q84",
+    "explanation": "邮件列表中的回形针图标通常表示带有附件。已读、已回复和垃圾邮件一般用其他状态或图标表示。"
+  },
+  {
+    "id": "cg-08-s1-q86",
+    "explanation": "地址qwer@163.com中，@之前的qwer是本地账号部分，之后的163.com是邮箱域名；本题询问账号，所以选B。"
+  },
+  {
+    "id": "cg-08-s1-q87",
+    "explanation": "邮件服务主要负责发送、接收、存储和管理邮件，可传送动画文件作为附件，但制作动画属于内容创作软件的功能。"
+  },
+  {
+    "id": "cg-08-s1-q88",
+    "stem": "下列历史软件或服务名称中，哪一个是微软曾推出的Web浏览器？",
+    "explanation": "Internet Explorer是微软曾推出的Web浏览器，现已退役，不应作为当前主流产品。Hotmail是邮件服务，Outlook Express是邮件客户端。"
+  },
+  {
+    "id": "cg-08-s1-q89",
+    "explanation": "邮件先送到收件方邮件服务器并暂存，收件人以后登录取信，因此对方电脑无需在发送时开机。邮件可在不同设备使用，也可指定多个收件人。"
+  },
+  {
+    "id": "cg-08-s1-q90",
+    "options": {
+      "A": "可通过收件人、抄送或密送等字段发送给多名收件人",
+      "B": "邮件客户端通常支持在收件人字段填写多个地址",
+      "C": "电子邮件要求双方同时在线，属于即时通讯",
+      "D": "邮件可发送文字并附加图片、音乐等文件"
+    },
+    "explanation": "电子邮件是存储转发服务，不要求双方同时在线，故C错误。收件地址分隔符取决于客户端，不能一概要求逗号。"
+  },
+  {
+    "id": "cg-08-s1-q100",
+    "options": {
+      "A": "发现病毒时，随意删除系统文件即可保证清除病毒",
+      "B": "密送用于保证邮件在网络中绝不丢失",
+      "C": "HTML是超文本标记语言，网页源文件可用文本编辑器编辑",
+      "D": "只要密码复杂，就能保证账号永不泄露"
+    },
+    "explanation": "HTML是标记语言，源文件是文本，C正确。查杀病毒不能随意删除系统文件；密送用于隐藏相应收件人信息；复杂密码也可能因钓鱼、泄露或终端失陷而失效。"
+  },
+  {
+    "id": "cg-08-s1-q103",
+    "options": {
+      "A": "<embed src=\"move.js\">",
+      "B": "<img src=\"move.js\">",
+      "C": "<script src=\"move.js\"></script>",
+      "D": "<video src=\"move.js\"></video>"
+    }
+  },
+  {
+    "id": "cg-08-s1-q104",
+    "explanation": "经典ASP是服务器端动态页面技术，由支持ASP的服务器执行。CSS用于样式，DHTML是浏览器端动态效果技术的统称；JavaScript既可在浏览器也可在Node.js等服务器环境运行，不能笼统说JS只在客户端。"
+  },
+  {
+    "id": "zg-27343",
+    "explanation": "HTTP是Hypertext Transfer Protocol，中文为超文本传输协议；FTP用于文件传输，Telnet用于远程终端登录，UDP是传输层数据报协议。HTTP/1.1和HTTP/2通常使用TCP，HTTP/3使用基于UDP的QUIC。"
+  },
+  {
+    "id": "zg-5971",
+    "stem": "在常见的SNMP over UDP传输映射中，SNMP不依赖面向连接的TCP传输服务。（ ）",
+    "explanation": "常见SNMP使用UDP，通常代理监听161端口、通知接收端使用162端口。SNMP也存在其他传输映射，因此不能说所有SNMP实现都绝不使用TCP。"
+  },
+  {
+    "id": "zg-97942",
+    "stem": "传统的明文远程终端登录协议，名称为________。",
+    "explanation": "Telnet提供远程终端登录，传统使用TCP 23端口且不加密登录内容。SSH也能远程登录但提供加密，不能把“远程登录”一概等同Telnet。"
+  },
+  {
+    "id": "dy-253de650",
+    "options": {
+      "A": "电子邮件只能传文字，不能附加其他文件",
+      "B": "电子邮件不能同时指定多名收件人",
+      "C": "标准邮箱地址包含本地部分和邮箱域，用@分隔",
+      "D": "知道有效邮件地址后可尝试投递，但是否接收还受服务器策略影响"
+    },
+    "explanation": "邮件可传多种附件，也可发给多人。邮箱地址通常为本地部分@邮箱域；知道地址可发起投递，但不保证绕过反垃圾、权限或容量限制，更不保证对方实际阅读。"
+  },
+  {
+    "id": "dy-c5d3ca69",
+    "stem": "下列哪些属于服务器端网站开发技术或语言，而不是可视化网页编辑工具？",
+    "explanation": "ASP、PHP、JSP用于服务器端动态Web开发，其中PHP是语言，ASP/JSP属于技术；Dreamweaver是开发工具。不能把ASP、JSP一概定义成编程语言。"
+  },
+  {
+    "id": "dy-492f9772",
+    "stem": "关于基本静态网页和网站，下列说法正确的有（ ）。",
+    "options": {
+      "A": "基本静态网页通常以HTML文件提供页面结构",
+      "B": "网页的内容和布局可不同，但通常包含文字、图片、链接等基本元素",
+      "C": "一个网站通常包含相互关联的多个页面或资源",
+      "D": "静态HTML文件本身必然在服务器端按每次请求实时执行数据库查询"
+    },
+    "explanation": "A、B、C成立。静态文件不意味着用户完全不能交互：表单和JavaScript也可发请求。D所说服务端每次实时查询数据库并不是静态HTML文件本身的必然功能。"
+  },
+  {
+    "id": "dy-32d91ae3",
+    "answer": "错误",
+    "explanation": "@后是邮箱域名，不一定是实际邮件服务器主机名。发送服务器通常查询该域的DNS MX记录来找到负责接收邮件的服务器；邮箱域与服务器名称可能不同。"
+  },
+  {
+    "id": "dy-33a5aed8",
+    "answer": "错误",
+    "explanation": "邮件服务器会按队列策略暂存和重试，但可能拒收、退信或在重试到期后删除；发件箱是否另存副本也取决于客户端和服务配置。“无论是否接收都将被保存”的绝对表述不成立。"
+  },
+  {
+    "id": "cg-08-s1-q76",
+    "stem": "下列哪项本身是描述网页结构的标记语言，而不是服务器端动态网页技术？"
+  },
+  {
+    "id": "cg-08-s1-q79",
+    "stem": "需要填写一个以HTTP协议访问www.tzschool.net的完整绝对URL，以下哪项符合要求？",
+    "options": {
+      "A": "http://www.tzschool.net",
+      "B": "tzschool.net",
+      "C": "www.tzschool.net",
+      "D": "tzschool"
+    }
+  },
+  {
+    "id": "cg-08-s1-q85",
+    "stem": "URL为http://www.yee21.cn/news/index.aspx，其中（1）http、（2）www.yee21.cn、（3）news、（4）index.aspx分别对应（ ）。"
+  },
+  {
+    "id": "cg-08-s1-q105",
+    "stem": "由相互关联的网页、图片等资源组成，并通过Web提供访问的整体，通常称为（ ）。",
+    "explanation": "网站是通过Web提供的一组相互关联的资源和服务；Web服务器是承载或提供这些资源的软件或设备，两者不能完全画等号。"
+  },
+  {
+    "id": "cg-08-s1-q106",
+    "options": {
+      "A": "动画效果",
+      "B": "反馈功能",
+      "C": "超链接",
+      "D": "播放器"
+    }
+  },
+  {
+    "id": "cg-08-s1-q108",
+    "stem": "网页表单要让浏览者从书法、写作、音乐等兴趣中任意选择多项，最合适的控件是（ ）。",
+    "explanation": "复选框允许每一项独立选中或取消，适合多选兴趣；单选按钮通常用于互斥的单项选择。此题考表单控件，不涉及HTTP加密或传输层次。"
+  },
+  {
+    "id": "cg-08-s1-q109",
+    "stem": "在以下列出的历史软件中，哪个主要用于可视化制作网页？",
+    "explanation": "FrontPage是微软曾推出的可视化网页制作工具。PowerPoint主要制作演示文稿，Excel处理电子表格，Word处理文档；本题比较给定历史产品，不代表当前推荐。"
+  },
+  {
+    "id": "dy-53153f96",
+    "explanation": "在题目给定的HTTP网站语境下，URL用于定位资源，通常含协议方案、主机和路径，也可带端口、查询和片段。它不是邮箱地址或仅一个主机名，所以选A、D。同一资源可有多个URL，不能把URL与资源说成严格一一对应。"
+  },
+  {
+    "id": "dy-0bd85370",
+    "stem": "网页设计中，下列哪些做法通常有助于提高内容价值和浏览体验？",
+    "options": {
+      "A": "不考虑辨识度，颜色越多越好",
+      "B": "在不影响使用的前提下保持适当创意",
+      "C": "提供充实且有浏览价值的内容",
+      "D": "合理安排布局与视觉层次"
+    }
+  },
+  {
+    "id": "dy-2fa7623e",
+    "stem": "某URL为http://www.edu.cn/index.htm，其协议方案为www。（ ）",
+    "explanation": "冒号前的http是URL方案名，www是主机域名中的一个惯用标签；二者不能混淆。"
+  },
+  {
+    "id": "cg-08-s1-q66",
+    "stem": "负责国家顶级域名.cn和中文顶级域名.中国注册管理的机构是（ ）。",
+    "explanation": "CNNIC承担.cn和.中国域名的注册管理职责。不能把它泛化为负责所有中国用户注册的各类顶级域名。"
+  },
+  {
+    "id": "cg-08-s1-q68",
+    "stem": "客户端把DNS查询交给配置好的本地递归解析器。为发起这次查询，通常无需预先知道哪些信息？\nI. 本地递归解析器的IP地址\nII. 该解析器上级域名服务器的名字\nIII. 根域名服务器的名字",
+    "explanation": "题设采用传统按IP配置递归DNS的方式，客户端需要知道递归解析器IP；后续迭代查询由解析器完成，客户端不必事先知道根服务器和上级服务器的主机名。"
+  },
+  {
+    "id": "cg-08-s1-q83",
+    "stem": "在使用账号口令认证的传统拨号接入情形中，ISP通常会提供哪项配置信息？"
+  },
+  {
+    "id": "zg-61952",
+    "type": "简答",
+    "stem": "以http://www.cctv.com.cn为例，分别指出URL方案、完整主机域名、惯用Web主机标签、商业机构类别标签和国家顶级域名。说明www是否为所有网站强制使用的名称。",
+    "answer": "方案为http；完整主机域名为www.cctv.com.cn；www是惯用Web主机标签；com表示商业机构类别；cn是中国国家顶级域名。www只是命名惯例，网站可以使用其他主机名，也可以直接使用不带www的域名。",
+    "explanation": "URL的协议方案与DNS名称结构不同。DNS标签表达层次命名，不自动保证服务器提供特定业务；是否为Web服务还取决于相应部署。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "指出http为方案、完整域名为www.cctv.com.cn",
+        "points": 1
+      },
+      {
+        "criterion": "区分www惯用标签和com类别标签",
+        "points": 1
+      },
+      {
+        "criterion": "指出cn国家顶级域并说明www非强制",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "dy-58ef37de",
+    "explanation": "按普通ASCII主机域名格式，标签用英文句点分隔，常用字母、数字和连字符；C、D含逗号与空格，不符合所给主机名格式。单标签DNS长度上限是63八位组，不能沿用三级域名统一20字符的说法。"
+  },
+  {
+    "id": "dy-771131ac",
+    "explanation": "普通ASCII域名的解析比较不区分英文字母大小写，例如example.com与EXAMPLE.COM等价。这不表示URL路径也不分大小写，路径是否敏感由服务器决定。"
+  },
+  {
+    "id": "cg-08-s1-q28",
+    "stem": "下列哪项是专门面向银行卡电子商务交易设计、名称为Secure Electronic Transaction的历史安全协议？",
+    "explanation": "SET是Secure Electronic Transaction（安全电子交易），用于历史银行卡电子交易场景。PGP、MOSS等也可使用数字签名，不能用“能防抵赖”作为本组选项中SET独有的特征。"
+  },
+  {
+    "id": "cg-08-s1-q97",
+    "stem": "某WiFi共享应用明确采用“用户授权上传已知热点信息，其他用户经平台获得共享访问”的模式。该模式主要依赖（ ）。",
+    "options": {
+      "A": "直接从任意强密码数学计算出明文",
+      "B": "对所有热点进行暴力破解",
+      "C": "共享用户提供的热点信息",
+      "D": "必须利用路由器漏洞"
+    },
+    "explanation": "题设已说明采用授权共享模式，因此主要依赖用户提供的热点信息，而非自动破解所有密码。具体产品实现需要证据，不能对所有同类应用一概断言秘密搜集密码。"
+  },
+  {
+    "id": "cg-04-s1-q16",
+    "stem": "设语句S的执行时间为常数。以下循环的紧确增长量级是（ ），选项用O记号表示。\nfor(i=1;i<=n;i++)\n  for(j=i;j<=n;j++)\n    S;"
+  },
+  {
+    "id": "zg-48003",
+    "explanation": "先分析方程系数、判别式及实数解条件，再设计算法、编写程序、调试运行并验证结果。只编写程序或只设计算法都没有覆盖完整流程。"
+  },
+  {
+    "id": "cg-05-s1-q5",
+    "explanation": "在教材所说的同类型记录集合中，每个元素由同样数量的数据项组成，对应项类型一致，但具体值可以不同。“元素相同类型”不等于所有元素取值完全相同。"
+  },
+  {
+    "id": "cg-05-s1-q6",
+    "explanation": "逻辑结构描述元素之间的关系，如线性、树形和图形，与具体内存地址或机器表示无关；存储结构是这种关系在计算机中的表示。"
+  },
+  {
+    "id": "cg-05-s1-q11",
+    "stem": "长度为n的顺序表尚有可用容量，在合法位置插入一个新元素，最坏情况下的时间复杂度为（ ）。",
+    "explanation": "若插在表头，原有n个元素全部右移，最坏为O(n)；插在表尾且无需扩容时可O(1)。因此不能不加条件说每个位置都耗时O(n)。",
+    "topic_id": "data-structures.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-05-s1-q15",
+    "explanation": "教材比较存储结构时，通常依据元素规模、所需访问与更新操作，以及实现条件。某个结点的具体数据值通常不是选择顺序或链式存储的直接依据；特殊的压缩或范围索引场景还需另外分析。"
+  },
+  {
+    "id": "cg-05-s1-q16",
+    "options": {
+      "A": "随机存取",
+      "B": "顺序存取",
+      "C": "索引存取",
+      "D": "散列存取"
+    },
+    "explanation": "顺序表用连续地址存放元素，已知首址和元素长度便可由下标计算地址，所以支持O(1)随机存取。“顺序存储”描述布局，不等于只能顺序读取。",
+    "topic_id": "data-structures.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-05-s1-q34",
+    "stem": "一个非空、连通、无环的有根结构，除根外每个结点只有一个直接前驱，但可有多个直接后继。该结构属于（ ）。"
+  },
+  {
+    "id": "cg-05-s1-q45",
+    "explanation": "01没有前驱，是根；其余8个结点各有唯一前驱。8条关系把9个结点连成一个连通无环结构，且01、02、03可有多个孩子，因此是树型结构。"
+  },
+  {
+    "id": "zg-34137",
+    "explanation": "结构化程序设计的三种基本控制结构是顺序、选择和循环；可通过这些结构组合描述通常的算法流程。Böhm和Jacopini的相关结果发表于1966年，不能写成1996年。",
+    "type": "简答",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "列出顺序结构",
+        "points": 1
+      },
+      {
+        "criterion": "列出选择或分支结构",
+        "points": 1
+      },
+      {
+        "criterion": "列出循环结构",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-ds-001",
+    "topic_id": "data-structures.t24",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-05-s1-q8",
+    "topic_id": "data-structures.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-core-ds-001",
+    "topic_id": "data-structures.t11",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-core-ds-027",
+    "topic_id": "data-structures.t11",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-70127",
+    "topic_id": "data-structures.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-05-s1-q39",
+    "topic_id": "data-structures.t09",
+    "topic_source": "manual",
+    "explanation": "中序最后一个结点位于从根反复选右孩子所得的最右位置；若它又是叶子，便不存在尚待先序访问的左子树，所以它也最后被先序访问。反例可否定其余项：根A仅有左叶B时，先序AB、中序BA，先序末叶B不是中序末。"
+  },
+  {
+    "id": "cg-05-s1-q43",
+    "topic_id": "data-structures.t09",
+    "topic_source": "manual",
+    "explanation": "层序首项F为根，中序分为左DBA和右CE。左子树层序DBA，以D为根、B为右孩子、A为B的右孩子；右子树层序EC，以E为根、C为左孩子。后序为ABD、CE、F，即ABDCEF。"
+  },
+  {
+    "id": "cg-05-s1-q44",
+    "topic_id": "data-structures.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-35267",
+    "topic_id": "data-structures.t01",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ds-004",
+    "topic_id": "data-structures.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uc-ds-003",
+    "topic_id": "data-structures.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-core-ds-010",
+    "topic_id": "data-structures.t08",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-05-s1-q9",
+    "explanation": "线性表中，除首元素外每个元素恰有一个直接前驱，除尾元素外恰有一个直接后继，体现一对一关系。空表也合法，不能说至少一个元素或所有元素均有前驱、后继。"
+  },
+  {
+    "id": "cg-05-s1-q10",
+    "options": {
+      "A": "顺序存储要求一片连续空间",
+      "B": "链式存储不要求结点占用连续空间",
+      "C": "顺序表在任意位置插删都不需要移动元素",
+      "D": "已知待删结点前驱时，单链表删除可用常数次指针修改实现"
+    },
+    "explanation": "顺序表中间插删通常要移动后续元素，因此C错误。链表改指针可避免搬移数据，但寻找位置或前驱仍可能需要O(n)。"
+  },
+  {
+    "id": "cg-05-s1-q14",
+    "stem": "一个含n个元素的顺序表中，x至少出现一次。从表头顺序比较，找到第一个x后删除它，并把后续元素依次左移一位。只计元素比较和元素移动，二者总次数为（ ）。",
+    "explanation": "若第一个x位于从1起算的第i位，需比较i次，后续n-i个元素各移动一次，总次数i+(n-i)=n。结论依赖找到x且按本题不计循环条件等开销的口径。"
+  },
+  {
+    "id": "cg-05-s1-q18",
+    "explanation": "线性表是由n个同类型数据元素组成的有限序列，n可为0。数据项是元素内部的组成部分，字符只是一种可能的元素类型。"
+  },
+  {
+    "id": "cg-05-s1-q17",
+    "options": {
+      "A": "大于1",
+      "B": "等于1",
+      "C": "小于1",
+      "D": "无法确定"
+    }
+  },
+  {
+    "id": "cg-05-s1-q23",
+    "stem": "双向链表中，p指向结点A，且p->right非空；s指向尚未入链的结点X。在A后插入X，下列指针修改顺序正确的是（ ）。",
+    "explanation": "先令s->left=p、s->right=p->right保存左右邻居，再让原后继的left指向s，最后p->right=s。若先修改p->right，便无法再通过它找到原后继。题设p->right非空，避免空指针解引用。"
+  },
+  {
+    "id": "zg-852",
+    "explanation": "递归是函数直接或间接调用自身，并通过基例终止调用。迭代是循环重复更新状态，两者可以互相转换但不是同义词。回溯是一种搜索策略，可用递归实现。"
+  },
+  {
+    "id": "cg-05-s1-q19",
+    "options": {
+      "A": "入栈复杂度必然比顺序栈低",
+      "B": "不受预先分配的固定数组容量限制，可按需分配结点",
+      "C": "永远不会出现空栈",
+      "D": "出栈复杂度必然比顺序栈低"
+    },
+    "explanation": "链栈按需分配结点，不会因固定数组已满而直接溢出，但仍可能因内存不足分配失败。顺序栈和链栈的基本入栈、出栈通常都为O(1)，都可能为空。"
+  },
+  {
+    "id": "cg-05-s1-q27",
+    "explanation": "全部入栈后依次弹出最后加入的元素，序列为39、38、P、C、8、7。这是按入栈顺序逆序输出，不是按数值大小排序。"
+  },
+  {
+    "id": "cg-05-s1-q28",
+    "stem": "用长度为n的数组实现循环队列，front指向队头，rear指向下一个入队位置，牺牲一个单元区分空满。队空条件为（ ）。"
+  },
+  {
+    "id": "cg-05-s1-q31",
+    "stem": "用长度为n的数组实现循环队列，front指向队头，rear指向下一入队位置，并牺牲一个单元区分空满。队满条件为（ ）。",
+    "options": {
+      "A": "front==rear",
+      "B": "front==rear+1且不取模",
+      "C": "front==rear%n",
+      "D": "front==(rear+1)%n"
+    }
+  },
+  {
+    "id": "cg-05-s1-q36",
+    "stem": "一棵有30个结点的二叉树，根结点位于第1层，其高度最少为多少层？"
+  },
+  {
+    "id": "cg-05-s1-q42",
+    "explanation": "完全二叉树除最末层外全部填满，最末层从左连续排列。因此同一结点的左子树不会比右子树矮，也不能高两层；左侧最大层次只能等于右侧h或为h+1。"
+  },
+  {
+    "id": "zg-39603",
+    "options": {
+      "A": "二叉树不能为空",
+      "B": "每个结点至多有两棵子树",
+      "C": "不存在度大于2的结点",
+      "D": "左右子树有次序之分"
+    },
+    "explanation": "二叉树允许为空。非空结点最多有左右两个孩子；只有左孩子和只有右孩子是不同形态。五种基本形态为：空树、仅根、仅左子树、仅右子树、左右子树都有。"
+  },
+  {
+    "id": "uf-ds-005",
+    "stem": "含n个结点（n≥1）的普通二叉链表，每个结点只有left、right两个孩子指针域，则空孩子指针域共有（ ）条。"
+  },
+  {
+    "id": "gap-ds-018",
+    "stem": "给定一个连通无向带权图，候选通信线路很少，要求连接全部站点且总建设成本最低。以下方法最合适的是？"
+  },
+  {
+    "id": "gap-ds-017",
+    "stem": "一个不含负权环的有向带权图，顶点较少，需要求任意两点间最短距离。以下算法优先考虑哪种？"
+  },
+  {
+    "id": "gap-ds-032",
+    "explanation": "按Kahn算法反复输出零入度顶点并删除出边。若队列为空仍有未输出顶点，则剩余子图含有向环；有些剩余顶点也可能只是位于环的下游，并非每个剩余顶点都在环上。"
+  },
+  {
+    "id": "uf-ds-008",
+    "stem": "在长度为n的有序顺序表中进行二分查找，最坏比较次数的紧确增长量级是（ ），选项以O记号表示。"
+  },
+  {
+    "id": "cg-05-s1-q48",
+    "stem": "一种排序反复从左向右比较相邻记录，若相邻记录逆序就交换，直到不再发生交换。这种排序称为（ ）。",
+    "explanation": "冒泡排序通过相邻比较和交换，使较大或较小元素逐趟到达端部。必须强调相邻，单说“两两比较、逆序交换”无法唯一识别具体算法。"
+  },
+  {
+    "id": "cg-05-s1-q49",
+    "explanation": "从大到小选择排序首趟选出全体最大值6，与首元素2交换，得到6、2、4、1。首趟只固定第一位，其余部分不要求已有序。"
+  },
+  {
+    "id": "cg-05-s1-q50",
+    "stem": "对序列54、73、21、35、67、78、63、24、89升序快排。以首元素54为枢轴，采用双指针挖坑法：先从右找小于54者填左坑，再从左找大于54者填右坑，交替至指针相遇，最后填入54。第一趟结果为（ ）。",
+    "explanation": "暂存54，右指针找到24填入首位；左指针找到73填原24位置；右指针找到35填原73位置。左指针越过21到两指针相遇处，填入54，得到24、35、21、54、67、78、63、73、89。不同划分规则可能给出不同的一趟结果，故题干明确规则。"
+  },
+  {
+    "id": "uc-ds-007",
+    "stem": "对序列9、1、5、3进行首元素9为枢轴、最终将枢轴归位的快速排序分区。一趟结束后可以确定的是（ ）。"
+  },
+  {
+    "id": "uc-ds-015",
+    "stem": "标准数组二路归并排序在相等时先取左段元素，可保持稳定性，通常需要O(n)量级辅助数组空间。（ ）"
+  },
+  {
+    "id": "cg-05-s1-q47",
+    "explanation": "希尔排序先按增量把元素分为若干子序列，对各组分别进行直接插入排序，逐步缩小增量直至1，因此属于插入类排序。它不是简单选择或堆排序。"
+  },
+  {
+    "id": "gap-ds-021",
+    "explanation": "Trie按字符路径共享前缀，定位前缀的代价主要取决于前缀长度；之后列出匹配词仍需遍历相应子树并付出结果输出代价。它不能保证列出无限多个匹配结果也只花O(前缀长度)。"
+  },
+  {
+    "id": "cg-10-s1-q7",
+    "options": {
+      "A": "交互性",
+      "B": "多路性",
+      "C": "独立性",
+      "D": "自治性"
+    },
+    "explanation": "分时系统通常强调多路性、独立性、及时性和交互性：多个用户可交互使用系统，感觉彼此独立。“独占性”原文不准确，应为独立性。自治性不是这组分时特点。"
+  },
+  {
+    "id": "cg-10-s1-q9",
+    "explanation": "并发指多个活动在同一时间段内交替推进；并行指在同一时刻真正同时执行。单核也能通过调度实现并发，但不能同时执行多个CPU指令流。"
+  },
+  {
+    "id": "cg-10-s1-q11",
+    "stem": "在经典资源分类中，以下哪项在一项工作执行过程中通常不能被强行剥夺后无损交给另一进程？",
+    "explanation": "打印机正在输出一个作业时不能随意切给另一作业，否则纸面输出会混杂。SPOOLing可让多个作业排队共享，但不等于可以抢占正在进行的物理打印。"
+  },
+  {
+    "id": "cg-10-s1-q12",
+    "explanation": "时间片让多个可运行任务轮流获得CPU，切换足够频繁便产生宏观同时推进的体验。单核同一时刻仍只有一个任务占用CPU执行。"
+  },
+  {
+    "id": "cg-10-s1-q15",
+    "explanation": "进程是程序在某个数据集合上的一次执行活动，包含运行状态、资源和进程控制信息。程序文件是静态代码，同一程序可形成多个进程。",
+    "topic_id": "operating-system.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q21",
+    "stem": "三个作业A在8:50到达、服务时间90分钟；B在9:00到达、服务时间24分钟；C在9:30到达、服务时间60分钟。单道非抢占系统此前保持空闲，9:30首次开始按最高响应比优先调度。忽略切换开销，执行顺序是（ ）。",
+    "answer": "B",
+    "explanation": "9:30时响应比R=(等待时间+服务时间)/服务时间：A为130/90≈1.444，B为54/24=2.25，C为1，先B。9:54 B完成后，A为154/90≈1.711，C为84/60=1.4，故再选A，最后C，顺序BAC。",
+    "topic_id": "operating-system.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q46",
+    "stem": "死锁四个必要条件中，“资源一旦分配，未由持有者主动释放前不能被强行收回”指（ ）。",
+    "options": {
+      "A": "互斥条件",
+      "B": "不剥夺条件",
+      "C": "请求和保持条件",
+      "D": "循环等待条件"
+    },
+    "answer": "B",
+    "explanation": "不剥夺指资源不能被其他进程或系统强行夺走，须由持有者主动释放。资源竞争本身不足以断定死锁，还需同时满足另外三个必要条件。",
+    "topic_id": "operating-system.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q22",
+    "topic_id": "operating-system.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q64",
+    "topic_id": "operating-system.t11",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q7-dup2",
+    "topic_id": "operating-system.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-e43d68bb",
+    "topic_id": "operating-system.t10",
+    "topic_source": "manual",
+    "explanation": "虚拟存储借助地址映射、按需调入和置换，用内存与外存配合提供逻辑地址空间。它不增加实际RAM容量，也不能无限扩大可用空间，性能受缺页与外存速度限制。"
+  },
+  {
+    "id": "ap-os-006",
+    "topic_id": "operating-system.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q31",
+    "topic_id": "operating-system.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q53",
+    "topic_id": "operating-system.t09",
+    "topic_source": "manual",
+    "explanation": "固定分区在系统初始化时预先划分，运行期间每个分区大小保持固定；各分区可等大，也可按不同大小设置。按作业实际长度临时划分属于动态分区。"
+  },
+  {
+    "id": "cg-10-s1-q13",
+    "topic_id": "operating-system.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q16",
+    "topic_id": "operating-system.t06",
+    "topic_source": "manual",
+    "explanation": "临界资源同一时刻只允许一个进程访问，但可在不同时间被多个进程共享。各进程进入访问该资源的临界区时实施互斥即可；仅建控制块或允许并发本身不保证安全。"
+  },
+  {
+    "id": "cg-10-s1-q29",
+    "topic_id": "operating-system.t12",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q48",
+    "topic_id": "operating-system.t10",
+    "topic_source": "manual",
+    "stem": "物理内存不足以一次容纳进程全部页面时，以下哪项技术允许部分页面暂存外存、按需调入执行？",
+    "explanation": "虚拟内存的请求分页允许只装入当前需要的页面，其他页面暂存外存。它受地址空间、交换区及性能等约束，不会无条件解决所有内存分配失败。"
+  },
+  {
+    "id": "cg-10-s1-q62",
+    "topic_id": "operating-system.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "web-32",
+    "topic_id": "operating-system.t12",
+    "topic_source": "manual"
+  },
+  {
+    "id": "web-36",
+    "topic_id": "operating-system.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-d9f15556",
+    "topic_id": "operating-system.t04",
+    "topic_source": "manual",
+    "explanation": "进程三种基本状态是就绪、运行和阻塞（等待）。后备队列通常描述尚未获准进入内存的作业，不是本题三态模型中的进程状态。"
+  },
+  {
+    "id": "uf-os-002",
+    "topic_id": "operating-system.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ap-os-003",
+    "topic_id": "operating-system.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uc-os-006",
+    "topic_id": "operating-system.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q58",
+    "topic_id": "operating-system.t13",
+    "topic_source": "manual",
+    "explanation": "最短寻道时间优先SSTF每次选择距当前磁头最近的请求，直接用于磁盘磁头调度。时间片和进程优先级用于处理机调度，LRU用于缓存或页面置换。"
+  },
+  {
+    "id": "cg-10-s1-q61",
+    "topic_id": "operating-system.t13",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q39",
+    "topic_id": "operating-system.t09",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-6ff41d09",
+    "topic_id": "operating-system.t09",
+    "topic_source": "manual",
+    "explanation": "分页把逻辑与物理空间划成固定大小页与页框；分段按程序逻辑单元组织；段页式先分段、再对段内分页。云管理不是与前三者并列的内存分配方案。"
+  },
+  {
+    "id": "cg-14-s1-q8-dup2",
+    "stem": "把CPU时间划分为短时间片，轮流为多个终端用户服务，使每个用户获得及时交互响应的操作系统称为（ ）。",
+    "explanation": "分时系统通过时间片轮流执行多个用户任务，追求及时交互。用户感觉独立使用系统，不是CPU具有这种感觉。"
+  },
+  {
+    "id": "cg-14-s1-q10-dup2",
+    "explanation": "休眠把当前内存状态保存到磁盘上的休眠文件，再进入低功耗或断电状态；恢复时从磁盘重载。睡眠通常主要在RAM中保留状态，两者不能混淆。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q11-dup2",
+    "explanation": "对对象单击鼠标右键通常打开与该对象有关的上下文菜单，也称快捷菜单，不会直接打开一个新应用程序。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q17-dup2",
+    "stem": "在支持标准编辑快捷键的应用程序中，保存当前文档的组合键通常为（ ）。",
+    "explanation": "Ctrl+S通常保存文档；Ctrl+X剪切，Ctrl+C复制，Ctrl+V粘贴。具体是否支持由应用程序决定。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q20-dup2",
+    "stem": "在英文输入状态下，字母键持续输入大写字母且未按住Shift，最可能启用了哪个键的状态？",
+    "explanation": "CapsLock切换字母大小写锁定。能否输入汉字还取决于输入法及其模式，不能仅凭大写锁定断言所有中文输入均不可用。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q22-dup2",
+    "explanation": "Win+D用于显示桌面，再次按可恢复原窗口显示；Alt+Tab用于在应用窗口之间切换。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q23-dup2",
+    "explanation": "Ctrl+X为剪切，把所选内容放入剪贴板，通常在粘贴后完成移动；Ctrl+C复制，Ctrl+V粘贴，Ctrl+A全选。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q24-dup2",
+    "explanation": "Windows 7传统截图快捷键中，Alt+PrintScreen把当前活动窗口图像复制到剪贴板；单独PrintScreen通常截取整个屏幕。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q27-dup2",
+    "explanation": "单独按Windows徽标键通常显示开始菜单；关闭活动窗口用Alt+F4，系统属性等需其他组合键。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q29-dup2",
+    "stem": "Windows桌面上带有.lnk扩展名、保存目标文件位置等信息的项目，实质上是（ ）。",
+    "explanation": "传统.lnk快捷方式保存目标路径、参数等信息，便于访问原对象。桌面也可以放真实文件和文件夹，因此不能把所有桌面图标都等同快捷方式。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q34-dup2",
+    "options": {
+      "A": "通常只有一个窗口接收当前键盘输入，其他程序仍可在后台运行",
+      "B": "只能有一个程序工作，其他均停止",
+      "C": "关闭其他窗口后当前窗口才能工作",
+      "D": "最小化其他窗口后当前窗口才能工作"
+    },
+    "explanation": "活动窗口表示当前输入焦点，不表示CPU只运行该程序。其他窗口对应的程序仍可由系统调度在后台执行；标题栏颜色随主题变化。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q35-dup2",
+    "explanation": "活动窗口通常是当前接收键盘输入的工作窗口。它不一定是任务栏的第一个窗口，也不等于整个屏幕。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q39-dup2",
+    "stem": "Windows中需要查看硬件设备状态、管理设备驱动时，应优先使用哪项工具？",
+    "options": {
+      "A": "显示器",
+      "B": "控制面板中的设备管理器",
+      "C": "文件资源管理器",
+      "D": "画图"
+    },
+    "answer": "B",
+    "explanation": "设备管理器用于查看硬件状态、启用停用设备和管理驱动；文件资源管理器主要管理文件与目录。硬件设备的识别和驱动状态应在设备管理器查看。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q46-dup2",
+    "explanation": "传统Windows剪贴板用于临时交换复制或剪切的数据，主要由内存保存；它不是磁盘上的回收站，也不是CPU高速缓存的专用区域。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q55",
+    "explanation": "Administrator是Windows内置管理员账户的默认英文名称。其实际操作仍受账户状态、UAC和其他安全机制影响，不能理解为可无条件绕过所有保护。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s2-q5-dup2",
+    "stem": "目标支持相应数据格式且允许编辑时，哪些情况通常可以使粘贴命令可用？",
+    "explanation": "剪贴板中已有目标可接受的数据，或成功执行复制、剪切后产生了这类数据，通常可粘贴。仅选中对象不会自动填充剪贴板，也不保证粘贴可用。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s2-q10",
+    "explanation": "回收站通常在相应磁盘卷上保存通过Shell删除且符合回收条件的项目，可以还原或清空。Shift+Delete、网络位置或某些移动盘删除通常绕过回收站；并非所有删除都能恢复。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s2-q12",
+    "stem": "Windows 7已启用Aero Snap，当前窗口支持最大化且未最大化。以下哪些操作可以将其最大化？",
+    "answer": "ACD",
+    "explanation": "在题设Windows桌面环境中，单击最大化按钮、双击窗口标题栏、将支持此操作的窗口拖到屏幕顶端触发贴靠，均可最大化；还原按钮用于从最大化状态恢复。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-32499",
+    "type": "简答",
+    "stem": "列出通常教材概括的操作系统四项基本特征，并各用一句话说明。",
+    "answer": "并发：多个程序在同一时间段推进；共享：多个活动按规则共同使用资源；虚拟：通过技术把物理资源表现为多个或更大的逻辑资源；异步：进程以不可预知的速度推进，需同步互斥协调。",
+    "explanation": "常见四特征为并发、共享、虚拟、异步。不同教材对异步或随机环境有不同表述，但不能把只有两空的旧题当成完整四特征训练。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "解释并发",
+        "points": 1
+      },
+      {
+        "criterion": "解释共享",
+        "points": 1
+      },
+      {
+        "criterion": "解释虚拟",
+        "points": 1
+      },
+      {
+        "criterion": "解释异步",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "web-31",
+    "options": {
+      "A": "管理计算机资源的系统软件",
+      "B": "管理用户程序执行的系统软件",
+      "C": "可通过调度提高资源利用率的系统软件",
+      "D": "无需编译器，直接将任意高级语言源代码翻译为机器指令的软件"
+    },
+    "explanation": "操作系统管理资源和程序执行，也通过接口方便用户编程。高级语言翻译主要由编译器或解释器完成，不能据“方便编程”否定操作系统的作用，故改D使错误点明确。"
+  },
+  {
+    "id": "dy-bd96ef41",
+    "options": {
+      "A": "并发性",
+      "B": "共享性",
+      "C": "控制性",
+      "D": "异步性"
+    },
+    "explanation": "通用教材列出的操作系统基本特征为并发、共享、虚拟和异步。控制是系统承担的功能，不属于这里并列的四项基本特征；异步指进程推进速度具有不可预知性，不是要求所有进程同步执行。"
+  },
+  {
+    "id": "dy-4d9dffea",
+    "stem": "只考虑快捷方式保存的固定目标路径，假定系统和应用不会自动跟踪或修复目标移动，以下说法正确的有（ ）。",
+    "explanation": "在题设不自动更新路径的模型下，移动或删除目标会使原快捷方式无法找到它；仅移动、复制或删除快捷方式通常不改变原文件。实际Windows可能跟踪目标移动，因此题目必须说明简化条件。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-ed514974",
+    "options": {
+      "A": "Shift+Delete删除时通常不把文件放入回收站",
+      "B": "直接按PrintScreen仅截取当前活动窗口",
+      "C": "在普通文本编辑中，Delete通常删除光标后字符",
+      "D": "Ctrl+PrintScreen专门截取当前活动窗口"
+    },
+    "explanation": "传统Win7中PrintScreen通常截整个屏幕，Alt+PrintScreen截活动窗口，故B、D错误。Shift+Delete绕过回收站，不代表数据经物理擦除后绝无恢复可能。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-c6d6dcd2",
+    "stem": "对支持调整大小的普通Windows窗口，以下哪些操作通常能改变其显示大小？",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-58bf1b4e",
+    "stem": "关于操作系统账号安全，下列做法合理的有（ ）。",
+    "options": {
+      "A": "使用密码认证且已设置密码的账户，应输入正确密码完成认证",
+      "B": "不随意向他人透露个人账号密码",
+      "C": "登录密码只能由数字组成",
+      "D": "多人共用设备时，使用各自授权账户操作"
+    },
+    "explanation": "A、B、D有助于正确认证和隔离权限。账号可使用不同认证方式，不能说所有登录都必须输密码；密码也不应只限数字。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-16a9dbf3",
+    "stem": "在Windows文件资源管理器中，假定有删除权限且对象为普通本地文件，以下哪些操作可以发起删除？",
+    "options": {
+      "A": "在快捷菜单中选择删除",
+      "B": "拖动到回收站",
+      "C": "按Delete键",
+      "D": "按Shift+Delete组合键"
+    },
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-9431713a",
+    "stem": "传统ACPI S4休眠与S3睡眠完全相同，均只把会话状态留在RAM中并靠持续供电保持。（ ）",
+    "explanation": "S4休眠把状态写入非易失存储，恢复时读回；传统S3睡眠主要靠RAM保留状态。两者不是同一个电源状态，实际恢复速度依设备而定。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-f9fc09ca",
+    "explanation": "双击是在系统规定的时间与位置阈值内连续点击两次，通常触发打开等命令；两次分开的单击可能只是选择，不等价于双击。是否进入重命名等状态还取决于位置和对象。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-8a52a074",
+    "explanation": "Win+D用于显示或隐藏桌面；在打开窗口之间轮转通常用Alt+Tab。显示桌面与切换到另一个应用窗口不是同一操作。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-e393765e",
+    "stem": "同时打开过多且实际消耗大量CPU或内存的应用窗口，可能降低系统响应速度。（ ）",
+    "explanation": "性能取决于各程序实际资源消耗而不只窗口数量。若工作集超过内存或CPU竞争严重，可能出现频繁换页或调度等待，从而响应变慢。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-144723bb",
+    "explanation": "传统Windows剪贴板主要由内存暂存复制、剪切的数据，不是固定存放于本地C盘。应用或新版系统的剪贴板历史可能另有持久化机制，题目限定传统模型。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-4f40c840",
+    "stem": "在Windows 7默认情况下，删除普通USB闪存盘中的文件后，通常能从系统回收站直接还原。（ ）",
+    "explanation": "Win7默认对普通USB闪存盘的删除通常不经过回收站，因此不能从回收站直接还原。但这不等于数据已安全擦除，能否通过其他方式恢复取决于覆盖等情况。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-8900c9aa",
+    "explanation": "窗口是否有滚动条由控件和内容决定；内容能完整显示时通常不需要滚动条。自定义界面还可能采用自动隐藏或其他滚动方式。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-c5794f7e",
+    "explanation": "在通常的单用户桌面输入模型中，同一时刻只有一个前台活动窗口接收当前键盘输入。其余窗口对应的程序仍可后台运行，活动状态与CPU运行状态并非同义。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q66",
+    "explanation": "原语是一段具有原子性语义的操作序列，在并发观察下不可分割。实现可借助原子指令和同步机制；并不要求必定只有一条机器指令，也不能在多核环境只靠关闭本核中断保证全局互斥。"
+  },
+  {
+    "id": "web-33",
+    "stem": "在教材简化的指令周期模型中，CPU通常在何时检查并响应待处理的可屏蔽外部中断请求？",
+    "explanation": "通常在一条指令执行结束的边界检查可屏蔽外部中断，并在中断使能等条件满足时响应。异常、陷阱及不可屏蔽中断有不同语义，不能把所有事件都笼统化。"
+  },
+  {
+    "id": "cg-10-s1-q6",
+    "explanation": "多道程序让某个作业等待I/O时，CPU可转而执行其他就绪作业，减少空闲并提高吞吐量。交互及时性和硬实时约束不是引入多道批处理的首要目的。"
+  },
+  {
+    "id": "cg-10-s1-q8",
+    "explanation": "多个进程在同一时间段内都得到推进，称为并发性。单核可交替执行实现并发；动态性强调进程是一次执行活动，异步性强调推进速度不可预知。"
+  },
+  {
+    "id": "cg-10-s1-q10",
+    "explanation": "PCB保存进程标识、状态、寄存器现场、调度和资源等信息，是操作系统管理进程的核心记录。一个状态字或起始地址不能完整描述进程。"
+  },
+  {
+    "id": "cg-10-s1-q14",
+    "stem": "单处理器系统共有12个进程，假定此刻其中一个正在占用CPU运行，其余只可能为就绪或阻塞。就绪队列最多含多少个进程？"
+  },
+  {
+    "id": "cg-10-s1-q17",
+    "explanation": "创建进程通常包括分配PCB、准备必要资源及建立初始运行状态，最后使其进入可调度状态。是否马上获得CPU属于后续调度，不是创建成功的必要前提。"
+  },
+  {
+    "id": "cg-10-s1-q25",
+    "stem": "在具有独立虚拟地址空间的普通进程之间，下列哪项本身不是直接共享数据的IPC机制？",
+    "explanation": "各进程普通全局变量位于各自地址空间，名称相同也不自动共享。消息队列、共享内存和管道由系统提供跨进程通信机制；共享内存里的变量则是另一种明确共享情形。"
+  },
+  {
+    "id": "cg-10-s1-q30",
+    "stem": "以下哪项主要是操作系统中的软件策略选择，而不是某种专门硬件机制？",
+    "explanation": "调度算法选择哪个就绪进程运行，主要是软件策略。中断、硬件地址映射和定时器需要对应硬件；调度执行仍依赖CPU和上下文切换设施，不能说完全不需要硬件。"
+  },
+  {
+    "id": "cg-10-s1-q45",
+    "options": {
+      "A": "每个进程只能有一个线程",
+      "B": "线程必须各自拥有一个完全独立的进程地址空间",
+      "C": "一个进程可以拥有多个线程",
+      "D": "一个普通线程同时属于多个进程"
+    }
+  },
+  {
+    "id": "cg-14-s1-q16-dup2",
+    "explanation": "Alt+F4通常请求关闭当前活动顶层窗口，应用可能先提示保存。Ctrl+F4常关闭应用内部子文档，不能普遍替代Alt+F4。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q25-dup2",
+    "explanation": "Ctrl+Esc可打开开始菜单，单独按Windows键通常也可以。Shift+Tab主要反向移动焦点，Ctrl+Shift常与输入法切换有关。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-ca4e8ea5",
+    "stem": "在教材的单线程进程模型中，以下关于进程的说法正确的有（ ）。",
+    "options": {
+      "A": "进程是程序的一次执行过程",
+      "B": "进程是资源分配和调度的基本单位",
+      "C": "进程是具有执行状态和资源的运行实体",
+      "D": "进程不需要任何可执行程序或指令"
+    },
+    "explanation": "在题设单线程模型中，进程既承担资源又接受调度，A、B、C成立。现代线程模型通常把线程作为CPU调度单位，应区分教材模型和实现。"
+  },
+  {
+    "id": "cg-10-s1-q20",
+    "stem": "单CPU上，所有作业同时到达，服务时间已知，无I/O阻塞且不计切换开销。以下哪种非抢占调度可使平均周转时间最小？"
+  },
+  {
+    "id": "cg-10-s1-q59",
+    "explanation": "最高响应比优先以R=(等待时间+服务时间)/服务时间选任务。短作业初始占优，长作业等待越久其比值也会上升，可缓解饥饿，但不能脱离负载条件绝对保证公平。"
+  },
+  {
+    "id": "ap-os-002",
+    "stem": "某仅进行CPU计算、无I/O及其他阻塞的进程在时刻0到达，需要CPU时间3，在时刻7完成。其周转时间和在就绪队列中的总等待时间分别为（ ）。"
+  },
+  {
+    "id": "uc-os-001",
+    "stem": "三个进程P1、P2、P3同时到达，运行时间为5、3、1，初始就绪队列按P1、P2、P3排列。时间片为2，轮转调度且无I/O，忽略切换开销。首次运行顺序和完成顺序分别为（ ）。"
+  },
+  {
+    "id": "dy-ebc6d4f4",
+    "explanation": "死锁需要同时具备互斥、请求并保持、不剥夺和循环等待四项条件。破坏其中任意一项可预防资源死锁；全部满足表示可能死锁，不能单凭条件名认定当前已死锁。"
+  },
+  {
+    "id": "dy-58750fc1",
+    "options": {
+      "A": "只要内存容量小就一定死锁",
+      "B": "不可剥夺资源的分配和申请安排不当",
+      "C": "只要CPU慢就一定死锁",
+      "D": "进程推进及申请资源的次序不当"
+    },
+    "explanation": "资源分配和推进次序不当可能形成持有并等待的环。资源少、进程多或CPU慢本身都不充分；是否死锁要结合互斥、保持、不剥夺、循环等待条件。"
+  },
+  {
+    "id": "gap-os-002",
+    "type": "简答",
+    "stem": "Available=(1,1)。P1的Need=(1,0)、Allocation=(1,0)；P2的Need=(1,1)、Allocation=(0,1)。给出一个安全序列并写出Work的更新过程。",
+    "answer": "可选P1、P2：初始Work=(1,1)，P1可完成并释放(1,0)，Work=(2,1)，再P2完成后Work=(2,2)。也可P2、P1：先P2释放(0,1)后Work=(1,2)，再P1后为(2,2)。",
+    "explanation": "安全序列不一定唯一。每次选择Need不超过Work的进程，并在假定它完成后加回Allocation；这里初始两个进程都满足条件。",
+    "max_score": 4,
+    "rubric": [
+      {
+        "criterion": "给出P1,P2或P2,P1任一合法序列",
+        "points": 1
+      },
+      {
+        "criterion": "初始Work=(1,1)并选择Need可满足的进程",
+        "points": 1
+      },
+      {
+        "criterion": "完成后正确加回该进程Allocation",
+        "points": 1
+      },
+      {
+        "criterion": "说明最终Work=(2,2)且全部可完成",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "cg-10-s1-q37",
+    "stem": "按字节编址，逻辑空间含8页，每页1024 B，地址从0开始。表示该空间逻辑地址至少需要多少二进制位？"
+  },
+  {
+    "id": "cg-10-s1-q38",
+    "stem": "单级页表保存在主存中，无TLB、无缺页且不考虑其他缓存。为通过虚拟地址读取一个操作数，需要访问主存几次？"
+  },
+  {
+    "id": "cg-10-s1-q40",
+    "explanation": "首次适应从低地址开始扫描，找到第一个足够大的空闲分区即分配，因此通常把空闲表按地址递增组织。按大小排序更对应最佳或最坏适应。"
+  },
+  {
+    "id": "cg-10-s1-q41",
+    "explanation": "静态重定位在装入时根据目标物理位置一次性修改相关地址。动态重定位在运行时由地址变换机制完成，支持装入后位置变化。"
+  },
+  {
+    "id": "cg-10-s1-q63",
+    "explanation": "地址映射或地址转换把程序使用的逻辑地址转换为实际访问的物理地址。地址分配决定使用哪块空间，地址保护和越界检查则限制访问范围。"
+  },
+  {
+    "id": "web-37",
+    "stem": "采用线性空闲区表实现最佳适应，并希望扫描到第一个足够大的分区即可分配，空闲区表应如何排序？"
+  },
+  {
+    "id": "dy-3d38882f",
+    "stem": "关于基本分页（非请求分页）存储管理，下列说法正确的有（ ）。",
+    "options": {
+      "A": "固定页框消除外部碎片，进程尾页可有小于一页的内部碎片",
+      "B": "同一程序的页面不必物理连续",
+      "C": "必然允许程序只装入一部分即可运行",
+      "D": "常规按进程建立页表来记录逻辑页到物理页框的映射"
+    }
+  },
+  {
+    "id": "cg-10-s1-q49",
+    "explanation": "按访问顺序是否缺页分别为：缺、缺、缺、缺、缺、缺、缺、命中、缺、命中、缺、命中，共9次。FIFO命中不改变装入先后次序，只有缺页且页框满时才淘汰最早装入页。"
+  },
+  {
+    "id": "cg-10-s1-q50",
+    "explanation": "访问0、1、7、8、6先产生5次缺页；2、3各再缺页；7、2命中；9、8、1、0再各缺页；最后2命中，共11次。LRU每次命中也更新最近使用次序。"
+  },
+  {
+    "id": "cg-10-s1-q36",
+    "stem": "从教材的文件逻辑组织角度，将数据库中的记录集合视为文件时，通常属于（ ）。",
+    "explanation": "按逻辑组织，记录式文件由可识别的记录组成，适合表达数据库记录集合。实际DBMS底层数据文件仍可表现为字节流和页面，不能把逻辑组织与物理文件接口混同。"
+  },
+  {
+    "id": "cg-10-s1-q42",
+    "stem": "按用途分类，某用户自己编写并生成的业务程序可执行文件，通常归为（ ）。",
+    "explanation": "用途由文件服务的对象决定：用户自建业务程序属于用户文件。可执行只是文件内容或执行属性，系统程序和库也可执行，不能仅凭“可执行”判断必为用户文件。"
+  },
+  {
+    "id": "cg-10-s1-q56",
+    "type": "多选",
+    "answer": "BC",
+    "explanation": "位示图用一个或多个位表示固定资源单元的状态，可用于主存空闲块和磁盘空闲块的分配回收，因此B、C都成立。0和1各代表何状态依约定，不是所有系统都固定相同。"
+  },
+  {
+    "id": "cg-10-s1-q57",
+    "stem": "位示图含8个32位字，内存块号、字号和位号均从1开始。归还第100号块时，它对应的字号和位号为（ ）。",
+    "explanation": "前3个字覆盖1～96号块，第100号块位于第4个字的第4位。公式为字号=floor((块号-1)/32)+1，位号=(块号-1)%32+1。"
+  },
+  {
+    "id": "cg-10-s1-q68",
+    "stem": "不考虑硬链接、符号链接等额外关联时，多级文件目录的基本层次结构是（ ）。",
+    "explanation": "根目录之下可有子目录，子目录再包含文件和目录，形成父子层次的树。额外链接可能引入图结构，所以题干限定基本目录层次。"
+  },
+  {
+    "id": "cg-14-s1-q12-dup2",
+    "stem": "Windows文件资源管理器中，不按修饰键，用左键把普通文件从D卷拖到E卷，且权限和空间足够。默认结果是（ ）。",
+    "explanation": "默认跨卷拖动通常复制，因此源卷和目标卷均有文件；同卷拖动通常移动。Shift、Ctrl、Alt等修饰键可改变行为，本题明确未使用。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q18-dup2",
+    "explanation": "Ctrl+A通常选中当前文件视图中的全部项目。Ctrl+S保存，Ctrl+V粘贴，Ctrl+U在不同应用可能表示下划线等。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q19-dup2",
+    "explanation": "在Windows文件资源管理器中按住Alt拖动通常创建快捷方式；Ctrl拖动通常复制，Shift拖动通常移动。快捷方式不是原文件副本。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q21-dup2",
+    "stem": "在Windows文件资源管理器中，按默认回收设置删除一个普通本地文件，以下哪项会明确绕过回收站，使其无法从回收站还原？",
+    "explanation": "Shift+Delete通常直接删除而不放入回收站；普通Delete或菜单删除通常进入回收站。绕过回收站不等于物理安全擦除，是否能用其他恢复工具找回取决于覆盖等情况。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q42-dup2",
+    "options": {
+      "A": "大图标",
+      "B": "小图标",
+      "C": "列表",
+      "D": "详细信息"
+    },
+    "explanation": "详细信息视图以列显示名称、修改时间、类型和大小等元数据，适合比较文件。大图标、小图标或列表主要突出名称与图标。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q43-dup2",
+    "explanation": "按住Ctrl逐个点击可选择多个不连续项目；Shift通常选择首尾之间的连续范围。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q44-dup2",
+    "type": "多选",
+    "stem": "在支持相应查询条件的Windows文件搜索中，以下哪些信息可以用于筛选或限定文件搜索？",
+    "answer": "ABCD",
+    "explanation": "文件名称、修改日期和其他可查询属性可用于筛选；文件夹路径可限定搜索位置。具体查询语法及可索引属性依版本和文件类型而定，不能说文件属性不能搜索。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q45-dup2",
+    "stem": "采用传统文件通配符规则，查找主文件名以“人事”开头且具有扩展名的文件，以下哪项匹配模式最合适？",
+    "explanation": "星号可匹配零个或多个字符，故人事*.*允许“人事”后接任意后续名称，并匹配任意扩展名。问号只匹配单个字符，不能覆盖任意长度。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s2-q6-dup2",
+    "explanation": "只读、隐藏是Windows文件的基本属性标志。共享属于网络访问配置，管理员属于账号或权限概念，不是本题所指基本文件属性。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s2-q7-dup2",
+    "stem": "按Windows通常的目录命名规则，未启用目录大小写敏感等特殊设置，下列关于同名项目的说法不恰当的有（ ）。",
+    "explanation": "同一目录中名称相同的普通文件或文件夹不能并存；不同目录可使用相同名称。名称包含扩展名，报告.txt与报告.doc并非同名。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s2-q8-dup2",
+    "options": {
+      "A": "只读",
+      "B": "隐藏",
+      "C": "存档",
+      "D": "只写"
+    },
+    "explanation": "只读、隐藏、存档是常见Windows文件属性标志。“只写”通常描述访问权限的一种效果，不是这组基本属性标志。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-fc1cb1a5",
+    "explanation": "DOC无扩展名也可合法，123.音乐使用数字、句点及中文也合法；?与*是Windows普通文件名的保留通配符，不可用于此类名称。文件名可以包含空格，不能把开头空格一概列为非法。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-9f856c15",
+    "explanation": "同一目录可以有不同名称的文件，不同目录可以有同名或不同名文件。默认规则下同一目录不能有完全相同名称的两个普通文件，所以选A、B、D。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-10421cd8",
+    "answer": "ABD",
+    "explanation": "在题设普通Windows文件命名规则下，3d%4.DAT、WIN-PROG.EXE、123.1均未使用禁用字符；扩展名可以含数字。123457689*.txt含保留字符*，不能作为普通文件名。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-396aa2de",
+    "explanation": "*.n通常按扩展名n匹配，不能表达名字以a开头。按名称前缀匹配可用a*；在传统含扩展名匹配模式下也常用a*.*。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-fd82b546",
+    "stem": "Windows中的普通文件名必须带扩展名，否则该文件不能存在。（ ）",
+    "answer": "错误",
+    "explanation": "文件名可无扩展名。扩展名是常见的类型标识和应用关联线索，不是文件存在的必要条件，也不保证内容一定符合所示格式。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-ce03ac57",
+    "explanation": "Shift+Delete、某些可移动盘、网络路径、超出回收容量或应用直接删除等情况可能绕过回收站。因此不能从回收站找到所有删除文件，也不能把绕过回收站等同物理不可恢复。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-bcad2b80",
+    "explanation": "普通文件夹名允许句点，例如资料.v1，因此“文件夹不允许扩展名”不准确。通常文件夹不依赖扩展名关联应用；某些Shell特殊后缀还有特定行为，不能一概说毫无意义。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-a4c3751d",
+    "explanation": "一般目录靠层级和路径组织，不需要通过扩展名声明文件内容类型，所以多数文件夹不写扩展名。但名称可以带句点，特定Shell约定也可能赋予后缀特殊含义。",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-10-s1-q60",
+    "explanation": "DMA控制器可在设备与主存之间成块传输，减少CPU逐字节搬运。CPU仍需要配置传输参数，并通常在完成或出错后处理通知，不是全过程完全不参与。"
+  },
+  {
+    "id": "cg-10-s1-q52",
+    "explanation": "先服务当前40号请求，移动0；再依次43、19、11、4、76、79。移动距离为0+3+24+8+7+72+3=117。每一步都重新比较距当前磁头的距离。"
+  },
+  {
+    "id": "gap-os-005",
+    "explanation": "先从50到最近的40，移动10。此时10和70均距30，可任选；若选10再70，额外移动30+60，总100；若先70再10，总数也为100，答案不受本题平局选择影响。"
+  },
+  {
+    "id": "dy-4bda8522",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-29949c83",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-7815f73c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-2e618059",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "web-11",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q53",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-14-s1-q47",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "web-9",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "dy-446d41b2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "cg-09-s1-q4",
+    "stem": "以下哪些系统通常可以使用数据库保存和管理业务数据？",
+    "explanation": "超市销售、财务核算和人事管理都有结构化业务数据，可使用数据库支持查询、更新和共享，因此选D。具体实现也可能采用其他存储，不能说所有此类系统必然使用DBMS。"
+  },
+  {
+    "id": "cg-09-s1-q8",
+    "stem": "数据库应用系统通常可以提供以下哪些能力？\nI. 存储大量业务数据\nII. 通过合理设计支持高效检索\nIII. 提供数据管理操作\nIV. 在适当部署及授权下支持网络共享"
+  },
+  {
+    "id": "cg-09-s1-q13",
+    "explanation": "内模式描述存储文件、记录组织、索引及访问路径等物理表示，是三级模式中最接近物理存储的一层。外模式面向用户视图，概念模式描述全局逻辑结构。"
+  },
+  {
+    "id": "zg-74915",
+    "explanation": "冗余可能增加维护成本并引发不一致，但受控冗余也可提高某些查询性能，例如物化汇总或缓存。因此“不应存储任何冗余”过于绝对；关键在于是否有明确收益和一致性维护机制。"
+  },
+  {
+    "id": "zg-47979",
+    "explanation": "数据库系统DBS包含数据库DB、管理软件DBMS、应用、人员及运行环境等；DBMS负责定义、操纵、控制和维护数据库，是管理核心。不能再把作为管理对象的DB等同于DBMS软件自身的内部核心。"
+  },
+  {
+    "id": "zg-39627",
+    "stem": "教材通常把数据管理技术的发展分为人工管理、文件系统、数据库系统三个阶段。下列哪项不属于这三个阶段？",
+    "explanation": "人工管理、文件系统、数据库系统是常见的数据管理技术发展阶段。目录管理是文件或系统管理中的具体功能，并非与三阶段并列的一种历史阶段。"
+  },
+  {
+    "id": "zg-43261",
+    "options": {
+      "A": "数据库、DBMS、应用系统、管理人员与用户及相关运行环境",
+      "B": "只有数据文件、命令文件和报表",
+      "C": "只有数据库文件结构和数据",
+      "D": "只有常量、变量和函数"
+    }
+  },
+  {
+    "id": "zg-78661",
+    "explanation": "数据库应用通常能够集中存储大量数据并在权限和并发控制下共享，A、B属于优势。性能、维护难度和空间占用依设计而定，不能保证必然更小、更简单。"
+  },
+  {
+    "id": "zg-23486",
+    "type": "简答",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出数据结构",
+        "points": 1
+      },
+      {
+        "criterion": "写出数据操作",
+        "points": 1
+      },
+      {
+        "criterion": "写出完整性约束",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "zg-25061",
+    "topic_id": "database.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "zg-76998",
+    "explanation": "DBMS负责数据库定义、数据访问、完整性与安全控制、事务和恢复，是数据库系统的管理核心。数据库是被管理的数据集合，两者应区分。"
+  },
+  {
+    "id": "cg-09-s1-q28",
+    "explanation": "从班级到学生，一个班级对应多名学生；反向每名学生只对应一个班级，所以是1:N。若把方向写成学生到班级，则为N:1。"
+  },
+  {
+    "id": "cg-09-s1-q29",
+    "stem": "一个供应商可供应多种零件，同一种零件也可由多个供应商供应。供应商与零件之间的联系为（ ）。"
+  },
+  {
+    "id": "zg-9930",
+    "stem": "在传统Chen记法的E-R图中，实体型之间的“联系”通常用什么图形表示？"
+  },
+  {
+    "id": "zg-73364",
+    "type": "简答",
+    "explanation": "E-R模型的基本要素是实体、属性、联系。实体是可区分的对象；属性是对象或联系的特征；联系描述实体之间的关联。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "说明实体",
+        "points": 1
+      },
+      {
+        "criterion": "说明属性",
+        "points": 1
+      },
+      {
+        "criterion": "说明联系",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-db-002",
+    "answer": "实体包括读者和图书；从借阅历史看，读者与图书为M:N。借出日期、归还日期描述某次借阅，不是读者或图书的固定属性。若同一读者可多次借同一本书，应进一步将借阅建成关联实体，使用借阅编号等标识一次事件，再分别与读者、图书建立N:1联系。",
+    "explanation": "基数要结合时间与业务规则。简单M:N加日期可说明概念联系，但重复发生的借阅需要区分事件实例，不能仅凭读者编号、图书编号唯一标识全部历史。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "识别读者和图书及历史M:N",
+        "points": 1
+      },
+      {
+        "criterion": "日期归属于借阅事件",
+        "points": 1
+      },
+      {
+        "criterion": "重复借阅需事件标识或关联实体",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "cg-09-s1-q14",
+    "explanation": "关系表的列表示属性，行表示一个元组。实体表中的行通常是实体实例，联系表中的行也可以表示关联事实；不能把列说成一个实体。"
+  },
+  {
+    "id": "cg-09-s1-q16",
+    "options": {
+      "A": "一个表只能有一个主键约束",
+      "B": "主键约束要求组成主键的每列取值非NULL",
+      "C": "主键约束允许组成主键的列取NULL",
+      "D": "一个主键可由多列组合构成"
+    }
+  },
+  {
+    "id": "cg-09-s1-q42",
+    "stem": "员工关系为(部门编号,部门名称,员工编号,姓名,性别,年龄)。员工编号在同一部门内唯一、不同部门可重复，且没有其他唯一性约束。以下哪项适合作主码？",
+    "explanation": "员工编号单独不能跨部门唯一，部门编号单独也对应多名员工；二者组合才唯一标识员工，且去掉任一项都不再唯一，故选A。"
+  },
+  {
+    "id": "zg-77676",
+    "stem": "下表包含多少条数据记录？不把列标题计为记录。\n考号 | 姓名 | 性别\n001 | 李飞 | 女\n002 | 孙俪 | 男\n003 | 吴磊 | 男",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    }
+  },
+  {
+    "id": "zg-75515",
+    "stem": "在采用集合语义的纯关系模型中，下列说法正确的是（ ）。"
+  },
+  {
+    "id": "zg-5594",
+    "explanation": "主码是被选作主要标识的候选码，可由一个属性或多个属性组成，用于唯一标识元组（行），而不是标识列。主码只有一个，但其组成列不必只有一列。"
+  },
+  {
+    "id": "zg-91256",
+    "stem": "学生选课关系含学号、姓名、课程编号、课程名、选课时间。假定同一学生对同一课程最多登记一次，姓名和选课时间均不唯一。以下哪项适合作主码？"
+  },
+  {
+    "id": "zg-89071",
+    "type": "简答",
+    "explanation": "在关系表语境中，行叫记录或元组，列叫字段或属性。标题行是展示列名的方式，不属于关系中的数据元组。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "行称记录或元组",
+        "points": 1
+      },
+      {
+        "criterion": "列称字段或属性",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "zg-9354",
+    "type": "简答",
+    "stem": "关系模型通常讨论哪三类完整性约束？分别说明其约束对象。",
+    "answer": "实体完整性约束主码非空且唯一；参照完整性约束外码取值应为允许的NULL或参照表已有键值；用户定义完整性约束具体业务要求，例如成绩范围和字段组合规则。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "实体完整性主码非空唯一",
+        "points": 1
+      },
+      {
+        "criterion": "参照完整性外码允许规则及被引用键",
+        "points": 1
+      },
+      {
+        "criterion": "用户定义完整性业务约束",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "zg-25661",
+    "stem": "将学生等实体类型转换为关系表后，表的一行通常表示一个实体实例，一列表示一个属性。（ ）"
+  },
+  {
+    "id": "zg-24086",
+    "stem": "从关系表的逻辑组织看，记录（整行）是不可再分的数据值。（ ）",
+    "explanation": "记录由多个属性值构成，整行不是一个不可再分的数据值。关系逻辑中的原子性与DBMS按页管理的物理存储单位是不同层次，不应混称“数据库最小存储单位”。"
+  },
+  {
+    "id": "cg-09-s1-q55",
+    "explanation": "R-S包含R中不属于S的元素，再从R中去掉它们，剩下的恰是同时属于R和S的元素，所以R∩S=R-(R-S)。关系差要求并相容。"
+  },
+  {
+    "id": "cg-09-s1-q56",
+    "explanation": "纯关系代数投影仅保留指定属性，并消除结果中重复元组，因此结果行数不会超过原关系，可相等也可减少。SQL普通SELECT默认不去重，应与纯关系代数区分。"
+  },
+  {
+    "id": "cg-09-s1-q59",
+    "explanation": "常用五种基本关系代数运算是并、差、笛卡尔积、选择和投影。交可由差表达，自然连接可由积、选择和投影组合表达，故它们不属于这组基本运算。"
+  },
+  {
+    "id": "gap-db-003",
+    "stem": "Student(sid,name,dept)用代码CS表示计算机系。写出“计算机系学生姓名”的关系代数表达式，并说明选择和投影后的中间结果。"
+  },
+  {
+    "id": "cg-09-s1-q50",
+    "stem": "按标准SQL语法，从参赛选手表中删除所有姓名为“林琳”的记录，正确语句是（ ）。"
+  },
+  {
+    "id": "cg-09-s1-q53",
+    "stem": "在PostgreSQL中，要删除Student表的Birthyear列，并级联删除依赖该列的视图等对象。下列哪条语句正确？",
+    "options": {
+      "A": "ALTER TABLE Student DROP COLUMN Birthyear RESTRICT;",
+      "B": "ALTER TABLE Student DELETE Birthyear CASCADE;",
+      "C": "ALTER TABLE Student DROP COLUMN Birthyear CASCADE;",
+      "D": "ALTER TABLE Student DELETE Birthyear RESTRICT;"
+    },
+    "explanation": "PostgreSQL中DROP COLUMN删除列，CASCADE允许删除依赖该列的对象；RESTRICT在存在阻止删除的依赖时拒绝操作。DELETE用于删除数据行，不是删除列。不同DBMS方言可能不同。"
+  },
+  {
+    "id": "cg-09-s2-q4",
+    "explanation": "INT规定整数类型，NOT NULL禁止空值，UNIQUE要求非空值不重复。本列可作为候选键的一种实现，但没有PRIMARY KEY声明，不能断言它已被指定为主码。"
+  },
+  {
+    "id": "zg-25187",
+    "explanation": "每名学生的完整信息按记录保存，题设要移除毕业生的记录而保留表结构，因此删除行。删除字段会影响所有学生的某列；删除数据库会扩大影响范围。"
+  },
+  {
+    "id": "zg-41008",
+    "stem": "SQL语句“________ TABLE 表名”用于删除表定义及其数据，应填哪个关键字？",
+    "answer": "DROP",
+    "explanation": "完整命令为DROP TABLE 表名。DELETE FROM删除表中行而保留表，ALTER TABLE修改表结构。"
+  },
+  {
+    "id": "cg-09-s1-q41",
+    "options": {
+      "A": "一个查询结果集",
+      "B": "一个属性定义",
+      "C": "一个固定的单元组",
+      "D": "一个完整数据库"
+    },
+    "explanation": "普通SELECT返回查询结果集，可有零行、一行或多行。SQL通常采用多重集语义，未使用DISTINCT时允许重复行，因此不能直接等同于严格去重的数学关系集合。"
+  },
+  {
+    "id": "cg-09-s1-q46",
+    "stem": "在SQL Server的SELECT语句中，把查询结果创建为一个新表使用哪个子句？"
+  },
+  {
+    "id": "cg-09-s1-q47",
+    "stem": "在大小写敏感的字符串比较规则下，执行SELECT FirstName FROM StaffList WHERE FirstName LIKE '_A%'，以下哪个名字匹配？",
+    "explanation": "_匹配恰好一个字符，%匹配零个或多个字符，故模式要求第二字符为大写A。JACKSON符合；David第二字符为小写a，仅在某些不区分大小写的规则下也可能匹配，题干已排除。"
+  },
+  {
+    "id": "cg-09-s1-q61",
+    "stem": "在SQL查询中使用MAX(列名)，关于列的数据类型，下列说法最准确的是（ ）。",
+    "options": {
+      "A": "只能是字符型",
+      "B": "只能是数值型",
+      "C": "只能是数值型或字符型，不能是日期时间",
+      "D": "应为相应DBMS定义支持MAX且可比较的数据类型"
+    },
+    "explanation": "MAX通常可用于数值、字符、日期时间等可比较类型，但并非不限制数据类型。例如不同系统对布尔、二进制、大对象等支持不同，需按该DBMS定义使用。"
+  },
+  {
+    "id": "cg-09-s1-q62",
+    "explanation": "DISTINCT按SELECT输出列的完整组合去掉重复行。JOIN组合表，AS指定别名，TOP限制行数，它们都不直接表示去重。"
+  },
+  {
+    "id": "cg-09-s1-q63",
+    "explanation": "WHERE先筛明细行，GROUP BY形成组，HAVING再按组或聚合结果筛选。本查询块不能在普通WHERE条件中直接使用自己的AVG等聚合结果；含聚合的子查询则是不同情况。"
+  },
+  {
+    "id": "zg-5212",
+    "stem": "需要根据学号读取某学生的学籍记录，而不修改数据，按数据库基本操作分类应执行（ ）。",
+    "options": {
+      "A": "插入",
+      "B": "查询",
+      "C": "更新",
+      "D": "删除"
+    },
+    "explanation": "按条件检索已有记录属于查询，通常用SELECT配合WHERE等子句实现。插入增加行，更新改变已有值，删除移除行；执行只读查询本身不会修改表中的记录。"
+  },
+  {
+    "id": "zg-45920",
+    "explanation": "SQL LIKE中，%匹配零个或多个字符，因此可匹配空串、一个字符或多个字符；_才限定恰好一个字符。"
+  },
+  {
+    "id": "zg-40599",
+    "stem": "在允许SELECT常量表达式的SQL系统中，以下哪些子句可以在某条合法SELECT查询中省略？",
+    "answer": "ABCD",
+    "explanation": "SELECT 1等查询可以不写FROM。WHERE、GROUP BY、ORDER BY也均不是每条查询必须具有的子句，因此四项均可省略。查询实际表数据时才需要相应数据来源。"
+  },
+  {
+    "id": "hn-recall-hn26-006",
+    "stem": "Reader(reader_id主键,name)与Borrow(reader_id,book_id)中，Borrow的两列非空且组合唯一，每行表示借阅一本不同图书。写SQL查询借书超过5本的读者姓名及数量。"
+  },
+  {
+    "id": "gap-db-006",
+    "stem": "Student(sid主键,name)和SC(sid,cid，二者为组合主键)。写SQL统计每名学生的选课数，并保留未选课学生。"
+  },
+  {
+    "id": "uc-db-002",
+    "stem": "学生表Student(sid主键,name)与选课表SC(sid,cid，二者为组合主键)。要统计每名学生选课数并保留未选课学生，正确的核心连接与计数是（ ）。"
+  },
+  {
+    "id": "cg-09-s1-q34",
+    "stem": "关于普通非物化视图与基本表，下列说法正确的是（ ）。",
+    "options": {
+      "A": "普通视图通常保存查询定义，可限制用户看到的行列",
+      "B": "任何视图都允许任意插入、更新、删除",
+      "C": "创建视图后就不再需要权限控制",
+      "D": "普通视图总会独立保存完整数据副本"
+    },
+    "explanation": "普通视图通常保存查询定义，提供某种逻辑展示，可配合授权限制暴露数据。其可更新性受定义及DBMS限制，也不能自动替代权限控制；物化视图才专门保存查询结果。"
+  },
+  {
+    "id": "cg-09-s1-q54",
+    "stem": "假定视图定义有效且用户有相应查询权限，下列哪种操作是普通视图普遍支持的，而其他操作需额外判断可更新性？"
+  },
+  {
+    "id": "gap-db-007",
+    "stem": "先用E-R图表示学生、课程及选课规则，再转成表并规范化，最后按常用查询建立索引。指出这三个工作的设计阶段。"
+  },
+  {
+    "id": "uc-db-001",
+    "stem": "关系R(A,B,C)的函数依赖集恰由A→B、B→C及其推导依赖构成。A的闭包为ABC。A属于（ ）。"
+  },
+  {
+    "id": "cg-09-s1-q58",
+    "explanation": "规范化中的删除异常指：删除一条应删除的业务记录时，同时丢失另一项本来应保留的事实。例如删除部门最后一个员工记录，连部门名称也无处保存。它不同于操作失误删错行。"
+  },
+  {
+    "id": "zg-58017",
+    "explanation": "纯关系模型以1NF的原子属性值为基础。2NF进一步要求每个非主属性完全依赖每个候选码；3NF排除非主属性对候选码的不当传递依赖。“非主属性”指不属于任何候选码的属性，不等同于“没有选入主键的所有列”。"
+  },
+  {
+    "id": "uf-db-005",
+    "stem": "已满足1NF的R(A,B,C)，函数依赖恰由A→B、B→C及其推导依赖构成，A为唯一候选码。R最高达到哪一范式？"
+  },
+  {
+    "id": "gap-db-009",
+    "stem": "R(学号,课程号,姓名,成绩)已满足1NF，候选键为(学号,课程号)，且学号→姓名。判断其最高范式并说明。"
+  },
+  {
+    "id": "cg-09-s1-q69",
+    "explanation": "原子性要求事务的操作作为整体完成或整体撤销，不能留下部分成功的中间结果。隔离性主要处理并发影响，持久性保证提交后的结果在故障后仍能保存。"
+  },
+  {
+    "id": "cg-09-s1-q68",
+    "explanation": "在经典S/X封锁模型中，持有对象X锁的事务本身可以读和写该对象；其他事务不能同时取得该对象的不兼容S锁或X锁。锁类型限制的是并发兼容关系，不是禁止持锁者读。"
+  },
+  {
+    "id": "cg-09-s1-q70",
+    "explanation": "后备副本是某时刻的数据库备份，用于故障后恢复基础数据；通常还要结合后续日志恢复到目标时点。创建副本是转储操作，其主要用途是恢复。"
+  },
+  {
+    "id": "gap-db-013",
+    "stem": "采用传统立即更新UNDO/REDO恢复模型，故障后内存丢失，磁盘可能包含未提交修改，也可能缺少已提交修改。稳定日志为<T1 start>、<T1,A,10,20>、<T1 commit>、<T2 start>、<T2,B,5,8>，更新记录依次写旧值、新值。说明两事务的恢复处理及目标值。"
+  }
+]

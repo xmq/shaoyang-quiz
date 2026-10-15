@@ -2,6 +2,7 @@
 import argparse
 import json
 from pathlib import Path
+from question_reviews import apply_reviews
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS = ROOT / "questions.json"
@@ -176,7 +177,7 @@ def main():
     questions = json.loads(QUESTIONS.read_text(encoding="utf-8"))
     if args.check:
         actual = {question["id"]: question for question in questions if question["id"].startswith("nw-national-")}
-        expected = {question["id"]: question for question in NEW_QUESTIONS}
+        expected = {question["id"]: question for question in apply_reviews(NEW_QUESTIONS)}
         synchronized = set(actual) == set(expected) and all(
             all(actual[qid].get(key) == value for key, value in definition.items())
             for qid, definition in expected.items()
@@ -187,7 +188,7 @@ def main():
         return
     before = len(questions)
     questions = [question for question in questions if not str(question.get("id") or "").startswith("nw-national-")]
-    questions.extend(NEW_QUESTIONS)
+    questions.extend(apply_reviews(NEW_QUESTIONS))
     QUESTIONS.write_text(json.dumps(questions, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"同步{len(NEW_QUESTIONS)}题；题库{before}→{len(questions)}题")
 

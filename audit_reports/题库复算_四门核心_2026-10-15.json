@@ -1,0 +1,166 @@
+[
+  {
+    "task": "2Mbps换算十进制kB/s",
+    "actual": 250.0,
+    "expected": 250,
+    "passed": true
+  },
+  {
+    "task": "B类网络号组合数",
+    "actual": 16384,
+    "expected": 16384,
+    "passed": true
+  },
+  {
+    "task": "/26广播",
+    "actual": "172.16.7.191",
+    "expected": "172.16.7.191",
+    "passed": true
+  },
+  {
+    "task": "/11网络地址",
+    "actual": "10.64.0.0",
+    "expected": "10.64.0.0",
+    "passed": true
+  },
+  {
+    "task": "香农30dB",
+    "actual": 29.9,
+    "expected": 29.9,
+    "passed": true
+  },
+  {
+    "task": "CRC余数",
+    "actual": "001",
+    "expected": "001",
+    "passed": true
+  },
+  {
+    "task": "三角循环次数n=20",
+    "actual": 210,
+    "expected": 210,
+    "passed": true
+  },
+  {
+    "task": "二维数组地址",
+    "actual": 1052,
+    "expected": 1052,
+    "passed": true
+  },
+  {
+    "task": "哈夫曼WPL",
+    "actual": 37,
+    "expected": 37,
+    "passed": true
+  },
+  {
+    "task": "FIFO原题3页框",
+    "actual": 9,
+    "expected": 9,
+    "passed": true
+  },
+  {
+    "task": "LRU原题5页框",
+    "actual": 11,
+    "expected": 11,
+    "passed": true
+  },
+  {
+    "task": "HRRN 9:30首次调度",
+    "actual": "BAC",
+    "expected": "BAC",
+    "passed": true
+  },
+  {
+    "task": "分页地址6300",
+    "actual": 14492,
+    "expected": 14492,
+    "passed": true
+  },
+  {
+    "task": "位示图第100块",
+    "actual": [
+      4,
+      4
+    ],
+    "expected": [
+      4,
+      4
+    ],
+    "passed": true
+  },
+  {
+    "task": "SSTF原题",
+    "actual": 117,
+    "expected": 117,
+    "passed": true
+  },
+  {
+    "task": "左连接ON筛薪资保零部门",
+    "actual": [
+      [
+        1,
+        "A",
+        1
+      ],
+      [
+        2,
+        "B",
+        0
+      ],
+      [
+        3,
+        "C",
+        0
+      ]
+    ],
+    "expected": [
+      [
+        1,
+        "A",
+        1
+      ],
+      [
+        2,
+        "B",
+        0
+      ],
+      [
+        3,
+        "C",
+        0
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "task": "NOT EXISTS含空外键",
+    "actual": [
+      [
+        2,
+        "R2"
+      ],
+      [
+        3,
+        "R3"
+      ]
+    ],
+    "expected": [
+      [
+        2,
+        "R2"
+      ],
+      [
+        3,
+        "R3"
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "task": "NOT IN含空反例",
+    "actual": [],
+    "expected": [],
+    "passed": true
+  }
+]

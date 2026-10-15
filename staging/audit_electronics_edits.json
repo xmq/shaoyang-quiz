@@ -1,0 +1,345 @@
+[
+  {
+    "id": "uf-ee-006",
+    "topic_id": "circuit.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-008",
+    "topic_id": "circuit.t04",
+    "topic_source": "manual",
+    "explanation": "受控源必须保留。独立源置零后在端口加测试源，按关联方向求U/I可得等效电阻；也可在端口开路电压、短路电流存在且短路电流非零、参考方向一致时求Uoc/Isc。若二者均为零，不可用0/0，应改用测试源法。"
+  },
+  {
+    "id": "ue-circuit-003",
+    "topic_id": "circuit.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-009",
+    "topic_id": "circuit.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-circuit-009",
+    "topic_id": "circuit.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-circuit-010",
+    "topic_id": "circuit.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-013",
+    "topic_id": "circuit.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-014",
+    "topic_id": "circuit.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-016",
+    "topic_id": "circuit.t06",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-021",
+    "topic_id": "circuit.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-circuit-003",
+    "topic_id": "circuit.t11",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-circuit-006",
+    "topic_id": "circuit.t08",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ue-circuit-012",
+    "topic_id": "circuit.t08",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ee-019",
+    "stem": "某正弦稳态单相负载的电压、电流有效值分别为100 V、4 A，功率因数为0.8，其有功功率为（ ）。"
+  },
+  {
+    "id": "gap-final-thin-020",
+    "explanation": "无冲激电流时电容电压连续，无冲激电压时电感电流连续，故分别保留6 V、0.4 A；电容电流和电感电压可以出现有限跃变。不能仅凭储能有限就排除由冲激引起的状态跃变。"
+  },
+  {
+    "id": "ue-circuit-007",
+    "explanation": "星形负载每相电压为380/√3 V，线电流等于相电流380/(√3×22)≈9.97 A。总有功功率为3×(380/√3)²×0.8/22=5250.9 W，约5.25 kW，选B；中间结果不要过早舍入为220 V和10 A。"
+  },
+  {
+    "id": "ue-circuit-015",
+    "stem": "对戴维宁等效为Uth串联Rth的直流线性网络，已知Uth非零、Rth>0且负载为可变纯电阻RL>0。当RL=Rth时，负载获得最大功率。"
+  },
+  {
+    "id": "sp-elec-circuit-025",
+    "stem": "示波器垂直刻度为1 V/div，该刻度尚未计入10倍探头衰减补偿。波形峰峰值占3格，被测信号峰峰值为____V。",
+    "explanation": "刻度未补偿探头倍率，Upp=3×1×10=30 V。若示波器通道已设置10倍探头并显示补偿后的刻度，就不能再重复乘10；本题已明确未补偿。"
+  },
+  {
+    "id": "uf-ae-006",
+    "topic_id": "analog-electronics.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ae-012",
+    "topic_id": "analog-electronics.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-analog-013",
+    "topic_id": "analog-electronics.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-analog-025",
+    "topic_id": "analog-electronics.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-analog-006",
+    "topic_id": "analog-electronics.t10",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-ae-009",
+    "stem": "常见NPN共射放大器以集电极电压为输出。静态集电极电流偏小、管子接近截止时，输入负半周过大更容易出现（ ）。"
+  },
+  {
+    "id": "uf-ae-014",
+    "stem": "理想反相比例器在线性负反馈区工作，同相端接地，Rin=10 kΩ、Rf=50 kΩ，输入0.2 V，输出为（ ）。"
+  },
+  {
+    "id": "uf-ae-015",
+    "stem": "理想同相比例器在线性负反馈区工作，Rf=40 kΩ、反相端接地电阻R1=10 kΩ，其闭环电压增益为（ ）。"
+  },
+  {
+    "id": "sp-elec-analog-027",
+    "stem": "常见NPN共射放大器从集电极取输出，输出出现单侧削顶。应如何结合静态工作点和削顶方向区分截止失真与饱和失真？",
+    "answer": "先确认供电、输入幅度和输出取样位置，再测静态IB、IC和UCE。管子截止时IC接近0，集电极输出靠近VCC，因此上侧削顶通常对应截止；管子饱和时UCE接近饱和压降，因此下侧削顶通常对应饱和。调整偏置与输入幅度后复测，不能把此方向规则套到其他输出位置或PNP电路。",
+    "explanation": "NPN共射集电极电压约为VCC-ICRC：IC过小时输出向上限靠近，IC过大时输出向低电压饱和边界靠近。判断必须结合电路类型与输出节点，而不是笼统说Q点高低。"
+  },
+  {
+    "id": "ue-analog-012",
+    "stem": "对于常见NPN共射放大器，以静态集电极电流ICQ的大小描述Q点高低，下列对应关系正确的有哪些？"
+  },
+  {
+    "id": "uf-de-003",
+    "topic_id": "digital-electronics.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-de-004",
+    "topic_id": "digital-electronics.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-de-005",
+    "topic_id": "digital-electronics.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ap-digital-001",
+    "topic_id": "digital-electronics.t02",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-de-012",
+    "topic_id": "digital-electronics.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ap-digital-002",
+    "topic_id": "digital-electronics.t08",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-de-011",
+    "stem": "理想组合逻辑电路的稳态输出只取决于当前输入，不含记忆状态。"
+  },
+  {
+    "id": "uf-de-017",
+    "stem": "边沿触发器的异步控制端均处于无效状态，且输入满足建立、保持时间。分析其波形时，正确做法是（ ）。"
+  },
+  {
+    "id": "ue-digital-006",
+    "stem": "一个上升沿触发D触发器初态Q=0，异步控制端无效。在连续三个有效上升沿到来前，D依次稳定为1、0、1。三个边沿后的Q依次为多少？"
+  },
+  {
+    "id": "ue-digital-008",
+    "stem": "某低通信号最高频率为8 kHz，奈奎斯特临界采样率（最高频率的2倍）为多少？",
+    "options": {
+      "A": "4 kHz",
+      "B": "8 kHz",
+      "C": "16 kHz",
+      "D": "64 kHz"
+    },
+    "explanation": "临界采样率为2×8=16 kHz，选C。要对包含边界正弦分量的任意相位信号保证可恢复，应取高于临界值的采样率；工程中还应留出抗混叠滤波器过渡带，不把临界等号当成无条件恢复保证。"
+  },
+  {
+    "id": "uf-cm-012",
+    "topic_id": "communication.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-cm-014",
+    "topic_id": "communication.t05",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-cm-021",
+    "topic_id": "communication.t15",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-cm-022",
+    "topic_id": "communication.t07",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ap-comm-004",
+    "topic_id": "communication.t04",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-comm-002",
+    "topic_id": "communication.t03",
+    "topic_source": "manual"
+  },
+  {
+    "id": "sp-elec-comm-016",
+    "topic_id": "communication.t11",
+    "topic_source": "manual"
+  },
+  {
+    "id": "ue-comm-009",
+    "topic_id": "communication.t10",
+    "topic_source": "manual"
+  },
+  {
+    "id": "uf-cm-004",
+    "stem": "码元速率为2400 Bd，每个码元采用16种等可能状态，未计其他编码开销时比特率为（ ）。"
+  },
+  {
+    "id": "uf-cm-008",
+    "stem": "最高频率为4 kHz的低通信号，其奈奎斯特临界采样率为（ ）。",
+    "options": {
+      "A": "2 kHz",
+      "B": "4 kHz",
+      "C": "8 kHz",
+      "D": "16 Hz"
+    },
+    "explanation": "奈奎斯特临界采样率为2fm=8 kHz。临界点正弦信号可能因采样相位丢失信息，因此实际无混叠恢复选择fs>8 kHz，并为滤波器过渡带留出裕量。"
+  },
+  {
+    "id": "ue-comm-003",
+    "stem": "某低通信号频谱最高到3.4 kHz，奈奎斯特临界采样率是多少？",
+    "explanation": "临界采样率为2×3.4=6.8 kHz，选C。对边界分量的任意相位不作额外假设时应高于此值；实际话音PCM常选8 kHz，也为抗混叠滤波器留下过渡带。"
+  },
+  {
+    "id": "gap-signal-005",
+    "answer": "同一双边拉普拉斯变换代数式配合不同ROC，可能对应不同的时域信号，所以不能省略。连续时间因果有理系统的ROC位于最右侧极点右方，即Re(s)>max Re(p_i)；稳定系统的ROC必须包含整个jω轴，极点本身不在ROC内。",
+    "explanation": "连续时间拉普拉斯ROC通常是s平面的竖直条带或半平面，因果右边信号取最右极点右侧；不能把Z变换的“最外侧极点之外”按模长的说法搬到s平面。表达式与ROC共同确定信号和系统性质。",
+    "rubric": [
+      {
+        "criterion": "说明同代数式不同ROC可对应不同信号",
+        "points": 1
+      },
+      {
+        "criterion": "连续因果ROC在最右极点右侧，比较实部",
+        "points": 1
+      },
+      {
+        "criterion": "稳定ROC包含jω轴",
+        "points": 1
+      },
+      {
+        "criterion": "极点不属于ROC",
+        "points": 1
+      }
+    ],
+    "max_score": 4
+  },
+  {
+    "id": "gap-final-sig-002",
+    "stem": "信号x(t)在0≤t≤3内均非零，在区间外为0。信号y(t)=x(2t-4)的非零区间是什么？",
+    "accepted_answers": [
+      "[2,3.5]",
+      "2<=t<=3.5"
+    ]
+  },
+  {
+    "id": "gap-final-sig-006",
+    "stem": "一个线性时不变系统初始状态非零，同时受到外部输入。为什么只计算x(t)*h(t)还不是总响应？应怎样补全？"
+  },
+  {
+    "id": "gap-final-sig-010",
+    "stem": "某周期信号基本周期T0=2 ms。计算其基频和傅里叶级数相邻整数次谐波频率栅格的间隔。",
+    "type": "简答",
+    "explanation": "基频f0=1/0.002=500 Hz，整数次谐波频率栅格为kf0，间隔500 Hz。某些系数为0时，实际非零谱线可能隔得更远，例如对称方波只保留奇次谐波，不能把频率栅格与非零谱线间隔混为一谈。",
+    "rubric": [
+      {
+        "criterion": "2 ms换成0.002 s",
+        "points": 1
+      },
+      {
+        "criterion": "基频为500 Hz",
+        "points": 1
+      },
+      {
+        "criterion": "相邻整数次谐波频率栅格间隔500 Hz",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "gap-signal-006",
+    "explanation": "奈奎斯特临界采样率为2×4=8 kHz。这里问的是理论临界值；若最高频率处存在任意相位的正弦分量，应选择高于8 kHz的采样率，工程中还要考虑滤波过渡带。",
+    "stem": "连续低通信号最高频率为4 kHz。奈奎斯特临界采样率为多少kHz？只填写数字。",
+    "rubric": [
+      {
+        "criterion": "临界采样率为2fmax",
+        "points": 1
+      },
+      {
+        "criterion": "代入4 kHz",
+        "points": 1
+      },
+      {
+        "criterion": "得到8 kHz；实际保证条件需高于临界值",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "gap-final-comm-002",
+    "type": "简答"
+  },
+  {
+    "id": "gap-final-comm-005",
+    "type": "简答"
+  },
+  {
+    "id": "gap-final-sig-005",
+    "type": "简答",
+    "stem": "系统满足y'(t)+2y(t)=x(t)，初始条件y(0+)=3。令t>0时x(t)=0，写出t>0的零输入响应并说明求法。",
+    "answer": "t>0时零输入响应为3e^(-2t)。解齐次方程y'+2y=0得Ke^(-2t)，代入0+初值3确定K=3。",
+    "explanation": "响应从给定初始状态出发，在t>0按齐次方程演化。已限定正时间，不必额外乘阶跃；若扩展到全时间，应同时处理t=0处初始条件产生的分布项。"
+  },
+  {
+    "id": "gap-final-sig-008",
+    "type": "简答"
+  }
+]

@@ -1,0 +1,784 @@
+{
+  "reviewed_questions": 797,
+  "edit_count": 380,
+  "removed_count": 56,
+  "new_count": 24,
+  "coverage": [
+    {
+      "topic_id": "operating-system.t01",
+      "title": "操作系统功能与基本特征",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "zg-32499"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t02",
+      "title": "用户态、内核态与系统调用",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "audit26-core-os-system-call"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t03",
+      "title": "进程、线程与PCB",
+      "retained_question_count": 14,
+      "independent_output_ids": [
+        "ap-os-005"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t04",
+      "title": "进程状态与切换",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "gap-final-thin-009"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t05",
+      "title": "处理机调度",
+      "retained_question_count": 9,
+      "independent_output_ids": [
+        "gap-os-001",
+        "gap-exam-os-scheduling"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t06",
+      "title": "同步、互斥与信号量",
+      "retained_question_count": 11,
+      "independent_output_ids": [
+        "gap-exam-os-semaphore",
+        "ap-os-006"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t07",
+      "title": "死锁条件与处理",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "audit26-core-os-deadlock-order"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t08",
+      "title": "银行家算法与安全序列",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "gap-os-002"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t09",
+      "title": "连续分配、分页与分段",
+      "retained_question_count": 19,
+      "independent_output_ids": [
+        "gap-os-003",
+        "gap-exam-os-address"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t10",
+      "title": "虚拟存储与页面置换",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "gap-os-004",
+        "hn-recall-hn26-003"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t11",
+      "title": "文件组织、目录与链接",
+      "retained_question_count": 11,
+      "independent_output_ids": [
+        "audit26-core-os-file-allocation"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t12",
+      "title": "I/O控制、缓冲与SPOOLing",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "audit26-core-os-spool-flow"
+      ]
+    },
+    {
+      "topic_id": "operating-system.t13",
+      "title": "磁盘调度",
+      "retained_question_count": 6,
+      "independent_output_ids": [
+        "gap-os-005"
+      ]
+    },
+    {
+      "topic_id": "database.t01",
+      "title": "数据库、DBMS与三级模式",
+      "retained_question_count": 31,
+      "independent_output_ids": [
+        "zg-23486",
+        "zg-76998",
+        "audit26-core-db-three-levels"
+      ]
+    },
+    {
+      "topic_id": "database.t02",
+      "title": "E-R建模",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "zg-25061",
+        "zg-73364",
+        "gap-db-002"
+      ]
+    },
+    {
+      "topic_id": "database.t03",
+      "title": "E-R转关系",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "audit26-core-db-er-convert"
+      ]
+    },
+    {
+      "topic_id": "database.t04",
+      "title": "关系键与完整性",
+      "retained_question_count": 19,
+      "independent_output_ids": [
+        "zg-89071",
+        "zg-9354",
+        "zg-12988"
+      ]
+    },
+    {
+      "topic_id": "database.t05",
+      "title": "关系代数",
+      "retained_question_count": 9,
+      "independent_output_ids": [
+        "zg-7295",
+        "gap-db-003",
+        "gap-db-004"
+      ]
+    },
+    {
+      "topic_id": "database.t06",
+      "title": "SQL定义与约束",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "zg-41008",
+        "audit26-core-db-create-constraints"
+      ]
+    },
+    {
+      "topic_id": "database.t07",
+      "title": "SQL筛选、分组与聚合",
+      "retained_question_count": 14,
+      "independent_output_ids": [
+        "gap-exam-db-groupjoin",
+        "hn-recall-hn26-006"
+      ]
+    },
+    {
+      "topic_id": "database.t08",
+      "title": "连接、子查询与集合运算",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "gap-db-006",
+        "gap-exam-db-notexists"
+      ]
+    },
+    {
+      "topic_id": "database.t09",
+      "title": "视图",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "audit26-core-db-view-permissions"
+      ]
+    },
+    {
+      "topic_id": "database.t10",
+      "title": "索引与物理设计",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "ap-db-006"
+      ]
+    },
+    {
+      "topic_id": "database.t11",
+      "title": "数据库设计流程",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-db-007"
+      ]
+    },
+    {
+      "topic_id": "database.t12",
+      "title": "属性闭包与候选键",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-db-008"
+      ]
+    },
+    {
+      "topic_id": "database.t13",
+      "title": "范式判断",
+      "retained_question_count": 8,
+      "independent_output_ids": [
+        "gap-db-009"
+      ]
+    },
+    {
+      "topic_id": "database.t14",
+      "title": "分解、无损连接与依赖保持",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-db-010",
+        "gap-final-thin-010"
+      ]
+    },
+    {
+      "topic_id": "database.t15",
+      "title": "ACID与事务边界",
+      "retained_question_count": 8,
+      "independent_output_ids": [
+        "gap-exam-db-transfer",
+        "hn-recall-hn26-007"
+      ]
+    },
+    {
+      "topic_id": "database.t16",
+      "title": "并发异常与隔离级别",
+      "retained_question_count": 8,
+      "independent_output_ids": [
+        "gap-db-011",
+        "gap-db-012",
+        "ap-db-005"
+      ]
+    },
+    {
+      "topic_id": "database.t17",
+      "title": "WAL与恢复",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "gap-db-013"
+      ]
+    },
+    {
+      "topic_id": "database.t18",
+      "title": "认证、授权与审计",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-db-014",
+        "gap-db-015"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t01",
+      "title": "数据结构与复杂度",
+      "retained_question_count": 20,
+      "independent_output_ids": [
+        "zg-34137",
+        "sp-core-ds-034"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t02",
+      "title": "顺序表",
+      "retained_question_count": 10,
+      "independent_output_ids": [
+        "gap-ds-026"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t03",
+      "title": "链表",
+      "retained_question_count": 8,
+      "independent_output_ids": [
+        "audit26-core-ds-linked-delete"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t04",
+      "title": "栈与递归",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "zg-70127",
+        "sp-core-ds-026"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t05",
+      "title": "队列与循环队列",
+      "retained_question_count": 9,
+      "independent_output_ids": [
+        "audit26-core-ds-circular-trace"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t06",
+      "title": "串与KMP",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-ds-007",
+        "audit26-core-ds-kmp-prefix"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t07",
+      "title": "数组、稀疏矩阵与广义表",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-ds-008",
+        "gap-final-thin-011"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t08",
+      "title": "二叉树性质",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "sp-core-ds-023",
+        "sp-core-ds-025"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t09",
+      "title": "遍历与树的还原",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "gap-final-thin-012"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t10",
+      "title": "BST与AVL",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "gap-ds-028",
+        "sp-core-ds-030"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t11",
+      "title": "堆",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "gap-ds-029",
+        "sp-core-ds-027"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t12",
+      "title": "哈夫曼树与B/B+树",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "sp-core-ds-031"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t13",
+      "title": "图的存储",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "sp-core-ds-024",
+        "sp-core-ds-028"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t14",
+      "title": "DFS与BFS",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "gap-ds-005",
+        "gap-ds-006"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t15",
+      "title": "最小生成树",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "gap-ds-030",
+        "audit26-core-ds-prim-steps"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t16",
+      "title": "最短路径",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "gap-ds-031",
+        "audit26-core-ds-bellman-negative"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t17",
+      "title": "拓扑排序",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "audit26-core-ds-topo-trace"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t18",
+      "title": "二分查找",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "audit26-core-ds-binary-steps"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t19",
+      "title": "散列查找",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "gap-ds-009",
+        "sp-core-ds-032"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t20",
+      "title": "插入、冒泡与选择排序",
+      "retained_question_count": 6,
+      "independent_output_ids": [
+        "zg-4542",
+        "gap-ds-010",
+        "sp-core-ds-033"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t21",
+      "title": "快速排序",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-ds-033"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t22",
+      "title": "归并排序",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-ds-034"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t23",
+      "title": "堆、希尔、基数与排序选择",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "audit26-core-ds-sort-choice"
+      ]
+    },
+    {
+      "topic_id": "data-structures.t24",
+      "title": "场景中的结构与算法选择",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "gap-ds-001",
+        "gap-ds-012",
+        "gap-ds-024",
+        "ap-ds-005"
+      ]
+    },
+    {
+      "topic_id": "net.overview",
+      "title": "网络组成、功能与拓扑",
+      "retained_question_count": 44,
+      "independent_output_ids": [
+        "zg-22893",
+        "zg-43176",
+        "zg-55249",
+        "audit26-core-net-topology"
+      ]
+    },
+    {
+      "topic_id": "net.performance",
+      "title": "速率、带宽与时延",
+      "retained_question_count": 6,
+      "independent_output_ids": [
+        "nw-national-012"
+      ]
+    },
+    {
+      "topic_id": "net.switching",
+      "title": "电路交换与分组交换",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-final-thin-014"
+      ]
+    },
+    {
+      "topic_id": "net.layers-addresses",
+      "title": "分层与地址",
+      "retained_question_count": 28,
+      "independent_output_ids": [
+        "audit26-core-net-layers"
+      ]
+    },
+    {
+      "topic_id": "net.protocol-service",
+      "title": "协议、服务与封装",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "zg-89180",
+        "audit26-core-net-protocol-service"
+      ]
+    },
+    {
+      "topic_id": "net.media",
+      "title": "介质与传输方向",
+      "retained_question_count": 12,
+      "independent_output_ids": [
+        "audit26-core-net-media-direction"
+      ]
+    },
+    {
+      "topic_id": "net.symbol-multiplexing",
+      "title": "比特率、码元速率与复用",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-final-thin-015"
+      ]
+    },
+    {
+      "topic_id": "net.channel-capacity",
+      "title": "信道容量与信噪比",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "nw-national-011",
+        "nw-national-013"
+      ]
+    },
+    {
+      "topic_id": "net.frames-switching",
+      "title": "帧、交换与VLAN",
+      "retained_question_count": 4,
+      "independent_output_ids": [
+        "audit26-core-net-vlan-learning"
+      ]
+    },
+    {
+      "topic_id": "net.crc",
+      "title": "CRC差错检测",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-final-thin-016"
+      ]
+    },
+    {
+      "topic_id": "net.arq-window",
+      "title": "停等与滑动窗口",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "nw-national-016"
+      ]
+    },
+    {
+      "topic_id": "net.ethernet-wifi",
+      "title": "以太网与无线接入",
+      "retained_question_count": 5,
+      "independent_output_ids": [
+        "audit26-core-net-cd-ca"
+      ]
+    },
+    {
+      "topic_id": "net.subnet-routing",
+      "title": "子网与路由",
+      "retained_question_count": 13,
+      "independent_output_ids": [
+        "nw-national-014",
+        "ap-nw-005"
+      ]
+    },
+    {
+      "topic_id": "net.arp-forwarding",
+      "title": "ARP与逐跳转发",
+      "retained_question_count": 6,
+      "independent_output_ids": [
+        "nw-national-018"
+      ]
+    },
+    {
+      "topic_id": "net.routing",
+      "title": "最长前缀匹配与路由协议",
+      "retained_question_count": 6,
+      "independent_output_ids": [
+        "hn-recall-hn26-008"
+      ]
+    },
+    {
+      "topic_id": "net.ip-versions",
+      "title": "IPv4与IPv6地址",
+      "retained_question_count": 22,
+      "independent_output_ids": [
+        "audit26-core-net-ipv6-fragment"
+      ]
+    },
+    {
+      "topic_id": "net.rip-update",
+      "title": "RIP距离向量更新",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "gap-retest-rip-001"
+      ]
+    },
+    {
+      "topic_id": "net.tcp-udp",
+      "title": "TCP与UDP",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "nw-national-017"
+      ]
+    },
+    {
+      "topic_id": "net.tcp-connection",
+      "title": "TCP序号、确认与连接建立",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "nw-national-015",
+        "hn-recall-hn26-005"
+      ]
+    },
+    {
+      "topic_id": "net.flow-congestion",
+      "title": "流量控制与拥塞控制",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "nw-national-020"
+      ]
+    },
+    {
+      "topic_id": "net.app-protocols",
+      "title": "名称、配置与应用服务",
+      "retained_question_count": 34,
+      "independent_output_ids": [
+        "zg-19259",
+        "zg-97942",
+        "zg-87605",
+        "audit26-core-net-mail-flow"
+      ]
+    },
+    {
+      "topic_id": "net.http",
+      "title": "HTTP状态与排障",
+      "retained_question_count": 17,
+      "independent_output_ids": [
+        "hn-recall-sy26-004"
+      ]
+    },
+    {
+      "topic_id": "net.dns-dhcp",
+      "title": "DNS解析与DHCP配置",
+      "retained_question_count": 16,
+      "independent_output_ids": [
+        "zg-91239",
+        "zg-61952",
+        "nw-national-019",
+        "ap-nw-006"
+      ]
+    },
+    {
+      "topic_id": "net.security-boundary",
+      "title": "防火墙与安全边界",
+      "retained_question_count": 2,
+      "independent_output_ids": [
+        "nw-national-021",
+        "gap-final-thin-017"
+      ]
+    },
+    {
+      "topic_id": "net.crypto-signature",
+      "title": "加密、摘要与数字签名",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-final-thin-018"
+      ]
+    },
+    {
+      "topic_id": "net.troubleshooting",
+      "title": "按层定位",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "hn-recall-hn26-004"
+      ]
+    },
+    {
+      "topic_id": "net.streaming-qos",
+      "title": "流媒体、实时传输与QoS",
+      "retained_question_count": 3,
+      "independent_output_ids": [
+        "gap-net-media-002",
+        "gap-net-media-003"
+      ]
+    },
+    {
+      "topic_id": "net.wireless-mobile",
+      "title": "WLAN、无线接入与移动网络",
+      "retained_question_count": 7,
+      "independent_output_ids": [
+        "gap-net-wireless-003"
+      ]
+    }
+  ],
+  "verification": "旧题18项、新题17项关键输出由独立实现复算。新增题knowledge_point、ability、difficulty实际导入维护枚举逐条断言通过。SQLite只验证兼容SQL，不替代专有方言核对。",
+  "sources": [
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc4632",
+      "used_for": "B类地址网络字段14位、16384个组合"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc826",
+      "used_for": "ARP协议地址到以太地址解析"
+    },
+    {
+      "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+      "used_for": "ARPANET资助与核战用途传言的区分"
+    },
+    {
+      "url": "https://learn.microsoft.com/windows/win32/fileio/naming-a-file",
+      "used_for": "Windows文件名字符和扩展名规则"
+    },
+    {
+      "url": "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec",
+      "used_for": "剪贴板、窗口和截图快捷键"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/sql-select.html",
+      "used_for": "SELECT FROM可省略、WHERE与HAVING、查询结果语义"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8201",
+      "used_for": "IPv6路由器Packet Too Big与源端路径MTU发现"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+      "used_for": "组合主键、外键、CHECK遇NULL语义"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/functions-aggregate.html",
+      "used_for": "MAX支持类型并非无条件所有类型"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+      "used_for": "PostgreSQL DROP COLUMN CASCADE依赖对象行为"
+    }
+  ],
+  "student_review_status": "已完成题作者逐步独立解题和可执行复算；两位独立学生视角由根代理统一组织，本记录不冒称真实学生体验已完成。",
+  "lecture_prerequisites": {
+    "course_notes/计算机网络.md": [
+      "添加VLAN学习源地址/查询目的/限定同VLAN泛洪的两步表",
+      "补IPv6过大包丢弃、ICMPv6反馈、源端调小包流程"
+    ],
+    "course_notes/数据结构与算法.md": [
+      "定义0基pi前缀长度表，示范j=5回退pi[4]=3，区分旧next约定"
+    ],
+    "course_notes/数据库技术.md": [
+      "补组合主键与CHECK遇NULL",
+      "补视图创建及基础表权限绕过边界"
+    ],
+    "course_notes/操作系统原理.md": [
+      "补模式切换不等于进程切换、read立即完成与阻塞两分支"
+    ]
+  }
+}

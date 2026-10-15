@@ -1,0 +1,6309 @@
+[
+  {
+    "id": "cg-11-s1-q5",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": "记事本的纯文本文件不能嵌入图片；Word能使用表格对象，绘图程序可添加文字，因此错误项为C。"
+  },
+  {
+    "id": "cg-13-s1-q1",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": "金山文档属于金山办公的在线协作产品，厂商判断与文档扩展名是两个问题。"
+  },
+  {
+    "id": "cg-13-s1-q2",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": ".wps是WPS文字的传统专用格式之一，WPS也支持DOC、DOCX等格式；文件扩展名与产品厂商是两个概念。"
+  },
+  {
+    "id": "cg-13-s1-q20",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "中文字号序号增大，字形反而变小；例如四号比五号大。磅值则相反，数值越大字越大。"
+  },
+  {
+    "id": "cg-13-s1-q21",
+    "subject": "办公软件",
+    "topic_id": "office.t02",
+    "verdict": "修正",
+    "reason": "定期保存能减少掉电时未保存的编辑损失；首次保存和编辑结束再保存都不能覆盖中途修改。"
+  },
+  {
+    "id": "cg-13-s1-q22",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Ctrl+Home移到文档开头；Home只到当前行开头，Ctrl+End到文档末尾。"
+  },
+  {
+    "id": "cg-13-s1-q24",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "删除两段之间的段落标记即可合并。前段末尾按Delete或后段开头按Backspace也可实现，原选项并未给出这两种正确按法。"
+  },
+  {
+    "id": "cg-13-s1-q29",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "插入普通位图后可调整大小、位置和裁剪边缘；文档编辑器并不直接提供逐个修改图内元素的矢量编辑能力。"
+  },
+  {
+    "id": "cg-13-s1-q32",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "文字表格的单元格可放文字、数字和图片，不只限于某一种内容。"
+  },
+  {
+    "id": "cg-13-s1-q35",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "替换可批量把已有的同一字符串换成新字符串；复制和另存为都不会完成该替换。"
+  },
+  {
+    "id": "cg-13-s1-q36",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "单击图形通常即可选中对象并显示控制点；不必选整页或覆盖整个图形区域。"
+  },
+  {
+    "id": "cg-13-s1-q42",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": "电子表格既处理数字和公式，也支持输入文本及设置文本格式，因此“没有文字处理功能”错误。"
+  },
+  {
+    "id": "cg-13-s1-q44",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "常规格式下数值默认右对齐、文本默认左对齐；手工设置对齐不会改变底层类型。两个空依次是右、左。"
+  },
+  {
+    "id": "cg-13-s1-q6",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "A13表示A列即第1列、第13行。地址显示在名称框，不应把名称框误称为编辑栏。"
+  },
+  {
+    "id": "cg-13-s1-q67",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "WPS表格支持同时打开多个工作簿窗口；具体可开数量受资源和软件限制，不是固定1、2或10个。"
+  },
+  {
+    "id": "dy-c346f0cd",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "拆分窗口可在同一文档的不同位置分别滚动查看；排列窗口主要安排多个窗口的位置。"
+  },
+  {
+    "id": "dy-cad45571",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": "WPS是国产办公套件，可用于字处理。360安全卫士是安全工具，百度主要是检索服务，Microsoft Office是微软产品。"
+  },
+  {
+    "id": "dy-ceb37dcf",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": "Ctrl、Alt和Shift是修饰键，用于组成快捷键；Alt单击也常激活菜单，不能笼统说三者单独没有功能。"
+  },
+  {
+    "id": "gap-office-new-001",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": "保留XLSX以保存多工作表、公式和图表，再另导出当前表CSV供纯数据交换；改扩展名不能转换文件内容。"
+  },
+  {
+    "id": "zg-2836",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "饼图表示各部分占总体的比例，可结合数值和百分比标签。柱形、条形主要便于比较项目数量。"
+  },
+  {
+    "id": "zg-71182",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Shift+Enter插入手动换行而不结束段落；Enter产生新段落。行距仍由段落设置控制，不保证按键后两行必然紧挨。"
+  },
+  {
+    "id": "cg-11-s1-q34",
+    "subject": "办公软件",
+    "topic_id": "office.t02",
+    "verdict": "修正",
+    "reason": "文件只读时通常不能覆盖原文件，可另存为有写入权限的新文件；不能把能编辑副本等同于能保存原件。"
+  },
+  {
+    "id": "cg-13-s1-q7",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "剪切的选中内容暂存剪贴板，之后可以粘贴；剪切不等于立即另建文档。"
+  },
+  {
+    "id": "dy-9e216b5a",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "复制部分网页文字前需先选中目标文字，再复制并在Word中粘贴。"
+  },
+  {
+    "id": "gap-office-new-002",
+    "subject": "办公软件",
+    "topic_id": "office.t02",
+    "verdict": "修正",
+    "reason": "同步会把误改传播到其他设备；独立版本备份或可恢复的历史版本才提供回退点。"
+  },
+  {
+    "id": "cg-11-s1-q11",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word可在中间插入普通文字后继续前一列表编号，因此编号项不必在文档中连续出现。"
+  },
+  {
+    "id": "cg-11-s1-q13",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "关闭文档会释放相关编辑内存；已保存的磁盘文件仍保留，未保存修改应先按提示处理。"
+  },
+  {
+    "id": "cg-11-s1-q21",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "衬于文字下方将图片放到文本后面，适合作文字背景；上下型只让文字排在图片上方和下方。"
+  },
+  {
+    "id": "cg-11-s1-q26",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "表格可按行拆成两个独立表格，之后删除中间段落标记等可重新合并；拆分不是不可逆操作。"
+  },
+  {
+    "id": "cg-11-s1-q28",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "普通查找替换可处理文本、格式和特殊标记，但不能直接把图片内部图形元素逐个改成另一图形。"
+  },
+  {
+    "id": "cg-11-s1-q41",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word以页面组织文字、图形和排版，属于基于页面的编辑工具。"
+  },
+  {
+    "id": "cg-11-s1-q42",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "常见全拼输入法用v代替ü，所以“吕”输入lv；这是输入法编码约定。"
+  },
+  {
+    "id": "cg-11-s1-q43",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "字数统计可直接查看文档或选区的字数、字符数，适合检查作文长度。"
+  },
+  {
+    "id": "cg-11-s1-q47",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word可保存或导出DOC、HTML、PDF，但不能把GIF作为整篇文档的常规保存格式。"
+  },
+  {
+    "id": "cg-11-s1-q53",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "格式刷复制格式而不复制正文；选中文字或段落可复制相应字符、段落格式，不能表述为它一概不能复制图形格式。"
+  },
+  {
+    "id": "cg-11-s1-q56",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "图片插入后可设置宽度、高度或拖动缩放；锁定纵横比有助于避免变形。"
+  },
+  {
+    "id": "cg-11-s1-q65",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "最后一次字体设置覆盖选区前一次设置，因此选中内容为仿宋，其余仍为宋体。"
+  },
+  {
+    "id": "cg-11-s1-q68",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "现代Word艺术字中的不同字符可分别设置字体和字号，统一字号或字体不是强制要求。"
+  },
+  {
+    "id": "cg-11-s1-q70",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "选中目标文字后按Delete删除选区；非连续选择也可用Ctrl配合鼠标实现，不能说只能选一个连续文本块。"
+  },
+  {
+    "id": "cg-11-s1-q71",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word支持撤销最近修改，因此“没有回退功能”错误；自动摘要是否可用依版本和功能授权，不应作为未限定版本的判断条件。"
+  },
+  {
+    "id": "cg-11-s1-q74",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Home移到当前行开头，End到行末；Ctrl+Home才到文档开头。"
+  },
+  {
+    "id": "cg-11-s1-q77",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "改写模式用“的”覆盖光标后面的“中”，结果是“舌尖上的国”，不是在“中”前插入。"
+  },
+  {
+    "id": "cg-11-s2-q11",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word的预设水印类别包括文字和图片；缩放是图片水印的参数而不是第三类水印。"
+  },
+  {
+    "id": "cg-11-s2-q12",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "项目符号可选字符符号或图片；单个汉字也可作字符项目符号，整张表格不是项目符号。"
+  },
+  {
+    "id": "cg-11-s2-q13",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word表格可以平均分布行列，也能按内容自动调整尺寸；平均分布与自动调整不是同一子命令组，题干应避免把二者混称。"
+  },
+  {
+    "id": "cg-11-s2-q15",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "打开密码限制读取，修改密码限制编辑流程，两者作用不同；修改权限限制不等同于加密保密保护。"
+  },
+  {
+    "id": "cg-11-s2-q16",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "浮动图形可设置层次、文字及立体效果；嵌入型对象不能直接组合，需先改为适合组合的环绕方式。"
+  },
+  {
+    "id": "cg-11-s2-q5",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "字符间距在字体设置中；行间距、段前段后间距在段落设置中，所以选A、C、D。"
+  },
+  {
+    "id": "cg-11-s2-q6",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "云形标注可使用图片填充并在内部添加带项目符号的文字；应区分填充图片与在文字内容中插入图片。"
+  },
+  {
+    "id": "cg-11-s2-q8",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "拼音指南、带圈字符、双行合一、纵横混排都是中文排版功能，与PowerPoint主题、母版无关。"
+  },
+  {
+    "id": "cg-13-s1-q10",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Enter结束当前段落并生成段落标记；Shift+Enter只在同一段落内换行。"
+  },
+  {
+    "id": "cg-13-s1-q13",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "格式刷复制所选内容的格式，不复制文本内容；先选格式来源再把格式应用到目标。"
+  },
+  {
+    "id": "cg-13-s1-q14",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "CapsLock用于切换字母大小写；中文输入法是否随之切到英文依输入法设置，题干应排除这一差异。"
+  },
+  {
+    "id": "cg-13-s1-q16",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "复制部分内容前必须先选中目标，之后复制并在目标位置粘贴。"
+  },
+  {
+    "id": "cg-13-s1-q30",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "新文档字体取决于默认模板和用户设置，不能把宋体认定为所有版本固定默认；题目改考用户已指定模板的效果。"
+  },
+  {
+    "id": "cg-13-s1-q8",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "四号为14磅，五号为10.5磅，故四号较大；16磅小于18磅。"
+  },
+  {
+    "id": "dy-02c0b97b",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "纸张大小可以按节设置，在不同部分插入分节符后可分别用A4、A3；不只作用于整篇文档。"
+  },
+  {
+    "id": "dy-3b626620",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "首行缩进只改变段落第一行相对段落左边界的位置，不是给每行前面输入空格。"
+  },
+  {
+    "id": "dy-5cf3acd5",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "页面视图显示页眉页脚、分页和分栏等版面信息，便于预览打印布局；实际输出仍受打印设置和字体等因素影响。"
+  },
+  {
+    "id": "dy-60608c8b",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Word默认选项通常把新插入图片设为嵌入型，但用户可改变该选项；题干应明确未修改该默认设置。"
+  },
+  {
+    "id": "dy-7602a647",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "选中后Delete会删掉文字，仍可立即Ctrl+Z撤销；删除正文文字不会送到Windows回收站。"
+  },
+  {
+    "id": "dy-84dc04ea",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Shift+Enter是手动换行；Ctrl+Enter是分页，Ctrl+Alt+Enter是样式分隔符，并非强行合并两段正文的通用快捷键。"
+  },
+  {
+    "id": "dy-8d36c6f9",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "只有启用“使用Insert键控制改写模式”等设置时Insert才能切换插入和改写，不能忽略该前提。"
+  },
+  {
+    "id": "dy-a3c255c8",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "页面视图最接近打印版面，大纲视图主要呈现标题层级；补齐题干结尾括号。"
+  },
+  {
+    "id": "dy-b385cec3",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "选定区即正文左边的空白区：单击选一行、双击选一段、三击选全文；原选项D的“行首三击”与解析矛盾，需明确位置。"
+  },
+  {
+    "id": "gap-office-new-003",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "首行缩进应设置段落属性；空格会受字体和编辑影响，格式刷复制的是格式而非文字。"
+  },
+  {
+    "id": "hn-recall-hn26-013",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "分栏可应用于选中内容或特定节，不只用于整篇文档；Word可能自动插入相应分节符。"
+  },
+  {
+    "id": "web-23",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "正文编辑状态下Ctrl+A全选文档内容；在某些对象内部第一次全选可能限于该对象，应明确焦点在正文。"
+  },
+  {
+    "id": "zg-36767",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "Ctrl+H打开替换；Ctrl+F查找，Ctrl+S保存，Ctrl+Q清除段落直接格式。"
+  },
+  {
+    "id": "zg-38826",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "1.5倍行距控制段落各行之间的距离，属于段落格式；字体、字号、字符间距属于字符格式。"
+  },
+  {
+    "id": "zg-4043",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "移除重复",
+    "reason": "与zg-36767都只考Word替换快捷键Ctrl+H，未增加条件边界或应用能力，保留后一题并移除语义重复。"
+  },
+  {
+    "id": "zg-69123",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "默认字体和字号依模板而变；题干给定模板的默认值后才能唯一判断，不能断言各版Word固定为宋体五号。"
+  },
+  {
+    "id": "zg-91213",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "考察报告以文字编辑排版为主，Word适合；CAD制图、Photoshop图像处理、FrontPage网页制作。"
+  },
+  {
+    "id": "dy-d36225d7",
+    "subject": "办公软件",
+    "topic_id": "office.t04",
+    "verdict": "修正",
+    "reason": "大纲视图展示标题层级和组织结构，页面视图用于预览接近打印的版面效果，故命题错误。"
+  },
+  {
+    "id": "gap-office-new-004",
+    "subject": "办公软件",
+    "topic_id": "office.t04",
+    "verdict": "修正",
+    "reason": "标题样式提供层级结构，配合目录更新才能可靠生成目录；仅加粗放大没有建立大纲层级。"
+  },
+  {
+    "id": "ua-office-002",
+    "subject": "办公软件",
+    "topic_id": "office.t04",
+    "verdict": "移除重复",
+    "reason": "与gap-office-new-004、uf-of-002都以手工加粗无法建立自动目录为相同任务，保留gap-office-new-004并由新独立输出题补维护流程。"
+  },
+  {
+    "id": "uf-of-002",
+    "subject": "办公软件",
+    "topic_id": "office.t04",
+    "verdict": "移除重复",
+    "reason": "与gap-office-new-004重复考标题样式生成目录，未新增任务边界，保留有具体报告情景的一题。"
+  },
+  {
+    "id": "ap-of-002",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "目标页前后插入分节符，可单独设置该节为横向；分页符只换页，不建立独立页面设置范围。"
+  },
+  {
+    "id": "cg-11-s1-q16",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "一般任意页面需要不同页眉时可用分节并取消链接；首页不同、奇偶页不同本就能产生不同页眉，因此原“必须”过于绝对。"
+  },
+  {
+    "id": "cg-11-s1-q30",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "邮件合并用统一主文档配合家长和成绩数据源批量生成通知单，不必逐份复制编辑。"
+  },
+  {
+    "id": "cg-11-s1-q31",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "修订记录正文的增删改，拒绝对应修订即可恢复该处原内容；批注只附加意见。"
+  },
+  {
+    "id": "cg-11-s1-q32",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "在不修改原题正文的前提下，用批注附加解题思路最合适；修订用于保留正文改动痕迹。"
+  },
+  {
+    "id": "cg-11-s1-q54",
+    "subject": "办公软件",
+    "topic_id": "office.t02",
+    "verdict": "修正",
+    "reason": "仍在撤销历史中的误操作可通过撤销恢复，通常快捷键为Ctrl+Z；不必人工重写。"
+  },
+  {
+    "id": "cg-11-s1-q61",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "开启修订再修改正文，可保留增删痕迹让学生逐项查看和接受、拒绝。"
+  },
+  {
+    "id": "cg-11-s1-q62",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "红色波浪线是拼写检查的疑似错误提示，并不表示已经自动更正；最终仍需结合上下文判断。"
+  },
+  {
+    "id": "cg-11-s1-q63",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "按预设规则在录入时替换误拼文字是自动更正；是否已有该中文词条取决于规则配置。"
+  },
+  {
+    "id": "cg-11-s1-q67",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "查找“无解”，替换内容仍为“无解”但设置着重号，再全部替换，即可批量修改匹配项格式。"
+  },
+  {
+    "id": "cg-11-s1-q73",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "文件压缩改变存储表示或体积，不是文本排版；页眉页脚、字体字号及段落缩进都是排版操作。"
+  },
+  {
+    "id": "cg-11-s1-q75",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "预设自动更正规则把mgzy映射为目标成语，录入时即可替换；查找替换一般处理已输入内容。"
+  },
+  {
+    "id": "cg-11-s1-q76",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "查找替换可限定原文字及颜色，并将匹配文本改为红色；自动更正不是对已有全文批量改色。"
+  },
+  {
+    "id": "cg-11-s2-q10",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "页边距是纸张边缘到正文区域的距离，可由页面设置和标尺边界调整；段落缩进只改变段落相对正文边界的位置，答案应为BC。"
+  },
+  {
+    "id": "cg-11-s2-q9",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "定位可以按页、书签、脚注等跳转；题注通常通过交叉引用和查找定位，不是此题列举的标准定位类别。"
+  },
+  {
+    "id": "cg-12-s1-q12-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "图片边框在图片样式相关功能中设置；大小用于尺寸，排列控制位置层次，调整处理颜色亮度等。"
+  },
+  {
+    "id": "dy-502f984d",
+    "subject": "办公软件",
+    "topic_id": "office.t04",
+    "verdict": "修正",
+    "reason": "自动目录可以按标题样式、大纲级别或目录项域等建立，因此原选项C也可能正确，必须把它限定为仅手工改外观而无结构标记。"
+  },
+  {
+    "id": "dy-edeb4381",
+    "subject": "办公软件",
+    "topic_id": "office.t03",
+    "verdict": "修正",
+    "reason": "用查找和替换把全部“符号”改为“富豪”；批注用于意见，格式刷不改变文字内容。"
+  },
+  {
+    "id": "gap-office-new-005",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "分节可分别设置页码和方向；页眉页脚内容需要独立时还应取消链接，分页本身不够。"
+  },
+  {
+    "id": "ua-office-001",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "分节后可分别设置页码格式和起始值；封面无页码可取消相关页脚链接后删除该节页码，不能把链接误认为页码计数开关。"
+  },
+  {
+    "id": "uf-of-001",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "各章分节并取消页眉“链接到前一节”，即可编辑独立页眉；页码可设置续前节保持连续。"
+  },
+  {
+    "id": "web-28",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "设置为一栏即恢复普通单栏；不是零栏。"
+  },
+  {
+    "id": "zg-68053",
+    "subject": "办公软件",
+    "topic_id": "office.t05",
+    "verdict": "修正",
+    "reason": "开启修订可在显示标记时同时看到删除的错字和新增的正确文字；接受修订后才成为最终正文。"
+  },
+  {
+    "id": "cg-11-s1-q12",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "选中整个表格后删除所有行，整张表格结构被删除；Delete键清内容与菜单删除行不同。"
+  },
+  {
+    "id": "cg-11-s1-q17",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "文本框可设置边框、文字方向、字体大小和对象效果；不是只能横排或固定大小。"
+  },
+  {
+    "id": "cg-11-s1-q38",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "水平标尺反映列的水平位置，可拖动相关边界调整列宽；垂直标尺主要对应纵向位置。"
+  },
+  {
+    "id": "cg-11-s1-q55",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "在未改变插入图片默认选项时，Word通常采用嵌入型，让图片像字符参与文本排版；与PowerPoint母版无关。"
+  },
+  {
+    "id": "cg-11-s2-q14",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "单元格中的文字可自动换行、分段，也可设置字体段落格式；不能说表格文字不可编辑。"
+  },
+  {
+    "id": "cg-12-s1-q6",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel桌面版自定义序列可在“输入序列”框中每项单独一行，再添加；原答案逗号与解析分号互相矛盾，且不应宣称与软件版本无关。"
+  },
+  {
+    "id": "cg-13-s1-q25",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "图形移动会带动其内部文字；改变形状尺寸并不必然改变文字字号，故“以上三项都正确”不成立。"
+  },
+  {
+    "id": "cg-13-s1-q26",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "设置为可组合的浮动对象后，文本框可与图形组合；普通正文文字、页眉区域和表格不是可直接组合的同类绘图对象。"
+  },
+  {
+    "id": "cg-13-s1-q27",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "裁剪图片改变显示的图片边界或区域，不等于更改文本框大小或编辑艺术字字符。"
+  },
+  {
+    "id": "cg-13-s1-q31",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "文字表格可嵌套子表格并调整单元格宽高；单元格不只容纳汉字数字，也不能任意变成圆形菱形。"
+  },
+  {
+    "id": "gap-office-new-006",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "清除单元格文字保留表格的行列结构，删除行则移除结构，二者不等价。"
+  },
+  {
+    "id": "uf-of-007",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "样式统一标题，题注及交叉引用管理编号，分节管理页面范围；连续空格在字体变化后不能稳定对齐。"
+  },
+  {
+    "id": "gap-office-clean-001",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "先整理一人一行的数据源，再在主文档插入合并域并预览、输出；合并前检查字段、空值和数值日期显示等。"
+  },
+  {
+    "id": "gap-office-clean-002",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "接受对应删除修订才会正式采用该删除；删除批注只移除讨论意见，不处理正文修订。"
+  },
+  {
+    "id": "gap-office-new-007",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "邮件合并负责批量变化字段，修订记录正文更改，批注交流意见，三个功能各司其职。"
+  },
+  {
+    "id": "cg-12-s1-q10",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "同一工作表可以创建多个图表，图表和工作表名称都可修改；第一行第二列地址是B1而非A2。"
+  },
+  {
+    "id": "cg-12-s1-q12",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "自动填充既可复制文本、数值和公式，也可延伸有规律的序列；题干应明确问“延伸序列”，否则A、B、C也可被填充。"
+  },
+  {
+    "id": "cg-12-s1-q14",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "先选目标单元格，输入等号再输入公式主体，最后Enter确认，顺序是④①②③。"
+  },
+  {
+    "id": "cg-12-s1-q17",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel可存数值、文本、逻辑值等；公式计算结果也可能是这些类型或错误值，不能把公式本身混同底层值类型。"
+  },
+  {
+    "id": "cg-12-s1-q19",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Windows版Excel在单元格内手动换行用Alt+Enter；单独Enter通常确认并移动活动单元格。"
+  },
+  {
+    "id": "cg-12-s1-q20",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "公式使用函数和单元格引用自动计算，通常以等号起始，是电子表格计算能力的核心。"
+  },
+  {
+    "id": "cg-12-s1-q24",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "拆分窗格可水平、垂直或同时水平垂直，以分别查看同一工作表不同区域。"
+  },
+  {
+    "id": "cg-12-s1-q33",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "BD的列序号为B的序号2乘26再加D的序号4，即2×26+4=56。"
+  },
+  {
+    "id": "cg-12-s1-q35",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Delete清除单元格内容但不删除单元格结构，故B错误；删除单元格会引起其他单元格上移或左移。"
+  },
+  {
+    "id": "cg-12-s1-q37",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "公式=9/3计算为数值3；没有等号的算式通常是文本，带引号的公式结果是文本。"
+  },
+  {
+    "id": "cg-12-s1-q4",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "120&102前没有等号，按文本保存并原样显示；=120&102才会将数字连接为文本120102。"
+  },
+  {
+    "id": "cg-12-s1-q50",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "修正",
+    "reason": "比较部门总绩效要先按部门汇总再按汇总值排序；直接按个人绩效排只能找到个人最高。"
+  },
+  {
+    "id": "cg-12-s1-q52",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "输入100+300/2且没有等号时通常作为文本显示；=100+300/2才按先除后加得250。"
+  },
+  {
+    "id": "cg-12-s1-q59",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "=TRUE=FALSE比较两个不同的逻辑值是否相等，结果为FALSE。公式中的英文标识符和运算符应准确输入。"
+  },
+  {
+    "id": "cg-12-s1-q60",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "以=开头且操作数完整的A、B、D可计算。*E3没有等号，并且乘号缺少左操作数，不能构成有效计算公式。"
+  },
+  {
+    "id": "cg-12-s1-q61",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "除数为0产生#DIV/0!；#VALUE!是值类型问题，#NUM!是数值参数问题，不是除零专用错误。"
+  },
+  {
+    "id": "cg-12-s1-q62",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel既可新增删除数据，也能计算、筛选和汇总，故选以上都对。"
+  },
+  {
+    "id": "cg-12-s1-q63",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "中文区域日期录入通常可用半角/或-分隔，实际识别受区域设置和格式影响。"
+  },
+  {
+    "id": "cg-12-s1-q64",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "D2没有$，行列均相对；F$1、$D2是混合引用。原D项3E$7是坏地址，宜改合法绝对引用作对照。"
+  },
+  {
+    "id": "cg-12-s1-q67",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "中文月日顺序区域且单元格为常规格式时，1/2通常识别为1月2日；需显式约定区域而非说各地默认相同。"
+  },
+  {
+    "id": "cg-12-s1-q7",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Del清除E4内容，不改变单元格结构及底纹，其他单元格也不会上移左移。"
+  },
+  {
+    "id": "cg-12-s1-q70",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "分母0或空白都会导致除零；直接删除被引用的单元格结构通常导致#REF!，不同于只清空其内容。"
+  },
+  {
+    "id": "cg-12-s1-q8",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "1900日期系统中序列值1代表1900年1月1日，原来的日期显示格式保留后显示1月1日。"
+  },
+  {
+    "id": "cg-12-s1-q9",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "先单击起始表标签，再按Shift单击终止表标签，可选择连续工作表；Shift此处不是绘图约束键。"
+  },
+  {
+    "id": "cg-12-s2-q7",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "单元格引用分相对、绝对、混合三类；“正反向引用”不是这一标准分类。"
+  },
+  {
+    "id": "cg-12-s2-q8",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "先输入英文单引号或先设文本格式都能保留数字文本；公式=\"123\"也会返回文本，因此原D必须明确为不配对引号才可排除。"
+  },
+  {
+    "id": "cg-12-s2-q9",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel支持等差、等比、日期及自动填充序列，具体生成方式由填充设置决定。"
+  },
+  {
+    "id": "cg-13-s1-q15",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "文字表格中非行末单元格按Tab前进到右侧下一格；若在行末则到下一行，题干应明确非最后一列。"
+  },
+  {
+    "id": "cg-13-s1-q34",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "文字表格单元格内Enter另起段落，通常不会新增表格行；需明确是文字处理表格而非Excel单元格。"
+  },
+  {
+    "id": "cg-13-s1-q39",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "按Ctrl可逐个选中不连续单元格，Shift通常用于连续区域选择。"
+  },
+  {
+    "id": "cg-13-s1-q40",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "第6列是F，第4行是4，所以地址为F4，列字母在行号之前。"
+  },
+  {
+    "id": "cg-13-s1-q41",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "行列交叉的单元格是电子表格最基本的数据操作单位；工作表和工作簿包含多个单元格。"
+  },
+  {
+    "id": "cg-13-s1-q50",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "数值因列宽不足显示井号时可增大列宽；负日期时间也可能显示井号，题干应排除该情况。"
+  },
+  {
+    "id": "cg-13-s1-q51",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "单元格可输入数字、中文及其他文本，三项都属于支持的内容。"
+  },
+  {
+    "id": "cg-13-s1-q52",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "公式通常以等号=开始，单引号会强制文本，$用于地址固定而非公式起始。"
+  },
+  {
+    "id": "cg-13-s1-q53",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "选中同行连续数值再点击自动求和，可在相邻空白位置生成汇总；选择目标与核对自动范围都很重要。"
+  },
+  {
+    "id": "cg-13-s1-q54",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "同一工作表内复制到不同地址时，相对引用=A20按行列偏移调整；复制不是把结果数值固定成常量。"
+  },
+  {
+    "id": "cg-13-s1-q61",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Windows桌面Excel删除工作表后不能用普通撤销恢复，可从未覆盖的文件或历史版本恢复；此规则不应泛指所有电子表格。"
+  },
+  {
+    "id": "cg-13-s1-q65",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "常规数字格式不会固定显示2位小数，通常按有效数字和列宽显示；只有显式设数值格式2位才会固定为两位。"
+  },
+  {
+    "id": "cg-13-s1-q69",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "新工作簿初始表数可配置且随版本而异；题干给定设置为3张后，才能选择3。"
+  },
+  {
+    "id": "cg-13-s1-q71",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "依次打开且未切换其他窗口时，最后打开的A4.xls成为活动工作簿；文件名应与选项统一。"
+  },
+  {
+    "id": "dy-0b7af726",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "同一工作表内单元格用列标加行号定位，例如D4；跨工作表时还需表名才能唯一定位。"
+  },
+  {
+    "id": "dy-5d120131",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "C2复制到C3后相对引用变为=A3+B3，两个单元格为空按0处理，结果为0而非3。"
+  },
+  {
+    "id": "dy-6458faae",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel可在选中矩形区域合并横向、纵向单元格；合并前注意仅左上单元格内容保留。"
+  },
+  {
+    "id": "dy-64d46e62",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Windows Excel中从单个数值单元格按Ctrl拖填充柄可切换到递增序列；Alt不是填充相同内容的通用快捷键。"
+  },
+  {
+    "id": "gap-office-new-008",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "学号是标识符而非数量，设文本可保留前导0；日期货币百分比格式不适合。"
+  },
+  {
+    "id": "ua-office-003",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "$F$1行列都绝对引用，向下复制保持不变；A2会变成A3、A4等。"
+  },
+  {
+    "id": "ua-office-004",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "IF先判断C2>=60，再返回及格或不及格；文本常量必须放在英文双引号内。"
+  },
+  {
+    "id": "uf-of-003",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "D2到E4偏移右1下2，$B2变$B4，C$1变D$1，结果=$B4*D$1。"
+  },
+  {
+    "id": "uf-of-004",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "COUNTIFS可同时检查>=60和<80；单一COUNTIF条件不能写成字符串>=60<80。"
+  },
+  {
+    "id": "zg-32431",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "D1中的SUM(A1:D1)包含自身，产生循环引用；题干应明确未启用迭代计算且其他单元格无间接循环。"
+  },
+  {
+    "id": "zg-34340",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "饼图编码部分占总体的比例；时间趋势通常用折线，项目数量比较可用柱形图。"
+  },
+  {
+    "id": "zg-36399",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "COUNT(A1:A4)只统计三个数值单元格，文本“3”不计入，因此3+12=15；原四个选项错配为缩放比例，必须重建。"
+  },
+  {
+    "id": "zg-65994",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Ctrl+N在Excel中新建工作簿，Ctrl+O打开，Ctrl+S保存。"
+  },
+  {
+    "id": "zg-7212",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "Word和WPS文字用于文本加工；Photoshop与ImageReady主要处理图像，不能把整个WPS套件等同于只有文字软件。"
+  },
+  {
+    "id": "zg-84068",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel公式一般以=开头，之后是由常量、引用、函数与运算符组成的表达式。"
+  },
+  {
+    "id": "zg-86021",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "&是文本连接运算符，例如=\"A\"&\"B\"得AB；它不做数值加法。"
+  },
+  {
+    "id": "cg-12-s1-q23",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "多个指标计算可先写一个AVERAGE公式再按相对引用复制；单说“函数法”与“复制法”并不互斥，需要给出已有首个公式这一前提。"
+  },
+  {
+    "id": "cg-12-s1-q42",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "Excel能插入图片，也支持填充、公式和排序，因此B的否定说法错误。"
+  },
+  {
+    "id": "cg-12-s1-q66",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "工作簿可以有多张工作表，不固定只有一张；SUM求和、B3地址和透视表描述都成立。"
+  },
+  {
+    "id": "cg-12-s2-q6",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "MAX求最大值，B3:E10为矩形区域，透视表用于汇总；工作表数不固定为3，所以选BCD。"
+  },
+  {
+    "id": "gap-office-new-009",
+    "subject": "办公软件",
+    "topic_id": "office.t09",
+    "verdict": "修正",
+    "reason": "右移1列下移1行：$B2变$B3，C$1变D$1，得=$B3*D$1。"
+  },
+  {
+    "id": "ua-office-010",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "跨软件交付应在目标环境检查字体、公式、宏和对象效果；需要固定版面时另导出PDF，扩展名相同不能保证完全一致。"
+  },
+  {
+    "id": "cg-12-s1-q21",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "先用AVERAGE(B2:B5)计算日均数量，再乘单价1.25得日均销售额；不能只求四天总量。"
+  },
+  {
+    "id": "cg-12-s1-q29",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "=SUM(A1:A3)以等号开始，SUM后跟配对括号和范围参数，构成完整函数公式；仅函数名或缺括号均不完整。"
+  },
+  {
+    "id": "cg-12-s1-q32",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "COUNTIF按条件计数；销售额在B2:B8且单位为万元时，=COUNTIF(B2:B8,\">2\")才是完整公式。"
+  },
+  {
+    "id": "cg-12-s1-q40",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "F2中的=B2+C2+D2+E2+F2直接引用自身，未启用迭代计算时产生循环引用；其他公式只依赖B2:E2。"
+  },
+  {
+    "id": "cg-12-s1-q46",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "MAX给出最高分，若超过试卷满分可提示输入异常；它只能发现部分异常，不能保证所有错录都能检出。"
+  },
+  {
+    "id": "cg-12-s1-q48",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "AVERAGE把数值0计入人数，文本或空白缺考不计入；因此把缺考写0会压低仅统计实考学生的均分，这不是软件缺陷。"
+  },
+  {
+    "id": "cg-12-s1-q49",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "SUM(C2:C7)引用整个连续区域；只把其中C2剪切移走时，原区域一般仍为C2:C7，少了该非零值所以结果改变。须补完整公式并限定单格移动。"
+  },
+  {
+    "id": "cg-12-s1-q51",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "数值格式学校代码因列宽不足显示井号，可调宽列；需要保留前导0的代码宜用文本保存。"
+  },
+  {
+    "id": "cg-12-s1-q58",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "AVERAGE计算数值的算术平均，SUM求总和，MAX和MIN求极值；不需以未经核实的全国读书数据作题干。"
+  },
+  {
+    "id": "cg-13-s1-q66",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "WPS表格可以直接输入以等号开头的合法函数公式；说“直接输入函数”一定不正确会误导，需改为明确无效公式。"
+  },
+  {
+    "id": "dy-7d7dfaf4",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "AVERAGE(A4:A100,D4:D100)把两个区域作为两个参数；不能用英文and连接函数参数。"
+  },
+  {
+    "id": "dy-bc6c044a",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "单元格能存文本数值等并使用公式，但受字符数、数值精度等限制，不能说“任何数据”均可无限录入。"
+  },
+  {
+    "id": "gap-office-clean-003",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "VLOOKUP的查找列为区域首列，姓名在第三列，FALSE表示精确匹配；绝对区域便于下填。"
+  },
+  {
+    "id": "gap-office-clean-004",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "#N/A应检查键是否存在、类型及空格是否一致、范围是否正确；近似匹配不能替代唯一键的精确查找。"
+  },
+  {
+    "id": "gap-office-new-010",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "唯一学号应使用FALSE或0精确匹配；TRUE或省略可能按近似匹配返回其他记录。"
+  },
+  {
+    "id": "web-10",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "SUM求和，COUNT统计数值单元格个数，AVERAGE求均值，MIN取最小值。"
+  },
+  {
+    "id": "zg-16424",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "SUM(8,7,8,7)=8+7+8+7=30。"
+  },
+  {
+    "id": "zg-1984",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "数字或日期时间显示井号常由列宽不足导致；普通文本过长通常截断或溢出，不会仅因列窄显示井号。"
+  },
+  {
+    "id": "zg-51207",
+    "subject": "办公软件",
+    "topic_id": "office.t10",
+    "verdict": "修正",
+    "reason": "SUM用于求和，MAX最大值，AVERAGE平均值，COUNT计数数值单元格。"
+  },
+  {
+    "id": "ap-of-004",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "每行一条完整记录有助于汇总；唯一订单应精确匹配，单独排序订单列会破坏字段对应关系。"
+  },
+  {
+    "id": "cg-12-s1-q26",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "按“性别、语文、数学”的次序设置关键字，第一关键字是性别，第二为语文，第三为数学，故C。"
+  },
+  {
+    "id": "cg-12-s1-q34",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "文本按字符逐位排序，B20是B200的前缀而排前，B22同理在B220前，得到B20、B200、B22、B220。"
+  },
+  {
+    "id": "cg-12-s1-q39",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "筛选只隐藏不匹配记录，清除条件后重新显示，不会删除源数据，故A错误。"
+  },
+  {
+    "id": "cg-12-s1-q44",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "筛选不破坏原始数据，可取消筛选按钮，且Excel不只排序筛选两种分析方法，故选D。"
+  },
+  {
+    "id": "cg-12-s1-q47",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "已汇总的各部门销售额按大小排序，可直接展示业绩高低；若是销售明细则应先汇总。"
+  },
+  {
+    "id": "cg-12-s1-q56",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "筛选不删除不匹配记录，故C错误；源数据清空后的图表表现受空值设置影响，不应断言点一定删除。"
+  },
+  {
+    "id": "cg-12-s1-q65",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "每部门已有一条汇总总销售额时，按该列降序排列即可直接比较业绩；若是明细，需先汇总。"
+  },
+  {
+    "id": "cg-12-s1-q68",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "增加补贴是原金额加100，不是把所有值替换为100；筛选后还要仅选择可见记录，防止误改隐藏行。"
+  },
+  {
+    "id": "cg-12-s2-q12",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "筛选隐藏的行通常不显示也不打印，但数据仍保留，可取消条件恢复显示，选ABD。"
+  },
+  {
+    "id": "cg-12-s2-q13",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "自动筛选中的自定义数值条件和高级筛选都可筛出高于85分的记录；条件格式只改外观，答案应为ABC。"
+  },
+  {
+    "id": "cg-13-s1-q57",
+    "subject": "办公软件",
+    "topic_id": "office.t08",
+    "verdict": "修正",
+    "reason": "自动填充按初始序列延伸连续数据；排序重排已有记录，不会生成新序列值。"
+  },
+  {
+    "id": "dy-645335cb",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "条件格式按规则改变匹配单元格的显示；筛选隐藏记录而非突出显示。"
+  },
+  {
+    "id": "gap-office-new-011",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "只排序工资列会移动工资却不移动姓名，破坏同一记录对应关系，故命题正确。"
+  },
+  {
+    "id": "hn-recall-hn26-015",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "冻结窗格在滚动时保持标题可见；工作表保护限制编辑，分类汇总计算合计。"
+  },
+  {
+    "id": "ua-office-005",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "整条记录一起排序可保持姓名与分数对应；只排序总分列会错位。"
+  },
+  {
+    "id": "ua-office-011",
+    "subject": "办公软件",
+    "topic_id": "office.t06",
+    "verdict": "修正",
+    "reason": "标题样式、题注交叉引用、分节符都属于结构化排版；用空格对齐不稳定，本题应映射长文档而非数据筛选。"
+  },
+  {
+    "id": "ua-office-012",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "数据验证约束输入，条件格式提示异常，文本学号保留前导0；冻结首行不能阻止修改。"
+  },
+  {
+    "id": "ua-office-013",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "筛选只是隐藏不符合条件的记录，只有另执行删除才会丢失数据，故错误。"
+  },
+  {
+    "id": "ua-office-015",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "修正",
+    "reason": "冻结窗格控制显示位置，不能锁定内容；保护工作表才可限制编辑。"
+  },
+  {
+    "id": "uf-of-005",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "修正",
+    "reason": "地区与产品交叉汇总适合数据透视表；其字段可以拖放，源数据变化后须刷新。"
+  },
+  {
+    "id": "uf-of-008",
+    "subject": "办公软件",
+    "topic_id": "office.t11",
+    "verdict": "移除重复",
+    "reason": "与ua-office-013重复判断筛选是否永久删除记录，保留说明Excel/WPS适用范围的ua-office-013。"
+  },
+  {
+    "id": "cg-12-s1-q71",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "修正",
+    "reason": "分类汇总依相邻分组工作，先按分类字段排序，使同组数据连续，避免多段重复分组。"
+  },
+  {
+    "id": "gap-office-clean-005",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "修正",
+    "reason": "部门放行、月份放列、销售额作为值并求和，构成部门与月份的交叉汇总。"
+  },
+  {
+    "id": "gap-office-clean-006",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "修正",
+    "reason": "范围已含新记录但汇总仍旧时先刷新透视表；冻结和母版不处理汇总缓存。"
+  },
+  {
+    "id": "gap-office-new-012",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "移除重复",
+    "reason": "与uf-of-005都考部门或地区产品交叉汇总使用透视表，保留uf-of-005及实际字段布局任务。"
+  },
+  {
+    "id": "ua-office-006",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "移除重复",
+    "reason": "与gap-office-clean-006都只考透视表变更后刷新，保留明确已经包含新记录的gap-office-clean-006。"
+  },
+  {
+    "id": "zg-37974",
+    "subject": "办公软件",
+    "topic_id": "office.t12",
+    "verdict": "修正",
+    "reason": "先按分类项排序让相同类别相邻，再执行分类汇总；仅筛选不能保证同类连续。"
+  },
+  {
+    "id": "ap-of-003",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "工作表保护限制误改，不验证公式逻辑、范围及原始数据，故命题错误。"
+  },
+  {
+    "id": "cg-12-s1-q30",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "连续五年价格随时间变化适合折线图，连接相邻时间点展示趋势；饼图主要表示构成。"
+  },
+  {
+    "id": "cg-12-s1-q31",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "饼图反映部分占整体的份额；折线图显示时间趋势，柱形图比较数量。"
+  },
+  {
+    "id": "cg-12-s1-q31-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "数据图表用图形编码数值便于比较；流程和组织结构通常使用流程图或组织结构图。"
+  },
+  {
+    "id": "cg-12-s1-q55",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "普通图表引用源单元格数据，A3作为数据源改变时图表会更新；位置、类型和图例位置都可调整。"
+  },
+  {
+    "id": "cg-12-s2-q14",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "Excel 2003可用图表区右键菜单或图表菜单的图表类型功能更改类型，故B、C；其他版本菜单路径可能不同。"
+  },
+  {
+    "id": "cg-12-s2-q15",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "草稿模式与降低打印分辨率可能减少打印耗时；黑白或去网格线是否更快取决于打印机和任务，不能保证四项均加快。"
+  },
+  {
+    "id": "gap-office-new-013",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "打印标题行用于每页重复表头；冻结窗格只对屏幕滚动有效，仍需检查分页与缩放。"
+  },
+  {
+    "id": "ua-office-007",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "散点图把成对数值放在两个数值轴上，适合观察广告投入与销售额关系，但相关不等于因果。"
+  },
+  {
+    "id": "zg-30372",
+    "subject": "办公软件",
+    "topic_id": "office.t13",
+    "verdict": "修正",
+    "reason": "2-5表示连续2至5页，逗号分隔表示另选10和12页；注意打印对话框实际分隔符要求。"
+  },
+  {
+    "id": "ap-of-001",
+    "subject": "办公软件",
+    "topic_id": "office.t07",
+    "verdict": "修正",
+    "reason": "邮件合并将固定通知版式和职工字段数据结合，适合300份个性化通知，应映射邮件合并知识点。"
+  },
+  {
+    "id": "cg-12-s1-q10-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "不按Ctrl等修饰键时拖动缩略图改变顺序，是移动；配合复制命令才产生副本。"
+  },
+  {
+    "id": "cg-12-s1-q16-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "超链接可跳到指定幻灯片，实现非线性导航，不会改变幻灯片实际存储顺序。"
+  },
+  {
+    "id": "cg-12-s1-q17-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "母版中的固定对象在母版中修改，普通页继承显示；不等于所有单页文字都只能在母版修改。"
+  },
+  {
+    "id": "cg-12-s1-q22-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "浏览视图适合缩略图排序、删除和切换设置，不能直接编辑幻灯片正文对象。"
+  },
+  {
+    "id": "cg-12-s1-q24-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "PowerPoint可给当前、选定多张或全部幻灯片设置背景，因此D错误。"
+  },
+  {
+    "id": "cg-12-s1-q28-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "模板和主题应用后可继续修改；旧版设计模板与内容模板的分类不宜泛指现代全部版本。"
+  },
+  {
+    "id": "cg-12-s1-q29-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "所有幻灯片使用同一母版且未隐藏背景图形时，可在母版加入重复图片；存在多母版时应分别检查。"
+  },
+  {
+    "id": "cg-12-s1-q30-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "版式的虚线内容区域称占位符，普通文本框不具备同等版式语义。"
+  },
+  {
+    "id": "cg-12-s1-q32-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "Shift配合起止缩略图可选连续幻灯片；Ctrl常用于逐张选择不连续项。"
+  },
+  {
+    "id": "cg-12-s1-q39-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "排练计时记录每页停留时间并可供自动换片使用；还要启用使用计时等放映选项。"
+  },
+  {
+    "id": "cg-12-s1-q40-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "现代PowerPoint可插入受支持的音视频；Flash已淘汰，不应将可插Flash作为跨版本通用答案。"
+  },
+  {
+    "id": "cg-12-s1-q6-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "母版统一公共格式和重复对象，不会自动把各页标题文字、图片内容改成完全一样。"
+  },
+  {
+    "id": "cg-12-s1-q7-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "演示文稿是包含一张或多张幻灯片的文件，二者是整体与页面的关系，不是同一概念。"
+  },
+  {
+    "id": "cg-12-s2-q8-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "同一文本框不同文字可设不同字体，标题字号也可手工更小；软件允许自选颜色，但为了可读性仍应保证背景对比。"
+  },
+  {
+    "id": "cg-13-s1-q46",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "WPS表格用于电子表格数据管理和计算，不是专门放幻灯片或上网；应映射工具选择。"
+  },
+  {
+    "id": "dy-47732507",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "超链接能在放映中跳转指定幻灯片；跨文件网页链接还取决于权限、路径及网络条件。"
+  },
+  {
+    "id": "gap-office-new-014",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "母版变化未反映到某页时，应检查该页所属母版、版式、占位符及直接格式覆盖。"
+  },
+  {
+    "id": "hn-recall-hn26-014",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "普通视图缩略图和浏览视图都可拖动重排幻灯片，故命题正确。"
+  },
+  {
+    "id": "ua-office-008",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "母版及版式适合统一校徽、字体、页脚等重复格式，单页直接格式仍可能覆盖默认值。"
+  },
+  {
+    "id": "ua-office-009",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "页内节点依次出现用对象动画并安排先后，切换只处理两张幻灯片之间的效果。"
+  },
+  {
+    "id": "uf-of-006",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "公共校徽和页脚宜在母版设置，应用于对应版式；个别页面隐藏背景图形时还需检查。"
+  },
+  {
+    "id": "zg-33133",
+    "subject": "办公软件",
+    "topic_id": "office.t01",
+    "verdict": "修正",
+    "reason": ".doc是Word文档，不是演示文稿；.wav音频、.avi视频容器、.swf动画的对应成立。"
+  },
+  {
+    "id": "zg-63802",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "段落水平对齐包括居中和两端对齐；顶端底端通常控制文本框内垂直位置，不属段落水平对齐。"
+  },
+  {
+    "id": "zg-98718",
+    "subject": "办公软件",
+    "topic_id": "office.t14",
+    "verdict": "修正",
+    "reason": "横向改纵向应设置幻灯片大小中的方向，不是更换占位符版式；原答案概念混淆，应修复选项。"
+  },
+  {
+    "id": "cg-12-s1-q14-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "排练计时记录各页时间；也可直接设置自动换片时间，题目应限定是实际演练中记录时间。"
+  },
+  {
+    "id": "cg-12-s1-q25-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "演讲者放映提供全屏演示和人工控制，观众浏览主要窗口自助，展台浏览适合无人值守。"
+  },
+  {
+    "id": "cg-12-s1-q3-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "Esc退出当前放映；Alt+Tab切换应用，并非正式结束放映。"
+  },
+  {
+    "id": "cg-12-s1-q34-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "普通演讲者放映可用右键导航到其他幻灯片，键盘鼠标均可控制；开始放映通常F5而非F11。"
+  },
+  {
+    "id": "cg-12-s1-q35-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "没有待播动画时左方向键通常回上一张，空格、Enter或点击可前进；有动画时可能先执行动画。"
+  },
+  {
+    "id": "cg-12-s1-q36-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "Shift+F5从当前页开始，F5从头开始，不能混用起始位置。"
+  },
+  {
+    "id": "cg-12-s1-q5-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "幻灯片浏览视图主要用于缩略图排序和批量管理，不能编辑备注正文；普通视图备注窗格和备注页可编辑备注。"
+  },
+  {
+    "id": "cg-12-s2-q10-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "PageUp和上箭头后退，PageDown、下箭头、空格、Enter前进；有动画时可能先触发上一或下一动画步骤。"
+  },
+  {
+    "id": "cg-12-s2-q12-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "对象动画分进入、强调、退出和动作路径，均作用于页内对象而不是整页切换。"
+  },
+  {
+    "id": "dy-7b9419ee",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "浏览视图是编辑视图，不是放映类型；放映类型包括演讲者、观众窗口浏览和展台浏览。"
+  },
+  {
+    "id": "dy-af5dfd59",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "观众自行浏览按窗口方式显示；演讲者和展台通常全屏，故命题错误。"
+  },
+  {
+    "id": "gap-office-new-015",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "同一页对象的出现顺序由动画控制，页面之间的效果由切换控制。"
+  },
+  {
+    "id": "ua-office-014",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "同扩展名不能保证不同软件平台对宏、字体和动画全部一致，交付前要实测目标环境。"
+  },
+  {
+    "id": "zg-52414",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "排练计时可记录页面停留供自动换片；现代录制旁白也可能连同计时录制，原题应明确通过实际排练来记录时间。"
+  },
+  {
+    "id": "zg-62728",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "两页之间效果的持续时间在切换计时中设置；动画计时针对页内对象。"
+  },
+  {
+    "id": "zg-97648",
+    "subject": "办公软件",
+    "topic_id": "office.t15",
+    "verdict": "修正",
+    "reason": "普通放映且无待播动画时点击左键通常到下一张；PageUp后退，F5通常用于从头启动放映。"
+  },
+  {
+    "id": "ap-of-005",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "表格整理汇总数据、图表呈现趋势、文字处理组织正式报告；链接便于更新但依赖源路径，交付还需核对引用和版面。"
+  },
+  {
+    "id": "cg-12-s1-q23-dup2",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "PowerPoint导出Word讲义应使用受支持的导出或发送功能；插入对象不能代替整套讲义导出，具体菜单路径依版本。"
+  },
+  {
+    "id": "gap-final-thin-001",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "先整理汇总数据再生成图表和文字报告，保留来源表、单位、更新时间，并复核公式范围和版式。"
+  },
+  {
+    "id": "gap-office-clean-007",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "表格负责明细计算、文字软件负责正式长文档、演示软件负责会议提炼；共享对象时检查链接与嵌入方式。"
+  },
+  {
+    "id": "gap-office-clean-008",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "结构化数据源配合邮件合并可复用模板并预览记录，比逐份手工改姓名更便于复核。"
+  },
+  {
+    "id": "gap-office-new-016",
+    "subject": "办公软件",
+    "topic_id": "office.t16",
+    "verdict": "修正",
+    "reason": "表格清理数据后邮件合并，抽查生成结果，再按交付要求导出PDF；截图不能替代可编辑源文件。"
+  },
+  {
+    "id": "ap-of-006",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "修订保留正文增删，批注交换意见，接受拒绝决定采用结果，版本备份防误改覆盖；同步不等于独立备份。"
+  },
+  {
+    "id": "cg-11-s1-q72",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "超链接中可点击文字是链接的起点，Table1.xls是目标；题干不应混用OLE“链接源”术语，后者通常指提供数据的文件。"
+  },
+  {
+    "id": "gap-office-clean-009",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "外链依赖源路径，跨设备可能失效；如需持续联动应携带并重建正确源路径，嵌入或静态副本会改变更新机制。"
+  },
+  {
+    "id": "gap-office-clean-010",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "检查目标环境兼容性、外链及隐藏敏感信息，保留受控源文件和备份，并确认PDF等交付版式。"
+  },
+  {
+    "id": "gap-office-new-017",
+    "subject": "办公软件",
+    "topic_id": "office.t17",
+    "verdict": "修正",
+    "reason": "外部链接可能因源文件移动而失效，嵌入则携带副本，跨设备交付前应检查路径和更新行为。"
+  },
+  {
+    "id": "cg-02-s4-q29",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "用可交互的模拟驾驶环境训练，是虚拟现实的典型应用；单纯语音识别不能构造驾驶场景。"
+  },
+  {
+    "id": "dy-2774c59a",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "多媒体综合处理两种以上媒体并可交互，改变信息获取方式；不是只有一种载体。"
+  },
+  {
+    "id": "dy-7c901a5f",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "电缆光缆负责搬运信息，是传输媒体；编码是表示媒体，磁盘是存储媒体。"
+  },
+  {
+    "id": "dy-8503a7a2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "多媒体可统一获取、处理和展示两种以上媒体，不限只有两种或单一类型。"
+  },
+  {
+    "id": "dy-9ff3f803",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "多媒体需要有机组织和综合处理，不能定义为各种媒体简单堆砌，故错误。"
+  },
+  {
+    "id": "dy-e22d0d27",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t15",
+    "verdict": "修正",
+    "reason": "先分析受众、目标和可行性，再规划设计及素材采集；需求分析为首步。"
+  },
+  {
+    "id": "dy-fb6fdd18",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "点击链接主动选择路径体现交互性，不是仅仅媒体种类多样。"
+  },
+  {
+    "id": "gap-media-new-001",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "文字音视频统一组织体现多样性与集成性；不能据此断言强交互或实时响应。"
+  },
+  {
+    "id": "ua-media-001",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "多媒体系统集成多种数字媒体并可交互，不以文件大或必须联网为定义。"
+  },
+  {
+    "id": "zg-13607",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "集成性强调多通道信息的统一获取、存储、组织和合成；非线性和交互性是其他特点。"
+  },
+  {
+    "id": "zg-25628",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t15",
+    "verdict": "修正",
+    "reason": "论证主题目标、必要性和可行性属于需求分析，而不是后续集成发布。"
+  },
+  {
+    "id": "zg-3594",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "计算机处理的素材要以数字形式表示；并非都必须压缩或刻录。"
+  },
+  {
+    "id": "zg-39568",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "媒体是表示、存储或传播信息的载体，范围比屏幕信息和编码更广。"
+  },
+  {
+    "id": "zg-45261",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "明确同时含文字、图片及配音并可交互的数字图书才是此处多媒体；原“彩画画报”也可能同时有文字，需消除歧义。"
+  },
+  {
+    "id": "zg-53822",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "头戴显示和动作追踪提供可交互三维模拟环境，体现虚拟现实的沉浸与交互；普通屏幕游戏的声画效果本身不足以证明VR。"
+  },
+  {
+    "id": "zg-61118",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t06",
+    "verdict": "修正",
+    "reason": "常见色彩三要素为色相、饱和度和明度；灰度不是这组三要素中的独立一项。"
+  },
+  {
+    "id": "zg-64830",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "录音机与音频CD播放机主要面向听觉，幻灯片和投影面向视觉；需明确音频CD而非多功能播放器。"
+  },
+  {
+    "id": "zg-7228",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "音视频采集处理能力是多媒体计算机的相关特征；体积、联网和C/S架构不构成定义。"
+  },
+  {
+    "id": "zg-75574",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "数码相机、扫描仪和摄像机都可采集图像，触摸屏主要用于显示与触控；数码相机用传感器而非底片记录。"
+  },
+  {
+    "id": "zg-94831",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t16",
+    "verdict": "修正",
+    "reason": "作品目标、结构、原创性可评价成果，工具越先进不代表效果越好，工具适用才重要。"
+  },
+  {
+    "id": "dy-252f28b2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t02",
+    "verdict": "修正",
+    "reason": "超文本的核心是用链接构建非线性文本；加入声音视频等形成超媒体，不能用媒体种类定义超文本。"
+  },
+  {
+    "id": "dy-8e05e639",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t02",
+    "verdict": "修正",
+    "reason": "超文本通过链接形成非线性路径，读者可自主跳转，不必唯一顺序阅读。"
+  },
+  {
+    "id": "dy-9aede1ad",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t02",
+    "verdict": "修正",
+    "reason": "超链接可把不同位置的文本节点构成网络，故命题正确。"
+  },
+  {
+    "id": "gap-media-new-002",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "卡顿需联合检查有效吞吐、抖动、缓冲和时延；DPI与字号不决定网络连续播放。"
+  },
+  {
+    "id": "uf-mm-008",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t02",
+    "verdict": "修正",
+    "reason": "超媒体用链接组织文本、图像、音视频节点，提供非线性交互导航。"
+  },
+  {
+    "id": "ap-mm-005",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "麦克风转换声波为模拟电信号，滤波后采样离散时间、量化离散幅度，再编码为数字序列。"
+  },
+  {
+    "id": "cg-02-s3-q2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "声音数字化基本步骤为采样、量化、编码；加密属于可选安全处理。"
+  },
+  {
+    "id": "dy-35d861b1",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "音频数字化先采样再量化最后编码，分别解决时间、幅值和数字表示。"
+  },
+  {
+    "id": "dy-71371fda",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "44.1kHz表示每秒采样44100次；不是每次采样的位数或可保留44.1kHz声音。"
+  },
+  {
+    "id": "dy-c572a0ab",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "多种媒体数字化后由计算机综合处理是多媒体技术的基础，故正确。"
+  },
+  {
+    "id": "dy-cc9caf68",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "编码压缩降低数据存储传输需求，是多媒体关键技术；不应把所有媒体都必须压缩视为定义。"
+  },
+  {
+    "id": "gap-media-new-003",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "18kHz最高频率的两倍为36kHz，是奈奎斯特速率；实际采样应留余量，边界频率信号不能一概保证可恢复。"
+  },
+  {
+    "id": "ua-media-002",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "移除重复",
+    "reason": "与gap-media-new-003给定18kHz求36kHz奈奎斯特速率完全相同，保留gap-media-new-003。"
+  },
+  {
+    "id": "ua-media-003",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "12位二进制可区分2^12=4096种码字，即4096量化级。"
+  },
+  {
+    "id": "zg-43202",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t03",
+    "verdict": "修正",
+    "reason": "普通模拟盒式录音磁带存连续模拟磁化信号；数字磁带也存在，必须限定模拟录音机。"
+  },
+  {
+    "id": "ap-mm-001",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "8000×8×1×10/8=80000B=80kB，不计文件头；注意bit到Byte除8。"
+  },
+  {
+    "id": "ap-mm-004",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "PCM容量与采样率位数声道时间成正比，总视频码率已含单位时间数据，不再乘像素和帧率，无损可精确恢复。"
+  },
+  {
+    "id": "cg-02-s2-q15",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "单声道、每样本8位时22030×1.8×8/8=39654B，十进制为39.654kB约39.7kB；原题缺声道和单位约定。"
+  },
+  {
+    "id": "dy-e77f3198",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "未压缩像素数据1024×768×24/8=2359296B=2304KiB，下载文件可能压缩，需排除文件头与压缩。"
+  },
+  {
+    "id": "gap-media-new-004",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "2Mbit/s×60/8=15MB，十进制单位下成立，不需再乘分辨率。"
+  },
+  {
+    "id": "ua-media-004",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "1024×768×24/8=2359296B=2.25MiB，未压缩且不计头部。"
+  },
+  {
+    "id": "uf-mm-001",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "44100×16=705600bit，即705.6kbit每秒；单声道不需再乘2。"
+  },
+  {
+    "id": "uf-mm-002",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "移除重复",
+    "reason": "与ua-media-004同样计算1024×768×24位图容量2.25MiB，保留单位清楚的ua-media-004。"
+  },
+  {
+    "id": "zg-39584",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t04",
+    "verdict": "修正",
+    "reason": "原始2304KiB除压缩460KiB约5.01，压缩比约5:1，必须统一两端单位。"
+  },
+  {
+    "id": "cg-02-s2-q7",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "相机、画图和照片扫描通常得到位图；剪贴画库也可能含位图，D必须明确为WMF等矢量内容。"
+  },
+  {
+    "id": "cg-02-s4-q30",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "VR传感设备采集头部手部动作等信号，不是所谓“思维交应设备”；并非所有VR都有完整人类感官模拟。"
+  },
+  {
+    "id": "cg-13-s1-q11-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "Windows版Photoshop默认Ctrl+Delete用背景色填充，Alt+Delete用前景色；与文本选区删除不同。"
+  },
+  {
+    "id": "cg-13-s1-q17-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "抗锯齿在建立选区时设置，以边缘过渡像素减少阶梯；羽化是模糊选区边缘，不等同抗锯齿。"
+  },
+  {
+    "id": "cg-13-s1-q21-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "Photoshop椭圆工具按Shift约束宽高相等形成正圆，需明确软件与默认快捷键。"
+  },
+  {
+    "id": "cg-13-s1-q25-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "磁性套索的边缘对比度控制识别图像边界的敏感程度，宽度控制搜索范围，两者作用不同。"
+  },
+  {
+    "id": "cg-13-s1-q27-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "Photoshop中X交换前景色背景色，D恢复默认黑白；填充快捷键并非交换快捷键。"
+  },
+  {
+    "id": "cg-13-s1-q30-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "工具选项栏图标的右键菜单可复位所有工具参数；复位单工具与全部工具范围不同。"
+  },
+  {
+    "id": "cg-13-s1-q53-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "Alpha通道载入选区时白为选中、黑为未选、灰为部分选中，故“黑色表示被选中”错误。"
+  },
+  {
+    "id": "cg-13-s1-q8-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "画笔间距越大，相邻笔印越分离，可形成断点式描边；硬度主要控制每个笔印边缘。"
+  },
+  {
+    "id": "cg-13-s2-q10",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "Photoshop自由变换支持缩放、旋转、斜切和透视等，操作方式依快捷键和对象类型而异。"
+  },
+  {
+    "id": "cg-13-s2-q11",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "镜头光晕滤镜有Brightness和Lens Type参数；原题只写“滤镜”无法唯一限定，须补滤镜名。"
+  },
+  {
+    "id": "cg-13-s2-q5",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "仿制图章失败需检查混合模式、不透明度、选区边界和取样图层；不透明度0或取样透明都会影响结果，不能拿剪贴板解释。"
+  },
+  {
+    "id": "cg-14-s1-q22",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "Adobe Animate的元件类型是图形、按钮、影片剪辑；库中的导入位图资源本身不是这三类元件。"
+  },
+  {
+    "id": "dy-3be73c8f",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "1024=2^10，按最小定长索引保存每像素需10位；实际文件存储对齐可能更多。"
+  },
+  {
+    "id": "dy-64574370",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "24位RGB每通道8位，共3字节，每通道256个等级；并非所有彩色格式都必须采用此表示。"
+  },
+  {
+    "id": "dy-9d4a8162",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "位深n最多表示2^n种码值；1位有2种而非只有黑，4位有16种而非4种，故BCD错误。"
+  },
+  {
+    "id": "dy-a87193b5",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "同源同处理条件下像素尺寸和色深影响细节与层次，不能保证单纯提高参数必定改善真实质量。"
+  },
+  {
+    "id": "dy-d3d6c77c",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "纯矢量对象按几何描述重绘，放大可保持边缘；位图放大显露像素。二者无绝对优劣，照片适合位图。"
+  },
+  {
+    "id": "dy-d6d8f85d",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "JPG、BMP、GIF是图像格式，MPG通常用于视频；即使视频能截帧也不把其格式归为静态图片。"
+  },
+  {
+    "id": "dy-d9caab6e",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "同尺寸且未压缩时1位图像与4位图像数据量比1:4，后者更大；压缩后的文件大小不能仅凭色数保证。"
+  },
+  {
+    "id": "dy-dbe61900",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "纯矢量几何对象缩放时重新计算，适合标志设计；若含位图或被栅格化仍受像素限制。"
+  },
+  {
+    "id": "dy-f61595bd",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "相同物理尺寸、位深及未压缩条件下，提高像素密度增加像素总数与数据量；重采样不能凭空恢复原始细节。"
+  },
+  {
+    "id": "dy-fe70a7b9",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "教材常把图形视为几何描述、图像视为像素表示；两者不是同一表示，但来源不必严格限定为绘制或相机。"
+  },
+  {
+    "id": "gap-media-clean-001",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "校徽适合纯矢量，照片适合位图；清晰度由像素、显示尺寸、缩放和压缩质量共同决定，扩展名不能单独判断。"
+  },
+  {
+    "id": "gap-media-new-005",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "SVG可描述几何对象并按尺寸重新绘制，适合标志；SVG若嵌入位图则需另看位图质量。"
+  },
+  {
+    "id": "hn-recall-hn26-009",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "屏幕每秒刷新的次数用Hz，dpi是密度，bit/s是数据速率。"
+  },
+  {
+    "id": "hn-recall-hn26-012",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "矢量按几何描述重绘，正常放大不会直接显露固定像素块；先栅格化后再放大则仍会像素化。"
+  },
+  {
+    "id": "ua-media-014",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "复杂路径、滤镜或嵌入图像能使矢量文件很大，不保证比位图小，故错误。"
+  },
+  {
+    "id": "web-29",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "提纲说明以文本便于快速查阅和检索，视频动画适用于变化过程而非替代全部文字。"
+  },
+  {
+    "id": "zg-38397",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "Windows传统画图以位图编辑为主，不是原生矢量对象编辑器；不要据“画图”二字混淆类型。"
+  },
+  {
+    "id": "zg-49209",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "照片类连续色调通常适合位图，纯矢量擅长线条标志；不能说矢量必定比位图更接近自然色。"
+  },
+  {
+    "id": "zg-9271",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "相同屏幕尺寸及其他条件下，更高原生像素分辨率可呈现更细细节；清晰度还受像素密度与输入源等影响。"
+  },
+  {
+    "id": "dy-160fca0c",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t06",
+    "verdict": "修正",
+    "reason": "CMYK是印刷减色模型，RGB是常见显示加色模型；RGB不等于一律真彩色位深。"
+  },
+  {
+    "id": "dy-d55fe67f",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t06",
+    "verdict": "修正",
+    "reason": "8位RGB各通道255表示全强度白，0,0,0是黑；位深约定需写清。"
+  },
+  {
+    "id": "gap-media-new-006",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t06",
+    "verdict": "修正",
+    "reason": "RGB屏显和CMYK印刷色域不同，需按目标印刷流程转换并打样，改扩展名不能解决颜色问题。"
+  },
+  {
+    "id": "ua-media-005",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t06",
+    "verdict": "修正",
+    "reason": "转换前检查RGB与CMYK模式、配置文件及目标色域，有助减少印刷颜色偏差。"
+  },
+  {
+    "id": "uf-mm-004",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t06",
+    "verdict": "修正",
+    "reason": "显示用RGB加色，印刷常用CMYK油墨减色；JPEG和PNG不是颜色模型。"
+  },
+  {
+    "id": "cg-02-s3-q3",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "JPG是图片，WAV音频、HTML网页文档、DOC字处理文档，因此不属于图片的为BCD。"
+  },
+  {
+    "id": "cg-13-s1-q33-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "关闭图层眼睛图标即关闭图层可见性。把不透明度调0与真正隐藏不同，图层样式还可能有显示。"
+  },
+  {
+    "id": "cg-13-s1-q56-dup2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "Windows Photoshop默认F7切换图层面板；不是因为图层定义就能推出快捷键。"
+  },
+  {
+    "id": "cg-13-s2-q7",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "尚未转换的背景层固定在底部；转换普通图层后可改名、移动并按普通层编辑。"
+  },
+  {
+    "id": "dy-4b6c7267",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "BMP转常规JPEG不会增加源细节，可能因有损压缩失真；是否肉眼可见与质量设置有关。"
+  },
+  {
+    "id": "gap-media-clean-002",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "人物分层并使用蒙版修改可见范围，保留原像素和可编辑源文件，导出副本供交付。"
+  },
+  {
+    "id": "gap-media-new-007",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "蒙版通过显示隐藏保留像素，通常比删除像素更方便调整和恢复，故正确。"
+  },
+  {
+    "id": "ua-media-011",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "图层分离对象、蒙版控制显示、调整层保留可修改处理；JPEG不能保存完整编辑图层，故ABC。"
+  },
+  {
+    "id": "zg-68464",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "BMP转JPEG采用压缩，静态图可能有空间冗余；未压缩BMP像素量由尺寸位深决定，但BMP也支持部分压缩，需限定未压缩。"
+  },
+  {
+    "id": "ap-mm-003",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "数字0和1仍要电信号、光信号或电磁波承载，数字逻辑不能脱离物理载体。"
+  },
+  {
+    "id": "cg-02-s2-q14",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "WMA、WAV及MIDI均属常见音频相关格式；MIDI存事件不存实际音波样值。"
+  },
+  {
+    "id": "cg-02-s2-q16",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "BMP位图不是音频，WAV、MP3、WMA均可保存音频数据。"
+  },
+  {
+    "id": "cg-02-s3-q8",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "缺少状态栏图片不能判断参数，应给定文件名sample.wav、44100Hz、立体声，才能选ABD。"
+  },
+  {
+    "id": "cg-14-s1-q14",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "Animate图形元件可复用并跟随父时间轴；图形元件动画中交互控件和声音不起相同独立播放作用，需要独立时间轴可用影片剪辑。"
+  },
+  {
+    "id": "dy-00784b66",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t07",
+    "verdict": "修正",
+    "reason": "PNG、JPG、TIF属于图像格式，WAV是音频，故BCD。"
+  },
+  {
+    "id": "dy-29fd21a1",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "安静环境、合理麦距、录制环境底噪样本有利于降噪；紧贴麦克风会产生喷麦和呼吸噪声。"
+  },
+  {
+    "id": "dy-2d719d12",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "声音作用听觉、图形图像作用视觉；无线电波属于传输媒体，而非感觉媒体。"
+  },
+  {
+    "id": "dy-79b620bb",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "PPTX是演示文稿，不是图像格式；文档、视频及音频三组分类基本对应，选ABD。"
+  },
+  {
+    "id": "dy-b3f1850f",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "主观听觉三要素是响度、音调、音色；响度不等同物理音强，分贝常用于声级而非音强单位本身。"
+  },
+  {
+    "id": "gap-media-clean-003",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "48000×16×2=1536000bit/s=1536kb/s；立体声乘2。"
+  },
+  {
+    "id": "gap-media-new-008",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "44100×16×2/8=176400B=176.4kB，单秒PCM不计文件头。"
+  },
+  {
+    "id": "ua-media-007",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "44100×16×2×10/8=1764000B，除1024²约1.682MiB。"
+  },
+  {
+    "id": "web-30",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "RealMedia用于网络流式播放，不能说不适用网络广播；格式质量取决于编码和码率，不是名称保证。"
+  },
+  {
+    "id": "zg-59559",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "动画用连续状态呈现运动或变化过程，适合解释运动机制；静态图只显示某一时刻。"
+  },
+  {
+    "id": "zg-73281",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t08",
+    "verdict": "修正",
+    "reason": "Cool Edit Pro是音频编辑软件，题中MP3可作为音频素材；PPT、ZIP和XLS不属于音频。"
+  },
+  {
+    "id": "zg-97608",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "移除重复",
+    "reason": "与zg-59559重复选择动画能模拟事物运动过程，未增加操作或边界，保留zg-59559。"
+  },
+  {
+    "id": "cg-02-s2-q10",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "保留完整时长并接受有损转换时，用音频编码器将PCM WAV转合适码率MP3可减体积；原D“编辑工具变小”与B重叠须修复。"
+  },
+  {
+    "id": "cg-02-s2-q11",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "44.1kHz=44100Hz而非44.1×1024。30秒立体声16位数据量5292000B，约5.29MB或5.05MiB，原答案5.17MB计算错误。"
+  },
+  {
+    "id": "cg-02-s2-q13",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "标准MIDI主要存演奏事件，不直接记录麦克风人声波形，WAV、MP3和CD音频可保存录音。"
+  },
+  {
+    "id": "dy-1a9b3e74",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "WMV是视频编码或视频文件常见后缀，WMA、WAV、MIDI是音频相关格式。"
+  },
+  {
+    "id": "dy-fa7fa77f",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "WAV即Waveform Audio格式，可保存PCM等音频；MIDI记录事件而非“只能记录乐器声音”，MP3压缩也不等于降低采样率。"
+  },
+  {
+    "id": "dy-fe6a4ce2",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "网页可以使用WAV，是否合适取决于体积兼容性；不能笼统说通常使用或一定不用，改考未压缩PCM体积。"
+  },
+  {
+    "id": "gap-media-clean-004",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "采访需波形音频记录真实声音；MIDI适合记录可换音源的演奏事件，不能替代原始人声录音。"
+  },
+  {
+    "id": "gap-media-new-009",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "原样记录人声需波形采样，MIDI只记录事件，不能靠改扩展名得到录音。"
+  },
+  {
+    "id": "ua-media-013",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t09",
+    "verdict": "修正",
+    "reason": "MIDI不直接保存麦克风波形，播放依赖音源和控制事件，所以命题错误。"
+  },
+  {
+    "id": "cg-14-s1-q12",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "Animate传统时间轴中动作脚本帧标a，红旗通常表示帧标签；不是都用红旗表示动作，需限定软件。"
+  },
+  {
+    "id": "cg-14-s1-q25",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "需要角色内部独立循环动作时适合影片剪辑元件；图形元件也可在主时间轴配合动画，原场景不足以唯一选影片剪辑。"
+  },
+  {
+    "id": "cg-14-s1-q26",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "地平线只出现1帧所以一闪而过，应延长其时间范围或放独立图层；原A与B包含关系导致单选双真，须改A。"
+  },
+  {
+    "id": "cg-14-s1-q32",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "导入多帧GIF并将其每帧映射为时间轴关键帧，形成逐帧动画；普通单帧GIF本身不保证动画。"
+  },
+  {
+    "id": "cg-14-s1-q34",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "底层文字，上层遮罩范围逐渐增大，可产生从左到右揭示效果；与PowerPoint主题母版无关。"
+  },
+  {
+    "id": "cg-14-s2-q7",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "逐帧逐个设置关键状态，控制细但工作量较大；并不保证比其他方式最有效，D应改为明确可逐帧调整。"
+  },
+  {
+    "id": "gap-media-clean-005",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "固定25fps播放2秒需要50帧；关键帧规定状态，中间帧表示过渡，“至少”需改为总播放帧数避免素材复用歧义。"
+  },
+  {
+    "id": "gap-media-new-010",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "10×25=250帧，单位分别是秒与帧每秒。"
+  },
+  {
+    "id": "zg-32474",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "逐帧提供精细控制但通常工作量大，文件也可能较大，选ACD。"
+  },
+  {
+    "id": "ap-mm-006",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "2Mbit/s×60/8=15MB；题中若给的是媒体负载平均总码率，容器另有头部索引开销。"
+  },
+  {
+    "id": "cg-02-s2-q12",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "采样使模拟视频离散为时间样本，量化编码后得到数字数据，再压缩存储；解码后通过D/A转换可在模拟接口输出。A/D是采样量化编码的整体过程。"
+  },
+  {
+    "id": "cg-02-s2-q17",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "EXE可执行程序不属视频格式，RM、MPEG、AVI为常见视频相关格式。"
+  },
+  {
+    "id": "cg-02-s2-q19",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "PrintScreen通常捕获静态截图，不直接录制连续视频；录屏工具和摄像机可获取视频。"
+  },
+  {
+    "id": "cg-02-s4-q28",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t01",
+    "verdict": "修正",
+    "reason": "头显呈现可交互三维环境与追踪可形成VR沉浸体验；仅说可穿戴设备并不足以排除其他技术。"
+  },
+  {
+    "id": "cg-14-s1-q17",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "元件复用简化统一修改、减少重复资源，但不保证更漂亮或必然提高播放速度，原单选含多个绝对项应修复。"
+  },
+  {
+    "id": "cg-14-s1-q20",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "关闭笔触颜色可去掉边框并保留填充；白色边框只是换色而不是无边框。"
+  },
+  {
+    "id": "cg-14-s1-q21",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "需要画出多辆私家车时复制同一元件的实例，便于复用且无需复制整个场景图层或时间轴。"
+  },
+  {
+    "id": "cg-14-s1-q7",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t10",
+    "verdict": "修正",
+    "reason": "普通舞台导出主要呈现舞台范围；周围工作区便于暂存对象，不等于全部发布可见，需明确普通裁切输出。"
+  },
+  {
+    "id": "dy-3569e56d",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "将文字声画统一组织成作品体现多媒体集成；只录入财务数字不属于该意义的多媒体信息集成。"
+  },
+  {
+    "id": "gap-media-clean-006",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "8Mbit/s×60/8=60MB，编码标准决定压缩方式，容器组织音视频字幕时间信息，二者不等同。"
+  },
+  {
+    "id": "gap-media-new-011",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "MP4是容器而不是唯一编码，扩展名不能保证H.264，故错误。"
+  },
+  {
+    "id": "ua-media-008",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "总码率4+0.128=4.128Mbit/s，乘120秒除8得61.92MB，忽略容器开销。"
+  },
+  {
+    "id": "ua-media-009",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "MP4常作容器，H.264是视频编码标准，同一容器可用不同编码，故B。"
+  },
+  {
+    "id": "ua-media-012",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "可用带宽、时延抖动、丢包及缓冲均直接影响实时会议，页边距无关；应归流媒体知识点。"
+  },
+  {
+    "id": "uf-mm-007",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t11",
+    "verdict": "修正",
+    "reason": "原始视频数据率与像素数、帧率和每像素位数相关，压缩参数决定编码后码率，文件名无关。"
+  },
+  {
+    "id": "dy-49595d57",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "流式播放可边接收边播放；能否跳转取决于点播直播及服务支持，不能一概说任意段落都可选。"
+  },
+  {
+    "id": "dy-b895ca4f",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "在线视频常采用流式传输以边收边播，故命题正确；并非必须完整下载后播放。"
+  },
+  {
+    "id": "dy-ee556dcb",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "流媒体可包含音频视频，是传输播放方式，不等于全部多媒体；沉浸感不是流媒体独有定义，ABC错。"
+  },
+  {
+    "id": "gap-final-thin-007",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "带宽下降时降低码率减少单位时间需求，结合缓冲和带宽估计，避免频繁清晰度震荡。"
+  },
+  {
+    "id": "gap-media-clean-007",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "缓冲不足且带宽长期低于码率时降码率并恢复缓冲，结合时间窗口及切换阈值避免对瞬时噪声反复切换。"
+  },
+  {
+    "id": "gap-media-new-012",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t12",
+    "verdict": "修正",
+    "reason": "较低码率降低单位时间的数据需求，通常有利于在弱网保持连续播放。"
+  },
+  {
+    "id": "dy-5c57e296",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "视频通常用专用媒体编码压缩，通用ZIP/RAR对已压缩视频常收益小；压缩比不是固定50:1。"
+  },
+  {
+    "id": "dy-c6ddfb53",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "RAR压缩归档为无损，可逐字节恢复文件；常见MPG、MP3和JPEG使用有损媒体编码。"
+  },
+  {
+    "id": "dy-ea2bcfaf",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "640×480×24×25=184320000bit/s=184.32Mbit/s，不除8时单位为比特率。"
+  },
+  {
+    "id": "gap-media-new-013",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "需要精确恢复像素的编辑母版应选择无损压缩并保留源结构，反复有损会累积信息丢失。"
+  },
+  {
+    "id": "ua-media-006",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "PNG使用无损压缩并支持Alpha半透明，常规JPEG不支持透明，适合此图标任务。"
+  },
+  {
+    "id": "ua-media-010",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "相邻像素空间相关、相邻帧时间相关及符号统计冗余是常见压缩依据；额外复制文件不是该编码层面的典型冗余。"
+  },
+  {
+    "id": "ua-media-015",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "无损压缩正确解码能恢复原字节；不能保证任意输入都变小，故核心命题正确。"
+  },
+  {
+    "id": "uf-mm-003",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t05",
+    "verdict": "修正",
+    "reason": "纯矢量图按几何对象重绘，适合缩放的标志线条；应归位图矢量主题而非压缩机制。"
+  },
+  {
+    "id": "uf-mm-005",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "常规JPEG照片压缩有损，PNG、GIF的LZW和ZIP无损；GIF转有限调色板时可能先丢颜色，不能混同LZW阶段。"
+  },
+  {
+    "id": "uf-mm-006",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "移除重复",
+    "reason": "与ua-media-015重复判断无损压缩能完全恢复数据，保留ua-media-015。"
+  },
+  {
+    "id": "zg-5653",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "评估压缩要兼顾码率体积、失真与计算开销，不能只看其中一项；算法简单不一定等于实现速度快。"
+  },
+  {
+    "id": "zg-69179",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "按24位真彩色计算320×240×3=230400B=225KiB；原KB应统一为KiB并明确24位。"
+  },
+  {
+    "id": "zg-9287",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "图像压缩主要减少存储与传输数据量，不负责提升源图清晰度和对比度。"
+  },
+  {
+    "id": "zg-95533",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "修正",
+    "reason": "MPEG系列用于动态视频编码；JPEG常用于静态图压缩，不能把JPEG标准成立年份误写为1986。"
+  },
+  {
+    "id": "zg-95549",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t13",
+    "verdict": "移除重复",
+    "reason": "与zg-9287都仅识别图像压缩减少存储传输量的目的，保留zg-9287，并用新增题练压缩场景及冗余。"
+  },
+  {
+    "id": "cg-02-s2-q9",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t14",
+    "verdict": "修正",
+    "reason": "GIF可含多帧动画，BMP、常规JPEG、WMF通常不提供此类逐帧动画。"
+  },
+  {
+    "id": "dy-4d8654cc",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t14",
+    "verdict": "修正",
+    "reason": "MP3可通过有损编码显著降低数据量，但音质取决于码率和信号，不能仅凭格式保证原音质。"
+  },
+  {
+    "id": "gap-media-clean-008",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t14",
+    "verdict": "修正",
+    "reason": "照片选合适有损预览，半透明图标选透明无损格式，分层海报保留源文件并导出交付副本。"
+  },
+  {
+    "id": "gap-media-new-014",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t14",
+    "verdict": "修正",
+    "reason": "原量/压缩量=896/128=7，节省率=(896-128)/896≈85.7%。"
+  },
+  {
+    "id": "zg-35248",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t14",
+    "verdict": "修正",
+    "reason": "三文件总量128+256+512=896KB，RAR无损，压缩比896:128=7:1。"
+  },
+  {
+    "id": "gap-final-thin-008",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t15",
+    "verdict": "修正",
+    "reason": "先明确受众平台和目标，再脚本分镜、素材组织、编辑测试导出；命名包含场景内容版本以便追踪。"
+  },
+  {
+    "id": "gap-media-clean-009",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t15",
+    "verdict": "修正",
+    "reason": "先明确手机观看约束、步骤脚本及素材清单，统一录制参数和命名，避免漏录与版本错用。"
+  },
+  {
+    "id": "gap-media-new-015",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t15",
+    "verdict": "修正",
+    "reason": "采集前明确受众目标和脚本，决定需要哪些素材及顺序；不应先堆特效再定内容。"
+  },
+  {
+    "id": "ap-mm-002",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t16",
+    "verdict": "修正",
+    "reason": "目标手机视口预览文字、触控和加载，才能发现交付使用障碍；仅源文件可打开不足以验证。"
+  },
+  {
+    "id": "gap-media-clean-010",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t16",
+    "verdict": "修正",
+    "reason": "从源结构、蒙版边缘、透明格式和目标平台逐层排查，分别预览后重新交付并保留源文件。"
+  },
+  {
+    "id": "gap-media-new-016",
+    "subject": "多媒体",
+    "topic_id": "multimedia.t16",
+    "verdict": "修正",
+    "reason": "发布前检查目标设备、交互、同步、字体兼容及素材授权隐私，四项都影响交付质量。"
+  },
+  {
+    "id": "cg-06-s1-q122",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "BBS即电子公告系统，用户以发帖回帖开展讨论；Email是电子邮件而非BBS。"
+  },
+  {
+    "id": "cg-06-s1-q52",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "录音机是记录播放声音的设备，磁盘磁带U盘是存储介质。录音机也可能内置存储，因此设备与介质的分类不能解读成录音机不能存信息。"
+  },
+  {
+    "id": "dy-1969eb6a",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "ATM、证券交易和航天导航都要求及时响应，其中硬实时约束程度不同；普通邮件通常异步投递。"
+  },
+  {
+    "id": "dy-243a015d",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "获取、加工、存储、传输、表示和利用信息均属于信息技术活动，故正确。"
+  },
+  {
+    "id": "dy-513915ae",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "雷达把反射信号转为速度信息，核心在传感检测，非语音或虚拟现实。"
+  },
+  {
+    "id": "dy-5434a041",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "发布前应保护本人及他人隐私，未经授权的信息可能被进一步传播和利用。"
+  },
+  {
+    "id": "dy-6a781080",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "拍照主要是信息采集，学籍管理、文件分类和成绩统计主要管理组织已有信息。"
+  },
+  {
+    "id": "dy-7b4e72eb",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "教材常按获取、传递、处理对应传感、通信、计算机三类基础技术，不代表信息技术只有这三种。"
+  },
+  {
+    "id": "dy-85006573",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "二维码生成把文本按规则转换为条码，是信息编码；原题将二维码写成一维码需修正。"
+  },
+  {
+    "id": "dy-94dfa813",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息资源管理强调有效组织、开发共享和利用信息以服务目标，不仅是技术衔接；原干扰项与题干维度不一致，应重建。"
+  },
+  {
+    "id": "dy-9890b9d7",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "计算机以数字方式处理编码数据，文字不是唯一可长期保存形式，故C正确。"
+  },
+  {
+    "id": "dy-a330b096",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "相关专家、互联网和报刊可提供主题素材，不相关航天展通常不适合；资料仍需核验可信度。"
+  },
+  {
+    "id": "dy-b1aac99d",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "基本信息处理链包括输入采集、加工存储及输出，题中顺序是简化模型而非唯一流水步骤。"
+  },
+  {
+    "id": "dy-cb52528f",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "二维码可编码文本数字字母及有限字节数据，但容量有限；图片通常以链接指向，并非能无限直接装入图片。"
+  },
+  {
+    "id": "dy-ce93a4cf",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "载体和所表达意义需区分：书本是物理载体，文字图像是表示形式，不能把所有载体简单等同信息。"
+  },
+  {
+    "id": "dy-d0f42341",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "电子警察拍照获取现场数据，主要属于信息采集；保存与后续识别是其他环节。"
+  },
+  {
+    "id": "dy-f9f25596",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "系统和实体保护、加密及责任机制共同保障安全；加密不是“没密钥绝不可能破解”，数字签名也不单独保证所有内容真实性。"
+  },
+  {
+    "id": "gap-final-thin-002",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t02",
+    "verdict": "修正",
+    "reason": "非空时用首个成绩初始化最大值后逐项比较，空输入应约定无结果或报错；固定0会误处理全负数据。"
+  },
+  {
+    "id": "gap-found-017",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t02",
+    "verdict": "修正",
+    "reason": "s从0开始四轮依次加1、2、3、4，得到1、3、6、10，输出10。"
+  },
+  {
+    "id": "cg-06-s1-q100",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "13=8+4+1，对应1101，选A。"
+  },
+  {
+    "id": "cg-06-s1-q103",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1111011111按位权相加为512+256+128+64+16+8+4+2+1=991。"
+  },
+  {
+    "id": "cg-06-s1-q104",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "21=2×8+5，所以八进制为25。"
+  },
+  {
+    "id": "cg-06-s1-q106",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1110对应E、1111对应F，按四位分组为EF。"
+  },
+  {
+    "id": "cg-06-s1-q77",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "主流数字计算机中指令与数据编码为二进制，显示为十六进制只是便于阅读。"
+  },
+  {
+    "id": "cg-06-s1-q78",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "两个稳定状态易用电路区分，二进制运算及逻辑实现相对简单可靠，不是因为书写最短。"
+  },
+  {
+    "id": "cg-06-s1-q81",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "非负整数按常规无前导0表示时，二进制位数不小于十进制位数；0和1两种表示位数相等。"
+  },
+  {
+    "id": "cg-06-s1-q82",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "B为二进制后缀，101101B不是十六进制字母B参与数值。"
+  },
+  {
+    "id": "cg-06-s1-q83",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "100=64+32+4，8位写成01100100。"
+  },
+  {
+    "id": "cg-06-s1-q87",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "字节是通常使用的存储容量基本计量单位，1Byte=8bit；最小二进制信息单位是bit。"
+  },
+  {
+    "id": "cg-06-s1-q88",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "容量单位量级从小到大为kB、MB、GB、TB；十进制与二进制约定影响倍率，不影响顺序。"
+  },
+  {
+    "id": "cg-06-s1-q90",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "二进制容量约定下1MiB=1024KiB，不能把十进制前缀M一律定义为1024倍。"
+  },
+  {
+    "id": "cg-06-s1-q91",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "32KiB=32×1024B=32768B，每字节一个单元则32768个。"
+  },
+  {
+    "id": "cg-06-s1-q93",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "137=128+8+1，0.625=1/2+1/8，合为10001001.101。"
+  },
+  {
+    "id": "cg-06-s1-q94",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "十进制72减八进制50即40得32，恰等于十六进制20；原解析出现32不等于32的矛盾应删除。"
+  },
+  {
+    "id": "cg-06-s1-q95",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "215=128+64+16+4+2+1，二进制11010111。"
+  },
+  {
+    "id": "cg-06-s1-q96",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "四项十进制分别92、35、39、46，最小35。"
+  },
+  {
+    "id": "cg-06-s1-q97",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "15二进制1111，0.25二进制.01，合为1111.01。"
+  },
+  {
+    "id": "cg-06-s1-q98",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "11111110=256-2=254，选D。"
+  },
+  {
+    "id": "cg-06-s1-q99",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "30=16+8+4+2，二进制11110。"
+  },
+  {
+    "id": "dy-054f157b",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "2AF=2×16²+10×16+15=687，原解析位权指数丢失须补齐。"
+  },
+  {
+    "id": "dy-129a9d50",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "字符按选定字符编码转换为比特保存，不能把屏幕字形等同直接存储的文字意义。"
+  },
+  {
+    "id": "dy-2987416e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1字节8位，共2^8=256种不同码字，不是最大数255与数量256混淆。"
+  },
+  {
+    "id": "dy-2ca62c7c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "8位无符号整数范围0至2^8-1=255，无符号不保留符号位。"
+  },
+  {
+    "id": "dy-2ebd08bc",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "按明确的二进制容量约定1MiB=1024KiB，其余容量级别不能倒置。"
+  },
+  {
+    "id": "dy-495725dc",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "三位无符号数最大111₂=4+2+1=7，共8种状态；原“进制数”应改十进制数。"
+  },
+  {
+    "id": "dy-59c859c3",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "十六进制小数0.2=2×16^-1=0.125，原解析漏负一次幂。"
+  },
+  {
+    "id": "dy-6b8b9443",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "若明确剩余4.7GiB且每部480MiB，则floor(4.7×1024/480)=10；若十进制GB则只有9，必须给单位。"
+  },
+  {
+    "id": "dy-6d2a8423",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1字节由8个二进制位构成，是Byte与bit的标准换算。"
+  },
+  {
+    "id": "dy-ac34bee0",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "八进制只含0到7，136、310合法，含B或8的字符串不是八进制数。"
+  },
+  {
+    "id": "dy-c178f89e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "111000=32+16+8=56。"
+  },
+  {
+    "id": "dy-c91d2c74",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "十进制11应记作十六进制B；十六进制11本身合法但代表17，不能说没有11这种表示。"
+  },
+  {
+    "id": "dy-e047e561",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "八进制35=3×8+5=29，对应二进制11101、十进制29，因此BC。"
+  },
+  {
+    "id": "dy-ecf60dcd",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "进位计数制按基数发生进位，二进制逢2进1，十进制逢10进1。"
+  },
+  {
+    "id": "dy-f79eaca7",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "二进制末位0表示偶数，去掉该位相当于右移一位，值除以2；四位且偶数最大14。"
+  },
+  {
+    "id": "gap-found-014",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "通过",
+    "reason": "2F=2×16+15=47。"
+  },
+  {
+    "id": "gap-found-018",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1920×1080×3=6220800B，除1024²约5.93MiB；默认只计像素不计文件头。"
+  },
+  {
+    "id": "web-6",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "20=16+4，二进制10100。"
+  },
+  {
+    "id": "web-8",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "Byte译为字节，通常8bit；word译为字，不可混同。"
+  },
+  {
+    "id": "zg-15396",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "bit表示一个二进制位，其取值为0或1，不能说单个位同时由0和1组成。"
+  },
+  {
+    "id": "zg-29511",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "bit是二进制位，Byte是字节，word是字。"
+  },
+  {
+    "id": "zg-34832",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "明确二进制容量约定后1KiB=1024B，1GiB=1024MiB；原写法需给旧KB/MB约定避免与SI混淆。"
+  },
+  {
+    "id": "zg-3550",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "四项分别73、63、70、90，十六进制5A最大。"
+  },
+  {
+    "id": "zg-40485",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "主流数字计算机内部采用二进制表示数据和指令，八十六进制主要用于简写。"
+  },
+  {
+    "id": "zg-46880",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "11₂=3，3+12=15=1111₂，原解析应补实际加法结果。"
+  },
+  {
+    "id": "zg-66855",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "269=1×256+0×16+13，十六进制为10D。"
+  },
+  {
+    "id": "zg-67560",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "常见十六进制后缀H，B表示二进制；83B含非法二进制数码，故D错误。"
+  },
+  {
+    "id": "zg-71896",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1101010₂=64+32+8+2=106，指数记法要保留^符号。"
+  },
+  {
+    "id": "zg-78534",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "移除重复",
+    "reason": "与cg-06-s1-q100完全同样把十进制13转1101，选项顺序改变无新增学习价值。"
+  },
+  {
+    "id": "zg-82870",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "1MiB=1024KiB=1048576B，原“1024K个字节”措辞应改明确单位。"
+  },
+  {
+    "id": "zg-99916",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t03",
+    "verdict": "修正",
+    "reason": "三位二进制有2³=8种状态，最大数为7而非8。"
+  },
+  {
+    "id": "cg-06-s1-q107",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII字符通常占1字节存放，但编码本身用7位；英文也可能以UTF-16等编码，需限定ASCII。"
+  },
+  {
+    "id": "cg-06-s1-q108",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII即美国信息交换标准代码，考缩写含义比泛称“最广泛”更准确。"
+  },
+  {
+    "id": "cg-06-s1-q109",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "16×16单色字形每字32B，4000个共128000B，约125KiB，选项128KB只是最接近，改精确值更清楚。"
+  },
+  {
+    "id": "cg-06-s1-q110",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "相同显示尺寸下，点阵规模越大一般可表示越细字形轮廓；不由输入码或交换码直接决定。"
+  },
+  {
+    "id": "cg-06-s1-q111",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII a=97、A=65、1=49，故a>A>1。"
+  },
+  {
+    "id": "cg-06-s1-q112",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII a=97>A=65，而a<h、9<D、1<a，只有B成立。"
+  },
+  {
+    "id": "cg-06-s1-q113",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "24×24单色点阵576bit，除8为72B。"
+  },
+  {
+    "id": "cg-06-s1-q115",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "传统GB2312交换码转EUC-CN双字节内部表示时每字节加80H；不能套用到UTF-8或所有汉字。"
+  },
+  {
+    "id": "cg-06-s1-q116",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII大写字母连续，A为65、C为67，67二进制1000011。"
+  },
+  {
+    "id": "cg-06-s1-q117",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "字形码用于输出、外码输入、内码内部表示；条码不是该汉字处理链的编码类别。"
+  },
+  {
+    "id": "cg-06-s1-q118",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "约定每字2B且2KiB=2048B，可存1024字；UTF-8汉字通常3字节，不能省略编码条件。"
+  },
+  {
+    "id": "cg-06-s1-q119",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "标准ASCII7位，总编码128个；一个字节存放不意味着标准有256字符。"
+  },
+  {
+    "id": "cg-06-s1-q120",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "传统汉字编码分类中，内部存储处理用机内码；跨系统交换所用编码须另行约定，不是一切传输必定原始内码。"
+  },
+  {
+    "id": "cg-06-s1-q121",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "五笔字型按字形规则输入汉字，属于输入码，不是存储字符的内码。"
+  },
+  {
+    "id": "cg-06-s1-q55",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "扫描加OCR适合把清晰印刷或可识别字稿变可编辑文本；任意手写稿可能识别错误，需限定清晰印刷手稿并人工校对。"
+  },
+  {
+    "id": "cg-06-s1-q56",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "DPI为每英寸点数，描述打印点密度，不是每秒页数。"
+  },
+  {
+    "id": "dy-1b6211b9",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "教材传统分类中交换码用于系统间交换、机内码用于内部表示，二者职责不同；需限定传统分类。"
+  },
+  {
+    "id": "dy-2435453e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII字母连续，P=80、Q=81、R=82、S=83，命题正确。"
+  },
+  {
+    "id": "dy-580bc45f",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "显示分辨率是水平像素数×垂直像素数；扫描频率与颜色总数是其他参数。"
+  },
+  {
+    "id": "dy-5ae4aebc",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "字形数据服务显示打印，可按点阵或轮廓表示，所需字节量取决于表示方法和参数。字符编码的两字节与字形位图容量不同；等宽字形可用统一网格。"
+  },
+  {
+    "id": "dy-9b84fc08",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "位图和矢量等图像最终都编码为比特序列保存，不能说计算机所有图像都用位图格式。"
+  },
+  {
+    "id": "dy-bd550aaa",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "1000万字每字2B为2000万B=20MB约19.07MiB，应选B而非C，原答案与解析冲突。"
+  },
+  {
+    "id": "gap-found-019",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "Unicode码位是抽象编号，UTF-8把有效标量值编码为1至4字节，字节数不等于字符数；用户可见字符也可能由多个码位构成。"
+  },
+  {
+    "id": "web-7",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "移除重复",
+    "reason": "与cg-06-s1-q121同样判断五笔属于汉字输入码，保留解释输入码与机内码区别的一题。"
+  },
+  {
+    "id": "zg-16583",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "a97>A65>5字符53>空格32，所以D。"
+  },
+  {
+    "id": "zg-32924",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "标准ASCII在不同机器中含义相同，A到Z连续为65至90；原题“各机ASCII不完全相同”混淆扩展字符集。"
+  },
+  {
+    "id": "zg-42544",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "n为110，N=110-32=78，P=N+2=80。"
+  },
+  {
+    "id": "zg-6311",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "B比A多1，66=01000010，选B。"
+  },
+  {
+    "id": "zg-65985",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "ASCII数字字符小于大写字母、小于小写字母，a<A错误，故B。"
+  },
+  {
+    "id": "zg-68489",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "GB2312汉字交换码用两个7位码值常以2字节存放；其他国标如GB18030不能一概两字节，题干需限定标准。"
+  },
+  {
+    "id": "zg-68914",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "GB2312交换码两个字节最高位0，EUC-CN表示置1；国标码和区位码不是同一码值，原解析不能用括号混同。"
+  },
+  {
+    "id": "zg-76959",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "16×16=256bit=32B，计算字形位图不是汉字字符编码字节数。"
+  },
+  {
+    "id": "zg-81295",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "A65=1000001、Z90=1011010，二者范围对应B。"
+  },
+  {
+    "id": "cg-06-s1-q11-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "硬件提供物理执行基础，软件提供指令和数据，完整工作系统二者配合。"
+  },
+  {
+    "id": "cg-06-s1-q123",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "配置串2048M对应内存，1000G通常硬盘，2.7G频率，20英寸显示尺寸，单位需结合位置。"
+  },
+  {
+    "id": "cg-06-s1-q128",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "键盘进液需断开电源并正确干燥处理，表面擦干不能排除内部短路；不宜要求无经验用户自行拆机。"
+  },
+  {
+    "id": "cg-06-s1-q13-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "经典存储程序结构通常称冯诺依曼结构；历史贡献多人参与，“世界首次独自提出”不准确应改名称对应。"
+  },
+  {
+    "id": "cg-06-s1-q14-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "预先存储程序再自动取指执行对应冯诺依曼基本思想，而非牛顿、爱因斯坦或爱迪生。"
+  },
+  {
+    "id": "cg-06-s1-q15-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "运算器、控制器、存储器、输入输出五部件是经典冯诺依曼结构的教材模型。"
+  },
+  {
+    "id": "cg-06-s1-q16-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "存储程序加程序控制强调程序先存储，再自动按控制流程取指执行，不止“事先编好”。"
+  },
+  {
+    "id": "cg-06-s1-q17-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "自动连续执行用户任务的直接机制是存储程序控制，二进制和高速元件不是该机制本身。"
+  },
+  {
+    "id": "cg-06-s1-q18-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "控制器取指译码并发控制信号，是指挥中心；运算器做算术逻辑操作。"
+  },
+  {
+    "id": "cg-06-s1-q19",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "完整计算机系统含硬件与软件，单有CPU内存I/O只概括硬件。"
+  },
+  {
+    "id": "cg-06-s1-q20",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "运算器含ALU和相关寄存器，指令译码器属控制器；原D误混入解析答案必须清除。"
+  },
+  {
+    "id": "cg-06-s1-q21",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CPU核心包括控制器、运算器及寄存器等，不把主存和输入输出设备算进CPU。"
+  },
+  {
+    "id": "cg-06-s1-q23",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "Cache是高速缓存，通常以SRAM实现，缓存近期可能使用的数据指令，不等于普通主存RAM。"
+  },
+  {
+    "id": "cg-06-s1-q24",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "教材主机指CPU与内存，不是外部主机箱，也不只CPU中的运算控制部分。"
+  },
+  {
+    "id": "cg-06-s1-q25",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CPU是核心处理部件，但整机性能取决于任务、内存、存储等，不能说CPU单独决定整体档次。"
+  },
+  {
+    "id": "cg-06-s1-q26",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "Pentium IV是Intel处理器系列，不是内存或主板；历史型号识别不等于当前产品推荐。"
+  },
+  {
+    "id": "cg-06-s1-q27",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "存储程序模型把程序指令与数据放在存储器，CPU从中取出指令执行。"
+  },
+  {
+    "id": "cg-06-s1-q28",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "RAM随机访问存储器，ROM只读存储器，D顺序对应正确。"
+  },
+  {
+    "id": "cg-06-s1-q29",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "掩膜ROM由制造时写入，不可普通改写；可编程ROM和Flash固件可更新，原题需限定掩膜ROM。"
+  },
+  {
+    "id": "cg-06-s1-q30",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "传统BIOS固件保存在非易失性ROM类存储中，现代常用可更新Flash，不是开机才写入的普通RAM。"
+  },
+  {
+    "id": "cg-06-s1-q31",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "普通DRAM/SRAM易失，断电不能保持信息；非易失RAM也存在，应限定常规主存RAM。"
+  },
+  {
+    "id": "cg-06-s1-q33",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "SSD通常低访问延迟和无机械部件，C低功耗与D速度快可能同时成立，单选需改问典型访问速度优势。"
+  },
+  {
+    "id": "cg-06-s1-q34",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "常规RAM相对磁盘外存速度快、每位成本高，但不能推断任意硬件绝对价格。"
+  },
+  {
+    "id": "cg-06-s1-q35",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "ROM在通常使用过程中读取，断电保留；某些ROM变体可经专门方式编程，不是一切ROM永不能写。"
+  },
+  {
+    "id": "cg-06-s1-q36",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "教材存储体系可分内存和辅助外存，硬盘软盘并非穷尽全部存储介质。"
+  },
+  {
+    "id": "cg-06-s1-q37",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "配置所称512MB内存一般是RAM容量，而非ROM或硬盘容量。"
+  },
+  {
+    "id": "cg-06-s1-q38",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "未接电的硬盘不会自身产生机械撞击声，故A不可能解释已发出的周期噪声。"
+  },
+  {
+    "id": "cg-06-s1-q39",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "软盘标称1.44M指容量，不是转速或厂商编号；不要把其特殊单位约定简单等同SI的MB。"
+  },
+  {
+    "id": "cg-06-s1-q40",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "Cache、主存与辅助外存形成常见层次，寄存器还在更高速上层；题中B概括较完整。"
+  },
+  {
+    "id": "cg-06-s1-q41",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "I/O即Input/Output，合称输入输出设备，不只输入或输出之一。"
+  },
+  {
+    "id": "cg-06-s1-q42",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "鼠标提供位置和按键输入，打印显示绘图把结果输出，故B。"
+  },
+  {
+    "id": "cg-06-s1-q43",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "普通磁盘文件需经I/O传入可寻址内存再供CPU取用；内存映射设备等扩展不在此基础模型。"
+  },
+  {
+    "id": "cg-06-s1-q44",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "相同容量时RAM通常每位成本更高、速度更快，“能存更多”与同容量条件相矛盾。"
+  },
+  {
+    "id": "cg-06-s1-q45",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "读盘被中断可导致读取错误，但蓝屏也可能有驱动故障，题干不能据此唯一诊断根因，应只问直接数据读取影响。"
+  },
+  {
+    "id": "cg-06-s1-q47",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "条码阅读器把编码信息读入系统，是输入设备。"
+  },
+  {
+    "id": "cg-06-s1-q48",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "话筒采集声音输入，打印机显示器音箱是输出。"
+  },
+  {
+    "id": "cg-06-s1-q49",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "打印机向纸张输出，鼠标键盘触摸屏提供输入，触摸屏还可显示输出。"
+  },
+  {
+    "id": "cg-06-s1-q50",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "扫描仪将纸面光学信息转换成数字图像；打印机投影仪是输出设备。"
+  },
+  {
+    "id": "cg-06-s1-q51",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "键盘、鼠标、光笔、扫描仪均用于输入，其他组选项混入显示打印等输出设备。"
+  },
+  {
+    "id": "cg-06-s1-q53",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "显示分辨率决定可显示像素网格，不应笼统称任何场景“最重要”，色域刷新率也重要。"
+  },
+  {
+    "id": "cg-06-s1-q59",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "Bus是总线，UPS是电源设备，BBS电子公告，USB是具体总线标准而非该通用单词。"
+  },
+  {
+    "id": "cg-06-s1-q60",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "按所传信息划分是数据、地址、控制总线；“交换总线”不是这一分类，不代表世上无此命名设备。"
+  },
+  {
+    "id": "cg-06-s1-q61",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "一次并行传送的位数由数据通路宽度决定，地址宽度决定寻址范围。"
+  },
+  {
+    "id": "cg-06-s1-q62",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "n根二进制地址线可区分2^n地址，按字节编址才对应2^n字节，实际已装内存可小于上限。"
+  },
+  {
+    "id": "cg-06-s1-q64",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "磁盘既可写入也可读取，是辅助存储设备而非单纯输出。"
+  },
+  {
+    "id": "cg-06-s1-q65",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "外设传输可采用串行或并行，分别逐位或多位同时传送。"
+  },
+  {
+    "id": "cg-06-s1-q7-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "早期通用电子计算机不是微处理器个人电脑，个人计算机出现于更晚时期。"
+  },
+  {
+    "id": "cg-06-s1-q70",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "描述系统使用方法的说明材料属于文档，硬件是物理设备，规程偏操作规范。"
+  },
+  {
+    "id": "cg-06-s1-q79",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "主频直接表示CPU时钟频率；实际程序速度还受指令数、CPI和存储等待等影响，不能只凭主频比较所有处理器。"
+  },
+  {
+    "id": "cg-06-s1-q80",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "数值表示精度取决于数据类型与有效位数，字长是教材简化相关指标但不单独决定任意计算精度。"
+  },
+  {
+    "id": "cg-06-s1-q85",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "存储单元中的比特可按执行上下文解释成数据或指令，存储器不会自行识别语义。"
+  },
+  {
+    "id": "cg-06-s1-q86",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "每秒完成基本运算的次数是速度指标；MIPS统计百万指令，不专指加法指令。"
+  },
+  {
+    "id": "cg-06-s1-q92",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "通常普通办公环境声音对电子计算机运行影响较小，极端声振动仍可能影响设备，不宜绝对化。"
+  },
+  {
+    "id": "cg-06-s2-q10",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "ALU的主要基本运算是算术与逻辑，文本处理由这些基本操作组合完成。"
+  },
+  {
+    "id": "cg-06-s2-q11",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "半导体、磁表面按介质分，随机顺序按访问方式分，分类维度不同。"
+  },
+  {
+    "id": "cg-06-s2-q12",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "ROM、RAM和Cache属于教材内部存储体系，HDD是磁盘外存；原HOD部门经理为OCR错误须修复。"
+  },
+  {
+    "id": "cg-06-s2-q13",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "按信号功能为数据地址控制三类，没有标准资源总线这一第四类。"
+  },
+  {
+    "id": "cg-06-s2-q14",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "手写、扫描后OCR和语音识别均需模式判别；单纯扫描成图片不等于识别，C需明确OCR。"
+  },
+  {
+    "id": "cg-06-s2-q17",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "软件分系统应用两类，提供用户运行环境；硬件还包括存储，不仅键盘显示，选BD。"
+  },
+  {
+    "id": "cg-06-s2-q18",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "键盘输入、打印输出、扫描输入成立；普通显示器不具有触控输入，固件不能按普通文件方式修改但可支持更新。"
+  },
+  {
+    "id": "cg-06-s2-q19",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "相对同等内容纸质材料，光盘可小体积容纳多媒体，复制成本可较低，不意味着与所有现代存储比较都容量最大。"
+  },
+  {
+    "id": "cg-06-s2-q7",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "计算机系统两部分是硬件与软件，系统和应用只是软件的下级分类。"
+  },
+  {
+    "id": "cg-06-s2-q9",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "指令有操作码及操作数或地址相关信息，支持的指令集合成指令系统；某些指令操作数可隐含。"
+  },
+  {
+    "id": "dy-005aa4bc",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "计算机可自动高速执行、保存数据且支持较高精度，但正确性仍取决于程序数据与数值表示。"
+  },
+  {
+    "id": "dy-045071ea",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "传统南北桥主板架构中芯片组含南桥北桥；现代功能常集成CPU或PCH，不能当作所有当代主板固定组成。"
+  },
+  {
+    "id": "dy-066977aa",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "常见2.5英寸SATA SSD用独立数据线接主板，M.2 SATA不需要同样线缆，题干须限定外形接口。"
+  },
+  {
+    "id": "dy-0b4ed800",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "基础存储模型中外存程序先调入主存再处理，不是CPU直接从普通磁盘执行。"
+  },
+  {
+    "id": "dy-15a5648a",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "配置示例SSD表示固态而非机械硬盘，内存16GB，i9为Intel处理器；不必引用未核实的具体商用整机规格。"
+  },
+  {
+    "id": "dy-15e95fb5",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "Cache用高命中率降低CPU访问主存的平均等待，不是主存与磁盘之间的缓存。"
+  },
+  {
+    "id": "dy-160fff6f",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "在列出的主存与磁盘光盘软盘中，常规主存存取周期最短。"
+  },
+  {
+    "id": "dy-24ad9ede",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "辅助外存用于长期保存较大量程序和数据，常见硬盘和SSD。普通DRAM、Cache和寄存器主要用于运行时临时数据。"
+  },
+  {
+    "id": "dy-335e6a07",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CPU为中央处理核心，处理指令与数据；主板连接部件，硬盘长期存储，内存保存运行内容。"
+  },
+  {
+    "id": "dy-3c64d634",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "键盘是输入、投影仪是输出，因此“都属输出”错误。"
+  },
+  {
+    "id": "dy-3e2ad954",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CPU意为中央处理器，执行兼容机器指令；CPU概念早于Intel微处理器，字长加倍不保证同频速度加倍。"
+  },
+  {
+    "id": "dy-47d625be",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CPU以运算器和控制器为核心还含寄存器；此处B应明确主存而非把CPU内部寄存器排除。"
+  },
+  {
+    "id": "dy-4acd995d",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "常规主存访问速度快于机械磁盘软盘磁带，故D。"
+  },
+  {
+    "id": "dy-4c6f4bd0",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "Cache通常低延迟，缓存近期所需的部分数据，未命中需访问更低层。写回策略的脏数据可在写回前与主存暂不一致，不能一概说永远是相同副本。"
+  },
+  {
+    "id": "dy-4cd5bec9",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "SoC含CPU及其他功能，不应把麒麟芯片简单称为CPU或作未证实产业判断，改为处理器概念题。"
+  },
+  {
+    "id": "dy-58598b5b",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "内外存按体系功能区分，不按是否装在机箱里；硬盘装机箱也仍是外存。"
+  },
+  {
+    "id": "dy-61f909a0",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "按信号划分三类总线为地址、数据、控制，“传输”不是这一分类中的独立第四种。"
+  },
+  {
+    "id": "dy-62555133",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "ROM非易失，正常断电不会使信息消失；也不意味着数据永不损坏。"
+  },
+  {
+    "id": "dy-6f204e2d",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "主机教材概念为CPU与内存，存储系统包含外存则范围更大。"
+  },
+  {
+    "id": "dy-702edf91",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CD-ROM只读，使用中不能新写入病毒，但出厂内容可能已有恶意程序并感染运行它的电脑；原B主语错误需修复。"
+  },
+  {
+    "id": "dy-7a1ceb0c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "分辨率、颜色表现和刷新率是显示指标，刷新率为每秒更新次数而非每分钟。"
+  },
+  {
+    "id": "dy-80efea9a",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "16位字长指机器基本处理位宽，不是16位十进制数；整数范围需再看符号与表示。"
+  },
+  {
+    "id": "dy-8c289d6a",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "显示系统还包括显示适配器及连接，不仅显示器实体。"
+  },
+  {
+    "id": "dy-8ee5516d",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "主机包括CPU及内存，CPU含运算控制、内存含RAM ROM，故ABCD。"
+  },
+  {
+    "id": "dy-90469052",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "软硬件需匹配协同，非完全独立；软件提供人与硬件交互功能并影响系统设计。"
+  },
+  {
+    "id": "dy-94760839",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "主频、字长、内存容量都是技术参数，但跨架构不能仅凭主频和字长断言速度精度更高。"
+  },
+  {
+    "id": "dy-963a7c67",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "按功能分地址、数据、控制总线；地址指定位置，数据传内容，控制传命令和状态。"
+  },
+  {
+    "id": "dy-ae13649a",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "系统还包括软件，列出主机显示键鼠不构成完整系统，命题错误。"
+  },
+  {
+    "id": "dy-b2bae3bb",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "3D负载出问题可以优先检查显卡及驱动，也不能据普通播放正常排除散热、内存或电源故障。"
+  },
+  {
+    "id": "dy-b94730f1",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "预存程序后自动取指执行实现连续运算，电子管和集成电路是器件而非此控制机制。"
+  },
+  {
+    "id": "dy-d91e1efd",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "硬件包括CPU、存储器、输入输出设备，CPU又含运算控制部件。"
+  },
+  {
+    "id": "dy-db4045b7",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "微处理器一般指集成CPU，不是内存，故错误。"
+  },
+  {
+    "id": "dy-dbc706a2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "兼容机器指令可由处理器直接执行；汇编还需汇编器，高级语言需编译或解释。"
+  },
+  {
+    "id": "dy-dfab7e9c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "主频表示CPU时钟频率，可用MHz或GHz表示；字长描述位宽，存储容量描述数据空间，可靠性描述稳定程度。"
+  },
+  {
+    "id": "dy-e88d779e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "ALU综合执行算术与逻辑，A/B只说部分功能，D最完整；应将题干改问两类主要功能。"
+  },
+  {
+    "id": "dy-ea8b6f42",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "共享总线是公共通信通道，传统模型数据双向、地址通常由主控发出，D把方向颠倒。"
+  },
+  {
+    "id": "dy-ef6142be",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "硬盘属于辅助外存、显示器输出，键鼠输入；软驱是外存设备而不只是接口电路。"
+  },
+  {
+    "id": "dy-f8f06a42",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "典型指令周期包含取指、译码分析和执行；不是每条指令都向外输出结果。"
+  },
+  {
+    "id": "dy-fb0af697",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "汇编需先汇编为机器代码，处理器不是直接执行汇编符号源文本。"
+  },
+  {
+    "id": "dy-fcdee01e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "条码阅读器读取编码并输入系统，是输入设备；不是存储器或显示器。"
+  },
+  {
+    "id": "dy-ff93663e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "普通主存RAM易失，硬盘ROM软盘通常断电保留；ROM并非绝对永久无故障。"
+  },
+  {
+    "id": "gap-found-002",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "五部件是运算、控制、存储、输入、输出，CPU核心是运算和控制，另含寄存器。"
+  },
+  {
+    "id": "hn-recall-hn26-019",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "完整系统有硬件和软件，网络数据库属于可选环境或具体软件数据。"
+  },
+  {
+    "id": "web-19",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "外存通常容量大可断电保留但访问较慢；格式化不构成病毒预防，CPU不包括主存。"
+  },
+  {
+    "id": "web-5",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "移除重复",
+    "reason": "与dy-ff93663e相同四选项同考RAM断电丢失，保留已明确普通DRAM条件的一题。"
+  },
+  {
+    "id": "zg-10890",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "绘图仪输出图形，不能采集杂志图片；相机摄像机和扫描仪可采集。"
+  },
+  {
+    "id": "zg-1270",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "光笔是输入设备，WPS是软件，服务器是计算机系统，投影仪是输出。"
+  },
+  {
+    "id": "zg-1975",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "主存与辅助存储形成基本两级分类，不能说所有“内存”只指断电易失部件。"
+  },
+  {
+    "id": "zg-25802",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "Windows传统控制面板的“程序”用于查看或卸载应用，安装也可由安装包执行，需限定控制面板场景。"
+  },
+  {
+    "id": "zg-2845",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "程序及数据先存储，控制器自动取指执行，是连续工作的基本思想。"
+  },
+  {
+    "id": "zg-28865",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "运算器执行算术和逻辑运算，因此填逻辑，可接受“逻辑运算”。"
+  },
+  {
+    "id": "zg-34499",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "教材可按基本字长分8/16/32/64位微处理器；性能价格不是该位数分类标准。"
+  },
+  {
+    "id": "zg-34558",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "教材所称主机包括CPU与内存，须接受中央处理器、内存储器等同义表述。"
+  },
+  {
+    "id": "zg-35906",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "日常配置中RAM通常指主存随机存储器，U盘硬盘光盘不是RAM；“随机”描述访问方式并非一定易失。"
+  },
+  {
+    "id": "zg-37965",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "机器代码由CPU直接执行，汇编高级语言须转换；高级语言并非完全脱离具体平台，机器语言也不保证人为编码质量最高。"
+  },
+  {
+    "id": "zg-39854",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "运算器负责算术逻辑，控制器组织控制，不要说控制器只取一次指令。"
+  },
+  {
+    "id": "zg-4252",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "CPU负责处理但不能替代系统所需主存；CPU内部确有寄存器缓存，不能说CPU完全无存储功能。"
+  },
+  {
+    "id": "zg-63926",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "软件不是物理硬件；I/O、运算器控制器均属硬件。"
+  },
+  {
+    "id": "zg-64855",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "SSD是固态硬盘，无机械寻道部件；不应继续保留主流少于1TB等过时容量价格判断。"
+  },
+  {
+    "id": "zg-79406",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "典型存储层次中辅助外存容量大每位便宜但访问慢，命题作为常见层次比较成立。"
+  },
+  {
+    "id": "zg-95465",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "麦克风和键盘输入，音箱和普通显示器输出，故AC。"
+  },
+  {
+    "id": "dy-3422428b",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "Windows资源管理器隐藏已知扩展名时，用常规重命名编辑框通常只改主名；其他工具仍可改扩展名。"
+  },
+  {
+    "id": "dy-3aafbcde",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "快捷方式保存目标引用，删除.lnk通常不会删除目标文件，故错误。"
+  },
+  {
+    "id": "dy-3dae1544",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "回收站内项目未清空时可还原；不意味着所有删除都经过回收站。"
+  },
+  {
+    "id": "dy-5581c715",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "Windows文件名不能含反斜杠、斜杠、冒号、星号、问号、双引号、尖括号及竖线等，主名也有限制。"
+  },
+  {
+    "id": "dy-72638b02",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "普通Windows文件可有扩展名也可无扩展名，且不是所有系统资源都是文件；原命题绝对化需修正。"
+  },
+  {
+    "id": "dy-83f95515",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "纯文本记事本不能嵌图片，Word可用表格对象、画图可输入文字，其余成立。"
+  },
+  {
+    "id": "dy-bab0b8a8",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "按内容表示方式，文件常分为文本文件与二进制文件。文本编码能以字符规则解释，二进制文件按特定结构解释；这种分类不同于源程序、目标程序等按用途分类。"
+  },
+  {
+    "id": "gap-found-003",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "改扩展名不重新编码内部结构，软件卸载还需处理配置服务依赖，不宜只删除目录。"
+  },
+  {
+    "id": "web-16",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "通配模式n*.com表示以n开头、任意后续主名、扩展名com；实际Windows搜索语法还受搜索方式影响。"
+  },
+  {
+    "id": "zg-35316",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "半角?通常匹配单个字符，*匹配任意长度字符；全角问号不应当成通配符。"
+  },
+  {
+    "id": "zg-36891",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "Shift删除通常跳过回收站，回收站二次删除不能用还原，重启不清空；剪切本身不是删除原文件，A需改明确移动。"
+  },
+  {
+    "id": "zg-88237",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "创建快捷方式需要相关菜单命令或明确修饰拖动，普通拖动行为依对象与磁盘可能移动复制，原选项不能唯一判断。"
+  },
+  {
+    "id": "cg-06-s1-q67",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "Android是操作系统，QQ支付宝微信为应用，故B。"
+  },
+  {
+    "id": "cg-06-s1-q68",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "声卡驱动属于系统支持软件，其余播放器图像和视频编辑器属于应用软件。"
+  },
+  {
+    "id": "cg-06-s1-q69",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "学生档案系统服务具体业务，是应用软件，不是操作系统。"
+  },
+  {
+    "id": "cg-06-s1-q71",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "迅雷是下载管理工具，ACDSee图像管理、WinZip压缩，Flash是旧动画技术。"
+  },
+  {
+    "id": "cg-06-s1-q72",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "教材软件包括程序、相关数据及文档，不能与单个程序或物理介质等同。"
+  },
+  {
+    "id": "cg-06-s1-q73",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "安装数量不等于性能提升，可能增加资源竞争和风险；DBMS与其查询语言须区分，原C应去掉DBMS等同语言。"
+  },
+  {
+    "id": "cg-06-s1-q74",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "Excel服务表格计算任务，属于应用软件，管理软件是按用途另一维度。"
+  },
+  {
+    "id": "cg-06-s1-q75",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "裸机为未装相应软件的硬件系统，不是“只有操作系统”。"
+  },
+  {
+    "id": "dy-02a21c21",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "操作系统统筹管理控制系统资源；文字处理及制表是应用任务。"
+  },
+  {
+    "id": "dy-0aefb444",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "操作系统管理计算机资源，并向用户和应用提供服务接口；显示电缆和外设物理连接属于硬件，编译器负责语言转换。"
+  },
+  {
+    "id": "dy-12ac6095",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "普通桌面应用通常依赖OS及其服务，但嵌入式裸机程序可无OS执行，原“计算机无法工作”过度绝对。"
+  },
+  {
+    "id": "dy-2193dab1",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "传统教材五大资源管理包括处理器、存储、文件、设备（输入输出）和作业管理。启动打印是具体活动，不是同层级五类管理。"
+  },
+  {
+    "id": "dy-25778b58",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "软件一般包括程序、数据和相关文档，A应为文档而非任意文件，算法流程图也可能属文档需消歧。"
+  },
+  {
+    "id": "dy-47fc99e4",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "CPU、存储、文件、设备和作业管理构成传统五大操作系统管理功能；不能将显示器键盘打印机等单个设备并列成五大类。"
+  },
+  {
+    "id": "dy-4c354f7c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "系统软件承接硬件管理及应用运行，不能说所有其他软件必在OS之上，固件和裸机程序是边界。"
+  },
+  {
+    "id": "dy-769c76fb",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "OS为系统软件核心、扩充硬件功能、提供接口并管理资源，不能把电脑特点作为解析。"
+  },
+  {
+    "id": "dy-787d8c1c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "BIOS设置配置启动顺序、存储设备等硬件参数，不保证任何改动必然更好，应依据硬件需求设置。"
+  },
+  {
+    "id": "dy-80319fc9",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "操作系统提供用户使用计算机的接口，同时也承接软件硬件调用，需去掉与C重叠的A。"
+  },
+  {
+    "id": "dy-932720df",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "图书馆业务管理软件解决具体应用需求，属于应用软件；程序设计语言本身不等同语言处理系统软件。"
+  },
+  {
+    "id": "dy-97bd8685",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "学籍管理服务业务场景是应用软件，非系统软件，故错误。"
+  },
+  {
+    "id": "dy-9a58d8db",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "普通应用通常需系统软件支持；“可无系统软件却必须有应用软件”错误，原解析末句误写正确须改。"
+  },
+  {
+    "id": "dy-c350a16d",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "资源控制和分配为OS职责；编译主要由编译器承担，故C。"
+  },
+  {
+    "id": "dy-ec3d07c3",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "OS提供用户接口及应用服务，可按用户数量分类；编译高级语言不是操作系统本身必备功能，故ABC。"
+  },
+  {
+    "id": "dy-f55f74f2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "灰显表示当前条件下不可用，条件改变后可能启用；不意味着命令永远不存在。"
+  },
+  {
+    "id": "dy-fc9f80bb",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "打字同时听音乐体现多个任务并发运行，不一定要求多个CPU核。"
+  },
+  {
+    "id": "gap-found-015",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "先记录报错、核对权限空间依赖，再用修复或正常卸载安装；直接删目录可能遗留服务共享依赖。"
+  },
+  {
+    "id": "zg-13337",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "死机是非正常失去响应，不等于可恢复的正常暂停或休眠。"
+  },
+  {
+    "id": "zg-30924",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "普通桌面应用运行通常依赖操作系统；嵌入式裸机程序是例外，题干应限定日常桌面环境。"
+  },
+  {
+    "id": "zg-32272",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "排列桌面图标在桌面空白区菜单进行，任务栏主要切换应用和访问系统入口，需限定传统Windows桌面。"
+  },
+  {
+    "id": "zg-55881",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "传统按处理组织方式的三类为批处理、分时、实时，网络OS是按功能维度分类；不应说网络系统不是OS。"
+  },
+  {
+    "id": "zg-80593",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "应用软件为特定工作服务，设备驱动和OS属于基础支持；“编辑语言”应改为编译器避免术语错误。"
+  },
+  {
+    "id": "zg-85088",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "传统剪贴板是临时数据交换机制，常驻内存；现代历史同步持久化不应一概断电丢失，题干需限定传统当前剪贴板。"
+  },
+  {
+    "id": "zg-89812",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t07",
+    "verdict": "修正",
+    "reason": "右击任务栏的日期时间显示可进入调整日期时间入口，其他空白区不提供同样直达路径。"
+  },
+  {
+    "id": "cg-06-s1-q125",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t08",
+    "verdict": "修正",
+    "reason": "云盘主要提供网络存储同步共享，安全性取决于服务和使用方式，不是绝对安全承诺。"
+  },
+  {
+    "id": "gap-found-004",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t08",
+    "verdict": "修正",
+    "reason": "IaaS提供基础资源用户管OS，PaaS提供运行开发平台用户部署代码，SaaS直接使用软件，区别在管理责任边界。"
+  },
+  {
+    "id": "gap-found-005",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t08",
+    "verdict": "修正",
+    "reason": "上传代码而不维护OS运行时适合PaaS；IaaS通常还需管理OS，SaaS使用现成功能。"
+  },
+  {
+    "id": "gap-final-thin-003",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t09",
+    "verdict": "修正",
+    "reason": "受控病历环境重控制，预约可弹性部署，低时延现场控制可边缘处理；具体方案还应满足数据治理约束，非唯一答案。"
+  },
+  {
+    "id": "gap-final-thin-004",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t10",
+    "verdict": "修正",
+    "reason": "接入记录时间来源、校验去重、处理缺失异常，实时计算或存储后分析，并保留血缘质量指标；不应盲目删除所有异常。"
+  },
+  {
+    "id": "dy-60fa8fa5",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "模式识别从样本及特征判断类别，生物识别仅是其中一类，故B。"
+  },
+  {
+    "id": "dy-6f64b607",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "语音转文本是AI语音识别；旧Office助手本身也可能采用智能技术，D应改明确普通功能避免多解。"
+  },
+  {
+    "id": "dy-b6125b33",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "远程播放预录视频通过网络传输和解码即可实现，不必AI；自动证明、翻译和意图推断则是典型智能任务。远程教育也可以另行集成AI功能。"
+  },
+  {
+    "id": "dy-c8552785",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "语音识别把声音识别为文字或命令，合成相反；不能将语音技术等同多媒体。"
+  },
+  {
+    "id": "dy-e4ba04f5",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "通过计算模型执行诊断推理定理证明等智能任务属于AI；普通医学数据计算未必AI，题干需明确推理。"
+  },
+  {
+    "id": "zg-14524",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "语音消息转文字用语音识别，不是指纹或从图片读字的OCR。"
+  },
+  {
+    "id": "zg-23525",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "按固定数控指令重复加工可由一般控制程序实现，不必具有智能识别推理；专家系统、机器翻译和语音识别是典型AI任务。"
+  },
+  {
+    "id": "zg-48939",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "围棋系统胜过人类只说明特定任务能力，不能推断已全面超过人类；原“近几年进步”不由单局必然推出，应改正确边界。"
+  },
+  {
+    "id": "zg-61534",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "OCR和指纹匹配是典型模式识别；飞机导航可能也用识别，机器翻译广义上亦用模式学习，题目需具体化操作。"
+  },
+  {
+    "id": "zg-901",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "机器翻译、智能决策机器人和语音识别是AI典型应用；人与同学直接下棋不是计算机AI应用。"
+  },
+  {
+    "id": "gap-found-007",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t13",
+    "verdict": "修正",
+    "reason": "训练用数据更新模型参数，推理用已有模型处理输入；生成内容可能事实错误或有偏差，重要信息需核验。"
+  },
+  {
+    "id": "gap-found-008",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t14",
+    "verdict": "修正",
+    "reason": "传感器感知、网络传输、平台分析、执行器调阀或泵，构成感知到控制链路。"
+  },
+  {
+    "id": "gap-final-thin-005",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t15",
+    "verdict": "修正",
+    "reason": "设备唯一可撤销身份、双向认证和通信保护，同时失联本地安全控制、缓存及恢复同步，保障失联网也安全。"
+  },
+  {
+    "id": "gap-found-009",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t16",
+    "verdict": "修正",
+    "reason": "共识帮助节点对状态或顺序一致，不保证输入事实真实、性能更好或合约无漏洞。"
+  },
+  {
+    "id": "gap-found-010",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t16",
+    "verdict": "修正",
+    "reason": "哈希发现内容变化并关联数据，签名提供来源及完整性验证，共识协调节点状态；源数据真实性需额外保障。"
+  },
+  {
+    "id": "gap-found-011",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t17",
+    "verdict": "修正",
+    "reason": "多机构缺乏完全可信中心且要可追溯协作，可评估联盟链；单机存储无需增加复杂度。"
+  },
+  {
+    "id": "gap-found-013",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t17",
+    "verdict": "修正",
+    "reason": "少量单部门结构化数据直接用关系数据库，没必要强加区块链、大模型或分布式集群。"
+  },
+  {
+    "id": "cg-06-s1-q10-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "高性能计算与微型便携、网络化智能化等可以并行发展，不是体积单向变大或变小。"
+  },
+  {
+    "id": "cg-06-s1-q12-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "神威太湖之光为面向大规模并行任务的超级计算机，对应巨型类。"
+  },
+  {
+    "id": "cg-06-s1-q6-dup2",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "业务统计录入查询是数据处理，不宜在没有统计口径时宣称所有时期应用最广泛。"
+  },
+  {
+    "id": "dy-0574dff5",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "利用数值模型作天气预报是科学计算；仅整理气象记录则也可能数据处理，题干需明确数值模拟。"
+  },
+  {
+    "id": "dy-378c8dbf",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "CAD为Computer-Aided Design即计算机辅助设计；CAM制造，CAI教学。"
+  },
+  {
+    "id": "dy-87d953d9",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "机器人若只按固定程序执行也可能是自动控制，需明确自主感知决策机器人方可选AI。"
+  },
+  {
+    "id": "dy-a34990fe",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "用途可分通用专用，基本字长可分8/16/32/64位，性能规模可分巨型大型小型微型等。“红色蓝色”并不是字长分类。"
+  },
+  {
+    "id": "dy-d4fda94c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "教材性能规模分类含巨型大型小型微型等，不能把小型机固定成仅十几个用户的硬性定义。"
+  },
+  {
+    "id": "dy-e911a96e",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "存储、逻辑判断、自动执行及交互为常见特点，适合科学计算也适合数据处理；无依据80%比例应删。"
+  },
+  {
+    "id": "dy-ed0b8d0c",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "计算机能按数值格式高精度计算但非无限精度，故“精度不高”不成立。"
+  },
+  {
+    "id": "gap-found-016",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "科学计算求工程数值解，数据处理整理查询业务，过程控制感知反馈调节；实际系统可组合应用。"
+  },
+  {
+    "id": "zg-17285",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "教材通常以晶体管为第二代标志；代际年份存在口径差异，不必为答题强记精确分界年。"
+  },
+  {
+    "id": "zg-19891",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "CAI辅助教学，CAD设计、CAM制造、CMI教学管理。"
+  },
+  {
+    "id": "zg-95580",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "工资管理含统计计算查询，按应用任务为数据处理；数据处理不等于从不涉及数值运算。"
+  },
+  {
+    "id": "zg-98509",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "按算力容量等综合性能规模可分巨型大型中型小型微型；器件代际和字长是其他维度。"
+  },
+  {
+    "id": "gap-final-thin-006",
+    "subject": "计算机基础",
+    "topic_id": "computer-foundations.t19",
+    "verdict": "修正",
+    "reason": "线上报修要重构人员权限、状态流转和数据规则，实施测试培训监测，不能仅照搬纸表。"
+  },
+  {
+    "id": "cg-02-s1-q10",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息可被开发利用和增值，B的“不可利用不能增值”与题意相反。"
+  },
+  {
+    "id": "cg-02-s1-q11",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "遗传信息由亲代传向后代，突出传递性而非共享或时效。"
+  },
+  {
+    "id": "cg-02-s1-q12",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "网络购物依靠商品与订单信息跨地域传递，题中主要体现传递性。"
+  },
+  {
+    "id": "cg-02-s1-q13",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "甲骨保存刻写的文字信息，体现载体依附，不是必须只有甲骨才能保存。"
+  },
+  {
+    "id": "cg-02-s1-q14",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "图像加工形成有用途的新作品，体现加工增值；并不证明每次加工必然增值。"
+  },
+  {
+    "id": "cg-02-s1-q15",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "兼听不同来源以补充信息，说明单一来源可能不完整，选D。"
+  },
+  {
+    "id": "cg-02-s1-q16",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息内容或价值可随时间改变，C的一概不变错误；历史记录本身也可以不变，应区别语义。"
+  },
+  {
+    "id": "cg-02-s1-q17",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息价值与适用时机可能变化，D一概说不随时间变错误。"
+  },
+  {
+    "id": "cg-02-s1-q19",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "战前有用报告在战后价值下降，用一个假设情景即可说明时效性；无须保留未经核实历史轶事。"
+  },
+  {
+    "id": "cg-02-s1-q20",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "设备承载、救治有用、实时判断、多人共享分别对应四特征，选D。"
+  },
+  {
+    "id": "cg-02-s1-q21",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息被广泛下载不保证真实正确；热度和共享不能作为真实性证明。"
+  },
+  {
+    "id": "cg-02-s1-q22",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "创意交换后双方都可保留和使用，是信息共享不同于排他实物交换。"
+  },
+  {
+    "id": "cg-02-s1-q23",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "未留合适记录载体使后人难获历史内容，突出保存传播的载体依赖。"
+  },
+  {
+    "id": "cg-02-s1-q24",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "文本按规则变成二维码为编码，识别则从图形读回数据；缺图不影响此文字任务可移除指图。"
+  },
+  {
+    "id": "cg-02-s1-q25",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息安全应教育管理技术防护，不等于一律禁止青少年接触网络，故C。"
+  },
+  {
+    "id": "cg-02-s1-q26",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "纳米材料技术与信息技术可交叉，不宜笼统排除；题干需明确问传统基础技术分类。"
+  },
+  {
+    "id": "cg-02-s1-q27",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "传统按获取、处理、传输、控制划分，四类为传感、计算机、通信和控制。"
+  },
+  {
+    "id": "cg-02-s1-q3",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "鼓声和金属鸣响是命令的声音载体，因此B。"
+  },
+  {
+    "id": "cg-02-s1-q30",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "教材常用五阶段概括中，语言、文字之后为印刷术，再为电信和计算机网络；不是唯一历史分期。"
+  },
+  {
+    "id": "cg-02-s1-q31",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "电信使远程信息传递不必依靠人员实体运输，原“结束单纯依靠”可作教材概括，勿当精确唯一历史断代。"
+  },
+  {
+    "id": "cg-02-s1-q32",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "手机通过网络访问银行服务，直接体现网络化；不因手机使用就证明智能决策。"
+  },
+  {
+    "id": "cg-02-s1-q34",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "传感器读取当前温度是采集新数据；学籍、通讯录和素材分类更侧重组织管理已有信息。"
+  },
+  {
+    "id": "cg-02-s1-q35",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "投影仪输出显示，扫描仪摄像机采集，计算机可配合接口采集，故A。"
+  },
+  {
+    "id": "cg-02-s1-q36",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "翻译转换表达内容，主要是信息加工，不是单纯存储或评价。"
+  },
+  {
+    "id": "cg-02-s1-q37",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "检索黄山照片是获取信息，绘画加工、发送传递，打字是技能训练。"
+  },
+  {
+    "id": "cg-02-s1-q38",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "通过网络检索再核验权威来源适合查找HTML历史，卫星遥感不适合此类知识检索。"
+  },
+  {
+    "id": "cg-02-s1-q39",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "读取单车二维码获得车辆标识，主要是信息获取；实际解锁还涉及后续处理通信。"
+  },
+  {
+    "id": "cg-02-s1-q5",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "电视电话是设备，声光是物理载体，不能把这些都直接等同其表达的内容。"
+  },
+  {
+    "id": "cg-02-s1-q6",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "书籍是载体，成绩预报价格是内容，故C。"
+  },
+  {
+    "id": "cg-02-s1-q7",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "道路交通状态是待认识的对象状态，视频文字烽火是用来表达传递的载体，按教材分类B。"
+  },
+  {
+    "id": "cg-02-s1-q8",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "同一信息可异地异时多人共享；不能把信息产生限定在文字或人类出现之时。"
+  },
+  {
+    "id": "cg-02-s1-q9",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "价值不保证永恒固定，可随对象和时机变化，D错误。"
+  },
+  {
+    "id": "cg-02-s2-q1",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "参观准备需地点开放时间交通，穿着也可能有关不应绝对“无关”，题干限定确定到达与开放所需。"
+  },
+  {
+    "id": "cg-02-s2-q2",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "电子化网络化和社会化企业化可作为传统发展方向概括，不是当前全部信息产业的唯一组织模式。"
+  },
+  {
+    "id": "cg-02-s4-q10",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "在支持布尔运算的检索系统中NOT排除词可缩小候选集合；不同网页搜索器不一定直接支持NOT关键字。"
+  },
+  {
+    "id": "cg-02-s4-q11",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "点击率是统计指标，按此评估属于统计评价；点击高不意味着事实可靠。"
+  },
+  {
+    "id": "cg-02-s4-q19",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "条码识别解码涉及图形模式识别；查价格还需数据库，题干应明确只问读码这一步。"
+  },
+  {
+    "id": "cg-02-s4-q2",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "保存了浏览历史且未清除时可从历史记录重开已访问网址；不保证网站当前仍可访问。"
+  },
+  {
+    "id": "cg-02-s4-q20",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "指纹特征与模板匹配属生物模式识别，不是语言理解或虚拟现实。"
+  },
+  {
+    "id": "cg-02-s4-q25",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t14",
+    "verdict": "修正",
+    "reason": "外界物理量进入控制系统需传感器感知；内部设备协调还包含控制，题干应聚焦感知。"
+  },
+  {
+    "id": "cg-02-s4-q4",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "抓取网页建立索引并按关键词返回结果是全文检索的典型机制；不必依厂商品牌固定分类。"
+  },
+  {
+    "id": "cg-02-s4-q5",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "本地文件管理器主要组织访问本机文件；面向互联网的全文检索依赖网络内容索引，不是同一功能。"
+  },
+  {
+    "id": "cg-02-s4-q6",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "用明确主题词查方案，可采用全文搜索并优先发布单位原文；不必保留年份会议事实。"
+  },
+  {
+    "id": "cg-02-s4-q7",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "索引差异导致结果不一定相同，排第一不保证准确；传统网页搜索主要返回已索引网页，但当前搜索也可能实时检索生成。"
+  },
+  {
+    "id": "cg-02-s4-q8",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "按商品分类层层导航属于主题目录查找，不等于元搜索。"
+  },
+  {
+    "id": "cg-02-s4-q9",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "支持的语法下，含糊词与通配会扩大匹配；原符号—和+是否有运算语义依引擎，应明确布尔模型。"
+  },
+  {
+    "id": "cg-02-s6-q6",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "正常传播共享本身不会消耗原信息，载体损坏可能造成丢失；延长有效期不是丢失原因。"
+  },
+  {
+    "id": "gap-found-001",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "数据是可处理表示，载体承载其表达；核验应查主体、原文、日期口径及独立来源，不能只看热度。"
+  },
+  {
+    "id": "web-15",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "黄山与雪两个概念组合更具体，但空格是否必然AND由搜索器决定，原CD皆可能同样识别，需消歧。"
+  },
+  {
+    "id": "web-25",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "网络连接、高速传输、多媒体处理是传统常见趋势，中文化不是全世界统一趋势。"
+  },
+  {
+    "id": "zg-11096",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "目标华南虎及数量两核心词贴合需求；还应限定年份、野生或圈养口径才能比较数量。"
+  },
+  {
+    "id": "zg-19141",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "计算机对编码的数据进行分析加工，承载信息处理，本质操作对象是数据。"
+  },
+  {
+    "id": "zg-21200",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "文字记录让信息能跨时间保存并搬运传播，教材常将其视为这一阶段标志，非否认更早图画载体。"
+  },
+  {
+    "id": "zg-21588",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "除全文目录外还有元搜索等组织方式，因此“只有两种”错误。"
+  },
+  {
+    "id": "zg-25596",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "无时不在无处不有对应普遍性，不是专指多样性或存储性。"
+  },
+  {
+    "id": "zg-27655",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "用人体功能比喻，通信扩展神经传递功能，传感扩展感知，计算扩展信息加工。"
+  },
+  {
+    "id": "zg-3126",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "天气预报内容是信息，纸报电视光盘为承载传播它的对象。"
+  },
+  {
+    "id": "zg-31603",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "实时路况的价值随时间改变，主要体现时效而非真伪。"
+  },
+  {
+    "id": "zg-31991",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "科学结论的可靠性需检查实验方法、测量、重复验证及独立证据。亲自实验也可能出现系统误差，粉丝数或搜索排名不能替代证据。"
+  },
+  {
+    "id": "zg-33178",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息通过纸张、声光或存储介质表达，体现载体依附，故正确。"
+  },
+  {
+    "id": "zg-33662",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "个人置顶是推荐行为，没有给出点击统计作为依据，不属于统计评价。"
+  },
+  {
+    "id": "zg-34050",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "远方消息经电视到本地主要跨越空间距离，也需信道，但题干应明确空间维度避免C同时成立。"
+  },
+  {
+    "id": "zg-39116",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "扫码读取二维码内容是信息获取，支付结算是后续处理，不能只凭支付目的解释获取。"
+  },
+  {
+    "id": "zg-41175",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "判断测量数据不可靠并需重做，属于质量评价；收集数据为获取，算数分析为加工。"
+  },
+  {
+    "id": "zg-42095",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "广播经电子传播，非实物现场物证；文献口头电子实物是教材一种信息源分类。"
+  },
+  {
+    "id": "zg-42750",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "商代器物的信息通过实物和记录传到今天，跨越了时间，体现传递性；保存过程也依赖相应载体。"
+  },
+  {
+    "id": "zg-43670",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "过期报纸价值下降主要体现时效；信息可加工压缩不是保证任意数据都可无损变短。"
+  },
+  {
+    "id": "zg-4701",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "模拟摄像机通过视频采集设备做A/D输入，不是电脑屏幕捕获或后期裁剪。"
+  },
+  {
+    "id": "zg-49142",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "量子计算、虚拟现实、机器人和数字化环境都属于现代计算与信息技术研究或应用范围，技术成熟度不同不意味着排除该领域。"
+  },
+  {
+    "id": "zg-5185",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "报道的内容为信息，机场航空公司是实体机构，报纸是载体，故C。"
+  },
+  {
+    "id": "zg-52854",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "可减少不确定性并帮助决策说明可利用，不代表信息就是物质或能量。"
+  },
+  {
+    "id": "zg-53944",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "路况及时更新，过时信息可能误导当前出行，体现时效性。"
+  },
+  {
+    "id": "zg-55131",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "并非所有信息都在互联网可得，私人未公开、未数字化内容可能无法检索。"
+  },
+  {
+    "id": "zg-59309",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "付费展示不等于真实性，用户应核验来源及证据，不必全部拒信搜索结果。"
+  },
+  {
+    "id": "zg-60011",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "移动通信远程培训刷卡指纹电子书以处理传递信息为核心，克隆转基因的核心为生物技术但可借助IT。"
+  },
+  {
+    "id": "zg-61586",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "类比图利用熟悉事物的关系解释另一个主题；实景图强调真实外观，结构图强调组成关系，选择取决于表达目的。"
+  },
+  {
+    "id": "zg-62070",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "不明附件应核对来源并隔离检查，发件人显示名也可伪造，不能未经核验执行。"
+  },
+  {
+    "id": "zg-65704",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "教材按载体列文献、口头、电子、实物源，是一种常用分类不是唯一严密不交叠分类。"
+  },
+  {
+    "id": "zg-67981",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "遥感卫星感知地面数据主要是信息采集，后续才加工存储。"
+  },
+  {
+    "id": "zg-68711",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "向父母口述比赛结果，对父母而言为口头信息源，不是没使用介质，声音仍是载体。"
+  },
+  {
+    "id": "zg-70770",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "有穷性是算法常见性质，不是信息特征这一组中的基本项。"
+  },
+  {
+    "id": "zg-71472",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "文字图像声数所表达的有意义内容可称信息，不能把载体与语义完全混同。"
+  },
+  {
+    "id": "zg-74177",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息处理可包含获取、存储、加工、传递、应用等，次序可交错，原双空强制固定顺序不够严谨，改简答。"
+  },
+  {
+    "id": "zg-7462",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "检索前应明确目标，结合具体关键词、适用引擎并核验来源日期；关键词越多不一定越相关，反而可能排除需要的资料。"
+  },
+  {
+    "id": "zg-75106",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "导航根据实时拥堵改道体现信息时效，不代表拥堵历史记录永远无价值。"
+  },
+  {
+    "id": "zg-77165",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "旧照片经过处理形成新表达说明信息可加工，C符合；不同于只强调共享或时间。"
+  },
+  {
+    "id": "zg-77811",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "搜索引擎根据关键词和索引检索结果，常用于网络查资料；结果仍需筛选验证。"
+  },
+  {
+    "id": "zg-77864",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息不只在人类诞生后存在，人可通过感官接收部分表示，但不是所有信息必经人感官，C原“总是”需修正。"
+  },
+  {
+    "id": "zg-78085",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "教材三支柱按感知传递处理对应传感通信计算机；不宜同时在解析切换另一种测控定义。"
+  },
+  {
+    "id": "zg-79439",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "提关键词、细化条件、在支持引擎中用逻辑及引号精确短语都可改进检索；语法必须依具体系统。"
+  },
+  {
+    "id": "zg-83151",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "伪造投降书误导决策是小说案例，说明消息真伪需核验；不应把小说当实际历史证据。"
+  },
+  {
+    "id": "zg-85210",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "同一信息对不同对象价值不相同，D“一律有价值”错误；价值不等于已发生实际使用。"
+  },
+  {
+    "id": "zg-86785",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "信息内容和用途可随时机变化，C的一概不变错误；部分历史事实可长期不变。"
+  },
+  {
+    "id": "zg-98060",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "目标→选择引擎→查询方式→筛选是可行流程，但先决定方式再选引擎也合理，不能无前提强制唯一次序。"
+  },
+  {
+    "id": "zg-99635",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "专门音乐检索或合法音乐平台比无关学校政府网站更有针对性；选C。"
+  },
+  {
+    "id": "cg-02-s4-q34",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "OCR可识别多种输入图片，B也可能正确；需把B改成“可保证任何PSD无误识别”，使D唯一。"
+  },
+  {
+    "id": "zg-96001",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t04",
+    "verdict": "修正",
+    "reason": "把中文字稿直接渲染导出成JPEG等图片后，接收方可在不依赖原中文字体的情况下看见字形；图片无法像文字一样便利检索编辑，应保留文本源件。"
+  },
+  {
+    "id": "cg-02-s1-q28",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t01",
+    "verdict": "修正",
+    "reason": "独立的多因素认证可提高账号被单一密码泄露后攻破的难度。邮箱加密码不天然是双因素；验证码和其他认证凭据也应保密。"
+  },
+  {
+    "id": "cg-02-s4-q32",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t05",
+    "verdict": "修正",
+    "reason": "灭火机器人输入用火焰温度传感器，将外部物理量转换为内部可处理信号。"
+  },
+  {
+    "id": "zg-6760",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t06",
+    "verdict": "修正",
+    "reason": "同层分类标准需一致，海南是旅游地点子项，与学习生活工作并列易重叠，但不同用户也可另有组织规则。"
+  },
+  {
+    "id": "gap-found-020",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t08",
+    "verdict": "修正",
+    "reason": "只部署代码由平台维护OS及运行时是PaaS，IaaS一般用户管OS，SaaS用现成功能。"
+  },
+  {
+    "id": "gap-found-021",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t09",
+    "verdict": "修正",
+    "reason": "安全停机闭环放现场边缘可降时延且断网可用，云做长时汇总训练，不能仅依云端保护。"
+  },
+  {
+    "id": "cg-02-s4-q13",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "跳棋程序从经验改进策略属于机器学习与AI，不是仅因“计算机下棋”就证明学习。"
+  },
+  {
+    "id": "cg-02-s4-q14",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "传统词典输入也可能采用智能方法，不能简单排除智能ABC；改D为纯粹固定字符替换，题型才明确。"
+  },
+  {
+    "id": "cg-02-s4-q15",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "对语言作识别理解并学习行动属于AI能力，声画播放不等同理解。"
+  },
+  {
+    "id": "cg-02-s4-q16",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "机器学习研究从数据或经验改善任务表现，不一定表示机器自动获得人类式知识。"
+  },
+  {
+    "id": "cg-02-s4-q18",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "语音识别属AI，普通浏览播放不需AI；现代软件可附加AI，题目应限定具体功能。"
+  },
+  {
+    "id": "cg-02-s4-q22",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "传统编译原理核心是语法分析代码转换优化，不等于AI分支；二者可交叉，不能说永不相关。"
+  },
+  {
+    "id": "gap-found-024",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t12",
+    "verdict": "修正",
+    "reason": "有标签分类为监督，未标注分群为无监督，奖惩学策略为强化，任务线索分别不同。"
+  },
+  {
+    "id": "gap-found-025",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t13",
+    "verdict": "修正",
+    "reason": "训练99测试70可能过拟合或分布差异，应查划分泄漏、数据代表性及正则，验证调参后独立测试。"
+  },
+  {
+    "id": "cg-02-s1-q33",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t14",
+    "verdict": "修正",
+    "reason": "环境光传感器提供亮度输入，再按规则调屏幕，是传感控制链。"
+  },
+  {
+    "id": "cg-02-s4-q23",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t14",
+    "verdict": "修正",
+    "reason": "触摸、光线、姿态需感知物理状态，App更新主要软件网络机制，故C。"
+  },
+  {
+    "id": "cg-02-s4-q26",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t14",
+    "verdict": "修正",
+    "reason": "独立红外遥控没有网络连接，不是此处联网物体系统；现代联网电视遥控另当别论。"
+  },
+  {
+    "id": "gap-found-026",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t14",
+    "verdict": "修正",
+    "reason": "湿度感知→网关传输→边缘平台决策→阀门执行→再次采样反馈，最后反馈才形成闭环。"
+  },
+  {
+    "id": "gap-found-027",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t15",
+    "verdict": "修正",
+    "reason": "失联时本地阈值保护和安全停机、告警记录，恢复后同步；不能等待云端才避免过热。"
+  },
+  {
+    "id": "gap-found-028",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t16",
+    "verdict": "修正",
+    "reason": "旧块变动通常改变哈希，后块前驱摘要不匹配而被发现；应限定摘要未重算且不发生碰撞，非自动保证永不可改。"
+  },
+  {
+    "id": "gap-found-029",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t17",
+    "verdict": "修正",
+    "reason": "单方简单数据用数据库，多方追溯共享可评估联盟链，仍需身份权限源数据治理。"
+  },
+  {
+    "id": "cg-02-s1-q29",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "信息处理设备概括计算存储等能力，单独速度或记忆不是全部功能，选D。"
+  },
+  {
+    "id": "cg-02-s4-q17",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "通过网络提供远程课程和交互属于网络应用；可包含AI但不必依赖AI。"
+  },
+  {
+    "id": "web-39",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t18",
+    "verdict": "修正",
+    "reason": "CAD设计、CAT测试、CAM制造，CAI教学与直接设计制造任务关系最弱，但员工培训仍可能用CAI，应限定直接生产环节。"
+  },
+  {
+    "id": "gap-found-030",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t19",
+    "verdict": "修正",
+    "reason": "信息系统问题涉及人员培训流程规则数据同步与事务控制，应逐层定位而非只查软件界面。"
+  },
+  {
+    "id": "gap-found-012",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t20",
+    "verdict": "修正",
+    "reason": "毫秒级闭环与断网运行放边缘，长期汇总模型更新放云；适用前提由时延、可靠性与规模决定。"
+  },
+  {
+    "id": "gap-found-031",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t20",
+    "verdict": "修正",
+    "reason": "感知执行构成物联网，边缘实时控制云端长期分析，认证权限加密最小上传处理隐私风险。"
+  },
+  {
+    "id": "gap-found-032",
+    "subject": "信息基础",
+    "topic_id": "computer-foundations.t20",
+    "verdict": "修正",
+    "reason": "水质感知、边缘断网告警、云端多站趋势、位置权限最小上传分别对应四项约束。"
+  },
+  {
+    "id": "gap-found-022",
+    "subject": "大数据",
+    "topic_id": "computer-foundations.t10",
+    "verdict": "修正",
+    "reason": "清洗先确认业务键和重复含义，再处理缺失及格式，抽样和统计检查结果。保留原始数据及处理记录，不能盲目删除可能有效的业务记录。"
+  },
+  {
+    "id": "bd-001",
+    "subject": "大数据",
+    "topic_id": "computer-foundations.t11",
+    "verdict": "修正",
+    "reason": "HDFS负责Hadoop的分布式文件存储，YARN负责资源调度，MapReduce负责分布式计算，Hive提供仓库查询分析能力。"
+  },
+  {
+    "id": "bd-002",
+    "subject": "大数据",
+    "topic_id": "computer-foundations.t11",
+    "verdict": "修正",
+    "reason": "多副本在部分数据节点失效时仍保留可访问副本，主要提高数据容错和可用性；整体高可用还要考虑元数据等组件。"
+  },
+  {
+    "id": "gap-found-006",
+    "subject": "大数据",
+    "topic_id": "computer-foundations.t11",
+    "verdict": "修正",
+    "reason": "本题按Volume、Velocity、Variety、Value说明规模、速度、多样和价值；分类使用已知类别，聚类按相似性分组，关联分析寻找共现模式。4V也存在其他口径，需以题中约定为准。"
+  },
+  {
+    "id": "gap-found-023",
+    "subject": "大数据",
+    "topic_id": "computer-foundations.t11",
+    "verdict": "修正",
+    "reason": "有标注的垃圾邮件判断是分类，无标签客户分群是聚类，识别偏离常态交易是异常检测；实际算法还需考虑数据和目标。"
+  },
+  {
+    "id": "hn-recall-sy26-002",
+    "subject": "大数据",
+    "topic_id": "computer-foundations.t11",
+    "verdict": "修正",
+    "reason": "分类预测离散类别，回归预测连续值，聚类按相似性组织无标签数据，关联分析发现共现。共现不能单独证明因果关系。"
+  }
+]

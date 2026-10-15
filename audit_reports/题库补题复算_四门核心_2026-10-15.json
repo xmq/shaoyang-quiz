@@ -1,0 +1,254 @@
+[
+  {
+    "task": "KMP前缀函数独立计算",
+    "worked_output": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "expected": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "passed": true
+  },
+  {
+    "task": "KMP匹配5字符失配回退",
+    "worked_output": 3,
+    "expected": 3,
+    "passed": true
+  },
+  {
+    "task": "快排首轮双指针挖坑",
+    "worked_output": [
+      24,
+      35,
+      21,
+      54,
+      67,
+      78,
+      63,
+      73,
+      89
+    ],
+    "expected": [
+      24,
+      35,
+      21,
+      54,
+      67,
+      78,
+      63,
+      73,
+      89
+    ],
+    "passed": true
+  },
+  {
+    "task": "Prim每条新增边",
+    "worked_output": [
+      [
+        "A",
+        "B",
+        2
+      ],
+      [
+        "B",
+        "C",
+        1
+      ],
+      [
+        "C",
+        "D",
+        3
+      ]
+    ],
+    "expected": [
+      [
+        "A",
+        "B",
+        2
+      ],
+      [
+        "B",
+        "C",
+        1
+      ],
+      [
+        "C",
+        "D",
+        3
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "task": "Prim总权",
+    "worked_output": 6,
+    "expected": 6,
+    "passed": true
+  },
+  {
+    "task": "负权边BellmanFord距离",
+    "worked_output": [
+      4,
+      2,
+      5
+    ],
+    "expected": [
+      4,
+      2,
+      5
+    ],
+    "passed": true
+  },
+  {
+    "task": "Kahn输出",
+    "worked_output": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "expected": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "passed": true
+  },
+  {
+    "task": "Kahn处理B后队列",
+    "worked_output": [
+      "C"
+    ],
+    "expected": [
+      "C"
+    ],
+    "passed": true
+  },
+  {
+    "task": "二分25全部边界",
+    "worked_output": [
+      [
+        0,
+        6,
+        3
+      ],
+      [
+        4,
+        6,
+        5
+      ],
+      [
+        4,
+        4,
+        4
+      ]
+    ],
+    "expected": [
+      [
+        0,
+        6,
+        3
+      ],
+      [
+        4,
+        6,
+        5
+      ],
+      [
+        4,
+        4,
+        4
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "task": "二分26失败终止",
+    "worked_output": [
+      5,
+      4
+    ],
+    "expected": [
+      5,
+      4
+    ],
+    "passed": true
+  },
+  {
+    "task": "循环队列最终状态",
+    "worked_output": [
+      5,
+      3,
+      4
+    ],
+    "expected": [
+      5,
+      3,
+      4
+    ],
+    "passed": true
+  },
+  {
+    "task": "文件索引取块与偏移",
+    "worked_output": [
+      5,
+      452
+    ],
+    "expected": [
+      5,
+      452
+    ],
+    "passed": true
+  },
+  {
+    "task": "CHECK允许NULL",
+    "worked_output": 1,
+    "expected": 1,
+    "passed": true
+  },
+  {
+    "task": "CHECK拒绝101",
+    "worked_output": true,
+    "expected": true,
+    "passed": true
+  },
+  {
+    "task": "外键拒绝不存在学生",
+    "worked_output": true,
+    "expected": true,
+    "passed": true
+  },
+  {
+    "task": "组合主键拒绝重复",
+    "worked_output": true,
+    "expected": true,
+    "passed": true
+  },
+  {
+    "task": "视图仅暴露部门10姓名编号",
+    "worked_output": [
+      [
+        1,
+        "A"
+      ]
+    ],
+    "expected": [
+      [
+        1,
+        "A"
+      ]
+    ],
+    "passed": true
+  }
+]

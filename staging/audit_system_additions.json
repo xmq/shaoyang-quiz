@@ -1,0 +1,557 @@
+[
+  {
+    "id": "audit26-system-001",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第1章 程序设计与算法",
+    "stem": "给出无需依赖编程语言的算法：输入一组非空整数，找出最大值。说明为什么不能总把最大值初始设为0，并用[-8,-3,-5]演示状态。",
+    "options": {},
+    "answer": "将max设为第一个数；依次比较其余数，若当前数大于max则更新。例中max初始-8，见-3更新为-3，见-5不变，最终-3。初始0会在全负输入时产生不存在于数据中的错误结果。",
+    "explanation": "算法需给出输入前提、初始状态、循环与更新。非空前提保证第一个元素存在；空输入必须另外约定处理。",
+    "subject": "编程语言",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "程序设计基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "programming.t01",
+    "topic_title": "算法、流程与执行",
+    "chapter_id": "programming.c01",
+    "required_depth": "直接应用",
+    "topic_order": 0,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "最大值以非空输入的第一个数初始化",
+        "points": 1
+      },
+      {
+        "criterion": "逐项比较更新并给出-8→-3→-3状态",
+        "points": 1
+      },
+      {
+        "criterion": "说明初值0在全负输入时错误",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-002",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第2章 数据类型、变量与常量",
+    "stem": "在C语言中，int a=7,b=2; 比较double x=a/b; 与double y=(double)a/b; 的值，写出各自转换顺序。",
+    "options": {},
+    "answer": "x为3.0：a/b先作整数除法得3，再转double。y为3.5：先把a转double，再将b按通常算术转换参与浮点除法。",
+    "explanation": "接收变量是double不会倒过来改变已经进行的整数除法；必须在除法之前转换操作数。",
+    "subject": "编程语言",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "程序设计基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "programming.t03",
+    "topic_title": "类型、变量与转换",
+    "chapter_id": "programming.c02",
+    "required_depth": "直接应用",
+    "topic_order": 2,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "整数除法先求7/2=3再转double得到3.0",
+        "points": 1
+      },
+      {
+        "criterion": "先把a转double后除以b得到3.5",
+        "points": 1
+      },
+      {
+        "criterion": "说明接收变量类型不会逆向改变运算类型",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-003",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第7章 函数与模块化程序设计",
+    "stem": "先不运行程序，跟踪Python函数f(3)的调用和返回：\ndef f(n):\n    if n <= 1:\n        return 1\n    return n * f(n - 1)\n再说明把递归参数写成n+1会怎样。",
+    "options": {},
+    "answer": "调用链f(3)→f(2)→f(1)；f(1)=1，f(2)=2，f(3)=6。n+1使正整数输入远离基本情形，不能正常终止，通常最终触发递归深度异常。",
+    "explanation": "把向下调用与向上返回分开记录。基本情形存在还不够，递归参数必须向其推进。",
+    "subject": "编程语言",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "C函数与作用域",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "programming.t09",
+    "topic_title": "作用域、递归与模块化",
+    "chapter_id": "programming.c07",
+    "required_depth": "综合应用",
+    "topic_order": 8,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "写出f(3)→f(2)→f(1)的调用链",
+        "points": 1
+      },
+      {
+        "criterion": "逐层返回1、2、6",
+        "points": 1
+      },
+      {
+        "criterion": "说明n+1远离基本情形导致不能正常终止",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-004",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第8章 数组、字符串与Python组合数据",
+    "stem": "C语言已包含string.h，定义char s[]=\"ab\\0cd\";。求sizeof(s)、strlen(s)，并列出数组各元素。",
+    "options": {},
+    "answer": "元素为a、b、空字符、c、d、末尾空字符，共6个char，所以sizeof(s)=6；strlen只计首个空字符之前的字符，结果2。",
+    "explanation": "字符串字面量显式含一个\\0，同时仍隐式追加结束空字符。数组容量与C字符串逻辑长度不是同一件事。",
+    "subject": "编程语言",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "C数组与字符串",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "programming.t10",
+    "topic_title": "C数组与字符串",
+    "chapter_id": "programming.c08",
+    "required_depth": "综合应用",
+    "topic_order": 9,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "列出a、b、空字符、c、d、末尾空字符",
+        "points": 1
+      },
+      {
+        "criterion": "sizeof(s)=6",
+        "points": 1
+      },
+      {
+        "criterion": "strlen(s)=2且说明首个空字符截断计数",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-005",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第9章 C指针、结构体与文件",
+    "stem": "用C编写void swap(int *a,int *b)，交换两个不同的有效int对象，并写出交换x和y时的调用方式。",
+    "options": {},
+    "answer": "void swap(int *a,int *b) { int temp=*a; *a=*b; *b=temp; }\n调用：swap(&x,&y);",
+    "explanation": "指针本身也按值传入，但解引用访问的是调用者对象。临时量必须保存原*a；直接依次赋*a=*b和*b=*a会丢失原值。题设保证非空有效指针。",
+    "subject": "编程语言",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "C指针与内存",
+    "ability": "代码编写",
+    "difficulty": "应用",
+    "topic_id": "programming.t12",
+    "topic_title": "C指针与地址",
+    "chapter_id": "programming.c09",
+    "required_depth": "综合应用",
+    "topic_order": 11,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "以int*形参并通过解引用访问调用者对象",
+        "points": 1
+      },
+      {
+        "criterion": "使用临时量正确完成三次赋值交换",
+        "points": 1
+      },
+      {
+        "criterion": "调用使用swap(&x,&y)传地址",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-006",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第3章 指令系统与CPU",
+    "stem": "某指令地址字段A=40，寄存器R=100，主存M[40]=300、M[100]=500。分别求立即、直接、寄存器和寄存器间接寻址得到的操作数；寄存器方式均使用R。",
+    "options": {},
+    "answer": "立即寻址操作数40；直接寻址M[40]=300；寄存器寻址R内容100；寄存器间接寻址M[R]=M[100]=500。",
+    "explanation": "先判断字段提供的是值、地址还是保存地址的寄存器，再决定是否读内存。不要把有效地址与最终操作数混同。",
+    "subject": "计算机组成原理",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "指令系统与CPU",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "computer-organization.t07",
+    "topic_title": "指令、寻址与RISC/CISC",
+    "chapter_id": "computer-organization.c03",
+    "required_depth": "综合应用",
+    "topic_order": 6,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "立即操作数40和直接操作数300",
+        "points": 1
+      },
+      {
+        "criterion": "寄存器寻址操作数100",
+        "points": 1
+      },
+      {
+        "criterion": "寄存器间接操作数M[100]=500",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-007",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第1章 软件工程概述",
+    "stem": "规格规定按钮点击后生成报表，但用户实际需要导出可编辑数据。测试确认按钮确实生成了报表，却仍未满足用户用途。分别说明验证与确认要回答什么，下一步应怎样处理。",
+    "options": {},
+    "answer": "验证检查实现是否符合既定规格，按钮能生成报表说明该项验证可能通过；确认检查系统是否满足用户真实需要，此处用途仍不满足。应澄清导出需求、确认验收标准并受控修改需求、设计与测试。",
+    "explanation": "符合错误或不完整的规格不代表满足用户需要。确认不能仅靠开发者判断，应有用户或业务代表参与。",
+    "subject": "软件工程",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "软件工程基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_id": "software-engineering.t02",
+    "topic_title": "生命周期与验证确认",
+    "chapter_id": "software-engineering.c01",
+    "required_depth": "直接应用",
+    "topic_order": 1,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "验证检查是否符合既定报表规格",
+        "points": 1
+      },
+      {
+        "criterion": "确认检查是否满足用户真实可编辑数据需求",
+        "points": 1
+      },
+      {
+        "criterion": "澄清验收需求并受控更新设计和测试",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-008",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第2章 软件过程与生命周期模型",
+    "stem": "两个项目分别是：①规则稳定、交付物和阶段评审清晰；②技术方案风险高，要求每轮先识别并验证主要风险。分别选择一种合适的过程模型并说明依据和局限。",
+    "options": {},
+    "answer": "①可采用瀑布，适合较稳定需求和阶段审查，但变更较晚时返工代价大；②可采用螺旋，以风险分析驱动迭代，但需要风险识别能力与管理投入。其他方案若说明如何满足条件也可。",
+    "explanation": "按需求稳定性与风险控制要求选型，不按项目大小机械匹配。模型选择不是取消反馈和测试。",
+    "subject": "软件工程",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "软件过程模型",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_id": "software-engineering.t03",
+    "topic_title": "过程模型选择",
+    "chapter_id": "software-engineering.c02",
+    "required_depth": "综合应用",
+    "topic_order": 2,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "稳定需求与阶段审查匹配瀑布并说明变更返工代价",
+        "points": 1
+      },
+      {
+        "criterion": "高风险逐轮评估匹配螺旋",
+        "points": 1
+      },
+      {
+        "criterion": "说明风险识别能力及管理投入要求",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-009",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第4章 总体设计与详细设计",
+    "stem": "设计一个借书系统。总体设计应交代哪些内容，详细设计还应补什么？以借阅资格检查模块举例。",
+    "options": {},
+    "answer": "总体设计确定读者管理、图书管理、借还管理等模块及接口、数据和依赖；详细设计写清资格检查内部规则与步骤，例如先查账号有效性，再查欠费和已借数量，给出数据结构、异常与返回结果。",
+    "explanation": "总体设计回答如何分解并协作，详细设计回答单个模块内部怎样实现；无需在设计答案里写完整产品代码。",
+    "subject": "软件工程",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "软件设计与UML",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "software-engineering.t08",
+    "topic_title": "总体设计与详细设计",
+    "chapter_id": "software-engineering.c04",
+    "required_depth": "直接应用",
+    "topic_order": 7,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "总体设计划分读者、图书、借还等模块及接口",
+        "points": 1
+      },
+      {
+        "criterion": "详细设计列出资格检查内部规则与步骤",
+        "points": 1
+      },
+      {
+        "criterion": "给出数据结构或异常返回等实现约定",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-010",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第4章 总体设计与详细设计",
+    "stem": "用户提交订单后，界面请求订单服务，订单服务请求库存服务，库存返回不足，再由订单服务返回失败。要画UML顺序图，应有哪些生命线？按先后写出四条主要消息；若改画订单状态变化，应选哪类图？",
+    "options": {},
+    "answer": "生命线可为用户/界面、订单服务、库存服务。主要消息：界面→订单服务提交；订单服务→库存服务检查库存；库存服务→订单服务返回不足；订单服务→界面返回失败。订单状态变化适合状态图。",
+    "explanation": "顺序图追踪跨对象消息先后；状态图跟踪同一对象在事件下的状态变化。返回消息可用虚线，不要求具体绘图工具。",
+    "subject": "软件工程",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "软件设计与UML",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "software-engineering.t10",
+    "topic_title": "面向对象分析设计与UML",
+    "chapter_id": "software-engineering.c04",
+    "required_depth": "综合应用",
+    "topic_order": 9,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "识别界面、订单服务、库存服务生命线",
+        "points": 1
+      },
+      {
+        "criterion": "按提交、检查、库存不足返回、失败返回排列消息",
+        "points": 1
+      },
+      {
+        "criterion": "订单自身状态变化选择状态图",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-011",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第6章 软件维护、质量与配置管理",
+    "stem": "把以下维护活动分类并说明依据：修复总价计算错误；适配新操作系统；增加导出报表；不改变外部行为地整理重复代码以降低未来修改风险。",
+    "options": {},
+    "answer": "依次为改正性、适应性、完善性、预防性维护。依据分别是现有缺陷、环境变化、功能改善、未来维护风险降低。",
+    "explanation": "按活动的主要目的分类；同一次版本可能包含多类维护，不由修改文件名或修改行数决定。",
+    "subject": "软件工程",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "软件维护与配置",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_id": "software-engineering.t14",
+    "topic_title": "维护、重构与再工程",
+    "chapter_id": "software-engineering.c06",
+    "required_depth": "综合应用",
+    "topic_order": 13,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "修总价错误为改正性、适配新OS为适应性",
+        "points": 1
+      },
+      {
+        "criterion": "增加导出报表为完善性",
+        "points": 1
+      },
+      {
+        "criterion": "保持行为的代码整理降低未来风险为预防性",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-012",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第7章 项目管理与风险管理",
+    "stem": "第三方接口可能在上线前无法交付，概率约30%，发生将延误10天。先算风险暴露量，再给出一项缓解措施、一项应急措施及监控信号。",
+    "options": {},
+    "answer": "期望延误约0.3×10=3天。可提前联调和设置中间里程碑降低风险；准备替代接口或延期非核心功能作为应急方案；监控交付里程碑、接口样例和联调通过率，并指定负责人。",
+    "explanation": "3天是期望影响，不代表发生时只延误3天；发生后需按问题处置，不能继续仅登记为未发生风险。",
+    "subject": "软件工程",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "项目管理",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "topic_id": "software-engineering.t17",
+    "topic_title": "风险、人员与沟通",
+    "chapter_id": "software-engineering.c07",
+    "required_depth": "直接应用",
+    "topic_order": 16,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "期望延误0.3×10=3天并区别发生时10天",
+        "points": 1
+      },
+      {
+        "criterion": "给出提前联调等缓解及备用接口等应急措施",
+        "points": 1
+      },
+      {
+        "criterion": "提出里程碑或联调通过率监控并指定负责人",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-013",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第1章 信息安全概论",
+    "stem": "分别判断并解释：成绩被偷偷改分；成绩文件被发给无权人员；选课服务被打到无法访问。每项最直接损害CIA中的哪一项？",
+    "options": {},
+    "answer": "改分损害完整性；泄露损害保密性；无法使用损害可用性。一次事件也可能同时影响多个目标，此处按题干最直接后果分类。",
+    "explanation": "不按攻击工具名称判断，而按信息或服务遭受的后果判断；三类措施互补，备份也不能使已经泄露的数据重新保密。",
+    "subject": "信息安全",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "安全目标与风险",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_id": "information-security.t01",
+    "topic_title": "CIA安全目标",
+    "chapter_id": "information-security.c01",
+    "required_depth": "直接应用",
+    "topic_order": 0,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "改分最直接破坏完整性",
+        "points": 1
+      },
+      {
+        "criterion": "向无权者外发最直接破坏保密性",
+        "points": 1
+      },
+      {
+        "criterion": "服务瘫痪最直接破坏可用性并说明可多目标受损",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-014",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第4章 身份认证与访问控制",
+    "stem": "系统用密码加硬件安全密钥登录。解释为何属于多因素认证；若账号已失陷，只修改密码是否足够？还应检查哪些会话措施？",
+    "options": {},
+    "answer": "密码为所知因素，安全密钥为所持因素，来自不同类别。仅改密码未必撤销已发会话令牌；应按预案撤销失陷会话、检查关联设备和异常登录、重置受影响凭据并检查恢复渠道。",
+    "explanation": "用户名不是第二因素，两次密码也不是不同因素；MFA减少口令泄露风险，却不自动消除已窃取会话的风险。",
+    "subject": "信息安全",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "身份认证与访问控制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "information-security.t07",
+    "topic_title": "认证因素与会话",
+    "chapter_id": "information-security.c04",
+    "required_depth": "综合应用",
+    "topic_order": 6,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "密码属所知、安全密钥属所持，构成不同因素",
+        "points": 1
+      },
+      {
+        "criterion": "说明只改密码未必撤销已发会话",
+        "points": 1
+      },
+      {
+        "criterion": "撤销失陷会话并核查关联登录设备或恢复渠道",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "audit26-system-015",
+    "source": "原创自测",
+    "type": "简答",
+    "chapter": "第7章 系统、应用与数据安全",
+    "stem": "业务要求最多丢失15分钟数据、2小时内恢复服务；当前仅每天凌晨做一次备份且与生产主机共用管理员账号。指出RPO、RTO和至少两项改进，并说明如何验证。",
+    "options": {},
+    "answer": "RPO为15分钟，RTO为2小时。每日备份通常无法满足15分钟丢失窗口，应增加日志备份或其他不超过15分钟恢复点的机制；用独立权限、离线/不可变副本减少同毁风险。演练恢复到指定时间点并计时，验证数据完整性与业务可用。",
+    "explanation": "备份完成不等于能恢复，需实测恢复点和恢复时长。具体备份/复制机制应同时考虑复制删除或加密的风险。",
+    "subject": "信息安全",
+    "source_chapter": "通用教材知识点复核补题",
+    "knowledge_point": "数据备份与恢复",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_id": "information-security.t14",
+    "topic_title": "备份、RPO与RTO",
+    "chapter_id": "information-security.c07",
+    "required_depth": "综合应用",
+    "topic_order": 13,
+    "topic_source": "manual",
+    "adaptation_note": "按通用教材知识点逐题复核后补充的原创独立作答题，不是招聘考试原题。",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "识别RPO15分钟及RTO2小时",
+        "points": 1
+      },
+      {
+        "criterion": "增加足够频率恢复点并分离权限或离线不可变副本",
+        "points": 1
+      },
+      {
+        "criterion": "实际恢复指定时间点并计时验证完整性与业务可用",
+        "points": 1
+      }
+    ]
+  }
+]
