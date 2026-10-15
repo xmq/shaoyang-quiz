@@ -24,6 +24,10 @@ GAP_QUESTIONS = {
     question["id"]: question
     for question in json.loads((ROOT / "staging" / "course_gap_questions.json").read_text(encoding="utf-8"))
 }
+REVIEWED_TOPIC_OVERRIDES = {
+    item["id"]: item["topic_id"]
+    for item in json.loads((ROOT / "staging" / "topic_override_review_other.json").read_text(encoding="utf-8"))
+}
 LEARNING_MAP = json.loads((ROOT / "learning-map.json").read_text(encoding="utf-8"))
 COURSE_BY_SUBJECT = {
     subject: course
@@ -54,6 +58,11 @@ NETWORK_TOPIC_OVERRIDES = {
     "web-27": "net.routing",
     "dy-be79e543": "net.overview",
     "dy-3bb220bd": "net.overview",
+    "zg-53166": "net.overview",
+    "zg-43176": "net.overview",
+    "dy-c5d3ca69": "net.app-protocols",
+    "uf-nw-005": "net.tcp-connection",
+    "ap-nw-004": "net.layers-addresses",
 }
 
 # 题干过短或术语跨主题时，明确指定其实际解题任务。
@@ -81,6 +90,7 @@ PROGRAMMING_TOPIC_OVERRIDES = {
     "cg-04-s2-q7": 11, "cg-04-s2-q8": 11, "cg-04-s2-q10": 11, "zg-1554": 6,
     "ap-pl-001": 12, "ua-program-006": 11, "ua-program-013": 10,
     "hn-recall-cs25-001": 14,
+    "uf-pl-006": 1, "gap-pl-002": 5,
 }
 
 COURSE_TOPIC_OVERRIDES = {
@@ -107,9 +117,12 @@ COURSE_TOPIC_OVERRIDES = {
     "算法与数据结构": {
         "cg-05-s1-q12": 1, "cg-05-s1-q33": 9,
         "cg-05-s1-q45": 1, "zg-65564": 1, "ap-ds-005": 24,
+        "cg-05-s1-q29": 5, "zg-97573": 1,
+        "ap-ds-001": 2, "ap-ds-004": 24, "uc-ds-010": 24,
+        "cg-05-s1-q7": 1, "cg-05-s1-q34": 1,
     },
     "操作系统": {
-        "cg-10-s1-q34": 9,
+        "cg-10-s1-q34": 9, "cg-10-s1-q41": 9, "dy-3d38882f": 9,
     },
     "电路分析与电工技术": {
         "uf-ee-018": 6, "uf-ee-019": 7, "uf-ee-020": 7,
@@ -306,7 +319,7 @@ REMOVED_QUESTION_IDS = {
     "bd-011", "cg-06-s1-q124", "cg-06-s1-q127", "dy-b1fdb3e1",
     "cg-06-s1-q57", "dy-80d7632d", "dy-afba316e", "dy-1057d716",
     "dy-debdaa71", "zg-91871", "zg-24227", "dy-0fdc6c59",
-    "zg-68262",
+    "zg-68262", "cg-06-s2-q22",
     # 微控制器、总线与现场调试属于数字系统接口专题，不纳入通用数电核心。
     "sp-elec-digital-001", "sp-elec-digital-004", "sp-elec-digital-005",
     "sp-elec-digital-006", "sp-elec-digital-007", "sp-elec-digital-008",
@@ -684,6 +697,18 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         return {}
     text = question_text(question)
     topics = list(course["topics"])
+    reviewed_topic_id = REVIEWED_TOPIC_OVERRIDES.get(str(question.get("id")))
+    reviewed = next((topic for topic in topics if topic["topic_id"] == reviewed_topic_id), None)
+    if reviewed_topic_id and not reviewed:
+        raise ValueError(f"人工复核topic不属于题目课程：{question.get('id')} -> {reviewed_topic_id}")
+    if reviewed:
+        return {
+            "topic_id": reviewed["topic_id"],
+            "topic_title": reviewed["title"],
+            "chapter_id": reviewed["chapter_id"],
+            "required_depth": reviewed["depth"],
+            "topic_order": topics.index(reviewed),
+        }
     if question.get("topic_source") == "manual":
         manual = next((topic for topic in topics if topic["topic_id"] == question.get("topic_id")), None)
         if manual:

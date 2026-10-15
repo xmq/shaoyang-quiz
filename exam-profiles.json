@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-15",
+  "notice": "这些模板复现单次回忆中的训练结构，不代表湖南统一题型或课程占比。course_weights 为 null 表示没有完整原卷证据，未知不等于零。",
+  "profiles": [
+    {
+      "id": "changsha-county-info-2025-recall",
+      "title": "长沙县2025信息化管理岗回忆版训练结构",
+      "region": "湖南省长沙县",
+      "year": 2025,
+      "exam_date": "2025-04-12",
+      "post": "信息化管理岗",
+      "exam_subject": "岗位专业知识",
+      "evidence_level": "B",
+      "evidence_note": "招聘公告转载可确认考试日期、两科各100分及成绩合成方式；题型和专业卷内容来自考生个人回忆，未取得原卷。",
+      "sources": [
+        {
+          "source_id": "changsha-county-2025",
+          "kind": "官方公告转载",
+          "supports": "考试日期、综合知识与岗位专业知识两科各100分、成绩按40%和60%合成"
+        },
+        {
+          "source_id": "xhs-changsha-info-2025",
+          "kind": "考生回忆帖",
+          "supports": "岗位专业知识卷的题型数量、客观题范围和编程任务线索"
+        }
+      ],
+      "total_score": 100,
+      "question_count": null,
+      "question_types": [
+        {
+          "type": "选择",
+          "count": 30,
+          "score_each": 1.5,
+          "total_score": 45,
+          "note": "回忆只写选择题，不能继续拆成单选和多选"
+        },
+        {
+          "type": "判断",
+          "count": 10,
+          "score_each": 1.5,
+          "total_score": 15,
+          "note": null
+        },
+        {
+          "type": "主观大题",
+          "count": null,
+          "score_each": null,
+          "total_score": 40,
+          "note": "大题数量未回忆完整；已知含一道6分、不限语言的编程题"
+        }
+      ],
+      "objective_score": 60,
+      "subjective_score": 40,
+      "course_weights": null,
+      "observed_courses": [
+        "计算机网络",
+        "数据结构与算法",
+        "数据库技术",
+        "操作系统原理",
+        "软件工程",
+        "信息安全",
+        "云计算",
+        "人工智能",
+        "区块链"
+      ],
+      "observed_tasks": [
+        "不限语言编写程序",
+        "分块或流式处理大文件"
+      ],
+      "use": "可按30道选择、10道判断、40分主观题生成回忆版训练卷；主观部分至少保留一道短编程任务。",
+      "limits": [
+        "不能推断九个课程模块各有多少题或多少分",
+        "不能把成绩合成中的专业知识60%解释成专业卷内部模块权重",
+        "不能把改编入库题数当作原卷题数",
+        "不能推广为长沙或湖南其他批次的统一结构"
+      ]
+    },
+    {
+      "id": "shaoyang-city-computer-2026-recall",
+      "title": "邵阳市直2026计算机相关岗位回忆版训练结构",
+      "region": "湖南省邵阳市",
+      "year": 2026,
+      "exam_date": "2026-07-11",
+      "post": "市直计算机相关岗位，岗位代码未记录",
+      "exam_subject": "计算机相关岗位专业卷",
+      "evidence_level": "B",
+      "evidence_note": "公告转载可确认同日市直统一笔试；题型与任务来自考生回忆。回忆列出的客观题共65道，却称客观部分70分，存在5分缺口。",
+      "sources": [
+        {
+          "source_id": "shaoyang-city-2026",
+          "kind": "官方公告转载",
+          "supports": "2026年7月11日邵阳市直第一次招聘笔试事件"
+        },
+        {
+          "source_id": "xhs-shaoyang-computer-2026",
+          "kind": "考生回忆帖",
+          "supports": "客观与主观分区、题型数量和四个可定位主观任务"
+        }
+      ],
+      "total_score": 100,
+      "question_count": 70,
+      "question_types": [
+        {
+          "type": "单选",
+          "count": 40,
+          "score_each": null,
+          "total_score": null,
+          "note": "没有可靠的逐题分值"
+        },
+        {
+          "type": "多选",
+          "count": 10,
+          "score_each": null,
+          "total_score": null,
+          "note": "没有可靠的逐题分值和部分得分规则"
+        },
+        {
+          "type": "判断",
+          "count": 15,
+          "score_each": null,
+          "total_score": null,
+          "note": "没有可靠的逐题分值"
+        },
+        {
+          "type": "主观题",
+          "count": 5,
+          "score_each": null,
+          "total_score": 30,
+          "note": "目前只恢复出第1、2、4、5题任务，第3题未知"
+        }
+      ],
+      "objective_score": 70,
+      "subjective_score": 30,
+      "course_weights": null,
+      "observed_courses": [
+        "计算机组成原理",
+        "大学计算机基础与新技术",
+        "C与Python程序设计",
+        "计算机网络"
+      ],
+      "observed_tasks": [
+        "说明CPU与Cache解决的性能问题",
+        "说明数据挖掘及常见任务",
+        "不限语言编写词频统计程序",
+        "说明HTTP与HTTPS的通信和安全机制"
+      ],
+      "use": "可按40单选、10多选、15判断、5主观生成邵阳市直回忆版训练卷；客观区和主观区分别归一化为70分和30分。",
+      "limits": [
+        "客观题数量为65道，但回忆称客观部分70分，不能据此推导每种客观题分值",
+        "第3道主观题内容缺失，训练卷补位题必须标注为教学补充",
+        "四个已知主观任务只证明考过，不能推断四门课程等权",
+        "同批不同计算机或电子信息岗位可能使用不同专业卷",
+        "不能推广为邵阳历年统一结构"
+      ]
+    },
+    {
+      "id": "hunan-computer-2026-unmatched-recall",
+      "title": "湖南2026未明批次混合题型训练结构",
+      "region": "湖南省，具体地区未注明",
+      "year": 2026,
+      "exam_date": null,
+      "post": "计算机与电子信息相关岗位，招聘单位和岗位代码未核实",
+      "exam_subject": "计算机相关专业考试",
+      "evidence_level": "C",
+      "evidence_note": "回忆给出较具体的题型数量和任务，但无法对应招聘单位、岗位代码、考试日期或官方公告。",
+      "sources": [
+        {
+          "source_id": "xhs-hunan-computer-recall-2026",
+          "kind": "考生回忆帖",
+          "supports": "题型数量、简答和分析任务以及若干客观考点"
+        }
+      ],
+      "total_score": null,
+      "question_count": 61,
+      "question_types": [
+        {
+          "type": "选择",
+          "count": 35,
+          "score_each": null,
+          "total_score": null,
+          "note": "回忆未区分单选和多选"
+        },
+        {
+          "type": "判断",
+          "count": 20,
+          "score_each": null,
+          "total_score": null,
+          "note": null
+        },
+        {
+          "type": "简答",
+          "count": 2,
+          "score_each": null,
+          "total_score": null,
+          "note": "已知任务为病毒和VPN"
+        },
+        {
+          "type": "分析",
+          "count": 4,
+          "score_each": null,
+          "total_score": null,
+          "note": "已知涉及内存排障、TCP客户端、SQL与事务、路由转发"
+        }
+      ],
+      "objective_score": null,
+      "subjective_score": null,
+      "course_weights": null,
+      "observed_courses": [
+        "大学计算机基础与新技术",
+        "Office软件操作",
+        "多媒体技术",
+        "操作系统原理",
+        "数据库技术",
+        "数据结构与算法",
+        "计算机网络",
+        "信息安全"
+      ],
+      "observed_tasks": [
+        "说明计算机病毒及特征",
+        "说明VPN作用和基本原理",
+        "分析内存不足原因并给出排查步骤",
+        "分析连接超时并编写最小TCP客户端",
+        "编写SQL分组查询并说明事务边界",
+        "说明路由转发过程",
+        "辨析刷新率、DNS、HTTP/1.1、矢量图、Word分栏、PPT顺序、Excel冻结窗格、Windows任务、时间复杂度和算法特性"
+      ],
+      "use": "只能生成不带地区真题声明的混合题型训练卷，题型数量可采用35选择、20判断、2简答、4分析。",
+      "limits": [
+        "不能称为邵阳、长沙或湖南某个官方批次的模拟卷",
+        "没有总分和逐题分值，不能复原评分结构",
+        "回忆到的考点数量不等于原卷模块题数",
+        "19道入库改编题是教学扩写，不是19道原题复现",
+        "不能用于计算课程占比或考试频率"
+      ]
+    }
+  ]
+}

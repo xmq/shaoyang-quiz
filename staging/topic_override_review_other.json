@@ -1,0 +1,297 @@
+[
+  {
+    "id": "cg-12-s1-q21",
+    "topic_id": "office.t10",
+    "reason": "题干要求使用AVERAGE函数计算平均销售额。"
+  },
+  {
+    "id": "cg-12-s1-q32",
+    "topic_id": "office.t10",
+    "reason": "题干直接考COUNTIF条件计数函数。"
+  },
+  {
+    "id": "cg-12-s1-q40",
+    "topic_id": "office.t10",
+    "reason": "题干考公式错误和循环引用，应归函数与错误值。"
+  },
+  {
+    "id": "cg-12-s1-q51",
+    "topic_id": "office.t10",
+    "reason": "`######`是显示/错误诊断，不考引用方式。"
+  },
+  {
+    "id": "zg-1984",
+    "topic_id": "office.t10",
+    "reason": "题干考`####`显示原因，应归错误值诊断。"
+  },
+  {
+    "id": "ap-of-005",
+    "topic_id": "office.t16",
+    "reason": "题干要求表格汇总、图表、文字报告和核对的跨工具工作流。"
+  },
+  {
+    "id": "cg-12-s1-q65",
+    "topic_id": "office.t11",
+    "reason": "题干考按销售业绩排序，不考文字处理对象和长文档。"
+  },
+  {
+    "id": "cg-12-s1-q23-dup2",
+    "topic_id": "office.t16",
+    "reason": "题干考PowerPoint内容转Word，属于跨工具组合。"
+  },
+  {
+    "id": "cg-12-s1-q40-dup2",
+    "topic_id": "office.t14",
+    "reason": "题干考演示文稿可插入的对象，不属于Word长文档对象。"
+  },
+  {
+    "id": "cg-13-s1-q14",
+    "topic_id": "office.t03",
+    "reason": "题干考文字编辑状态下CapsLock输入切换，不考动画放映。"
+  },
+  {
+    "id": "dy-d36225d7",
+    "topic_id": "office.t04",
+    "reason": "题干比较Word大纲视图与页面视图，核心是文档结构。"
+  },
+  {
+    "id": "uf-of-006",
+    "topic_id": "office.t14",
+    "reason": "题干考幻灯片母版统一标志和页脚。"
+  },
+  {
+    "id": "ua-office-008",
+    "topic_id": "office.t14",
+    "reason": "题干考母版统一校徽、字体与页脚。"
+  },
+  {
+    "id": "hn-recall-hn26-015",
+    "topic_id": "office.t11",
+    "reason": "题干考Excel冻结窗格的数据查看操作，不考Word表格对象。"
+  },
+  {
+    "id": "cg-14-s1-q26",
+    "topic_id": "multimedia.t10",
+    "reason": "题干考动画时间轴中地平线只存在1帧。"
+  },
+  {
+    "id": "dy-2774c59a",
+    "topic_id": "multimedia.t01",
+    "reason": "题干考多媒体定义、交互性和载体多样性。"
+  },
+  {
+    "id": "dy-252f28b2",
+    "topic_id": "multimedia.t02",
+    "reason": "题干判断超文本定义，核心是链接和非线性组织。"
+  },
+  {
+    "id": "uf-mm-001",
+    "topic_id": "multimedia.t04",
+    "reason": "题干计算未压缩音频数据量，不考压缩冗余。"
+  },
+  {
+    "id": "ap-mm-001",
+    "topic_id": "multimedia.t04",
+    "reason": "题干计算PCM容量，不考有损/无损压缩。"
+  },
+  {
+    "id": "uf-mm-002",
+    "topic_id": "multimedia.t04",
+    "reason": "题干计算未压缩位图容量，不考压缩比。"
+  },
+  {
+    "id": "uf-ee-007",
+    "topic_id": "circuit.t04",
+    "reason": "已给开路电压和等效电阻求负载功率，属于戴维南等效。"
+  },
+  {
+    "id": "gap-circuit-001",
+    "topic_id": "circuit.t11",
+    "reason": "题干考电压表、电流表接法和内阻影响。"
+  },
+  {
+    "id": "gap-circuit-002",
+    "topic_id": "circuit.t12",
+    "reason": "题干用开关两端测量结果分段定位故障。"
+  },
+  {
+    "id": "ap-circuit-005",
+    "topic_id": "circuit.t07",
+    "reason": "题干分析功率因数、线路电流和损耗关系。"
+  },
+  {
+    "id": "ap-circuit-006",
+    "topic_id": "circuit.t09",
+    "reason": "题干计算功能串联系统可靠度，并明确不是电阻串联。"
+  },
+  {
+    "id": "sp-elec-circuit-025",
+    "topic_id": "circuit.t11",
+    "reason": "题干由示波器灵敏度、探头倍率和格数计算峰峰值。"
+  },
+  {
+    "id": "sp-elec-circuit-029",
+    "topic_id": "circuit.t08",
+    "reason": "冒烟、火花、焦糊味后的断电与禁止重合闸属于保护安全。"
+  },
+  {
+    "id": "ue-circuit-004",
+    "topic_id": "circuit.t04",
+    "reason": "开路电压与短路电流用于求戴维南参数。"
+  },
+  {
+    "id": "ue-circuit-007",
+    "topic_id": "circuit.t07",
+    "reason": "题干计算对称三相有功功率。"
+  },
+  {
+    "id": "ue-circuit-009",
+    "topic_id": "circuit.t09",
+    "reason": "题干计算两个独立元件的功能串联可靠度。"
+  },
+  {
+    "id": "ue-circuit-011",
+    "topic_id": "circuit.t07",
+    "reason": "题干考并联电容补偿后的功率因数、电流和损耗。"
+  },
+  {
+    "id": "uf-ee-022",
+    "topic_id": "circuit.t08",
+    "reason": "题干计算四极异步电动机同步转速，属于电动机。"
+  },
+  {
+    "id": "ap-analog-001",
+    "topic_id": "analog-electronics.t02",
+    "reason": "题干按二极管正向压降计算LED限流电阻。"
+  },
+  {
+    "id": "ap-analog-002",
+    "topic_id": "analog-electronics.t07",
+    "reason": "题干计算理想反相运放闭环输出。"
+  },
+  {
+    "id": "sp-elec-analog-008",
+    "topic_id": "analog-electronics.t07",
+    "reason": "题干考运放线性公式与电源饱和边界。"
+  },
+  {
+    "id": "sp-elec-analog-025",
+    "topic_id": "analog-electronics.t01",
+    "reason": "题干填写硅二极管基础近似导通压降。"
+  },
+  {
+    "id": "ue-analog-013",
+    "topic_id": "analog-electronics.t07",
+    "reason": "题干判断运放负反馈、未饱和与虚短虚断条件。"
+  },
+  {
+    "id": "uf-de-019",
+    "topic_id": "digital-electronics.t08",
+    "reason": "题干由模10计算计数器所需触发器数，任务是计数器设计。"
+  },
+  {
+    "id": "uf-de-021",
+    "topic_id": "digital-electronics.t07",
+    "reason": "题干考状态机“自启动”的状态转移性质。"
+  },
+  {
+    "id": "ap-digital-005",
+    "topic_id": "digital-electronics.t07",
+    "reason": "报警恢复后仍保持，直到复位，核心是带状态记忆的时序系统。"
+  },
+  {
+    "id": "sp-elec-digital-012",
+    "topic_id": "digital-electronics.t10",
+    "reason": "题干由高电平时间和周期计算PWM占空比。"
+  },
+  {
+    "id": "sp-elec-digital-025",
+    "topic_id": "digital-electronics.t10",
+    "reason": "题干填写PWM占空比。"
+  },
+  {
+    "id": "sp-elec-digital-029",
+    "topic_id": "digital-electronics.t10",
+    "reason": "题干解释PWM调光/调速及频率、占空比边界，不考ADC/DAC。"
+  },
+  {
+    "id": "uf-cm-013",
+    "topic_id": "communication.t05",
+    "reason": "题干考普通AM带宽。"
+  },
+  {
+    "id": "uf-cm-015",
+    "topic_id": "communication.t05",
+    "reason": "题干比较AM与SSB带宽，属于模拟调制。"
+  },
+  {
+    "id": "uf-cm-017",
+    "topic_id": "communication.t05",
+    "reason": "题干用卡森公式计算FM带宽。"
+  },
+  {
+    "id": "uf-cm-021",
+    "topic_id": "communication.t07",
+    "reason": "题干考光纤低损耗窗口，属于介质与频谱。"
+  },
+  {
+    "id": "uf-cm-024",
+    "topic_id": "communication.t09",
+    "reason": "题干考小信号谐振放大器作用。"
+  },
+  {
+    "id": "ap-comm-001",
+    "topic_id": "communication.t03",
+    "reason": "题干直接使用香农公式计算容量。"
+  },
+  {
+    "id": "sp-elec-comm-009",
+    "topic_id": "communication.t13",
+    "reason": "寻找数据块开始和结束是帧同步。"
+  },
+  {
+    "id": "sp-elec-comm-010",
+    "topic_id": "communication.t14",
+    "reason": "题干判断眼图张开含义。"
+  },
+  {
+    "id": "sp-elec-comm-019",
+    "topic_id": "communication.t14",
+    "reason": "题干判断闭合眼图能否唯一定位坏件。"
+  },
+  {
+    "id": "sp-elec-comm-020",
+    "topic_id": "communication.t13",
+    "reason": "题干列举载波、位和帧同步。"
+  },
+  {
+    "id": "sp-elec-comm-023",
+    "topic_id": "communication.t14",
+    "reason": "题干判断眼图闭合原因。"
+  },
+  {
+    "id": "sp-elec-comm-025",
+    "topic_id": "communication.t03",
+    "reason": "题干把线性信噪比换算为dB，属于信道容量前置计算。"
+  },
+  {
+    "id": "sp-elec-comm-027",
+    "topic_id": "communication.t13",
+    "reason": "题干说明三种同步各自解决的问题。"
+  },
+  {
+    "id": "sp-elec-comm-029",
+    "topic_id": "communication.t15",
+    "reason": "题干要求光纤链路组成并区分衰减与色散。"
+  },
+  {
+    "id": "ue-comm-005",
+    "topic_id": "communication.t05",
+    "reason": "题干计算普通双边带AM带宽。"
+  },
+  {
+    "id": "ap-comm-006",
+    "topic_id": "communication.t04",
+    "reason": "题干同时考声音数字化与位/帧同步，暂按前半段完整过程主映射到抽样、量化与PCM码率；待拆题后将同步部分归communication.t13。"
+  }
+]
