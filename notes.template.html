@@ -380,8 +380,8 @@
     }
     .table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
     .table-hint { margin: -8px 0 12px !important; color: var(--muted); font-size: 13px; }
-    .note-figure { width: fit-content; max-width: 100%; margin: 20px auto; padding: 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); text-align: center; }
-    .note-figure img { display: block; width: auto; height: auto; max-width: 100%; max-height: min(72svh, 640px); margin: 0 auto; }
+    .note-figure { width: fit-content; max-width: 100%; margin: 24px auto; padding: 0; border: 0; border-radius: 0; background: transparent; text-align: center; }
+    .note-figure img { display: block; height: auto; max-width: min(100%, calc(min(72svh, 640px) * var(--image-ratio, 1))); max-height: min(72svh, 640px); margin: 0 auto; }
     .note-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .figure-open { display: block; max-width: 100%; margin: 0 auto; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
     body.image-viewer-open { overflow: hidden; }
@@ -391,6 +391,7 @@
     .study-image-viewer .pswp__button--fit { width: auto; padding: 0 12px; color: #fff; font-size: 13px; white-space: nowrap; }
     .study-image-viewer .image-viewer-title { flex: 1; min-width: 0; margin: 0 8px 0 0; overflow: hidden; color: #fff; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; font-weight: 500; }
     .study-image-viewer .pswp__button--zoom { display: block; }
+    .study-image-viewer img.pswp__img { background: var(--panel); border-radius: 2px; }
     .study-image-viewer .pswp__preloader { position: absolute; top: calc(64px + env(safe-area-inset-top)); right: 16px; }
     .note table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--panel); font-size: 14px; }
     .note th, .note td { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
@@ -468,7 +469,7 @@
     }
     .color-notes-page .chapter-chevron { display: none; }
     .color-notes-page .chapter-section.collapsed .chapter-body { display: block; }
-    .color-notes-page .note-figure { margin: 12px auto 16px; padding: 8px; }
+    .color-notes-page .note-figure { margin: 16px auto 20px; padding: 0; }
     .color-notes-page .note-figure figcaption { display: none; }
 
     @media (max-width: 900px) {
@@ -529,7 +530,7 @@
       .point { margin-top: 17px; padding: 9px 10px; font-size: 16px; }
       .note p { line-height: 1.85; }
       .table-wrap { margin-right: -3px; }
-      .note-figure { padding: 8px; }
+      .note-figure { padding: 0; }
       .color-notes-page .note-figure { padding: 0; border: 0; background: transparent; }
 
       body { padding-bottom: env(safe-area-inset-bottom); }
@@ -1173,8 +1174,8 @@
           const normalizedSource = rawSource.replace(/^\.\.\/media\//, "media/");
           if (/^media\/[a-zA-Z0-9_./-]+\.svg$/i.test(normalizedSource)) {
             const size = imageSizes[normalizedSource];
-            const dimensions = size ? ` width="${size[0]}" height="${size[1]}"` : "";
-            output.push(`<figure class="note-figure"><button class="figure-open" type="button" aria-label="放大查看：${escapeHtml(caption || "配图")}" title="点击放大"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="lazy" decoding="async"></button>${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
+            const dimensions = size ? ` width="${size[0]}" height="${size[1]}" style="--image-ratio:${size[0] / size[1]}"` : "";
+            output.push(`<figure class="note-figure"><button class="figure-open" type="button" aria-label="放大查看：${escapeHtml(caption || "配图")}" title="点击放大"><img src="${escapeHtml(normalizedSource)}"${dimensions} alt="${escapeHtml(caption)}" loading="eager" decoding="async"></button>${caption ? `<figcaption>${formatInline(caption)}</figcaption>` : ""}</figure>`);
           }
           index += 1;
           continue;

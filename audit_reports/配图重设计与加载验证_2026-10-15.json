@@ -1,0 +1,264 @@
+{
+  "diagrams": 11,
+  "bounds": [
+    {
+      "name": "analog_bjt_states.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_common_emitter.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_diode_iv.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_feedback_block.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_load_line.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_opamp_inverting.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_pn_bias.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_power_supply.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "network_arp_hop.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "ds_graph_steps.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "office_references.svg",
+      "theme": "light",
+      "overflow": []
+    },
+    {
+      "name": "analog_bjt_states.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_common_emitter.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_diode_iv.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_feedback_block.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_load_line.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_opamp_inverting.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_pn_bias.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "analog_power_supply.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "network_arp_hop.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "ds_graph_steps.svg",
+      "theme": "dark",
+      "overflow": []
+    },
+    {
+      "name": "office_references.svg",
+      "theme": "dark",
+      "overflow": []
+    }
+  ],
+  "reserve": [
+    {
+      "width": 390,
+      "before": [
+        {
+          "src": "media/analog_bjt_states.svg",
+          "w": 366,
+          "h": 196,
+          "ready": false
+        },
+        {
+          "src": "media/analog_load_line.svg",
+          "w": 366,
+          "h": 242,
+          "ready": false
+        },
+        {
+          "src": "media/analog_common_emitter.svg",
+          "w": 366,
+          "h": 271,
+          "ready": false
+        }
+      ],
+      "after": [
+        {
+          "src": "media/analog_bjt_states.svg",
+          "w": 366,
+          "h": 196,
+          "ready": true
+        },
+        {
+          "src": "media/analog_load_line.svg",
+          "w": 366,
+          "h": 242,
+          "ready": true
+        },
+        {
+          "src": "media/analog_common_emitter.svg",
+          "w": 366,
+          "h": 271,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "before": [
+        {
+          "src": "media/analog_pn_bias.svg",
+          "w": 490,
+          "h": 278,
+          "ready": false
+        },
+        {
+          "src": "media/analog_diode_iv.svg",
+          "w": 465,
+          "h": 320,
+          "ready": false
+        },
+        {
+          "src": "media/analog_bjt_states.svg",
+          "w": 520,
+          "h": 278,
+          "ready": false
+        },
+        {
+          "src": "media/analog_load_line.svg",
+          "w": 500,
+          "h": 330,
+          "ready": false
+        },
+        {
+          "src": "media/analog_common_emitter.svg",
+          "w": 500,
+          "h": 370,
+          "ready": false
+        },
+        {
+          "src": "media/analog_feedback_block.svg",
+          "w": 555,
+          "h": 252,
+          "ready": false
+        },
+        {
+          "src": "media/analog_opamp_inverting.svg",
+          "w": 515,
+          "h": 313,
+          "ready": false
+        },
+        {
+          "src": "media/analog_power_supply.svg",
+          "w": 500,
+          "h": 350,
+          "ready": false
+        }
+      ],
+      "after": [
+        {
+          "src": "media/analog_pn_bias.svg",
+          "w": 490,
+          "h": 278,
+          "ready": true
+        },
+        {
+          "src": "media/analog_diode_iv.svg",
+          "w": 465,
+          "h": 320,
+          "ready": true
+        },
+        {
+          "src": "media/analog_bjt_states.svg",
+          "w": 520,
+          "h": 278,
+          "ready": true
+        },
+        {
+          "src": "media/analog_load_line.svg",
+          "w": 500,
+          "h": 330,
+          "ready": true
+        },
+        {
+          "src": "media/analog_common_emitter.svg",
+          "w": 500,
+          "h": 370,
+          "ready": true
+        },
+        {
+          "src": "media/analog_feedback_block.svg",
+          "w": 555,
+          "h": 252,
+          "ready": true
+        },
+        {
+          "src": "media/analog_opamp_inverting.svg",
+          "w": 515,
+          "h": 313,
+          "ready": true
+        },
+        {
+          "src": "media/analog_power_supply.svg",
+          "w": 500,
+          "h": 350,
+          "ready": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

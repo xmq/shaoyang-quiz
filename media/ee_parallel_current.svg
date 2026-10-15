@@ -5,7 +5,7 @@
         .paper{fill:var(--paper)}.panel{fill:var(--panel);stroke:var(--border)}.t{font:18px system-ui,sans-serif;fill:var(--ink)}.h{font:700 21px system-ui,sans-serif;fill:var(--ink)}.b{font:700 18px system-ui,sans-serif;fill:var(--blue)}.g{font:700 18px system-ui,sans-serif;fill:var(--green)}.r{font:700 18px system-ui,sans-serif;fill:var(--red)}.muted{font:18px system-ui,sans-serif;fill:var(--muted)}
         .wire{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}.blue{fill:none;stroke:var(--blue);stroke-width:2.5}.green{fill:none;stroke:var(--green);stroke-width:2.5}.orange{fill:none;stroke:var(--orange);stroke-width:2.5}.red{fill:none;stroke:var(--red);stroke-width:2.5}.dash{stroke-dasharray:5 4}.dot{fill:var(--ink)}.shade{fill:var(--green);opacity:.17}
         </style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--ink)"/></marker></defs>
-<rect class="paper" width="400" height="450" rx="12"/>
+
 <text class="h" x="20" y="33">并联：每条支路同电压</text>
 <text class="b" x="20" y="64">三个6 Ω支路接在同一对节点</text>
 <path class="wire" d="M55 120H345M55 260H345M55 120V260"/>
