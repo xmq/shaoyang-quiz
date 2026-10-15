@@ -25,10 +25,10 @@
     }
 
     * { box-sizing: border-box; }
-    html { max-width: 100%; overflow-x: hidden; scroll-behavior: auto; }
+    html { max-width: 100%; overflow-x: clip; scroll-behavior: auto; }
     body {
       max-width: 100%;
-      overflow-x: hidden;
+      overflow-x: clip;
       margin: 0;
       background: var(--bg);
       color: var(--text);
@@ -213,9 +213,11 @@
     .study-content { min-width: 0; }
     .chapter-nav {
       position: sticky;
-      top: 128px;
-      max-height: calc(100vh - 148px);
+      top: 154px;
+      max-height: calc(100vh - 174px);
+      max-height: calc(100dvh - 174px);
       overflow: auto;
+      overscroll-behavior-y: contain;
       border: 1px solid var(--border);
       border-radius: 15px;
       background: var(--panel);
@@ -235,7 +237,7 @@
       background: var(--panel);
       font-weight: 750;
     }
-    .chapter-links { padding: 8px; }
+    .chapter-links { padding: 8px; overscroll-behavior-y: contain; }
     .chapter-link {
       width: 100%;
       min-height: 44px;
