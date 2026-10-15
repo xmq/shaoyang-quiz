@@ -12,6 +12,8 @@ COMMANDS = (
     ("node", "--check", "app.js"),
     ("node", "--check", "quiz-loader.js"),
     ("node", "--check", "home.js"),
+    ("node", "--check", "study-review.js"),
+    ("node", "scripts/verify_study_review.cjs"),
     ("node", "--check", "question-media.js"),
     ("node", "--check", "sw.js"),
     (sys.executable, "scripts/merge_applied_bank.py", "--check"),

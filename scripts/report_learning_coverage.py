@@ -8,13 +8,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "audit_reports" / "learning_coverage.md"
 
-OBJECTIVE_TYPES = {"单选", "多选", "判断", "填空"}
+OBJECTIVE_TYPES = {"单选", "多选", "判断"}
 APPLICATION_ABILITIES = {"场景选型", "读图排障", "过程描述", "代码编写", "SQL编写"}
 
 
 def current_forms(items):
     forms = []
-    if any(question.get("type") in OBJECTIVE_TYPES for question in items):
+    if any(
+        question.get("type") in OBJECTIVE_TYPES
+        or (question.get("type") == "填空" and question.get("ability") in {"概念识记", "比较辨析", "机制解释"})
+        for question in items
+    ):
         forms.append("客观辨析")
     if any(question.get("type") == "简答" for question in items):
         forms.append("简答说明")
@@ -34,12 +38,15 @@ def main():
         "# 课程知识点、例题与练习覆盖", "",
         "该报告用于内部建设，不发布到学生页面。范围为各高校通用教材共同核心。", "",
         "大学通用教材确定范围，常见期末任务作为解题深度基准；湖南回忆题校准本地题型与情境，408提供相关课程的进阶任务参考。", "",
-        "判定方法：优先练知识点建议至少5题，其他知识点建议至少3题；练习方式采用较严格的题型与能力组合判断。本报告用于建设排查，不代表学生掌握度或真实考频。", "",
+        "判定方法：按实际题型和作答能力逐项列缺口，不把题量作为完成标准。选择题中的计算只算有提示辨析，不算独立书面计算；计算或代码填空不自动计入概念辨析。代码/语句仍包含阅读与编写，需另看两者数量。", "",
     ]
     all_topic_count = 0
     all_count_ready = 0
     all_form_count = 0
     all_form_ready = 0
+    all_tasks = 0
+    all_traps = 0
+    course_rows = []
     for course in learning["courses"]:
         subjects = set(course.get("subjects", [course["subject"]]))
         items = [question for question in questions if question.get("subject") in subjects]
@@ -52,10 +59,7 @@ def main():
         ]
         missing = [topic["title"] for topic in course["topics"] if not topic_counts[topic["topic_id"]]]
         topic_items = {topic["topic_id"]: [question for question in items if question.get("topic_id") == topic["topic_id"]] for topic in course["topics"]}
-        count_ready = sum(
-            topic_counts[topic["topic_id"]] >= (5 if topic.get("practice_priority") == "优先练" else 3)
-            for topic in course["topics"]
-        )
+        count_ready = sum(bool(topic_counts[topic["topic_id"]]) for topic in course["topics"])
         form_total = sum(len(topic.get("practice_modes", [])) for topic in course["topics"])
         form_ready = sum(
             len(set(topic.get("practice_modes", [])) & set(current_forms(topic_items[topic["topic_id"]])))
@@ -65,17 +69,20 @@ def main():
         all_count_ready += count_ready
         all_form_count += form_total
         all_form_ready += form_ready
+        all_tasks += sum(bool(topic.get("study_task")) for topic in course["topics"])
+        all_traps += sum(bool(topic.get("common_trap")) for topic in course["topics"])
+        course_rows.append(f"| {course['course_name']} | {len(course['topics'])} | {len(items)} | {sum(question.get('type') in OBJECTIVE_TYPES for question in items)} | {len(short_questions)} | {len(calculation_questions)} | {sum(question.get('ability') == '程序阅读' for question in items)} | {sum(question.get('ability') in {'代码编写', 'SQL编写'} and question.get('type') == '简答' for question in items)} |")
         lines.extend([
             f"## {course['course_name']}", "",
             f"- 题目：{len(items)}",
             f"- 知识点：{len(course['topics'])}，已有练习：{len(course['topics']) - len(missing)}，缺少练习：{len(missing)}",
-            f"- 练习数量达到建议值：{count_ready}/{len(course['topics'])}",
+            f"- 有关联练习：{count_ready}/{len(course['topics'])}；题量不表示考频或教学完整。",
             f"- 练习方式已有对应题：{form_ready}/{form_total}",
             "- 题型：" + "、".join(f"{name}{count}题" for name, count in type_counts.items()),
             f"- 简答核对要点：{sum(bool(question.get('rubric')) for question in short_questions)}/{len(short_questions)}",
             f"- 书面计算核对步骤：{sum(bool(question.get('rubric')) for question in calculation_questions)}/{len(calculation_questions)}",
             "- 缺少练习：" + ("、".join(missing) if missing else "无"), "",
-            "| 知识点 | 练习优先级 | 学习层次 | 计划练习方式 | 现有练习方式 | 题量 | 结论 |",
+            "| 知识点 | 练习优先级 | 学习层次 | 计划练习方式 | 现有练习方式 | 题量 | 尚缺能力 |",
             "|---|---|---|---|---|---:|---|",
             *[
                 "| {title} | {priority} | {steps} | {expected} | {actual} | {count} | {status} |".format(
@@ -86,10 +93,7 @@ def main():
                     actual="、".join(current_forms(topic_items[topic["topic_id"]])) or "无",
                     count=topic_counts[topic["topic_id"]],
                     status=(
-                        "方式已覆盖"
-                        if topic_counts[topic["topic_id"]] >= (5 if topic.get("practice_priority") == "优先练" else 3)
-                        and set(topic.get("practice_modes", [])) <= set(current_forms(topic_items[topic["topic_id"]]))
-                        else "需补题"
+                        "、".join(mode for mode in topic.get("practice_modes", []) if mode not in current_forms(topic_items[topic["topic_id"]])) or "目标方式已有题，仍需教学抽检"
                     ),
                 )
                 for topic in course["topics"]
@@ -97,10 +101,15 @@ def main():
         ])
     lines[8:8] = [
         "## 总体结论", "",
-        f"- 通用教材核心知识点：{all_topic_count}/{all_topic_count} 已建立讲解卡和练习入口。",
-        f"- 练习数量达到建议值：{all_count_ready}/{all_topic_count}。",
+        f"- 学习地图知识点：{all_topic_count}；有练习入口：{all_count_ready}。此处不是完整教材节次覆盖证明。",
+        f"- 已维护具体闭卷任务：{all_tasks}；从重点卡同步易错边界：{all_traps}。",
         f"- 练习方式已有对应题：{all_form_ready}/{all_form_count}。",
-        "- 数量和练习方式都满足时标为“方式已覆盖”；本报告只统计学习地图和题库，不能证明讲义教学完整、学生掌握或真实考频。", "",
+        "- 本报告只统计当前内容分布，不能把网站题量换算为湖南考试课程占比，也不能证明学生会独立作答。", "",
+        "## 题库分布与能力结构", "",
+        "同一题可能同时是简答和书面计算，下表各能力列不能相加当作总题量。填空单列能力，不强行归入选择判断。", "",
+        "| 课程 | 知识点 | 总题量 | 选择判断 | 简答 | 书面计算 | 程序阅读 | 独立代码/SQL编写 |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+        *course_rows, "",
     ]
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text("\n".join(lines), encoding="utf-8")

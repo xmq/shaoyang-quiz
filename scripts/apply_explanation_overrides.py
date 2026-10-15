@@ -35,9 +35,15 @@ def build(questions: list[dict], overrides: dict[str, str]) -> list[dict]:
     missing = sorted(set(overrides) - known_ids)
     if missing:
         raise ValueError("解析覆盖题号不存在：" + ", ".join(missing))
+    edits = json.loads((STAGING / "question_text_edits.json").read_text(encoding="utf-8"))
+    edit_ids = [item["id"] for item in edits]
+    if len(edit_ids) != len(set(edit_ids)) or set(edit_ids) - known_ids:
+        raise ValueError("题干选项修订包含重复或不存在的ID")
+    if any(set(item) - {"id", "stem", "options"} for item in edits):
+        raise ValueError("题干选项修订只允许id、stem和options字段")
+    by_id = {item["id"]: item for item in edits}
     return [
-        {**question, "explanation": overrides[question["id"]]}
-        if question.get("id") in overrides else question
+        {**question, **by_id.get(question["id"], {}), **({"explanation": overrides[question["id"]]} if question["id"] in overrides else {})}
         for question in questions
     ]
 

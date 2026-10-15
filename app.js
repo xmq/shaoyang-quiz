@@ -528,7 +528,7 @@ function announceAnswer(q, correct) {
   live.textContent = "";
   requestAnimationFrame(() => {
     if (q.type === "简答") {
-      live.textContent = correct ? "已标记为已掌握，核对要点已展开。" : "已标记为还需复习，参考答案已展开。";
+      live.textContent = correct ? "已记录本次能独立答出，已安排再次练习。" : "已标记为还需复习，参考答案已展开。";
       return;
     }
     live.textContent = correct ? "回答正确，解析已展开。" : `回答错误，正确答案是 ${q.answer}，解析已展开。`;
@@ -712,8 +712,8 @@ function renderShortAnswerQuestion(q, chosen) {
   const revealed = !!pending?.revealed;
   if (chosen) {
     return `<div class="short-answer short-graded">
-      <strong>${chosen === "掌握" ? "已掌握" : "还需复习"}</strong>
-      <span>已记录本题掌握状态。</span>
+      <strong>${chosen === "掌握" ? "本次能独立答出" : "还需复习"}</strong>
+      <span>已记录本次自评。</span>
     </div>`;
   }
   return `<div class="short-answer ${revealed ? "is-revealed" : ""}">
@@ -727,7 +727,7 @@ function renderShortAnswerQuestion(q, chosen) {
         ${studyLinksHtml(q)}
       </div>
       <div class="short-grade-actions" aria-label="简答题自评">
-        <button type="button" class="primary-btn" data-short-grade="掌握">已掌握</button>
+        <button type="button" class="primary-btn" data-short-grade="掌握">能独立答出</button>
         <button type="button" class="secondary-btn" data-short-grade="未掌握">还需复习</button>
       </div>` : `<div class="short-draft-actions">
         <button type="button" id="show-short" class="primary-btn">核对参考答案</button>
@@ -773,7 +773,7 @@ function feedbackHtml(q, chosen) {
     : "";
   const repairLinks = ok ? "" : studyLinksHtml(q, reviewMessage);
   return `<div class="feedback" role="status" aria-live="polite" tabindex="-1">
-    <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 已标记为已掌握" : "× 已标记为还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
+    <div class="feedback-label ${ok ? "ok" : "ng"}">${isShort ? (ok ? "✓ 本次能独立答出" : "× 还需复习") : (ok ? "✓ 正确" : "× 错误，" + answer)}${badge}</div>
     ${referenceAnswer}
     ${explanation}
     ${calculationRubric}

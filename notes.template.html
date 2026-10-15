@@ -196,6 +196,18 @@
     .mobile-module-context,
     .chapter-pager,
     .recall-card-pager { display: none; }
+    @media (min-width: 701px) {
+      .study.due-recall .chapter-section:not(.mobile-active),
+      .study.due-recall .recall-card:not(.mobile-active),
+      .study.due-recall .chapter-pager,
+      .study.due-recall .chapter-body > :not(.recall-card) { display: none; }
+      .study.due-recall .recall-card-pager { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; margin: 16px 0; }
+      .study.due-recall .recall-card-pager button { min-height: 42px; padding: 8px 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); cursor: pointer; }
+      .study.due-recall .recall-card-pager.is-rating { grid-template-columns: 1fr; }
+      .study.due-recall .is-rating > :not(.recall-rating) { display: none; }
+      .study.due-recall .recall-rating { display: none; }
+      .study.due-recall .is-rating .recall-rating { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    }
 
     .study-layout { display: grid; grid-template-columns: 238px minmax(0, 1fr); gap: 18px; align-items: start; }
     .study-content { min-width: 0; }
@@ -854,6 +866,7 @@
             <button type="button" id="chapter-prev">← 上一章</button>
             <button type="button" id="chapter-next">下一章 →</button>
           </nav>
+          <p id="recall-status" role="status" hidden></p>
           <nav class="recall-card-pager hidden" aria-label="笔记操作" hidden>
             <button type="button" id="recall-prev">← 上一张</button>
             <button type="button" class="reveal-card" id="reveal-card">显示答案</button>
@@ -870,6 +883,7 @@
     </section>
   </main>
 
+  <script src="./study-review.js"></script>
   <script>
     const items = __COURSE_DATA__;
     const colorMode = __COLOR_MODE__;
@@ -920,17 +934,11 @@
     let activeRecallIndex = 0;
     let recallRetryQueue = [];
     let recallRetryMode = false;
+    let dueRecallQueue = null;
     let searchTimer = null;
     let mobileNavReturnFocus = null;
     const readingProgressKey = "shaoyang-reading-progress-v1";
-    const recallRatings = (() => {
-      try {
-        const stored = JSON.parse(localStorage.getItem("shaoyang-recall-ratings-v2") || "{}");
-        return stored && typeof stored === "object" ? stored : {};
-      } catch {
-        return {};
-      }
-    })();
+    const recallRatings = StudyReview.read();
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -1005,7 +1013,7 @@
       if (!currentCourse) return [];
       const prefix = `${currentCourse.name}::`;
       return Object.entries(recallRatings)
-        .filter(([key, rating]) => key.startsWith(prefix) && rating?.value && rating.value !== "known")
+        .filter(([key, rating]) => key.startsWith(prefix) && StudyReview.isDue(rating))
         .map(([key]) => {
           const [, chapter, card] = key.split("::");
           return {chapterIndex: Number(chapter) - 1, cardIndex: Number(card) - 1};
@@ -1018,18 +1026,24 @@
       if (active) recallToggle.textContent = "显示全文";
       else {
         const pending = pendingRecallCards().length;
-        recallToggle.textContent = pending ? `回忆模式 · ${pending}` : "回忆模式";
+        recallToggle.textContent = pending ? `到期回忆 · ${pending}` : "回忆模式";
       }
     }
 
     function saveRecallRating(value) {
       const key = recallRatingKey();
       if (!key) return;
-      recallRatings[key] = {value, savedAt: new Date().toISOString()};
+      const rating = StudyReview.nextRating(recallRatings[key], value);
+      if (!rating) return;
+      recallRatings[key] = rating;
       try {
-        localStorage.setItem("shaoyang-recall-ratings-v2", JSON.stringify(recallRatings));
+        localStorage.setItem(StudyReview.key, JSON.stringify(recallRatings));
       } catch {}
       updateRecallToggleLabel();
+      const status = document.getElementById("recall-status");
+      const due = new Date(rating.nextReviewAt);
+      status.textContent = value === "again" ? "已安排稍后重忆" : `下次回忆：${due.toLocaleDateString("zh-CN", {month: "numeric", day: "numeric"})}`;
+      status.hidden = false;
     }
 
     function concealRecallCard(card) {
@@ -1324,7 +1338,7 @@
         tag.textContent = priority;
         const copy = document.createElement("span");
         copy.className = "topic-study-copy";
-        copy.textContent = `${topic.target_depth || "识记理解"} · ${(topic.practice_modes || ["客观辨析"]).join(" / ")}`;
+        copy.textContent = topic.study_task || `${topic.target_depth || "识记理解"} · ${(topic.practice_modes || ["客观辨析"]).join(" / ")}`;
         meta.append(tag, copy);
         point.insertAdjacentElement("afterend", meta);
         if (!topic.question_count) return;
@@ -1343,6 +1357,7 @@
     }
 
     function updateStudyPosition({replaceRoute = true, sectionId = ""} = {}) {
+      study.classList.toggle("due-recall", Boolean(dueRecallQueue));
       const sections = [...content.querySelectorAll(".chapter-section")];
       activeChapterIndex = Math.max(0, Math.min(activeChapterIndex, Math.max(0, sections.length - 1)));
       const section = sections[activeChapterIndex];
@@ -1364,11 +1379,17 @@
         mobileCardProgress.textContent = cards.length ? `笔记 ${activeRecallIndex + 1}/${cards.length}` : "";
         recallPrev.disabled = activeChapterIndex <= 0 && activeRecallIndex <= 0;
         recallNext.disabled = activeChapterIndex >= sections.length - 1 && activeRecallIndex >= cards.length - 1;
+        if (dueRecallQueue) {
+          mobileCardProgress.textContent = `待回忆 ${dueRecallQueue.length} 个`;
+          recallPrev.disabled = true;
+          recallNext.disabled = false;
+        }
+        recallNext.textContent = dueRecallQueue ? "稍后再练" : "下一张 →";
         const activeCard = cards[activeRecallIndex];
         const hiddenAnswer = activeCard && [...activeCard.querySelectorAll(".red, .blue, .black")].some((item) => !item.classList.contains("recall-revealed"));
         revealCard.textContent = hiddenAnswer ? "显示答案" : "答案已显示";
         revealCard.disabled = !activeCard || !hiddenAnswer;
-        const awaitingRating = Boolean(activeCard && !hiddenAnswer && mobileMedia.matches);
+        const awaitingRating = Boolean(activeCard && !hiddenAnswer && (mobileMedia.matches || dueRecallQueue));
         recallPager.classList.toggle("is-rating", awaitingRating);
         recallRating.classList.toggle("hidden", !awaitingRating);
       } else {
@@ -1432,6 +1453,7 @@
       activeRecallIndex = 0;
       recallRetryQueue = [];
       recallRetryMode = false;
+      dueRecallQueue = null;
       sections[activeChapterIndex].classList.remove("collapsed");
       sections[activeChapterIndex].querySelector(".chapter-toggle")?.setAttribute("aria-expanded", "true");
       updateStudyPosition({replaceRoute});
@@ -1482,6 +1504,10 @@
     }
 
     function advanceAfterRecallRating(value) {
+      if (dueRecallQueue) {
+        advanceDueRecall();
+        return;
+      }
       const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
       const cards = section ? [...section.querySelectorAll(".recall-card")] : [];
       if (!cards.length) return;
@@ -1514,6 +1540,21 @@
       }
       recallRetryMode = false;
       moveRecallCard(1);
+    }
+
+    function advanceDueRecall() {
+      dueRecallQueue.shift();
+      if (dueRecallQueue.length) {
+        const next = dueRecallQueue[0];
+        activeChapterIndex = next.chapterIndex;
+        setActiveRecallCard(next.cardIndex, {focus: true});
+      } else {
+        dueRecallQueue = null;
+        recallToggle.click();
+        const status = document.getElementById("recall-status");
+        status.textContent = "本轮回忆结束";
+        status.hidden = false;
+      }
     }
 
     function bindChapters() {
@@ -1650,6 +1691,8 @@
       recallRetryQueue = [];
       recallRetryMode = false;
       const routeParams = new URLSearchParams(location.hash.replace(/^#/, ""));
+      dueRecallQueue = null;
+      document.getElementById("recall-status").hidden = true;
       const routeTopic = routeParams.get("topic");
       requestedRecallTopic = routeTopic || "";
       const routeSection = routeParams.get("section");
@@ -1718,6 +1761,7 @@
       if (routeParams.has("chapter")) {
         requestAnimationFrame(() => content.querySelectorAll(".chapter-section")[activeChapterIndex]?.scrollIntoView({block: "start"}));
       }
+      if (colorMode && routeParams.get("recall") === "due") recallToggle.click();
     }
 
     function showDirectory() {
@@ -1931,7 +1975,7 @@
     chapterPrev.addEventListener("click", () => setActiveChapter(activeChapterIndex - 1, {focus: true}));
     chapterNext.addEventListener("click", () => setActiveChapter(activeChapterIndex + 1, {focus: true}));
     recallPrev.addEventListener("click", () => moveRecallCard(-1));
-    recallNext.addEventListener("click", () => moveRecallCard(1));
+    recallNext.addEventListener("click", () => dueRecallQueue ? advanceDueRecall() : moveRecallCard(1));
     revealCard.addEventListener("click", () => {
       const section = content.querySelectorAll(".chapter-section")[activeChapterIndex];
       const card = section?.querySelectorAll(".recall-card")[activeRecallIndex];
@@ -1960,6 +2004,7 @@
         filterContent();
       }
       const active = study.classList.toggle("recall-mode");
+      if (!active) dueRecallQueue = null;
       study.classList.toggle("color-notes-list", !active);
       recallPager.hidden = !active;
       recallPager.classList.toggle("hidden", !active);
@@ -1978,7 +2023,9 @@
           setActiveRecallCard(activeRecallIndex, {focus: true});
           return;
         }
-        const pending = pendingRecallCards().find((item) => sections[item.chapterIndex]?.querySelectorAll(".recall-card")[item.cardIndex]);
+        const pendingCards = pendingRecallCards().filter((item) => sections[item.chapterIndex]?.querySelectorAll(".recall-card")[item.cardIndex]);
+        dueRecallQueue = pendingCards.length ? pendingCards : null;
+        const pending = pendingCards[0];
         if (pending) {
           activeChapterIndex = pending.chapterIndex;
           activeRecallIndex = pending.cardIndex;

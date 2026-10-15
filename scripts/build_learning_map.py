@@ -352,6 +352,20 @@ def read_structure(course_name: str):
     return chapters, topics
 
 
+def read_traps(course_name: str) -> dict[str, str]:
+    """Read the maintained review-card boundary instead of duplicating it."""
+    traps = {}
+    title = None
+    lines = (ROOT / "color_notes" / f"{course_name}.md").read_text(encoding="utf-8").splitlines()
+    for line in lines:
+        if line.startswith("### "):
+            title = line[4:].strip()
+        elif title and "**易混易错**" in line:
+            text = line.split("**易混易错**", 1)[1].lstrip("：: ")
+            traps[title] = re.sub(r"[*`]", "", text)
+    return traps
+
+
 def build():
     current = json.loads(OUTPUT.read_text(encoding="utf-8"))
     existing = {course["course_name"]: course for course in current["courses"]}
@@ -389,10 +403,13 @@ def build():
         raise ValueError(f"题型指引含无效知识点：{', '.join(unknown_ids)}")
     for course in courses:
         course.setdefault("subjects", [course["subject"]])
+        traps = read_traps(course["course_name"])
         for topic in course["topics"]:
             guidance = guidance_for(topic["topic_id"])
             topic.update(guidance)
             topic["depth"] = guidance["target_depth"]
+            if topic["title"] in traps:
+                topic["common_trap"] = traps[topic["title"]]
     return {
         "schema_version": 3,
         "scope_policy": "各高校通用教材的共同核心；不纳入学校自编专题、特定软件版本、行业工具专项和高级选修章节。",

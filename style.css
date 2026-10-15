@@ -3178,6 +3178,15 @@ body:not(.platform-home) {
 .quiz-hub #subject-select,
 .quiz-hub #quiz-module-select,
 .quiz-hub .icon-btn { border-radius: 10px; }
+.home-review-tasks { margin-bottom: 18px; padding: 14px 16px; border: 1px solid #c7ddd8; border-radius: 14px; background: #f0f8f5; }
+.home-review-tasks[hidden] { display: none; }
+.home-review-tasks h2 { margin: 0 0 6px; font-size: 16px; }
+.home-review-tasks a { display: block; padding: 10px 0; color: #176f68; font-size: 14px; line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
+.home-review-tasks summary { padding: 8px 0; font-size: 13px; cursor: pointer; }
+@media (prefers-color-scheme: dark) {
+  .home-review-tasks { border-color: #31584f; background: #142e2a; }
+  .home-review-tasks a { color: #96eee0; }
+}
 .quiz-hub-dashboard { gap: 12px; }
 .quiz-hub .hub-tasks,
 .quiz-hub .hub-review { border-radius: 16px; box-shadow: 0 7px 22px rgba(16, 42, 67, .05); }

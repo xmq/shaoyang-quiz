@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500"><defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.box{fill:#fff;stroke:#64748b;stroke-width:2}.hi{fill:#e7f6f4;stroke:#176f68;stroke-width:3}.line{stroke:#2563eb;stroke-width:4;fill:none}.h{font:700 25px system-ui,sans-serif;fill:#102a43}.t{font:19px system-ui,sans-serif;fill:#334155}.m{font:19px ui-monospace,monospace;fill:#1d4ed8}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.box{fill:#17283b;stroke:#647b91}.hi{fill:#173f3c;stroke:#46d6c6}.line{stroke:#66a3ff}.h{fill:#edf4fb}.t{fill:#b8c5d1}.m{fill:#a9cbff}}</style></defs><rect class="bg" x="12" y="12" width="876" height="476" rx="24"/><text class="h" x="45" y="58">生产者—消费者：先等数量资源，再进互斥区</text><rect class="hi" x="325" y="190" width="250" height="105" rx="18"/><text class="h" x="450" y="235" text-anchor="middle">共享缓冲区</text><text class="m" x="450" y="270" text-anchor="middle">mutex=1</text><g class="box"><rect x="45" y="130" width="220" height="210" rx="18"/><rect x="635" y="130" width="220" height="210" rx="18"/></g><text class="h" x="155" y="170" text-anchor="middle">生产者</text><text class="m" x="70" y="215">P(empty)</text><text class="m" x="70" y="250">P(mutex)</text><text class="m" x="70" y="285">放入产品</text><text class="m" x="70" y="320">V(mutex),V(full)</text><text class="h" x="745" y="170" text-anchor="middle">消费者</text><text class="m" x="660" y="215">P(full)</text><text class="m" x="660" y="250">P(mutex)</text><text class="m" x="660" y="285">取出产品</text><text class="m" x="660" y="320">V(mutex),V(empty)</text><path class="line" d="M265 240H325M575 240H635"/><text class="t" x="45" y="405">初值：empty=N，full=0。等待empty/full时不能占住mutex。</text><text class="t" x="45" y="445">互斥保护共享状态；empty/full表达先后条件。</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 530" role="img" aria-labelledby="title desc">
+<title id="title">生产者消费者信号量顺序</title><desc id="desc">先等数量再进入互斥区。生产者等待空位，消费者等待产品，进出缓冲区均用mutex保护。</desc>
+<defs><style>.bg{fill:#f8fafc;stroke:#cbd5e1}.box{fill:#fff;stroke:#64748b}.hi{fill:#e7f6f4;stroke:#176f68}.h{font:700 19px system-ui,sans-serif;fill:#102a43}.t{font:17px system-ui,sans-serif;fill:#334155}.m{font:17px ui-monospace,monospace;fill:#1d4ed8}.line{stroke:#2563eb;stroke-width:2;fill:none}@media(prefers-color-scheme:dark){.bg{fill:#142234;stroke:#30455b}.box{fill:#17283b;stroke:#647b91}.hi{fill:#173f3c;stroke:#46d6c6}.h{fill:#edf4fb}.t{fill:#b8c5d1}.m{fill:#a9cbff}.line{stroke:#66a3ff}}</style></defs>
+<rect class="bg" x="6" y="6" width="378" height="518" rx="16"/>
+<text class="h" x="24" y="37">先等数量，再进入互斥区</text>
+<rect class="box" x="22" y="56" width="346" height="165" rx="12"/>
+<text class="h" x="38" y="85">生产者：等空位</text>
+<text class="m" x="38" y="115">P(empty) → P(mutex)</text>
+<text class="t" x="38" y="147">放入一件产品</text>
+<text class="m" x="38" y="179">V(mutex) → V(full)</text>
+<text class="t" x="38" y="205">先退出互斥区，再通知有产品</text>
+<path class="line" d="M195 222v16"/>
+<rect class="hi" x="60" y="239" width="270" height="49" rx="10"/>
+<text class="h" x="195" y="269" text-anchor="middle">共享缓冲区 · mutex=1</text>
+<path class="line" d="M195 289v16"/>
+<rect class="box" x="22" y="306" width="346" height="165" rx="12"/>
+<text class="h" x="38" y="335">消费者：等产品</text>
+<text class="m" x="38" y="365">P(full) → P(mutex)</text>
+<text class="t" x="38" y="397">取出一件产品</text>
+<text class="m" x="38" y="429">V(mutex) → V(empty)</text>
+<text class="t" x="38" y="455">先退出互斥区，再通知有空位</text>
+<text class="t" x="24" y="503">初始为空：empty=N，full=0</text>
+</svg>

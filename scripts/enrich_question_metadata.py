@@ -24,6 +24,17 @@ GAP_QUESTIONS = {
     question["id"]: question
     for question in json.loads((ROOT / "staging" / "course_gap_questions.json").read_text(encoding="utf-8"))
 }
+# The reviewed source banks already assign the ability from the actual task.
+# Keep those human labels; apply stem heuristics only to legacy imported items.
+MAINTAINED_QUESTIONS = {
+    question["id"]: question
+    for name in (
+        "applied_core_computer.json", "applied_network_application.json", "applied_electronics.json",
+        "supplement_core_thin.json", "supplement_electronics_practical.json",
+        "university_applied.json", "university_corecs.json", "university_electronics.json",
+    )
+    for question in json.loads((ROOT / "staging" / name).read_text(encoding="utf-8"))
+}
 REVIEWED_TOPIC_OVERRIDES = {
     item["id"]: item["topic_id"]
     for item in json.loads((ROOT / "staging" / "topic_override_review_other.json").read_text(encoding="utf-8"))
@@ -41,6 +52,9 @@ NETWORK_TOPIC_BY_ID = {topic["topic_id"]: topic for topic in NETWORK_TOPICS}
 # 旧题题干过短或包含跨层术语时，关键词分类会把首题放到错误专题。
 # 这里只保留能够从题干解题任务直接确认的覆盖。
 NETWORK_TOPIC_OVERRIDES = {
+    "cg-08-s1-q13": "net.frames-switching",
+    "zg-55249": "net.overview",
+    "zg-61952": "net.dns-dhcp",
     "cg-08-s1-q30": "net.flow-congestion",
     "cg-08-s1-q8": "net.overview",
     "cg-08-s1-q96": "net.ethernet-wifi",
@@ -1036,7 +1050,7 @@ def classify_ability(question: dict) -> str:
     qtype = str(question.get("type") or "")
     # 学科名称只是分类，不是题目能力证据。若把“计算机组成原理”中的
     # “原理”用于匹配，会把普通名词识别题批量误标成机制解释题。
-    text = question_text(question, include_options=False, include_subject=False)
+    text = normalized_text(question.get("stem"))
 
     if re.search(r"如图|图中|示意图|拓扑图|波形图|电路图|逻辑图|真值表|截图", text):
         return "读图排障"
@@ -1047,8 +1061,7 @@ def classify_ability(question: dict) -> str:
     if qtype == "简答" and re.search(r"编写(?:一段)?(?:程序|代码)|写一段.+代码|使用.+编程语言|用(?:python|c\+\+|c语言|java).{0,8}编写", text):
         return "代码编写"
     if subject == "编程语言" and (
-        qtype == "填空"
-        or re.search(
+        re.search(
             r"程序填空|程序段|以下程序|下列程序|代码|执行结果|运行结果|输出结果|输出为|"
             r"循环次数|变量.+值|表达式.+值|printf|scanf|print\s*\(|range\s*\(|len\s*\(",
             text,
@@ -1155,7 +1168,7 @@ def add_scoring_metadata(question: dict, metadata: dict[str, object]) -> dict[st
 
 
 def expected_metadata(question: dict) -> dict[str, object]:
-    curated = NETWORK_QUESTIONS.get(question.get("id")) or GAP_QUESTIONS.get(question.get("id"))
+    curated = NETWORK_QUESTIONS.get(question.get("id")) or GAP_QUESTIONS.get(question.get("id")) or MAINTAINED_QUESTIONS.get(question.get("id"))
     if curated:
         source = curated
         metadata = {key: source[key] for key in ("knowledge_point", "ability", "difficulty")}

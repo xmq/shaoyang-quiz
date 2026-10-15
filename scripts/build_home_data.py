@@ -18,6 +18,10 @@ def render():
             "subject": course["subject"],
             "subjects": course.get("subjects", [course["subject"]]),
             "chapter_count": len(course.get("chapters", [])),
+            "review_card_counts": [
+                sum(topic["chapter_id"] == chapter["chapter_id"] for topic in course.get("topics", []))
+                for chapter in course.get("chapters", [])
+            ],
             "priority_topics": [
                 topic["topic_id"] for topic in course.get("topics", [])
                 if topic.get("practice_priority") == "优先练"

@@ -8907,5 +8907,227 @@
     "points": 1
    }
   ]
+ },
+ {
+  "id": "gap-exam-os-semaphore",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "同步、互斥与信号量",
+  "stem": "缓冲区容量为2，初始为空，empty=2、full=0、mutex=1。采用记录型信号量，P先减1、结果小于0则阻塞，V先加1并在需要时唤醒等待者。生产者、消费者均先等待资源，再申请mutex。请写出两者完整P/V顺序；没有并发干扰时，生产者放入两件后的三个信号量各为多少？此时第三次P(empty)后是什么状态？消费者完整取出一件并唤醒该生产者，但该生产者尚未继续时，三个值各为多少？",
+  "options": {},
+  "answer": "生产者：P(empty)、P(mutex)、放入、V(mutex)、V(full)。消费者：P(full)、P(mutex)、取出、V(mutex)、V(empty)。放入两件后为(0,2,1)；第三次P(empty)使empty=-1，生产者阻塞；消费者取一件并V(empty)后为(0,1,1)，生产者已被唤醒但尚未继续。",
+  "explanation": "资源等待在mutex之前，避免持有锁却等对方释放资源。消费者V(empty)将-1增加为0，唤醒等待者；这个空位已预约给被唤醒的生产者，因此empty不是1。信号量值与实际空位数不能在存在等待或预约时直接等同。",
+  "subject": "操作系统",
+  "source_chapter": "同步、互斥与信号量",
+  "adaptation_note": "依据现有大学教材同步讲义原创独立作答任务，不冒充湖南真题。",
+  "topic_source": "manual",
+  "topic_id": "operating-system.t06",
+  "knowledge_point": "进程调度与同步",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "生产者与消费者资源等待、互斥和释放顺序正确",
+    "points": 1
+   },
+   {
+    "criterion": "写出放两件后的(0,2,1)",
+    "points": 1
+   },
+   {
+    "criterion": "第三次申请后empty=-1且阻塞",
+    "points": 1
+   },
+   {
+    "criterion": "取出唤醒后(0,1,1)，说明预约空位",
+    "points": 1
+   }
+  ]
+ },
+ {
+  "id": "gap-exam-os-scheduling",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "处理机调度",
+  "stem": "单核系统三个进程P1、P2、P3的到达时间分别为0、1、2，运行时间分别为6、2、1。采用非抢占式短作业优先SJF，不计切换开销。请画出执行时间线，计算每个进程的周转时间、等待时间及平均等待时间，并说明P2为何不能在时刻1抢占CPU。",
+  "options": {},
+  "answer": "执行顺序P1[0,6)、P3[6,7)、P2[7,9)。P1周转6、等待0；P2周转8、等待6；P3周转5、等待4。平均等待时间(0+6+4)/3=10/3。非抢占SJF只在CPU空闲时从已到达作业中选择，P1运行中不能被P2抢占。",
+  "explanation": "时刻0只有P1到达，因此先运行P1；时刻6选择运行时间更短的P3。周转=完成-到达，等待=周转-运行。不能把尚未到达的P3放在最前，也不能套用抢占式最短剩余时间规则。",
+  "subject": "操作系统",
+  "source_chapter": "处理机调度",
+  "adaptation_note": "依据现有大学教材同步讲义原创独立作答任务，不冒充湖南真题。",
+  "topic_source": "manual",
+  "topic_id": "operating-system.t05",
+  "knowledge_point": "进程调度与同步",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "写出P1、P3、P2及正确时间边界",
+    "points": 1
+   },
+   {
+    "criterion": "各进程周转时间正确",
+    "points": 1
+   },
+   {
+    "criterion": "各进程等待时间与平均值正确",
+    "points": 1
+   },
+   {
+    "criterion": "说明非抢占与已到达约束",
+    "points": 1
+   }
+  ]
+ },
+ {
+  "id": "gap-exam-os-address",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "连续分配、分页与分段",
+  "stem": "按字节编址，页大小2048 B。某进程逻辑地址为6300，第3号逻辑页有效且映射到第7号物理页框。请求访问时TLB未命中。请闭卷写出地址变换关系，求页号、页内偏移和物理地址；解释TLB未命中为何不能直接判为缺页。",
+  "options": {},
+  "answer": "页号p=floor(A/S)=3，页内偏移d=A mod S=156。页框号f=7，物理地址f×S+d=7×2048+156=14492。TLB未命中仅说明高速缓存中没有该映射，仍可查页表；本题页有效且在内存，不发生缺页。",
+  "explanation": "6300=3×2048+156。分页只替换页号，偏移不变。TLB与页表承担不同层次的映射查询，不能把TLB未命中、页表有效位无效和页面不在内存混为一谈。",
+  "subject": "操作系统",
+  "source_chapter": "连续分配、分页与分段",
+  "adaptation_note": "依据现有大学教材同步讲义原创独立作答任务，不冒充湖南真题。",
+  "topic_source": "manual",
+  "topic_id": "operating-system.t09",
+  "knowledge_point": "内存与虚拟存储",
+  "ability": "直接计算",
+  "difficulty": "应用",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "写出整除与取余关系",
+    "points": 1
+   },
+   {
+    "criterion": "页号3、偏移156正确",
+    "points": 1
+   },
+   {
+    "criterion": "物理地址14492正确",
+    "points": 1
+   },
+   {
+    "criterion": "区分TLB未命中与缺页",
+    "points": 1
+   }
+  ]
+ },
+ {
+  "id": "gap-exam-db-groupjoin",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "SQL筛选、分组与聚合",
+  "stem": "有Dept(dept_id主键,dept_name)和Employee(emp_id主键,dept_id外键,salary)。请独立写SQL列出每个部门编号、名称和工资不低于5000的员工数，包括没有达标员工的部门，结果按部门编号升序。说明工资条件应放在哪里，以及为什么不能用COUNT(*)代替COUNT(e.emp_id)。",
+  "options": {},
+  "answer": "SELECT d.dept_id,d.dept_name,COUNT(e.emp_id) AS n FROM Dept d LEFT JOIN Employee e ON e.dept_id=d.dept_id AND e.salary>=5000 GROUP BY d.dept_id,d.dept_name ORDER BY d.dept_id; 工资条件放ON，COUNT(e.emp_id)忽略外连接补出的NULL；COUNT(*)会把补出的行也计为1。",
+  "explanation": "先保留所有部门，再仅匹配达标员工。把工资条件放WHERE会过滤没有匹配员工的补NULL行，丢失应显示0的部门。按标准分组规则，两个非聚合输出列都列入GROUP BY。",
+  "subject": "数据库",
+  "source_chapter": "SQL筛选、分组与聚合",
+  "adaptation_note": "依据现有大学教材同步讲义原创独立作答任务，不冒充湖南真题。",
+  "topic_source": "manual",
+  "topic_id": "database.t07",
+  "knowledge_point": "SQL查询",
+  "ability": "SQL编写",
+  "difficulty": "应用",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "以Dept为左表并使用LEFT JOIN",
+    "points": 1
+   },
+   {
+    "criterion": "ON中正确连接和筛选工资",
+    "points": 1
+   },
+   {
+    "criterion": "COUNT非空主键并正确分组排序",
+    "points": 1
+   },
+   {
+    "criterion": "说明WHERE和COUNT(*)的陷阱",
+    "points": 1
+   }
+  ]
+ },
+ {
+  "id": "gap-exam-db-notexists",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "连接、子查询与集合运算",
+  "stem": "Reader(reader_id主键,reader_name)与Borrow(reader_id可为空,book_id)。请独立写SQL查询从未借书的读者编号和姓名，要求在Borrow.reader_id含NULL时仍正确。解释NOT EXISTS如何针对当前读者判断，以及直接用NOT IN可能产生什么问题。",
+  "options": {},
+  "answer": "SELECT r.reader_id,r.reader_name FROM Reader r WHERE NOT EXISTS (SELECT 1 FROM Borrow b WHERE b.reader_id=r.reader_id); 对每位读者检查是否存在与其编号匹配的借阅记录，无匹配才保留。NOT IN子查询若含NULL，比较可能为UNKNOWN，导致本应保留的读者也被过滤。",
+  "explanation": "相关条件b.reader_id=r.reader_id不可遗漏，否则会变成判断整张Borrow表是否为空。NULL借阅记录不与任何非空主键相等，不影响NOT EXISTS按匹配记录判断。",
+  "subject": "数据库",
+  "source_chapter": "连接、子查询与集合运算",
+  "adaptation_note": "依据现有大学教材同步讲义原创独立作答任务，不冒充湖南真题。",
+  "topic_source": "manual",
+  "topic_id": "database.t08",
+  "knowledge_point": "SQL查询",
+  "ability": "SQL编写",
+  "difficulty": "应用",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "SQL查询正确输出读者列",
+    "points": 1
+   },
+   {
+    "criterion": "NOT EXISTS与外层读者正确关联",
+    "points": 1
+   },
+   {
+    "criterion": "解释逐读者存在性判断",
+    "points": 1
+   },
+   {
+    "criterion": "解释NOT IN遇NULL的三值逻辑问题",
+    "points": 1
+   }
+  ]
+ },
+ {
+  "id": "gap-exam-db-transfer",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "chapter": "ACID与事务边界",
+  "stem": "Account(id主键,balance)中账户1向账户2转账100。假定两账户存在、余额充足，且本题没有并发更新。请写出包含事务开始、两次UPDATE和成功提交的SQL流程；若第二次UPDATE失败应怎样处理？说明为何第一次扣款后不能先提交。事务开始语句可采用所学DBMS的合法写法。",
+  "options": {},
+  "answer": "START TRANSACTION; UPDATE Account SET balance=balance-100 WHERE id=1; UPDATE Account SET balance=balance+100 WHERE id=2; COMMIT; 应用仅在两次更新均成功时提交，任一步失败则ROLLBACK整个事务，不再执行成功分支的COMMIT。第一次扣款不能单独提交，否则第二步失败时会留下扣款成功、入账失败的半完成状态。",
+  "explanation": "答案是带成功/失败分支的执行流程，不是让COMMIT和ROLLBACK顺序无条件执行。BEGIN或BEGIN TRANSACTION等写法依DBMS接受。原子性保证本次转账整体成功或整体撤销；并发和余额竞争在题干已排除，实际系统还需相应并发控制。",
+  "subject": "数据库",
+  "source_chapter": "ACID与事务边界",
+  "adaptation_note": "依据现有大学教材同步讲义原创独立作答任务，不冒充湖南真题。",
+  "topic_source": "manual",
+  "topic_id": "database.t15",
+  "knowledge_point": "事务与并发控制",
+  "ability": "SQL编写",
+  "difficulty": "应用",
+  "max_score": 4,
+  "rubric": [
+   {
+    "criterion": "合法事务开始并正确扣款、入账",
+    "points": 1
+   },
+   {
+    "criterion": "仅两步成功后提交",
+    "points": 1
+   },
+   {
+    "criterion": "失败回滚整体且不再提交",
+    "points": 1
+   },
+   {
+    "criterion": "用原子性解释不能中途提交",
+    "points": 1
+   }
+  ]
  }
 ]

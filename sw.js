@@ -12,6 +12,7 @@ const CORE_ASSETS = [
   "./build-meta.js",
   "./home-data.js",
   "./home.js",
+  "./study-review.js",
   "./reset-data.js",
   "./app.js",
   "./quiz-loader.js",

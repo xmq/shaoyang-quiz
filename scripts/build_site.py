@@ -22,6 +22,7 @@ STATIC_FILES = (
     "app.js",
     "quiz-loader.js",
     "home.js",
+    "study-review.js",
     "reset-data.js",
     "question-media.js",
     "sw.js",

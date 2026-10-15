@@ -6,6 +6,8 @@ split into smaller explanation, calculation and application tasks so that a
 learner can master one step at a time.
 """
 
+from topic_study_tasks import STUDY_TASKS
+
 OBJECTIVE = "客观辨析"
 SHORT_ANSWER = "简答说明"
 CALCULATION = "直接计算"
@@ -220,16 +222,16 @@ set_course_guidance(
 )
 set_course_guidance(
     "operating-system", 13,
-    priority=(3, 4, 5, 6, 7, 8, 9, 10, 13),
+    priority=(3, 4, 5, 6, 7, 8, 9, 10, 11, 13),
     short_answer=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13),
     calculation=(5, 8, 9, 10, 13),
-    application=(4, 6, 7, 9, 10, 13),
+    application=(4, 5, 6, 7, 8, 9, 10, 11, 13),
     code=(6,),
-    supplement=(2, 12),
+    supplement=(),
 )
 set_course_guidance(
     "database", 18,
-    priority=(2, 4, 5, 7, 8, 10, 12, 13, 15, 16),
+    priority=(2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 15, 16, 17),
     short_answer=tuple(range(1, 19)),
     calculation=(4, 5, 7, 8, 10, 12, 13, 14, 16, 17),
     application=(2, 3, 5, 8, 11, 12, 13, 14, 15, 16, 17, 18),
@@ -238,12 +240,12 @@ set_course_guidance(
 )
 set_course_guidance(
     "data-structures", 24,
-    priority=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 16, 18, 20, 21, 22),
+    priority=(1, 3, 4, 5, 8, 9, 10, 12, 14, 15, 16, 18, 21, 23),
     short_answer=tuple(range(1, 25)),
     calculation=(1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23),
     application=(2, 3, 4, 5, 6, 14, 15, 16, 17, 24),
     code=(2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23),
-    supplement=(7, 13),
+    supplement=(7,),
 )
 set_course_guidance(
     "programming", 16,
@@ -259,7 +261,7 @@ set_course_guidance(
     priority=(2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14),
     short_answer=(1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14),
     calculation=(2, 3, 4, 5, 7, 9, 10, 11, 12, 14),
-    application=(2, 5, 7, 9, 10, 11, 13, 14),
+    application=(2, 4, 5, 6, 7, 9, 10, 11, 13, 14),
     supplement=(8, 12),
 )
 set_course_guidance(
@@ -314,10 +316,14 @@ set_course_guidance(
     "information-security", 17,
     priority=(1, 2, 4, 5, 7, 8, 9, 10, 11, 14),
     short_answer=tuple(range(1, 18)),
-    application=(7, 8, 11, 12, 13, 14, 15, 16, 17),
+    application=(7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17),
     code=(13,),
     supplement=(3, 16, 17),
 )
+
+# Process and calculation tasks require early retrieval practice even when the
+# bank currently contains few questions. Bank size never determines priority.
+KEY_TOPICS.update({"net.symbol-multiplexing", "net.crc", "net.arq-window", "net.rip-update"})
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]
@@ -338,7 +344,7 @@ def guidance_for(topic_id: str) -> dict:
     target_depth = "综合应用" if topic_id in APPLICATION_TOPICS else (
         "直接应用" if topic_id in (SHORT_ANSWER_TOPICS | CALCULATION_TOPICS | CODE_TOPICS) else "识记理解"
     )
-    return {
+    result = {
         "core_status": "必学",
         "practice_priority": priority,
         "target_depth": target_depth,
@@ -346,8 +352,11 @@ def guidance_for(topic_id: str) -> dict:
         "practice_modes": practice_modes,
         "short_answer": topic_id in SHORT_ANSWER_TOPICS,
     }
+    if topic_id in STUDY_TASKS:
+        result["study_task"] = STUDY_TASKS[topic_id]
+    return result
 
 
 def validate_guidance(topic_ids: set[str]) -> list[str]:
-    configured = KEY_TOPICS | SUPPLEMENT_TOPICS | SHORT_ANSWER_TOPICS | CALCULATION_TOPICS | APPLICATION_TOPICS | CODE_TOPICS
+    configured = KEY_TOPICS | SUPPLEMENT_TOPICS | SHORT_ANSWER_TOPICS | CALCULATION_TOPICS | APPLICATION_TOPICS | CODE_TOPICS | set(STUDY_TASKS)
     return sorted(configured - topic_ids)

@@ -208,9 +208,64 @@
     const courseName = selectedCourseName();
     const lectureProgress = readLectureProgress();
     updateMobileLinks(courseName, lectureProgress);
-    buildCourseGrid(readProgress(), lectureProgress);
+    const progress = readProgress();
+    buildCourseGrid(progress, lectureProgress);
+    renderReviewTasks(progress);
     bindCourseLinks();
     applyCourseFilter(activeFilter);
+  }
+
+  function renderReviewTasks(progress) {
+    const root = document.getElementById("home-review-tasks");
+    const ratings = StudyReview.read();
+    const entries = [];
+    const now = Date.now();
+    COURSE_INDEX.forEach((course) => {
+      const dueCards = Object.entries(ratings).filter(([key, value]) => {
+        const [name, chapter, card] = key.split("::");
+        return name === course.name && Number.isInteger(Number(chapter)) && Number(chapter) > 0
+          && Number.isInteger(Number(card)) && Number(card) > 0
+          && Number(card) <= (course.review_card_counts?.[Number(chapter) - 1] || 0)
+          && StudyReview.isDue(value, now);
+      });
+      const subjects = course.subjects || [course.subject];
+      const dueQuestions = QUESTION_INDEX.filter((question) => {
+        if (!subjects.includes(question.subject) || progress.flagged?.[question.id]) return false;
+        const meta = progress.reviewMeta?.[question.id];
+        return meta ? Date.parse(meta.nextReviewAt) <= now : Boolean(progress.wrong?.[question.id]);
+      }).length;
+      if (dueCards.length) {
+        const [, chapter, card] = dueCards[0][0].split("::");
+        const params = new URLSearchParams({course: course.name, chapter, card, recall: "due"});
+        entries.push({label: `${course.name} · 回忆 ${dueCards.length} 个知识点`, href: `./color-notes.html#${params}`, count: dueCards.length});
+      }
+      if (dueQuestions) entries.push({label: `${course.name} · 重练 ${dueQuestions} 题`, href: `./quiz.html?${new URLSearchParams({course: course.name, mode: "review"})}`, count: dueQuestions});
+    });
+    root.hidden = !entries.length;
+    root.replaceChildren();
+    if (!entries.length) return;
+    const heading = document.createElement("h2");
+    heading.textContent = "待复习";
+    root.appendChild(heading);
+    entries.sort((left, right) => right.count - left.count).forEach((entry, index) => {
+      const link = document.createElement("a");
+      link.href = entry.href;
+      link.textContent = `${entry.label} →`;
+      if (index < 3) root.appendChild(link);
+    });
+    if (entries.length > 3) {
+      const more = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = `其余 ${entries.length - 3} 项`;
+      more.appendChild(summary);
+      entries.slice(3).forEach((entry) => {
+        const link = document.createElement("a");
+        link.href = entry.href;
+        link.textContent = `${entry.label} →`;
+        more.appendChild(link);
+      });
+      root.appendChild(more);
+    }
   }
 
   function registerServiceWorker() {
@@ -234,7 +289,7 @@
   renderHome();
   window.addEventListener("pageshow", renderHome);
   window.addEventListener("storage", (event) => {
-    if (!event.key || ["shaoyang-selected-course-v1", "shaoyang-last-learning", "shaoyang-reading-progress-v1"].includes(event.key)) renderHome();
+    if (!event.key || [...STORE_KEYS, StudyReview.key, "shaoyang-selected-course-v1", "shaoyang-last-learning", "shaoyang-reading-progress-v1"].includes(event.key)) renderHome();
   });
   registerServiceWorker();
 })();
