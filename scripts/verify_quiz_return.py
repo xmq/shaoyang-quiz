@@ -20,6 +20,12 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *_args):
         pass
 
+    def handle(self):
+        try:
+            super().handle()
+        except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
+            pass
+
 
 def current_question(page):
     return page.evaluate("getPool().find(q => q.id === state.currentId)")

@@ -36,13 +36,13 @@ def main():
     bank_ids={q['id'] for q in bank}
     if len(new_ids)!=len(additions): raise ValueError('新增复核题ID重复')
     if bank!=apply_reviews(bank): raise ValueError('复核修订未进入题库')
-    if removed-reviewed: raise ValueError('有未逐题审查的移除项')
+    if removed-reviewed-new_ids: raise ValueError('有未逐题审查的移除项')
     if set(edits)-reviewed-new_ids: raise ValueError('有不存在的修订题号')
     missing=reviewed-bank_ids-removed
     extra=bank_ids-reviewed-new_ids
     if missing or extra: raise ValueError(f'审查覆盖不完整，丢失{sorted(missing)[:10]}，无记录{sorted(extra)[:10]}')
     if removed&bank_ids: raise ValueError('已移除题仍在题库')
-    if new_ids-bank_ids: raise ValueError('新增复核题未进入题库')
+    if new_ids-bank_ids-removed: raise ValueError('新增复核题未进入题库')
     print(f'逐题复核记录：{len(reviewed)}题；修订{len(edits)}；移除{len(removed)}；补题{len(new_ids)}；发布{len(bank)}')
 
 

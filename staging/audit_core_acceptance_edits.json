@@ -1,0 +1,100 @@
+[
+  {
+    "id": "sp-core-ds-011",
+    "stem": "下列应用与数据结构的对应合理的有（ ）。",
+    "explanation": "栈保存函数调用现场，普通队列按到达顺序服务，双端队列支持两端插删，优先队列按紧急程度选下一项。这里比较操作需求，不据优先队列的某种实现把它强行归为线性或树形存储。"
+  },
+  {
+    "id": "zg-56841",
+    "stem": "按把数据查询与数据更新统称为“数据操纵”的广义教材口径，下列不属于SQL数据操纵功能的是（ ）。",
+    "explanation": "本题明确采用广义数据操纵口径，包含SELECT查询及INSERT、DELETE、UPDATE等更新；CREATE TABLE定义表结构，属于数据定义，故选B。有些分类把SELECT单列DQL，不应混用分类口径。"
+  },
+  {
+    "id": "cg-05-s1-q13",
+    "ability": "直接计算"
+  },
+  {
+    "id": "cg-05-s1-q30",
+    "ability": "直接计算"
+  },
+  {
+    "id": "cg-05-s1-q35",
+    "ability": "直接计算"
+  },
+  {
+    "id": "cg-05-s1-q40",
+    "ability": "直接计算"
+  },
+  {
+    "id": "zg-4542",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-core-ds-023",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-core-ds-024",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-core-ds-025",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uc-ds-002",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uc-ds-004",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uc-ds-005",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uc-ds-008",
+    "ability": "直接计算"
+  },
+  {
+    "id": "gap-audit26-core-ds-circular-trace",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-os-005",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-os-008",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uc-os-002",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uc-os-003",
+    "ability": "直接计算"
+  },
+  {
+    "id": "gap-audit26-core-os-file-allocation",
+    "ability": "直接计算"
+  },
+  {
+    "id": "cg-05-s1-q26",
+    "ability": "过程描述"
+  },
+  {
+    "id": "zg-65217",
+    "ability": "过程描述"
+  },
+  {
+    "id": "sp-core-ds-026",
+    "ability": "过程描述"
+  },
+  {
+    "id": "uc-os-004",
+    "ability": "过程描述"
+  }
+]

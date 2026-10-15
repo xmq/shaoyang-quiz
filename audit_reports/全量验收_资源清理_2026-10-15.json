@@ -1,0 +1,210 @@
+{
+  "removed_question_media_ids": [
+    "cg-03-s1-q15",
+    "cg-03-s2-q25",
+    "cg-04-s3-q19",
+    "cg-11-s1-q45",
+    "cg-11-s1-q49",
+    "cg-11-s1-q51",
+    "cg-11-s1-q57",
+    "cg-11-s1-q60",
+    "cg-11-s1-q7",
+    "cg-12-s1-q1",
+    "cg-12-s1-q1-dup2",
+    "cg-12-s1-q45",
+    "cg-12-s1-q53",
+    "cg-12-s1-q57",
+    "cg-13-s1-q22-dup2",
+    "cg-13-s1-q29-dup2",
+    "cg-13-s1-q39-dup2",
+    "cg-13-s1-q40-dup2",
+    "cg-13-s1-q41-dup2",
+    "cg-13-s1-q7-dup2",
+    "cg-13-s2-q8",
+    "cg-14-s1-q10",
+    "cg-14-s1-q13",
+    "cg-14-s1-q35",
+    "cg-14-s1-q36",
+    "cg-14-s1-q39",
+    "cg-14-s1-q40",
+    "cg-14-s1-q8",
+    "cg-15-s1-q58",
+    "dy-aad00e4b",
+    "dy-c4f581f2",
+    "dy-fb82fec0",
+    "zg-11548",
+    "zg-19054",
+    "zg-31523",
+    "zg-33208",
+    "zg-41584",
+    "zg-53190",
+    "zg-66902",
+    "zg-69198",
+    "zg-69663",
+    "zg-71222",
+    "zg-73238",
+    "zg-77598",
+    "zg-79657",
+    "zg-9228"
+  ],
+  "removed_files": [
+    "media/cg-03-s1-q15.svg",
+    "media/cg-03-s2-q25.svg",
+    "media/cg-04-s3-q19.svg",
+    "media/cg-11-s1-q45.svg",
+    "media/cg-11-s1-q49.svg",
+    "media/cg-11-s1-q51.svg",
+    "media/cg-11-s1-q57.svg",
+    "media/cg-11-s1-q60.svg",
+    "media/cg-11-s1-q7.svg",
+    "media/cg-12-s1-q1-dup2.svg",
+    "media/cg-12-s1-q1.svg",
+    "media/cg-12-s1-q45.svg",
+    "media/cg-12-s1-q53.svg",
+    "media/cg-12-s1-q57.svg",
+    "media/cg-13-s1-q22-dup2.svg",
+    "media/cg-13-s1-q29-dup2.svg",
+    "media/cg-13-s1-q39-dup2.svg",
+    "media/cg-13-s1-q40-dup2.svg",
+    "media/cg-13-s1-q41-dup2.svg",
+    "media/cg-13-s1-q7-dup2.svg",
+    "media/cg-13-s2-q8.svg",
+    "media/cg-14-s1-q10.svg",
+    "media/cg-14-s1-q13.svg",
+    "media/cg-14-s1-q35.svg",
+    "media/cg-14-s1-q36.svg",
+    "media/cg-14-s1-q39.svg",
+    "media/cg-14-s1-q40.svg",
+    "media/cg-14-s1-q8.svg",
+    "media/cg-15-s1-q58.svg",
+    "media/dy-aad00e4b.svg",
+    "media/dy-c4f581f2.svg",
+    "media/dy-fb82fec0.svg",
+    "media/zg-11548.svg",
+    "media/zg-19054.svg",
+    "media/zg-31523.svg",
+    "media/zg-33208.svg",
+    "media/zg-41584.svg",
+    "media/zg-53190.svg",
+    "media/zg-66902.svg",
+    "media/zg-69198.svg",
+    "media/zg-69663.svg",
+    "media/zg-71222.svg",
+    "media/zg-73238.svg",
+    "media/zg-77598.svg",
+    "media/zg-79657.svg",
+    "media/zg-9228.svg",
+    "media/cg-02-s1-q24.svg",
+    "media/cg-02-s1-q28.svg",
+    "media/cg-02-s2-q9.svg",
+    "media/cg-02-s3-q8.svg",
+    "media/cg-12-s1-q10-dup2.svg",
+    "media/cg-12-s1-q22-dup2.svg",
+    "media/cg-12-s1-q32-dup2.svg",
+    "media/cg-13-s1-q8-dup2.svg",
+    "media/cg-13-s1-q17-dup2.svg",
+    "media/cg-13-s1-q21-dup2.svg",
+    "media/cg-13-s1-q27-dup2.svg",
+    "media/cg-14-s1-q20.svg",
+    "media/cg-14-s1-q21.svg",
+    "media/cg-14-s1-q22.svg",
+    "media/cg-14-s1-q25.svg",
+    "media/cg-14-s1-q32.svg",
+    "media/cg-14-s1-q24-dup2.svg",
+    "media/zg-68464.svg",
+    "media/zg-9930.svg",
+    "media/dy-a3c255c8.svg"
+  ],
+  "kept_question_media": 1,
+  "kept_referenced_assets": 144,
+  "placeholder_review": {
+    "reviewed": 21,
+    "kept": 1,
+    "removed": {
+      "cg-02-s1-q24": {
+        "src": "./media/cg-02-s1-q24.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-02-s1-q28": {
+        "src": "./media/cg-02-s1-q28.svg",
+        "reason": "题目已改为账号认证，旧虚拟人像不对应"
+      },
+      "cg-02-s2-q9": {
+        "src": "./media/cg-02-s2-q9.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-02-s3-q8": {
+        "src": "./media/cg-02-s3-q8.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-12-s1-q10-dup2": {
+        "src": "./media/cg-12-s1-q10-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-12-s1-q22-dup2": {
+        "src": "./media/cg-12-s1-q22-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-12-s1-q32-dup2": {
+        "src": "./media/cg-12-s1-q32-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-13-s1-q8-dup2": {
+        "src": "./media/cg-13-s1-q8-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-13-s1-q17-dup2": {
+        "src": "./media/cg-13-s1-q17-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-13-s1-q21-dup2": {
+        "src": "./media/cg-13-s1-q21-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-13-s1-q27-dup2": {
+        "src": "./media/cg-13-s1-q27-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-14-s1-q20": {
+        "src": "./media/cg-14-s1-q20.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-14-s1-q21": {
+        "src": "./media/cg-14-s1-q21.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-14-s1-q22": {
+        "src": "./media/cg-14-s1-q22.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-14-s1-q25": {
+        "src": "./media/cg-14-s1-q25.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-14-s1-q32": {
+        "src": "./media/cg-14-s1-q32.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "cg-14-s1-q24-dup2": {
+        "src": "./media/cg-14-s1-q24-dup2.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "zg-68464": {
+        "src": "./media/zg-68464.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "zg-9930": {
+        "src": "./media/zg-9930.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      },
+      "dy-a3c255c8": {
+        "src": "./media/dy-a3c255c8.svg",
+        "reason": "题目已独立描述条件，旧通用界面或答案式示意不提供必要解题信息"
+      }
+    },
+    "specific_mismatch": {
+      "zg-68464": "图像压缩题配的是Excel表格界面",
+      "cg-02-s1-q28": "账号安全题配的是虚拟三维人像"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "gap-full-comm-line-clock",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "communication.t06",
+    "source_chapter": "communication.t06",
+    "adaptation_note": "全量验收补充的原创边界辨析，不是招聘原题。",
+    "stem": "NRZ发送很长一串相同比特时，为什么时钟提取可能困难？曼彻斯特码用什么结构改善，代价是什么？",
+    "options": {},
+    "answer": "NRZ长连码可能长时间没有电平跳变，接收端缺少校正时钟的时间参考；曼彻斯特每位中间都有跳变，便于恢复节拍，但通常需要更宽带宽。",
+    "explanation": "线路编码处理波形与同步条件，并不改变原业务比特数，也不能单独保证业务事务一致性。",
+    "knowledge_point": "通信系统基础",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "communication.t06",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "指出连码缺跳变、中点跳变提供节拍以及带宽代价",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-comm-multiplex-boundary",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "communication.t06",
+    "source_chapter": "communication.t06",
+    "adaptation_note": "全量验收补充的原创机制辨析，不是招聘原题。",
+    "stem": "系统甲把不同用户安排到互不重叠的频带同时传输；系统乙让用户轮流使用固定时隙。分别是什么复用？为什么两者都不能代替位同步？",
+    "options": {},
+    "answer": "甲为FDM，乙为同步TDM；复用规定多路怎样共享资源，位同步决定接收端何时判决每个码元。即使知道用户的频带或时隙，也仍需正确的码元判决节拍。",
+    "explanation": "区分频率/时间资源划分与采样判决时刻。TDM还需帧或时隙边界同步，不能由复用名称推定全部同步已完成。",
+    "knowledge_point": "通信系统基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "topic_id": "communication.t06",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "识别FDM/TDM并区分资源共享与码元判决时刻",
+        "points": 1
+      }
+    ]
+  }
+]

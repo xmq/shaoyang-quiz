@@ -13,7 +13,8 @@
   {
     "id": "ue-circuit-003",
     "topic_id": "circuit.t04",
-    "topic_source": "manual"
+    "topic_source": "manual",
+    "ability": "直接计算"
   },
   {
     "id": "uf-ee-009",
@@ -23,7 +24,8 @@
   {
     "id": "sp-elec-circuit-009",
     "topic_id": "circuit.t05",
-    "topic_source": "manual"
+    "topic_source": "manual",
+    "stem": "在没有冲激电流的条件下，电路换路瞬间通常保持连续的量是（ ）。"
   },
   {
     "id": "sp-elec-circuit-010",
@@ -38,7 +40,8 @@
   {
     "id": "uf-ee-014",
     "topic_id": "circuit.t06",
-    "topic_source": "manual"
+    "topic_source": "manual",
+    "ability": "直接计算"
   },
   {
     "id": "uf-ee-016",
@@ -48,7 +51,8 @@
   {
     "id": "uf-ee-021",
     "topic_id": "circuit.t07",
-    "topic_source": "manual"
+    "topic_source": "manual",
+    "stem": "对称三相Y接负载中，线电压与相电压的有效值、线电流与相电流的有效值关系为（ ）。"
   },
   {
     "id": "sp-elec-circuit-003",
@@ -67,7 +71,8 @@
   },
   {
     "id": "uf-ee-019",
-    "stem": "某正弦稳态单相负载的电压、电流有效值分别为100 V、4 A，功率因数为0.8，其有功功率为（ ）。"
+    "stem": "某正弦稳态单相负载的电压、电流有效值分别为100 V、4 A，功率因数为0.8，其有功功率为（ ）。",
+    "ability": "直接计算"
   },
   {
     "id": "gap-final-thin-020",
@@ -84,7 +89,8 @@
   {
     "id": "sp-elec-circuit-025",
     "stem": "示波器垂直刻度为1 V/div，该刻度尚未计入10倍探头衰减补偿。波形峰峰值占3格，被测信号峰峰值为____V。",
-    "explanation": "刻度未补偿探头倍率，Upp=3×1×10=30 V。若示波器通道已设置10倍探头并显示补偿后的刻度，就不能再重复乘10；本题已明确未补偿。"
+    "explanation": "刻度未补偿探头倍率，Upp=3×1×10=30 V。若示波器通道已设置10倍探头并显示补偿后的刻度，就不能再重复乘10；本题已明确未补偿。",
+    "ability": "直接计算"
   },
   {
     "id": "uf-ae-006",
@@ -109,7 +115,15 @@
   {
     "id": "sp-elec-analog-006",
     "topic_id": "analog-electronics.t10",
-    "topic_source": "manual"
+    "topic_source": "manual",
+    "stem": "输入交流与负载电流不变，桥式整流各导通路径正常，但同一负载下滤波后纹波明显增大。优先怀疑哪项？",
+    "options": {
+      "A": "滤波电容容量下降或开路",
+      "B": "滤波电容容量增大且其他参数不变",
+      "C": "只把示波器V/div调小而实际波形不变",
+      "D": "稳压器输出设定值正确就能排除所有滤波问题"
+    },
+    "explanation": "其他条件不变时纹波近似与I/(frC)成正比，C下降使峰间放电压降增大。应实测电容与连接，不能凭平均设定值排除纹波，也不能把显示缩放当波形变化。"
   },
   {
     "id": "uf-ae-009",
@@ -123,7 +137,8 @@
   },
   {
     "id": "uf-ae-015",
-    "stem": "理想同相比例器在线性负反馈区工作，Rf=40 kΩ、反相端接地电阻R1=10 kΩ，其闭环电压增益为（ ）。"
+    "stem": "理想同相比例器在线性负反馈区工作，Rf=40 kΩ、反相端接地电阻R1=10 kΩ，其闭环电压增益为（ ）。",
+    "ability": "直接计算"
   },
   {
     "id": "sp-elec-analog-027",
@@ -188,7 +203,8 @@
       "C": "16 kHz",
       "D": "64 kHz"
     },
-    "explanation": "临界采样率为2×8=16 kHz，选C。要对包含边界正弦分量的任意相位信号保证可恢复，应取高于临界值的采样率；工程中还应留出抗混叠滤波器过渡带，不把临界等号当成无条件恢复保证。"
+    "explanation": "临界采样率为2×8=16 kHz，选C。要对包含边界正弦分量的任意相位信号保证可恢复，应取高于临界值的采样率；工程中还应留出抗混叠滤波器过渡带，不把临界等号当成无条件恢复保证。",
+    "ability": "直接计算"
   },
   {
     "id": "uf-cm-012",
@@ -218,7 +234,8 @@
   {
     "id": "sp-elec-comm-002",
     "topic_id": "communication.t03",
-    "topic_source": "manual"
+    "topic_source": "manual",
+    "ability": "直接计算"
   },
   {
     "id": "sp-elec-comm-016",
@@ -232,7 +249,8 @@
   },
   {
     "id": "uf-cm-004",
-    "stem": "码元速率为2400 Bd，每个码元采用16种等可能状态，未计其他编码开销时比特率为（ ）。"
+    "stem": "码元速率为2400 Bd，每个码元采用16种等可能状态，未计其他编码开销时比特率为（ ）。",
+    "ability": "直接计算"
   },
   {
     "id": "uf-cm-008",
@@ -243,12 +261,15 @@
       "C": "8 kHz",
       "D": "16 Hz"
     },
-    "explanation": "奈奎斯特临界采样率为2fm=8 kHz。临界点正弦信号可能因采样相位丢失信息，因此实际无混叠恢复选择fs>8 kHz，并为滤波器过渡带留出裕量。"
+    "explanation": "奈奎斯特临界采样率为2fm=8 kHz。临界点正弦信号可能因采样相位丢失信息，因此实际无混叠恢复选择fs>8 kHz，并为滤波器过渡带留出裕量。",
+    "topic_id": "communication.t04",
+    "ability": "直接计算"
   },
   {
     "id": "ue-comm-003",
     "stem": "某低通信号频谱最高到3.4 kHz，奈奎斯特临界采样率是多少？",
-    "explanation": "临界采样率为2×3.4=6.8 kHz，选C。对边界分量的任意相位不作额外假设时应高于此值；实际话音PCM常选8 kHz，也为抗混叠滤波器留下过渡带。"
+    "explanation": "临界采样率为2×3.4=6.8 kHz，选C。对边界分量的任意相位不作额外假设时应高于此值；实际话音PCM常选8 kHz，也为抗混叠滤波器留下过渡带。",
+    "topic_id": "communication.t04"
   },
   {
     "id": "gap-signal-005",

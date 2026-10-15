@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="292" viewBox="0 0 440 292" role="img" aria-labelledby="title desc">
+<title id="title">两个顺时针网孔在共享电阻上方向相反</title>
+<desc id="desc">左电源上正下负10伏，右电源上负下正4伏，各外侧2欧，共享1欧。左网孔电流4.25安，右2.75安，共享向下电流1.5安。</desc>
+<defs><style>
+.wire{stroke:#294858;stroke-width:2;fill:none}.resistor{stroke:#294858;stroke-width:2;fill:#fff}.label{font:20px "Microsoft YaHei",sans-serif;fill:#173647}.small{font:18px "Microsoft YaHei",sans-serif;fill:#435d6b}.flow{stroke:#147d72;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+@media(prefers-color-scheme:dark){.wire,.resistor{stroke:#b4c9d8}.resistor{fill:#172635}.label{fill:#edf4fa}.small{fill:#c1d0dc}.flow{stroke:#67d7c4}}
+</style><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#218c7c"/></marker></defs>
+<text class="label" x="12" y="27">先定方向，再写共享支路的电流差</text>
+<path class="wire" d="M48 140V65H110M164 65H286M340 65H392V140M48 175V240H392V175M220 65V126M220 176V240"/>
+<rect class="resistor" x="110" y="56" width="54" height="18"/><rect class="resistor" x="286" y="56" width="54" height="18"/><rect class="resistor" x="211" y="126" width="18" height="50"/>
+<text class="label" x="119" y="51">2Ω</text><text class="label" x="295" y="51">2Ω</text><text class="label" x="236" y="148">1Ω</text>
+<path class="wire" d="M48 140V148M31 148H65M39 163H57M48 163V175M392 140V148M383 148H401M375 163H409M392 163V175"/>
+<text class="label" x="12" y="131">＋</text><text class="label" x="13" y="186">−</text><text class="label" x="8" y="214">10V</text>
+<text class="label" x="411" y="135">−</text><text class="label" x="409" y="190">＋</text><text class="label" x="350" y="214">4V</text>
+<path class="flow" d="M91 121Q130 91 169 121Q190 147 169 184"/><path class="flow" d="M263 121Q301 91 341 121Q362 147 341 184"/>
+<text class="label" x="104" y="163">I₁</text><text class="label" x="283" y="163">I₂</text>
+<path class="flow" d="M247 163V214"/>
+<text class="small" x="12" y="278">共享支路向下：I₁−I₂ = 4.25−2.75 = 1.5A</text>
+</svg>

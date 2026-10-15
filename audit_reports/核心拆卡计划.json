@@ -1,0 +1,958 @@
+{
+  "scope": "仅追加在各章原卡之后；原标题原顺序保留，原混合卡改为比较或选型。",
+  "cards": [
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "title": "AVL四类旋转",
+      "suggested_parent_topic_id": "data-structures.t10",
+      "keywords": [
+        "AVL",
+        "旋转"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-028",
+          "stem": "向空AVL树依次插入30、20、10，完成平衡调整后根结点为________。",
+          "answer": "20"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-01-1",
+          "type": "简答",
+          "stem": "依次向空AVL插入30、10、20。写出两次旋转对象及中间根关系。",
+          "answer": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+          "explanation": "从30到新点路径为左后右，故先把LR折成LL，再右旋。",
+          "parent_topic_id": "data-structures.t10",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "title": "哈夫曼合并与WPL",
+      "suggested_parent_topic_id": "data-structures.t12",
+      "keywords": [
+        "哈夫曼",
+        "WPL"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-ds-004",
+          "stem": "权值为2、3、7、8的四个叶结点构造哈夫曼树，其最小带权路径长度WPL为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-02-1",
+          "type": "简答",
+          "stem": "权值1、2、4构造哈夫曼树，写每轮合并权值和WPL。",
+          "answer": "先1+2=3，再3+4=7；WPL=3+7=10。",
+          "explanation": "每轮重选当前最小两权；权1与2深2、权4深1，1×2+2×2+4=10。",
+          "parent_topic_id": "data-structures.t12",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "先1+2=3，再3+4=7；WPL=3+7=10。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "DFS深入与回退",
+      "suggested_parent_topic_id": "data-structures.t14",
+      "keywords": [
+        "深度优先",
+        "DFS"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-05-s1-q46",
+          "stem": "深度优先搜索算法实现时需要用到的数据结构是（ ）。",
+          "answer": "C"
+        },
+        {
+          "id": "gap-ds-002",
+          "stem": "无向图顶点为A、B、C、D、E、F，边为AB、AC、BD、BE、CF、EF。从A开始，邻接点按字母升序访问，DFS序列是？",
+          "answer": "B"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "BFS入队与层次",
+      "suggested_parent_topic_id": "data-structures.t14",
+      "keywords": [
+        "广度优先",
+        "BFS"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-003",
+          "stem": "对同一无向图，从A开始且邻接点按字母升序，BFS处理完A和B后，队列内容依次为？图的边为AB、AC、BD、BE、CF、EF。",
+          "answer": "B"
+        },
+        {
+          "id": "gap-ds-004",
+          "stem": "BFS中可以等顶点出队时再设置visited标记，这不会造成同一顶点被重复入队。",
+          "answer": "错误"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Prim跨集合选边",
+      "suggested_parent_topic_id": "data-structures.t15",
+      "keywords": [
+        "Prim"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-audit26-core-ds-prim-steps",
+          "stem": "连通无向图仅有AB=2、AC=5、BC=1、BD=4、CD=3四个顶点的这些边。从A执行Prim，写每次加入的顶点和所选边，求总权值，并解释为何不能选连接两个已加入顶点的边。",
+          "answer": "先加入A；选AB=2加入B；当前跨割候选AC=5、BC=1、BD=4，选BC=1加入C；再选CD=3加入D。生成树边AB、BC、CD，总权6。连接两个已在树中的顶点不会增加新顶点，加入树边会形成环，不符合Prim跨割扩展规则。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-05-1",
+          "type": "简答",
+          "stem": "图仅AB2、AC5、BC1。从A运行Prim，能否第一条选BC1？给出选边顺序。",
+          "answer": "不能；先AB2，再BC1。",
+          "explanation": "BC两端都不在起始集合{A}，不跨集合边界；加入B后BC才可选。",
+          "parent_topic_id": "data-structures.t15",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "不能；先AB2，再BC1。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Kruskal排序与判环",
+      "suggested_parent_topic_id": "data-structures.t15",
+      "keywords": [
+        "Kruskal"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-030",
+          "stem": "连通无向图边权为AB=1、CD=1、BC=2、AC=4、BD=5。用Kruskal求最小生成树，总权值为________。",
+          "answer": "4"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-06-1",
+          "type": "简答",
+          "stem": "图AB1、BC2、AC3。Kruskal选AB、BC后为何跳过AC？",
+          "answer": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+          "explanation": "排序只决定检查顺序；两端分量是否不同才决定能否接受。",
+          "parent_topic_id": "data-structures.t15",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Dijkstra确定与松弛",
+      "suggested_parent_topic_id": "data-structures.t16",
+      "keywords": [
+        "Dijkstra"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-031",
+          "stem": "有向图边权AB=1、AC=4、BC=2、BD=5、CD=1，均非负。从A执行Dijkstra，A到D的最短距离为________。",
+          "answer": "4"
+        },
+        {
+          "id": "uc-ds-006",
+          "stem": "用Dijkstra算法求单源最短路径时，图中边权应满足的基本条件是（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Bellman-Ford逐轮扫描",
+      "suggested_parent_topic_id": "data-structures.t16",
+      "keywords": [
+        "Bellman"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-08-1",
+          "type": "简答",
+          "stem": "有向边A→B2、A→C5、B→C−1，从A开始采用同步更新。第1轮和第2轮距离各是什么？",
+          "answer": "第1轮[0,2,5]；第2轮[0,2,1]。",
+          "explanation": "同步每轮只读上一轮，第一轮B还不能把新2传到C；第二轮经B得2−1=1。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "第1轮[0,2,5]；第2轮[0,2,1]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-08-2",
+          "type": "简答",
+          "stem": "从源点执行Bellman-Ford共V−1轮后，再扫描一轮仍能减小某可达顶点距离，说明什么？能否据此发现所有不可达负环？",
+          "answer": "说明存在源点可达负权环；不能保证发现不可达负环。",
+          "explanation": "无可达负环时最短简单路径至多V−1边；不可达部分距离无穷不会参与有效松弛。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "说明存在源点可达负权环；不能保证发现不可达负环。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Floyd开放中转点",
+      "suggested_parent_topic_id": "data-structures.t16",
+      "keywords": [
+        "Floyd"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-09-1",
+          "type": "简答",
+          "stem": "有向图AB2、BC1、AC5，只考虑A到C。允许B为中转后距离变成多少？",
+          "answer": "3。",
+          "explanation": "D[A,C]=min(5,D[A,B]+D[B,C])=min(5,2+1)=3。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "3。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-09-2",
+          "type": "简答",
+          "stem": "Floyd伪代码中k表示当前开放中转点，为什么k应在三层循环最外层？",
+          "answer": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+          "explanation": "随意把i或j放外层会破坏同一轮允许中转集合的约束，不能保证一般图得到正确最短路。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "插入排序扩有序区",
+      "suggested_parent_topic_id": "data-structures.t20",
+      "keywords": [
+        "插入排序"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-010",
+          "stem": "对序列5、2、4、3执行直接插入排序，完成前两次插入后序列为________。用逗号分隔。",
+          "answer": "2,4,5,3"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-10-1",
+          "type": "简答",
+          "stem": "序列4、1、3、2执行直接插入排序，前两次插入后完整序列是什么？",
+          "answer": "[1,3,4,2]。",
+          "explanation": "插1先得[1,4,3,2]；暂存3，将4右移再放3，得到[1,3,4,2]。",
+          "parent_topic_id": "data-structures.t20",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "[1,3,4,2]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "冒泡与选择的一趟",
+      "suggested_parent_topic_id": "data-structures.t20",
+      "keywords": [
+        "冒泡",
+        "选择排序"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-05-s1-q49",
+          "stem": "选择排序的基本思想是：在参与排序的所有数组元素中找出最小（或最大）的\n元素，使它与第一个元素互换位置，然后再在余下的元素中重复上述过程。有一组数，\n顺序是“2、6、4、1”，用选择排序法将这组数从大到小排序，第一次交换数据后的\n顺序是（ ）。",
+          "answer": "D"
+        },
+        {
+          "id": "zg-4542",
+          "stem": "若用冒泡法将数据 4，9，2，7 按升序排列，则需要进行数据交换的次数是________次。",
+          "answer": "3"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "堆排序取顶与下沉",
+      "suggested_parent_topic_id": "data-structures.t23",
+      "keywords": [
+        "堆排序"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-12-1",
+          "type": "简答",
+          "stem": "大根堆[5,3,4,2]执行取最大值，写交换堆尾后和下沉后的完整状态，竖线分隔已排区。",
+          "answer": "[2,3,4|5]，再[4,3,2|5]。",
+          "explanation": "只在前三项恢复堆，根2与更大的孩子4交换；已排5不再参与。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "[2,3,4|5]，再[4,3,2|5]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-12-2",
+          "type": "简答",
+          "stem": "大根堆根被末元素替换后，为什么下沉应优先与较大孩子比较交换？",
+          "answer": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+          "explanation": "如根2孩子3和4，换3后仍有父3<右孩4，不能宣布调整结束。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "希尔排序按增量分组",
+      "suggested_parent_topic_id": "data-structures.t23",
+      "keywords": [
+        "希尔"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-05-s1-q47",
+          "stem": "希尔排序法属于哪一种类型的排序法？（ ）",
+          "answer": "B"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-13-1",
+          "type": "简答",
+          "stem": "对[5,2,4,3]做增量2的希尔插入一趟，回填数组是什么？",
+          "answer": "[4,2,5,3]。",
+          "explanation": "下标0与2形成(5,4)，1与3形成(2,3)，分别排序后按原间隔交错放回。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "[4,2,5,3]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "基数排序稳定收集",
+      "suggested_parent_topic_id": "data-structures.t23",
+      "keywords": [
+        "基数"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-14-1",
+          "type": "简答",
+          "stem": "对[21,13,12]做最低位优先十进制基数排序，写个位收集后、十位收集后结果。",
+          "answer": "个位后[21,12,13]，十位后[12,13,21]。",
+          "explanation": "先按个位1/2/3，再按十位1/2；同桶保持前轮相对顺序。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "个位后[21,12,13]，十位后[12,13,21]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-14-2",
+          "type": "简答",
+          "stem": "最低位优先基数排序处理十位时，为什么桶内必须保持上轮顺序？",
+          "answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+          "explanation": "例如12与13同十位，必须保留12在13之前，才能使最终整个数有序。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "title": "非抢占调度画时间线",
+      "suggested_parent_topic_id": "operating-system.t05",
+      "keywords": [
+        "SJF",
+        "短作业",
+        "FCFS"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-os-002",
+          "stem": "三个进程同时到达，运行时间分别为6、2、4，采用非抢占短作业优先，执行顺序是（ ）。",
+          "answer": "B"
+        },
+        {
+          "id": "gap-os-001",
+          "stem": "进程A、B均在时刻0到达，服务时间分别为3和1。按A先B后的FCFS执行，平均周转时间是多少？",
+          "answer": "3.5"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "title": "RR时间片与队列",
+      "suggested_parent_topic_id": "operating-system.t05",
+      "keywords": [
+        "轮转",
+        "时间片"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-os-001",
+          "stem": "三个进程P1、P2、P3同时到达，运行时间为5、3、1，初始就绪队列按P1、P2、P3排列。时间片为2，轮转调度且无I/O，忽略切换开销。首次运行顺序和完成顺序分别为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-16-1",
+          "type": "简答",
+          "stem": "P1、P2同到达，服务时间3、2，初始队列[P1,P2]、时间片1、不计开销。给出片次和完成时刻。",
+          "answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+          "explanation": "每轮未完成回队尾，完成立即移出；各片长度1，逐片累计时间。",
+          "parent_topic_id": "operating-system.t05",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "title": "FIFO与LRU命中后状态",
+      "suggested_parent_topic_id": "operating-system.t10",
+      "keywords": [
+        "FIFO",
+        "LRU"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-10-s1-q49",
+          "stem": "有一虚拟存储系统，若进程在内存中占 3 页（开始时内存为空），若采用先进\n先出（FIFO）页面淘汰算法，当执行以下访问页号序列后 1，3，4，2，1，3，5，1，2，\n5，4，2，会产生多少次缺页（ ）。",
+          "answer": "C"
+        },
+        {
+          "id": "cg-10-s1-q50",
+          "stem": "在 5 个页框上使用 LRU 页面替换算法，当页框初始为空时，引用序列为 0、1、\n7、8、6、2、3、7、2、9、8、1、0、2，系统将发生（ ）次缺页。",
+          "answer": "C"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "title": "CLOCK访问位与指针",
+      "suggested_parent_topic_id": "operating-system.t10",
+      "keywords": [
+        "CLOCK",
+        "时钟"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-10-s1-q47",
+          "stem": "通常 Clock 置换算法只有一位访问位，而一种改进的 Clock 置换算法则通过\n一个访问位A 和一个修改位 M 来选出淘汰的页。如果已访问，则 A 为 1，已修改，则\nM 为 1，那么 A 和M 的 4 种组合中，最佳被淘汰页的情况是（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-18-1",
+          "type": "简答",
+          "stem": "CLOCK页框[1(1),2(0),3(1)]，括号为访问位，指针指第1框。页4缺页，写淘汰页及新指针。",
+          "answer": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+          "explanation": "遇页1的访问位1先清0并前进，再遇页2位0选择置换，装入页4后指针继续前进。",
+          "parent_topic_id": "operating-system.t10",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "title": "SSTF逐次选最近",
+      "suggested_parent_topic_id": "operating-system.t13",
+      "keywords": [
+        "SSTF",
+        "最短寻道"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-10-s1-q52",
+          "stem": "若干个等待访问磁盘者依次要访问的磁道为 19、43、40、4、79、11、76，当\n前磁头位于 40 号柱面，若用最短寻道时间优先磁盘调度算法，则磁头移动总距离（道\n数）为（ ）。",
+          "answer": "B"
+        },
+        {
+          "id": "uf-os-008",
+          "stem": "磁头当前在50号柱面，请求序列为10、55、90，若采用SSTF，下一次访问（ ）。",
+          "answer": "B"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "title": "SCAN与LOOK累计距离",
+      "suggested_parent_topic_id": "operating-system.t13",
+      "keywords": [
+        "SCAN",
+        "LOOK"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-20-1",
+          "type": "简答",
+          "stem": "磁道0—99，磁头50向大号移动，请求20和80，只统计完成全部请求前移动。LOOK与SCAN移动各多少？",
+          "answer": "LOOK90；SCAN128。",
+          "explanation": "LOOK走50→80→20为30+60；SCAN走50→99→20为49+79。",
+          "parent_topic_id": "operating-system.t13",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "LOOK90；SCAN128。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-20-2",
+          "type": "简答",
+          "stem": "磁道0—199，磁头100向小号移动，请求40和150，按LOOK完成全部请求，服务顺序及移动总数？",
+          "answer": "先40再150，总170。",
+          "explanation": "先向下到最远请求40走60，立即反向到150走110，不必继续到物理端点0。",
+          "parent_topic_id": "operating-system.t13",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "先40再150，总170。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "title": "冲突优先图判串行化",
+      "suggested_parent_topic_id": "database.t16",
+      "keywords": [
+        "优先图",
+        "可串行化"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-db-011",
+          "stem": "调度为r1(X),w1(X),r2(X),w2(X)。画出冲突优先图的边，判断是否冲突可串行化并给出等价顺序。",
+          "answer": "只有T1→T2，无环，因此可串行化，等价顺序为T1、T2。"
+        },
+        {
+          "id": "gap-db-012",
+          "stem": "若优先图同时包含T1→T2和T2→T1，能否判为冲突可串行化？说明理由。",
+          "answer": "不能；两条边形成有向环，无法得到满足全部冲突先后的串行顺序。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "title": "两段锁的首次解锁",
+      "suggested_parent_topic_id": "database.t16",
+      "keywords": [
+        "2PL",
+        "两段锁"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-22-1",
+          "type": "简答",
+          "stem": "锁A→读A→锁B→写B→解锁A→锁C，哪个动作违反2PL？",
+          "answer": "最后锁C违反。",
+          "explanation": "第一次解锁A后已进入收缩阶段，不能再申请新锁；C应在首次解锁之前取得。",
+          "parent_topic_id": "database.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "最后锁C违反。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-22-2",
+          "type": "简答",
+          "stem": "所有事务都遵守2PL，是否就不会死锁？给一个两事务两资源反例。",
+          "answer": "仍可死锁；T1持A等B，T2持B等A。",
+          "explanation": "双方均处增长阶段、尚未解锁，也满足2PL，却形成循环等待。",
+          "parent_topic_id": "database.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "仍可死锁；T1持A等B，T2持B等A。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "title": "Cache地址拆分与命中",
+      "suggested_parent_topic_id": "computer-organization.t10",
+      "keywords": [
+        "Cache",
+        "缓存"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-co-012",
+          "stem": "32位字节地址，Cache数据容量16KB，块64B，4路组相联。求块内偏移、组索引和标记位数。",
+          "answer": "偏移6位，组索引6位，标记20位。"
+        },
+        {
+          "id": "uc-co-004",
+          "stem": "32位字节地址，Cache数据容量16 KB，块大小64 B，采用4路组相联。组索引位数为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "title": "平均访存时间按口径算",
+      "suggested_parent_topic_id": "computer-organization.t10",
+      "keywords": [
+        "平均访问",
+        "平均访存",
+        "命中率"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-co-005",
+          "stem": "某Cache命中时间2 ns，失效率5%，失效代价为60 ns。按AMAT=命中时间+失效率×失效代价，平均访问时间为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-24-1",
+          "type": "简答",
+          "stem": "Cache命中查询1ns；未命中从开始查询直到取回总计41ns；命中率95%。串行模型平均访问时间是多少？",
+          "answer": "3ns。",
+          "explanation": "0.95×1+0.05×41=3；41已含首查，不应再在该加权结果上加1。",
+          "parent_topic_id": "computer-organization.t10",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "3ns。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "title": "理想流水线填充与排空",
+      "suggested_parent_topic_id": "computer-organization.t11",
+      "keywords": [
+        "理想",
+        "流水线"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-co-008",
+          "stem": "理想5段等长流水线，每段1 ns，完成20条指令所需时间为（ ）。",
+          "answer": "A"
+        },
+        {
+          "id": "uc-co-014",
+          "stem": "采用流水线后，主要目标是提高指令吞吐率，单条指令从开始到结束的延迟不一定缩短。（ ）",
+          "answer": "正确"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "title": "流水线停顿与总时间",
+      "suggested_parent_topic_id": "computer-organization.t11",
+      "keywords": [
+        "停顿",
+        "转发"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-co-009",
+          "stem": "5段流水处理10条指令，时钟周期1.6ns，执行中共插入2个停顿周期。求总周期数和总时间。",
+          "answer": "16个周期，25.6ns。"
+        },
+        {
+          "id": "sp-core-co-031",
+          "stem": "数据转发可以缓解部分数据相关，但不能自动消除所有结构冲突和控制冲突。（ ）",
+          "answer": "正确"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "title": "递归调用与逐层返回",
+      "suggested_parent_topic_id": "programming.t09",
+      "keywords": [
+        "递归",
+        "阶乘"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-pl-007",
+          "stem": "为了保证递归算法正常终止，应有基本情形，并保证递归调用能够逐步接近基本情形。",
+          "answer": "正确"
+        },
+        {
+          "id": "gap-audit26-system-003",
+          "stem": "先不运行程序，跟踪Python函数f(3)的调用和返回：\ndef f(n):\n    if n <= 1:\n        return 1\n    return n * f(n - 1)\n再说明把递归参数写成n+1会怎样。",
+          "answer": "调用链f(3)→f(2)→f(1)；f(1)=1，f(2)=2，f(3)=6。n+1使正整数输入远离基本情形，不能正常终止，通常最终触发递归深度异常。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "title": "C与Python名字作用域",
+      "suggested_parent_topic_id": "programming.t09",
+      "keywords": [
+        "作用域",
+        "全局",
+        "局部"
+      ],
+      "practice_existing": [
+        {
+          "id": "zg-11699",
+          "stem": "在 C 语言中，变量可以分为全局变量和局部变量。（ ）",
+          "answer": "正确"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-28-1",
+          "type": "简答",
+          "stem": "C中int x=1; {int x=2;} 离开内层块后x为多少？Python普通if代码块会建立同样的新局部作用域吗？",
+          "answer": "C外层仍为1；Python普通if不建立新的局部作用域。",
+          "explanation": "内层C声明遮蔽外层，离开块恢复可见；Python局部作用域主要按函数等边界，不能照搬花括号规则。",
+          "parent_topic_id": "programming.t09",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "C外层仍为1；Python普通if不建立新的局部作用域。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "title": "Python按异常类型分支",
+      "suggested_parent_topic_id": "programming.t15",
+      "keywords": [
+        "异常",
+        "ValueError",
+        "try"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-pl-006",
+          "stem": "Python把用户输入转换为整数。说明应捕获什么异常，并写出try/except核心结构。",
+          "answer": "try:\n    n = int(input())\nexcept ValueError:\n    print(\"请输入合法整数\")"
+        },
+        {
+          "id": "gap-pl-007",
+          "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+          "answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "title": "with文件读写与编码",
+      "suggested_parent_topic_id": "programming.t15",
+      "keywords": [
+        "with",
+        "文件",
+        "编码"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-pl-007",
+          "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+          "answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。"
+        },
+        {
+          "id": "ap-pl-006",
+          "stem": "一个程序要长期保存多条订单记录。说明为什么不能只放在变量或列表中，并分别给出C和Python打开文本文件时应注意的一项问题。",
+          "answer": "变量或列表通常在进程结束后丢失，应写入文件或数据库持久保存。C用fopen后检查返回值并fclose；Python可用with open自动关闭。两者使用w模式都可能清空原文件。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "title": "语句与判定覆盖辨别",
+      "suggested_parent_topic_id": "software-engineering.t12",
+      "keywords": [
+        "覆盖",
+        "白盒"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-core-se-017",
+          "stem": "白盒测试依据程序内部控制结构设计用例，因此需要了解代码或设计内部逻辑。（ ）",
+          "answer": "正确"
+        },
+        {
+          "id": "sp-core-se-018",
+          "stem": "测试达到100%分支覆盖后，就必然同时覆盖了程序中的所有可能执行路径。（ ）",
+          "answer": "错误"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "title": "控制流图环形复杂度",
+      "suggested_parent_topic_id": "software-engineering.t12",
+      "keywords": [
+        "环形",
+        "复杂度",
+        "路径"
+      ],
+      "practice_existing": [
+        {
+          "id": "se-gen-q06",
+          "stem": "某连通控制流图的圈复杂度为8，则其基本独立路径集合包含多少条路径？",
+          "answer": "C"
+        },
+        {
+          "id": "gap-se-007",
+          "stem": "某控制流图有10条边、8个结点且为单连通，环形复杂度是多少？它表示什么？",
+          "answer": "V(G)=E−N+2=10−8+2=4，表示基本独立路径数量为4。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "title": "关键路径与总工期",
+      "suggested_parent_topic_id": "software-engineering.t16",
+      "keywords": [
+        "关键路径",
+        "工期"
+      ],
+      "practice_existing": [
+        {
+          "id": "se-gen-q09",
+          "stem": "关键路径上的活动通常具有（ ）。",
+          "answer": "B"
+        },
+        {
+          "id": "gap-se-010",
+          "stem": "项目网络有两条路径A-B-D为8天，A-C-D为11天。关键路径是哪条？A-C-D上的活动延迟2天会怎样？",
+          "answer": "关键路径为A-C-D；若无可用时差，延迟2天使项目总工期延长2天。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": []
+    }
+  ]
+}

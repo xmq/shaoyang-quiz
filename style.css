@@ -499,19 +499,19 @@ body.drawer-open {
 }
 
 .question-media {
-  margin: 0 0 16px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--panel);
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 16px;
 }
 
 .question-media img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   max-height: 460px;
   object-fit: contain;
-  background: #f8fafc;
+  margin: 0 auto;
 }
 
 .question-media figcaption {

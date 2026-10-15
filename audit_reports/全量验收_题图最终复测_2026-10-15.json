@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "theme": "light",
+      "rendered": true,
+      "correct_flow_C": "pass",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\atm-390-light.png"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "rendered": true,
+      "correct_flow_C": "pass",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\atm-390-dark.png"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "rendered": true,
+      "correct_flow_C": "pass",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\atm-1280-light.png"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "rendered": true,
+      "correct_flow_C": "pass",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\atm-1280-dark.png"
+    }
+  ],
+  "errors": []
+}

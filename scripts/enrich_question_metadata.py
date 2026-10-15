@@ -26,6 +26,9 @@ GAP_QUESTIONS = {
     for question in load_gap_questions()
 }
 AUDIT_EDITS = load_edits()
+# Reviewed questions keep their approved task when new cards add keywords.
+# Explicit review corrections (including card splits) still take precedence.
+REVIEWED_TOPIC_BASELINE = json.loads((ROOT / "staging" / "reviewed_topic_baseline.json").read_text(encoding="utf-8"))
 # The reviewed source banks already assign the ability from the actual task.
 # Keep those human labels; apply stem heuristics only to legacy imported items.
 MAINTAINED_QUESTIONS = {
@@ -624,6 +627,11 @@ KNOWLEDGE_POINT_VALUES = frozenset(
 )
 
 
+def topic_for_number(topics, number):
+    suffix = f".t{number:02d}"
+    return next(topic for topic in topics if topic["topic_id"].endswith(suffix))
+
+
 def normalized_text(*values: object) -> str:
     text = " ".join(str(value or "") for value in values)
     return unicodedata.normalize("NFKC", text).lower()
@@ -707,7 +715,8 @@ def classify_network_topic(question: dict) -> dict[str, str]:
 
 def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str]:
     subject = str(question.get("subject") or "")
-    reviewed_id = AUDIT_EDITS.get(question.get("id"), {}).get("topic_id")
+    reviewed_id = (AUDIT_EDITS.get(question.get("id"), {}).get("topic_id")
+                   or REVIEWED_TOPIC_BASELINE.get(question.get("id")))
     if reviewed_id:
         course = COURSE_BY_SUBJECT.get(subject, {})
         for index, topic in enumerate(course.get("topics", [])):
@@ -745,11 +754,11 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
             }
     override_number = COURSE_TOPIC_OVERRIDES.get(subject, {}).get(str(question.get("id")))
     if override_number and override_number <= len(topics):
-        best = topics[override_number - 1]
+        best = topic_for_number(topics, override_number)
         return {
             "topic_id": best["topic_id"], "topic_title": best["title"],
             "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-            "topic_order": override_number - 1,
+            "topic_order": topics.index(best),
         }
     if subject in {"办公软件", "多媒体"}:
         stem = normalized_text(question.get("stem"))
@@ -795,22 +804,22 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
+                best = topic_for_number(topics, topic_number)
                 return {
                     "topic_id": best["topic_id"], "topic_title": best["title"],
                     "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-                    "topic_order": topic_number - 1,
+                    "topic_order": topics.index(best),
                 }
     if subject == "数据库":
         # 数据库题干中的“选择”“关系”等普通词很容易撞上关系代数。
         # 按独立解题任务使用题干规则，并让恢复、安全等窄主题优先匹配。
         override_number = DATABASE_TOPIC_OVERRIDES.get(str(question.get("id")))
         if override_number:
-            best = topics[override_number - 1]
+            best = topic_for_number(topics, override_number)
             return {
                 "topic_id": best["topic_id"], "topic_title": best["title"],
                 "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-                "topic_order": override_number - 1,
+                "topic_order": topics.index(best),
             }
         stem = normalized_text(question.get("stem"))
         rules = (
@@ -834,22 +843,22 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
+                best = topic_for_number(topics, topic_number)
                 return {
                     "topic_id": best["topic_id"],
                     "topic_title": best["title"],
                     "chapter_id": best["chapter_id"],
                     "required_depth": best["depth"],
-                    "topic_order": topic_number - 1,
+                    "topic_order": topics.index(best),
                 }
     if subject == "编程语言":
         override_number = PROGRAMMING_TOPIC_OVERRIDES.get(str(question.get("id")))
         if override_number:
-            best = topics[override_number - 1]
+            best = topic_for_number(topics, override_number)
             return {
                 "topic_id": best["topic_id"], "topic_title": best["title"],
                 "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-                "topic_order": override_number - 1,
+                "topic_order": topics.index(best),
             }
         stem = normalized_text(question.get("stem"))
         rules = (
@@ -871,20 +880,20 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
+                best = topic_for_number(topics, topic_number)
                 return {
                     "topic_id": best["topic_id"], "topic_title": best["title"],
                     "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-                    "topic_order": topic_number - 1,
+                    "topic_order": topics.index(best),
                 }
     if subject == "计算机组成原理":
         override_number = COMPUTER_ORGANIZATION_TOPIC_OVERRIDES.get(str(question.get("id")))
         if override_number:
-            best = topics[override_number - 1]
+            best = topic_for_number(topics, override_number)
             return {
                 "topic_id": best["topic_id"], "topic_title": best["title"],
                 "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-                "topic_order": override_number - 1,
+                "topic_order": topics.index(best),
             }
         stem = normalized_text(question.get("stem"))
         rules = (
@@ -905,17 +914,17 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
+                best = topic_for_number(topics, topic_number)
                 return {
                     "topic_id": best["topic_id"], "topic_title": best["title"],
                     "chapter_id": best["chapter_id"], "required_depth": best["depth"],
-                    "topic_order": topic_number - 1,
+                    "topic_order": topics.index(best),
                 }
     if subject == "信息安全":
         override_number = INFORMATION_SECURITY_TOPIC_OVERRIDES.get(str(question.get("id")))
         if override_number:
-            best = topics[override_number - 1]
-            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": override_number - 1}
+            best = topic_for_number(topics, override_number)
+            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topics.index(best)}
         stem = normalized_text(question.get("stem"))
         rules = (
             (17, r"授权范围|合法目的|公开信息|知识产权|职业责任|合规|单位制度"),
@@ -938,13 +947,13 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
-                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
+                best = topic_for_number(topics, topic_number)
+                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topics.index(best)}
     if subject in {"计算机基础", "信息基础", "大数据"}:
         override_number = COMPUTER_FOUNDATION_TOPIC_OVERRIDES.get(str(question.get("id")))
         if override_number:
-            best = topics[override_number - 1]
-            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": override_number - 1}
+            best = topic_for_number(topics, override_number)
+            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topics.index(best)}
         stem = normalized_text(question.get("stem"))
         rules = (
             (20, r"技术选型|组合技术|目标.*约束|时延.*隐私|可靠性.*风险|综合方案"),
@@ -970,13 +979,13 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
-                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
+                best = topic_for_number(topics, topic_number)
+                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topics.index(best)}
     if subject == "软件工程":
         override_number = SOFTWARE_ENGINEERING_TOPIC_OVERRIDES.get(str(question.get("id")))
         if override_number:
-            best = topics[override_number - 1]
-            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": override_number - 1}
+            best = topic_for_number(topics, override_number)
+            return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topics.index(best)}
         stem = normalized_text(question.get("stem"))
         rules = (
             (19, r"追踪矩阵|需求到测试|持续改进|度量反馈|复盘"),
@@ -1001,8 +1010,8 @@ def classify_course_topic(question: dict, knowledge_point: str) -> dict[str, str
         )
         for topic_number, pattern in rules:
             if re.search(pattern, stem, re.I):
-                best = topics[topic_number - 1]
-                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topic_number - 1}
+                best = topic_for_number(topics, topic_number)
+                return {"topic_id": best["topic_id"], "topic_title": best["title"], "chapter_id": best["chapter_id"], "required_depth": best["depth"], "topic_order": topics.index(best)}
     best = topics[0]
     if subject in {"算法与数据结构", "操作系统", "数据库", "编程语言", "计算机组成原理", "信息安全", "计算机基础", "信息基础", "大数据", "软件工程", "办公软件", "多媒体", "电路分析与电工技术", "模拟电子技术", "数字电子技术", "通信原理与高频电子线路", "信号与系统"}:
         core_text = question_text(question, include_options=False)

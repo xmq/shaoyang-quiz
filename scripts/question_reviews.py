@@ -14,6 +14,13 @@ def load_edits():
             if not item.get("id") or item["id"] in edits or set(item) - FIELDS:
                 raise ValueError(f"无效或重复题目修订：{path.name}: {item.get('id')}")
             edits[item["id"]] = item
+    # Topic splits are maintained separately from wording/answer corrections.
+    # Apply their final assignments in every merge, not only in enrichment.
+    assignments = json.loads((ROOT / "staging" / "topic_assignment_acceptance.json").read_text(encoding="utf-8"))
+    if not isinstance(assignments, dict) or any(not isinstance(key, str) or not isinstance(value, str) for key, value in assignments.items()):
+        raise ValueError("Invalid question topic assignments")
+    for question_id, topic_id in assignments.items():
+        edits.setdefault(question_id, {"id": question_id})["topic_id"] = topic_id
     return edits
 
 

@@ -691,6 +691,33 @@
           "common_trap": "计算思维不等于编程；“找出最大值”只是任务描述而非算法，有序数据才能直接二分查找，抽象也不是忽略会改变结果的条件。"
         },
         {
+          "topic_id": "computer-foundations.t21",
+          "chapter_id": "computer-foundations.c01",
+          "title": "信息检索与结果筛选",
+          "depth": "直接应用",
+          "keywords": [
+            "搜索",
+            "搜索引擎",
+            "检索",
+            "关键词",
+            "书签"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true,
+          "common_trap": "竞价排名和高转发不证明可信；历史记录不同于书签，布尔与通配符语法须按具体检索系统。"
+        },
+        {
           "topic_id": "computer-foundations.t03",
           "chapter_id": "computer-foundations.c02",
           "title": "数制转换与容量计算",
@@ -1357,7 +1384,7 @@
         {
           "topic_id": "multimedia.t02",
           "chapter_id": "multimedia.c01",
-          "title": "超文本、超媒体与流媒体",
+          "title": "超文本与超媒体",
           "depth": "直接应用",
           "keywords": [
             "超文本",
@@ -1380,7 +1407,7 @@
             "简答说明"
           ],
           "short_answer": true,
-          "common_trap": "超媒体不是媒体简单堆叠；流媒体仍需物理信号和网络承载，也不表示所有内容已完整下载。"
+          "common_trap": "超媒体不是媒体种类的简单堆叠；是否边收边播属于流媒体的传送方式，应与节点链接结构分别判断。"
         },
         {
           "topic_id": "multimedia.t03",
@@ -2018,7 +2045,64 @@
           ],
           "short_answer": true,
           "study_task": "按指定调度算法画执行时间线，计算各进程周转时间和平均等待时间。",
-          "common_trap": "RR时间片过大接近FCFS，过小增加切换开销；SJF平均等待较低但不能预知未来时需估计服务时间。"
+          "common_trap": "平均等待低不代表每个任务都短等；RR片太大近FCFS，太小则增加切换与调度的开销。"
+        },
+        {
+          "topic_id": "operating-system.t14",
+          "chapter_id": "operating-system.c03",
+          "title": "非抢占调度画时间线",
+          "depth": "综合应用",
+          "keywords": [
+            "SJF",
+            "短作业",
+            "FCFS"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "不能忽略到达时刻预排全部任务；无I/O阻塞的简化题才用等待=完成−到达−服务，先算完成时刻。"
+        },
+        {
+          "topic_id": "operating-system.t15",
+          "chapter_id": "operating-system.c03",
+          "title": "RR时间片与队列",
+          "depth": "综合应用",
+          "keywords": [
+            "轮转",
+            "时间片"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "同时到达与时间片结束的入队先后要服从约定；最后任务可提前结束，不应强行用满时间片。"
         },
         {
           "topic_id": "operating-system.t06",
@@ -2203,7 +2287,63 @@
           ],
           "short_answer": true,
           "study_task": "按FIFO、LRU或OPT逐次记录页框，统计缺页并解释替换原因。",
-          "common_trap": "FIFO可能出现Belady异常；页框过少或并发过高会抖动；虚拟地址空间扩大不代表访问速度更快。"
+          "common_trap": "虚拟空间大不表示物理访问同速；TLB未命中不等缺页，FIFO可能出现增加页框反而更多缺页。"
+        },
+        {
+          "topic_id": "operating-system.t16",
+          "chapter_id": "operating-system.c05",
+          "title": "FIFO与LRU命中后状态",
+          "depth": "综合应用",
+          "keywords": [
+            "FIFO",
+            "LRU"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "必须在相同页框数、初始状态和访问串下比较；不能把最近装入误当最近访问或漏计首次缺页。"
+        },
+        {
+          "topic_id": "operating-system.t17",
+          "chapter_id": "operating-system.c05",
+          "title": "CLOCK访问位与指针",
+          "depth": "综合应用",
+          "keywords": [
+            "CLOCK",
+            "时钟"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "指针不是每次回到第一框；CLOCK是近似LRU而非精确最近时间，访问位和页是否在内存不同。"
         },
         {
           "topic_id": "operating-system.t11",
@@ -2311,7 +2451,63 @@
           ],
           "short_answer": true,
           "study_task": "按磁头初始方向列出磁盘访问顺序，计算总移动距离。",
-          "common_trap": "SCAN类算法没有方向就不能唯一作答；SSTF可能使远端请求饥饿；SSD没有机械寻道过程。"
+          "common_trap": "没有初始方向不能唯一算SCAN类；SSTF可能饥饿，SSD也没有机械磁头寻道这一过程。"
+        },
+        {
+          "topic_id": "operating-system.t18",
+          "chapter_id": "operating-system.c07",
+          "title": "SSTF逐次选最近",
+          "depth": "综合应用",
+          "keywords": [
+            "SSTF",
+            "最短寻道"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "最近必须每步重算，不是只按距最初磁头排序；同距的处理约定会影响中间顺序甚至总距离。"
+        },
+        {
+          "topic_id": "operating-system.t19",
+          "chapter_id": "operating-system.c07",
+          "title": "SCAN与LOOK累计距离",
+          "depth": "综合应用",
+          "keywords": [
+            "SCAN",
+            "LOOK"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "若题目只统计完成所有请求前移动，就不要再加最后无用回程；端点与方向必须先写清。"
         }
       ]
     },
@@ -2910,7 +3106,7 @@
           ],
           "short_answer": true,
           "study_task": "沿事务时间线识别并发异常，画冲突优先图，检查两段锁并说明隔离级别保证。",
-          "common_trap": "不可重复读是同行值变，幻读是条件行集变；2PL首次解锁后不能再加锁，保证冲突可串行化但可能死锁；严格2PL将X锁持有到提交或回滚。"
+          "common_trap": "产品的锁与多版本实现不同，不能把可重复读对幻读的细节一概而论，也不能用事务代替业务幂等。"
         },
         {
           "topic_id": "database.t17",
@@ -2951,6 +3147,66 @@
           "short_answer": true,
           "study_task": "按日志与提交状态判断需重做或撤销的操作，解释WAL为何要求日志先行。",
           "common_trap": "COMMIT 成功依赖提交日志持久化，不要求所有数据页立即落盘；备份解决介质损坏，日志恢复主要处理事务和系统故障，两者不能互相替代。"
+        },
+        {
+          "topic_id": "database.t19",
+          "chapter_id": "database.c08",
+          "title": "冲突优先图判串行化",
+          "depth": "综合应用",
+          "keywords": [
+            "优先图",
+            "可串行化"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "两个读操作不冲突；要检查所有数据项上的边，不能只看一个数据的顺序就宣布整个调度无环。"
+        },
+        {
+          "topic_id": "database.t20",
+          "chapter_id": "database.c08",
+          "title": "两段锁的首次解锁",
+          "depth": "综合应用",
+          "keywords": [
+            "2PL",
+            "两段锁"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "2PL保证冲突可串行化却仍可能死锁；严格2PL把排他锁留到提交或回滚，不能混为无锁快照。"
         },
         {
           "topic_id": "database.t18",
@@ -3391,7 +3647,7 @@
           ],
           "short_answer": true,
           "study_task": "逐步插入BST或AVL，找到首个失衡结点并选择旋转方式。",
-          "common_trap": "普通BST可能退化为链；AVL类型看失衡点到新结点的方向，双旋不能只做其中一次。"
+          "common_trap": "旋转维持中序顺序而非重新排序全部结点；平衡因子正负约定先声明，不能只靠树的外观判断。"
         },
         {
           "topic_id": "data-structures.t11",
@@ -3457,7 +3713,59 @@
           ],
           "short_answer": true,
           "study_task": "逐次合并最小权构造哈夫曼树并求WPL，区分B树与B+树的检索特点。",
-          "common_trap": "哈夫曼左右编码可交换但必须保持前缀码；B树与B+树的数据位置不同，不能套二叉树规则。"
+          "common_trap": "B+树叶层顺序连接服务范围扫描；哈夫曼权大通常靠根，不表示可以拿频率直接当作码长。"
+        },
+        {
+          "topic_id": "data-structures.t25",
+          "chapter_id": "data-structures.c04",
+          "title": "AVL四类旋转",
+          "depth": "直接应用",
+          "keywords": [
+            "AVL",
+            "旋转"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "旋转必须保留被移动的中间子树并更新高度；只转最后插入结点或只做双旋的一半都会出错。"
+        },
+        {
+          "topic_id": "data-structures.t26",
+          "chapter_id": "data-structures.c04",
+          "title": "哈夫曼合并与WPL",
+          "depth": "直接应用",
+          "keywords": [
+            "哈夫曼",
+            "WPL"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "common_trap": "左右编码0与1可交换但仍需前缀性质；不能只把原权值求和，或按初始排列不重新选最小。"
         },
         {
           "topic_id": "data-structures.t13",
@@ -3527,7 +3835,7 @@
           ],
           "short_answer": true,
           "study_task": "在指定邻接访问顺序下逐步列DFS调用栈或BFS队列，并标出访问时机。",
-          "common_trap": "BFS等出队才标记会重复入队；DFS和BFS序列都可能随邻接点排列方式改变。"
+          "common_trap": "图不连通时单起点不能覆盖全图，要再选未访问起点；合法序列也可能随邻接顺序改变。"
         },
         {
           "topic_id": "data-structures.t15",
@@ -3563,7 +3871,7 @@
           ],
           "short_answer": true,
           "study_task": "按Prim或Kruskal逐次选边，说明如何避免成环并计算总权值。",
-          "common_trap": "MST不保证任意两点路径最短；图不连通时得到最小生成森林，而不是一棵生成树。"
+          "common_trap": "它不保证各点对之间路径最短；图不连通只能得到森林，权值相同也可能存在多棵最优树。"
         },
         {
           "topic_id": "data-structures.t16",
@@ -3599,7 +3907,7 @@
           ],
           "short_answer": true,
           "study_task": "逐轮更新最短距离与前驱，按负权和查询范围选择Dijkstra、Bellman-Ford或Floyd。",
-          "common_trap": "Dijkstra不能直接处理负权边；负权环可使最短路无定义；最短路径与MST目标不同。"
+          "common_trap": "最短路径不等于MST；可达负环会让相关最短路没有有限值，不能只看算法名称忽略边界。"
         },
         {
           "topic_id": "data-structures.t17",
@@ -3633,6 +3941,211 @@
           "short_answer": true,
           "study_task": "按入度为0逐步删除顶点并更新入度，判断是否有环及序列是否唯一。",
           "common_trap": "无法输出全部顶点说明有环；拓扑序可能不唯一，多个入度0顶点的选择会影响结果。"
+        },
+        {
+          "topic_id": "data-structures.t27",
+          "chapter_id": "data-structures.c05",
+          "title": "DFS深入与回退",
+          "depth": "综合应用",
+          "keywords": [
+            "深度优先",
+            "DFS"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "回退不是再次输出旧顶点；存在环必须先标记再深入，显式栈还要注意压入顺序与递归顺序。"
+        },
+        {
+          "topic_id": "data-structures.t28",
+          "chapter_id": "data-structures.c05",
+          "title": "BFS入队与层次",
+          "depth": "综合应用",
+          "keywords": [
+            "广度优先",
+            "BFS"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "等到出队才标记可能让同点重复入队；边权不同不能只数层数，需要另选适合的最短路算法。"
+        },
+        {
+          "topic_id": "data-structures.t29",
+          "chapter_id": "data-structures.c05",
+          "title": "Prim跨集合选边",
+          "depth": "综合应用",
+          "keywords": [
+            "Prim"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "候选边来自整个已接通集合，不仅是刚加入顶点；两端都在S内的边会成环，不能再选入。"
+        },
+        {
+          "topic_id": "data-structures.t30",
+          "chapter_id": "data-structures.c05",
+          "title": "Kruskal排序与判环",
+          "depth": "综合应用",
+          "keywords": [
+            "Kruskal"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "按全局最小边不等于永远接受该边；排序只给检查顺序，还必须执行判环并核对全图是否连通。"
+        },
+        {
+          "topic_id": "data-structures.t31",
+          "chapter_id": "data-structures.c05",
+          "title": "Dijkstra确定与松弛",
+          "depth": "综合应用",
+          "keywords": [
+            "Dijkstra"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "负边会破坏确定后不再改变的保证；恢复路径沿前驱倒推再反转，不可达点保留无穷距离。"
+        },
+        {
+          "topic_id": "data-structures.t32",
+          "chapter_id": "data-structures.c05",
+          "title": "Bellman-Ford逐轮扫描",
+          "depth": "综合应用",
+          "keywords": [
+            "Bellman"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "原地更新一轮可传播多条边，与同步表中间状态不同；不可达负环不在本源点检测保证范围。"
+        },
+        {
+          "topic_id": "data-structures.t33",
+          "chapter_id": "data-structures.c05",
+          "title": "Floyd开放中转点",
+          "depth": "综合应用",
+          "keywords": [
+            "Floyd"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "不能把三重循环随意交换；最终对角线为负提示负环，相关点对不能继续解释为有限最短路。"
         },
         {
           "topic_id": "data-structures.t18",
@@ -3738,7 +4251,7 @@
           ],
           "short_answer": true,
           "study_task": "逐趟写插入、冒泡或选择排序的序列，比较稳定性和提前结束条件。",
-          "common_trap": "一趟冒泡只保证一个极值到位；一次输入未交换相等元素，不能证明算法稳定。"
+          "common_trap": "一次输入没有交换相等元素不能证明稳定；一趟只保证局部目标，不等于整个数组已经有序。"
         },
         {
           "topic_id": "data-structures.t21",
@@ -3836,7 +4349,143 @@
           ],
           "short_answer": true,
           "study_task": "根据稳定性、空间、数据规模与关键字特点选排序方法，并推演关键一趟。",
-          "common_trap": "还要看稳定性、空间和键类型；堆与希尔通常不稳定，基数复杂度依赖位数与基数。"
+          "common_trap": "堆、希尔通常不稳定，基数性能依赖位数和基数；名称相近并不表示步骤可以相互替换。"
+        },
+        {
+          "topic_id": "data-structures.t34",
+          "chapter_id": "data-structures.c07",
+          "title": "插入排序扩有序区",
+          "depth": "直接应用",
+          "keywords": [
+            "插入排序"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "必须暂存待插元素再搬移，稳定实现只移动严格大于它的项；比较次数与元素移动次数不同。"
+        },
+        {
+          "topic_id": "data-structures.t35",
+          "chapter_id": "data-structures.c07",
+          "title": "冒泡与选择的一趟",
+          "depth": "直接应用",
+          "keywords": [
+            "冒泡",
+            "选择排序"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "看到两两比较不一定是冒泡，必须看相邻交换；简单选择的远距离交换可能改变同键先后。"
+        },
+        {
+          "topic_id": "data-structures.t36",
+          "chapter_id": "data-structures.c07",
+          "title": "堆排序取顶与下沉",
+          "depth": "直接应用",
+          "keywords": [
+            "堆排序"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "不是与任意一个孩子交换；堆只保证父子偏序，建堆O(n)与逐项插入的O(nlogn)不能混淆。"
+        },
+        {
+          "topic_id": "data-structures.t37",
+          "chapter_id": "data-structures.c07",
+          "title": "希尔排序按增量分组",
+          "depth": "直接应用",
+          "keywords": [
+            "希尔"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "增量序列影响效率，不能统一背成固定O(nlogn)；跨组远移也使常规实现不保证稳定。"
+        },
+        {
+          "topic_id": "data-structures.t38",
+          "chapter_id": "data-structures.c07",
+          "title": "基数排序稳定收集",
+          "depth": "直接应用",
+          "keywords": [
+            "基数"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "桶内不稳定会破坏已排低位；复杂度依赖位数d与桶数r，不是任意键都能直接线性排序。"
         },
         {
           "topic_id": "data-structures.t24",
@@ -4216,7 +4865,7 @@
         {
           "topic_id": "programming.t09",
           "chapter_id": "programming.c07",
-          "title": "作用域、递归与模块化",
+          "title": "C与Python名字作用域",
           "depth": "综合应用",
           "keywords": [
             "作用域",
@@ -4225,7 +4874,9 @@
             "递归",
             "调用栈",
             "模块化",
-            "终止条件"
+            "终止条件",
+            "全局",
+            "局部"
           ],
           "knowledge_points": [],
           "core_status": "必学",
@@ -4245,7 +4896,35 @@
           ],
           "short_answer": true,
           "study_task": "展开递归到终止条件并逐层返回，区分作用域与变量生存期。",
-          "common_trap": "局部变量不会自动修改同名全局变量；递归缺终止或规模不变会耗尽栈，模块化也不是简单把长程序随意切成多个文件。"
+          "common_trap": "名称可见与对象生命周期分开判断；局部static仍局部可见，Python原地改列表也不等重新绑定。"
+        },
+        {
+          "topic_id": "programming.t17",
+          "chapter_id": "programming.c07",
+          "title": "递归调用与逐层返回",
+          "depth": "综合应用",
+          "keywords": [
+            "递归",
+            "阶乘"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "需要基例可达且规模缩小；递归不是循环自动更快，先打印后递归和递归后打印次序也不同。"
         },
         {
           "topic_id": "programming.t10",
@@ -4429,7 +5108,7 @@
         {
           "topic_id": "programming.t15",
           "chapter_id": "programming.c10",
-          "title": "Python异常、模块与文件",
+          "title": "Python按异常类型分支",
           "depth": "综合应用",
           "keywords": [
             "异常",
@@ -4459,7 +5138,36 @@
           ],
           "short_answer": true,
           "study_task": "写出Python文件处理与异常分支，说明with为何能在失败时释放资源。",
-          "common_trap": "捕获所有异常后静默忽略会隐藏缺陷；文件不存在、权限不足和解码失败原因不同，finally 中 return 还可能覆盖原返回值。"
+          "common_trap": "不要把所有失败都解释为输入错误；不能恢复时应报告或继续抛出，空捕获并不表示程序已修好。"
+        },
+        {
+          "topic_id": "programming.t18",
+          "chapter_id": "programming.c10",
+          "title": "with文件读写与编码",
+          "depth": "综合应用",
+          "keywords": [
+            "with",
+            "文件",
+            "编码"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "common_trap": "路径不存在和解码失败是不同原因；关闭文件不等于内容已另有备份，外部资源仍需错误路径管理。"
         },
         {
           "topic_id": "programming.t16",
@@ -4886,7 +5594,64 @@
           ],
           "short_answer": true,
           "study_task": "拆分Cache地址字段，判断命中并计算包含缺失代价的平均访问时间。",
-          "common_trap": "未命中代价是否已含首次查Cache必须看题意；命中率高仍可能被大缺失代价拖慢，写策略和替换策略也会影响行为。"
+          "common_trap": "命中率高不保证所有程序都快；Cache未命中、TLB未命中和缺页属于不同层次，不能混算。"
+        },
+        {
+          "topic_id": "computer-organization.t15",
+          "chapter_id": "computer-organization.c04",
+          "title": "Cache地址拆分与命中",
+          "depth": "综合应用",
+          "keywords": [
+            "Cache",
+            "缓存"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "容量指数据区还是含标记要看题意；行号相同不代表命中，仍须有效位为真且标记匹配。"
+        },
+        {
+          "topic_id": "computer-organization.t16",
+          "chapter_id": "computer-organization.c04",
+          "title": "平均访存时间按口径算",
+          "depth": "综合应用",
+          "keywords": [
+            "平均访问",
+            "平均访存",
+            "命中率"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "不能既按失效总时间加权又重复加首次查询；是否串行、是否考虑写回与缺页都应服从题设。"
         },
         {
           "topic_id": "computer-organization.t11",
@@ -4923,7 +5688,63 @@
           ],
           "short_answer": true,
           "study_task": "画小规模流水线时空图，计入启动、冲突和停顿后求总周期。",
-          "common_trap": "流水线通常不把单条指令延迟缩短k倍；时钟周期受最慢阶段和流水寄存器开销限制，理想公式不能忽略题目给出的停顿。"
+          "common_trap": "更多级数可能增加寄存器与分支代价；数据转发不能保证消除一切等待，不能跳过题给时序。"
+        },
+        {
+          "topic_id": "computer-organization.t17",
+          "chapter_id": "computer-organization.c05",
+          "title": "理想流水线填充与排空",
+          "depth": "综合应用",
+          "keywords": [
+            "理想",
+            "流水线"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "公式假定各段可同时工作且无冲突停顿；阶段不等长时先找节拍，不能把总段时间当周期。"
+        },
+        {
+          "topic_id": "computer-organization.t18",
+          "chapter_id": "computer-organization.c05",
+          "title": "流水线停顿与总时间",
+          "depth": "综合应用",
+          "keywords": [
+            "停顿",
+            "转发"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "已经包含停顿的时间表不能再次加罚时；无转发数据相关要等写回，能否同拍读写须按约定。"
         },
         {
           "topic_id": "computer-organization.t12",
@@ -5730,6 +6551,33 @@
           "common_trap": "原下一跳若报告距离变大也要更新；其他邻居出现更短候选时再切换。"
         },
         {
+          "topic_id": "net.fragmentation",
+          "chapter_id": "net-04",
+          "title": "IPv4分片的长度与偏移",
+          "depth": "综合应用",
+          "keywords": [
+            "分片",
+            "MTU"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "总长度还要加各片首部；MF仅末片为0。IPv6中间路由器不分片，应返回Packet Too Big。"
+        },
+        {
           "topic_id": "net.tcp-udp",
           "chapter_id": "net-05",
           "title": "TCP与UDP",
@@ -5848,6 +6696,34 @@
           "common_trap": "接收窗口很大不代表网络不拥塞；快重传、快恢复和超时处理不能混为同一步。"
         },
         {
+          "topic_id": "net.congestion-steps",
+          "chapter_id": "net-05",
+          "title": "拥塞窗口逐轮变化",
+          "depth": "综合应用",
+          "keywords": [
+            "慢开始",
+            "拥塞窗口",
+            "ssthresh"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "门限减半按在途量并有2MSS下限；快恢复不能按超时处理。增长受ACK数量与实现限制，应先按题设。"
+        },
+        {
           "topic_id": "net.app-protocols",
           "chapter_id": "net-06",
           "title": "名称、配置与应用服务",
@@ -5963,6 +6839,82 @@
           "target_depth": "综合应用",
           "study_task": "画DNS解析和DHCP租约流程，区分递归、迭代及各消息的作用。",
           "common_trap": "DNS故障不会直接把主机地址改成169.254；递归查询和迭代查询的责任主体不同。"
+        },
+        {
+          "topic_id": "net.dns-lookup",
+          "chapter_id": "net-06",
+          "title": "DNS递归与迭代查询",
+          "depth": "综合应用",
+          "keywords": [
+            "递归",
+            "迭代",
+            "DNS查询"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "根通常返回转介，不保存每个站点地址；主机不必预知根服务器名，递归与迭代要看谁负责继续查。"
+        },
+        {
+          "topic_id": "net.dhcp-lease",
+          "chapter_id": "net-06",
+          "title": "DHCP租约获取流程",
+          "depth": "综合应用",
+          "keywords": [
+            "DHCP",
+            "租约"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "DHCP分配配置而非解析域名；续租不必重做完整广播流程，169.254地址只是自动配置失败的常见线索。"
+        },
+        {
+          "topic_id": "net.socket-io",
+          "chapter_id": "net-06",
+          "title": "TCP Socket收发与消息边界",
+          "depth": "直接应用",
+          "keywords": [
+            "Socket",
+            "socket",
+            "sendall",
+            "recv"
+          ],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true,
+          "common_trap": "TCP提供字节流，不保留send调用边界；recv返回空字节通常表示对端有序关闭，不是完整业务消息。"
         },
         {
           "topic_id": "net.security-boundary",
@@ -6115,6 +7067,34 @@
           "common_trap": "RTP不保证可靠重传；平均带宽足够仍可能因短时波动或抖动造成卡顿。"
         },
         {
+          "topic_id": "net.playback-buffer",
+          "chapter_id": "net-08",
+          "title": "播放缓冲耗尽计算",
+          "depth": "综合应用",
+          "keywords": [
+            "缓冲耗尽",
+            "缓冲区",
+            "缓存"
+          ],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "先统一bit与Byte；输入不低于消费时不能套正耗尽时间。可变速率需分阶段算，缓冲会增加启动等待。"
+        },
+        {
           "topic_id": "net.wireless-mobile",
           "chapter_id": "net-09",
           "title": "WLAN、无线接入与移动网络",
@@ -6206,14 +7186,14 @@
         {
           "topic_id": "circuit.t01",
           "chapter_id": "circuit.c01",
-          "title": "参考方向、功率与示波器读数",
+          "title": "关联参考方向与功率符号",
           "depth": "直接应用",
           "keywords": [
-            "参考方向",
-            "功率",
-            "示波器读数",
-            "功率与示波器读数",
-            "电路分析基础"
+            "关联参考方向",
+            "功率符号",
+            "关联参考方向与功率符号",
+            "电路分析基础",
+            "参考方向"
           ],
           "knowledge_points": [
             "电路分析基础"
@@ -6232,7 +7212,7 @@
             "直接计算"
           ],
           "short_answer": true,
-          "common_trap": "负电流表示实际方向相反；220V市电是有效值，示波器显示量还要分峰值与峰峰值。"
+          "common_trap": "判断吸收发出先看正负端和箭头，不只乘绝对值；负电流有物理意义，不能因负号直接判元件损坏。"
         },
         {
           "topic_id": "circuit.t02",
@@ -6325,6 +7305,62 @@
           "short_answer": true,
           "study_task": "独立源置零求等效电阻，计算戴维南等效并说明受控源不能直接置零。",
           "common_trap": "受控源不能随意置零，功率不能直接叠加；端口等效不保证内部支路量相同。"
+        },
+        {
+          "topic_id": "circuit.t13",
+          "chapter_id": "circuit.c03",
+          "title": "共享电阻的网孔列式",
+          "depth": "综合应用",
+          "keywords": [
+            "共享电阻的网孔列式",
+            "节点电压"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "共享支路不是两网孔电流直接相加；电源正负要按绕行方向，求出电流后回代KVL检查每条回路。"
+        },
+        {
+          "topic_id": "circuit.t14",
+          "chapter_id": "circuit.c03",
+          "title": "戴维南端口参数求法",
+          "depth": "综合应用",
+          "keywords": [
+            "戴维南端口参数求法",
+            "叠加"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "受控源不能随意置零，独立源置零后可加测试源求Ut/It；Uoc与Isc都0时不能把0/0当零电阻。"
         },
         {
           "topic_id": "circuit.t05",
@@ -6724,7 +7760,61 @@
           ],
           "short_answer": true,
           "study_task": "先求静态工作点再分析交流增益，判断截止或饱和失真的方向。",
-          "common_trap": "β关系限放大区；RE未旁路时不能套此增益简式；rbe不是外接RB，削顶还要查工作点与摆幅。"
+          "common_trap": "不能把静态电流代作交流信号，也不能用小信号增益宣称任意幅度都可线性输出；工作区与摆幅要验证。"
+        },
+        {
+          "topic_id": "analog-electronics.t11",
+          "chapter_id": "analog-electronics.c03",
+          "title": "固定偏置静态工作点",
+          "depth": "综合应用",
+          "keywords": [
+            "固定偏置静态工作点"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "计算出负UCE不能继续沿用放大区假设；若接入RE，回路还需计入IERE，不能原式硬套。"
+        },
+        {
+          "topic_id": "analog-electronics.t12",
+          "chapter_id": "analog-electronics.c03",
+          "title": "共射中频小信号增益",
+          "depth": "综合应用",
+          "keywords": [
+            "共射中频小信号增益"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "rbe不是偏置RB；RE未充分旁路、输入过大或输出削顶时，不能继续使用这一简式。"
         },
         {
           "topic_id": "analog-electronics.t05",
@@ -6754,7 +7844,93 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "空载增益不可机械相乘；0.707倍电压对应半功率；共模抑制不等于消除全部噪声。"
+          "common_trap": "空载总增益、共模抑制比和带宽是不同量；某一指标改善不代表三者都改善，输出始终受线性摆幅约束。"
+        },
+        {
+          "topic_id": "analog-electronics.t13",
+          "chapter_id": "analog-electronics.c04",
+          "title": "级间负载分压",
+          "depth": "综合应用",
+          "keywords": [
+            "级间负载分压"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "空载增益不能机械相乘；输入电阻越大通常加载越轻，但还须核查频率和具体电路条件。"
+        },
+        {
+          "topic_id": "analog-electronics.t14",
+          "chapter_id": "analog-electronics.c04",
+          "title": "差模、共模与抑制比",
+          "depth": "综合应用",
+          "keywords": [
+            "差模",
+            "共模",
+            "抑制比",
+            "共模与抑制比"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "CMRR越大越能抑制共模，但不是消除全部噪声；换算分贝用20log₁₀CMRR并检查摆幅。"
+        },
+        {
+          "topic_id": "analog-electronics.t15",
+          "chapter_id": "analog-electronics.c04",
+          "title": "截止频率与通频带",
+          "depth": "综合应用",
+          "keywords": [
+            "截止频率",
+            "通频带",
+            "截止频率与通频带"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "0.707倍电压在负载不变时对应半功率，不是电压减半；扩大频带也不能保证其他指标都改善。"
         },
         {
           "topic_id": "analog-electronics.t06",
@@ -6788,7 +7964,61 @@
           ],
           "short_answer": true,
           "study_task": "用瞬时极性法判断反馈正负，辨别组态并计算满足条件时的闭环增益。",
-          "common_trap": "先验负反馈，再分取样与接法；不能只看接正端或负端，环外噪声和稳定性仍需检查。"
+          "common_trap": "接反相端不自动等于任意频率都稳定；组态与环路增益不同，环外噪声也不能靠负反馈全部消除。"
+        },
+        {
+          "topic_id": "analog-electronics.t16",
+          "chapter_id": "analog-electronics.c05",
+          "title": "负反馈闭环增益计算",
+          "depth": "综合应用",
+          "keywords": [
+            "负反馈闭环增益计算"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "把正反馈直接套入负反馈结论会错；深反馈近似不是任意数据的精确值，还要满足稳定线性条件。"
+        },
+        {
+          "topic_id": "analog-electronics.t17",
+          "chapter_id": "analog-electronics.c05",
+          "title": "四种负反馈的电阻判断",
+          "depth": "综合应用",
+          "keywords": [
+            "四种负反馈的电阻判断"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "电压或电流指输出取样，串联或并联指输入比较；不能只看连接正端负端就机械判定组态。"
         },
         {
           "topic_id": "analog-electronics.t07",
@@ -6851,7 +8081,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "输入在两阈之间且历史未知时不能唯一判输出；比较器饱和不可虚短，正反馈不凭空供能。"
+          "common_trap": "迟滞抗抖与正弦振荡不是同一目标；正反馈不供能，阈值历史和振荡稳定条件必须按具体电路说明。"
         },
         {
           "topic_id": "analog-electronics.t09",
@@ -6883,6 +8113,64 @@
           "common_trap": "效率高不代表失真小；输出功率增加必须同时核对器件安全区和散热。"
         },
         {
+          "topic_id": "analog-electronics.t18",
+          "chapter_id": "analog-electronics.c07",
+          "title": "迟滞阈值与历史状态",
+          "depth": "综合应用",
+          "keywords": [
+            "迟滞阈值",
+            "历史状态",
+            "迟滞阈值与历史状态"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "初始输入就在2到3V且历史未知，无法唯一判输出；比较器通常饱和，不能用线性运放虚短。"
+        },
+        {
+          "topic_id": "analog-electronics.t19",
+          "chapter_id": "analog-electronics.c07",
+          "title": "正弦振荡的起振与稳幅",
+          "depth": "综合应用",
+          "keywords": [
+            "正弦振荡的起振",
+            "稳幅",
+            "正弦振荡的起振与稳幅"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "正反馈不是自动振荡保证，仍需选频和电源供能；相位与幅度要同时满足，稳态条件不等于起振条件。"
+        },
+        {
           "topic_id": "analog-electronics.t10",
           "chapter_id": "analog-electronics.c08",
           "title": "直流电源、采集链与排障",
@@ -6912,7 +8200,88 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "二极管挡先断电放电、必要时脱一端；MOS防静电；平均值正常不证明波形正常，ADC位数高不消除前端噪声。"
+          "common_trap": "把ADC位数提高不能补救供电纹波或前端削顶；万用表平均值正常也不能证明动态波形和全部参数正确。"
+        },
+        {
+          "topic_id": "analog-electronics.t20",
+          "chapter_id": "analog-electronics.c08",
+          "title": "电容滤波纹波估算",
+          "depth": "综合应用",
+          "keywords": [
+            "电容滤波纹波估算"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "这只是忽略导通时间的近似；大电容还增充电冲击，不能脱离整流器件、耐压与负载做完整设计。"
+        },
+        {
+          "topic_id": "analog-electronics.t21",
+          "chapter_id": "analog-electronics.c08",
+          "title": "传感器采集链选型",
+          "depth": "综合应用",
+          "keywords": [
+            "传感器采集链选型"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "ADC位数高不能修复前端噪声偏置和混叠；滤波过强会丢有用变化，选型需同时核查信号带宽。"
+        },
+        {
+          "topic_id": "analog-electronics.t22",
+          "chapter_id": "analog-electronics.c08",
+          "title": "二极管挡安全初检",
+          "depth": "综合应用",
+          "keywords": [
+            "二极管挡安全初检"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "这个检查只能初判开短路，不能证明耐压、放大倍数和动态性能正常；带电量阻可能损表且结果错误。"
         }
       ]
     },
@@ -6984,6 +8353,31 @@
           ],
           "short_answer": true,
           "common_trap": "BCD不是普通二进制整体转换；逻辑0/1是电平范围，不一定精确等于0V/1V。"
+        },
+        {
+          "topic_id": "digital-electronics.t12",
+          "chapter_id": "digital-electronics.c01",
+          "title": "二进制小数按位权求值",
+          "depth": "直接应用",
+          "keywords": [
+            "二进制小数按位权求值"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "common_trap": "小数部分不能按十进制直接读0.01；整数除基取余要倒序，小数乘基取整数则按产生顺序排列。"
         },
         {
           "topic_id": "digital-electronics.t02",
@@ -7076,7 +8470,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "使能和有效电平按器件规定；MUX的S是选择端，加法器的S是和位，同一字母不代表同一作用。"
+          "common_trap": "使能和有效电平须按器件功能表；这些器件不保存历史状态，状态保持任务需触发器等存储单元。"
         },
         {
           "topic_id": "digital-electronics.t05",
@@ -7104,6 +8498,64 @@
           ],
           "short_answer": true,
           "common_trap": "毛刺直接接异步控制端可能被误触发；不能只用理想布尔表达式判断动态波形。"
+        },
+        {
+          "topic_id": "digital-electronics.t13",
+          "chapter_id": "digital-electronics.c04",
+          "title": "用MUX拆分逻辑函数",
+          "depth": "综合应用",
+          "keywords": [
+            "用MUX拆分逻辑函数",
+            "MUX",
+            "拆分逻辑函数"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "必须先看使能与输出是否反相；选择端S不是全加器和位S，不能只凭同一个字母推断功能。"
+        },
+        {
+          "topic_id": "digital-electronics.t14",
+          "chapter_id": "digital-electronics.c04",
+          "title": "全加器的和位与进位",
+          "depth": "综合应用",
+          "keywords": [
+            "全加器的",
+            "进位",
+            "全加器的和位与进位"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "半加器没有来自低位的Cin；进位为1不代表本位S也为1，检查结果可回代2Cout+S。"
         },
         {
           "topic_id": "digital-electronics.t06",
@@ -7199,7 +8651,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "4位不等于一定模16；异步计数器延迟逐级累积，同步计数器共用时钟。"
+          "common_trap": "四位存储不等于一定模16；未用状态仍需规定去向，同步共享时钟不能替代对下一状态规则的检查。"
         },
         {
           "topic_id": "digital-electronics.t09",
@@ -7234,6 +8686,63 @@
           "common_trap": "地址线和数据线作用不同；RAM通常易失，ROM家族并非全部永远不可改写。"
         },
         {
+          "topic_id": "digital-electronics.t15",
+          "chapter_id": "digital-electronics.c06",
+          "title": "移位寄存器逐拍跟踪",
+          "depth": "综合应用",
+          "keywords": [
+            "移位寄存器逐拍跟踪"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "移位不是模计数加1；并行装入与串行移动控制不同，同一拍各位应依据原状态同时更新。"
+        },
+        {
+          "topic_id": "digital-electronics.t16",
+          "chapter_id": "digital-electronics.c06",
+          "title": "计数器状态到T激励",
+          "depth": "综合应用",
+          "keywords": [
+            "计数器状态到T激励",
+            "计数器状态到",
+            "激励",
+            "T"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "不要用同拍已更新的低位计算高位；若改D触发器，输入直接等于Q+，不可照用T的激励式。"
+        },
+        {
           "topic_id": "digital-electronics.t10",
           "chapter_id": "digital-electronics.c07",
           "title": "脉冲、555与施密特触发",
@@ -7262,7 +8771,7 @@
             "直接计算"
           ],
           "short_answer": true,
-          "common_trap": "占空比不等频率；施密特回差提高抗扰，也改变翻转阈值。"
+          "common_trap": "占空比不等于频率；施密特不是产生任意周期的时钟源，555多种功能也不是仅凭芯片名称就能确定。"
         },
         {
           "topic_id": "digital-electronics.t11",
@@ -7296,6 +8805,58 @@
           "short_answer": true,
           "study_task": "根据位数与满量程求分辨率，区分ADC量化误差与采样混叠。",
           "common_trap": "分辨率不等绝对精度；位数增加不消除噪声、参考误差和混叠。"
+        },
+        {
+          "topic_id": "digital-electronics.t17",
+          "chapter_id": "digital-electronics.c07",
+          "title": "脉冲周期与占空比",
+          "depth": "直接应用",
+          "keywords": [
+            "脉冲周期",
+            "占空比",
+            "脉冲周期与占空比"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "common_trap": "占空比不是频率也不是幅度；百分数需乘100%，读图要分清一个周期和仅高电平所占的宽度。"
+        },
+        {
+          "topic_id": "digital-electronics.t18",
+          "chapter_id": "digital-electronics.c07",
+          "title": "施密特双阈值整形",
+          "depth": "直接应用",
+          "keywords": [
+            "施密特双阈值整形"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "common_trap": "高低方向由具体电路规定，不能只记阈值数字；历史未知且输入在回差区间时，输出不能唯一确定。"
         }
       ]
     },
@@ -7524,7 +9085,36 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "复用不是调制，TDM必须保持时隙同步；曼彻斯特自同步代价是更高带宽，物理同步也不保证业务幂等。"
+          "common_trap": "自同步不保证应用幂等；帧率依每帧从各路取多少信息而定，曼彻斯特方向约定也要先按具体标准。"
+        },
+        {
+          "topic_id": "communication.t17",
+          "chapter_id": "communication.c03",
+          "title": "同步TDM帧率与开销",
+          "depth": "综合应用",
+          "keywords": [
+            "同步TDM帧率",
+            "开销",
+            "同步",
+            "TDM",
+            "帧率与开销"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "一帧已含所有支路，不能再把帧率乘路数；每时隙只取1bit时需按新帧结构重算，不能照搬样值帧率。"
         },
         {
           "topic_id": "communication.t07",
@@ -7645,7 +9235,32 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "振荡器没有周期输入但仍需直流能量；PLL锁定有捕获与跟踪范围，不能把任意频差都视为可立即锁定。"
+          "common_trap": "无周期输入不代表没有电源；有VCO也不代表已锁相，无法捕获时不能先假设频率完全一致再分析。"
+        },
+        {
+          "topic_id": "communication.t18",
+          "chapter_id": "communication.c06",
+          "title": "锁相环误差反馈过程",
+          "depth": "综合应用",
+          "keywords": [
+            "锁相环误差反馈过程"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "锁定不必相位误差严格为0，取决于结构；环路滤波要权衡噪声与响应速度，不能把任意频差视为立即锁定。"
         },
         {
           "topic_id": "communication.t11",
@@ -7701,7 +9316,94 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "普通CRC主要检错而非纠错，偶数位错误可能逃过简单奇偶校验；无序号重传会造成重复或错序。"
+          "common_trap": "CRC余数零不保证绝对正确，奇偶可能漏偶数位错；增加冗余与请求重传作用不同，不能把CRC当纠错码。"
+        },
+        {
+          "topic_id": "communication.t19",
+          "chapter_id": "communication.c07",
+          "title": "离散信源熵的计算",
+          "depth": "直接应用",
+          "keywords": [
+            "离散信源熵的计算"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "common_trap": "平均1.5bit不表示每个符号物理编码都长1.5位；概率越集中通常不确定性越低，熵与信道容量不同。"
+        },
+        {
+          "topic_id": "communication.t20",
+          "chapter_id": "communication.c07",
+          "title": "CRC模2除法与余数",
+          "depth": "综合应用",
+          "keywords": [
+            "CRC模2除法",
+            "余数",
+            "CRC",
+            "除法与余数"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "模2减法不借位；余数0不能证明绝对无误，CRC主要检错，重传和纠错需要另外机制完成。"
+        },
+        {
+          "topic_id": "communication.t21",
+          "chapter_id": "communication.c07",
+          "title": "ARQ确认、序号与超时",
+          "depth": "综合应用",
+          "keywords": [
+            "ARQ确认",
+            "序号",
+            "超时",
+            "ARQ",
+            "确认",
+            "序号与超时"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "仅有确认不能处理ACK丢失，仅有重传会造成重复；等待很久不等于已确认，序号和定时器要配合。"
         },
         {
           "topic_id": "communication.t13",
@@ -7820,6 +9522,36 @@
           ],
           "short_answer": true,
           "common_trap": "dBm是绝对功率，dB是比值；预算只保证功率余量，不自动保证色散、带宽和误码率达标。"
+        },
+        {
+          "topic_id": "communication.t22",
+          "chapter_id": "communication.c09",
+          "title": "dB链路预算与余量",
+          "depth": "综合应用",
+          "keywords": [
+            "dB链路预算",
+            "余量",
+            "dB",
+            "链路预算与余量"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "0dBm不是零功率，不能把两项dBm相加当增益；功率预算满足仍要检查色散、带宽及接收过载。"
         }
       ]
     },
@@ -8109,6 +9841,62 @@
           "common_trap": "时域相乘对应频域卷积而非相乘；时间压缩会使频谱展宽，并伴随不能遗漏的幅度因子。"
         },
         {
+          "topic_id": "signals-systems.t14",
+          "chapter_id": "signals-systems.c04",
+          "title": "傅里叶奇偶与系数",
+          "depth": "直接应用",
+          "keywords": [
+            "傅里叶奇偶",
+            "系数",
+            "傅里叶奇偶与系数"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "common_trap": "仅奇偶性不能直接消去所有偶次谐波，半波对称才给相应约束；三角系数不能直接当复指数系数。"
+        },
+        {
+          "topic_id": "signals-systems.t15",
+          "chapter_id": "signals-systems.c04",
+          "title": "时移与尺度的频谱变化",
+          "depth": "综合应用",
+          "keywords": [
+            "时移",
+            "尺度的频谱变化",
+            "时移与尺度的频谱变化"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "时间压缩会展宽频谱但不能漏幅度因子；尺度与平移混合时先确定实际延迟，不只看括号内常数。"
+        },
+        {
           "topic_id": "signals-systems.t09",
           "chapter_id": "signals-systems.c05",
           "title": "拉普拉斯变换、极点与ROC",
@@ -8169,6 +9957,35 @@
           ],
           "short_answer": true,
           "common_trap": "右边与左边序列可有同一代数式而ROC不同；单边Z变换处理初值时不能套双边零状态结论。"
+        },
+        {
+          "topic_id": "signals-systems.t16",
+          "chapter_id": "signals-systems.c05",
+          "title": "部分分式与反变换",
+          "depth": "综合应用",
+          "keywords": [
+            "部分分式",
+            "反变换",
+            "部分分式与反变换"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "非零初始状态还需导数变换的初值项；求系数代极点是代入多项式恒等式，不表示原函数在极点收敛。"
         },
         {
           "topic_id": "signals-systems.t11",
@@ -8688,7 +10505,7 @@
           ],
           "short_answer": true,
           "study_task": "从控制流求环形复杂度，分别构造语句、分支和条件覆盖用例。",
-          "common_trap": "判定覆盖和条件覆盖一般互不包含；覆盖率高不能发现遗漏需求，复杂度低也不能证明没有缺陷。"
+          "common_trap": "判定与条件覆盖一般互不包含；多出口分支不能直接套二分判定数加一，路径还可能不可达。"
         },
         {
           "topic_id": "software-engineering.t13",
@@ -8724,6 +10541,63 @@
           ],
           "short_answer": true,
           "common_trap": "回归不是第五个测试层次；失败位置不等于缺陷位置，测试发现问题，调试定位并修复根因。"
+        },
+        {
+          "topic_id": "software-engineering.t20",
+          "chapter_id": "software-engineering.c05",
+          "title": "语句与判定覆盖辨别",
+          "depth": "综合应用",
+          "keywords": [
+            "覆盖",
+            "白盒"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "条件覆盖看各基本条件真假，不保证整个组合判定两种结果；短路会影响哪些条件实际被计算。"
+        },
+        {
+          "topic_id": "software-engineering.t21",
+          "chapter_id": "software-engineering.c05",
+          "title": "控制流图环形复杂度",
+          "depth": "综合应用",
+          "keywords": [
+            "环形",
+            "复杂度",
+            "路径"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "数量够不代表路径彼此独立；不可达路径无法凭编造输入覆盖，高覆盖也不能找出所有遗漏需求。"
         },
         {
           "topic_id": "software-engineering.t14",
@@ -8825,7 +10699,7 @@
           ],
           "short_answer": true,
           "study_task": "根据活动依赖求关键路径和工期，说明非关键活动的可用时差。",
-          "common_trap": "WBS不是日程表；功能点、代码行和故事点口径不同，估算必须写假设并随证据更新。"
+          "common_trap": "代码行、功能点、故事点不可直接互换；WBS不是日程表，压缩非关键活动不一定缩短项目。"
         },
         {
           "topic_id": "software-engineering.t17",
@@ -8857,6 +10731,34 @@
           ],
           "short_answer": true,
           "common_trap": "增加人员不一定缩短工期，培训沟通也有成本；概率乘损失只辅助排序，安全法律影响不能只看金额。"
+        },
+        {
+          "topic_id": "software-engineering.t22",
+          "chapter_id": "software-engineering.c07",
+          "title": "关键路径与总工期",
+          "depth": "综合应用",
+          "keywords": [
+            "关键路径",
+            "工期"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "可能同时存在多条关键路径；只压缩一条未必缩短工期，资源约束另需校验，不能凭活动最长就判关键。"
         },
         {
           "topic_id": "software-engineering.t18",
@@ -9360,6 +11262,33 @@
           "short_answer": true,
           "study_task": "从攻击现象识别威胁，分别提出预防、检测和处置措施。",
           "common_trap": "异常现象不是攻击结论；HTTPS网站仍可能存在注入、越权和业务漏洞。"
+        },
+        {
+          "topic_id": "information-security.t18",
+          "chapter_id": "information-security.c06",
+          "title": "VPN隧道与身份校验",
+          "depth": "综合应用",
+          "keywords": [
+            "VPN",
+            "隧道",
+            "虚拟专用网"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "common_trap": "单纯隧道不一定加密；VPN不修复终端病毒、弱口令与业务越权，仍需最小权限、补丁和审计。"
         },
         {
           "topic_id": "information-security.t13",

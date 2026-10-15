@@ -1,0 +1,167 @@
+{
+  "cards": [
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "topic_id": "net.fragmentation",
+      "title": "IPv4分片的长度与偏移",
+      "suggested_parent_topic_id": "net.ip-versions",
+      "keywords": [
+        "分片",
+        "MTU"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-net-006"
+        },
+        {
+          "id": "gap-audit26-core-net-ipv6-fragment"
+        }
+      ],
+      "practice_proposed": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "topic_id": "net.congestion-steps",
+      "title": "拥塞窗口逐轮变化",
+      "suggested_parent_topic_id": "net.flow-congestion",
+      "keywords": [
+        "慢开始",
+        "拥塞窗口",
+        "ssthresh"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-congestion-trace",
+          "type": "简答",
+          "stem": "按教材Reno简化轮次模型，cwnd初值1 MSS、ssthresh=8 MSS，每轮确认充分且无丢包。写第1至第5轮开始时cwnd。",
+          "answer": "1、2、4、8、9 MSS。",
+          "explanation": "门限前每RTT近翻倍，达到8后拥塞避免每轮加1。",
+          "ability": "过程描述",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-full-net-congestion-loss",
+          "type": "简答",
+          "stem": "按教材TCP Reno简化模型，超时与收到三个重复ACK都会如何触发重传？它们对cwnd的恢复处理能否混为一谈？",
+          "answer": "超时触发超时重传并通常把cwnd降到1 MSS重新慢开始；三个重复ACK触发快重传，Reno进入快恢复，不能当作超时归1处理。",
+          "explanation": "二者都提示丢包，但拥塞证据和恢复路径不同。门限常按在途量约减半并有下限，具体数值须看题设。",
+          "ability": "机制解释",
+          "difficulty": "应用"
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "topic_id": "net.dns-lookup",
+      "title": "DNS递归与迭代查询",
+      "suggested_parent_topic_id": "net.dns-dhcp",
+      "keywords": [
+        "递归",
+        "迭代",
+        "DNS查询"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-08-s1-q68"
+        },
+        {
+          "id": "hn-recall-hn26-010"
+        }
+      ],
+      "practice_proposed": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "topic_id": "net.dhcp-lease",
+      "title": "DHCP租约获取流程",
+      "suggested_parent_topic_id": "net.dns-dhcp",
+      "keywords": [
+        "DHCP",
+        "租约"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-dhcp-order",
+          "type": "简答",
+          "stem": "IPv4主机首次经DHCP获取租约，写出Discover、Offer、Request、ACK的顺序，并说明Request的作用。",
+          "answer": "Discover→Offer→Request→ACK；Request表明主机选择的配置方案并请求服务器确认。",
+          "explanation": "首次获取的DORA流程；主机的Request也让其他服务器知道选择，续租路径另论。",
+          "ability": "过程描述",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-full-net-dhcp-dns",
+          "type": "简答",
+          "stem": "电脑获得169.254.x.x自动地址、掩码和网关未正确取得。仅修改DNS通常能解决吗？给出优先排查顺序。",
+          "answer": "通常不能；先查网线/WLAN与链路状态，再查DHCP服务、可用地址池和跨网段中继，成功获得配置后再检查DNS。",
+          "explanation": "169.254是IPv4链路本地自动地址的常见形式，不是DNS错误主动改写了主机地址；现象仍需结合网络设计确认。",
+          "ability": "场景选型",
+          "difficulty": "应用"
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "topic_id": "net.socket-io",
+      "title": "TCP Socket收发与消息边界",
+      "suggested_parent_topic_id": "net.app-protocols",
+      "keywords": [
+        "Socket",
+        "socket",
+        "sendall",
+        "recv"
+      ],
+      "practice_existing": [
+        {
+          "id": "hn-recall-hn26-005"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-socket-boundary",
+          "type": "简答",
+          "stem": "TCP发送方连续调用两次sendall，各发送10字节。接收端一次recv(1024)是否必然得到20字节或恰好一条消息？应如何处理？",
+          "answer": "不必然；TCP是字节流，recv可能返回少于20字节或合并的数据。应用需约定固定长度、长度前缀或分隔符，并循环读取到消息完整。",
+          "explanation": "sendall保证尝试发送所给数据，不保证对端recv的次数和消息边界；连接关闭与异常也需处理。",
+          "ability": "机制解释",
+          "difficulty": "应用"
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "topic_id": "net.playback-buffer",
+      "title": "播放缓冲耗尽计算",
+      "suggested_parent_topic_id": "net.streaming-qos",
+      "keywords": [
+        "缓冲耗尽",
+        "缓冲区",
+        "缓存"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-net-media-002"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-buffer-boundary",
+          "type": "简答",
+          "stem": "播放速率固定4 Mbit/s，网络持续输入5 Mbit/s，已有24 Mbit缓冲。能否用24/(4-5)=-24秒作为耗尽时间？说明原因。",
+          "answer": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+          "explanation": "耗尽公式要求消费速率大于输入速率，负时间没有物理意义。",
+          "ability": "机制解释",
+          "difficulty": "应用"
+        }
+      ]
+    }
+  ]
+}

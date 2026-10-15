@@ -1,0 +1,450 @@
+[
+  {
+    "build": "5472506a0aa23241",
+    "检查": "实际浏览器加载的5归属与20能力及OCR",
+    "题目": {
+      "cg-04-s3-q16": {
+        "topic": "programming.t01",
+        "ability": "概念识记",
+        "stem": "用基本操作计数分析算法时，时间复杂度主要描述（ ）。",
+        "options": {
+          "A": "某台机器实测的运行秒数",
+          "B": "源程序的字符数",
+          "C": "基本操作次数随输入规模增长的数量级",
+          "D": "源代码中静态指令的条数"
+        }
+      },
+      "zg-49142": {
+        "topic": "computer-foundations.t18",
+        "ability": "概念识记",
+        "stem": "下列哪些属于现代计算与信息技术的研究或应用实例？（多选）",
+        "options": {
+          "A": "量子计算机",
+          "B": "虚拟现实",
+          "C": "机器人",
+          "D": "数字地球和智能化小区"
+        }
+      },
+      "zg-8065": {
+        "topic": "programming.t01",
+        "ability": "比较辨析",
+        "stem": "汇编语言和机器语言都属于低级语言，之所以称为低级语言是因为用他们编写的程序可以被计算\n机直接识别执行。（ ）",
+        "options": {}
+      },
+      "dy-c350a16d": {
+        "topic": "computer-foundations.t07",
+        "ability": "机制解释",
+        "stem": "操作系统的主要作用是（ ）。",
+        "options": {
+          "A": "将源程序编译成目标程序",
+          "B": "只负责诊断机器的硬件故障",
+          "C": "控制和管理计算机系统各种软硬件资源的使用",
+          "D": "只负责外设与主机之间的信息交换"
+        }
+      },
+      "uf-co-002": {
+        "topic": "computer-organization.t04",
+        "ability": "直接计算",
+        "stem": "8位补码01111111加00000001的结果发生（ ）。",
+        "options": {
+          "A": "无溢出，结果128",
+          "B": "正溢出",
+          "C": "负溢出",
+          "D": "进位等于溢出"
+        }
+      },
+      "uf-co-003": {
+        "topic": "computer-organization.t09",
+        "ability": "直接计算",
+        "stem": "用8K×8位芯片组成32K×16位存储器，需要芯片数为（ ）。",
+        "options": {
+          "A": "4",
+          "B": "8",
+          "C": "16",
+          "D": "32"
+        }
+      },
+      "uf-co-006": {
+        "topic": "computer-organization.t02",
+        "ability": "直接计算",
+        "stem": "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+        "options": {
+          "A": "0.5 s",
+          "B": "1 s",
+          "C": "2 s",
+          "D": "4 s"
+        }
+      },
+      "ap-co-002": {
+        "topic": "computer-organization.t12",
+        "ability": "直接计算",
+        "stem": "一条32位数据总线每秒有效传送200万次，不计其他开销，其理论数据传输率约为（ ）。",
+        "options": {
+          "A": "8 MB/s",
+          "B": "32 MB/s",
+          "C": "2 MB/s",
+          "D": "64 MB/s"
+        }
+      },
+      "ap-se-005": {
+        "topic": "software-engineering.t06",
+        "ability": "机制解释",
+        "stem": "某需求只写“95%的查询在2秒内返回”，团队在100条数据、1个用户时达标，就宣布在所有使用场景均已验收。指出缺少的条件，以及应怎样完善验收依据。",
+        "options": {}
+      },
+      "sp-core-co-035": {
+        "topic": "computer-organization.t09",
+        "ability": "直接计算",
+        "stem": "按字节编址的系统有20根地址线，最多可直接表示________个字节地址。",
+        "options": {}
+      },
+      "sp-core-co-036": {
+        "topic": "computer-organization.t12",
+        "ability": "直接计算",
+        "stem": "16位数据总线一次最多传送________字节数据。",
+        "options": {}
+      },
+      "sp-core-co-037": {
+        "topic": "computer-organization.t09",
+        "ability": "直接计算",
+        "stem": "一片1K×8位存储芯片共可保存________位信息。",
+        "options": {}
+      },
+      "sp-core-co-039": {
+        "topic": "computer-organization.t01",
+        "ability": "机制解释",
+        "stem": "为什么“存储程序、程序控制”能让计算机自动连续工作？请按取指、译码与执行的信息流说明。",
+        "options": {}
+      },
+      "uc-co-001": {
+        "topic": "computer-organization.t04",
+        "ability": "直接计算",
+        "stem": "8位补码11110110表示的十进制真值是（ ）。",
+        "options": {
+          "A": "-10",
+          "B": "-9",
+          "C": "246",
+          "D": "10"
+        }
+      },
+      "uc-co-002": {
+        "topic": "computer-organization.t04",
+        "ability": "直接计算",
+        "stem": "8位加法器计算01111100+00001000，结果10000100。CF表示最高位向外进位，OF表示把操作数作为8位补码时的有符号溢出。CF与OF分别为（ ）。",
+        "options": {
+          "A": "CF=0，OF=1",
+          "B": "CF=1，OF=0",
+          "C": "CF=0，OF=0",
+          "D": "CF=1，OF=1"
+        }
+      },
+      "uc-co-003": {
+        "topic": "computer-organization.t09",
+        "ability": "直接计算",
+        "stem": "用8K×8位存储芯片组成32K×16位存储器。地址按存储字编排时，片内寻址与选择4个字扩展组分别需要多少根地址线？（ ）",
+        "options": {
+          "A": "13根片内地址线、2根高位组选择线",
+          "B": "8根片内地址线、4根高位组选择线",
+          "C": "15根片内地址线、不需要组选择线",
+          "D": "13根片内地址线、4根高位组选择线"
+        }
+      },
+      "uc-co-005": {
+        "topic": "computer-organization.t16",
+        "ability": "直接计算",
+        "stem": "某Cache命中时间2 ns，失效率5%，失效代价为60 ns。按AMAT=命中时间+失效率×失效代价，平均访问时间为（ ）。",
+        "options": {
+          "A": "5 ns",
+          "B": "3 ns",
+          "C": "62 ns",
+          "D": "60 ns"
+        }
+      },
+      "uc-co-006": {
+        "topic": "computer-organization.t07",
+        "ability": "直接计算",
+        "stem": "某相对寻址指令执行时PC内容为1000，指令地址字段是补码表示的-20，则有效地址EA为（ ）。",
+        "options": {
+          "A": "980",
+          "B": "1020",
+          "C": "-20",
+          "D": "1000"
+        }
+      },
+      "uc-co-007": {
+        "topic": "computer-organization.t07",
+        "ability": "直接计算",
+        "stem": "若采用定长操作码，要表示至少50种操作，操作码字段最少需要（ ）。",
+        "options": {
+          "A": "6位",
+          "B": "5位",
+          "C": "7位",
+          "D": "50位"
+        }
+      },
+      "uc-co-008": {
+        "topic": "computer-organization.t17",
+        "ability": "直接计算",
+        "stem": "理想5段等长流水线，每段1 ns，完成20条指令所需时间为（ ）。",
+        "options": {
+          "A": "24 ns",
+          "B": "100 ns",
+          "C": "20 ns",
+          "D": "25 ns"
+        }
+      },
+      "uc-co-009": {
+        "topic": "computer-organization.t02",
+        "ability": "直接计算",
+        "stem": "同一任务在A、B两种实现中都执行10^9条指令。A主频2GHz、平均CPI为1；B主频3GHz、平均CPI为2。忽略其他因素，哪项正确？",
+        "options": {
+          "A": "A用0.5s，B约0.667s，主频更高的B反而更慢",
+          "B": "A用1s，B用0.5s，B更快",
+          "C": "两者都用1s",
+          "D": "只看主频可确定B一定快1.5倍"
+        }
+      },
+      "uc-co-014": {
+        "topic": "computer-organization.t17",
+        "ability": "比较辨析",
+        "stem": "采用流水线后，主要目标是提高指令吞吐率，单条指令从开始到结束的延迟不一定缩短。（ ）",
+        "options": {}
+      },
+      "uc-se-004": {
+        "topic": "software-engineering.t09",
+        "ability": "概念识记",
+        "stem": "一个模块只完成“计算订单总价”这一单一明确任务，其内聚类型最接近（ ）。",
+        "options": {
+          "A": "功能内聚",
+          "B": "偶然内聚",
+          "C": "时间内聚",
+          "D": "逻辑内聚"
+        }
+      },
+      "uc-se-008": {
+        "topic": "software-engineering.t16",
+        "ability": "直接计算",
+        "stem": "活动A工期3天；A完成后B、C并行，工期分别4天和6天；B、C都完成后D执行2天。项目最短工期为（ ）。",
+        "options": {
+          "A": "11天",
+          "B": "15天",
+          "C": "9天",
+          "D": "6天"
+        }
+      },
+      "uc-se-013": {
+        "topic": "software-engineering.t04",
+        "ability": "机制解释",
+        "stem": "持续集成的自动构建和快速测试全部通过，就说明用户需求一定正确，因此可以完全省去系统测试和业务验收。（ ）",
+        "options": {}
+      },
+      "hn-recall-hn26-006": {
+        "topic": "database.t07",
+        "ability": "SQL编写",
+        "stem": "Reader(reader_id主键,name)与Borrow(reader_id,book_id)中，Borrow的两列非空且组合唯一，每行表示借阅一本不同图书。写SQL查询借书超过5本的读者姓名及数量。",
+        "options": {}
+      }
+    },
+    "结果": "逐项与审阅目标一致"
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "light",
+    "course": "大学计算机基础与新技术",
+    "chapter": 9,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "light",
+    "course": "Office软件操作",
+    "chapter": 3,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "light",
+    "course": "Office软件操作",
+    "chapter": 4,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "light",
+    "course": "C与Python程序设计",
+    "chapter": 7,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "light",
+    "course": "计算机网络",
+    "chapter": 5,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "dark",
+    "course": "大学计算机基础与新技术",
+    "chapter": 9,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "dark",
+    "course": "Office软件操作",
+    "chapter": 3,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "dark",
+    "course": "Office软件操作",
+    "chapter": 4,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "dark",
+    "course": "C与Python程序设计",
+    "chapter": 7,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 390,
+    "theme": "dark",
+    "course": "计算机网络",
+    "chapter": 5,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "light",
+    "course": "大学计算机基础与新技术",
+    "chapter": 9,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "light",
+    "course": "Office软件操作",
+    "chapter": 3,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "light",
+    "course": "Office软件操作",
+    "chapter": 4,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "light",
+    "course": "C与Python程序设计",
+    "chapter": 7,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "light",
+    "course": "计算机网络",
+    "chapter": 5,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "dark",
+    "course": "大学计算机基础与新技术",
+    "chapter": 9,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "dark",
+    "course": "Office软件操作",
+    "chapter": 3,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "dark",
+    "course": "Office软件操作",
+    "chapter": 4,
+    "page": "notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "dark",
+    "course": "C与Python程序设计",
+    "chapter": 7,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  },
+  {
+    "build": "5472506a0aa23241",
+    "width": 1280,
+    "theme": "dark",
+    "course": "计算机网络",
+    "chapter": 5,
+    "page": "color-notes",
+    "结果": "实际章节内容与独立手推及归位目标一致",
+    "overflow": false
+  }
+]

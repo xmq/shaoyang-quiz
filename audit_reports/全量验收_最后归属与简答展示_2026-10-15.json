@@ -1,0 +1,123 @@
+{
+  "build": "04a0cec6f7ad4fdb",
+  "checks": 20,
+  "errors": [],
+  "results": [
+    {
+      "id": "ue-circuit-010",
+      "topic_id": "circuit.t02",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "ap-digital-004",
+      "topic_id": "digital-electronics.t08",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "cg-06-s1-q70",
+      "topic_id": "computer-foundations.t07",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "zg-49142",
+      "topic_id": "computer-foundations.t18",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "uf-cm-018",
+      "topic_id": "communication.t08",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "hn-recall-hn26-006",
+      "topic_id": "database.t07",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "sp-core-co-039",
+      "topic_id": "computer-organization.t01",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "ap-se-005",
+      "topic_id": "software-engineering.t06",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "uc-se-013",
+      "topic_id": "software-engineering.t04",
+      "width": 390,
+      "filtered_pool": "pass"
+    },
+    {
+      "width": 390,
+      "reference_answer_not_duplicated": "pass"
+    },
+    {
+      "id": "ue-circuit-010",
+      "topic_id": "circuit.t02",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "ap-digital-004",
+      "topic_id": "digital-electronics.t08",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "cg-06-s1-q70",
+      "topic_id": "computer-foundations.t07",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "zg-49142",
+      "topic_id": "computer-foundations.t18",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "uf-cm-018",
+      "topic_id": "communication.t08",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "hn-recall-hn26-006",
+      "topic_id": "database.t07",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "sp-core-co-039",
+      "topic_id": "computer-organization.t01",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "ap-se-005",
+      "topic_id": "software-engineering.t06",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "id": "uc-se-013",
+      "topic_id": "software-engineering.t04",
+      "width": 1280,
+      "filtered_pool": "pass"
+    },
+    {
+      "width": 1280,
+      "reference_answer_not_duplicated": "pass"
+    }
+  ]
+}

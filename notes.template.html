@@ -471,6 +471,8 @@
     .color-notes-page .chapter-section.collapsed .chapter-body { display: block; }
     .color-notes-page .note-figure { margin: 16px auto 20px; padding: 0; }
     .color-notes-page .note-figure figcaption { display: none; }
+    .recall-diagram { margin: 8px 0; }
+    .recall-diagram > summary { min-height: 44px; padding: 10px 0; color: var(--primary); cursor: pointer; font-size: 14px; line-height: 1.6; }
 
     @media (max-width: 900px) {
       .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1278,6 +1280,15 @@
       bindTopicGuidance();
       bindChapters();
       if (colorMode) content.querySelectorAll(".recall-card").forEach((card) => {
+        card.querySelectorAll(".note-figure").forEach((figure) => {
+          const details = document.createElement("details");
+          details.className = "recall-diagram";
+          details.open = !mobileMedia.matches;
+          const summary = document.createElement("summary");
+          summary.textContent = `图解：${figure.querySelector("img")?.alt || "过程示意"}`;
+          figure.before(details);
+          details.append(summary, figure);
+        });
         const practice = card.querySelector(".point-practice-link");
         if (practice) card.appendChild(practice);
       });

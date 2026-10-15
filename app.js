@@ -731,6 +731,8 @@ function renderFillQuestion(q, chosen) {
 
 function checkpointHtml(q) {
   if (!Array.isArray(q.rubric) || !q.rubric.length) return "";
+  const compact = (value) => String(value || "").replace(/\s+/g, "");
+  if (q.rubric.length === 1 && compact(q.rubric[0].criterion) === compact(q.answer)) return "";
   const title = q.type === "简答" ? "核对要点" : "核对步骤";
   return `<div class="short-rubric"><strong>${title}</strong><ul>${q.rubric.map((item) => `<li>${escapeHtml(item.criterion)}</li>`).join("")}</ul></div>`;
 }
@@ -827,7 +829,7 @@ function mediaHtml(q) {
   if (!media || !media.src) return "";
   return `<figure class="question-media">
     <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || "题图重绘示意")}" loading="lazy">
-    <figcaption><strong>${escapeHtml(media.label || "重绘示意")}</strong>${media.note ? `：${escapeHtml(media.note)}` : ""}</figcaption>
+    ${media.label || media.note ? `<figcaption>${media.label ? `<strong>${escapeHtml(media.label)}</strong>` : ""}${media.note ? `${media.label ? "：" : ""}${escapeHtml(media.note)}` : ""}</figcaption>` : ""}
   </figure>`;
 }
 

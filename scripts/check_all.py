@@ -16,6 +16,7 @@ COMMANDS = (
     ("node", "scripts/verify_study_review.cjs"),
     ("node", "scripts/verify_answer_checks.cjs"),
     ("node", "--check", "question-media.js"),
+    (sys.executable, "scripts/validate_media_assets.py"),
     ("node", "--check", "sw.js"),
     (sys.executable, "scripts/merge_applied_bank.py", "--check"),
     (sys.executable, "scripts/merge_supplement_bank.py", "--check"),
@@ -41,7 +42,7 @@ COMMANDS = (
 
 
 def main() -> int:
-    for name in ("questions.json", "manifest.webmanifest", "network-exam-sources.json", "exam-profiles.json", "learning-map.json", "textbook-map.json"):
+    for name in ("questions.json", "manifest.webmanifest", "network-exam-sources.json", "exam-profiles.json", "learning-map.json", "textbook-map.json", "topic-ids.json", "staging/topic_assignment_acceptance.json", "staging/reviewed_topic_baseline.json"):
         json.loads((ROOT / name).read_text(encoding="utf-8"))
         print(f"JSON有效：{name}", flush=True)
     for command in COMMANDS:

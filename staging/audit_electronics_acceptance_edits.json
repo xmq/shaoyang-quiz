@@ -1,0 +1,193 @@
+[
+  {
+    "id": "uf-cm-018",
+    "stem": "在加性高斯白噪声信道、相同平均比特能量与相干检测条件下，BPSK相较二进制开关键控（OOK）通常（ ）。",
+    "explanation": "相同比特能量Eb和噪声功率谱密度N0下，相干BPSK误码率为Q(√(2Eb/N0))，相干OOK为Q(√(Eb/N0))，因此BPSK更低。该结论固定了能量、噪声和检测条件，不能推广为任何调制和任何信道下都更好；BPSK相干解调仍需同步。",
+    "topic_id": "communication.t08"
+  },
+  {
+    "id": "uf-cm-015",
+    "stem": "与带载波的普通AM相比，抑制载波单边带SSB的主要优点是（ ）。"
+  },
+  {
+    "id": "gap-final-sig-014",
+    "answer": "因果有理系统ROC在最右侧极点右方，所以ROC为Re(s)>-2；该区域包含jω轴，因此系统BIBO稳定。"
+  },
+  {
+    "id": "sp-elec-circuit-004",
+    "topic_id": "circuit.t11",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-elec-circuit-005",
+    "topic_id": "circuit.t11"
+  },
+  {
+    "id": "sp-elec-circuit-011",
+    "topic_id": "circuit.t11"
+  },
+  {
+    "id": "ue-comm-014",
+    "topic_id": "communication.t03"
+  },
+  {
+    "id": "gap-audit26-elec-reference",
+    "stem": "元件电压、电流采用关联参考方向，u=3 V、i=-2 A。计算功率并说明吸收还是发出，解释负号与参考方向的关系。",
+    "answer": "p=ui=3×(-2)=-6 W，元件发出6 W。负号表示实际能量方向与吸收功率的正方向相反，不表示电流不存在或违反守恒。",
+    "explanation": "关联参考方向下以流入电压正端为电流正方向，p=ui；p>0吸收、p<0发出。变更参考箭头时必须同步变更读数与功率表达式。"
+  },
+  {
+    "id": "sp-elec-analog-005",
+    "stem": "常见NPN共射放大器从集电极取输出，输入幅度增大后，输出上侧接近VCC处被削平。优先检查哪项？",
+    "options": {
+      "A": "静态电流是否过小、负半周是否使管子截止",
+      "B": "是否因集电极电流过大进入低电压饱和",
+      "C": "电路是否误用了乙类互补推挽造成过零死区",
+      "D": "只需把示波器垂直刻度调大即可消除实际失真"
+    },
+    "explanation": "NPN共射集电极电压约为VCC-ICRC，IC趋零时输出靠近VCC，上侧削顶提示截止。应检查静态偏置与输入摆幅；管子饱和对应低电压边界，调显示刻度不会修复电路失真。"
+  },
+  {
+    "id": "sp-elec-analog-014",
+    "stem": "放大器输入波形正常而输出为0，在更换放大器件前首先应怎样排查？",
+    "options": {
+      "A": "测该级供电、静态偏置、耦合通路和负载是否异常",
+      "B": "只测断电电阻正常，就排除全部动态故障",
+      "C": "不测量就先加大输入幅度，直到输出出现",
+      "D": "直接短接反馈和保护元件后继续运行"
+    },
+    "explanation": "输入正确并不证明该级电源、工作点、信号通路和负载正确，先逐项测量缩小范围。断电阻值不能排除动态故障，盲目增信号或短接保护可能扩大问题。"
+  },
+  {
+    "id": "uf-ee-002",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ee-003",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ee-004",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ee-010",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ee-011",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ee-020",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ee-022",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ae-004",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-ae-007",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-de-010",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-de-022",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-cm-003",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-cm-005",
+    "ability": "直接计算"
+  },
+  {
+    "id": "uf-cm-017",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-circuit-004",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-circuit-006",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-analog-001",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-analog-005",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-analog-006",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-analog-007",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-analog-011",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-digital-007",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-comm-001",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-comm-004",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-comm-005",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-comm-006",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-comm-008",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-elec-digital-012",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-elec-digital-024",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-elec-digital-025",
+    "ability": "直接计算"
+  },
+  {
+    "id": "sp-elec-comm-025",
+    "ability": "直接计算"
+  },
+  {
+    "id": "ue-circuit-010",
+    "topic_id": "circuit.t02"
+  },
+  {
+    "id": "ap-digital-004",
+    "topic_id": "digital-electronics.t08"
+  }
+]

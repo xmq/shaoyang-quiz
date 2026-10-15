@@ -1,0 +1,2146 @@
+{
+  "cards": [
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "title": "AVL四类旋转",
+      "suggested_parent_topic_id": "data-structures.t10",
+      "keywords": [
+        "AVL",
+        "旋转"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-028",
+          "stem": "向空AVL树依次插入30、20、10，完成平衡调整后根结点为________。",
+          "answer": "20"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-01-1",
+          "type": "简答",
+          "stem": "依次向空AVL插入30、10、20。写出两次旋转对象及中间根关系。",
+          "answer": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+          "explanation": "从30到新点路径为左后右，故先把LR折成LL，再右旋。",
+          "parent_topic_id": "data-structures.t10",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t25"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "title": "哈夫曼合并与WPL",
+      "suggested_parent_topic_id": "data-structures.t12",
+      "keywords": [
+        "哈夫曼",
+        "WPL"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-ds-004",
+          "stem": "权值为2、3、7、8的四个叶结点构造哈夫曼树，其最小带权路径长度WPL为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-02-1",
+          "type": "简答",
+          "stem": "权值1、2、4构造哈夫曼树，写每轮合并权值和WPL。",
+          "answer": "先1+2=3，再3+4=7；WPL=3+7=10。",
+          "explanation": "每轮重选当前最小两权；权1与2深2、权4深1，1×2+2×2+4=10。",
+          "parent_topic_id": "data-structures.t12",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "先1+2=3，再3+4=7；WPL=3+7=10。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t26"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "DFS深入与回退",
+      "suggested_parent_topic_id": "data-structures.t14",
+      "keywords": [
+        "深度优先",
+        "DFS"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-05-s1-q46",
+          "stem": "深度优先搜索算法实现时需要用到的数据结构是（ ）。",
+          "answer": "C"
+        },
+        {
+          "id": "gap-ds-002",
+          "stem": "无向图顶点为A、B、C、D、E、F，边为AB、AC、BD、BE、CF、EF。从A开始，邻接点按字母升序访问，DFS序列是？",
+          "answer": "B"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "data-structures.t27"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "BFS入队与层次",
+      "suggested_parent_topic_id": "data-structures.t14",
+      "keywords": [
+        "广度优先",
+        "BFS"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-003",
+          "stem": "对同一无向图，从A开始且邻接点按字母升序，BFS处理完A和B后，队列内容依次为？图的边为AB、AC、BD、BE、CF、EF。",
+          "answer": "B"
+        },
+        {
+          "id": "gap-ds-004",
+          "stem": "BFS中可以等顶点出队时再设置visited标记，这不会造成同一顶点被重复入队。",
+          "answer": "错误"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "data-structures.t28"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Prim跨集合选边",
+      "suggested_parent_topic_id": "data-structures.t15",
+      "keywords": [
+        "Prim"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-audit26-core-ds-prim-steps",
+          "stem": "连通无向图仅有AB=2、AC=5、BC=1、BD=4、CD=3四个顶点的这些边。从A执行Prim，写每次加入的顶点和所选边，求总权值，并解释为何不能选连接两个已加入顶点的边。",
+          "answer": "先加入A；选AB=2加入B；当前跨割候选AC=5、BC=1、BD=4，选BC=1加入C；再选CD=3加入D。生成树边AB、BC、CD，总权6。连接两个已在树中的顶点不会增加新顶点，加入树边会形成环，不符合Prim跨割扩展规则。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-05-1",
+          "type": "简答",
+          "stem": "图仅AB2、AC5、BC1。从A运行Prim，能否第一条选BC1？给出选边顺序。",
+          "answer": "不能；先AB2，再BC1。",
+          "explanation": "BC两端都不在起始集合{A}，不跨集合边界；加入B后BC才可选。",
+          "parent_topic_id": "data-structures.t15",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "不能；先AB2，再BC1。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t29"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Kruskal排序与判环",
+      "suggested_parent_topic_id": "data-structures.t15",
+      "keywords": [
+        "Kruskal"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-030",
+          "stem": "连通无向图边权为AB=1、CD=1、BC=2、AC=4、BD=5。用Kruskal求最小生成树，总权值为________。",
+          "answer": "4"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-06-1",
+          "type": "简答",
+          "stem": "图AB1、BC2、AC3。Kruskal选AB、BC后为何跳过AC？",
+          "answer": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+          "explanation": "排序只决定检查顺序；两端分量是否不同才决定能否接受。",
+          "parent_topic_id": "data-structures.t15",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t30"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Dijkstra确定与松弛",
+      "suggested_parent_topic_id": "data-structures.t16",
+      "keywords": [
+        "Dijkstra"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-031",
+          "stem": "有向图边权AB=1、AC=4、BC=2、BD=5、CD=1，均非负。从A执行Dijkstra，A到D的最短距离为________。",
+          "answer": "4"
+        },
+        {
+          "id": "uc-ds-006",
+          "stem": "用Dijkstra算法求单源最短路径时，图中边权应满足的基本条件是（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "data-structures.t31"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Bellman-Ford逐轮扫描",
+      "suggested_parent_topic_id": "data-structures.t16",
+      "keywords": [
+        "Bellman"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-08-1",
+          "type": "简答",
+          "stem": "有向边A→B2、A→C5、B→C−1，从A开始采用同步更新。第1轮和第2轮距离各是什么？",
+          "answer": "第1轮[0,2,5]；第2轮[0,2,1]。",
+          "explanation": "同步每轮只读上一轮，第一轮B还不能把新2传到C；第二轮经B得2−1=1。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "第1轮[0,2,5]；第2轮[0,2,1]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-08-2",
+          "type": "简答",
+          "stem": "从源点执行Bellman-Ford共V−1轮后，再扫描一轮仍能减小某可达顶点距离，说明什么？能否据此发现所有不可达负环？",
+          "answer": "说明存在源点可达负权环；不能保证发现不可达负环。",
+          "explanation": "无可达负环时最短简单路径至多V−1边；不可达部分距离无穷不会参与有效松弛。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "说明存在源点可达负权环；不能保证发现不可达负环。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t32"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "Floyd开放中转点",
+      "suggested_parent_topic_id": "data-structures.t16",
+      "keywords": [
+        "Floyd"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-09-1",
+          "type": "简答",
+          "stem": "有向图AB2、BC1、AC5，只考虑A到C。允许B为中转后距离变成多少？",
+          "answer": "3。",
+          "explanation": "D[A,C]=min(5,D[A,B]+D[B,C])=min(5,2+1)=3。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "3。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-09-2",
+          "type": "简答",
+          "stem": "Floyd伪代码中k表示当前开放中转点，为什么k应在三层循环最外层？",
+          "answer": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+          "explanation": "随意把i或j放外层会破坏同一轮允许中转集合的约束，不能保证一般图得到正确最短路。",
+          "parent_topic_id": "data-structures.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t33"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "插入排序扩有序区",
+      "suggested_parent_topic_id": "data-structures.t20",
+      "keywords": [
+        "插入排序"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-ds-010",
+          "stem": "对序列5、2、4、3执行直接插入排序，完成前两次插入后序列为________。用逗号分隔。",
+          "answer": "2,4,5,3"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-10-1",
+          "type": "简答",
+          "stem": "序列4、1、3、2执行直接插入排序，前两次插入后完整序列是什么？",
+          "answer": "[1,3,4,2]。",
+          "explanation": "插1先得[1,4,3,2]；暂存3，将4右移再放3，得到[1,3,4,2]。",
+          "parent_topic_id": "data-structures.t20",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "[1,3,4,2]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t34"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "冒泡与选择的一趟",
+      "suggested_parent_topic_id": "data-structures.t20",
+      "keywords": [
+        "冒泡",
+        "选择排序"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-05-s1-q49",
+          "stem": "选择排序的基本思想是：在参与排序的所有数组元素中找出最小（或最大）的\n元素，使它与第一个元素互换位置，然后再在余下的元素中重复上述过程。有一组数，\n顺序是“2、6、4、1”，用选择排序法将这组数从大到小排序，第一次交换数据后的\n顺序是（ ）。",
+          "answer": "D"
+        },
+        {
+          "id": "zg-4542",
+          "stem": "若用冒泡法将数据 4，9，2，7 按升序排列，则需要进行数据交换的次数是________次。",
+          "answer": "3"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "data-structures.t35"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "堆排序取顶与下沉",
+      "suggested_parent_topic_id": "data-structures.t23",
+      "keywords": [
+        "堆排序"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-12-1",
+          "type": "简答",
+          "stem": "大根堆[5,3,4,2]执行取最大值，写交换堆尾后和下沉后的完整状态，竖线分隔已排区。",
+          "answer": "[2,3,4|5]，再[4,3,2|5]。",
+          "explanation": "只在前三项恢复堆，根2与更大的孩子4交换；已排5不再参与。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "[2,3,4|5]，再[4,3,2|5]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-12-2",
+          "type": "简答",
+          "stem": "大根堆根被末元素替换后，为什么下沉应优先与较大孩子比较交换？",
+          "answer": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+          "explanation": "如根2孩子3和4，换3后仍有父3<右孩4，不能宣布调整结束。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t36"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "希尔排序按增量分组",
+      "suggested_parent_topic_id": "data-structures.t23",
+      "keywords": [
+        "希尔"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-05-s1-q47",
+          "stem": "希尔排序法属于哪一种类型的排序法？（ ）",
+          "answer": "B"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-13-1",
+          "type": "简答",
+          "stem": "对[5,2,4,3]做增量2的希尔插入一趟，回填数组是什么？",
+          "answer": "[4,2,5,3]。",
+          "explanation": "下标0与2形成(5,4)，1与3形成(2,3)，分别排序后按原间隔交错放回。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "[4,2,5,3]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t37"
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "基数排序稳定收集",
+      "suggested_parent_topic_id": "data-structures.t23",
+      "keywords": [
+        "基数"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-14-1",
+          "type": "简答",
+          "stem": "对[21,13,12]做最低位优先十进制基数排序，写个位收集后、十位收集后结果。",
+          "answer": "个位后[21,12,13]，十位后[12,13,21]。",
+          "explanation": "先按个位1/2/3，再按十位1/2；同桶保持前轮相对顺序。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "个位后[21,12,13]，十位后[12,13,21]。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-14-2",
+          "type": "简答",
+          "stem": "最低位优先基数排序处理十位时，为什么桶内必须保持上轮顺序？",
+          "answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+          "explanation": "例如12与13同十位，必须保留12在13之前，才能使最终整个数有序。",
+          "parent_topic_id": "data-structures.t23",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "data-structures.t38"
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "title": "非抢占调度画时间线",
+      "suggested_parent_topic_id": "operating-system.t05",
+      "keywords": [
+        "SJF",
+        "短作业",
+        "FCFS"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-os-002",
+          "stem": "三个进程同时到达，运行时间分别为6、2、4，采用非抢占短作业优先，执行顺序是（ ）。",
+          "answer": "B"
+        },
+        {
+          "id": "gap-os-001",
+          "stem": "进程A、B均在时刻0到达，服务时间分别为3和1。按A先B后的FCFS执行，平均周转时间是多少？",
+          "answer": "3.5"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "operating-system.t14"
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "title": "RR时间片与队列",
+      "suggested_parent_topic_id": "operating-system.t05",
+      "keywords": [
+        "轮转",
+        "时间片"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-os-001",
+          "stem": "三个进程P1、P2、P3同时到达，运行时间为5、3、1，初始就绪队列按P1、P2、P3排列。时间片为2，轮转调度且无I/O，忽略切换开销。首次运行顺序和完成顺序分别为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-16-1",
+          "type": "简答",
+          "stem": "P1、P2同到达，服务时间3、2，初始队列[P1,P2]、时间片1、不计开销。给出片次和完成时刻。",
+          "answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+          "explanation": "每轮未完成回队尾，完成立即移出；各片长度1，逐片累计时间。",
+          "parent_topic_id": "operating-system.t05",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "operating-system.t15"
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "title": "FIFO与LRU命中后状态",
+      "suggested_parent_topic_id": "operating-system.t10",
+      "keywords": [
+        "FIFO",
+        "LRU"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-10-s1-q49",
+          "stem": "有一虚拟存储系统，若进程在内存中占 3 页（开始时内存为空），若采用先进\n先出（FIFO）页面淘汰算法，当执行以下访问页号序列后 1，3，4，2，1，3，5，1，2，\n5，4，2，会产生多少次缺页（ ）。",
+          "answer": "C"
+        },
+        {
+          "id": "cg-10-s1-q50",
+          "stem": "在 5 个页框上使用 LRU 页面替换算法，当页框初始为空时，引用序列为 0、1、\n7、8、6、2、3、7、2、9、8、1、0、2，系统将发生（ ）次缺页。",
+          "answer": "C"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "operating-system.t16"
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "title": "CLOCK访问位与指针",
+      "suggested_parent_topic_id": "operating-system.t10",
+      "keywords": [
+        "CLOCK",
+        "时钟"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-10-s1-q47",
+          "stem": "通常 Clock 置换算法只有一位访问位，而一种改进的 Clock 置换算法则通过\n一个访问位A 和一个修改位 M 来选出淘汰的页。如果已访问，则 A 为 1，已修改，则\nM 为 1，那么 A 和M 的 4 种组合中，最佳被淘汰页的情况是（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-18-1",
+          "type": "简答",
+          "stem": "CLOCK页框[1(1),2(0),3(1)]，括号为访问位，指针指第1框。页4缺页，写淘汰页及新指针。",
+          "answer": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+          "explanation": "遇页1的访问位1先清0并前进，再遇页2位0选择置换，装入页4后指针继续前进。",
+          "parent_topic_id": "operating-system.t10",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "operating-system.t17"
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "title": "SSTF逐次选最近",
+      "suggested_parent_topic_id": "operating-system.t13",
+      "keywords": [
+        "SSTF",
+        "最短寻道"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-10-s1-q52",
+          "stem": "若干个等待访问磁盘者依次要访问的磁道为 19、43、40、4、79、11、76，当\n前磁头位于 40 号柱面，若用最短寻道时间优先磁盘调度算法，则磁头移动总距离（道\n数）为（ ）。",
+          "answer": "B"
+        },
+        {
+          "id": "uf-os-008",
+          "stem": "磁头当前在50号柱面，请求序列为10、55、90，若采用SSTF，下一次访问（ ）。",
+          "answer": "B"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "operating-system.t18"
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "title": "SCAN与LOOK累计距离",
+      "suggested_parent_topic_id": "operating-system.t13",
+      "keywords": [
+        "SCAN",
+        "LOOK"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-20-1",
+          "type": "简答",
+          "stem": "磁道0—99，磁头50向大号移动，请求20和80，只统计完成全部请求前移动。LOOK与SCAN移动各多少？",
+          "answer": "LOOK90；SCAN128。",
+          "explanation": "LOOK走50→80→20为30+60；SCAN走50→99→20为49+79。",
+          "parent_topic_id": "operating-system.t13",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "LOOK90；SCAN128。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-20-2",
+          "type": "简答",
+          "stem": "磁道0—199，磁头100向小号移动，请求40和150，按LOOK完成全部请求，服务顺序及移动总数？",
+          "answer": "先40再150，总170。",
+          "explanation": "先向下到最远请求40走60，立即反向到150走110，不必继续到物理端点0。",
+          "parent_topic_id": "operating-system.t13",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "先40再150，总170。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "operating-system.t19"
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "title": "冲突优先图判串行化",
+      "suggested_parent_topic_id": "database.t16",
+      "keywords": [
+        "优先图",
+        "可串行化"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-db-011",
+          "stem": "调度为r1(X),w1(X),r2(X),w2(X)。画出冲突优先图的边，判断是否冲突可串行化并给出等价顺序。",
+          "answer": "只有T1→T2，无环，因此可串行化，等价顺序为T1、T2。"
+        },
+        {
+          "id": "gap-db-012",
+          "stem": "若优先图同时包含T1→T2和T2→T1，能否判为冲突可串行化？说明理由。",
+          "answer": "不能；两条边形成有向环，无法得到满足全部冲突先后的串行顺序。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "database.t19"
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "title": "两段锁的首次解锁",
+      "suggested_parent_topic_id": "database.t16",
+      "keywords": [
+        "2PL",
+        "两段锁"
+      ],
+      "practice_existing": [],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-22-1",
+          "type": "简答",
+          "stem": "锁A→读A→锁B→写B→解锁A→锁C，哪个动作违反2PL？",
+          "answer": "最后锁C违反。",
+          "explanation": "第一次解锁A后已进入收缩阶段，不能再申请新锁；C应在首次解锁之前取得。",
+          "parent_topic_id": "database.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "最后锁C违反。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        },
+        {
+          "id": "accept-card-core-22-2",
+          "type": "简答",
+          "stem": "所有事务都遵守2PL，是否就不会死锁？给一个两事务两资源反例。",
+          "answer": "仍可死锁；T1持A等B，T2持B等A。",
+          "explanation": "双方均处增长阶段、尚未解锁，也满足2PL，却形成循环等待。",
+          "parent_topic_id": "database.t16",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "仍可死锁；T1持A等B，T2持B等A。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "database.t20"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "title": "Cache地址拆分与命中",
+      "suggested_parent_topic_id": "computer-organization.t10",
+      "keywords": [
+        "Cache",
+        "缓存"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-co-012",
+          "stem": "32位字节地址，Cache数据容量16KB，块64B，4路组相联。求块内偏移、组索引和标记位数。",
+          "answer": "偏移6位，组索引6位，标记20位。"
+        },
+        {
+          "id": "uc-co-004",
+          "stem": "32位字节地址，Cache数据容量16 KB，块大小64 B，采用4路组相联。组索引位数为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "computer-organization.t15"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "title": "平均访存时间按口径算",
+      "suggested_parent_topic_id": "computer-organization.t10",
+      "keywords": [
+        "平均访问",
+        "平均访存",
+        "命中率"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-co-005",
+          "stem": "某Cache命中时间2 ns，失效率5%，失效代价为60 ns。按AMAT=命中时间+失效率×失效代价，平均访问时间为（ ）。",
+          "answer": "A"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-24-1",
+          "type": "简答",
+          "stem": "Cache命中查询1ns；未命中从开始查询直到取回总计41ns；命中率95%。串行模型平均访问时间是多少？",
+          "answer": "3ns。",
+          "explanation": "0.95×1+0.05×41=3；41已含首查，不应再在该加权结果上加1。",
+          "parent_topic_id": "computer-organization.t10",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "3ns。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "topic_id": "computer-organization.t16"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "title": "理想流水线填充与排空",
+      "suggested_parent_topic_id": "computer-organization.t11",
+      "keywords": [
+        "理想",
+        "流水线"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-co-008",
+          "stem": "理想5段等长流水线，每段1 ns，完成20条指令所需时间为（ ）。",
+          "answer": "A"
+        },
+        {
+          "id": "uc-co-014",
+          "stem": "采用流水线后，主要目标是提高指令吞吐率，单条指令从开始到结束的延迟不一定缩短。（ ）",
+          "answer": "正确"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "computer-organization.t17"
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "title": "流水线停顿与总时间",
+      "suggested_parent_topic_id": "computer-organization.t11",
+      "keywords": [
+        "停顿",
+        "转发"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-co-009",
+          "stem": "5段流水处理10条指令，时钟周期1.6ns，执行中共插入2个停顿周期。求总周期数和总时间。",
+          "answer": "16个周期，25.6ns。"
+        },
+        {
+          "id": "sp-core-co-031",
+          "stem": "数据转发可以缓解部分数据相关，但不能自动消除所有结构冲突和控制冲突。（ ）",
+          "answer": "正确"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "computer-organization.t18"
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "title": "递归调用与逐层返回",
+      "suggested_parent_topic_id": "programming.t09",
+      "keywords": [
+        "递归",
+        "阶乘"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-pl-007",
+          "stem": "为了保证递归算法正常终止，应有基本情形，并保证递归调用能够逐步接近基本情形。",
+          "answer": "正确"
+        },
+        {
+          "id": "gap-audit26-system-003",
+          "stem": "先不运行程序，跟踪Python函数f(3)的调用和返回：\ndef f(n):\n    if n <= 1:\n        return 1\n    return n * f(n - 1)\n再说明把递归参数写成n+1会怎样。",
+          "answer": "调用链f(3)→f(2)→f(1)；f(1)=1，f(2)=2，f(3)=6。n+1使正整数输入远离基本情形，不能正常终止，通常最终触发递归深度异常。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "programming.t17"
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "title": "C与Python名字作用域",
+      "suggested_parent_topic_id": "programming.t09",
+      "keywords": [
+        "作用域",
+        "全局",
+        "局部"
+      ],
+      "practice_existing": [
+        {
+          "id": "zg-11699",
+          "stem": "在 C 语言中，变量可以分为全局变量和局部变量。（ ）",
+          "answer": "正确"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [
+        {
+          "id": "accept-card-core-28-1",
+          "type": "简答",
+          "stem": "C中int x=1; {int x=2;} 离开内层块后x为多少？Python普通if代码块会建立同样的新局部作用域吗？",
+          "answer": "C外层仍为1；Python普通if不建立新的局部作用域。",
+          "explanation": "内层C声明遮蔽外层，离开块恢复可见；Python局部作用域主要按函数等边界，不能照搬花括号规则。",
+          "parent_topic_id": "programming.t09",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "author_attempt_before_answer": "C外层仍为1；Python普通if不建立新的局部作用域。",
+          "status": "建议新增，等待主代理统一题库合并，尚未写入产品题库"
+        }
+      ],
+      "reuses_existing_topic": true,
+      "topic_id": "programming.t09"
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "title": "Python按异常类型分支",
+      "suggested_parent_topic_id": "programming.t15",
+      "keywords": [
+        "异常",
+        "ValueError",
+        "try"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-pl-006",
+          "stem": "Python把用户输入转换为整数。说明应捕获什么异常，并写出try/except核心结构。",
+          "answer": "try:\n    n = int(input())\nexcept ValueError:\n    print(\"请输入合法整数\")"
+        },
+        {
+          "id": "gap-pl-007",
+          "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+          "answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "reuses_existing_topic": true,
+      "topic_id": "programming.t15"
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "title": "with文件读写与编码",
+      "suggested_parent_topic_id": "programming.t15",
+      "keywords": [
+        "with",
+        "文件",
+        "编码"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-pl-007",
+          "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+          "answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。"
+        },
+        {
+          "id": "ap-pl-006",
+          "stem": "一个程序要长期保存多条订单记录。说明为什么不能只放在变量或列表中，并分别给出C和Python打开文本文件时应注意的一项问题。",
+          "answer": "变量或列表通常在进程结束后丢失，应写入文件或数据库持久保存。C用fopen后检查返回值并fclose；Python可用with open自动关闭。两者使用w模式都可能清空原文件。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "programming.t18"
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "title": "语句与判定覆盖辨别",
+      "suggested_parent_topic_id": "software-engineering.t12",
+      "keywords": [
+        "覆盖",
+        "白盒"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-core-se-017",
+          "stem": "白盒测试依据程序内部控制结构设计用例，因此需要了解代码或设计内部逻辑。（ ）",
+          "answer": "正确"
+        },
+        {
+          "id": "sp-core-se-018",
+          "stem": "测试达到100%分支覆盖后，就必然同时覆盖了程序中的所有可能执行路径。（ ）",
+          "answer": "错误"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "software-engineering.t20"
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "title": "控制流图环形复杂度",
+      "suggested_parent_topic_id": "software-engineering.t12",
+      "keywords": [
+        "环形",
+        "复杂度",
+        "路径"
+      ],
+      "practice_existing": [
+        {
+          "id": "se-gen-q06",
+          "stem": "某连通控制流图的圈复杂度为8，则其基本独立路径集合包含多少条路径？",
+          "answer": "C"
+        },
+        {
+          "id": "gap-se-007",
+          "stem": "某控制流图有10条边、8个结点且为单连通，环形复杂度是多少？它表示什么？",
+          "answer": "V(G)=E−N+2=10−8+2=4，表示基本独立路径数量为4。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "software-engineering.t21"
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "title": "关键路径与总工期",
+      "suggested_parent_topic_id": "software-engineering.t16",
+      "keywords": [
+        "关键路径",
+        "工期"
+      ],
+      "practice_existing": [
+        {
+          "id": "se-gen-q09",
+          "stem": "关键路径上的活动通常具有（ ）。",
+          "answer": "B"
+        },
+        {
+          "id": "gap-se-010",
+          "stem": "项目网络有两条路径A-B-D为8天，A-C-D为11天。关键路径是哪条？A-C-D上的活动延迟2天会怎样？",
+          "answer": "关键路径为A-C-D；若无可用时差，延迟2天使项目总工期延长2天。"
+        }
+      ],
+      "practice_missing": 0,
+      "practice_proposed": [],
+      "topic_id": "software-engineering.t22"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c03",
+      "title": "固定偏置静态工作点",
+      "suggested_parent_topic_id": "analog-electronics.t04",
+      "keywords": [
+        "固定偏置静态工作点"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-analog-001",
+          "stem": "固定偏置共射电路VCC=12 V、RB=565 kΩ、RC=2 kΩ，发射极接地，取UBE=0.7 V、β=100。求IB、IC、UCE并判断是否处于放大区。",
+          "answer": "IB=(12-0.7)/565k=20 μA，假设放大区IC=2 mA，UCE=12-2mA×2k=8 V，未接近饱和且结偏条件合理，可判处于放大区。",
+          "explanation": "先按放大区计算，再用UCE与电源、饱和压降关系验证假设。"
+        },
+        {
+          "id": "ue-analog-003",
+          "stem": "固定偏置共射电路中VCC=12 V、RB=470 kΩ、RC=2 kΩ，发射极接地，取UBE=0.7 V、β=100。静态UCE约为多少？",
+          "answer": "C",
+          "explanation": "IB=(12-0.7)/470 kΩ≈24 μA，IC≈βIB=2.4 mA，UCE=12-ICRC≈12-4.8=7.2 V，且明显高于饱和压降，放大区假设成立。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t11"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c03",
+      "title": "共射中频小信号增益",
+      "suggested_parent_topic_id": "analog-electronics.t04",
+      "keywords": [
+        "共射中频小信号增益"
+      ],
+      "practice_existing": [
+        {
+          "id": "ue-analog-004",
+          "stem": "某旁路电容充分大的共射放大器，小信号发射结电阻rbe=1 kΩ，交流集电极等效负载为2 kΩ，β=100。忽略源内阻，其电压增益约为多少？",
+          "answer": "D",
+          "explanation": "共射近似电压增益Au=-βRL'/rbe=-100×2 kΩ/1 kΩ=-200，负号表示输出与输入反相。"
+        },
+        {
+          "id": "uf-ae-011",
+          "stem": "发射极旁路电容充分旁路RE后，通常会（ ）。",
+          "answer": "B",
+          "explanation": "电容只在交流下旁路RE，减弱交流负反馈而提高增益；直流时电容开路，RE仍稳定静态点。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t12"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "title": "级间负载分压",
+      "suggested_parent_topic_id": "analog-electronics.t05",
+      "keywords": [
+        "级间负载分压"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-analog-002",
+          "stem": "前级等效输出电阻10 kΩ、空载输出1 V，后级输入电阻10 kΩ。连接后送入后级的电压是多少？说明这反映什么效应。",
+          "answer": "两者形成分压，电压为1×10/(10+10)=0.5 V，反映后级输入电阻对前级的负载效应。",
+          "explanation": "多级增益不能只相乘空载增益，必须把后级输入电阻计入前级负载。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "前级等效空载电压固定，后级输入电阻从有限值逐渐增大，实际送入后级电压趋向什么？为什么不能超过空载电压？",
+          "answer": "趋向U0；正电阻分压Ri/(Ro+Ri)趋1但不超过1。",
+          "explanation": "从负载模型判断极限与范围，不是只换数重复计算。",
+          "ability": "机制解释",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-03-2"
+        }
+      ],
+      "topic_id": "analog-electronics.t13"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "title": "差模、共模与抑制比",
+      "suggested_parent_topic_id": "analog-electronics.t05",
+      "keywords": [
+        "差模",
+        "共模与抑制比"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "u1=1.01V、u2=0.99V，Ad=100、Ac=0.1，输出在线性范围。求差模、共模、两部分输出和CMRR。",
+          "answer": "ud=0.02V，uc=1V；差模2V、共模0.1V，总2.1V；CMRR1000。",
+          "explanation": "差和平均分别计算，再乘对应增益；CMRR为增益比。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-04-1"
+        },
+        {
+          "type": "简答",
+          "stem": "两输入端同时叠加同样的0.2V干扰，Ad不变。Ac为0.1时输出干扰多大？若Ac降到0.01，输出干扰和CMRR怎样变化？",
+          "answer": "输出干扰0.02V；Ac降后0.002V，CMRR增为原来10倍。",
+          "explanation": "等量同相变化是共模，差模为0；降低Ac改善抑制，不是消除全部噪声。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-04-2"
+        }
+      ],
+      "topic_id": "analog-electronics.t14"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "title": "截止频率与通频带",
+      "suggested_parent_topic_id": "analog-electronics.t05",
+      "keywords": [
+        "截止频率与通频带"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "中频电压增益100，fL=20Hz、fH=20kHz。求常用截止点幅值增益与通频带宽度。",
+          "answer": "约70.7；带宽19980Hz。",
+          "explanation": "用0.707倍中频幅值，带宽先统一单位再作差。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-05-1"
+        },
+        {
+          "type": "简答",
+          "stem": "放大器某频率的电压幅值增益降到中频一半，负载相同。这是常用半功率截止点吗？功率比是多少？",
+          "answer": "不是；电压一半对应功率1/4，常用半功率点电压约0.707倍。",
+          "explanation": "相同负载功率随电压平方变化，辨别幅值与功率条件。",
+          "ability": "机制解释",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-05-2"
+        }
+      ],
+      "topic_id": "analog-electronics.t15"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c05",
+      "title": "负反馈闭环增益计算",
+      "suggested_parent_topic_id": "analog-electronics.t06",
+      "keywords": [
+        "负反馈闭环增益计算"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-analog-003",
+          "stem": "某负反馈放大器开环增益A=200、反馈系数F=0.02，按Af=A/(1+AF)计算闭环增益为________。",
+          "answer": "40",
+          "explanation": "AF=4，Af=200/(1+4)=40。"
+        },
+        {
+          "id": "ue-analog-006",
+          "stem": "某放大器开环增益A=100，反馈系数F=0.09，构成负反馈后闭环增益Af约为多少？",
+          "answer": "B",
+          "explanation": "负反馈闭环增益Af=A/(1+AF)=100/(1+9)=10。环路增益AF越大，闭环增益越接近1/F。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t16"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c05",
+      "title": "四种负反馈的电阻判断",
+      "suggested_parent_topic_id": "analog-electronics.t06",
+      "keywords": [
+        "四种负反馈的电阻判断"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-ae-017",
+          "stem": "引入电压串联负反馈后，通常会（ ）。",
+          "answer": "B",
+          "explanation": "串联反馈提高输入电阻，电压反馈降低输出电阻；负反馈还稳定增益、扩展带宽并减小失真。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "希望提高输入电阻并使输出更接近恒流源，应选哪种稳定负反馈？分别说明两端判断。",
+          "answer": "电流串联；输入串联增Ri，输出电流取样增Ro。",
+          "explanation": "先根据输入比较接法判断Ri，再根据输出采样判断Ro，不能把电压串联结论照搬。",
+          "ability": "场景选型",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-07-2"
+        }
+      ],
+      "topic_id": "analog-electronics.t17"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c07",
+      "title": "迟滞阈值与历史状态",
+      "suggested_parent_topic_id": "analog-electronics.t08",
+      "keywords": [
+        "迟滞阈值与历史状态"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-analog-005",
+          "stem": "温度信号在阈值附近叠加小噪声，普通比较器输出反复翻转。迟滞比较器怎样改善？代价是什么？",
+          "answer": "迟滞比较器设置不同的上升和下降阈值，输入小幅噪声不会反复跨越两阈值，因此输出稳定；代价是存在回差，翻转点随变化方向不同。",
+          "explanation": "正反馈形成双阈值，改善抗噪但改变单一阈值模型。"
+        },
+        {
+          "id": "sp-elec-analog-023",
+          "stem": "关于迟滞比较器，正确的有（ ）。",
+          "answer": "ABC",
+          "explanation": "迟滞来自正反馈并形成两个阈值；比较器多处于非线性状态，不能套虚短。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t18"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c07",
+      "title": "正弦振荡的起振与稳幅",
+      "suggested_parent_topic_id": "analog-electronics.t08",
+      "keywords": [
+        "正弦振荡的起振与稳幅"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "选频处环路相位满足条件，但幅值增益一直为0.8，微扰后会形成持续正弦振荡吗？稳态为什么常要求约1？",
+          "answer": "不会，微扰每圈衰减；稳态需要补回一圈损失使振幅保持，即有效幅值增益约1。",
+          "explanation": "相位正确不是充分条件，还需幅值和电源条件。",
+          "ability": "机制解释",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-09-1"
+        },
+        {
+          "type": "简答",
+          "stem": "环路增益始终大于1且没有稳幅，输出是否一定成为稳定且无削顶的正弦？怎样区分起振和稳态条件？",
+          "answer": "不一定，振幅会增大至非线性削顶；起振略大于1，稳态借稳幅使有效增益约1。",
+          "explanation": "明确起振与稳定振幅是不同阶段，不把正反馈等同自动完美振荡。",
+          "ability": "机制解释",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-analog-electronics-09-2"
+        }
+      ],
+      "topic_id": "analog-electronics.t19"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "title": "电容滤波纹波估算",
+      "suggested_parent_topic_id": "analog-electronics.t10",
+      "keywords": [
+        "电容滤波纹波估算"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-ae-023",
+          "stem": "电容滤波时，增大滤波电容通常会使输出纹波（ ）。",
+          "answer": "B",
+          "explanation": "电容放电更慢，输出电压在相邻峰值间下降更少，因此纹波减小；同时应关注冲击电流。"
+        },
+        {
+          "id": "sp-elec-analog-006",
+          "stem": "桥式整流输出仍有脉动，但滤波后纹波突然明显增大，优先怀疑（ ）。",
+          "answer": "A",
+          "explanation": "整流级已有脉动输出说明前级基本工作，滤波效果变差应优先检查电容和负载。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t20"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "title": "传感器采集链选型",
+      "suggested_parent_topic_id": "analog-electronics.t10",
+      "keywords": [
+        "传感器采集链选型"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-elec-analog-029",
+          "stem": "写出模拟传感器到微控制器的数据采集链，并说明放大、滤波和ADC各自作用。",
+          "answer": "典型链路为传感器→保护/偏置→缓冲或放大→抗混叠滤波→ADC→微控制器。放大提高ADC量程利用率，滤波限制带宽并减少混叠，ADC完成抽样、量化和编码。增益过大可能饱和，提高位数也不能自动消除噪声。",
+          "explanation": "评分点：完整顺序、放大作用、滤波作用、ADC作用和至少一项边界。"
+        },
+        {
+          "id": "sp-elec-analog-020",
+          "stem": "合理的模拟传感器采集前端可能包含（ ）。",
+          "answer": "ABCD",
+          "explanation": "各级依次保护并设定工作点、调整阻抗和幅度、限制带宽、完成数字化。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t21"
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "title": "二极管挡安全初检",
+      "suggested_parent_topic_id": "analog-electronics.t10",
+      "keywords": [
+        "二极管挡安全初检"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-elec-analog-026",
+          "stem": "说明用万用表二极管挡初步判断普通硅二极管好坏的步骤和局限。",
+          "answer": "先断电、确认放电并尽量脱开一端；交换表笔测两个方向，正常时正向约0.6～0.7 V、反向截止。两向近0疑似短路，两向均截止疑似开路。该方法只做初检，在路并联支路会影响读数，也不能证明耐压等全部参数正常。",
+          "explanation": "评分点：断电、两向测量、正常特征、开短路特征、在路与参数局限。"
+        },
+        {
+          "id": "sp-elec-analog-001",
+          "stem": "断电并脱开一端后，用万用表二极管挡测硅二极管，正常现象通常是（ ）。",
+          "answer": "A",
+          "explanation": "正常PN结正向有压降、反向截止；两向近0疑似短路，两向均截止疑似开路。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "analog-electronics.t22"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c01",
+      "title": "二进制小数按位权求值",
+      "suggested_parent_topic_id": "digital-electronics.t01",
+      "keywords": [
+        "二进制小数按位权求值"
+      ],
+      "practice_existing": [
+        {
+          "id": "ue-digital-001",
+          "stem": "二进制数101101.01₂转换为十进制数是多少？",
+          "answer": "B",
+          "explanation": "整数部分101101₂=32+8+4+1=45，小数部分.01₂=1/4=0.25，所以结果为45.25。"
+        },
+        {
+          "id": "uf-de-001",
+          "stem": "二进制数101101₂转换为十进制数是（ ）。",
+          "answer": "C",
+          "explanation": "101101₂=32+8+4+1=45。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "digital-electronics.t12"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c04",
+      "title": "用MUX拆分逻辑函数",
+      "suggested_parent_topic_id": "digital-electronics.t04",
+      "keywords": [
+        "MUX",
+        "拆分逻辑函数"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-digital-002",
+          "stem": "用2选1数据选择器实现F=A⊕B，选择端接A，则D0、D1应分别接（ ）。",
+          "answer": "A",
+          "explanation": "A=0时F=B，故D0=B；A=1时F=B̅，故D1=B̅。"
+        },
+        {
+          "id": "gap-audit26-elec-mux",
+          "stem": "用2选1数据选择器实现F=A+B（+表示逻辑或），选择端接A，A=0选择D0，A=1选择D1。确定D0、D1，列出四组输入验证。",
+          "answer": "A=0时F=B，所以D0=B；A=1时F=1，所以D1=1。AB=00、01、10、11时F依次0、1、1、1。",
+          "explanation": "先固定选择变量求数据端函数，再核对真值表；不能把逻辑或当作普通整数加法。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "digital-electronics.t13"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c04",
+      "title": "全加器的和位与进位",
+      "suggested_parent_topic_id": "digital-electronics.t04",
+      "keywords": [
+        "全加器的和位与进位"
+      ],
+      "practice_existing": [
+        {
+          "id": "uf-de-008",
+          "stem": "半加器的和S与进位C分别为（ ）。",
+          "answer": "B",
+          "explanation": "半加器不含低位进位输入，和为异或，进位为与。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "全加器A=1、B=0、Cin=1，求S和Cout；再把B也变为1，求两输出。",
+          "answer": "前者S=0、Cout=1；后者S=1、Cout=1。",
+          "explanation": "普通整数和分别2和3，对照2Cout+S检查，区别本位与进位。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-digital-electronics-15-2"
+        }
+      ],
+      "topic_id": "digital-electronics.t14"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c06",
+      "title": "移位寄存器逐拍跟踪",
+      "suggested_parent_topic_id": "digital-electronics.t08",
+      "keywords": [
+        "移位寄存器逐拍跟踪"
+      ],
+      "practice_existing": [
+        {
+          "id": "ap-digital-002",
+          "stem": "要把逐位到达的串行数据在接收完4位后同时送给4根输出线，最适合采用（ ）。",
+          "answer": "A",
+          "explanation": "数据按位进入、接收完成后各位同时输出，对应“串行输入、并行输出”。并入串出完成的方向正好相反。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "4位寄存器Q3Q2Q1Q0初态1011，每个时钟右移一位并从Q3串入0。写两拍后的状态和每拍移出位。",
+          "answer": "第一拍0101、移出1；第二拍0010、移出1。",
+          "explanation": "按同一旧位组同时移动，不把移位误算为计数减1。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-digital-electronics-16-2"
+        }
+      ],
+      "topic_id": "digital-electronics.t15"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c06",
+      "title": "计数器状态到T激励",
+      "suggested_parent_topic_id": "digital-electronics.t08",
+      "keywords": [
+        "计数器状态到",
+        "T",
+        "激励"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-digital-005",
+          "stem": "设计模6计数器至少需要几个触发器？为什么还必须规定两个未用状态的下一状态？",
+          "answer": "至少3个，因为2²<6≤2³。3位共有8种编码，两个未用状态若没有回到有效循环的路径，电路可能锁死，因此要设计自启动。",
+          "explanation": "状态位数量只保证编码空间，可靠设计还要处理未用状态。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "两位同步T触发器计数器Q1Q0按00→01→10→11→00循环。列T1/T0四行，求输入逻辑并说明01时下一状态。",
+          "answer": "按00、01、10、11，T1依次0、1、0、1，T0均1；T1=Q0、T0=1；01时两位翻转成10。",
+          "explanation": "每位用T=Q⊕Q+反推，输入取更新前的Q0，不在同一拍先更新低位再求高位。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-digital-electronics-17-2"
+        }
+      ],
+      "topic_id": "digital-electronics.t16"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c07",
+      "title": "脉冲周期与占空比",
+      "suggested_parent_topic_id": "digital-electronics.t10",
+      "keywords": [
+        "脉冲周期与占空比"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-elec-digital-012",
+          "stem": "周期为2 ms、高电平0.5 ms的PWM占空比为（ ）。",
+          "answer": "B",
+          "explanation": "占空比等于高电平时间除以周期，因此D=0.5/2×100%=25%。"
+        },
+        {
+          "id": "sp-elec-digital-025",
+          "stem": "PWM高电平2 ms、周期8 ms，占空比为____%。",
+          "answer": "25",
+          "explanation": "占空比按高电平时间与周期之比计算，D=2/8×100%=25%。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "digital-electronics.t17"
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c07",
+      "title": "施密特双阈值整形",
+      "suggested_parent_topic_id": "digital-electronics.t10",
+      "keywords": [
+        "施密特双阈值整形"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "规定输入上升过3V输出高、下降低2V输出低。输出已高，输入降到2.4V，再到1.8V，输出依次怎样？",
+          "answer": "2.4V仍高，1.8V变低。",
+          "explanation": "下降时只检查下阈2V，回差区保留历史。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-digital-electronics-19-1"
+        },
+        {
+          "type": "简答",
+          "stem": "同一双阈值整形电路，上阈3V下阈2V，刚观察到输入2.5V且未知此前历史，能否唯一判断输出？这与单阈值比较器何处不同？",
+          "answer": "不能，可能高也可能低；回差区保留先前状态，单阈值规则通常只比较当前输入与单个阈值。",
+          "explanation": "检查历史是迟滞判定的一部分，不凭区间中点猜输出。",
+          "ability": "机制解释",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-digital-electronics-19-2"
+        }
+      ],
+      "topic_id": "digital-electronics.t18"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c03",
+      "title": "同步TDM帧率与开销",
+      "suggested_parent_topic_id": "communication.t06",
+      "keywords": [
+        "同步",
+        "TDM",
+        "帧率与开销"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-retest-tdm-001",
+          "stem": "4路独立信号均以8 kHz采样，每个样值编码为8 bit，采用同步时分复用，每帧固定从每路取1个样值。计算帧率、每帧有效数据位数以及有效数据传输速率。若每帧再加入1 bit帧同步位，且无其他开销，计算线路传输速率，并说明帧同步的作用。",
+          "answer": "每帧从每路取1个样值，因此帧率等于每路采样率，为8000帧/s。每帧有效数据为4×8=32 bit，有效数据速率为8000×32=256000 bit/s，即256 kbit/s。加入同步位后，每帧共33 bit，线路速率为8000×33=264000 bit/s，即264 kbit/s。帧同步帮助接收端识别帧的起始边界，结合固定时隙次序，把各样值正确分配回对应支路。",
+          "explanation": "帧率不是4路采样率之和：一帧已经包含4路各一个样值。有效数据速率只计32 bit样值数据，线路速率还要计入每帧1 bit同步开销，增加8000 bit/s。帧同步位用于定位帧边界，不是新增一路采样信号。"
+        },
+        {
+          "id": "ap-comm-002",
+          "stem": "多路数字终端轮流占用同一物理信道的固定时隙，并要求收发双方保持时隙同步，这种方式是（ ）。",
+          "answer": "B",
+          "explanation": "TDM按时间划分时隙，各路轮流使用信道；FDM分频带，WDM分光波长，AM是调制方式。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "communication.t17"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c06",
+      "title": "锁相环误差反馈过程",
+      "suggested_parent_topic_id": "communication.t10",
+      "keywords": [
+        "锁相环误差反馈过程"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-final-comm-001",
+          "stem": "接收机本振与输入载波有小频差。按信号流说明PLL怎样逐步减小该频差，并指出尚未捕获时不能作什么假设。",
+          "answer": "鉴相器比较输入与VCO相位产生误差，环路滤波器提取控制量，控制VCO改变频率和相位，反馈后误差逐步减小直至锁定。未捕获时不能假设任意初始频差都能立即进入锁定。",
+          "explanation": "PLL是闭环纠偏过程，捕获范围、跟踪范围和动态时间构成使用边界。"
+        },
+        {
+          "id": "gap-final-thin-025",
+          "stem": "说明锁相环从未锁定到锁定的基本过程，并比较捕获范围与保持范围。",
+          "answer": "鉴相器比较输入与反馈相位，环路滤波后控制振荡器频率，使频差和相差逐步减小并锁定；捕获范围是能从失锁进入锁定的范围，保持范围是已锁定后仍能跟踪而不失锁的范围，通常保持范围更大。",
+          "explanation": "锁相环是负反馈调节过程，两个范围描述进入锁定和维持锁定的不同边界。"
+        }
+      ],
+      "practice_proposed": [],
+      "topic_id": "communication.t18"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "title": "离散信源熵的计算",
+      "suggested_parent_topic_id": "communication.t11",
+      "keywords": [
+        "离散信源熵的计算"
+      ],
+      "practice_existing": [
+        {
+          "id": "ue-comm-001",
+          "stem": "某离散无记忆信源输出A、B、C的概率分别为1/2、1/4、1/4，其平均信息量是多少？",
+          "answer": "B",
+          "explanation": "H=-Σp log₂p=-(0.5×(-1)+0.25×(-2)+0.25×(-2))=1.5 bit/符号。概率越均匀，熵通常越大。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "概率1/2、1/4、1/4的信源用码0、10、11。求平均码长，并说明平均1.5bit/符号是否要求每个码字都长1.5位。",
+          "answer": "平均0.5×1+0.25×2+0.25×2=1.5bit/符号；码字实际长度是1、2、2位，平均值可以非整数。",
+          "explanation": "区分统计平均与单个码字长度，该码也是前缀码。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-communication-22-2"
+        }
+      ],
+      "topic_id": "communication.t19"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "title": "CRC模2除法与余数",
+      "suggested_parent_topic_id": "communication.t12",
+      "keywords": [
+        "CRC",
+        "除法与余数"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-elec-comm-015",
+          "stem": "帧通过CRC校验就能从数学上保证数据绝对没有错误。（ ）",
+          "answer": "错误",
+          "explanation": "CRC漏检概率很低但不为零，能力取决于多项式和错误模式。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "数据1101、生成串1011。先补零后第一次异或得到0110000。下一次生成串怎样对齐？余数若仅写为1，检验字段为什么还要写001？",
+          "answer": "下一次对齐为0101100；生成串次数为3，字段固定3位，余1要补前导零成001。",
+          "explanation": "对齐当前最高的1；校验字段长度由生成多项式次数决定，不随余数最高位缩短。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-communication-23-1"
+        }
+      ],
+      "topic_id": "communication.t20"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "title": "ARQ确认、序号与超时",
+      "suggested_parent_topic_id": "communication.t12",
+      "keywords": [
+        "ARQ",
+        "确认",
+        "序号与超时"
+      ],
+      "practice_existing": [
+        {
+          "id": "sp-elec-comm-026",
+          "stem": "比较信源编码、信道编码、CRC和ARQ的目的与边界。",
+          "answer": "信源编码去冗余以降低码率；信道编码增加受控冗余以检错或纠错；CRC主要检错，通常不能自行纠错；ARQ用确认、超时和重传恢复错误。各机制都有能力和时延、带宽代价，不能保证绝对零错。",
+          "explanation": "评分点包括四种机制的目的、相互区别、实现代价以及不能保证绝对零错的边界。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "停等ARQ中编号0数据已被接收并交付，但其ACK丢失。发送方超时后做什么，接收方看到重复0后怎样处理？",
+          "answer": "发送方重传0；接收方识别重复，不再重复交付，只重新发确认，再继续预期的下一编号。",
+          "explanation": "定时器处理ACK丢失，序号用于消除重传产生的重复；不能把重传数据再次当新业务。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-communication-24-1"
+        }
+      ],
+      "topic_id": "communication.t21"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c09",
+      "title": "dB链路预算与余量",
+      "suggested_parent_topic_id": "communication.t16",
+      "keywords": [
+        "dB",
+        "链路预算与余量"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-comm-002",
+          "stem": "链路发射功率10 dBm，发射和接收天线增益各2 dB，路径损耗80 dB，其他系统损耗2 dB。接收功率是多少dBm？只填写数字。",
+          "answer": "-68",
+          "explanation": "接收功率=10+2+2-80-2=-68 dBm。增益相加，损耗相减。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "发射光功率0dBm，链路损耗7dB，再预留1dB，接收灵敏度−12dBm。求预算接收功率和余量；0dBm是否没有光？",
+          "answer": "预算−8dBm，余量4dB；0dBm为1mW，不是零功率。",
+          "explanation": "损耗和预留作减项，绝对功率dBm与功率比dB不同；预算不替代色散检验。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-communication-25-2"
+        }
+      ],
+      "topic_id": "communication.t22"
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "title": "傅里叶奇偶与系数",
+      "suggested_parent_topic_id": "signals-systems.t07",
+      "keywords": [
+        "傅里叶奇偶与系数"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-final-sig-011",
+          "stem": "某实周期信号满足x(t)=-x(-t)。不做积分，说明其直流分量以及正弦、余弦系数的基本结论。",
+          "answer": "该信号为奇信号，一个对称周期内平均值为0，所以直流分量为0；与偶对称余弦相乘后积分为0，因此余弦系数为0，只可能保留正弦项。",
+          "explanation": "先利用奇偶对称可大幅减少傅里叶级数计算，但仍要确认积分区间关于原点对称。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "周期2π方波在−π<t<0为−1、0<t<π为1，端点取0。已按定义得到bn=2[1−cos(nπ)]/(nπ)。写b1、b2、b3及a0/an，并说明哪些谐波消失。",
+          "answer": "b1=4/π，b2=0，b3=4/(3π)；奇信号a0=an=0，所有偶次谐波为0。",
+          "explanation": "先用奇性去余弦和直流，再代n奇偶；该波也半波对称，不能把全部偶谐波消失推广到任意奇函数。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-signals-systems-26-2"
+        }
+      ],
+      "topic_id": "signals-systems.t14"
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "title": "时移与尺度的频谱变化",
+      "suggested_parent_topic_id": "signals-systems.t08",
+      "keywords": [
+        "时移与尺度的频谱变化"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-final-sig-013",
+          "stem": "信号x(t)延迟t0后，其傅里叶变换幅度谱保持不变，只增加线性相位。",
+          "answer": "正确",
+          "explanation": "x(t-t0)对应X(jω)e^(-jωt0)，指数因子模为1，所以幅度谱不变，相位增加-ωt0。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "x(t)的频谱仅在|ω|≤10非零。y(t)=x(2t)的频带边界和频谱幅度因子怎样变？若再延迟1秒会改变幅度谱吗？",
+          "answer": "边界到|ω|≤20，Y=X(jω/2)/2；再延迟只乘e^(−jω)，幅度谱不变。",
+          "explanation": "尺度同时改横轴和1/|a|幅度，时移只改线性相位，两性质不可混用。",
+          "ability": "直接计算",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-signals-systems-27-2"
+        }
+      ],
+      "topic_id": "signals-systems.t15"
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "title": "部分分式与反变换",
+      "suggested_parent_topic_id": "signals-systems.t09",
+      "keywords": [
+        "部分分式与反变换"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "type": "简答",
+          "stem": "因果零初始系统y′+2y=x，x=e^(−t)u(t)。求Y(s)，写部分分式、零状态响应和ROC。",
+          "answer": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)；y=(e^−t−e^−2t)u(t)，ROC Re(s)>−1。",
+          "explanation": "变换方程后设A/(s+1)+B/(s+2)，通分得A=1 B=−1；因果决定右侧ROC。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-signals-systems-28-1"
+        },
+        {
+          "type": "简答",
+          "stem": "上述方程和输入不变，改为初值y(0−)=3。单边拉普拉斯中导数怎样变换？总响应比零状态响应多哪一项？",
+          "answer": "导数为sY−3；多零输入3e^(−2t)，总响应为e^(−t)+2e^(−2t)（t≥0）。",
+          "explanation": "线性系统初始储能单独贡献齐次响应，不可仍只用Y=HX；0+核对总响应为3。",
+          "ability": "过程描述",
+          "difficulty": "基础",
+          "source": "全量验收补充",
+          "id": "accept-elec-signals-systems-28-2"
+        }
+      ],
+      "topic_id": "signals-systems.t16"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c01",
+      "title": "关联参考方向与功率符号",
+      "suggested_parent_topic_id": "circuit.t01",
+      "keywords": [
+        "关联参考方向与功率符号",
+        "参考方向"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-audit26-elec-reference",
+          "stem": "元件电压、电流采用关联参考方向，u=3 V、i=-2 A，计算功率并说明吸收还是发出。另用10倍探头测量周期电压，示波器已经补偿探头衰减，屏幕标示0.5 V/div，峰峰值占4格。被测峰峰值是多少？为何不能再乘10？",
+          "answer": "p=ui=3×(-2)=-6 W，元件发出6 W。峰峰值为0.5×4=2 V；标示刻度已经包含探头补偿，再乘10会重复计入倍率。",
+          "explanation": "功率正负须先确认关联参考方向；负号表示发出。示波器倍率计算取决于屏幕刻度是否已经补偿，不能只看到10倍探头就无条件再乘10。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "id": "accept-elec-circuit-1-28",
+          "source": "全量验收补充",
+          "type": "简答",
+          "stem": "相同元件的电压正端不变，把电流参考箭头反向，读数由2A变−2A。实际吸收功率会变号吗？为什么？",
+          "answer": "不会；参考改变需同时改变功率表达式，物理能量方向不随记号变。",
+          "explanation": "关联方向用ui，非关联用−ui，参考读数与表达式配套才保持同一物理结论。",
+          "ability": "机制解释",
+          "difficulty": "基础"
+        }
+      ],
+      "reuses_existing_topic": true,
+      "topic_id": "circuit.t01"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c03",
+      "title": "共享电阻的网孔列式",
+      "suggested_parent_topic_id": "circuit.t03",
+      "keywords": [
+        "共享电阻的网孔列式",
+        "节点电压"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "id": "accept-elec-mesh-setup",
+          "source": "全量验收补充",
+          "type": "简答",
+          "stem": "两个相邻网孔都取顺时针，左右外侧各2Ω、共享1Ω，沿各自网孔方向电源升10V与4V。列方程并求I1、I2。",
+          "answer": "3I1−I2=10，−I1+3I2=4；I1=4.25A、I2=2.75A。",
+          "explanation": "共享电阻分别用两方向电流差，联立后回代两回路守恒。",
+          "ability": "直接计算",
+          "difficulty": "基础"
+        },
+        {
+          "id": "accept-elec-circuit-3-29",
+          "source": "全量验收补充",
+          "type": "简答",
+          "stem": "上述两个回路共享支路电流沿左网孔方向是多少？若把右网孔方程共享电阻项也写I1−I2会错在哪里？",
+          "answer": "共享支路1.5A；沿右网孔需I2−I1，写反会错用压降方向。",
+          "explanation": "同一电阻沿两个相反绕行方向电压代数项相反；4.25−2.75=1.5A。",
+          "ability": "机制解释",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "circuit.t13"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c03",
+      "title": "戴维南端口参数求法",
+      "suggested_parent_topic_id": "circuit.t04",
+      "keywords": [
+        "戴维南端口参数求法",
+        "叠加"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-eg-circuit-002",
+          "stem": "某线性二端网络开路电压12 V、短路电流3 A。求戴维南等效参数；接何值纯电阻负载时负载功率最大，并求最大功率。",
+          "answer": "Uth=12 V，Rth=Uoc/Isc=4 Ω；RL=4 Ω时最大功率Pmax=Uth²/(4Rth)=9 W。",
+          "explanation": "开路电压给出Uth，开路电压与短路电流之比给出Rth，纯电阻最大功率条件为RL=Rth。"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "id": "accept-elec-circuit-3-30",
+          "source": "全量验收补充",
+          "type": "简答",
+          "stem": "含受控源的线性二端网络Uoc=Isc=0，是否可以判断Rth=0？给出合适求法。",
+          "answer": "不能；保留受控源、独立源置零，在端口加测试电压或电流，Rth=Ut/It。",
+          "explanation": "0/0未定义；受控源仍反映内部线性作用，测试源能激励看入特性。",
+          "ability": "机制解释",
+          "difficulty": "基础"
+        }
+      ],
+      "topic_id": "circuit.t14"
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "topic_id": "net.fragmentation",
+      "title": "IPv4分片的长度与偏移",
+      "suggested_parent_topic_id": "net.ip-versions",
+      "keywords": [
+        "分片",
+        "MTU"
+      ],
+      "practice_existing": [
+        {
+          "id": "uc-net-006"
+        },
+        {
+          "id": "gap-audit26-core-net-ipv6-fragment"
+        }
+      ],
+      "practice_proposed": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "topic_id": "net.congestion-steps",
+      "title": "拥塞窗口逐轮变化",
+      "suggested_parent_topic_id": "net.flow-congestion",
+      "keywords": [
+        "慢开始",
+        "拥塞窗口",
+        "ssthresh"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-congestion-trace",
+          "type": "简答",
+          "stem": "按教材Reno简化轮次模型，cwnd初值1 MSS、ssthresh=8 MSS，每轮确认充分且无丢包。写第1至第5轮开始时cwnd。",
+          "answer": "1、2、4、8、9 MSS。",
+          "explanation": "门限前每RTT近翻倍，达到8后拥塞避免每轮加1。",
+          "ability": "过程描述",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-full-net-congestion-loss",
+          "type": "简答",
+          "stem": "按教材TCP Reno简化模型，超时与收到三个重复ACK都会如何触发重传？它们对cwnd的恢复处理能否混为一谈？",
+          "answer": "超时触发超时重传并通常把cwnd降到1 MSS重新慢开始；三个重复ACK触发快重传，Reno进入快恢复，不能当作超时归1处理。",
+          "explanation": "二者都提示丢包，但拥塞证据和恢复路径不同。门限常按在途量约减半并有下限，具体数值须看题设。",
+          "ability": "机制解释",
+          "difficulty": "应用"
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "topic_id": "net.dns-lookup",
+      "title": "DNS递归与迭代查询",
+      "suggested_parent_topic_id": "net.dns-dhcp",
+      "keywords": [
+        "递归",
+        "迭代",
+        "DNS查询"
+      ],
+      "practice_existing": [
+        {
+          "id": "cg-08-s1-q68"
+        },
+        {
+          "id": "hn-recall-hn26-010"
+        }
+      ],
+      "practice_proposed": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "topic_id": "net.dhcp-lease",
+      "title": "DHCP租约获取流程",
+      "suggested_parent_topic_id": "net.dns-dhcp",
+      "keywords": [
+        "DHCP",
+        "租约"
+      ],
+      "practice_existing": [],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-dhcp-order",
+          "type": "简答",
+          "stem": "IPv4主机首次经DHCP获取租约，写出Discover、Offer、Request、ACK的顺序，并说明Request的作用。",
+          "answer": "Discover→Offer→Request→ACK；Request表明主机选择的配置方案并请求服务器确认。",
+          "explanation": "首次获取的DORA流程；主机的Request也让其他服务器知道选择，续租路径另论。",
+          "ability": "过程描述",
+          "difficulty": "应用"
+        },
+        {
+          "id": "gap-full-net-dhcp-dns",
+          "type": "简答",
+          "stem": "电脑获得169.254.x.x自动地址、掩码和网关未正确取得。仅修改DNS通常能解决吗？给出优先排查顺序。",
+          "answer": "通常不能；先查网线/WLAN与链路状态，再查DHCP服务、可用地址池和跨网段中继，成功获得配置后再检查DNS。",
+          "explanation": "169.254是IPv4链路本地自动地址的常见形式，不是DNS错误主动改写了主机地址；现象仍需结合网络设计确认。",
+          "ability": "场景选型",
+          "difficulty": "应用"
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "topic_id": "net.socket-io",
+      "title": "TCP Socket收发与消息边界",
+      "suggested_parent_topic_id": "net.app-protocols",
+      "keywords": [
+        "Socket",
+        "socket",
+        "sendall",
+        "recv"
+      ],
+      "practice_existing": [
+        {
+          "id": "hn-recall-hn26-005"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-socket-boundary",
+          "type": "简答",
+          "stem": "TCP发送方连续调用两次sendall，各发送10字节。接收端一次recv(1024)是否必然得到20字节或恰好一条消息？应如何处理？",
+          "answer": "不必然；TCP是字节流，recv可能返回少于20字节或合并的数据。应用需约定固定长度、长度前缀或分隔符，并循环读取到消息完整。",
+          "explanation": "sendall保证尝试发送所给数据，不保证对端recv的次数和消息边界；连接关闭与异常也需处理。",
+          "ability": "机制解释",
+          "difficulty": "应用"
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "topic_id": "net.playback-buffer",
+      "title": "播放缓冲耗尽计算",
+      "suggested_parent_topic_id": "net.streaming-qos",
+      "keywords": [
+        "缓冲耗尽",
+        "缓冲区",
+        "缓存"
+      ],
+      "practice_existing": [
+        {
+          "id": "gap-net-media-002"
+        }
+      ],
+      "practice_proposed": [
+        {
+          "id": "gap-full-net-buffer-boundary",
+          "type": "简答",
+          "stem": "播放速率固定4 Mbit/s，网络持续输入5 Mbit/s，已有24 Mbit缓冲。能否用24/(4-5)=-24秒作为耗尽时间？说明原因。",
+          "answer": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+          "explanation": "耗尽公式要求消费速率大于输入速率，负时间没有物理意义。",
+          "ability": "机制解释",
+          "difficulty": "应用"
+        }
+      ]
+    }
+  ],
+  "existing_question_assignments": {
+    "gap-ds-028": "data-structures.t25",
+    "uc-ds-004": "data-structures.t26",
+    "cg-05-s1-q46": "data-structures.t27",
+    "gap-ds-002": "data-structures.t27",
+    "gap-ds-003": "data-structures.t28",
+    "gap-ds-004": "data-structures.t28",
+    "gap-audit26-core-ds-prim-steps": "data-structures.t29",
+    "gap-ds-030": "data-structures.t30",
+    "gap-ds-031": "data-structures.t31",
+    "uc-ds-006": "data-structures.t31",
+    "gap-ds-010": "data-structures.t34",
+    "cg-05-s1-q49": "data-structures.t35",
+    "zg-4542": "data-structures.t35",
+    "cg-05-s1-q47": "data-structures.t37",
+    "uf-os-002": "operating-system.t14",
+    "gap-os-001": "operating-system.t14",
+    "uc-os-001": "operating-system.t15",
+    "cg-10-s1-q49": "operating-system.t16",
+    "cg-10-s1-q50": "operating-system.t16",
+    "cg-10-s1-q47": "operating-system.t17",
+    "cg-10-s1-q52": "operating-system.t18",
+    "uf-os-008": "operating-system.t18",
+    "gap-db-011": "database.t19",
+    "gap-db-012": "database.t19",
+    "gap-co-012": "computer-organization.t15",
+    "uc-co-004": "computer-organization.t15",
+    "uc-co-005": "computer-organization.t16",
+    "uc-co-008": "computer-organization.t17",
+    "uc-co-014": "computer-organization.t17",
+    "gap-co-009": "computer-organization.t18",
+    "sp-core-co-031": "computer-organization.t18",
+    "uf-pl-007": "programming.t17",
+    "gap-audit26-system-003": "programming.t17",
+    "zg-11699": "programming.t09",
+    "gap-pl-006": "programming.t15",
+    "gap-pl-007": "programming.t18",
+    "ap-pl-006": "programming.t18",
+    "sp-core-se-017": "software-engineering.t20",
+    "sp-core-se-018": "software-engineering.t20",
+    "se-gen-q06": "software-engineering.t21",
+    "gap-se-007": "software-engineering.t21",
+    "se-gen-q09": "software-engineering.t22",
+    "gap-se-010": "software-engineering.t22",
+    "gap-eg-analog-001": "analog-electronics.t11",
+    "ue-analog-003": "analog-electronics.t11",
+    "ue-analog-004": "analog-electronics.t12",
+    "uf-ae-011": "analog-electronics.t12",
+    "gap-eg-analog-002": "analog-electronics.t13",
+    "gap-eg-analog-003": "analog-electronics.t16",
+    "ue-analog-006": "analog-electronics.t16",
+    "uf-ae-017": "analog-electronics.t17",
+    "gap-eg-analog-005": "analog-electronics.t18",
+    "sp-elec-analog-023": "analog-electronics.t18",
+    "uf-ae-023": "analog-electronics.t20",
+    "sp-elec-analog-006": "analog-electronics.t20",
+    "sp-elec-analog-029": "analog-electronics.t21",
+    "sp-elec-analog-020": "analog-electronics.t21",
+    "sp-elec-analog-026": "analog-electronics.t22",
+    "sp-elec-analog-001": "analog-electronics.t22",
+    "ue-digital-001": "digital-electronics.t12",
+    "uf-de-001": "digital-electronics.t12",
+    "gap-eg-digital-002": "digital-electronics.t13",
+    "gap-audit26-elec-mux": "digital-electronics.t13",
+    "uf-de-008": "digital-electronics.t14",
+    "ap-digital-002": "digital-electronics.t15",
+    "gap-eg-digital-005": "digital-electronics.t16",
+    "sp-elec-digital-012": "digital-electronics.t17",
+    "sp-elec-digital-025": "digital-electronics.t17",
+    "gap-retest-tdm-001": "communication.t17",
+    "ap-comm-002": "communication.t17",
+    "gap-final-comm-001": "communication.t18",
+    "gap-final-thin-025": "communication.t18",
+    "ue-comm-001": "communication.t19",
+    "sp-elec-comm-015": "communication.t20",
+    "sp-elec-comm-026": "communication.t21",
+    "gap-comm-002": "communication.t22",
+    "gap-final-sig-011": "signals-systems.t14",
+    "gap-final-sig-013": "signals-systems.t15",
+    "gap-audit26-elec-reference": "circuit.t01",
+    "gap-eg-circuit-002": "circuit.t14",
+    "uc-net-006": "net.fragmentation",
+    "gap-audit26-core-net-ipv6-fragment": "net.fragmentation",
+    "cg-08-s1-q68": "net.dns-lookup",
+    "hn-recall-hn26-010": "net.dns-lookup",
+    "hn-recall-hn26-005": "net.socket-io",
+    "gap-net-media-002": "net.playback-buffer"
+  },
+  "new_count": 53
+}

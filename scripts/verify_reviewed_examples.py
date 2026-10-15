@@ -39,7 +39,7 @@ def main():
         ('uf-cm-006', 3000*math.log2(1001)/1000),
         ('uf-cm-017', 2*(5*3+3)),
         ('ue-comm-001', -sum(p*math.log2(p) for p in [.5,.25,.25])),
-        ('ue-comm-002', 1*math.log2(16)),
+        ('ap-comm-001', 1*math.log2(4)),
         ('ue-comm-004', 2400*math.log2(4)),
         ('ue-comm-005', 2*5),
         ('ue-comm-006', 2*(75+15)),

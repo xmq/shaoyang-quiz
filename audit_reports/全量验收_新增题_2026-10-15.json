@@ -1,0 +1,2415 @@
+{
+  "date": "2026-10-15",
+  "scope": "新增53题及2道线路编码/复用边界题，共55唯一ID；独立隐藏gold作答，不复用作者结论。",
+  "reviewed_count": 55,
+  "scope_count": 55,
+  "records": [
+    {
+      "check_id": "new-question-gap-accept-card-core-01-1",
+      "id": "gap-accept-card-core-01-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "先对10左旋，30的左子树变为20且20左为10；再30右旋，20根左10右30。",
+      "original_gold_answer": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t25",
+      "chapter_id": "data-structures.c04",
+      "topic_title": "AVL四类旋转",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "先对10左旋，30的左子树变为20且20左为10；再30右旋，20根左10右30。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "7c1525e2929757aa471333104f0b691ea50323af42c4925b6269bfe276242222",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "109012b6a6921ad621f0582920b239470237d869a6c955a772962a09b9e36955"
+      },
+      "original_source_sha256": "7c1525e2929757aa471333104f0b691ea50323af42c4925b6269bfe276242222"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-02-1",
+      "id": "gap-accept-card-core-02-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "先1+2=3，再3+4=7，WPL=1*2+2*2+4*1=10。",
+      "original_gold_answer": "先1+2=3，再3+4=7；WPL=3+7=10。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t26",
+      "chapter_id": "data-structures.c04",
+      "topic_title": "哈夫曼合并与WPL",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "先1+2=3，再3+4=7，WPL=1*2+2*2+4*1=10。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "merges": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            4,
+            7
+          ]
+        ],
+        "wpl": 10
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "f6480860d688622fde38e16a93c7bf1a542cca576de2dd957399e3ed7e15ae8b",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "按权值合并并求WPL=10，包含明确数值计算。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "333ff51c495311fc419823b9938c50cbb75a35e043c266243a4944ed536b6a90"
+      },
+      "original_source_sha256": "3f2ac9d7dcaa5fc61891843ae16dbf01c823f98dfe8334c289b831862786e706"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-05-1",
+      "id": "gap-accept-card-core-05-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不能BC首选；初cut只有A，选AB2，再从AB到C选BC1，总3。",
+      "original_gold_answer": "不能；先AB2，再BC1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t29",
+      "chapter_id": "data-structures.c05",
+      "topic_title": "Prim跨集合选边",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不能BC首选；初cut只有A，选AB2，再从AB到C选BC1，总3。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "无向连通图只有顶点A、B、C，边AB权2、AC权5、BC权1。从A运行Prim，第一条边能否选BC？写出选边顺序。"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "9acb9fee3dbff1afdc9817dfc47ba1c36dbb73d521726b64efd3e1e81edd020e",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "2996ce7a01f7425b54708fa2253336664c1f74b0ad0787a47408d3a9de2bb31e"
+      },
+      "original_source_sha256": "9acb9fee3dbff1afdc9817dfc47ba1c36dbb73d521726b64efd3e1e81edd020e"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-06-1",
+      "id": "gap-accept-card-core-06-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "AB和BC已连接A/B/C，AC加入会成环，不取。",
+      "original_gold_answer": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t30",
+      "chapter_id": "data-structures.c05",
+      "topic_title": "Kruskal排序与判环",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "AB和BC已连接A/B/C，AC加入会成环，不取。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "无向图只有顶点A、B、C，边AB权1、BC权2、AC权3。Kruskal已经选中AB、BC，为什么不再接受AC？"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "49ac746229517d9e7ab199072733997aa6c16c4416574ceefae9fcd2e247f823",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "机制解释",
+        "reason": "解释跳过已连通边防环，不要求计算权值总和。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "ee6b879ccc49c5c9a32816b5f1987ffd364d10990ba3350e4496c7a89dedbc70"
+      },
+      "original_source_sha256": "c2a61ded7a06d06ac70b6ff3c454b029455070461f5080becb5168e06f0604e0"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-08-1",
+      "id": "gap-accept-card-core-08-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "同步初始0无穷无穷；第1轮A0B2C5，第2轮A0B2C1。",
+      "original_gold_answer": "第1轮[0,2,5]；第2轮[0,2,1]。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t32",
+      "chapter_id": "data-structures.c05",
+      "topic_title": "Bellman-Ford逐轮扫描",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "同步初始0无穷无穷；第1轮A0B2C5，第2轮A0B2C1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": [
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "有向图只有边A→B（权2）、A→C（权5）、B→C（权−1）。从A执行Bellman-Ford，初始距离A为0、其他为∞；每轮同步松弛所有边，只读取上一轮距离。写出第1轮、第2轮结束后的距离[A,B,C]。"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "c19b188f32daaa9f368c1c0814178892ee0ccfc2a02e93e36d341c1f71a35642",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "6e2c1caada7beaa7f73d95eea5a3fcd31b4bbf4d043762f312f4893c9e61c260"
+      },
+      "original_source_sha256": "c19b188f32daaa9f368c1c0814178892ee0ccfc2a02e93e36d341c1f71a35642"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-08-2",
+      "id": "gap-accept-card-core-08-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "源可达负环可继续降距离；不可达负环的顶点保持无穷不能这样检出。",
+      "original_gold_answer": "说明存在源点可达负权环；不能保证发现不可达负环。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t32",
+      "chapter_id": "data-structures.c05",
+      "topic_title": "Bellman-Ford逐轮扫描",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "源可达负环可继续降距离；不可达负环的顶点保持无穷不能这样检出。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "V为图的顶点数。从一个源点执行Bellman-Ford，完成V−1轮松弛后再扫描一轮，仍能减小某个源点可达顶点的距离，说明什么？能否据此发现源点不可达区域中的所有负权环？"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "ce62d546acfe210a8fc76401f385321294e17d3d884ba9c1f213c40e3276e295",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "机制解释",
+        "reason": "负环可达性与额外松弛的条件边界，无数值距离求解。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "b87182bb8ecb2c6fb8e0dffcb54af757f3d90c188cae0c1eb37f930833961821"
+      },
+      "original_source_sha256": "9b1e1b1cd764b35c9a6141c954c3119fd42fcfdd1159879e6053f51090484943"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-09-1",
+      "id": "gap-accept-card-core-09-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "2+1=3，替原直边5。",
+      "original_gold_answer": "3。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t33",
+      "chapter_id": "data-structures.c05",
+      "topic_title": "Floyd开放中转点",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "2+1=3，替原直边5。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "有向图只有边A→B（权2）、B→C（权1）、A→C（权5）。Floyd初始化后，允许B作为中转点时，A到C的最短距离更新为多少？"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "8276d5c551392f2719fbc5387c8d4df75ae7ccd627d048b0ee90c9194dc0e3ea",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "用min(5,2+1)实际求更新距离3。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "616eb7791676796e92bdcea00c7583580436fd2bf197775b2790b530a0610f0e"
+      },
+      "original_source_sha256": "36eb1046192fc5150a7e8a517ae1cd2bddf1729cebadb45b5bf69c04df2dfee7"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-09-2",
+      "id": "gap-accept-card-core-09-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "k外层保持只允许前k个顶点作内部中转的DP不变式，原位更新有依据；改内层一次扫描可能漏传播。",
+      "original_gold_answer": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t33",
+      "chapter_id": "data-structures.c05",
+      "topic_title": "Floyd开放中转点",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "k外层保持只允许前k个顶点作内部中转的DP不变式，原位更新有依据；改内层一次扫描可能漏传播。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "5079ba38131fa19aae25cf07d85f9a471a4c57350b9f08a5e24288585344b031",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "机制解释",
+        "reason": "阐释DP中转集合不变式，不执行给定数值图。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "23c7632f2b77a8d13a46ee87ca8a4cf34b0d4fdf76fda156184b8e82159c8c1f"
+      },
+      "original_source_sha256": "7a830d90f7e767997860253841547cfeb00b7fc6fddaeb0265478391f2faefa4"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-10-1",
+      "id": "gap-accept-card-core-10-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "插入3后[3,5a,5b]；只搬严格大于当前键，等键不越过，保a在b前。",
+      "original_gold_answer": "[3,5a,5b]；只移动大于当前键的元素，使后来的相等键停在已有相等键后方，保留原相对次序。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t34",
+      "chapter_id": "data-structures.c07",
+      "topic_title": "插入排序扩有序区",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "插入3后[3,5a,5b]；只搬严格大于当前键，等键不越过，保a在b前。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "稳定的直接插入排序处理带身份标签的序列[5a,5b,3]，a、b只标记原先相对次序，不参与大小比较。插入3后的序列是什么？为什么对待插入元素只后移键值严格大于它的元素？"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "26d483aa820900c1b7eb344ca2d433f9f6f5584a650a3b8703873570d85775aa",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "7e409f38338a655a7c14c6915f69600097e354d52fa20202903052e49872abdd"
+      },
+      "original_source_sha256": "26d483aa820900c1b7eb344ca2d433f9f6f5584a650a3b8703873570d85775aa"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-12-1",
+      "id": "gap-accept-card-core-12-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "交换堆尾[2,3,4|5]；有效前三下沉选大孩4得到[4,3,2|5]。",
+      "original_gold_answer": "[2,3,4|5]，再[4,3,2|5]。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t36",
+      "chapter_id": "data-structures.c07",
+      "topic_title": "堆排序取顶与下沉",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "交换堆尾[2,3,4|5]；有效前三下沉选大孩4得到[4,3,2|5]。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "堆排序的有效大根堆为[5,3,4,2]，尚无已排区。执行一次“交换堆顶与堆尾、缩小有效堆、下沉恢复”，分别写交换后和下沉后的完整数组，用竖线分隔已排区。"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "54a5ef3640d11e0c5a9d94b34e450d9bbd3bf8a91a1127bdd1c4771d93406b8e",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "08c83918e1b8cf35f2be96d9ec5983871dcebe4bc118743a59f49792842104d4"
+      },
+      "original_source_sha256": "54a5ef3640d11e0c5a9d94b34e450d9bbd3bf8a91a1127bdd1c4771d93406b8e"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-12-2",
+      "id": "gap-accept-card-core-12-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "较大孩子若仍大于父不先处理，父子最大堆序会违反；父和大孩满足则也不小于小孩。",
+      "original_gold_answer": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t36",
+      "chapter_id": "data-structures.c07",
+      "topic_title": "堆排序取顶与下沉",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "较大孩子若仍大于父不先处理，父子最大堆序会违反；父和大孩满足则也不小于小孩。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "2817bcd82ada16650e6f4d2b57921768391fa134dfcb53d45650f4da4b5a7163",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "机制解释",
+        "reason": "说明较大孩子比较维护堆序的原因，不追踪指定数组。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "c6dc5e682a3b64b41274b2b15dd77d3ecb12ce4251a2c2324368b51babb4e939"
+      },
+      "original_source_sha256": "3f477164c5b6fcc5eb0d3d5e8eb9145f535c75edaa48db42197f575ddac34f45"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-13-1",
+      "id": "gap-accept-card-core-13-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "下标0/2为5,4排4,5；1/3为2,3不变，回填[4,2,5,3]。",
+      "original_gold_answer": "[4,2,5,3]。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t37",
+      "chapter_id": "data-structures.c07",
+      "topic_title": "希尔排序按增量分组",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "下标0/2为5,4排4,5；1/3为2,3不变，回填[4,2,5,3]。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "d14d9279fc69aee492b96df6a4848fc850a3c8927d392356f49786c3be7b8bc6",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "df7015fa2aaae7290b98dda8e9799bfc7308ba9065efaedd9c2756c1a9284e04"
+      },
+      "original_source_sha256": "d14d9279fc69aee492b96df6a4848fc850a3c8927d392356f49786c3be7b8bc6"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-14-1",
+      "id": "gap-accept-card-core-14-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "个位收集[21,12,13]；十位稳定收集[12,13,21]。",
+      "original_gold_answer": "个位后[21,12,13]，十位后[12,13,21]。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t38",
+      "chapter_id": "data-structures.c07",
+      "topic_title": "基数排序稳定收集",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "个位收集[21,12,13]；十位稳定收集[12,13,21]。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "31db81111e429077a2232b2139f84ab832a2dfab1be2c08ad2519db4bfb6197f",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "9493e00b6260c5270a449d8449ffac5cac103f642bd48b81405d50ce915dbe0a"
+      },
+      "original_source_sha256": "31db81111e429077a2232b2139f84ab832a2dfab1be2c08ad2519db4bfb6197f"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-14-2",
+      "id": "gap-accept-card-core-14-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "高位相等时要保低位已形成次序，不稳定会破坏完整键有序。",
+      "original_gold_answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "data-structures.t38",
+      "chapter_id": "data-structures.c07",
+      "topic_title": "基数排序稳定收集",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "高位相等时要保低位已形成次序，不稳定会破坏完整键有序。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "b841f133940c75b72484a5f01ec7bf3a037abe9341f138a7ef485c398827a3d8",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "机制解释",
+        "reason": "说明稳定分桶保留低位关系，不执行数值分桶。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "17bc17df5c04cd9a2309516b1cc5b751188c08a2a1b546a33008a6826a670d9c"
+      },
+      "original_source_sha256": "f241e7d57240d4b40c7e006be0cdc56262a1aa069f565556eb252dd9db0c115c"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-16-1",
+      "id": "gap-accept-card-core-16-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "P1 P2 P1 P2 P1；P2完成4，P1完成5。",
+      "original_gold_answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "operating-system.t15",
+      "chapter_id": "operating-system.c03",
+      "topic_title": "RR时间片与队列",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "P1 P2 P1 P2 P1；P2完成4，P1完成5。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "timeline": [
+          "P1",
+          "P2",
+          "P1",
+          "P2",
+          "P1"
+        ],
+        "completed": {
+          "P2": 4,
+          "P1": 5
+        }
+      },
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "P1、P2均在时刻0到达，服务时间分别为3和2个时间单位，初始就绪队列[P1,P2]。采用时间片1的RR且不计开销，写各片执行进程及两者的完成时刻。"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "81fe99005e1a1594e55efacaab945966f4ab31623d42b4b20c2b74578ffde54a",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "8199822a13d9e5a3f3867b870f1e10da226a04734cdabf906c2f3527e8f6d7a5"
+      },
+      "original_source_sha256": "81fe99005e1a1594e55efacaab945966f4ab31623d42b4b20c2b74578ffde54a"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-18-1",
+      "id": "gap-accept-card-core-18-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "扫1页清位到0；遇2页0换成4访问位置1；指针到第3框页3。",
+      "original_gold_answer": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "operating-system.t17",
+      "chapter_id": "operating-system.c05",
+      "topic_title": "CLOCK访问位与指针",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "扫1页清位到0；遇2页0换成4访问位置1；指针到第3框页3。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "d3f4ac53c58a6d91fbd1fdbc4ad89e9d7b8515ee368b4f9f1c0d6b5cb57082f5",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "8c0afb59041734a3d4106bfd9223cc540e9142ecc504bd0ece7f9527e7f5b87f"
+      },
+      "original_source_sha256": "d3f4ac53c58a6d91fbd1fdbc4ad89e9d7b8515ee368b4f9f1c0d6b5cb57082f5"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-20-1",
+      "id": "gap-accept-card-core-20-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "LOOK50到80到20=90；SCAN50到99再20=128。",
+      "original_gold_answer": "LOOK90；SCAN128。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "operating-system.t19",
+      "chapter_id": "operating-system.c07",
+      "topic_title": "SCAN与LOOK累计距离",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "LOOK50到80到20=90；SCAN50到99再20=128。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "look": 90,
+        "scan": 128
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "67ad348d935c90136f6110005ca0b8b24edb7abfc46a1c57ca0e96a605fad458",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "计算LOOK90和SCAN128的轨道移动量。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "30b8fdaa85b7a549a34a48c03648be5dd34e2e3eb0effc506854e6f9870a5f68"
+      },
+      "original_source_sha256": "be1e6cb6c2a7876c12acb26b9c90a2050e589a5047c79fb5aa35eed503fae4cb"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-20-2",
+      "id": "gap-accept-card-core-20-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "LOOK100到40再150，顺40/150，总170。",
+      "original_gold_answer": "先40再150，总170。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "operating-system.t19",
+      "chapter_id": "operating-system.c07",
+      "topic_title": "SCAN与LOOK累计距离",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "LOOK100到40再150，顺40/150，总170。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "7ca27cdb5ae120f1ac25c4561ba16938f90f73f6cade187fd2587ba845144af3",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "计算两段距离60+110=170，除写顺序还需数值总量。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "99e15dd0ee0bba15b9516b0b68a048e2812eff22e38100ed32992699c9f25f34"
+      },
+      "original_source_sha256": "117e61d4daa91f3ccc565b352d9cea0ece9bdc984caa47e92c345cf4ba7ec901"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-22-1",
+      "id": "gap-accept-card-core-22-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "解锁A已进收缩，之后锁C违反不能再申请锁。",
+      "original_gold_answer": "最后锁C违反。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "database.t20",
+      "chapter_id": "database.c08",
+      "topic_title": "两段锁的首次解锁",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "解锁A已进收缩，之后锁C违反不能再申请锁。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "d637d8dd8d463bb188c57745d212167b9b9c16af8ebaafb2c0c37bfe2e6522d9",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "e2aeb29bbf574529b3951a3a38bd52c8544a71f9e3d99742050b65125f27c1fb"
+      },
+      "original_source_sha256": "d637d8dd8d463bb188c57745d212167b9b9c16af8ebaafb2c0c37bfe2e6522d9"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-22-2",
+      "id": "gap-accept-card-core-22-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "仍可死锁：T1持A待B，T2持B待A；二者未释放符合增长阶段。",
+      "original_gold_answer": "仍可死锁；T1持A等B，T2持B等A。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "database.t20",
+      "chapter_id": "database.c08",
+      "topic_title": "两段锁的首次解锁",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "仍可死锁：T1持A待B，T2持B待A；二者未释放符合增长阶段。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "4c06588a03be926690477ff811f54e30b58891bce1b733cfc9215ded7f15e2a4",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "机制解释",
+        "reason": "用两事务循环等待反例说明2PL不消死锁，不执行完整时序表。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "fa25904776b852b62e89ad50aff537b4fd144d1f1a2708d1f8d7eff7b46a12a3"
+      },
+      "original_source_sha256": "6b22d01e6d138567bf4f6fcee7739aea44d5ea3632de0700dd95cd773b102e92"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-24-1",
+      "id": "gap-accept-card-core-24-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "平均.95*1+.05*41=3ns，41已包含命中查询不再加1。",
+      "original_gold_answer": "3ns。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "computer-organization.t16",
+      "chapter_id": "computer-organization.c04",
+      "topic_title": "平均访存时间按口径算",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "平均.95*1+.05*41=3ns，41已包含命中查询不再加1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": 3.0,
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "b465caa2bedda665b40a01b03b5966b06926637fbf222068efd9afdddc1e06b1",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "实际加权.95*1+.05*41=3ns，不能归纯流程。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "f982872dfa04a949ee01a1cc99e63acf65ad54999f61f2eca60f85977c457469"
+      },
+      "original_source_sha256": "637b929b896ae63c08d441148409958330e2918430c24595cfa7450c12bc76af"
+    },
+    {
+      "check_id": "new-question-gap-accept-card-core-28-1",
+      "id": "gap-accept-card-core-28-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "C外层x保持1；Python普通if不建立新局部作用域，if内给x赋2会影响所在同一作用域。",
+      "original_gold_answer": "C外层仍为1；Python普通if不建立新的局部作用域。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "programming.t09",
+      "chapter_id": "programming.c07",
+      "topic_title": "C与Python名字作用域",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "C外层x保持1；Python普通if不建立新局部作用域，if内给x赋2会影响所在同一作用域。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "81048afcff673fe85296a2c4d68b25711f5c73ac6ebb7925ae9b54ba59b7058f",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "比较辨析",
+        "reason": "对比C块与Python普通if作用域，标量x仅作为最小例。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "比较辨析",
+        "question_sha256": "27025c4305c4ae1439046d4ab350ca2a8945a6b43a01de3a8d09f761f51813b5"
+      },
+      "original_source_sha256": "4f0165a56a643ced2668520c1b0106d702b22c95802fd0cbcf8dca76f9e255b6"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-03-2",
+      "id": "gap-accept-elec-analog-electronics-03-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "Uin=U0Ri/(Ro+Ri)，Ri→∞时从下方趋U0；正电阻分压比小于1。",
+      "original_gold_answer": "趋向U0；正电阻分压Ri/(Ro+Ri)趋1但不超过1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t13",
+      "chapter_id": "analog-electronics.c04",
+      "topic_title": "级间负载分压",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "Uin=U0Ri/(Ro+Ri)，Ri→∞时从下方趋U0；正电阻分压比小于1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "b26ad4bde500cd28647b228997076ae3ae965c626a3f239be57163e06f597b74",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "3c01b7849dfb1cb76bc1f0865de26adf4974624207eb3bd98ad5489c34821dfa"
+      },
+      "original_source_sha256": "b26ad4bde500cd28647b228997076ae3ae965c626a3f239be57163e06f597b74"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-04-1",
+      "id": "gap-accept-elec-analog-electronics-04-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "ud=.02V，uc=1V；差模输出2V，共模输出.1V，总2.1V；CMRR1000即60dB。",
+      "original_gold_answer": "ud=0.02V，uc=1V；差模2V、共模0.1V，总2.1V；CMRR1000。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t14",
+      "chapter_id": "analog-electronics.c04",
+      "topic_title": "差模、共模与抑制比",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "ud=.02V，uc=1V；差模输出2V，共模输出.1V，总2.1V；CMRR1000即60dB。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "ud": 0.02,
+        "uc": 1,
+        "out": 2.1,
+        "cmrr": 1000
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "897f8ec2eccc77b28b5a6cf33a9aa268a5cb902ad86fbce2768c7c91288e252e",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "c2a33fd4edc10ad4b95b1cd04f398928bc7dfa104265dcc8309b4def39122630"
+      },
+      "original_source_sha256": "897f8ec2eccc77b28b5a6cf33a9aa268a5cb902ad86fbce2768c7c91288e252e"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-04-2",
+      "id": "gap-accept-elec-analog-electronics-04-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "同增.2共模干扰，输出.02V；Ac.01则.002V，CMRR提升10倍即20dB。",
+      "original_gold_answer": "输出干扰0.02V；Ac降后0.002V，CMRR增为原来10倍。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t14",
+      "chapter_id": "analog-electronics.c04",
+      "topic_title": "差模、共模与抑制比",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "同增.2共模干扰，输出.02V；Ac.01则.002V，CMRR提升10倍即20dB。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "d25fff21896dfe96cbf9ab72da79440e92f6329f64f03354d58c17c82d58031e",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "28cdc0e60eede03a3eaf0593f08966fb16d05dbe541a82007b79546b37660921"
+      },
+      "original_source_sha256": "d25fff21896dfe96cbf9ab72da79440e92f6329f64f03354d58c17c82d58031e"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-05-1",
+      "id": "gap-accept-elec-analog-electronics-05-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "截止电压增益100/√2约70.71，带宽20000-20=19980Hz。",
+      "original_gold_answer": "约70.7；带宽19980Hz。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t15",
+      "chapter_id": "analog-electronics.c04",
+      "topic_title": "截止频率与通频带",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "截止电压增益100/√2约70.71，带宽20000-20=19980Hz。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "cutoff_gain": 70.71067811865474,
+        "bw": 19980
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "9f621a19ad806cc7c03f6cd0fb8a7558d1b3a81081caa3c4d0f10a96ed073de9",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "f713825a1f708ae0bb9bd6aaa2f9ac41c6d4b699baf7c558a28072eb922c4832"
+      },
+      "original_source_sha256": "9f621a19ad806cc7c03f6cd0fb8a7558d1b3a81081caa3c4d0f10a96ed073de9"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-05-2",
+      "id": "gap-accept-elec-analog-electronics-05-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不是半功率截止；电压半，等负载功率1/4约-6.02dB。",
+      "original_gold_answer": "不是；电压一半对应功率1/4，常用半功率点电压约0.707倍。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t15",
+      "chapter_id": "analog-electronics.c04",
+      "topic_title": "截止频率与通频带",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不是半功率截止；电压半，等负载功率1/4约-6.02dB。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "7e2f886db85cc008ec8822143e409491531d8374404376ad3a7e62ed679239a5",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "6ce0793f24b99372313320665a9ded3e676a6bbff2f4c67951f308985e1a3a21"
+      },
+      "original_source_sha256": "7e2f886db85cc008ec8822143e409491531d8374404376ad3a7e62ed679239a5"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-07-2",
+      "id": "gap-accept-elec-analog-electronics-07-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "电流串联负反馈：输入串联↑输入电阻，输出取电流趋恒流↑输出电阻。",
+      "original_gold_answer": "电流串联；输入串联增Ri，输出电流取样增Ro。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t17",
+      "chapter_id": "analog-electronics.c05",
+      "topic_title": "四种负反馈的电阻判断",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "电流串联负反馈：输入串联↑输入电阻，输出取电流趋恒流↑输出电阻。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "fe977d7bef24e5267e5e56d3e03f9b6e7ec49bf34b8371964e042614720c5ee3",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "场景选型",
+        "question_sha256": "e0778a800ddf88346010c59cae92f66087e4a6fcd6f4b97de566c11229513a06"
+      },
+      "original_source_sha256": "fe977d7bef24e5267e5e56d3e03f9b6e7ec49bf34b8371964e042614720c5ee3"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-09-1",
+      "id": "gap-accept-elec-analog-electronics-09-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不能，.8每周回衰减；稳态有效环路幅度约1维持振幅，且相位2πm。",
+      "original_gold_answer": "不会，微扰每圈衰减；稳态需要补回一圈损失使振幅保持，即有效幅值增益约1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t19",
+      "chapter_id": "analog-electronics.c07",
+      "topic_title": "正弦振荡的起振与稳幅",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不能，.8每周回衰减；稳态有效环路幅度约1维持振幅，且相位2πm。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "21696f53d5f7df679aa4ef0a3bb88bfa9c099f832b2c85a4d61461c4b03e1dfe",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "516d7cbed522be0d3ac1e3cd33af5f2a818cf7a6474fb440bdde6cc0fc14bd64"
+      },
+      "original_source_sha256": "21696f53d5f7df679aa4ef0a3bb88bfa9c099f832b2c85a4d61461c4b03e1dfe"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-analog-electronics-09-2",
+      "id": "gap-accept-elec-analog-electronics-09-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不保证稳定正弦，大于1增长可进入非线性削顶；起振>1相位满足，稳态经稳幅回1。",
+      "original_gold_answer": "不一定，振幅会增大至非线性削顶；起振略大于1，稳态借稳幅使有效增益约1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "analog-electronics.t19",
+      "chapter_id": "analog-electronics.c07",
+      "topic_title": "正弦振荡的起振与稳幅",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不保证稳定正弦，大于1增长可进入非线性削顶；起振>1相位满足，稳态经稳幅回1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "cd9674bfa2cb60ec16fad56d3a4dc8f2437de811bd959fa798dd7b6a30636e3c",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "f17e0933db898136541da204abdde5dce0cdee000d069725eb15b87595a112a2"
+      },
+      "original_source_sha256": "cd9674bfa2cb60ec16fad56d3a4dc8f2437de811bd959fa798dd7b6a30636e3c"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-digital-electronics-15-2",
+      "id": "gap-accept-elec-digital-electronics-15-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "101总2→S0C1；111总3→S1C1。",
+      "original_gold_answer": "前者S=0、Cout=1；后者S=1、Cout=1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "digital-electronics.t14",
+      "chapter_id": "digital-electronics.c04",
+      "topic_title": "全加器的和位与进位",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "101总2→S0C1；111总3→S1C1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": [
+        {
+          "A": 1,
+          "B": 0,
+          "Cin": 1,
+          "S": 0,
+          "Cout": 1
+        },
+        {
+          "A": 1,
+          "B": 1,
+          "Cin": 1,
+          "S": 1,
+          "Cout": 1
+        }
+      ],
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "f6bb3d2de194c897243a352132165a2fd3ed34f6f33b8ef5b7cb75350adcfe60",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "f6bd815cea31afde41545d3b07a388493890e57381e07702c3918147207214a8"
+      },
+      "original_source_sha256": "f6bb3d2de194c897243a352132165a2fd3ed34f6f33b8ef5b7cb75350adcfe60"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-digital-electronics-16-2",
+      "id": "gap-accept-elec-digital-electronics-16-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "1011→0101→0010，每拍移出旧Q0均1。",
+      "original_gold_answer": "第一拍0101、移出1；第二拍0010、移出1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "digital-electronics.t15",
+      "chapter_id": "digital-electronics.c06",
+      "topic_title": "移位寄存器逐拍跟踪",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "1011→0101→0010，每拍移出旧Q0均1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": [
+        {
+          "old": "1011",
+          "out": 1,
+          "new": "0101"
+        },
+        {
+          "old": "0101",
+          "out": 1,
+          "new": "0010"
+        }
+      ],
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "24fa0d0c849fbe0004c48b129106ebb0f9eb450dddcd9a843c705ffe1e2f5d2d",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "385efe268f8b62dfaebcfc823c3ea96fcc773223a40207522d5c200a6448d5b4"
+      },
+      "original_source_sha256": "24fa0d0c849fbe0004c48b129106ebb0f9eb450dddcd9a843c705ffe1e2f5d2d"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-digital-electronics-17-2",
+      "id": "gap-accept-elec-digital-electronics-17-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "按00,01,10,11，T1T0为01,11,01,11；T0=1 T1=Q0；01下一10。",
+      "original_gold_answer": "按00、01、10、11，T1依次0、1、0、1，T0均1；T1=Q0、T0=1；01时两位翻转成10。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "digital-electronics.t16",
+      "chapter_id": "digital-electronics.c06",
+      "topic_title": "计数器状态到T激励",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "按00,01,10,11，T1T0为01,11,01,11；T0=1 T1=Q0；01下一10。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": [
+        {
+          "Q": "00",
+          "next": "01",
+          "T": "01"
+        },
+        {
+          "Q": "01",
+          "next": "10",
+          "T": "11"
+        },
+        {
+          "Q": "10",
+          "next": "11",
+          "T": "01"
+        },
+        {
+          "Q": "11",
+          "next": "00",
+          "T": "11"
+        }
+      ],
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "6041d3bb7248164256db33766bfa4221e84adaa1a6d72011262067f6a917c564",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "7b2ec5d0adaf1efdadc8c52cd3bf29f300bf101bcc56d47a5e32611c6f21c596"
+      },
+      "original_source_sha256": "6041d3bb7248164256db33766bfa4221e84adaa1a6d72011262067f6a917c564"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-digital-electronics-19-1",
+      "id": "gap-accept-elec-digital-electronics-19-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "先保持高，再低。",
+      "original_gold_answer": "2.4V仍高，1.8V变低。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "digital-electronics.t18",
+      "chapter_id": "digital-electronics.c07",
+      "topic_title": "施密特双阈值整形",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "先保持高，再低。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "832e3fa72f18ed6bd81a4d368b5d6710f25540bfa7f91630ac78b1912b6cdd1f",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "3149becd923abde10857df3bd97b45544c1725e0103b7f72110113a72267bc4e"
+      },
+      "original_source_sha256": "832e3fa72f18ed6bd81a4d368b5d6710f25540bfa7f91630ac78b1912b6cdd1f"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-digital-electronics-19-2",
+      "id": "gap-accept-elec-digital-electronics-19-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "中间带2.5可能高可能低取决历史，不能唯一；单阈在非阈点由当前电压关系可判。",
+      "original_gold_answer": "不能，可能高也可能低；回差区保留先前状态，单阈值规则通常只比较当前输入与单个阈值。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "digital-electronics.t18",
+      "chapter_id": "digital-electronics.c07",
+      "topic_title": "施密特双阈值整形",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "中间带2.5可能高可能低取决历史，不能唯一；单阈在非阈点由当前电压关系可判。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "某非反相双阈值整形电路规定：输入上升超过3V时输出高，下降低于2V时输出低。刚观察到输入2.5V且未知此前历史，能否唯一判断输出？这与单阈值比较器有何不同？"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "6d42fd194df8aaa2b61755e4a6e229e22d9a5e35383e1874cb6b142516341b48",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "62c720881aafb39fa5415692e9920553b0a76087d3b6f2fa1461f3cea8668648"
+      },
+      "original_source_sha256": "6d42fd194df8aaa2b61755e4a6e229e22d9a5e35383e1874cb6b142516341b48"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-communication-22-2",
+      "id": "gap-accept-elec-communication-22-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "L=.5*1+.25*2+.25*2=1.5bit/符号，每码字实际整数1/2，期望值可非整数。",
+      "original_gold_answer": "平均0.5×1+0.25×2+0.25×2=1.5bit/符号；码字实际长度是1、2、2位，平均值可以非整数。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "communication.t19",
+      "chapter_id": "communication.c07",
+      "topic_title": "离散信源熵的计算",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "L=.5*1+.25*2+.25*2=1.5bit/符号，每码字实际整数1/2，期望值可非整数。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": 1.5,
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "53a412c1b70ee7ead3c7f90f948217f390d48d56870530e8e6b58d878c667da0",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "9a86f952c4ed24043ae13b10e04013be6aafa57fd6f89907b13e66355a249229"
+      },
+      "original_source_sha256": "53a412c1b70ee7ead3c7f90f948217f390d48d56870530e8e6b58d878c667da0"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-communication-23-1",
+      "id": "gap-accept-elec-communication-23-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "下一对齐0101100；r=3检验域固定3bit，1补成001。",
+      "original_gold_answer": "下一次对齐为0101100；生成串次数为3，字段固定3位，余1要补前导零成001。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "communication.t20",
+      "chapter_id": "communication.c07",
+      "topic_title": "CRC模2除法与余数",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "下一对齐0101100；r=3检验域固定3bit，1补成001。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "083e3d449c7fddede18298f024b26a7469c7aa23992b519cf04128dad13d6ad3",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "9d969d62034e8b748d71697f53dfa5e3e7abe9bfc292edd706f133007f3768ef"
+      },
+      "original_source_sha256": "083e3d449c7fddede18298f024b26a7469c7aa23992b519cf04128dad13d6ad3"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-communication-24-1",
+      "id": "gap-accept-elec-communication-24-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "超时重发0；接收者知已交付所以丢重复不再交付，并再次确认已收0（确认编号随协议约定）。",
+      "original_gold_answer": "发送方重传0；接收方识别重复，不再重复交付，只重新发确认，再继续预期的下一编号。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "communication.t21",
+      "chapter_id": "communication.c07",
+      "topic_title": "ARQ确认、序号与超时",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "超时重发0；接收者知已交付所以丢重复不再交付，并再次确认已收0（确认编号随协议约定）。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "7f2ab336a6e00491c7a1cb9a1a7d3e04a36e244228e68c374a68c68779601311",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "d3cbbf58b54098492ee3311e753af7aa5dcae20f5b0ed49ca6ca9751e424a0a6"
+      },
+      "original_source_sha256": "7f2ab336a6e00491c7a1cb9a1a7d3e04a36e244228e68c374a68c68779601311"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-communication-25-2",
+      "id": "gap-accept-elec-communication-25-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "物理0dBm=1mW，扣7链损是-7dBm；若预算再扣1预留得-8dBm，与-12灵敏度余4dB，实际扣预留前余5。",
+      "original_gold_answer": "预算−8dBm，余量4dB；0dBm为1mW，不是零功率。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "communication.t22",
+      "chapter_id": "communication.c09",
+      "topic_title": "dB链路预算与余量",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "物理0dBm=1mW，扣7链损是-7dBm；若预算再扣1预留得-8dBm，与-12灵敏度余4dB，实际扣预留前余5。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "budget": -8,
+        "margin": 4,
+        "mW_at_0dBm": 1.0
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "ca7c88b83bb81a6014a3b46bab2f96e37ece02ce90d7d93cf641e4ebc3e2d261",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "f273006976f5ef829b2e1f7f7cccbb80dc40d3ccb108600fb3f8ae3f9a67fe66"
+      },
+      "original_source_sha256": "ca7c88b83bb81a6014a3b46bab2f96e37ece02ce90d7d93cf641e4ebc3e2d261"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-signals-systems-26-2",
+      "id": "gap-accept-elec-signals-systems-26-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "b1=4/π b2=0 b3=4/(3π)，奇函数a0=an=0，偶次谐波消失、直流无。",
+      "original_gold_answer": "b1=4/π，b2=0，b3=4/(3π)；奇信号a0=an=0，所有偶次谐波为0。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "signals-systems.t14",
+      "chapter_id": "signals-systems.c04",
+      "topic_title": "傅里叶奇偶与系数",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "b1=4/π b2=0 b3=4/(3π)，奇函数a0=an=0，偶次谐波消失、直流无。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "f20f81218e6868658975ea1fc7ad450f97e1fd8917e63da14d66105f13edd7be",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "9d5663c4b09a7288737e93f7b1a6c17ca386d916714e2c424f04d4d284fc9528"
+      },
+      "original_source_sha256": "f20f81218e6868658975ea1fc7ad450f97e1fd8917e63da14d66105f13edd7be"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-signals-systems-27-2",
+      "id": "gap-accept-elec-signals-systems-27-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "Yω=1/2 X(ω/2)，频带至±20，幅因1/2；再延1秒乘e^-jω，幅谱不变相位减ω。",
+      "original_gold_answer": "边界到|ω|≤20，Y=X(jω/2)/2；再延迟只乘e^(−jω)，幅度谱不变。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "signals-systems.t15",
+      "chapter_id": "signals-systems.c04",
+      "topic_title": "时移与尺度的频谱变化",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "Yω=1/2 X(ω/2)，频带至±20，幅因1/2；再延1秒乘e^-jω，幅谱不变相位减ω。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "8b388b7fda1fa02220adf33ed427a629f572498f0ce710c839d70b91bf49826c",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "8a3d5087e65cd81258ad64a070fdd260fda6c1ce7d74bfec8b4e5418061ed03f"
+      },
+      "original_source_sha256": "8b388b7fda1fa02220adf33ed427a629f572498f0ce710c839d70b91bf49826c"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-signals-systems-28-1",
+      "id": "gap-accept-elec-signals-systems-28-1",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "Y=1/((s+1)(s+2))=1/(s+1)-1/(s+2)，y=(e^-t-e^-2t)u(t)，ROCRe(s)>-1。",
+      "original_gold_answer": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)；y=(e^−t−e^−2t)u(t)，ROC Re(s)>−1。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "signals-systems.t16",
+      "chapter_id": "signals-systems.c05",
+      "topic_title": "部分分式与反变换",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "Y=1/((s+1)(s+2))=1/(s+1)-1/(s+2)，y=(e^-t-e^-2t)u(t)，ROCRe(s)>-1。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "residual_at_samples": [
+          [
+            0.1,
+            0.0
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.0
+          ]
+        ],
+        "y_0": 0
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "3b197101d1ae7bc0f133a52126569a9b74a18282e9db8a20de169c2b3d3d6cd7",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "需要变换方程、求部分分式系数与反变换，属于解析计算。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "977af13901449f660dda3fdbe203eb34b2fb121f08c755838ef2d128ba63595f"
+      },
+      "original_source_sha256": "021207be18268e8989b48b21c8bf501ca59db1eb2b98a88ea2b0160a12613730"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-signals-systems-28-2",
+      "id": "gap-accept-elec-signals-systems-28-2",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "导数sY-3；零输入3e^-2t，总e^-t+2e^-2t，t>=0。",
+      "original_gold_answer": "导数为sY−3；多零输入3e^(−2t)，总响应为e^(−t)+2e^(−2t)（t≥0）。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "signals-systems.t16",
+      "chapter_id": "signals-systems.c05",
+      "topic_title": "部分分式与反变换",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "导数sY-3；零输入3e^-2t，总e^-t+2e^-2t，t>=0。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "residual_at_samples": [
+          [
+            0.1,
+            -2.220446049250313e-16
+          ],
+          [
+            0.5,
+            2.220446049250313e-16
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.0
+          ]
+        ],
+        "y_0": 3
+      },
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "answer": "导数变换为sY−3；零输入响应为3e^(−2t)，总响应为e^(−t)+2e^(−2t)（t≥0）。"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "7bec015e7b288dcc8b96e89fda2bca94b57d56652eb1f02eeed1eec261b31b4b",
+      "ability_retest": {
+        "status": "pass_final_generated",
+        "ability": "直接计算",
+        "reason": "用初始值项计算零输入和总响应，不是只复述步骤名称。"
+      },
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "e9b3511945c853c0c7a8dfc8df38967879e87a68b5369018d70a66f0760dffe6"
+      },
+      "original_source_sha256": "e3cb80cf7e983a06cf338fc8e5dee07a8ab4083f8b7dd78197f4e96dac4b852a"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-circuit-1-28",
+      "id": "gap-accept-elec-circuit-1-28",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不会变，参考方向变更须同时由关联p=ui改非关联p=-ui；u与实际能流不变。",
+      "original_gold_answer": "不会；参考改变需同时改变功率表达式，物理能量方向不随记号变。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "circuit.t01",
+      "chapter_id": "circuit.c01",
+      "topic_title": "关联参考方向与功率符号",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不会变，参考方向变更须同时由关联p=ui改非关联p=-ui；u与实际能流不变。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "2d119718e1ad45861d9669a5d31f32bad714126346f21c78a404942b196f4d80",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "b4f063e321d4287c4350b379630898a36242dcef518cda05d6e9d4eaaddfedb7"
+      },
+      "original_source_sha256": "2d119718e1ad45861d9669a5d31f32bad714126346f21c78a404942b196f4d80"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-mesh-setup",
+      "id": "gap-accept-elec-mesh-setup",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "3I1-I2=10，-I1+3I2=4；I1=4.25A I2=2.75A。",
+      "original_gold_answer": "3I1−I2=10，−I1+3I2=4；I1=4.25A、I2=2.75A。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "circuit.t13",
+      "chapter_id": "circuit.c03",
+      "topic_title": "共享电阻的网孔列式",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "3I1-I2=10，-I1+3I2=4；I1=4.25A I2=2.75A。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "independent_execution": {
+        "I1": "17/4",
+        "I2": "11/4",
+        "left_kvl": "10",
+        "right_kvl": "4"
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "60905006899cc4678c0a9a11a4a34ed72ba3f165f8d815c80b1df223fb8b876f",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "直接计算",
+        "question_sha256": "de0aea5e37d50cb0f052c200cfb5b35b92f6c6489af21507ed8ff2a90ae81c23"
+      },
+      "original_source_sha256": "60905006899cc4678c0a9a11a4a34ed72ba3f165f8d815c80b1df223fb8b876f"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-circuit-3-29",
+      "id": "gap-accept-elec-circuit-3-29",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "I左向=4.25-2.75=1.5A；右环参考向相反电阻压降R(I2-I1)=-1.5V。",
+      "original_gold_answer": "共享支路1.5A；沿右网孔需I2−I1，写反会错用压降方向。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "circuit.t13",
+      "chapter_id": "circuit.c03",
+      "topic_title": "共享电阻的网孔列式",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "I左向=4.25-2.75=1.5A；右环参考向相反电阻压降R(I2-I1)=-1.5V。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "97772e7ca7fa707d146de27d31f954b61eda737d6e927be5b413208901a30f79",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "6e0853110ed07558e1deddfd226fd4bc63773955241f568654bc339e75623934"
+      },
+      "original_source_sha256": "97772e7ca7fa707d146de27d31f954b61eda737d6e927be5b413208901a30f79"
+    },
+    {
+      "check_id": "new-question-gap-accept-elec-circuit-3-30",
+      "id": "gap-accept-elec-circuit-3-30",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不行0/0，普通非零电阻都无源开短0；关独立源保受控，外加测试电压/电流求U/I。",
+      "original_gold_answer": "不能；保留受控源、独立源置零，在端口加测试电压或电流，Rth=Ut/It。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "circuit.t14",
+      "chapter_id": "circuit.c03",
+      "topic_title": "戴维南端口参数求法",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不行0/0，普通非零电阻都无源开短0；关独立源保受控，外加测试电压/电流求U/I。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "f003d8522f1ec9cd9551432569d46e84faa3de0c16dd0e5885e7f4a8b3f9c2ae",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "516da1fbdd7d1e0f022788dd212db62e81125847ed7a7252f5839c08e0d00178"
+      },
+      "original_source_sha256": "f003d8522f1ec9cd9551432569d46e84faa3de0c16dd0e5885e7f4a8b3f9c2ae"
+    },
+    {
+      "check_id": "new-question-gap-full-net-congestion-trace",
+      "id": "gap-full-net-congestion-trace",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "轮开始1,2,4,8,9 MSS，达到8后拥塞避免线性加1每轮。",
+      "original_gold_answer": "1、2、4、8、9 MSS。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "net.congestion-steps",
+      "chapter_id": "net-05",
+      "topic_title": "拥塞窗口逐轮变化",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "轮开始1,2,4,8,9 MSS，达到8后拥塞避免线性加1每轮。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "repair": {
+        "status": "pass_final_generated",
+        "fields": {
+          "stem": "按教材Reno简化轮次模型，cwnd初值1 MSS、ssthresh=8 MSS，到达门限即转入拥塞避免。每轮数据均获确认且无丢包，写第1至第5轮开始时的cwnd。"
+        }
+      },
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "e672d06e1f58a249ff194841f0af3bdeaff0bf9a459d068b379562364056390f",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "299a0b6213ca479baba98b07d9ddf88dcba40a514b3dc39fbfbdfbd5a74a5292"
+      },
+      "original_source_sha256": "e672d06e1f58a249ff194841f0af3bdeaff0bf9a459d068b379562364056390f"
+    },
+    {
+      "check_id": "new-question-gap-full-net-congestion-loss",
+      "id": "gap-full-net-congestion-loss",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "超时重传后慢开始cwnd1，三个重复ACK触发快重传并快恢复，不是都重回1；ssthresh按在途量减半等教材假设。",
+      "original_gold_answer": "超时触发超时重传并通常把cwnd降到1 MSS重新慢开始；三个重复ACK触发快重传，Reno进入快恢复，不能当作超时归1处理。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "net.congestion-steps",
+      "chapter_id": "net-05",
+      "topic_title": "拥塞窗口逐轮变化",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "超时重传后慢开始cwnd1，三个重复ACK触发快重传并快恢复，不是都重回1；ssthresh按在途量减半等教材假设。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "30fcc0486d3c30ba6d690b98b8a748c1534363bc45c1859d83b0b71cbf1a3ab2",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "27a316b7c8b007a98e95db578659fefa1ae1ba304f6d3bf9011168191ef02487"
+      },
+      "original_source_sha256": "30fcc0486d3c30ba6d690b98b8a748c1534363bc45c1859d83b0b71cbf1a3ab2"
+    },
+    {
+      "check_id": "new-question-gap-full-net-dhcp-order",
+      "id": "gap-full-net-dhcp-order",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "D O R A；Request声明选中哪个Offer/服务器并请求租约，ACK才确认。",
+      "original_gold_answer": "Discover→Offer→Request→ACK；Request表明主机选择的配置方案并请求服务器确认。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "net.dhcp-lease",
+      "chapter_id": "net-06",
+      "topic_title": "DHCP租约获取流程",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "D O R A；Request声明选中哪个Offer/服务器并请求租约，ACK才确认。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "lecture_gap": "当前网络6章只列DORA英文顺序，尚未说明Request选中Offer并告知其他服务器；已交root补讲。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。",
+        "lecture_evidence": "course_notes/计算机网络.md 6.3已展开四步职责：Discover寻找、Offer候选、Request选定请求并告知其他、ACK最终确认，Request非ACK。"
+      },
+      "source_sha256": "c4e54b47a9da856cedc61d2441a47afab7cb7af6eb3a2654993345aaae1baa04",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "过程描述",
+        "question_sha256": "ad128453d20b26bfbbf13e3874b4e71b6f8f4431294c7545ebbc43d7b08b141e"
+      },
+      "original_source_sha256": "c4e54b47a9da856cedc61d2441a47afab7cb7af6eb3a2654993345aaae1baa04"
+    },
+    {
+      "check_id": "new-question-gap-full-net-dhcp-dns",
+      "id": "gap-full-net-dhcp-dns",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "单改DNS不修DHCP租约缺失，先本地链路网卡配置再服务/池/中继，取得IP掩码网关后核DNS。",
+      "original_gold_answer": "通常不能；先查网线/WLAN与链路状态，再查DHCP服务、可用地址池和跨网段中继，成功获得配置后再检查DNS。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "net.dhcp-lease",
+      "chapter_id": "net-06",
+      "topic_title": "DHCP租约获取流程",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "单改DNS不修DHCP租约缺失，先本地链路网卡配置再服务/池/中继，取得IP掩码网关后核DNS。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "441a4c2ad383e4aa7b3d121821ea4e51c1b3fbd8ec5fcae7af712c326bcf3ce2",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "场景选型",
+        "question_sha256": "9853569bbd570ce2515595a9467ef7371b80c142d436f919d956d6dc90c6cc0c"
+      },
+      "original_source_sha256": "441a4c2ad383e4aa7b3d121821ea4e51c1b3fbd8ec5fcae7af712c326bcf3ce2"
+    },
+    {
+      "check_id": "new-question-gap-full-net-socket-boundary",
+      "id": "gap-full-net-socket-boundary",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不保20或整消息，TCP字节流可分读/合并；应用长度头/分隔/定长封帧循环收，EOF断开处理。",
+      "original_gold_answer": "不必然；TCP是字节流，recv可能返回少于20字节或合并的数据。应用需约定固定长度、长度前缀或分隔符，并循环读取到消息完整。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "net.socket-io",
+      "chapter_id": "net-06",
+      "topic_title": "TCP Socket收发与消息边界",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不保20或整消息，TCP字节流可分读/合并；应用长度头/分隔/定长封帧循环收，EOF断开处理。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "337e1741c3a8fc3033a93b9e2a2e4c1611d5ebc200a2ea295d2299145a4da906",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "1104b8033afc344f89f7e75aabc2f383cfc877e00c6c4ca149a168e592a9faea"
+      },
+      "original_source_sha256": "337e1741c3a8fc3033a93b9e2a2e4c1611d5ebc200a2ea295d2299145a4da906"
+    },
+    {
+      "check_id": "new-question-gap-full-net-buffer-boundary",
+      "id": "gap-full-net-buffer-boundary",
+      "source_file": "staging/audit_full_acceptance_additions.json",
+      "blind_answer_before_gold": "不能，净入5-4=1Mbit/s缓冲增长不耗尽；有限容量达满需流控/丢弃等另模型。",
+      "original_gold_answer": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "net.playback-buffer",
+      "chapter_id": "net-08",
+      "topic_title": "播放缓冲耗尽计算",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "不能，净入5-4=1Mbit/s缓冲增长不耗尽；有限容量达满需流控/丢弃等另模型。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "88e4987bf06ab7abbbf20a407ea816ee1c0d19a4851d27aa0ac869bd357ed299",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "9a5b5d344507aa46433030aedb9280ca65c0b0ebe063027cbe579db7fbbf4174"
+      },
+      "original_source_sha256": "88e4987bf06ab7abbbf20a407ea816ee1c0d19a4851d27aa0ac869bd357ed299"
+    },
+    {
+      "check_id": "new-question-gap-full-comm-line-clock",
+      "id": "gap-full-comm-line-clock",
+      "source_file": "staging/audit_full_acceptance_boundary_additions.json",
+      "blind_answer_before_gold": "NRZ长相同比特缺边沿时钟难锁；Manchester中点必跳提供时序线索，更多转换占更大带宽通常约倍。",
+      "original_gold_answer": "NRZ长连码可能长时间没有电平跳变，接收端缺少校正时钟的时间参考；曼彻斯特每位中间都有跳变，便于恢复节拍，但通常需要更宽带宽。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "communication.t06",
+      "chapter_id": "communication.c03",
+      "topic_title": "复用、线路编码与同步",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "NRZ长相同比特缺边沿时钟难锁；Manchester中点必跳提供时序线索，更多转换占更大带宽通常约倍。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "33ff129a11816548053a8a9ae6657ad593470252918fca72907146041eb2c9f8",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "机制解释",
+        "question_sha256": "ef2ccd6c3ece538f4b9dd371864a476fcdfee2c64916d16b8634317e7fbb3f2d"
+      },
+      "original_source_sha256": "33ff129a11816548053a8a9ae6657ad593470252918fca72907146041eb2c9f8"
+    },
+    {
+      "check_id": "new-question-gap-full-comm-multiplex-boundary",
+      "id": "gap-full-comm-multiplex-boundary",
+      "source_file": "staging/audit_full_acceptance_boundary_additions.json",
+      "blind_answer_before_gold": "甲FDM乙同步TDM；频带/时隙分配复用不等位采样定时，接收每支还需位同步/帧同步。",
+      "original_gold_answer": "甲为FDM，乙为同步TDM；复用规定多路怎样共享资源，位同步决定接收端何时判决每个码元。即使知道用户的频带或时隙，也仍需正确的码元判决节拍。",
+      "answer_status": "pass",
+      "explanation_status": "pass",
+      "topic_id": "communication.t06",
+      "chapter_id": "communication.c03",
+      "topic_title": "复用、线路编码与同步",
+      "topic_status": "pass",
+      "lecture_support_status": "pass",
+      "reason": "甲FDM乙同步TDM；频带/时隙分配复用不等位采样定时，接收每支还需位同步/帧同步。",
+      "method": "先读取不含答案解析的packet并落自己的解，再读取gold与解析对照；定位当前讲义机制及例子。",
+      "candidate_retest": {
+        "build": "f35f762d8d7b7ae5",
+        "generated_fields_match": true,
+        "differences": [],
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "method": "独立盲解已在本轮计算并落盘，再读取候选题与源字段比对，核当前讲义机制。"
+      },
+      "source_sha256": "2e85c14cbe86d2d125adcfdbe3255bf78813acd173c64f4c52e2e3847cc65149",
+      "final_review": {
+        "status": "pass",
+        "build": "02b1610e2f15a714",
+        "source_fields_match_generated": true,
+        "answer_status": "pass",
+        "topic_status": "pass",
+        "lecture_support_status": "pass",
+        "ability_status": "pass",
+        "ability": "比较辨析",
+        "question_sha256": "9262106ffbdd6f4c4bd6c4c84209f22a1c24d98b4778cac54b0516f1547fcaf5"
+      },
+      "original_source_sha256": "2e85c14cbe86d2d125adcfdbe3255bf78813acd173c64f4c52e2e3847cc65149"
+    }
+  ],
+  "execution_note": "算术、状态和微分方程代回使用独立Python/Fraction计算；C作用域未使用编译器（环境未提供gcc/clang/cl），按语言块作用域规则独立判定。",
+  "generated_build_retest": "55/55 pass; final release 02b1610e2f15a714",
+  "source_clarity_repairs": 11,
+  "candidate_retest_count": 55,
+  "ability_repairs": 14,
+  "final_build": "02b1610e2f15a714",
+  "scope_status": "complete",
+  "final_missing_count": 0,
+  "final_issue_count": 0,
+  "final_current_bank_count": 2441,
+  "dist_questions_equals_source": true,
+  "accepted_release_build": "02b1610e2f15a714",
+  "final_status_counts": {
+    "pass": 55
+  },
+  "verified_builds": [
+    "f35f762d8d7b7ae5",
+    "795367db6a5e616e",
+    "02b1610e2f15a714"
+  ]
+}

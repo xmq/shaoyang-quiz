@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "courses": {
+    "Office软件操作": {
+      "titles": {
+        "文件格式与兼容": "office.t01",
+        "保存、恢复与备份": "office.t02",
+        "编辑、剪贴板与直接格式": "office.t03",
+        "样式与文档结构": "office.t04",
+        "分页、分节与页眉页码": "office.t05",
+        "对象、表格与长文档": "office.t06",
+        "邮件合并、修订与批注": "office.t07",
+        "单元格类型与公式基础": "office.t08",
+        "相对、绝对与混合引用": "office.t09",
+        "函数、查找与错误值": "office.t10",
+        "排序、筛选与验证": "office.t11",
+        "分类汇总与数据透视表": "office.t12",
+        "图表、打印与保护边界": "office.t13",
+        "主题、母版与版式": "office.t14",
+        "动画、切换与放映": "office.t15",
+        "按任务组合工具": "office.t16",
+        "链接、协作与交付检查": "office.t17"
+      },
+      "chapter_prefix": {
+        "office.c01": [
+          "office.t01",
+          "office.t02"
+        ],
+        "office.c02": [
+          "office.t03",
+          "office.t04"
+        ],
+        "office.c03": [
+          "office.t05",
+          "office.t06",
+          "office.t07"
+        ],
+        "office.c04": [
+          "office.t08",
+          "office.t09",
+          "office.t10"
+        ],
+        "office.c05": [
+          "office.t11",
+          "office.t12",
+          "office.t13"
+        ],
+        "office.c06": [
+          "office.t14",
+          "office.t15"
+        ],
+        "office.c07": [
+          "office.t16",
+          "office.t17"
+        ]
+      }
+    },
+    "大学计算机基础与新技术": {
+      "titles": {
+        "数据、信息与可信判断": "computer-foundations.t01",
+        "计算思维与算法步骤": "computer-foundations.t02",
+        "数制转换与容量计算": "computer-foundations.t03",
+        "字符、图像与声音编码": "computer-foundations.t04",
+        "存储程序与系统组成": "computer-foundations.t05",
+        "文件、目录、路径与格式": "computer-foundations.t06",
+        "操作系统资源与工具选择": "computer-foundations.t07",
+        "云特征与IaaS、PaaS、SaaS": "computer-foundations.t08",
+        "公有云、私有云与云边协同": "computer-foundations.t09",
+        "数据流程、4V与质量治理": "computer-foundations.t10",
+        "挖掘任务与分布式处理": "computer-foundations.t11",
+        "AI关系与学习范式": "computer-foundations.t12",
+        "训练、推理与生成式AI": "computer-foundations.t13",
+        "物联网体系与闭环控制": "computer-foundations.t14",
+        "设备身份、安全与失联": "computer-foundations.t15",
+        "哈希、签名、共识与链式记录": "computer-foundations.t16",
+        "区块链选型与智能合约": "computer-foundations.t17",
+        "计算机发展与应用分类": "computer-foundations.t18",
+        "信息系统与数字化建设": "computer-foundations.t19",
+        "按目标与约束组合技术": "computer-foundations.t20",
+        "信息检索与结果筛选": "computer-foundations.t21"
+      },
+      "chapter_prefix": {
+        "computer-foundations.c01": [
+          "computer-foundations.t01",
+          "computer-foundations.t02"
+        ],
+        "computer-foundations.c02": [
+          "computer-foundations.t03",
+          "computer-foundations.t04",
+          "computer-foundations.t05"
+        ],
+        "computer-foundations.c03": [
+          "computer-foundations.t06",
+          "computer-foundations.t07"
+        ],
+        "computer-foundations.c04": [
+          "computer-foundations.t08",
+          "computer-foundations.t09"
+        ],
+        "computer-foundations.c05": [
+          "computer-foundations.t10",
+          "computer-foundations.t11"
+        ],
+        "computer-foundations.c06": [
+          "computer-foundations.t12",
+          "computer-foundations.t13"
+        ],
+        "computer-foundations.c07": [
+          "computer-foundations.t14",
+          "computer-foundations.t15"
+        ],
+        "computer-foundations.c08": [
+          "computer-foundations.t16",
+          "computer-foundations.t17"
+        ],
+        "computer-foundations.c09": [
+          "computer-foundations.t18",
+          "computer-foundations.t19"
+        ],
+        "computer-foundations.c10": [
+          "computer-foundations.t20"
+        ]
+      },
+      "parents": {
+        "computer-foundations.t21": "computer-foundations.t01"
+      },
+      "keywords": {
+        "computer-foundations.t21": [
+          "搜索",
+          "搜索引擎",
+          "检索",
+          "关键词",
+          "书签"
+        ]
+      }
+    },
+    "多媒体技术": {
+      "titles": {
+        "多媒体特征与系统组成": "multimedia.t01",
+        "超文本、超媒体与流媒体": "multimedia.t02",
+        "采样、量化与编码": "multimedia.t03",
+        "容量、码率与单位": "multimedia.t04",
+        "位图、矢量与分辨率": "multimedia.t05",
+        "颜色模型与交付": "multimedia.t06",
+        "格式、图层与蒙版": "multimedia.t07",
+        "声音采集与PCM": "multimedia.t08",
+        "波形音频、MIDI与格式": "multimedia.t09",
+        "动画时间轴与帧率": "multimedia.t10",
+        "视频参数、编码器与容器": "multimedia.t11",
+        "流媒体与自适应播放": "multimedia.t12",
+        "无损、有损与冗余": "multimedia.t13",
+        "压缩比与格式选择": "multimedia.t14",
+        "需求、脚本与素材组织": "multimedia.t15",
+        "图层蒙版、测试与交付": "multimedia.t16",
+        "超文本与超媒体": "multimedia.t02"
+      },
+      "chapter_prefix": {
+        "multimedia.c01": [
+          "multimedia.t01",
+          "multimedia.t02"
+        ],
+        "multimedia.c02": [
+          "multimedia.t03",
+          "multimedia.t04"
+        ],
+        "multimedia.c03": [
+          "multimedia.t05",
+          "multimedia.t06",
+          "multimedia.t07"
+        ],
+        "multimedia.c04": [
+          "multimedia.t08",
+          "multimedia.t09"
+        ],
+        "multimedia.c05": [
+          "multimedia.t10",
+          "multimedia.t11",
+          "multimedia.t12"
+        ],
+        "multimedia.c06": [
+          "multimedia.t13",
+          "multimedia.t14"
+        ],
+        "multimedia.c07": [
+          "multimedia.t15",
+          "multimedia.t16"
+        ]
+      }
+    },
+    "操作系统原理": {
+      "titles": {
+        "操作系统功能与基本特征": "operating-system.t01",
+        "用户态、内核态与系统调用": "operating-system.t02",
+        "进程、线程与PCB": "operating-system.t03",
+        "进程状态与切换": "operating-system.t04",
+        "处理机调度": "operating-system.t05",
+        "同步、互斥与信号量": "operating-system.t06",
+        "死锁条件与处理": "operating-system.t07",
+        "银行家算法与安全序列": "operating-system.t08",
+        "连续分配、分页与分段": "operating-system.t09",
+        "虚拟存储与页面置换": "operating-system.t10",
+        "文件组织、目录与链接": "operating-system.t11",
+        "I/O控制、缓冲与SPOOLing": "operating-system.t12",
+        "磁盘调度": "operating-system.t13",
+        "非抢占调度画时间线": "operating-system.t14",
+        "RR时间片与队列": "operating-system.t15",
+        "FIFO与LRU命中后状态": "operating-system.t16",
+        "CLOCK访问位与指针": "operating-system.t17",
+        "SSTF逐次选最近": "operating-system.t18",
+        "SCAN与LOOK累计距离": "operating-system.t19"
+      },
+      "chapter_prefix": {
+        "operating-system.c01": [
+          "operating-system.t01"
+        ],
+        "operating-system.c02": [
+          "operating-system.t02"
+        ],
+        "operating-system.c03": [
+          "operating-system.t03",
+          "operating-system.t04",
+          "operating-system.t05"
+        ],
+        "operating-system.c04": [
+          "operating-system.t06",
+          "operating-system.t07",
+          "operating-system.t08"
+        ],
+        "operating-system.c05": [
+          "operating-system.t09",
+          "operating-system.t10"
+        ],
+        "operating-system.c06": [
+          "operating-system.t11"
+        ],
+        "operating-system.c07": [
+          "operating-system.t12",
+          "operating-system.t13"
+        ]
+      },
+      "parents": {
+        "operating-system.t14": "operating-system.t05",
+        "operating-system.t15": "operating-system.t05",
+        "operating-system.t16": "operating-system.t10",
+        "operating-system.t17": "operating-system.t10",
+        "operating-system.t18": "operating-system.t13",
+        "operating-system.t19": "operating-system.t13"
+      },
+      "keywords": {
+        "operating-system.t14": [
+          "SJF",
+          "短作业",
+          "FCFS"
+        ],
+        "operating-system.t15": [
+          "轮转",
+          "时间片"
+        ],
+        "operating-system.t16": [
+          "FIFO",
+          "LRU"
+        ],
+        "operating-system.t17": [
+          "CLOCK",
+          "时钟"
+        ],
+        "operating-system.t18": [
+          "SSTF",
+          "最短寻道"
+        ],
+        "operating-system.t19": [
+          "SCAN",
+          "LOOK"
+        ]
+      }
+    },
+    "数据库技术": {
+      "titles": {
+        "数据库、DBMS与三级模式": "database.t01",
+        "E-R建模": "database.t02",
+        "E-R转关系": "database.t03",
+        "关系键与完整性": "database.t04",
+        "关系代数": "database.t05",
+        "SQL定义与约束": "database.t06",
+        "SQL筛选、分组与聚合": "database.t07",
+        "连接、子查询与集合运算": "database.t08",
+        "视图": "database.t09",
+        "索引与物理设计": "database.t10",
+        "数据库设计流程": "database.t11",
+        "属性闭包与候选键": "database.t12",
+        "范式判断": "database.t13",
+        "分解、无损连接与依赖保持": "database.t14",
+        "ACID与事务边界": "database.t15",
+        "并发异常与隔离级别": "database.t16",
+        "WAL与恢复": "database.t17",
+        "认证、授权与审计": "database.t18",
+        "冲突优先图判串行化": "database.t19",
+        "两段锁的首次解锁": "database.t20"
+      },
+      "chapter_prefix": {
+        "database.c01": [
+          "database.t01"
+        ],
+        "database.c02": [
+          "database.t02",
+          "database.t03"
+        ],
+        "database.c03": [
+          "database.t04"
+        ],
+        "database.c04": [
+          "database.t05"
+        ],
+        "database.c05": [
+          "database.t06",
+          "database.t07",
+          "database.t08"
+        ],
+        "database.c06": [
+          "database.t09",
+          "database.t10",
+          "database.t11"
+        ],
+        "database.c07": [
+          "database.t12",
+          "database.t13",
+          "database.t14"
+        ],
+        "database.c08": [
+          "database.t15",
+          "database.t16",
+          "database.t17"
+        ],
+        "database.c09": [
+          "database.t18"
+        ]
+      },
+      "parents": {
+        "database.t19": "database.t16",
+        "database.t20": "database.t16"
+      },
+      "keywords": {
+        "database.t19": [
+          "优先图",
+          "可串行化"
+        ],
+        "database.t20": [
+          "2PL",
+          "两段锁"
+        ]
+      }
+    },
+    "数据结构与算法": {
+      "titles": {
+        "数据结构与复杂度": "data-structures.t01",
+        "顺序表": "data-structures.t02",
+        "链表": "data-structures.t03",
+        "栈与递归": "data-structures.t04",
+        "队列与循环队列": "data-structures.t05",
+        "串与KMP": "data-structures.t06",
+        "数组、稀疏矩阵与广义表": "data-structures.t07",
+        "二叉树性质": "data-structures.t08",
+        "遍历与树的还原": "data-structures.t09",
+        "BST与AVL": "data-structures.t10",
+        "堆": "data-structures.t11",
+        "哈夫曼树与B/B+树": "data-structures.t12",
+        "图的存储": "data-structures.t13",
+        "DFS与BFS": "data-structures.t14",
+        "最小生成树": "data-structures.t15",
+        "最短路径": "data-structures.t16",
+        "拓扑排序": "data-structures.t17",
+        "二分查找": "data-structures.t18",
+        "散列查找": "data-structures.t19",
+        "插入、冒泡与选择排序": "data-structures.t20",
+        "快速排序": "data-structures.t21",
+        "归并排序": "data-structures.t22",
+        "堆、希尔、基数与排序选择": "data-structures.t23",
+        "场景中的结构与算法选择": "data-structures.t24",
+        "AVL四类旋转": "data-structures.t25",
+        "哈夫曼合并与WPL": "data-structures.t26",
+        "DFS深入与回退": "data-structures.t27",
+        "BFS入队与层次": "data-structures.t28",
+        "Prim跨集合选边": "data-structures.t29",
+        "Kruskal排序与判环": "data-structures.t30",
+        "Dijkstra确定与松弛": "data-structures.t31",
+        "Bellman-Ford逐轮扫描": "data-structures.t32",
+        "Floyd开放中转点": "data-structures.t33",
+        "插入排序扩有序区": "data-structures.t34",
+        "冒泡与选择的一趟": "data-structures.t35",
+        "堆排序取顶与下沉": "data-structures.t36",
+        "希尔排序按增量分组": "data-structures.t37",
+        "基数排序稳定收集": "data-structures.t38"
+      },
+      "chapter_prefix": {
+        "data-structures.c01": [
+          "data-structures.t01"
+        ],
+        "data-structures.c02": [
+          "data-structures.t02",
+          "data-structures.t03"
+        ],
+        "data-structures.c03": [
+          "data-structures.t04",
+          "data-structures.t05",
+          "data-structures.t06",
+          "data-structures.t07"
+        ],
+        "data-structures.c04": [
+          "data-structures.t08",
+          "data-structures.t09",
+          "data-structures.t10",
+          "data-structures.t11",
+          "data-structures.t12"
+        ],
+        "data-structures.c05": [
+          "data-structures.t13",
+          "data-structures.t14",
+          "data-structures.t15",
+          "data-structures.t16",
+          "data-structures.t17"
+        ],
+        "data-structures.c06": [
+          "data-structures.t18",
+          "data-structures.t19"
+        ],
+        "data-structures.c07": [
+          "data-structures.t20",
+          "data-structures.t21",
+          "data-structures.t22",
+          "data-structures.t23"
+        ],
+        "data-structures.c08": [
+          "data-structures.t24"
+        ]
+      },
+      "parents": {
+        "data-structures.t25": "data-structures.t10",
+        "data-structures.t26": "data-structures.t12",
+        "data-structures.t27": "data-structures.t14",
+        "data-structures.t28": "data-structures.t14",
+        "data-structures.t29": "data-structures.t15",
+        "data-structures.t30": "data-structures.t15",
+        "data-structures.t31": "data-structures.t16",
+        "data-structures.t32": "data-structures.t16",
+        "data-structures.t33": "data-structures.t16",
+        "data-structures.t34": "data-structures.t20",
+        "data-structures.t35": "data-structures.t20",
+        "data-structures.t36": "data-structures.t23",
+        "data-structures.t37": "data-structures.t23",
+        "data-structures.t38": "data-structures.t23"
+      },
+      "keywords": {
+        "data-structures.t25": [
+          "AVL",
+          "旋转"
+        ],
+        "data-structures.t26": [
+          "哈夫曼",
+          "WPL"
+        ],
+        "data-structures.t27": [
+          "深度优先",
+          "DFS"
+        ],
+        "data-structures.t28": [
+          "广度优先",
+          "BFS"
+        ],
+        "data-structures.t29": [
+          "Prim"
+        ],
+        "data-structures.t30": [
+          "Kruskal"
+        ],
+        "data-structures.t31": [
+          "Dijkstra"
+        ],
+        "data-structures.t32": [
+          "Bellman"
+        ],
+        "data-structures.t33": [
+          "Floyd"
+        ],
+        "data-structures.t34": [
+          "插入排序"
+        ],
+        "data-structures.t35": [
+          "冒泡",
+          "选择排序"
+        ],
+        "data-structures.t36": [
+          "堆排序"
+        ],
+        "data-structures.t37": [
+          "希尔"
+        ],
+        "data-structures.t38": [
+          "基数"
+        ]
+      }
+    },
+    "C与Python程序设计": {
+      "titles": {
+        "算法、流程与执行": "programming.t01",
+        "编译、解释与程序错误": "programming.t02",
+        "类型、变量与转换": "programming.t03",
+        "运算符、除法与短路": "programming.t04",
+        "输入输出与顺序跟踪": "programming.t05",
+        "条件与多分支": "programming.t06",
+        "循环状态与边界": "programming.t07",
+        "函数、参数与返回": "programming.t08",
+        "作用域、递归与模块化": "programming.t09",
+        "C数组与字符串": "programming.t10",
+        "Python列表、元组、字典与集合": "programming.t11",
+        "C指针与地址": "programming.t12",
+        "C结构体": "programming.t13",
+        "C文件与资源管理": "programming.t14",
+        "Python异常、模块与文件": "programming.t15",
+        "C与Python语义比较": "programming.t16",
+        "递归调用与逐层返回": "programming.t17",
+        "C与Python名字作用域": "programming.t09",
+        "Python按异常类型分支": "programming.t15",
+        "with文件读写与编码": "programming.t18"
+      },
+      "chapter_prefix": {
+        "programming.c01": [
+          "programming.t01",
+          "programming.t02"
+        ],
+        "programming.c02": [
+          "programming.t03"
+        ],
+        "programming.c03": [
+          "programming.t04"
+        ],
+        "programming.c04": [
+          "programming.t05"
+        ],
+        "programming.c05": [
+          "programming.t06"
+        ],
+        "programming.c06": [
+          "programming.t07"
+        ],
+        "programming.c07": [
+          "programming.t08",
+          "programming.t09"
+        ],
+        "programming.c08": [
+          "programming.t10",
+          "programming.t11"
+        ],
+        "programming.c09": [
+          "programming.t12",
+          "programming.t13",
+          "programming.t14"
+        ],
+        "programming.c10": [
+          "programming.t15"
+        ],
+        "programming.c11": [
+          "programming.t16"
+        ]
+      },
+      "parents": {
+        "programming.t17": "programming.t09",
+        "programming.t18": "programming.t15"
+      },
+      "keywords": {
+        "programming.t17": [
+          "递归",
+          "阶乘"
+        ],
+        "programming.t09": [
+          "作用域",
+          "全局",
+          "局部"
+        ],
+        "programming.t15": [
+          "异常",
+          "ValueError",
+          "try"
+        ],
+        "programming.t18": [
+          "with",
+          "文件",
+          "编码"
+        ]
+      }
+    },
+    "计算机组成原理": {
+      "titles": {
+        "存储程序与系统组成": "computer-organization.t01",
+        "性能指标与时间计算": "computer-organization.t02",
+        "数制、编码与位权": "computer-organization.t03",
+        "原码、反码、补码与溢出": "computer-organization.t04",
+        "定点与浮点表示": "computer-organization.t05",
+        "CPU部件与指令周期": "computer-organization.t06",
+        "指令、寻址与RISC/CISC": "computer-organization.t07",
+        "存储层次与局部性": "computer-organization.t08",
+        "主存容量、编址与芯片扩展": "computer-organization.t09",
+        "Cache映射与平均访存时间": "computer-organization.t10",
+        "流水线与相关冲突": "computer-organization.t11",
+        "总线结构与带宽": "computer-organization.t12",
+        "I/O控制、中断与DMA": "computer-organization.t13",
+        "虚拟地址、页表与TLB": "computer-organization.t14",
+        "Cache地址拆分与命中": "computer-organization.t15",
+        "平均访存时间按口径算": "computer-organization.t16",
+        "理想流水线填充与排空": "computer-organization.t17",
+        "流水线停顿与总时间": "computer-organization.t18"
+      },
+      "chapter_prefix": {
+        "computer-organization.c01": [
+          "computer-organization.t01",
+          "computer-organization.t02"
+        ],
+        "computer-organization.c02": [
+          "computer-organization.t03",
+          "computer-organization.t04",
+          "computer-organization.t05"
+        ],
+        "computer-organization.c03": [
+          "computer-organization.t06",
+          "computer-organization.t07"
+        ],
+        "computer-organization.c04": [
+          "computer-organization.t08",
+          "computer-organization.t09",
+          "computer-organization.t10"
+        ],
+        "computer-organization.c05": [
+          "computer-organization.t11"
+        ],
+        "computer-organization.c06": [
+          "computer-organization.t12",
+          "computer-organization.t13"
+        ],
+        "computer-organization.c07": [
+          "computer-organization.t14"
+        ]
+      },
+      "parents": {
+        "computer-organization.t15": "computer-organization.t10",
+        "computer-organization.t16": "computer-organization.t10",
+        "computer-organization.t17": "computer-organization.t11",
+        "computer-organization.t18": "computer-organization.t11"
+      },
+      "keywords": {
+        "computer-organization.t15": [
+          "Cache",
+          "缓存"
+        ],
+        "computer-organization.t16": [
+          "平均访问",
+          "平均访存",
+          "命中率"
+        ],
+        "computer-organization.t17": [
+          "理想",
+          "流水线"
+        ],
+        "computer-organization.t18": [
+          "停顿",
+          "转发"
+        ]
+      }
+    },
+    "计算机网络": {
+      "titles": {
+        "网络组成、功能与拓扑": "net.overview",
+        "速率、带宽与时延": "net.performance",
+        "电路交换与分组交换": "net.switching",
+        "分层与地址": "net.layers-addresses",
+        "协议、服务与封装": "net.protocol-service",
+        "介质与传输方向": "net.media",
+        "比特率、码元速率与复用": "net.symbol-multiplexing",
+        "信道容量与信噪比": "net.channel-capacity",
+        "帧、交换与VLAN": "net.frames-switching",
+        "CRC差错检测": "net.crc",
+        "停等与滑动窗口": "net.arq-window",
+        "以太网与无线接入": "net.ethernet-wifi",
+        "子网与路由": "net.subnet-routing",
+        "ARP与逐跳转发": "net.arp-forwarding",
+        "最长前缀匹配与路由协议": "net.routing",
+        "IPv4与IPv6地址": "net.ip-versions",
+        "RIP距离向量更新": "net.rip-update",
+        "TCP与UDP": "net.tcp-udp",
+        "TCP序号、确认与连接建立": "net.tcp-connection",
+        "流量控制与拥塞控制": "net.flow-congestion",
+        "名称、配置与应用服务": "net.app-protocols",
+        "HTTP状态与排障": "net.http",
+        "DNS解析与DHCP配置": "net.dns-dhcp",
+        "防火墙与安全边界": "net.security-boundary",
+        "加密、摘要与数字签名": "net.crypto-signature",
+        "按层定位": "net.troubleshooting",
+        "流媒体、实时传输与QoS": "net.streaming-qos",
+        "WLAN、无线接入与移动网络": "net.wireless-mobile",
+        "IPv4分片的长度与偏移": "net.fragmentation",
+        "拥塞窗口逐轮变化": "net.congestion-steps",
+        "DNS递归与迭代查询": "net.dns-lookup",
+        "DHCP租约获取流程": "net.dhcp-lease",
+        "TCP Socket收发与消息边界": "net.socket-io",
+        "播放缓冲耗尽计算": "net.playback-buffer"
+      },
+      "chapter_prefix": {
+        "net-01": [
+          "net.overview",
+          "net.performance",
+          "net.switching",
+          "net.layers-addresses",
+          "net.protocol-service"
+        ],
+        "net-02": [
+          "net.media",
+          "net.symbol-multiplexing",
+          "net.channel-capacity"
+        ],
+        "net-03": [
+          "net.frames-switching",
+          "net.crc",
+          "net.arq-window",
+          "net.ethernet-wifi"
+        ],
+        "net-04": [
+          "net.subnet-routing",
+          "net.arp-forwarding",
+          "net.routing",
+          "net.ip-versions",
+          "net.rip-update"
+        ],
+        "net-05": [
+          "net.tcp-udp",
+          "net.tcp-connection",
+          "net.flow-congestion"
+        ],
+        "net-06": [
+          "net.app-protocols",
+          "net.http",
+          "net.dns-dhcp"
+        ],
+        "net-07": [
+          "net.security-boundary",
+          "net.crypto-signature",
+          "net.troubleshooting"
+        ],
+        "net-08": [
+          "net.streaming-qos"
+        ],
+        "net-09": [
+          "net.wireless-mobile"
+        ]
+      },
+      "parents": {
+        "net.fragmentation": "net.ip-versions",
+        "net.congestion-steps": "net.flow-congestion",
+        "net.dns-lookup": "net.dns-dhcp",
+        "net.dhcp-lease": "net.dns-dhcp",
+        "net.socket-io": "net.app-protocols",
+        "net.playback-buffer": "net.streaming-qos"
+      },
+      "keywords": {
+        "net.fragmentation": [
+          "分片",
+          "MTU"
+        ],
+        "net.congestion-steps": [
+          "慢开始",
+          "拥塞窗口",
+          "ssthresh"
+        ],
+        "net.dns-lookup": [
+          "递归",
+          "迭代",
+          "DNS查询"
+        ],
+        "net.dhcp-lease": [
+          "DHCP",
+          "租约"
+        ],
+        "net.socket-io": [
+          "Socket",
+          "socket",
+          "sendall",
+          "recv"
+        ],
+        "net.playback-buffer": [
+          "缓冲耗尽",
+          "缓冲区",
+          "缓存"
+        ]
+      }
+    },
+    "电路分析与电工技术": {
+      "titles": {
+        "参考方向、功率与示波器读数": "circuit.t01",
+        "串并联、KCL与KVL": "circuit.t02",
+        "节点电压与回路列式": "circuit.t03",
+        "叠加、戴维南与最大功率": "circuit.t04",
+        "电容电感与换路连续性": "circuit.t05",
+        "正弦相量、阻抗与谐振": "circuit.t06",
+        "交流功率、三相与变压器": "circuit.t07",
+        "电动机控制、保护与安全": "circuit.t08",
+        "串并联系统可靠度": "circuit.t09",
+        "一阶RC/RL响应": "circuit.t10",
+        "万用表与示波器测量": "circuit.t11",
+        "沿信号链分段定位": "circuit.t12",
+        "关联参考方向与功率符号": "circuit.t01",
+        "共享电阻的网孔列式": "circuit.t13",
+        "戴维南端口参数求法": "circuit.t14"
+      },
+      "chapter_prefix": {
+        "circuit.c01": [
+          "circuit.t01"
+        ],
+        "circuit.c02": [
+          "circuit.t02"
+        ],
+        "circuit.c03": [
+          "circuit.t03",
+          "circuit.t04"
+        ],
+        "circuit.c04": [
+          "circuit.t05"
+        ],
+        "circuit.c05": [
+          "circuit.t06",
+          "circuit.t07",
+          "circuit.t08"
+        ],
+        "circuit.c06": [
+          "circuit.t09"
+        ],
+        "circuit.c07": [
+          "circuit.t10"
+        ],
+        "circuit.c08": [
+          "circuit.t11"
+        ],
+        "circuit.c09": [
+          "circuit.t12"
+        ]
+      },
+      "keywords": {
+        "circuit.t01": [
+          "关联参考方向与功率符号",
+          "参考方向"
+        ],
+        "circuit.t13": [
+          "共享电阻的网孔列式",
+          "节点电压"
+        ],
+        "circuit.t14": [
+          "戴维南端口参数求法",
+          "叠加"
+        ]
+      },
+      "parents": {
+        "circuit.t13": "circuit.t03",
+        "circuit.t14": "circuit.t04"
+      }
+    },
+    "模拟电子技术": {
+      "titles": {
+        "PN结与器件模型": "analog-electronics.t01",
+        "二极管导通、整流滤波稳压": "analog-electronics.t02",
+        "BJT/MOS工作区与开关": "analog-electronics.t03",
+        "静态工作点、共射增益与削顶": "analog-electronics.t04",
+        "多级负载、差分与频率响应": "analog-electronics.t05",
+        "反馈极性、组态与闭环增益": "analog-electronics.t06",
+        "运放虚短虚断与比例运算": "analog-electronics.t07",
+        "比较器、迟滞与振荡": "analog-electronics.t08",
+        "功率放大与交越失真": "analog-electronics.t09",
+        "直流电源、采集链与排障": "analog-electronics.t10",
+        "固定偏置静态工作点": "analog-electronics.t11",
+        "共射中频小信号增益": "analog-electronics.t12",
+        "级间负载分压": "analog-electronics.t13",
+        "差模、共模与抑制比": "analog-electronics.t14",
+        "截止频率与通频带": "analog-electronics.t15",
+        "负反馈闭环增益计算": "analog-electronics.t16",
+        "四种负反馈的电阻判断": "analog-electronics.t17",
+        "迟滞阈值与历史状态": "analog-electronics.t18",
+        "正弦振荡的起振与稳幅": "analog-electronics.t19",
+        "电容滤波纹波估算": "analog-electronics.t20",
+        "传感器采集链选型": "analog-electronics.t21",
+        "二极管挡安全初检": "analog-electronics.t22"
+      },
+      "chapter_prefix": {
+        "analog-electronics.c01": [
+          "analog-electronics.t01"
+        ],
+        "analog-electronics.c02": [
+          "analog-electronics.t02"
+        ],
+        "analog-electronics.c03": [
+          "analog-electronics.t03",
+          "analog-electronics.t04"
+        ],
+        "analog-electronics.c04": [
+          "analog-electronics.t05"
+        ],
+        "analog-electronics.c05": [
+          "analog-electronics.t06"
+        ],
+        "analog-electronics.c06": [
+          "analog-electronics.t07"
+        ],
+        "analog-electronics.c07": [
+          "analog-electronics.t08",
+          "analog-electronics.t09"
+        ],
+        "analog-electronics.c08": [
+          "analog-electronics.t10"
+        ]
+      },
+      "parents": {
+        "analog-electronics.t11": "analog-electronics.t04",
+        "analog-electronics.t12": "analog-electronics.t04",
+        "analog-electronics.t13": "analog-electronics.t05",
+        "analog-electronics.t14": "analog-electronics.t05",
+        "analog-electronics.t15": "analog-electronics.t05",
+        "analog-electronics.t16": "analog-electronics.t06",
+        "analog-electronics.t17": "analog-electronics.t06",
+        "analog-electronics.t18": "analog-electronics.t08",
+        "analog-electronics.t19": "analog-electronics.t08",
+        "analog-electronics.t20": "analog-electronics.t10",
+        "analog-electronics.t21": "analog-electronics.t10",
+        "analog-electronics.t22": "analog-electronics.t10"
+      },
+      "keywords": {
+        "analog-electronics.t11": [
+          "固定偏置静态工作点"
+        ],
+        "analog-electronics.t12": [
+          "共射中频小信号增益"
+        ],
+        "analog-electronics.t13": [
+          "级间负载分压"
+        ],
+        "analog-electronics.t14": [
+          "差模",
+          "共模与抑制比"
+        ],
+        "analog-electronics.t15": [
+          "截止频率与通频带"
+        ],
+        "analog-electronics.t16": [
+          "负反馈闭环增益计算"
+        ],
+        "analog-electronics.t17": [
+          "四种负反馈的电阻判断"
+        ],
+        "analog-electronics.t18": [
+          "迟滞阈值与历史状态"
+        ],
+        "analog-electronics.t19": [
+          "正弦振荡的起振与稳幅"
+        ],
+        "analog-electronics.t20": [
+          "电容滤波纹波估算"
+        ],
+        "analog-electronics.t21": [
+          "传感器采集链选型"
+        ],
+        "analog-electronics.t22": [
+          "二极管挡安全初检"
+        ]
+      }
+    },
+    "数字电子技术": {
+      "titles": {
+        "数制、BCD与格雷码": "digital-electronics.t01",
+        "门电路、有效电平与三态": "digital-electronics.t02",
+        "逻辑代数、最小项与卡诺图": "digital-electronics.t03",
+        "编译码器、MUX与加法器": "digital-electronics.t04",
+        "组合冒险与采样边界": "digital-electronics.t05",
+        "RS、JK、D、T触发器": "digital-electronics.t06",
+        "状态表、状态图与时序分析": "digital-electronics.t07",
+        "寄存器与同步计数器": "digital-electronics.t08",
+        "存储器容量与扩展": "digital-electronics.t09",
+        "脉冲、555与施密特触发": "digital-electronics.t10",
+        "ADC/DAC分辨率与采样": "digital-electronics.t11",
+        "二进制小数按位权求值": "digital-electronics.t12",
+        "用MUX拆分逻辑函数": "digital-electronics.t13",
+        "全加器的和位与进位": "digital-electronics.t14",
+        "移位寄存器逐拍跟踪": "digital-electronics.t15",
+        "计数器状态到T激励": "digital-electronics.t16",
+        "脉冲周期与占空比": "digital-electronics.t17",
+        "施密特双阈值整形": "digital-electronics.t18"
+      },
+      "chapter_prefix": {
+        "digital-electronics.c01": [
+          "digital-electronics.t01"
+        ],
+        "digital-electronics.c02": [
+          "digital-electronics.t02"
+        ],
+        "digital-electronics.c03": [
+          "digital-electronics.t03"
+        ],
+        "digital-electronics.c04": [
+          "digital-electronics.t04",
+          "digital-electronics.t05"
+        ],
+        "digital-electronics.c05": [
+          "digital-electronics.t06",
+          "digital-electronics.t07"
+        ],
+        "digital-electronics.c06": [
+          "digital-electronics.t08",
+          "digital-electronics.t09"
+        ],
+        "digital-electronics.c07": [
+          "digital-electronics.t10",
+          "digital-electronics.t11"
+        ]
+      },
+      "parents": {
+        "digital-electronics.t12": "digital-electronics.t01",
+        "digital-electronics.t13": "digital-electronics.t04",
+        "digital-electronics.t14": "digital-electronics.t04",
+        "digital-electronics.t15": "digital-electronics.t08",
+        "digital-electronics.t16": "digital-electronics.t08",
+        "digital-electronics.t17": "digital-electronics.t10",
+        "digital-electronics.t18": "digital-electronics.t10"
+      },
+      "keywords": {
+        "digital-electronics.t12": [
+          "二进制小数按位权求值"
+        ],
+        "digital-electronics.t13": [
+          "MUX",
+          "拆分逻辑函数"
+        ],
+        "digital-electronics.t14": [
+          "全加器的和位与进位"
+        ],
+        "digital-electronics.t15": [
+          "移位寄存器逐拍跟踪"
+        ],
+        "digital-electronics.t16": [
+          "计数器状态到",
+          "T",
+          "激励"
+        ],
+        "digital-electronics.t17": [
+          "脉冲周期与占空比"
+        ],
+        "digital-electronics.t18": [
+          "施密特双阈值整形"
+        ]
+      }
+    },
+    "通信原理与高频电子线路": {
+      "titles": {
+        "通信链路与传输方式": "communication.t01",
+        "码元速率、信息速率与可靠性": "communication.t02",
+        "香农容量与奈奎斯特速率": "communication.t03",
+        "抽样、量化与PCM码率": "communication.t04",
+        "模拟与数字调制选择": "communication.t05",
+        "复用、线路编码与同步": "communication.t06",
+        "介质、传播与频谱位置": "communication.t07",
+        "数字调制与移动代际": "communication.t08",
+        "调谐放大、混频与超外差": "communication.t09",
+        "振荡器、反馈与锁相环": "communication.t10",
+        "信源编码与信道编码": "communication.t11",
+        "奇偶校验、CRC与ARQ": "communication.t12",
+        "码间串扰与同步层次": "communication.t13",
+        "眼图判读与链路定位": "communication.t14",
+        "光纤链路、衰减与色散": "communication.t15",
+        "链路预算与测试工具": "communication.t16",
+        "同步TDM帧率与开销": "communication.t17",
+        "锁相环误差反馈过程": "communication.t18",
+        "离散信源熵的计算": "communication.t19",
+        "CRC模2除法与余数": "communication.t20",
+        "ARQ确认、序号与超时": "communication.t21",
+        "dB链路预算与余量": "communication.t22"
+      },
+      "chapter_prefix": {
+        "communication.c01": [
+          "communication.t01"
+        ],
+        "communication.c02": [
+          "communication.t02",
+          "communication.t03"
+        ],
+        "communication.c03": [
+          "communication.t04",
+          "communication.t05",
+          "communication.t06"
+        ],
+        "communication.c04": [
+          "communication.t07"
+        ],
+        "communication.c05": [
+          "communication.t08"
+        ],
+        "communication.c06": [
+          "communication.t09",
+          "communication.t10"
+        ],
+        "communication.c07": [
+          "communication.t11",
+          "communication.t12"
+        ],
+        "communication.c08": [
+          "communication.t13",
+          "communication.t14"
+        ],
+        "communication.c09": [
+          "communication.t15",
+          "communication.t16"
+        ]
+      },
+      "parents": {
+        "communication.t17": "communication.t06",
+        "communication.t18": "communication.t10",
+        "communication.t19": "communication.t11",
+        "communication.t20": "communication.t12",
+        "communication.t21": "communication.t12",
+        "communication.t22": "communication.t16"
+      },
+      "keywords": {
+        "communication.t17": [
+          "同步",
+          "TDM",
+          "帧率与开销"
+        ],
+        "communication.t18": [
+          "锁相环误差反馈过程"
+        ],
+        "communication.t19": [
+          "离散信源熵的计算"
+        ],
+        "communication.t20": [
+          "CRC",
+          "除法与余数"
+        ],
+        "communication.t21": [
+          "ARQ",
+          "确认",
+          "序号与超时"
+        ],
+        "communication.t22": [
+          "dB",
+          "链路预算与余量"
+        ]
+      }
+    },
+    "信号与系统": {
+      "titles": {
+        "信号分类、周期与能量功率": "signals-systems.t01",
+        "时间变换与冲激阶跃": "signals-systems.t02",
+        "线性、时不变、因果与稳定": "signals-systems.t03",
+        "零输入、零状态与总响应": "signals-systems.t04",
+        "冲激响应与LTI判据": "signals-systems.t05",
+        "卷积反折、平移与重叠": "signals-systems.t06",
+        "傅里叶级数与谱线": "signals-systems.t07",
+        "傅里叶变换与滤波": "signals-systems.t08",
+        "拉普拉斯变换、极点与ROC": "signals-systems.t09",
+        "Z变换与差分方程": "signals-systems.t10",
+        "采样条件、混叠与重建": "signals-systems.t11",
+        "量化步长与数字化链路": "signals-systems.t12",
+        "时域、频域与复频域选择": "signals-systems.t13",
+        "傅里叶奇偶与系数": "signals-systems.t14",
+        "时移与尺度的频谱变化": "signals-systems.t15",
+        "部分分式与反变换": "signals-systems.t16"
+      },
+      "chapter_prefix": {
+        "signals-systems.c01": [
+          "signals-systems.t01",
+          "signals-systems.t02"
+        ],
+        "signals-systems.c02": [
+          "signals-systems.t03",
+          "signals-systems.t04"
+        ],
+        "signals-systems.c03": [
+          "signals-systems.t05",
+          "signals-systems.t06"
+        ],
+        "signals-systems.c04": [
+          "signals-systems.t07",
+          "signals-systems.t08"
+        ],
+        "signals-systems.c05": [
+          "signals-systems.t09",
+          "signals-systems.t10"
+        ],
+        "signals-systems.c06": [
+          "signals-systems.t11",
+          "signals-systems.t12"
+        ],
+        "signals-systems.c07": [
+          "signals-systems.t13"
+        ]
+      },
+      "parents": {
+        "signals-systems.t14": "signals-systems.t07",
+        "signals-systems.t15": "signals-systems.t08",
+        "signals-systems.t16": "signals-systems.t09"
+      },
+      "keywords": {
+        "signals-systems.t14": [
+          "傅里叶奇偶与系数"
+        ],
+        "signals-systems.t15": [
+          "时移与尺度的频谱变化"
+        ],
+        "signals-systems.t16": [
+          "部分分式与反变换"
+        ]
+      }
+    },
+    "软件工程": {
+      "titles": {
+        "软件危机与工程化": "software-engineering.t01",
+        "生命周期与验证确认": "software-engineering.t02",
+        "过程模型选择": "software-engineering.t03",
+        "敏捷、迭代与持续集成": "software-engineering.t04",
+        "可行性与成本效益": "software-engineering.t05",
+        "需求获取、质量与变更": "software-engineering.t06",
+        "DFD、数据字典与需求模型": "software-engineering.t07",
+        "总体设计与详细设计": "software-engineering.t08",
+        "内聚、耦合与信息隐藏": "software-engineering.t09",
+        "面向对象分析设计与UML": "software-engineering.t10",
+        "黑盒测试设计": "software-engineering.t11",
+        "白盒覆盖与环形复杂度": "software-engineering.t12",
+        "测试层次、集成与调试": "software-engineering.t13",
+        "维护、重构与再工程": "software-engineering.t14",
+        "质量、基线与受控变更": "software-engineering.t15",
+        "估算、计划与关键路径": "software-engineering.t16",
+        "风险、人员与沟通": "software-engineering.t17",
+        "按证据组合工程方法": "software-engineering.t18",
+        "追踪、反馈与持续改进": "software-engineering.t19",
+        "语句与判定覆盖辨别": "software-engineering.t20",
+        "控制流图环形复杂度": "software-engineering.t21",
+        "关键路径与总工期": "software-engineering.t22"
+      },
+      "chapter_prefix": {
+        "software-engineering.c01": [
+          "software-engineering.t01",
+          "software-engineering.t02"
+        ],
+        "software-engineering.c02": [
+          "software-engineering.t03",
+          "software-engineering.t04"
+        ],
+        "software-engineering.c03": [
+          "software-engineering.t05",
+          "software-engineering.t06",
+          "software-engineering.t07"
+        ],
+        "software-engineering.c04": [
+          "software-engineering.t08",
+          "software-engineering.t09",
+          "software-engineering.t10"
+        ],
+        "software-engineering.c05": [
+          "software-engineering.t11",
+          "software-engineering.t12",
+          "software-engineering.t13"
+        ],
+        "software-engineering.c06": [
+          "software-engineering.t14",
+          "software-engineering.t15"
+        ],
+        "software-engineering.c07": [
+          "software-engineering.t16",
+          "software-engineering.t17"
+        ],
+        "software-engineering.c08": [
+          "software-engineering.t18",
+          "software-engineering.t19"
+        ]
+      },
+      "parents": {
+        "software-engineering.t20": "software-engineering.t12",
+        "software-engineering.t21": "software-engineering.t12",
+        "software-engineering.t22": "software-engineering.t16"
+      },
+      "keywords": {
+        "software-engineering.t20": [
+          "覆盖",
+          "白盒"
+        ],
+        "software-engineering.t21": [
+          "环形",
+          "复杂度",
+          "路径"
+        ],
+        "software-engineering.t22": [
+          "关键路径",
+          "工期"
+        ]
+      }
+    },
+    "信息安全": {
+      "titles": {
+        "CIA安全目标": "information-security.t01",
+        "风险链与安全原则": "information-security.t02",
+        "控制分类与风险处置": "information-security.t03",
+        "账号口令与等级保护": "information-security.t04",
+        "恶意代码传播机制": "information-security.t05",
+        "社会工程与感染处置": "information-security.t06",
+        "认证因素与会话": "information-security.t07",
+        "访问控制模型与复核": "information-security.t08",
+        "对称、非对称与混合加密": "information-security.t09",
+        "哈希、MAC、签名与证书": "information-security.t10",
+        "网络分区与边界防护": "information-security.t11",
+        "网络攻击与排障": "information-security.t12",
+        "主机与应用防护": "information-security.t13",
+        "备份、RPO与RTO": "information-security.t14",
+        "事件响应闭环": "information-security.t15",
+        "最小必要与重新识别": "information-security.t16",
+        "授权边界与规则核验": "information-security.t17",
+        "VPN隧道与身份校验": "information-security.t18"
+      },
+      "chapter_prefix": {
+        "information-security.c01": [
+          "information-security.t01",
+          "information-security.t02"
+        ],
+        "information-security.c02": [
+          "information-security.t03",
+          "information-security.t04"
+        ],
+        "information-security.c03": [
+          "information-security.t05",
+          "information-security.t06"
+        ],
+        "information-security.c04": [
+          "information-security.t07",
+          "information-security.t08"
+        ],
+        "information-security.c05": [
+          "information-security.t09",
+          "information-security.t10"
+        ],
+        "information-security.c06": [
+          "information-security.t11",
+          "information-security.t12"
+        ],
+        "information-security.c07": [
+          "information-security.t13",
+          "information-security.t14",
+          "information-security.t15"
+        ],
+        "information-security.c08": [
+          "information-security.t16",
+          "information-security.t17"
+        ]
+      },
+      "parents": {
+        "information-security.t18": "information-security.t11"
+      },
+      "keywords": {
+        "information-security.t18": [
+          "VPN",
+          "隧道",
+          "虚拟专用网"
+        ]
+      }
+    }
+  }
+}

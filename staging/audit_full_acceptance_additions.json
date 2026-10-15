@@ -1,0 +1,1327 @@
+[
+  {
+    "id": "gap-accept-card-core-01-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t25",
+    "source_chapter": "data-structures.t25",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "依次向空AVL插入30、10、20。写出两次旋转对象及中间根关系。",
+    "options": {},
+    "answer": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+    "explanation": "从30到新点路径为左后右，故先把LR折成LL，再右旋。",
+    "knowledge_point": "树与二叉树",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t25",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "先对10左旋，20成为30左孩子且10为20左孩子；再对30右旋，20为根、10左30右。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-02-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t26",
+    "source_chapter": "data-structures.t26",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "权值1、2、4构造哈夫曼树，写每轮合并权值和WPL。",
+    "options": {},
+    "answer": "先1+2=3，再3+4=7；WPL=3+7=10。",
+    "explanation": "每轮重选当前最小两权；权1与2深2、权4深1，1×2+2×2+4=10。",
+    "knowledge_point": "树与二叉树",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t26",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "先1+2=3，再3+4=7；WPL=3+7=10。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-05-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t29",
+    "source_chapter": "data-structures.t29",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "无向连通图只有顶点A、B、C，边AB权2、AC权5、BC权1。从A运行Prim，第一条边能否选BC？写出选边顺序。",
+    "options": {},
+    "answer": "不能；先AB2，再BC1。",
+    "explanation": "BC两端都不在起始集合{A}，不跨集合边界；加入B后BC才可选。",
+    "knowledge_point": "图结构与算法",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t29",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不能；先AB2，再BC1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-06-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t30",
+    "source_chapter": "data-structures.t30",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "无向图只有顶点A、B、C，边AB权1、BC权2、AC权3。Kruskal已经选中AB、BC，为什么不再接受AC？",
+    "options": {},
+    "answer": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+    "explanation": "排序只决定检查顺序；两端分量是否不同才决定能否接受。",
+    "knowledge_point": "图结构与算法",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t30",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "A、C已属于同一连通分量，再加AC形成环，已选V−1=2条边可结束。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-08-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t32",
+    "source_chapter": "data-structures.t32",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "有向图只有边A→B（权2）、A→C（权5）、B→C（权−1）。从A执行Bellman-Ford，初始距离A为0、其他为∞；每轮同步松弛所有边，只读取上一轮距离。写出第1轮、第2轮结束后的距离[A,B,C]。",
+    "options": {},
+    "answer": "第1轮[0,2,5]；第2轮[0,2,1]。",
+    "explanation": "同步每轮只读上一轮，第一轮B还不能把新2传到C；第二轮经B得2−1=1。",
+    "knowledge_point": "图结构与算法",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t32",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "第1轮[0,2,5]；第2轮[0,2,1]。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-08-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t32",
+    "source_chapter": "data-structures.t32",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "V为图的顶点数。从一个源点执行Bellman-Ford，完成V−1轮松弛后再扫描一轮，仍能减小某个源点可达顶点的距离，说明什么？能否据此发现源点不可达区域中的所有负权环？",
+    "options": {},
+    "answer": "说明存在源点可达负权环；不能保证发现不可达负环。",
+    "explanation": "无可达负环时最短简单路径至多V−1边；不可达部分距离无穷不会参与有效松弛。",
+    "knowledge_point": "图结构与算法",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t32",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "说明存在源点可达负权环；不能保证发现不可达负环。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-09-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t33",
+    "source_chapter": "data-structures.t33",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "有向图只有边A→B（权2）、B→C（权1）、A→C（权5）。Floyd初始化后，允许B作为中转点时，A到C的最短距离更新为多少？",
+    "options": {},
+    "answer": "3。",
+    "explanation": "D[A,C]=min(5,D[A,B]+D[B,C])=min(5,2+1)=3。",
+    "knowledge_point": "图结构与算法",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t33",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "3。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-09-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t33",
+    "source_chapter": "data-structures.t33",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "Floyd伪代码中k表示当前开放中转点，为什么k应在三层循环最外层？",
+    "options": {},
+    "answer": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+    "explanation": "随意把i或j放外层会破坏同一轮允许中转集合的约束，不能保证一般图得到正确最短路。",
+    "knowledge_point": "图结构与算法",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t33",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "每轮用已经开放的中转集合更新所有点对，才能维持“只用这些中转点”的阶段含义。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-10-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t34",
+    "source_chapter": "data-structures.t34",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "稳定的直接插入排序处理带身份标签的序列[5a,5b,3]，a、b只标记原先相对次序，不参与大小比较。插入3后的序列是什么？为什么对待插入元素只后移键值严格大于它的元素？",
+    "options": {},
+    "answer": "[3,5a,5b]；只移动大于当前键的元素，使后来的相等键停在已有相等键后方，保留原相对次序。",
+    "explanation": "a、b只标身份不参与大小比较。若插入时把相等键也向后移，后来的相等键可能越过先来的键，破坏稳定性。",
+    "knowledge_point": "排序算法",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t34",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "[3,5a,5b]；只移动大于当前键的元素，使后来的相等键停在已有相等键后方，保留原相对次序。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-12-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t36",
+    "source_chapter": "data-structures.t36",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "堆排序的有效大根堆为[5,3,4,2]，尚无已排区。执行一次“交换堆顶与堆尾、缩小有效堆、下沉恢复”，分别写交换后和下沉后的完整数组，用竖线分隔已排区。",
+    "options": {},
+    "answer": "[2,3,4|5]，再[4,3,2|5]。",
+    "explanation": "只在前三项恢复堆，根2与更大的孩子4交换；已排5不再参与。",
+    "knowledge_point": "排序算法",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t36",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "[2,3,4|5]，再[4,3,2|5]。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-12-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t36",
+    "source_chapter": "data-structures.t36",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "大根堆根被末元素替换后，为什么下沉应优先与较大孩子比较交换？",
+    "options": {},
+    "answer": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+    "explanation": "如根2孩子3和4，换3后仍有父3<右孩4，不能宣布调整结束。",
+    "knowledge_point": "排序算法",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t36",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "保证新的父结点不小于两个孩子；若先换较小孩子，另一个更大孩子仍会破坏堆性质。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-13-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t37",
+    "source_chapter": "data-structures.t37",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "对[5,2,4,3]做增量2的希尔插入一趟，回填数组是什么？",
+    "options": {},
+    "answer": "[4,2,5,3]。",
+    "explanation": "下标0与2形成(5,4)，1与3形成(2,3)，分别排序后按原间隔交错放回。",
+    "knowledge_point": "排序算法",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t37",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "[4,2,5,3]。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-14-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t38",
+    "source_chapter": "data-structures.t38",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "对[21,13,12]做最低位优先十进制基数排序，写个位收集后、十位收集后结果。",
+    "options": {},
+    "answer": "个位后[21,12,13]，十位后[12,13,21]。",
+    "explanation": "先按个位1/2/3，再按十位1/2；同桶保持前轮相对顺序。",
+    "knowledge_point": "排序算法",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t38",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "个位后[21,12,13]，十位后[12,13,21]。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-14-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t38",
+    "source_chapter": "data-structures.t38",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "最低位优先基数排序处理十位时，为什么桶内必须保持上轮顺序？",
+    "options": {},
+    "answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+    "explanation": "例如12与13同十位，必须保留12在13之前，才能使最终整个数有序。",
+    "knowledge_point": "排序算法",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "data-structures.t38",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-16-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "操作系统",
+    "chapter": "operating-system.t15",
+    "source_chapter": "operating-system.t15",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "P1、P2均在时刻0到达，服务时间分别为3和2个时间单位，初始就绪队列[P1,P2]。采用时间片1的RR且不计开销，写各片执行进程及两者的完成时刻。",
+    "options": {},
+    "answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+    "explanation": "每轮未完成回队尾，完成立即移出；各片长度1，逐片累计时间。",
+    "knowledge_point": "进程与线程",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "operating-system.t15",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-18-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "操作系统",
+    "chapter": "operating-system.t17",
+    "source_chapter": "operating-system.t17",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "CLOCK页框[1(1),2(0),3(1)]，括号为访问位，指针指第1框。页4缺页，写淘汰页及新指针。",
+    "options": {},
+    "answer": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+    "explanation": "遇页1的访问位1先清0并前进，再遇页2位0选择置换，装入页4后指针继续前进。",
+    "knowledge_point": "内存与虚拟存储",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "operating-system.t17",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "淘汰页2，结果[1(0),4(1),3(1)]，指针到第3框。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-20-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "操作系统",
+    "chapter": "operating-system.t19",
+    "source_chapter": "operating-system.t19",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "磁道0—99，磁头50向大号移动，请求20和80，只统计完成全部请求前移动。LOOK与SCAN移动各多少？",
+    "options": {},
+    "answer": "LOOK90；SCAN128。",
+    "explanation": "LOOK走50→80→20为30+60；SCAN走50→99→20为49+79。",
+    "knowledge_point": "进程调度与同步",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "operating-system.t19",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "LOOK90；SCAN128。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-20-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "操作系统",
+    "chapter": "operating-system.t19",
+    "source_chapter": "operating-system.t19",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "磁道0—199，磁头100向小号移动，请求40和150，按LOOK完成全部请求，服务顺序及移动总数？",
+    "options": {},
+    "answer": "先40再150，总170。",
+    "explanation": "先向下到最远请求40走60，立即反向到150走110，不必继续到物理端点0。",
+    "knowledge_point": "进程调度与同步",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "operating-system.t19",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "先40再150，总170。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-22-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数据库",
+    "chapter": "database.t20",
+    "source_chapter": "database.t20",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "锁A→读A→锁B→写B→解锁A→锁C，哪个动作违反2PL？",
+    "options": {},
+    "answer": "最后锁C违反。",
+    "explanation": "第一次解锁A后已进入收缩阶段，不能再申请新锁；C应在首次解锁之前取得。",
+    "knowledge_point": "事务与并发控制",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "database.t20",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "最后锁C违反。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-22-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数据库",
+    "chapter": "database.t20",
+    "source_chapter": "database.t20",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "所有事务都遵守2PL，是否就不会死锁？给一个两事务两资源反例。",
+    "options": {},
+    "answer": "仍可死锁；T1持A等B，T2持B等A。",
+    "explanation": "双方均处增长阶段、尚未解锁，也满足2PL，却形成循环等待。",
+    "knowledge_point": "事务与并发控制",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "database.t20",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "仍可死锁；T1持A等B，T2持B等A。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-24-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机组成原理",
+    "chapter": "computer-organization.t16",
+    "source_chapter": "computer-organization.t16",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "Cache命中查询1ns；未命中从开始查询直到取回总计41ns；命中率95%。串行模型平均访问时间是多少？",
+    "options": {},
+    "answer": "3ns。",
+    "explanation": "0.95×1+0.05×41=3；41已含首查，不应再在该加权结果上加1。",
+    "knowledge_point": "存储层次与Cache",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "computer-organization.t16",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "3ns。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-card-core-28-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "编程语言",
+    "chapter": "programming.t09",
+    "source_chapter": "programming.t09",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "C中int x=1; {int x=2;} 离开内层块后x为多少？Python普通if代码块会建立同样的新局部作用域吗？",
+    "options": {},
+    "answer": "C外层仍为1；Python普通if不建立新的局部作用域。",
+    "explanation": "内层C声明遮蔽外层，离开块恢复可见；Python局部作用域主要按函数等边界，不能照搬花括号规则。",
+    "knowledge_point": "C函数与作用域",
+    "ability": "比较辨析",
+    "difficulty": "基础",
+    "topic_id": "programming.t09",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "C外层仍为1；Python普通if不建立新的局部作用域。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-03-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t13",
+    "source_chapter": "analog-electronics.t13",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "前级等效空载电压U0>0、输出电阻Ro>0固定，后级输入电阻Ri>0逐渐增大。实际送入后级电压趋向什么？为什么不超过U0？",
+    "options": {},
+    "answer": "趋向U0；正电阻分压Ri/(Ro+Ri)趋1但不超过1。",
+    "explanation": "从负载模型判断极限与范围，不是只换数重复计算。",
+    "knowledge_point": "三极管放大",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t13",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "趋向U0；正电阻分压Ri/(Ro+Ri)趋1但不超过1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-04-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t14",
+    "source_chapter": "analog-electronics.t14",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "u1=1.01V、u2=0.99V，Ad=100、Ac=0.1，输出在线性范围。求差模、共模、两部分输出和CMRR。",
+    "options": {},
+    "answer": "ud=0.02V，uc=1V；差模2V、共模0.1V，总2.1V；CMRR1000。",
+    "explanation": "差和平均分别计算，再乘对应增益；CMRR为增益比。",
+    "knowledge_point": "三极管放大",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t14",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "ud=0.02V，uc=1V；差模2V、共模0.1V，总2.1V；CMRR1000。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-04-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t14",
+    "source_chapter": "analog-electronics.t14",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "两输入端同时叠加同样的0.2V干扰，Ad不变。Ac为0.1时输出干扰多大？若Ac降到0.01，输出干扰和CMRR怎样变化？",
+    "options": {},
+    "answer": "输出干扰0.02V；Ac降后0.002V，CMRR增为原来10倍。",
+    "explanation": "等量同相变化是共模，差模为0；降低Ac改善抑制，不是消除全部噪声。",
+    "knowledge_point": "三极管放大",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t14",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "输出干扰0.02V；Ac降后0.002V，CMRR增为原来10倍。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-05-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t15",
+    "source_chapter": "analog-electronics.t15",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "中频电压增益100，fL=20Hz、fH=20kHz。求常用截止点幅值增益与通频带宽度。",
+    "options": {},
+    "answer": "约70.7；带宽19980Hz。",
+    "explanation": "用0.707倍中频幅值，带宽先统一单位再作差。",
+    "knowledge_point": "三极管放大",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t15",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "约70.7；带宽19980Hz。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-05-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t15",
+    "source_chapter": "analog-electronics.t15",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "放大器某频率的电压幅值增益降到中频一半，负载相同。这是常用半功率截止点吗？功率比是多少？",
+    "options": {},
+    "answer": "不是；电压一半对应功率1/4，常用半功率点电压约0.707倍。",
+    "explanation": "相同负载功率随电压平方变化，辨别幅值与功率条件。",
+    "knowledge_point": "三极管放大",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t15",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不是；电压一半对应功率1/4，常用半功率点电压约0.707倍。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-07-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t17",
+    "source_chapter": "analog-electronics.t17",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "希望提高输入电阻并使输出更接近恒流源，应选哪种稳定负反馈？分别说明两端判断。",
+    "options": {},
+    "answer": "电流串联；输入串联增Ri，输出电流取样增Ro。",
+    "explanation": "先根据输入比较接法判断Ri，再根据输出采样判断Ro，不能把电压串联结论照搬。",
+    "knowledge_point": "负反馈放大",
+    "ability": "场景选型",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t17",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "电流串联；输入串联增Ri，输出电流取样增Ro。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-09-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t19",
+    "source_chapter": "analog-electronics.t19",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "选频处环路相位满足条件，但幅值增益一直为0.8，微扰后会形成持续正弦振荡吗？稳态为什么常要求约1？",
+    "options": {},
+    "answer": "不会，微扰每圈衰减；稳态需要补回一圈损失使振幅保持，即有效幅值增益约1。",
+    "explanation": "相位正确不是充分条件，还需幅值和电源条件。",
+    "knowledge_point": "运算放大器",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t19",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不会，微扰每圈衰减；稳态需要补回一圈损失使振幅保持，即有效幅值增益约1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-analog-electronics-09-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "analog-electronics.t19",
+    "source_chapter": "analog-electronics.t19",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "环路增益始终大于1且没有稳幅，输出是否一定成为稳定且无削顶的正弦？怎样区分起振和稳态条件？",
+    "options": {},
+    "answer": "不一定，振幅会增大至非线性削顶；起振略大于1，稳态借稳幅使有效增益约1。",
+    "explanation": "明确起振与稳定振幅是不同阶段，不把正反馈等同自动完美振荡。",
+    "knowledge_point": "运算放大器",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "analog-electronics.t19",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不一定，振幅会增大至非线性削顶；起振略大于1，稳态借稳幅使有效增益约1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-digital-electronics-15-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "digital-electronics.t14",
+    "source_chapter": "digital-electronics.t14",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "全加器A=1、B=0、Cin=1，求S和Cout；再把B也变为1，求两输出。",
+    "options": {},
+    "answer": "前者S=0、Cout=1；后者S=1、Cout=1。",
+    "explanation": "普通整数和分别2和3，对照2Cout+S检查，区别本位与进位。",
+    "knowledge_point": "组合逻辑",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "digital-electronics.t14",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "前者S=0、Cout=1；后者S=1、Cout=1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-digital-electronics-16-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "digital-electronics.t15",
+    "source_chapter": "digital-electronics.t15",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "4位寄存器Q3Q2Q1Q0初态1011，每个时钟右移一位并从Q3串入0。写两拍后的状态和每拍移出位。",
+    "options": {},
+    "answer": "第一拍0101、移出1；第二拍0010、移出1。",
+    "explanation": "按同一旧位组同时移动，不把移位误算为计数减1。",
+    "knowledge_point": "触发器",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "digital-electronics.t15",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "第一拍0101、移出1；第二拍0010、移出1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-digital-electronics-17-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "digital-electronics.t16",
+    "source_chapter": "digital-electronics.t16",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "两位同步T触发器计数器Q1Q0按00→01→10→11→00循环。列T1/T0四行，求输入逻辑并说明01时下一状态。",
+    "options": {},
+    "answer": "按00、01、10、11，T1依次0、1、0、1，T0均1；T1=Q0、T0=1；01时两位翻转成10。",
+    "explanation": "每位用T=Q⊕Q+反推，输入取更新前的Q0，不在同一拍先更新低位再求高位。",
+    "knowledge_point": "触发器",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "digital-electronics.t16",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "按00、01、10、11，T1依次0、1、0、1，T0均1；T1=Q0、T0=1；01时两位翻转成10。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-digital-electronics-19-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "digital-electronics.t18",
+    "source_chapter": "digital-electronics.t18",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "规定输入上升过3V输出高、下降低2V输出低。输出已高，输入降到2.4V，再到1.8V，输出依次怎样？",
+    "options": {},
+    "answer": "2.4V仍高，1.8V变低。",
+    "explanation": "下降时只检查下阈2V，回差区保留历史。",
+    "knowledge_point": "脉冲与555电路",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "digital-electronics.t18",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "2.4V仍高，1.8V变低。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-digital-electronics-19-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "digital-electronics.t18",
+    "source_chapter": "digital-electronics.t18",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "某非反相双阈值整形电路规定：输入上升超过3V时输出高，下降低于2V时输出低。刚观察到输入2.5V且未知此前历史，能否唯一判断输出？这与单阈值比较器有何不同？",
+    "options": {},
+    "answer": "不能，可能高也可能低；回差区保留先前状态，单阈值规则通常只比较当前输入与单个阈值。",
+    "explanation": "检查历史是迟滞判定的一部分，不凭区间中点猜输出。",
+    "knowledge_point": "脉冲与555电路",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "digital-electronics.t18",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不能，可能高也可能低；回差区保留先前状态，单阈值规则通常只比较当前输入与单个阈值。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-communication-22-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "communication.t19",
+    "source_chapter": "communication.t19",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "概率1/2、1/4、1/4的信源用码0、10、11。求平均码长，并说明平均1.5bit/符号是否要求每个码字都长1.5位。",
+    "options": {},
+    "answer": "平均0.5×1+0.25×2+0.25×2=1.5bit/符号；码字实际长度是1、2、2位，平均值可以非整数。",
+    "explanation": "区分统计平均与单个码字长度，该码也是前缀码。",
+    "knowledge_point": "通信系统基础",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "communication.t19",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "平均0.5×1+0.25×2+0.25×2=1.5bit/符号；码字实际长度是1、2、2位，平均值可以非整数。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-communication-23-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "communication.t20",
+    "source_chapter": "communication.t20",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "数据1101、生成串1011。先补零后第一次异或得到0110000。下一次生成串怎样对齐？余数若仅写为1，检验字段为什么还要写001？",
+    "options": {},
+    "answer": "下一次对齐为0101100；生成串次数为3，字段固定3位，余1要补前导零成001。",
+    "explanation": "对齐当前最高的1；校验字段长度由生成多项式次数决定，不随余数最高位缩短。",
+    "knowledge_point": "通信系统基础",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "communication.t20",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "下一次对齐为0101100；生成串次数为3，字段固定3位，余1要补前导零成001。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-communication-24-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "communication.t21",
+    "source_chapter": "communication.t21",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "停等ARQ中编号0数据已被接收并交付，但其ACK丢失。发送方超时后做什么，接收方看到重复0后怎样处理？",
+    "options": {},
+    "answer": "发送方重传0；接收方识别重复，不再重复交付，只重新发确认，再继续预期的下一编号。",
+    "explanation": "定时器处理ACK丢失，序号用于消除重传产生的重复；不能把重传数据再次当新业务。",
+    "knowledge_point": "通信系统基础",
+    "ability": "过程描述",
+    "difficulty": "基础",
+    "topic_id": "communication.t21",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "发送方重传0；接收方识别重复，不再重复交付，只重新发确认，再继续预期的下一编号。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-communication-25-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "communication.t22",
+    "source_chapter": "communication.t22",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "发射光功率0dBm，链路损耗7dB，再预留1dB，接收灵敏度−12dBm。求预算接收功率和余量；0dBm是否没有光？",
+    "options": {},
+    "answer": "预算−8dBm，余量4dB；0dBm为1mW，不是零功率。",
+    "explanation": "损耗和预留作减项，绝对功率dBm与功率比dB不同；预算不替代色散检验。",
+    "knowledge_point": "高频电路",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "communication.t22",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "预算−8dBm，余量4dB；0dBm为1mW，不是零功率。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-signals-systems-26-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "信号与系统",
+    "chapter": "signals-systems.t14",
+    "source_chapter": "signals-systems.t14",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "周期2π方波在−π<t<0为−1、0<t<π为1，端点取0。已按定义得到bn=2[1−cos(nπ)]/(nπ)。写b1、b2、b3及a0/an，并说明哪些谐波消失。",
+    "options": {},
+    "answer": "b1=4/π，b2=0，b3=4/(3π)；奇信号a0=an=0，所有偶次谐波为0。",
+    "explanation": "先用奇性去余弦和直流，再代n奇偶；该波也半波对称，不能把全部偶谐波消失推广到任意奇函数。",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "signals-systems.t14",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "b1=4/π，b2=0，b3=4/(3π)；奇信号a0=an=0，所有偶次谐波为0。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-signals-systems-27-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "信号与系统",
+    "chapter": "signals-systems.t15",
+    "source_chapter": "signals-systems.t15",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "x(t)的频谱仅在|ω|≤10非零。y(t)=x(2t)的频带边界和频谱幅度因子怎样变？若再延迟1秒会改变幅度谱吗？",
+    "options": {},
+    "answer": "边界到|ω|≤20，Y=X(jω/2)/2；再延迟只乘e^(−jω)，幅度谱不变。",
+    "explanation": "尺度同时改横轴和1/|a|幅度，时移只改线性相位，两性质不可混用。",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "signals-systems.t15",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "边界到|ω|≤20，Y=X(jω/2)/2；再延迟只乘e^(−jω)，幅度谱不变。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-signals-systems-28-1",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "信号与系统",
+    "chapter": "signals-systems.t16",
+    "source_chapter": "signals-systems.t16",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "因果零初始系统y′+2y=x，x=e^(−t)u(t)。求Y(s)，写部分分式、零状态响应和ROC。",
+    "options": {},
+    "answer": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)；y=(e^−t−e^−2t)u(t)，ROC Re(s)>−1。",
+    "explanation": "变换方程后设A/(s+1)+B/(s+2)，通分得A=1 B=−1；因果决定右侧ROC。",
+    "knowledge_point": "拉普拉斯与Z变换",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "signals-systems.t16",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)；y=(e^−t−e^−2t)u(t)，ROC Re(s)>−1。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-signals-systems-28-2",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "信号与系统",
+    "chapter": "signals-systems.t16",
+    "source_chapter": "signals-systems.t16",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "系统y′+2y=x，x(t)=e^(−t)u(t)，初值y(0−)=3。单边拉普拉斯中导数怎样变换？写出零输入响应和t≥0的总响应。",
+    "options": {},
+    "answer": "导数变换为sY−3；零输入响应为3e^(−2t)，总响应为e^(−t)+2e^(−2t)（t≥0）。",
+    "explanation": "线性系统初始储能单独贡献齐次响应，不可仍只用Y=HX；0+核对总响应为3。",
+    "knowledge_point": "拉普拉斯与Z变换",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "signals-systems.t16",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "导数为sY−3；多零输入3e^(−2t)，总响应为e^(−t)+2e^(−2t)（t≥0）。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-circuit-1-28",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "电路分析与电工技术",
+    "chapter": "circuit.t01",
+    "source_chapter": "circuit.t01",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "相同元件的电压正端不变，把电流参考箭头反向，读数由2A变−2A。实际吸收功率会变号吗？为什么？",
+    "options": {},
+    "answer": "不会；参考改变需同时改变功率表达式，物理能量方向不随记号变。",
+    "explanation": "关联方向用ui，非关联用−ui，参考读数与表达式配套才保持同一物理结论。",
+    "knowledge_point": "直流电路与功率",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "circuit.t01",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不会；参考改变需同时改变功率表达式，物理能量方向不随记号变。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-mesh-setup",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "电路分析与电工技术",
+    "chapter": "circuit.t13",
+    "source_chapter": "circuit.t13",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "两个相邻网孔都取顺时针，左右外侧各2Ω、共享1Ω，沿各自网孔方向电源升10V与4V。列方程并求I1、I2。",
+    "options": {},
+    "answer": "3I1−I2=10，−I1+3I2=4；I1=4.25A、I2=2.75A。",
+    "explanation": "共享电阻分别用两方向电流差，联立后回代两回路守恒。",
+    "knowledge_point": "直流电路与功率",
+    "ability": "直接计算",
+    "difficulty": "基础",
+    "topic_id": "circuit.t13",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "3I1−I2=10，−I1+3I2=4；I1=4.25A、I2=2.75A。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-circuit-3-29",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "电路分析与电工技术",
+    "chapter": "circuit.t13",
+    "source_chapter": "circuit.t13",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "相邻两网孔都取顺时针，左网孔电流I1=4.25 A、右网孔I2=2.75 A，共享1Ω电阻。共享支路沿左网孔方向的电流是多少？右网孔方程该电阻项为何必须用I2−I1？",
+    "options": {},
+    "answer": "共享支路1.5A；沿右网孔需I2−I1，写反会错用压降方向。",
+    "explanation": "同一电阻沿两个相反绕行方向电压代数项相反；4.25−2.75=1.5A。",
+    "knowledge_point": "直流电路与功率",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "circuit.t13",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "共享支路1.5A；沿右网孔需I2−I1，写反会错用压降方向。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-accept-elec-circuit-3-30",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "电路分析与电工技术",
+    "chapter": "circuit.t14",
+    "source_chapter": "circuit.t14",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "含受控源的线性二端网络Uoc=Isc=0，是否可以判断Rth=0？给出合适求法。",
+    "options": {},
+    "answer": "不能；保留受控源、独立源置零，在端口加测试电压或电流，Rth=Ut/It。",
+    "explanation": "0/0未定义；受控源仍反映内部线性作用，测试源能激励看入特性。",
+    "knowledge_point": "直流电路与功率",
+    "ability": "机制解释",
+    "difficulty": "基础",
+    "topic_id": "circuit.t14",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不能；保留受控源、独立源置零，在端口加测试电压或电流，Rth=Ut/It。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-net-congestion-trace",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机网络",
+    "chapter": "net.congestion-steps",
+    "source_chapter": "net.congestion-steps",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "按教材Reno简化轮次模型，cwnd初值1 MSS、ssthresh=8 MSS，到达门限即转入拥塞避免。每轮数据均获确认且无丢包，写第1至第5轮开始时的cwnd。",
+    "options": {},
+    "answer": "1、2、4、8、9 MSS。",
+    "explanation": "门限前每RTT近翻倍，达到8后拥塞避免每轮加1。",
+    "knowledge_point": "TCP与UDP",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "net.congestion-steps",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "1、2、4、8、9 MSS。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-net-congestion-loss",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机网络",
+    "chapter": "net.congestion-steps",
+    "source_chapter": "net.congestion-steps",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "按教材TCP Reno简化模型，超时与收到三个重复ACK都会如何触发重传？它们对cwnd的恢复处理能否混为一谈？",
+    "options": {},
+    "answer": "超时触发超时重传并通常把cwnd降到1 MSS重新慢开始；三个重复ACK触发快重传，Reno进入快恢复，不能当作超时归1处理。",
+    "explanation": "二者都提示丢包，但拥塞证据和恢复路径不同。门限常按在途量约减半并有下限，具体数值须看题设。",
+    "knowledge_point": "TCP与UDP",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "net.congestion-steps",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "超时触发超时重传并通常把cwnd降到1 MSS重新慢开始；三个重复ACK触发快重传，Reno进入快恢复，不能当作超时归1处理。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-net-dhcp-order",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机网络",
+    "chapter": "net.dhcp-lease",
+    "source_chapter": "net.dhcp-lease",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "IPv4主机首次经DHCP获取租约，写出Discover、Offer、Request、ACK的顺序，并说明Request的作用。",
+    "options": {},
+    "answer": "Discover→Offer→Request→ACK；Request表明主机选择的配置方案并请求服务器确认。",
+    "explanation": "首次获取的DORA流程；主机的Request也让其他服务器知道选择，续租路径另论。",
+    "knowledge_point": "DNS与DHCP",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "topic_id": "net.dhcp-lease",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "Discover→Offer→Request→ACK；Request表明主机选择的配置方案并请求服务器确认。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-net-dhcp-dns",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机网络",
+    "chapter": "net.dhcp-lease",
+    "source_chapter": "net.dhcp-lease",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "电脑获得169.254.x.x自动地址、掩码和网关未正确取得。仅修改DNS通常能解决吗？给出优先排查顺序。",
+    "options": {},
+    "answer": "通常不能；先查网线/WLAN与链路状态，再查DHCP服务、可用地址池和跨网段中继，成功获得配置后再检查DNS。",
+    "explanation": "169.254是IPv4链路本地自动地址的常见形式，不是DNS错误主动改写了主机地址；现象仍需结合网络设计确认。",
+    "knowledge_point": "DNS与DHCP",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "topic_id": "net.dhcp-lease",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "通常不能；先查网线/WLAN与链路状态，再查DHCP服务、可用地址池和跨网段中继，成功获得配置后再检查DNS。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-net-socket-boundary",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机网络",
+    "chapter": "net.socket-io",
+    "source_chapter": "net.socket-io",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "TCP发送方连续调用两次sendall，各发送10字节。接收端一次recv(1024)是否必然得到20字节或恰好一条消息？应如何处理？",
+    "options": {},
+    "answer": "不必然；TCP是字节流，recv可能返回少于20字节或合并的数据。应用需约定固定长度、长度前缀或分隔符，并循环读取到消息完整。",
+    "explanation": "sendall保证尝试发送所给数据，不保证对端recv的次数和消息边界；连接关闭与异常也需处理。",
+    "knowledge_point": "计算机网络基础",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "net.socket-io",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不必然；TCP是字节流，recv可能返回少于20字节或合并的数据。应用需约定固定长度、长度前缀或分隔符，并循环读取到消息完整。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "gap-full-net-buffer-boundary",
+    "source": "课程缺口补充",
+    "type": "简答",
+    "subject": "计算机网络",
+    "chapter": "net.playback-buffer",
+    "source_chapter": "net.playback-buffer",
+    "adaptation_note": "全量验收后补充的原创练习，不是招聘原题。",
+    "stem": "播放速率固定4 Mbit/s，网络持续输入5 Mbit/s，已有24 Mbit缓冲。能否用24/(4-5)=-24秒作为耗尽时间？说明原因。",
+    "options": {},
+    "answer": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+    "explanation": "耗尽公式要求消费速率大于输入速率，负时间没有物理意义。",
+    "knowledge_point": "流媒体与服务质量",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "topic_id": "net.playback-buffer",
+    "topic_source": "manual",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+        "points": 1
+      }
+    ]
+  }
+]

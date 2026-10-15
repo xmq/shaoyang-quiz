@@ -10,6 +10,7 @@ from topic_exam_guidance import guidance_for, validate_guidance
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "learning-map.json"
+TOPIC_IDS = json.loads((ROOT / "topic-ids.json").read_text(encoding="utf-8"))["courses"]
 
 COURSES = {
     "Office软件操作": ("office", "办公软件"),
@@ -338,17 +339,27 @@ def read_structure(course_name: str):
     chapter_id = None
     for line in lines:
         if line.startswith("## "):
-            chapter_id = f"{COURSES[course_name][0]}.c{len(chapters) + 1:02d}"
+            chapter_id = (f"net-{len(chapters) + 1:02d}" if course_name == "计算机网络"
+                          else f"{COURSES[course_name][0]}.c{len(chapters) + 1:02d}")
             chapters.append({"chapter_id": chapter_id, "title": line[3:].strip()})
         elif line.startswith("### ") and chapter_id:
             topics.append({
-                "topic_id": f"{COURSES[course_name][0]}.t{len(topics) + 1:02d}",
+                "topic_id": TOPIC_IDS[course_name]["titles"][line[4:].strip()],
                 "chapter_id": chapter_id,
                 "title": line[4:].strip(),
                 "depth": "direct",
                 "keywords": [],
                 "knowledge_points": [],
             })
+    active_ids = [topic["topic_id"] for topic in topics]
+    if len(active_ids) != len(set(active_ids)):
+        raise ValueError(f"Duplicate topic ID: {course_name}")
+    for chapter in chapters:
+        chapter_id = chapter["chapter_id"]
+        prefix = TOPIC_IDS[course_name]["chapter_prefix"].get(chapter_id, [])
+        chapter_ids = [topic["topic_id"] for topic in topics if topic["chapter_id"] == chapter_id]
+        if chapter_ids[:len(prefix)] != prefix:
+            raise ValueError(f"Existing review card order changed: {chapter_id}")
     return chapters, topics
 
 
@@ -372,13 +383,25 @@ def build():
     order = [item["name"] for item in json.loads((ROOT / "course-index.json").read_text(encoding="utf-8"))]
     courses = []
     for course_name in order:
-        if course_name == "计算机网络":
-            courses.append(existing[course_name])
-            continue
         course_id, subject = COURSES[course_name]
         chapters, topics = read_structure(course_name)
+        if course_name == "计算机网络":
+            old_topics = {topic["topic_id"]: topic for topic in existing[course_name]["topics"]}
+            for index, topic in enumerate(topics):
+                old = old_topics.get(topic["topic_id"], {})
+                merged = {**old, **topic}
+                merged["keywords"] = old.get("keywords", [])
+                if "knowledge_points" not in old:
+                    merged.pop("knowledge_points", None)
+                else:
+                    merged["knowledge_points"] = old["knowledge_points"]
+                topics[index] = merged
+            courses.append({**existing[course_name], "chapters": chapters, "topics": topics})
+            continue
         subjects = COURSE_SUBJECTS.get(course_name, (subject,))
-        by_title = {topic["title"]: topic for topic in topics}
+        by_id = {topic["topic_id"]: topic for topic in topics}
+        by_title = {title: by_id[topic_id] for title, topic_id in TOPIC_IDS[course_name]["titles"].items()
+                    if topic_id in by_id}
         for mapped_subject in subjects:
             for knowledge_point, title in KNOWLEDGE_TO_TOPIC.get(mapped_subject, {}).items():
                 if title in by_title:
@@ -386,7 +409,8 @@ def build():
         for topic in topics:
             words = [part for part in re.split(r"[、，与和及/（）()·]+", topic["title"]) if len(part) >= 2]
             words.extend(token for token in re.findall(r"[A-Za-z0-9+.-]+|[\u4e00-\u9fff]{2,}", topic["title"]) if len(token) >= 2)
-            extras = EXTRA_TOPIC_KEYWORDS.get(course_name, {}).get(topic["title"], [])
+            extras = [word for title, words in EXTRA_TOPIC_KEYWORDS.get(course_name, {}).items()
+                      if TOPIC_IDS[course_name]["titles"].get(title) == topic["topic_id"] for word in words]
             keyword_source = extras + topic["knowledge_points"] if course_name in EXTRA_TOPIC_KEYWORDS else words + extras + topic["knowledge_points"]
             topic["keywords"] = list(dict.fromkeys(keyword_source))
         courses.append({
@@ -405,7 +429,12 @@ def build():
         course.setdefault("subjects", [course["subject"]])
         traps = read_traps(course["course_name"])
         for topic in course["topics"]:
-            guidance = guidance_for(topic["topic_id"])
+            registry = TOPIC_IDS[course["course_name"]]
+            parent_id = registry.get("parents", {}).get(topic["topic_id"], topic["topic_id"])
+            guidance = guidance_for(parent_id)
+            if parent_id != topic["topic_id"]:
+                guidance.pop("study_task", None)
+            topic["keywords"] = list(dict.fromkeys(topic["keywords"] + registry.get("keywords", {}).get(topic["topic_id"], [])))
             topic.update(guidance)
             topic["depth"] = guidance["target_depth"]
             if topic["title"] in traps:
