@@ -1,0 +1,2746 @@
+{
+  "date": "2026-10-15",
+  "role": "第二独立代理：在职备考、零碎时间学习，少量编程经验，不是真人用户",
+  "initial_ui_build": "f072ccaedc017d13",
+  "final_section_retest_build": "8572758aa5cb52c0",
+  "verdict": "考点版能够先扫定义/方法/易混，再按默认显示的典型例完成迁移，明显比前版连续叙述更易定位。10章/38节保留的机制与条件经通读，汉明/Cache/Booth/微程序新数据执行成功；唯一压缩回退是6.1原码/反码定义，已两短条补齐并定点复验，当前教学阻断为0。",
+  "method_limits": [
+    "55个短标题、20个初构建test标记只是组织信息，不作为教材完整或学会证据。",
+    "例题本轮默认全可见，不能称为隐藏答案盲答；另用新数据任务执行来检验迁移。",
+    "本轮20道章练按ID核对池归属并先保存独立算式再核对参考；这些旧题可能在前轮读过，不声称严格陌生题盲测。",
+    "浏览器是Chrome 390/1280明暗模拟，非真机/真人；保持原报告，未重建或修改产品。",
+    "教材38节逐项为通读机制证据，章级每章2道练习，未把后者虚构成每节两道。"
+  ],
+  "presentation": {
+    "short_units": 55,
+    "initial_test_markers": 20,
+    "details_count": 0,
+    "assessment": "定义与参数先短标记，方法/完整数值过程紧邻，易混给边界；考法写具体动作如拆地址/汉明校验/写控制式，没有只列“计算/简答”充数。",
+    "default_worked_examples": "主文直接给出可复现步骤；不是把前版长文藏到details。",
+    "color_check": "四环境computedStyle证实仅strong标签着红蓝，正文普通色且字重400，标签800。",
+    "length_boundary": "第4/6章信息仍多，但以真实不同任务和表分开；无须为追求更短而删掉运算步骤，也不建议再普遍加长。"
+  },
+  "chapter_walkthroughs": [
+    {
+      "chapter": 1,
+      "title": "第1章 计算机系统概论",
+      "own_explanation": "程序由存储的指令驱动，PC装下一地址，IR是当前指令；性能按总拍数算。",
+      "new_transfer_task": "400万条、CPI1.25、2GHz，CPU时间？",
+      "attempt_and_intermediate": "400万×1.25=500万拍；除2×10^9=0.0025s=2.5ms。",
+      "lecture_support": "1.3先参数/加权例再公式，能够依主文完成，默认例题已经可见。",
+      "linked_questions": [
+        {
+          "id": "uf-co-006",
+          "attempt": "1秒",
+          "work": "10^9×2/(2×10^9)=1秒",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "uc-co-009",
+          "attempt": "A约0.5秒、B约2/3秒，A更快；A相对B加速4/3",
+          "work": "A10^9×1/2GHz，B10^9×2/3GHz，不只比主频",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "第2章 计算机的发展及应用",
+      "own_explanation": "器件代际不代替任务性能，应用主要要求和可并行比例都需按场景判断。",
+      "new_transfer_task": "60%可3倍加速，40%串行，整体快多少？",
+      "attempt_and_intermediate": "剩0.4+0.6/3=0.6，加速5/3≈1.67倍。",
+      "lecture_support": "按2.2先算新时间再取倒数，未照抄80%/4的数据。",
+      "linked_questions": [
+        {
+          "id": "gap-co-textbook-01-2",
+          "attempt": "错误；翻译/解释后CPU执行机器指令",
+          "work": "CPU不直接把高级语言源文件当机器指令",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "gap-co-textbook-02-2",
+          "attempt": "实时控制重响应截止；离线数据处理重吞吐/完成时间",
+          "work": "按具体业务主要任务识别",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "第3章 系统总线",
+      "own_explanation": "共享总线先仲裁资源，再由握手确认有效时刻；位宽不是地址空间。",
+      "new_transfer_task": "16bit、80MHz、每拍2次、利用率75%，有效带宽？",
+      "attempt_and_intermediate": "2B×80×10^6×2×0.75=240MB/s；REQ1/ACK0仍不能采样。",
+      "lecture_support": "3.3的单位/次数/利用率条件和3.5有效性条件都在主文。",
+      "linked_questions": [
+        {
+          "id": "sp-core-co-036",
+          "attempt": "2字节",
+          "work": "16bit÷8=2B",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "sp-core-co-023",
+          "attempt": "错误",
+          "work": "64bit数据线只决定单次传多少，地址宽度和编址单位才定地址空间",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "第4章 存储器",
+      "own_explanation": "块/行/组/路先定位，再比较有效位/标记；汉明按位置二进制分校验组。",
+      "new_transfer_task": "同16KiB/64B/4路，地址0x3ABC；汉明新数据1001，若位5错怎样定位？",
+      "attempt_and_intermediate": "0x3ABC=15036，除64块234余60；234mod64=42、整除得3，所以偏移60/组42/标记3。数据放3/5/6/7为1/0/0/1，p1=0、p2=0、p4=1，码0011001；翻5使p1/p4失败，综合101₂=5。",
+      "lecture_support": "不需要额外翻长文：默认块分组小例和汉明表已提供全过程；新数据执行成功。",
+      "linked_questions": [
+        {
+          "id": "gap-co-008",
+          "attempt": "111ns",
+          "work": "0.9×(1+100)+0.1×(1+200)=90.9+20.1",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "gap-co-012",
+          "attempt": "偏移6、索引6、标记20位",
+          "work": "16KiB/64B=256行，4路为64组，32−6−6=20",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "第5章 输入输出系统",
+      "own_explanation": "接口状态/内容/命令分开；DMA由CPU设参而控制器搬运，仍占资源。",
+      "new_transfer_task": "DMA初地址1200，长度200B，已搬17B；每秒500次查询各12拍、3MHz，查询占比？",
+      "attempt_and_intermediate": "下一地址1217、剩183B；500×12/(3×10^6)=0.002=0.2%。",
+      "lecture_support": "5.4和5.6公式/参数/单位/边界保留，可以分两步算。",
+      "linked_questions": [
+        {
+          "id": "sp-core-co-046",
+          "attempt": "键盘中断、磁盘DMA；CPU仍初始化并处理结束",
+          "work": "键盘偶发无需忙等，成块磁盘搬运避免CPU逐字介入",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "sp-core-co-034",
+          "attempt": "错误",
+          "work": "占主存地址空间不等于更快；方式区别是地址空间与指令，不是速度保证",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "第6章 计算机的运算方法",
+      "own_explanation": "位模式必须按类型和字长解释；乘除看中间状态，浮点移动尾数同步调阶。",
+      "new_transfer_task": "Booth 4位−3×3，不用讲义−3×2/−2×3例；另算5.5+1.25。",
+      "attempt_and_intermediate": "M1101，初A0000/Q0011/q0：第1轮10减M后整体移位0001/1001/1；第2轮11不加→0000/1100/1；第3轮01加M后→1110/1110/0；第4轮00→1111/0111/0。积11110111=−9。5.5=1.011×2²，1.25=0.0101×2²，相加1.1011×2²=6.75。",
+      "lecture_support": "Booth表、位对规则与右移因果保留，迁移后仍可执行。原反码唯一压缩缺口已用两短条补齐。",
+      "linked_questions": [
+        {
+          "id": "gap-co-007",
+          "attempt": "5",
+          "work": "E10000001=129，实际阶2；1.01₂=1.25，乘4得5",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "uc-co-002",
+          "attempt": "CF=0，OF=1",
+          "work": "124+8=132<256没有最高位进位，但超8位补码127",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "第7章 指令系统",
+      "own_explanation": "指令先切字段，再解释寻址；地址/内容混用会多加一次错误值。",
+      "new_transfer_task": "24位指令操作码6位、两个4位寄存器字段，剩补码立即数范围？A60/M60=500/M500=11/R500，各寻址取什么？",
+      "attempt_and_intermediate": "剩10bit补码−512…511。立即60、直接500、一次间接11、寄存器500、寄存器间接11。",
+      "lecture_support": "字段/访存表直接可查，题型是明确取数与范围，不是泛列计算。",
+      "linked_questions": [
+        {
+          "id": "uc-co-007",
+          "attempt": "6位",
+          "work": "2^5=32不够50，2^6=64足够",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "uc-co-013",
+          "attempt": "正确",
+          "work": "RISC设计方向不是每条永远1拍的实现保证",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "第8章 CPU的结构和功能",
+      "own_explanation": "流水填充排空与停顿分开数；中断嵌套是回被打断服务而非直接回主程序。",
+      "new_transfer_task": "4段6条、共2停顿、每拍2ns；A打断B后返回位置？",
+      "attempt_and_intermediate": "4+6−1+2=11拍，22ns；A先回B后半，B完成才回主程序。",
+      "lecture_support": "主文无停顿条件与额外停顿口径保留，A/B返回链能复述。",
+      "linked_questions": [
+        {
+          "id": "gap-co-009",
+          "attempt": "16拍，25.6ns",
+          "work": "5+10−1+2=16，乘1.6ns",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "uc-co-014",
+          "attempt": "正确",
+          "work": "流水主要改善吞吐，单条需经过全部级与开销不保证变短",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "第9章 控制单元的功能",
+      "own_explanation": "控制器每拍要知道通路、当前状态与就绪条件；同拍并行取决于资源。",
+      "new_transfer_task": "单总线R1=8、R2=6求R1←R1+R2；READY0时是否前进？",
+      "attempt_and_intermediate": "先Y=8，再由R2驱动总线与Y相加Z=14，最后Z回R1=14；READY0自环等，不把未稳定数据当结果。",
+      "lecture_support": "9.1三拍规则与9.2等待例在默认主文；未借外部专业知识填通路。",
+      "linked_questions": [
+        {
+          "id": "gap-co-textbook-17-2",
+          "attempt": "独立PC增量器且无共享通路冲突时可同拍",
+          "work": "若都依赖同一总线/ALU则拆拍，先明确硬件模型",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "gap-co-textbook-18-2",
+          "attempt": "操作码之外还要当前状态、条件标志、READY等",
+          "work": "ADD取指态与执行态输出不同，条件还会改变转移",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "第10章 控制单元的设计",
+      "own_explanation": "硬布线与微程序都必须把数据从明确来源送目的；PC和μPC是两空间。",
+      "new_transfer_task": "机器PC200取4B直接ADD，操作数字段44，M44=6、ACC7，微00—24如何更新？",
+      "attempt_and_intermediate": "00 MAR200；01等READY后MDR得指令；02 IR锁存/PC204；03按新IR分派20；20 MAR44；21 MDR6；22 Y6；23 Z13；24 ACC13，μPC00但机器PC仍204。",
+      "lecture_support": "前次修好的DISPATCH和Y/Z执行表全保留，默认可看到完整过程，未因精简退化。",
+      "linked_questions": [
+        {
+          "id": "gap-co-textbook-20-1",
+          "attempt": "不会；微PC回00，机器PC继续程序",
+          "work": "两个地址空间，公共取指入口不等于用户程序入口",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        },
+        {
+          "id": "gap-co-textbook-21-2",
+          "attempt": "1536bit=192B，6位下地址",
+          "work": "64×24；8bit/B；2^6=64",
+          "reference_check": "本轮保存作答后核对参考，语义一致；旧题曾在前轮见过，不称严格盲答"
+        }
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "textbook_section": "1.1 计算机系统简介",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "硬件/软件分工与编译/解释→机器指令分两短单元；ISA的程序员接口与组成实现直接对比，寄存器与抽象虚拟机也有释义。",
+      "lecture_line": 6,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "1.2 计算机的基本组成",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "先结论存储程序/五部件，再给PC100取4B→104、R1=3+5→8，地址与内容不混。简答考法落实自动连续工作原因和部件分工。",
+      "lecture_line": 17,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "1.3 计算机硬件的主要技术指标",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "单位、字长、编址与CPI分开；例先加权CPI2，再200万拍/1GHz=2ms，条件保留CPU时间不含I/O。新迁移400万条/CPI1.25/2GHz=2.5ms可推。",
+      "lecture_line": 30,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "2.1 计算机的发展史",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "电子管→晶体管→集成→大规模；按器件而非速度划代，历史“第一”保留限定，不照抄原docx绝对化。",
+      "lecture_line": 46,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "2.2 计算机的应用和展望",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "传感器毫秒响应和日汇总先给场景，实时/数据处理判据清楚；并行80%/4以新时间0.4→2.5倍完整。",
+      "lecture_line": 53,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "3.1 总线的基本概念",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "共享路径、主/从角色与多源电气冲突先解释；DMA获权后也可主控，不能默认只有CPU可发起。",
+      "lecture_line": 67,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "3.2 总线的分类",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "按范围与按信号职责分两条，串并行另辨；控制线方向不一与并行不一定更快的条件保留。",
+      "lecture_line": 75,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "3.3 总线性能及性能指标",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "每次先bit÷8，再频率×次数×利用率；32bit/100MHz/双传800MB/s、80%为640MB/s有完整单位。",
+      "lecture_line": 80,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "3.4 总线结构",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "单总线访存/I/O争用与桥接多总线的共享端口限制仍有；USB/PCIe例说明名称不代表统一拓扑。",
+      "lecture_line": 88,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "3.5 总线控制",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "仲裁三法功能/线数/饥饿一组；REQ/ACK四相一组；REQ1/ACK0不可采样由数据有效因果推出，配图同顺序。",
+      "lecture_line": 93,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "4.1 概述",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "先补0x2B=43、整除/取余、位数64→6的短先修，再说层次与时间/空间局部性；压缩未丢先修。",
+      "lecture_line": 111,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "4.2 主存储器",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "存储类型/DRAM恢复与刷新、芯片4×2=8片/13+2地址线、交叉定位、汉明分组各独立短标题。汉明正文先表1—7再1011→0110011、位6错→p2/p4，能力边界保留。新数据1001→0011001、位5错综合101已独立完成。",
+      "lecture_line": 125,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "4.3 高速缓冲存储器",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "块/行/组/路与有效位先定义，简单地址13先定位后到32位大例；0x1234偏移52/组8/标记1、直接映射五访问20%及两种AMAT口径都在主文。新0x3ABC得到偏移60/组42/标记3。",
+      "lecture_line": 166,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "4.4 辅助存储器",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "7200rpm半转4.17ms再加寻道/传输；CHS70→柱面1/头0/从1扇区7，SSD不可套旋转公式；TLB扩展仍标为扩展，页号替换偏移不变与111ns串行模型条件均保留。",
+      "lecture_line": 207,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "5.1 概述",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "统一/独立编址的地址空间与指令区分；控制方式与串并行两种分类不混；通道职责仍有基本定位。",
+      "lecture_line": 235,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "5.2 I/O设备",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "输入/输出/触摸屏与块/字符流一句区分；640×480×8bit=307200B主文数例完整，分辨率/色深/刷新率非替代。",
+      "lecture_line": 240,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "5.3 I/O接口",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "状态/数据/控制三寄存器与写启动→采集→READY→查状态→读内容流程直接对应；清就绪依协议、有限缓冲边界保留。",
+      "lecture_line": 245,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "5.4 程序查询方式",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "读状态忙等→就绪传数；Nc/f与1000×20/1MHz=2%齐全，额外数据处理开销未删。",
+      "lecture_line": 251,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "5.5 程序中断方式",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "请求、允许边界、保存、向量、服务、恢复返回一条链；为什么不用持续轮询解释利用率，异常/外中断与屏蔽区别仍有。",
+      "lecture_line": 256,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "5.6 DMA方式",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "CPU初始化/结束与DMAC逐字搬运分工先结论；1000起256B送10B后1010/246，方式/争用边界与图一致。",
+      "lecture_line": 262,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "6.1 无符号数和有符号数",
+      "status": "初审缺定义→两短条补齐→857四环境定向复验通过",
+      "evidence": "初稿保留进制、位权、补码、端序，却少负原码/反码定义，已反馈。857版新增原码符号位+绝对值、负反码保持符号反数值，−5同数10000101/11111010/11111011实页核验。范围/符号扩展/固定精度未省略。",
+      "lecture_line": 276,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "6.2 数的定点表示和浮点表示",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "定点整数/纯小数范围先分；IEEE S/E/M各位数与隐含1，解5和编码6.5两向例在主文，E全0/1不可套普通式保留。",
+      "lecture_line": 295,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "6.3 定点运算",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "移位、补码加减、无符号乘、Booth、恢复/不恢复除法分别短标题；Booth位对与整体算术移位表完整、除法每轮保留R及末恢复仍在。新Booth−3×3逐轮得11110111=−9，未靠原例照抄。",
+      "lecture_line": 311,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "6.4 浮点四则运算",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "加6+2.5与减法对阶/规格化过程仍完整；最近偶数、零单独处理、偏置乘除阶、特殊值条件保留。新算5.5+1.25=1.1011₂×2²=6.75；1.25×1.5=1.875，1.5/0.75=2可按规则完成。",
+      "lecture_line": 363,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "6.5 算术逻辑单元",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "输入/输出位号先释，⊕、逻辑乘加不是算术，Ai1/Bi0/Ci1得和0进1；SUB复用和ZF/SF/CF/OF定义保留，新4位6+3得1001、CF0/OF1。",
+      "lecture_line": 377,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "7.1 机器指令",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "指令/机器字长、定长字段与地址数先结论；16位保留1111扩展前缀，15种三地址+16二地址数量互斥，继续扩展要扣名额。",
+      "lecture_line": 392,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "7.2 操作数类型和操作类型",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "数据类型/操作类型与调用保存返回地址简列；栈先压7后2，先弹右操作数，SUB7−2仍有解释。",
+      "lecture_line": 402,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "7.3 寻址方式",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "A/R/M[x]/EA释义后表寻址、例取数、例算址；访存次数明确不含取指，相对PC按题设，数组下标乘字节数未丢。",
+      "lecture_line": 407,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "7.4 指令格式举例",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "16位按操作码/目的/源字段切分0001011010000000=0x1680；32扣6+5+5=16bit补码范围例完整。",
+      "lecture_line": 428,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "7.5 RISC技术",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "RISC/CISC取向+LOAD/ADD/STORE三条示例，IC/CPI/f/存储等待约束保留，没有恢复为原docx“一定快/永远一拍”。",
+      "lecture_line": 433,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "8.1 CPU的结构",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "PC/IR/MAR/MDR/ALU/CU分工配取指ADD图；单总线Y/Z三拍独立，时钟/机器/指令周期不等同。",
+      "lecture_line": 441,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "8.2 指令周期",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "间接ADD A100先M100=400作地址，再M400=9与ACC3得12；寄存器传送表与400/9易错相连，不称每条都有中断周期。",
+      "lecture_line": 453,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "8.3 指令流水",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "理想k+n−1、冲突、实际节拍/停顿分开；5级20条24ns、实际16×1.6=25.6与SUB等到第5拍的读写条件完整。",
+      "lecture_line": 467,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "8.4 中断系统",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "请求优先与服务屏蔽优先分开；B中A嵌套回B后半再主程序，先保护现场且高优先仍受屏蔽约束。",
+      "lecture_line": 486,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "9.1 操作命令的分析",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "out/in/Read/READY释义，T0/T1/T2取指与直接ADD经Y/Z可执行；独立PC增量可并行、两源同总线不可。",
+      "lecture_line": 494,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "9.2 控制单元的功能",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "操作码/当前状态/条件共同决定控制输出；READY0自环、1锁存推进，最长组合路径与建立时间时钟边界保留。",
+      "lecture_line": 508,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "10.1 组合逻辑设计",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "本节LOAD总线路径/ADD专用ALU输入先声明；F2装IR后DISPATCH再分派，E2数据源明确；∨/∧式和STORE保持式协议例完整，未退回名词表。",
+      "lecture_line": 517,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    },
+    {
+      "textbook_section": "10.2 微程序设计",
+      "status": "通读机制保留、无当前教学阻断",
+      "evidence": "机器/微地址分清；00、01等、02装IR、03分派、20—24经Y/Z再回00的全表仍在主文。新M44=6/ACC7推Y6→Z13→ACC13，PC200取4B后204不被μPC00覆盖。字段k+1、13位与1536bit/192B例条件保留。",
+      "lecture_line": 544,
+      "evidence_boundary": "通读与已注明任务证据，不假称每节另做两道陌生题。"
+    }
+  ],
+  "browser": {
+    "build_meta_start": "globalThis.SHAOYANG_BUILD=Object.freeze({\"id\":\"f072ccaedc017d13\",\"questionCount\":2481,\"mediaAssets\":[\"./media/analog_bjt_states.svg\",\"./media/analog_common_emitter.svg\",\"./media/analog_diode_iv.svg\",\"./media/analog_feedback_block.svg\",\"./me",
+    "build_meta_end": "globalThis.SHAOYANG_BUILD=Object.freeze({\"id\":\"f072ccaedc017d13\",\"questionCount\":2481,\"mediaAssets\":[\"./media/analog_bjt_states.svg\",\"./media/analog_common_emitter.svg\",\"./media/analog_diode_iv.svg\",\"./media/analog_feedback_block.svg\",\"./me",
+    "checks": [
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 1,
+        "chapter_id": "computer-organization.c01",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 8,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 2,
+        "chapter_id": "computer-organization.c08",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 3,
+        "chapter_id": "computer-organization.c06",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 10,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 4,
+        "chapter_id": "computer-organization.c04",
+        "figures": 4,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 38,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 5,
+        "chapter_id": "computer-organization.c09",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 12,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 6,
+        "chapter_id": "computer-organization.c02",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 21,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 7,
+        "chapter_id": "computer-organization.c03",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 9,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 8,
+        "chapter_id": "computer-organization.c10",
+        "figures": 3,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 18,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 9,
+        "chapter_id": "computer-organization.c05",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "chapter": 10,
+        "chapter_id": "computer-organization.c11",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 6,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 1,
+        "chapter_id": "computer-organization.c01",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 8,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 2,
+        "chapter_id": "computer-organization.c08",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 3,
+        "chapter_id": "computer-organization.c06",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 10,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 4,
+        "chapter_id": "computer-organization.c04",
+        "figures": 4,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 38,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 5,
+        "chapter_id": "computer-organization.c09",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 12,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 6,
+        "chapter_id": "computer-organization.c02",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 21,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 7,
+        "chapter_id": "computer-organization.c03",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 9,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 8,
+        "chapter_id": "computer-organization.c10",
+        "figures": 3,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 18,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 9,
+        "chapter_id": "computer-organization.c05",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "chapter": 10,
+        "chapter_id": "computer-organization.c11",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 6,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 1,
+        "chapter_id": "computer-organization.c01",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 8,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 2,
+        "chapter_id": "computer-organization.c08",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 3,
+        "chapter_id": "computer-organization.c06",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 10,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 4,
+        "chapter_id": "computer-organization.c04",
+        "figures": 4,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 38,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 5,
+        "chapter_id": "computer-organization.c09",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 12,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 6,
+        "chapter_id": "computer-organization.c02",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 21,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 7,
+        "chapter_id": "computer-organization.c03",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 9,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 8,
+        "chapter_id": "computer-organization.c10",
+        "figures": 3,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 18,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 9,
+        "chapter_id": "computer-organization.c05",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "chapter": 10,
+        "chapter_id": "computer-organization.c11",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 6,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 1,
+        "chapter_id": "computer-organization.c01",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 8,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 2,
+        "chapter_id": "computer-organization.c08",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 3,
+        "chapter_id": "computer-organization.c06",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 10,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 4,
+        "chapter_id": "computer-organization.c04",
+        "figures": 4,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 38,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 5,
+        "chapter_id": "computer-organization.c09",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 12,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 6,
+        "chapter_id": "computer-organization.c02",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 21,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 7,
+        "chapter_id": "computer-organization.c03",
+        "figures": 0,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 9,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 8,
+        "chapter_id": "computer-organization.c10",
+        "figures": 3,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 18,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 9,
+        "chapter_id": "computer-organization.c05",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 4,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "chapter": 10,
+        "chapter_id": "computer-organization.c11",
+        "figures": 1,
+        "detail_count": 0,
+        "toggle_summary": null,
+        "chapter_practice_count": 6,
+        "back_returns_to_chapter": true,
+        "pass": true,
+        "return_trace": [
+          "quiz runner",
+          "quiz hub",
+          "original lecture chapter"
+        ],
+        "native_back_steps": 2
+      }
+    ],
+    "errors": [],
+    "question_pools_stems_only": [
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c01",
+          "title": "第1章 计算机系统概论"
+        },
+        "questions": [
+          {
+            "id": "sp-core-co-013",
+            "stem": "关于存储程序计算机，下列说法正确的有（ ）。",
+            "options": {
+              "A": "程序和数据以二进制形式存入存储器",
+              "B": "控制器按指令地址组织执行",
+              "C": "转移指令可以改变顺序执行流程",
+              "D": "输入设备负责完成全部算术运算"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t01"
+          },
+          {
+            "id": "sp-core-co-019",
+            "stem": "存储程序方式要求所有指令只能永远按物理地址连续顺序执行，不能发生转移。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t01"
+          },
+          {
+            "id": "sp-core-co-039",
+            "stem": "为什么“存储程序、程序控制”能让计算机自动连续工作？请按取指、译码与执行的信息流说明。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t01"
+          },
+          {
+            "id": "uf-co-006",
+            "stem": "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+            "options": {
+              "A": "0.5 s",
+              "B": "1 s",
+              "C": "2 s",
+              "D": "4 s"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t02"
+          },
+          {
+            "id": "sp-core-co-001",
+            "stem": "某处理器字长为32位，这一指标首先表示（ ）。",
+            "options": {
+              "A": "CPU一次能处理的基本二进制位数",
+              "B": "主存一定只有32个单元",
+              "C": "地址总线一定为32根",
+              "D": "每秒执行32条指令"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t02"
+          },
+          {
+            "id": "sp-core-co-018",
+            "stem": "比较两台计算机执行同一任务的性能时，应综合考虑（ ）。",
+            "options": {
+              "A": "程序指令数",
+              "B": "平均CPI",
+              "C": "时钟频率",
+              "D": "存储系统和实际工作负载"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t02"
+          },
+          {
+            "id": "sp-core-co-041",
+            "stem": "写出CPU执行时间与指令数、CPI、主频的基本关系，并解释为什么主频高不代表程序一定更快。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t02"
+          },
+          {
+            "id": "uc-co-009",
+            "stem": "同一任务在A、B两种实现中都执行10^9条指令。A主频2GHz、平均CPI为1；B主频3GHz、平均CPI为2。忽略其他因素，哪项正确？",
+            "options": {
+              "A": "A用0.5s，B约0.667s，主频更高的B反而更慢",
+              "B": "A用1s，B用0.5s，B更快",
+              "C": "两者都用1s",
+              "D": "只看主频可确定B一定快1.5倍"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t02"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c08",
+          "title": "第2章 计算机的发展及应用"
+        },
+        "questions": [
+          {
+            "id": "gap-co-textbook-01-1",
+            "stem": "按主要电子器件写出常见计算机四代顺序。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c08",
+            "topic_id": "computer-organization.t19"
+          },
+          {
+            "id": "gap-co-textbook-01-2",
+            "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c08",
+            "topic_id": "computer-organization.t19"
+          },
+          {
+            "id": "gap-co-textbook-02-1",
+            "stem": "程序80%的时间可4倍并行加速，20%必须串行，忽略开销，整体加速比多少？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c08",
+            "topic_id": "computer-organization.t20"
+          },
+          {
+            "id": "gap-co-textbook-02-2",
+            "stem": "工业控制必须在规定毫秒内响应传感器，离线统计每天记录更关注批量处理。这两类主要要求各是什么？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c08",
+            "topic_id": "computer-organization.t20"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c06",
+          "title": "第3章 系统总线"
+        },
+        "questions": [
+          {
+            "id": "gap-co-013",
+            "stem": "64位数据总线、频率200MHz、每周期传2次，忽略开销，理论带宽是多少GB/s？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t12"
+          },
+          {
+            "id": "ap-co-002",
+            "stem": "一条32位数据总线每秒有效传送200万次，不计其他开销，其理论数据传输率约为（ ）。",
+            "options": {
+              "A": "8 MB/s",
+              "B": "32 MB/s",
+              "C": "2 MB/s",
+              "D": "64 MB/s"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t12"
+          },
+          {
+            "id": "sp-core-co-016",
+            "stem": "关于系统总线，下列说法正确的有（ ）。",
+            "options": {
+              "A": "数据总线宽度影响一次传送数据量",
+              "B": "地址总线宽度影响可寻址范围",
+              "C": "控制总线传递读写和中断等信号",
+              "D": "三类总线的所有信号都只能单向"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t12"
+          },
+          {
+            "id": "sp-core-co-022",
+            "stem": "在编址单位不变时，地址总线增加一位，可选择的地址数量通常扩大为原来的2倍。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t12"
+          },
+          {
+            "id": "sp-core-co-023",
+            "stem": "64位数据总线表示主存一定有2^64个字节。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t12"
+          },
+          {
+            "id": "sp-core-co-036",
+            "stem": "16位数据总线一次最多传送________字节数据。",
+            "options": {},
+            "type": "填空",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t12"
+          },
+          {
+            "id": "gap-co-textbook-03-1",
+            "stem": "链式查询总线，设备1比设备3靠近仲裁器，两者同时请求时谁先？长期可能出现什么问题？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t21"
+          },
+          {
+            "id": "gap-co-textbook-03-2",
+            "stem": "为什么独立请求仲裁通常比链式需要更多连线？是否意味着所有设备可同时驱动共享数据总线？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t21"
+          },
+          {
+            "id": "gap-co-textbook-04-1",
+            "stem": "异步四相互锁读传输中REQ已置1但ACK仍为0，主设备能否按该协议采样？后续撤销顺序是什么？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t22"
+          },
+          {
+            "id": "gap-co-textbook-04-2",
+            "stem": "半同步总线遇慢设备时用WAIT延长等待，它是否完全取消统一时钟？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t22"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c04",
+          "title": "第4章 存储器"
+        },
+        "questions": [
+          {
+            "id": "gap-co-004",
+            "stem": "程序在循环中顺序访问数组元素，并多次重复同一循环。分别说明空间局部性和时间局部性体现在哪里。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t08"
+          },
+          {
+            "id": "sp-core-co-007",
+            "stem": "主存容量要求较大、成本需要控制，通常优先采用（ ）。",
+            "options": {
+              "A": "DRAM",
+              "B": "SRAM",
+              "C": "CPU寄存器",
+              "D": "只读光盘"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t08"
+          },
+          {
+            "id": "sp-core-co-015",
+            "stem": "下列现象体现程序局部性的有（ ）。",
+            "options": {
+              "A": "循环中的同一组指令反复执行",
+              "B": "访问数组元素后继续访问相邻元素",
+              "C": "最近使用的数据很可能再次使用",
+              "D": "每次访问都必须随机且毫无规律"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t08"
+          },
+          {
+            "id": "uf-co-003",
+            "stem": "用8K×8位芯片组成32K×16位存储器，需要芯片数为（ ）。",
+            "options": {
+              "A": "4",
+              "B": "8",
+              "C": "16",
+              "D": "32"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "gap-co-011",
+            "stem": "用8K×8位芯片组成32K×16位存储器，求芯片数、片内地址线数和选择字扩展组所需高位地址线数。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "ap-co-004",
+            "stem": "下列部件用途与存储器选择通常匹配的有（ ）。",
+            "options": {
+              "A": "高速缓存可采用SRAM",
+              "B": "主存常采用DRAM",
+              "C": "固件可保存在非易失性的Flash中",
+              "D": "要求断电保存的文件只放CPU寄存器"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "sp-core-co-024",
+            "stem": "只读存储器一旦出厂就绝对不能以任何方式改写。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "sp-core-co-025",
+            "stem": "DRAM用电荷表示信息，通常需要周期刷新。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "sp-core-co-026",
+            "stem": "SRAM速度较快且无需刷新，因此属于断电后数据仍保留的非易失性存储器。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "sp-core-co-035",
+            "stem": "按字节编址的系统有20根地址线，最多可直接表示________个字节地址。",
+            "options": {},
+            "type": "填空",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "sp-core-co-037",
+            "stem": "一片1K×8位存储芯片共可保存________位信息。",
+            "options": {},
+            "type": "填空",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "sp-core-co-042",
+            "stem": "关于SRAM和DRAM的特点及用途，下列说法正确的是（ ）。",
+            "options": {
+              "A": "SRAM需要周期性刷新，通常用作主存",
+              "B": "DRAM无需刷新，通常用作Cache",
+              "C": "SRAM速度较快且无需刷新，常用于Cache",
+              "D": "SRAM和DRAM断电后都能长期保存数据"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "uc-co-003",
+            "stem": "用8K×8位存储芯片组成32K×16位存储器。地址按存储字编排时，片内寻址与选择4个字扩展组分别需要多少根地址线？（ ）",
+            "options": {
+              "A": "13根片内地址线、2根高位组选择线",
+              "B": "8根片内地址线、4根高位组选择线",
+              "C": "15根片内地址线、不需要组选择线",
+              "D": "13根片内地址线、4根高位组选择线"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t09"
+          },
+          {
+            "id": "uf-co-004",
+            "stem": "某程序访存1000次，其中Cache命中950次，命中率为（ ）。",
+            "options": {
+              "A": "5%",
+              "B": "50%",
+              "C": "95%",
+              "D": "105%"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-008",
+            "stem": "在直接映射Cache中，两个主存块反复映射到同一Cache行，即使其他行空闲也频繁替换，这属于（ ）。",
+            "options": {
+              "A": "冲突失效",
+              "B": "缺页异常",
+              "C": "指令溢出",
+              "D": "总线仲裁"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-009",
+            "stem": "希望每次CPU写Cache时主存也立即得到同样更新，应采用（ ）。",
+            "options": {
+              "A": "写直达",
+              "B": "写回",
+              "C": "只读",
+              "D": "不写分配"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-027",
+            "stem": "Cache容量通常远小于主存，但访问速度更接近CPU。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-028",
+            "stem": "直接映射Cache允许任意主存块放入任意Cache行。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-029",
+            "stem": "采用写回策略时，修改后的Cache块可先标记为脏块，淘汰时再写入主存。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-043",
+            "stem": "为什么容量远小于主存的Cache仍能明显提高平均访问速度？说明依据和边界。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "sp-core-co-044",
+            "stem": "比较直接映射、全相联和组相联的主要特点与取舍。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "uc-co-010",
+            "stem": "关于Cache，下列说法正确的有（ ）。",
+            "options": {
+              "A": "直接映射实现简单但可能有较多冲突失效",
+              "B": "提高相联度通常能减少冲突失效",
+              "C": "写回法需要脏位判断淘汰时是否写主存",
+              "D": "Cache容量增大必然消除所有强制失效"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "hn-recall-sy26-001",
+            "stem": "直接映射Cache仅有2行、初始均无效，主存块号读取序列为0、1、0、2、0，块b映射到行b mod 2。写出每次命中/未命中、访问后两行的块号及最终命中率。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t10"
+          },
+          {
+            "id": "gap-co-005",
+            "stem": "某系统按字节编址，页面大小4KiB，虚拟地址的页内偏移需要________位。",
+            "options": {},
+            "type": "填空",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t14"
+          },
+          {
+            "id": "gap-co-006",
+            "stem": "依次说明TLB未命中、Cache未命中和缺页后通常去哪里继续查找。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t14"
+          },
+          {
+            "id": "gap-co-008",
+            "stem": "TLB查询1ns，主存访问100ns，TLB命中率90%。采用一级页表，忽略Cache与缺页，TLB命中需一次主存，未命中需先访问一次主存查页表再访问数据。求串行模型平均时间。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t14"
+          },
+          {
+            "id": "ap-co-006",
+            "stem": "访问一个已有效驻留主存的页面时，TLB中没有其转换项；随后查页表得到页框，数据也未命中当前Cache。说明这次涉及哪些未命中，是否必然访问磁盘，以及接下来怎样取到数据。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t14"
+          },
+          {
+            "id": "uc-co-015",
+            "stem": "TLB未命中、Cache未命中和缺页是同一种事件，都会直接访问磁盘。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t14"
+          },
+          {
+            "id": "gap-co-012",
+            "stem": "32位字节地址，Cache数据容量16KB，块64B，4路组相联。求块内偏移、组索引和标记位数。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t15"
+          },
+          {
+            "id": "uc-co-004",
+            "stem": "32位字节地址，Cache数据容量16 KB，块大小64 B，采用4路组相联。组索引位数为（ ）。",
+            "options": {
+              "A": "6",
+              "B": "8",
+              "C": "4",
+              "D": "10"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t15"
+          },
+          {
+            "id": "gap-accept-card-core-24-1",
+            "stem": "Cache命中查询1ns；未命中从开始查询直到取回总计41ns；命中率95%。串行模型平均访问时间是多少？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t16"
+          },
+          {
+            "id": "uc-co-005",
+            "stem": "某Cache命中时间2 ns，失效率5%，失效代价为60 ns。按AMAT=命中时间+失效率×失效代价，平均访问时间为（ ）。",
+            "options": {
+              "A": "5 ns",
+              "B": "3 ns",
+              "C": "62 ns",
+              "D": "60 ns"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t16"
+          },
+          {
+            "id": "gap-co-textbook-05-1",
+            "stem": "4路低位交叉存储按字地址编排，字地址13的模块号与模块内地址是多少？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t23"
+          },
+          {
+            "id": "gap-co-textbook-05-2",
+            "stem": "4路低位交叉存储中，顺序访问0、1、2、3和访问0、4、8、12，哪组更易并行？说明原因。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t23"
+          },
+          {
+            "id": "gap-co-textbook-06-1",
+            "stem": "4个数据位用普通汉明码纠正单比特错，至少需几个校验位？写不等式。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t24"
+          },
+          {
+            "id": "gap-co-textbook-06-2",
+            "stem": "偶校验能否保证发现两个位同时翻转？普通汉明码遇双错能否无条件纠正？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t24"
+          },
+          {
+            "id": "gap-co-textbook-07-1",
+            "stem": "7200rpm磁盘平均寻道6ms，平均传输1ms，忽略其他开销，平均访问时间约多少？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t25"
+          },
+          {
+            "id": "gap-co-textbook-07-2",
+            "stem": "传统CHS模型每柱面4磁头、每磁道16扇区，LBA=70，柱面和磁头从0编号、扇区从1编号，位置是什么？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t25"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c09",
+          "title": "第5章 输入输出系统"
+        },
+        "questions": [
+          {
+            "id": "uf-co-008",
+            "stem": "DMA方式适合高速块设备，因为它可以（ ）。",
+            "options": {
+              "A": "由DMA控制器在主存与设备间成批传送，减少CPU逐字干预",
+              "B": "完全取消中断和总线",
+              "C": "让设备直接执行用户程序",
+              "D": "只传送一个位"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "ap-co-003",
+            "stem": "DMA可以在设备和主存之间成块传送数据，但CPU通常仍要设置传送参数并处理完成状态。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "ap-co-005",
+            "stem": "简述CPU响应外部设备中断的一般过程，并说明中断方式为什么比程序查询方式更有利于提高CPU利用率。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "sp-core-co-011",
+            "stem": "CPU响应中断后要找到相应服务程序入口，通常借助（ ）。",
+            "options": {
+              "A": "中断向量",
+              "B": "数据总线位宽",
+              "C": "文件目录",
+              "D": "页内偏移"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "sp-core-co-032",
+            "stem": "采用中断方式后，CPU无需像程序查询那样持续轮询设备状态，可先执行其他任务。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "sp-core-co-034",
+            "stem": "统一编址一定比独立编址传输更快，因为它占用了存储地址空间。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "sp-core-co-046",
+            "stem": "键盘偶尔输入、高速磁盘成块传输分别更适合查询、中断还是DMA？说明选择原因和CPU参与边界。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "uc-co-012",
+            "stem": "关于DMA方式，下列说法正确的有（ ）。",
+            "options": {
+              "A": "适合设备与主存之间成批传输",
+              "B": "传输前通常由CPU设置地址和长度",
+              "C": "DMA控制器可能通过周期挪用取得总线",
+              "D": "每传一个字节都必须由CPU执行搬运指令"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13"
+          },
+          {
+            "id": "gap-co-textbook-08-1",
+            "stem": "CPU要判断键盘接口是否已有新字符、读取字符、允许中断，分别主要访问哪类寄存器？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t26"
+          },
+          {
+            "id": "sp-core-co-012",
+            "stem": "将设备控制寄存器放入存储地址空间并使用访存指令访问，属于（ ）。",
+            "options": {
+              "A": "统一编址",
+              "B": "独立编址",
+              "C": "立即寻址",
+              "D": "虚拟寻址"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t26"
+          },
+          {
+            "id": "gap-co-textbook-09-1",
+            "stem": "CPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t27"
+          },
+          {
+            "id": "gap-co-textbook-09-2",
+            "stem": "程序查询到设备READY=0时为何不能直接读数据作为新输入？若查询间隔太长有什么风险？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t27"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c02",
+          "title": "第6章 计算机的运算方法"
+        },
+        "questions": [
+          {
+            "id": "gap-co-001",
+            "stem": "十六进制数2D转换为8位二进制是________。",
+            "options": {},
+            "type": "填空",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t03"
+          },
+          {
+            "id": "sp-core-co-002",
+            "stem": "要在同一系统中统一表示汉字、英文和多种语言字符，主要应采用（ ）。",
+            "options": {
+              "A": "Unicode编码体系",
+              "B": "仅7位ASCII",
+              "C": "十进制补码",
+              "D": "BCD码"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t03"
+          },
+          {
+            "id": "sp-core-co-038",
+            "stem": "32位整数0x12345678按小端方式保存在4个连续字节中。按地址从低到高写出四个字节的十六进制值，以空格分隔，不写0x。",
+            "options": {},
+            "type": "填空",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t03"
+          },
+          {
+            "id": "uf-co-002",
+            "stem": "8位补码01111111加00000001的结果发生（ ）。",
+            "options": {
+              "A": "无溢出，结果128",
+              "B": "正溢出",
+              "C": "负溢出",
+              "D": "进位等于溢出"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t04"
+          },
+          {
+            "id": "gap-co-010",
+            "stem": "写出8位补码−5，并判断8位补码127+1是否溢出，说明理由。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t04"
+          },
+          {
+            "id": "sp-core-co-003",
+            "stem": "对8位补码数进行符号扩展到16位时，应当（ ）。",
+            "options": {
+              "A": "在高位复制原符号位",
+              "B": "高8位始终补0",
+              "C": "低8位全部取反",
+              "D": "删除原符号位"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t04"
+          },
+          {
+            "id": "uc-co-001",
+            "stem": "8位补码11110110表示的十进制真值是（ ）。",
+            "options": {
+              "A": "-10",
+              "B": "-9",
+              "C": "246",
+              "D": "10"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t04"
+          },
+          {
+            "id": "gap-co-002",
+            "stem": "按常见规格化二进制浮点模型，说明符号位、阶码和尾数分别主要决定什么。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t05"
+          },
+          {
+            "id": "gap-co-003",
+            "stem": "浮点数能够表示很大的范围，因此范围内每个实数都能被精确表示。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t05"
+          },
+          {
+            "id": "gap-co-007",
+            "stem": "IEEE 754单精度位串0｜10000001｜01000000000000000000000表示的十进制数是多少？写出阶码和尾数过程。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t05"
+          },
+          {
+            "id": "gap-co-textbook-10-1",
+            "stem": "8位补码11110100算术右移一位得到什么位串和真值？若逻辑右移呢？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t28"
+          },
+          {
+            "id": "gap-co-textbook-10-2",
+            "stem": "8位补码01111110左移一位得到11111100，能否解释为126×2的正确有符号结果？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t28"
+          },
+          {
+            "id": "gap-co-textbook-11-1",
+            "stem": "按移位相加计算无符号6×3，写出两次非零部分积与最终8位结果。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t29"
+          },
+          {
+            "id": "gap-co-textbook-11-2",
+            "stem": "无符号4位15×15若只留4位，得到的位串是否代表真实积？写真实积和至少需要的积宽。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t29"
+          },
+          {
+            "id": "gap-co-textbook-12-1",
+            "stem": "用无符号逐位试商计算11÷3，给出商、余数和验证式。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t30"
+          },
+          {
+            "id": "gap-co-textbook-12-2",
+            "stem": "不恢复余数法最终商已形成但余数为−2、除数为3，最终余数应如何修正？为什么不能直接报−2？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t30"
+          },
+          {
+            "id": "gap-co-textbook-13-1",
+            "stem": "用二进制规格化过程计算6+2.5，写对阶、尾数加法和规格化三步。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t31"
+          },
+          {
+            "id": "gap-co-textbook-13-2",
+            "stem": "1.1₂×2²−1.01₂×2¹，对阶后得0.111₂×2²，规格化应怎样调整，真值多少？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t31"
+          },
+          {
+            "id": "gap-co-textbook-14-1",
+            "stem": "ALU要用同一加法器完成A+B和A−B，怎样处理B与最低位输入进位？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t32"
+          },
+          {
+            "id": "uc-co-002",
+            "stem": "8位加法器计算01111100+00001000，结果10000100。CF表示最高位向外进位，OF表示把操作数作为8位补码时的有符号溢出。CF与OF分别为（ ）。",
+            "options": {
+              "A": "CF=0，OF=1",
+              "B": "CF=1，OF=0",
+              "C": "CF=0，OF=0",
+              "D": "CF=1，OF=1"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t32"
+          },
+          {
+            "id": "gap-co-textbook-booth-01",
+            "stem": "用4位补码Booth算法计算−2×3。设M=1110、A=0000、Q=0011、附加位q=0，每轮先按(Q最低位,q)执行01加M、10减M、00/11不加，再对A、Q、q整体算术右移。写出前两轮移位后的A/Q/q，以及4轮结束后的8位乘积。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t40"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c03",
+          "title": "第7章 指令系统"
+        },
+        "questions": [
+          {
+            "id": "uf-co-005",
+            "stem": "指令中给出的地址是操作数所在存储单元地址，这种方式是（ ）。",
+            "options": {
+              "A": "立即寻址",
+              "B": "直接寻址",
+              "C": "间接寻址",
+              "D": "寄存器寻址"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "gap-audit26-system-006",
+            "stem": "某指令地址字段A=40，寄存器R=100，主存M[40]=300、M[100]=500。分别求立即、直接、寄存器和寄存器间接寻址得到的操作数；寄存器方式均使用R。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "sp-core-co-005",
+            "stem": "指令地址字段中直接给出操作数本身，这种寻址方式是（ ）。",
+            "options": {
+              "A": "立即寻址",
+              "B": "直接寻址",
+              "C": "间接寻址",
+              "D": "相对寻址"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "sp-core-co-006",
+            "stem": "若某寄存器中保存的是操作数所在主存单元的地址，则属于（ ）。",
+            "options": {
+              "A": "寄存器间接寻址",
+              "B": "寄存器寻址",
+              "C": "立即寻址",
+              "D": "隐含寻址"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "sp-core-co-017",
+            "stem": "RISC处理器常见的设计倾向包括（ ）。",
+            "options": {
+              "A": "指令格式较规整",
+              "B": "寻址方式较少",
+              "C": "采用Load/Store结构",
+              "D": "每条指令在任何机器上都保证一个周期完成"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "uc-co-006",
+            "stem": "某相对寻址指令执行时PC内容为1000，指令地址字段是补码表示的-20，则有效地址EA为（ ）。",
+            "options": {
+              "A": "980",
+              "B": "1020",
+              "C": "-20",
+              "D": "1000"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "uc-co-013",
+            "stem": "RISC通常强调规整指令格式、较少寻址方式和Load/Store结构，但这不等于每条指令在任何实现中都只需一个时钟周期。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07"
+          },
+          {
+            "id": "gap-co-textbook-15-1",
+            "stem": "32位指令包含6位操作码、两个5位寄存器字段，余位为补码立即数。立即数位数和范围是什么？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t33"
+          },
+          {
+            "id": "uc-co-007",
+            "stem": "若采用定长操作码，要表示至少50种操作，操作码字段最少需要（ ）。",
+            "options": {
+              "A": "6位",
+              "B": "5位",
+              "C": "7位",
+              "D": "50位"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t33"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c10",
+          "title": "第8章 CPU的结构和功能"
+        },
+        "questions": [
+          {
+            "id": "ap-co-001",
+            "stem": "在典型取指过程中，下列信息流向最合理的是（ ）。",
+            "options": {
+              "A": "PC→MAR→主存→MDR→IR",
+              "B": "IR→PC→ALU→键盘",
+              "C": "MDR→MAR→PC→打印机",
+              "D": "主存→MAR→PC→IR"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-004",
+            "stem": "CPU准备访问主存某单元时，用于暂存该单元地址的寄存器通常是（ ）。",
+            "options": {
+              "A": "MAR",
+              "B": "MDR",
+              "C": "IR",
+              "D": "ACC"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-010",
+            "stem": "完成一条指令从取指到执行结束所经历的全部时间称为（ ）。",
+            "options": {
+              "A": "指令周期",
+              "B": "时钟频率",
+              "C": "字长",
+              "D": "寻址空间"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-014",
+            "stem": "下列部件及其作用对应正确的有（ ）。",
+            "options": {
+              "A": "PC保存下一条待取指令地址",
+              "B": "IR保存当前指令",
+              "C": "ALU执行算术与逻辑运算",
+              "D": "MDR只保存文件名"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-020",
+            "stem": "指令寄存器IR通常保存当前正在译码或执行的指令。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-021",
+            "stem": "ALU只能进行加减乘除，不能执行与、或、异或等逻辑运算。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-033",
+            "stem": "除零异常通常由外部设备异步产生，与当前正在执行的指令无关。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "sp-core-co-040",
+            "stem": "执行一次加法指令时，CPU内部通常有哪些部件参与？按信息流说明作用。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06"
+          },
+          {
+            "id": "uf-co-007",
+            "stem": "流水线中常见相关包括（ ）。",
+            "options": {
+              "A": "结构相关",
+              "B": "数据相关",
+              "C": "控制相关",
+              "D": "文件相关"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t11"
+          },
+          {
+            "id": "sp-core-co-030",
+            "stem": "流水线各阶段耗时很不均衡时，最长阶段会限制时钟周期，流水效率可能下降。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t11"
+          },
+          {
+            "id": "sp-core-co-045",
+            "stem": "在指令流水线中，后一条指令需要使用前一条指令尚未产生的运算结果，这属于（ ）。",
+            "options": {
+              "A": "结构冲突",
+              "B": "数据冲突",
+              "C": "控制冲突",
+              "D": "存储容量不足"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t11"
+          },
+          {
+            "id": "uc-co-011",
+            "stem": "判断下面三种流水线现象：①ADD产生R1后紧随的SUB要读取尚未就绪的R1；②两条指令同时争用唯一存储端口；③分支结果未定，下一取指方向未知。对应正确的有（ ）。",
+            "options": {
+              "A": "①属于数据冒险",
+              "B": "②属于结构冒险",
+              "C": "③属于控制冒险",
+              "D": "数据转发可自动消除②③的一切问题"
+            },
+            "type": "多选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t11"
+          },
+          {
+            "id": "uc-co-008",
+            "stem": "理想5段等长流水线，每段1 ns，完成20条指令所需时间为（ ）。",
+            "options": {
+              "A": "24 ns",
+              "B": "100 ns",
+              "C": "20 ns",
+              "D": "25 ns"
+            },
+            "type": "单选",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t17"
+          },
+          {
+            "id": "uc-co-014",
+            "stem": "采用流水线后，主要目标是提高指令吞吐率，单条指令从开始到结束的延迟不一定缩短。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t17"
+          },
+          {
+            "id": "gap-co-009",
+            "stem": "5段流水处理10条指令，时钟周期1.6ns，执行中共插入2个停顿周期。求总周期数和总时间。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t18"
+          },
+          {
+            "id": "sp-core-co-031",
+            "stem": "数据转发可以缓解部分数据相关，但不能自动消除所有结构冲突和控制冲突。（ ）",
+            "options": {},
+            "type": "判断",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t18"
+          },
+          {
+            "id": "gap-co-textbook-16-1",
+            "stem": "B服务期间A请求，A优先级更高且未屏蔽、允许嵌套，执行返回顺序是什么？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t34"
+          },
+          {
+            "id": "gap-co-textbook-16-2",
+            "stem": "中断服务尚未保护返回地址和寄存器就开放嵌套，可能出现什么问题？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t34"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c05",
+          "title": "第9章 控制单元的功能"
+        },
+        "questions": [
+          {
+            "id": "gap-co-textbook-17-1",
+            "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c05",
+            "topic_id": "computer-organization.t35"
+          },
+          {
+            "id": "gap-co-textbook-17-2",
+            "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c05",
+            "topic_id": "computer-organization.t35"
+          },
+          {
+            "id": "gap-co-textbook-18-1",
+            "stem": "在READ_WAIT状态，READY=0与READY=1时分别如何转移？为什么？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c05",
+            "topic_id": "computer-organization.t36"
+          },
+          {
+            "id": "gap-co-textbook-18-2",
+            "stem": "为什么只知道当前指令是ADD仍不足以确定本拍全部控制信号？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c05",
+            "topic_id": "computer-organization.t36"
+          }
+        ]
+      },
+      {
+        "chapter": {
+          "chapter_id": "computer-organization.c11",
+          "title": "第10章 控制单元的设计"
+        },
+        "questions": [
+          {
+            "id": "gap-co-textbook-19-1",
+            "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t37"
+          },
+          {
+            "id": "gap-co-textbook-19-2",
+            "stem": "设计硬布线控制器，为何在列状态表前应先明确单总线还是多总线、ALU输入通路？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t37"
+          },
+          {
+            "id": "gap-co-textbook-20-1",
+            "stem": "控存公共取指入口00，ADD执行入口20，ADD微程序结束应回00。这里回00是否把用户程序PC清0？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t38"
+          },
+          {
+            "id": "gap-co-textbook-20-2",
+            "stem": "写出三种下一微地址来源，并解释条件等待态为何可指向自身。",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t38"
+          },
+          {
+            "id": "gap-co-textbook-21-1",
+            "stem": "同一微指令字段需选择4种互斥动作之一或不动作，最少几位？为什么不是2位？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t39"
+          },
+          {
+            "id": "gap-co-textbook-21-2",
+            "stem": "控制存储器64条微指令，每条24位，容量多少bit与B？若要直接编码64个下地址，需几位？",
+            "options": {},
+            "type": "简答",
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t39"
+          }
+        ]
+      }
+    ]
+  },
+  "final_6_1_retest": [
+    {
+      "width": 390,
+      "theme": "light",
+      "build": "8572758aa5cb52c0",
+      "negative_codes": [
+        "10000101",
+        "11111010",
+        "11111011"
+      ],
+      "styles": [
+        {
+          "text": "位权：二进制整数从右向左权为1、2、4、8…，小数点右为1/2、1/4、1/8…；101101₂=45，0.101₂=0.625。",
+          "bodyColor": "rgb(36, 52, 59)",
+          "labelColor": "rgb(179, 68, 59)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "互换：二进制每3位一组对应八进制、每4位对应十六进制，从小数点向两边分组；0010 1101₂=2D₁₆。整数高位、小数低位可补0。",
+          "bodyColor": "rgb(36, 52, 59)",
+          "labelColor": "rgb(66, 107, 146)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "十进制转二进制：整数除2倒读余数，13→1101；小数乘2顺取整数，0.625→1.25取1→0.5取0→1取1，得0.101。不能有限表示的小数需指定精度。",
+          "bodyColor": "rgb(36, 52, 59)",
+          "labelColor": "rgb(66, 107, 146)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        }
+      ],
+      "raw_comment_leak": false,
+      "generic_chapter_badges": false,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\co_exam_final_390_light_6.png",
+      "marks": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "build": "8572758aa5cb52c0",
+      "negative_codes": [
+        "10000101",
+        "11111010",
+        "11111011"
+      ],
+      "styles": [
+        {
+          "text": "位权：二进制整数从右向左权为1、2、4、8…，小数点右为1/2、1/4、1/8…；101101₂=45，0.101₂=0.625。",
+          "bodyColor": "rgb(231, 238, 240)",
+          "labelColor": "rgb(232, 161, 151)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "互换：二进制每3位一组对应八进制、每4位对应十六进制，从小数点向两边分组；0010 1101₂=2D₁₆。整数高位、小数低位可补0。",
+          "bodyColor": "rgb(231, 238, 240)",
+          "labelColor": "rgb(159, 191, 219)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "十进制转二进制：整数除2倒读余数，13→1101；小数乘2顺取整数，0.625→1.25取1→0.5取0→1取1，得0.101。不能有限表示的小数需指定精度。",
+          "bodyColor": "rgb(231, 238, 240)",
+          "labelColor": "rgb(159, 191, 219)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        }
+      ],
+      "raw_comment_leak": false,
+      "generic_chapter_badges": false,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\co_exam_final_390_dark_6.png",
+      "marks": []
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "build": "8572758aa5cb52c0",
+      "negative_codes": [
+        "10000101",
+        "11111010",
+        "11111011"
+      ],
+      "styles": [
+        {
+          "text": "位权：二进制整数从右向左权为1、2、4、8…，小数点右为1/2、1/4、1/8…；101101₂=45，0.101₂=0.625。",
+          "bodyColor": "rgb(36, 52, 59)",
+          "labelColor": "rgb(179, 68, 59)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "互换：二进制每3位一组对应八进制、每4位对应十六进制，从小数点向两边分组；0010 1101₂=2D₁₆。整数高位、小数低位可补0。",
+          "bodyColor": "rgb(36, 52, 59)",
+          "labelColor": "rgb(66, 107, 146)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "十进制转二进制：整数除2倒读余数，13→1101；小数乘2顺取整数，0.625→1.25取1→0.5取0→1取1，得0.101。不能有限表示的小数需指定精度。",
+          "bodyColor": "rgb(36, 52, 59)",
+          "labelColor": "rgb(66, 107, 146)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        }
+      ],
+      "raw_comment_leak": false,
+      "generic_chapter_badges": false,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\co_exam_final_1280_light_6.png",
+      "marks": []
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "build": "8572758aa5cb52c0",
+      "negative_codes": [
+        "10000101",
+        "11111010",
+        "11111011"
+      ],
+      "styles": [
+        {
+          "text": "位权：二进制整数从右向左权为1、2、4、8…，小数点右为1/2、1/4、1/8…；101101₂=45，0.101₂=0.625。",
+          "bodyColor": "rgb(231, 238, 240)",
+          "labelColor": "rgb(232, 161, 151)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "互换：二进制每3位一组对应八进制、每4位对应十六进制，从小数点向两边分组；0010 1101₂=2D₁₆。整数高位、小数低位可补0。",
+          "bodyColor": "rgb(231, 238, 240)",
+          "labelColor": "rgb(159, 191, 219)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        },
+        {
+          "text": "十进制转二进制：整数除2倒读余数，13→1101；小数乘2顺取整数，0.625→1.25取1→0.5取0→1取1，得0.101。不能有限表示的小数需指定精度。",
+          "bodyColor": "rgb(231, 238, 240)",
+          "labelColor": "rgb(159, 191, 219)",
+          "bodyWeight": "400",
+          "labelWeight": "800"
+        }
+      ],
+      "raw_comment_leak": false,
+      "generic_chapter_badges": false,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\co_exam_final_1280_dark_6.png",
+      "marks": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "exam-co-01",
+      "severity": "压缩造成先修回退",
+      "finding": "f072的6.1提正数原反补一致与原码±0，却没教负数原码/反码规则。",
+      "fix": "两短条补原码/反码并以−5三串对照；不加长为教材段落。",
+      "status": "857四环境实页通过，阻断闭合"
+    },
+    {
+      "id": "exam-co-02",
+      "severity": "导航事实",
+      "finding": "章练原生返回先回练习方式hub，再回讲义，需要两步。",
+      "status": "与app原生history设计一致，40环境均回原章；未把两步冒称一步。"
+    },
+    {
+      "id": "exam-co-03",
+      "severity": "非阻塞备考体验建议",
+      "finding": "第4/6章默认完整表需要多屏；标题已能快速找到任务，横表可横向阅读。",
+      "status": "不建议一刀切继续删字或折叠；目前机制/条件与重点步骤优先保留。"
+    }
+  ],
+  "pending_root_only": "root在6.1另补一条具体test考法标记，机制内容未再改；最终hash及该标记由root单点复验，本报告不冒称已看最终新hash。",
+  "remaining_teaching_blockers": [],
+  "lecture_sha256": "8d310829d4d911935cba8ed27526eed57eae4e93be453d4fd0c27298fc29b827"
+}

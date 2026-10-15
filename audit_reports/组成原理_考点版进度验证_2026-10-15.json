@@ -1,0 +1,40 @@
+{
+  "build": "90b653aba948d514",
+  "checks": [
+    "all 18 old ratings follow topic IDs; no new topic inherits mastery",
+    "quiz records and other courses preserved",
+    "old completions archived; expanded chapters require rereading",
+    "recent lesson moved by topic ID",
+    "home, mobile and due-card links carry current layout revision",
+    "migration is idempotent on reload",
+    {
+      "route": "notes.html&chapter=3",
+      "chapter": 8,
+      "topic": null
+    },
+    {
+      "route": "notes.html&chapter=3&layout=tang3-10-chapters-v1",
+      "chapter": 3,
+      "topic": null
+    },
+    {
+      "route": "color-notes.html&chapter=3&card=2",
+      "chapter": 7,
+      "topic": "computer-organization.t07"
+    },
+    {
+      "route": "color-notes.html&chapter=7&card=1",
+      "chapter": 4,
+      "topic": "computer-organization.t14"
+    },
+    {
+      "route": "color-notes.html&chapter=3&topic=computer-organization.t40",
+      "chapter": 6,
+      "topic": "computer-organization.t40"
+    },
+    "all 40 topic links retain their card after refresh",
+    "browser native back returns from course to home"
+  ],
+  "errors": [],
+  "real_device": false
+}

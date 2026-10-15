@@ -1,4 +1,5 @@
 """Browser regression for textbook regrouping and existing learning records."""
+import argparse
 import functools
 import http.server
 import json
@@ -12,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COURSE = '计算机组成原理'
 
 
-def main():
+def main(report_path='audit_reports/组成原理_旧进度迁移_2026-10-15.json'):
     course = next(c for c in json.loads((ROOT/'learning-map.json').read_text(encoding='utf-8'))['courses'] if c['course_name'] == COURSE)
     revision = course['layout_revision']
     old = course['previous_layout']
@@ -93,9 +94,11 @@ def main():
         server.shutdown()
     assert not errors, errors
     report = {'build': (ROOT/'dist/build-meta.js').read_text(encoding='utf-8').split('"id":"')[1].split('"')[0], 'checks': checks, 'errors': errors, 'real_device': False}
-    (ROOT/'audit_reports/组成原理_旧进度迁移_2026-10-15.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (ROOT/report_path).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False))
 
 
 if __name__ == '__main__':
-    main()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--report',default='audit_reports/组成原理_旧进度迁移_2026-10-15.json')
+    main(parser.parse_args().report)

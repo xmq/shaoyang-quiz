@@ -306,6 +306,7 @@
     .red { color: var(--red); font-weight: 750; }
     .blue { color: var(--blue); font-weight: 750; }
     .black { color: var(--black); }
+    .lecture-line { color: var(--text); }
     .recall-answer { display: inline; }
     .study.recall-mode .note :is(.red, .blue, .black):not(.recall-revealed) {
       display: inline-block;
@@ -444,6 +445,11 @@
       color: var(--deep);
     }
     .lecture-page .note strong { color: var(--deep); font-weight: 800; }
+    .lecture-page .note .lecture-core > strong { color: var(--red); }
+    .lecture-page .note .lecture-method > strong { color: var(--blue); }
+    .lecture-page .note .lecture-caution > strong { color: var(--black); }
+    .lecture-page .note .test-point { margin: 6px 0 14px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .lecture-page .note .test-point strong { color: var(--blue); font-weight: 750; }
     .lecture-page .note code { border: 1px solid #d8e6f3; background: #eef5fb; color: #174f78; font-weight: 650; }
     .lecture-callout {
       margin: 16px 0 !important;
@@ -1044,6 +1050,9 @@
         const className = marker[1] === "🔴" ? "red" : marker[1] === "🔵" ? "blue" : "black";
         const recallRole = className === "red" ? "结论" : className === "blue" ? "方法与步骤" : "条件与易错";
         output = `<span class="${className}" data-recall-cue="${recallRole}"><span class="recall-answer">${output}</span></span>`;
+      } else if (marker) {
+        const kind = marker[1] === "🔴" ? "core" : marker[1] === "🔵" ? "method" : "caution";
+        output = `<span class="lecture-line lecture-${kind}">${output}</span>`;
       }
       return output;
     }
@@ -1219,6 +1228,7 @@
         const plainChapter = trimmed.match(/^第[一二三四五六七八九十百\d]+(?:章|节|篇|部分)[：:]?.*$/);
         const plainPoint = trimmed.match(/^(?:考点|专题|模块)\s*\d+[：:]?.*$/);
         const examMarker = trimmed.match(/^<!--\s*exam:\s*([ABC])\s*\|\s*(.+?)\s*-->$/i);
+        const testMarker = trimmed.match(/^<!--\s*test:\s*(.+?)\s*\|\s*(.+?)\s*-->$/i);
 
         if (markdownH2 || plainChapter) {
           closeChapter();
@@ -1233,11 +1243,14 @@
             break;
           }
           const levelLabels = {A: "课程核心", B: "课程基础", C: "课程拓展"};
-          const examHtml = !colorMode && marker
+          const examHtml = !colorMode && marker && !lines.some(line => /^<!--\s*test:/.test(line.trim()))
             ? `<span class="exam-meta"><span class="exam-level level-${marker[1].toLowerCase()}">${levelLabels[marker[1].toUpperCase()]}</span><span class="exam-types">练习形式：${formatInline(marker[2].replace(/[、，]/g, " · "))}</span></span>`
             : "";
           output.push(`<section class="chapter-section"><h2 class="chapter-heading"><button class="chapter-toggle" type="button" aria-expanded="true"><span class="chapter-heading-copy"><span class="chapter-title">${formatInline(title)}</span>${examHtml}</span><span class="chapter-chevron" aria-hidden="true">▾</span></button></h2><div class="chapter-body">`);
           chapterOpen = true;
+        } else if (testMarker) {
+          closeList();
+          output.push(`<p class="test-point"><strong>可能考 · ${formatInline(testMarker[1].replace(/[、，]/g, " / "))}</strong>　${formatInline(testMarker[2])}</p>`);
         } else if (examMarker) {
           index += 1;
           continue;
