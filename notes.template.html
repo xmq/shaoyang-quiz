@@ -1915,7 +1915,10 @@
     window.addEventListener("popstate", (event) => {
       applyLocation();
     });
-    window.addEventListener("pageshow", () => closeMobileNav({restoreFocus: false}));
+    window.addEventListener("pageshow", (event) => {
+      closeMobileNav({restoreFocus: false});
+      if (event.persisted) applyLocation();
+    });
     closeMobileNav();
     backButton.textContent = mobileMedia.matches ? "课程" : "换科目";
     prepareStudyHistory();
@@ -1923,12 +1926,6 @@
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
       window.addEventListener("load", () => {
-        let reloading = false;
-        navigator.serviceWorker.addEventListener("controllerchange", () => {
-          if (reloading) return;
-          reloading = true;
-          location.reload();
-        });
         navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).then((registration) => {
           if (registration.waiting) registration.waiting.postMessage("SKIP_WAITING");
           registration.update().catch(() => {});

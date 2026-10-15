@@ -149,35 +149,49 @@
 
   function bindCourseLinks() {
     document.querySelectorAll("[data-course-name]").forEach((link) => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const courseName = link.dataset.courseName;
         try {
-          localStorage.setItem("shaoyang-selected-course-v1", link.dataset.courseName);
+          localStorage.setItem("shaoyang-selected-course-v1", courseName);
         } catch {}
+        updateMobileLinks(courseName);
+        document.querySelectorAll(".home-course-card").forEach((card) => {
+          card.classList.toggle("is-current", card.contains(link));
+        });
+        location.assign(link.href);
       });
     });
   }
 
-  function bindCourseFilters() {
+  function applyCourseFilter(filter) {
     const buttons = [...document.querySelectorAll("[data-course-filter]")];
     const groups = [...document.querySelectorAll("[data-course-group]")];
+    buttons.forEach((item) => item.setAttribute("aria-selected", String(item.dataset.courseFilter === filter)));
+    groups.forEach((group) => { group.hidden = filter !== "all" && group.dataset.courseGroup !== filter; });
+    document.getElementById("home-course-grid").dataset.activeFilter = filter;
+  }
+
+  function bindCourseFilters() {
+    const buttons = [...document.querySelectorAll("[data-course-filter]")];
     buttons.forEach((button) => button.addEventListener("click", () => {
-      const filter = button.dataset.courseFilter;
-      buttons.forEach((item) => item.setAttribute("aria-selected", String(item === button)));
-      groups.forEach((group) => { group.hidden = filter !== "all" && group.dataset.courseGroup !== filter; });
-      document.getElementById("home-course-grid").dataset.activeFilter = filter;
+      applyCourseFilter(button.dataset.courseFilter);
     }));
+  }
+
+  function renderHome() {
+    const root = document.getElementById("home-course-grid");
+    const activeFilter = root.dataset.activeFilter || "all";
+    const courseName = selectedCourseName();
+    updateMobileLinks(courseName);
+    buildCourseGrid(readProgress(), readLectureProgress());
+    bindCourseLinks();
+    applyCourseFilter(activeFilter);
   }
 
   function registerServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
-      const hadController = Boolean(navigator.serviceWorker.controller);
-      let reloading = false;
-      navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (!hadController || reloading) return;
-        reloading = true;
-        location.reload();
-      });
       navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).then((registration) => {
         if (registration.waiting) registration.waiting.postMessage("SKIP_WAITING");
         registration.addEventListener("updatefound", () => {
@@ -191,12 +205,12 @@
     });
   }
 
-  const progress = readProgress();
-  const lectureProgress = readLectureProgress();
   document.getElementById("home-reset").addEventListener("click", () => window.clearStudyData());
-  updateMobileLinks(selectedCourseName());
-  buildCourseGrid(progress, lectureProgress);
-  bindCourseLinks();
   bindCourseFilters();
+  renderHome();
+  window.addEventListener("pageshow", renderHome);
+  window.addEventListener("storage", (event) => {
+    if (!event.key || event.key === "shaoyang-selected-course-v1" || event.key === "shaoyang-last-learning") renderHome();
+  });
   registerServiceWorker();
 })();
