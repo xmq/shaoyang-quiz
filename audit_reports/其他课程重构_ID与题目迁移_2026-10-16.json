@@ -1,0 +1,93 @@
+{
+  "baseline_commit": "3183bc50ed29e4d78fe8ea7bbbe4643b6ab8b7a9",
+  "old_topics_preserved": 357,
+  "new_topics": 28,
+  "old_question_ids_preserved": 2497,
+  "all_old_correct_answers_unchanged": true,
+  "new_questions": 29,
+  "topic_moves": [
+    {
+      "id": "cg-09-s1-q8",
+      "before": "database.t18",
+      "after": "database.t01"
+    },
+    {
+      "id": "cg-10-s1-q42",
+      "before": "operating-system.t03",
+      "after": "operating-system.t11"
+    },
+    {
+      "id": "cg-10-s1-q66",
+      "before": "operating-system.t02",
+      "after": "operating-system.t06"
+    },
+    {
+      "id": "dy-e222d101",
+      "before": "net.frames-switching",
+      "after": "net.overview"
+    },
+    {
+      "id": "gap-ds-023",
+      "before": "data-structures.t22",
+      "after": "data-structures.t44"
+    },
+    {
+      "id": "gap-final-thin-011",
+      "before": "data-structures.t07",
+      "after": "data-structures.t39"
+    }
+  ],
+  "old_question_revisions": [
+    {
+      "id": "cg-08-s1-q92",
+      "change": "保留异步邮件与实时会话的原考点及答案C，将停运产品名改成通信方式，题干/选项/解析及答案版本相应更新。"
+    },
+    {
+      "id": "gap-audit26-elec-reference",
+      "change": "只修无关评分点；题干、标准答案、解析不变。"
+    },
+    {
+      "id": "gap-pl-008",
+      "change": "核对要点由旧负数除法修为当前题的中点类型和值；题干、标准答案、解析不变。"
+    },
+    {
+      "id": "gap-final-sig-001",
+      "change": "增加明确等价答案1/4；标准答案0.25不变。"
+    },
+    {
+      "id": "uf-cm-018",
+      "change": "在原BPSK/OOK比较题明确两种比特等可能、同一噪声信道的假设，解析同步限定；答案A不变。"
+    }
+  ],
+  "new_topic_question_counts": {
+    "information-security.t21": 1,
+    "database.t22": 1,
+    "multimedia.t19": 1,
+    "database.t21": 1,
+    "data-structures.t39": 1,
+    "computer-foundations.t23": 1,
+    "data-structures.t42": 1,
+    "software-engineering.t24": 1,
+    "information-security.t22": 1,
+    "net.ppp-stuffing": 1,
+    "multimedia.t21": 1,
+    "data-structures.t44": 2,
+    "operating-system.t20": 1,
+    "information-security.t20": 1,
+    "net.snmp-management": 1,
+    "multimedia.t18": 1,
+    "data-structures.t41": 1,
+    "programming.t21": 1,
+    "programming.t19": 1,
+    "programming.t20": 1,
+    "software-engineering.t23": 1,
+    "multimedia.t20": 1,
+    "net.multicast-membership": 1,
+    "data-structures.t43": 1,
+    "information-security.t19": 1,
+    "data-structures.t40": 1,
+    "multimedia.t17": 1,
+    "computer-foundations.t22": 1
+  },
+  "errors": []
+}

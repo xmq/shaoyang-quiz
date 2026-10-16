@@ -40,7 +40,22 @@
     "stem": "同一算法要在长度为7的数组中取首尾下标的中点。low=0、high=6。现代C中int mid=(low+high)/2; 与Python 3中mid=(low+high)/2分别得到什么类型和值？Python怎样写才能得到整数下标？",
     "answer": "C得到int 3；Python 3的/得到float 3.0。Python应写mid=(low+high)//2得到整数3。实际大整数下标还可用low+(high-low)//2形式，避免把C中的low+high溢出风险带入实现。",
     "explanation": "这里即使真除结果恰好是整数，Python的结果类型仍是float，不能直接当普通列表下标。迁移应保持整数下标语义，不是只比较显示数值3与3.0。",
-    "ability": "程序阅读"
+    "ability": "程序阅读",
+    "max_score": 3,
+    "rubric": [
+      {
+        "criterion": "现代C整数除法得到int类型，mid的值为3",
+        "points": 1
+      },
+      {
+        "criterion": "Python 3真除法/得到float类型，值为3.0",
+        "points": 1
+      },
+      {
+        "criterion": "Python用mid=(low+high)//2得到整数下标3；/的float结果不能直接作为普通列表下标",
+        "points": 1
+      }
+    ]
   },
   {
     "id": "sp-core-co-038",

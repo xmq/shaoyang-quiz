@@ -1,0 +1,235 @@
+{
+  "topics": [
+    {
+      "course": "计算机网络",
+      "title": "PPP透明传输的填充与还原",
+      "topic_id": "net.ppp-stuffing",
+      "parent_topic_id": "net.frames-switching",
+      "chapter_id": "net-03"
+    },
+    {
+      "course": "计算机网络",
+      "title": "组播成员与分支转发",
+      "topic_id": "net.multicast-membership",
+      "parent_topic_id": "net.arp-forwarding",
+      "chapter_id": "net-04"
+    },
+    {
+      "course": "计算机网络",
+      "title": "SNMP轮询与主动通知",
+      "topic_id": "net.snmp-management",
+      "parent_topic_id": "net.app-protocols",
+      "chapter_id": "net-06"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "title": "域名访问与网络地址分工",
+      "topic_id": "computer-foundations.t22",
+      "parent_topic_id": "computer-foundations.t07",
+      "chapter_id": "computer-foundations.c03"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "title": "准确率、精确率与召回率",
+      "topic_id": "computer-foundations.t23",
+      "parent_topic_id": "computer-foundations.t13",
+      "chapter_id": "computer-foundations.c06"
+    },
+    {
+      "course": "多媒体技术",
+      "title": "二维变换的顺序",
+      "topic_id": "multimedia.t17",
+      "parent_topic_id": "multimedia.t05",
+      "chapter_id": "multimedia.c03"
+    },
+    {
+      "course": "多媒体技术",
+      "title": "游程编码与压缩条件",
+      "topic_id": "multimedia.t18",
+      "parent_topic_id": "multimedia.t13",
+      "chapter_id": "multimedia.c06"
+    },
+    {
+      "course": "多媒体技术",
+      "title": "哈夫曼编码与前缀解码",
+      "topic_id": "multimedia.t19",
+      "parent_topic_id": "multimedia.t13",
+      "chapter_id": "multimedia.c06"
+    },
+    {
+      "course": "多媒体技术",
+      "title": "JPEG量化与信息损失",
+      "topic_id": "multimedia.t20",
+      "parent_topic_id": "multimedia.t14",
+      "chapter_id": "multimedia.c06"
+    },
+    {
+      "course": "多媒体技术",
+      "title": "预测帧的参考依赖",
+      "topic_id": "multimedia.t21",
+      "parent_topic_id": "multimedia.t14",
+      "chapter_id": "multimedia.c06"
+    },
+    {
+      "course": "信息安全",
+      "title": "物理安全的风险与控制",
+      "topic_id": "information-security.t19",
+      "parent_topic_id": "information-security.t03",
+      "chapter_id": "information-security.c02"
+    },
+    {
+      "course": "信息安全",
+      "title": "分组模式与nonce重用",
+      "topic_id": "information-security.t20",
+      "parent_topic_id": "information-security.t09",
+      "chapter_id": "information-security.c05"
+    },
+    {
+      "course": "信息安全",
+      "title": "全量、增量与差异恢复链",
+      "topic_id": "information-security.t21",
+      "parent_topic_id": "information-security.t14",
+      "chapter_id": "information-security.c07"
+    },
+    {
+      "course": "信息安全",
+      "title": "加密、隐写与数字水印",
+      "topic_id": "information-security.t22",
+      "parent_topic_id": "information-security.t16",
+      "chapter_id": "information-security.c08"
+    },
+    {
+      "course": "数据结构与算法",
+      "title": "二维数组地址计算",
+      "topic_id": "data-structures.t39",
+      "parent_topic_id": "data-structures.t07",
+      "chapter_id": "data-structures.c03"
+    },
+    {
+      "course": "数据结构与算法",
+      "title": "稀疏矩阵快速转置",
+      "topic_id": "data-structures.t40",
+      "parent_topic_id": "data-structures.t07",
+      "chapter_id": "data-structures.c03"
+    },
+    {
+      "course": "数据结构与算法",
+      "title": "广义表长度与深度",
+      "topic_id": "data-structures.t41",
+      "parent_topic_id": "data-structures.t07",
+      "chapter_id": "data-structures.c03"
+    },
+    {
+      "course": "数据结构与算法",
+      "title": "AOE网关键路径",
+      "topic_id": "data-structures.t42",
+      "parent_topic_id": "data-structures.t17",
+      "chapter_id": "data-structures.c05"
+    },
+    {
+      "course": "数据结构与算法",
+      "title": "动态存储分裂与合并",
+      "topic_id": "data-structures.t43",
+      "parent_topic_id": "data-structures.t24",
+      "chapter_id": "data-structures.c08"
+    },
+    {
+      "course": "数据结构与算法",
+      "title": "外部归并与文件组织",
+      "topic_id": "data-structures.t44",
+      "parent_topic_id": "data-structures.t24",
+      "chapter_id": "data-structures.c08"
+    },
+    {
+      "course": "操作系统原理",
+      "title": "读者写者的计数与互斥",
+      "topic_id": "operating-system.t20",
+      "parent_topic_id": "operating-system.t06",
+      "chapter_id": "operating-system.c04"
+    },
+    {
+      "course": "数据库技术",
+      "title": "查询执行与优化",
+      "topic_id": "database.t21",
+      "parent_topic_id": "database.t10",
+      "chapter_id": "database.c06"
+    },
+    {
+      "course": "数据库技术",
+      "title": "多值依赖与4NF",
+      "topic_id": "database.t22",
+      "parent_topic_id": "database.t13",
+      "chapter_id": "database.c07"
+    },
+    {
+      "course": "C与Python程序设计",
+      "title": "预处理与static局部状态",
+      "topic_id": "programming.t19",
+      "parent_topic_id": "programming.t09",
+      "chapter_id": "programming.c07"
+    },
+    {
+      "course": "C与Python程序设计",
+      "title": "二维数组与指针声明",
+      "topic_id": "programming.t20",
+      "parent_topic_id": "programming.t12",
+      "chapter_id": "programming.c09"
+    },
+    {
+      "course": "C与Python程序设计",
+      "title": "CSV转换统计与格式化",
+      "topic_id": "programming.t21",
+      "parent_topic_id": "programming.t18",
+      "chapter_id": "programming.c10"
+    },
+    {
+      "course": "软件工程",
+      "title": "有穷状态机与需求约束",
+      "topic_id": "software-engineering.t23",
+      "parent_topic_id": "software-engineering.t07",
+      "chapter_id": "software-engineering.c03"
+    },
+    {
+      "course": "软件工程",
+      "title": "借阅对象与协作建模",
+      "topic_id": "software-engineering.t24",
+      "parent_topic_id": "software-engineering.t10",
+      "chapter_id": "software-engineering.c04"
+    }
+  ],
+  "new_question_ids": [
+    "gap-course-revision-applied-01-1",
+    "gap-course-revision-applied-02-1",
+    "gap-course-revision-applied-03-1",
+    "gap-course-revision-applied-04-1",
+    "gap-course-revision-applied-05-1",
+    "gap-course-revision-applied-06-1",
+    "gap-course-revision-applied-07-1",
+    "gap-course-revision-applied-08-1",
+    "gap-course-revision-applied-09-1",
+    "gap-course-revision-applied-10-1",
+    "gap-course-revision-applied-11-1",
+    "gap-course-revision-applied-12-1",
+    "gap-course-revision-applied-13-1",
+    "gap-course-revision-applied-14-1",
+    "gap-course-revision-core-02-1",
+    "gap-course-revision-core-03-1",
+    "gap-course-revision-core-04-1",
+    "gap-course-revision-core-05-1",
+    "gap-course-revision-core-06-1",
+    "gap-course-revision-core-07-1",
+    "gap-course-revision-core-08-1",
+    "gap-course-revision-core-09-1",
+    "gap-course-revision-core-10-1",
+    "gap-course-revision-core-11-1",
+    "gap-course-revision-core-12-1",
+    "gap-course-revision-core-13-1",
+    "gap-course-revision-core-14-1",
+    "gap-course-revision-programming-scenario-01",
+    "gap-course-revision-programming-scenario-02"
+  ],
+  "topic_moves": {
+    "gap-final-thin-011": "data-structures.t39"
+  },
+  "question_note": "原创补充练习；对情境、可用条件和干扰项作明确约束，不宣称招聘真题。"
+}

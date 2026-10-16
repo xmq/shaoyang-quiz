@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "name": "absolute-value formulas are prose",
+      "passed": true
+    },
+    {
+      "name": "inline-code formulas are prose",
+      "passed": true
+    },
+    {
+      "name": "standard table with separator",
+      "passed": true
+    },
+    {
+      "name": "table with leading pipes",
+      "passed": true
+    },
+    {
+      "name": "escaped absolute-value bars are prose",
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

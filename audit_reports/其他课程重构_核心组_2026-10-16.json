@@ -1,0 +1,2417 @@
+{
+  "date": "2026-10-16",
+  "status": "本组内容冻结供独立交叉试读；不等于发布验收或指定教材逐章全覆盖",
+  "scope": [
+    "数据结构与算法",
+    "操作系统原理",
+    "数据库技术",
+    "C与Python程序设计",
+    "软件工程"
+  ],
+  "authorship": "本组作者逐章合并/复算；尚未把作者检查冒称独立新生试读",
+  "implementation": {
+    "lecture": "按章重建正式概念/分类/条件，删除被替代旧定义和泛比喻；保留旧代码、算法表/中间态和全部有效图；补难点必要解释而非逐点故事",
+    "cards": "117原卡全部换写，保留原H2/原H3标题与原卡章内位置；14独立任务章末追加，三段标记遵守renderer；最多220可见字并各块至少25字",
+    "excluded_mutations": "未修改media、题库/registry、全局页面/派生学习图，未构建dist；新题与ID由root整合"
+  },
+  "courses": [
+    {
+      "course": "数据结构与算法",
+      "chapters": [
+        {
+          "chapter": "第1章 绪论与算法分析",
+          "actual_changes": "重写数据层次与算法规范，删除泛比喻和重复入门段",
+          "canonical_concepts": "数据/元素/项/对象；逻辑四类、存储四类；ADT；算法五特征逐项含义",
+          "rules_and_conditions": "基本操作次数与n；辅助空间计递归栈；O上界/Θ同阶",
+          "worked_example_and_states": "三角循环1+…+n=n(n+1)/2，O(n²)；二分递归每层常数并减半",
+          "images_preserved_in_chapter": [
+            "../media/ds_complexity_growth.svg"
+          ],
+          "applicable_exam_tasks": "填空、单选、计算",
+          "lecture_task_headings": [
+            "数据结构与复杂度",
+            "算法特征与复杂度"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第2章 线性表",
+          "actual_changes": "把线性表边界、顺序地址、移动量合并到具体操作，保留改链代码与两图",
+          "canonical_concepts": "有限序列n≥0；首尾前驱后继；头结点/头指针",
+          "rules_and_conditions": "0起地址L+ib；插入移动n−i、删除n−i−1；合法i与容量",
+          "worked_example_and_states": "插入s先存旧后继再连p；删除保存q再跳过并释放，查找成本与局部操作分开",
+          "images_preserved_in_chapter": [
+            "../media/ds_array_linked.svg",
+            "../media/ds_linked_insert.svg"
+          ],
+          "applicable_exam_tasks": "单选、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "线性表与顺序存储",
+            "顺序表",
+            "链表",
+            "基本操作怎样执行",
+            "按操作需求选择结构"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第3章 栈、队列、串与数组",
+          "actual_changes": "保留KMP和快速转置完整表；栈表达式补弹出次序；拆出三个独立子卡",
+          "canonical_concepts": "LIFO/FIFO、空串/空格串、数组/广义表",
+          "rules_and_conditions": "循环队列牺牲一格；pi表口径；行/列优先地址；转置O(c+t)",
+          "worked_example_and_states": "后缀8 3 2 * -栈[8,3,2]→[8,6]→[2]；三元组next逐次更新；L=(a,(b,c),d)长3深2",
+          "images_preserved_in_chapter": [
+            "../media/ds_stack_queue.svg",
+            "../media/ds_circular_queue.svg",
+            "../media/ds_kmp_prefix.svg",
+            "../media/ds_array_sparse.svg",
+            "../media/ds_sparse_triples.svg"
+          ],
+          "applicable_exam_tasks": "填空、计算、过程推演",
+          "lecture_task_headings": [
+            "栈、队列与串的基本术语",
+            "栈",
+            "队列",
+            "串与模式匹配",
+            "多维数组与稀疏矩阵",
+            "二维数组地址计算",
+            "稀疏矩阵快速转置",
+            "广义表长度与深度",
+            "栈与递归"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第4章 树与二叉树",
+          "actual_changes": "规范树/二叉树性质，保留遍历、AVL、堆轨迹，补森林、线索和B树分裂",
+          "canonical_concepts": "结点度/树度/叶；有序左右子树；满/完全；孩子兄弟表示",
+          "rules_and_conditions": "根第1层；n0=n2+1；1起完全树编号；三阶B树最多2键",
+          "worked_example_and_states": "先序ABDEC+中序DBEAC还原；AVL四旋转中序保持；三阶根[10,20]插30分裂为根20、子10/30",
+          "images_preserved_in_chapter": [
+            "../media/ds_tree_traversal.svg"
+          ],
+          "applicable_exam_tasks": "填空、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "二叉树性质与遍历",
+            "基本术语",
+            "二叉树",
+            "遍历",
+            "特殊树",
+            "哈夫曼树与B/B+树",
+            "遍历与树的还原",
+            "AVL四类旋转",
+            "堆",
+            "树与森林的二叉链表示",
+            "B树的分裂与B+树边界"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第5章 图",
+          "actual_changes": "统一图目标边界，保留八种核心图算法完整表/伪代码，新增AOE推算",
+          "canonical_concepts": "图/弧/网/分量；DFS/BFS；MST、最短路、拓扑、关键路径区别",
+          "rules_and_conditions": "无向度和2E；Dijkstra非负；Bellman同步/原地轮次区别；Floyd外层k；AOE前推max后推min",
+          "worked_example_and_states": "AOE S-A2/S-B3/A-T4/B-T2，ve=(0,2,3,6)、vl=(0,2,4,6)，关键S-A-T；BFS线性复杂度场景说明Dijkstra亦可正确求无权图",
+          "images_preserved_in_chapter": [
+            "../media/ds_graph_traversal.svg",
+            "../media/ds_graph_steps.svg",
+            "../media/ds_weighted_graph.svg",
+            "../media/ds_prim_steps.svg",
+            "../media/ds_topological_order.svg"
+          ],
+          "applicable_exam_tasks": "单选、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "图的基本术语与任务",
+            "存储方式",
+            "遍历与典型算法思想",
+            "DFS深入与回退",
+            "BFS入队与层次",
+            "例题",
+            "最小生成树：Prim与Kruskal",
+            "Prim跨集合选边",
+            "Kruskal排序与判环",
+            "单源最短路径：Dijkstra",
+            "带负权边与多源最短路径",
+            "Bellman-Ford逐轮扫描",
+            "Floyd开放中转点",
+            "拓扑排序：先修课程怎么排",
+            "拿到题目先判断目标",
+            "AOE网关键路径"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第6章 查找",
+          "actual_changes": "补查找表/关键字/静动态、ASL参数和分块检索，保留折半/探测例",
+          "canonical_concepts": "ASL为按概率加权比较次数；成功/失败口径分别定义",
+          "rules_and_conditions": "折半需有序及随机访问；散列冲突/装填因子/删除标记",
+          "worked_example_and_states": "[3,8,12,20,27]查20，mid2后low3、mid3命中；10/17/24 mod7依次落3/4/5",
+          "images_preserved_in_chapter": [
+            "../media/ds_hash_probe.svg"
+          ],
+          "applicable_exam_tasks": "填空、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "查找表与平均查找长度",
+            "顺序与折半查找",
+            "散列查找",
+            "例题",
+            "有序索引与分块查找"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第7章 内部排序",
+          "actual_changes": "明确排序稳定性、内部/外部边界，保留每趟排序及快排伪代码",
+          "canonical_concepts": "稳定性保等键相对顺序，内部排序全部待排可驻内存",
+          "rules_and_conditions": "快排规则需指定；归并相等先左；堆有效区；希尔增量依赖；基数稳定分配",
+          "worked_example_and_states": "[5,2,4,3]各趟：冒泡最大到尾；末项枢轴3划分；堆[2,3,4|5]下沉[4,3,2|5]",
+          "images_preserved_in_chapter": [
+            "../media/ds_insertion_sort.svg",
+            "../media/ds_quick_partition.svg",
+            "../media/ds_merge_steps.svg",
+            "../media/ds_heap_steps.svg"
+          ],
+          "applicable_exam_tasks": "单选、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "排序的稳定性与分析口径",
+            "例题",
+            "手算：不要把“一趟”当成“全部排好”"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第8章 数据结构与算法选择",
+          "actual_changes": "保留操作/图/排序选型依据，补空闲块、伙伴、外部归并和文件组织任务",
+          "canonical_concepts": "最坏/平均/均摊；动态存储；顺序/索引/散列/倒排文件",
+          "rules_and_conditions": "伙伴同阶空闲且互为伙伴；k路需k+1缓冲；完整读写模型计算I/O",
+          "worked_example_and_states": "128B申请20B占32B并回收逐级合并；12页3缓冲4段→2段→1段共72页I/O；倒排交并",
+          "images_preserved_in_chapter": [
+            "../media/ds_algorithm_choice.svg"
+          ],
+          "applicable_exam_tasks": "简答、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "场景中的结构与算法选择",
+            "从操作特征选择数据结构",
+            "从图问题选择算法",
+            "从数据特点选择排序与查找",
+            "从问题结构选择算法思想",
+            "考试中的选型步骤",
+            "例题",
+            "场景例题",
+            "动态存储分裂与合并",
+            "外部归并与文件组织"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        }
+      ],
+      "old_gap_handling": {
+        "动态存储管理未教": "新增空闲块分裂/合并和伙伴分配可执行例，基础补齐；完整分配器仍保留",
+        "外部排序与文件组织缺失": "新增多路归并趟数/I-O模型及文件/倒排选择，基础补齐；败者树等仍保留",
+        "树与森林、线索二叉树缺失": "新增孩子兄弟转换和中序线索后继例，其他更新操作仍保留",
+        "AOE关键路径缺失": "新增ve/vl/e/l完整状态并配独立子卡和题计划",
+        "B/B+树只有性质": "新增三阶B树分裂轨迹及B+范围扫描，删除更新未展开"
+      },
+      "remaining_scope": [
+        "线索树仅给中序后继规则，其他线索遍历与删除的完整代码未展开",
+        "B树给插入分裂和范围定位，删除借位/合并、B+树全部更新过程仍需专题",
+        "伙伴/边界标识及文件组织已补可执行基础例，完整分配器、置换选择/败者树和多关键字文件细节未展开"
+      ],
+      "external_units_reviewed": [
+        {
+          "textbook_unit": "教材1：绪论",
+          "site_location": "本站1",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材2：线性表",
+          "site_location": "本站2",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材3：栈队列",
+          "site_location": "本站3.1—3.2",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材4：字符串",
+          "site_location": "本站3.3",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材5：数组及广义表",
+          "site_location": "本站3.4",
+          "finding": "合并但部分过程缺失"
+        },
+        {
+          "textbook_unit": "教材6：树、二叉树、森林",
+          "site_location": "本站4",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材7：图",
+          "site_location": "本站5",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材8：动态内存组织",
+          "site_location": "无",
+          "finding": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材9：检索结构",
+          "site_location": "本站6及4的BST/AVL",
+          "finding": "合并但B树过程缺失"
+        },
+        {
+          "textbook_unit": "教材10：内存排序",
+          "site_location": "本站7",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材11：外存排序",
+          "site_location": "无；本站8仅一句适用场景",
+          "finding": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材12：文件组织",
+          "site_location": "无",
+          "finding": "整章知识域缺失"
+        }
+      ],
+      "independent_student_evidence": "待非作者在构建页面按章执行：解释/中间态/2道关联题/卡片同任务/场景迁移，作者不代签"
+    },
+    {
+      "course": "操作系统原理",
+      "chapters": [
+        {
+          "chapter": "第1章 操作系统引论",
+          "actual_changes": "替换定义，补足特征含义/管理功能并合并重复段，低深度补多处理机与多媒体",
+          "canonical_concepts": "OS、并发/并行、共享/虚拟/异步、批处理/分时/实时、SMP",
+          "rules_and_conditions": "并行不限多核，CPU/I/O亦可；硬截止与交互响应区别",
+          "worked_example_and_states": "四核20%串行模型加速2.5；25帧/秒对应每40ms一帧时限，夜间账单/交互/控制区分目标",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "填空、简答、场景选型",
+          "lecture_task_headings": [
+            "操作系统功能与基本特征",
+            "常见分类",
+            "常见类型判断",
+            "多处理机、网络与多媒体系统"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第2章 操作系统结构与用户接口",
+          "actual_changes": "把接口、特权和控制转移归并，补保护域和访问矩阵",
+          "canonical_concepts": "系统调用/库函数/中断/异常；宏内核/微内核/分层/模块化；ACL",
+          "rules_and_conditions": "用户态不能直接执行特权指令；域-对象权限受控",
+          "worked_example_and_states": "read缓存命中仍本进程返回，等待I/O才可能调度他者；文件F有读无写则读通过写拒绝",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、简答、场景选型",
+          "lecture_task_headings": [
+            "用户态、内核态与系统调用",
+            "一次系统调用的基本路径",
+            "内核组织方式",
+            "系统保护与安全"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第3章 进程、线程与处理机调度",
+          "actual_changes": "规范进程实体、PCB与线程共享边界，补调度全部指标与三级调度",
+          "canonical_concepts": "程序静态/进程动态；进程资源单位/线程执行调度；PCB唯一标志",
+          "rules_and_conditions": "周转C-A，带权(T/S)，等待T-S仅无阻塞模型，首次响应另算",
+          "worked_example_and_states": "非抢占SJF P1[0,5)→P3[5,6)→P2[6,9)，等待0/5/3；RR同到3/2片1完成5/4",
+          "images_preserved_in_chapter": [
+            "../media/os_process_states.svg",
+            "../media/os_rr_timeline.svg"
+          ],
+          "applicable_exam_tasks": "填空、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "进程、线程与PCB",
+            "程序、进程和线程",
+            "基本状态",
+            "调度方法的基本比较",
+            "场景中的调度、同步和通信"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第4章 进程同步与死锁",
+          "actual_changes": "保留记录型P/V、生产消费和安全检查，增加读者写者/进餐/策略区别；根初学抽读后补四死锁必要条件逐项定义及对应预防措施",
+          "canonical_concepts": "临界资源/临界区；四管理要求；死锁四条件与四处理；信号量/管程",
+          "rules_and_conditions": "记录型P先减负阻塞、V先加≤0唤醒；请求先≤Need和Available再试分配安全检验；四条件是必要而非无条件判死锁的捷径，预防需对应破坏条件并说明能否共享/剥夺",
+          "worked_example_and_states": "empty/full/mutex从(2,0,1)到(1,1,1)再归初；Work2经P1释放1到3，再P2；读计数0→1→2→1→0首锁末解",
+          "images_preserved_in_chapter": [
+            "../media/os_semaphore_buffer.svg",
+            "../media/os_banker_steps.svg"
+          ],
+          "applicable_exam_tasks": "单选、简答、过程推演、场景选型",
+          "lecture_task_headings": [
+            "临界区与原子操作",
+            "同步与互斥",
+            "缓冲区空了，消费者怎样等？",
+            "死锁",
+            "同步、互斥与信号量",
+            "银行家算法与安全序列",
+            "读者写者的计数与互斥",
+            "死锁处理与请求检查"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第5章 存储器与虚拟存储器",
+          "actual_changes": "去掉重复碎片/分配定义，保留地址和置换完整状态，补缺页链与EAT条件",
+          "canonical_concepts": "分配/装入/重定位；内部外部碎片；页/框/段；虚拟三特征；局部性",
+          "rules_and_conditions": "A除S得页号/偏移；分段查限；TLB未命中不等缺页；EAT模型F含最终访问",
+          "worked_example_and_states": "2500/1024页2余452、框5物址5572；首次适应100/500/200申请180剩100/320/200；CLOCK逐位；EAT1099.99ns",
+          "images_preserved_in_chapter": [
+            "../media/os_paging_address.svg",
+            "../media/os_page_replacement.svg"
+          ],
+          "applicable_exam_tasks": "计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "内存分配与地址空间",
+            "连续分配与碎片",
+            "连续分配的查找与合并",
+            "分页与分段",
+            "虚拟存储",
+            "虚拟存储与页面置换",
+            "覆盖、交换与虚拟存储辨析"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第6章 文件管理",
+          "actual_changes": "重写文件层次和基本操作，保留逻辑块/位图/链接例",
+          "canonical_concepts": "文件/文件系统；逻辑结构、物理分配、访问方法三维区别",
+          "rules_and_conditions": "逻辑块号=偏移整除块长；索引定位；硬链接/符号链接作用与边界",
+          "worked_example_and_states": "2300/1024逻辑块2余252，索引[9,16,7,20]取物理7；32位/字、1起块100在字4位4",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、计算、简答",
+          "lecture_task_headings": [
+            "文件结构与基本操作"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第7章 输入输出与磁盘管理",
+          "actual_changes": "重排I/O层次/分配，补缓冲流水及旋转延迟，保留调度图区别",
+          "canonical_concepts": "设备独立性/驱动/控制器；独占/共享/虚拟设备；查询/中断/DMA/通道；SPOOLing",
+          "rules_and_conditions": "平均旋转延迟30/r秒；缓冲稳态含复制/处理条件；磁道范围/方向/回程计数",
+          "worked_example_and_states": "7200rpm平均4.17ms；T8/M1/C5单缓冲9双8ms稳态；50向上、20/80，LOOK90、SCAN经99共128",
+          "images_preserved_in_chapter": [
+            "../media/os_io_disk.svg",
+            "../media/os_disk_scan.svg"
+          ],
+          "applicable_exam_tasks": "单选、计算、过程推演、场景选型",
+          "lecture_task_headings": [
+            "I/O层次与设备分配",
+            "I/O 控制",
+            "磁盘调度",
+            "设备管理中的易混概念",
+            "单缓冲、双缓冲与假脱机"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        }
+      ],
+      "old_gap_handling": {
+        "经典同步问题被压成名称": "新增读写计数轨迹与哲学家循环等待/破坏方法；保留管程条件重查",
+        "I/O缓冲只给目的": "新增单/双缓冲流水模型与启动排空边界",
+        "多处理机与系统安全域缺少完整单元": "新增SMP亲和/均衡基础、保护域/ACL权限例；网络多媒体/完整系统域仍仅基础"
+      },
+      "remaining_scope": [
+        "多处理机与系统保护补基础机制及场景，NUMA、完整处理器调度和内核安全实现未展开",
+        "网络/多媒体仅补时限、缓冲及分布式故障目标，专门调度/协议算法仍待补",
+        "读者优先/进餐补过程，公平读写锁完整实现未展开"
+      ],
+      "external_units_reviewed": [
+        {
+          "textbook_unit": "教材1：导论",
+          "site_location": "本站1",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材2：进程与同步",
+          "site_location": "本站3—4",
+          "finding": "合并但同步过程不齐"
+        },
+        {
+          "textbook_unit": "教材3：调度与死锁",
+          "site_location": "本站3—4",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材4：基本存储管理",
+          "site_location": "本站5",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材5：虚拟存储",
+          "site_location": "本站5",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材6：I/O层次",
+          "site_location": "本站7",
+          "finding": "合并但过程不齐"
+        },
+        {
+          "textbook_unit": "教材7：文件系统",
+          "site_location": "本站6",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材8：磁盘与外存",
+          "site_location": "本站6—7",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材9：用户接口",
+          "site_location": "本站2；部分命令在大学基础课",
+          "finding": "合并但归属未记"
+        },
+        {
+          "textbook_unit": "教材10：多处理机系统",
+          "site_location": "无",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材11：网络及多媒体系统",
+          "site_location": "本站1仅分类；另有网络课不等同此域",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材12：系统安全",
+          "site_location": "本站2特权态与6文件权限少量提及",
+          "finding": "知识域缺失"
+        }
+      ],
+      "independent_student_evidence": "待非作者在构建页面按章执行：解释/中间态/2道关联题/卡片同任务/场景迁移，作者不代签"
+    },
+    {
+      "course": "数据库技术",
+      "chapters": [
+        {
+          "chapter": "第1章 数据库系统概论",
+          "actual_changes": "归并DB等定义与系统特点，补数据模型三要素和DBMS内部路径/类型边界",
+          "canonical_concepts": "数据/DB/DBMS/DBS/DBA；概念/逻辑/物理模型；三级模式",
+          "rules_and_conditions": "外/模式映像逻辑独立，模式/内映像物理独立；元数据/查询/存储/事务职责",
+          "worked_example_and_states": "教务不同视图共享逻辑表，文件索引改变支持物理独立；查询解析→优化→执行→页缓冲",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "填空、简答、场景选型",
+          "lecture_task_headings": [
+            "数据库、DBMS与三级模式",
+            "数据模型",
+            "三级模式与两级映像",
+            "DBMS内部与数据库类型"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第2章 概念模型与E-R方法",
+          "actual_changes": "补实体型/集、联系度与参与约束，保留1:n和m:n图表",
+          "canonical_concepts": "实体/型/集，属性分类，联系度/基数/参与",
+          "rules_and_conditions": "1:n外码放多端，m:n另建含双方码和联系属性表",
+          "worked_example_and_states": "学生1选C1/C2、2选C1三条SC；院系10/20与各学生外码；属性年龄可派生",
+          "images_preserved_in_chapter": [
+            "../media/db_er_symbols.svg",
+            "../media/db_relationships.svg",
+            "../media/db_many_to_many.svg"
+          ],
+          "applicable_exam_tasks": "单选、简答、过程推演",
+          "lecture_task_headings": [
+            "E-R建模",
+            "E-R 转关系的基本规则"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第3章 关系模型与完整性",
+          "actual_changes": "补模式/实例与理论关系性质，保留各键及完整性分类",
+          "canonical_concepts": "R(U,D,DOM,F)、元组/属性/域、超码/候选码/主码/主属性/外码",
+          "rules_and_conditions": "候选码无多余属性；理论关系不可重复而SQL可重复；主码组成列非空",
+          "worked_example_and_states": "学号和身份证可各成候选码；学号+姓名超码含多余；检查参照存在与NULL约束分别进行",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "填空、单选、简答",
+          "lecture_task_headings": [
+            "关系模式与关系实例",
+            "基本术语",
+            "各类键",
+            "三类完整性"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第4章 关系代数",
+          "actual_changes": "补运算封闭性/相容/连接差别；明确相邻两个独立Student例边界",
+          "canonical_concepts": "关系代数及集合语义；选择投影、集合运算、积/连接/除",
+          "rules_and_conditions": "m×n行，a+b列；自然连接全部同名；除要求全部匹配",
+          "worked_example_and_states": "图例1/3同名小林投影一行；独立例1小林/3小吴投影两行；SC除DB/NET保1/3",
+          "images_preserved_in_chapter": [
+            "../media/db_algebra_rows.svg"
+          ],
+          "applicable_exam_tasks": "计算、过程推演",
+          "lecture_task_headings": [
+            "关系代数",
+            "选择、投影与除法综合例"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第5章 关系数据库标准语言SQL",
+          "actual_changes": "规范SQL/NULL/默认重复规则，保留查询代码、结果行与聚合/连接例，补编程/触发器",
+          "canonical_concepts": "SQL分类口径；TRUE/FALSE/UNKNOWN；游标/存储过程/触发器；参数绑定",
+          "rules_and_conditions": "WHERE/HAVING只TRUE；CHECK可UNKNOWN；约束优先；SQLite ?非通用占位符",
+          "worked_example_and_states": "成年筛选→10组2/20组1→HAVING保10；左连Reader1两本/2未借，COUNT右非空2/0；sqlite示例实际输出小林",
+          "images_preserved_in_chapter": [
+            "../media/db_sql_order.svg",
+            "../media/db_join_rows.svg"
+          ],
+          "applicable_exam_tasks": "填空、程序阅读、过程推演、场景选型",
+          "lecture_task_headings": [
+            "SQL数据语义与NULL",
+            "SQL 分类",
+            "建表与约束",
+            "查询基本结构",
+            "连接查询",
+            "子查询与集合运算",
+            "例题",
+            "数据库编程与触发器"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第6章 视图、索引与数据库设计",
+          "actual_changes": "合并设计六阶段重复列表，补记录/页/缓冲、查询计划和条件下推边界",
+          "canonical_concepts": "普通/物化视图；B+索引/散列；联合键顺序/选择性/覆盖；逻辑物理优化",
+          "rules_and_conditions": "(a,b)先a再b，非前导列不绝对禁用；内连接改写与外连接过滤不一概等价",
+          "worked_example_and_states": "索引(1,2),(1,8),(2,1),(2,9)按a=2缩段；R3/S4朴素12对；先选100/1000行减少连接输入",
+          "images_preserved_in_chapter": [
+            "../media/db_index_choice.svg"
+          ],
+          "applicable_exam_tasks": "简答、过程推演、场景选型",
+          "lecture_task_headings": [
+            "数据库设计流程",
+            "视图",
+            "索引",
+            "索引与物理设计",
+            "数据库设计阶段",
+            "查询执行与优化"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第7章 关系数据理论",
+          "actual_changes": "补依赖正式定义/范式边界，保留闭包和无损推演，增加多值依赖4NF",
+          "canonical_concepts": "合法关系函数依赖；完全/部分/传递；主属性；1NF/2NF/3NF/BCNF/4NF",
+          "rules_and_conditions": "3NF每X→A要求X超码或A主属性；BCNF只超码；二元无损交集决定一边；4NF非平凡多值决定项超码",
+          "worked_example_and_states": "AD闭包AD→ABD→ABCD→ABCDE且删A/D不全；学生爱好棋球×语言中英4组合分两表",
+          "images_preserved_in_chapter": [
+            "../media/db_normalization.svg"
+          ],
+          "applicable_exam_tasks": "单选、计算、简答、过程推演",
+          "lecture_task_headings": [
+            "函数依赖与规范化",
+            "从依赖推导候选键与分解",
+            "闭包的逐步算法",
+            "无损连接与依赖保持",
+            "多值依赖与4NF"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第8章 事务、并发控制与恢复",
+          "actual_changes": "规范事务/ACID/故障，保留优先图两段锁及隔离图，补WAL恢复模型条件",
+          "canonical_concepts": "原子/一致/隔离/持久；脏读/不可重复读/幻读/丢失修改；共享排他锁",
+          "rules_and_conditions": "标准可重复读允许幻读但实现可更强；严格2PL X锁到事务结束；WAL日志先数据",
+          "worked_example_and_states": "r1/w1/r2/w2得T1→T2无环；解A后取C违2PL；立即更新模型T1提交120/T2未交90恢复确保120并撤T2",
+          "images_preserved_in_chapter": [
+            "../media/db_isolation.svg",
+            "../media/db_isolation_compare.svg",
+            "../media/db_wal.svg"
+          ],
+          "applicable_exam_tasks": "单选、简答、过程推演、场景选型",
+          "lecture_task_headings": [
+            "ACID与事务边界",
+            "并发异常",
+            "冲突可串行化与优先图",
+            "两段锁：先取得，再释放",
+            "订单场景中的机制选择",
+            "日志与备份",
+            "WAL与恢复的判定条件"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第9章 数据库安全性",
+          "actual_changes": "归并认证授权审计重复，保留授权链/最小权限场景，补仓库/内存/链基础及范围",
+          "canonical_concepts": "安全/完整性；自主/强制/角色权限；OLTP/OLAP；ETL；内存DB/区块链",
+          "rules_and_conditions": "视图不自动隔离基础表权限；仓库聚合不代替业务事务；内存DB可持久化但依协议",
+          "worked_example_and_states": "报表账号仅视图SELECT而非基础表修改；订单清洗按时间地区商品聚合，下钻月份/上卷全省",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、简答、场景选型",
+          "lecture_task_headings": [
+            "认证、授权与审计",
+            "分析型数据与新型数据库的比较"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        }
+      ],
+      "old_gap_handling": {
+        "数据库编程与触发器未讲": "新增接口/游标/存储过程/触发事件与前后值，SQLite参数绑定可执行；产品触发器语法仍待专题",
+        "查询处理与优化整域缺失": "新增解析到页读取路径、三类连接、逻辑/物理优化及外连接下推反例；深层成本优化仍保留",
+        "存储与DBMS内部不足": "新增记录页缓冲、模块职责、行列存与聚簇边界；完整内部实现仍保留",
+        "第14—18章没有数据库视角": "新增非关系、仓库/OLAP/ETL、内存持久化、区块链比较；不冒称各章完整",
+        "4NF及多值依赖未覆盖": "新增正式条件、4元组交叉组合及无损分解基础例/卡"
+      },
+      "remaining_scope": [
+        "触发器给事件/前后值/事务行为例，未给跨产品可直接执行的触发器程序",
+        "查询执行/优化给机制及等价边界，外排序/多级成本优化器/DBMS内部恢复细节仍待专题",
+        "14—18章仅建立数据库视角的组织、流转和选型基础；非关系体系、仓库维度建模、内存恢复、共识算法不据此宣称整章完成"
+      ],
+      "external_units_reviewed": [
+        {
+          "textbook_unit": "教材1：概论",
+          "site_location": "本站1",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材2：关系模型",
+          "site_location": "本站3—4",
+          "finding": "拆分"
+        },
+        {
+          "textbook_unit": "教材3：SQL",
+          "site_location": "本站5—6",
+          "finding": "拆分"
+        },
+        {
+          "textbook_unit": "教材4：安全",
+          "site_location": "本站9",
+          "finding": "移序"
+        },
+        {
+          "textbook_unit": "教材5：完整性",
+          "site_location": "本站3、5",
+          "finding": "合并但触发机制缺失"
+        },
+        {
+          "textbook_unit": "教材6：依赖与范式",
+          "site_location": "本站7",
+          "finding": "合并但多值依赖缺失"
+        },
+        {
+          "textbook_unit": "教材7：设计",
+          "site_location": "本站2、6",
+          "finding": "拆分"
+        },
+        {
+          "textbook_unit": "教材8：数据库程序",
+          "site_location": "无",
+          "finding": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材9：记录、块及存取组织",
+          "site_location": "本站6仅索引选型",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材10：查询执行与优化",
+          "site_location": "无",
+          "finding": "整章知识域缺失"
+        },
+        {
+          "textbook_unit": "教材11：恢复",
+          "site_location": "本站8",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材12：并发",
+          "site_location": "本站8",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材13：DBMS内部",
+          "site_location": "本站1只有组成定义",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材14：数据库演进",
+          "site_location": "本站1有模型分类，非数据库发展机制",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "教材15：非关系大数据存储",
+          "site_location": "无",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材16：仓库与分析",
+          "site_location": "无",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材17：内存数据库",
+          "site_location": "无",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材18：区块链与数据库",
+          "site_location": "本课无；大学基础8仅通用链原理",
+          "finding": "跨课部分提及但数据库比较缺失"
+        }
+      ],
+      "independent_student_evidence": "待非作者在构建页面按章执行：解释/中间态/2道关联题/卡片同任务/场景迁移，作者不代签"
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapters": [
+        {
+          "chapter": "第1章 程序设计与算法",
+          "actual_changes": "合并算法重复定义并逐项解释五特征，保留基础代码，补任务分解",
+          "canonical_concepts": "程序/算法；结构化自顶向下逐步求精模块化；顺序选择循环",
+          "rules_and_conditions": "有限终止/确定/可执行、输入输出条件；空数据不得除0",
+          "worked_example_and_states": "成绩80/90/拒绝−1，sum/count从0/0→80/1→170/2，均分85；最大值全负不初始化0",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "填空、程序阅读、场景选型",
+          "lecture_task_headings": [
+            "算法、结构与逐句执行",
+            "三种基本结构",
+            "基本程序结构",
+            "编译与解释",
+            "程序错误",
+            "自顶向下的任务分解"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第2章 数据类型、变量与常量",
+          "actual_changes": "规范C类型与Python对象，解释字符串/字符区别及Unicode标识符",
+          "canonical_concepts": "整型字符浮点/枚举void/构造类型；变量声明/名称绑定；常量",
+          "rules_and_conditions": "sizeof依实现；float近似；转换发生先后决定整数除法结果",
+          "worked_example_and_states": "double x=7/2得3.0，(double)7/2得3.5；int(3.9)=3",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、程序阅读",
+          "lecture_task_headings": [
+            "类型、变量与转换",
+            "标识符",
+            "变量与常量",
+            "基本数据类型",
+            "类型转换"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第3章 运算符与表达式",
+          "actual_changes": "补表达式/副作用/优先级与求值先后边界，保留短路与余数例",
+          "canonical_concepts": "算术关系逻辑赋值条件位运算；未定义行为",
+          "rules_and_conditions": "C整数除向0、Python //向下；无序重复修改不强算；C有符号溢出未定义",
+          "worked_example_and_states": "0&&++x短路x仍0；−7 C商−3余−1、Python商−4余1；两者均商×除数+余数=原数",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、程序阅读、过程推演",
+          "lecture_task_headings": [
+            "运算符与求值顺序",
+            "算术运算",
+            "关系运算",
+            "逻辑运算",
+            "优先级",
+            "例题"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第4章 顺序结构与输入输出",
+          "actual_changes": "补格式参数匹配和返回值检查，保留顺序变量状态",
+          "canonical_concepts": "stdio.h/scanf/printf；input返回文本；格式化",
+          "rules_and_conditions": "scanf %d/int*、%f/float*、%lf/double*；%s留结束位；检查成功项数",
+          "worked_example_and_states": "x3→y5→x10输出10 5；读失败不得使用未初始化x；Python输入4输出5实跑",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "填空、程序阅读、场景选型",
+          "lecture_task_headings": [
+            "输入输出与顺序结构",
+            "C语言输入输出",
+            "Python输入输出",
+            "简单输出跟踪",
+            "例题"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第5章 选择结构",
+          "actual_changes": "规范分支/范围/else归属，增加等级判定依据，保留switch流程图",
+          "canonical_concepts": "单/双/多分支，嵌套if，switch case",
+          "rules_and_conditions": "85按90/80/60降序命中80；C else就近，Python缩进；case整型常量、break控制贯穿",
+          "worked_example_and_states": "同图switch路径按case跳入、缺break继续后续；范围先检合法再分等级",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "程序阅读、过程推演",
+          "lecture_task_headings": [
+            "条件与分支",
+            "C语言选择",
+            "Python选择",
+            "分支判断方法",
+            "C语言 switch"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第6章 循环结构",
+          "actual_changes": "统一四要素与语言循环边界，保留循环表与continue差别",
+          "canonical_concepts": "while/do while/for；break/continue；Python循环else",
+          "rules_and_conditions": "range含首不含尾步长非0；while0次、do至少1；continue的更新位置不同",
+          "worked_example_and_states": "while i1..3累计6；range(3)输出0/1/2；continue跳过偶数后和4，实跑核对",
+          "images_preserved_in_chapter": [
+            "../media/program_loop_trace.svg"
+          ],
+          "applicable_exam_tasks": "程序阅读、计算、过程推演",
+          "lecture_task_headings": [
+            "循环状态与边界",
+            "while循环",
+            "for循环",
+            "break与continue",
+            "循环状态变化",
+            "例题",
+            "遇到continue，下一步去哪里"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第7章 函数与模块化程序设计",
+          "actual_changes": "归并形参与传参重复，补函数定义/返回、预处理、static/extern、入口",
+          "canonical_concepts": "C按值；Python对象绑定；LEGB作用域；存储期/链接；递归",
+          "rules_and_conditions": "宏文本替换需括号且避副作用；static局部跨调用、作用域仍局部；默认可变值复用",
+          "worked_example_and_states": "static count两调用1→2；宏SQUARE(1+2)9而坏宏5；递归图保逐层返回",
+          "images_preserved_in_chapter": [
+            "../media/program_function_args.svg",
+            "../media/program_python_binding.svg",
+            "../media/program_recursion_stack.svg"
+          ],
+          "applicable_exam_tasks": "程序阅读、过程推演、场景选型",
+          "lecture_task_headings": [
+            "函数、参数与返回",
+            "函数",
+            "参数与返回值",
+            "局部变量和全局变量",
+            "递归、关键字实参与模块",
+            "预处理与static局部状态"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第8章 数组、字符串与Python组合数据",
+          "actual_changes": "规范数组/字符串与各容器，保留浅拷贝，补strlen/词频状态和可哈希边界",
+          "canonical_concepts": "数组连续同类；字符串结束符；列表/元组/字典/集合",
+          "rules_and_conditions": "索引0..n−1；容量含结束符，strlen不含；字典键/集合成员可哈希",
+          "worked_example_and_states": "char s[6]=cat sizeof6/strlen3；词频Cat cat dog依次cat1→cat2→dog1；浅拷贝内层共享",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、程序阅读、过程推演、场景选型",
+          "lecture_task_headings": [
+            "数组、字符串与容器边界",
+            "C数组和字符串",
+            "Python列表和元组",
+            "字典和集合",
+            "切片",
+            "字符串操作与词频状态"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第9章 C指针、结构体与文件",
+          "actual_changes": "去重复malloc警句并保完整申请解释，补数组指针/函数指针/自定义类型/二进制",
+          "canonical_concepts": "指针值/变量；取址/解引用；struct/union/enum/typedef；FILE流",
+          "rules_and_conditions": "生命周期/边界检查；int*数组与int(*)[3]不同；fread元素数；fseek/ftell条件",
+          "worked_example_and_states": "int4B首1000，p+1=1004；行指针+1=1012、a[1][2]1020；二进制偏8读第三int30",
+          "images_preserved_in_chapter": [
+            "../media/program_pointer.svg",
+            "../media/program_pointer_array.svg"
+          ],
+          "applicable_exam_tasks": "计算、程序阅读、过程推演、场景选型",
+          "lecture_task_headings": [
+            "指针类型与对象生命周期",
+            "指针基础",
+            "长度运行时才知道，内存怎样申请和归还？",
+            "C指针与地址",
+            "结构体",
+            "C文本文件",
+            "二维数组与指针声明",
+            "结构体、联合、枚举与别名",
+            "C二进制读取与定位"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第10章 Python异常、模块与文件",
+          "actual_changes": "规范异常/模块/文本字节，保留with，增加CSV/JSON、随机模拟、标准与第三方生态",
+          "canonical_concepts": "异常类型顺序/else/finally；模块/包；CSV/JSON；str/bytes",
+          "rules_and_conditions": "csv字段显式数值化；newline空串；import不等安装；有限频率不等概率",
+          "worked_example_and_states": "CSV状态80/1→170/2输出85.0实跑；random种7频率0.3实跑；turtle/Matplotlib需图形环境/安装",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "程序阅读、过程推演、场景选型",
+          "lecture_task_headings": [
+            "Python按异常类型分支",
+            "异常处理",
+            "with open",
+            "CSV转换统计与格式化",
+            "标准库、随机模拟与第三方生态"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第11章 C与Python程序模型比较",
+          "actual_changes": "重写比较顺序与资源边界，保留对照表和独立除法题",
+          "canonical_concepts": "语法/类型/对象/内存与资源管理维度",
+          "rules_and_conditions": "先确定版本和类型再执行；Python自动内存管理不自动关闭外部资源",
+          "worked_example_and_states": "7/2和−7/2在C整数与Python真除/整除各不同；对照余数恒等式",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、程序阅读、场景选型",
+          "lecture_task_headings": [
+            "C与Python语义比较",
+            "例题"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        }
+      ],
+      "old_gap_handling": {
+        "C函数相关预处理与存储类别未教": "新增宏替换/条件包含/static/extern和跨调用状态；明确作用域与存储期",
+        "指针高频组合和类型缺口": "新增数组指针/指针数组/二维形参/函数指针/struct数组链/union/enum/typedef基础",
+        "文件与数据格式化缺过程": "新增fread/fseek参数返回值、位置例、CSV转换统计及JSON格式，代码实跑",
+        "Python计算生态和应用完全没有": "新增标准/第三方安装导入区别、随机模拟与可视化任务；网络和完整科学应用仍保留"
+      },
+      "remaining_scope": [
+        "C二维指针/函数指针补基础声明和手算，复杂组合声明、完整链表库未展开",
+        "二进制I/O明确本机格式限制，未覆盖跨平台交换格式规范",
+        "Python标准库/CSV/随机模拟/可视化入门已补；网络自动化与完整科学图像应用未展开",
+        "本环境无gcc/clang，新增C片段经类型/生命周期人工核对，未声称实际编译执行"
+      ],
+      "external_units_reviewed": [
+        {
+          "textbook_unit": "C教材1—2：程序与算法",
+          "site_location": "本站1",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "C教材3：顺序结构",
+          "site_location": "本站2—4",
+          "finding": "拆分"
+        },
+        {
+          "textbook_unit": "C教材4—5：分支及循环",
+          "site_location": "本站5—6",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "C教材6：数组",
+          "site_location": "本站8",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "C教材7：函数",
+          "site_location": "本站7",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "C教材8：指针",
+          "site_location": "本站9",
+          "finding": "合并但较多过程缺失"
+        },
+        {
+          "textbook_unit": "C教材9：自定义类型",
+          "site_location": "本站9",
+          "finding": "合并但联合枚举缺失"
+        },
+        {
+          "textbook_unit": "C教材10：文件I/O",
+          "site_location": "本站9",
+          "finding": "合并但二进制定位缺失"
+        },
+        {
+          "textbook_unit": "Python教材1—6：基本语法、控制、函数及容器",
+          "site_location": "本站1—8",
+          "finding": "重新组合"
+        },
+        {
+          "textbook_unit": "Python教材7：文件和格式化",
+          "site_location": "本站10及8",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "Python教材8：设计方法",
+          "site_location": "本站1及少量场景",
+          "finding": "部分缺失"
+        },
+        {
+          "textbook_unit": "Python计算生态及应用资源：科学计算、可视化、网络自动化",
+          "site_location": "无",
+          "finding": "知识域缺失；正式二维码资源证实主题，章号需完整目录进一步核验"
+        }
+      ],
+      "independent_student_evidence": "待非作者在构建页面按章执行：解释/中间态/2道关联题/卡片同任务/场景迁移，作者不代签"
+    },
+    {
+      "course": "软件工程",
+      "chapters": [
+        {
+          "chapter": "第1章 软件工程概述",
+          "actual_changes": "合并旧长定义与比喻，重写软件/危机/工程三要素",
+          "canonical_concepts": "程序数据文档；危机表现与原因；方法工具过程",
+          "rules_and_conditions": "工程活动贯穿开发运行维护；无物理磨损仍可结构退化",
+          "worked_example_and_states": "无需求/测试/部署资料仅程序运行不构成完整交付；文档深度按风险",
+          "images_preserved_in_chapter": [
+            "../media/soft_lifecycle.svg"
+          ],
+          "applicable_exam_tasks": "填空、简答、场景选型",
+          "lecture_task_headings": [
+            "软件危机与工程化",
+            "基本原理与生命周期",
+            "过程、产品与角色"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第2章 软件过程与生命周期模型",
+          "actual_changes": "规范生命周期/阶段产物和迭代增量，保留各模型、选型表、CI链",
+          "canonical_concepts": "瀑布/原型/增量/螺旋/统一过程/敏捷/CI",
+          "rules_and_conditions": "螺旋风险驱动；抛弃/演化原型区别；模型可组合；CI不等自动部署",
+          "worked_example_and_states": "可分核心两周反馈用迭代增量，支付高风险独立风险分析与严格测试，不因敏捷省控制",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "单选、简答、场景选型",
+          "lecture_task_headings": [
+            "生命周期与过程组织",
+            "瀑布、原型与增量",
+            "螺旋、统一过程与敏捷",
+            "根据证据选模型",
+            "持续集成与迭代反馈"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第3章 可行性研究与需求工程",
+          "actual_changes": "把需求质量完整列举，补模型三类和状态机约束，不再只列形式化名字",
+          "canonical_concepts": "可行性；功能/非功能/约束；DFD四元素/数据字典；SRS；状态机",
+          "rules_and_conditions": "条件/度量/阈值构成可验需求；父子DFD边界平衡；前后置/不变式",
+          "worked_example_and_states": "20万/年8万静态2.5年；图书可借→合格借出→借出→归还→可借，重复借出非法",
+          "images_preserved_in_chapter": [
+            "../media/soft_dfd.svg"
+          ],
+          "applicable_exam_tasks": "填空、计算、简答、过程推演、场景选型",
+          "lecture_task_headings": [
+            "需求工程基本任务",
+            "可行性与成本效益",
+            "需求获取、分类与质量",
+            "分析模型、DFD与数据字典",
+            "SRS、验证、追踪与变更",
+            "有穷状态机与需求约束"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第4章 总体设计与详细设计",
+          "actual_changes": "合并概要详细定义，补完整内聚/耦合层次、结构设计过程、对象全链",
+          "canonical_concepts": "软件设计；模块独立/信息隐藏；变换/事务分析；UML；对象类继承多态/关联组合",
+          "rules_and_conditions": "内聚按组合原因，耦合按依赖；两条件判定表4组合；对象多重性与生命周期",
+          "worked_example_and_states": "读成绩/算均分/报表映射三模块；账号/余额TT扣款其他拒绝；Student/BookCopy/Loan日期归记录，协作及异常测试",
+          "images_preserved_in_chapter": [
+            "../media/soft_design_flow.svg",
+            "../media/soft_uml_example.svg"
+          ],
+          "applicable_exam_tasks": "单选、简答、过程推演、场景选型",
+          "lecture_task_headings": [
+            "总体设计与详细设计",
+            "从分析到体系结构",
+            "模块化、内聚、耦合与信息隐藏",
+            "结构化设计与详细设计工具",
+            "面向对象分析、设计与UML",
+            "借阅数据属于哪个对象",
+            "内聚、耦合与信息隐藏",
+            "从DFD到模块与判定表",
+            "借阅对象与协作建模"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第5章 软件实现与软件测试",
+          "actual_changes": "规范验证确认与测试分类，保留边界图区别，补短路覆盖反例并恢复图复杂度参数",
+          "canonical_concepts": "黑盒/白盒，静态/动态，单元集成系统验收/回归；覆盖要求",
+          "rules_and_conditions": "单连通V=E−N+2；二分判定数+1；逻辑与实际短路覆盖约定；有限测试不证无错",
+          "worked_example_and_states": "18..60边界六值；x1全部语句仍缺x0出口；A or B两例条件覆盖不判定覆盖；15边12点V5",
+          "images_preserved_in_chapter": [
+            "../media/soft_testing.svg",
+            "../media/soft_whitebox_paths.svg"
+          ],
+          "applicable_exam_tasks": "单选、计算、程序阅读、场景选型",
+          "lecture_task_headings": [
+            "验证、确认与测试分类",
+            "黑盒测试设计",
+            "白盒覆盖与基本路径",
+            "控制流图环形复杂度",
+            "测试层次、集成和确认",
+            "调试、可靠性与测试闭环",
+            "条件与判定覆盖辨析"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第6章 软件维护、质量与配置管理",
+          "actual_changes": "归并维护分类与质量，补McCall完整11项及可测指标",
+          "canonical_concepts": "改正/适应/完善/预防；重构/逆向/再工程；质量保证/配置项/基线",
+          "rules_and_conditions": "基线正式评审批准并受控更改；版本控制不替代变更审批审计",
+          "worked_example_and_states": "适配新驱动属适应、清理结构属预防；变更申请→分析→批准→实施→验证→更新基线",
+          "images_preserved_in_chapter": [
+            "../media/soft_change_trace.svg"
+          ],
+          "applicable_exam_tasks": "填空、简答、场景选型",
+          "lecture_task_headings": [
+            "维护、重构与再工程",
+            "维护类型、过程与再工程",
+            "软件质量、保证与文档",
+            "配置项、版本、基线与变更控制",
+            "质量模型的完整分组"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第7章 项目管理与风险管理",
+          "actual_changes": "规范项目规模/工作量/工期与风险暴露，补前推后推及模型量纲",
+          "canonical_concepts": "WBS/人月/工期/风险；关键路径与时差；COCOMO基础",
+          "rules_and_conditions": "ES前驱最大EF，LF后继最小LS；无资源冲突；系数必须给定；RE=P×L",
+          "worked_example_and_states": "A2/B4/C2/D3前推0,2,2,6后推0,2,4,6，TF0/0/2/0，总9；E=2×10^1.1约25.18人月",
+          "images_preserved_in_chapter": [
+            "../media/soft_critical_path.svg"
+          ],
+          "applicable_exam_tasks": "计算、简答、过程推演、场景选型",
+          "lecture_task_headings": [
+            "项目估算与风险暴露",
+            "范围、规模与工作量估算",
+            "进度网络与关键路径",
+            "人员组织与沟通",
+            "风险管理",
+            "关键路径与总时差",
+            "工作量估算的量纲"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        },
+        {
+          "chapter": "第8章 面向变化的软件开发方法",
+          "actual_changes": "重写面向变化的组合依据与追踪链，保留反馈度量边界",
+          "canonical_concepts": "目标需求设计实现测试发布双向追踪；CI/持续交付/持续部署",
+          "rules_and_conditions": "按不确定性、可分性、风险、审查选择控制强度；度量需口径及场景",
+          "worked_example_and_states": "每周报表短迭代自动回归；结算规则保留正式需求批准、审计与严格测试，两者共享受控版本发布",
+          "images_preserved_in_chapter": [],
+          "applicable_exam_tasks": "简答、场景选型",
+          "lecture_task_headings": [
+            "按证据组合过程方法",
+            "从业务变化选择工程方法",
+            "贯穿生命周期的追踪",
+            "用反馈持续改进"
+          ],
+          "author_check": "按本章全部保留/新增机制及例状态核对；不是只数标题",
+          "student_evidence": "待独立试读"
+        }
+      ],
+      "old_gap_handling": {
+        "对象分析、设计、实现三章压成一节": "新增抽类、多重性、职责、顺序、状态一致性与对象/集成测试同任务链；不以单例冒称三章完全覆盖",
+        "形式化说明停在名称识别": "新增状态事件守卫/前后置/不变式及非法路径推演，Petri/Z仅识别",
+        "结构化设计图形只有名词和适用句": "新增变换/事务映射步骤、三模块接口例、二条件完整判定表；N-S/PAD作基础识别"
+      },
+      "remaining_scope": [
+        "形式化说明补状态迁移和约束，Petri/Z完整语法与证明仍为专题",
+        "对象分析→设计→实现测试补同一借阅任务链，设计模式和完整OO项目实现未展开",
+        "COCOMO仅给有系数基础模型与量纲，详细校准和高级估算不展开"
+      ],
+      "external_units_reviewed": [
+        {
+          "textbook_unit": "教材1：工程与过程",
+          "site_location": "本站1—2",
+          "finding": "拆分"
+        },
+        {
+          "textbook_unit": "教材2—3：可行性、需求",
+          "site_location": "本站3",
+          "finding": "合并"
+        },
+        {
+          "textbook_unit": "教材4：形式化描述",
+          "site_location": "无",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材5—6：总体/详细设计",
+          "site_location": "本站4",
+          "finding": "合并但过程不足"
+        },
+        {
+          "textbook_unit": "教材7：实现验证",
+          "site_location": "本站5",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材8：维护",
+          "site_location": "本站6",
+          "finding": "已归属"
+        },
+        {
+          "textbook_unit": "教材9：面向对象方法",
+          "site_location": "本站4.4",
+          "finding": "压缩"
+        },
+        {
+          "textbook_unit": "教材10：对象分析",
+          "site_location": "本站4.4",
+          "finding": "只有概括"
+        },
+        {
+          "textbook_unit": "教材11：对象设计",
+          "site_location": "本站4.4",
+          "finding": "只有概括"
+        },
+        {
+          "textbook_unit": "教材12：对象实现测试",
+          "site_location": "无独立讲解",
+          "finding": "知识域缺失"
+        },
+        {
+          "textbook_unit": "教材13：项目管理",
+          "site_location": "本站7及6",
+          "finding": "拆分"
+        }
+      ],
+      "independent_student_evidence": "待非作者在构建页面按章执行：解释/中间态/2道关联题/卡片同任务/场景迁移，作者不代签"
+    }
+  ],
+  "validation": {
+    "source_checks": [
+      {
+        "file": "course_notes/数据结构与算法.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 20,
+        "missing_images": [],
+        "sha256": "e4ddaaef7b9ef72a4176265bbd47d8e9efd665a65e36e7b2eccbd2df3cae20cc",
+        "fences_paired": true,
+        "details_paired": true,
+        "original_code_blocks_retained": true,
+        "original_code_block_count": 14,
+        "plain_explanations": 3,
+        "one_final_newline": true
+      },
+      {
+        "file": "color_notes/数据结构与算法.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 2,
+        "missing_images": [],
+        "sha256": "a81263ae70548db2643f0990e31ae8663e6b65361e917060621a11d5d795b96b",
+        "fences_paired": true,
+        "details_paired": true,
+        "old_h3_same_title_order_position_within_each_chapter": true,
+        "card_validation": [
+          {
+            "title": "数据结构与复杂度",
+            "visible_chars": 154,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "顺序表",
+            "visible_chars": 126,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "链表",
+            "visible_chars": 149,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "栈与递归",
+            "visible_chars": 119,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "队列与循环队列",
+            "visible_chars": 154,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "串与KMP",
+            "visible_chars": 165,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "数组、稀疏矩阵与广义表",
+            "visible_chars": 137,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "二维数组地址计算",
+            "visible_chars": 148,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "稀疏矩阵快速转置",
+            "visible_chars": 186,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "广义表长度与深度",
+            "visible_chars": 124,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "二叉树性质",
+            "visible_chars": 126,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "遍历与树的还原",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "BST与AVL",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "堆",
+            "visible_chars": 130,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "哈夫曼树与B/B+树",
+            "visible_chars": 126,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "AVL四类旋转",
+            "visible_chars": 144,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "哈夫曼合并与WPL",
+            "visible_chars": 129,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "图的存储",
+            "visible_chars": 127,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "DFS与BFS",
+            "visible_chars": 124,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "最小生成树",
+            "visible_chars": 129,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "最短路径",
+            "visible_chars": 132,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "拓扑排序",
+            "visible_chars": 128,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "DFS深入与回退",
+            "visible_chars": 130,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "BFS入队与层次",
+            "visible_chars": 113,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Prim跨集合选边",
+            "visible_chars": 116,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Kruskal排序与判环",
+            "visible_chars": 126,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Dijkstra确定与松弛",
+            "visible_chars": 131,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Bellman-Ford逐轮扫描",
+            "visible_chars": 131,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Floyd开放中转点",
+            "visible_chars": 138,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "AOE网关键路径",
+            "visible_chars": 136,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "二分查找",
+            "visible_chars": 145,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "散列查找",
+            "visible_chars": 132,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "插入、冒泡与选择排序",
+            "visible_chars": 138,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "快速排序",
+            "visible_chars": 146,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "归并排序",
+            "visible_chars": 121,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "堆、希尔、基数与排序选择",
+            "visible_chars": 139,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "插入排序扩有序区",
+            "visible_chars": 122,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "冒泡与选择的一趟",
+            "visible_chars": 137,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "堆排序取顶与下沉",
+            "visible_chars": 141,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "希尔排序按增量分组",
+            "visible_chars": 142,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "基数排序稳定收集",
+            "visible_chars": 141,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "场景中的结构与算法选择",
+            "visible_chars": 132,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "动态存储分裂与合并",
+            "visible_chars": 140,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "外部归并与文件组织",
+            "visible_chars": 146,
+            "labels_valid": true,
+            "under_220": true
+          }
+        ],
+        "one_final_newline": true
+      },
+      {
+        "file": "course_notes/操作系统原理.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 8,
+        "missing_images": [],
+        "sha256": "17bdf2304c739723071d530925fe92417d555e5fcc7930fa01e680a2ce5bc992",
+        "fences_paired": true,
+        "details_paired": true,
+        "original_code_blocks_retained": true,
+        "original_code_block_count": 1,
+        "plain_explanations": 3,
+        "one_final_newline": true
+      },
+      {
+        "file": "color_notes/操作系统原理.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 2,
+        "missing_images": [],
+        "sha256": "0276c48758072d5977e9e52aa1bfc26664a1a0aca150c4e1c7c774e50bedf972",
+        "fences_paired": true,
+        "details_paired": true,
+        "old_h3_same_title_order_position_within_each_chapter": true,
+        "card_validation": [
+          {
+            "title": "操作系统功能与基本特征",
+            "visible_chars": 140,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "用户态、内核态与系统调用",
+            "visible_chars": 125,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "进程、线程与PCB",
+            "visible_chars": 155,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "进程状态与切换",
+            "visible_chars": 126,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "处理机调度",
+            "visible_chars": 147,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "非抢占调度画时间线",
+            "visible_chars": 142,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "RR时间片与队列",
+            "visible_chars": 124,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "同步、互斥与信号量",
+            "visible_chars": 158,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "死锁条件与处理",
+            "visible_chars": 135,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "银行家算法与安全序列",
+            "visible_chars": 204,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "读者写者的计数与互斥",
+            "visible_chars": 140,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "连续分配、分页与分段",
+            "visible_chars": 138,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "虚拟存储与页面置换",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "FIFO与LRU命中后状态",
+            "visible_chars": 138,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "CLOCK访问位与指针",
+            "visible_chars": 142,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "文件组织、目录与链接",
+            "visible_chars": 158,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "I/O控制、缓冲与SPOOLing",
+            "visible_chars": 138,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "磁盘调度",
+            "visible_chars": 142,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "SSTF逐次选最近",
+            "visible_chars": 119,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "SCAN与LOOK累计距离",
+            "visible_chars": 149,
+            "labels_valid": true,
+            "under_220": true
+          }
+        ],
+        "one_final_newline": true
+      },
+      {
+        "file": "course_notes/数据库技术.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 11,
+        "missing_images": [],
+        "sha256": "92d2f1670ab5743affbb1256683584b882411deb5302bfc089e5085c69498ef6",
+        "fences_paired": true,
+        "details_paired": true,
+        "original_code_blocks_retained": true,
+        "original_code_block_count": 6,
+        "plain_explanations": 3,
+        "one_final_newline": true
+      },
+      {
+        "file": "color_notes/数据库技术.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 0,
+        "missing_images": [],
+        "sha256": "a37f320915138f8acb1931d918fc92ba3a61cee42bffeaefae04f602693b5761",
+        "fences_paired": true,
+        "details_paired": true,
+        "old_h3_same_title_order_position_within_each_chapter": true,
+        "card_validation": [
+          {
+            "title": "数据库、DBMS与三级模式",
+            "visible_chars": 164,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "E-R建模",
+            "visible_chars": 150,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "E-R转关系",
+            "visible_chars": 159,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "关系键与完整性",
+            "visible_chars": 145,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "关系代数",
+            "visible_chars": 154,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "SQL定义与约束",
+            "visible_chars": 205,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "SQL筛选、分组与聚合",
+            "visible_chars": 194,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "连接、子查询与集合运算",
+            "visible_chars": 190,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "视图",
+            "visible_chars": 158,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "索引与物理设计",
+            "visible_chars": 155,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "数据库设计流程",
+            "visible_chars": 120,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "查询执行与优化",
+            "visible_chars": 137,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "属性闭包与候选键",
+            "visible_chars": 155,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "范式判断",
+            "visible_chars": 175,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "分解、无损连接与依赖保持",
+            "visible_chars": 141,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "多值依赖与4NF",
+            "visible_chars": 128,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "ACID与事务边界",
+            "visible_chars": 152,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "并发异常与隔离级别",
+            "visible_chars": 147,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "WAL与恢复",
+            "visible_chars": 149,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "冲突优先图判串行化",
+            "visible_chars": 130,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "两段锁的首次解锁",
+            "visible_chars": 130,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "认证、授权与审计",
+            "visible_chars": 146,
+            "labels_valid": true,
+            "under_220": true
+          }
+        ],
+        "one_final_newline": true
+      },
+      {
+        "file": "course_notes/C与Python程序设计.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 6,
+        "missing_images": [],
+        "sha256": "791f117c629054067a6acf43e4656c6c254648b21514f4ea350157c2d7649a34",
+        "fences_paired": true,
+        "details_paired": true,
+        "original_code_blocks_retained": true,
+        "original_code_block_count": 26,
+        "plain_explanations": 3,
+        "one_final_newline": true
+      },
+      {
+        "file": "color_notes/C与Python程序设计.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 1,
+        "missing_images": [],
+        "sha256": "7aed4b9691a4b3c78a013d4489fa50749c52e23d979b6363720b99a56579f470",
+        "fences_paired": true,
+        "details_paired": true,
+        "old_h3_same_title_order_position_within_each_chapter": true,
+        "card_validation": [
+          {
+            "title": "算法、流程与执行",
+            "visible_chars": 141,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "编译、解释与程序错误",
+            "visible_chars": 137,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "类型、变量与转换",
+            "visible_chars": 172,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "运算符、除法与短路",
+            "visible_chars": 150,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "输入输出与顺序跟踪",
+            "visible_chars": 190,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "条件与多分支",
+            "visible_chars": 158,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "循环状态与边界",
+            "visible_chars": 177,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "函数、参数与返回",
+            "visible_chars": 153,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "C与Python名字作用域",
+            "visible_chars": 136,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "递归调用与逐层返回",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "预处理与static局部状态",
+            "visible_chars": 165,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "C数组与字符串",
+            "visible_chars": 167,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Python列表、元组、字典与集合",
+            "visible_chars": 159,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "C指针与地址",
+            "visible_chars": 154,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "C结构体",
+            "visible_chars": 176,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "C文件与资源管理",
+            "visible_chars": 177,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "二维数组与指针声明",
+            "visible_chars": 168,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "Python按异常类型分支",
+            "visible_chars": 181,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "with文件读写与编码",
+            "visible_chars": 182,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "CSV转换统计与格式化",
+            "visible_chars": 176,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "C与Python语义比较",
+            "visible_chars": 156,
+            "labels_valid": true,
+            "under_220": true
+          }
+        ],
+        "one_final_newline": true
+      },
+      {
+        "file": "course_notes/软件工程.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 8,
+        "missing_images": [],
+        "sha256": "aa5e1b888e087990d0837a362c7d90bafcdea095abcc75db970dde6e4e181f67",
+        "fences_paired": true,
+        "details_paired": true,
+        "original_code_blocks_retained": true,
+        "original_code_block_count": 0,
+        "plain_explanations": 3,
+        "one_final_newline": true
+      },
+      {
+        "file": "color_notes/软件工程.md",
+        "h2_preserved": true,
+        "original_image_set_preserved": true,
+        "image_count": 0,
+        "missing_images": [],
+        "sha256": "41a3186233dc4aa10f20e2c629de56be98d0b359505a2dc56b4b501a17830bc3",
+        "fences_paired": true,
+        "details_paired": true,
+        "old_h3_same_title_order_position_within_each_chapter": true,
+        "card_validation": [
+          {
+            "title": "软件危机与工程化",
+            "visible_chars": 151,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "生命周期与验证确认",
+            "visible_chars": 141,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "过程模型选择",
+            "visible_chars": 127,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "敏捷、迭代与持续集成",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "可行性与成本效益",
+            "visible_chars": 134,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "需求获取、质量与变更",
+            "visible_chars": 140,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "DFD、数据字典与需求模型",
+            "visible_chars": 130,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "有穷状态机与需求约束",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "总体设计与详细设计",
+            "visible_chars": 125,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "内聚、耦合与信息隐藏",
+            "visible_chars": 144,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "面向对象分析设计与UML",
+            "visible_chars": 151,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "借阅对象与协作建模",
+            "visible_chars": 169,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "黑盒测试设计",
+            "visible_chars": 140,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "白盒覆盖与环形复杂度",
+            "visible_chars": 147,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "测试层次、集成与调试",
+            "visible_chars": 123,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "语句与判定覆盖辨别",
+            "visible_chars": 136,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "控制流图环形复杂度",
+            "visible_chars": 139,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "维护、重构与再工程",
+            "visible_chars": 132,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "质量、基线与受控变更",
+            "visible_chars": 147,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "估算、计划与关键路径",
+            "visible_chars": 125,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "风险、人员与沟通",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "关键路径与总工期",
+            "visible_chars": 150,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "按证据组合工程方法",
+            "visible_chars": 130,
+            "labels_valid": true,
+            "under_220": true
+          },
+          {
+            "title": "追踪、反馈与持续改进",
+            "visible_chars": 133,
+            "labels_valid": true,
+            "under_220": true
+          }
+        ],
+        "one_final_newline": true
+      }
+    ],
+    "python_environment": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "python_examples": [
+      {
+        "course": "C与Python程序设计",
+        "block": 1,
+        "status": "pass",
+        "output": ""
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 2,
+        "status": "pass",
+        "output": "5"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 3,
+        "status": "pass",
+        "output": "10 5"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 4,
+        "status": "pass",
+        "output": "pass"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 5,
+        "status": "pass",
+        "output": "6"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 6,
+        "status": "pass",
+        "output": "0\n1\n2"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 7,
+        "status": "pass",
+        "output": ""
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 8,
+        "status": "pass",
+        "output": ""
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 9,
+        "status": "pass",
+        "output": "25"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 10,
+        "status": "pass",
+        "output": "20"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 11,
+        "status": "pass",
+        "output": "[1, 2]"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 12,
+        "status": "pass",
+        "output": "error"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 13,
+        "status": "pass",
+        "output": ""
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 14,
+        "status": "pass",
+        "output": "85.0"
+      },
+      {
+        "course": "C与Python程序设计",
+        "block": 15,
+        "status": "pass",
+        "output": "0.3"
+      },
+      {
+        "course": "数据库技术",
+        "block": 1,
+        "status": "pass",
+        "output": "[('小林',)]"
+      }
+    ],
+    "lecture_validator": "python scripts/validate_course_notes.py：全站16课通过",
+    "color_validator": "卡内容规则全通过；执行时新卡尚未派生到learning-map，产生多课标题序列未同步；由root整合并复跑",
+    "C_compiler": "Get-Command gcc,clang无可用结果，未声称实际编译",
+    "mobile_and_independent_review": "待root构建后由非作者交叉试读，尚未声称手机/浏览器全验收"
+  },
+  "important_correction_to_work_log": "关系代数前后Student本为两组独立数据，旧综合例答案正确；本轮只明确边界并展开除法，未把先前误判计为原题修错",
+  "new_card_plan": "audit_reports/其他课程重构_核心组_新增卡计划_2026-10-16.json",
+  "sources": [
+    {
+      "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=00236807",
+      "use": "严蔚敏C版外部目录：动态存储、树/森林、外排与文件组织范围"
+    },
+    {
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "use": "大学作者开放教材用于调度、地址空间、并发、持久化机制核对"
+    },
+    {
+      "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406",
+      "use": "软件工程6版外部目录：形式化、对象方法阶段及项目管理范围"
+    },
+    {
+      "url": "https://www.tup.com.cn/bookscenter/bookcatalog?id=07645004",
+      "use": "C第5版外部目录，函数/指针/自定义类型/文件范围"
+    },
+    {
+      "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+      "use": "WG14 C11草案：作用域/存储期、整数除法、数组和指针、未定义行为、文件函数；非冒称指定教材原句"
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/controlflow.html",
+      "use": "官方教程核对for/range/break/continue/参数等语言规则；默认页面现为3.15，本文基础语义另用3.13接口页和实际3.14运行核验"
+    },
+    {
+      "url": "https://docs.python.org/3.13/library/csv.html",
+      "use": "标准csv字段、newline及DictReader规则"
+    },
+    {
+      "url": "https://docs.python.org/3.13/library/sqlite3.html",
+      "use": "标准库SQLite接口占位符与提交回滚边界，独立内存数据库实跑"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "use": "PostgreSQL18实现与SQL标准隔离最低要求区别，不推广某产品至全DBMS"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/18/indexes-multicolumn.html",
+      "use": "联合B树前导列范围与实现优化边界，避免绝对宣称非前导列不能走索引"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/18/sql-createtrigger.html",
+      "use": "触发事件/时机/级别依产品，正文保持基础机制及明确语法边界"
+    },
+    {
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "use": "Scrum职责与迭代产物核对，学生页不塞版本来源说明"
+    }
+  ],
+  "freeze": "10份MD已冻结；后续交叉阅读如有问题需报告root后定点修订并重建，不在后台继续改稿",
+  "feedback_fixes": [
+    {
+      "reviewer": "root初学者抽读",
+      "chapter": "操作系统原理 第4章",
+      "finding": "四个死锁必要条件在卡中但讲义缺逐项含义",
+      "fix": "原死锁处补死锁定义、互斥/请求并保持/不剥夺/循环等待逐项定义，给共享/一次申请/允许剥夺/统一顺序对应破坏的条件和限制",
+      "retest": "再次运行validate_course_notes.py全站通过；待浏览器独立题目复测"
+    }
+  ]
+}

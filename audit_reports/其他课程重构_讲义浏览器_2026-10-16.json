@@ -1,0 +1,6206 @@
+{
+  "build": "d268f2413e14b80d",
+  "chapter_contexts": 536,
+  "courses": 16,
+  "errors": [],
+  "formula_regressions": [
+    {
+      "width": 390,
+      "theme": "light",
+      "absolute_value_formulas_preserved": true,
+      "no_false_energy_table": true,
+      "fourier_table_retained": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "absolute_value_formulas_preserved": true,
+      "no_false_energy_table": true,
+      "fourier_table_retained": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "absolute_value_formulas_preserved": true,
+      "no_false_energy_table": true,
+      "fourier_table_retained": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "absolute_value_formulas_preserved": true,
+      "no_false_energy_table": true,
+      "fourier_table_retained": true
+    }
+  ],
+  "rows": [
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1132,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1570,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1703,
+      "figures": 1,
+      "tables": [
+        "姓名\t班级\t编号（文本）\n"
+      ]
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3105,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1870,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1338,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1771,
+      "figures": 0,
+      "tables": [
+        "任务情境\t优先功能\t为什么\t使用边界\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1506,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3115,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3704,
+      "figures": 0,
+      "tables": [
+        "要完成的任务\t优先使用的入口或工具\n",
+        "操作\t常用快捷键\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1297,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1207,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 969,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 861,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1177,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c10",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 776,
+      "figures": 0,
+      "tables": [
+        "主要约束\t优先考虑\t仍需检查\n"
+      ]
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1246,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1757,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2434,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1748,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1522,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1183,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1166,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1011,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1766,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3497,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2600,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1006,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1237,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1188,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 674,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 779,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3918,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1928,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1784,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2825,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 959,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 999,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1209,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2951,
+      "figures": 5,
+      "tables": [
+        "前缀\t最长相等真前后缀\tpi值\n",
+        "扫描原三元组\t放到结果表哪里\t写入转置三元组\t更新后的next\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3263,
+      "figures": 1,
+      "tables": [
+        "类型与插入顺序\t失衡前的局部形状\t调整顺序\t调整后\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 7177,
+      "figures": 5,
+      "tables": [
+        "已接通S\t当前可选边\t本轮选择\t累计费用\n",
+        "检查顺序\t判断\t选择后的分量\n",
+        "本轮确定\tS\tdist[A,B,C,D,E]\t发生的更新\n",
+        "轮次\tdist[A,B,C,D,E]\t本轮代表更新\n",
+        "",
+        "刚输出\t剩余入度变化\t本轮结束队列\n",
+        "题目要求\t选择\t手算时必须记录\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1213,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2351,
+      "figures": 4,
+      "tables": [
+        "排序\t平均时间\t最坏时间\t稳定性\t主要特点\n",
+        "算法与本题规则\t一趟中的变化\t本趟结束保证什么\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3614,
+      "figures": 1,
+      "tables": [
+        "题目特征\t优先考虑\t选择理由与边界\n",
+        "场景\t算法\t必须检查的条件\n",
+        "数据特点\t合适方法\t说明\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1376,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1299,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1431,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 834,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1198,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1639,
+      "figures": 1,
+      "tables": [
+        "本轮i\t是否跳过累加\t轮后s\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2163,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3398,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2093,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c11",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 627,
+      "figures": 0,
+      "tables": [
+        "项目\tC语言\tPython 3\n",
+        "整除\t整数 /\t//\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2158,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 630,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1241,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 4120,
+      "figures": 4,
+      "tables": [
+        "位置\t二进制\t内容\t参加组\n",
+        "访问块\t命中？\t访问后两行\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2047,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3656,
+      "figures": 1,
+      "tables": [
+        "轮\t位对\t移位前对A操作\t移位后A/Q/q\n",
+        "带入位\t左移带位后R\t试减3\t商位\t保留R\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 0,
+      "tables": [
+        "方式\t如何得到操作数/地址\t典型用途\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c10",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1695,
+      "figures": 3,
+      "tables": [
+        "阶段\t寄存器传送\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 760,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c11",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1946,
+      "figures": 1,
+      "tables": [
+        "状态\t输出/动作\t下一状态\n",
+        "微地址\t本拍动作\t下一地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3165,
+      "figures": 1,
+      "tables": [
+        "层次\t主要作用\t常见对象或协议\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3009,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3492,
+      "figures": 1,
+      "tables": [
+        "时刻或动作\tGBN回退N帧\tSR选择重传\n",
+        "收到的帧\t先学习源地址\t再处理目的地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 4988,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3421,
+      "figures": 3,
+      "tables": [
+        "机制\t什么时候使用\t窗口怎样变化\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 4806,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2290,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1284,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1587,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1442,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1429,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2929,
+      "figures": 1,
+      "tables": [
+        "类型\t控制关系\t系数及单位\n"
+      ]
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 918,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2908,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 433,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1007,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 989,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 732,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1015,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1388,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3181,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2066,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1396,
+      "figures": 1,
+      "tables": [
+        "负反馈组态\t输入电阻\t输出电阻\n"
+      ]
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1547,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1438,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1525,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1526,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1117,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1857,
+      "figures": 0,
+      "tables": [
+        "A\tB\tCin\tCout\tS\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1809,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1902,
+      "figures": 1,
+      "tables": [
+        "当前Q1Q0\t下一状态Q1+Q0+\tT1\tT0\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2277,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 948,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1826,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3473,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1428,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2153,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1816,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1477,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c09",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1174,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1229,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1149,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2084,
+      "figures": 1,
+      "tables": [
+        "时域\t频域\t条件或约定\n"
+      ]
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2049,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 904,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 977,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 681,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1115,
+      "figures": 0,
+      "tables": [
+        "项目信号\t优先考虑\t主要边界\n"
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1540,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2405,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1648,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1178,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1354,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 716,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c01",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 740,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c02",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 987,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c03",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 867,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c04",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 839,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c05",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1644,
+      "figures": 2,
+      "tables": [
+        "算法/机制\t类属与任务\t必要边界\n"
+      ]
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c06",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1402,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c07",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1790,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c08",
+      "width": 390,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1009,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1132,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1570,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1703,
+      "figures": 1,
+      "tables": [
+        "姓名\t班级\t编号（文本）\n"
+      ]
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3105,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1870,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1338,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1771,
+      "figures": 0,
+      "tables": [
+        "任务情境\t优先功能\t为什么\t使用边界\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1506,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3115,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3704,
+      "figures": 0,
+      "tables": [
+        "要完成的任务\t优先使用的入口或工具\n",
+        "操作\t常用快捷键\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1297,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1207,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 969,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 861,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1177,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c10",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 776,
+      "figures": 0,
+      "tables": [
+        "主要约束\t优先考虑\t仍需检查\n"
+      ]
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1246,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1757,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2434,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1748,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1522,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1183,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1166,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1011,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1766,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3497,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2600,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1006,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1237,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1188,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 674,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 779,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3918,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1928,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1784,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2825,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 959,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 999,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1209,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2951,
+      "figures": 5,
+      "tables": [
+        "前缀\t最长相等真前后缀\tpi值\n",
+        "扫描原三元组\t放到结果表哪里\t写入转置三元组\t更新后的next\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3263,
+      "figures": 1,
+      "tables": [
+        "类型与插入顺序\t失衡前的局部形状\t调整顺序\t调整后\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 7177,
+      "figures": 5,
+      "tables": [
+        "已接通S\t当前可选边\t本轮选择\t累计费用\n",
+        "检查顺序\t判断\t选择后的分量\n",
+        "本轮确定\tS\tdist[A,B,C,D,E]\t发生的更新\n",
+        "轮次\tdist[A,B,C,D,E]\t本轮代表更新\n",
+        "",
+        "刚输出\t剩余入度变化\t本轮结束队列\n",
+        "题目要求\t选择\t手算时必须记录\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1213,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2351,
+      "figures": 4,
+      "tables": [
+        "排序\t平均时间\t最坏时间\t稳定性\t主要特点\n",
+        "算法与本题规则\t一趟中的变化\t本趟结束保证什么\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3614,
+      "figures": 1,
+      "tables": [
+        "题目特征\t优先考虑\t选择理由与边界\n",
+        "场景\t算法\t必须检查的条件\n",
+        "数据特点\t合适方法\t说明\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1376,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1299,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1431,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 834,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1198,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1639,
+      "figures": 1,
+      "tables": [
+        "本轮i\t是否跳过累加\t轮后s\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2163,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3398,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2093,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c11",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 627,
+      "figures": 0,
+      "tables": [
+        "项目\tC语言\tPython 3\n",
+        "整除\t整数 /\t//\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2158,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 630,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1241,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 4120,
+      "figures": 4,
+      "tables": [
+        "位置\t二进制\t内容\t参加组\n",
+        "访问块\t命中？\t访问后两行\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2047,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3656,
+      "figures": 1,
+      "tables": [
+        "轮\t位对\t移位前对A操作\t移位后A/Q/q\n",
+        "带入位\t左移带位后R\t试减3\t商位\t保留R\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 0,
+      "tables": [
+        "方式\t如何得到操作数/地址\t典型用途\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c10",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1695,
+      "figures": 3,
+      "tables": [
+        "阶段\t寄存器传送\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 760,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c11",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1946,
+      "figures": 1,
+      "tables": [
+        "状态\t输出/动作\t下一状态\n",
+        "微地址\t本拍动作\t下一地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3165,
+      "figures": 1,
+      "tables": [
+        "层次\t主要作用\t常见对象或协议\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3009,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3492,
+      "figures": 1,
+      "tables": [
+        "时刻或动作\tGBN回退N帧\tSR选择重传\n",
+        "收到的帧\t先学习源地址\t再处理目的地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 4988,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3421,
+      "figures": 3,
+      "tables": [
+        "机制\t什么时候使用\t窗口怎样变化\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 4806,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2290,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1284,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1587,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1442,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1429,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2929,
+      "figures": 1,
+      "tables": [
+        "类型\t控制关系\t系数及单位\n"
+      ]
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 918,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2908,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 433,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1007,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 989,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 732,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1015,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1388,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3181,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2066,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1396,
+      "figures": 1,
+      "tables": [
+        "负反馈组态\t输入电阻\t输出电阻\n"
+      ]
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1547,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1438,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1525,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1526,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1117,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1857,
+      "figures": 0,
+      "tables": [
+        "A\tB\tCin\tCout\tS\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1809,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1902,
+      "figures": 1,
+      "tables": [
+        "当前Q1Q0\t下一状态Q1+Q0+\tT1\tT0\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2277,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 948,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1826,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3473,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1428,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2153,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1816,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1477,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c09",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1174,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1229,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1149,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2084,
+      "figures": 1,
+      "tables": [
+        "时域\t频域\t条件或约定\n"
+      ]
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2049,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 904,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 977,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 681,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1115,
+      "figures": 0,
+      "tables": [
+        "项目信号\t优先考虑\t主要边界\n"
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1540,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2405,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1648,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1178,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1354,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 716,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c01",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 740,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c02",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 987,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c03",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 867,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c04",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 839,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c05",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1644,
+      "figures": 2,
+      "tables": [
+        "算法/机制\t类属与任务\t必要边界\n"
+      ]
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c06",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1402,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c07",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1790,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c08",
+      "width": 390,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1009,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1132,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1570,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1703,
+      "figures": 1,
+      "tables": [
+        "姓名\t班级\t编号（文本）\n"
+      ]
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3105,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1870,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1338,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1771,
+      "figures": 0,
+      "tables": [
+        "任务情境\t优先功能\t为什么\t使用边界\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1506,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3115,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3704,
+      "figures": 0,
+      "tables": [
+        "要完成的任务\t优先使用的入口或工具\n",
+        "操作\t常用快捷键\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1297,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1207,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 969,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 861,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1177,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c10",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 776,
+      "figures": 0,
+      "tables": [
+        "主要约束\t优先考虑\t仍需检查\n"
+      ]
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1246,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1757,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2434,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1748,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1522,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1183,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1166,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1011,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1766,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3497,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2600,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1006,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1237,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1188,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 674,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 779,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3918,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1928,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1784,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2825,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 959,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 999,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1209,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2951,
+      "figures": 5,
+      "tables": [
+        "前缀\t最长相等真前后缀\tpi值\n",
+        "扫描原三元组\t放到结果表哪里\t写入转置三元组\t更新后的next\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3263,
+      "figures": 1,
+      "tables": [
+        "类型与插入顺序\t失衡前的局部形状\t调整顺序\t调整后\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 7177,
+      "figures": 5,
+      "tables": [
+        "已接通S\t当前可选边\t本轮选择\t累计费用\n",
+        "检查顺序\t判断\t选择后的分量\n",
+        "本轮确定\tS\tdist[A,B,C,D,E]\t发生的更新\n",
+        "轮次\tdist[A,B,C,D,E]\t本轮代表更新\n",
+        "",
+        "刚输出\t剩余入度变化\t本轮结束队列\n",
+        "题目要求\t选择\t手算时必须记录\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1213,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2351,
+      "figures": 4,
+      "tables": [
+        "排序\t平均时间\t最坏时间\t稳定性\t主要特点\n",
+        "算法与本题规则\t一趟中的变化\t本趟结束保证什么\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3614,
+      "figures": 1,
+      "tables": [
+        "题目特征\t优先考虑\t选择理由与边界\n",
+        "场景\t算法\t必须检查的条件\n",
+        "数据特点\t合适方法\t说明\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1376,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1299,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1431,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 834,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1198,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1639,
+      "figures": 1,
+      "tables": [
+        "本轮i\t是否跳过累加\t轮后s\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2163,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3398,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2093,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c11",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 627,
+      "figures": 0,
+      "tables": [
+        "项目\tC语言\tPython 3\n",
+        "整除\t整数 /\t//\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2158,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 630,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1241,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 4120,
+      "figures": 4,
+      "tables": [
+        "位置\t二进制\t内容\t参加组\n",
+        "访问块\t命中？\t访问后两行\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2047,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3656,
+      "figures": 1,
+      "tables": [
+        "轮\t位对\t移位前对A操作\t移位后A/Q/q\n",
+        "带入位\t左移带位后R\t试减3\t商位\t保留R\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 0,
+      "tables": [
+        "方式\t如何得到操作数/地址\t典型用途\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c10",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1695,
+      "figures": 3,
+      "tables": [
+        "阶段\t寄存器传送\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 760,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c11",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1946,
+      "figures": 1,
+      "tables": [
+        "状态\t输出/动作\t下一状态\n",
+        "微地址\t本拍动作\t下一地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3165,
+      "figures": 1,
+      "tables": [
+        "层次\t主要作用\t常见对象或协议\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3009,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3492,
+      "figures": 1,
+      "tables": [
+        "时刻或动作\tGBN回退N帧\tSR选择重传\n",
+        "收到的帧\t先学习源地址\t再处理目的地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 4988,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3421,
+      "figures": 3,
+      "tables": [
+        "机制\t什么时候使用\t窗口怎样变化\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 4806,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2290,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1284,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1587,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1442,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1429,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2929,
+      "figures": 1,
+      "tables": [
+        "类型\t控制关系\t系数及单位\n"
+      ]
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 918,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2908,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 433,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1007,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 989,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 732,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1015,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1388,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3181,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2066,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1396,
+      "figures": 1,
+      "tables": [
+        "负反馈组态\t输入电阻\t输出电阻\n"
+      ]
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1547,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1438,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1525,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1526,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1117,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1857,
+      "figures": 0,
+      "tables": [
+        "A\tB\tCin\tCout\tS\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1809,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1902,
+      "figures": 1,
+      "tables": [
+        "当前Q1Q0\t下一状态Q1+Q0+\tT1\tT0\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2277,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 948,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1826,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 3473,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1428,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2153,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1816,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1477,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c09",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1174,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1229,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1149,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2084,
+      "figures": 1,
+      "tables": [
+        "时域\t频域\t条件或约定\n"
+      ]
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2049,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 904,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 977,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 681,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1115,
+      "figures": 0,
+      "tables": [
+        "项目信号\t优先考虑\t主要边界\n"
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1540,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 2405,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1648,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1178,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1354,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 716,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c01",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 740,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c02",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 987,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c03",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 867,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c04",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 839,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c05",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1644,
+      "figures": 2,
+      "tables": [
+        "算法/机制\t类属与任务\t必要边界\n"
+      ]
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c06",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1402,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c07",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1790,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c08",
+      "width": 1280,
+      "theme": "light",
+      "visible": true,
+      "overflow": false,
+      "text": 1009,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1132,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1570,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1703,
+      "figures": 1,
+      "tables": [
+        "姓名\t班级\t编号（文本）\n"
+      ]
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3105,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1870,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1338,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "Office软件操作",
+      "chapter_id": "office.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1771,
+      "figures": 0,
+      "tables": [
+        "任务情境\t优先功能\t为什么\t使用边界\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1506,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3115,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3704,
+      "figures": 0,
+      "tables": [
+        "要完成的任务\t优先使用的入口或工具\n",
+        "操作\t常用快捷键\n"
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1297,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1207,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 969,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 861,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1177,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c10",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 776,
+      "figures": 0,
+      "tables": [
+        "主要约束\t优先考虑\t仍需检查\n"
+      ]
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1246,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1757,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2434,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1307,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1748,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1522,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1183,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1166,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1011,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1766,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3497,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2600,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1006,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1237,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1188,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 674,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 779,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3918,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1928,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1784,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2825,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "数据库技术",
+      "chapter_id": "database.c09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 959,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 999,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1209,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2951,
+      "figures": 5,
+      "tables": [
+        "前缀\t最长相等真前后缀\tpi值\n",
+        "扫描原三元组\t放到结果表哪里\t写入转置三元组\t更新后的next\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3263,
+      "figures": 1,
+      "tables": [
+        "类型与插入顺序\t失衡前的局部形状\t调整顺序\t调整后\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 7177,
+      "figures": 5,
+      "tables": [
+        "已接通S\t当前可选边\t本轮选择\t累计费用\n",
+        "检查顺序\t判断\t选择后的分量\n",
+        "本轮确定\tS\tdist[A,B,C,D,E]\t发生的更新\n",
+        "轮次\tdist[A,B,C,D,E]\t本轮代表更新\n",
+        "",
+        "刚输出\t剩余入度变化\t本轮结束队列\n",
+        "题目要求\t选择\t手算时必须记录\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1213,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2351,
+      "figures": 4,
+      "tables": [
+        "排序\t平均时间\t最坏时间\t稳定性\t主要特点\n",
+        "算法与本题规则\t一趟中的变化\t本趟结束保证什么\n"
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3614,
+      "figures": 1,
+      "tables": [
+        "题目特征\t优先考虑\t选择理由与边界\n",
+        "场景\t算法\t必须检查的条件\n",
+        "数据特点\t合适方法\t说明\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1376,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1299,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1431,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 834,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1198,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1639,
+      "figures": 1,
+      "tables": [
+        "本轮i\t是否跳过累加\t轮后s\n"
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2163,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3398,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2093,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c11",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 627,
+      "figures": 0,
+      "tables": [
+        "项目\tC语言\tPython 3\n",
+        "整除\t整数 /\t//\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2158,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 630,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1241,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 4120,
+      "figures": 4,
+      "tables": [
+        "位置\t二进制\t内容\t参加组\n",
+        "访问块\t命中？\t访问后两行\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2047,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3656,
+      "figures": 1,
+      "tables": [
+        "轮\t位对\t移位前对A操作\t移位后A/Q/q\n",
+        "带入位\t左移带位后R\t试减3\t商位\t保留R\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 0,
+      "tables": [
+        "方式\t如何得到操作数/地址\t典型用途\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c10",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1695,
+      "figures": 3,
+      "tables": [
+        "阶段\t寄存器传送\n"
+      ]
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 760,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c11",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1946,
+      "figures": 1,
+      "tables": [
+        "状态\t输出/动作\t下一状态\n",
+        "微地址\t本拍动作\t下一地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3165,
+      "figures": 1,
+      "tables": [
+        "层次\t主要作用\t常见对象或协议\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3009,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3492,
+      "figures": 1,
+      "tables": [
+        "时刻或动作\tGBN回退N帧\tSR选择重传\n",
+        "收到的帧\t先学习源地址\t再处理目的地址\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 4988,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3421,
+      "figures": 3,
+      "tables": [
+        "机制\t什么时候使用\t窗口怎样变化\n"
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 4806,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2290,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1284,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "计算机网络",
+      "chapter_id": "net-09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1587,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1442,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1429,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2929,
+      "figures": 1,
+      "tables": [
+        "类型\t控制关系\t系数及单位\n"
+      ]
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 918,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2908,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 433,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1007,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 989,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_id": "circuit.c09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 732,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1015,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1388,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3181,
+      "figures": 3,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2066,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1396,
+      "figures": 1,
+      "tables": [
+        "负反馈组态\t输入电阻\t输出电阻\n"
+      ]
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1977,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1547,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_id": "analog-electronics.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1438,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1525,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1526,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1117,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1857,
+      "figures": 0,
+      "tables": [
+        "A\tB\tCin\tCout\tS\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1809,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1902,
+      "figures": 1,
+      "tables": [
+        "当前Q1Q0\t下一状态Q1+Q0+\tT1\tT0\n"
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_id": "digital-electronics.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2277,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 948,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1826,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 3473,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 880,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1428,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2153,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1816,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1477,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_id": "communication.c09",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1174,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1760,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1229,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1149,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2084,
+      "figures": 1,
+      "tables": [
+        "时域\t频域\t条件或约定\n"
+      ]
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2049,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 904,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 977,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 681,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1115,
+      "figures": 0,
+      "tables": [
+        "项目信号\t优先考虑\t主要边界\n"
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1540,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 2405,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1648,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1178,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1354,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 716,
+      "figures": 0,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c01",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 740,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c02",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 987,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c03",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 867,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c04",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 839,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c05",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1644,
+      "figures": 2,
+      "tables": [
+        "算法/机制\t类属与任务\t必要边界\n"
+      ]
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c06",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1402,
+      "figures": 1,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c07",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1790,
+      "figures": 2,
+      "tables": []
+    },
+    {
+      "course": "信息安全",
+      "chapter_id": "information-security.c08",
+      "width": 1280,
+      "theme": "dark",
+      "visible": true,
+      "overflow": false,
+      "text": 1009,
+      "figures": 0,
+      "tables": []
+    }
+  ]
+}

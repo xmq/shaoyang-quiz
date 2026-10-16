@@ -1,0 +1,762 @@
+[
+  {
+    "stem": "异步PPP透明传输中，信息字段的两个原始字节依次为0x7E、0x7D。只写出这两个字节经过字节填充后的结果（十六进制，不含帧定界、首部及FCS）。",
+    "type": "简答",
+    "answer": "7D 5E 7D 5D",
+    "explanation": "两个特殊字节均先输出转义字节0x7D，再将原字节与0x20异或：7E⊕20=5E，7D⊕20=5D，因此结果为7D 5E 7D 5D。",
+    "id": "gap-course-revision-applied-01-1",
+    "ability": "过程描述",
+    "topic_id": "net.ppp-stuffing",
+    "topic_source": "manual",
+    "subject": "计算机网络",
+    "chapter": "net.ppp-stuffing",
+    "source_chapter": "第3章 数据链路层",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "数据链路与局域网",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "7D 5E 7D 5D",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "路由器R分别向直连LAN1和LAN2转发组G的组播数据。LAN1仍有G成员，LAN2唯一的G成员B已离开，成员离开已确认且该分支无其他接收者。R应保留哪条下行分支、停止哪条分支？",
+    "type": "简答",
+    "answer": "保留LAN1，停止LAN2",
+    "explanation": "分支转发依据是否仍有需要接收的成员，不因单个用户退出结束所有分发。",
+    "id": "gap-course-revision-applied-02-1",
+    "ability": "过程描述",
+    "topic_id": "net.multicast-membership",
+    "topic_source": "manual",
+    "subject": "计算机网络",
+    "chapter": "net.multicast-membership",
+    "source_chapter": "第4章 网络层",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "路由与网络诊断",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "保留LAN1，停止LAN2",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "管理员要定期采集交换机接口计数器来估算流量趋势，并在接口断开时尽早得到事件通知。SNMP可配合使用哪两类交互？",
+    "type": "简答",
+    "answer": "周期读取接口计数器；代理主动发送接口变化通知",
+    "explanation": "管理站轮询读取接口计数器，按相邻读数与时间差估算区间流量；代理主动发送接口状态通知，报告离散事件。通知仍可能丢失，不能保证每次故障都即时送达，因此轮询与通知互为补充。",
+    "id": "gap-course-revision-applied-03-1",
+    "ability": "机制解释",
+    "topic_id": "net.snmp-management",
+    "topic_source": "manual",
+    "subject": "计算机网络",
+    "chapter": "net.snmp-management",
+    "source_chapter": "第6章 应用层",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "应用层协议",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "周期读取接口计数器；代理主动发送接口变化通知",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "同一台电脑能按公网IP访问某服务，但用域名访问失败，nslookup查询该域名也失败。为定位故障，应优先检查哪一项？",
+    "type": "单选",
+    "answer": "A",
+    "explanation": "按IP可达说明该服务的基本网络路径可用；域名查询失败指向DNS解析环节，优先检查DNS配置、响应和记录。不能仅凭此现象直接断定某个DNS服务器永久损坏；其他三项不负责域名解析。",
+    "id": "gap-course-revision-applied-04-1",
+    "ability": "场景选型",
+    "topic_id": "computer-foundations.t22",
+    "topic_source": "manual",
+    "subject": "计算机基础",
+    "chapter": "computer-foundations.t22",
+    "source_chapter": "第3章 操作系统、文件与软件",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "计算机网络基础",
+    "options": {
+      "A": "DNS服务器配置及域名解析响应",
+      "B": "默认网关与目标IP之间的基本可达性",
+      "C": "该服务返回的HTML页面排版规则",
+      "D": "本地硬盘的文件系统类型"
+    },
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "A",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "某二分类模型的统计为TP=12、FP=3、FN=8、TN=77。求召回率，即实际正类样本中被正确识别为正类的比例。",
+    "type": "简答",
+    "answer": "召回率=12/(12+8)=60%。",
+    "explanation": "实际正类20个，正确识别12个，召回率12/(12+8)=60%。",
+    "id": "gap-course-revision-applied-05-1",
+    "ability": "直接计算",
+    "topic_id": "computer-foundations.t23",
+    "topic_source": "manual",
+    "subject": "计算机基础",
+    "chapter": "computer-foundations.t23",
+    "source_chapter": "第6章 人工智能与机器学习",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "计算机发展与应用",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "召回率=12/(12+8)=60%。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "点(1,2)先右移3再以原点放大2倍是多少？",
+    "type": "简答",
+    "answer": "(8,4)",
+    "explanation": "先(4,2)，再乘2；不是先放大后平移的(5,4)。",
+    "id": "gap-course-revision-applied-06-1",
+    "ability": "直接计算",
+    "topic_id": "multimedia.t17",
+    "topic_source": "manual",
+    "subject": "多媒体",
+    "chapter": "multimedia.t17",
+    "source_chapter": "第3章 数字图形与图像",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "图形图像",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "(8,4)",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "为何ABAB不一定适合游程压缩？",
+    "type": "简答",
+    "answer": "没有长重复游程，逐段存符号和次数的开销可能超过原数据",
+    "explanation": "压缩收益取决于重复结构及编码开销，不是无损必然更小。",
+    "id": "gap-course-revision-applied-07-1",
+    "ability": "机制解释",
+    "topic_id": "multimedia.t18",
+    "topic_source": "manual",
+    "subject": "多媒体",
+    "chapter": "multimedia.t18",
+    "source_chapter": "第6章 多媒体数据压缩",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "多媒体压缩与容量",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "没有长重复游程，逐段存符号和次数的开销可能超过原数据",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "A=0、B=10、C=11，01110怎样解码？",
+    "type": "简答",
+    "answer": "A、C、B",
+    "explanation": "依次取0|11|10；匹配到完整码字即输出并回树根。",
+    "id": "gap-course-revision-applied-08-1",
+    "ability": "过程描述",
+    "topic_id": "multimedia.t19",
+    "topic_source": "manual",
+    "subject": "多媒体",
+    "chapter": "multimedia.t19",
+    "source_chapter": "第6章 多媒体数据压缩",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "多媒体压缩与容量",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "A、C、B",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "在简化的JPEG系数量化中，DCT系数为23、量化步长为10，采用四舍五入。求量化整数、反量化重建值和绝对量化误差。",
+    "type": "简答",
+    "answer": "量化整数2；重建值20；绝对量化误差3。",
+    "explanation": "23÷10=2.3，四舍五入为2；反量化2×10=20，绝对误差|23−20|=3。被舍入的差值不能由该量化整数唯一恢复。",
+    "id": "gap-course-revision-applied-09-1",
+    "ability": "直接计算",
+    "topic_id": "multimedia.t20",
+    "topic_source": "manual",
+    "subject": "多媒体",
+    "chapter": "multimedia.t20",
+    "source_chapter": "第6章 多媒体数据压缩",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "多媒体压缩与容量",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "量化整数2；重建值20；绝对量化误差3。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "视频显示顺序为I₀、B₁、P₂，已知B₁的预测同时依赖I₀和P₂。I₀已解码而P₂尚未解码时，要完整重建B₁，应怎样处理？",
+    "type": "单选",
+    "answer": "B",
+    "explanation": "题设明确B₁依赖前后两个参考图像，须先取得已解码的P₂，再结合I₀与预测残差重建。显示顺序不等于解码顺序；改名不改变编码结构，A、C、D均忽略已给出的依赖条件。",
+    "id": "gap-course-revision-applied-10-1",
+    "ability": "场景选型",
+    "topic_id": "multimedia.t21",
+    "topic_source": "manual",
+    "subject": "多媒体",
+    "chapter": "multimedia.t21",
+    "source_chapter": "第6章 多媒体数据压缩",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "动画与视频",
+    "options": {
+      "A": "只使用I₀即可完整重建，不需要P₂",
+      "B": "先取得并解码P₂，再用两参考图像及残差重建B₁",
+      "C": "把B₁改名为I₁即可消除依赖",
+      "D": "按显示顺序解码，永远不需参考图像"
+    },
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "B",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "机房服务器主要面临短时市电中断导致的异常关机。为直接缓解该风险，下列措施最合适的是？",
+    "type": "单选",
+    "answer": "C",
+    "explanation": "短时停电属于供电及可用性风险。容量匹配的UPS提供短期供电，配合安全停机可减少突然断电损失；不能认为UPS能无限续航。防火墙、密码和VLAN分别控制其他风险，不能直接维持供电。",
+    "id": "gap-course-revision-applied-11-1",
+    "ability": "场景选型",
+    "topic_id": "information-security.t19",
+    "topic_source": "manual",
+    "subject": "信息安全",
+    "chapter": "information-security.t19",
+    "source_chapter": "第2章 安全管理与风险管理",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "安全目标与风险",
+    "options": {
+      "A": "仅增加防火墙的端口过滤规则",
+      "B": "仅提高登录密码的复杂度",
+      "C": "配置容量匹配的UPS并设置安全停机策略",
+      "D": "仅在交换机上划分更多VLAN"
+    },
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "C",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "CTR模式中，等长明文P₁、P₂在同一密钥下错误复用了相同密钥流K，密文分别为C₁=P₁⊕K、C₂=P₂⊕K。求C₁⊕C₂，并说明这种重用泄露了什么关系。",
+    "type": "简答",
+    "answer": "C₁⊕C₂=P₁⊕P₂，泄露两段明文的异或关系。",
+    "explanation": "逐位异或中K⊕K=0，密钥流相消，留下P₁⊕P₂。若再知道一段明文还可求出另一段；并非仅凭两密文就必然唯一恢复全部明文。CTR必须避免同一密钥下重复使用计数器块、产生重复密钥流。",
+    "id": "gap-course-revision-applied-12-1",
+    "ability": "直接计算",
+    "topic_id": "information-security.t20",
+    "topic_source": "manual",
+    "subject": "信息安全",
+    "chapter": "information-security.t20",
+    "source_chapter": "第5章 密码学基础",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "密码技术",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "C₁⊕C₂=P₁⊕P₂，泄露两段明文的异或关系。",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "周日完成全量备份F，周一完成增量I₁，周二完成增量I₂。每个增量只记录相对上一次成功备份的变化。周三故障，需恢复到周二备份完成时，且无额外日志可用，应按哪一条链恢复？",
+    "type": "单选",
+    "answer": "D",
+    "explanation": "传统链式增量依赖前一次成功备份；I₂不包含仅在周一变化且周二未再改变的数据，因此应依次恢复F、I₁和I₂。若周二是相对F的差异备份，才可用F及该差异备份；题设已经排除了这一模型。",
+    "id": "gap-course-revision-applied-13-1",
+    "ability": "场景选型",
+    "topic_id": "information-security.t21",
+    "topic_source": "manual",
+    "subject": "信息安全",
+    "chapter": "information-security.t21",
+    "source_chapter": "第7章 系统、应用与数据安全",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "数据备份与恢复",
+    "options": {
+      "A": "只恢复I₂",
+      "B": "按F→I₂恢复，I₁可省略",
+      "C": "只恢复F",
+      "D": "按F→I₁→I₂恢复"
+    },
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "D",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "stem": "摄影作品需要公开展示，且希望在图像中嵌入可检测的版权标识。下列技术中，哪一项最符合这两个要求？",
+    "type": "单选",
+    "answer": "B",
+    "explanation": "数字水印可在保持作品可展示的同时嵌入版权标识，辅助归属判断；不保证能阻止复制或抵御所有修改。整体加密会限制直接观看，单独散列不满足图像内嵌标识，删除原件不提供该功能。",
+    "id": "gap-course-revision-applied-14-1",
+    "ability": "场景选型",
+    "topic_id": "information-security.t22",
+    "topic_source": "manual",
+    "subject": "信息安全",
+    "chapter": "information-security.t22",
+    "source_chapter": "第8章 隐私保护、法律与职业责任",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "隐私合规与责任",
+    "options": {
+      "A": "将整张图像加密后仅公布密文",
+      "B": "在图像中嵌入数字水印",
+      "C": "仅计算散列值而不在图像内嵌入标识",
+      "D": "删除所有原始文件"
+    },
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "B",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "按从0开始的行、列下标，三元组(0,2,5)、(1,0,7)表示一个2×3稀疏矩阵的全部非零元素。求转置后的矩阵尺寸及按行、列递增排列的非零三元组。",
+    "answer": "(0,1,7),(2,0,5)，矩阵为3×2",
+    "explanation": "逐项交换行列后得到(2,0,5),(0,1,7)，再按新行排序。",
+    "id": "gap-course-revision-core-02-1",
+    "ability": "机制解释",
+    "topic_id": "data-structures.t40",
+    "topic_source": "manual",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t40",
+    "source_chapter": "第3章 栈、队列、串与数组",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "线性表",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "(0,1,7),(2,0,5)，矩阵为3×2",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "L=((a),b,())的长度、深度和表尾是什么？",
+    "answer": "长度3，深度2，表尾(b,())",
+    "explanation": "最外层三元素(a)、b、()；最深括号两层，去掉第一元素后保留其余组成表。",
+    "id": "gap-course-revision-core-03-1",
+    "ability": "机制解释",
+    "topic_id": "data-structures.t41",
+    "topic_source": "manual",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t41",
+    "source_chapter": "第3章 栈、队列、串与数组",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "线性表",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "长度3，深度2，表尾(b,())",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "单源单汇AOE网包含事件S、A、B、T，活动及工期为S→A：2，S→B：3，A→T：4，B→T：2（单位均为天）。求总工期、关键路径，并按S、A、B、T顺序列出事件最早发生时间ve和最迟发生时间vl。",
+    "answer": "工期6，S-A-T；ve为0,2,3,6，vl为0,2,4,6",
+    "explanation": "源汇路径时长6和5；顺推取最大、逆推取最小，S-A及A-T最早最迟相等。",
+    "id": "gap-course-revision-core-04-1",
+    "ability": "机制解释",
+    "topic_id": "data-structures.t42",
+    "topic_source": "manual",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t42",
+    "source_chapter": "第5章 图",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "图结构与算法",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "工期6，S-A-T；ve为0,2,3,6，vl为0,2,4,6",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "一个起始地址为0、大小128B且完全空闲的伙伴系统，只处理一次20B申请。忽略管理开销，按最小足够的2的幂次分配，并总从较低地址一侧继续分裂。实际分配多少字节？该块释放后，其他伙伴仍空闲时如何逐级合并？",
+    "answer": "占32B；与地址32的32B合64，再与地址64的64B合128",
+    "explanation": "20向上取整为32；合并需同阶、互为伙伴且均空闲。",
+    "id": "gap-course-revision-core-05-1",
+    "ability": "机制解释",
+    "topic_id": "data-structures.t43",
+    "topic_source": "manual",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t43",
+    "source_chapter": "第8章 数据结构与算法选择",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "数据结构基础",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "占32B；与地址32的32B合64，再与地址64的64B合128",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "12页文件、3页缓冲，初始每次排3页、2路归并，含段生成各阶段完整读写，需多少页I/O？",
+    "answer": "72页I/O",
+    "explanation": "4初始段需2趟归并，连同生成3阶段，每阶段读12写12，3×24=72。",
+    "id": "gap-course-revision-core-06-1",
+    "ability": "直接计算",
+    "topic_id": "data-structures.t44",
+    "topic_source": "manual",
+    "subject": "算法与数据结构",
+    "chapter": "data-structures.t44",
+    "source_chapter": "第8章 数据结构与算法选择",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "数据结构基础",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "72页I/O",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "读者优先方案中两读者已进入，一人退出后能否放行写者？为何？",
+    "answer": "不能；readCount仍为1，最后一个读者退出才释放rw",
+    "explanation": "写者必须与所有读者互斥；第一个退出不代表共享对象已无读者使用。",
+    "id": "gap-course-revision-core-07-1",
+    "ability": "机制解释",
+    "topic_id": "operating-system.t20",
+    "topic_source": "manual",
+    "subject": "操作系统",
+    "chapter": "operating-system.t20",
+    "source_chapter": "第4章 进程同步与死锁",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "进程调度与同步",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不能；readCount仍为1，最后一个读者退出才释放rw",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "LEFT JOIN后把右表条件由ON移动到WHERE，是否总等价？说明原因。",
+    "answer": "不总等价；WHERE可能滤掉右侧补NULL的左行",
+    "explanation": "ON参与匹配，左表未匹配仍补NULL；WHERE在补行后筛选，普通比较NULL为UNKNOWN而被剔除。",
+    "id": "gap-course-revision-core-08-1",
+    "ability": "机制解释",
+    "topic_id": "database.t21",
+    "topic_source": "manual",
+    "subject": "数据库",
+    "chapter": "database.t21",
+    "source_chapter": "第6章 视图、索引与数据库设计",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "SQL查询",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不总等价；WHERE可能滤掉右侧补NULL的左行",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "R(学生,爱好,语言)中爱好与语言按学生相互独立且每项可多个，如何分解减少冗余？",
+    "answer": "分为R1(学生,爱好)、R2(学生,语言)",
+    "explanation": "原表含独立集合交叉组合，学生不是超码却有非平凡多值依赖，违反4NF；此分解保留两集合且无损。",
+    "id": "gap-course-revision-core-09-1",
+    "ability": "机制解释",
+    "topic_id": "database.t22",
+    "topic_source": "manual",
+    "subject": "数据库",
+    "chapter": "database.t22",
+    "source_chapter": "第7章 关系数据理论",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "数据库规范化",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "分为R1(学生,爱好)、R2(学生,语言)",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "C函数int f(void){static int x=0;return ++x;}在程序中此前从未调用过，现在连续调用两次。两次返回值依次是什么？",
+    "answer": "1、2",
+    "explanation": "static局部对象跨调用保存，初始化仅一次；第二次从1继续加到2。",
+    "id": "gap-course-revision-core-10-1",
+    "ability": "程序阅读",
+    "topic_id": "programming.t19",
+    "topic_source": "manual",
+    "subject": "编程语言",
+    "chapter": "programming.t19",
+    "source_chapter": "第7章 函数与模块化程序设计",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "C函数与作用域",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "1、2",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "在简化的字节编址模型中，int占4B，数组int a[2][3]按行连续存储且首地址记为1000。声明int (*p)[3]=a后，p+1所指位置的地址值是多少？",
+    "answer": "1012",
+    "explanation": "p指向含3个int的一行，每步3×4=12B。",
+    "id": "gap-course-revision-core-11-1",
+    "ability": "直接计算",
+    "topic_id": "programming.t20",
+    "topic_source": "manual",
+    "subject": "编程语言",
+    "chapter": "programming.t20",
+    "source_chapter": "第9章 C指针、结构体与文件",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "C指针与内存",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "1012",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "csv.DictReader读出score为字符串\"80\"、\"90\"，为什么直接相加不能得到170？应如何统计？",
+    "answer": "字符串相加会拼接为\"8090\"；每项int转换后累计并计数",
+    "explanation": "CSV默认字段为str；转数值再算总和/均值，并检查空输入与转换异常。",
+    "id": "gap-course-revision-core-12-1",
+    "ability": "机制解释",
+    "topic_id": "programming.t21",
+    "topic_source": "manual",
+    "subject": "编程语言",
+    "chapter": "programming.t21",
+    "source_chapter": "第10章 Python异常、模块与文件",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "Python数据类型",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "字符串相加会拼接为\"8090\"；每项int转换后累计并计数",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "借阅状态机的初态为“可借”。在“可借”态，borrow使其转为“借出”；在“借出”态，只允许return转回“可借”。从初态执行事件序列borrow、borrow是否合法？说明每一步。",
+    "answer": "不合法；第一步到借出，第二次borrow无允许迁移",
+    "explanation": "逐步按当前状态查转移，不能把第一个状态的可执行事件套用于后续状态。",
+    "id": "gap-course-revision-core-13-1",
+    "ability": "机制解释",
+    "topic_id": "software-engineering.t23",
+    "topic_source": "manual",
+    "subject": "软件工程",
+    "chapter": "software-engineering.t23",
+    "source_chapter": "第3章 可行性研究与需求工程",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "需求工程",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "不合法；第一步到借出，第二次borrow无允许迁移",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "简答",
+    "stem": "同一册书先后被多人借阅，每次借出/归还日应存在哪个对象，为什么？",
+    "answer": "存具体Loan借阅记录",
+    "explanation": "日期属于一次借阅关系；放学生或图书单一日期字段会被后次借阅覆盖，不能保留历史。",
+    "id": "gap-course-revision-core-14-1",
+    "ability": "机制解释",
+    "topic_id": "software-engineering.t24",
+    "topic_source": "manual",
+    "subject": "软件工程",
+    "chapter": "software-engineering.t24",
+    "source_chapter": "第4章 总体设计与详细设计",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义操作与适用条件原创编写，不是招聘原题或真题。",
+    "knowledge_point": "软件设计与UML",
+    "options": {},
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "存具体Loan借阅记录",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "单选",
+    "ability": "场景选型",
+    "stem": "C函数需创建n个int供调用者在函数返回后继续使用，n已检查为正且字节乘法不溢出，调用者负责释放。下列方案中哪项符合该所有权约定？",
+    "options": {
+      "A": "返回普通局部数组首地址",
+      "B": "malloc申请n*sizeof(int)，检查非NULL后返回，调用者用完free",
+      "C": "malloc成功后先free，再返回原地址",
+      "D": "返回局部int变量的地址并让调用者free"
+    },
+    "answer": "B",
+    "explanation": "动态对象可在函数返回后继续存在，由调用者按所有权释放。A/D自动对象已结束生命周期，C返回已释放对象地址。题设限定为返回后使用，排除VLA等局部存储。",
+    "id": "gap-course-revision-programming-scenario-01",
+    "subject": "编程语言",
+    "topic_id": "programming.t12",
+    "topic_source": "manual",
+    "chapter": "programming.t12",
+    "source_chapter": "第9章 C指针、结构体与文件",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义适用条件原创编写的场景选择题，不是招聘原题或真题。",
+    "knowledge_point": "C指针与内存",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "B",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "type": "单选",
+    "ability": "场景选型",
+    "stem": "Python程序只需维护一批可哈希的用户编号，要求自动去重且频繁判断某编号是否已出现，不要求保存重复次数或顺序。四个选项中最直接的容器是？",
+    "options": {
+      "A": "列表list",
+      "B": "元组tuple",
+      "C": "集合set",
+      "D": "字符串str"
+    },
+    "answer": "C",
+    "explanation": "set按不重复元素组织并适合成员判断。列表/元组保留重复且通常顺序查找；字符串表达字符序列。题目明确无需顺序和计数，集合符合条件。",
+    "id": "gap-course-revision-programming-scenario-02",
+    "subject": "编程语言",
+    "topic_id": "programming.t11",
+    "topic_source": "manual",
+    "chapter": "programming.t11",
+    "source_chapter": "第8章 数组、字符串与Python组合数据",
+    "source": "课程缺口补充",
+    "difficulty": "应用",
+    "adaptation_note": "按讲义适用条件原创编写的场景选择题，不是招聘原题或真题。",
+    "knowledge_point": "Python数据类型",
+    "max_score": 1,
+    "rubric": [
+      {
+        "criterion": "C",
+        "points": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "new_cards": [
+    {
+      "course": "数据结构与算法",
+      "chapter": "第3章 栈、队列、串与数组",
+      "chapter_id": "data-structures.c03",
+      "title": "二维数组地址计算",
+      "parent_title": "数组、稀疏矩阵与广义表",
+      "parent_topic_id": "data-structures.t07",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [
+        "gap-final-thin-011"
+      ],
+      "proposed_questions": []
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter": "第3章 栈、队列、串与数组",
+      "chapter_id": "data-structures.c03",
+      "title": "稀疏矩阵快速转置",
+      "parent_title": "数组、稀疏矩阵与广义表",
+      "parent_topic_id": "data-structures.t07",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "原三元组(0,2,5),(1,0,7)表示2×3矩阵，转置后按行有序三元组是什么？",
+          "answer": "(0,1,7),(2,0,5)，矩阵为3×2",
+          "explanation": "逐项交换行列后得到(2,0,5),(0,1,7)，再按新行排序。"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter": "第3章 栈、队列、串与数组",
+      "chapter_id": "data-structures.c03",
+      "title": "广义表长度与深度",
+      "parent_title": "数组、稀疏矩阵与广义表",
+      "parent_topic_id": "data-structures.t07",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "L=((a),b,())的长度、深度和表尾是什么？",
+          "answer": "长度3，深度2，表尾(b,())",
+          "explanation": "最外层三元素(a)、b、()；最深括号两层，去掉第一元素后保留其余组成表。"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter": "第5章 图",
+      "chapter_id": "data-structures.c05",
+      "title": "AOE网关键路径",
+      "parent_title": "拓扑排序",
+      "parent_topic_id": "data-structures.t17",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "AOE边S→A2、S→B3、A→T4、B→T2，求总工期及关键路径。",
+          "answer": "工期6，S-A-T；ve为0,2,3,6，vl为0,2,4,6",
+          "explanation": "源汇路径时长6和5；顺推取最大、逆推取最小，S-A及A-T最早最迟相等。"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter": "第8章 数据结构与算法选择",
+      "chapter_id": "data-structures.c08",
+      "title": "动态存储分裂与合并",
+      "parent_title": "场景中的结构与算法选择",
+      "parent_topic_id": "data-structures.t24",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "0起128B伙伴区申请20B，按最小足够幂次分配，实际占多少？释放后可怎样合并？",
+          "answer": "占32B；与地址32的32B合64，再与地址64的64B合128",
+          "explanation": "20向上取整为32；合并需同阶、互为伙伴且均空闲。"
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter": "第8章 数据结构与算法选择",
+      "chapter_id": "data-structures.c08",
+      "title": "外部归并与文件组织",
+      "parent_title": "场景中的结构与算法选择",
+      "parent_topic_id": "data-structures.t24",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "12页文件、3页缓冲，初始每次排3页、2路归并，含段生成各阶段完整读写，需多少页I/O？",
+          "answer": "72页I/O",
+          "explanation": "4初始段需2趟归并，连同生成3阶段，每阶段读12写12，3×24=72。"
+        }
+      ]
+    },
+    {
+      "course": "操作系统原理",
+      "chapter": "第4章 进程同步与死锁",
+      "chapter_id": "operating-system.c04",
+      "title": "读者写者的计数与互斥",
+      "parent_title": "同步、互斥与信号量",
+      "parent_topic_id": "operating-system.t06",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "读者优先方案中两读者已进入，一人退出后能否放行写者？为何？",
+          "answer": "不能；readCount仍为1，最后一个读者退出才释放rw",
+          "explanation": "写者必须与所有读者互斥；第一个退出不代表共享对象已无读者使用。"
+        }
+      ]
+    },
+    {
+      "course": "数据库技术",
+      "chapter": "第6章 视图、索引与数据库设计",
+      "chapter_id": "database.c06",
+      "title": "查询执行与优化",
+      "parent_title": "索引与物理设计",
+      "parent_topic_id": "database.t10",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "LEFT JOIN后把右表条件由ON移动到WHERE，是否总等价？说明原因。",
+          "answer": "不总等价；WHERE可能滤掉右侧补NULL的左行",
+          "explanation": "ON参与匹配，左表未匹配仍补NULL；WHERE在补行后筛选，普通比较NULL为UNKNOWN而被剔除。"
+        }
+      ]
+    },
+    {
+      "course": "数据库技术",
+      "chapter": "第7章 关系数据理论",
+      "chapter_id": "database.c07",
+      "title": "多值依赖与4NF",
+      "parent_title": "范式判断",
+      "parent_topic_id": "database.t13",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "R(学生,爱好,语言)中爱好与语言按学生相互独立且每项可多个，如何分解减少冗余？",
+          "answer": "分为R1(学生,爱好)、R2(学生,语言)",
+          "explanation": "原表含独立集合交叉组合，学生不是超码却有非平凡多值依赖，违反4NF；此分解保留两集合且无损。"
+        }
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter": "第7章 函数与模块化程序设计",
+      "chapter_id": "programming.c07",
+      "title": "预处理与static局部状态",
+      "parent_title": "C与Python名字作用域",
+      "parent_topic_id": "programming.t09",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "函数int f(void){static int x=0;return ++x;}连续调用两次返回什么？",
+          "answer": "1、2",
+          "explanation": "static局部对象跨调用保存，初始化仅一次；第二次从1继续加到2。"
+        }
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter": "第9章 C指针、结构体与文件",
+      "chapter_id": "programming.c09",
+      "title": "二维数组与指针声明",
+      "parent_title": "C指针与地址",
+      "parent_topic_id": "programming.t12",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "int占4B，a[2][3]首址1000，int (*p)[3]=a，p+1表示地址多少？",
+          "answer": "1012",
+          "explanation": "p指向含3个int的一行，每步3×4=12B。"
+        }
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter": "第10章 Python异常、模块与文件",
+      "chapter_id": "programming.c10",
+      "title": "CSV转换统计与格式化",
+      "parent_title": "with文件读写与编码",
+      "parent_topic_id": "programming.t18",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "csv.DictReader读出score为字符串\"80\"、\"90\"，为什么直接相加不能得到170？应如何统计？",
+          "answer": "字符串相加会拼接为\"8090\"；每项int转换后累计并计数",
+          "explanation": "CSV默认字段为str；转数值再算总和/均值，并检查空输入与转换异常。"
+        }
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第3章 可行性研究与需求工程",
+      "chapter_id": "software-engineering.c03",
+      "title": "有穷状态机与需求约束",
+      "parent_title": "DFD、数据字典与需求模型",
+      "parent_topic_id": "software-engineering.t07",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "状态可借可经borrow到借出，借出只允许return到可借；事件borrow,borrow是否合法？",
+          "answer": "不合法；第一步到借出，第二次borrow无允许迁移",
+          "explanation": "逐步按当前状态查转移，不能把第一个状态的可执行事件套用于后续状态。"
+        }
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第4章 总体设计与详细设计",
+      "chapter_id": "software-engineering.c04",
+      "title": "借阅对象与协作建模",
+      "parent_title": "面向对象分析设计与UML",
+      "parent_topic_id": "software-engineering.t10",
+      "reason": "独立计算/判断步骤，聚合卡只作概览不能承担完整回忆任务",
+      "existing_question_ids": [],
+      "proposed_questions": [
+        {
+          "type": "简答",
+          "stem": "同一册书先后被多人借阅，每次借出/归还日应存在哪个对象，为什么？",
+          "answer": "存具体Loan借阅记录",
+          "explanation": "日期属于一次借阅关系；放学生或图书单一日期字段会被后次借阅覆盖，不能保留历史。"
+        }
+      ]
+    }
+  ],
+  "scenario_questions": [
+    {
+      "course": "C与Python程序设计",
+      "chapter": 9,
+      "type": "单选",
+      "ability": "场景选型",
+      "stem": "C函数需创建n个int供调用者在函数返回后继续使用，n已检查为正且字节乘法不溢出，调用者负责释放。下列方案中哪项符合该所有权约定？",
+      "options": {
+        "A": "返回普通局部数组首地址",
+        "B": "malloc申请n*sizeof(int)，检查非NULL后返回，调用者用完free",
+        "C": "malloc成功后先free，再返回原地址",
+        "D": "返回局部int变量的地址并让调用者free"
+      },
+      "answer": "B",
+      "explanation": "动态对象可在函数返回后继续存在，由调用者按所有权释放。A/D自动对象已结束生命周期，C返回已释放对象地址。题设限定为返回后使用，排除VLA等局部存储。"
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter": 8,
+      "type": "单选",
+      "ability": "场景选型",
+      "stem": "Python程序只需维护一批可哈希的用户编号，要求自动去重且频繁判断某编号是否已出现，不要求保存重复次数或顺序。四个选项中最直接的容器是？",
+      "options": {
+        "A": "列表list",
+        "B": "元组tuple",
+        "C": "集合set",
+        "D": "字符串str"
+      },
+      "answer": "C",
+      "explanation": "set按不重复元素组织并适合成员判断。列表/元组保留重复且通常顺序查找；字符串表达字符序列。题目明确无需顺序和计数，集合符合条件。"
+    }
+  ]
+}

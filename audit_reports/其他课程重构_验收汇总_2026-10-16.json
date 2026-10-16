@@ -1,0 +1,615 @@
+{
+  "date": "2026-10-16",
+  "release_build": "d500a2ccc13adbde",
+  "full_ui_check_build": "d268f2413e14b80d",
+  "scope": "按组成原理已接受的表达方式重构其余15门课现有124章；不宣称整本外部教材完整覆盖。",
+  "counts": {
+    "revised_courses": 15,
+    "revised_chapters": 124,
+    "perspective_chapter_walkthroughs": 248,
+    "initial_linked_question_attempts": 496,
+    "topics_total": 385,
+    "new_topics": 28,
+    "questions_total": 2526,
+    "new_questions": 29,
+    "new_scenario_choices": 7
+  },
+  "student_method_limit": "三个AI代理分别交叉复核非本人编写课程，每科两画像；不是不同真人。保留模型先验、主例已展开曝光、自评与迁移限制；修后只重复失败项及相应关联路径。",
+  "student_coverage": [
+    {
+      "course": "Office软件操作",
+      "chapters": 7,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "office.c01",
+            "office.c02",
+            "office.c03",
+            "office.c04",
+            "office.c05",
+            "office.c06",
+            "office.c07"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "office.c01",
+            "office.c02",
+            "office.c03",
+            "office.c04",
+            "office.c05",
+            "office.c06",
+            "office.c07"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapters": 10,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "computer-foundations.c01",
+            "computer-foundations.c02",
+            "computer-foundations.c03",
+            "computer-foundations.c04",
+            "computer-foundations.c05",
+            "computer-foundations.c06",
+            "computer-foundations.c07",
+            "computer-foundations.c08",
+            "computer-foundations.c09",
+            "computer-foundations.c10"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "computer-foundations.c01",
+            "computer-foundations.c02",
+            "computer-foundations.c03",
+            "computer-foundations.c04",
+            "computer-foundations.c05",
+            "computer-foundations.c06",
+            "computer-foundations.c07",
+            "computer-foundations.c08",
+            "computer-foundations.c09",
+            "computer-foundations.c10"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "多媒体技术",
+      "chapters": 7,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "multimedia.c01",
+            "multimedia.c02",
+            "multimedia.c03",
+            "multimedia.c04",
+            "multimedia.c05",
+            "multimedia.c06",
+            "multimedia.c07"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "multimedia.c01",
+            "multimedia.c02",
+            "multimedia.c03",
+            "multimedia.c04",
+            "multimedia.c05",
+            "multimedia.c06",
+            "multimedia.c07"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "操作系统原理",
+      "chapters": 7,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "operating-system.c01",
+            "operating-system.c02",
+            "operating-system.c03",
+            "operating-system.c04",
+            "operating-system.c05",
+            "operating-system.c06",
+            "operating-system.c07"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "operating-system.c01",
+            "operating-system.c02",
+            "operating-system.c03",
+            "operating-system.c04",
+            "operating-system.c05",
+            "operating-system.c06",
+            "operating-system.c07"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "数据库技术",
+      "chapters": 9,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "database.c01",
+            "database.c02",
+            "database.c03",
+            "database.c04",
+            "database.c05",
+            "database.c06",
+            "database.c07",
+            "database.c08",
+            "database.c09"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "database.c01",
+            "database.c02",
+            "database.c03",
+            "database.c04",
+            "database.c05",
+            "database.c06",
+            "database.c07",
+            "database.c08",
+            "database.c09"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "数据结构与算法",
+      "chapters": 8,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "data-structures.c01",
+            "data-structures.c02",
+            "data-structures.c03",
+            "data-structures.c04",
+            "data-structures.c05",
+            "data-structures.c06",
+            "data-structures.c07",
+            "data-structures.c08"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "data-structures.c01",
+            "data-structures.c02",
+            "data-structures.c03",
+            "data-structures.c04",
+            "data-structures.c05",
+            "data-structures.c06",
+            "data-structures.c07",
+            "data-structures.c08"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapters": 11,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "programming.c01",
+            "programming.c02",
+            "programming.c03",
+            "programming.c04",
+            "programming.c05",
+            "programming.c06",
+            "programming.c07",
+            "programming.c08",
+            "programming.c09",
+            "programming.c10",
+            "programming.c11"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "programming.c01",
+            "programming.c02",
+            "programming.c03",
+            "programming.c04",
+            "programming.c05",
+            "programming.c06",
+            "programming.c07",
+            "programming.c08",
+            "programming.c09",
+            "programming.c10",
+            "programming.c11"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "计算机网络",
+      "chapters": 9,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "net-01",
+            "net-02",
+            "net-03",
+            "net-04",
+            "net-05",
+            "net-06",
+            "net-07",
+            "net-08",
+            "net-09"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "net-01",
+            "net-02",
+            "net-03",
+            "net-04",
+            "net-05",
+            "net-06",
+            "net-07",
+            "net-08",
+            "net-09"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapters": 9,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "circuit.c01",
+            "circuit.c02",
+            "circuit.c03",
+            "circuit.c04",
+            "circuit.c05",
+            "circuit.c06",
+            "circuit.c07",
+            "circuit.c08",
+            "circuit.c09"
+          ]
+        },
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "circuit.c01",
+            "circuit.c02",
+            "circuit.c03",
+            "circuit.c04",
+            "circuit.c05",
+            "circuit.c06",
+            "circuit.c07",
+            "circuit.c08",
+            "circuit.c09"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "模拟电子技术",
+      "chapters": 8,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "analog-electronics.c01",
+            "analog-electronics.c02",
+            "analog-electronics.c03",
+            "analog-electronics.c04",
+            "analog-electronics.c05",
+            "analog-electronics.c06",
+            "analog-electronics.c07",
+            "analog-electronics.c08"
+          ]
+        },
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "analog-electronics.c01",
+            "analog-electronics.c02",
+            "analog-electronics.c03",
+            "analog-electronics.c04",
+            "analog-electronics.c05",
+            "analog-electronics.c06",
+            "analog-electronics.c07",
+            "analog-electronics.c08"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "数字电子技术",
+      "chapters": 7,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "digital-electronics.c01",
+            "digital-electronics.c02",
+            "digital-electronics.c03",
+            "digital-electronics.c04",
+            "digital-electronics.c05",
+            "digital-electronics.c06",
+            "digital-electronics.c07"
+          ]
+        },
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "digital-electronics.c01",
+            "digital-electronics.c02",
+            "digital-electronics.c03",
+            "digital-electronics.c04",
+            "digital-electronics.c05",
+            "digital-electronics.c06",
+            "digital-electronics.c07"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapters": 9,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "communication.c01",
+            "communication.c02",
+            "communication.c03",
+            "communication.c04",
+            "communication.c05",
+            "communication.c06",
+            "communication.c07",
+            "communication.c08",
+            "communication.c09"
+          ]
+        },
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "communication.c01",
+            "communication.c02",
+            "communication.c03",
+            "communication.c04",
+            "communication.c05",
+            "communication.c06",
+            "communication.c07",
+            "communication.c08",
+            "communication.c09"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "信号与系统",
+      "chapters": 7,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "signals-systems.c01",
+            "signals-systems.c02",
+            "signals-systems.c03",
+            "signals-systems.c04",
+            "signals-systems.c05",
+            "signals-systems.c06",
+            "signals-systems.c07"
+          ]
+        },
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "signals-systems.c01",
+            "signals-systems.c02",
+            "signals-systems.c03",
+            "signals-systems.c04",
+            "signals-systems.c05",
+            "signals-systems.c06",
+            "signals-systems.c07"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "软件工程",
+      "chapters": 8,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "应用作者",
+          "report": "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+          "chapters": [
+            "software-engineering.c01",
+            "software-engineering.c02",
+            "software-engineering.c03",
+            "software-engineering.c04",
+            "software-engineering.c05",
+            "software-engineering.c06",
+            "software-engineering.c07",
+            "software-engineering.c08"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "software-engineering.c01",
+            "software-engineering.c02",
+            "software-engineering.c03",
+            "software-engineering.c04",
+            "software-engineering.c05",
+            "software-engineering.c06",
+            "software-engineering.c07",
+            "software-engineering.c08"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "信息安全",
+      "chapters": 8,
+      "two_non_author_perspectives": [
+        {
+          "reviewer": "核心作者",
+          "report": "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+          "chapters": [
+            "information-security.c01",
+            "information-security.c02",
+            "information-security.c03",
+            "information-security.c04",
+            "information-security.c05",
+            "information-security.c06",
+            "information-security.c07",
+            "information-security.c08"
+          ]
+        },
+        {
+          "reviewer": "电子作者",
+          "report": "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json",
+          "chapters": [
+            "information-security.c01",
+            "information-security.c02",
+            "information-security.c03",
+            "information-security.c04",
+            "information-security.c05",
+            "information-security.c06",
+            "information-security.c07",
+            "information-security.c08"
+          ]
+        }
+      ]
+    }
+  ],
+  "student_reports": [
+    "audit_reports/其他课程重构_交叉体验_核心作者_2026-10-16.json",
+    "audit_reports/其他课程重构_交叉体验_应用作者_2026-10-16.json",
+    "audit_reports/其他课程重构_交叉体验_电子作者_2026-10-16.json"
+  ],
+  "fixed_after_review": [
+    "死锁四必要条件补定义及预防措施对应关系；原语补原子性与实现边界。",
+    "DB严格2PL定义移至题前；C分支预测补完整程序，允许先答再揭晓。",
+    "C static初始化时机改为程序启动前一次初始化，区分首次调用的自增。",
+    "网络首章补完整定义；本征/杂质半导体拆为正式概念（原稿转录误判不计产品错误）。",
+    "TTL悬空题补传统双极模型及CMOS/具体器件边界；BPSK/OOK题补同能量距离依据及等概条件。",
+    "修复5道既有题错章，另将一题数组地址计算迁至新独立任务卡；旧题ID和全部原标准答案保留。",
+    "实时交流题用通信方式替换已退役软件名；保留原考点与答案。",
+    "修复电路功率、C/Python中点两题残留旧核对要点；能量填空接受1/4。",
+    "表格识别要求分隔行或明确行首竖线，绝对值公式不再被相邻竖线误拆。",
+    "重点卡恢复规范三标签，补足短块的条件；28张新卡保留章末追加，旧卡顺序和原图引用保持。"
+  ],
+  "checks": {
+    "check_all": "通过；教材覆盖检查明确保留15科外部范围未完整验收状态，组成原理既有严格验收通过。",
+    "source_invariants": "audit_reports/其他课程重构_旧章节卡片与图片保持_2026-10-16.json",
+    "topic_and_question_ids": "audit_reports/其他课程重构_ID与题目迁移_2026-10-16.json",
+    "new_question_review": "audit_reports/其他课程重构_新题审核_2026-10-16.json",
+    "card_contexts": 1540,
+    "topic_pools": 385,
+    "max_phone_card_height": 515,
+    "lecture_contexts": 536,
+    "offline_pages": 48,
+    "offline_assets": 170,
+    "missing_offline_assets": []
+  },
+  "last_candidate_change": {
+    "from": "d268f2413e14b80d",
+    "to": "d500a2ccc13adbde",
+    "changed_assets": [
+      "build-meta.js",
+      "home-data.js",
+      "questions.js"
+    ],
+    "reason": "仅给uf-cm-018明确两比特等可能及同一噪声信道；题源与首页答案版本索引同步。",
+    "unchanged": "169个页面、样式、交互脚本与媒体资产逐字节相同，保留d268全量展示证据；最终版本另做该题实际UI与全离线验证。"
+  },
+  "known_limits": {
+    "textbook_scope": "textbook-coverage.json及三份分组内容报告保留未补范围，例如DFT/FFT/圆周卷积、电路二阶及部分完整DBMS专题；不将列名或选对题替代教材整域完成。",
+    "navigation": "应用作者初轮发现25条回看缺精确topic锚点；支持退到正确章，相关清单保留。不宣称每条回看均精确到任务段落。"
+  },
+  "source_sha256": {
+    "course_notes/C与Python程序设计.md": "bf29349990975bc0c9387190f75f14fe5de3145676aaeb9a83bc40f26bb5880d",
+    "course_notes/Office软件操作.md": "40331a5a1a1b9cbb1efded438ec2b562059a6870c199dbbb9452ef9d743d50a8",
+    "course_notes/信号与系统.md": "ea27796b5e5798ae03cb0499dca5290f66d1b20b65392a47737b74c1163aaf91",
+    "course_notes/信息安全.md": "90413069275821619979171a803deaa143fa9ed51bb877d56b78e5f606a1c48b",
+    "course_notes/多媒体技术.md": "ac6898af47e4661d2c47454b3d8e242c6134dd25867d70da93574a3e81c2d7f8",
+    "course_notes/大学计算机基础与新技术.md": "289e9c5be09874cfd6e3ecbb4cc1ed7ec42d4f4ca4c93795ec556425821c1a57",
+    "course_notes/操作系统原理.md": "5f9392e74eb1c576acc3643a6475f34f7a8514fe1a591a9d2ccbf47fb4a3a19f",
+    "course_notes/数字电子技术.md": "9b9c219e6100f876ea354bc7d44da16b7500652d519fbe96557d232f9f664510",
+    "course_notes/数据库技术.md": "2365f503abd7ce85b7f5453faa06a67557665fdccc8a714653b4d286692035b2",
+    "course_notes/数据结构与算法.md": "3ce701ed622dbef5c8d7c924046190e3525995936cc0771a7f11e3d30ddaef40",
+    "course_notes/模拟电子技术.md": "cebf6ec7a9cd02ff62b15b373db0562d741647e73d299cb65d1e6a3a20bd9669",
+    "course_notes/电路分析与电工技术.md": "f638334cb1d8560324304c232d5239932ad6a762d1e0c20fb1e811b994eccc10",
+    "course_notes/计算机网络.md": "7a3fff0ed035f2579ecd89d0a1c45bb5dea9f0b8373d474a6e2274d5e2e0c39a",
+    "course_notes/软件工程.md": "9b7139ffc1ef2abced4a839908c4928018c39cc224221e3f9662e7452ef0556f",
+    "course_notes/通信原理与高频电子线路.md": "aced3696a702f563672ebeb0b966c448b9f578b14d13fbcaef859153e868b73a",
+    "color_notes/C与Python程序设计.md": "fcfaf195fece8e191ed2383b0134aaf779ab5772e461f08a74ac9f1c0b2ea5a4",
+    "color_notes/Office软件操作.md": "0885c2ca9481e152d52a22b33d583ad76f840acd5a7d9a79cc9b838e5c6addfc",
+    "color_notes/信号与系统.md": "3d728d768148ea73107e255b01def0a413e98936d98cec8161cf707ea7e18c61",
+    "color_notes/信息安全.md": "9b907019463a5ffb6edffa84b4f74c774462b77fcff4e4ec6198fa1e23e27401",
+    "color_notes/多媒体技术.md": "ac1b700ca595fe358089a849cb8f5b082921f40b9321657587ab6e72bc3a3253",
+    "color_notes/大学计算机基础与新技术.md": "25a337d47f19ed43cb720b98e77b9077fb6c9af103db356b368fc0abb3ea6ee6",
+    "color_notes/操作系统原理.md": "bb5556b77184e811374923a2c4ccf12f40b0fc5319bd27356cd0d8927eab305b",
+    "color_notes/数字电子技术.md": "6ec07bf444056a8e7f2a9690d659d34041c9ecbbca2f263aa3206d53f7670d0c",
+    "color_notes/数据库技术.md": "01edb8b22e371013b0d1f8ff2337966955fc46fe569de9d47d7a3dddf6bfc0c1",
+    "color_notes/数据结构与算法.md": "fd0fa5da0da83c90fcb19ac26a27b04b34ca88b097c8765dd93af836d49360f2",
+    "color_notes/模拟电子技术.md": "076a70267a7b1847581f51c803bf0f11997a2de7bb58c55bd87505b88b1812c4",
+    "color_notes/电路分析与电工技术.md": "3b3951a5e1159f3d8597352d6c93bffb551b148f3b642a7f4dc64477aa358f7f",
+    "color_notes/计算机网络.md": "0b4e23f7a5d896e9e3f7beef806686c8a51aab278c0260caaa74da29a3d6c8ed",
+    "color_notes/软件工程.md": "d910819cd8a669c37259900db4b7bb7e3f7422858cdf6952ef1510117edbff0d",
+    "color_notes/通信原理与高频电子线路.md": "efdaf110f5d3316b11bb9821207ecdf01a371aacc31113c1a009a4e80238ab40"
+  }
+}

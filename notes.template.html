@@ -1086,7 +1086,9 @@
       if (index + 1 >= lines.length || !lines[index].includes("|") || !lines[index + 1].includes("|")) return false;
       const first = tableCells(lines[index]);
       const second = tableCells(lines[index + 1]);
-      return first.length >= 2 && second.length === first.length;
+      const hasSeparator = isSeparatorRow(second);
+      const rowsStartWithPipe = lines[index].trim().startsWith("|") && lines[index + 1].trim().startsWith("|");
+      return first.length >= 2 && second.length === first.length && (hasSeparator || rowsStartWithPipe);
     }
 
     function renderTable(rows) {

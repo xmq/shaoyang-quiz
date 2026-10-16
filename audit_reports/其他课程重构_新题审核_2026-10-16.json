@@ -1,0 +1,738 @@
+{
+  "date": "2026-10-16",
+  "source": "staging/audit_course_revision_20261016_additions.json",
+  "source_sha256": "e7601e6aaeec54ef327fe28846541f8a4ba6f7a1f09306db82871f66ab0a0d0a",
+  "reviewed_count": 29,
+  "single_choice_count": 7,
+  "summary": "根末次3项修订后，29题题设/答案/解析及7道单选唯一性通过；初审问题均已关闭。派生地图及页面跳转留冻结构建后复验。同例重现不作为迁移盲测。",
+  "findings": [
+    {
+      "severity": "P1",
+      "ids": [
+        "gap-course-revision-applied-05-1"
+      ],
+      "issue": "题干问“实际正类中有多少被找出”未规定数量还是比例，合理答案可为12个，而答案仅60%。",
+      "evidence": "TP=12，实际正类TP+FN=20，找出的数量12，找出的比例12/20=60%。",
+      "suggestion": "改为“求实际正类被识别出的比例（召回率），以百分比作答”；或若考数量改答案为12个并重写解析。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "召回率题已明确求被正确识别比例，答案60%唯一；原数量12歧义关闭。"
+    },
+    {
+      "severity": "P2",
+      "ids": [
+        "gap-course-revision-applied-12-1"
+      ],
+      "issue": "答案使用P1、P2，但题干没有明确它们是两消息的明文、也没有给密文符号，独立题面略依赖讲义命名。",
+      "evidence": "C1=P1⊕K、C2=P2⊕K时，C1⊕C2=P1⊕P2；结论正确。",
+      "suggestion": "题干给出两条等长明文P1/P2及对应密文C1/C2，明确复用同一位置的密钥流，求C1⊕C2；或答案写“两条明文的按位异或P1⊕P2”。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "CTR已明确定义等长P1/P2、C1/C2和相同密钥流K，解析区分异或关系泄露与直接恢复，关闭。"
+    },
+    {
+      "severity": "P2",
+      "ids": [
+        "gap-course-revision-core-10-1"
+      ],
+      "issue": "“连续调用两次”没有明确是本次程序运行中的首次和第二次调用。",
+      "evidence": "若此前已调用k次，结果为k+1、k+2，初始尚未调用时才为1、2（忽略后续溢出情形）。",
+      "suggestion": "补“在程序开始后此前未调用f，首次连续调用两次”，答案1、2不变。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "已明确此前从未调用、现在连续两次，返回1、2，关闭。"
+    },
+    {
+      "severity": "P2",
+      "ids": [
+        "gap-course-revision-core-13-1"
+      ],
+      "issue": "题干列允许转移却未显式给事件序列起始状态；答案解释“第一步到借出”依赖初态可借。",
+      "evidence": "从可借出发，borrow到借出，再borrow无定义；若初态借出，第一步已经无定义。两者最终均不合法，但失败位置不同。",
+      "suggestion": "补“初始为可借”；明确borrow为借出事件、return为归还事件，随后逐步判定。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "已明确初态可借及两事件含义，第一步借出、第二步无允许迁移，关闭。"
+    },
+    {
+      "severity": "P2",
+      "ids": [
+        "gap-course-revision-core-04-1"
+      ],
+      "issue": "题干ve/vl为可选输出（“若列”），rubric却把ve/vl与必答工期/关键路径放在唯一评分项里。",
+      "evidence": "必答结果工期6天、关键路径S-A-T；顺序S,A,B,T的ve=(0,2,3,6)、vl=(0,2,4,6)均正确。",
+      "suggestion": "要么改为必须同时写ve/vl，要么唯一必答评分项只含工期与关键路径，ve/vl作为核对过程展示。当前UI不会把这种单一rubric单独列作评分点，但数据语义仍宜一致。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "末次3项调整已复核通过。"
+    },
+    {
+      "severity": "P2",
+      "ids": [
+        "gap-course-revision-applied-01-1",
+        "gap-course-revision-applied-02-1",
+        "gap-course-revision-applied-03-1",
+        "gap-course-revision-applied-04-1",
+        "gap-course-revision-applied-05-1",
+        "gap-course-revision-applied-06-1",
+        "gap-course-revision-applied-07-1",
+        "gap-course-revision-applied-08-1",
+        "gap-course-revision-applied-09-1",
+        "gap-course-revision-applied-10-1",
+        "gap-course-revision-applied-11-1",
+        "gap-course-revision-applied-12-1",
+        "gap-course-revision-applied-13-1",
+        "gap-course-revision-applied-14-1",
+        "gap-course-revision-core-02-1",
+        "gap-course-revision-core-03-1",
+        "gap-course-revision-core-04-1",
+        "gap-course-revision-core-05-1",
+        "gap-course-revision-core-06-1",
+        "gap-course-revision-core-07-1",
+        "gap-course-revision-core-08-1",
+        "gap-course-revision-core-09-1",
+        "gap-course-revision-core-10-1",
+        "gap-course-revision-core-11-1",
+        "gap-course-revision-core-12-1",
+        "gap-course-revision-core-13-1",
+        "gap-course-revision-core-14-1"
+      ],
+      "issue": "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+      "evidence": "本轮逐题读取source_chapter、讲义H2/H4与新增卡标题可对应；尚不能从当前派生地图验证新ID直达。",
+      "suggestion": "根完成注册后生成learning-map与题目元数据，复验27个新topic的课程/章/同名卡/错题回看。这里不把待生成状态误判为注册失败。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "deferred_build_check",
+      "retest": "题源语义可独立审核，不等待派生地图；本项留后续构建检查，不阻断本轮题源复核。"
+    },
+    {
+      "severity": "P3",
+      "ids": [
+        "gap-course-revision-applied-01-1",
+        "gap-course-revision-applied-03-1",
+        "gap-course-revision-applied-07-1",
+        "gap-course-revision-applied-08-1",
+        "gap-course-revision-applied-13-1"
+      ],
+      "issue": "legacy knowledge_point沿旧粗分类，部分与题面任务不符。",
+      "evidence": "PPP为“网络体系结构”；SNMP为“DNS与DHCP”；RLE/Huffman为“音频数字化”；备份恢复链为“安全事件响应”。各题topic_id及source_chapter意图正确。",
+      "suggestion": "可分别改为链路透明传输、网络管理、无损压缩、备份恢复等实际知识点，或确认由元数据生成器规范；当前前端按topic_id过滤且topic_title优先，不将其定为已经发生的错章。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "PPP/SNMP/无损压缩/备份粗标签已按现有合法枚举调整，topic_id仍正确，关闭明显错标。"
+    },
+    {
+      "severity": "P3",
+      "ids": [
+        "gap-course-revision-applied-04-1"
+      ],
+      "issue": "单选唯一性成立，但B/C/D分别为分辨率、Word格式、收藏夹排序，干扰项和DNS定位过远，难验证对相近网络方案的辨析。",
+      "evidence": "A为唯一负责解析环节的选项。",
+      "suggestion": "若用于场景选型能力验收，可将部分干扰项改为DHCP租约/ARP缓存/目标TCP监听等相邻层次，并保留已按IP访问成功及nslookup失败的限定；当前题可留作入门识别。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "末次3项调整已复核通过。"
+    },
+    {
+      "severity": "P3",
+      "ids": [
+        "gap-course-revision-core-02-1"
+      ],
+      "issue": "三元组含0坐标可推知零起始，但题干未直接声明编号约定。",
+      "evidence": "转置交换行列后为(2,0,5),(0,1,7)，按新行序为(0,1,7),(2,0,5)，3×2矩阵。",
+      "suggestion": "补“行列号从0开始，三元组格式为(行,列,值)”，便于脱离上下文直接作答。",
+      "blocks_content_freeze": false,
+      "initial_finding": true,
+      "status": "resolved_after_root_revision",
+      "retest": "末次3项调整已复核通过。"
+    }
+  ],
+  "per_question": [
+    {
+      "id": "gap-course-revision-applied-01-1",
+      "type": "简答",
+      "answer_check": "7D 5E 7D 5D",
+      "lecture": "course_notes/计算机网络.md",
+      "lecture_heading": "PPP透明传输的填充与还原",
+      "lecture_line": 257,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重现：取讲义载荷的两个特殊字节",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "legacy knowledge_point沿旧粗分类，部分与题面任务不符。"
+      ],
+      "reviewed_stem": "异步PPP透明传输中，信息字段的两个原始字节依次为0x7E、0x7D。只写出这两个字节经过字节填充后的结果（十六进制，不含帧定界、首部及FCS）。",
+      "reviewed_answer": "7D 5E 7D 5D",
+      "reviewed_knowledge_point": "数据链路与局域网",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-02-1",
+      "type": "简答",
+      "answer_check": "LAN1保留、LAN2停发；题面无其他下游需求",
+      "lecture": "course_notes/计算机网络.md",
+      "lecture_heading": "组播成员与分支转发",
+      "lecture_line": 433,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重现",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "路由器R分别向直连LAN1和LAN2转发组G的组播数据。LAN1仍有G成员，LAN2唯一的G成员B已离开，成员离开已确认且该分支无其他接收者。R应保留哪条下行分支、停止哪条分支？",
+      "reviewed_answer": "保留LAN1，停止LAN2",
+      "reviewed_knowledge_point": "路由与网络诊断",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-03-1",
+      "type": "简答",
+      "answer_check": "计数器轮询+代理主动通知",
+      "lecture": "course_notes/计算机网络.md",
+      "lecture_heading": "SNMP轮询与主动通知",
+      "lecture_line": 726,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "机制复述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "legacy knowledge_point沿旧粗分类，部分与题面任务不符。"
+      ],
+      "reviewed_stem": "管理员要定期采集交换机接口计数器来估算流量趋势，并在接口断开时尽早得到事件通知。SNMP可配合使用哪两类交互？",
+      "reviewed_answer": "周期读取接口计数器；代理主动发送接口变化通知",
+      "reviewed_knowledge_point": "应用层协议",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-04-1",
+      "type": "单选",
+      "answer_check": "A唯一，解析失败优先DNS",
+      "lecture": "course_notes/大学计算机基础与新技术.md",
+      "lecture_heading": "域名访问与网络地址分工",
+      "lecture_line": 169,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "已教排障场景重述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "单选唯一性成立，但B/C/D分别为分辨率、Word格式、收藏夹排序，干扰项和DNS定位过远，难验证对相近网络方案的辨析。"
+      ],
+      "reviewed_stem": "同一台电脑能按公网IP访问某服务，但用域名访问失败，nslookup查询该域名也失败。为定位故障，应优先检查哪一项？",
+      "reviewed_answer": "A",
+      "reviewed_knowledge_point": "计算机网络基础",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-05-1",
+      "type": "简答",
+      "answer_check": "明确求比例：12/(12+8)=60%，唯一",
+      "lecture": "course_notes/大学计算机基础与新技术.md",
+      "lecture_heading": "准确率、精确率与召回率",
+      "lecture_line": 356,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重现；初审题意歧义已关闭",
+      "issues": [
+        "题干问“实际正类中有多少被找出”未规定数量还是比例，合理答案可为12个，而答案仅60%。",
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "某二分类模型的统计为TP=12、FP=3、FN=8、TN=77。求召回率，即实际正类样本中被正确识别为正类的比例。",
+      "reviewed_answer": "召回率=12/(12+8)=60%。",
+      "reviewed_knowledge_point": "计算机发展与应用",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-06-1",
+      "type": "简答",
+      "answer_check": "(1,2)→(4,2)→(8,4)",
+      "lecture": "course_notes/多媒体技术.md",
+      "lecture_heading": "二维变换的顺序",
+      "lecture_line": 192,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重现",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "点(1,2)先右移3再以原点放大2倍是多少？",
+      "reviewed_answer": "(8,4)",
+      "reviewed_knowledge_point": "图形图像",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-07-1",
+      "type": "简答",
+      "answer_check": "无长游程且计数/标记有开销",
+      "lecture": "course_notes/多媒体技术.md",
+      "lecture_heading": "游程编码与压缩条件",
+      "lecture_line": 365,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "讲义反例复述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "legacy knowledge_point沿旧粗分类，部分与题面任务不符。"
+      ],
+      "reviewed_stem": "为何ABAB不一定适合游程压缩？",
+      "reviewed_answer": "没有长重复游程，逐段存符号和次数的开销可能超过原数据",
+      "reviewed_knowledge_point": "多媒体压缩与容量",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-08-1",
+      "type": "简答",
+      "answer_check": "0|11|10→A,C,B",
+      "lecture": "course_notes/多媒体技术.md",
+      "lecture_heading": "哈夫曼编码与前缀解码",
+      "lecture_line": 369,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "与讲义折叠自测相同，不是盲测",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "legacy knowledge_point沿旧粗分类，部分与题面任务不符。"
+      ],
+      "reviewed_stem": "A=0、B=10、C=11，01110怎样解码？",
+      "reviewed_answer": "A、C、B",
+      "reviewed_knowledge_point": "多媒体压缩与容量",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-09-1",
+      "type": "简答",
+      "answer_check": "round(23/10)=2；2×10=20；绝对误差3",
+      "lecture": "course_notes/多媒体技术.md",
+      "lecture_heading": "JPEG量化与信息损失",
+      "lecture_line": 373,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重现；绝对误差条件已充分",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "在简化的JPEG系数量化中，DCT系数为23、量化步长为10，采用四舍五入。求量化整数、反量化重建值和绝对量化误差。",
+      "reviewed_answer": "量化整数2；重建值20；绝对量化误差3。",
+      "reviewed_knowledge_point": "多媒体压缩与容量",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-10-1",
+      "type": "单选",
+      "answer_check": "B唯一；须先解码P2",
+      "lecture": "course_notes/多媒体技术.md",
+      "lecture_heading": "预测帧的参考依赖",
+      "lecture_line": 378,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重述为选择题",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "视频显示顺序为I₀、B₁、P₂，已知B₁的预测同时依赖I₀和P₂。I₀已解码而P₂尚未解码时，要完整重建B₁，应怎样处理？",
+      "reviewed_answer": "B",
+      "reviewed_knowledge_point": "动画与视频",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-11-1",
+      "type": "单选",
+      "answer_check": "C唯一；容量匹配UPS+安全停机",
+      "lecture": "course_notes/信息安全.md",
+      "lecture_heading": "物理安全的风险与控制",
+      "lecture_line": 52,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "已教威胁对应控制",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "机房服务器主要面临短时市电中断导致的异常关机。为直接缓解该风险，下列措施最合适的是？",
+      "reviewed_answer": "C",
+      "reviewed_knowledge_point": "安全目标与风险",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-12-1",
+      "type": "简答",
+      "answer_check": "C1⊕C2=P1⊕P2",
+      "lecture": "course_notes/信息安全.md",
+      "lecture_heading": "分组模式与nonce重用",
+      "lecture_line": 177,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例公式重现；符号可补清楚",
+      "issues": [
+        "答案使用P1、P2，但题干没有明确它们是两消息的明文、也没有给密文符号，独立题面略依赖讲义命名。",
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "CTR模式中，等长明文P₁、P₂在同一密钥下错误复用了相同密钥流K，密文分别为C₁=P₁⊕K、C₂=P₂⊕K。求C₁⊕C₂，并说明这种重用泄露了什么关系。",
+      "reviewed_answer": "C₁⊕C₂=P₁⊕P₂，泄露两段明文的异或关系。",
+      "reviewed_knowledge_point": "密码技术",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-13-1",
+      "type": "单选",
+      "answer_check": "D唯一；F→I1→I2，传统增量链条件已明",
+      "lecture": "course_notes/信息安全.md",
+      "lecture_heading": "全量、增量与差异恢复链",
+      "lecture_line": 269,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "示例重述为场景题",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "legacy knowledge_point沿旧粗分类，部分与题面任务不符。"
+      ],
+      "reviewed_stem": "周日完成全量备份F，周一完成增量I₁，周二完成增量I₂。每个增量只记录相对上一次成功备份的变化。周三故障，需恢复到周二备份完成时，且无额外日志可用，应按哪一条链恢复？",
+      "reviewed_answer": "D",
+      "reviewed_knowledge_point": "数据备份与恢复",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-applied-14-1",
+      "type": "单选",
+      "answer_check": "B唯一；公开展示且图内嵌标识",
+      "lecture": "course_notes/信息安全.md",
+      "lecture_heading": "加密、隐写与数字水印",
+      "lecture_line": 324,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "已教选型条件重述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "摄影作品需要公开展示，且希望在图像中嵌入可检测的版权标识。下列技术中，哪一项最符合这两个要求？",
+      "reviewed_answer": "B",
+      "reviewed_knowledge_point": "隐私合规与责任",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-02-1",
+      "type": "简答",
+      "answer_check": "(0,1,7),(2,0,5)，3×2",
+      "lecture": "course_notes/数据结构与算法.md",
+      "lecture_heading": "稀疏矩阵快速转置",
+      "lecture_line": 161,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "不同数据与非方阵近迁移设计；尚无学生实测",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。",
+        "三元组含0坐标可推知零起始，但题干未直接声明编号约定。"
+      ],
+      "reviewed_stem": "按从0开始的行、列下标，三元组(0,2,5)、(1,0,7)表示一个2×3稀疏矩阵的全部非零元素。求转置后的矩阵尺寸及按行、列递增排列的非零三元组。",
+      "reviewed_answer": "(0,1,7),(2,0,5)，矩阵为3×2",
+      "reviewed_knowledge_point": "线性表",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-03-1",
+      "type": "简答",
+      "answer_check": "长3、深2、尾(b,())；空表深1约定见讲义",
+      "lecture": "course_notes/数据结构与算法.md",
+      "lecture_heading": "广义表长度与深度",
+      "lecture_line": 173,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "不同嵌套结构近迁移设计；尚无学生实测",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "L=((a),b,())的长度、深度和表尾是什么？",
+      "reviewed_answer": "长度3，深度2，表尾(b,())",
+      "reviewed_knowledge_point": "线性表",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-04-1",
+      "type": "简答",
+      "answer_check": "6天；S-A-T；ve0,2,3,6；vl0,2,4,6",
+      "lecture": "course_notes/数据结构与算法.md",
+      "lecture_heading": "AOE网关键路径",
+      "lecture_line": 607,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "与讲义4边图完全相同的示例重现",
+      "issues": [
+        "题干ve/vl为可选输出（“若列”），rubric却把ve/vl与必答工期/关键路径放在唯一评分项里。",
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "单源单汇AOE网包含事件S、A、B、T，活动及工期为S→A：2，S→B：3，A→T：4，B→T：2（单位均为天）。求总工期、关键路径，并按S、A、B、T顺序列出事件最早发生时间ve和最迟发生时间vl。",
+      "reviewed_answer": "工期6，S-A-T；ve为0,2,3,6，vl为0,2,4,6",
+      "reviewed_knowledge_point": "图结构与算法",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-05-1",
+      "type": "简答",
+      "answer_check": "20→32B，伙伴32合64，再伙伴64合128；条件充分",
+      "lecture": "course_notes/数据结构与算法.md",
+      "lecture_heading": "动态存储分裂与合并",
+      "lecture_line": 873,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "与讲义128B/20B示例相同",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "一个起始地址为0、大小128B且完全空闲的伙伴系统，只处理一次20B申请。忽略管理开销，按最小足够的2的幂次分配，并总从较低地址一侧继续分裂。实际分配多少字节？该块释放后，其他伙伴仍空闲时如何逐级合并？",
+      "reviewed_answer": "占32B；与地址32的32B合64，再与地址64的64B合128",
+      "reviewed_knowledge_point": "数据结构基础",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-06-1",
+      "type": "简答",
+      "answer_check": "4初始段，2归并趟，含生成3×24=72页I/O",
+      "lecture": "course_notes/数据结构与算法.md",
+      "lecture_heading": "外部归并与文件组织",
+      "lecture_line": 879,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "与讲义12页/3缓冲示例相同",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "12页文件、3页缓冲，初始每次排3页、2路归并，含段生成各阶段完整读写，需多少页I/O？",
+      "reviewed_answer": "72页I/O",
+      "reviewed_knowledge_point": "数据结构基础",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-07-1",
+      "type": "简答",
+      "answer_check": "剩1读者，rw不释放，写者不能进入",
+      "lecture": "course_notes/操作系统原理.md",
+      "lecture_heading": "读者写者的计数与互斥",
+      "lecture_line": 192,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "讲义2→1状态重现",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "读者优先方案中两读者已进入，一人退出后能否放行写者？为何？",
+      "reviewed_answer": "不能；readCount仍为1，最后一个读者退出才释放rw",
+      "reviewed_knowledge_point": "进程调度与同步",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-08-1",
+      "type": "简答",
+      "answer_check": "不总等价，WHERE可拒绝补NULL行",
+      "lecture": "course_notes/数据库技术.md",
+      "lecture_heading": "查询执行与优化",
+      "lecture_line": 364,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "讲义优化反例复述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "LEFT JOIN后把右表条件由ON移动到WHERE，是否总等价？说明原因。",
+      "reviewed_answer": "不总等价；WHERE可能滤掉右侧补NULL的左行",
+      "reviewed_knowledge_point": "SQL查询",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-09-1",
+      "type": "简答",
+      "answer_check": "分(学生,爱好)与(学生,语言)，按独立性无损",
+      "lecture": "course_notes/数据库技术.md",
+      "lecture_heading": "多值依赖与4NF",
+      "lecture_line": 417,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "同业务示例复述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "R(学生,爱好,语言)中爱好与语言按学生相互独立且每项可多个，如何分解减少冗余？",
+      "reviewed_answer": "分为R1(学生,爱好)、R2(学生,语言)",
+      "reviewed_knowledge_point": "数据库规范化",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-10-1",
+      "type": "简答",
+      "answer_check": "此前未调用时1、2；先前次数需补明确",
+      "lecture": "course_notes/C与Python程序设计.md",
+      "lecture_heading": "预处理与static局部状态",
+      "lecture_line": 484,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "改名同机制、同结果示例重现",
+      "issues": [
+        "“连续调用两次”没有明确是本次程序运行中的首次和第二次调用。",
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "C函数int f(void){static int x=0;return ++x;}在程序中此前从未调用过，现在连续调用两次。两次返回值依次是什么？",
+      "reviewed_answer": "1、2",
+      "reviewed_knowledge_point": "C函数与作用域",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-11-1",
+      "type": "简答",
+      "answer_check": "步长3×4=12，1000+12=1012；模型充分",
+      "lecture": "course_notes/C与Python程序设计.md",
+      "lecture_heading": "二维数组与指针声明",
+      "lecture_line": 673,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "与讲义相同行宽/地址/结果，仅改指针名",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "在简化的字节编址模型中，int占4B，数组int a[2][3]按行连续存储且首地址记为1000。声明int (*p)[3]=a后，p+1所指位置的地址值是多少？",
+      "reviewed_answer": "1012",
+      "reviewed_knowledge_point": "C指针与内存",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-12-1",
+      "type": "简答",
+      "answer_check": "字符串拼8090；转int累计得170，可计数求均值",
+      "lecture": "course_notes/C与Python程序设计.md",
+      "lecture_heading": "CSV转换统计与格式化",
+      "lecture_line": 733,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "与讲义80/90数据完全相同",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "csv.DictReader读出score为字符串\"80\"、\"90\"，为什么直接相加不能得到170？应如何统计？",
+      "reviewed_answer": "字符串相加会拼接为\"8090\"；每项int转换后累计并计数",
+      "reviewed_knowledge_point": "Python数据类型",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-13-1",
+      "type": "简答",
+      "answer_check": "从可借初态：借出后再次borrow无定义",
+      "lecture": "course_notes/软件工程.md",
+      "lecture_heading": "有穷状态机与需求约束",
+      "lecture_line": 116,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "讲义已借再次借的反例，初态需补",
+      "issues": [
+        "题干列允许转移却未显式给事件序列起始状态；答案解释“第一步到借出”依赖初态可借。",
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "借阅状态机的初态为“可借”。在“可借”态，borrow使其转为“借出”；在“借出”态，只允许return转回“可借”。从初态执行事件序列borrow、borrow是否合法？说明每一步。",
+      "reviewed_answer": "不合法；第一步到借出，第二次borrow无允许迁移",
+      "reviewed_knowledge_point": "需求工程",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-core-14-1",
+      "type": "简答",
+      "answer_check": "每次日期属于一次Loan借阅记录，保留历史",
+      "lecture": "course_notes/软件工程.md",
+      "lecture_heading": "借阅对象与协作建模",
+      "lecture_line": 177,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "同借阅建模案例复述",
+      "issues": [
+        "当前learning-map.json尚没有27个新增topic_id，只有最后2题旧编程topic可查到；属于冻结生成前待闭环事项。"
+      ],
+      "reviewed_stem": "同一册书先后被多人借阅，每次借出/归还日应存在哪个对象，为什么？",
+      "reviewed_answer": "存具体Loan借阅记录",
+      "reviewed_knowledge_point": "软件设计与UML",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-programming-scenario-01",
+      "type": "单选",
+      "answer_check": "B唯一；malloc成功返回动态对象，由调用者free",
+      "lecture": "course_notes/C与Python程序设计.md",
+      "lecture_heading": "C指针与地址",
+      "lecture_line": 618,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "已教生命周期原则的场景选择；未做学生盲测",
+      "issues": [],
+      "reviewed_stem": "C函数需创建n个int供调用者在函数返回后继续使用，n已检查为正且字节乘法不溢出，调用者负责释放。下列方案中哪项符合该所有权约定？",
+      "reviewed_answer": "B",
+      "reviewed_knowledge_point": "C指针与内存",
+      "retest_status": "answer_and_lecture_support_pass"
+    },
+    {
+      "id": "gap-course-revision-programming-scenario-02",
+      "type": "单选",
+      "answer_check": "C唯一；可哈希、去重、成员判断、无需顺序/计数",
+      "lecture": "course_notes/C与Python程序设计.md",
+      "lecture_heading": "字典和集合",
+      "lecture_line": 543,
+      "source_chapter_matches": true,
+      "support": "对应定义/公式/过程已教；不是仅关键词出现",
+      "exercise_evidence_kind": "已教容器选型的场景选择；未做学生盲测",
+      "issues": [],
+      "reviewed_stem": "Python程序只需维护一批可哈希的用户编号，要求自动去重且频繁判断某编号是否已出现，不要求保存重复次数或顺序。四个选项中最直接的容器是？",
+      "reviewed_answer": "C",
+      "reviewed_knowledge_point": "Python数据类型",
+      "retest_status": "answer_and_lecture_support_pass"
+    }
+  ],
+  "independent_review_limits": "逐题作者以外的逻辑重算和讲义支持核对；未组织学生盲测，没有把同例数字重现称作迁移验证；没有修改题源、题库或产品。",
+  "primary_sources": [
+    {
+      "url": "https://docs.python.org/3/library/csv.html",
+      "use": "CSV默认字段类型与DictReader行为"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/queries-table-expressions.html",
+      "use": "外连接ON与WHERE不可任意互换"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc1662",
+      "use": "PPP转义机制，沿前轮官方核查"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9776.html",
+      "use": "IGMP成员管理，沿前轮官方核查"
+    }
+  ],
+  "retest": {
+    "status": "29题题源逻辑复测通过；无未关闭答案错误/多解阻断",
+    "source_sha256": "e7601e6aaeec54ef327fe28846541f8a4ba6f7a1f09306db82871f66ab0a0d0a",
+    "recomputed_examples": {
+      "AOE": "S,A,B,T：ve 0,2,3,6；vl 0,2,4,6；最长路径6与5，关键S-A-T。",
+      "伙伴系统": "初始[0,128)全空闲，低址分裂选[0,32)，回收并32为64再并64为128。",
+      "指针模型": "int(*p)[3]每步3×4字节；1000+12=1012；同一数组内p+1有效。",
+      "JPEG": "23/10=2.3，舍入2，重建20，绝对误差3。"
+    },
+    "single_choice": "7道单选答案依次A/B/C/D/B/B/C（按题源顺序），各正确项符合全部条件，其他项违反明确目标或生命周期/数据结构要求。",
+    "extra_conditions_verified": [
+      "组播明确R直连两LAN且LAN2最后成员离开已确认、没有其他接收者",
+      "SNMP按周期计数差估流量趋势，事件通知可能丢失、不承诺即时必达",
+      "备份明确传统链式增量、最后时间点、无额外日志",
+      "JPEG明确绝对量化误差，不存在正负误差约定问题"
+    ],
+    "remaining_suggestions": [],
+    "not_claimed": "未将本轮逻辑复测或同例重现称为学生迁移验证；没有修改题源/产品。"
+  },
+  "final_three_retest": {
+    "status": "通过",
+    "source_sha256": "e7601e6aaeec54ef327fe28846541f8a4ba6f7a1f09306db82871f66ab0a0d0a",
+    "checks": [
+      "三元组明确0基与全部非零元素，转置输出唯一。",
+      "AOE明确求ve/vl，必答范围与答案及rubric一致。",
+      "DNS干扰B与题设已给IP可访问证据对应，A仍是优先排查项，唯一性通过。"
+    ]
+  },
+  "first_retained_source_sha256": "641d0244bce0d66fc45b7fe566b51f4c02fab554c45a3db6e16c6bf82e09b3e4",
+  "initial_evidence_limit": "初始题干依据首次工具读取内容和问题记录；当时未保存独立补丁前题源快照/哈希。首次留存SHA已是根的修后版本，不能充当初审原稿哈希。"
+}

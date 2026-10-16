@@ -86,7 +86,9 @@
         "计算机发展与应用分类": "computer-foundations.t18",
         "信息系统与数字化建设": "computer-foundations.t19",
         "按目标与约束组合技术": "computer-foundations.t20",
-        "信息检索与结果筛选": "computer-foundations.t21"
+        "信息检索与结果筛选": "computer-foundations.t21",
+        "域名访问与网络地址分工": "computer-foundations.t22",
+        "准确率、精确率与召回率": "computer-foundations.t23"
       },
       "chapter_prefix": {
         "computer-foundations.c01": [
@@ -131,7 +133,9 @@
         ]
       },
       "parents": {
-        "computer-foundations.t21": "computer-foundations.t01"
+        "computer-foundations.t21": "computer-foundations.t01",
+        "computer-foundations.t22": "computer-foundations.t07",
+        "computer-foundations.t23": "computer-foundations.t13"
       },
       "keywords": {
         "computer-foundations.t21": [
@@ -140,6 +144,12 @@
           "检索",
           "关键词",
           "书签"
+        ],
+        "computer-foundations.t22": [
+          "域名访问与网络地址分工"
+        ],
+        "computer-foundations.t23": [
+          "准确率、精确率与召回率"
         ]
       },
       "chapters": {
@@ -173,7 +183,12 @@
         "压缩比与格式选择": "multimedia.t14",
         "需求、脚本与素材组织": "multimedia.t15",
         "图层蒙版、测试与交付": "multimedia.t16",
-        "超文本与超媒体": "multimedia.t02"
+        "超文本与超媒体": "multimedia.t02",
+        "二维变换的顺序": "multimedia.t17",
+        "游程编码与压缩条件": "multimedia.t18",
+        "哈夫曼编码与前缀解码": "multimedia.t19",
+        "JPEG量化与信息损失": "multimedia.t20",
+        "预测帧的参考依赖": "multimedia.t21"
       },
       "chapter_prefix": {
         "multimedia.c01": [
@@ -215,6 +230,30 @@
         "第5章 动画与数字视频": "multimedia.c05",
         "第6章 多媒体数据压缩": "multimedia.c06",
         "第7章 多媒体作品设计与应用": "multimedia.c07"
+      },
+      "parents": {
+        "multimedia.t17": "multimedia.t05",
+        "multimedia.t18": "multimedia.t13",
+        "multimedia.t19": "multimedia.t13",
+        "multimedia.t20": "multimedia.t14",
+        "multimedia.t21": "multimedia.t14"
+      },
+      "keywords": {
+        "multimedia.t17": [
+          "二维变换的顺序"
+        ],
+        "multimedia.t18": [
+          "游程编码与压缩条件"
+        ],
+        "multimedia.t19": [
+          "哈夫曼编码与前缀解码"
+        ],
+        "multimedia.t20": [
+          "JPEG量化与信息损失"
+        ],
+        "multimedia.t21": [
+          "预测帧的参考依赖"
+        ]
       }
     },
     "操作系统原理": {
@@ -237,7 +276,8 @@
         "FIFO与LRU命中后状态": "operating-system.t16",
         "CLOCK访问位与指针": "operating-system.t17",
         "SSTF逐次选最近": "operating-system.t18",
-        "SCAN与LOOK累计距离": "operating-system.t19"
+        "SCAN与LOOK累计距离": "operating-system.t19",
+        "读者写者的计数与互斥": "operating-system.t20"
       },
       "chapter_prefix": {
         "operating-system.c01": [
@@ -274,7 +314,8 @@
         "operating-system.t16": "operating-system.t10",
         "operating-system.t17": "operating-system.t10",
         "operating-system.t18": "operating-system.t13",
-        "operating-system.t19": "operating-system.t13"
+        "operating-system.t19": "operating-system.t13",
+        "operating-system.t20": "operating-system.t06"
       },
       "keywords": {
         "operating-system.t14": [
@@ -301,6 +342,9 @@
         "operating-system.t19": [
           "SCAN",
           "LOOK"
+        ],
+        "operating-system.t20": [
+          "读者写者的计数与互斥"
         ]
       },
       "chapters": {
@@ -334,7 +378,9 @@
         "WAL与恢复": "database.t17",
         "认证、授权与审计": "database.t18",
         "冲突优先图判串行化": "database.t19",
-        "两段锁的首次解锁": "database.t20"
+        "两段锁的首次解锁": "database.t20",
+        "查询执行与优化": "database.t21",
+        "多值依赖与4NF": "database.t22"
       },
       "chapter_prefix": {
         "database.c01": [
@@ -376,7 +422,9 @@
       },
       "parents": {
         "database.t19": "database.t16",
-        "database.t20": "database.t16"
+        "database.t20": "database.t16",
+        "database.t21": "database.t10",
+        "database.t22": "database.t13"
       },
       "keywords": {
         "database.t19": [
@@ -386,6 +434,12 @@
         "database.t20": [
           "2PL",
           "两段锁"
+        ],
+        "database.t21": [
+          "查询执行与优化"
+        ],
+        "database.t22": [
+          "多值依赖与4NF"
         ]
       },
       "chapters": {
@@ -439,7 +493,13 @@
         "冒泡与选择的一趟": "data-structures.t35",
         "堆排序取顶与下沉": "data-structures.t36",
         "希尔排序按增量分组": "data-structures.t37",
-        "基数排序稳定收集": "data-structures.t38"
+        "基数排序稳定收集": "data-structures.t38",
+        "二维数组地址计算": "data-structures.t39",
+        "稀疏矩阵快速转置": "data-structures.t40",
+        "广义表长度与深度": "data-structures.t41",
+        "AOE网关键路径": "data-structures.t42",
+        "动态存储分裂与合并": "data-structures.t43",
+        "外部归并与文件组织": "data-structures.t44"
       },
       "chapter_prefix": {
         "data-structures.c01": [
@@ -497,7 +557,13 @@
         "data-structures.t35": "data-structures.t20",
         "data-structures.t36": "data-structures.t23",
         "data-structures.t37": "data-structures.t23",
-        "data-structures.t38": "data-structures.t23"
+        "data-structures.t38": "data-structures.t23",
+        "data-structures.t39": "data-structures.t07",
+        "data-structures.t40": "data-structures.t07",
+        "data-structures.t41": "data-structures.t07",
+        "data-structures.t42": "data-structures.t17",
+        "data-structures.t43": "data-structures.t24",
+        "data-structures.t44": "data-structures.t24"
       },
       "keywords": {
         "data-structures.t25": [
@@ -546,6 +612,24 @@
         ],
         "data-structures.t38": [
           "基数"
+        ],
+        "data-structures.t39": [
+          "二维数组地址计算"
+        ],
+        "data-structures.t40": [
+          "稀疏矩阵快速转置"
+        ],
+        "data-structures.t41": [
+          "广义表长度与深度"
+        ],
+        "data-structures.t42": [
+          "AOE网关键路径"
+        ],
+        "data-structures.t43": [
+          "动态存储分裂与合并"
+        ],
+        "data-structures.t44": [
+          "外部归并与文件组织"
         ]
       },
       "chapters": {
@@ -580,7 +664,10 @@
         "递归调用与逐层返回": "programming.t17",
         "C与Python名字作用域": "programming.t09",
         "Python按异常类型分支": "programming.t15",
-        "with文件读写与编码": "programming.t18"
+        "with文件读写与编码": "programming.t18",
+        "预处理与static局部状态": "programming.t19",
+        "二维数组与指针声明": "programming.t20",
+        "CSV转换统计与格式化": "programming.t21"
       },
       "chapter_prefix": {
         "programming.c01": [
@@ -624,7 +711,10 @@
       },
       "parents": {
         "programming.t17": "programming.t09",
-        "programming.t18": "programming.t15"
+        "programming.t18": "programming.t15",
+        "programming.t19": "programming.t09",
+        "programming.t20": "programming.t12",
+        "programming.t21": "programming.t18"
       },
       "keywords": {
         "programming.t17": [
@@ -645,6 +735,15 @@
           "with",
           "文件",
           "编码"
+        ],
+        "programming.t19": [
+          "预处理与static局部状态"
+        ],
+        "programming.t20": [
+          "二维数组与指针声明"
+        ],
+        "programming.t21": [
+          "CSV转换统计与格式化"
         ]
       },
       "chapters": {
@@ -972,7 +1071,10 @@
         "DNS递归与迭代查询": "net.dns-lookup",
         "DHCP租约获取流程": "net.dhcp-lease",
         "TCP Socket收发与消息边界": "net.socket-io",
-        "播放缓冲耗尽计算": "net.playback-buffer"
+        "播放缓冲耗尽计算": "net.playback-buffer",
+        "PPP透明传输的填充与还原": "net.ppp-stuffing",
+        "组播成员与分支转发": "net.multicast-membership",
+        "SNMP轮询与主动通知": "net.snmp-management"
       },
       "chapter_prefix": {
         "net-01": [
@@ -1028,7 +1130,10 @@
         "net.dns-lookup": "net.dns-dhcp",
         "net.dhcp-lease": "net.dns-dhcp",
         "net.socket-io": "net.app-protocols",
-        "net.playback-buffer": "net.streaming-qos"
+        "net.playback-buffer": "net.streaming-qos",
+        "net.ppp-stuffing": "net.frames-switching",
+        "net.multicast-membership": "net.arp-forwarding",
+        "net.snmp-management": "net.app-protocols"
       },
       "keywords": {
         "net.fragmentation": [
@@ -1059,6 +1164,15 @@
           "缓冲耗尽",
           "缓冲区",
           "缓存"
+        ],
+        "net.ppp-stuffing": [
+          "PPP透明传输的填充与还原"
+        ],
+        "net.multicast-membership": [
+          "组播成员与分支转发"
+        ],
+        "net.snmp-management": [
+          "SNMP轮询与主动通知"
         ]
       },
       "chapters": {
@@ -1567,7 +1681,9 @@
         "追踪、反馈与持续改进": "software-engineering.t19",
         "语句与判定覆盖辨别": "software-engineering.t20",
         "控制流图环形复杂度": "software-engineering.t21",
-        "关键路径与总工期": "software-engineering.t22"
+        "关键路径与总工期": "software-engineering.t22",
+        "有穷状态机与需求约束": "software-engineering.t23",
+        "借阅对象与协作建模": "software-engineering.t24"
       },
       "chapter_prefix": {
         "software-engineering.c01": [
@@ -1609,7 +1725,9 @@
       "parents": {
         "software-engineering.t20": "software-engineering.t12",
         "software-engineering.t21": "software-engineering.t12",
-        "software-engineering.t22": "software-engineering.t16"
+        "software-engineering.t22": "software-engineering.t16",
+        "software-engineering.t23": "software-engineering.t07",
+        "software-engineering.t24": "software-engineering.t10"
       },
       "keywords": {
         "software-engineering.t20": [
@@ -1624,6 +1742,12 @@
         "software-engineering.t22": [
           "关键路径",
           "工期"
+        ],
+        "software-engineering.t23": [
+          "有穷状态机与需求约束"
+        ],
+        "software-engineering.t24": [
+          "借阅对象与协作建模"
         ]
       },
       "chapters": {
@@ -1656,7 +1780,11 @@
         "事件响应闭环": "information-security.t15",
         "最小必要与重新识别": "information-security.t16",
         "授权边界与规则核验": "information-security.t17",
-        "VPN隧道与身份校验": "information-security.t18"
+        "VPN隧道与身份校验": "information-security.t18",
+        "物理安全的风险与控制": "information-security.t19",
+        "分组模式与nonce重用": "information-security.t20",
+        "全量、增量与差异恢复链": "information-security.t21",
+        "加密、隐写与数字水印": "information-security.t22"
       },
       "chapter_prefix": {
         "information-security.c01": [
@@ -1694,13 +1822,29 @@
         ]
       },
       "parents": {
-        "information-security.t18": "information-security.t11"
+        "information-security.t18": "information-security.t11",
+        "information-security.t19": "information-security.t03",
+        "information-security.t20": "information-security.t09",
+        "information-security.t21": "information-security.t14",
+        "information-security.t22": "information-security.t16"
       },
       "keywords": {
         "information-security.t18": [
           "VPN",
           "隧道",
           "虚拟专用网"
+        ],
+        "information-security.t19": [
+          "物理安全的风险与控制"
+        ],
+        "information-security.t20": [
+          "分组模式与nonce重用"
+        ],
+        "information-security.t21": [
+          "全量、增量与差异恢复链"
+        ],
+        "information-security.t22": [
+          "加密、隐写与数字水印"
         ]
       },
       "chapters": {
