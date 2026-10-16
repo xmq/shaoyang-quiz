@@ -448,6 +448,15 @@
     .lecture-page .note .lecture-core > strong { color: var(--red); }
     .lecture-page .note .lecture-method > strong { color: var(--blue); }
     .lecture-page .note .lecture-caution > strong { color: var(--black); }
+    .lecture-page .note mark.answer-key {
+      background: transparent;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: .2em;
+      text-decoration-skip-ink: auto;
+    }
     .lecture-page .note .test-point { margin: 6px 0 14px; color: var(--muted); font-size: 13px; line-height: 1.7; }
     .lecture-page .note .test-point strong { color: var(--blue); font-weight: 750; }
     .lecture-page .note code { border: 1px solid #d8e6f3; background: #eef5fb; color: #174f78; font-weight: 650; }
@@ -1043,9 +1052,15 @@
       const source = publicFacingText(value);
       const marker = source.match(/^(🔴|🔵|⚫️?)\s*/u);
       const visibleSource = marker ? source.slice(marker[0].length) : source;
+      const codeParts = [];
       let output = escapeHtml(visibleSource)
-        .replace(/`([^`]+)`/g, "<code>$1</code>")
-        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+        .replace(/`([^`]+)`/g, (_match, code) => {
+          const index = codeParts.push(`<code>${code}</code>`) - 1;
+          return `\u0000${index}\u0000`;
+        })
+        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+        .replace(/==(.+?)==/g, '<mark class="answer-key">$1</mark>')
+        .replace(/\u0000(\d+)\u0000/g, (_match, index) => codeParts[Number(index)]);
       if (colorMode && marker) {
         const className = marker[1] === "🔴" ? "red" : marker[1] === "🔵" ? "blue" : "black";
         const recallRole = className === "red" ? "结论" : className === "blue" ? "方法与步骤" : "条件与易错";
