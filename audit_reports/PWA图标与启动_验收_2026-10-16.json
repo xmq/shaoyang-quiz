@@ -1,0 +1,98 @@
+{
+  "build": "147d775824e1b2d7",
+  "icons": [
+    {
+      "file": "icon-192.png",
+      "size": 192,
+      "purpose": "any"
+    },
+    {
+      "file": "icon-512.png",
+      "size": 512,
+      "purpose": "any"
+    },
+    {
+      "file": "icon-maskable-512.png",
+      "size": 512,
+      "purpose": "maskable",
+      "opaque_background": true,
+      "foreground_radius": 177.92,
+      "safe_radius": 204.8
+    }
+  ],
+  "browser_checks": [
+    {
+      "width": 390,
+      "theme": "light",
+      "slow_boot_skeleton": true,
+      "immediate_render_after_data": true,
+      "warm_boot": true,
+      "courses": 16,
+      "manifest_errors": [],
+      "reduced_motion": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "slow_boot_skeleton": true,
+      "immediate_render_after_data": true,
+      "warm_boot": true,
+      "courses": 16,
+      "manifest_errors": [],
+      "reduced_motion": true,
+      "overflow": false
+    },
+    {
+      "width": 700,
+      "theme": "light",
+      "slow_boot_skeleton": true,
+      "immediate_render_after_data": true,
+      "warm_boot": true,
+      "courses": 16,
+      "manifest_errors": [],
+      "reduced_motion": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "slow_boot_skeleton": true,
+      "immediate_render_after_data": true,
+      "warm_boot": true,
+      "courses": 16,
+      "manifest_errors": [],
+      "reduced_motion": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "slow_boot_skeleton": true,
+      "immediate_render_after_data": true,
+      "warm_boot": true,
+      "courses": 16,
+      "manifest_errors": [],
+      "reduced_motion": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "slow_boot_skeleton": true,
+      "immediate_render_after_data": true,
+      "warm_boot": true,
+      "courses": 16,
+      "manifest_errors": [],
+      "reduced_motion": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "native_launch_limit": "未模拟或宣称Android原生启动画面验收；原生页由平台根据manifest生成。裁切图为图形预览。Chrome新版本会将图标/名称身份更新交由用户审阅；本轮icons元数据及maskable URL已变更，可被更新检测识别，不承诺已安装图标立即自动替换。",
+  "sources": [
+    "https://developer.chrome.com/docs/lighthouse/pwa/splash-screen",
+    "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons",
+    "https://developer.chrome.com/blog/improvements-to-web-app-updates"
+  ]
+}

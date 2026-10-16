@@ -37,6 +37,25 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 .study-home .home-header-inner { min-height: 64px; padding: 0; }
 .study-home .home-brand-mark, .brand-mark { width: 36px; height: 36px; font-family: inherit; font-size: 19px; font-weight: 700; line-height: 1; border-radius: 10px; background: var(--ui-primary); box-shadow: none; }
 .study-home .home-brand strong, .brand { color: var(--ui-text); letter-spacing: 0; }
+.study-home .home-brand-mark { background: transparent; }
+.home-brand-mark img { display: block; width: 36px; height: 36px; }
+.home-loading { width: 100%; }
+.course-skeleton-heading { width: 68px; height: 14px; margin: 0 0 12px; border-radius: 4px; background: var(--ui-line); }
+.course-skeleton-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.course-skeleton { position: relative; min-width: 0; height: 86px; padding: 22px 16px 16px 68px; border: 1px solid var(--ui-line); border-radius: var(--ui-radius); background: var(--ui-panel); }
+.course-skeleton i { position: absolute; left: 16px; top: 20px; width: 40px; height: 40px; border-radius: 10px; background: var(--ui-soft); }
+.course-skeleton span { display: block; height: 12px; margin-bottom: 12px; border-radius: 4px; background: var(--ui-line); }
+.course-skeleton span:nth-of-type(2) { width: 62%; height: 9px; }
+@media (prefers-reduced-motion: no-preference) {
+  .course-skeleton :is(i, span), .course-skeleton-heading { animation: course-loading 1.6s ease-in-out infinite; }
+  @keyframes course-loading { 50% { opacity: .45; } }
+}
+@media (max-width: 1000px) { .course-skeleton-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .course-skeleton-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .course-skeleton { height: 78px; padding-left: 66px; }
+  .course-skeleton i { left: 14px; top: 18px; }
+}
 .study-home .home-brand small { display: none; }
 .home-reset { min-height: 44px; min-width: 44px; border: 0; background: transparent; color: var(--ui-muted); font-size: 13px; font-weight: 500; }
 .home-reset:hover { color: var(--ui-primary); background: var(--ui-soft); }

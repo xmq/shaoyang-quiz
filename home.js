@@ -232,6 +232,7 @@
     updateMobileLinks(courseName, lectureProgress);
     const progress = readProgress();
     buildCourseGrid(progress, lectureProgress);
+    root.removeAttribute("aria-busy");
     renderReviewTasks(progress);
     bindCourseLinks();
     applyCourseFilter(activeFilter);

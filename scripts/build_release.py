@@ -15,6 +15,7 @@ CORE_HASHED_ASSETS = [
     "quiz-loader.js",
     "icon-192.png",
     "icon-512.png",
+    "icon-maskable-512.png",
     "icon.svg",
     "home-data.js",
     "home.js",

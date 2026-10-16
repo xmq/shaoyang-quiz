@@ -8,6 +8,7 @@
   <meta name="description" content="面向计算机事业编笔试，按大学教材学习、练题与间隔复习。">
   <title>知阶 · 计算机专业课学习台</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./ui.css">
@@ -17,7 +18,7 @@
   <header class="home-header">
     <div class="home-header-inner">
       <a class="home-brand" href="./index.html" aria-current="page">
-        <span class="home-brand-mark" aria-hidden="true">知</span>
+        <span class="home-brand-mark" aria-hidden="true"><img src="./icon.svg" width="36" height="36" alt=""></span>
         <span><strong>知阶</strong><small>计算机专业课学习台</small></span>
       </a>
       <button class="home-reset" id="home-reset" type="button">重置</button>
@@ -36,7 +37,20 @@
         <button type="button" role="tab" aria-selected="false" data-course-filter="计算机应用与安全">应用安全</button>
         <button type="button" role="tab" aria-selected="false" data-course-filter="电子通信方向扩展">电子通信</button>
       </nav>
-      <div class="home-course-grid" id="home-course-grid" data-active-filter="all" aria-live="polite"></div>
+      <div class="home-course-grid" id="home-course-grid" data-active-filter="all" aria-live="polite" aria-busy="true">
+        <div class="home-loading" role="status">
+          <span class="sr-only">正在载入课程</span>
+          <div class="course-skeleton-heading" aria-hidden="true"></div>
+          <div class="course-skeleton-grid" aria-hidden="true">
+            <div class="course-skeleton"><i></i><span></span><span></span></div>
+            <div class="course-skeleton"><i></i><span></span><span></span></div>
+            <div class="course-skeleton"><i></i><span></span><span></span></div>
+            <div class="course-skeleton"><i></i><span></span><span></span></div>
+            <div class="course-skeleton"><i></i><span></span><span></span></div>
+            <div class="course-skeleton"><i></i><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>

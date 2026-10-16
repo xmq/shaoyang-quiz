@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="26" fill="#2563eb"/>
-  <path fill="#fff" d="M34 28h48a12 12 0 0 1 12 12v60H42a12 12 0 0 1-12-12V32a4 4 0 0 1 4-4z"/>
-  <path fill="#dbeafe" d="M42 40h40v8H42zm0 18h40v8H42zm0 18h26v8H42z"/>
-  <path fill="#10b981" d="m78 80 7 7 16-19 7 6-22 26-15-15z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="background" x1="12" y1="8" x2="112" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#21877b"/>
+      <stop offset="1" stop-color="#0c625a"/>
+    </linearGradient>
+  </defs>
+  <rect id="icon-background" width="128" height="128" rx="28" fill="url(#background)"/>
+  <path d="M29 39c12 0 22 3 31 8v47c-9-5-19-8-31-8V39Z" fill="#f7fcf9"/>
+  <path d="M68 94V63h11V51h11V39h11v47c-12 0-23 3-33 8Z" fill="#d6eee5"/>
 </svg>
