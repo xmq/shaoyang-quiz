@@ -16,6 +16,7 @@ COMMANDS = (
     ("node", "scripts/verify_study_review.cjs"),
     ("node", "scripts/verify_answer_checks.cjs"),
     ("node", "scripts/verify_lecture_marks.cjs"),
+    ("node", "scripts/verify_code_blocks.cjs"),
     ("node", "--check", "question-media.js"),
     (sys.executable, "scripts/validate_media_assets.py"),
     ("node", "--check", "sw.js"),

@@ -23,6 +23,15 @@
       --red-soft: #fff2f0;
       --blue: #2563eb;
       --black: #182230;
+      --code-bg: #f5f7f9;
+      --code-heading: #edf1f4;
+      --code-border: #dce3e9;
+      --code-text: #263746;
+      --code-keyword: #774497;
+      --code-string: #21644e;
+      --code-number: #885017;
+      --code-comment: #607282;
+      --code-function: #245e88;
       --shadow: 0 10px 30px rgba(16, 24, 40, .08);
       --image-safe-top: env(safe-area-inset-top, 0px);
       --image-safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -300,8 +309,23 @@
     .note ol { margin: 0 0 15px; padding-left: 1.6em; }
     .note li { margin: 5px 0; }
     .note blockquote { margin: 14px 0; padding: 10px 14px; border-left: 4px solid #98a2b3; background: #f8fafc; color: #475467; }
-    .note pre { max-width: 100%; overflow: auto; margin: 14px 0; padding: 14px; border-radius: 10px; background: #101828; color: #f2f4f7; line-height: 1.65; }
-    .note pre code { padding: 0; background: transparent; color: inherit; white-space: pre; }
+    .code-block { min-width: 0; max-width: 100%; margin: 18px 0 22px; overflow: hidden; border: 1px solid var(--code-border); border-radius: 8px; background: var(--code-bg); }
+    .code-heading { padding: 8px 16px; border-bottom: 1px solid var(--code-border); background: var(--code-heading); color: var(--muted); font-size: 12px; font-weight: 650; line-height: 1.5; }
+    .note .code-block pre { max-width: 100%; margin: 0; padding: 15px 17px; overflow-x: auto; overflow-y: hidden; border: 0; border-radius: 0; background: var(--code-bg); color: var(--code-text); scrollbar-width: thin; tab-size: 4; }
+    .note .code-block pre:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+    .note .code-block pre code,
+    .lecture-page .note .code-block pre code { display: block; min-width: 100%; width: max-content; padding: 0; border: 0; border-radius: 0; background: transparent; color: inherit; font: 400 14px/1.85 "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace; white-space: pre; overflow-wrap: normal; word-break: normal; }
+    .note .code-block.code-steps pre code { width: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .code-keyword { color: var(--code-keyword); font-weight: 600; }
+    .code-string { color: var(--code-string); }
+    .code-number { color: var(--code-number); }
+    .code-comment { color: var(--code-comment); }
+    .code-function { color: var(--code-function); }
+    .code-directive { color: var(--code-keyword); }
+    @media (max-width: 700px) {
+      .code-heading { padding: 7px 12px; }
+      .note .code-block pre { padding: 12px; }
+    }
     .note mark { padding: 0 .08em; border-radius: 3px; background: #fef08a; color: #422006; }
     .red { color: var(--red); font-weight: 750; }
     .blue { color: var(--blue); font-weight: 750; }
@@ -739,6 +763,15 @@
         --blue: #a8c7ff;
         --black: #f2f4f7;
         --red-soft: #3a2424;
+        --code-bg: #13212b;
+        --code-heading: #1a2b36;
+        --code-border: #2b414f;
+        --code-text: #dce6ed;
+        --code-keyword: #d1b4f2;
+        --code-string: #a6d8b5;
+        --code-number: #edc38d;
+        --code-comment: #a1b4c1;
+        --code-function: #a8ceef;
         --shadow: 0 10px 30px rgba(0, 0, 0, .24);
       }
       .site-header { border-color: var(--border); background: rgba(16, 24, 40, .94); }
@@ -1072,6 +1105,52 @@
       return output;
     }
 
+    function highlightCode(value, language) {
+      const source = String(value);
+      const words = {
+        c: "auto break case char const continue default do double else enum extern float for if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while NULL",
+        python: "and as assert async await break class continue def del elif else except False finally for from global if import in is lambda None nonlocal not or pass raise return True try while with yield",
+        sql: "ALL ALTER AND AS ASC BEGIN BETWEEN BY CASE CHECK COMMIT CONSTRAINT CREATE CROSS DATABASE DEFAULT DELETE DESC DISTINCT DROP ELSE END EXISTS FOREIGN FROM FULL GROUP HAVING IN INDEX INNER INSERT INTO IS JOIN KEY LEFT LIKE LIMIT NOT NULL ON OR ORDER OUTER PRIMARY REFERENCES RIGHT ROLLBACK SELECT SET TABLE THEN UNION UNIQUE UPDATE VALUES VIEW WHEN WHERE WITH",
+        text: "if else for while return repeat until in 如果 否则 返回 重复 直到 输出 输入 结束 遍历",
+      };
+      if (!words[language]) return escapeHtml(source);
+      const keywords = new Set(words[language].split(" "));
+      const strings = language === "python"
+        ? /"""[\s\S]*?"""|'''[\s\S]*?'''|"(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*'/
+        : language === "sql" ? /'(?:''|[^'])*'|"(?:""|[^"])*"/
+        : /"(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*'/;
+      const comments = language === "python" ? /#[^\n]*/
+        : language === "sql" ? /--[^\n]*|\/\*[\s\S]*?\*\//
+        : /\/\/[^\n]*|\/\*[\s\S]*?\*\/|^[ \t]*#[^\n]*/;
+      const tokens = new RegExp(`${strings.source}|${comments.source}|\\b(?:0[xX][0-9a-fA-F]+|\\d+(?:\\.\\d+)?(?:[eE][+-]?\\d+)?)[uUlLfF]*\\b|\\b[A-Za-z_]\\w*\\b|(?:如果|否则|返回|重复|直到|输出|输入|结束|遍历)(?=\\s|[：:])`, "gm");
+      let output = "";
+      let position = 0;
+      for (const token of source.matchAll(tokens)) {
+        output += escapeHtml(source.slice(position, token.index));
+        const text = token[0];
+        const word = language === "sql" ? text.toUpperCase() : text;
+        let kind = "";
+        if (/^["']/.test(text)) kind = "string";
+        else if (/^\s*#/.test(text)) kind = language === "c" ? "directive" : "comment";
+        else if (/^(?:\/\/|\/\*|--)/.test(text)) kind = "comment";
+        else if (/^\d/.test(text)) kind = "number";
+        else if (keywords.has(word)) kind = "keyword";
+        else if (/^[A-Za-z_]/.test(text) && /^\s*\(/.test(source.slice(token.index + text.length))) kind = "function";
+        output += kind ? `<span class="code-${kind}">${escapeHtml(text)}</span>` : escapeHtml(text);
+        position = token.index + text.length;
+      }
+      return output + escapeHtml(source.slice(position));
+    }
+
+    function renderCodeBlock(code, language) {
+      const type = String(language || "text").toLowerCase().replace(/[^a-z0-9_-]/g, "");
+      const names = {c: "C", python: "Python", sql: "SQL", text: "伪代码 / 步骤"};
+      const label = names[type] || "代码";
+      const steps = type === "text";
+      const description = steps ? label : `${label}代码，可横向滚动`;
+      return `<div class="code-block${steps ? " code-steps" : ""}"><div class="code-heading">${label}</div><pre tabindex="0" role="region" aria-label="${description}"><code class="language-${type}">${highlightCode(code, type)}</code></pre></div>`;
+    }
+
     function tableCells(line) {
       let trimmed = line.trim();
       if (trimmed.startsWith("|")) trimmed = trimmed.slice(1);
@@ -1180,7 +1259,7 @@
             index += 1;
           }
           if (index < lines.length) index += 1;
-          output.push(`<pre><code${language ? ` class="language-${language}"` : ""}>${escapeHtml(code.join("\n"))}</code></pre>`);
+          output.push(renderCodeBlock(code.join("\n"), language));
           continue;
         }
         if (isTableStart(lines, index)) {
