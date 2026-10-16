@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "电子组独立交叉审阅者；BST按新手顺读约束检查，非真人学生盲测",
+  "scope": "应用组12处局部修复及新增BST过程/图/题；只读产品，只新增复核报告和独立SVG渲染截图",
+  "summary": {
+    "applied_checked": 12,
+    "applied_passed": 12,
+    "bst_result": "查找、插入、三种删除及后继带右孩子过程可理解且独立推导正确",
+    "new_unresolved_P0_P1_P2": 0,
+    "during_review_P2_closed": 1,
+    "cards_checked": 10,
+    "cards_valid": true
+  },
+  "applied_checks": [
+    {
+      "id": "APP-001",
+      "status": "通过",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "line": 80,
+      "independent_recalculation": "区号16/位号01十进制→10H/01H；分别+20H为30H/21H；分别+80H为B0H/A1H。结果1001H→3021H→B0A1H。直接置高位的9081H不是该字GB机内表示。",
+      "conclusion": "已明确区/位十进制与逐字节步骤，且不推广到Unicode/UTF-8。",
+      "topic_id": "computer-foundations.t04",
+      "current_line_text": "- 🔴 中文信息处理还会区分输入码、交换码或国标码、机内码和字形码：输入码服务键盘或输入法录入，交换码用于约定字符编号，机内码用于系统内部存储处理，字形码用点阵或轮廓描述显示输出。传统GB2312题先把区号、位号各加十六进制20H，得到国标交换码；再把两个字节各加80H（最高位置1），得到通常所说的GB机内码。例如区号16、位号01均按十进制给出，先写成两个字节10H、01H，即1001H；加2020H得3021H，再加8080H得B0A1H。不能把区位码直接置高位，也不能把这套转换推广到Unicode和UTF-8。OCR则从扫描图像识别字符，结果仍需校对，不能把图片扩展名改成文本格式来代替识别。",
+      "chapter_id": "computer-foundations.c02"
+    },
+    {
+      "id": "APP-002",
+      "status": "通过",
+      "file": "course_notes/Office软件操作.md",
+      "line": 239,
+      "independent_recalculation": "IF(B2>=60,\"及格\",\"不及格\")：B2=59条件假返不及格；60条件真返及格；0/100也有定义。空白和缺考不作为本数值例有效输入。",
+      "conclusion": "三参数含义、有效数值前提、59/60边界及空白/文本政策均补出。",
+      "topic_id": "office.t10",
+      "current_line_text": "`IF(条件,条件成立时的值,条件不成立时的值)`先判断条件，再返回对应结果。例如B2已核验为0—100的有效数值成绩，及格线为60，可写`=IF(B2>=60,\"及格\",\"不及格\")`：59返回“不及格”，60返回“及格”。若成绩可能空白或写“缺考”，应先约定这些情况如何处理，不能未经检查就把它们套入此数值例。",
+      "chapter_id": "office.c04"
+    },
+    {
+      "id": "APP-003",
+      "status": "通过",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "line": 358,
+      "independent_recalculation": "以垃圾为正类：TP12+FN8=20实际垃圾，FP3+TN77=80正常；预测垃圾12+3=15；准确(12+77)/100=.89，精确12/15=.8，召回12/20=.6。",
+      "conclusion": "四格有实际/预测对象，正类及分母已交代。",
+      "topic_id": "computer-foundations.t23",
+      "current_line_text": "- 🔴 **先确定正类**：本例把垃圾邮件定为正类、正常邮件定为负类。TP（真正例）是垃圾判成垃圾，FP（假正例）是正常误判垃圾，FN（假负例）是垃圾漏判为正常，TN（真负例）是正常判成正常。先按实际类别与预测类别填这四格，再算指标；换了正类，四格的含义也要跟着调整。",
+      "chapter_id": "computer-foundations.c06"
+    },
+    {
+      "id": "APP-004",
+      "status": "通过",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "line": 381,
+      "independent_recalculation": "初关，28<30→开，35两条件假→保持开，42>40→关，35→保持关。额外边界：原开且40%应仍开，30%也维持；SVG42%关阀与严格>一致。",
+      "conclusion": "图文使用相同严格阈值，不再把等于40%当关阀。",
+      "topic_id": "computer-foundations.t14",
+      "current_line_text": "- 🔵 **回差例**：规则为湿度<30%开阀、>40%关阀、其余维持原状态；初始关阀，读数28→开，35→仍开，42→关，35→仍关。若只用一个阈值，在阈值附近噪声可能使阀门频繁开关。",
+      "chapter_id": "computer-foundations.c07"
+    },
+    {
+      "id": "APP-005",
+      "status": "通过（卡片同项复测关闭）",
+      "file": "course_notes/计算机网络.md",
+      "line": 338,
+      "independent_recalculation": "三角形A/B/C，ID A<B<C，代价1：A根；B→A与C→A为根端口；B—C根路径成本同1，B ID小赢指定端口，C—B端阻塞。断A—C后，C经B根代价2，C→B改根端口；稳态广播没有闭环。",
+      "conclusion": "正文根选举、比较条件、控制帧与普通帧、故障重算均可执行；复核中发现的卡片泛洪前提已由根补为转发状态，本代理复读关闭APP-XCHECK-001。",
+      "topic_id": "net.frames-switching",
+      "current_line_text": "**生成树协议STP（Spanning Tree Protocol）怎样保留冗余又避免环路？** 同一VLAN内三台交换机A、B、C接成三角形，三条链路代价都为1，桥标识从小到大为A、B、C。广播帧没有IP的TTL式逐跳限额，若环中端口都转发，同一帧可能反复复制；同一源MAC又从不同端口到达，会使地址表反复改写。",
+      "chapter_id": "net-03"
+    },
+    {
+      "id": "APP-006",
+      "status": "通过",
+      "file": "course_notes/信息安全.md",
+      "line": 179,
+      "independent_recalculation": "1010 XOR 1100=0110；0110 XOR 1100=1010；两密文XOR=1100，亦为1010 XOR 0110。K XOR K=0000。只泄露关系，不能由此唯一还原两明文。",
+      "conclusion": "P/C/K/逐位异或/nonce作用和公开性均已先解释；同密钥不重用的方案条件明确。",
+      "topic_id": "information-security.t20",
+      "current_line_text": "下式中P为明文、C为密文、K为用于相应位置的密钥流，⊕表示逐位异或：同位相同得0、不同得1，因此任意位与自身异或得0。nonce是在协议中用于区分一次操作或消息的数值，通常可以公开；这里要求同一密钥下按方案避免重复，它不等于需要保密的密钥。CTR的计数器输入用来区分产生密钥流的各块，重复输入会重用对应密钥流。",
+      "chapter_id": "information-security.c05"
+    },
+    {
+      "id": "APP-007",
+      "status": "通过",
+      "file": "course_notes/软件工程.md",
+      "line": 339,
+      "independent_recalculation": "A2→B4/C2并行→D3。ES/EF：A0/2,B2/6,C2/4,D6/9；LS/LF：D6/9,B2/6,C4/6,A0/2；TF0,0,2,0；关键A-B-D总9天。",
+      "conclusion": "四缩写、计时起点、前推max/后推min、资源不冲突条件已给。",
+      "topic_id": "software-engineering.t22",
+      "current_line_text": "- 🔴 **时刻含义**：ES为最早开始、EF为最早完成、LS为不推迟项目完工的最迟开始、LF为最迟完成；均从项目起点0计时。下例每个区间按[开始时刻,完成时刻]记录，前推得最早区间，后推得最迟区间。",
+      "chapter_id": "software-engineering.c07"
+    },
+    {
+      "id": "APP-008",
+      "status": "通过",
+      "file": "course_notes/软件工程.md",
+      "line": 140,
+      "independent_recalculation": "查成绩请求→控制器协调→模型按权限/规则取成绩→视图展示。改颜色归视图，改成绩计算规则归模型；无须三机部署。",
+      "conclusion": "把英文缩写变成可在同一场景执行的职责链，并留框架差异边界。",
+      "topic_id": "software-engineering.t08",
+      "current_line_text": "MVC把职责分为模型Model、视图View、控制器Controller：模型管理业务数据与规则，视图展示结果，控制器接收请求并协调处理。例如查成绩时，用户发起查询→控制器检查请求并调用模型→模型按权限与规则取成绩→视图呈现结果。改变表格颜色主要影响视图，改变成绩计算规则主要影响模型；这是逻辑职责划分，不要求分成三台服务器，具体框架的调用细节可不同。",
+      "chapter_id": "software-engineering.c04"
+    },
+    {
+      "id": "APP-009",
+      "status": "通过",
+      "file": "course_notes/软件工程.md",
+      "line": 219,
+      "independent_recalculation": "代码6结点7边，V=7-6+2=3。假假路径1246输出0，真假12346输出1，假真12456输出2，真真123456输出3。前三路径向量独立；第四=第二+第三−第一，故不新增独立路径。",
+      "conclusion": "已由双独立if明确区分3基本路径与4组合，不依赖只含一判定的配图；输入x,z可独立赋值，四路均可达。",
+      "topic_id": "software-engineering.t21",
+      "current_line_text": "**从代码列出基本路径。** 上图只含一个判定。另看下面两个独立判定的小程序，x、z均为给定整数：",
+      "chapter_id": "software-engineering.c05"
+    },
+    {
+      "id": "APP-010",
+      "status": "通过",
+      "file": "course_notes/多媒体技术.md",
+      "line": 161,
+      "independent_recalculation": "色彩配置文件描述设备/空间颜色特性，按印厂约定选择转换配置，再用实际样张核颜色文字细节。屏幕RGB色域与纸张CMYK不等，改扩展名无法替代转换。",
+      "conclusion": "正文解释了卡片先前只提的配置/打样，并未强加完整印前工程。",
+      "topic_id": "multimedia.t06",
+      "current_line_text": "色彩配置文件描述设备或色彩空间的颜色特性，转换时应采用印厂约定的配置，不能把任意工程文件当成色彩配置。打样是在正式批量输出前核对实际样张的颜色、文字和细节，屏幕预览不能保证与纸面一致。",
+      "chapter_id": "multimedia.c03"
+    },
+    {
+      "id": "APP-013",
+      "status": "通过",
+      "file": "course_notes/计算机网络.md",
+      "line": 143,
+      "independent_recalculation": "800m>100m，普通1000BASE-T通道直连不满足；选抗电磁干扰且标称距离足够的光纤/模块。Cisco表23中某SX多模仅220—550m，不能任意SX方案也判800m可用。",
+      "conclusion": "100m限定到1000BASE-T通道；模块/纤型/波长/距离均需匹配，没有把所有铜标准或所有光模块泛化。",
+      "topic_id": "net.media",
+      "current_line_text": "**介质要与距离、接口配套。** 常见1000BASE-T铜缆以太网通道按不超过100 m的范围设计，不能据此断言所有铜缆标准都只有100 m。两栋楼相距800 m且电磁干扰较强时，宜选光纤，并核对两端收发模块、纤型、波长及标称传输距离；光纤抗电磁干扰，也不表示任意光纤和模块组合都能覆盖800 m。",
+      "chapter_id": "net-02"
+    },
+    {
+      "id": "APP-014",
+      "status": "通过",
+      "file": "course_notes/软件工程.md",
+      "line": 22,
+      "independent_recalculation": "按钮按规定生成报表→符合规格可过验证；用户真正需要可编辑数据而现报表不可编辑→用途确认未满足。改变需求须受控澄清，不是自动把两项合并。",
+      "conclusion": "第1章即给验证/确认区别；第5章195行再细化，消除先用后定义。",
+      "topic_id": "software-engineering.t02",
+      "current_line_text": "验证检查工作产品是否符合规定要求，确认检查软件是否满足用户的预期用途。例如按钮按规格生成报表，可通过这项验证；若用户实际需要可编辑数据，仍未满足用途确认，需要澄清需求并受控修改。",
+      "chapter_id": "software-engineering.c01"
+    }
+  ],
+  "additional_requirement_recheck": {
+    "question_id": "ap-se-005",
+    "source_file": "course_notes/软件工程.md",
+    "lines": [
+      93,
+      97
+    ],
+    "result": "通过；正文定义需求质量并补计时起止、统计窗口、错误请求口径，与题干缺条件和6点评分口径一致；不改阈值即宣称全面达标"
+  },
+  "closed_finding": {
+    "id": "APP-XCHECK-001",
+    "severity": "P2",
+    "file": "color_notes/计算机网络.md",
+    "line": 72,
+    "before": "已知单播只发对应端口；未知单播和广播向除入端口外的同VLAN端口泛洪。",
+    "reason": "STP阻塞端口同属VLAN却不应转发普通帧，泛洪要带转发状态条件。",
+    "root_change": "已知单播只发对应的转发端口；未知单播和广播向除入端口外、处于转发状态的同VLAN端口泛洪。",
+    "retest": "已实际复读新句；三角形中C—B端口阻塞时，不因同VLAN就向其转发广播。端口之后转为转发状态才纳入转发规则。",
+    "status": "closed_after_root_fix",
+    "source": "https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/stp/stp-configuration-guide/m-stp.html"
+  },
+  "bst_walkthrough": {
+    "source_file": "course_notes/数据结构与算法.md",
+    "lines": [
+      258,
+      279
+    ],
+    "review_card": "color_notes/数据结构与算法.md:82",
+    "prerequisites_used": [
+      "本章202—220已教根/左右孩子与中序左根右",
+      "234行已把二叉排序树命名为BST并说明左小右大",
+      "258行限定键互异，解释key、left/right和重复键不插入"
+    ],
+    "plain_explanation": "比较只走一条子树直到命中或空链接；插入接在空链接。删除改变的是链接：叶直接断，一孩由孩子接替，两孩先换成后继键再移除原后继，后继的右孩子必须接回。",
+    "lecture_independent_steps": [
+      "空树插50为根；30<50接左；70>50接右；60在50右、70左；80在70右；65经50→70→60后接60右。",
+      "查65经50→70→60→65命中；查55经50→70→60后进入空左链接失败；若插55，应接60左。",
+      "每次重置初始树：删叶80令70.right空；删只有右孩子的60令70.left=65。",
+      "删根50：右子树从70向左到60最小，复制60到根键；原60的右孩子65接到其父70的左；保留根左30和70右80。中序30,60,65,70,80，原50已除且其他键各出现一次。"
+    ],
+    "new_question": {
+      "id": "gap-context-bst-successor-001",
+      "topic_id": "data-structures.t10",
+      "chapter_id": "data-structures.c04",
+      "independent_result": "插入40/20/60/50/70/55后，40右为60，60左为50、右为70，50右为55；根40的后继是50。替换根键为50，再把原50的右孩子55接到60左；中序20,50,55,60,70。",
+      "rubric_check": "三点各1分：后继/新根50、60.left=55、中序完整递增；与发布题和staging一致。",
+      "support": "正文273行已教完全同构的后继仍有右孩子边界；本题迁移数值与树键，不能只背图中60/65。"
+    },
+    "linked_questions": [
+      {
+        "id": "sp-core-ds-004",
+        "independent_result": "A：中序左根右输出递增序列，正文先修充分。"
+      },
+      {
+        "id": "sp-core-ds-017",
+        "independent_result": "错误：依次插入递增键会成单链，最坏O(n)；复习卡和正文234行均有边界。"
+      }
+    ],
+    "visual": {
+      "file": "media/ds_bst_delete_successor.svg",
+      "inspection": "Chromium实际渲染390px宽、DPR1，明暗主题各截图后目视检查；初始50左30右70/60右65，删除后根60、70左65，全部连接与正文一致；两幅状态图足以与文字接回步骤相互核对。",
+      "text_outside_viewbox": [],
+      "screenshots": [
+        "audit_reports/bst_context_light_20261016.png",
+        "audit_reports/bst_context_dark_20261016.png"
+      ],
+      "limitation": "是独立SVG在390px背景上的实际渲染；没有冒称跑了整站跳转/PWA/离线验收。"
+    },
+    "novice_conclusion": "借助本章已给的左右孩子/中序前提，可跟踪查找失败位置、插入空链接、删除原后继及接回其孩子；未发现新的符号/树形/过程阻断。未要求此处补复杂BST删除代码或所有AVL操作。"
+  },
+  "cards": [
+    {
+      "course": "计算机网络",
+      "card": "帧、交换与VLAN",
+      "blocks": [
+        56,
+        45,
+        36
+      ],
+      "visible": 153,
+      "valid": true
+    },
+    {
+      "course": "软件工程",
+      "card": "总体设计与详细设计",
+      "blocks": [
+        36,
+        46,
+        35
+      ],
+      "visible": 133,
+      "valid": true
+    },
+    {
+      "course": "软件工程",
+      "card": "控制流图环形复杂度",
+      "blocks": [
+        37,
+        50,
+        46
+      ],
+      "visible": 149,
+      "valid": true
+    },
+    {
+      "course": "软件工程",
+      "card": "关键路径与总工期",
+      "blocks": [
+        73,
+        45,
+        37
+      ],
+      "visible": 171,
+      "valid": true
+    },
+    {
+      "course": "信息安全",
+      "card": "分组模式与nonce重用",
+      "blocks": [
+        44,
+        46,
+        43
+      ],
+      "visible": 149,
+      "valid": true
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "card": "字符、图像与声音编码",
+      "blocks": [
+        62,
+        65,
+        54
+      ],
+      "visible": 196,
+      "valid": true
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "card": "准确率、精确率与召回率",
+      "blocks": [
+        83,
+        36,
+        25
+      ],
+      "visible": 160,
+      "valid": true
+    },
+    {
+      "course": "Office软件操作",
+      "card": "函数、查找与错误值",
+      "blocks": [
+        38,
+        100,
+        52
+      ],
+      "visible": 206,
+      "valid": true
+    },
+    {
+      "course": "多媒体技术",
+      "card": "颜色模型与交付",
+      "blocks": [
+        54,
+        50,
+        44
+      ],
+      "visible": 164,
+      "valid": true
+    },
+    {
+      "course": "数据结构与算法",
+      "card": "BST与AVL",
+      "blocks": [
+        39,
+        49,
+        53
+      ],
+      "visible": 157,
+      "valid": true
+    }
+  ],
+  "retained_open_domains": {
+    "APP-011": "CMM通用教材域仍未教，不因本轮局部修复关闭。",
+    "APP-012": "Jackson/由数据结构导出处理结构仍未教，不因本轮局部修复关闭。",
+    "other": "原应用审查known_remaining逐课程保留；本次不重新宣称全教材覆盖。"
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.tup.com.cn/upload/books/yz/105768-01.pdf",
+      "checked": "清华大学出版社正式样章，打开20页PDF文本；传统区位/国标/机内码差8080H关系，与逐字节复算相符。"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel/functions/if-function",
+      "checked": "Microsoft官方IF三参数与真假返回语义，页面成功打开。"
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/thresholding",
+      "checked": "Google官方二分类混淆矩阵，页面成功打开；数值独立手算。"
+    },
+    {
+      "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/stp/stp-configuration-guide/m-stp.html",
+      "checked": "Cisco官方阻塞状态不转发普通帧、不学习地址、接收BPDU；支持泛洪卡同项复测。"
+    },
+    {
+      "url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/hw/nexus7000/installation/guide/cisco_nexus_7000_hardware_install/cisco_nexus_7000_hardware_install_chapter_0100.html",
+      "checked": "Cisco官方表23：1000BASE-T Cat5/5E/6 100m；SX多模具体220—550m，LX单模10km。"
+    },
+    {
+      "url": "https://helpx.adobe.com/acrobat/using/color-managing-documents.html",
+      "checked": "Adobe官方色彩管理/打样说明搜索展开；支持配置和实际输出核对的范围，不当完整印前课程。"
+    }
+  ],
+  "snapshot_sha256": {
+    "course_notes/大学计算机基础与新技术.md": "fbd207280510fa77035d98838f3c1cbeec0de7daa9816ce3d91144f550cc56c0",
+    "course_notes/Office软件操作.md": "e9a5f2c778e75f86a4e9d780c388257c1e98431ac4cf140b2a1bc229f6186bb9",
+    "course_notes/计算机网络.md": "3e10b6240a3c655b579747c28ed3de6a48326749a1fea268f01c3db3b44565e7",
+    "course_notes/信息安全.md": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+    "course_notes/软件工程.md": "b4906af8b55a362efd77a1c67fd94baec903c02ba217dcc0d368fb4bb6c83b6c",
+    "course_notes/多媒体技术.md": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+    "color_notes/计算机网络.md": "0b7c781428b9ac0e90f9b0ecffc92272f81adbb2501b06431438fc6a15a80002",
+    "course_notes/数据结构与算法.md": "44f19bb6854c055b04c92cd8d172cf1d261a1a70d6b3e340be12c28a8013bbfd",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "media/ds_bst_delete_successor.svg": "bf35db4b115654ec9935a6481715461895401a137d08a389bdee63b09819486a",
+    "staging/audit_context_20261016_additions.json": "803369627f0095e8b8843e3c08f4abefddf43ce0fa3094838b02b5d6247b46f2"
+  },
+  "product_changes_by_this_reviewer": [],
+  "old_report_changes": [],
+  "build": "未运行；PWA闪白交由root处理",
+  "mirror_wording_review": {
+    "proposed": "两基极相连、两发射极同电位，使两管UBE相同",
+    "judgment": "认可：以连接/电位解释UBE相同，更不易与共基/共射放大组态混淆，匹配同温/忽略基极电流及电压影响/Q2放大区余量条件和1mA结果保持。",
+    "actual_source_contains_proposed": true,
+    "scope": "若此时尚未落地，只有拟议措辞认可，不伪称复读修后源码。"
+  }
+}

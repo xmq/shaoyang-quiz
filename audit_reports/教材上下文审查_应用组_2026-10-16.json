@@ -1,0 +1,3351 @@
+{
+  "date": "2026-10-16",
+  "role": "独立教材专家；非学生盲答",
+  "scope": [
+    "计算机网络",
+    "软件工程",
+    "信息安全",
+    "大学计算机基础与新技术",
+    "Office软件操作",
+    "多媒体技术"
+  ],
+  "method": "先按章实际读全部讲义/卡与代表任务，再对照旧报告及教材覆盖。每章2道真实映射题，SVG文本/数值核对。只输出审查报告，不改产品题库注册图片，不build。",
+  "counts": {
+    "courses": 6,
+    "chapters": 49,
+    "cards": 144,
+    "questions": 98,
+    "findings": 14,
+    "P1": 2,
+    "P2": 12
+  },
+  "snapshot": {
+    "course_notes/计算机网络.md": "30bd48d873197148258bb6bbcc5c0a16900ebae666f61055ddb60baca45a943d",
+    "color_notes/计算机网络.md": "0b4e23f7a5d896e9e3f7beef806686c8a51aab278c0260caaa74da29a3d6c8ed",
+    "course_notes/软件工程.md": "822cf42d746721681366342662f9420022988e30b64acc85c9d752ca07ff343b",
+    "color_notes/软件工程.md": "d910819cd8a669c37259900db4b7bb7e3f7422858cdf6952ef1510117edbff0d",
+    "course_notes/信息安全.md": "b9e83ec3a79e6a0d52a8d702af2443a403180f1f69cc918ea32e1a5b5c6de3ab",
+    "color_notes/信息安全.md": "9b907019463a5ffb6edffa84b4f74c774462b77fcff4e4ec6198fa1e23e27401",
+    "course_notes/大学计算机基础与新技术.md": "e51108a500f9b874966fa9ec6ddd5bb6883dc95900f4884db6e01795686f6780",
+    "color_notes/大学计算机基础与新技术.md": "25a337d47f19ed43cb720b98e77b9077fb6c9af103db356b368fc0abb3ea6ee6",
+    "course_notes/Office软件操作.md": "c2087fd81071074c8c2662c4cfce1c32a50f7585fcf6d99c063ae2d3b53b3a75",
+    "color_notes/Office软件操作.md": "0885c2ca9481e152d52a22b33d583ad76f840acd5a7d9a79cc9b838e5c6addfc",
+    "course_notes/多媒体技术.md": "fed8fcf66f7c9d74ef50c86b16f061e18e3897a1718884fb9a7d52f09d409661",
+    "color_notes/多媒体技术.md": "ac1b700ca595fe358089a849cb8f5b082921f40b9321657587ab6e72bc3a3253"
+  },
+  "textbooks": [
+    {
+      "name": "Office软件操作",
+      "textbooks": [
+        "姜永生《大学计算机基础（Windows 10+Office 2019）》"
+      ],
+      "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5f07525ab0b2bda7c523ccc5",
+      "chapters": [
+        "第1章 办公环境与文件管理",
+        "第2章 文字编辑与格式",
+        "第3章 页面排版、表格与对象",
+        "第4章 电子表格基础与公式",
+        "第5章 数据管理、分析与图表",
+        "第6章 演示文稿设计与制作",
+        "第7章 Office综合应用"
+      ],
+      "chapter_alignment": "grouped",
+      "coverage_status": "gaps_or_mapping_pending",
+      "coverage_review": "audit_reports/教材目录排查_计算机与应用_2026-10-15.json"
+    },
+    {
+      "name": "大学计算机基础与新技术",
+      "textbooks": [
+        "《大学计算机基础》（上海交通大学出版社）"
+      ],
+      "url": "https://www.jiaodapress.com.cn/Data/BookContent/19593",
+      "chapters": [
+        "第1章 信息、计算与计算思维",
+        "第2章 信息表示与计算机系统",
+        "第3章 操作系统、文件与软件",
+        "第4章 云计算与服务模型",
+        "第5章 大数据与数据处理",
+        "第6章 人工智能与机器学习",
+        "第7章 物联网",
+        "第8章 区块链",
+        "第9章 计算机发展与典型应用",
+        "第10章 新一代信息技术的综合应用"
+      ],
+      "chapter_alignment": "grouped",
+      "coverage_status": "gaps_or_mapping_pending",
+      "coverage_review": "audit_reports/教材目录排查_计算机与应用_2026-10-15.json"
+    },
+    {
+      "name": "多媒体技术",
+      "textbooks": [
+        "鄂大伟《多媒体技术基础与应用（第3版）》"
+      ],
+      "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59ccbce3ba9eb884cf817f00",
+      "chapters": [
+        "第1章 多媒体技术概论",
+        "第2章 多媒体计算机系统与数字化",
+        "第3章 数字图形与图像",
+        "第4章 数字音频",
+        "第5章 动画与数字视频",
+        "第6章 多媒体数据压缩",
+        "第7章 多媒体作品设计与应用"
+      ],
+      "chapter_alignment": "grouped",
+      "coverage_status": "gaps_or_mapping_pending",
+      "coverage_review": "audit_reports/教材目录排查_电子与安全_2026-10-15.json"
+    },
+    {
+      "name": "计算机网络",
+      "textbooks": [
+        "谢希仁《计算机网络（第8版）》"
+      ],
+      "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=58234",
+      "chapters": [
+        "第1章 概述",
+        "第2章 物理层",
+        "第3章 数据链路层",
+        "第4章 网络层",
+        "第5章 运输层",
+        "第6章 应用层",
+        "第7章 网络安全",
+        "第8章 互联网上的音频/视频服务",
+        "第9章 无线网络和移动网络"
+      ],
+      "chapter_alignment": "grouped",
+      "coverage_status": "gaps_or_mapping_pending",
+      "coverage_review": "audit_reports/教材目录排查_计算机与应用_2026-10-15.json"
+    },
+    {
+      "name": "软件工程",
+      "textbooks": [
+        "张海藩、牟永敏《软件工程导论（第6版）》"
+      ],
+      "url": "https://www.tup.com.cn/booksCenter/book_05016406.html",
+      "chapters": [
+        "第1章 软件工程概述",
+        "第2章 软件过程与生命周期模型",
+        "第3章 可行性研究与需求工程",
+        "第4章 总体设计与详细设计",
+        "第5章 软件实现与软件测试",
+        "第6章 软件维护、质量与配置管理",
+        "第7章 项目管理与风险管理",
+        "第8章 面向变化的软件开发方法"
+      ],
+      "chapter_alignment": "grouped",
+      "coverage_status": "gaps_or_mapping_pending",
+      "coverage_review": "audit_reports/教材目录排查_计算机与应用_2026-10-15.json"
+    },
+    {
+      "name": "信息安全",
+      "textbooks": [
+        "朱建明、杨力、高胜《信息安全导论（第2版）》"
+      ],
+      "url": "https://www.tup.com.cn/booksCenter/book_09024201.html",
+      "chapters": [
+        "第1章 信息安全概论",
+        "第2章 安全管理与风险管理",
+        "第3章 恶意代码与社会工程",
+        "第4章 身份认证与访问控制",
+        "第5章 密码学基础",
+        "第6章 网络安全",
+        "第7章 系统、应用与数据安全",
+        "第8章 隐私保护、法律与职业责任"
+      ],
+      "chapter_alignment": "grouped",
+      "coverage_status": "gaps_or_mapping_pending",
+      "coverage_review": "audit_reports/教材目录排查_电子与安全_2026-10-15.json"
+    }
+  ],
+  "chapters": [
+    {
+      "course": "计算机网络",
+      "chapter": "第1章 概述",
+      "chapter_id": "net-01",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 3,
+        "end": 126,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 2,
+        "end": 39,
+        "read": "按章全文实际审读",
+        "cards": 5
+      },
+      "dependency_and_expert_trace": "分组/封装→链路发送：3组12000bit经2条1Mbit/s，首组0—12/12—24ms，第2组12—24/24—36，第3组24—36/36—48，总48ms。",
+      "practice": [
+        {
+          "id": "cg-08-s1-q95",
+          "topic_id": "net.overview",
+          "chapter_id": "net-01",
+          "stem": "某组网方案明确规定按“先设计，再安装操作系统，随后接入网络设备、配置协议，最后授权共享”的流程实施。以下编号按该流程排列为（ ）。\n①安装计算机操作系统 ②准备和安装网络设备 ③授权网络资源共享 ④确定方案并绘制拓扑图 ⑤选择和配置网络协议",
+          "answer": "B",
+          "explanation": "按题干指定流程，设计④→安装系统①→接入设备②→配置协议⑤→授权共享③，故B。实际项目的准备与安装步骤可交叉，题目没有把这个流程作为所有组网任务的唯一次序。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 3,
+            "end": 126,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-core-net-protocol-service",
+          "topic_id": "net.protocol-service",
+          "chapter_id": "net-01",
+          "stem": "用“网购订单”举例，解释网络协议、层间服务、封装的区别：HTTP客户端与服务器遵守的消息规则属于哪一种？HTTP调用TCP发送数据属于哪一种关系？TCP添加序号等首部属于哪一种过程？",
+          "answer": "HTTP双方约定请求响应格式和含义属于对等实体的协议；HTTP使用TCP提供的可靠字节流，属于上层使用下层服务；TCP在应用字节前添加含端口、序号等控制信息是封装。",
+          "explanation": "协议描述对等实体怎么交互，服务描述下层向上层提供什么，封装是实际增加控制信息的操作。三者相关但不是同义词。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 3,
+            "end": 126,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第2章 物理层",
+      "chapter_id": "net-02",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 127,
+        "end": 242,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 40,
+        "end": 65,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "码元/噪声→约束：B3000Hz、M4、线性S/N63，奈氏12000、香农18000bit/s，取12000；30dB换1000，香农约29.9kbit/s。",
+      "practice": [
+        {
+          "id": "gap-audit26-core-net-media-direction",
+          "topic_id": "net.media",
+          "chapter_id": "net-02",
+          "stem": "两栋楼相距800米，需要高速连接，周围电磁干扰较强。在普通铜双绞线直连与光纤中选择较合理方案并说明原因。再说明半双工和全双工的区别，光纤是否天然只允许单向传输？",
+          "answer": "选择适合距离的光纤链路及配套收发模块；光纤抗电磁干扰，普通以太网铜双绞线单段距离通常不足800米。半双工允许双向但不能同时，全双工允许同时双向。光纤可以通过双纤或合适波分等方式实现双向通信，不等于只能单向。",
+          "explanation": "介质选择要考虑距离、速率和干扰，收发方向由链路实现决定，不能从“用光传输”直接推出单工。",
+          "support": "partial",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 127,
+            "end": 242,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "抗干扰和全双工有；800m距离失败条件、铜缆单段距离未教，APP-013。"
+        },
+        {
+          "id": "nw-national-013",
+          "topic_id": "net.channel-capacity",
+          "chapter_id": "net-02",
+          "stem": "某有噪声信道带宽为3000 Hz，信噪比为30 dB。按香农公式计算理论容量，结果是多少kbit/s？可保留一位小数或取整数。",
+          "answer": "29.9",
+          "explanation": "先默写C=B log₂(1+S/N)。30 dB对应S/N=10³=1000，C=3000×log₂(1001)≈29901.7 bit/s，即约29.9 kbit/s，取整约30 kbit/s。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 127,
+            "end": 242,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第3章 数据链路层",
+      "chapter_id": "net-03",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 243,
+        "end": 359,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 66,
+        "end": 103,
+        "read": "按章全文实际审读",
+        "cards": 5
+      },
+      "dependency_and_expert_trace": "帧边界→转义→交换：7E/7D传为7D5E/7D5D；空表A从端口1发B先学A→1，仅同VLAN泛洪，B回复学B→2再定向1。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-01-1",
+          "topic_id": "net.ppp-stuffing",
+          "chapter_id": "net-03",
+          "stem": "异步PPP透明传输中，信息字段的两个原始字节依次为0x7E、0x7D。只写出这两个字节经过字节填充后的结果（十六进制，不含帧定界、首部及FCS）。",
+          "answer": "7D 5E 7D 5D",
+          "explanation": "两个特殊字节均先输出转义字节0x7D，再将原字节与0x20异或：7E⊕20=5E，7D⊕20=5D，因此结果为7D 5E 7D 5D。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 243,
+            "end": 359,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-core-net-vlan-learning",
+          "topic_id": "net.frames-switching",
+          "chapter_id": "net-03",
+          "stem": "一台二层交换机有端口1、2属于VLAN10，端口3属于VLAN20。MAC表初始为空。端口1收到源MAC=A、目的MAC=B的帧，B连接端口2。写出学习和转发行为；B回复A后表中应有哪些关联？VLAN20能否收到第一帧？",
+          "answer": "交换机学习A属于VLAN10、位于端口1；B未知，第一帧仅向VLAN10除入端口外的端口2泛洪。端口3属于VLAN20，不接收此次泛洪。B从端口2回复时学习B→端口2，查到A→端口1后定向转发。",
+          "explanation": "交换机学习源地址，转发查目的地址；未知单播的泛洪仍受VLAN边界限制。第一次收到帧不能仅由目的MAC猜出B所在端口。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 243,
+            "end": 359,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第4章 网络层",
+      "chapter_id": "net-04",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 360,
+        "end": 506,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 104,
+        "end": 156,
+        "read": "按章全文实际审读",
+        "cards": 7
+      },
+      "dependency_and_expert_trace": "前缀→下一跳→更新：192.168.1.10/24到192.168.2.20异网，ARP查网关1.1；RIP邻居报2加1得3，后报16且无替代则标不可达；LAN2最后组播成员离开后剪该支。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-02-1",
+          "topic_id": "net.multicast-membership",
+          "chapter_id": "net-04",
+          "stem": "路由器R分别向直连LAN1和LAN2转发组G的组播数据。LAN1仍有G成员，LAN2唯一的G成员B已离开，成员离开已确认且该分支无其他接收者。R应保留哪条下行分支、停止哪条分支？",
+          "answer": "保留LAN1，停止LAN2",
+          "explanation": "分支转发依据是否仍有需要接收的成员，不因单个用户退出结束所有分发。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 360,
+            "end": 506,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-retest-rip-001",
+          "topic_id": "net.rip-update",
+          "chapter_id": "net-04",
+          "stem": "路由器R与邻居N相距1跳。R当前经邻居M到目的网络X的距离为5跳。现在N通告自己到X的距离为2跳。请逐步说明R如何计算候选距离、选择下一跳并更新路由。更新后，N又通告到X的距离为16，且R已没有其他可用的替代路由，R应如何处理？说明RIP中16的含义。",
+          "answer": "经N到X的候选距离为1+2=3跳，小于原来经M的5跳，因此把到X的路由更新为下一跳N、距离3跳。随后当前下一跳N通告16，表示它到X不可达；在没有替代路由时，R也应将到X的距离标记为16（不可达），不能继续保留旧的3跳。RIP的最大有效跳数为15，16表示无穷大。",
+          "explanation": "距离向量更新先把邻居通告的距离加上到邻居的代价，再比较候选路由。当前下一跳的路由已经失效时，不能因为旧值更小就继续使用它。RIP的度量在16处表示不可达，因此不能把16再加1后当作有效的17跳路由。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 360,
+            "end": 506,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第5章 运输层",
+      "chapter_id": "net-05",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 507,
+        "end": 630,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 157,
+        "end": 189,
+        "read": "按章全文实际审读",
+        "cards": 4
+      },
+      "dependency_and_expert_trace": "字节→在途→窗口：rwnd12KB/cwnd8KB/在途3KB可新发5KB；Reno逐轮1,2,4,8,9；满窗10超时门限5窗1，三重复ACK暂窗8，新ACK后5。",
+      "practice": [
+        {
+          "id": "gap-full-net-congestion-trace",
+          "topic_id": "net.congestion-steps",
+          "chapter_id": "net-05",
+          "stem": "按教材Reno简化轮次模型，cwnd初值1 MSS、ssthresh=8 MSS，到达门限即转入拥塞避免。每轮数据均获确认且无丢包，写第1至第5轮开始时的cwnd。",
+          "answer": "1、2、4、8、9 MSS。",
+          "explanation": "门限前每RTT近翻倍，达到8后拥塞避免每轮加1。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 507,
+            "end": 630,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "nw-national-006",
+          "topic_id": "net.flow-congestion",
+          "chapter_id": "net-05",
+          "stem": "接收方通告的接收窗口rwnd为12 KB，发送方拥塞窗口cwnd为8 KB，已有3 KB数据在途未确认。忽略其他限制，此刻最多还能新增发送多少数据？",
+          "answer": "B",
+          "explanation": "在途数据上限为min(12,8)=8 KB；已占3 KB，因此尚可新增发送5 KB。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 507,
+            "end": 630,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第6章 应用层",
+      "chapter_id": "net-06",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 631,
+        "end": 754,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 190,
+        "end": 236,
+        "read": "按章全文实际审读",
+        "cards": 7
+      },
+      "dependency_and_expert_trace": "配置→名字→连接→请求：DNS无缓存根→顶级→权威；转介不是最终IP。SNMP管理者读161，代理Trap向162，计数差/间隔估速率须检查回绕和重启。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-03-1",
+          "topic_id": "net.snmp-management",
+          "chapter_id": "net-06",
+          "stem": "管理员要定期采集交换机接口计数器来估算流量趋势，并在接口断开时尽早得到事件通知。SNMP可配合使用哪两类交互？",
+          "answer": "周期读取接口计数器；代理主动发送接口变化通知",
+          "explanation": "管理站轮询读取接口计数器，按相邻读数与时间差估算区间流量；代理主动发送接口状态通知，报告离散事件。通知仍可能丢失，不能保证每次故障都即时送达，因此轮询与通知互为补充。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 631,
+            "end": 754,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-08-s1-q72",
+          "topic_id": "net.dns-dhcp",
+          "chapter_id": "net-06",
+          "stem": "在 IE 浏览器中输入 IP 地址 202.196.200.23，可以浏览到某网站，但是当输\n入该网站的域名地址 www.CZIND. COM 却发现无法访问，可能的原因是（ ）。\n①该网络未能提供域名服务管理\n②该网络在物理层有问题\n③本机的 IP 设置有问题\n④本网段交换机的设置有问题",
+          "answer": "A",
+          "explanation": "IP 通而域名不通，最可能是网络的 DNS 服务出问题或本机 DNS 设置不对。仅①符合。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 631,
+            "end": 754,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第7章 网络安全",
+      "chapter_id": "net-07",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 755,
+        "end": 826,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 237,
+        "end": 262,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "保护目标→证书→规则：签名不保密；外网仅到DMZ Web必要443，指定Web到指定DB必要端口，其余拒绝；443通不代表登录成功。",
+      "practice": [
+        {
+          "id": "cg-08-s1-q28",
+          "topic_id": "net.crypto-signature",
+          "chapter_id": "net-07",
+          "stem": "下列哪项是专门面向银行卡电子商务交易设计、名称为Secure Electronic Transaction的历史安全协议？",
+          "answer": "A",
+          "explanation": "SET是Secure Electronic Transaction（安全电子交易），用于历史银行卡电子交易场景。PGP、MOSS等也可使用数字签名，不能用“能防抵赖”作为本组选项中SET独有的特征。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 755,
+            "end": 826,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-final-thin-017",
+          "topic_id": "net.security-boundary",
+          "chapter_id": "net-07",
+          "stem": "校园Web服务器必须对互联网开放，数据库只供Web服务器访问。说明合理分区并写出两条最小开放规则。",
+          "answer": "Web服务器放DMZ，数据库放内网数据区；允许互联网到Web的必要HTTP/HTTPS端口，允许Web到数据库的指定数据库端口，拒绝互联网直连数据库及其他非必要方向。",
+          "explanation": "防火墙策略应明确源、目的、服务和方向，并按最小开放减少横向移动。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 755,
+            "end": 826,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第8章 互联网上的音频/视频服务",
+      "chapter_id": "net-08",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 827,
+        "end": 880,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 263,
+        "end": 278,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "缓存→净消耗：24Mbit/(4−3)Mbit/s=24s；输入5>消费4时增加1Mbit/s，不存在−24秒耗尽；8kHz×20ms=160时间戳增量。",
+      "practice": [
+        {
+          "id": "gap-net-media-002",
+          "topic_id": "net.playback-buffer",
+          "chapter_id": "net-08",
+          "stem": "某视频平均码率为4 Mbit/s，当前缓冲区有24 Mbit视频数据，网络持续输入速率为3 Mbit/s。忽略其他开销，缓冲区约多少秒后耗尽？只填写数字。",
+          "answer": "24",
+          "explanation": "播放每秒消耗4 Mbit，网络每秒补入3 Mbit，净减少1 Mbit/s；24÷1=24 s。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 827,
+            "end": 880,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-full-net-buffer-boundary",
+          "topic_id": "net.playback-buffer",
+          "chapter_id": "net-08",
+          "stem": "播放速率固定4 Mbit/s，网络持续输入5 Mbit/s，已有24 Mbit缓冲。能否用24/(4-5)=-24秒作为耗尽时间？说明原因。",
+          "answer": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+          "explanation": "耗尽公式要求消费速率大于输入速率，负时间没有物理意义。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 827,
+            "end": 880,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第9章 无线网络和移动网络",
+      "chapter_id": "net-09",
+      "lecture": {
+        "file": "course_notes/计算机网络.md",
+        "start": 881,
+        "end": 934,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/计算机网络.md",
+        "start": 279,
+        "end": 287,
+        "read": "按章全文实际审读",
+        "cards": 1
+      },
+      "dependency_and_expert_trace": "AP→竞争→状态：退避3空闲1槽剩2，忙冻结2，再空闲2槽发；A/C互听不到同到AP仍碰撞；移动IPv4先登记转交地址再归属代理封装。",
+      "practice": [
+        {
+          "id": "cg-08-s1-q97",
+          "topic_id": "net.wireless-mobile",
+          "chapter_id": "net-09",
+          "stem": "某WiFi共享应用明确采用“用户授权上传已知热点信息，其他用户经平台获得共享访问”的模式。该模式主要依赖（ ）。",
+          "answer": "C",
+          "explanation": "题设已说明采用授权共享模式，因此主要依赖用户提供的热点信息，而非自动破解所有密码。具体产品实现需要证据，不能对所有同类应用一概断言秘密搜集密码。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 881,
+            "end": 934,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-08-s1-q80",
+          "topic_id": "net.wireless-mobile",
+          "chapter_id": "net-09",
+          "stem": "以下哪项操作仅能说明终端已接入本地无线网络，仍不能判断该网络是否有可用的互联网出口？",
+          "answer": "B",
+          "explanation": "加入WiFi只表明无线关联和认证成功。热点可能没有互联网出口，或出口认证、路由、DNS等仍有问题。其他三项已经完成公网业务通信。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/计算机网络.md",
+            "start": 881,
+            "end": 934,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第1章 软件工程概述",
+      "chapter_id": "software-engineering.c01",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 3,
+        "end": 29,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 3,
+        "end": 16,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "完整软件→生命周期：只有代码可运行而无必要数据/文档/测试部署证据不是完整交付；维护需求需再次分析设计测试。验证/确认正文后置第5章，当前第1章卡有定义。",
+      "practice": [
+        {
+          "id": "gap-audit26-system-007",
+          "topic_id": "software-engineering.t02",
+          "chapter_id": "software-engineering.c01",
+          "stem": "规格规定按钮点击后生成报表，但用户实际需要导出可编辑数据。测试确认按钮确实生成了报表，却仍未满足用户用途。分别说明验证与确认要回答什么，下一步应怎样处理。",
+          "answer": "验证检查实现是否符合既定规格，按钮能生成报表说明该项验证可能通过；确认检查系统是否满足用户真实需要，此处用途仍不满足。应澄清导出需求、确认验收标准并受控修改需求、设计与测试。",
+          "explanation": "符合错误或不完整的规格不代表满足用户需要。确认不能仅靠开发者判断，应有用户或业务代表参与。",
+          "support": "review_supported_lecture_later",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 3,
+            "end": 29,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "第1章卡已定义验证/确认，但正文到第5章才给，APP-014。"
+        },
+        {
+          "id": "cg-06-s2-q1",
+          "topic_id": "software-engineering.t02",
+          "chapter_id": "software-engineering.c01",
+          "stem": "按传统“定义期—开发期—运行期”三阶段划分，定义期包含可行性研究和需求分析，开发期包含设计、编码和测试。下列不属于开发期活动的有（ ）。",
+          "answer": "ABC",
+          "explanation": "选ABC。按题干给出的划分，需求获取/建模A与可行性研究C在定义期，软件维护B在运行期；体系结构和数据设计D在开发期。生命周期划分存在教材差异，因此题干先限定口径。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 3,
+            "end": 29,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第2章 软件过程与生命周期模型",
+      "chapter_id": "software-engineering.c02",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 30,
+        "end": 72,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 17,
+        "end": 30,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "需求稳定/风险/可分性→模型：可分功能两周反馈用迭代增量，支付高风险独立风险验证；稳定规则严格阶段评审可瀑布，晚变返工成本高。",
+      "practice": [
+        {
+          "id": "gap-audit26-system-008",
+          "topic_id": "software-engineering.t03",
+          "chapter_id": "software-engineering.c02",
+          "stem": "两个项目分别是：①规则稳定、交付物和阶段评审清晰；②技术方案风险高，要求每轮先识别并验证主要风险。分别选择一种合适的过程模型并说明依据和局限。",
+          "answer": "①可采用瀑布，适合较稳定需求和阶段审查，但变更较晚时返工代价大；②可采用螺旋，以风险分析驱动迭代，但需要风险识别能力与管理投入。其他方案若说明如何满足条件也可。",
+          "explanation": "按需求稳定性与风险控制要求选型，不按项目大小机械匹配。模型选择不是取消反馈和测试。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 30,
+            "end": 72,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "ap-se-006",
+          "topic_id": "software-engineering.t04",
+          "chapter_id": "software-engineering.c02",
+          "stem": "某系统计划先上线订单查询，之后分批增加付款和报表；核心规则稳定但每批都要接受用户反馈。选择一种主要开发思路并说明原因、实施要点和边界。",
+          "answer": "可采用增量开发，把可运行功能分批交付，先提供核心查询并在每批反馈后调整后续需求；每个增量仍要完成必要的分析、设计、编码、测试和配置管理。",
+          "explanation": "评分点：增量选择、与分批交付匹配的原因、用户反馈、每批完整质量活动。答敏捷迭代也可酌情得分，但须说明如何形成可验收增量。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 30,
+            "end": 72,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第3章 可行性研究与需求工程",
+      "chapter_id": "software-engineering.c03",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 73,
+        "end": 121,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 31,
+        "end": 56,
+        "read": "按章全文实际审读",
+        "cards": 4
+      },
+      "dependency_and_expert_trace": "需求→状态/守卫→验证：可借+合格borrow→借出，再borrow无迁移非法；return→可借；性能需求需并发/数据量和阈值，不从1用户100条外推。",
+      "practice": [
+        {
+          "id": "gap-course-revision-core-13-1",
+          "topic_id": "software-engineering.t23",
+          "chapter_id": "software-engineering.c03",
+          "stem": "借阅状态机的初态为“可借”。在“可借”态，borrow使其转为“借出”；在“借出”态，只允许return转回“可借”。从初态执行事件序列borrow、borrow是否合法？说明每一步。",
+          "answer": "不合法；第一步到借出，第二次borrow无允许迁移",
+          "explanation": "逐步按当前状态查转移，不能把第一个状态的可执行事件套用于后续状态。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 73,
+            "end": 121,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "ap-se-005",
+          "topic_id": "software-engineering.t06",
+          "chapter_id": "software-engineering.c03",
+          "stem": "某需求只写“95%的查询在2秒内返回”，团队在100条数据、1个用户时达标，就宣布在所有使用场景均已验收。指出缺少的条件，以及应怎样完善验收依据。",
+          "answer": "还需定义适用负载和并发、数据量、网络及软硬件环境、响应起止点、统计窗口和错误请求口径；按经业务确认的条件建立性能测试。单用户小数据结果不能外推全部场景。",
+          "explanation": "量化阈值仍需明确条件与度量口径。不是随意把2秒再缩小，而是建立可重复的验收环境和有业务意义的样本。",
+          "support": "partial",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 73,
+            "end": 121,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "并发数据量阈值已有；响应起止/统计窗口/失败口径答案新增，建议需求处补一短句。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第4章 总体设计与详细设计",
+      "chapter_id": "software-engineering.c04",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 122,
+        "end": 183,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 57,
+        "end": 82,
+        "read": "按章全文实际审读",
+        "cards": 4
+      },
+      "dependency_and_expert_trace": "业务规则→对象→职责：日期归Loan避免后次覆盖，Student1对Loan0..*；资格/状态检查→建Loan→改BookCopy→返回，失败不留半状态。",
+      "practice": [
+        {
+          "id": "gap-course-revision-core-14-1",
+          "topic_id": "software-engineering.t24",
+          "chapter_id": "software-engineering.c04",
+          "stem": "同一册书先后被多人借阅，每次借出/归还日应存在哪个对象，为什么？",
+          "answer": "存具体Loan借阅记录",
+          "explanation": "日期属于一次借阅关系；放学生或图书单一日期字段会被后次借阅覆盖，不能保留历史。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 122,
+            "end": 183,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-system-010",
+          "topic_id": "software-engineering.t10",
+          "chapter_id": "software-engineering.c04",
+          "stem": "用户提交订单后，界面请求订单服务，订单服务请求库存服务，库存返回不足，再由订单服务返回失败。要画UML顺序图，应有哪些生命线？按先后写出四条主要消息；若改画订单状态变化，应选哪类图？",
+          "answer": "生命线可为用户/界面、订单服务、库存服务。主要消息：界面→订单服务提交；订单服务→库存服务检查库存；库存服务→订单服务返回不足；订单服务→界面返回失败。订单状态变化适合状态图。",
+          "explanation": "顺序图追踪跨对象消息先后；状态图跟踪同一对象在事件下的状态变化。返回消息可用虚线，不要求具体绘图工具。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 122,
+            "end": 183,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第5章 软件实现与软件测试",
+      "chapter_id": "software-engineering.c05",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 184,
+        "end": 234,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 83,
+        "end": 114,
+        "read": "按章全文实际审读",
+        "cards": 5
+      },
+      "dependency_and_expert_trace": "规格→用例/控制流：18..60取17/18/19/59/60/61；x1全部语句仍缺假出口，x0补齐；15−12+2=5只核V值，未学构基本路径另列。",
+      "practice": [
+        {
+          "id": "sp-core-se-029",
+          "topic_id": "software-engineering.t13",
+          "chapter_id": "software-engineering.c05",
+          "stem": "内部测试团队先验证完整系统在约定负载下的吞吐和稳定性，随后用户代表按业务验收标准判断是否接受。两项主要分别属于（ ）。",
+          "answer": "B",
+          "explanation": "完整系统的功能和性能属于系统测试对象；用户按实际业务及接受标准作决定属于验收。二者关注点不同，不能因都运行完整系统就视作同一层次。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 184,
+            "end": 234,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "sp-core-se-004",
+          "topic_id": "software-engineering.t11",
+          "chapter_id": "software-engineering.c05",
+          "stem": "登录年龄输入允许18～60岁。将输入划分为“小于18、18～60、大于60”三组并各选代表值，属于（ ）。",
+          "answer": "A",
+          "explanation": "等价类划分把输入域分为预期行为相同的有效或无效类别，再选代表值测试。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 184,
+            "end": 234,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第6章 软件维护、质量与配置管理",
+      "chapter_id": "software-engineering.c06",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 235,
+        "end": 275,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 115,
+        "end": 128,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "目的→维护→受控变更：修总价错改正、适配OS适应、加报表完善、行为不变清重复预防；申请→影响→批准→实施→测试→基线文档。",
+      "practice": [
+        {
+          "id": "gap-audit26-system-011",
+          "topic_id": "software-engineering.t14",
+          "chapter_id": "software-engineering.c06",
+          "stem": "把以下维护活动分类并说明依据：修复总价计算错误；适配新操作系统；增加导出报表；不改变外部行为地整理重复代码以降低未来修改风险。",
+          "answer": "依次为改正性、适应性、完善性、预防性维护。依据分别是现有缺陷、环境变化、功能改善、未来维护风险降低。",
+          "explanation": "按活动的主要目的分类；同一次版本可能包含多类维护，不由修改文件名或修改行数决定。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 235,
+            "end": 275,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "uc-se-009",
+          "topic_id": "software-engineering.t14",
+          "chapter_id": "software-engineering.c06",
+          "stem": "一个版本同时包含①适配新操作系统；②新增导出报表功能；③不改变外部行为地清理重复代码以降低未来风险。主要维护类型依次为（ ）。",
+          "answer": "B",
+          "explanation": "分类看活动目的：①外部环境变化为适应性；②新增用户能力为完善性；③降低未来维护风险为预防性。同一版本可以同时包含多类维护。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 235,
+            "end": 275,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第7章 项目管理与风险管理",
+      "chapter_id": "software-engineering.c07",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 276,
+        "end": 319,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 129,
+        "end": 148,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "依赖→早晚时刻→时差：A2/B4/C2/D3，ES0/2/2/6，LS0/2/4/6，TF0/0/2/0，总9天；0.3×10天=期望3天而非发生只延误3天。",
+      "practice": [
+        {
+          "id": "gap-audit26-system-012",
+          "topic_id": "software-engineering.t17",
+          "chapter_id": "software-engineering.c07",
+          "stem": "第三方接口可能在上线前无法交付，概率约30%，发生将延误10天。先算风险暴露量，再给出一项缓解措施、一项应急措施及监控信号。",
+          "answer": "期望延误约0.3×10=3天。可提前联调和设置中间里程碑降低风险；准备替代接口或延期非核心功能作为应急方案；监控交付里程碑、接口样例和联调通过率，并指定负责人。",
+          "explanation": "3天是期望影响，不代表发生时只延误3天；发生后需按问题处置，不能继续仅登记为未发生风险。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 276,
+            "end": 319,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-se-010",
+          "topic_id": "software-engineering.t22",
+          "chapter_id": "software-engineering.c07",
+          "stem": "项目网络有两条路径A-B-D为8天，A-C-D为11天。关键路径是哪条？A-C-D上的活动延迟2天会怎样？",
+          "answer": "关键路径为A-C-D；若无可用时差，延迟2天使项目总工期延长2天。",
+          "explanation": "最长路径决定最短完工时间，关键活动通常总时差为0。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 276,
+            "end": 319,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "软件工程",
+      "chapter": "第8章 面向变化的软件开发方法",
+      "chapter_id": "software-engineering.c08",
+      "lecture": {
+        "file": "course_notes/软件工程.md",
+        "start": 320,
+        "end": 350,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/软件工程.md",
+        "start": 149,
+        "end": 161,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "变化→控制强度→追踪：报表每周变短迭代回归，监管结算正式批准/审计；不登记缺陷使数量降不代表质量升，需真实影响和回归证据。",
+      "practice": [
+        {
+          "id": "gap-final-thin-027",
+          "topic_id": "software-engineering.t19",
+          "chapter_id": "software-engineering.c08",
+          "stem": "团队为了降低缺陷数量指标，开始不登记用户报告；为了提高代码行指标，大量复制代码。说明这些度量为什么失真，并提出一种用证据改进的做法。",
+          "answer": "指标被当作奖惩目标后诱导漏报和重复，数字好看却增加质量维护风险。应保留真实缺陷和业务影响，结合复发率、回归结果、交付周期与用户反馈分析根因，采取改进并在后续迭代验证。",
+          "explanation": "度量应支持发现趋势而非脱离语境奖惩个人。不能用缺陷数变少就证明缺陷减少，也不能用代码行多证明价值增加。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 320,
+            "end": 350,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-se-011",
+          "topic_id": "software-engineering.t18",
+          "chapter_id": "software-engineering.c08",
+          "stem": "需求高度不确定、用户可频繁反馈，但核心支付模块风险很高。说明可怎样组合原型、迭代和风险分析。",
+          "answer": "用原型澄清界面与需求，短迭代持续交付可验证增量，对支付等高风险部分先做风险分析和验证。",
+          "explanation": "过程模型可按证据组合，不能只凭项目名称机械选择。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/软件工程.md",
+            "start": 320,
+            "end": 350,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第1章 信息安全概论",
+      "chapter_id": "information-security.c01",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 3,
+        "end": 37,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 3,
+        "end": 14,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "资产/威胁/弱点→目标：成绩库弱口令盗号后泄露篡改同损C/I；加密防披露，认证最小授权限冒充修改，断网会损A。",
+      "practice": [
+        {
+          "id": "cg-02-s5-q14",
+          "topic_id": "information-security.t02",
+          "chapter_id": "information-security.c01",
+          "stem": "某犯罪分子在一个银行储蓄所安装了一个遥控发射装置，侵入银行电脑系统，\n非法取走现金 30 万元，体现的主要安全威胁是（ ）。",
+          "answer": "D",
+          "explanation": "犯罪者安装遥控装置并侵入银行计算机系统取款，核心证据是未经授权的技术入侵和控制，属于黑客攻击，因此选D。易错点：资金损失是后果，威胁类型应按攻击手段判断。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 3,
+            "end": 37,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "zg-51797",
+          "topic_id": "information-security.t01",
+          "chapter_id": "information-security.c01",
+          "stem": "按通用教材常列的CIA、真实性和不可否认性等安全保护属性，下列哪项主要描述业务内容本身的含义是否正确，而非这组安全属性？",
+          "answer": "D",
+          "explanation": "D语义正确性主要判断业务内容或程序含义是否正确。A、B、C列的是教材常见的安全保护属性。这不表示业务正确性与系统安全毫无关系，只是在区分本题所问的属性类别。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 3,
+            "end": 37,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第2章 安全管理与风险管理",
+      "chapter_id": "information-security.c02",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 38,
+        "end": 79,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 15,
+        "end": 32,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "风险→控制→审计证据：短停电UPS及安全停机；离职查角色/直接授权/令牌撤销时间，再抽查访问及日志，有日志不等已撤权。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-11-1",
+          "topic_id": "information-security.t19",
+          "chapter_id": "information-security.c02",
+          "stem": "机房服务器主要面临短时市电中断导致的异常关机。为直接缓解该风险，下列措施最合适的是？",
+          "answer": "C",
+          "explanation": "短时停电属于供电及可用性风险。容量匹配的UPS提供短期供电，配合安全停机可减少突然断电损失；不能认为UPS能无限续航。防火墙、密码和VLAN分别控制其他风险，不能直接维持供电。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 38,
+            "end": 79,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-02-s5-q31",
+          "topic_id": "information-security.t04",
+          "chapter_id": "information-security.c02",
+          "stem": "在长度相当、随机生成且均未泄露的前提下，下列哪种口令方案通常更难猜测？（ ）",
+          "answer": "C",
+          "explanation": "选C。在长度相当且真正随机的限定下，更大的字符集合带来更大的候选空间；姓名、电话具有可预测性。现实安全还取决于长度、唯一性、泄露状态、猜测限速及MFA，不能只看字符种类。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 38,
+            "end": 79,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第3章 恶意代码与社会工程",
+      "chapter_id": "information-security.c03",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 80,
+        "end": 113,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 33,
+        "end": 44,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "传播机制/目的→处置：独立网络自传播为蠕虫，伪装诱导为木马，勒索为目的可重叠；QQ转账用旧独立渠道复核，先隔离留证再根除恢复。",
+      "practice": [
+        {
+          "id": "zg-99117",
+          "topic_id": "information-security.t06",
+          "chapter_id": "information-security.c03",
+          "stem": "会计小刘按照公司王总通过手机 QQ 发来的信息，将 96 万元项目款打入指定账号，事后经过两人\n的交流，小刘得知王总并没有发送该消息，自己很可能遭遇诈骗，便立即报警。对于上述情况，下列说\n法正确的是（ ）。",
+          "answer": "D",
+          "explanation": "应通过原先掌握的独立联系电话或规定审批流程核验身份和收款信息后再操作。高版本系统或杀毒软件不能自动识别所有冒充诈骗，也不需要禁止一切即时通信。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 80,
+            "end": 113,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-02-s5-q34",
+          "topic_id": "information-security.t06",
+          "chapter_id": "information-security.c03",
+          "stem": "我们使用手机时，有时会收到一些带链接的信息，如：“这是我们以前的照片，\n你打开看看哦”“有人悄悄关注你了，赶快点击了解”“这条信息对你很重要，点击链\n接浏览”。对这类信息，恰当的做法是（ ）。",
+          "answer": "C",
+          "explanation": "消息用熟人语气和紧迫措辞诱导点击未知链接，符合钓鱼和木马投递特征，应不点击并通过独立渠道核验，因此选C。易错点：显示的发送者名称可以伪造，不能因文案像熟人就信任链接。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 80,
+            "end": 113,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第4章 身份认证与访问控制",
+      "chapter_id": "information-security.c04",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 114,
+        "end": 144,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 45,
+        "end": 57,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "因素→会话→权限：密码+硬件密钥为知识/持有；640为alice读写、teachers组bob只读、组外carol无权，忽略ACL/特权；改密码未必撤旧会话。",
+      "practice": [
+        {
+          "id": "gap-audit26-system-014",
+          "topic_id": "information-security.t07",
+          "chapter_id": "information-security.c04",
+          "stem": "系统用密码加硬件安全密钥登录。解释为何属于多因素认证；若账号已失陷，只修改密码是否足够？还应检查哪些会话措施？",
+          "answer": "密码为所知因素，安全密钥为所持因素，来自不同类别。仅改密码未必撤销已发会话令牌；应按预案撤销失陷会话、检查关联设备和异常登录、重置受影响凭据并检查恢复渠道。",
+          "explanation": "用户名不是第二因素，两次密码也不是不同因素；MFA减少口令泄露风险，却不自动消除已窃取会话的风险。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 114,
+            "end": 144,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-sec-005",
+          "topic_id": "information-security.t08",
+          "chapter_id": "information-security.c04",
+          "stem": "财务人员可审批本部门10万元以下付款，超过金额需主管。RBAC和ABAC分别表达哪部分？",
+          "answer": "RBAC表达财务人员/主管角色的基础权限；ABAC用部门、金额等属性和条件限制具体操作。",
+          "explanation": "角色适合稳定职责，属性适合环境和业务条件。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 114,
+            "end": 144,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第5章 密码学基础",
+      "chapter_id": "information-security.c05",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 145,
+        "end": 204,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 58,
+        "end": 76,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "目标→密码模式→复用：P1=1010/P2=0110/K=1100，C1=0110/C2=1010；两密文异或1100等于两明文异或。相消正确，但符号/nonce首次未释。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-12-1",
+          "topic_id": "information-security.t20",
+          "chapter_id": "information-security.c05",
+          "stem": "CTR模式中，等长明文P₁、P₂在同一密钥下错误复用了相同密钥流K，密文分别为C₁=P₁⊕K、C₂=P₂⊕K。求C₁⊕C₂，并说明这种重用泄露了什么关系。",
+          "answer": "C₁⊕C₂=P₁⊕P₂，泄露两段明文的异或关系。",
+          "explanation": "逐位异或中K⊕K=0，密钥流相消，留下P₁⊕P₂。若再知道一段明文还可求出另一段；并非仅凭两密文就必然唯一恢复全部明文。CTR必须避免同一密钥下重复使用计数器块、产生重复密钥流。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 145,
+            "end": 204,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "dy-826139cf",
+          "topic_id": "information-security.t09",
+          "chapter_id": "information-security.c05",
+          "stem": "即使攻击者截获通信流量，仍希望其难以直接读出内容。在下列措施中，最直接保护传输内容机密性的是（ ）。",
+          "answer": "A",
+          "explanation": "正确使用加密可使截获流量的人难以得到明文，选A。加密不阻止流量本身被捕获，杀毒、防火墙和改用无线介质也不等价于端到端内容保密。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 145,
+            "end": 204,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第6章 网络安全",
+      "chapter_id": "information-security.c06",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 205,
+        "end": 247,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 77,
+        "end": 94,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "分区→规则顺序→回复：外网到DB5432默认拒绝，指定Web到DB5432允许；返回仍须状态/返回规则，TLS不代替记录授权。",
+      "practice": [
+        {
+          "id": "zg-17382",
+          "topic_id": "information-security.t11",
+          "chapter_id": "information-security.c06",
+          "stem": "某中学校园网内的计算机经常受到来自外网计算机病毒的攻击，为保障学校本地局域网的安全，\n学校决定添置硬件防火墙。设置防火墙的合适位置是（ ）。",
+          "answer": "B",
+          "explanation": "所谓防火墙指的是一个由软件和硬件设备组合而成、在内部网和外部网之间、\n专用网与公共网之间的界面上构造的保护屏障。所以设置防火墙的合适位置是学校局域网与外网连接处。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 205,
+            "end": 247,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "dy-fc9c9344",
+          "topic_id": "information-security.t12",
+          "chapter_id": "information-security.c06",
+          "stem": "甲从A主机向B主机发送IP数据包，并伪造源IP地址为C主机地址，使B误判来源。该攻击最直接属于（ ）。",
+          "answer": "D",
+          "explanation": "选D。题干明确伪造IP首部的源地址，即IP地址欺骗。ARP欺骗针对局域网IP到MAC的映射；仅说“误认为与C通信”不足以唯一判定，所以补明被伪造字段。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 205,
+            "end": 247,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第7章 系统、应用与数据安全",
+      "chapter_id": "information-security.c07",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 248,
+        "end": 307,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 95,
+        "end": 118,
+        "read": "按章全文实际审读",
+        "cards": 4
+      },
+      "dependency_and_expert_trace": "输入上下文→授权/绑定→恢复：id作为值绑定；F→I1→I2恢复周二，缺I1不保证；08备份10故障11:30恢复，窗口2h/恢复1.5h对照目标。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-13-1",
+          "topic_id": "information-security.t21",
+          "chapter_id": "information-security.c07",
+          "stem": "周日完成全量备份F，周一完成增量I₁，周二完成增量I₂。每个增量只记录相对上一次成功备份的变化。周三故障，需恢复到周二备份完成时，且无额外日志可用，应按哪一条链恢复？",
+          "answer": "D",
+          "explanation": "传统链式增量依赖前一次成功备份；I₂不包含仅在周一变化且周二未再改变的数据，因此应依次恢复F、I₁和I₂。若周二是相对F的差异备份，才可用F及该差异备份；题设已经排除了这一模型。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 248,
+            "end": 307,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-system-015",
+          "topic_id": "information-security.t14",
+          "chapter_id": "information-security.c07",
+          "stem": "业务要求最多丢失15分钟数据、2小时内恢复服务；当前仅每天凌晨做一次备份且与生产主机共用管理员账号。指出RPO、RTO和至少两项改进，并说明如何验证。",
+          "answer": "RPO为15分钟，RTO为2小时。每日备份通常无法满足15分钟丢失窗口，应增加日志备份或其他不超过15分钟恢复点的机制；用独立权限、离线/不可变副本减少同毁风险。演练恢复到指定时间点并计时，验证数据完整性与业务可用。",
+          "explanation": "备份完成不等于能恢复，需实测恢复点和恢复时长。具体备份/复制机制应同时考虑复制删除或加密的风险。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 248,
+            "end": 307,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "信息安全",
+      "chapter": "第8章 隐私保护、法律与职业责任",
+      "chapter_id": "information-security.c08",
+      "lecture": {
+        "file": "course_notes/信息安全.md",
+        "start": 308,
+        "end": 345,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/信息安全.md",
+        "start": 119,
+        "end": 135,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "目的/最小字段→内容与AI：删名留唯一学号仍可识别，公开图水印辅助归属；外部网页导出名单指令不能授系统权限，输出需核敏感字段。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-14-1",
+          "topic_id": "information-security.t22",
+          "chapter_id": "information-security.c08",
+          "stem": "摄影作品需要公开展示，且希望在图像中嵌入可检测的版权标识。下列技术中，哪一项最符合这两个要求？",
+          "answer": "B",
+          "explanation": "数字水印可在保持作品可展示的同时嵌入版权标识，辅助归属判断；不保证能阻止复制或抵御所有修改。整体加密会限制直接观看，单独散列不满足图像内嵌标识，删除原件不提供该功能。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 308,
+            "end": 345,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-sec-014",
+          "topic_id": "information-security.t17",
+          "chapter_id": "information-security.c08",
+          "stem": "获得系统管理员口令后，是否可以查看与工作无关的个人数据？说明判断依据。",
+          "answer": "不可以。能力不等于授权，应以岗位职责、合法目的、最小必要、单位制度和审批范围判断并保留审计。",
+          "explanation": "公开可见或技术上可访问也不代表可任意使用。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/信息安全.md",
+            "start": 308,
+            "end": 345,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第1章 信息、计算与计算思维",
+      "chapter_id": "computer-foundations.c01",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 3,
+        "end": 55,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 3,
+        "end": 18,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "数据→语境→可信/算法：28加室温℃时间才成具体信息；[60,85,72]当前最大60→85→85，空序列另定；就业率比较先查口径。",
+      "practice": [
+        {
+          "id": "cg-02-s1-q20",
+          "topic_id": "computer-foundations.t01",
+          "chapter_id": "computer-foundations.c01",
+          "stem": "某医院的多名医生和护士，在为某一名垂危病人做手术时，通过一些医疗监视\n设备了解病人的心电图、血压等情况，从而采用不同的救治措施，最后成功挽救了病人\n的生命。我们知道，信息的特征有：①依附性；②价值性；③时效性；④共享性。在这\n个事例中，体现了信息的（ ）。",
+          "answer": "D",
+          "explanation": "设备承载、救治有用、实时判断、多人共享分别对应四特征，选D。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 3,
+            "end": 55,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "zg-62070",
+          "topic_id": "computer-foundations.t01",
+          "chapter_id": "computer-foundations.c01",
+          "stem": "在邮箱里收到了一封带有附件的邮件，张华打开看附件并运行它。此后，他的电脑常常出现死机，\n运行缓慢等一系列问题。经朋友检查，机器由于接收不明来历的软件中毒了。从这事例中，张华接收不\n明来历的邮件时没有对一下哪项（ ）做出慎重判断，以致造成了损失。",
+          "answer": "A",
+          "explanation": "不明附件应核对来源并隔离检查，发件人显示名也可伪造，不能未经核验执行。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 3,
+            "end": 55,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第2章 信息表示与计算机系统",
+      "chapter_id": "computer-foundations.c02",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 56,
+        "end": 128,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 19,
+        "end": 35,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "位权→编码→容量：13.625=1101.101₂；2F=47；1024×768×24/8=2359296B=2.25MiB；ASCII n110→N78→P80，GB步骤另列。",
+      "practice": [
+        {
+          "id": "zg-42544",
+          "topic_id": "computer-foundations.t04",
+          "chapter_id": "computer-foundations.c02",
+          "stem": "字符“A”比“a”的 ASCII 码值小 32（十进制），已知字符“n”的二进制 ASCII 码值为(1101110)2，\n则字符“P”的十进制 ASCII 码值是（ ）。",
+          "answer": "A",
+          "explanation": "n为110，N=110-32=78，P=N+2=80。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 56,
+            "end": 128,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-06-s1-q123",
+          "topic_id": "computer-foundations.t05",
+          "chapter_id": "computer-foundations.c02",
+          "stem": "某学校的计算机的配置为\n“Intel Pentium E5400S 2.7G/2048M/1000G/DVD±RW/20”，其中通常用来表示内\n存大小的是（ ）。",
+          "answer": "B",
+          "explanation": "配置串2048M对应内存，1000G通常硬盘，2.7G频率，20英寸显示尺寸，单位需结合位置。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 56,
+            "end": 128,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第3章 操作系统、文件与软件",
+      "chapter_id": "computer-foundations.c03",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 129,
+        "end": 228,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 36,
+        "end": 52,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "目录/资源→配置→DNS：普通文件同卷左拖移动、跨卷复制；ShiftDelete绕回收站；IP可访且nslookup失败优先DNS；同层目录分类标准一致。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-04-1",
+          "topic_id": "computer-foundations.t22",
+          "chapter_id": "computer-foundations.c03",
+          "stem": "同一台电脑能按公网IP访问某服务，但用域名访问失败，nslookup查询该域名也失败。为定位故障，应优先检查哪一项？",
+          "answer": "A",
+          "explanation": "按IP可达说明该服务的基本网络路径可用；域名查询失败指向DNS解析环节，优先检查DNS配置、响应和记录。不能仅凭此现象直接断定某个DNS服务器永久损坏；其他三项不负责域名解析。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 129,
+            "end": 228,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "zg-6760",
+          "topic_id": "computer-foundations.t06",
+          "chapter_id": "computer-foundations.c03",
+          "stem": "王丽个人计算机上的照片非常多，查找起来很不方便，于是她对计算机中的照片进行了整理和归\n类.下列四种文件夹存放结构中，不合理的是（ ）。",
+          "answer": "D",
+          "explanation": "同层分类标准需一致，海南是旅游地点子项，与学习生活工作并列易重叠，但不同用户也可另有组织规则。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 129,
+            "end": 228,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第4章 云计算与服务模型",
+      "chapter_id": "computer-foundations.c04",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 229,
+        "end": 273,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 53,
+        "end": 65,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "服务管理层→部署对象→边缘：只交代码PaaS且仍管数据；共同合规医院专用共享社区云，在线软件可同时SaaS；低时延保护本地。",
+      "practice": [
+        {
+          "id": "gap-final-thin-003",
+          "topic_id": "computer-foundations.t09",
+          "chapter_id": "computer-foundations.c04",
+          "stem": "医院核心病历要求强控制，公开预约业务访问波动大，现场设备还需低时延响应。分别说明可考虑的部署位置及理由。",
+          "answer": "核心病历可放私有云或受控环境；预约业务可利用公有云弹性；现场低时延控制放边缘节点，并与云端协同汇总。",
+          "explanation": "受控病历环境重控制，预约可弹性部署，低时延现场控制可边缘处理；具体方案还应满足数据治理约束，非唯一答案。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 229,
+            "end": 273,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-found-020",
+          "topic_id": "computer-foundations.t08",
+          "chapter_id": "computer-foundations.c04",
+          "stem": "团队只想上传代码，由平台管理运行环境和扩缩容，应选IaaS、PaaS还是SaaS？说明边界。",
+          "answer": "选PaaS；用户管理应用代码和数据，平台管理操作系统、运行时和底层资源。",
+          "explanation": "只部署代码由平台维护OS及运行时是PaaS，IaaS一般用户管OS，SaaS用现成功能。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 229,
+            "end": 273,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第5章 大数据与数据处理",
+      "chapter_id": "computer-foundations.c05",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 274,
+        "end": 321,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 66,
+        "end": 77,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "清洗→Map→分组→Reduce：重复A10去重，B0.002万元换20，总30；苹果苹果/苹果梨→苹果[1,1,1]/梨[1]→3/1；标签分类/无标签聚类。",
+      "practice": [
+        {
+          "id": "gap-found-006",
+          "topic_id": "computer-foundations.t11",
+          "chapter_id": "computer-foundations.c05",
+          "stem": "按Volume、Velocity、Variety、Value这一常见4V口径，解释四个特征，再比较分类、聚类、关联分析三类任务。",
+          "answer": "Volume指数据量大，Velocity指数据产生或处理速度快，Variety指数据类型多样，Value指从数据中提取有用价值，通常还需注意价值密度。分类用已有类别训练并预测新样本类别；聚类把无标签数据按相似性分组；关联分析发现项目或事件经常共同出现的关系。",
+          "explanation": "本题按Volume、Velocity、Variety、Value说明规模、速度、多样和价值；分类使用已知类别，聚类按相似性分组，关联分析寻找共现模式。4V也存在其他口径，需以题中约定为准。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 274,
+            "end": 321,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-found-023",
+          "topic_id": "computer-foundations.t11",
+          "chapter_id": "computer-foundations.c05",
+          "stem": "利用已标注垃圾/正常邮件预测新邮件类别、对无标签客户自动分群、按偏离常态发现可疑交易，分别属于什么数据挖掘任务？",
+          "answer": "垃圾邮件是分类，客户分群是聚类，异常交易是异常检测。",
+          "explanation": "有标注的垃圾邮件判断是分类，无标签客户分群是聚类，识别偏离常态交易是异常检测；实际算法还需考虑数据和目标。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 274,
+            "end": 321,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第6章 人工智能与机器学习",
+      "chapter_id": "computer-foundations.c06",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 322,
+        "end": 361,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 78,
+        "end": 94,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "标签→训练验证测试→混淆：真垃圾20、判垃圾15、正确12→TP12/FP3/FN8/TN77，准确89%精确80%召回60%，符号未先释另列。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-05-1",
+          "topic_id": "computer-foundations.t23",
+          "chapter_id": "computer-foundations.c06",
+          "stem": "某二分类模型的统计为TP=12、FP=3、FN=8、TN=77。求召回率，即实际正类样本中被正确识别为正类的比例。",
+          "answer": "召回率=12/(12+8)=60%。",
+          "explanation": "实际正类20个，正确识别12个，召回率12/(12+8)=60%。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 322,
+            "end": 361,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "dy-60fa8fa5",
+          "topic_id": "computer-foundations.t12",
+          "chapter_id": "computer-foundations.c06",
+          "stem": "（）是利用计算机对物体、图像、语音、字符等进行自动识别的技术，它的一般过程包括： 样本采集、信息的数字化、预处理、数据特征的提取、与标准模式进行比较、分类识别等。",
+          "answer": "B",
+          "explanation": "模式识别从样本及特征判断类别，生物识别仅是其中一类，故B。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 322,
+            "end": 361,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第7章 物联网",
+      "chapter_id": "computer-foundations.c07",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 362,
+        "end": 398,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 95,
+        "end": 106,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "感知→原状态/阈值→执行反馈：初关28开35仍开42关35仍关；正文>40关下40维持，图恰40关冲突。",
+      "practice": [
+        {
+          "id": "cg-02-s1-q33",
+          "topic_id": "computer-foundations.t14",
+          "chapter_id": "computer-foundations.c07",
+          "stem": "智能手机越来越人性化，设置自动调节屏幕亮度，在环境光线变化时屏幕亮度\n也随之变化，这是采用什么技术？（ ）",
+          "answer": "C",
+          "explanation": "环境光传感器提供亮度输入，再按规则调屏幕，是传感控制链。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 362,
+            "end": 398,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-02-s4-q32",
+          "topic_id": "computer-foundations.t14",
+          "chapter_id": "computer-foundations.c07",
+          "stem": "完整的灭火机器人主要包括：输入装置、控制器、输出装置，其输入装置使用\n了信息技术中的（ ）。",
+          "answer": "D",
+          "explanation": "灭火机器人输入用火焰温度传感器，将外部物理量转换为内部可处理信号。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 362,
+            "end": 398,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第8章 区块链",
+      "chapter_id": "computer-foundations.c08",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 399,
+        "end": 430,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 107,
+        "end": 118,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "内容→摘要引用→共识：B1修改使H(B1)变，B2旧引用失配；本地重算仍需共识接受；单可信部门联系人表用数据库更直接。",
+      "practice": [
+        {
+          "id": "gap-found-028",
+          "topic_id": "computer-foundations.t16",
+          "chapter_id": "computer-foundations.c08",
+          "stem": "假定未发生哈希碰撞，且后续区块保存的摘要没有重算。篡改旧区块的一条记录后，为什么链式校验会发现不匹配？",
+          "answer": "旧区块内容改变会改变其哈希，后一区块保存的前块哈希不再匹配，并沿链影响后续校验。",
+          "explanation": "旧块变动通常改变哈希，后块前驱摘要不匹配而被发现；应限定摘要未重算且不发生碰撞，非自动保证永不可改。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 399,
+            "end": 430,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-found-013",
+          "topic_id": "computer-foundations.t17",
+          "chapter_id": "computer-foundations.c08",
+          "stem": "某单位只需在单一可信部门内部管理少量结构化联系人数据，没有多方共同记账需求。更直接的技术选择是？",
+          "answer": "A",
+          "explanation": "少量单部门结构化数据直接用关系数据库，没必要强加区块链、大模型或分布式集群。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 399,
+            "end": 430,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第9章 计算机发展与典型应用",
+      "chapter_id": "computer-foundations.c09",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 431,
+        "end": 465,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 119,
+        "end": 129,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "器件/用途分类→建设责任：电子管/晶体管/IC/大规模IC；桥梁受力科学计算、工资数据处理、电机反馈过程控制；网站目标→内容结构→制作→反馈。",
+      "practice": [
+        {
+          "id": "cg-08-s1-q107",
+          "topic_id": "computer-foundations.t19",
+          "chapter_id": "computer-foundations.c09",
+          "stem": "某单位现需要为本单位建立一个主题网站，下面较为合理的信息集成过程是\n（ ）。\n①规划内容结构，收集加工素材\n②确定主题，设计目标\n③选择适当工具，实际制作\n④收集反馈，评价修正",
+          "answer": "A",
+          "explanation": "信息集成顺序：定主题→规划收集→工具制作→反馈修正。②①③④。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 431,
+            "end": 465,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-02-s1-q32",
+          "topic_id": "computer-foundations.t18",
+          "chapter_id": "computer-foundations.c09",
+          "stem": "随着互联网金融的发展，人们可以借助手机银行理财。这主要体现的信息技术\n发展趋势是（ ）。",
+          "answer": "A",
+          "explanation": "手机通过网络访问银行服务，直接体现网络化；不因手机使用就证明智能决策。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 431,
+            "end": 465,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter": "第10章 新一代信息技术的综合应用",
+      "chapter_id": "computer-foundations.c10",
+      "lecture": {
+        "file": "course_notes/大学计算机基础与新技术.md",
+        "start": 466,
+        "end": 496,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/大学计算机基础与新技术.md",
+        "start": 130,
+        "end": 134,
+        "read": "按章全文实际审读",
+        "cards": 1
+      },
+      "dependency_and_expert_trace": "目标时限→状态→执行→验收：超超正常超超超计数1/2/0/1/2/3，第6次触发，旧时间戳不重计，断网仍本地执行，年度汇总手工小样本复核。",
+      "practice": [
+        {
+          "id": "gap-found-012",
+          "topic_id": "computer-foundations.t20",
+          "chapter_id": "computer-foundations.c10",
+          "stem": "某工厂需要毫秒级设备停机保护，同时希望长期汇总数据并更新预测模型。说明边缘侧和云端分别适合承担哪些任务，并给出理由。",
+          "answer": "边缘侧适合采集、过滤和执行毫秒级停机控制，因为靠近设备、时延低且断网时仍可工作；云端适合长期存储、跨设备汇总、集中分析和模型更新，因为资源弹性较强并便于统一管理。",
+          "explanation": "毫秒级闭环与断网运行放边缘，长期汇总模型更新放云；适用前提由时延、可靠性与规模决定。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 466,
+            "end": 496,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-found-032",
+          "topic_id": "computer-foundations.t20",
+          "chapter_id": "computer-foundations.c10",
+          "stem": "山区水质监测点网络不稳定，需要现场超标告警、跨区域长期趋势分析，并防止无关人员查看位置数据。给出技术组合及理由。",
+          "answer": "传感器采集形成物联网；边缘网关在断网时完成阈值判断和本地告警；云端汇总多站点数据做长期分析；对位置和监测数据采用最小必要上传、认证、加密和权限控制。",
+          "explanation": "水质感知、边缘断网告警、云端多站趋势、位置权限最小上传分别对应四项约束。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "start": 466,
+            "end": 496,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第1章 办公环境与文件管理",
+      "chapter_id": "office.c01",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 3,
+        "end": 49,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 3,
+        "end": 14,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "保留能力→导出：3表公式图表保留xlsx，当前表另CSV查编码/分隔符，不保公式多表图表，改后缀不转换。",
+      "practice": [
+        {
+          "id": "gap-audit26-found-001",
+          "topic_id": "office.t01",
+          "chapter_id": "office.c01",
+          "stem": "现有XLSX工作簿含3张表、公式和图表，需交付可编辑源文件及供系统导入的当前表纯数据。给出保存方案，并说明仅改扩展名为什么不行。",
+          "answer": "保留XLSX工作簿作为源件，另导出当前工作表CSV并检查编码、分隔符和关键数据。CSV不能保留多工作表结构、公式及图表。只改扩展名不改变内部编码与结构。",
+          "explanation": "文件选型看保留能力；源件和数据交换副本用途不同。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 3,
+            "end": 49,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "ua-office-014",
+          "topic_id": "office.t01",
+          "chapter_id": "office.c01",
+          "stem": "只要Microsoft Office与WPS保存的文件扩展名相同，宏、字体、图表和动画效果就一定完全一致。（ ）",
+          "answer": "错误",
+          "explanation": "同扩展名不能保证不同软件平台对宏、字体和动画全部一致，交付前要实测目标环境。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 3,
+            "end": 49,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第2章 文字编辑与格式",
+      "chapter_id": "office.c02",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 50,
+        "end": 105,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 15,
+        "end": 27,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "段落/结构→格式：三段首行2字符段后6磅用段落属性，段内ShiftEnter；标题1/2插目录并更新整个目录，mgzy自动替换为自动更正。",
+      "practice": [
+        {
+          "id": "cg-11-s1-q75",
+          "topic_id": "office.t03",
+          "chapter_id": "office.c02",
+          "stem": "老李的文章中经常出现“暮虢朝虞”这个成语，每次录入这个词时会很费劲，\n为了加快录入速度他想了个方法，每次打入字母 mgzy 就会立马换成这个成语，他利\n用的 word 功能是（    ）。",
+          "answer": "A",
+          "explanation": "预设自动更正规则把mgzy映射为目标成语，录入时即可替换；查找替换一般处理已输入内容。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 50,
+            "end": 105,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-found-003",
+          "topic_id": "office.t03",
+          "chapter_id": "office.c02",
+          "stem": "Word有三段正文。要求每段首行缩进2字符且段后6磅，段内需手动换行时不能开启新段。说明设置方法、快捷键，以及为什么不应用空格和连续回车凑版面。",
+          "answer": "选中三段，在段落设置中设首行缩进2字符、段后6磅。段内手动换行用Shift+Enter，Enter才产生新段。空格和空段会随字体、分页及编辑改变而错位，格式属性更稳定。",
+          "explanation": "字符、段落和换行是不同层级的排版任务。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 50,
+            "end": 105,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第3章 页面排版、表格与对象",
+      "chapter_id": "office.c03",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 106,
+        "end": 181,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 28,
+        "end": 44,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "节→页码/方向；数据→合并域：封面正文附录三节，正文取消页脚链接从1；001李明/002王芳/003张华，预览第2人王芳002后合并全部。",
+      "practice": [
+        {
+          "id": "cg-11-s1-q31",
+          "topic_id": "office.t07",
+          "chapter_id": "office.c03",
+          "stem": "小胡的一个 Word 文档请朋友修改后，发现其中一段文字改得不太合理，就拒\n绝了在该处的修改，该处文字自动还原为原来内容。这用到了 Word 字处理软件中的\n（    ）。",
+          "answer": "A",
+          "explanation": "修订记录正文的增删改，拒绝对应修订即可恢复该处原内容；批注只附加意见。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 106,
+            "end": 181,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-11-s1-q61",
+          "topic_id": "office.t07",
+          "chapter_id": "office.c03",
+          "stem": "陈老师想对自己学生交来的小论文做个修改，同时让自己的学生清楚的知道自\n己修改的痕迹，最恰当采用的方式是（    ）。",
+          "answer": "D",
+          "explanation": "开启修订再修改正文，可保留增删痕迹让学生逐项查看和接受、拒绝。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 106,
+            "end": 181,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第4章 电子表格基础与公式",
+      "chapter_id": "office.c04",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 182,
+        "end": 280,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 45,
+        "end": 61,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "类型/位移→函数：D2=$B2*C$1到E3=$B3*D$1；60/0/空/缺考AVERAGE30；文本002精确查王芳；IF只有名称无语法另列。",
+      "practice": [
+        {
+          "id": "cg-12-s1-q46",
+          "topic_id": "office.t10",
+          "chapter_id": "office.c04",
+          "stem": "李老师负责高一年级的成绩统计，在用 Excel 输入分数的过程中，有时会因为\n手指在键盘上停留时间过长而输入重复数字，如将 102 输成 1002，为了及时发现种错\n误，可在分数这一列的最下面使用一个函数来检查错误这个函数是（    ）。",
+          "answer": "C",
+          "explanation": "MAX给出最高分，若超过试卷满分可提示输入异常；它只能发现部分异常，不能保证所有错录都能检出。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 182,
+            "end": 280,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-12-s1-q21",
+          "topic_id": "office.t10",
+          "chapter_id": "office.c04",
+          "stem": "在 Excel 中，在当前工作表的 B2 到 B5 的 4 个单元格内已填入某种商品 4 天\n销售的数量，该商品的单价为 1.25 元，那么要计算这 4 天该商品平均销售额并填入\nB6 单元格，则应在B6 单元格内输（    ）。",
+          "answer": "B",
+          "explanation": "先用AVERAGE(B2:B5)计算日均数量，再乘单价1.25得日均销售额；不能只求四天总量。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 182,
+            "end": 280,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第5章 数据管理、分析与图表",
+      "chapter_id": "office.c05",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 281,
+        "end": 359,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 62,
+        "end": 79,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "整行→分组/透视→刷新：技术10+20=30，行政5+8=13，总43，月列15/28；增加技术一月7刷新10→17并查范围；打印标题不等冻结。",
+      "practice": [
+        {
+          "id": "gap-audit26-found-011",
+          "topic_id": "office.t13",
+          "chapter_id": "office.c05",
+          "stem": "需展示五个月价格趋势以及各品类占销售总额的比例，并打印跨页销售表，每页重复表头。分别选择图表及打印设置，并说明保护工作表能否保证公式正确。",
+          "answer": "价格趋势用折线图，品类占比可用饼图并检查总量和标签；设置打印标题行并预览分页缩放，冻结窗格不代替打印标题。工作表保护限制编辑，不验证公式、数据或统计逻辑。",
+          "explanation": "图表取决于表达目标，打印与屏幕显示的设置也不同。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 281,
+            "end": 359,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-12-s1-q34",
+          "topic_id": "office.t11",
+          "chapter_id": "office.c05",
+          "stem": "在 Excel 工作表中有一列数据“B20、B220、B200、B22”，该列数据在默认\n情况下进行升序排列，排序结果是（    ）。",
+          "answer": "B",
+          "explanation": "文本按字符逐位排序，B20是B200的前缀而排前，B22同理在B220前，得到B20、B200、B22、B220。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 281,
+            "end": 359,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第6章 演示文稿设计与制作",
+      "chapter_id": "office.c06",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 360,
+        "end": 427,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 80,
+        "end": 91,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "继承→动画/切换→计时：母版标题，节点对象出现排顺序，页间淡化切换；无人值守改自动衔接/换片计时/使用计时，循环不产生时间。",
+      "practice": [
+        {
+          "id": "cg-12-s2-q8-dup2",
+          "topic_id": "office.t14",
+          "chapter_id": "office.c06",
+          "stem": "在输入了文字之后，可以根据实际需要来改变文字的格式，不同的文字格式会给\n幻灯片带来不同的视觉效果。下列说法正确的是（    ）。",
+          "answer": "BCD",
+          "explanation": "同一文本框不同文字可设不同字体，标题字号也可手工更小；软件允许自选颜色，但为了可读性仍应保证背景对比。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 360,
+            "end": 427,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-found-013",
+          "topic_id": "office.t15",
+          "chapter_id": "office.c06",
+          "stem": "一个幻灯片流程图要求节点按点击依次出现，随后切换下一页需要淡化效果。说明分别设置何种功能；如果无人值守自动播放，还要补充什么？",
+          "answer": "节点设对象动画并安排顺序和开始方式，页间淡化设切换。无人值守还需把对象开始改为自动衔接、设置换片计时或排练计时并启用使用计时，最后完整预览；按需求设置展台循环。",
+          "explanation": "页内动画、页间切换和自动时间安排是三个不同控制点。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 360,
+            "end": 427,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "Office软件操作",
+      "chapter": "第7章 Office综合应用",
+      "chapter_id": "office.c07",
+      "lecture": {
+        "file": "course_notes/Office软件操作.md",
+        "start": 428,
+        "end": 479,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/Office软件操作.md",
+        "start": 92,
+        "end": 101,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "清洗→汇总→成文展示→交付：唯一编号数值先核、透视刷新抽查、Word通知PPT趋势；链接源更新联动，移动源查断链，保留源件；IF仍依赖第4章补教。",
+      "practice": [
+        {
+          "id": "gap-office-clean-007",
+          "topic_id": "office.t16",
+          "chapter_id": "office.c07",
+          "stem": "要制作一份月度经营汇报：原始销售明细需要核对和汇总，报告需要正式排版，会议上还要展示关键趋势。说明三类办公组件的分工和建议处理顺序。",
+          "answer": "先用电子表格清理数据、检查类型和公式、汇总并生成合适图表；再把确认后的表格和图表用于文字报告，使用样式、题注和目录完成正式排版；最后在演示文稿中提炼结论、统一母版并安排展示顺序。各阶段都应保留可编辑源文件并核对链接或嵌入关系。",
+          "explanation": "表格负责明细计算、文字软件负责正式长文档、演示软件负责会议提炼；共享对象时检查链接与嵌入方式。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 428,
+            "end": 479,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "ap-of-005",
+          "topic_id": "office.t16",
+          "chapter_id": "office.c07",
+          "stem": "某办公室每月要根据明细数据自动汇总各部门费用、制作趋势图，并把结果放入正式报告。请说明软件与功能的选择、基本操作链及核对方法。",
+          "answer": "用Excel/WPS表格保存结构化明细，使用公式或数据透视表汇总，以折线图展示趋势；核对数据类型和公式引用，刷新并抽样复核，再把图表嵌入或链接到Word/WPS文字报告，最后检查版式和链接。",
+          "explanation": "表格整理汇总数据、图表呈现趋势、文字处理组织正式报告；链接便于更新但依赖源路径，交付还需核对引用和版面。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "start": 428,
+            "end": 479,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第1章 多媒体技术概论",
+      "chapter_id": "multimedia.c01",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 3,
+        "end": 61,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 2,
+        "end": 12,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "媒体形式/角色→交互→检索：文字图音统一体现多样集成，点击不同反馈交互；标签校庆检索与照片特征检索有别，无须联网。",
+      "practice": [
+        {
+          "id": "dy-2774c59a",
+          "topic_id": "multimedia.t01",
+          "chapter_id": "multimedia.c01",
+          "stem": "多媒体技术是指通过计算机对文字、数据、图形、图像、动画、声音等多种媒体信息进行 处理和管理，使用户可以通过多种感官与计算机进行实时交互的技术。下列关于多媒体技术描述 正确的有（）。",
+          "answer": "ABC",
+          "explanation": "多媒体综合处理两种以上媒体并可交互，改变信息获取方式；不是只有一种载体。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 3,
+            "end": 61,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-audit26-found-014",
+          "topic_id": "multimedia.t01",
+          "chapter_id": "multimedia.c01",
+          "stem": "某教学页面统一呈现文字、示意图与音频，学生点击选项后页面提供不同反馈。分别指出它体现的多样性、集成性和交互性；是否必须联网才能称多媒体？",
+          "answer": "文字图音多种形式体现多样性，统一组织处理体现集成性，用户输入导致不同反馈体现交互性。多媒体并不要求联网，可离线运行。",
+          "explanation": "媒体种类、组织方式和响应机制要分别找证据，不能只记三个名词。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 3,
+            "end": 61,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第2章 多媒体计算机系统与数字化",
+      "chapter_id": "multimedia.c02",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 62,
+        "end": 132,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 13,
+        "end": 24,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "采样/量化→单位→容量/瓶颈：16kHz×16bit×30/8=960kB，双声1920kB；80−50=30MB/s积压，300MB撑10s；1bit像素为4bit的1/4。",
+      "practice": [
+        {
+          "id": "gap-audit26-found-016",
+          "topic_id": "multimedia.t04",
+          "chapter_id": "multimedia.c02",
+          "stem": "一段单声道未压缩PCM，采样率16kHz、每样本16bit、时长30秒。不计文件头，求码率和十进制kB容量；再说改为双声道会怎样。",
+          "answer": "码率16000×16=256000bit/s=256kbit/s，容量256000×30/8=960000B=960kB。其他条件相同改双声道，码率和容量都乘2，为512kbit/s及1920kB。",
+          "explanation": "采样率每秒样本数，位深每样本位数；bit转Byte除8，k按1000。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 62,
+            "end": 132,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "dy-d9caab6e",
+          "topic_id": "multimedia.t04",
+          "chapter_id": "multimedia.c02",
+          "stem": "一幅400×600像素、每像素1位的两色位图，与同尺寸每像素4位的16色位图相比，均未压缩并忽略头部，所需像素存储空间（ ）。",
+          "answer": "A",
+          "explanation": "同尺寸且未压缩时1位图像与4位图像数据量比1:4，后者更大；压缩后的文件大小不能仅凭色数保证。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 62,
+            "end": 132,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第3章 数字图形与图像",
+      "chapter_id": "multimedia.c03",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 133,
+        "end": 218,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 25,
+        "end": 46,
+        "read": "按章全文实际审读",
+        "cards": 4
+      },
+      "dependency_and_expert_trace": "几何→次序→编辑：P(1,2)右3成(4,2)，原点2倍(8,4)；反序(5,4)。蒙版黑藏白显保像素，色彩配置文件卡先用未教。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-06-1",
+          "topic_id": "multimedia.t17",
+          "chapter_id": "multimedia.c03",
+          "stem": "点(1,2)先右移3再以原点放大2倍是多少？",
+          "answer": "(8,4)",
+          "explanation": "先(4,2)，再乘2；不是先放大后平移的(5,4)。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 133,
+            "end": 218,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "dy-64574370",
+          "topic_id": "multimedia.t05",
+          "chapter_id": "multimedia.c03",
+          "stem": "彩色图像中的每个像素，可以使用3个字节来表示，每个字节分别表示此像素中的红、绿、 蓝成分，每个字节用来储存该成分在256个等级中的某一量值。",
+          "answer": "正确",
+          "explanation": "24位RGB每通道8位，共3字节，每通道256个等级；并非所有彩色格式都必须采用此表示。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 133,
+            "end": 218,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第4章 数字音频",
+      "chapter_id": "multimedia.c04",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 219,
+        "end": 278,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 47,
+        "end": 58,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "声波→ADC/PCM→混音→DAC：48k×16×2=1536kbit/s；44.1k×16×2/8=176400B/s；同相0.7+0.7削波，各半增益后0.7，MIDI不是录音。",
+      "practice": [
+        {
+          "id": "cg-02-s3-q8",
+          "topic_id": "multimedia.t09",
+          "chapter_id": "multimedia.c04",
+          "stem": "某音频编辑器状态栏显示：sample.wav，44100Hz，Stereo（立体声）。以下判断正确的有（多选）。",
+          "answer": "ABD",
+          "explanation": "状态栏给出采样率44100 Hz、Stereo双声道，文件名sample.wav表明保存为WAV，故A、B、D成立。WAV是容器名，不能仅据扩展名断定其中是否采用未压缩PCM。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 219,
+            "end": 278,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-media-clean-003",
+          "topic_id": "multimedia.t08",
+          "chapter_id": "multimedia.c04",
+          "stem": "立体声PCM音频采样率48 kHz、量化16 bit，不压缩时码率为________kb/s。",
+          "answer": "1536",
+          "explanation": "48000×16×2=1536000bit/s=1536kb/s；立体声乘2。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 219,
+            "end": 278,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第5章 动画与数字视频",
+      "chapter_id": "multimedia.c05",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 279,
+        "end": 341,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 59,
+        "end": 74,
+        "read": "按章全文实际审读",
+        "cards": 3
+      },
+      "dependency_and_expert_trace": "帧/层→补间→容器：背景延长持续帧，人物另层补间；0..1秒x0..100线性0.4秒x40；12/(4−3)=12s缓存耗尽；MP4不能确定编码。",
+      "practice": [
+        {
+          "id": "cg-14-s1-q26",
+          "topic_id": "multimedia.t10",
+          "chapter_id": "multimedia.c05",
+          "stem": "某同学在同一个图层的第一帧制作了一个“地平线”形状，在第 2 帧、第 3\n帧、······第12 帧分别绘制了“太阳”，并调整了每帧太阳的位置。测试后发现作为地平\n线的图形一闪而过，不能与太阳同时存在。造成这种情况的原因是（    ）。",
+          "answer": "B",
+          "explanation": "地平线只出现1帧所以一闪而过，应延长其时间范围或放独立图层。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 279,
+            "end": 341,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "cg-14-s1-q34",
+          "topic_id": "multimedia.t10",
+          "chapter_id": "multimedia.c05",
+          "stem": "清晨，太阳从东方地平线上冉冉升起，给人们带来无限生机预示着新的一天开\n始。请同学们以“日出”为题制作一个动画短片，实现上述创意。如果第一场景就用来\n显示主题词“日出”，效果是从左到右逐渐展开。实现这种效果最合适的方法是\n（    ）。",
+          "answer": "A",
+          "explanation": "底层文字，上层遮罩范围逐渐增大，可产生从左到右揭示效果；与PowerPoint主题母版无关。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 279,
+            "end": 341,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第6章 多媒体数据压缩",
+      "chapter_id": "multimedia.c06",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 342,
+        "end": 415,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 75,
+        "end": 109,
+        "read": "按章全文实际审读",
+        "cards": 6
+      },
+      "dependency_and_expert_trace": "冗余→前缀码→量化→依赖：Huffman4/2/2先合2+2再4+4，0/10/11解01110=A/C/B；23步长10存2还原20误差3；B1须先I0/P2。",
+      "practice": [
+        {
+          "id": "gap-course-revision-applied-10-1",
+          "topic_id": "multimedia.t21",
+          "chapter_id": "multimedia.c06",
+          "stem": "视频显示顺序为I₀、B₁、P₂，已知B₁的预测同时依赖I₀和P₂。I₀已解码而P₂尚未解码时，要完整重建B₁，应怎样处理？",
+          "answer": "B",
+          "explanation": "题设明确B₁依赖前后两个参考图像，须先取得已解码的P₂，再结合I₀与预测残差重建。显示顺序不等于解码顺序；改名不改变编码结构，A、C、D均忽略已给出的依赖条件。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 342,
+            "end": 415,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "gap-course-revision-applied-09-1",
+          "topic_id": "multimedia.t20",
+          "chapter_id": "multimedia.c06",
+          "stem": "在简化的JPEG系数量化中，DCT系数为23、量化步长为10，采用四舍五入。求量化整数、反量化重建值和绝对量化误差。",
+          "answer": "量化整数2；重建值20；绝对量化误差3。",
+          "explanation": "23÷10=2.3，四舍五入为2；反量化2×10=20，绝对误差|23−20|=3。被舍入的差值不能由该量化整数唯一恢复。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 342,
+            "end": 415,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    },
+    {
+      "course": "多媒体技术",
+      "chapter": "第7章 多媒体作品设计与应用",
+      "chapter_id": "multimedia.c07",
+      "lecture": {
+        "file": "course_notes/多媒体技术.md",
+        "start": 416,
+        "end": 458,
+        "read": "按章全文实际审读",
+        "cards": null
+      },
+      "review": {
+        "file": "color_notes/多媒体技术.md",
+        "start": 110,
+        "end": 119,
+        "read": "按章全文实际审读",
+        "cards": 2
+      },
+      "dependency_and_expert_trace": "受众→节点脚本→导出测试：H到D/Q，D到H/Q，Q到E/H，E到Q/H，逐边检查；透明边核Alpha/格式/目标支持，手机完整预览保留工程。",
+      "practice": [
+        {
+          "id": "gap-media-clean-010",
+          "topic_id": "multimedia.t16",
+          "chapter_id": "multimedia.c07",
+          "stem": "同一宣传内容在手机上文字过小、电脑上正常，且导出后透明边缘出现黑底。给出从源文件到重新交付的排查步骤。",
+          "answer": "回到可编辑源文件检查画布比例、文字安全尺寸、图层和蒙版边缘；确认目标平台是否支持透明及所选导出格式和颜色设置；分别在手机和电脑预览，核对字体、透明、文件大小和版权素材后重新导出。",
+          "explanation": "从源结构、蒙版边缘、透明格式和目标平台逐层排查，分别预览后重新交付并保留源文件。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 416,
+            "end": 458,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        },
+        {
+          "id": "zg-25628",
+          "topic_id": "multimedia.t15",
+          "chapter_id": "multimedia.c07",
+          "stem": "在制作多媒体作品的基本过程中，（ ）是根据主题确定作品要达到的目标并分析其必要性和可\n行性的过程。",
+          "answer": "A",
+          "explanation": "论证主题目标、必要性和可行性属于需求分析，而不是后续集成发布。",
+          "support": "supported",
+          "support_evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "start": 416,
+            "end": 458,
+            "read": "按章全文实际审读",
+            "cards": null
+          },
+          "note": "上列依赖链及章内内容支持；专家核查，不是学生盲答。"
+        }
+      ],
+      "review_result": "全部卡实际读完；作为同章检索单位检查条件，未要求重复完整讲义。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "APP-001",
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c02",
+      "topic_id": "computer-foundations.t04",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "line": 80,
+      "original": "机内码常由区位/国标编码的两个字节最高位置1得到",
+      "dependency_gap": "区位码与国标交换码合成同一步；漏区位每字节+20H。",
+      "learning_impact": "照句从区位置高位得错误内码。",
+      "severity": "P1",
+      "certainty": "confirmed",
+      "minimal_fix": "区位各字节+20H成国标，再置高位1成通常GB内码。给区16位01：1001H→3021H→B0A1H；维持Unicode边界。",
+      "source_or_recalculation": {
+        "recalculation": "10H+20H=30H，01H+20H=21H，再各+80H为B0A1H；直接置高位成9081H错误。",
+        "url": "https://jsxngx.seu.edu.cn/ResourceInformationFile/28d74cb8-281f-4230-97f3-ea5ff736add0.pdf",
+        "access": "大学域搜索索引转换表；直接打开超时，未声称读整PDF。索引正文A0H/128D笔误未采用。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-002",
+      "course": "Office软件操作",
+      "chapter_id": "office.c04",
+      "topic_id": "office.t10",
+      "file": "course_notes/Office软件操作.md",
+      "line": 234,
+      "original": "IF 根据条件返回不同结果",
+      "dependency_gap": "本课无IF语法/完整例，第7章直接要求IF判断。",
+      "learning_impact": "不能独立写及格公式或检60分边界。",
+      "severity": "P1",
+      "certainty": "confirmed",
+      "minimal_fix": "先限定B2已验证0—100有效数值；给IF(条件,成立值,不成立值)与=IF(B2>=60,\"及格\",\"不及格\")，59/60输出分别核；空白缺考另按约定处理。",
+      "source_or_recalculation": {
+        "url": "https://support.microsoft.com/en-us/excel/functions/if-function",
+        "dependent": "第7章先检查学号唯一、成绩数值和缺考编码，再用IF判断结果。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-003",
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c06",
+      "topic_id": "computer-foundations.t23",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "line": 358,
+      "original": "TP=12、FP=3、FN=8、TN=77",
+      "dependency_gap": "未先声明正类/四符号实际×预测含义，重点卡直接用。",
+      "learning_impact": "会代公式不能从新叙述填四格。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "以垃圾为正类；TP真垃圾判垃圾、FP正常判垃圾、FN垃圾判正常、TN正常判正常，卡保留短对应。",
+      "source_or_recalculation": {
+        "url": "https://developers.google.com/machine-learning/crash-course/classification/thresholding",
+        "recalculation": "实际垃圾12+8=20；预测垃圾12+3=15；实际正常3+77=80。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-004",
+      "course": "大学计算机基础与新技术",
+      "chapter_id": "computer-foundations.c07",
+      "topic_id": "computer-foundations.t14",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "line": 380,
+      "original": "湿度<30%开阀、>40%关阀、其余维持原状态",
+      "dependency_gap": "图foundations_iot_loop.svg写升到40%达到停止阈值关，与严格>40不符。",
+      "learning_impact": "恰边界状态结果不唯一。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "保留正文则图读数改42%，写超过40%关阀；勿同时混用>和>=。",
+      "source_or_recalculation": {
+        "image": "media/foundations_iot_loop.svg",
+        "recalculation": "原开、40%：两条件均假，应仍开；42%才关。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-005",
+      "course": "计算机网络",
+      "chapter_id": "net-03",
+      "topic_id": "net.frames-switching",
+      "file": "course_notes/计算机网络.md",
+      "line": 334,
+      "original": "STP 用于防止二层环路导致广播风暴和 MAC 表震荡",
+      "dependency_gap": "仅此用途句，无全称/广播循环/端口阻塞与转发机制。",
+      "learning_impact": "只能按名字选协议，不能说明保留冗余而无环。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "补生成树协议；三交换机环中广播重复复制、同源MAC在不同端口反复学习；选择根及无环转发路径，冗余端口暂不转普通帧，故障重算。无需配置命令。",
+      "source_or_recalculation": {
+        "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/stp/stp-configuration-guide/m-stp.html",
+        "trace": "A-B-C-A，C-A一端普通数据阻塞后广播沿A-B-C不回A。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-006",
+      "course": "信息安全",
+      "chapter_id": "information-security.c05",
+      "topic_id": "information-security.t20",
+      "file": "course_notes/信息安全.md",
+      "line": 181,
+      "original": "C₁=P₁⊕K、C₂=P₂⊕K，则C₁⊕C₂=P₁⊕P₂",
+      "dependency_gap": "本课⊕/P/C未解释；nonce只给不重复条件未解释数值角色，别课CRC无明确承接。",
+      "learning_impact": "首次密码过程只能背相消，不能逐位复算。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "说明P明文/C密文/K密钥流，⊕同位相同0不同1；nonce为协议使用的数值，按方案同密钥不重复，不要求其保密；给4位例。",
+      "source_or_recalculation": {
+        "recalculation": "P1=1010/P2=0110/K=1100→C1=0110/C2=1010；两对异或均1100。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-007",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "topic_id": "software-engineering.t22",
+      "file": "course_notes/软件工程.md",
+      "line": 312,
+      "original": "ES=max(前驱EF)，EF=ES+工期d；终点LF=总工期，LS=LF−d",
+      "dependency_gap": "ES/EF/LS/LF未释；状态区间未标开始/完成。",
+      "learning_impact": "学生分不清两组早晚时刻与机动时间。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "公式前说明最早开始ES/最早完成EF/最迟开始LS/最迟完成LF，自项目起点0计时；区间标开始完成。",
+      "source_or_recalculation": {
+        "recalculation": "C最早[2,4]最迟[4,6]，总时差4−2=2，总工期9。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-008",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "topic_id": "software-engineering.t08",
+      "file": "course_notes/软件工程.md",
+      "line": 134,
+      "original": "分层、客户端/服务器和MVC等结构各有边界",
+      "dependency_gap": "MVC仅此名，没展开三职责，后文只解释分层。",
+      "learning_impact": "不知逻辑职责怎样分，可能当三台服务器。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "一例说明模型管理成绩数据/规则、视图展示、控制器接请求协调，逻辑职责不等物理部署。",
+      "source_or_recalculation": {
+        "check": "本课全文只有该MVC提及；不强加唯一框架实现。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-009",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c05",
+      "topic_id": "software-engineering.t21",
+      "file": "course_notes/软件工程.md",
+      "line": 204,
+      "original": "E=15、N=12得V=5",
+      "dependency_gap": "只有汇总数，没从代码画图、列独立路径/选用例；线性独立未通俗解释。",
+      "learning_impact": "会算V但不能建立基本路径测试。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "复用已有y=0;if x>0:y=1;输出y四结点，列4边真假2路径，用x1/x0走通；说明新增路径引入新边，基本路径不等所有循环次数。",
+      "source_or_recalculation": {
+        "recalculation": "结点1赋值2判定3条件赋值4输出；1→2、2真→3、3→4、2假→4，E4N4V2；路径1234/124。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-010",
+      "course": "多媒体技术",
+      "chapter_id": "multimedia.c03",
+      "topic_id": "multimedia.t06",
+      "file": "color_notes/多媒体技术.md",
+      "line": 33,
+      "original": "检查CMYK转换、配置文件、黑色文字和打样",
+      "dependency_gap": "卡新增配置文件/打样，正文只说成色差异；未说明是色彩描述文件。",
+      "learning_impact": "复习不到未教操作，可能把保存PSD视作完成色彩管理。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "正文补色彩配置文件描述设备/色彩空间，转换按印厂约定配置；打样以实际输出核颜色。卡明确色彩配置文件，不扩完整印前流程。",
+      "source_or_recalculation": {
+        "check": "卡L33与本课颜色模型全文对照，非规定具体ICC参数。"
+      },
+      "history_status": "new_context_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-011",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "topic_id": "software-engineering.t17",
+      "file": "course_notes/软件工程.md",
+      "line": 303,
+      "original": "团队应明确职责、接口、决策方式和沟通节奏",
+      "dependency_gap": "教材13.7能力成熟度模型全文无，现有高级估算排除理由不适用。",
+      "learning_impact": "通用本科过程改进辨识域未教，CI不等组织成熟。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "保留CMM五级初始/可重复/已定义/已管理/优化基本含义与一项组织证据分类；完整评估实施可排除。",
+      "source_or_recalculation": {
+        "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406",
+        "locator": "13.7 能力成熟度模型"
+      },
+      "history_status": "new_textbook_core_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-012",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "topic_id": "software-engineering.t08",
+      "file": "course_notes/软件工程.md",
+      "line": 142,
+      "original": "详细设计确定模块内部算法、局部数据结构及具体处理过程",
+      "dependency_gap": "教材6.1结构程序设计/6.4 Jackson无基本任务，仅数据流变换/事务映射。",
+      "learning_impact": "从DFD到模块不等覆盖数据结构到程序处理结构。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "最小成绩文件例：重复学生记录，每记录姓名+重复成绩，按顺序/重复遍历累计；区分Jackson从输入输出数据结构出发与变换分析。完整图语法可低深度。",
+      "source_or_recalculation": {
+        "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406",
+        "locator": "6.1、6.4.1—6.4.3；通用基础，不能称高级专题。"
+      },
+      "history_status": "new_textbook_core_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-013",
+      "course": "计算机网络",
+      "chapter_id": "net-02",
+      "topic_id": "net.media",
+      "file": "course_notes/计算机网络.md",
+      "line": 138,
+      "original": "双绞线：价格低、布线方便，常用于局域网",
+      "dependency_gap": "题gap-audit26-core-net-media-direction要求800m楼间选型，未教普通铜缆单段距离及模块距离适配。",
+      "learning_impact": "抗干扰可选光纤但无法独立说明距离失败条件。",
+      "severity": "P2",
+      "certainty": "support_gap_confirmed_numeric_limit_pending",
+      "minimal_fix": "补普通铜缆以太网单段通常100m级需按标准线材，800m选匹配光纤/模块；具体数值写入前用所选标准或厂商primary核验。",
+      "source_or_recalculation": {
+        "question_id": "gap-audit26-core-net-media-direction",
+        "certainty": "缺教学确定，具体距离主资料待核；未把未经核对数值当定论。"
+      },
+      "history_status": "new_practice_support_gap",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    },
+    {
+      "id": "APP-014",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c01",
+      "topic_id": "software-engineering.t02",
+      "file": "course_notes/软件工程.md",
+      "line": 18,
+      "original": "工程化开发强调分阶段、评审、验证、变更控制和持续改进",
+      "dependency_gap": "第1章真实题要求区分验证确认，正文到第5章才正式定义；第1章复习卡已有，因此不是全课未讲。",
+      "learning_impact": "单沿讲义章序学不能作区分，要转卡或提前跳第5章。",
+      "severity": "P2",
+      "certainty": "confirmed",
+      "minimal_fix": "第1章首次验证处用一句说明验证看规定要求、确认看预期用途；保留第5章测试细化即可。",
+      "source_or_recalculation": {
+        "question_id": "gap-audit26-system-007",
+        "later_definition_line": 189,
+        "earlier_review_line": 13
+      },
+      "history_status": "later_lecture_definition_review_already_has",
+      "whole_course_check": "先通读全课全部讲义及卡，再全文检索概念与前后定义；不以别课有术语视为已教。",
+      "retest": "待根修后同项复核"
+    }
+  ],
+  "old_issues_rechecked": [
+    {
+      "course": "计算机网络",
+      "resolved": "PPP双填充还原、IGMP成员/分支、CDM相关解码、接入路径、SNMP轮询/通知均已有，不重报整域缺失。"
+    },
+    {
+      "course": "Office软件操作",
+      "resolved": "邮件合并三收件人完整操作、分类汇总/透视四记录结果30/13/43均可执行。"
+    },
+    {
+      "course": "软件工程",
+      "resolved": "状态守卫/非法迁移、Loan对象多重性/日期/职责/测试、DFD变换与事务/判定表已补；完整方法不因单例全闭合。"
+    },
+    {
+      "course": "信息安全",
+      "resolved": "物理控制、TCB/640、模式、规则、XSS/CSRF、恢复链、云责任、内容/AI风险均已有；只重报其中前提缺释。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "resolved": "第3章网络安全基础、第4章完整四部署已补；主教材精确身份仍待核。"
+    },
+    {
+      "course": "多媒体技术",
+      "resolved": "检索、光盘、二维变换、混音、帧场、Huffman/JPEG/MPEG、节点发布链已补，10月15整域缺失非现状。"
+    }
+  ],
+  "known_remaining": [
+    {
+      "course": "Office软件操作",
+      "open_findings": [
+        "以Windows桌面Office2019基础为菜单边界；WPS/网页版仅功能对应，不宣称逐个按钮相同。",
+        "XLOOKUP明确是支持版扩展，不在Excel2016/2019可用范围内。",
+        "不覆盖宏VBA开发、复杂透视计算字段和完整专业排版工作流。"
+      ],
+      "boundary": "Office教材链接、作者、软件版本已由正式HEP移动页核实正确。7章不是漏了教材章：办公域主要重新拆分，计算基础与网络域由其他课承接，需记录。不能把宏VBA高级开发强加为本课必修缺章。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "open_findings": [
+        "主教材精确身份和全部拓展模块仍待官方目录确认；保留未知状态。",
+        "Office独立课承接办公模块；网络、安全、多媒体的深入机制分设独立课，本课补独立入门但不冒充已教其他课全部深度。",
+        "区块链共识、AI模型评估为基础过程，未涵盖共识证明、神经网络训练推导或量子计算算法。"
+      ],
+      "boundary": "出版社页面直接打开间歇失败，但搜索引擎索引中的正式出版社目录可核验模块1—8；无法读取部分不冒充完整目录。跨课合理分拆不应重复大量内容。"
+    },
+    {
+      "course": "多媒体技术",
+      "open_findings": [
+        "没有完整三维投影/光照数学、图形硬件结构、JPEG 8×8DCT手算和完整MPEG码流解析。",
+        "旧制盘/Authorware/Director专有软件安装与脚本没有完整教学；只保留历史名词边界。",
+        "内容检索和多媒体数据库仅任务/元数据深度，不包含完整特征算法、索引和检索系统实现。"
+      ],
+      "boundary": "旧教材设备/软件需要区分历史考点与现代通用原理。Director/Authorware等安装细节、过时硬件电路可不深入，但不能因此删去图形变换、压缩机制、媒体传输等通用知识。"
+    },
+    {
+      "course": "计算机网络",
+      "open_findings": [
+        "MPLS、SDN仍为职责与用途认识，未展开完整标签分发/控制器配置实验。",
+        "OSPF已执行最短路径小图，未覆盖全部区域、邻居状态和LSA类型；BGP仅路径与策略基础。",
+        "无线采用经典DCF和教材移动IPv4基础，未完整覆盖现代802.11/蜂窝协议状态机。"
+      ],
+      "boundary": "9个大章并未缺章；属于章内教材节漏项。IPv4分片已存在正确数值例题，不能误报缺失。"
+    },
+    {
+      "course": "软件工程",
+      "open_findings": [
+        "形式化说明补状态迁移和约束，Petri/Z完整语法与证明仍为专题",
+        "对象分析→设计→实现测试补同一借阅任务链，设计模式和完整OO项目实现未展开",
+        "COCOMO仅给有系数基础模型与量纲，详细校准和高级估算不展开"
+      ],
+      "boundary": ""
+    },
+    {
+      "course": "信息安全",
+      "open_findings": [
+        "访问控制未展开Bell-LaPadula等形式化安全模型证明；文件权限例明确忽略ACL和特权。",
+        "密码模式/算法为用途与安全条件，不做完整轮函数/证明或工程参数配方。",
+        "AI安全为阶段威胁与控制基础，未实现对抗算法、差分隐私或模型攻击测试；不称整章完整。",
+        "法律未增加处罚/期限等易变条文结论，现行合规题仍需官方文本核验。"
+      ],
+      "boundary": "当前本站8章按威胁与运营重新分组，但不能只对照自造8章目录判完整。教材安全机制的基础辨识/防护场景仍需保留；不要求恶意代码实战、数学证明或复杂攻防实验。现行法律/标准细节另须官方最新文本，不能从教材年代直接推断。"
+    }
+  ],
+  "scope_judgment": "完整Petri/Z语法证明、复杂协议全状态、8x8DCT手算及旧Authorware/Director安装可降深度；CMM/Jackson是本教材基本域，单列未讲，不伪作高级专题。基础课主教材身份/后续全模块未核实仍未知；跨课只有明确可达承接才算支持。",
+  "not_errors": [
+    "==关键词==为接受标记；未建议删除。",
+    "流媒体8秒缓存32Mbit与独立图题8Mbit各题面清楚，不误报。",
+    "安全四区3306图与三条5432例属于不同场景。",
+    "Office2019/WPS边界与XLOOKUP不支持2016/2019已明确，未发现新版本推广错误。",
+    "未因卡短要求整段扩成教材；只补独立任务的条件或符号。"
+  ],
+  "limitations": [
+    "源文与SVG语义审查，未作手机浏览器视觉/触控验收。",
+    "GB高校PDF直接打开超时，索引转换表+独立复算，不声称整份PDF已读。",
+    "APP-013数值限制需选标准primary核验。",
+    "ap-se-005答案额外列响应起止/窗口/错误口径，正文仅有通用可验原则；建议一短句补足，不定为错章。"
+  ],
+  "history_sources": [
+    "audit_reports/教材目录排查_计算机与应用_2026-10-15.md",
+    "audit_reports/教材目录排查_电子与安全_2026-10-15.md",
+    "audit_reports/其他课程重构_应用组_2026-10-16.md",
+    "audit_reports/其他课程重构_核心组_2026-10-16.md",
+    "textbook-coverage.json"
+  ]
+}

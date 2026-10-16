@@ -48395,6 +48395,43 @@
   "topic_order": 16
  },
  {
+  "id": "gap-context-bst-successor-001",
+  "source": "课程缺口补充",
+  "type": "简答",
+  "subject": "算法与数据结构",
+  "chapter": "data-structures.t10",
+  "source_chapter": "第4章 树与二叉树",
+  "adaptation_note": "教材上下文审查后补充的原创BST操作练习，不是招聘原题；检验后继仍有右孩子的链接边界。",
+  "topic_id": "data-structures.t10",
+  "topic_source": "manual",
+  "knowledge_point": "树与二叉树",
+  "ability": "过程描述",
+  "difficulty": "应用",
+  "stem": "从空BST依次插入互不相同的键40、20、60、50、70、55。现在按右子树最小键（中序后继）替换的方法删除根40。写出新根、原结点60的左孩子及删除后的中序序列，说明后继的孩子怎样接回。",
+  "options": {},
+  "answer": "新根的键为50；60的左孩子为55；中序为20、50、55、60、70。后继是原位置的50，它有右孩子55，删除原50时把55接到其父60的左链接，不能丢掉55。",
+  "explanation": "初始40右子树根为60，其最左结点50就是后继；50没有左孩子，但有右孩子55。用50替换根键40后，仍须删除后继原结点并接回55。中序保持严格递增，40已删除且其余键均保留。",
+  "max_score": 3,
+  "rubric": [
+   {
+    "criterion": "确定中序后继为50，新根键为50",
+    "points": 1
+   },
+   {
+    "criterion": "把后继的右孩子55接回60的左链接",
+    "points": 1
+   },
+   {
+    "criterion": "中序序列20、50、55、60、70完整且有序",
+    "points": 1
+   }
+  ],
+  "topic_title": "BST与AVL",
+  "chapter_id": "data-structures.c04",
+  "required_depth": "直接应用",
+  "topic_order": 12
+ },
+ {
   "id": "gap-audit26-core-net-topology",
   "source": "课程缺口补充",
   "type": "简答",

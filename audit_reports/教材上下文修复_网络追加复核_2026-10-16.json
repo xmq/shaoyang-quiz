@@ -1,0 +1,2445 @@
+{
+  "build": "1b51e5fbb6e98343",
+  "card_contexts": 148,
+  "topic_pools": 37,
+  "max_phone_card_height": 510,
+  "errors": [],
+  "cards": [
+    {
+      "id": "net.overview",
+      "title": "网络组成、功能与拓扑",
+      "chapter": 0,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.overview&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.performance",
+      "title": "速率、带宽与时延",
+      "chapter": 0,
+      "visible": true,
+      "height": 398,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.performance&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.switching",
+      "title": "电路交换与分组交换",
+      "chapter": 0,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.switching&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.layers-addresses",
+      "title": "分层与地址",
+      "chapter": 0,
+      "visible": true,
+      "height": 428,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.layers-addresses&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.protocol-service",
+      "title": "协议、服务与封装",
+      "chapter": 0,
+      "visible": true,
+      "height": 373,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.protocol-service&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.media",
+      "title": "介质与传输方向",
+      "chapter": 1,
+      "visible": true,
+      "height": 402,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.media&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.symbol-multiplexing",
+      "title": "比特率、码元速率与复用",
+      "chapter": 1,
+      "visible": true,
+      "height": 428,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.symbol-multiplexing&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.channel-capacity",
+      "title": "信道容量与信噪比",
+      "chapter": 1,
+      "visible": true,
+      "height": 417,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.channel-capacity&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.frames-switching",
+      "title": "帧、交换与VLAN",
+      "chapter": 2,
+      "visible": true,
+      "height": 476,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.frames-switching&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.crc",
+      "title": "CRC差错检测",
+      "chapter": 2,
+      "visible": true,
+      "height": 398,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crc&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.arq-window",
+      "title": "停等与滑动窗口",
+      "chapter": 2,
+      "visible": true,
+      "height": 427,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arq-window&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.ethernet-wifi",
+      "title": "以太网与无线接入",
+      "chapter": 2,
+      "visible": true,
+      "height": 432,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ethernet-wifi&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.ppp-stuffing",
+      "title": "PPP透明传输的填充与还原",
+      "chapter": 2,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ppp-stuffing&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.subnet-routing",
+      "title": "子网与路由",
+      "chapter": 3,
+      "visible": true,
+      "height": 510,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": false
+        }
+      ],
+      "practice": "./quiz.html?topic=net.subnet-routing&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.arp-forwarding",
+      "title": "ARP与逐跳转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 387,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arp-forwarding&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.routing",
+      "title": "最长前缀匹配与路由协议",
+      "chapter": 3,
+      "visible": true,
+      "height": 398,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.routing&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.ip-versions",
+      "title": "IPv4与IPv6地址",
+      "chapter": 3,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ip-versions&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.rip-update",
+      "title": "RIP距离向量更新",
+      "chapter": 3,
+      "visible": true,
+      "height": 417,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.rip-update&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.fragmentation",
+      "title": "IPv4分片的长度与偏移",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.fragmentation&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.multicast-membership",
+      "title": "组播成员与分支转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.multicast-membership&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.tcp-udp",
+      "title": "TCP与UDP",
+      "chapter": 4,
+      "visible": true,
+      "height": 427,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.tcp-udp&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.tcp-connection",
+      "title": "TCP序号、确认与连接建立",
+      "chapter": 4,
+      "visible": true,
+      "height": 480,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": false
+        }
+      ],
+      "practice": "./quiz.html?topic=net.tcp-connection&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.flow-congestion",
+      "title": "流量控制与拥塞控制",
+      "chapter": 4,
+      "visible": true,
+      "height": 510,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": false
+        }
+      ],
+      "practice": "./quiz.html?topic=net.flow-congestion&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.congestion-steps",
+      "title": "拥塞窗口逐轮变化",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.congestion-steps&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.app-protocols",
+      "title": "名称、配置与应用服务",
+      "chapter": 5,
+      "visible": true,
+      "height": 432,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.app-protocols&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.http",
+      "title": "HTTP状态与排障",
+      "chapter": 5,
+      "visible": true,
+      "height": 476,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.http&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.dns-dhcp",
+      "title": "DNS解析与DHCP配置",
+      "chapter": 5,
+      "visible": true,
+      "height": 458,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-dhcp&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.dns-lookup",
+      "title": "DNS递归与迭代查询",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-lookup&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.dhcp-lease",
+      "title": "DHCP租约获取流程",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dhcp-lease&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.socket-io",
+      "title": "TCP Socket收发与消息边界",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.socket-io&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.snmp-management",
+      "title": "SNMP轮询与主动通知",
+      "chapter": 5,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.snmp-management&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.security-boundary",
+      "title": "防火墙与安全边界",
+      "chapter": 6,
+      "visible": true,
+      "height": 432,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.security-boundary&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.crypto-signature",
+      "title": "加密、摘要与数字签名",
+      "chapter": 6,
+      "visible": true,
+      "height": 476,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crypto-signature&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.troubleshooting",
+      "title": "按层定位",
+      "chapter": 6,
+      "visible": true,
+      "height": 428,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.troubleshooting&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.streaming-qos",
+      "title": "流媒体、实时传输与QoS",
+      "chapter": 7,
+      "visible": true,
+      "height": 373,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.streaming-qos&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.playback-buffer",
+      "title": "播放缓冲耗尽计算",
+      "chapter": 7,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.playback-buffer&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.wireless-mobile",
+      "title": "WLAN、无线接入与移动网络",
+      "chapter": 8,
+      "visible": true,
+      "height": 402,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.wireless-mobile&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "net.overview",
+      "title": "网络组成、功能与拓扑",
+      "chapter": 0,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.overview&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.performance",
+      "title": "速率、带宽与时延",
+      "chapter": 0,
+      "visible": true,
+      "height": 398,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.performance&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.switching",
+      "title": "电路交换与分组交换",
+      "chapter": 0,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.switching&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.layers-addresses",
+      "title": "分层与地址",
+      "chapter": 0,
+      "visible": true,
+      "height": 428,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.layers-addresses&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.protocol-service",
+      "title": "协议、服务与封装",
+      "chapter": 0,
+      "visible": true,
+      "height": 373,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.protocol-service&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.media",
+      "title": "介质与传输方向",
+      "chapter": 1,
+      "visible": true,
+      "height": 402,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.media&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.symbol-multiplexing",
+      "title": "比特率、码元速率与复用",
+      "chapter": 1,
+      "visible": true,
+      "height": 428,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.symbol-multiplexing&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.channel-capacity",
+      "title": "信道容量与信噪比",
+      "chapter": 1,
+      "visible": true,
+      "height": 417,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.channel-capacity&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.frames-switching",
+      "title": "帧、交换与VLAN",
+      "chapter": 2,
+      "visible": true,
+      "height": 476,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.frames-switching&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.crc",
+      "title": "CRC差错检测",
+      "chapter": 2,
+      "visible": true,
+      "height": 398,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crc&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.arq-window",
+      "title": "停等与滑动窗口",
+      "chapter": 2,
+      "visible": true,
+      "height": 427,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arq-window&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.ethernet-wifi",
+      "title": "以太网与无线接入",
+      "chapter": 2,
+      "visible": true,
+      "height": 432,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ethernet-wifi&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.ppp-stuffing",
+      "title": "PPP透明传输的填充与还原",
+      "chapter": 2,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ppp-stuffing&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.subnet-routing",
+      "title": "子网与路由",
+      "chapter": 3,
+      "visible": true,
+      "height": 510,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": false
+        }
+      ],
+      "practice": "./quiz.html?topic=net.subnet-routing&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.arp-forwarding",
+      "title": "ARP与逐跳转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 387,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arp-forwarding&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.routing",
+      "title": "最长前缀匹配与路由协议",
+      "chapter": 3,
+      "visible": true,
+      "height": 398,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.routing&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.ip-versions",
+      "title": "IPv4与IPv6地址",
+      "chapter": 3,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ip-versions&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.rip-update",
+      "title": "RIP距离向量更新",
+      "chapter": 3,
+      "visible": true,
+      "height": 417,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.rip-update&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.fragmentation",
+      "title": "IPv4分片的长度与偏移",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.fragmentation&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.multicast-membership",
+      "title": "组播成员与分支转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.multicast-membership&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.tcp-udp",
+      "title": "TCP与UDP",
+      "chapter": 4,
+      "visible": true,
+      "height": 427,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.tcp-udp&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.tcp-connection",
+      "title": "TCP序号、确认与连接建立",
+      "chapter": 4,
+      "visible": true,
+      "height": 480,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": false
+        }
+      ],
+      "practice": "./quiz.html?topic=net.tcp-connection&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.flow-congestion",
+      "title": "流量控制与拥塞控制",
+      "chapter": 4,
+      "visible": true,
+      "height": 510,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": false
+        }
+      ],
+      "practice": "./quiz.html?topic=net.flow-congestion&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.congestion-steps",
+      "title": "拥塞窗口逐轮变化",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.congestion-steps&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.app-protocols",
+      "title": "名称、配置与应用服务",
+      "chapter": 5,
+      "visible": true,
+      "height": 432,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.app-protocols&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.http",
+      "title": "HTTP状态与排障",
+      "chapter": 5,
+      "visible": true,
+      "height": 476,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.http&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.dns-dhcp",
+      "title": "DNS解析与DHCP配置",
+      "chapter": 5,
+      "visible": true,
+      "height": 458,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-dhcp&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.dns-lookup",
+      "title": "DNS递归与迭代查询",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-lookup&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.dhcp-lease",
+      "title": "DHCP租约获取流程",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dhcp-lease&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.socket-io",
+      "title": "TCP Socket收发与消息边界",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.socket-io&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.snmp-management",
+      "title": "SNMP轮询与主动通知",
+      "chapter": 5,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.snmp-management&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.security-boundary",
+      "title": "防火墙与安全边界",
+      "chapter": 6,
+      "visible": true,
+      "height": 432,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.security-boundary&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.crypto-signature",
+      "title": "加密、摘要与数字签名",
+      "chapter": 6,
+      "visible": true,
+      "height": 476,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crypto-signature&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.troubleshooting",
+      "title": "按层定位",
+      "chapter": 6,
+      "visible": true,
+      "height": 428,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.troubleshooting&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.streaming-qos",
+      "title": "流媒体、实时传输与QoS",
+      "chapter": 7,
+      "visible": true,
+      "height": 373,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.streaming-qos&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.playback-buffer",
+      "title": "播放缓冲耗尽计算",
+      "chapter": 7,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.playback-buffer&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.wireless-mobile",
+      "title": "WLAN、无线接入与移动网络",
+      "chapter": 8,
+      "visible": true,
+      "height": 402,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.wireless-mobile&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "net.overview",
+      "title": "网络组成、功能与拓扑",
+      "chapter": 0,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.overview&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.performance",
+      "title": "速率、带宽与时延",
+      "chapter": 0,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.performance&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.switching",
+      "title": "电路交换与分组交换",
+      "chapter": 0,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.switching&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.layers-addresses",
+      "title": "分层与地址",
+      "chapter": 0,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.layers-addresses&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.protocol-service",
+      "title": "协议、服务与封装",
+      "chapter": 0,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.protocol-service&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.media",
+      "title": "介质与传输方向",
+      "chapter": 1,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.media&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.symbol-multiplexing",
+      "title": "比特率、码元速率与复用",
+      "chapter": 1,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.symbol-multiplexing&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.channel-capacity",
+      "title": "信道容量与信噪比",
+      "chapter": 1,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.channel-capacity&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.frames-switching",
+      "title": "帧、交换与VLAN",
+      "chapter": 2,
+      "visible": true,
+      "height": 314,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.frames-switching&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.crc",
+      "title": "CRC差错检测",
+      "chapter": 2,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crc&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.arq-window",
+      "title": "停等与滑动窗口",
+      "chapter": 2,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arq-window&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.ethernet-wifi",
+      "title": "以太网与无线接入",
+      "chapter": 2,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ethernet-wifi&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.ppp-stuffing",
+      "title": "PPP透明传输的填充与还原",
+      "chapter": 2,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ppp-stuffing&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.subnet-routing",
+      "title": "子网与路由",
+      "chapter": 3,
+      "visible": true,
+      "height": 579,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": true
+        }
+      ],
+      "practice": "./quiz.html?topic=net.subnet-routing&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.arp-forwarding",
+      "title": "ARP与逐跳转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arp-forwarding&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.routing",
+      "title": "最长前缀匹配与路由协议",
+      "chapter": 3,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.routing&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.ip-versions",
+      "title": "IPv4与IPv6地址",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ip-versions&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.rip-update",
+      "title": "RIP距离向量更新",
+      "chapter": 3,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.rip-update&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.fragmentation",
+      "title": "IPv4分片的长度与偏移",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.fragmentation&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.multicast-membership",
+      "title": "组播成员与分支转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.multicast-membership&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.tcp-udp",
+      "title": "TCP与UDP",
+      "chapter": 4,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.tcp-udp&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.tcp-connection",
+      "title": "TCP序号、确认与连接建立",
+      "chapter": 4,
+      "visible": true,
+      "height": 589,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": true
+        }
+      ],
+      "practice": "./quiz.html?topic=net.tcp-connection&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.flow-congestion",
+      "title": "流量控制与拥塞控制",
+      "chapter": 4,
+      "visible": true,
+      "height": 614,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": true
+        }
+      ],
+      "practice": "./quiz.html?topic=net.flow-congestion&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.congestion-steps",
+      "title": "拥塞窗口逐轮变化",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.congestion-steps&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.app-protocols",
+      "title": "名称、配置与应用服务",
+      "chapter": 5,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.app-protocols&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.http",
+      "title": "HTTP状态与排障",
+      "chapter": 5,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.http&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.dns-dhcp",
+      "title": "DNS解析与DHCP配置",
+      "chapter": 5,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-dhcp&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.dns-lookup",
+      "title": "DNS递归与迭代查询",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-lookup&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.dhcp-lease",
+      "title": "DHCP租约获取流程",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dhcp-lease&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.socket-io",
+      "title": "TCP Socket收发与消息边界",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.socket-io&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.snmp-management",
+      "title": "SNMP轮询与主动通知",
+      "chapter": 5,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.snmp-management&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.security-boundary",
+      "title": "防火墙与安全边界",
+      "chapter": 6,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.security-boundary&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.crypto-signature",
+      "title": "加密、摘要与数字签名",
+      "chapter": 6,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crypto-signature&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.troubleshooting",
+      "title": "按层定位",
+      "chapter": 6,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.troubleshooting&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.streaming-qos",
+      "title": "流媒体、实时传输与QoS",
+      "chapter": 7,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.streaming-qos&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.playback-buffer",
+      "title": "播放缓冲耗尽计算",
+      "chapter": 7,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.playback-buffer&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.wireless-mobile",
+      "title": "WLAN、无线接入与移动网络",
+      "chapter": 8,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.wireless-mobile&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "net.overview",
+      "title": "网络组成、功能与拓扑",
+      "chapter": 0,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.overview&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.performance",
+      "title": "速率、带宽与时延",
+      "chapter": 0,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.performance&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.switching",
+      "title": "电路交换与分组交换",
+      "chapter": 0,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.switching&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.layers-addresses",
+      "title": "分层与地址",
+      "chapter": 0,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.layers-addresses&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.protocol-service",
+      "title": "协议、服务与封装",
+      "chapter": 0,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.protocol-service&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.media",
+      "title": "介质与传输方向",
+      "chapter": 1,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.media&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.symbol-multiplexing",
+      "title": "比特率、码元速率与复用",
+      "chapter": 1,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.symbol-multiplexing&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.channel-capacity",
+      "title": "信道容量与信噪比",
+      "chapter": 1,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.channel-capacity&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.frames-switching",
+      "title": "帧、交换与VLAN",
+      "chapter": 2,
+      "visible": true,
+      "height": 314,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.frames-switching&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.crc",
+      "title": "CRC差错检测",
+      "chapter": 2,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crc&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.arq-window",
+      "title": "停等与滑动窗口",
+      "chapter": 2,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arq-window&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.ethernet-wifi",
+      "title": "以太网与无线接入",
+      "chapter": 2,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ethernet-wifi&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.ppp-stuffing",
+      "title": "PPP透明传输的填充与还原",
+      "chapter": 2,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ppp-stuffing&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.subnet-routing",
+      "title": "子网与路由",
+      "chapter": 3,
+      "visible": true,
+      "height": 579,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": true
+        }
+      ],
+      "practice": "./quiz.html?topic=net.subnet-routing&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.arp-forwarding",
+      "title": "ARP与逐跳转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.arp-forwarding&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.routing",
+      "title": "最长前缀匹配与路由协议",
+      "chapter": 3,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.routing&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.ip-versions",
+      "title": "IPv4与IPv6地址",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.ip-versions&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.rip-update",
+      "title": "RIP距离向量更新",
+      "chapter": 3,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.rip-update&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.fragmentation",
+      "title": "IPv4分片的长度与偏移",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.fragmentation&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.multicast-membership",
+      "title": "组播成员与分支转发",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.multicast-membership&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.tcp-udp",
+      "title": "TCP与UDP",
+      "chapter": 4,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.tcp-udp&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.tcp-connection",
+      "title": "TCP序号、确认与连接建立",
+      "chapter": 4,
+      "visible": true,
+      "height": 589,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": true
+        }
+      ],
+      "practice": "./quiz.html?topic=net.tcp-connection&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.flow-congestion",
+      "title": "流量控制与拥塞控制",
+      "chapter": 4,
+      "visible": true,
+      "height": 614,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [
+        {
+          "open": true
+        }
+      ],
+      "practice": "./quiz.html?topic=net.flow-congestion&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.congestion-steps",
+      "title": "拥塞窗口逐轮变化",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.congestion-steps&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.app-protocols",
+      "title": "名称、配置与应用服务",
+      "chapter": 5,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.app-protocols&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.http",
+      "title": "HTTP状态与排障",
+      "chapter": 5,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.http&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.dns-dhcp",
+      "title": "DNS解析与DHCP配置",
+      "chapter": 5,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-dhcp&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.dns-lookup",
+      "title": "DNS递归与迭代查询",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dns-lookup&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.dhcp-lease",
+      "title": "DHCP租约获取流程",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.dhcp-lease&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.socket-io",
+      "title": "TCP Socket收发与消息边界",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.socket-io&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.snmp-management",
+      "title": "SNMP轮询与主动通知",
+      "chapter": 5,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.snmp-management&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.security-boundary",
+      "title": "防火墙与安全边界",
+      "chapter": 6,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.security-boundary&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.crypto-signature",
+      "title": "加密、摘要与数字签名",
+      "chapter": 6,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.crypto-signature&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.troubleshooting",
+      "title": "按层定位",
+      "chapter": 6,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.troubleshooting&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.streaming-qos",
+      "title": "流媒体、实时传输与QoS",
+      "chapter": 7,
+      "visible": true,
+      "height": 284,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.streaming-qos&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.playback-buffer",
+      "title": "播放缓冲耗尽计算",
+      "chapter": 7,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.playback-buffer&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "net.wireless-mobile",
+      "title": "WLAN、无线接入与移动网络",
+      "chapter": 8,
+      "visible": true,
+      "height": 254,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=net.wireless-mobile&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    }
+  ],
+  "pools": [
+    {
+      "topic_id": "net.overview",
+      "question_ids": [
+        "cg-08-s1-q1",
+        "cg-08-s1-q8",
+        "cg-08-s1-q11",
+        "cg-08-s1-q15",
+        "cg-08-s1-q16",
+        "cg-08-s1-q17",
+        "cg-08-s1-q18",
+        "cg-08-s1-q19",
+        "cg-08-s1-q37",
+        "cg-08-s1-q43",
+        "cg-08-s1-q48",
+        "cg-08-s1-q95",
+        "cg-08-s1-q99",
+        "zg-49532",
+        "zg-53166",
+        "zg-25",
+        "zg-87097",
+        "zg-21512",
+        "zg-35092",
+        "zg-3912",
+        "zg-22893",
+        "zg-43176",
+        "zg-55249",
+        "web-38",
+        "dy-93407259",
+        "dy-4ac13314",
+        "dy-1a53061f",
+        "dy-df751f5c",
+        "dy-a2b16c00",
+        "dy-be79e543",
+        "dy-2d788ce1",
+        "dy-e222d101",
+        "dy-068fc972",
+        "dy-2ff14673",
+        "dy-4a6436c1",
+        "dy-b63aad8d",
+        "dy-3bb220bd",
+        "dy-b5852adf",
+        "dy-0e293313",
+        "dy-60ed5b71",
+        "dy-fe47807b",
+        "dy-60fff34e",
+        "gap-audit26-core-net-topology"
+      ]
+    },
+    {
+      "topic_id": "net.performance",
+      "question_ids": [
+        "cg-08-s1-q44",
+        "cg-08-s1-q45",
+        "cg-08-s1-q46",
+        "dy-48021ee9",
+        "nw-national-012",
+        "uc-net-001"
+      ]
+    },
+    {
+      "topic_id": "net.switching",
+      "question_ids": [
+        "cg-08-s1-q47",
+        "gap-final-thin-014"
+      ]
+    },
+    {
+      "topic_id": "net.layers-addresses",
+      "question_ids": [
+        "cg-08-s1-q7",
+        "cg-08-s1-q20",
+        "cg-08-s1-q21",
+        "cg-08-s1-q31",
+        "zg-95689",
+        "cg-08-s1-q33",
+        "cg-08-s1-q110",
+        "zg-66746",
+        "zg-97748",
+        "zg-99323",
+        "zg-93630",
+        "zg-63333",
+        "zg-61274",
+        "web-24",
+        "dy-4a95dd28",
+        "dy-89ef5496",
+        "dy-792d37ae",
+        "dy-d4df3be1",
+        "dy-3e26bc1a",
+        "dy-63566fa1",
+        "dy-69be03f9",
+        "dy-abc830e2",
+        "dy-6cc9fae5",
+        "dy-fc643099",
+        "dy-ccd9f16a",
+        "dy-084d1cb8",
+        "uf-nw-001",
+        "gap-audit26-core-net-layers",
+        "ap-nw-004",
+        "uc-net-010"
+      ]
+    },
+    {
+      "topic_id": "net.protocol-service",
+      "question_ids": [
+        "cg-08-s1-q24",
+        "cg-08-s1-q25",
+        "zg-97264",
+        "zg-37151",
+        "zg-27285",
+        "zg-89180",
+        "dy-7c423127",
+        "gap-audit26-core-net-protocol-service"
+      ]
+    },
+    {
+      "topic_id": "net.media",
+      "question_ids": [
+        "cg-08-s1-q4",
+        "cg-08-s1-q9",
+        "cg-08-s1-q29",
+        "cg-08-s1-q34",
+        "cg-08-s1-q35",
+        "zg-85522",
+        "zg-67669",
+        "zg-33738",
+        "zg-73199",
+        "dy-4c9f7d86",
+        "dy-5c6c5119",
+        "dy-496c078e",
+        "gap-audit26-core-net-media-direction"
+      ]
+    },
+    {
+      "topic_id": "net.symbol-multiplexing",
+      "question_ids": [
+        "cg-08-s1-q42",
+        "gap-final-thin-015"
+      ]
+    },
+    {
+      "topic_id": "net.channel-capacity",
+      "question_ids": [
+        "nw-national-001",
+        "nw-national-011",
+        "nw-national-013",
+        "uc-net-002"
+      ]
+    },
+    {
+      "topic_id": "net.frames-switching",
+      "question_ids": [
+        "cg-08-s1-q13",
+        "dy-32a66171",
+        "gap-audit26-core-net-vlan-learning",
+        "uc-net-009"
+      ]
+    },
+    {
+      "topic_id": "net.crc",
+      "question_ids": [
+        "nw-national-002",
+        "gap-final-thin-016"
+      ]
+    },
+    {
+      "topic_id": "net.arq-window",
+      "question_ids": [
+        "nw-national-016"
+      ]
+    },
+    {
+      "topic_id": "net.ethernet-wifi",
+      "question_ids": [
+        "cg-08-s1-q23",
+        "nw-national-007",
+        "gap-audit26-core-net-cd-ca"
+      ]
+    },
+    {
+      "topic_id": "net.ppp-stuffing",
+      "question_ids": [
+        "gap-course-revision-applied-01-1"
+      ]
+    },
+    {
+      "topic_id": "net.subnet-routing",
+      "question_ids": [
+        "cg-08-s1-q54",
+        "cg-08-s1-q57",
+        "cg-08-s1-q63",
+        "cg-08-s1-q64",
+        "cg-08-s1-q65",
+        "cg-08-s1-q70",
+        "cg-08-s1-q96",
+        "uf-nw-002",
+        "uf-nw-003",
+        "nw-national-003",
+        "nw-national-014",
+        "ap-nw-005",
+        "uc-net-004"
+      ]
+    },
+    {
+      "topic_id": "net.arp-forwarding",
+      "question_ids": [
+        "dy-bfac1faf",
+        "uf-nw-004",
+        "uf-nw-008",
+        "nw-national-018",
+        "uc-net-013"
+      ]
+    },
+    {
+      "topic_id": "net.routing",
+      "question_ids": [
+        "cg-08-s1-q12",
+        "cg-08-s1-q14",
+        "web-27",
+        "nw-national-005",
+        "uc-net-005",
+        "hn-recall-hn26-008"
+      ]
+    },
+    {
+      "topic_id": "net.ip-versions",
+      "question_ids": [
+        "cg-08-s1-q49",
+        "cg-08-s1-q50",
+        "cg-08-s1-q51",
+        "cg-08-s1-q52",
+        "cg-08-s1-q53",
+        "cg-08-s1-q55",
+        "cg-08-s1-q56",
+        "cg-08-s1-q58",
+        "cg-08-s1-q59",
+        "cg-08-s1-q60",
+        "cg-08-s1-q61",
+        "cg-08-s1-q62",
+        "zg-74774",
+        "cg-08-s2-q9",
+        "zg-25284",
+        "zg-73141",
+        "zg-3438",
+        "zg-47220",
+        "dy-3617dfbb",
+        "dy-a985c02c",
+        "nw-national-008"
+      ]
+    },
+    {
+      "topic_id": "net.rip-update",
+      "question_ids": [
+        "nw-national-004",
+        "gap-retest-rip-001"
+      ]
+    },
+    {
+      "topic_id": "net.fragmentation",
+      "question_ids": [
+        "gap-audit26-core-net-ipv6-fragment",
+        "uc-net-006"
+      ]
+    },
+    {
+      "topic_id": "net.multicast-membership",
+      "question_ids": [
+        "gap-course-revision-applied-02-1"
+      ]
+    },
+    {
+      "topic_id": "net.tcp-udp",
+      "question_ids": [
+        "cg-08-s1-q27",
+        "cg-08-s1-q39",
+        "dy-b582fe9c",
+        "nw-national-017",
+        "ap-nw-002",
+        "ap-nw-003",
+        "uc-net-014"
+      ]
+    },
+    {
+      "topic_id": "net.tcp-connection",
+      "question_ids": [
+        "uf-nw-005",
+        "uf-nw-006",
+        "nw-national-015",
+        "uc-net-008",
+        "uc-net-011",
+        "uc-net-015"
+      ]
+    },
+    {
+      "topic_id": "net.flow-congestion",
+      "question_ids": [
+        "cg-08-s1-q30",
+        "nw-national-006",
+        "nw-national-020"
+      ]
+    },
+    {
+      "topic_id": "net.congestion-steps",
+      "question_ids": [
+        "gap-full-net-congestion-trace",
+        "gap-full-net-congestion-loss"
+      ]
+    },
+    {
+      "topic_id": "net.app-protocols",
+      "question_ids": [
+        "cg-08-s1-q26",
+        "cg-08-s1-q36",
+        "cg-08-s1-q41",
+        "cg-08-s1-q75",
+        "cg-08-s1-q78",
+        "cg-08-s1-q81",
+        "cg-08-s1-q82",
+        "cg-08-s1-q84",
+        "cg-08-s1-q86",
+        "cg-08-s1-q87",
+        "cg-08-s1-q88",
+        "cg-08-s1-q89",
+        "cg-08-s1-q90",
+        "cg-08-s1-q91",
+        "cg-08-s1-q92",
+        "zg-27343",
+        "zg-71082",
+        "zg-5971",
+        "zg-19259",
+        "zg-97942",
+        "zg-87605",
+        "web-12",
+        "web-26",
+        "dy-253de650",
+        "dy-9caafdfc",
+        "dy-e2ff715a",
+        "dy-32d91ae3",
+        "dy-33a5aed8",
+        "dy-44fd2211",
+        "gap-audit26-core-net-mail-flow",
+        "uc-net-012"
+      ]
+    },
+    {
+      "topic_id": "net.http",
+      "question_ids": [
+        "cg-08-s1-q40",
+        "cg-08-s1-q77",
+        "cg-08-s1-q79",
+        "cg-08-s1-q85",
+        "cg-08-s1-q100",
+        "cg-08-s1-q105",
+        "cg-08-s1-q106",
+        "zg-23651",
+        "web-1",
+        "dy-53153f96",
+        "dy-492f9772",
+        "dy-edef41ec",
+        "dy-2fa7623e",
+        "dy-340ea980",
+        "nw-national-010",
+        "hn-recall-sy26-004",
+        "hn-recall-hn26-011"
+      ]
+    },
+    {
+      "topic_id": "net.dns-dhcp",
+      "question_ids": [
+        "cg-08-s1-q66",
+        "cg-08-s1-q67",
+        "cg-08-s1-q69",
+        "cg-08-s1-q71",
+        "cg-08-s1-q72",
+        "cg-08-s1-q73",
+        "cg-08-s1-q74",
+        "cg-08-s1-q83",
+        "zg-91239",
+        "zg-61952",
+        "dy-58ef37de",
+        "dy-771131ac",
+        "nw-national-019",
+        "ap-nw-006"
+      ]
+    },
+    {
+      "topic_id": "net.dns-lookup",
+      "question_ids": [
+        "cg-08-s1-q68",
+        "hn-recall-hn26-010"
+      ]
+    },
+    {
+      "topic_id": "net.dhcp-lease",
+      "question_ids": [
+        "gap-full-net-dhcp-order",
+        "gap-full-net-dhcp-dns"
+      ]
+    },
+    {
+      "topic_id": "net.socket-io",
+      "question_ids": [
+        "gap-full-net-socket-boundary",
+        "hn-recall-hn26-005"
+      ]
+    },
+    {
+      "topic_id": "net.snmp-management",
+      "question_ids": [
+        "gap-course-revision-applied-03-1"
+      ]
+    },
+    {
+      "topic_id": "net.security-boundary",
+      "question_ids": [
+        "nw-national-021",
+        "gap-final-thin-017"
+      ]
+    },
+    {
+      "topic_id": "net.crypto-signature",
+      "question_ids": [
+        "cg-08-s1-q28",
+        "nw-national-009",
+        "gap-final-thin-018"
+      ]
+    },
+    {
+      "topic_id": "net.troubleshooting",
+      "question_ids": [
+        "cg-08-s1-q93",
+        "uf-nw-007",
+        "hn-recall-hn26-004"
+      ]
+    },
+    {
+      "topic_id": "net.streaming-qos",
+      "question_ids": [
+        "gap-net-media-001",
+        "gap-net-media-003"
+      ]
+    },
+    {
+      "topic_id": "net.playback-buffer",
+      "question_ids": [
+        "gap-net-media-002",
+        "gap-full-net-buffer-boundary"
+      ]
+    },
+    {
+      "topic_id": "net.wireless-mobile",
+      "question_ids": [
+        "cg-08-s1-q80",
+        "cg-08-s1-q94",
+        "cg-08-s1-q97",
+        "cg-08-s1-q98",
+        "cg-08-s1-q111",
+        "dy-c569f2fc",
+        "gap-net-wireless-001",
+        "gap-net-wireless-002",
+        "gap-net-wireless-003"
+      ]
+    }
+  ]
+}

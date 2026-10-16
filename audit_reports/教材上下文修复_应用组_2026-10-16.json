@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-16",
+  "scope": "应用组六科局部上下文修复",
+  "original_evidence": "首轮审查JSON/MD原句和hash未改",
+  "fixed": [
+    {
+      "id": "APP-001",
+      "status": "source_fixed_author_rechecked",
+      "fix": "区位各字节+20H成国标，再置高位1成通常GB内码。给区16位01：1001H→3021H→B0A1H；维持Unicode边界。",
+      "retest_evidence": {
+        "recalculation": "10H+20H=30H，01H+20H=21H，再各+80H为B0A1H；直接置高位成9081H错误。",
+        "url": "https://jsxngx.seu.edu.cn/ResourceInformationFile/28d74cb8-281f-4230-97f3-ea5ff736add0.pdf",
+        "access": "大学域搜索索引转换表；直接打开超时，未声称读整PDF。索引正文A0H/128D笔误未采用。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-002",
+      "status": "source_fixed_author_rechecked",
+      "fix": "先限定B2已验证0—100有效数值；给IF(条件,成立值,不成立值)与=IF(B2>=60,\"及格\",\"不及格\")，59/60输出分别核；空白缺考另按约定处理。",
+      "retest_evidence": {
+        "url": "https://support.microsoft.com/en-us/excel/functions/if-function",
+        "dependent": "第7章先检查学号唯一、成绩数值和缺考编码，再用IF判断结果。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-003",
+      "status": "source_fixed_author_rechecked",
+      "fix": "以垃圾为正类；TP真垃圾判垃圾、FP正常判垃圾、FN垃圾判正常、TN正常判正常，卡保留短对应。",
+      "retest_evidence": {
+        "url": "https://developers.google.com/machine-learning/crash-course/classification/thresholding",
+        "recalculation": "实际垃圾12+8=20；预测垃圾12+3=15；实际正常3+77=80。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-004",
+      "status": "source_fixed_author_rechecked",
+      "fix": "保留正文则图读数改42%，写超过40%关阀；勿同时混用>和>=。",
+      "retest_evidence": {
+        "image": "media/foundations_iot_loop.svg",
+        "recalculation": "原开、40%：两条件均假，应仍开；42%才关。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-005",
+      "status": "source_fixed_author_rechecked",
+      "fix": "补生成树协议；三交换机环中广播重复复制、同源MAC在不同端口反复学习；选择根及无环转发路径，冗余端口暂不转普通帧，故障重算。无需配置命令。",
+      "retest_evidence": {
+        "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/stp/stp-configuration-guide/m-stp.html",
+        "trace": "A-B-C-A，C-A一端普通数据阻塞后广播沿A-B-C不回A。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-006",
+      "status": "source_fixed_author_rechecked",
+      "fix": "说明P明文/C密文/K密钥流，⊕同位相同0不同1；nonce为协议使用的数值，按方案同密钥不重复，不要求其保密；给4位例。",
+      "retest_evidence": {
+        "recalculation": "P1=1010/P2=0110/K=1100→C1=0110/C2=1010；两对异或均1100。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-007",
+      "status": "source_fixed_author_rechecked",
+      "fix": "公式前说明最早开始ES/最早完成EF/最迟开始LS/最迟完成LF，自项目起点0计时；区间标开始完成。",
+      "retest_evidence": {
+        "recalculation": "C最早[2,4]最迟[4,6]，总时差4−2=2，总工期9。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-008",
+      "status": "source_fixed_author_rechecked",
+      "fix": "一例说明模型管理成绩数据/规则、视图展示、控制器接请求协调，逻辑职责不等物理部署。",
+      "retest_evidence": {
+        "check": "本课全文只有该MVC提及；不强加唯一框架实现。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-009",
+      "status": "source_fixed_author_rechecked",
+      "fix": "复用已有y=0;if x>0:y=1;输出y四结点，列4边真假2路径，用x1/x0走通；说明新增路径引入新边，基本路径不等所有循环次数。",
+      "retest_evidence": {
+        "recalculation": "结点1赋值2判定3条件赋值4输出；1→2、2真→3、3→4、2假→4，E4N4V2；路径1234/124。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-010",
+      "status": "source_fixed_author_rechecked",
+      "fix": "正文补色彩配置文件描述设备/色彩空间，转换按印厂约定配置；打样以实际输出核颜色。卡明确色彩配置文件，不扩完整印前流程。",
+      "retest_evidence": {
+        "check": "卡L33与本课颜色模型全文对照，非规定具体ICC参数。"
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-014",
+      "status": "source_fixed_author_rechecked",
+      "fix": "第1章首次验证处用一句说明验证看规定要求、确认看预期用途；保留第5章测试细化即可。",
+      "retest_evidence": {
+        "question_id": "gap-audit26-system-007",
+        "later_definition_line": 189,
+        "earlier_review_line": 13
+      },
+      "independent_crosscheck": "由根另行交叉验收；未把作者复算冒称独立学生试学"
+    },
+    {
+      "id": "APP-013",
+      "status": "source_fixed_primary_verified",
+      "fix": "限定常见1000BASE-T通道不超过100m；800m强干扰楼间选光纤并核模块、纤型、波长、距离",
+      "source": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/hw/nexus7000/installation/guide/cisco_nexus_7000_hardware_install/cisco_nexus_7000_hardware_install_chapter_0100.html",
+      "locator": "表23：1000BASE-T GLC-T/SFP-GE-T、Cat5/5E/6为100m；同表光模块随纤型/波长有不同距离",
+      "linked_question": "gap-audit26-core-net-media-direction",
+      "retest": "800m大于该1000BASE-T通道100m上限，光纤候选还须选标称距足够的模块组合，不能任意SX/多模都算满足。"
+    }
+  ],
+  "additional_fix": {
+    "question": "ap-se-005",
+    "change": "需求质量处补响应起止、统计窗口、失败请求口径，同负载/数据量/环境复测；不改答案/分值"
+  },
+  "unclosed": [
+    {
+      "id": "APP-011",
+      "reason": "CMM通用教材域未教，本轮未补，不称高级专题"
+    },
+    {
+      "id": "APP-012",
+      "reason": "Jackson/数据结构导出处理结构基础未教，本轮未补，不称高级专题"
+    }
+  ],
+  "cards": [
+    {
+      "course": "计算机网络",
+      "card": "帧、交换与VLAN",
+      "block_lengths": [
+        56,
+        35,
+        36
+      ],
+      "total": 127
+    },
+    {
+      "course": "软件工程",
+      "card": "总体设计与详细设计",
+      "block_lengths": [
+        36,
+        46,
+        35
+      ],
+      "total": 117
+    },
+    {
+      "course": "软件工程",
+      "card": "控制流图环形复杂度",
+      "block_lengths": [
+        37,
+        50,
+        46
+      ],
+      "total": 133
+    },
+    {
+      "course": "软件工程",
+      "card": "关键路径与总工期",
+      "block_lengths": [
+        73,
+        45,
+        37
+      ],
+      "total": 155
+    },
+    {
+      "course": "信息安全",
+      "card": "分组模式与nonce重用",
+      "block_lengths": [
+        44,
+        46,
+        43
+      ],
+      "total": 133
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "card": "字符、图像与声音编码",
+      "block_lengths": [
+        61,
+        65,
+        54
+      ],
+      "total": 180
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "card": "准确率、精确率与召回率",
+      "block_lengths": [
+        83,
+        36,
+        25
+      ],
+      "total": 144
+    },
+    {
+      "course": "Office软件操作",
+      "card": "函数、查找与错误值",
+      "block_lengths": [
+        38,
+        100,
+        52
+      ],
+      "total": 190
+    },
+    {
+      "course": "多媒体技术",
+      "card": "颜色模型与交付",
+      "block_lengths": [
+        54,
+        50,
+        44
+      ],
+      "total": 148
+    }
+  ],
+  "invariants": "12份源文件H2/H3、图片引用、既有==标记==序列与HEAD保持；未新增/重排卡、ID或元数据",
+  "checks": [
+    "GB步骤复算",
+    "IF59/60边界复算",
+    "混淆矩阵四格及精确/召回复算",
+    "湿度40维持/42关闭",
+    "4位XOR相消",
+    "双独立if6结点7边3基本路径与4组合输出",
+    "STP等代价三角形根/端口/断链状态人工推演",
+    "9张修改卡三块各至少25字/单卡不超过220字",
+    "IoT SVG可解析"
+  ],
+  "files": [
+    "course_notes/计算机网络.md",
+    "color_notes/计算机网络.md",
+    "course_notes/软件工程.md",
+    "color_notes/软件工程.md",
+    "course_notes/信息安全.md",
+    "color_notes/信息安全.md",
+    "course_notes/大学计算机基础与新技术.md",
+    "color_notes/大学计算机基础与新技术.md",
+    "course_notes/Office软件操作.md",
+    "color_notes/Office软件操作.md",
+    "course_notes/多媒体技术.md",
+    "color_notes/多媒体技术.md",
+    "media/foundations_iot_loop.svg"
+  ],
+  "after_sha256": {
+    "course_notes/计算机网络.md": "3e10b6240a3c655b579747c28ed3de6a48326749a1fea268f01c3db3b44565e7",
+    "color_notes/计算机网络.md": "0067c34ba2c60b8e38bf8430457cd29a675ba0311b7c8332edd5aa645ff6974b",
+    "course_notes/软件工程.md": "b4906af8b55a362efd77a1c67fd94baec903c02ba217dcc0d368fb4bb6c83b6c",
+    "color_notes/软件工程.md": "4a82d6e3ac93c82935cca2d72189b070e58091ec4c512f1cc352102aebaa1360",
+    "course_notes/信息安全.md": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+    "color_notes/信息安全.md": "d070ecfe0e3ac71a15138949865d46012a44c73aea2f7f9f562d2bd0a064c2bb",
+    "course_notes/大学计算机基础与新技术.md": "fbd207280510fa77035d98838f3c1cbeec0de7daa9816ce3d91144f550cc56c0",
+    "color_notes/大学计算机基础与新技术.md": "2650b0a3b518742913df2725a6df6fe1a02ce1697e5fd251e289b8aad282a98a",
+    "course_notes/Office软件操作.md": "e9a5f2c778e75f86a4e9d780c388257c1e98431ac4cf140b2a1bc229f6186bb9",
+    "color_notes/Office软件操作.md": "f1da39253dbf76ec4345c3bd1920cc930dba1109507f24e76509bbb3d176f33d",
+    "course_notes/多媒体技术.md": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+    "color_notes/多媒体技术.md": "696215070ab3cea6f0e78eca22c0808ff6267d21a161bd8a4f27527dd95bc7a2",
+    "media/foundations_iot_loop.svg": "dc3599b739440984736ee6e19315ab096d29f2e22c82f6610ebb4eb227461cb6"
+  },
+  "build": "未运行；未修改dist、全局注册、题源、题库",
+  "source_freeze": "六科局部源修复完成并冻结，可由根独立交叉验收；CMM/Jackson整域保持未覆盖"
+}

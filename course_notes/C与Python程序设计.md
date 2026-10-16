@@ -676,6 +676,21 @@ if (fp != NULL) {
 
 读取循环应直接检查`fgets`、`fscanf`等函数的返回值。`feof(fp)`只有在一次读取尝试已经到达文件末尾后才为真，不能用“先判断feof再读取”的写法可靠控制每一轮。
 
+**先认识按行读取的接口：** `fgets(buf,n,fp)`把文件流fp中的字符放入缓冲区buf，至多读n−1个字符，再补字符串结束符`'\0'`；读到换行会保留`'\n'`。成功返回buf，未读到字符就遇文件末尾时返回NULL，发生读取错误也返回NULL。最后一行即使没有换行，只要正常读到了字符，也会先成功返回。
+
+```c
+/* 已包含stdio.h，以下位于main内；假定每行少于255个字符 */
+FILE *fp = fopen("data.txt", "r");
+if (fp == NULL) return 1;
+char buf[256];
+while (fgets(buf, sizeof buf, fp) != NULL) {
+    printf("%s", buf);
+}
+fclose(fp);
+```
+
+数组容量256包含结尾的`'\0'`，不能读取256个正文字符再补结束符；若取消短行假设，一次成功读取可能只有一行的一部分。返回NULL也可能是读取错误，需要区分时可用`ferror(fp)`检查，其非0结果表示流上发生过错误。
+
 远大于内存的文本不能一次读完，应逐行或按固定块读取并立即累计；按块读取时要把块尾未完成的单词留到下一块。若不同单词数量本身也超出内存，还需分区、把中间计数写盘，再归并结果。文件流和中间文件都要在成功与异常路径关闭。
 
 <details><summary>先预测：函数返回局部变量地址后还能安全解引用吗？</summary>
@@ -766,8 +781,13 @@ if count:
 ```python
 import random
 rng = random.Random(7)
-rolls = [rng.randint(1, 6) for _ in range(10)]
-hits = sum(x >= 5 for x in rolls)
+rolls = []
+for i in range(10):
+    rolls.append(rng.randint(1, 6))
+hits = 0
+for x in rolls:
+    if x >= 5:
+        hits += 1
 print(hits / len(rolls))
 ```
 - 🔵 **模拟规则**：randint(1,6)含两端，10次中若5或6出现h次，事件频率为h/10；扩大次数用于观察频率，有限样本不必等于理论概率2/6。固定种子有助复现本环境试验，不能据此把模拟结果当数学证明。

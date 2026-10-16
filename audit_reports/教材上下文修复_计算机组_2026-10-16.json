@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-16",
+  "fixed_issues": [
+    "CTX-COMP-001",
+    "CTX-COMP-002",
+    "CTX-COMP-003",
+    "CTX-COMP-004",
+    "CTX-COMP-005"
+  ],
+  "status": "root_fixes_frozen_pending_non_author_recheck",
+  "checks": {
+    "bst": "插入去重、叶/单孩子/双孩子删除及后继右子树接回通过；新题根50、60.left=55、中序20,50,55,60,70",
+    "python_random": {
+      "same_rolls": [
+        3,
+        2,
+        4,
+        6,
+        1,
+        1,
+        5,
+        1,
+        3,
+        5
+      ],
+      "hits": 3,
+      "same_result": true
+    },
+    "c_fgets": {
+      "mode": "Windows ucrtbase stdio实际调用，非C编译验收",
+      "cases": [
+        {
+          "case": "ctx_fgets_lines_20261016.txt",
+          "returned_lines": [
+            "one\n",
+            "last"
+          ]
+        },
+        {
+          "case": "ctx_fgets_empty_20261016.txt",
+          "returned_lines": []
+        }
+      ],
+      "short_line_and_no_final_newline": true
+    }
+  },
+  "sources": [
+    "https://sourceware.org/glibc/manual/latest/html_node/Line-Input.html",
+    "https://man7.org/linux/man-pages/man7/inode.7.html"
+  ],
+  "source_sha256": {
+    "course_notes/数据结构与算法.md": "44f19bb6854c055b04c92cd8d172cf1d261a1a70d6b3e340be12c28a8013bbfd",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "color_notes/数据库技术.md": "0328fdfe3429583a11f40a09525d256eb35131b84ff31411093f85d8fb13a751",
+    "course_notes/操作系统原理.md": "c1c6985ce886daa4dbd9b07b161236405cdda209c0c88cab71b7c033de0bad52",
+    "color_notes/操作系统原理.md": "798398e0465c2e5c43cf35bf22ab7b731b44a4a90a3fdae9ca5d0676e2445541",
+    "course_notes/C与Python程序设计.md": "4de69622aaa44ff9d30ced82985a3309b44ffe2e7e715f6e845c342bd45e0e4e",
+    "media/ds_bst_delete_successor.svg": "bf35db4b115654ec9935a6481715461895401a137d08a389bdee63b09819486a",
+    "staging/audit_context_20261016_additions.json": "803369627f0095e8b8843e3c08f4abefddf43ce0fa3094838b02b5d6247b46f2"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "commit": "b00389e",
+  "scope": "16科全部讲义及重点，上下文和语义完整性；不是只看标题或字数",
+  "courses": [
+    {
+      "course": "Office软件操作",
+      "chapter_ids": [
+        "office.c01",
+        "office.c02",
+        "office.c03",
+        "office.c04",
+        "office.c05",
+        "office.c06",
+        "office.c07"
+      ],
+      "topics": 17,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\Office软件操作.md",
+          "sha256": "c2087fd81071074c8c2662c4cfce1c32a50f7585fcf6d99c063ae2d3b53b3a75"
+        },
+        "color_notes": {
+          "path": "color_notes\\Office软件操作.md",
+          "sha256": "0885c2ca9481e152d52a22b33d583ad76f840acd5a7d9a79cc9b838e5c6addfc"
+        }
+      }
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "chapter_ids": [
+        "computer-foundations.c01",
+        "computer-foundations.c02",
+        "computer-foundations.c03",
+        "computer-foundations.c04",
+        "computer-foundations.c05",
+        "computer-foundations.c06",
+        "computer-foundations.c07",
+        "computer-foundations.c08",
+        "computer-foundations.c09",
+        "computer-foundations.c10"
+      ],
+      "topics": 23,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\大学计算机基础与新技术.md",
+          "sha256": "e51108a500f9b874966fa9ec6ddd5bb6883dc95900f4884db6e01795686f6780"
+        },
+        "color_notes": {
+          "path": "color_notes\\大学计算机基础与新技术.md",
+          "sha256": "25a337d47f19ed43cb720b98e77b9077fb6c9af103db356b368fc0abb3ea6ee6"
+        }
+      }
+    },
+    {
+      "course": "多媒体技术",
+      "chapter_ids": [
+        "multimedia.c01",
+        "multimedia.c02",
+        "multimedia.c03",
+        "multimedia.c04",
+        "multimedia.c05",
+        "multimedia.c06",
+        "multimedia.c07"
+      ],
+      "topics": 21,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\多媒体技术.md",
+          "sha256": "fed8fcf66f7c9d74ef50c86b16f061e18e3897a1718884fb9a7d52f09d409661"
+        },
+        "color_notes": {
+          "path": "color_notes\\多媒体技术.md",
+          "sha256": "ac1b700ca595fe358089a849cb8f5b082921f40b9321657587ab6e72bc3a3253"
+        }
+      }
+    },
+    {
+      "course": "操作系统原理",
+      "chapter_ids": [
+        "operating-system.c01",
+        "operating-system.c02",
+        "operating-system.c03",
+        "operating-system.c04",
+        "operating-system.c05",
+        "operating-system.c06",
+        "operating-system.c07"
+      ],
+      "topics": 20,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\操作系统原理.md",
+          "sha256": "f8ca63ff0e92b7b833ca674478963181bb2d0d473985b1f1df0f3d78ad60860f"
+        },
+        "color_notes": {
+          "path": "color_notes\\操作系统原理.md",
+          "sha256": "bb5556b77184e811374923a2c4ccf12f40b0fc5319bd27356cd0d8927eab305b"
+        }
+      }
+    },
+    {
+      "course": "数据库技术",
+      "chapter_ids": [
+        "database.c01",
+        "database.c02",
+        "database.c03",
+        "database.c04",
+        "database.c05",
+        "database.c06",
+        "database.c07",
+        "database.c08",
+        "database.c09"
+      ],
+      "topics": 22,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\数据库技术.md",
+          "sha256": "3f5d18596653ae72ea26a68b4d6b81a5c63a8bd4545aecd57de576449e84584a"
+        },
+        "color_notes": {
+          "path": "color_notes\\数据库技术.md",
+          "sha256": "01edb8b22e371013b0d1f8ff2337966955fc46fe569de9d47d7a3dddf6bfc0c1"
+        }
+      }
+    },
+    {
+      "course": "数据结构与算法",
+      "chapter_ids": [
+        "data-structures.c01",
+        "data-structures.c02",
+        "data-structures.c03",
+        "data-structures.c04",
+        "data-structures.c05",
+        "data-structures.c06",
+        "data-structures.c07",
+        "data-structures.c08"
+      ],
+      "topics": 44,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\数据结构与算法.md",
+          "sha256": "3d71834f075b62d98212d83a207c7196585b0a50daf54b146e465fcb2ab0ca0e"
+        },
+        "color_notes": {
+          "path": "color_notes\\数据结构与算法.md",
+          "sha256": "fd0fa5da0da83c90fcb19ac26a27b04b34ca88b097c8765dd93af836d49360f2"
+        }
+      }
+    },
+    {
+      "course": "C与Python程序设计",
+      "chapter_ids": [
+        "programming.c01",
+        "programming.c02",
+        "programming.c03",
+        "programming.c04",
+        "programming.c05",
+        "programming.c06",
+        "programming.c07",
+        "programming.c08",
+        "programming.c09",
+        "programming.c10",
+        "programming.c11"
+      ],
+      "topics": 21,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\C与Python程序设计.md",
+          "sha256": "6d2dcaa2097d0da1646971d555bb1f3392c0941b642a14f1275a5626acb8270f"
+        },
+        "color_notes": {
+          "path": "color_notes\\C与Python程序设计.md",
+          "sha256": "fcfaf195fece8e191ed2383b0134aaf779ab5772e461f08a74ac9f1c0b2ea5a4"
+        }
+      }
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter_ids": [
+        "computer-organization.c01",
+        "computer-organization.c08",
+        "computer-organization.c06",
+        "computer-organization.c04",
+        "computer-organization.c09",
+        "computer-organization.c02",
+        "computer-organization.c03",
+        "computer-organization.c10",
+        "computer-organization.c05",
+        "computer-organization.c11"
+      ],
+      "topics": 42,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\计算机组成原理.md",
+          "sha256": "6ce94d64f271b559a3bb0e734c3dbb5e6bb581afdfeaa0e1bb1eec0270ba3069"
+        },
+        "color_notes": {
+          "path": "color_notes\\计算机组成原理.md",
+          "sha256": "483f905c7e5ea655bb13569951cff389d537eaaec9d3e65c150806cfb332b29e"
+        }
+      }
+    },
+    {
+      "course": "计算机网络",
+      "chapter_ids": [
+        "net-01",
+        "net-02",
+        "net-03",
+        "net-04",
+        "net-05",
+        "net-06",
+        "net-07",
+        "net-08",
+        "net-09"
+      ],
+      "topics": 37,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\计算机网络.md",
+          "sha256": "30bd48d873197148258bb6bbcc5c0a16900ebae666f61055ddb60baca45a943d"
+        },
+        "color_notes": {
+          "path": "color_notes\\计算机网络.md",
+          "sha256": "0b4e23f7a5d896e9e3f7beef806686c8a51aab278c0260caaa74da29a3d6c8ed"
+        }
+      }
+    },
+    {
+      "course": "电路分析与电工技术",
+      "chapter_ids": [
+        "circuit.c01",
+        "circuit.c02",
+        "circuit.c03",
+        "circuit.c04",
+        "circuit.c05",
+        "circuit.c06",
+        "circuit.c07",
+        "circuit.c08",
+        "circuit.c09"
+      ],
+      "topics": 14,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\电路分析与电工技术.md",
+          "sha256": "8a191b99ab5479933a08a09a8fe3d880575670f3b7b92a966895f85e1e222d11"
+        },
+        "color_notes": {
+          "path": "color_notes\\电路分析与电工技术.md",
+          "sha256": "3b3951a5e1159f3d8597352d6c93bffb551b148f3b642a7f4dc64477aa358f7f"
+        }
+      }
+    },
+    {
+      "course": "模拟电子技术",
+      "chapter_ids": [
+        "analog-electronics.c01",
+        "analog-electronics.c02",
+        "analog-electronics.c03",
+        "analog-electronics.c04",
+        "analog-electronics.c05",
+        "analog-electronics.c06",
+        "analog-electronics.c07",
+        "analog-electronics.c08"
+      ],
+      "topics": 22,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\模拟电子技术.md",
+          "sha256": "27b4212d7bdb82ae86e3aa4c8cab32ae900c1b44db0ff8cd3f6d2a6f4332aa76"
+        },
+        "color_notes": {
+          "path": "color_notes\\模拟电子技术.md",
+          "sha256": "076a70267a7b1847581f51c803bf0f11997a2de7bb58c55bd87505b88b1812c4"
+        }
+      }
+    },
+    {
+      "course": "数字电子技术",
+      "chapter_ids": [
+        "digital-electronics.c01",
+        "digital-electronics.c02",
+        "digital-electronics.c03",
+        "digital-electronics.c04",
+        "digital-electronics.c05",
+        "digital-electronics.c06",
+        "digital-electronics.c07"
+      ],
+      "topics": 18,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\数字电子技术.md",
+          "sha256": "c114c0d372b9b5f39f70e01d4ef1a3bfc4942ebb0fe818e339a6b07a139f1015"
+        },
+        "color_notes": {
+          "path": "color_notes\\数字电子技术.md",
+          "sha256": "6ec07bf444056a8e7f2a9690d659d34041c9ecbbca2f263aa3206d53f7670d0c"
+        }
+      }
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "chapter_ids": [
+        "communication.c01",
+        "communication.c02",
+        "communication.c03",
+        "communication.c04",
+        "communication.c05",
+        "communication.c06",
+        "communication.c07",
+        "communication.c08",
+        "communication.c09"
+      ],
+      "topics": 22,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\通信原理与高频电子线路.md",
+          "sha256": "df3b5e30056624112bf0b05172c1582288480e3d614666863a3fe89e44a9e9f1"
+        },
+        "color_notes": {
+          "path": "color_notes\\通信原理与高频电子线路.md",
+          "sha256": "efdaf110f5d3316b11bb9821207ecdf01a371aacc31113c1a009a4e80238ab40"
+        }
+      }
+    },
+    {
+      "course": "信号与系统",
+      "chapter_ids": [
+        "signals-systems.c01",
+        "signals-systems.c02",
+        "signals-systems.c03",
+        "signals-systems.c04",
+        "signals-systems.c05",
+        "signals-systems.c06",
+        "signals-systems.c07"
+      ],
+      "topics": 16,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\信号与系统.md",
+          "sha256": "bfc234b1afff1e4548675d2da7e383fe93681806318b0e3049705f64178a1f89"
+        },
+        "color_notes": {
+          "path": "color_notes\\信号与系统.md",
+          "sha256": "3d728d768148ea73107e255b01def0a413e98936d98cec8161cf707ea7e18c61"
+        }
+      }
+    },
+    {
+      "course": "软件工程",
+      "chapter_ids": [
+        "software-engineering.c01",
+        "software-engineering.c02",
+        "software-engineering.c03",
+        "software-engineering.c04",
+        "software-engineering.c05",
+        "software-engineering.c06",
+        "software-engineering.c07",
+        "software-engineering.c08"
+      ],
+      "topics": 24,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\软件工程.md",
+          "sha256": "822cf42d746721681366342662f9420022988e30b64acc85c9d752ca07ff343b"
+        },
+        "color_notes": {
+          "path": "color_notes\\软件工程.md",
+          "sha256": "d910819cd8a669c37259900db4b7bb7e3f7422858cdf6952ef1510117edbff0d"
+        }
+      }
+    },
+    {
+      "course": "信息安全",
+      "chapter_ids": [
+        "information-security.c01",
+        "information-security.c02",
+        "information-security.c03",
+        "information-security.c04",
+        "information-security.c05",
+        "information-security.c06",
+        "information-security.c07",
+        "information-security.c08"
+      ],
+      "topics": 22,
+      "files": {
+        "course_notes": {
+          "path": "course_notes\\信息安全.md",
+          "sha256": "b9e83ec3a79e6a0d52a8d702af2443a403180f1f69cc918ea32e1a5b5c6de3ab"
+        },
+        "color_notes": {
+          "path": "color_notes\\信息安全.md",
+          "sha256": "9b907019463a5ffb6edffa84b4f74c774462b77fcff4e4ec6198fa1e23e27401"
+        }
+      }
+    }
+  ]
+}

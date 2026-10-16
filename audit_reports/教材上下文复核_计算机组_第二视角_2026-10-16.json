@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-16",
+  "role": "第二独立学习视角，由非本次计算机组修复作者进行逐段理解/独立复算；不是声称真人或盲测",
+  "status": "five_context_fixes_pass_expert_recheck",
+  "checks": [
+    {
+      "id": "CTX-COMP-001",
+      "result": "pass",
+      "evidence": [
+        {
+          "case": "讲义后继带右孩子",
+          "input": [
+            50,
+            30,
+            70,
+            60,
+            80,
+            65
+          ],
+          "delete": 50,
+          "root": 60,
+          "right_left": 65,
+          "inorder": [
+            30,
+            60,
+            65,
+            70,
+            80
+          ],
+          "key_set_preserved": true
+        },
+        {
+          "case": "新题后继带右孩子",
+          "input": [
+            40,
+            20,
+            60,
+            50,
+            70,
+            55
+          ],
+          "delete": 40,
+          "root": 50,
+          "right_left": 55,
+          "inorder": [
+            20,
+            50,
+            55,
+            60,
+            70
+          ],
+          "key_set_preserved": true
+        },
+        {
+          "case": "删叶",
+          "input": [
+            50,
+            30,
+            70,
+            60,
+            80,
+            65
+          ],
+          "delete": 80,
+          "root": 50,
+          "right_left": 60,
+          "inorder": [
+            30,
+            50,
+            60,
+            65,
+            70
+          ],
+          "key_set_preserved": true
+        },
+        {
+          "case": "删单孩子",
+          "input": [
+            50,
+            30,
+            70,
+            60,
+            80,
+            65
+          ],
+          "delete": 60,
+          "root": 50,
+          "right_left": 65,
+          "inorder": [
+            30,
+            50,
+            65,
+            70,
+            80
+          ],
+          "key_set_preserved": true
+        },
+        {
+          "case": "后继即直接右孩子且带右孩子",
+          "input": [
+            40,
+            20,
+            60,
+            70
+          ],
+          "delete": 40,
+          "root": 60,
+          "right_left": null,
+          "inorder": [
+            20,
+            60,
+            70
+          ],
+          "key_set_preserved": true
+        },
+        {
+          "case": "只有根",
+          "input": [
+            40
+          ],
+          "delete": 40,
+          "root": null,
+          "right_left": null,
+          "inorder": [],
+          "key_set_preserved": true
+        }
+      ],
+      "question_id": "gap-context-bst-successor-001",
+      "independent_solution": "从40右侧到60，再向左到50，50.left为空所以为后继；先将根键40替为50，再将60.left从原50改55，旧50移除，不能遗漏55。",
+      "question_review": "源staging与发布questions同ID题面/答案/三项各1分一致；topic_id=data-structures.t10、chapter_id=data-structures.c04正确，讲义支持该边界。"
+    },
+    {
+      "id": "CTX-COMP-002",
+      "result": "pass",
+      "evidence": [
+        {
+          "id": "L1",
+          "reader": 1,
+          "book": "B1",
+          "date": "10-01"
+        },
+        {
+          "id": "L2",
+          "reader": 1,
+          "book": "B1",
+          "date": "10-10"
+        }
+      ],
+      "question_id": "gap-db-002",
+      "independent_solution": "双方码(1,B1)只有一种，不能辨两次历史事件；L1/L2两键可区分，读者/图书分别是两条记录的外键。原SC例明确一次配对唯一，重修另加符合规则标识。"
+    },
+    {
+      "id": "CTX-COMP-003",
+      "result": "pass",
+      "evidence": {
+        "b": 7
+      },
+      "independent_solution": "目录a、b各关联inode7，删a仅移除一个名字，b仍可访问；inode元数据与名称/目录项、单一索引块分工已说清，符号链接目标路径可悬空。未在Windows操作冒充实际Unix验证。"
+    },
+    {
+      "id": "CTX-COMP-004",
+      "result": "pass",
+      "evidence": [
+        {
+          "case": "normal",
+          "returned": [
+            "one\n",
+            "last"
+          ]
+        },
+        {
+          "case": "empty",
+          "returned": []
+        },
+        {
+          "case": "newline",
+          "returned": [
+            "\n"
+          ]
+        }
+      ],
+      "question_id": "gap-pl-013",
+      "independent_solution": "256容量允许至多255字符再补零；one\n保留换行、last无末尾换行仍返回，空文件不进循环；NULL兼有EOF/错误并以ferror区分。",
+      "execution_limit": "实际调用Windows ucrtbase stdio验证接口与返回结果，不声称完整C编译运行。"
+    },
+    {
+      "id": "CTX-COMP-005",
+      "result": "pass",
+      "evidence": {
+        "rolls": [
+          3,
+          2,
+          4,
+          6,
+          1,
+          1,
+          5,
+          1,
+          3,
+          5
+        ],
+        "hits": 3,
+        "stdout": "0.3",
+        "trace": "逐项3/2/4/6/1/1/5/1/3/5，满足x>=5的第4/7/10项，hits0→1→2→3，3/10=0.3。"
+      },
+      "independent_solution": "普通for/append和条件计数都是前文已学语法；不再依赖未教列表推导/生成器/布尔求和。固定种子本环境可复现，正文未推广为概率证明。"
+    }
+  ],
+  "source_sha256": {
+    "course_notes/数据结构与算法.md": "44f19bb6854c055b04c92cd8d172cf1d261a1a70d6b3e340be12c28a8013bbfd",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "color_notes/数据库技术.md": "0328fdfe3429583a11f40a09525d256eb35131b84ff31411093f85d8fb13a751",
+    "course_notes/操作系统原理.md": "c1c6985ce886daa4dbd9b07b161236405cdda209c0c88cab71b7c033de0bad52",
+    "color_notes/操作系统原理.md": "798398e0465c2e5c43cf35bf22ab7b731b44a4a90a3fdae9ca5d0676e2445541",
+    "course_notes/C与Python程序设计.md": "4de69622aaa44ff9d30ced82985a3309b44ffe2e7e715f6e845c342bd45e0e4e",
+    "media/ds_bst_delete_successor.svg": "bf35db4b115654ec9935a6481715461895401a137d08a389bdee63b09819486a",
+    "staging/audit_context_20261016_additions.json": "803369627f0095e8b8843e3c08f4abefddf43ce0fa3094838b02b5d6247b46f2"
+  },
+  "snapshot_drift": {},
+  "image_review": {
+    "file": "media/ds_bst_delete_successor.svg",
+    "semantic": "源码的两阶段结点/边与50,30,70,60,80,65原树和删除后树一致，65仍为70左孩子，未丢节点或把65放错侧。",
+    "visual": "已把原SVG嵌入HTML容器，用Chrome在390px视口实际渲染并查看360x440图像：初始与删除后两树分区清楚，60替换根、65接70左侧的连线/数字正确，正文可读，无可见裁切；不将此单图检查冒称应用手机全流程验收。",
+    "screenshot": "audit_reports/bst_second_view_20261016.png"
+  },
+  "limitations": [
+    "检查限定此次BST新增内容、新题和其余4项修复，未复核全部计算机课程教材域。",
+    "未改产品、题库、注册或dist，未build。",
+    "完整C编译器验证未做；fgets仅实际stdio接口执行。"
+  ]
+}

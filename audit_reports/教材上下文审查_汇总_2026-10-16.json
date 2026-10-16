@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-16",
+  "baseline": "b00389e",
+  "scope": {
+    "courses": 16,
+    "chapters": 134,
+    "topics": 385,
+    "representative_linked_questions": 268
+  },
+  "local_findings_fixed": 23,
+  "old_questions_unchanged": 2526,
+  "new_bst_process_question": [
+    "gap-context-bst-successor-001"
+  ],
+  "chapter_and_card_titles_preserved": [
+    "course_notes/C与Python程序设计.md",
+    "course_notes/Office软件操作.md",
+    "course_notes/信号与系统.md",
+    "course_notes/信息安全.md",
+    "course_notes/多媒体技术.md",
+    "course_notes/大学计算机基础与新技术.md",
+    "course_notes/操作系统原理.md",
+    "course_notes/数字电子技术.md",
+    "course_notes/数据库技术.md",
+    "course_notes/数据结构与算法.md",
+    "course_notes/模拟电子技术.md",
+    "course_notes/电路分析与电工技术.md",
+    "course_notes/计算机组成原理.md",
+    "course_notes/计算机网络.md",
+    "course_notes/软件工程.md",
+    "course_notes/通信原理与高频电子线路.md",
+    "color_notes/C与Python程序设计.md",
+    "color_notes/Office软件操作.md",
+    "color_notes/信号与系统.md",
+    "color_notes/信息安全.md",
+    "color_notes/多媒体技术.md",
+    "color_notes/大学计算机基础与新技术.md",
+    "color_notes/操作系统原理.md",
+    "color_notes/数字电子技术.md",
+    "color_notes/数据库技术.md",
+    "color_notes/数据结构与算法.md",
+    "color_notes/模拟电子技术.md",
+    "color_notes/电路分析与电工技术.md",
+    "color_notes/计算机组成原理.md",
+    "color_notes/计算机网络.md",
+    "color_notes/软件工程.md",
+    "color_notes/通信原理与高频电子线路.md"
+  ],
+  "topic_ids_preserved": true,
+  "existing_answer_marks_preserved": true,
+  "last_review_adjustments": [
+    {
+      "file": "color_notes/计算机网络.md",
+      "fix": "泛洪限处于转发状态的端口，避免把STP阻塞端口纳入"
+    },
+    {
+      "file": "course_notes/模拟电子技术.md",
+      "fix": "电流镜两基极相连、两发射极同电位，用实际接线说明，避免与放大器组态混淆"
+    }
+  ],
+  "remaining_textbook_gaps": [
+    "电路二阶动态",
+    "信号DFT/FFT与循环卷积",
+    "软件工程CMM分级",
+    "软件工程Jackson设计"
+  ],
+  "limits": "以上列举不是所有历史范围缺口；其他15科外部教材完整验收状态保持未完成。独立复核使用模型代理，非真实学生或盲测。",
+  "source_fingerprints": {
+    "course_notes/C与Python程序设计.md": "4de69622aaa44ff9d30ced82985a3309b44ffe2e7e715f6e845c342bd45e0e4e",
+    "course_notes/Office软件操作.md": "e9a5f2c778e75f86a4e9d780c388257c1e98431ac4cf140b2a1bc229f6186bb9",
+    "course_notes/信号与系统.md": "bfc234b1afff1e4548675d2da7e383fe93681806318b0e3049705f64178a1f89",
+    "course_notes/信息安全.md": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+    "course_notes/多媒体技术.md": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+    "course_notes/大学计算机基础与新技术.md": "fbd207280510fa77035d98838f3c1cbeec0de7daa9816ce3d91144f550cc56c0",
+    "course_notes/操作系统原理.md": "c1c6985ce886daa4dbd9b07b161236405cdda209c0c88cab71b7c033de0bad52",
+    "course_notes/数字电子技术.md": "263dd89f3c5a396d4eeba873208caa88e1582b452db8c5a82c00dbb4e8edc147",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "course_notes/数据结构与算法.md": "44f19bb6854c055b04c92cd8d172cf1d261a1a70d6b3e340be12c28a8013bbfd",
+    "course_notes/模拟电子技术.md": "4ca6cd64c2f975dfab2069fc1a8ded78fbf94a996a0d07076c0ede1ef91e915e",
+    "course_notes/电路分析与电工技术.md": "342044bb1dfb8f3fc5c46a5013ea069f68c0da7fd4cf59f875e9a1b34412abfb",
+    "course_notes/计算机组成原理.md": "6ce94d64f271b559a3bb0e734c3dbb5e6bb581afdfeaa0e1bb1eec0270ba3069",
+    "course_notes/计算机网络.md": "3e10b6240a3c655b579747c28ed3de6a48326749a1fea268f01c3db3b44565e7",
+    "course_notes/软件工程.md": "b4906af8b55a362efd77a1c67fd94baec903c02ba217dcc0d368fb4bb6c83b6c",
+    "course_notes/通信原理与高频电子线路.md": "91112341fe5b066e764942819555eacef99dd33284819afaa332530351a4c5c7",
+    "color_notes/C与Python程序设计.md": "fcfaf195fece8e191ed2383b0134aaf779ab5772e461f08a74ac9f1c0b2ea5a4",
+    "color_notes/Office软件操作.md": "f1da39253dbf76ec4345c3bd1920cc930dba1109507f24e76509bbb3d176f33d",
+    "color_notes/信号与系统.md": "3d728d768148ea73107e255b01def0a413e98936d98cec8161cf707ea7e18c61",
+    "color_notes/信息安全.md": "d070ecfe0e3ac71a15138949865d46012a44c73aea2f7f9f562d2bd0a064c2bb",
+    "color_notes/多媒体技术.md": "696215070ab3cea6f0e78eca22c0808ff6267d21a161bd8a4f27527dd95bc7a2",
+    "color_notes/大学计算机基础与新技术.md": "2650b0a3b518742913df2725a6df6fe1a02ce1697e5fd251e289b8aad282a98a",
+    "color_notes/操作系统原理.md": "798398e0465c2e5c43cf35bf22ab7b731b44a4a90a3fdae9ca5d0676e2445541",
+    "color_notes/数字电子技术.md": "ad0187089188c6f43adeb440783ac60fde37e4da8fbe245d56bc6199a0c6057d",
+    "color_notes/数据库技术.md": "0328fdfe3429583a11f40a09525d256eb35131b84ff31411093f85d8fb13a751",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "color_notes/模拟电子技术.md": "2fd82e7afdf84dfccf955921153de9a7a2191aeace4fdcedc3b688c95bc04294",
+    "color_notes/电路分析与电工技术.md": "2e59d9ed65f90943ed5330ae9484497d11c30b3bab9cbe90b5270de0c4ccd5cd",
+    "color_notes/计算机组成原理.md": "483f905c7e5ea655bb13569951cff389d537eaaec9d3e65c150806cfb332b29e",
+    "color_notes/计算机网络.md": "0b7c781428b9ac0e90f9b0ecffc92272f81adbb2501b06431438fc6a15a80002",
+    "color_notes/软件工程.md": "4a82d6e3ac93c82935cca2d72189b070e58091ec4c512f1cc352102aebaa1360",
+    "color_notes/通信原理与高频电子线路.md": "efdaf110f5d3316b11bb9821207ecdf01a371aacc31113c1a009a4e80238ab40"
+  }
+}

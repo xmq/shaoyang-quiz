@@ -1,0 +1,66 @@
+{
+  "build": "1b51e5fbb6e98343",
+  "checks": [
+    {
+      "theme": "light",
+      "page": "index.html",
+      "css_unavailable_html_background": "rgb(245, 247, 248)"
+    },
+    {
+      "theme": "light",
+      "page": "quiz.html",
+      "css_unavailable_html_background": "rgb(245, 247, 248)"
+    },
+    {
+      "theme": "light",
+      "page": "notes.html",
+      "css_unavailable_html_background": "rgb(245, 247, 248)"
+    },
+    {
+      "theme": "light",
+      "page": "color-notes.html",
+      "css_unavailable_html_background": "rgb(245, 247, 248)"
+    },
+    {
+      "theme": "light",
+      "cached_launch_with_2s_server_delay_seconds": 0.043
+    },
+    {
+      "theme": "light",
+      "offline_launch": true
+    },
+    {
+      "theme": "dark",
+      "page": "index.html",
+      "css_unavailable_html_background": "rgb(16, 25, 30)"
+    },
+    {
+      "theme": "dark",
+      "page": "quiz.html",
+      "css_unavailable_html_background": "rgb(16, 25, 30)"
+    },
+    {
+      "theme": "dark",
+      "page": "notes.html",
+      "css_unavailable_html_background": "rgb(16, 25, 30)"
+    },
+    {
+      "theme": "dark",
+      "page": "color-notes.html",
+      "css_unavailable_html_background": "rgb(16, 25, 30)"
+    },
+    {
+      "theme": "dark",
+      "cached_launch_with_2s_server_delay_seconds": 0.04
+    },
+    {
+      "theme": "dark",
+      "offline_launch": true
+    },
+    {
+      "new_worker_update_activated": true,
+      "old_version_cache_removed": true
+    }
+  ],
+  "limits": "Desktop Chromium mobile viewport; no Android native splash measurement. Manifest brand background verified as source only."
+}

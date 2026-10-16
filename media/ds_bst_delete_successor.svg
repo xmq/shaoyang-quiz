@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 440" width="360" height="440" role="img" aria-labelledby="title desc">
+  <title id="title">BST删除根50，接回后继60的右孩子65</title>
+  <desc id="desc">初始树根50，左30、右70，70的左60右80，60的右65。按中序后继删除50后，根为60，70的左孩子接回65，30与80保留。</desc>
+  <style>
+    .edge{stroke:#82959f;stroke-width:1.8;fill:none}
+    .node{fill:#f7fafb;stroke:#82959f;stroke-width:1.5}
+    .removed{fill:#fff0ed;stroke:#b24e41;stroke-dasharray:4 3}
+    .changed{fill:#e8f5ef;stroke:#187466;stroke-width:2}
+    text{font:16px system-ui,"Microsoft YaHei",sans-serif;fill:#273e49;text-anchor:middle}
+    .heading{font-size:17px;font-weight:650;text-anchor:start}
+    .caption{font-size:14px;fill:#526b78}
+    @media(prefers-color-scheme:dark){.edge{stroke:#8aa3b0}.node{fill:#172b35;stroke:#8aa3b0}.removed{fill:#422a28;stroke:#efa799}.changed{fill:#193e36;stroke:#77cabb}text{fill:#e2edf0}.caption{fill:#b1c4cc}}
+  </style>
+  <text class="heading" x="12" y="24">① 初始树：删除有两个孩子的50</text>
+  <path class="edge" d="M180 61 85 116M180 61 270 116M270 116 220 171M270 116 320 171M220 171 246 216"/>
+  <circle class="node removed" cx="180" cy="61" r="17"/><text x="180" y="67">50</text>
+  <circle class="node" cx="85" cy="116" r="17"/><text x="85" y="122">30</text>
+  <circle class="node" cx="270" cy="116" r="17"/><text x="270" y="122">70</text>
+  <circle class="node changed" cx="220" cy="171" r="17"/><text x="220" y="177">60</text>
+  <circle class="node" cx="320" cy="171" r="17"/><text x="320" y="177">80</text>
+  <circle class="node changed" cx="246" cy="216" r="17"/><text x="246" y="222">65</text>
+  <text class="caption" x="180" y="254">后继60在右子树最左侧，仍带有右孩子65。</text>
+  <text class="heading" x="12" y="288">② 用60替换根，再把65接到70左侧</text>
+  <path class="edge" d="M180 323 85 373M180 323 270 373M270 373 220 421M270 373 320 421"/>
+  <circle class="node changed" cx="180" cy="323" r="17"/><text x="180" y="329">60</text>
+  <circle class="node" cx="85" cy="373" r="17"/><text x="85" y="379">30</text>
+  <circle class="node" cx="270" cy="373" r="17"/><text x="270" y="379">70</text>
+  <circle class="node changed" cx="220" cy="421" r="17"/><text x="220" y="427">65</text>
+  <circle class="node" cx="320" cy="421" r="17"/><text x="320" y="427">80</text>
+</svg>

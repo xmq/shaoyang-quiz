@@ -1,0 +1,1357 @@
+{
+  "build": "1b51e5fbb6e98343",
+  "card_contexts": 88,
+  "topic_pools": 22,
+  "max_phone_card_height": 456,
+  "errors": [],
+  "cards": [
+    {
+      "id": "analog-electronics.t01",
+      "title": "PN结与器件模型",
+      "chapter": 0,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t01&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t02",
+      "title": "二极管导通、整流滤波稳压",
+      "chapter": 1,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t02&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t03",
+      "title": "BJT/MOS工作区与开关",
+      "chapter": 2,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t03&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t04",
+      "title": "静态工作点、共射增益与削顶",
+      "chapter": 2,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t04&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t11",
+      "title": "固定偏置静态工作点",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t11&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t12",
+      "title": "共射中频小信号增益",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t12&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t05",
+      "title": "多级负载、差分与频率响应",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t05&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t13",
+      "title": "级间负载分压",
+      "chapter": 3,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t13&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t14",
+      "title": "差模、共模与抑制比",
+      "chapter": 3,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t14&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t15",
+      "title": "截止频率与通频带",
+      "chapter": 3,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t15&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t06",
+      "title": "反馈极性、组态与闭环增益",
+      "chapter": 4,
+      "visible": true,
+      "height": 456,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t06&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t16",
+      "title": "负反馈闭环增益计算",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t16&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t17",
+      "title": "四种负反馈的电阻判断",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t17&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t07",
+      "title": "运放虚短虚断与比例运算",
+      "chapter": 5,
+      "visible": true,
+      "height": 408,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t07&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t08",
+      "title": "比较器、迟滞与振荡",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t08&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t09",
+      "title": "功率放大与交越失真",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t09&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t18",
+      "title": "迟滞阈值与历史状态",
+      "chapter": 6,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t18&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t19",
+      "title": "正弦振荡的起振与稳幅",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t19&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t10",
+      "title": "直流电源、采集链与排障",
+      "chapter": 7,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t10&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t20",
+      "title": "电容滤波纹波估算",
+      "chapter": 7,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t20&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t21",
+      "title": "传感器采集链选型",
+      "chapter": 7,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t21&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t22",
+      "title": "二极管挡安全初检",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t22&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t01",
+      "title": "PN结与器件模型",
+      "chapter": 0,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t01&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t02",
+      "title": "二极管导通、整流滤波稳压",
+      "chapter": 1,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t02&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t03",
+      "title": "BJT/MOS工作区与开关",
+      "chapter": 2,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t03&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t04",
+      "title": "静态工作点、共射增益与削顶",
+      "chapter": 2,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t04&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t11",
+      "title": "固定偏置静态工作点",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t11&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t12",
+      "title": "共射中频小信号增益",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t12&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t05",
+      "title": "多级负载、差分与频率响应",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t05&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t13",
+      "title": "级间负载分压",
+      "chapter": 3,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t13&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t14",
+      "title": "差模、共模与抑制比",
+      "chapter": 3,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t14&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t15",
+      "title": "截止频率与通频带",
+      "chapter": 3,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t15&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t06",
+      "title": "反馈极性、组态与闭环增益",
+      "chapter": 4,
+      "visible": true,
+      "height": 456,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t06&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t16",
+      "title": "负反馈闭环增益计算",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t16&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t17",
+      "title": "四种负反馈的电阻判断",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t17&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t07",
+      "title": "运放虚短虚断与比例运算",
+      "chapter": 5,
+      "visible": true,
+      "height": 408,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t07&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t08",
+      "title": "比较器、迟滞与振荡",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t08&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t09",
+      "title": "功率放大与交越失真",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t09&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t18",
+      "title": "迟滞阈值与历史状态",
+      "chapter": 6,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t18&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t19",
+      "title": "正弦振荡的起振与稳幅",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t19&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t10",
+      "title": "直流电源、采集链与排障",
+      "chapter": 7,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t10&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t20",
+      "title": "电容滤波纹波估算",
+      "chapter": 7,
+      "visible": true,
+      "height": 353,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t20&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t21",
+      "title": "传感器采集链选型",
+      "chapter": 7,
+      "visible": true,
+      "height": 382,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t21&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t22",
+      "title": "二极管挡安全初检",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t22&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t01",
+      "title": "PN结与器件模型",
+      "chapter": 0,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t01&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t02",
+      "title": "二极管导通、整流滤波稳压",
+      "chapter": 1,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t02&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t03",
+      "title": "BJT/MOS工作区与开关",
+      "chapter": 2,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t03&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t04",
+      "title": "静态工作点、共射增益与削顶",
+      "chapter": 2,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t04&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t11",
+      "title": "固定偏置静态工作点",
+      "chapter": 2,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t11&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t12",
+      "title": "共射中频小信号增益",
+      "chapter": 2,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t12&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t05",
+      "title": "多级负载、差分与频率响应",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t05&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t13",
+      "title": "级间负载分压",
+      "chapter": 3,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t13&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t14",
+      "title": "差模、共模与抑制比",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t14&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t15",
+      "title": "截止频率与通频带",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t15&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t06",
+      "title": "反馈极性、组态与闭环增益",
+      "chapter": 4,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t06&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t16",
+      "title": "负反馈闭环增益计算",
+      "chapter": 4,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t16&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t17",
+      "title": "四种负反馈的电阻判断",
+      "chapter": 4,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t17&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t07",
+      "title": "运放虚短虚断与比例运算",
+      "chapter": 5,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t07&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t08",
+      "title": "比较器、迟滞与振荡",
+      "chapter": 6,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t08&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t09",
+      "title": "功率放大与交越失真",
+      "chapter": 6,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t09&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t18",
+      "title": "迟滞阈值与历史状态",
+      "chapter": 6,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t18&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t19",
+      "title": "正弦振荡的起振与稳幅",
+      "chapter": 6,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t19&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t10",
+      "title": "直流电源、采集链与排障",
+      "chapter": 7,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t10&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t20",
+      "title": "电容滤波纹波估算",
+      "chapter": 7,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t20&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t21",
+      "title": "传感器采集链选型",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t21&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t22",
+      "title": "二极管挡安全初检",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t22&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "analog-electronics.t01",
+      "title": "PN结与器件模型",
+      "chapter": 0,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t01&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t02",
+      "title": "二极管导通、整流滤波稳压",
+      "chapter": 1,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t02&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t03",
+      "title": "BJT/MOS工作区与开关",
+      "chapter": 2,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t03&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t04",
+      "title": "静态工作点、共射增益与削顶",
+      "chapter": 2,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t04&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t11",
+      "title": "固定偏置静态工作点",
+      "chapter": 2,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t11&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t12",
+      "title": "共射中频小信号增益",
+      "chapter": 2,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t12&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t05",
+      "title": "多级负载、差分与频率响应",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t05&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t13",
+      "title": "级间负载分压",
+      "chapter": 3,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t13&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t14",
+      "title": "差模、共模与抑制比",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t14&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t15",
+      "title": "截止频率与通频带",
+      "chapter": 3,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t15&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t06",
+      "title": "反馈极性、组态与闭环增益",
+      "chapter": 4,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t06&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t16",
+      "title": "负反馈闭环增益计算",
+      "chapter": 4,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t16&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t17",
+      "title": "四种负反馈的电阻判断",
+      "chapter": 4,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t17&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t07",
+      "title": "运放虚短虚断与比例运算",
+      "chapter": 5,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t07&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t08",
+      "title": "比较器、迟滞与振荡",
+      "chapter": 6,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t08&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t09",
+      "title": "功率放大与交越失真",
+      "chapter": 6,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t09&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t18",
+      "title": "迟滞阈值与历史状态",
+      "chapter": 6,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t18&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t19",
+      "title": "正弦振荡的起振与稳幅",
+      "chapter": 6,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t19&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t10",
+      "title": "直流电源、采集链与排障",
+      "chapter": 7,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t10&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t20",
+      "title": "电容滤波纹波估算",
+      "chapter": 7,
+      "visible": true,
+      "height": 234,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t20&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t21",
+      "title": "传感器采集链选型",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t21&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "analog-electronics.t22",
+      "title": "二极管挡安全初检",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=analog-electronics.t22&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    }
+  ],
+  "pools": [
+    {
+      "topic_id": "analog-electronics.t01",
+      "question_ids": [
+        "gap-audit26-elec-pn",
+        "gap-audit26-visual-pn"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t02",
+      "question_ids": [
+        "uf-ae-001",
+        "uf-ae-002",
+        "uf-ae-003",
+        "uf-ae-004",
+        "uf-ae-022",
+        "gap-audit26-elec-rectifier",
+        "ap-analog-001",
+        "sp-elec-analog-025",
+        "ue-analog-001",
+        "ue-analog-007",
+        "ue-analog-014"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t03",
+      "question_ids": [
+        "uf-ae-005",
+        "uf-ae-006",
+        "uf-ae-012",
+        "ap-analog-003",
+        "ap-analog-005",
+        "ue-analog-002",
+        "ue-analog-015"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t04",
+      "question_ids": [
+        "uf-ae-007",
+        "uf-ae-008",
+        "uf-ae-009",
+        "uf-ae-010",
+        "gap-analog-002",
+        "sp-elec-analog-005",
+        "sp-elec-analog-021",
+        "sp-elec-analog-027",
+        "ue-analog-012"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t11",
+      "question_ids": [
+        "gap-eg-analog-001",
+        "ue-analog-003"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t12",
+      "question_ids": [
+        "uf-ae-011",
+        "ue-analog-004"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t05",
+      "question_ids": [
+        "gap-analog-001"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t13",
+      "question_ids": [
+        "gap-eg-analog-002",
+        "gap-accept-elec-analog-electronics-03-2"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t14",
+      "question_ids": [
+        "gap-accept-elec-analog-electronics-04-1",
+        "gap-accept-elec-analog-electronics-04-2"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t15",
+      "question_ids": [
+        "gap-accept-elec-analog-electronics-05-1",
+        "gap-accept-elec-analog-electronics-05-2"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t06",
+      "question_ids": [
+        "uf-ae-018",
+        "uf-ae-019",
+        "ap-analog-004",
+        "ue-analog-010"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t16",
+      "question_ids": [
+        "gap-eg-analog-003",
+        "ue-analog-006"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t17",
+      "question_ids": [
+        "uf-ae-017",
+        "gap-accept-elec-analog-electronics-07-2"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t07",
+      "question_ids": [
+        "uf-ae-013",
+        "uf-ae-015",
+        "gap-eg-analog-004",
+        "ap-analog-002",
+        "ap-analog-006",
+        "sp-elec-analog-008",
+        "sp-elec-analog-009",
+        "sp-elec-analog-024",
+        "ue-analog-005",
+        "ue-analog-011",
+        "ue-analog-013"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t08",
+      "question_ids": [
+        "uf-ae-016",
+        "sp-elec-analog-007",
+        "sp-elec-analog-018",
+        "ue-analog-009"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t09",
+      "question_ids": [
+        "uf-ae-020",
+        "uf-ae-021",
+        "gap-audit26-elec-classb",
+        "ue-analog-008"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t18",
+      "question_ids": [
+        "gap-eg-analog-005",
+        "sp-elec-analog-023"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t19",
+      "question_ids": [
+        "gap-accept-elec-analog-electronics-09-1",
+        "gap-accept-elec-analog-electronics-09-2"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t10",
+      "question_ids": [
+        "uf-ae-024",
+        "gap-eg-analog-006",
+        "sp-elec-analog-003",
+        "sp-elec-analog-004",
+        "sp-elec-analog-010",
+        "sp-elec-analog-011",
+        "sp-elec-analog-012",
+        "sp-elec-analog-013",
+        "sp-elec-analog-014",
+        "sp-elec-analog-015",
+        "sp-elec-analog-016",
+        "sp-elec-analog-017",
+        "sp-elec-analog-019",
+        "sp-elec-analog-022",
+        "sp-elec-analog-030"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t20",
+      "question_ids": [
+        "uf-ae-023",
+        "sp-elec-analog-006"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t21",
+      "question_ids": [
+        "sp-elec-analog-020",
+        "sp-elec-analog-029"
+      ]
+    },
+    {
+      "topic_id": "analog-electronics.t22",
+      "question_ids": [
+        "sp-elec-analog-001",
+        "sp-elec-analog-026"
+      ]
+    }
+  ]
+}

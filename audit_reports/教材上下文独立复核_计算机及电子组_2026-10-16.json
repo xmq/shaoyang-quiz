@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-16",
+  "role": "独立非作者同问题复核及电子组交叉复核",
+  "status": "11项局部修复语义复核通过；不等于教材完整验收",
+  "checks": [
+    {
+      "issue_id": "CTX-COMP-001",
+      "result": "通过",
+      "file": "course_notes/数据结构与算法.md",
+      "line": 256,
+      "evidence": "从根比较、空链失败、空位插入和三类删除均明教；独立初始树避免连续删除歧义，后继带右孩子接回规则与图一致。重复键约定已给，新题答案及三项rubric一致。"
+    },
+    {
+      "issue_id": "CTX-COMP-002",
+      "result": "通过",
+      "file": "course_notes/数据库技术.md",
+      "line": 76,
+      "evidence": "明确同配对仅一次的条件；两次借阅L1/L2作为关联实体，分别引用原实体，足以支持gap-db-002，未把双方码误称通用事件码。"
+    },
+    {
+      "issue_id": "CTX-COMP-003",
+      "result": "通过",
+      "file": "course_notes/操作系统原理.md",
+      "line": 305,
+      "evidence": "先给类Unix适用范围、inode中文职责与目录名称映射，再讲a/b两名同对象；不再先用未定义术语，卡与讲义边界一致。"
+    },
+    {
+      "issue_id": "CTX-COMP-004",
+      "result": "通过",
+      "file": "course_notes/C与Python程序设计.md",
+      "line": 679,
+      "evidence": "三个参数、n−1/结尾空字符、保留换行、成功/NULL与无末尾换行均已给；短行条件支撑独立循环题。ferror立即定义，无新增未引入前置。未自行重跑根的ucrtbase调用，不冒称C编译测试。"
+    },
+    {
+      "issue_id": "CTX-COMP-005",
+      "result": "通过",
+      "file": "course_notes/C与Python程序设计.md",
+      "line": 782,
+      "evidence": "采用此前已教range、append、if和+=，无推导式/生成器跳步。固定种子所得10次点数与hits3复算一致，输出0.3。"
+    },
+    {
+      "issue_id": "ELEC-CTX-001",
+      "result": "通过",
+      "file": "course_notes/电路分析与电工技术.md",
+      "line": 274,
+      "evidence": "在三相公式前定义同频等幅120°电源及等阻抗负载，区分源/负载，线量符号紧跟给出。220V相量差模381.051V=√3×220，不能套任意三路。"
+    },
+    {
+      "issue_id": "ELEC-CTX-002",
+      "result": "通过",
+      "file": "course_notes/模拟电子技术.md",
+      "line": 233,
+      "evidence": "arg就地定义；总相位包含A0相角。负A0=-100、f=fH代入为-50+j50，相位135°，等价-225°，公式与文本一致。"
+    },
+    {
+      "issue_id": "ELEC-CTX-003",
+      "result": "通过",
+      "file": "course_notes/模拟电子技术.md",
+      "line": 236,
+      "evidence": "NPN参考管二极管连接、共基共射、R位置及输出端均明示；共UBE→等电流有匹配/同温及忽略基流、输出电压影响的前提，Q2放大区条件保留。4.3/4300=1mA。"
+    },
+    {
+      "issue_id": "ELEC-CTX-004",
+      "result": "通过",
+      "file": "course_notes/模拟电子技术.md",
+      "line": 402,
+      "evidence": "积分输出回到非反相迟滞比较器，正负阈值翻转方向闭合。+5输入→积分下降→-1阈值变-5→积分上升→+1阈值变+5，周期8ms/125Hz；前文356与373行分别教授积分与非反相迟滞规则。"
+    },
+    {
+      "issue_id": "ELEC-CTX-005",
+      "result": "通过",
+      "file": "course_notes/数字电子技术.md",
+      "line": 36,
+      "evidence": "首用处就地定义XOR含00→0，消除后章依赖。1011 XOR 0101=1110；换1101 XOR 0110=1011。卡也补统一规则。"
+    },
+    {
+      "issue_id": "ELEC-CTX-006",
+      "result": "通过",
+      "file": "course_notes/通信原理与高频电子线路.md",
+      "line": 463,
+      "evidence": "K与星号就地定义，实信号特例明确；s=[1+2j,3-4j]且T=1/K=1时反折共轭为[3+4j,1-2j]。不把星号当卷积；后续门限同步条件保留。"
+    }
+  ],
+  "independent_computation": {
+    "bst": {
+      "80": {
+        "root": 50,
+        "inorder": [
+          30,
+          50,
+          60,
+          65,
+          70
+        ],
+        "right_left": 60
+      },
+      "60": {
+        "root": 50,
+        "inorder": [
+          30,
+          50,
+          65,
+          70,
+          80
+        ],
+        "right_left": 65
+      },
+      "50": {
+        "root": 60,
+        "inorder": [
+          30,
+          60,
+          65,
+          70,
+          80
+        ],
+        "right_left": 65
+      },
+      "new_question": {
+        "root": 50,
+        "node60_left": 55,
+        "inorder": [
+          20,
+          50,
+          55,
+          60,
+          70
+        ]
+      }
+    },
+    "random": {
+      "rolls": [
+        3,
+        2,
+        4,
+        6,
+        1,
+        1,
+        5,
+        1,
+        3,
+        5
+      ],
+      "hits": 3,
+      "frequency": 0.3
+    },
+    "electronics": {
+      "three_phase": {
+        "phase_voltage": 220,
+        "line_voltage": 381.051177665153
+      },
+      "negative_gain_corner": {
+        "complex_A": "(-50+50j)",
+        "phase_degrees": 135.0,
+        "phase_formula_modulo_360": 135
+      },
+      "mirror_current_A": 0.001,
+      "triangle": {
+        "slope_abs_V_per_s": 500.0,
+        "half_cycle_s": 0.004,
+        "frequency_Hz": 125.0
+      },
+      "gray_1011": "1110",
+      "gray_1101": "1011",
+      "conjugate_template": {
+        "s": [
+          "(1+2j)",
+          "(3-4j)"
+        ],
+        "h_at_T_equal_1_K_equal_1": [
+          "(3+4j)",
+          "(1-2j)"
+        ]
+      }
+    }
+  },
+  "new_question": "gap-context-bst-successor-001，核对staging源题、答案、rubric及topic_id=data-structures.t10；未替根执行合并构建",
+  "screenshots": [
+    "audit_reports/教材上下文复核_BST图_light_2026-10-16.png",
+    "audit_reports/教材上下文复核_BST图_dark_2026-10-16.png"
+  ],
+  "sha256": {
+    "color_notes/操作系统原理.md": "798398e0465c2e5c43cf35bf22ab7b731b44a4a90a3fdae9ca5d0676e2445541",
+    "color_notes/数字电子技术.md": "ad0187089188c6f43adeb440783ac60fde37e4da8fbe245d56bc6199a0c6057d",
+    "color_notes/数据库技术.md": "0328fdfe3429583a11f40a09525d256eb35131b84ff31411093f85d8fb13a751",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "color_notes/模拟电子技术.md": "2fd82e7afdf84dfccf955921153de9a7a2191aeace4fdcedc3b688c95bc04294",
+    "color_notes/电路分析与电工技术.md": "2e59d9ed65f90943ed5330ae9484497d11c30b3bab9cbe90b5270de0c4ccd5cd",
+    "course_notes/C与Python程序设计.md": "4de69622aaa44ff9d30ced82985a3309b44ffe2e7e715f6e845c342bd45e0e4e",
+    "course_notes/操作系统原理.md": "c1c6985ce886daa4dbd9b07b161236405cdda209c0c88cab71b7c033de0bad52",
+    "course_notes/数字电子技术.md": "263dd89f3c5a396d4eeba873208caa88e1582b452db8c5a82c00dbb4e8edc147",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "course_notes/数据结构与算法.md": "44f19bb6854c055b04c92cd8d172cf1d261a1a70d6b3e340be12c28a8013bbfd",
+    "course_notes/模拟电子技术.md": "efb4191407ed2bfd5f27c7e297ca085483d5720c739088b19078d67175547fdd",
+    "course_notes/电路分析与电工技术.md": "342044bb1dfb8f3fc5c46a5013ea069f68c0da7fd4cf59f875e9a1b34412abfb",
+    "course_notes/通信原理与高频电子线路.md": "91112341fe5b066e764942819555eacef99dd33284819afaa332530351a4c5c7",
+    "media/ds_bst_delete_successor.svg": "bf35db4b115654ec9935a6481715461895401a137d08a389bdee63b09819486a",
+    "staging/audit_context_20261016_additions.json": "803369627f0095e8b8843e3c08f4abefddf43ce0fa3094838b02b5d6247b46f2"
+  },
+  "sources": [
+    "https://opendsa-server.cs.vt.edu/ODSA/Books/vt/cstest/spring-2018/May_12-Full_Module_Test_2/html/BST.html",
+    "https://man7.org/linux/man-pages/man7/inode.7.html",
+    "https://sourceware.org/glibc/manual/latest/html_node/Line-Input.html",
+    "https://wiki.analog.com/university/courses/electronics/text/chapter-11",
+    "https://www.ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/dfe2855f36e44436678bfd3736c937fe_MIT6_011S18lec24.pdf"
+  ],
+  "limits": [
+    "只读产品；只新增本轮复核报告/截图，未改旧报告、讲义、卡、题库、ID、构建。",
+    "本轮检查五处计算机及六处电子修复前后文和相关卡；不是第二轮全科全章通读。",
+    "未检查根负责的PWA闪白，不对离线、页面整体或最终发布状态作结论。",
+    "新图已核SVG树边/标签并实际查看轻暗截图：根50→60、70.left由60改65与正文一致，节点/文字无裁切，明暗均可读。截图为独立390px宽浅/深背景容器，非完整学习页面验收。",
+    "C读取未自行编译执行，接口依据GNU C官方文档核对；不重复根的运行验证。",
+    "保留旧整域缺口，不因局部修复而关闭其教材范围结论。"
+  ]
+}

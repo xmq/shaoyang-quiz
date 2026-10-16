@@ -353,7 +353,7 @@
           ],
           "short_answer": true,
           "study_task": "根据条件写IF、条件统计或查找公式，解释找不到值与类型错误。",
-          "common_trap": "文本002与数值2可能不匹配；Excel 2016/2019不内置XLOOKUP，未排序慎用近似。"
+          "common_trap": "缺考/空白先定规则，文本002与数值2可不匹配；2016/2019不内置XLOOKUP，近似查找须排序。"
         },
         {
           "topic_id": "office.t11",
@@ -2844,7 +2844,7 @@
           ],
           "short_answer": true,
           "study_task": "把1:n和m:n联系转为关系表，标明主外键及联系属性的位置。",
-          "common_trap": "1:1可在适当端加唯一外码；多值属性另表，派生属性可按规则计算，不能把m:n硬存单个外码。"
+          "common_trap": "双方码不必总能唯一识别重复事件；1:1外码还需唯一约束，多值属性另表，不能把m:n硬存单个外码。"
         },
         {
           "topic_id": "database.t04",
@@ -3972,7 +3972,7 @@
           ],
           "short_answer": true,
           "study_task": "逐步插入BST或AVL，找到首个失衡结点并选择旋转方式。",
-          "common_trap": "重复键处理服从约定；平衡要求每个结点成立，不只看根。"
+          "common_trap": "本例键互异；后继不一定是直接右孩子。链状BST查找最坏O(n)，AVL旋转保持中序次序，平衡检查每个结点。"
         },
         {
           "topic_id": "data-structures.t11",
@@ -9170,7 +9170,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "同负载条件下0.707倍电压对应半功率；多极点不能全程按单极点斜率计算。"
+          "common_trap": "同负载下0.707倍电压对应半功率；单极点总相位须加arg(A0)，负增益包含180°反相；多极点不可全程套单极点斜率。"
         },
         {
           "topic_id": "analog-electronics.t06",
@@ -9321,7 +9321,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "迟滞区内不能只凭当前电压判输出；有正反馈也不保证稳定正弦振荡。"
+          "common_trap": "迟滞区内不能只看当前电压；三角波例须按正文翻转方向闭环，反向接法不可照用；有正反馈不保证稳定正弦振荡。"
         },
         {
           "topic_id": "analog-electronics.t09",
@@ -12529,7 +12529,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "CTR计数输入及GCM nonce按方案不得在同密钥下重复；随机不是随便取数。"
+          "common_trap": "nonce可公开，按方案同密钥不得重复；CTR计数输入也须避免复用，随机不是随便取数。"
         },
         {
           "topic_id": "information-security.t11",

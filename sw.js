@@ -1,7 +1,7 @@
 importScripts("./build-meta.js");
 
 const CACHE_PREFIX = "shaoyang-quiz-";
-const SHELL_REVISION = "mobile-study-13";
+const SHELL_REVISION = "mobile-study-14";
 const CACHE_NAME = `${CACHE_PREFIX}${globalThis.SHAOYANG_BUILD?.id || "development"}-${SHELL_REVISION}`;
 const NETWORK_TIMEOUT_MS = 4500;
 const CORE_ASSETS = [
@@ -33,6 +33,7 @@ const CORE_ASSETS = [
 ];
 
 const INSTALL_ASSETS = CORE_ASSETS;
+const CORE_URLS = new Set(CORE_ASSETS.map((path) => new URL(path, self.location.href).href));
 
 self.addEventListener("install", (event) => {
   const freshRequests = INSTALL_ASSETS.map((url) => new Request(url, {cache: "reload"}));
@@ -109,8 +110,10 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin || url.pathname.includes("/api/")) return;
 
-  if (request.mode === "navigate") {
-    event.respondWith(networkFirst(request));
+  // Serve the complete versioned shell immediately. New workers install
+  // updates in the background instead of delaying each launch on network.
+  if (CORE_URLS.has(url.origin + url.pathname)) {
+    event.respondWith(cacheFirst(request));
     return;
   }
   const isCritical = /\/(questions\.js|home-data\.js|(?:color-)?notes\.html|quiz\.html|quiz-loader\.js|app\.js|home\.js)$/.test(url.pathname);
