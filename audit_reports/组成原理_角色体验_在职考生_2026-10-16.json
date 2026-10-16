@@ -1,0 +1,1458 @@
+{
+  "role": "独立AI模拟：毕业几年、基础模糊、碎片时间备考湖南计算机岗位笔试的在职考生",
+  "date": "2026-10-16",
+  "build": "f74588c9a55176f0",
+  "scope": "认可现版；10章短任务规模试读，不改产品、不重建dist、不参考旧体验结论",
+  "skill": "C:/Users/pc/.codex/skills/build-study-course/SKILL.md",
+  "environment": {
+    "browser": "本机Chrome + Python Playwright",
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "storage": "新建隔离browser context，无真实用户profile/storage",
+    "artifacts": "C:\\Users\\pc\\AppData\\Local\\Temp\\co_working_candidate"
+  },
+  "conclusion": "能按章节/小节找到定义、公式、例题和易混边界；本角色未发现真阻断或需结构调整的证据。4/6章需拆成多个回看任务，不等于建议删除核心或添加冗长说明。",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "计算机系统概论",
+      "independent_task": "闭卷区分机器/指令/存储字长；先写CPU时间公式再算。",
+      "closed_book_restatement": "计算机由硬件软件组成；机器字长是一次整数运算位数，其余两字长描述另外两个对象。",
+      "intermediate_state": "PC100取4B指令后104，IR装当前指令；例子答案正文已见，仅复述。",
+      "reread": "1.3的编址与三字长、IC×CPI/f；回看单位口径。",
+      "can_skip_for_this_role": "硬件/软件及五大部件基础定义我已有印象，可以跳过重复解释。",
+      "questions": [
+        {
+          "id": "uf-co-006",
+          "stem": "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+          "options": {
+            "A": "0.5 s",
+            "B": "1 s",
+            "C": "2 s",
+            "D": "4 s"
+          },
+          "answer_before_gold": "B；先写t=IC×CPI/f，IC指令数、CPI每指令平均周期、f每秒周期。10^9×2/(2×10^9)=1s。",
+          "gold": "B",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "sp-core-co-001",
+          "stem": "某处理器字长为32位，这一指标首先表示（ ）。",
+          "options": {
+            "A": "CPU一次能处理的基本二进制位数",
+            "B": "主存一定只有32个单元",
+            "C": "地址总线一定为32根",
+            "D": "每秒执行32条指令"
+          },
+          "answer_before_gold": "A；一次整数运算处理的位数。",
+          "gold": "A",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 1,
+        "id": "computer-organization.c01",
+        "headings": [
+          "1.1 计算机系统简介",
+          "计算机系统、硬件与软件",
+          "体系结构与组成",
+          "1.2 计算机的基本组成",
+          "冯·诺依曼结构：存储程序与程序控制",
+          "冯·诺依曼机的基本特点",
+          "五大部件及其功能",
+          "先跟踪一次3+5",
+          "1.3 计算机硬件的主要技术指标",
+          "单位、字长和编址",
+          "机器字长、指令字长与存储字长",
+          "CPU性能指标：CPI、主频与执行时间"
+        ],
+        "chars": 2085,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c01&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-terms-11",
+            "stem": "按教材对系统结构演变的概括，传统冯·诺依曼计算机以运算器为中心，现代计算机的系统结构通常以________为中心。（填部件名称）",
+            "type": "填空"
+          },
+          {
+            "id": "gap-co-terms-12",
+            "stem": "教材说现代计算机通常以存储器为中心，因此现代计算机中的所有I/O数据都必须先穿过ALU，再进入主存。（ ）",
+            "type": "判断"
+          }
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "计算机的发展及应用",
+      "independent_task": "闭卷列器件四代，辨析CPU能否直接执行源文件。",
+      "closed_book_restatement": "器件代际与语言层次不是同一分类；应用按主要任务区别。",
+      "intermediate_state": "独立变式：p=.75,n=3；先S=1/[(1-p)+p/n]，p为原执行中可并行部分比例，得到2倍；题内忽略开销。",
+      "reread": "加速公式分母的串行部分必须保留。",
+      "can_skip_for_this_role": "CAD/CAM/CAI已熟悉，不需反复读缩写例子。",
+      "questions": [
+        {
+          "id": "gap-co-textbook-01-1",
+          "stem": "按主要电子器件写出常见计算机四代顺序。",
+          "options": {},
+          "answer_before_gold": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+          "gold": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "gap-co-textbook-01-2",
+          "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+          "options": {},
+          "answer_before_gold": "错误。编译器先把高级语言翻译，CPU执行机器指令；解释执行仍不能等同CPU直接执行源文件。",
+          "gold": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 2,
+        "id": "computer-organization.c08",
+        "headings": [
+          "2.1 计算机的发展史",
+          "四代按什么划分",
+          "2.2 计算机的应用和展望",
+          "根据主要任务识别应用",
+          "多核为何未必快同样倍数"
+        ],
+        "chars": 522,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=2&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c08&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-textbook-01-1",
+            "stem": "按主要电子器件写出常见计算机四代顺序。",
+            "type": "简答"
+          },
+          {
+            "id": "gap-co-textbook-01-2",
+            "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+            "type": "简答"
+          }
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "系统总线",
+      "independent_task": "闭卷辨高阻态，带宽先换B/次再算。",
+      "closed_book_restatement": "仲裁决定谁能用，REQ/ACK决定数据是否有效。",
+      "intermediate_state": "REQ1/ACK0不能采样；ACK1有效后采样并撤REQ。原说明已见，属复述。",
+      "reread": "MHz及B/s口径、每周期次数是否已包含、四相握手撤信号顺序。",
+      "can_skip_for_this_role": "地址线/数据线/控制线职责已有记忆，可略过基础列举。",
+      "questions": [
+        {
+          "id": "gap-co-terms-15",
+          "stem": "共享数据总线的一端采用三态输出。该端未被允许驱动总线时进入高阻态Z，这表示（ ）。",
+          "options": {
+            "A": "主动向总线输出逻辑0",
+            "B": "主动向总线输出逻辑1",
+            "C": "逻辑0与逻辑1按固定频率交替",
+            "D": "该输出端基本不向总线提供驱动，便于其他获准设备驱动总线"
+          },
+          "answer_before_gold": "D。高阻是退出驱动，不是输出0。",
+          "gold": "D",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "ap-co-002",
+          "stem": "一条32位数据总线每秒有效传送200万次，不计其他开销，其理论数据传输率约为（ ）。",
+          "options": {
+            "A": "8 MB/s",
+            "B": "32 MB/s",
+            "C": "2 MB/s",
+            "D": "64 MB/s"
+          },
+          "answer_before_gold": "A；B=(w/8)×f，这里f是已给有效传送次数，32/8×200万=800万B/s=8MB/s，不另乘利用率。",
+          "gold": "A",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 3,
+        "id": "computer-organization.c06",
+        "headings": [
+          "3.1 总线的基本概念",
+          "共享通路与主从设备",
+          "3.2 总线的分类",
+          "3.3 总线性能及性能指标",
+          "带宽先换成每次多少字节",
+          "3.4 总线结构",
+          "3.5 总线控制",
+          "仲裁决定谁先用",
+          "通信控制决定何时有效"
+        ],
+        "chars": 1241,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=3&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c06&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-013",
+            "stem": "64位数据总线、频率200MHz、每周期传2次，忽略开销，理论带宽是多少GB/s？",
+            "type": "简答"
+          },
+          {
+            "id": "gap-co-terms-15",
+            "stem": "共享数据总线的一端采用三态输出。该端未被允许驱动总线时进入高阻态Z，这表示（ ）。",
+            "type": "单选"
+          }
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "存储器",
+      "independent_task": "闭卷四类存取定义；独立计算芯片扩展与命中率。",
+      "closed_book_restatement": "随机是按地址访问耗时基本不随位置变，不能拿断电保留判断随机；CAM按内容匹配。",
+      "intermediate_state": "原例块序列0,1,0,2后两行[2,1]，下一次0失效；答案正文已见。",
+      "reread": "芯片地址/片选、汉明位号、Cache拆地址、AMAT额外与总耗时、TLB与缺页。",
+      "can_skip_for_this_role": "RAM/ROM和存储层次的用途熟悉，可略读；不会据此跳过分类条件。",
+      "questions": [
+        {
+          "id": "uf-co-003",
+          "stem": "用8K×8位芯片组成32K×16位存储器，需要芯片数为（ ）。",
+          "options": {
+            "A": "4",
+            "B": "8",
+            "C": "16",
+            "D": "32"
+          },
+          "answer_before_gold": "B；片数=(目标字数/芯片字数)×(目标位宽/芯片位宽)=(32K/8K)×(16/8)=8。",
+          "gold": "B",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "uf-co-004",
+          "stem": "某程序访存1000次，其中Cache命中950次，命中率为（ ）。",
+          "options": {
+            "A": "5%",
+            "B": "50%",
+            "C": "95%",
+            "D": "105%"
+          },
+          "answer_before_gold": "C；h=命中次数/总访存=950/1000=95%。",
+          "gold": "C",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 4,
+        "id": "computer-organization.c04",
+        "headings": [
+          "4.1 概述",
+          "存储器按存取方式分类",
+          "先备好地址算术",
+          "层次与局部性",
+          "4.2 主存储器",
+          "芯片类型和刷新",
+          "容量、编址与芯片扩展",
+          "低位交叉存储",
+          "校验怎样分组",
+          "4.3 高速缓冲存储器",
+          "先分清块、行、组、路",
+          "放哪里、换谁、何时写主存",
+          "地址拆分与一次查找",
+          "平均访存时间",
+          "4.4 辅助存储器",
+          "磁盘位置和访问时间",
+          "容量与CHS定位",
+          "扩展：虚拟存储与TLB"
+        ],
+        "chars": 4120,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c04&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-004",
+            "stem": "程序在循环中顺序访问数组元素，并多次重复同一循环。分别说明空间局部性和时间局部性体现在哪里。",
+            "type": "简答"
+          },
+          {
+            "id": "sp-core-co-007",
+            "stem": "主存容量要求较大、成本需要控制，通常优先采用（ ）。",
+            "type": "单选"
+          }
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "输入输出系统",
+      "independent_task": "闭卷DMA中文、CPU介入边界及传统中断/DMA响应条件；查询占比先列参数。",
+      "closed_book_restatement": "中断转程序控制，DMA转总线使用权；DMA搬运前后仍要CPU。",
+      "intermediate_state": "在指令未结束的机器周期末，若当前访问可结束且仲裁获准可先DMA；有效未屏蔽请求、开中断仍须到指令末才响应可屏蔽中断。",
+      "reread": "5.5/5.6传统模型限定和中断隐指令；不要推广异常或现代全部CPU。",
+      "can_skip_for_this_role": "键盘/显示器输入输出例子已知，可略读。",
+      "questions": [
+        {
+          "id": "uf-co-008",
+          "stem": "DMA方式适合高速块设备，因为它可以（ ）。",
+          "options": {
+            "A": "由DMA控制器在主存与设备间成批传送，减少CPU逐字干预",
+            "B": "完全取消中断和总线",
+            "C": "让设备直接执行用户程序",
+            "D": "只传送一个位"
+          },
+          "answer_before_gold": "A；CPU前后介入，控制器传数据。",
+          "gold": "A",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "gap-co-terms-13",
+          "stem": "采用教材中的传统非流水CPU模型：可屏蔽外部中断在指令结束时检查，且当前允许中断；DMA在机器周期结束且总线可让出时取得总线。当前指令尚有两个机器周期，在本机器周期中同时出现有效中断请求和DMA请求。最早可能出现的处理是（ ）。",
+          "options": {
+            "A": "本时钟沿立即中断指令并执行中断服务程序",
+            "B": "本机器周期结束后可让出总线给DMA，中断响应则等到指令结束时检查",
+            "C": "DMA和中断都必须等整个用户程序执行完",
+            "D": "DMA请求出现后，CPU永远不能再执行当前指令"
+          },
+          "answer_before_gold": "B；机器周期末先可让DMA，整条指令结束才检查可屏蔽中断；均须满足题给模型条件。",
+          "gold": "B",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 5,
+        "id": "computer-organization.c09",
+        "headings": [
+          "5.1 概述",
+          "5.2 I/O设备",
+          "5.3 I/O接口",
+          "5.4 程序查询方式",
+          "5.5 程序中断方式",
+          "5.6 DMA方式",
+          "程序中断与DMA的简答对照"
+        ],
+        "chars": 2047,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=5&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c09&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "uf-co-008",
+            "stem": "DMA方式适合高速块设备，因为它可以（ ）。",
+            "type": "单选"
+          },
+          {
+            "id": "gap-co-terms-06",
+            "stem": "DMA的规范中文名称是________。（填传送方式的名称）",
+            "type": "填空"
+          }
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "title": "计算机的运算方法",
+      "independent_task": "闭卷8位补码范围与溢出、Unicode选择；恢复一道Booth中间状态。",
+      "closed_book_restatement": "位串先确定字长与编码；CF不等于OF，浮点正常数公式不能套特殊值。",
+      "intermediate_state": "已见Booth例：第二轮A-M=0011，整体算术移后0001/1000/1；这是复现已见步骤，不计独立算法掌握。",
+      "reread": "Booth、不恢复除法、舍入和ALU逻辑式要对照表再手算。需要练习本身不是讲义缺陷。",
+      "can_skip_for_this_role": "ASCII/Unicode/BCD用途和正整数进制分组我会，可先略过。",
+      "questions": [
+        {
+          "id": "uf-co-002",
+          "stem": "8位补码01111111加00000001的结果发生（ ）。",
+          "options": {
+            "A": "无溢出，结果128",
+            "B": "正溢出",
+            "C": "负溢出",
+            "D": "进位等于溢出"
+          },
+          "answer_before_gold": "B；127+1超出8位有符号上限127，正溢出；结果串10000000不是真值128。",
+          "gold": "B",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "sp-core-co-002",
+          "stem": "要在同一系统中统一表示汉字、英文和多种语言字符，主要应采用（ ）。",
+          "options": {
+            "A": "Unicode编码体系",
+            "B": "仅7位ASCII",
+            "C": "十进制补码",
+            "D": "BCD码"
+          },
+          "answer_before_gold": "A；Unicode。",
+          "gold": "A",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 6,
+        "id": "computer-organization.c02",
+        "headings": [
+          "6.1 无符号数和有符号数",
+          "数制与编码",
+          "机器数与真值",
+          "6.2 数的定点表示和浮点表示",
+          "定点位置决定范围",
+          "IEEE 754单精度",
+          "6.3 定点运算",
+          "先选移位规则",
+          "补码加减与溢出",
+          "无符号移位相加乘法",
+          "Booth补码乘法",
+          "恢复余数法逐位试商",
+          "不恢复法与带符号结果",
+          "6.4 浮点四则运算",
+          "浮点加减五步",
+          "舍入与乘除",
+          "6.5 算术逻辑单元",
+          "一位全加器怎样产生进位",
+          "复用加法器与标志位"
+        ],
+        "chars": 3656,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c02&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-001",
+            "stem": "十六进制数2D转换为8位二进制是________。",
+            "type": "填空"
+          },
+          {
+            "id": "sp-core-co-002",
+            "stem": "要在同一系统中统一表示汉字、英文和多种语言字符，主要应采用（ ）。",
+            "type": "单选"
+          }
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "title": "指令系统",
+      "independent_task": "闭卷指令系统定义与机器/微指令层次，判直接寻址。",
+      "closed_book_restatement": "指令系统是机器指令集合；地址字段是否是数或地址决定如何取操作数。",
+      "intermediate_state": "原例A100,M100=400,M400=9：直接取400，间接取9；已见答案，仅复述。",
+      "reread": "寻址表中的EA、额外访存次数、扩展操作码前缀不能重复计数。",
+      "can_skip_for_this_role": "RISC/CISC全称已熟悉，可略读；保留性能不能绝对化的边界。",
+      "questions": [
+        {
+          "id": "uf-co-005",
+          "stem": "指令中给出的地址是操作数所在存储单元地址，这种方式是（ ）。",
+          "options": {
+            "A": "立即寻址",
+            "B": "直接寻址",
+            "C": "间接寻址",
+            "D": "寄存器寻址"
+          },
+          "answer_before_gold": "B；地址字段就是最终地址。",
+          "gold": "B",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "gap-co-terms-02",
+          "stem": "某机用微程序控制器实现ADD机器指令，一条ADD由多条微指令完成。关于该机的指令系统，表述正确的是（ ）。",
+          "options": {
+            "A": "指令系统是这些内部微指令的集合",
+            "B": "一条ADD对应多条微指令，所以ADD不属于机器指令",
+            "C": "指令系统包括ADD等机器指令，微指令属于其内部实现层次",
+            "D": "只有硬布线控制器才具有指令系统"
+          },
+          "answer_before_gold": "C；机器指令集合，微指令是内部实现。",
+          "gold": "C",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 7,
+        "id": "computer-organization.c03",
+        "headings": [
+          "7.1 机器指令",
+          "指令与指令系统",
+          "指令由哪些字段组成",
+          "扩展操作码要保留前缀",
+          "7.2 操作数类型和操作类型",
+          "7.3 寻址方式",
+          "指令寻址与数据寻址",
+          "先辨数值还是地址",
+          "7.4 指令格式举例",
+          "7.5 RISC技术"
+        ],
+        "chars": 1760,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=7&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c03&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "uf-co-005",
+            "stem": "指令中给出的地址是操作数所在存储单元地址，这种方式是（ ）。",
+            "type": "单选"
+          },
+          {
+            "id": "gap-co-terms-01",
+            "stem": "一台计算机所能执行的全部机器指令的集合，称为该机的________。（填规范术语）",
+            "type": "填空"
+          }
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "title": "CPU的结构和功能",
+      "independent_task": "闭卷取指寄存器链与三类流水相关；独立流水变式。",
+      "closed_book_restatement": "PC存地址，IR存指令，MAR存访存地址，MDR存数据；流水提高吞吐，不保证单条变快。",
+      "intermediate_state": "独立变式：k=4,n=8,节拍2ns，无停顿等长；T=(k+n-1)×节拍=(4+8-1)×2=22ns。",
+      "reread": "机器周期/时钟/指令周期条件、无转发流水图的WB和ID前后半拍。",
+      "can_skip_for_this_role": "PC/IR的重复定义已在第1章读懂，可只回看MAR/MDR和过程。",
+      "questions": [
+        {
+          "id": "uf-co-007",
+          "stem": "流水线中常见相关包括（ ）。",
+          "options": {
+            "A": "结构相关",
+            "B": "数据相关",
+            "C": "控制相关",
+            "D": "文件相关"
+          },
+          "answer_before_gold": "ABC。",
+          "gold": "ABC",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "ap-co-001",
+          "stem": "在典型取指过程中，下列信息流向最合理的是（ ）。",
+          "options": {
+            "A": "PC→MAR→主存→MDR→IR",
+            "B": "IR→PC→ALU→键盘",
+            "C": "MDR→MAR→PC→打印机",
+            "D": "主存→MAR→PC→IR"
+          },
+          "answer_before_gold": "A；先PC给地址，主存内容经MDR到IR。",
+          "gold": "A",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 8,
+        "id": "computer-organization.c10",
+        "headings": [
+          "8.1 CPU的结构",
+          "跟踪取指就能分清寄存器",
+          "单总线怎样凑齐两个输入",
+          "时钟周期、机器周期与指令周期",
+          "8.2 指令周期",
+          "8.3 指令流水",
+          "理想流水时间",
+          "冲突与实际时间",
+          "8.4 中断系统"
+        ],
+        "chars": 1675,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=8&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c10&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "ap-co-001",
+            "stem": "在典型取指过程中，下列信息流向最合理的是（ ）。",
+            "type": "单选"
+          },
+          {
+            "id": "sp-core-co-004",
+            "stem": "CPU准备访问主存某单元时，用于暂存该单元地址的寄存器通常是（ ）。",
+            "type": "单选"
+          }
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "title": "控制单元的功能",
+      "independent_task": "闭卷写单总线三拍，辨能否并行必须补硬件条件。",
+      "closed_book_restatement": "控制信号由操作码、当前状态和条件共同决定；同拍不可两源抢单总线。",
+      "intermediate_state": "独立数值变式R1=4,R2=7：第一拍Y4；第二拍Z11；第三拍R1=11。",
+      "reread": "out/in、Y/Z、独立PC增量器与公共ALU条件，READY等待。",
+      "can_skip_for_this_role": "第8章同一取指寄存器功能不再整段重读。",
+      "questions": [
+        {
+          "id": "gap-co-textbook-17-1",
+          "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+          "options": {},
+          "answer_before_gold": "不能同拍，两源抢总线。三拍：R1→Y；R2经总线与Y相加→Z；Z→R1。",
+          "gold": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "gap-co-textbook-17-2",
+          "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+          "options": {},
+          "answer_before_gold": "有独立PC增量器、两条动作不争同一总线/ALU且锁存时序允许可同拍。若PC加4也占公共ALU则另拍。",
+          "gold": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 9,
+        "id": "computer-organization.c05",
+        "headings": [
+          "9.1 操作命令的分析",
+          "机器指令怎样拆小",
+          "执行与并行条件",
+          "9.2 控制单元的功能"
+        ],
+        "chars": 760,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=9&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c05&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-textbook-17-1",
+            "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+            "type": "简答"
+          },
+          {
+            "id": "gap-co-textbook-17-2",
+            "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+            "type": "简答"
+          }
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "title": "控制单元的设计",
+      "independent_task": "闭卷写MemRead/MDRin条件，说明先定数据通路的原因。",
+      "closed_book_restatement": "硬布线把条件组合成信号，微程序把控制步骤保存在控存；机器PC与微PC不是同一地址空间。",
+      "intermediate_state": "独立条件推演：F1且READY0→MemRead1、MDRin0并留F1；READY1→MDRin1后进F2。",
+      "reread": "F2后另设DISPATCH的原因、两种ADD数据通路模型、字段编码需计不动作。",
+      "can_skip_for_this_role": "已有记忆的硬布线快/微程序规整的概括可略读，但不能跳过状态表和字段计算。",
+      "questions": [
+        {
+          "id": "gap-co-textbook-19-1",
+          "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+          "options": {},
+          "answer_before_gold": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。∨或、∧与，等待读持续但数据就绪才装入。",
+          "gold": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        },
+        {
+          "id": "gap-co-textbook-19-2",
+          "stem": "设计硬布线控制器，为何在列状态表前应先明确单总线还是多总线、ALU输入通路？",
+          "options": {},
+          "answer_before_gold": "数据通路决定哪些微操作能同拍；单总线不可两个源同时驱动，ALU输入若需Y/Z就要拆步，否则状态表会要求硬件无法执行的动作。",
+          "gold": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+          "result": "符合答案或主观要点",
+          "gold_seen_when_answering": false
+        }
+      ],
+      "mobile_read": {
+        "chapter": 10,
+        "id": "computer-organization.c11",
+        "headings": [
+          "10.1 组合逻辑设计",
+          "硬布线设计顺序",
+          "先装IR，后分派",
+          "把“什么时候有效”写成逻辑式",
+          "10.2 微程序设计",
+          "控制信号也能按步保存",
+          "下一微地址从哪里来",
+          "水平、垂直与字段编码"
+        ],
+        "chars": 1946,
+        "links": [
+          {
+            "text": "查看本章重点与易错 →",
+            "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1"
+          },
+          {
+            "text": "练习本章 →",
+            "href": "./quiz.html?chapter=computer-organization.c11&mode=seq"
+          }
+        ],
+        "overflow": false,
+        "ui_questions": [
+          {
+            "id": "gap-co-textbook-19-1",
+            "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+            "type": "简答"
+          },
+          {
+            "id": "gap-co-textbook-19-2",
+            "stem": "设计硬布线控制器，为何在列状态表前应先明确单总线还是多总线、ALU输入通路？",
+            "type": "简答"
+          }
+        ]
+      }
+    }
+  ],
+  "extra_independent_answers": [
+    {
+      "id": "gap-co-terms-06",
+      "stem": "DMA的规范中文名称是________。（填传送方式的名称）",
+      "answer_before_gold": "直接存储器访问",
+      "gold": "直接存储器存取",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    },
+    {
+      "id": "gap-co-terms-09",
+      "stem": "某教学机的CPU一次整数运算通常处理32位数据，一条机器指令固定为16位，主存每个存储单元保存8位。在机器字长、指令字长、存储字长三个术语中，描述这里16位的是________。",
+      "answer_before_gold": "指令字长",
+      "gold": "指令字长",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    },
+    {
+      "id": "gap-co-terms-10",
+      "stem": "某教学机机器字长为32位。因此，它的每条机器指令和每个主存存储单元也必定都是32位。（ ）",
+      "answer_before_gold": "错误；三个对象不同，不能由机器字长推出其余两种。",
+      "gold": "错误",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    },
+    {
+      "id": "gap-co-terms-14",
+      "stem": "某传统教学模型规定：可屏蔽外部中断在指令末检查，DMA在总线可让出的机器周期末检查。仅凭这个规定，就能断言所有现代CPU都必须在每个机器周期结束时响应DMA，且任何异常也只能在指令末响应。（ ）",
+      "answer_before_gold": "错误；仅传统题设，不足以推广到所有现代CPU和异常。",
+      "gold": "错误",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    },
+    {
+      "id": "gap-co-terms-07",
+      "stem": "按存取方式分类，教材常列出随机存取存储器、顺序存取存储器、直接存取存储器，以及按内容匹配查找的________。",
+      "answer_before_gold": "相联存取存储器",
+      "gold": "相联存储器",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    },
+    {
+      "id": "gap-co-terms-08",
+      "stem": "按存取方式分类：甲可按地址访问任一单元且存取时间基本与地址无关；乙必须从当前位置依次经过前面的记录；丙先定位到目标所在区域，再在区域内找到记录。甲、乙、丙依次是（ ）。",
+      "answer_before_gold": "A",
+      "gold": "A",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    },
+    {
+      "id": "gap-co-textbook-09-1",
+      "stem": "CPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？",
+      "answer_before_gold": "先记比例=Nc/f；N每秒查询次数，c每次周期数，f主频。2000×10/(2×10^6)=0.01=1%。",
+      "gold": "1%。",
+      "accepted": true,
+      "gold_seen_when_answering": false
+    }
+  ],
+  "independent_summary": {
+    "questions": 27,
+    "matches_gold_or_points": 27,
+    "natural_answer_errors_observed": 0,
+    "meaning": "即时试读后模拟结果；不能证明真人效率或长期记忆"
+  },
+  "actual_ui": {
+    "evidence": {
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "computer-organization.c01",
+          "headings": [
+            "1.1 计算机系统简介",
+            "计算机系统、硬件与软件",
+            "体系结构与组成",
+            "1.2 计算机的基本组成",
+            "冯·诺依曼结构：存储程序与程序控制",
+            "冯·诺依曼机的基本特点",
+            "五大部件及其功能",
+            "先跟踪一次3+5",
+            "1.3 计算机硬件的主要技术指标",
+            "单位、字长和编址",
+            "机器字长、指令字长与存储字长",
+            "CPU性能指标：CPI、主频与执行时间"
+          ],
+          "chars": 2085,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c01&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-terms-11",
+              "stem": "按教材对系统结构演变的概括，传统冯·诺依曼计算机以运算器为中心，现代计算机的系统结构通常以________为中心。（填部件名称）",
+              "type": "填空"
+            },
+            {
+              "id": "gap-co-terms-12",
+              "stem": "教材说现代计算机通常以存储器为中心，因此现代计算机中的所有I/O数据都必须先穿过ALU，再进入主存。（ ）",
+              "type": "判断"
+            }
+          ]
+        },
+        {
+          "chapter": 2,
+          "id": "computer-organization.c08",
+          "headings": [
+            "2.1 计算机的发展史",
+            "四代按什么划分",
+            "2.2 计算机的应用和展望",
+            "根据主要任务识别应用",
+            "多核为何未必快同样倍数"
+          ],
+          "chars": 522,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=2&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c08&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-textbook-01-1",
+              "stem": "按主要电子器件写出常见计算机四代顺序。",
+              "type": "简答"
+            },
+            {
+              "id": "gap-co-textbook-01-2",
+              "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+              "type": "简答"
+            }
+          ]
+        },
+        {
+          "chapter": 3,
+          "id": "computer-organization.c06",
+          "headings": [
+            "3.1 总线的基本概念",
+            "共享通路与主从设备",
+            "3.2 总线的分类",
+            "3.3 总线性能及性能指标",
+            "带宽先换成每次多少字节",
+            "3.4 总线结构",
+            "3.5 总线控制",
+            "仲裁决定谁先用",
+            "通信控制决定何时有效"
+          ],
+          "chars": 1241,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=3&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c06&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-013",
+              "stem": "64位数据总线、频率200MHz、每周期传2次，忽略开销，理论带宽是多少GB/s？",
+              "type": "简答"
+            },
+            {
+              "id": "gap-co-terms-15",
+              "stem": "共享数据总线的一端采用三态输出。该端未被允许驱动总线时进入高阻态Z，这表示（ ）。",
+              "type": "单选"
+            }
+          ]
+        },
+        {
+          "chapter": 4,
+          "id": "computer-organization.c04",
+          "headings": [
+            "4.1 概述",
+            "存储器按存取方式分类",
+            "先备好地址算术",
+            "层次与局部性",
+            "4.2 主存储器",
+            "芯片类型和刷新",
+            "容量、编址与芯片扩展",
+            "低位交叉存储",
+            "校验怎样分组",
+            "4.3 高速缓冲存储器",
+            "先分清块、行、组、路",
+            "放哪里、换谁、何时写主存",
+            "地址拆分与一次查找",
+            "平均访存时间",
+            "4.4 辅助存储器",
+            "磁盘位置和访问时间",
+            "容量与CHS定位",
+            "扩展：虚拟存储与TLB"
+          ],
+          "chars": 4120,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c04&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-004",
+              "stem": "程序在循环中顺序访问数组元素，并多次重复同一循环。分别说明空间局部性和时间局部性体现在哪里。",
+              "type": "简答"
+            },
+            {
+              "id": "sp-core-co-007",
+              "stem": "主存容量要求较大、成本需要控制，通常优先采用（ ）。",
+              "type": "单选"
+            }
+          ]
+        },
+        {
+          "chapter": 5,
+          "id": "computer-organization.c09",
+          "headings": [
+            "5.1 概述",
+            "5.2 I/O设备",
+            "5.3 I/O接口",
+            "5.4 程序查询方式",
+            "5.5 程序中断方式",
+            "5.6 DMA方式",
+            "程序中断与DMA的简答对照"
+          ],
+          "chars": 2047,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=5&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c09&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "uf-co-008",
+              "stem": "DMA方式适合高速块设备，因为它可以（ ）。",
+              "type": "单选"
+            },
+            {
+              "id": "gap-co-terms-06",
+              "stem": "DMA的规范中文名称是________。（填传送方式的名称）",
+              "type": "填空"
+            }
+          ]
+        },
+        {
+          "chapter": 6,
+          "id": "computer-organization.c02",
+          "headings": [
+            "6.1 无符号数和有符号数",
+            "数制与编码",
+            "机器数与真值",
+            "6.2 数的定点表示和浮点表示",
+            "定点位置决定范围",
+            "IEEE 754单精度",
+            "6.3 定点运算",
+            "先选移位规则",
+            "补码加减与溢出",
+            "无符号移位相加乘法",
+            "Booth补码乘法",
+            "恢复余数法逐位试商",
+            "不恢复法与带符号结果",
+            "6.4 浮点四则运算",
+            "浮点加减五步",
+            "舍入与乘除",
+            "6.5 算术逻辑单元",
+            "一位全加器怎样产生进位",
+            "复用加法器与标志位"
+          ],
+          "chars": 3656,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c02&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-001",
+              "stem": "十六进制数2D转换为8位二进制是________。",
+              "type": "填空"
+            },
+            {
+              "id": "sp-core-co-002",
+              "stem": "要在同一系统中统一表示汉字、英文和多种语言字符，主要应采用（ ）。",
+              "type": "单选"
+            }
+          ]
+        },
+        {
+          "chapter": 7,
+          "id": "computer-organization.c03",
+          "headings": [
+            "7.1 机器指令",
+            "指令与指令系统",
+            "指令由哪些字段组成",
+            "扩展操作码要保留前缀",
+            "7.2 操作数类型和操作类型",
+            "7.3 寻址方式",
+            "指令寻址与数据寻址",
+            "先辨数值还是地址",
+            "7.4 指令格式举例",
+            "7.5 RISC技术"
+          ],
+          "chars": 1760,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=7&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c03&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "uf-co-005",
+              "stem": "指令中给出的地址是操作数所在存储单元地址，这种方式是（ ）。",
+              "type": "单选"
+            },
+            {
+              "id": "gap-co-terms-01",
+              "stem": "一台计算机所能执行的全部机器指令的集合，称为该机的________。（填规范术语）",
+              "type": "填空"
+            }
+          ]
+        },
+        {
+          "chapter": 8,
+          "id": "computer-organization.c10",
+          "headings": [
+            "8.1 CPU的结构",
+            "跟踪取指就能分清寄存器",
+            "单总线怎样凑齐两个输入",
+            "时钟周期、机器周期与指令周期",
+            "8.2 指令周期",
+            "8.3 指令流水",
+            "理想流水时间",
+            "冲突与实际时间",
+            "8.4 中断系统"
+          ],
+          "chars": 1675,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=8&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c10&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "ap-co-001",
+              "stem": "在典型取指过程中，下列信息流向最合理的是（ ）。",
+              "type": "单选"
+            },
+            {
+              "id": "sp-core-co-004",
+              "stem": "CPU准备访问主存某单元时，用于暂存该单元地址的寄存器通常是（ ）。",
+              "type": "单选"
+            }
+          ]
+        },
+        {
+          "chapter": 9,
+          "id": "computer-organization.c05",
+          "headings": [
+            "9.1 操作命令的分析",
+            "机器指令怎样拆小",
+            "执行与并行条件",
+            "9.2 控制单元的功能"
+          ],
+          "chars": 760,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=9&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c05&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-textbook-17-1",
+              "stem": "单内部总线中可否同拍让R1送Y、R2送Z？给出计算R1←R1+R2的可行三步。",
+              "type": "简答"
+            },
+            {
+              "id": "gap-co-textbook-17-2",
+              "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+              "type": "简答"
+            }
+          ]
+        },
+        {
+          "chapter": 10,
+          "id": "computer-organization.c11",
+          "headings": [
+            "10.1 组合逻辑设计",
+            "硬布线设计顺序",
+            "先装IR，后分派",
+            "把“什么时候有效”写成逻辑式",
+            "10.2 微程序设计",
+            "控制信号也能按步保存",
+            "下一微地址从哪里来",
+            "水平、垂直与字段编码"
+          ],
+          "chars": 1946,
+          "links": [
+            {
+              "text": "查看本章重点与易错 →",
+              "href": "./color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1"
+            },
+            {
+              "text": "练习本章 →",
+              "href": "./quiz.html?chapter=computer-organization.c11&mode=seq"
+            }
+          ],
+          "overflow": false,
+          "ui_questions": [
+            {
+              "id": "gap-co-textbook-19-1",
+              "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+              "type": "简答"
+            },
+            {
+              "id": "gap-co-textbook-19-2",
+              "stem": "设计硬布线控制器，为何在列状态表前应先明确单总线还是多总线、ALU输入通路？",
+              "type": "简答"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "name": "home_continue_link",
+          "href": "./notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=5&layout=tang3-10-chapters-v1"
+        },
+        {
+          "name": "resume",
+          "before": {
+            "chapter": 4,
+            "scroll": 1989,
+            "store": "{\"计算机组成原理\":{\"previousLayoutProgress\":{},\"completed\":[],\"lecture\":[\"computer-organization.c01\",\"computer-organization.c08\",\"computer-organization.c06\",\"computer-organization.c04\",\"computer-organization.c09\",\"computer-organization.c02\",\"computer-organization.c03\",\"computer-organization.c10\",\"computer-organization.c05\",\"computer-organization.c11\"],\"color-notes\":[],\"lastLectureChapter\":5,\"layoutRevision\":\"tang3-10-chapters-v1\"}}"
+          },
+          "after": {
+            "chapter": 4,
+            "scroll": 10
+          }
+        },
+        {
+          "name": "complete",
+          "store": "{\"计算机组成原理\":{\"previousLayoutProgress\":{},\"completed\":[\"computer-organization.c09\"],\"lecture\":[\"computer-organization.c01\",\"computer-organization.c08\",\"computer-organization.c06\",\"computer-organization.c04\",\"computer-organization.c09\",\"computer-organization.c02\",\"computer-organization.c03\",\"computer-organization.c10\",\"computer-organization.c05\",\"computer-organization.c11\"],\"color-notes\":[],\"lastLectureChapter\":5,\"layoutRevision\":\"tang3-10-chapters-v1\"}}"
+        },
+        {
+          "name": "recall_ratings",
+          "ratings": [
+            "不记得",
+            "有点模糊",
+            "记住了"
+          ],
+          "store": "{\"shaoyang-reading-progress-v1\":\"{\\\"计算机组成原理\\\":{\\\"previousLayoutProgress\\\":{},\\\"completed\\\":[\\\"computer-organization.c09\\\"],\\\"lecture\\\":[\\\"computer-organization.c01\\\",\\\"computer-organization.c08\\\",\\\"computer-organization.c06\\\",\\\"computer-organization.c04\\\",\\\"computer-organization.c09\\\",\\\"computer-organization.c02\\\",\\\"computer-organization.c03\\\",\\\"computer-organization.c10\\\",\\\"computer-organization.c05\\\",\\\"computer-organization.c11\\\"],\\\"color-notes\\\":[\\\"computer-organization.c09\\\"],\\\"lastLectureChapter\\\":5,\\\"layoutRevision\\\":\\\"tang3-10-chapters-v1\\\"}}\",\"shaoyang-last-learning\":\"{\\\"course\\\":\\\"计算机组成原理\\\",\\\"module\\\":\\\"color-notes\\\",\\\"chapter\\\":5,\\\"card\\\":1,\\\"savedAt\\\":\\\"2026-10-16T02:54:15.253Z\\\",\\\"layoutRevision\\\":\\\"tang3-10-chapters-v1\\\"}\",\"shaoyang-selected-course-v1\":\"计算机组成原理\",\"shaoyang-recall-ratings-v2\":\"{\\\"__layoutVersions\\\":{\\\"计算机组成原理\\\":\\\"tang3-10-chapters-v1\\\"},\\\"计算机组成原理::5::1\\\":{\\\"value\\\":\\\"again\\\",\\\"level\\\":0,\\\"savedAt\\\":\\\"2026-10-16T02:54:14.835Z\\\",\\\"nextReviewAt\\\":\\\"2026-10-16T03:04:14.835Z\\\"},\\\"计算机组成原理::5::2\\\":{\\\"value\\\":\\\"fuzzy\\\",\\\"level\\\":0,\\\"savedAt\\\":\\\"2026-10-16T02:54:15.037Z\\\",\\\"nextReviewAt\\\":\\\"2026-10-17T02:54:15.037Z\\\"},\\\"计算机组成原理::5::3\\\":{\\\"value\\\":\\\"known\\\",\\\"level\\\":1,\\\"savedAt\\\":\\\"2026-10-16T02:54:15.252Z\\\",\\\"nextReviewAt\\\":\\\"2026-10-17T02:54:15.252Z\\\"}}\"}"
+        },
+        {
+          "name": "ui_fill",
+          "id": "gap-co-terms-11",
+          "feedback": [
+            "× 错误，答案：存储器 · 已错 1 次新错题"
+          ]
+        },
+        {
+          "name": "ui_fill",
+          "id": "gap-co-terms-06",
+          "feedback": [
+            "× 错误，答案：直接存储器存取 · 已错 1 次新错题"
+          ]
+        },
+        {
+          "name": "ui_fill",
+          "id": "gap-co-001",
+          "feedback": [
+            "× 错误，答案：00101101 · 已错 1 次新错题"
+          ]
+        },
+        {
+          "name": "ui_fill",
+          "id": "gap-co-terms-01",
+          "feedback": [
+            "× 错误，答案：指令系统 · 已错 1 次新错题"
+          ]
+        },
+        {
+          "name": "deliberate_wrong_loop",
+          "start": "gap-co-terms-09",
+          "wrong": "gap-co-terms-09",
+          "lecture": "http://127.0.0.1:14244/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1",
+          "returned": "gap-co-terms-09",
+          "feedback": [
+            "× 错误，答案：指令字长 · 已错 2 次二刷错"
+          ]
+        },
+        {
+          "name": "synonym_not_reached",
+          "id": "gap-co-terms-06",
+          "current": "sp-core-co-034"
+        },
+        {
+          "name": "synonym",
+          "id": "gap-co-terms-07",
+          "answer": "相联存取存储器",
+          "feedback": [
+            "✓ 正确"
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "targeted": {
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "chapters": [],
+      "actions": [
+        {
+          "name": "dma_synonym",
+          "value": "直接存储器访问",
+          "feedback": [
+            "✓ 正确"
+          ]
+        },
+        {
+          "name": "search_dma",
+          "status": "找到 2 个相关内容区，已定位到首个结果",
+          "marks": 20
+        },
+        {
+          "name": "clear_search",
+          "chapter": 2
+        },
+        {
+          "name": "review_card_matching",
+          "text": "I/O控制、中断与DMA\n优先练\n按一次I/O流程比较查询、中断与DMA，说明CPU何时参与。\n核心知识：DMA为直接存储器存取；DMA控制器搬设备与主存间数据。程序中断方式由CPU执行服务程序搬数据。\n方法与例题：传统模型的外部可屏蔽中断须有效未屏蔽请求、开中断、指令结束；DMA可在机器周期末取得总线后传送，不必等整指令。\n易混易错：CPU关中断不等于禁止DMA；DMA仍需初始化、结束处理及总线仲裁。DMA完成可再发中断，具体边界按模型。\n练习这个知识点（11题） →\nI/O接口的三个寄存器\n优先练\n核心知识：数据寄存器存内容，状态寄存器报ready等状态，控制寄存器接启动等命令；接口协调设备和总线的速差。\n方法与例题：输入顺序为写启动、设备完成置就绪、CPU查状态、读数据；先分清在读状态还是在读真正的数据。\n易混易错：端口寄存器不是设备全部内存；统一编址可用访存指令，但不代表无条件更快，清就绪规则按设备约定。\n练习这个知识点（2题） →\n程序查询的忙等开销\n优先练\n核心知识：查询方式反复读状态，未就绪继续等，就绪后传数据；CPU时间占比约为每秒查询次数×每次拍数÷主频。\n方法与例题：每秒1000次、每次20拍、主频1MHz，占比2%；题目若另有数据处理时间，应在查询成本之外计入。\n易混易错：查询频繁会占CPU，间隔太长可能来不及读设备；状态未就绪时不能把数据寄存器旧值当新数据使用。\n练习这个知识点（2题） →\n查看本章讲义 →\n练习本章 →"
+        }
+      ],
+      "errors": []
+    },
+    "chapter_resume": "章级续读通过；段落位置回章首",
+    "reading_progress": "10章已读记录；显式完成只将computer-organization.c09写入completed",
+    "recall": "不记得/有点模糊/记住了三种评级均操作并写入独立存储；操作评级不代表本角色真实记忆表现",
+    "wrong_loop": "主动在gap-co-terms-09输入测试错答，两次错误均为流程造错；错题→讲义→浏览器返回同题及反馈保留",
+    "synonyms": "直接存储器访问、相联存取存储器实际UI均判正确",
+    "mobile": "10章正文均实际载入并滚动各小节；全部无横向溢出，所查页面0运行错误"
+  },
+  "issues": [
+    {
+      "id": "W1",
+      "priority": "P3",
+      "kind": "短任务回看摩擦，不阻断",
+      "location": "首页续读→第5章",
+      "evidence": "从第5章5.6附近退出到首页，经首页课程卡重进，chapter索引4→4，scroll1989→10。章节恢复正确，段落位置未恢复。",
+      "minimum_action": "现有目录/搜索可再次定位；本轮不默认新增段落续读功能。",
+      "status": "现状记录"
+    },
+    {
+      "id": "W2",
+      "priority": "P3",
+      "kind": "先修单位回忆",
+      "location": "1.3及3.3",
+      "evidence": "GHz/MHz与ms须自行换算，公式例子能核对，但基础模糊的在职角色需停下来回想单位量级。独立计算未发生错误。",
+      "minimum_action": "如需修，仅在现有单位段补一行换算；无需扩章或加题。",
+      "status": "候选c383定向复测关闭：现有单位段新增一行换算即可回看。"
+    }
+  ],
+  "limitations": [
+    "这是AI角色模拟，不是真人访谈；没有声称实际20分钟学习或长期记忆效果。",
+    "讲义完整例题多为直接可见答案，本次已见的例子和中间状态明确标为复述；27道独立题先仅抽题干选项，写入TEMP答案文件后才核gold。",
+    "UI试做在独立答案核gold之后进行，部分题已见答案；UI点击及故意错误不计自然学习成绩。UI另外出现的题若未先独立作答，不计27题。",
+    "第一轮自动化误用?course以及缺layout，后按#course及layout重跑10个正确章节。DMA一次填入字面Unicode转义字符串的测试脚本错误已用真正中文复测通过；均不算产品问题。",
+    "未验证所有题、所有屏幕及跨天真实复习效果。",
+    "未把自己的已会内容推断为湖南考试不考，也未建议删除课程核心。"
+  ],
+  "targeted_retest": {
+    "build": "c383d27d0891e5c7",
+    "scope": "仅复核单位换算、并行条件文本及390暗色1.3/章级续读；未重做全课或27题",
+    "text_checks": [
+      {
+        "item": "频率及时间单位",
+        "result": "1MHz=10^6Hz，1GHz=10^9Hz；1s=10^3ms=10^6μs=10^9ns，正确。"
+      },
+      {
+        "item": "原CPU例题复算",
+        "result": "先CPI=.5×1+.5×3=2；IC=10^6，f=10^9Hz；t=IC×CPI/f=.002s=2ms。"
+      },
+      {
+        "item": "并行条件",
+        "result": "p明确为原程序串行运行总时间中可并行部分耗时占比，不是行数；其余时间不变、忽略额外开销。按原式用p=.75,n=3得S=1/(.25+.75/3)=2。"
+      }
+    ],
+    "mobile_evidence": {
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "chapters": [],
+      "actions": [
+        {
+          "name": "read_1_3",
+          "chapter": 0,
+          "text": "CPI与主频的作用\n\n单位、字长和编址\n位与字节：bit表示位，1B=8bit。地址宽度决定可区分的地址数，数据总线宽度决定一次可并行传输的数据位数。\n容量：容量=单元数×每单元位数；n位地址可选2^n个单元，按字节编址才是2^n B。KiB=1024B；传统KB及总线MB/s应按给定口径统一单位。\n机器字长、指令字长与存储字长\n\n可能考 · 填空 / 单选　区分运算位数、指令位数和存储字位数\n\n机器字长：CPU进行一次整数运算所能处理的二进制数据位数。\n指令字长：一条机器指令包含的二进制代码的总位数。\n存储字长：一个存储单元所存放的二进制代码的位数，即一个存储字的位数。\n对照例：机器字长32位，指令长16位，存储字长64位，分别描述运算、指令编码、存储字三个对象，数值不必相等。\n编址单位另看题设：按字节编址表示每个地址对应一个字节，不表示机器字长或存储字长必为8位；地址宽度也不是这三个字长。\nCPU性能指标：CPI、主频与执行时间\nCPI与主频：CPI是执行每条指令所需的平均时钟周期数；主频f是CPU的时钟频率，单位Hz，时钟周期T=1/f。\n单位换算：1MHz=10⁶Hz，1GHz=10⁹Hz；1s=10³ms=10⁶μs=10⁹ns。先统一频率和时间单位，再代公式。\n公式与参数：CPU时间=指令数IC×平均CPI÷f；平均CPI=各类“执行比例×该类周期数”之和。\n完整例题：100万条指令，一半1拍、一半3拍，主频1GHz：CPI=0.5×1+0.5×3=2，总200万拍，时间=2×10⁶/10⁹=2ms。\n吞吐量、响应时间与MIPS：吞吐量是单位时间完成的任务量；响应时间是完成一个任务所需的时间；MIPS表示每秒执行的百万条指令数。\n性能比较：跨指令集直接比较MIPS可能失真；主频高不保证任务快，CPU时间通常不含I/O等待。\n查看本章重点与易错 →\n练习本章 →\n完成本章",
+          "overflow": false,
+          "worked_example_recompute": "CPI=.5*1+.5*3=2; IC=1e6,f=1e9Hz; time=IC*CPI/f=.002s=2ms",
+          "independent_variant": "IC=2e6,CPI=1.5,f=500MHz=5e8Hz; t=IC*CPI/f=.006s=6ms"
+        },
+        {
+          "name": "resume",
+          "before": {
+            "chapter": 0,
+            "scroll": 3303
+          },
+          "home_href": "./notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1",
+          "after": {
+            "chapter": 0,
+            "scroll": 10
+          },
+          "same_chapter": true
+        }
+      ],
+      "errors": []
+    },
+    "result": "通过：1.3新换算行在390暗色可读，无横向溢出；独立变式500MHz、200万条、CPI1.5算6ms；退出到首页再从课程卡重进仍第1章。",
+    "remaining_observation": "延续初轮现状：重进回章首scroll3303→10，不保存段落位置；不新增功能。",
+    "browser": "新建隔离context，已close；未碰真实用户存储。"
+  }
+}

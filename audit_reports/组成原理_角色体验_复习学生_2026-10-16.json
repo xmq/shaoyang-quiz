@@ -1,0 +1,575 @@
+{
+  "reviewer": "independent AI agent role simulation; university course attended but shaky, finals+computer-job written test; not a real human",
+  "date": "2026-10-16",
+  "baseline": "dist f74588c9a55176f0 per task, no rebuild/no product modifications",
+  "scope": "10 chapter review pages;20 actual linked questions,7 new-data task families; not full146-question audit",
+  "prior_audits": "No prior audit_reports conclusions read. No claim that the model has never seen similar subject knowledge.",
+  "answer_order": "stems/options only first;20 answers frozen TEMP/rev_answers_frozen.json before question gold; new-data reasoning frozen separately before arithmetic verifier",
+  "chapters": [
+    {
+      "chapter": "第1章 计算机系统概论",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1",
+      "review_chars": 680,
+      "own_restatement": "Instructions/data are both stored bit strings; execution purpose determines interpretation; CPU time counts instructions times CPI divided by clock.",
+      "process_or_transfer": "1e9 instructions: A needs1e9 cycles, B2e9 cycles; faster clock alone loses.",
+      "questions": [
+        {
+          "id": "gap-co-terms-09",
+          "type": "填空",
+          "topic_id": "computer-organization.t42",
+          "stem": "某教学机的CPU一次整数运算通常处理32位数据，一条机器指令固定为16位，主存每个存储单元保存8位。在机器字长、指令字长、存储字长三个术语中，描述这里16位的是________。",
+          "own_answer_frozen": "instruction word length",
+          "gold": "指令字长",
+          "explanation": "机器字长描述CPU通常一次处理的二进制数据位数，此处为32位；指令字长是一条机器指令的位数，此处为16位；存储字长是一个存储单元的位数，此处为8位。三个量描述的对象不同。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "uc-co-009",
+          "type": "单选",
+          "topic_id": "computer-organization.t02",
+          "stem": "同一任务在A、B两种实现中都执行10^9条指令。A主频2GHz、平均CPI为1；B主频3GHz、平均CPI为2。忽略其他因素，哪项正确？",
+          "own_answer_frozen": "A; A=1e9*1/2e9=0.5s; B=1e9*2/3e9=0.667s",
+          "gold": "A",
+          "explanation": "A时间10^9×1/(2×10^9)=0.5s；B时间10^9×2/(3×10^9)=2/3s。必须同时考虑CPI与频率，高主频不能补偿本例翻倍的CPI。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass with t02 topic pollution finding"
+    },
+    {
+      "chapter": "第2章 计算机的发展及应用",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=2&layout=tang3-10-chapters-v1",
+      "review_chars": 397,
+      "own_restatement": "Generation follows main electronic components; real-time response and throughput are different goals; serial fraction limits speedup.",
+      "process_or_transfer": "p=.6,n=3: new time .4+.6/3=.6; S=5/3. Own extra transfer based on review formula; same assumption of zero overhead.",
+      "questions": [
+        {
+          "id": "gap-co-textbook-01-2",
+          "type": "简答",
+          "topic_id": "computer-organization.t19",
+          "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+          "own_answer_frozen": "False. Compiler translates high-level source to machine code; CPU executes machine instructions. Interpreter is software too.",
+          "gold": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+          "explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "gap-co-textbook-02-2",
+          "type": "简答",
+          "topic_id": "computer-organization.t20",
+          "stem": "工业控制必须在规定毫秒内响应传感器，离线统计每天记录更关注批量处理。这两类主要要求各是什么？",
+          "own_answer_frozen": "industrial control: response deadline; offline records: batch data processing/throughput",
+          "gold": "前者实时控制，重响应期限；后者数据处理，重吞吐和完成时间。",
+          "explanation": "同样使用计算机，判断依据是任务目标，不是设备是否联网。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第3章 系统总线",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=3&layout=tang3-10-chapters-v1",
+      "review_chars": 597,
+      "own_restatement": "Arbitration gives ownership; handshake determines when the payload is valid.",
+      "process_or_transfer": "REQ1 ACK0 means wait; cannot use request assertion as data-valid signal.",
+      "questions": [
+        {
+          "id": "gap-co-013",
+          "type": "简答",
+          "topic_id": "computer-organization.t12",
+          "stem": "64位数据总线、频率200MHz、每周期传2次，忽略开销，理论带宽是多少GB/s？",
+          "own_answer_frozen": "64/8*200e6*2=3.2e9 B/s=3.2 GB/s (decimal)",
+          "gold": "3.2GB/s。",
+          "explanation": "64位=8B，8×200×10^6×2=3.2×10^9B/s。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "gap-co-textbook-04-1",
+          "type": "简答",
+          "topic_id": "computer-organization.t22",
+          "stem": "异步四相互锁读传输中REQ已置1但ACK仍为0，主设备能否按该协议采样？后续撤销顺序是什么？",
+          "own_answer_frozen": "Cannot sample before ACK. Slave prepares data then asserts ACK; master samples and clears REQ; slave clears ACK.",
+          "gold": "不能，应等ACK确认数据有效；采样后主设备先撤REQ，从设备再撤ACK。",
+          "explanation": "REQ只代表请求，ACK才是从设备准备完成的确认。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第4章 存储器",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1",
+      "review_chars": 2031,
+      "own_restatement": "Caches retain blocks, lookup needs index plus valid tag; TLB maps addresses and absence does not imply missing page.",
+      "process_or_transfer": "For total miss41ns, average .95*1+.05*41=3ns; do not add lookup again.",
+      "questions": [
+        {
+          "id": "gap-accept-card-core-24-1",
+          "type": "简答",
+          "topic_id": "computer-organization.t16",
+          "stem": "Cache命中查询1ns；未命中从开始查询直到取回总计41ns；命中率95%。串行模型平均访问时间是多少？",
+          "own_answer_frozen": "0.95*1+0.05*41=3 ns; 41 is TOTAL miss latency",
+          "gold": "3ns。",
+          "explanation": "0.95×1+0.05×41=3；41已含首查，不应再在该加权结果上加1。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "ap-co-006",
+          "type": "简答",
+          "topic_id": "computer-organization.t14",
+          "stem": "访问一个已有效驻留主存的页面时，TLB中没有其转换项；随后查页表得到页框，数据也未命中当前Cache。说明这次涉及哪些未命中，是否必然访问磁盘，以及接下来怎样取到数据。",
+          "own_answer_frozen": "TLB miss and Cache miss; resident page so no mandatory disk; page table yields frame, then fetch block from main memory into Cache and deliver data.",
+          "gold": "先发生TLB未命中，需要查页表；页面有效驻留，故没有缺页。数据未命中当前Cache时继续查下一层Cache或主存，不必然访问磁盘，完成后可更新对应缓存再返回。",
+          "explanation": "按地址转换和数据访问两条路径判断。TLB与Cache可在同次访问中均未命中，但这仍不等于页表显示页面不驻留。题中已经排除缺页。",
+          "comparison": "correct core answer; ap-co-006 omitted possible lower Cache hierarchy",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第5章 输入输出系统",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=5&layout=tang3-10-chapters-v1",
+      "review_chars": 643,
+      "own_restatement": "CPU programs DMA and handles completion; DMA controller carries payload. Polling reads status before data.",
+      "process_or_transfer": "2000 polls*10cycles=20000cycles/s,2MHz gives1%; payload processing is excluded.",
+      "questions": [
+        {
+          "id": "gap-co-terms-14",
+          "type": "判断",
+          "topic_id": "computer-organization.t13",
+          "stem": "某传统教学模型规定：可屏蔽外部中断在指令末检查，DMA在总线可让出的机器周期末检查。仅凭这个规定，就能断言所有现代CPU都必须在每个机器周期结束时响应DMA，且任何异常也只能在指令末响应。（ ）",
+          "own_answer_frozen": "False; given traditional boundary does not prove every modern CPU DMA or exception boundary.",
+          "gold": "错误",
+          "explanation": "模型规定不能无条件推广。DMA还取决于总线或互连协议、仲裁和当前事务能否让出；题设只讨论可屏蔽外部中断，不包含同步异常、不可屏蔽中断等各自的处理规则。判断时要同时保留模型与事件种类两个条件。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "gap-co-textbook-09-1",
+          "type": "简答",
+          "topic_id": "computer-organization.t27",
+          "stem": "CPU主频2MHz，每秒查询2000次、每次10拍，仅查询占CPU时间比例是多少？",
+          "own_answer_frozen": "2000*10/2e6=0.01=1%",
+          "gold": "1%。",
+          "explanation": "2000×10÷(2×10⁶)=0.01；未计数据搬运和处理。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第6章 计算机的运算方法",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1",
+      "review_chars": 1893,
+      "own_restatement": "Finite width determines represented range; CF and OF answer different questions. Signed Booth needs combined arithmetic shift.",
+      "process_or_transfer": "11/3 gives quotient bits0011 and remainder2; first brought bit1 produces R1.",
+      "questions": [
+        {
+          "id": "gap-co-textbook-12-1",
+          "type": "简答",
+          "topic_id": "computer-organization.t30",
+          "stem": "用无符号逐位试商计算11÷3，给出商、余数和验证式。",
+          "own_answer_frozen": "11 binary1011 /3: remainder after each input=1,2,2,2; quotient0011=3 remainder2; 11=3*3+2",
+          "gold": "商3，余2；11=3×3+2，且0≤2<3。",
+          "explanation": "被除数1011逐位带入，商0011；最终余数必须小于除数。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "uc-co-002",
+          "type": "单选",
+          "topic_id": "computer-organization.t32",
+          "stem": "8位加法器计算01111100+00001000，结果10000100。CF表示最高位向外进位，OF表示把操作数作为8位补码时的有符号溢出。CF与OF分别为（ ）。",
+          "own_answer_frozen": "A; 124+8=132=10000100; no unsigned carry, signed positive overflow: CF0 OF1",
+          "gold": "A",
+          "explanation": "124+8=132，小于256，8位无符号没有最高位向外进位，所以CF=0；但132超过有符号上界127，两个正数相加结果符号变负，故OF=1。进位与有符号溢出是两种不同判据。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第7章 指令系统",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=7&layout=tang3-10-chapters-v1",
+      "review_chars": 448,
+      "own_restatement": "Address field can hold a literal, an address, or use a register; operand is not always the effective address.",
+      "process_or_transfer": "A40,R100: direct operand300 but register operand100 and register-indirect500.",
+      "questions": [
+        {
+          "id": "gap-audit26-system-006",
+          "type": "简答",
+          "topic_id": "computer-organization.t07",
+          "stem": "某指令地址字段A=40，寄存器R=100，主存M[40]=300、M[100]=500。分别求立即、直接、寄存器和寄存器间接寻址得到的操作数；寄存器方式均使用R。",
+          "own_answer_frozen": "immediate40; direct300; register100; register indirect500",
+          "gold": "立即寻址操作数40；直接寻址M[40]=300；寄存器寻址R内容100；寄存器间接寻址M[R]=M[100]=500。",
+          "explanation": "先判断字段提供的是值、地址还是保存地址的寄存器，再决定是否读内存。不要把有效地址与最终操作数混同。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "uc-co-007",
+          "type": "单选",
+          "topic_id": "computer-organization.t33",
+          "stem": "若采用定长操作码，要表示至少50种操作，操作码字段最少需要（ ）。",
+          "own_answer_frozen": "A; 2^5<50<=2^6 so 6 bits",
+          "gold": "A",
+          "explanation": "2^5=32不足，2^6=64可覆盖50种操作，所以至少ceil(log2 50)=6位。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第8章 CPU的结构和功能",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=8&layout=tang3-10-chapters-v1",
+      "review_chars": 996,
+      "own_restatement": "Pipeline overlaps stages for throughput; hazards depend on result, resource or branch direction. Nesting needs preserved state.",
+      "process_or_transfer": "Five stages and10 instructions require14ideal cycles; adding2 waits at1.6ns gives25.6ns (visible example replay).",
+      "questions": [
+        {
+          "id": "gap-co-textbook-16-2",
+          "type": "简答",
+          "topic_id": "computer-organization.t34",
+          "stem": "中断服务尚未保护返回地址和寄存器就开放嵌套，可能出现什么问题？",
+          "own_answer_frozen": "Nested service can overwrite unsaved return address/registers, so return may jump incorrectly or corrupt caller data.",
+          "gold": "高优先级中断可能覆盖返回信息或寄存器，恢复错误位置或错误数据。",
+          "explanation": "嵌套每一层都须保有自己的现场，不能只保存最外层。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "uc-co-011",
+          "type": "多选",
+          "topic_id": "computer-organization.t11",
+          "stem": "判断下面三种流水线现象：①ADD产生R1后紧随的SUB要读取尚未就绪的R1；②两条指令同时争用唯一存储端口；③分支结果未定，下一取指方向未知。对应正确的有（ ）。",
+          "own_answer_frozen": "ABC; forwarding does not solve structural/control problems",
+          "gold": "ABC",
+          "explanation": "①是前后指令结果依赖；②是硬件资源竞争；③是分支带来的取指不确定性。数据转发处理某些数据依赖，不能自动增添硬件端口或确定分支方向。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第9章 控制单元的功能",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=9&layout=tang3-10-chapters-v1",
+      "review_chars": 412,
+      "own_restatement": "Microoperation scheduling depends on buses, ports and data readiness; opcode alone is incomplete.",
+      "process_or_transfer": "MDR-to-IR can coexist with PC increment only if PC has independent increment path; READY0 self-loop.",
+      "questions": [
+        {
+          "id": "gap-co-textbook-17-2",
+          "type": "简答",
+          "topic_id": "computer-organization.t35",
+          "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+          "own_answer_frozen": "Can if PC has independent incrementer and write path; cannot assume if ALU/shared bus needs same resources.",
+          "gold": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+          "explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "gap-co-textbook-18-2",
+          "type": "简答",
+          "topic_id": "computer-organization.t36",
+          "stem": "为什么只知道当前指令是ADD仍不足以确定本拍全部控制信号？",
+          "own_answer_frozen": "Need current timing state plus condition flags/READY and datapath conflicts; ADD alone does not identify current micro-operation.",
+          "gold": "还要知道取指/执行等当前状态、条件标志和外部READY等状态。",
+          "explanation": "同一ADD在取指与执行的动作不同，控制是译码、时序和条件的组合。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    },
+    {
+      "chapter": "第10章 控制单元的设计",
+      "review_url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=10&layout=tang3-10-chapters-v1",
+      "review_chars": 608,
+      "own_restatement": "Control equations come from state plus condition; microPC selects control steps and differs from machinePC.",
+      "process_or_transfer": "Micro22 loadsY,23 computesZ,24 commitsACC,then microPC00; machinePC not reset.",
+      "questions": [
+        {
+          "id": "gap-co-textbook-19-1",
+          "type": "简答",
+          "topic_id": "computer-organization.t37",
+          "stem": "F1与E1两态都需持续读存储器，READY时装入MDR，写MemRead与MDRin逻辑式。",
+          "own_answer_frozen": "MemRead=F1 OR E1; MDRin=(F1 OR E1) AND READY",
+          "gold": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+          "explanation": "读请求在等待期间保持，锁存必须等READY有效。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        },
+        {
+          "id": "gap-co-textbook-21-1",
+          "type": "简答",
+          "topic_id": "computer-organization.t39",
+          "stem": "同一微指令字段需选择4种互斥动作之一或不动作，最少几位？为什么不是2位？",
+          "own_answer_frozen": "3 bits: 4 actions plus no action=5 choices; 2 bits only 4 choices",
+          "gold": "3位；共5种状态，2位只能4种，3位可8种。",
+          "explanation": "若无不动作且保证必选一个才可能2位，题目条件不能省。",
+          "comparison": "correct",
+          "blind_test": false,
+          "exposure_note": "answered before revealing question gold, after reading review/lecture; visible worked examples and familiar wording prevent claiming a blind test"
+        }
+      ],
+      "review_vs_lecture": "Review recalls task; process-heavy topics needed lecture steps.",
+      "status": "pass in sampled scope"
+    }
+  ],
+  "migrations": [
+    {
+      "task": "Cache new address",
+      "given": "32bit byte address,16KiB data,64B block,4way; address0x2B7C",
+      "own": "64 groups; offset6,index6,tag20; decimal11132=173*64+60; 173=2*64+45; offset60 group45 tag2; need valid+matching tag in group45",
+      "support": "lecture4.3 arithmetic and lookup example0x1234; applied to different address; review card alone lacks numeric lookup process"
+    },
+    {
+      "task": "Cache new sequence",
+      "given": "2 direct rows,initial invalid,sequence2,3,2,4,3,2",
+      "own": "miss[2,-];miss[2,3];hit[2,3];miss[4,3];hit[4,3];miss[2,3]; hit rate2/6=1/3",
+      "support": "lecture4.3 provided0,1,0,2,0 table; changed sequence and wrote states, not matching visible answer"
+    },
+    {
+      "task": "Hamming new data",
+      "given": "even Hamming(7,4),data0110 at positions3,5,6,7; flip bit6",
+      "own": "p1=1,p2=1,p4=0; code in position1-to7 order1100110; received1100100; failed p2,p4,syndrome110(binary)=6; flip6 restores code",
+      "support": "lecture4.2 explicitly provides position groups; review card only tells grouping idea and r inequality; returned to lecture for groups"
+    },
+    {
+      "task": "signed overflow new operands",
+      "given": "8bit100+40 and -100+(-40)",
+      "own": "01100100+00101000=10001100; CF0 OF1, true140 exceeds127.10011100+11011000=1 01110100; CF1 OF1,true-140 below-128. Same overflow can have different carry.",
+      "support": "lecture6.3 same-sign/opposite-result rule and CF/OF distinction sufficient"
+    },
+    {
+      "task": "Booth new operands",
+      "given": "4bit -3*3 M1101 Q0011 A0000 q0",
+      "own": "after shifts:0001/1001/1;0000/1100/1;1110/1110/0;1111/0111/0. Pairs10,11,01,00. product11110111=-9",
+      "support": "review rule and lecture6.3 -3*2 table supports; new multiplier changes intermediate states. Smallest negative case intentionally excluded as a different width boundary."
+    },
+    {
+      "task": "addressing new values",
+      "given": "A24,R80,M24=80,M80=7; postfetch PC204, displacement-12",
+      "own": "immediate24;direct80;indirect7;register80;register-indirect7;relativeEA192. Excluding instruction fetch memory reads0,1,2,0,1 respectively",
+      "support": "lecture7.3 formula/comparison table sufficient; review alone only brief examples so returned to lecture"
+    },
+    {
+      "task": "microprogram new ACC",
+      "given": "lecture10.2 direct ADD microsteps; initialACC=-4,MDR9 at micro21 completion",
+      "own": "22:Y9,ACC-4,Z not yet updated;23:Z5,ACC still-4;24:ACC5,next microPC00; machinePC stays already advanced and is not zeroed",
+      "support": "lecture10.2 table plus numeric example3+9 supports change of ACC; review alone names microaddress but lacks all22/23/24 actions"
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "REV-TOPIC-01",
+      "kind": "topic filter contamination",
+      "question_id": "sp-core-co-001",
+      "observed": "t02 performance/time set contains machine word length definition question; t42 separately teaches and drills three word lengths",
+      "evidence": [
+        "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+        "某处理器字长为32位，这一指标首先表示（ ）。",
+        "比较两台计算机执行同一任务的性能时，应综合考虑（ ）。",
+        "写出CPU执行时间与指令数、CPI、主频的基本关系，并解释为什么主频高不代表程序一定更快。",
+        "同一任务在A、B两种实现中都执行10^9条指令。A主频2GHz、平均CPI为1；B主频3GHz、平均CPI为2。忽略其他因素，哪项正确？"
+      ],
+      "minimal_fix": "map sp-core-co-001 to computer-organization.t42; regenerate derived question metadata; retest t02 excludes and t42 includes question",
+      "severity": "learning-loop mapping defect; does not prevent completing quiz",
+      "resolution": "fixed and browser retested on c383d27d0891e5c7"
+    }
+  ],
+  "answer_errors_found": [],
+  "independent_answer_errors": "No wrong core answers among20. ap-co-006 response too narrow in saying main memory, omits possible lower Cache; gold correctly covers lower Cache/main memory. This is learner answer omission, not bad gold.",
+  "ui": {
+    "pc": "1280x900 dark; review topic link -> filtered quiz;20 selected stems reached by Skip; short answer typed before reveal; no automatic full-text score claimed",
+    "wrong_flow": {
+      "before": "http://127.0.0.1:8767/quiz.html?topic=computer-organization.t02&mode=seq",
+      "text": "× 错误，答案：B · 已错 1 次新错题\n解析\nCPU时间=指令数×CPI/主频=10⁹×2/(2×10⁹)=1 s。\n这次错在哪里？\n选一个最主要原因，方便下次有针对性地修正。\n概念不清\n公式/方法选错\n条件漏看\n计算/操作失误\n想不起来\n已加入待复习队列\n回看讲义\n重点与易错",
+      "links": [
+        {
+          "t": "回看讲义",
+          "h": "http://127.0.0.1:8767/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t02"
+        },
+        {
+          "t": "重点与易错",
+          "h": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t02"
+        }
+      ],
+      "lecture_url": "http://127.0.0.1:8767/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t02",
+      "back_stem": "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。"
+    },
+    "deliberate_wrong_note": "A was intentionally selected for uf-co-006 to produce repair links; excluded from mastery errors; back restored same stem",
+    "phone": [
+      {
+        "url": "http://127.0.0.1:8767/quiz.html?topic=computer-organization.t40&mode=seq",
+        "body_width": 390,
+        "viewport": 390,
+        "links": [
+          {
+            "t": "回看讲义",
+            "h": "http://127.0.0.1:8767/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t40"
+          },
+          {
+            "t": "重点与易错",
+            "h": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t40"
+          }
+        ]
+      }
+    ],
+    "phone_scope": "390x844 dark: chapter6 review->Booth topic; input->reveal->repair links visible; screenshot inspected; no document horizontal overflow. Did not claim all mobile chapters or all native-back paths checked.",
+    "screenshots": [
+      "%TEMP%/revision_wrong_pc.png",
+      "%TEMP%/revision_phone_booth.png"
+    ]
+  },
+  "preferences_optional": [
+    "Cache review splits overlap t10/t15/t16; current links still usable. Prefer explicit task label if later reorganizing, not required for this audit.",
+    "Chapter2 practice is very small and repeats lecture scenarios; current linked answers show understanding of text, new p=.6,n=3 transfer gives stronger evidence than counting visible2.5 answer."
+  ],
+  "retest": "c383d27d0891e5c7 targeted retest passed; baseline f745 evidence retained",
+  "evidence_temp": [
+    "revision_browser_evidence.json",
+    "rev_answers_frozen.json",
+    "revision_migrations_frozen.json"
+  ],
+  "final_targeted_retest": {
+    "target_build": "c383d27d0891e5c7",
+    "scope": "only failed mapping and its repair link; no course-wide rerun",
+    "question_id": "sp-core-co-001",
+    "record_policy": "No reset operation. New isolated browser context for technical UI check; prior baseline answers retained in report. Intentional wrong selection below is not mastery evidence.",
+    "metadata": [
+      {
+        "id": "uf-co-006",
+        "topic": "computer-organization.t02",
+        "chapter": "computer-organization.c01",
+        "stem": "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+        "answer": "B"
+      },
+      {
+        "id": "gap-co-terms-09",
+        "topic": "computer-organization.t42",
+        "chapter": "computer-organization.c01",
+        "stem": "某教学机的CPU一次整数运算通常处理32位数据，一条机器指令固定为16位，主存每个存储单元保存8位。在机器字长、指令字长、存储字长三个术语中，描述这里16位的是________。",
+        "answer": "指令字长"
+      },
+      {
+        "id": "gap-co-terms-10",
+        "topic": "computer-organization.t42",
+        "chapter": "computer-organization.c01",
+        "stem": "某教学机机器字长为32位。因此，它的每条机器指令和每个主存存储单元也必定都是32位。（ ）",
+        "answer": "错误"
+      },
+      {
+        "id": "sp-core-co-001",
+        "topic": "computer-organization.t42",
+        "chapter": "computer-organization.c01",
+        "stem": "某处理器字长为32位，这一指标首先表示（ ）。",
+        "answer": "A"
+      },
+      {
+        "id": "sp-core-co-018",
+        "topic": "computer-organization.t02",
+        "chapter": "computer-organization.c01",
+        "stem": "比较两台计算机执行同一任务的性能时，应综合考虑（ ）。",
+        "answer": "ABCD"
+      },
+      {
+        "id": "sp-core-co-041",
+        "topic": "computer-organization.t02",
+        "chapter": "computer-organization.c01",
+        "stem": "写出CPU执行时间与指令数、CPI、主频的基本关系，并解释为什么主频高不代表程序一定更快。",
+        "answer": "CPU时间=指令数×平均CPI÷主频。主频只决定时钟快慢，程序还受指令数、CPI、存储等待和体系结构影响。"
+      },
+      {
+        "id": "uc-co-009",
+        "topic": "computer-organization.t02",
+        "chapter": "computer-organization.c01",
+        "stem": "同一任务在A、B两种实现中都执行10^9条指令。A主频2GHz、平均CPI为1；B主频3GHz、平均CPI为2。忽略其他因素，哪项正确？",
+        "answer": "A"
+      }
+    ],
+    "t02_actual_stems": [
+      "CPU主频2 GHz，某程序指令数10⁹、平均CPI为2，CPU执行时间约为（ ）。",
+      "比较两台计算机执行同一任务的性能时，应综合考虑（ ）。",
+      "写出CPU执行时间与指令数、CPI、主频的基本关系，并解释为什么主频高不代表程序一定更快。",
+      "同一任务在A、B两种实现中都执行10^9条指令。A主频2GHz、平均CPI为1；B主频3GHz、平均CPI为2。忽略其他因素，哪项正确？"
+    ],
+    "t42_actual_stems": [
+      "某教学机的CPU一次整数运算通常处理32位数据，一条机器指令固定为16位，主存每个存储单元保存8位。在机器字长、指令字长、存储字长三个术语中，描述这里16位的是________。",
+      "某教学机机器字长为32位。因此，它的每条机器指令和每个主存存储单元也必定都是32位。（ ）",
+      "某处理器字长为32位，这一指标首先表示（ ）。"
+    ],
+    "before_url": "http://127.0.0.1:8767/quiz.html?topic=computer-organization.t42&mode=seq",
+    "original_question": "某处理器字长为32位，这一指标首先表示（ ）。",
+    "technical_wrong_choice": "B intentionally selected; gold A unchanged",
+    "repair_links": [
+      {
+        "text": "回看讲义",
+        "url": "http://127.0.0.1:8767/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t42"
+      },
+      {
+        "text": "重点与易错",
+        "url": "http://127.0.0.1:8767/color-notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t42"
+      }
+    ],
+    "lecture_url": "http://127.0.0.1:8767/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&topic=computer-organization.t42",
+    "heading": {
+      "text": "机器字长、指令字长与存储字长",
+      "bounds": {
+        "x": 338,
+        "y": 137,
+        "width": 860,
+        "height": 34
+      },
+      "tag": "H4",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    "returned_url": "http://127.0.0.1:8767/quiz.html?topic=computer-organization.t42&mode=seq",
+    "returned_question": "某处理器字长为32位，这一指标首先表示（ ）。",
+    "status": "pass"
+  }
+}

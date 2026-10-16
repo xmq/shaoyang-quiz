@@ -113,7 +113,19 @@
         "六特点完整列举",
         "传统/现代中心辨析",
         "五部件功能挖空"
-      ]
+      ],
+      "role_experience_revision": {
+        "build": "c383d27d0891e5c7",
+        "baseline_build": "f74588c9a55176f0",
+        "summary": "audit_reports/组成原理_三角色体验汇总_2026-10-16.md",
+        "reports": [
+          "audit_reports/组成原理_角色体验_零基础学生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_在职考生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_复习学生_2026-10-16.json"
+        ],
+        "scope": "三角色各10章实际体验；只对四处短说明和一题归属做小修，修后定向复测；非真人、长期记忆或全题库再审。",
+        "mapping_check": "sp-core-co-001题干、选项、答案、章节与答案版本不变，仅转到t42。"
+      }
     },
     {
       "textbook_section": "1.3 计算机硬件的主要技术指标",
@@ -170,7 +182,19 @@
       "exam_tasks": [
         "三种字长定义/反例",
         "性能指标公式与单位"
-      ]
+      ],
+      "role_experience_revision": {
+        "build": "c383d27d0891e5c7",
+        "baseline_build": "f74588c9a55176f0",
+        "summary": "audit_reports/组成原理_三角色体验汇总_2026-10-16.md",
+        "reports": [
+          "audit_reports/组成原理_角色体验_零基础学生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_在职考生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_复习学生_2026-10-16.json"
+        ],
+        "scope": "三角色各10章实际体验；只对四处短说明和一题归属做小修，修后定向复测；非真人、长期记忆或全题库再审。",
+        "mapping_check": "sp-core-co-001题干、选项、答案、章节与答案版本不变，仅转到t42。"
+      }
     },
     {
       "textbook_section": "2.1 计算机的发展史",
@@ -250,7 +274,19 @@
       "question_ids": [
         "gap-co-textbook-02-1",
         "gap-co-textbook-02-2"
-      ]
+      ],
+      "role_experience_revision": {
+        "build": "c383d27d0891e5c7",
+        "baseline_build": "f74588c9a55176f0",
+        "summary": "audit_reports/组成原理_三角色体验汇总_2026-10-16.md",
+        "reports": [
+          "audit_reports/组成原理_角色体验_零基础学生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_在职考生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_复习学生_2026-10-16.json"
+        ],
+        "scope": "三角色各10章实际体验；只对四处短说明和一题归属做小修，修后定向复测；非真人、长期记忆或全题库再审。",
+        "mapping_check": "sp-core-co-001题干、选项、答案、章节与答案版本不变，仅转到t42。"
+      }
     },
     {
       "textbook_section": "3.1 总线的基本概念",
@@ -1590,7 +1626,19 @@
       ],
       "exam_tasks": [
         "结构/数据/控制相关规范名称与原因"
-      ]
+      ],
+      "role_experience_revision": {
+        "build": "c383d27d0891e5c7",
+        "baseline_build": "f74588c9a55176f0",
+        "summary": "audit_reports/组成原理_三角色体验汇总_2026-10-16.md",
+        "reports": [
+          "audit_reports/组成原理_角色体验_零基础学生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_在职考生_2026-10-16.json",
+          "audit_reports/组成原理_角色体验_复习学生_2026-10-16.json"
+        ],
+        "scope": "三角色各10章实际体验；只对四处短说明和一题归属做小修，修后定向复测；非真人、长期记忆或全题库再审。",
+        "mapping_check": "sp-core-co-001题干、选项、答案、章节与答案版本不变，仅转到t42。"
+      }
     },
     {
       "textbook_section": "8.4 中断系统",
@@ -1806,8 +1854,8 @@
   "change_note": "先建官方38节矩阵后实施；实现不等于学生验收通过，证据待root回填。",
   "acceptance_scope": "出版社38节逐节教学机制覆盖核对；两个独立代理模拟新生，完成逐章代表任务、链接题和修后复测。不是教材所有细节/所有题型的穷尽证明，也不是现实学生长期学习效果。",
   "source_hashes": {
-    "course_notes/计算机组成原理.md": "3f805ca262076f01e74f0ceb5eaaa50b6c491f867fefbb4cac57fa6cda56d7bf",
-    "color_notes/计算机组成原理.md": "cf8852a195af8ac5bb5c2414156e1efe2dfcb9e3e5e624a3dc1b05d97949fa72",
+    "course_notes/计算机组成原理.md": "f9b0c1b9f4f37e9a07d48287213f89d9f061801fbd68d07396433886429b6603",
+    "color_notes/计算机组成原理.md": "483f905c7e5ea655bb13569951cff389d537eaaec9d3e65c150806cfb332b29e",
     "staging/audit_organization_terms_additions.json": "ad3b7c442ba37996383f4a8b732c9a95de9dfc718b35d5937d8fa96c39dbd062"
   },
   "accepted_at": "2026-10-15",
@@ -1831,5 +1879,17 @@
     "topics": 42,
     "new_questions": 16,
     "open_findings": []
+  },
+  "role_experience_revision": {
+    "build": "c383d27d0891e5c7",
+    "baseline_build": "f74588c9a55176f0",
+    "summary": "audit_reports/组成原理_三角色体验汇总_2026-10-16.md",
+    "reports": [
+      "audit_reports/组成原理_角色体验_零基础学生_2026-10-16.json",
+      "audit_reports/组成原理_角色体验_在职考生_2026-10-16.json",
+      "audit_reports/组成原理_角色体验_复习学生_2026-10-16.json"
+    ],
+    "scope": "三角色各10章实际体验；只对四处短说明和一题归属做小修，修后定向复测；非真人、长期记忆或全题库再审。",
+    "mapping_check": "sp-core-co-001题干、选项、答案、章节与答案版本不变，仅转到t42。"
   }
 }
