@@ -57,7 +57,14 @@
         "sp-core-co-013",
         "sp-core-co-019",
         "sp-core-co-039"
-      ]
+      ],
+      "definition_revision": {
+        "date": "2026-10-16",
+        "scope": "仅第一章定义及首张重点卡规范表述校准，解释单列；未重新声称全课程逐字审定。",
+        "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
+        "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
+        "build": "47902f9bd047880b"
+      }
     },
     {
       "textbook_section": "1.2 计算机的基本组成",
@@ -111,7 +118,14 @@
         "sp-core-co-013",
         "sp-core-co-019",
         "sp-core-co-039"
-      ]
+      ],
+      "definition_revision": {
+        "date": "2026-10-16",
+        "scope": "仅第一章定义及首张重点卡规范表述校准，解释单列；未重新声称全课程逐字审定。",
+        "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
+        "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
+        "build": "47902f9bd047880b"
+      }
     },
     {
       "textbook_section": "1.3 计算机硬件的主要技术指标",
@@ -167,7 +181,14 @@
         "sp-core-co-018",
         "sp-core-co-041",
         "uc-co-009"
-      ]
+      ],
+      "definition_revision": {
+        "date": "2026-10-16",
+        "scope": "仅第一章定义及首张重点卡规范表述校准，解释单列；未重新声称全课程逐字审定。",
+        "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
+        "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
+        "build": "47902f9bd047880b"
+      }
     },
     {
       "textbook_section": "2.1 计算机的发展史",
@@ -2115,13 +2136,20 @@
   "change_note": "先建官方38节矩阵后实施；实现不等于学生验收通过，证据待root回填。",
   "acceptance_scope": "出版社38节逐节教学机制覆盖核对；两个独立代理模拟新生，完成逐章代表任务、链接题和修后复测。不是教材所有细节/所有题型的穷尽证明，也不是现实学生长期学习效果。",
   "source_hashes": {
-    "course_notes/计算机组成原理.md": "8d310829d4d911935cba8ed27526eed57eae4e93be453d4fd0c27298fc29b827",
-    "color_notes/计算机组成原理.md": "28d3435c766ccbcef36154c04120f54c85bdb57ff92c699954ca92515c6e658c"
+    "course_notes/计算机组成原理.md": "b0a022fea0789c85241679ba5a6e3867f7259ed869798e51e534b9f664a2ad78",
+    "color_notes/计算机组成原理.md": "fd920fa8b7f922ab0973a267c4c11831f345cf77584f2a97b97b4189e30585f7"
   },
   "accepted_at": "2026-10-15",
   "previous_student_reviews": [
     "audit_reports/组成原理_新生试学_2026-10-15.json",
     "audit_reports/组成原理_独立试学_2026-10-15.json"
   ],
-  "current_revision": "考点版：按原三色笔记提炼，保留机制、条件与完整代表例题；6.1规则修后复测，最后仅增加6.1考法标记由root验证。"
+  "current_revision": "考点版：按原三色笔记提炼，保留机制、条件与完整代表例题；6.1规则修后复测，最后仅增加6.1考法标记由root验证。",
+  "definition_revision": {
+    "date": "2026-10-16",
+    "scope": "仅第一章定义及首张重点卡规范表述校准，解释单列；未重新声称全课程逐字审定。",
+    "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
+    "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
+    "build": "47902f9bd047880b"
+  }
 }
