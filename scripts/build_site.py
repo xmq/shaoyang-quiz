@@ -34,6 +34,8 @@ STATIC_FILES = (
     "manifest.webmanifest",
     "icon.svg",
     "icon-192.png",
+    "icon-256.png",
+    "icon-startup-512.png",
     "icon-512.png",
     "icon-maskable-512.png",
 )

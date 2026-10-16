@@ -14,12 +14,17 @@ def main(browser_path):
     background = document.find("{http://www.w3.org/2000/svg}rect")
     background.set("rx", "0")
     adaptive = ET.tostring(document, encoding="unicode")
+    # Keep the 192/256 launcher artwork full size. The larger startup image
+    # has transparent padding so Android's fixed splash area stays restrained.
+    startup = svg.replace('viewBox="0 0 128 128"', 'viewBox="-64 -64 256 256"')
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path=browser_path, headless=True)
         for size, filename, source in (
             (192, "icon-192.png", svg),
+            (256, "icon-256.png", svg),
             (512, "icon-512.png", svg),
             (512, "icon-maskable-512.png", adaptive),
+            (512, "icon-startup-512.png", startup),
         ):
             page = browser.new_page(viewport={"width": size, "height": size}, device_scale_factor=1)
             page.set_content(f'<style>html,body{{margin:0;width:100%;height:100%;background:transparent}}svg{{display:block;width:100%;height:100%}}</style>{source}')

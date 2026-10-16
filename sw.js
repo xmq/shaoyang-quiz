@@ -25,6 +25,8 @@ const CORE_ASSETS = [
   "./questions.js",
   "./manifest.webmanifest",
   "./icon-192.png",
+  "./icon-256.png",
+  "./icon-startup-512.png",
   "./icon-512.png",
   "./icon-maskable-512.png",
   "./icon.svg",
