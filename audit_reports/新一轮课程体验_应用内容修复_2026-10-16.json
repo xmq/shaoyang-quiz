@@ -1,0 +1,141 @@
+{
+  "title": "应用五科讲义与重点修复记录",
+  "date": "2026-10-16",
+  "status": "本代理7个MD修改完成并冻结，等待root统一生成与独立复测",
+  "files": [
+    {
+      "file": "course_notes/Office软件操作.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "5788ab21b96507384774e2391c60ea5cccdb0fe22ab5220a814e85e5351283b0"
+    },
+    {
+      "file": "color_notes/Office软件操作.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "83ca9333dcc64e8a8512983555c13f7290278888eaf391dbf2803d32043e121b"
+    },
+    {
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "1a5a2c2f193d51ae7f72dcd4c9e4357906ee3a568ad716e098e0ad2159f40a47"
+    },
+    {
+      "file": "color_notes/大学计算机基础与新技术.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "e955dd727b0d7adaad61faeb071c5fc56321b103930ffff33b57fe68f8aad8d3"
+    },
+    {
+      "file": "course_notes/软件工程.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "48ce977e5f66506e53731c3041c5702edb0865132c2c52f40fa9bf8f9c991628"
+    },
+    {
+      "file": "color_notes/软件工程.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "d22bd4bf83c411ecca5fa5128f634fd05fe8a3dbf8acf1888a1ba46623d5c723"
+    },
+    {
+      "file": "color_notes/多媒体技术.md",
+      "old_headings_preserved": true,
+      "highlights_preserved": true,
+      "sha256": "8051dcdb28620c0b65e741c1028386fc5c5e244503be323051849b9295ef478b"
+    }
+  ],
+  "new_cards": [
+    {
+      "topic_id": "office.t18",
+      "title": "按操作选择演示视图",
+      "chapter": "第6章",
+      "block_lengths": [
+        45,
+        46,
+        47
+      ],
+      "total": 138
+    },
+    {
+      "topic_id": "computer-foundations.t24",
+      "title": "ASCII字符与连续编码",
+      "chapter": "第2章",
+      "block_lengths": [
+        48,
+        53,
+        47
+      ],
+      "total": 148
+    },
+    {
+      "topic_id": "computer-foundations.t25",
+      "title": "挖掘任务的输出与场景",
+      "chapter": "第5章",
+      "block_lengths": [
+        48,
+        47,
+        48
+      ],
+      "total": 143
+    },
+    {
+      "topic_id": "software-engineering.t25",
+      "title": "嵌套判断的N-S与PAD图",
+      "chapter": "第4章",
+      "block_lengths": [
+        46,
+        51,
+        50
+      ],
+      "total": 147
+    }
+  ],
+  "changes": [
+    {
+      "id": "EXP-APP-001",
+      "change": "Office正文及既有卡补题注、交叉引用、前插新图加题注、主体Ctrl+A/F9更新并核对原图图1变图2，明确页眉页脚文本框等域分别检查。"
+    },
+    {
+      "id": "EXP-APP-002",
+      "change": "软件工程c04补同原判定表的N-S/PAD正文结构读法与两图，新增独立短卡；先A、仅A真才B，FT/FF均账号无效。"
+    },
+    {
+      "id": "EXP-APP-003",
+      "change": "基础c02补8位负权、−5固定字长取反加1及模256反算，既有数制卡补检索线索。"
+    },
+    {
+      "task": "考生：格式查找替换",
+      "change": "既有编辑卡和正文补文字与原颜色定位、替换颜色、单处核验再全换及残留格式条件。"
+    },
+    {
+      "task": "考生：演示视图",
+      "change": "新增视图卡与同名H4，分整页、页内对象、备注、全屏及母版任务。"
+    },
+    {
+      "task": "考生：ASCII",
+      "change": "新增卡和同名H4，沿原有讲解加连续区间算例，不跨数字/大小写区间乱加。"
+    },
+    {
+      "task": "考生：挖掘选型",
+      "change": "新增五输出场景卡和同名H4；旧分布式卡保标题，专注HDFS/YARN与Map—分组—Reduce，去掉重复五类概念。"
+    },
+    {
+      "task": "考生：素材管理",
+      "change": "既有素材卡补分类目录、序号_内容_版本、修改副本、原件与授权记录保留。"
+    }
+  ],
+  "verification": {
+    "source_checks": "旧H2/H3全部按原相对顺序保留；既有==逐项相同；4张新卡各三块>=25字且合计<=220字；同名H4均唯一。",
+    "task_checks": "按新文案书面推演：前插图后原引用仍对原图且更新图2；−5负权和低8位相加均核验；TT/TF/FT/FF三结果与原判定表一致；未运行真实Office/Word，不声称软件操作已实机复测。",
+    "pwm": "已在390×844 Chrome浅深重新渲染并view_image：黑三角消失，25%/75%与1.25V/3.75V均值虚线正确，截图在TEMP/new_svg_review。",
+    "diff_check": "git diff --check指定7个文件通过"
+  },
+  "boundaries": [
+    "未改题库、registry、staging、JS、dist；未build。",
+    "题目迁移、新题和4个topic ID注册由root处理。",
+    "正文及卡片上线呈现、图片默认折叠、题目闭环等待root统一生成后独立复测。",
+    "未把任何已知教材整域缺失改为选修或宣称解决。"
+  ]
+}

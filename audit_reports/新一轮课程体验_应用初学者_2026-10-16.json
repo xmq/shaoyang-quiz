@@ -1,0 +1,2935 @@
+{
+  "title": "新一轮课程体验：应用五科初学者",
+  "date": "2026-10-16",
+  "baseline_commit": "9dc2a3f",
+  "dist_build": "7339df71cfe62b2a",
+  "perspective": "模型扮演初学者，承认模型先验；不是招募的真人，也不是严格盲测。先完成80题尝试并写TEMP，再打开answers；正文答案按曝光记录。",
+  "scope": {
+    "courses": 5,
+    "chapters": 40,
+    "questions": 80,
+    "source_read": "完整顺序阅读五科course_notes和color_notes；长输出截断处已单独补读。没有读旧体验报告，没有改产品或build。",
+    "textbook_boundary": "仅课程体验，不独立重新核验外部教材目录；已存在的教材整域缺失/映射未完成范围继续保留，不能凭40章与80题通过宣称教材完整，也不改为选修。"
+  },
+  "attempt_file": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\applied_beginner_attempts_before_answers.json",
+  "mobile": {
+    "browser": "本机Chrome headless + Python只读dist随机端口",
+    "viewport": "390x844，非真机",
+    "states_opened": 160,
+    "overflow": 0,
+    "visible_images_broken": 0,
+    "visual_observation": "实际打开40章讲义/重点各浅深共160状态；截图只直接观察各科两页两色首章或困难章，共20+张。图片抽查：Office混合引用、基础AI流程、多媒体压缩、软件白盒分支、安全密码职责。样本图文字可读、浅深可区分，未检查所有滚动位置及所有卡片。",
+    "artifacts": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\applied_browser",
+    "first_chapter_cards": "首卡能在本视口读到关键知识、方法、易错与练习入口；普通重点页连续展示下一卡，不能把全章高度当作单卡超屏。"
+  },
+  "summary": {
+    "P1": 0,
+    "P2": 3,
+    "P3": 0,
+    "wrong_chapter_confirmed": 0,
+    "question_check": "80题逐题核对；2题作答局部漏点，其余关键点一致。曝光题不视为独立新任务成绩。"
+  },
+  "issues": [
+    {
+      "id": "EXP-APP-001",
+      "priority": "P2",
+      "chapter_id": "office.c03",
+      "file": "course_notes/Office软件操作.md",
+      "quote": "题注用于给图表编号，交叉引用可引用题注编号。",
+      "failed_task": "在已有图前插入新图后，要求图号与正文“见图x”一起更新；能说要用题注/交叉引用，但本章没有创建题注、选择引用项及更新域的操作顺序，独立书面操作链停在选择功能名。",
+      "minimum_fix": "在现有一行后增加一个小操作例：引用→插入题注→插入正文交叉引用→前插图→更新域，列出更新前后的两个编号；在现有卡中仅提示关键链，不增加长卡。",
+      "prior_vs_text": "模型先验知道Word有这两个命令；讲义证据仅说明用途。正文讲过域及F9，但未将题注与交叉引用接起来。不能把先验操作当作从讲义学会。",
+      "line": 150
+    },
+    {
+      "id": "EXP-APP-002",
+      "priority": "P2",
+      "chapter_id": "software-engineering.c04",
+      "file": "course_notes/软件工程.md",
+      "quote": "N-S图用嵌套框表达顺序/选择/循环；PAD图用层次树形结构表达算法；判定表枚举条件组合及对应动作。",
+      "failed_task": "将“账号无效则拒绝，否则余额足够则扣款”转成N-S图或PAD图：能写判定表四组合，却无法仅由文字确定这两种图的选择/嵌套画法。",
+      "minimum_fix": "给现有二条件判定表旁配一个同业务的N-S或PAD小图及阅读顺序；若本课仅要求识别另一种工具，写明识别层次，不把教材整块静默降为选修。",
+      "prior_vs_text": "模型知道这些图的大致形状，不能当作初学者证据；讲义提供名称和一句结构概括，并未给画法或中间状态。判定表有完整例，不应指控整个详细设计未教。",
+      "line": 180
+    },
+    {
+      "id": "EXP-APP-003",
+      "priority": "P2",
+      "chapter_id": "computer-foundations.c02",
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "quote": "无符号8位范围0—255；8位补码范围−128—127。",
+      "failed_task": "解释为何同样8位有两种范围，再写出−5的8位补码：仅从本章可复述范围，不能说明符号位权或构造−5的过程；计算−5=11111011依赖模型先验。",
+      "minimum_fix": "保留范围并加一个8位正负数对应例，解释最高位负权/按位取反加1的适用位宽，核验−5与+5相加模256为0；如教材要求仅识别范围，覆盖矩阵需明确深度，不能据此声称完整有符号运算教学。",
+      "prior_vs_text": "范围不是错误；缺的是支撑“补码”含义的机制。原码/反码/补码全域是否要求仍须教材矩阵审查，本轮不把它虚标已完成。",
+      "line": 126
+    }
+  ],
+  "chapters": [
+    {
+      "chapter_id": "office.c01",
+      "title": "第1章 办公环境与文件管理",
+      "retell": "保存写当前版本，备份留可回退副本，格式转换要真正导出。",
+      "process": "把三表簿另存XLSX再导当前活动表CSV；后者仅值，源表仍3张。",
+      "attempts": [
+        {
+          "id": "gap-office-new-002",
+          "stem": "云盘中的重要制度文件被误改后自动同步到所有设备。最能降低此类风险的措施是？",
+          "topic_id": "office.t02",
+          "answer": "B；同步会扩散误改，独立版本能回退。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "同步会把误改传播到其他设备；独立版本备份或可恢复的历史版本才提供回退点。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c01",
+            "topic_id": "office.t02",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-office-new-001",
+          "stem": "一个含3张工作表、公式和图表的工作簿需要交付可编辑原件，同时给另一系统导入当前表的纯数据。较稳妥的做法是？",
+          "topic_id": "office.t01",
+          "answer": "B；XLSX保结构而CSV给交换单表值。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "保留XLSX以保存多工作表、公式和图表，再另导出当前表CSV供纯数据交换；改扩展名不能转换文件内容。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c01",
+            "topic_id": "office.t01",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "恢复与同步界线清楚；未在真实Office执行恢复，只有书面操作。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "office.c02",
+      "title": "第2章 文字编辑与格式",
+      "retell": "格式分文字外观和段落规则，标题样式同时承载层次。",
+      "process": "在同一编号地址中按Shift+Enter，标记仍在同段；Enter才新编号。",
+      "attempts": [
+        {
+          "id": "gap-audit26-found-003",
+          "stem": "Word有三段正文。要求每段首行缩进2字符且段后6磅，段内需手动换行时不能开启新段。说明设置方法、快捷键，以及为什么不应用空格和连续回车凑版面。",
+          "topic_id": "office.t03",
+          "answer": "选三段，开始/段落设首行2字符、段后6磅；段内Shift+Enter。空格依字体宽度且回车制造空段，版面会漂。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "选中三段，在段落设置中设首行缩进2字符、段后6磅。段内手动换行用Shift+Enter，Enter才产生新段。空格和空段会随字体、分页及编辑改变而错位，格式属性更稳定。",
+            "explanation": "字符、段落和换行是不同层级的排版任务。",
+            "rubric": [
+              {
+                "criterion": "段落属性设置正确",
+                "points": 1
+              },
+              {
+                "criterion": "Shift+Enter及Enter区别",
+                "points": 1
+              },
+              {
+                "criterion": "解释空格空段不稳定",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c02",
+            "topic_id": "office.t03",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-office-new-004",
+          "stem": "报告标题已逐个加粗放大，但自动目录无法可靠生成。优先修正为？",
+          "topic_id": "office.t04",
+          "answer": "B；用标题1/2赋层次，再更新整个目录。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "标题样式提供层级结构，配合目录更新才能可靠生成目录；仅加粗放大没有建立大纲层级。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c02",
+            "topic_id": "office.t04",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "字符/段落先分层，Shift+Enter给出直接示例，可迁移到编号地址。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "office.c03",
+      "title": "第3章 页面排版、表格与对象",
+      "retell": "分节隔离页面设置；表格内容与结构不同，邮件合并把逐行字段套进主文档。",
+      "process": "新数据第二人王芳002，预览应变王芳而不是只重复李明；筛一班输出2份。",
+      "attempts": [
+        {
+          "id": "ap-of-002",
+          "stem": "一份纵向文档只有第3页需要改为横向，且前后页方向保持不变。较合理的处理是（ ）。",
+          "topic_id": "office.t05",
+          "answer": "A；第3页两端设下一页分节，仅改当前节方向。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "目标页前后插入分节符，可单独设置该节为横向；分页符只换页，不建立独立页面设置范围。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c03",
+            "topic_id": "office.t05",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "ap-of-001",
+          "stem": "某单位要使用统一版式，为300名职工分别生成姓名、部门不同的培训通知。最适合使用的功能是（ ）。",
+          "topic_id": "office.t07",
+          "answer": "A；300条记录分别合入相同模板。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "邮件合并将固定通知版式和职工字段数据结合，适合300份个性化通知，应映射邮件合并知识点。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c03",
+            "topic_id": "office.t07",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "邮件合并有第2人中间态；题注交叉引用仍停用途，见EXP-APP-001。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。有关题注链、负数表示或绘图工具的局部不足见本章问题。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": [
+        "EXP-APP-001"
+      ]
+    },
+    {
+      "chapter_id": "office.c04",
+      "title": "第4章 电子表格基础与公式",
+      "retell": "单元格有值/公式/显示三个层面，复制公式时先算位移再查美元固定。",
+      "process": "D2到F4偏移列2行2；$B2变$B4，C$1变E$1，得=$B4*E$1。",
+      "attempts": [
+        {
+          "id": "cg-12-s1-q51",
+          "stem": "若在某次修改后，学校代码列显示“######”原因是什么？（    ）",
+          "topic_id": "office.t10",
+          "answer": "A；先拓宽列，非数据丢失的证据。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "数值格式学校代码因列宽不足显示井号，可调宽列；需要保留前导0的代码宜用文本保存。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c04",
+            "topic_id": "office.t10",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-office-new-009",
+          "stem": "公式=$B2*C$1从D2复制到E3后是？",
+          "topic_id": "office.t09",
+          "answer": "A；右1下1，B列和1行固定。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "右移1列下移1行：$B2变$B3，C$1变D$1，得=$B3*D$1。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c04",
+            "topic_id": "office.t09",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "复制引用与IF有边界；函数卡同时承载IF/查找，平均数的空白/0仍需回讲义复习。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "office.c05",
+      "title": "第5章 数据管理、分析与图表",
+      "retell": "排序搬整条记录，筛选只隐藏；透视重组字段，需要刷新和检查范围。",
+      "process": "技术1月10新增7后17，二月20，技术合37、行政13、总50。",
+      "attempts": [
+        {
+          "id": "gap-audit26-found-009",
+          "stem": "学生成绩表A列学号、B列姓名、C列分数，每行一个学生。要按分数降序并筛选60至79分，说明操作范围、条件及如何限制新录分在0至100。",
+          "topic_id": "office.t11",
+          "answer": "选含标题ABC整表按C降序，筛C>=60且<=79；分数区域验证整数0..100停止型，试101并复核粘贴。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "排序应选择整条记录所在区域并以C列降序，保持姓名学号和分数同步。筛选C>=60且C<80，未匹配行仅隐藏。对录入区设置数据验证0至100并合理选择错误提示，已有数据另核验。",
+            "explanation": "排序、筛选、输入验证用途不同；数据验证可能被复制粘贴等绕过，不能替代核对。",
+            "rubric": [
+              {
+                "criterion": "整行排序保持对应",
+                "points": 1
+              },
+              {
+                "criterion": "筛选双条件且不删除",
+                "points": 1
+              },
+              {
+                "criterion": "设置验证并核验边界",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c05",
+            "topic_id": "office.t11",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-audit26-found-011",
+          "stem": "需展示五个月价格趋势以及各品类占销售总额的比例，并打印跨页销售表，每页重复表头。分别选择图表及打印设置，并说明保护工作表能否保证公式正确。",
+          "topic_id": "office.t13",
+          "answer": "趋势折线、少量品类比例饼图；页面布局打印标题$1:$1预览第2页，设置区域/缩放；保护只能防误改不能证公式正确。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "价格趋势用折线图，品类占比可用饼图并检查总量和标签；设置打印标题行并预览分页缩放，冻结窗格不代替打印标题。工作表保护限制编辑，不验证公式、数据或统计逻辑。",
+            "explanation": "图表取决于表达目标，打印与屏幕显示的设置也不同。",
+            "rubric": [
+              {
+                "criterion": "两种图表选择及理由",
+                "points": 1
+              },
+              {
+                "criterion": "打印标题与冻结区别",
+                "points": 1
+              },
+              {
+                "criterion": "保护不能保证公式正确",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c05",
+            "topic_id": "office.t13",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "完整记录排序、刷新范围和打印入口能复述；成绩题本作答限定整数，若业务允许小数应先约定口径。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "office.c06",
+      "title": "第6章 演示文稿设计与制作",
+      "retell": "母版定默认、版式定占位符，动画控制一页对象，切换控制页间。",
+      "process": "给3节点加出现，动画窗格序号1/2/3；选上一动画之后才自动接续，不靠画布位置。",
+      "attempts": [
+        {
+          "id": "gap-office-new-014",
+          "stem": "修改母版标题字体后某页未变化，优先检查什么？",
+          "topic_id": "office.t14",
+          "answer": "A；版式、占位符和局部格式可能覆盖母版。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "母版变化未反映到某页时，应检查该页所属母版、版式、占位符及直接格式覆盖。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c06",
+            "topic_id": "office.t14",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-office-new-015",
+          "stem": "让同一页流程节点依次出现，应设置？",
+          "topic_id": "office.t15",
+          "answer": "A；页内对象顺序由动画窗格控制。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "同一页对象的出现顺序由动画控制，页面之间的效果由切换控制。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c06",
+            "topic_id": "office.t15",
+            "ability": "场景选型",
+            "difficulty": "基础"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "母版失效和动画顺序可解释；F5快捷键明示Windows条件。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "office.c07",
+      "title": "第7章 Office综合应用",
+      "retell": "按输出把数据清理、批量成文、汇报及交付串起来；链接须携带来源。",
+      "process": "通知抽及格和不及格各1人，合并人数=选中行数；移走源表后链接图表可断，嵌入副本仍在。",
+      "attempts": [
+        {
+          "id": "gap-office-clean-008",
+          "stem": "每周都要根据同一模板生成不同部门的通知，收件人信息保存在表格中。最能减少重复劳动且便于复核的做法是（ ）。",
+          "topic_id": "office.t16",
+          "answer": "A；结构字段减少每周手工改错。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "结构化数据源配合邮件合并可复用模板并预览记录，比逐份手工改姓名更便于复核。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c07",
+            "topic_id": "office.t16",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-office-clean-009",
+          "stem": "演示文稿中的图表需要随外部工作簿更新，但文件要发到另一台电脑。最需要提前处理的风险是（ ）。",
+          "topic_id": "office.t17",
+          "answer": "A；跨机路径依赖须检查，嵌入则失自动联动。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "外链依赖源路径，跨设备可能失效；如需持续联动应携带并重建正确源路径，嵌入或静态副本会改变更新机制。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "office.c07",
+            "topic_id": "office.t17",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "综合交付能说明理由；抽查总数/个体一致性比单列功能名更可执行。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c01",
+      "title": "第1章 信息、计算与计算思维",
+      "retell": "数据经语境才有信息，计算思维将问题变为有限可检验步骤。",
+      "process": "[72,61,89]max=72→72→89，空表先拦截，不读首项。",
+      "attempts": [
+        {
+          "id": "zg-74177",
+          "stem": "列举信息处理的至少四类活动，并说明它们是否必须始终按唯一固定顺序发生。",
+          "topic_id": "computer-foundations.t01",
+          "answer": "获取、表示、存储、加工、传输、使用；可反复反馈，并非一次固定直线。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "可包括获取、存储、加工、传递、应用和评价等。实际流程可反复交错，例如加工后重新获取或评价后再加工，并非只有唯一顺序。",
+            "explanation": "可包括获取、存储、加工、传递、应用和评价。实际任务可能反复进行，例如先评价数据质量，再重新获取或加工，不能把一种简化顺序当成唯一流程。",
+            "rubric": [
+              {
+                "criterion": "列出至少四类活动",
+                "points": 2
+              },
+              {
+                "criterion": "说明顺序可交错反复",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c01",
+            "topic_id": "computer-foundations.t01",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "cg-02-s4-q6",
+          "stem": "需要查找某公开政策方案原文，已经知道准确主题词，优先采用哪种网络检索方式？",
+          "topic_id": "computer-foundations.t21",
+          "answer": "A；准确主题词适合全文检索，再核发布主体与原文。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "用明确主题词查方案，可采用全文搜索并优先发布单位原文；不必保留年份会议事实。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c01",
+            "topic_id": "computer-foundations.t21",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "数据/信息语境与max过程可执行；检索语法给版本边界，不照背AND。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c02",
+      "title": "第2章 信息表示与计算机系统",
+      "retell": "位权解释数值，编码解释符号；CPU按已存程序取指，容量和地址宽度需分开。",
+      "process": "八进制35=3×8+5=29；二进制11101=16+8+4+1=29。",
+      "attempts": [
+        {
+          "id": "dy-e047e561",
+          "stem": "与八进制数（35）：是同一数的有（）。",
+          "topic_id": "computer-foundations.t03",
+          "answer": "BC；35八进制是29十进制和11101二进制。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "BC",
+            "explanation": "八进制35=3×8+5=29，对应二进制11101、十进制29，因此BC。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c02",
+            "topic_id": "computer-foundations.t03",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "cg-06-s1-q17-dup2",
+          "stem": "计算机之所以能按人们的意图自动进行工作，最直接的原因是采用了（ ）。",
+          "topic_id": "computer-foundations.t05",
+          "answer": "D；存储程序控制让计算机自动按指令执行。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "D",
+            "explanation": "自动连续执行用户任务的直接机制是存储程序控制，二进制和高速元件不是该机制本身。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c02",
+            "topic_id": "computer-foundations.t05",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "无符号与补码范围提及但负数构造依赖先验，见EXP-APP-003；其他位权与容量可计算。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。有关题注链、负数表示或绘图工具的局部不足见本章问题。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": [
+        "EXP-APP-003"
+      ]
+    },
+    {
+      "chapter_id": "computer-foundations.c03",
+      "title": "第3章 操作系统、文件与软件",
+      "retell": "OS给程序管资源，文件目录给数据定位，网络访问先配置再名字解析再通信。",
+      "process": "IP通、nslookup失败时范围缩到DNS配置/记录，不先重装浏览器；图书馆程序仍依赖OS调度。",
+      "attempts": [
+        {
+          "id": "gap-course-revision-applied-04-1",
+          "stem": "同一台电脑能按公网IP访问某服务，但用域名访问失败，nslookup查询该域名也失败。为定位故障，应优先检查哪一项？",
+          "topic_id": "computer-foundations.t22",
+          "answer": "A；已有IP连通证据、解析失败，先查DNS。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "按IP可达说明该服务的基本网络路径可用；域名查询失败指向DNS解析环节，优先检查DNS配置、响应和记录。不能仅凭此现象直接断定某个DNS服务器永久损坏；其他三项不负责域名解析。",
+            "rubric": [
+              {
+                "criterion": "A",
+                "points": 1
+              }
+            ],
+            "max_score": 1
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c03",
+            "topic_id": "computer-foundations.t22",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "dy-932720df",
+          "stem": "某学校的图书馆管理软件是属于（",
+          "topic_id": "computer-foundations.t07",
+          "answer": "D；图书馆业务软件服务具体任务。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "D",
+            "explanation": "图书馆业务管理软件解决具体应用需求，属于应用软件；程序设计语言本身不等同语言处理系统软件。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c03",
+            "topic_id": "computer-foundations.t07",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "DNS跨入OS章但正文已实际教，元数据本章一致，不能指控错章。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c04",
+      "title": "第4章 云计算与服务模型",
+      "retell": "云分交付层次和部署对象，边缘负责近场低延迟，云做集中长期任务。",
+      "process": "租VM需补来宾OS→IaaS；只上传代码→PaaS；直接用教务→SaaS。",
+      "attempts": [
+        {
+          "id": "gap-found-004",
+          "stem": "比较IaaS、PaaS和SaaS向用户提供的主要内容，并各举一个适合的使用场景。",
+          "topic_id": "computer-foundations.t08",
+          "answer": "IaaS给VM存储网络，自管OS部署教务；PaaS给运行平台上传网站代码；SaaS给成品功能在线文档。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "IaaS提供计算、存储和网络等基础资源，适合需要管理操作系统的场景；PaaS提供应用运行与开发平台，适合只部署代码的场景；SaaS直接提供软件功能，适合在线办公等直接使用服务的场景。",
+            "explanation": "IaaS提供基础资源用户管OS，PaaS提供运行开发平台用户部署代码，SaaS直接使用软件，区别在管理责任边界。",
+            "rubric": [
+              {
+                "criterion": "说明IaaS及场景",
+                "points": 2
+              },
+              {
+                "criterion": "说明PaaS及场景",
+                "points": 2
+              },
+              {
+                "criterion": "说明SaaS及场景",
+                "points": 2
+              }
+            ],
+            "max_score": 6
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c04",
+            "topic_id": "computer-foundations.t08",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-found-021",
+          "stem": "设备需要毫秒级停机保护且网络可能中断，边缘侧和云端分别承担什么？",
+          "topic_id": "computer-foundations.t09",
+          "answer": "急停本地/边缘，断网仍按安全规则动作；云保存历史、汇总和训练，不能等云端指令。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "边缘侧实时采集、判断和安全停机；云端做长期汇总、模型训练和跨设备分析。",
+            "explanation": "安全停机闭环放现场边缘可降时延且断网可用，云做长时汇总训练，不能仅依云端保护。",
+            "rubric": [
+              {
+                "criterion": "边缘实时控制",
+                "points": 1
+              },
+              {
+                "criterion": "云端长期分析",
+                "points": 1
+              },
+              {
+                "criterion": "说明时延失联理由",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c04",
+            "topic_id": "computer-foundations.t09",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "管理边界清楚，选型有断网时延约束；云五特征重复出现，属于轻微阅读负担而非缺知识。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c05",
+      "title": "第5章 大数据与数据处理",
+      "retell": "清洗先统一业务键单位再汇总；分类有目标标签，聚类无标签，关联找共现。",
+      "process": "订单A10重复删一份，B0.002万元换20元，总30；不能因金额一样删不同订单。",
+      "attempts": [
+        {
+          "id": "gap-found-006",
+          "stem": "按Volume、Velocity、Variety、Value这一常见4V口径，解释四个特征，再比较分类、聚类、关联分析三类任务。",
+          "topic_id": "computer-foundations.t11",
+          "answer": "量/速度/多样性/价值密度；分类输出已定义类别、聚类按相似分组、关联发现一起出现，非因果证明。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "Volume指数据量大，Velocity指数据产生或处理速度快，Variety指数据类型多样，Value指从数据中提取有用价值，通常还需注意价值密度。分类用已有类别训练并预测新样本类别；聚类把无标签数据按相似性分组；关联分析发现项目或事件经常共同出现的关系。",
+            "explanation": "本题按Volume、Velocity、Variety、Value说明规模、速度、多样和价值；分类使用已知类别，聚类按相似性分组，关联分析寻找共现模式。4V也存在其他口径，需以题中约定为准。",
+            "rubric": [
+              {
+                "criterion": "写出4V",
+                "points": 4
+              },
+              {
+                "criterion": "说明分类",
+                "points": 1
+              },
+              {
+                "criterion": "说明聚类",
+                "points": 1
+              },
+              {
+                "criterion": "说明关联分析",
+                "points": 1
+              }
+            ],
+            "max_score": 7
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c05",
+            "topic_id": "computer-foundations.t11",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-final-thin-004",
+          "stem": "传感器数据持续高速到达且存在缺失、重复和异常值。说明从接入到分析至少应包含哪些处理步骤。",
+          "topic_id": "computer-foundations.t10",
+          "answer": "接入时间戳和设备ID→存原始数据→去重/校单位/标记缺失异常→分流存储→流式或批处理聚合分析→展示；治理权限质量并留痕。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "流式接入后记录时间和来源，进行格式校验、去重、缺失与异常处理，再按用途进入实时计算或持久化存储，并保留质量指标和血缘。",
+            "explanation": "接入记录时间来源、校验去重、处理缺失异常，实时计算或存储后分析，并保留血缘质量指标；不应盲目删除所有异常。",
+            "rubric": [
+              {
+                "criterion": "说明流式接入与来源时间",
+                "points": 1
+              },
+              {
+                "criterion": "至少写出两项质量处理",
+                "points": 2
+              },
+              {
+                "criterion": "说明计算/存储及治理记录",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c05",
+            "topic_id": "computer-foundations.t10",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "分组是MapReduce关键中间态，水果小例可重算；血缘定义已教。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c06",
+      "title": "第6章 人工智能与机器学习",
+      "retell": "训练调参数，推理用参数；评估需分训练验证测试，流畅生成不能当事实。",
+      "process": "100封20正类，判正15其中12真：TP12 FP3 FN8 TN77，召回12/20=60%。",
+      "attempts": [
+        {
+          "id": "dy-60fa8fa5",
+          "stem": "（）是利用计算机对物体、图像、语音、字符等进行自动识别的技术，它的一般过程包括： 样本采集、信息的数字化、预处理、数据特征的提取、与标准模式进行比较、分类识别等。",
+          "topic_id": "computer-foundations.t12",
+          "answer": "B；过程是广义模式识别，指纹仅一个应用。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "模式识别从样本及特征判断类别，生物识别仅是其中一类，故B。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c06",
+            "topic_id": "computer-foundations.t12",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-found-007",
+          "stem": "比较机器学习模型的训练和推理两个阶段，并说明生成式AI输出为什么仍需人工核验。",
+          "topic_id": "computer-foundations.t13",
+          "answer": "训练用样本及损失调整参数，推理用已训练模型处理新输入；生成可能编造、偏差、泄密，核对来源和敏感字段。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "训练阶段利用数据调整模型参数，推理阶段使用已训练模型处理新输入。生成式AI按学习到的模式生成高概率内容，可能出现事实错误、偏差或不当信息，因此重要场景需要核对来源并人工复核。",
+            "explanation": "训练用数据更新模型参数，推理用已有模型处理输入；生成内容可能事实错误或有偏差，重要信息需核验。",
+            "rubric": [
+              {
+                "criterion": "说明训练阶段",
+                "points": 1
+              },
+              {
+                "criterion": "说明推理阶段",
+                "points": 1
+              },
+              {
+                "criterion": "指出生成内容可能出错或有偏差",
+                "points": 1
+              },
+              {
+                "criterion": "说明核验或人工复核",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c06",
+            "topic_id": "computer-foundations.t13",
+            "ability": "机制解释",
+            "difficulty": "基础"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "指标分母先教正类后计算；正则化/归一化仍以概念说明为主，不宣称学会训练算法。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c07",
+      "title": "第7章 物联网",
+      "retell": "感知读现场，网络传递，平台判断，执行器动作再回读形成闭环。",
+      "process": "初关，28开、35保持开、42关、35保持关；中间态由历史开关决定。",
+      "attempts": [
+        {
+          "id": "gap-final-thin-005",
+          "stem": "远程温控设备与云端失联时仍要避免过热。说明设备身份、通信和失联策略至少应怎样设计。",
+          "topic_id": "computer-foundations.t15",
+          "answer": "设备与平台双向认证、独立可撤销凭据、加密通信；本地阈值/量程检查，断网仍限时安全控制、告警、记录后补传，不能无限延续旧命令。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "为设备配置可撤销的唯一身份和双向认证，通信加密并校验完整性；失联时进入本地安全控制或限定模式，缓存必要记录并在恢复连接后受控同步。",
+            "explanation": "设备唯一可撤销身份、双向认证和通信保护，同时失联本地安全控制、缓存及恢复同步，保障失联网也安全。",
+            "rubric": [
+              {
+                "criterion": "设备唯一身份和认证",
+                "points": 1
+              },
+              {
+                "criterion": "通信机密性完整性",
+                "points": 1
+              },
+              {
+                "criterion": "失联安全模式",
+                "points": 2
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c07",
+            "topic_id": "computer-foundations.t15",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-found-026",
+          "stem": "智慧灌溉从湿度到开阀形成怎样的闭环？",
+          "topic_id": "computer-foundations.t14",
+          "answer": "湿度传感→网关→阈值决策→阀门→湿度反馈；仅上传不算闭环。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "传感器采集湿度，经网络/网关送平台或边缘判断，控制器向执行器发开阀命令，再采集新状态反馈。",
+            "explanation": "湿度感知→网关传输→边缘平台决策→阀门执行→再次采样反馈，最后反馈才形成闭环。",
+            "rubric": [
+              {
+                "criterion": "感知",
+                "points": 1
+              },
+              {
+                "criterion": "传输判断",
+                "points": 1
+              },
+              {
+                "criterion": "执行反馈",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c07",
+            "topic_id": "computer-foundations.t14",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "回差有历史状态，双向身份与断网安全均教；本轮没有真的驱动设备。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c08",
+      "title": "第8章 区块链",
+      "retell": "摘要链暴露后改，签名认授权者，共识决定多节点接受状态，均不保证起初事实。",
+      "process": "改B1使H(B1)变，B2仍持旧h1而校验失败；单机重算B2B3仍不等于全网接受。",
+      "attempts": [
+        {
+          "id": "gap-found-010",
+          "stem": "分别说明哈希、数字签名和共识机制在区块链系统中的主要作用。",
+          "topic_id": "computer-foundations.t16",
+          "answer": "哈希关联历史与发现改动；签名凭可信公钥验授权和完整性；共识对记录顺序/状态一致。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "哈希用于形成摘要并发现内容变化；数字签名用于验证记录来源和完整性；共识机制帮助多个节点对记录顺序或系统状态形成一致。",
+            "explanation": "哈希发现内容变化并关联数据，签名提供来源及完整性验证，共识协调节点状态；源数据真实性需额外保障。",
+            "rubric": [
+              {
+                "criterion": "说明哈希作用",
+                "points": 1
+              },
+              {
+                "criterion": "说明数字签名作用",
+                "points": 1
+              },
+              {
+                "criterion": "说明共识机制作用",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c08",
+            "topic_id": "computer-foundations.t16",
+            "ability": "机制解释",
+            "difficulty": "基础"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-found-013",
+          "stem": "某单位只需在单一可信部门内部管理少量结构化联系人数据，没有多方共同记账需求。更直接的技术选择是？",
+          "topic_id": "computer-foundations.t17",
+          "answer": "A；少量单中心结构化事务无多方不信任问题。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "少量单部门结构化数据直接用关系数据库，没必要强加区块链、大模型或分布式集群。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c08",
+            "topic_id": "computer-foundations.t17",
+            "ability": "场景选型",
+            "difficulty": "基础"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "哈希不等事实真实，单机重算与共识分开；共识完整算法明确未展开，保留范围。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c09",
+      "title": "第9章 计算机发展与典型应用",
+      "retell": "代际是器件分类；应用看所做任务；信息系统同时有人员流程数据软硬件网络。",
+      "process": "医院同患者有两ID→统一标识再查重，单换服务器不会修复重复预约。",
+      "attempts": [
+        {
+          "id": "gap-found-030",
+          "stem": "医院预约冲突可能由人员、流程、数据和技术中的哪些问题造成？各举一例。",
+          "topic_id": "computer-foundations.t19",
+          "answer": "人员未明确排班责任；流程允许重复占号；数据患者ID重复；技术并发预约无唯一约束/检查。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "人员培训不足、流程未规定并发确认、数据号源不同步、技术缺少事务或冲突检测都可能造成。",
+            "explanation": "信息系统问题涉及人员培训流程规则数据同步与事务控制，应逐层定位而非只查软件界面。",
+            "rubric": [
+              {
+                "criterion": "人员或流程例子",
+                "points": 1
+              },
+              {
+                "criterion": "数据例子",
+                "points": 1
+              },
+              {
+                "criterion": "技术例子",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c09",
+            "topic_id": "computer-foundations.t19",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-found-016",
+          "stem": "分别说明科学计算、数据处理和过程控制的主要任务，并各举一个典型应用。",
+          "topic_id": "computer-foundations.t18",
+          "answer": "科学计算求数值模型如天气；数据处理组织汇总如工资；过程控制反馈调节如电机温控。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "科学计算用数值方法求解复杂数学或工程问题，如气象模拟；数据处理对大量业务数据进行整理、统计和查询，如工资结算；过程控制根据现场数据及时调节设备，如生产线温度自动控制。",
+            "explanation": "科学计算求工程数值解，数据处理整理查询业务，过程控制感知反馈调节；实际系统可组合应用。",
+            "rubric": [
+              {
+                "criterion": "说明科学计算并举例",
+                "points": 2
+              },
+              {
+                "criterion": "说明数据处理并举例",
+                "points": 2
+              },
+              {
+                "criterion": "说明过程控制并举例",
+                "points": 2
+              }
+            ],
+            "max_score": 6
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c09",
+            "topic_id": "computer-foundations.t18",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "人员流程数据技术能分别举因；量子/数字地球仅认识名词，不能据此声称全域应用掌握。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "computer-foundations.c10",
+      "title": "第10章 新一代信息技术的综合应用",
+      "retell": "组合技术先写业务约束，每项技术需解决一个具体问题并可验收。",
+      "process": "超超正常超超超计数1,2,0,1,2,3，第6次触发；过时时戳不能再计数。",
+      "attempts": [
+        {
+          "id": "gap-found-031",
+          "stem": "校园能耗系统需实时控制、长期分析和隐私保护。给出云边物联网组合，并写一项风险控制。",
+          "topic_id": "computer-foundations.t20",
+          "answer": "IoT采电表→边缘实时阈值控制→云历史分析；最小授权与位置/个人数据脱敏，失联安全状态。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "传感器与执行器构成物联网，边缘侧实时判断控制，云端汇总分析；按最小必要上传数据并加认证、加密和权限控制。",
+            "explanation": "感知执行构成物联网，边缘实时控制云端长期分析，认证权限加密最小上传处理隐私风险。",
+            "rubric": [
+              {
+                "criterion": "物联网采集执行",
+                "points": 1
+              },
+              {
+                "criterion": "边缘实时云端分析",
+                "points": 1
+              },
+              {
+                "criterion": "隐私安全控制",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c10",
+            "topic_id": "computer-foundations.t20",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-found-032",
+          "stem": "山区水质监测点网络不稳定，需要现场超标告警、跨区域长期趋势分析，并防止无关人员查看位置数据。给出技术组合及理由。",
+          "topic_id": "computer-foundations.t20",
+          "answer": "传感设备/网关采集，边缘本地超标告警并缓存，恢复后上送云跨区长期分析；位置数据最小权限、加密审计，不必加区块链。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "传感器采集形成物联网；边缘网关在断网时完成阈值判断和本地告警；云端汇总多站点数据做长期分析；对位置和监测数据采用最小必要上传、认证、加密和权限控制。",
+            "explanation": "水质感知、边缘断网告警、云端多站趋势、位置权限最小上传分别对应四项约束。",
+            "rubric": [
+              {
+                "criterion": "物联网采集",
+                "points": 1
+              },
+              {
+                "criterion": "边缘离线告警",
+                "points": 1
+              },
+              {
+                "criterion": "云端长期分析",
+                "points": 1
+              },
+              {
+                "criterion": "隐私与访问控制",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "computer-foundations.c10",
+            "topic_id": "computer-foundations.t20",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "技术各有约束理由，3次计数可独立推；不以所有技术必须上场为标准。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c01",
+      "title": "第1章 多媒体技术概论",
+      "retell": "多媒体是多种数字媒体集成，交互取决于用户能改变路径，超媒体扩展链接节点类型。",
+      "process": "文本章A→章B或图片→视频，不按页码唯一先后，可选择分支并返回。",
+      "attempts": [
+        {
+          "id": "cg-02-s4-q28",
+          "stem": "使用头显及动作追踪，让用户进入可交互的三维模拟场景并获得沉浸体验，这主要称为（ ）。",
+          "topic_id": "multimedia.t01",
+          "answer": "A；头显跟踪交互沉浸是VR。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "头显呈现可交互三维环境与追踪可形成VR沉浸体验；仅说可穿戴设备并不足以排除其他技术。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c01",
+            "topic_id": "multimedia.t01",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-audit26-found-015",
+          "stem": "一本电子教程允许点击文字链接跳到其他章节，也允许点击图像进入视频。解释超文本与超媒体的关系，以及这种导航为何是非线性的。",
+          "topic_id": "multimedia.t02",
+          "answer": "超文本链接文本节点，超媒体扩展到图像视频；用户沿不同链接自行选路径故非线性。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "超文本用超链接连接文本节点，超媒体把这种链接组织扩展到图像音视频等内容。学生可按链接选择路径而不只顺序翻页，体现非线性；非线性不意味着完全没有组织。",
+            "explanation": "区别在节点包含的媒体类型，链接机制支持用户选择阅读路径。",
+            "rubric": [
+              {
+                "criterion": "定义文本链接",
+                "points": 1
+              },
+              {
+                "criterion": "说明扩展到多媒体节点",
+                "points": 1
+              },
+              {
+                "criterion": "解释路径选择非线性",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c01",
+            "topic_id": "multimedia.t02",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "五类媒体按角色分与内容类别分开；无节点图也能手列导航边。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c02",
+      "title": "第2章 多媒体计算机系统与数字化",
+      "retell": "采样离散时间、量化离散幅值、编码编号；先算bit再除8转Byte。",
+      "process": "44.1k×16×1=705600 bit/s，再÷8=88200 B/s；缓冲300/(80−50)=10秒。",
+      "attempts": [
+        {
+          "id": "uf-mm-001",
+          "stem": "单声道音频采样率44.1 kHz、量化16 bit，未压缩1秒数据量约为（ ）。",
+          "topic_id": "multimedia.t04",
+          "answer": "C；44100×16=705600 bit=705.6kbit。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "C",
+            "explanation": "44100×16=705600bit，即705.6kbit每秒；单声道不需再乘2。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c02",
+            "topic_id": "multimedia.t04",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "ua-media-003",
+          "stem": "每个采样值使用12 bit量化时，理论上可表示的量化级数为（ ）。",
+          "topic_id": "multimedia.t03",
+          "answer": "D；2^12=4096级。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "D",
+            "explanation": "12位二进制可区分2^12=4096种码字，即4096量化级。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c02",
+            "topic_id": "multimedia.t03",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "采样/量化各有定义，bit题算后需查单位；理论临界与实际余量没有混写。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c03",
+      "title": "第3章 数字图形与图像",
+      "retell": "照片由像素表达，标志可用几何表达；图层分对象，蒙版保留像素退路。",
+      "process": "(1,2)右移3→(4,2)放2→(8,4)，交换则(5,4)，顺序不能换。",
+      "attempts": [
+        {
+          "id": "gap-course-revision-applied-06-1",
+          "stem": "点(1,2)先右移3再以原点放大2倍是多少？",
+          "topic_id": "multimedia.t17",
+          "answer": "(8,4)；先加横坐标再全乘2。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "(8,4)",
+            "explanation": "先(4,2)，再乘2；不是先放大后平移的(5,4)。",
+            "rubric": [
+              {
+                "criterion": "(8,4)",
+                "points": 1
+              }
+            ],
+            "max_score": 1
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c03",
+            "topic_id": "multimedia.t17",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "dy-160fca0c",
+          "stem": "RGB是彩色印刷时采用的一种套色模式，利用色料的三原色混色原理，加上黑色油墨， 共计四种颜色混合叠加，形成所谓“全彩印刷”。",
+          "topic_id": "multimedia.t06",
+          "answer": "错；所述是CMYK，RGB为发光加色。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "错误",
+            "explanation": "CMYK是印刷减色模型，RGB是常见显示加色模型；RGB不等于一律真彩色位深。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c03",
+            "topic_id": "multimedia.t06",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "蒙版和选区有操作，变换例已见答案，不能算独立迁移测试；三角函数用到数学先修。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c04",
+      "title": "第4章 数字音频",
+      "retell": "波形保存采样声音，MIDI保存何时演奏什么音，二者用途不同。",
+      "process": "两路0.7相加1.4越限；两路各乘0.5后各0.35，总0.7，归一化不是降噪。",
+      "attempts": [
+        {
+          "id": "gap-media-clean-004",
+          "stem": "录制人声采访和保存可更换乐器音色的电子乐演奏，分别更适合波形音频还是MIDI？说明原因和边界。",
+          "topic_id": "multimedia.t09",
+          "answer": "人声采访用波形，真实音色与声场需采样；可改乐器编配用MIDI事件但依赖音源，不记录真实采访声波。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "人声采访适合波形音频，因为需要记录实际声压采样；电子乐演奏可用MIDI保存音符、时值、力度等控制事件，便于更换音源。MIDI不保存真实人声波形，播放效果依赖音源。",
+            "explanation": "采访需波形音频记录真实声音；MIDI适合记录可换音源的演奏事件，不能替代原始人声录音。",
+            "rubric": [
+              {
+                "criterion": "采访选择波形音频",
+                "points": 1
+              },
+              {
+                "criterion": "说明记录实际声音",
+                "points": 1
+              },
+              {
+                "criterion": "电子乐选择MIDI及可换音源",
+                "points": 1
+              },
+              {
+                "criterion": "说明MIDI边界",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c04",
+            "topic_id": "multimedia.t09",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-media-new-008",
+          "stem": "44.1kHz、16bit、双声道PCM一秒理论数据量约为？",
+          "topic_id": "multimedia.t08",
+          "answer": "C；44100×16×2÷8=176400B。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "C",
+            "explanation": "44100×16×2/8=176400B=176.4kB，单秒PCM不计文件头。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c04",
+            "topic_id": "multimedia.t08",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "采访/MIDI可选型并说边界；PCM题已曝光，混音缩放为额外过程证据。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c05",
+      "title": "第5章 动画与数字视频",
+      "retell": "时间轴记录帧状态，补间生成中间运动；容器组织轨道而编码器压缩轨道。",
+      "process": "0到1秒x0→100线性，0.4秒40；缓存12Mbit净减1Mbit/s，12秒空。",
+      "attempts": [
+        {
+          "id": "gap-media-new-002",
+          "stem": "直播在网络波动时频繁卡顿，优先联合检查哪些指标？",
+          "topic_id": "multimedia.t12",
+          "answer": "A；看吞吐能否持续超过码率及抖动、缓冲和时延。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "卡顿需联合检查有效吞吐、抖动、缓冲和时延；DPI与字号不决定网络连续播放。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c05",
+            "topic_id": "multimedia.t12",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-media-new-010",
+          "stem": "10秒动画按25帧/秒制作，总帧数为？",
+          "topic_id": "multimedia.t10",
+          "answer": "B；10×25=250帧。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "10×25=250帧，单位分别是秒与帧每秒。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c05",
+            "topic_id": "multimedia.t10",
+            "ability": "直接计算",
+            "difficulty": "基础"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "补间/缓冲均有中间状态；Flash旧环境明确，未实际启动Animate。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c06",
+      "title": "第6章 多媒体数据压缩",
+      "retell": "压缩利用重复或概率，有损在量化/子采样等丢信息，无损需能完整解码。",
+      "process": "A4 B2 C2先合2+2=4再4+4=8，码A0 B10 C11；01110切0/11/10=ACB。",
+      "attempts": [
+        {
+          "id": "gap-course-revision-applied-09-1",
+          "stem": "在简化的JPEG系数量化中，DCT系数为23、量化步长为10，采用四舍五入。求量化整数、反量化重建值和绝对量化误差。",
+          "topic_id": "multimedia.t20",
+          "answer": "量化round(23/10)=2，反量化20，绝对误差3。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "量化整数2；重建值20；绝对量化误差3。",
+            "explanation": "23÷10=2.3，四舍五入为2；反量化2×10=20，绝对误差|23−20|=3。被舍入的差值不能由该量化整数唯一恢复。",
+            "rubric": [
+              {
+                "criterion": "量化整数2；重建值20；绝对量化误差3。",
+                "points": 1
+              }
+            ],
+            "max_score": 1
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c06",
+            "topic_id": "multimedia.t20",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": true,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-media-clean-008",
+          "stem": "分别为照片网页预览、带半透明背景的图标、需要继续编辑的分层海报选择交付或保存方案，并说明依据。",
+          "topic_id": "multimedia.t14",
+          "answer": "照片预览JPEG且保原件；半透明图标PNG支持Alpha；分层海报PSD源文件保图层，另导出交付版。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "照片网页预览可选适当质量的有损照片格式以减小体积；半透明图标选支持透明和无损压缩的格式；分层海报保留支持图层蒙版的可编辑源文件，并另导出通用交付副本。",
+            "explanation": "照片选合适有损预览，半透明图标选透明无损格式，分层海报保留源文件并导出交付副本。",
+            "rubric": [
+              {
+                "criterion": "照片方案与理由",
+                "points": 1
+              },
+              {
+                "criterion": "透明图标方案与理由",
+                "points": 1
+              },
+              {
+                "criterion": "分层源文件方案",
+                "points": 1
+              },
+              {
+                "criterion": "区分源文件和交付副本",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c06",
+            "topic_id": "multimedia.t14",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "哈夫曼合并/解码与量化损失可跟踪；JPEG23/10题已曝光，不以答对证明压缩全域。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "multimedia.c07",
+      "title": "第7章 多媒体作品设计与应用",
+      "retell": "制作先受众需求再脚本素材，发布要以目标设备结果核查而非编辑器预览。",
+      "process": "H→Q答错→E→Q重做，若E无返回则被困；按每条边逐点验证。",
+      "attempts": [
+        {
+          "id": "gap-media-clean-010",
+          "stem": "同一宣传内容在手机上文字过小、电脑上正常，且导出后透明边缘出现黑底。给出从源文件到重新交付的排查步骤。",
+          "topic_id": "multimedia.t16",
+          "answer": "从分层源核小屏画布/字号/字幕，按手机重排；查Alpha与导出格式，JPEG不保透明，转支持Alpha PNG并在目标背景/设备复看；保源素材/授权再重新交付。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "回到可编辑源文件检查画布比例、文字安全尺寸、图层和蒙版边缘；确认目标平台是否支持透明及所选导出格式和颜色设置；分别在手机和电脑预览，核对字体、透明、文件大小和版权素材后重新导出。",
+            "explanation": "从源结构、蒙版边缘、透明格式和目标平台逐层排查，分别预览后重新交付并保留源文件。",
+            "rubric": [
+              {
+                "criterion": "检查手机版式和文字尺寸",
+                "points": 1
+              },
+              {
+                "criterion": "检查图层蒙版边缘",
+                "points": 1
+              },
+              {
+                "criterion": "检查透明支持与导出格式",
+                "points": 1
+              },
+              {
+                "criterion": "多终端测试",
+                "points": 1
+              },
+              {
+                "criterion": "核对文件与授权后交付",
+                "points": 1
+              }
+            ],
+            "max_score": 5
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c07",
+            "topic_id": "multimedia.t16",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "dy-e22d0d27",
+          "stem": "制作多媒体作品过程中，第一步应该做的是（）。",
+          "topic_id": "multimedia.t15",
+          "answer": "B；先确定需求与受众才有设计依据。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "先分析受众、目标和可行性，再规划设计及素材采集；需求分析为首步。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "multimedia.c07",
+            "topic_id": "multimedia.t15",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "手机排障能给步骤，但本章没有具体字号阈值，按设备实测避免编造统一像素标准。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c01",
+      "title": "第1章 软件工程概述",
+      "retell": "软件交付含程序数据文档，工程通过过程/工具/方法控制长期成本质量。",
+      "process": "代码能生成固定报表通过规格检查，但用户要可编辑数据仍不满足用途，需反馈需求。",
+      "attempts": [
+        {
+          "id": "sp-core-se-012",
+          "stem": "软件生命周期不仅包括开发，还包括部署、运行维护直至退役。（ ）",
+          "topic_id": "software-engineering.t02",
+          "answer": "对；生命周期到退役。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "正确",
+            "explanation": "软件从提出到退役的全过程都属于生命周期，交付不是工程活动终点。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c01",
+            "topic_id": "software-engineering.t02",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-final-thin-026",
+          "stem": "一个项目频繁延期、需求口头变更、缺少测试和文档。说明这体现的软件危机问题，并给出三项工程化改进。",
+          "topic_id": "software-engineering.t01",
+          "answer": "延期与失控变更、质量和文档不足；建可验证需求/受控变更，里程碑监控，测试评审与版本文档追踪。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "体现规模复杂性、需求失控、质量不可见和维护困难；应建立需求与变更管理、迭代计划和估算、分层测试与持续集成，并维护设计和追踪文档。",
+            "explanation": "软件工程用可重复过程和证据控制复杂性，而不只是增加编码人数。",
+            "rubric": [
+              {
+                "criterion": "指出至少一类软件危机表现",
+                "points": 1
+              },
+              {
+                "criterion": "需求变更措施",
+                "points": 1
+              },
+              {
+                "criterion": "计划或测试措施",
+                "points": 1
+              },
+              {
+                "criterion": "文档追踪或持续改进措施",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c01",
+            "topic_id": "software-engineering.t01",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "验证/确认用报表用途可解释，代码运行不是完整交付。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c02",
+      "title": "第2章 软件过程与生命周期模型",
+      "retell": "过程模型组织活动，各由稳定性、反馈周期与风险选取，能组合。",
+      "process": "第一轮原型发现收银步骤漏退货→改需求，原型可废弃；随后核心收款先增量交付并测试。",
+      "attempts": [
+        {
+          "id": "gap-se-001",
+          "stem": "用户需求变化频繁，并希望尽早看到可运行版本并持续反馈。根据这些证据，更合适的开发方式是？",
+          "topic_id": "software-engineering.t04",
+          "answer": "B；短迭代增量允许可运行功能和反馈。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "需求变化频繁且需要早期反馈，支持短周期迭代、增量交付和持续确认。方法选择应由项目证据决定。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c02",
+            "topic_id": "software-engineering.t04",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "ap-se-001",
+          "stem": "用户暂时说不清新收银系统的界面和业务步骤，希望先看到可演示版本再反馈。现阶段优先采用的方法是（ ）。",
+          "topic_id": "software-engineering.t03",
+          "answer": "A；先让界面/业务可观察以澄清。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "原型可让用户尽早看到交互并反馈，用于澄清模糊需求；之后仍需正式设计、开发和测试。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c02",
+            "topic_id": "software-engineering.t03",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "原型/增量/风险能组合而非只按行业背模型。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c03",
+      "title": "第3章 可行性研究与需求工程",
+      "retell": "可行性比方案，需求须可验收，模型分别看数据流或状态行为，冲突需有权者确认。",
+      "process": "借出+再次借出无合法迁移应拒；归还后才回可借，同册未归还记录<=1。",
+      "attempts": [
+        {
+          "id": "sp-core-se-024",
+          "stem": "财务部门要求退款必须人工复核，业务部门要求所有退款立即自动完成。作为需求人员应怎样处理这项冲突？",
+          "topic_id": "software-engineering.t06",
+          "answer": "记录两方目标风险，组织财务业务等有权人协商，可按金额/风险分层复核；明确阈值与审批再更新SRS、追踪和验收用例，不私选。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "记录双方需求和理由，识别冲突及风险；组织相关干系人澄清业务规则和优先级；形成可验证方案并获授权确认；更新SRS、验收标准和追踪关系。",
+            "explanation": "得分点为不擅自拍板、分析冲突、协商确认、可验证记录和追踪。不能把双方矛盾原样写入SRS。",
+            "rubric": [
+              {
+                "criterion": "不擅自拍板",
+                "points": 1
+              },
+              {
+                "criterion": "分析冲突",
+                "points": 1
+              },
+              {
+                "criterion": "协商确认",
+                "points": 1
+              },
+              {
+                "criterion": "可验证记录和追踪",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c03",
+            "topic_id": "software-engineering.t06",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "cg-06-s1-q5",
+          "stem": "在可行性研究阶段，对系统所要求的功能、性能及限制条件进行分析，确定是否\n能够构成一个满足要求的系统，这称为（ ）可行性。",
+          "topic_id": "software-engineering.t05",
+          "answer": "B；是否有技术实现满足要求的能力。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "技术可行性分析用于判断拟建系统在技术、设备和技术人员条件下是否可实现。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c03",
+            "topic_id": "software-engineering.t05",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "冲突有授权确认与追踪，状态机有拒绝非法迁移；形式语言完整语法边界已保留。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c04",
+      "title": "第4章 总体设计与详细设计",
+      "retell": "总体定架构接口，详细定算法状态异常；对象数据归真实一次业务，模块职责和依赖分清。",
+      "process": "学生S第一次Loan1归还日保Loan1，第二次Loan2另记；BookCopy同一时刻最多一个未还Loan。",
+      "attempts": [
+        {
+          "id": "sp-core-se-003",
+          "stem": "要描述报销业务从提交、审批、退回到结束的流程与分支，较适合使用（ ）。",
+          "topic_id": "software-engineering.t10",
+          "answer": "A；活动图描述工作流分支。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "A",
+            "explanation": "活动图适合描述工作流、分支和并发；类图强调静态结构，部署图强调软硬件结点。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c04",
+            "topic_id": "software-engineering.t10",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-audit26-system-009",
+          "stem": "设计一个借书系统。总体设计应交代哪些内容，详细设计还应补什么？以借阅资格检查模块举例。",
+          "topic_id": "software-engineering.t08",
+          "answer": "总体：分层架构、模块/全局数据/接口与部署；资格模块详细：输入学生/书副本、资格/可借前置、额度欠费检查算法、失败原因/返回、并发一致性，不能只列模块名。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "总体设计确定读者管理、图书管理、借还管理等模块及接口、数据和依赖；详细设计写清资格检查内部规则与步骤，例如先查账号有效性，再查欠费和已借数量，给出数据结构、异常与返回结果。",
+            "explanation": "总体设计回答如何分解并协作，详细设计回答单个模块内部怎样实现；无需在设计答案里写完整产品代码。",
+            "rubric": [
+              {
+                "criterion": "总体设计划分读者、图书、借还等模块及接口",
+                "points": 1
+              },
+              {
+                "criterion": "详细设计列出资格检查内部规则与步骤",
+                "points": 1
+              },
+              {
+                "criterion": "给出数据结构或异常返回等实现约定",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c04",
+            "topic_id": "software-engineering.t08",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "部分符合：列了总体设计类型和资格检查细节，但未具体列读者/图书/借还三模块；rubric第一点仅部分满足。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "对象日期归Loan可说明；总体设计答题遗漏具体三模块；N-S/PAD图画法局部不足见EXP-APP-002。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。有关题注链、负数表示或绘图工具的局部不足见本章问题。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": [
+        "EXP-APP-002"
+      ]
+    },
+    {
+      "chapter_id": "software-engineering.c05",
+      "title": "第5章 软件实现与软件测试",
+      "retell": "黑盒从规格分输入，白盒从控制路径选用例，覆盖并不证明所有需求正确。",
+      "process": "两个if取(0,0)输出0，(1,0)1，(0,1)2；E7 N6 V3，(1,1)3另是组合路径。",
+      "attempts": [
+        {
+          "id": "sp-core-se-028",
+          "stem": "输入字段规定为1～100的整数。使用等价类和边界值方法时应怎样选择基础测试数据？",
+          "topic_id": "software-engineering.t11",
+          "answer": "有效类1..100取50，无效<1取0、>100取101，另测小数/非数字/空；边界0,1,2,99,100,101并规定预期。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "等价类可选有效类代表值如50，以及小于1、大于100、非整数等无效类代表；边界值选择0、1、2、99、100、101。",
+            "explanation": "得分点为有效/无效等价类和边界内、边界、边界外相邻值。具体代表值可不同但应覆盖规则。",
+            "rubric": [
+              {
+                "criterion": "有效/无效等价类和边界内",
+                "points": 1
+              },
+              {
+                "criterion": "边界",
+                "points": 1
+              },
+              {
+                "criterion": "边界外相邻值",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c05",
+            "topic_id": "software-engineering.t11",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "uc-se-007",
+          "stem": "控制流图含可重复任意次数的循环，其基本独立路径数为2。关于测试路径数量，哪项正确？",
+          "topic_id": "software-engineering.t12",
+          "answer": "B；独立路径基有限不等循环展开执行路径有限。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "环形复杂度衡量独立路径基的数量，不是穷尽所有执行路径的数量。循环可重复任意次使路径总数不受有限基数量限制，有限测试也不能证明绝对无错。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c05",
+            "topic_id": "software-engineering.t12",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "基本路径给E/N与路径，能算中间值；覆盖模型明确短路条件，未运行真实软件测试。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c06",
+      "title": "第6章 软件维护、质量与配置管理",
+      "retell": "维护按目的分类，配置管理让需求代码测试环境保持一个可追踪发布。",
+      "process": "换数据库驱动为适应，行为不变清重复为预防；紧急修复也留授权版本测试回退。",
+      "attempts": [
+        {
+          "id": "ap-se-004",
+          "stem": "一个已上线系统提出新增退款功能。规范变更过程通常应包括（ ）。",
+          "topic_id": "software-engineering.t15",
+          "answer": "ABC；申请分析、审批实施、验证更新是受控链。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "ABC",
+            "explanation": "变更应可评估、受审批、可验证和可追踪；无记录直接覆盖会带来范围、质量和回退风险。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c06",
+            "topic_id": "software-engineering.t15",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "cg-06-s1-q18",
+          "stem": "对于长期运行并持续演化的软件，通常花费累计成本较多、持续时间较长的生命周期阶段是（ ）。",
+          "topic_id": "software-engineering.t14",
+          "answer": "B；长期环境和业务变化使维护持续且累计成本高。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "B",
+            "explanation": "选B。长期运行软件交付后还要长期纠错、适配环境和完善功能，维护往往持续最长、累计成本较高；这属于常见经验，不能断言所有短期或中止项目都如此。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c06",
+            "topic_id": "software-engineering.t14",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "紧急变更仍留授权/回退；质量因素多但明确从因素落到指标，不是只列口号。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c07",
+      "title": "第7章 项目管理与风险管理",
+      "retell": "进度要看最长依赖链，人月是投入而非工期，风险用概率影响和应对责任一起描述。",
+      "process": "A2后B4/C2后D3，C最早2最迟4，时差2；缩C无效，总仍9。",
+      "attempts": [
+        {
+          "id": "gap-se-010",
+          "stem": "项目网络有两条路径A-B-D为8天，A-C-D为11天。关键路径是哪条？A-C-D上的活动延迟2天会怎样？",
+          "topic_id": "software-engineering.t22",
+          "answer": "A-C-D关键，11天；其活动延2则最长13天，未含资源冲突。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "关键路径为A-C-D；若无可用时差，延迟2天使项目总工期延长2天。",
+            "explanation": "最长路径决定最短完工时间，关键活动通常总时差为0。",
+            "rubric": [
+              {
+                "criterion": "选出A-C-D",
+                "points": 1
+              },
+              {
+                "criterion": "说明最长路径",
+                "points": 1
+              },
+              {
+                "criterion": "说明总工期延长2天",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c07",
+            "topic_id": "software-engineering.t22",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-audit26-system-012",
+          "stem": "第三方接口可能在上线前无法交付，概率约30%，发生将延误10天。先算风险暴露量，再给出一项缓解措施、一项应急措施及监控信号。",
+          "topic_id": "software-engineering.t17",
+          "answer": "0.3×10=3天期望暴露；提前对接模拟/适配降低风险；触发改降级方案或延期切换；看里程碑交付/联调通过率与供应方进度。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "期望延误约0.3×10=3天。可提前联调和设置中间里程碑降低风险；准备替代接口或延期非核心功能作为应急方案；监控交付里程碑、接口样例和联调通过率，并指定负责人。",
+            "explanation": "3天是期望影响，不代表发生时只延误3天；发生后需按问题处置，不能继续仅登记为未发生风险。",
+            "rubric": [
+              {
+                "criterion": "期望延误0.3×10=3天并区别发生时10天",
+                "points": 1
+              },
+              {
+                "criterion": "给出提前联调等缓解及备用接口等应急措施",
+                "points": 1
+              },
+              {
+                "criterion": "提出里程碑或联调通过率监控并指定负责人",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c07",
+            "topic_id": "software-engineering.t17",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "部分符合：算3天且有缓解/应急/监控；漏指定负责人，未显式比较事件实际10天，不报满分。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "自身风险题遗漏指定负责人且未显式对比发生时10天；讲义已经要求负责人，属于漏答，不据此指控讲义缺失。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "software-engineering.c08",
+      "title": "第8章 面向变化的软件开发方法",
+      "retell": "按变化和风险分控制强度，追踪把需求到发布连起来，度量用于下一轮改进。",
+      "process": "R1变→找设计模块、实现提交、用例与发布版；测试缺口补例并回归，跟踪漏检类下降。",
+      "attempts": [
+        {
+          "id": "gap-se-012",
+          "stem": "需求R1变更后，追踪矩阵应帮助找到哪些对象？发布后缺陷数据又如何用于改进？",
+          "topic_id": "software-engineering.t19",
+          "answer": "找业务目标、需求依赖、设计/模块/接口、提交、测试、版本文档；按缺陷类别根因与口径补评审测试并比较后续缺陷和周期。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "应追到设计模块、代码提交、测试用例和发布版本；缺陷趋势用于定位薄弱阶段并调整评审、测试和流程。",
+            "explanation": "追踪支持影响分析，反馈数据支持持续改进。",
+            "rubric": [
+              {
+                "criterion": "追到设计/代码",
+                "points": 1
+              },
+              {
+                "criterion": "追到测试/版本",
+                "points": 1
+              },
+              {
+                "criterion": "用缺陷反馈改进流程",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c08",
+            "topic_id": "software-engineering.t19",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-se-011",
+          "stem": "需求高度不确定、用户可频繁反馈，但核心支付模块风险很高。说明可怎样组合原型、迭代和风险分析。",
+          "topic_id": "software-engineering.t18",
+          "answer": "先原型澄清交互、短迭代增量取反馈；支付做风险试验威胁分析、严格需求审批/测试/追踪，可回退发布。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "用原型澄清界面与需求，短迭代持续交付可验证增量，对支付等高风险部分先做风险分析和验证。",
+            "explanation": "过程模型可按证据组合，不能只凭项目名称机械选择。",
+            "rubric": [
+              {
+                "criterion": "原型澄清需求",
+                "points": 1
+              },
+              {
+                "criterion": "迭代获取反馈",
+                "points": 1
+              },
+              {
+                "criterion": "高风险部分先分析验证",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "software-engineering.c08",
+            "topic_id": "software-engineering.t18",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "风险控制强度可按报表/结算拆分，追踪能落到模块用例版本。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c01",
+      "title": "第1章 信息安全概论",
+      "retell": "目标是授权者能用且内容不被乱看乱改，风险需资产弱点威胁影响。",
+      "process": "成绩库→盗号者→弱口令→看/改成绩同时伤C和I；停机恢复另看A。",
+      "attempts": [
+        {
+          "id": "dy-9d0d0774",
+          "stem": "某小区物业管理员未经授权将业主资料拷贝给其他地产公司，导致业主收到营销骚扰。本案例直接发生的安全事件是（ ）。",
+          "topic_id": "information-security.t02",
+          "answer": "D；未授权外传资料是信息泄露。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "D",
+            "explanation": "根据题意分析业主的信息是由物业管理员拷贝给其他地产公司，泄露\n了业主的基本信息。故正确答案为D。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c01",
+            "topic_id": "information-security.t02",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "dy-0c0a712a",
+          "stem": "信息在存储或传输过程中保持不被修改、不被破坏和丢失的特性属于信息的（）。",
+          "topic_id": "information-security.t01",
+          "answer": "D；不被篡改破坏丢失归完整性。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "D",
+            "explanation": "选D。完整性保护数据不被未经授权或不恰当修改、破坏。保密性防泄露，可用性关注授权访问与服务。审计与不可否认性相互支持但不是同义概念。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c01",
+            "topic_id": "information-security.t01",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "CIA与资产风险因果能解释，同一事件多属性不互斥。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c02",
+      "title": "第2章 安全管理与风险管理",
+      "retell": "管理要风险识别处置验证复查，预防检测恢复各有角色，等保是持续工作。",
+      "process": "离职T时刻后检查角色/直接权限/令牌都撤，再实际尝试访问及查日志，不仅看账号禁用。",
+      "attempts": [
+        {
+          "id": "gap-sec-002",
+          "stem": "门禁、防火墙告警和备份恢复分别更接近预防、检测、纠正中的哪类控制？",
+          "topic_id": "information-security.t03",
+          "answer": "门禁预防、防火墙告警检测、备份恢复纠正/恢复；分类看所问作用。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "门禁偏预防，告警偏检测，备份恢复偏纠正。",
+            "explanation": "同一措施可能兼有多种作用，按题目中的主要目标判断。",
+            "rubric": [
+              {
+                "criterion": "门禁预防",
+                "points": 1
+              },
+              {
+                "criterion": "告警检测",
+                "points": 1
+              },
+              {
+                "criterion": "备份恢复纠正",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c02",
+            "topic_id": "information-security.t03",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "ap-is-006",
+          "stem": "简述等保2.0基础工作流程，并说明它与安全事件响应的区别和联系。",
+          "topic_id": "information-security.t04",
+          "answer": "定级→备案→建设整改→测评→监督持续改进；响应针对已发生事件准备发现分析遏制根除恢复复盘，等保降低风险且演练响应，响应结果回改控制。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "等保基础流程为定级、备案、建设整改、等级测评、监督检查和持续改进；它按系统等级建立持续保护体系。事件响应针对已经发生的具体事件进行发现报告、分析、遏制、根除、恢复和复盘。等保中的制度、技术和预案为响应提供基础，但不能代替具体处置。",
+            "explanation": "评分点：等保流程、持续性、事件响应对象与闭环、二者联系和不能互相替代的边界。具体合规要求以题干给定现行规定为准。",
+            "rubric": [
+              {
+                "criterion": "等保流程",
+                "points": 1
+              },
+              {
+                "criterion": "持续性",
+                "points": 1
+              },
+              {
+                "criterion": "事件响应对象与闭环",
+                "points": 1
+              },
+              {
+                "criterion": "者联系和不能互相替代的边界",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c02",
+            "topic_id": "information-security.t04",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "等保工作与事件响应可区分；本轮不验证法律现行条文，讲义明确需查官方。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c03",
+      "title": "第3章 恶意代码与社会工程",
+      "retell": "恶意程序按宿主传播目的分轴，钓鱼利用人信任，已泄凭据须控制会话和影响。",
+      "process": "伪装工具带勒索目的可同时叫木马/勒索；网络自动扩散又有蠕虫特征，不互斥。",
+      "attempts": [
+        {
+          "id": "dy-c8de56cd",
+          "stem": "恶意代码可以经U盘、移动硬盘等介质传播；文件复制后是否真正感染，还取决于代码执行、自动运行机制或漏洞触发等条件。",
+          "topic_id": "information-security.t05",
+          "answer": "对；介质带来文件不等立即执行感染。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "正确",
+            "explanation": "正确。移动介质可携带受感染内容，但“插入介质”或“文件存在”不自动等于已经感染；传播媒介不是把病毒严格分成互不相交类别的依据。"
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c03",
+            "topic_id": "information-security.t05",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-sec-004",
+          "stem": "员工在钓鱼页面提交了账号和密码后，按合理顺序写出四项首要处置。",
+          "topic_id": "information-security.t06",
+          "answer": "停止在钓鱼页操作，可信渠道上报留证，在可信设备重置凭据并撤销会话/令牌，检查日志与关联账号并控制影响；不继续用攻击者链接。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "停止继续操作并上报，隔离或控制受影响会话，重置凭据并撤销会话，检查日志与影响范围并保留证据。",
+            "explanation": "只改密码不足以查清会话、横向访问和数据影响。",
+            "rubric": [
+              {
+                "criterion": "上报与停止",
+                "points": 1
+              },
+              {
+                "criterion": "控制会话/隔离",
+                "points": 1
+              },
+              {
+                "criterion": "重置凭据",
+                "points": 1
+              },
+              {
+                "criterion": "查日志留证",
+                "points": 1
+              }
+            ],
+            "max_score": 4
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c03",
+            "topic_id": "information-security.t06",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "复制介质不等执行感染；钓鱼后撤会话先验与正文共同支持。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c04",
+      "title": "第4章 身份认证与访问控制",
+      "retell": "认证身份不代表授权全部，因素类别不同才MFA，资源访问还须策略判断。",
+      "process": "640所有者6=rw，组4=r，其他0；bob组内可读不能写，carol组外无读。",
+      "attempts": [
+        {
+          "id": "gap-sec-015",
+          "stem": "在“主体和客体带安全标签，系统按级别规则决定能否访问”的语境中，MAC全称和作用是什么？",
+          "topic_id": "information-security.t08",
+          "answer": "Mandatory Access Control，强制访问控制；按主体/客体标签及强制规则允许拒绝，非消息认证码。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "MAC指Mandatory Access Control，即强制访问控制；由系统依据安全标签和规则强制决定访问，普通用户不能自行转授。",
+            "explanation": "此处MAC属于访问控制模型，不是密码学中的消息认证码。",
+            "rubric": [
+              {
+                "criterion": "写出强制访问控制",
+                "points": 1
+              },
+              {
+                "criterion": "说明标签/规则",
+                "points": 1
+              },
+              {
+                "criterion": "说明不可自行转授",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c04",
+            "topic_id": "information-security.t08",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-audit26-system-014",
+          "stem": "系统用密码加硬件安全密钥登录。解释为何属于多因素认证；若账号已失陷，只修改密码是否足够？还应检查哪些会话措施？",
+          "topic_id": "information-security.t07",
+          "answer": "密码知识+硬件持有不同类；仅改密码不足，撤销现有会话/令牌、检查恢复方式和密钥、有效期/退出，审计异常访问后重新安全认证。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "密码为所知因素，安全密钥为所持因素，来自不同类别。仅改密码未必撤销已发会话令牌；应按预案撤销失陷会话、检查关联设备和异常登录、重置受影响凭据并检查恢复渠道。",
+            "explanation": "用户名不是第二因素，两次密码也不是不同因素；MFA减少口令泄露风险，却不自动消除已窃取会话的风险。",
+            "rubric": [
+              {
+                "criterion": "密码属所知、安全密钥属所持，构成不同因素",
+                "points": 1
+              },
+              {
+                "criterion": "说明只改密码未必撤销已发会话",
+                "points": 1
+              },
+              {
+                "criterion": "撤销失陷会话并核查关联登录设备或恢复渠道",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c04",
+            "topic_id": "information-security.t07",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "MFA按因素类别，640逐组算，MAC双含义在后章明示。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c05",
+      "title": "第5章 密码学基础",
+      "retell": "加密保密，MAC/签名验证来源完整性，证书把可信身份和公钥绑定，各解决不同任务。",
+      "process": "P1 1010 xor K1100=C1 0110；P2 0110 xor K1100=C2 1010；密文xor=1100等于明文xor，重用漏关系。",
+      "attempts": [
+        {
+          "id": "gap-sec-006",
+          "stem": "为什么HTTPS等协议常用非对称机制协商会话密钥，再用对称加密传大量数据？",
+          "topic_id": "information-security.t09",
+          "answer": "公钥机制便于认证/协商而大数据开销较高；对称会话密钥高效加密大量数据，仍需标签验证与认证防中间人。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "非对称机制便于认证和安全协商但开销大；对称加密速度快，适合大数据量；组合兼顾密钥分发和性能。",
+            "explanation": "公钥加密不等于所有通信数据都必须直接用公钥算法处理。",
+            "rubric": [
+              {
+                "criterion": "非对称便于协商认证",
+                "points": 1
+              },
+              {
+                "criterion": "对称适合批量数据",
+                "points": 1
+              },
+              {
+                "criterion": "说明组合目标",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c05",
+            "topic_id": "information-security.t09",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-sec-007",
+          "stem": "数字签名能证明什么，不能自动保证什么？证书在其中承担什么作用？",
+          "topic_id": "information-security.t10",
+          "answer": "可信公钥验来源完整性并支持抗抵赖，不自动保密、不保证内容事实正确；证书将主体公钥绑定，检查链/名称/有效期/撤销。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "签名验证来源、完整性并支持防抵赖；不自动保密内容。证书把主体身份与公钥绑定并由信任链验证。",
+            "explanation": "加密、哈希、签名和证书解决不同目标。",
+            "rubric": [
+              {
+                "criterion": "来源与完整性",
+                "points": 1
+              },
+              {
+                "criterion": "不保证保密",
+                "points": 1
+              },
+              {
+                "criterion": "证书绑定身份公钥",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c05",
+            "topic_id": "information-security.t10",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "异或已定义，4位密钥流相消可复算；未把玩具例当真实密码参数。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c06",
+      "title": "第6章 网络安全",
+      "retell": "分区和默认拒绝缩攻击面；VPN保通道不修主机和业务问题，首条匹配顺序重要。",
+      "process": "规则允许外→Web443、Web→DB5432、其他拒；外→DB命中拒，Web→DB命中允许，还需返回状态规则。",
+      "attempts": [
+        {
+          "id": "gap-sec-008",
+          "stem": "面向互联网的Web服务为何放DMZ，数据库为何放更内层？写一条最小开放规则。",
+          "topic_id": "information-security.t11",
+          "answer": "Web需对外置DMZ，DB只接受必要应用访问更内层；允许指定WebIP→指定DB TCP5432，拒其他新连接并安排返回状态规则。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "DMZ隔离外部暴露服务，数据库置于内层减少直接攻击面；只允许Web服务器按必要端口访问数据库，禁止互联网直连数据库。",
+            "explanation": "分区通过限制路径降低横向移动影响。",
+            "rubric": [
+              {
+                "criterion": "说明DMZ隔离",
+                "points": 1
+              },
+              {
+                "criterion": "数据库内层",
+                "points": 1
+              },
+              {
+                "criterion": "给出最小开放规则",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c06",
+            "topic_id": "information-security.t11",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "hn-recall-hn26-002",
+          "stem": "说明VPN的主要作用及其实现安全通信的基本原理，并指出VPN不能替代哪两类安全措施。",
+          "topic_id": "information-security.t18",
+          "answer": "跨不可信网络认证两端协商、隧道封装并按方案加密完整性校验，接收校验解封装；不能替代终端补丁/恶意代码防护和应用授权/输入安全。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "VPN在公共网络上建立逻辑专用通道，使远程用户或不同站点能够安全访问内部资源。它通常通过身份认证、隧道封装、加密和完整性校验保护传输。VPN不能替代终端防恶意代码、账号最小权限、应用漏洞修复等其他安全措施。",
+            "explanation": "VPN保护的是指定通信通道，不会自动消除终端和应用本身的风险。",
+            "rubric": [
+              {
+                "criterion": "说明远程或站点互联作用",
+                "points": 1
+              },
+              {
+                "criterion": "说明隧道封装",
+                "points": 1
+              },
+              {
+                "criterion": "说明认证、加密或完整性保护",
+                "points": 2
+              },
+              {
+                "criterion": "指出至少两类不能替代的安全措施",
+                "points": 1
+              }
+            ],
+            "max_score": 5
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c06",
+            "topic_id": "information-security.t18",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "首条匹配和返回规则可复述；VPN作用不能包办端点安全。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c07",
+      "title": "第7章 系统、应用与数据安全",
+      "retell": "输入输出边界各要控制，事故先控影响留证再根除恢复，备份必须链齐且能还原。",
+      "process": "F周日+I1周一+I2周二才能恢复周二，缺I1不保证；改差异则F+D2。",
+      "attempts": [
+        {
+          "id": "ap-is-005",
+          "stem": "业务服务器出现异常外联和未授权登录记录。请按先后顺序写出基础处置流程，并说明为什么不能立即格式化主机。",
+          "topic_id": "information-security.t15",
+          "answer": "上报/留证→分析确认范围与失陷凭据→按预案隔离遏制→修入口撤凭据根除→可信恢复监控→复盘；格式化毁日志和证据且未清入口可再次失陷。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "立即报告并记录时间、告警、主机和网络状态；分析确认事件与范围；按授权隔离遏制；保全日志等证据；根除恶意代码、漏洞和失陷凭据；验证后恢复并监控；最后复盘整改。立即格式化会破坏证据且可能掩盖根因和影响范围。",
+            "explanation": "评分点：报告记录、分析范围、隔离、证据、根除、恢复监控、复盘、说明格式化边界。紧急情况下仍应服从应急预案和指挥授权。",
+            "rubric": [
+              {
+                "criterion": "报告记录",
+                "points": 1
+              },
+              {
+                "criterion": "分析范围",
+                "points": 1
+              },
+              {
+                "criterion": "隔离",
+                "points": 1
+              },
+              {
+                "criterion": "证据",
+                "points": 1
+              },
+              {
+                "criterion": "根除",
+                "points": 1
+              },
+              {
+                "criterion": "恢复监控",
+                "points": 1
+              },
+              {
+                "criterion": "复盘",
+                "points": 1
+              },
+              {
+                "criterion": "说明格式化边界",
+                "points": 1
+              }
+            ],
+            "max_score": 8
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c07",
+            "topic_id": "information-security.t15",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-sec-010",
+          "stem": "登录查询把用户输入直接拼入SQL。给出主要风险和两项修复。",
+          "topic_id": "information-security.t13",
+          "answer": "SQL注入；改预编译参数绑定、最小数据库权限，先认证并做具体记录授权；字段名等用允许列表。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "存在SQL注入风险；使用参数化查询，并在服务端按类型、长度和范围校验输入，同时执行最小数据库权限。",
+            "explanation": "转义或客户端校验不能单独替代参数化和服务端控制。",
+            "rubric": [
+              {
+                "criterion": "指出SQL注入",
+                "points": 1
+              },
+              {
+                "criterion": "参数化查询",
+                "points": 1
+              },
+              {
+                "criterion": "服务端校验或最小权限",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c07",
+            "topic_id": "information-security.t13",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "SQL两项修复满足rubric；XSS/CSRF正文有分别解释但重点仅提XSS，复习CSRF需回讲义，不要求卡代替全文。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    },
+    {
+      "chapter_id": "information-security.c08",
+      "title": "第8章 隐私保护、法律与职业责任",
+      "retell": "可访问不等有权，隐私需目的最小化，去掉姓名后稀有属性仍能指人。",
+      "process": "生日+邮编+罕见职位在小群体可能只剩1人；改汇总和粗粒度字段，复查组合识别风险。",
+      "attempts": [
+        {
+          "id": "gap-sec-014",
+          "stem": "获得系统管理员口令后，是否可以查看与工作无关的个人数据？说明判断依据。",
+          "topic_id": "information-security.t17",
+          "answer": "不可以；按合法业务目的、明确授权/范围最小权限，管理员能力不扩大职责，可审计。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "不可以。能力不等于授权，应以岗位职责、合法目的、最小必要、单位制度和审批范围判断并保留审计。",
+            "explanation": "公开可见或技术上可访问也不代表可任意使用。",
+            "rubric": [
+              {
+                "criterion": "能力不等于授权",
+                "points": 1
+              },
+              {
+                "criterion": "岗位目的最小必要",
+                "points": 1
+              },
+              {
+                "criterion": "制度审批与审计",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c08",
+            "topic_id": "information-security.t17",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        },
+        {
+          "id": "gap-sec-013",
+          "stem": "数据删除姓名后仍保留精确生日、邮编和罕见职位，为什么仍可能重新识别？",
+          "topic_id": "information-security.t16",
+          "answer": "准标识符组合可与外部资料连接到唯一人，删除直接标识不是不可复原匿名化。",
+          "basis": "依据已读本章讲义的概念、步骤和条件；允许模型先验，非真人盲测",
+          "expected": {
+            "answer": "这些准标识符组合可能与外部数据匹配到具体个人；应按最小必要降低粒度、删除或泛化字段，并评估攻击者背景知识。",
+            "explanation": "去掉直接标识符不自动成为匿名数据。",
+            "rubric": [
+              {
+                "criterion": "指出准标识符组合",
+                "points": 1
+              },
+              {
+                "criterion": "外部数据匹配",
+                "points": 1
+              },
+              {
+                "criterion": "提出最小化/泛化",
+                "points": 1
+              }
+            ],
+            "max_score": 3
+          },
+          "metadata": {
+            "course_id": null,
+            "chapter_id": "information-security.c08",
+            "topic_id": "information-security.t16",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "answer_exposure": false,
+          "check": "与答案关键点一致（自核，非真人成绩）。",
+          "lecture_match": "真实questions元数据章ID与本章一致；本章正文含题干所需概念或操作。"
+        }
+      ],
+      "difficulty": "删除姓名不等匿名化能举组合识别；未测试法律合规或攻击算法。",
+      "review_consistency": "本章重点与讲义的核心任务一致；重点用于提取概念/步骤/易错，不作为完整教学替代。",
+      "worked_example_exposure": "已顺序阅读正文及details内容，正文例题答案存在曝光；独立过程多采用改条件或另设输入，未声称先遮住所有正文答案。",
+      "optimizations": []
+    }
+  ]
+}

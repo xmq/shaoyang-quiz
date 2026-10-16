@@ -324,6 +324,11 @@ set_course_guidance(
 # Process and calculation tasks require early retrieval practice even when the
 # bank currently contains few questions. Bank size never determines priority.
 KEY_TOPICS.update({"net.symbol-multiplexing", "net.crc", "net.arq-window", "net.rip-update"})
+KEY_TOPICS.update({"operating-system.t21", "programming.t22", "digital-electronics.t19"})
+SHORT_ANSWER_TOPICS.update({"operating-system.t21", "programming.t22", "circuit.t15", "digital-electronics.t19", "office.t18", "computer-foundations.t24", "computer-foundations.t25", "software-engineering.t25"})
+CALCULATION_TOPICS.update({"operating-system.t21", "circuit.t15", "digital-electronics.t19", "computer-foundations.t24"})
+APPLICATION_TOPICS.update({"operating-system.t21", "programming.t22", "circuit.t15", "digital-electronics.t19", "office.t18", "computer-foundations.t25", "software-engineering.t25"})
+CODE_TOPICS.add("programming.t22")
 
 def guidance_for(topic_id: str) -> dict:
     practice_modes = [OBJECTIVE]

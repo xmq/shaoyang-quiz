@@ -1,0 +1,206 @@
+[
+  {
+    "id": "gap-experience26-motor-slip",
+    "subject": "电路分析与电工技术",
+    "topic_id": "circuit.t15",
+    "topic_source": "manual",
+    "chapter": "三相交流和电动机",
+    "source_chapter": "三相交流和电动机",
+    "knowledge_point": "三相电路与用电",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "一台50 Hz、四极三相异步电动机处于正常电动运行，转子转速1440 r/min。计算同步转速与转差率，并说明为什么不能把1440直接代入同步转速公式反求极数。",
+    "options": {},
+    "answer": "四极即p=2对极，同步转速n同步=60×50/2=1500 r/min；s=(1500−1440)/1500=0.04=4%。1440是转子实际转速，不是旋转磁场同步转速，二者因转差而不同。",
+    "explanation": "先将极数换成极对数，再算磁场同步转速；转差率比较同步与实际转速。公式60f/p描述旋转磁场，不用于把实际转速当同步转速反推。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。",
+    "rubric": [
+      {
+        "criterion": "四极换算为2极对并求同步转速1500 r/min",
+        "points": 1
+      },
+      {
+        "criterion": "转差率求得4%",
+        "points": 1
+      },
+      {
+        "criterion": "区分转子实际转速与磁场同步转速",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "gap-experience26-complement-carry",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t19",
+    "topic_source": "manual",
+    "chapter": "定字长补码与溢出",
+    "source_chapter": "定字长补码与溢出",
+    "knowledge_point": "数字电子基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "采用4位二进制补码，仅保留4位结果。计算1111+0001，并分别判断是否产生最高位进位、是否产生有符号溢出，说明依据。",
+    "options": {},
+    "answer": "1111表示−1，0001表示+1；相加得到1 0000，保留结果0000，有最高位进位1。实际−1+1=0在−8到7内，没有有符号溢出；异号相加不会因结果超出有符号范围而溢出。",
+    "explanation": "进位记录最高位之外的无符号进位，有符号溢出检查结果是否超出补码范围，两者不能互相代替。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。",
+    "rubric": [
+      {
+        "criterion": "保留4位结果0000",
+        "points": 1
+      },
+      {
+        "criterion": "指出最高位进位为1",
+        "points": 1
+      },
+      {
+        "criterion": "说明−1与+1异号相加为0且无有符号溢出",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "gap-experience26-complement-minimum",
+    "subject": "数字电子技术",
+    "topic_id": "digital-electronics.t19",
+    "topic_source": "manual",
+    "chapter": "定字长补码与溢出",
+    "source_chapter": "定字长补码与溢出",
+    "knowledge_point": "数字电子基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "对4位补码1000按位取反加1，并仍仅保留4位，结果仍为1000。正确解释是（ ）。",
+    "options": {
+      "A": "结果已经正确表示+8",
+      "B": "−8的相反数+8超出4位补码范围，不能由这个结果表示",
+      "C": "1000一定是负零",
+      "D": "任何数取反加1都会保持不变"
+    },
+    "answer": "B",
+    "explanation": "1000原来表示−8，4位补码范围为−8～7，其相反数+8不可表示。位运算得到1000不意味着成功表示+8；固定字长范围必须先检查。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。"
+  },
+  {
+    "id": "gap-experience26-word-count-separator",
+    "subject": "编程语言",
+    "topic_id": "programming.t22",
+    "topic_source": "manual",
+    "chapter": "数组、字符串与Python组合数据",
+    "source_chapter": "数组、字符串与Python组合数据",
+    "knowledge_point": "Python数据类型",
+    "ability": "程序阅读",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "阅读Python代码：\ntext = \"red,blue red\"\ncounts = {}\nfor word in text.lower().replace(\",\", \" \").split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n写出两个词的计数，并说明若把replace(\",\", \" \")改成replace(\",\", \"\")会有什么不同。",
+    "options": {},
+    "answer": "原代码得到red:2、blue:1。逗号换为空格后词序列为red、blue、red；若直接删除逗号，red,blue会合成redblue，词序列变为redblue、red，得到redblue:1、red:1。",
+    "explanation": "预处理规则由输入约定决定。逗号本身充当两个相邻单词的分隔符时，应保留分词边界；get(word,0)+1让新词从0开始累计。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。",
+    "rubric": [
+      {
+        "criterion": "正确分词并得到red为2、blue为1",
+        "points": 1
+      },
+      {
+        "criterion": "解释get默认0后逐词累计",
+        "points": 1
+      },
+      {
+        "criterion": "识别删除逗号会合成redblue并给出新计数",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "gap-experience26-bitmap-zero-index",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t21",
+    "topic_source": "manual",
+    "chapter": "文件与磁盘空间管理",
+    "source_chapter": "文件与磁盘空间管理",
+    "knowledge_point": "文件系统",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "位示图每个字含32位，块号、字号和位号全部从0开始编号。第100号块处于几号字的几号位？有人套用从1开始的公式算出“4号字、4号位”，指出错误。位号按题设顺序计算，不讨论机器字节序。",
+    "options": {},
+    "answer": "字号=100整除32=3，位号=100 mod 32=4，即3号字4号位。从0开始时直接取商和余数，不需要先减1或最后加1；从1编号的公式不能原样套用。",
+    "explanation": "编号起点是计算条件。0号字覆盖0～31，1号字覆盖32～63，2号字覆盖64～95，3号字覆盖96～127，因此100在3号字第4号位。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。",
+    "rubric": [
+      {
+        "criterion": "算出字号3",
+        "points": 1
+      },
+      {
+        "criterion": "算出位号4",
+        "points": 1
+      },
+      {
+        "criterion": "解释从0编号不减1也不加1",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "gap-experience26-ns-nested-branch",
+    "subject": "软件工程",
+    "topic_id": "software-engineering.t25",
+    "topic_source": "manual",
+    "chapter": "软件设计",
+    "source_chapter": "软件设计",
+    "knowledge_point": "软件设计与UML",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "一个N-S盒图先判断A“账号有效”，仅在A的真分支内部嵌套判断B“余额足够”。当A为假时，正确执行方式是（ ）。",
+    "options": {
+      "A": "仍判断B并按余额扣款",
+      "B": "同时执行A的假分支和B的假分支",
+      "C": "只执行A的假分支，不进入B判断",
+      "D": "无论A真假都必须先执行B"
+    },
+    "answer": "C",
+    "explanation": "B整个包含在A的真分支，A假时走外层假分支，不进入B。盒图的包含关系表达控制依赖，不能把上下或左右出现的所有动作都依次执行。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。"
+  },
+  {
+    "id": "gap-experience26-ns-pad-false-branch",
+    "subject": "软件工程",
+    "topic_id": "software-engineering.t25",
+    "topic_source": "manual",
+    "chapter": "软件设计",
+    "source_chapter": "软件设计",
+    "knowledge_point": "软件设计与UML",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "模块规则：库存充足则发货；库存不足时，再判断能否补货，能补货则下采购单，否则提示缺货。用N-S盒图或PAD图描述时，第二个判断应嵌入第一个判断的哪一分支？列出三条处理路径。",
+    "options": {},
+    "answer": "第二判断“能否补货”嵌入“库存充足”的假分支。三条路径：库存充足→发货；库存不足且可补货→下采购单；库存不足且不可补货→提示缺货。N-S把第二判断的完整盒放在外层假分支内，PAD从外层假分支向右展开第二选择节点。",
+    "explanation": "本题将嵌套位置改为外层假分支，不能机械照搬讲义中A真才判断B的图；应先把业务条件和动作对应，再确定结构包含关系。",
+    "adaptation_note": "课程体验后补充的原创迁移任务；用于验证不同边界，不作为历年真题。",
+    "rubric": [
+      {
+        "criterion": "第二判断位于外层假分支",
+        "points": 1
+      },
+      {
+        "criterion": "列出三条完整处理路径",
+        "points": 1
+      },
+      {
+        "criterion": "说明盒内嵌套或向右分层选择关系",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  }
+]

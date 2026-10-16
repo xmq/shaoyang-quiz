@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="320" viewBox="0 0 360 320" role="img" aria-labelledby="title desc">
+  <title id="title">N-S盒图中的账号和余额嵌套判断</title>
+  <desc id="desc">外层先判断账号A是否有效。左侧假分支拒绝账号无效；右侧真分支完整包含余额B是否足够的判断，余额不足时拒绝，足够时扣款成功。所有结构均在封闭盒内，无流程箭头。</desc>
+  <style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}text{fill:currentColor}.line{stroke:currentColor;stroke-width:1.5;fill:none}.condition{fill:#eaf5f2}.muted{fill:#67777e}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.condition{fill:#203c3b}.muted{fill:#a0b2bb}}</style>
+  <text x="12" y="24" font-size="17" font-weight="650">N-S：把内层判断放进对应分支</text>
+  <path class="condition" d="M12 50H348V108H12Z"/>
+  <path class="condition" d="M124 108H348V168H124Z"/>
+  <rect class="line" x="12" y="50" width="336" height="232"/>
+  <path class="line" d="M12 50L124 108L348 50M12 108H348M124 108V282M124 108L236 168L348 108M124 168H348M236 168V282"/>
+  <text x="176" y="74" text-anchor="middle">A：账号有效？</text>
+  <text x="42" y="102">假</text><text x="306" y="102">真</text>
+  <text x="236" y="133" text-anchor="middle">B：余额足够？</text>
+  <text x="144" y="162">假</text><text x="318" y="162">真</text>
+  <text x="68" y="191" text-anchor="middle"><tspan x="68">拒绝</tspan><tspan x="68" dy="23">账号无效</tspan></text>
+  <text x="180" y="215" text-anchor="middle"><tspan x="180">拒绝</tspan><tspan x="180" dy="23">余额不足</tspan></text>
+  <text x="292" y="226" text-anchor="middle">扣款成功</text>
+  <text x="12" y="308" class="muted">A假时不再判断B；盒内不使用任意跳转。</text>
+</svg>

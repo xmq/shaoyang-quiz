@@ -1,0 +1,33 @@
+[
+  {
+    "id": "gap-eg-analog-006",
+    "rubric": [
+      {
+        "criterion": "按变压→整流→滤波→稳压排列四环节",
+        "points": 3
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed"
+  },
+  {
+    "id": "ap-analog-005",
+    "explanation": "核对要点：三种状态的主要特征、开关/放大用途、β关系的适用边界。",
+    "rubric": [
+      {
+        "criterion": "正确区分截止、放大、饱和三种状态的主要特征",
+        "points": 1
+      },
+      {
+        "criterion": "说明开关与放大用途",
+        "points": 1
+      },
+      {
+        "criterion": "说明IC=βIB的适用边界",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed"
+  }
+]

@@ -1199,6 +1199,12 @@
       return `<div class="table-wrap" tabindex="0" aria-label="可横向滚动的表格"><table><thead><tr>${header.map((cell) => `<th scope="col">${formatInline(cell)}</th>`).join("")}</tr></thead><tbody>${bodyRows.map((row) => `<tr>${row.map((cell) => `<td>${formatInline(cell)}</td>`).join("")}</tr>`).join("")}</tbody></table></div><p class="table-hint">↔ 左右滑动查看完整表格</p>`;
     }
 
+    function findTopicHeading(topicId) {
+      const headings = [...content.querySelectorAll(".point[data-topic-id]")].filter(item => item.dataset.topicId === topicId);
+      const title = currentCourse?.topics?.find(item => item.topic_id === topicId)?.title;
+      return headings.find(item => item.textContent.trim() === title) || headings[0] || null;
+    }
+
     function topicForHeading(title, chapterIndex) {
       const plainTitle = title.replace(/^\d+(?:\.\d+)*\s*/, "").trim();
       const exact = currentCourse?.topics?.find((item) => item.title === plainTitle || item.title === title);
@@ -1837,7 +1843,7 @@
       renderMarkdown(course.text);
       if (routeTopic) {
         const topic = currentCourse?.topics?.find((item) => item.topic_id === routeTopic);
-        const point = [...content.querySelectorAll(".point[data-topic-id]")].find((item) => item.dataset.topicId === routeTopic);
+        const point = findTopicHeading(routeTopic);
         let section = point?.closest(".chapter-section");
         const sections = [...content.querySelectorAll(".chapter-section")];
         let sectionIndex = sections.indexOf(section);
@@ -2160,7 +2166,7 @@
         const sections = [...content.querySelectorAll(".chapter-section")];
         const routeTopic = requestedRecallTopic;
         requestedRecallTopic = "";
-        const targetPoint = routeTopic ? [...content.querySelectorAll(".point[data-topic-id]")].find((point) => point.dataset.topicId === routeTopic) : null;
+        const targetPoint = routeTopic ? findTopicHeading(routeTopic) : null;
         const targetCard = targetPoint?.closest(".recall-card");
         if (targetCard) {
           activeChapterIndex = sections.indexOf(targetCard.closest(".chapter-section"));

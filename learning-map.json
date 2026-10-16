@@ -130,7 +130,7 @@
             "客观辨析"
           ],
           "short_answer": false,
-          "common_trap": "连续空格不能稳定代替段落缩进；固定行距小于实际文字高度时可能截字。"
+          "common_trap": "空格不能代替缩进，固定行距过小可能截字；格式查找条件不会随操作自动清空，后续查找前应检查。"
         },
         {
           "topic_id": "office.t04",
@@ -222,7 +222,7 @@
             "客观辨析"
           ],
           "short_answer": false,
-          "common_trap": "裁剪不必然删除原图数据；嵌入型对象通常不能直接组合，手工编号和引用在增删后容易失序。"
+          "common_trap": "主体更新不保证覆盖页眉、文本框等域，须分别查；裁剪不必然删原图，嵌入型对象通常不能组合，手工图号易失序。"
         },
         {
           "topic_id": "office.t07",
@@ -508,6 +508,35 @@
           "common_trap": "只勾循环不会生成换片时间；F5从头，Shift+F5从当前页（Windows桌面）。"
         },
         {
+          "topic_id": "office.t18",
+          "chapter_id": "office.c06",
+          "title": "按操作选择演示视图",
+          "depth": "综合应用",
+          "keywords": [
+            "幻灯片浏览视图",
+            "普通视图",
+            "备注页",
+            "放映"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "study_task": "按编辑对象、整页排序、讲稿和放映需求选择演示视图。",
+          "common_trap": "能拖动整页不等于能改页内对象；备注不自动显示给观众；整套默认格式用母版，勿把它当普通编辑视图。"
+        },
+        {
           "topic_id": "office.t16",
           "chapter_id": "office.c07",
           "title": "按任务组合工具",
@@ -750,7 +779,7 @@
           ],
           "short_answer": false,
           "study_task": "独立完成进制转换与bit、Byte、KB等容量换算，写清使用的进制约定。",
-          "common_trap": "位数、字长、容量不是同一量；网络速率的Mb/s与文件容量MB相差8倍，压缩文件不能继续直接使用未压缩容量公式。"
+          "common_trap": "补码不能只翻转有效几位，也不能按无符号251读；容量先算bit再除8成B，1000/1024口径须统一，压缩量不套原图公式。"
         },
         {
           "topic_id": "computer-foundations.t04",
@@ -819,6 +848,34 @@
           ],
           "short_answer": true,
           "common_trap": "机器字长、地址宽度、存储容量含义不同；CPU不等于主机。"
+        },
+        {
+          "topic_id": "computer-foundations.t24",
+          "chapter_id": "computer-foundations.c02",
+          "title": "ASCII字符与连续编码",
+          "depth": "直接应用",
+          "keywords": [
+            "ASCII",
+            "字符码",
+            "字母连续"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算"
+          ],
+          "short_answer": true,
+          "study_task": "区分7位编码和字节存放，利用各字符区间的连续性计算码值。",
+          "common_trap": "位数与存放字节宽度要分开；偏移不能跨字符区间乱加，9后码58是冒号；字符7的码55不是整数7。"
         },
         {
           "topic_id": "computer-foundations.t06",
@@ -1050,6 +1107,36 @@
           ],
           "short_answer": false,
           "common_trap": "Map输出键值对还须按键分组归约，不能当最终汇总；分布式副本也不能替代独立备份。"
+        },
+        {
+          "topic_id": "computer-foundations.t25",
+          "chapter_id": "computer-foundations.c05",
+          "title": "挖掘任务的输出与场景",
+          "depth": "综合应用",
+          "keywords": [
+            "分类",
+            "回归",
+            "聚类",
+            "关联分析",
+            "异常检测"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "study_task": "根据输出是类别、数值、分组、共现还是偏离，区分五类挖掘任务。",
+          "common_trap": "先看标签与预期输出；已按欺诈标签训练的任务是分类，不因题里写异常就改选异常检测；共现不证明因果。"
         },
         {
           "topic_id": "computer-foundations.t12",
@@ -1968,7 +2055,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "先堆素材再找主题会造成结构混乱；素材可访问不代表拥有使用授权，隐私信息也需处理。"
+          "common_trap": "按小屏与网络核画面、声音和码率；先堆素材再定主题易乱，不能用最终版2覆盖历史；可访问不等有授权，隐私信息仍须处理。"
         },
         {
           "topic_id": "multimedia.t16",
@@ -2574,6 +2661,37 @@
           "short_answer": true,
           "study_task": "比较连续、链接和索引分配的访问方式，区分硬链接与符号链接。",
           "common_trap": "inode通常不存文件名；关闭不等删除；普通硬链接不能跨文件系统，符号链接可能悬空。"
+        },
+        {
+          "topic_id": "operating-system.t21",
+          "chapter_id": "operating-system.c06",
+          "title": "位示图的块号与位号",
+          "depth": "综合应用",
+          "keywords": [
+            "位示图",
+            "位图",
+            "字号",
+            "位号"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "study_task": "先确定编号起点，再用商和余数定位位示图，解释位值约定。",
+          "common_trap": "均从0编号直接用块号除位数，商是字号、余是位号，不加1；混合编号须分别按各自起点换算。"
         },
         {
           "topic_id": "operating-system.t12",
@@ -3420,7 +3538,7 @@
             "代码/语句"
           ],
           "short_answer": true,
-          "common_trap": "读读不冲突；有环说明不冲突可串行化，不等于已经发生死锁。"
+          "common_trap": "读读不冲突；有环说明不满足冲突可串行化，不等于已经发生死锁。"
         },
         {
           "topic_id": "database.t20",
@@ -5120,7 +5238,7 @@
           ],
           "short_answer": true,
           "study_task": "逐项计算除法、取模和短路表达式，说明两个语言的差异。",
-          "common_trap": "优先级不等求值先后；C未排序的重复修改不可强算；Python and/or返回操作数，不必为bool。"
+          "common_trap": "实参分隔逗号不保证从左求值；优先级不等求值先后，未排序重复修改不可强算；Python and/or返回操作数。"
         },
         {
           "topic_id": "programming.t05",
@@ -5427,6 +5545,37 @@
           "short_answer": false,
           "study_task": "用Python列表、字典或集合完成去重、计数和查找，解释所选容器。",
           "common_trap": "空{}为字典，空集合set()，单元组(1,)；字典插入顺序不等于键排序，含列表的元组也不可哈希。"
+        },
+        {
+          "topic_id": "programming.t22",
+          "chapter_id": "programming.c08",
+          "title": "字典词频累计",
+          "depth": "综合应用",
+          "keywords": [
+            "词频",
+            "counts",
+            "split",
+            "get"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用",
+            "读写语句"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用",
+            "代码/语句"
+          ],
+          "short_answer": true,
+          "study_task": "按输入约定规范化和分词，逐词更新字典，检查分隔符会否合并单词。",
+          "common_trap": "red,blue不能直接删逗号合成redblue；get给缺省0避免新词缺键，统计末尾用计数总和核对词数。"
         },
         {
           "topic_id": "programming.t12",
@@ -6058,7 +6207,7 @@
           ],
           "short_answer": true,
           "study_task": "拆分Cache地址字段，判断命中并计算包含缺失代价的平均访问时间。",
-          "common_trap": "命中率高不保证所有程序都快；Cache未命中、TLB未命中和缺页属于不同层次，不能混算。"
+          "common_trap": "同容量下直接映射硬件简单但易冲突；全相联放置灵活但比较硬件多；组相联折中，不能只凭命中率判断速度。"
         },
         {
           "topic_id": "computer-organization.t14",
@@ -8693,7 +8842,7 @@
             "综合应用"
           ],
           "short_answer": true,
-          "common_trap": "U、I取有效值；三相线量与相量应按Y/Δ换算，变压器电流大小比为1/k。"
+          "common_trap": "U、I取有效值；线电压/电流与相电压/电流应按Y/Δ换算，变压器电流大小比为1/k。"
         },
         {
           "topic_id": "circuit.t08",
@@ -8722,6 +8871,37 @@
           ],
           "short_answer": true,
           "common_trap": "热继电器不能替代短路保护；额定值不是越大越合适，检修须断电验电。"
+        },
+        {
+          "topic_id": "circuit.t15",
+          "chapter_id": "circuit.c05",
+          "title": "同步转速与转差率",
+          "depth": "综合应用",
+          "keywords": [
+            "同步转速",
+            "转差率",
+            "同步转速与转差率",
+            "极对数"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "study_task": "区分极数与极对数，计算同步转速，并用实际转速求转差率。",
+          "common_trap": "同步转速是磁场转速，不是实测转子转速；正常电动状态n<n同步，发电状态不照搬此关系。"
         },
         {
           "topic_id": "circuit.t09",
@@ -9620,6 +9800,38 @@
           "common_trap": "分组转十六进制时，小数部分从小数点向右每4位分组，补0不改变数值。"
         },
         {
+          "topic_id": "digital-electronics.t19",
+          "chapter_id": "digital-electronics.c01",
+          "title": "补码加法与有符号溢出",
+          "depth": "综合应用",
+          "keywords": [
+            "补码加法",
+            "有符号溢出",
+            "补码加法与有符号溢出",
+            "补码",
+            "最高位进位"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "优先练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "直接计算",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "直接计算",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "study_task": "按固定位宽求补码和，分别判断最高位进位与有符号溢出。",
+          "common_trap": "先固定字长及有符号解释；最高位向外进位不等于有符号溢出，符号位为1也不自动表示越界。"
+        },
+        {
           "topic_id": "digital-electronics.t02",
           "chapter_id": "digital-electronics.c02",
           "title": "门电路、有效电平与三态",
@@ -10071,7 +10283,7 @@
             "直接计算"
           ],
           "short_answer": true,
-          "common_trap": "周期包括高低两段；低有效脉冲的有效占比可能为tL/T，不能默认等于高电平占空比。"
+          "common_trap": "低频可能闪烁或转矩脉动，高频增开关损耗；效果受负载和驱动限制，平均电压不直接等于转速或线性亮度。"
         },
         {
           "topic_id": "digital-electronics.t18",
@@ -11731,6 +11943,35 @@
           ],
           "short_answer": true,
           "common_trap": "继承是is-a；has-a应用关联/聚合/组合按生命周期判断；一个名词不一定独立成类。"
+        },
+        {
+          "topic_id": "software-engineering.t25",
+          "chapter_id": "software-engineering.c04",
+          "title": "嵌套判断的N-S与PAD图",
+          "depth": "综合应用",
+          "keywords": [
+            "N-S",
+            "PAD",
+            "嵌套判断",
+            "过程设计"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "综合应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明",
+            "分析应用"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明",
+            "综合应用"
+          ],
+          "short_answer": true,
+          "study_task": "先列条件与动作，再确定第二判断嵌入哪个分支，并逐条走通。",
+          "common_trap": "分支只执行选中一路，不能看见B真就跳过A；PAD折角不是普通流程图菱形，N-S不能画成盒外箭头连接。"
         },
         {
           "topic_id": "software-engineering.t11",

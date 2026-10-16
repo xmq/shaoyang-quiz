@@ -19,7 +19,8 @@
         "主题、母版与版式": "office.t14",
         "动画、切换与放映": "office.t15",
         "按任务组合工具": "office.t16",
-        "链接、协作与交付检查": "office.t17"
+        "链接、协作与交付检查": "office.t17",
+        "按操作选择演示视图": "office.t18"
       },
       "chapter_prefix": {
         "office.c01": [
@@ -62,6 +63,14 @@
         "第5章 数据管理、分析与图表": "office.c05",
         "第6章 演示文稿设计与制作": "office.c06",
         "第7章 Office综合应用": "office.c07"
+      },
+      "keywords": {
+        "office.t18": [
+          "幻灯片浏览视图",
+          "普通视图",
+          "备注页",
+          "放映"
+        ]
       }
     },
     "大学计算机基础与新技术": {
@@ -88,7 +97,9 @@
         "按目标与约束组合技术": "computer-foundations.t20",
         "信息检索与结果筛选": "computer-foundations.t21",
         "域名访问与网络地址分工": "computer-foundations.t22",
-        "准确率、精确率与召回率": "computer-foundations.t23"
+        "准确率、精确率与召回率": "computer-foundations.t23",
+        "ASCII字符与连续编码": "computer-foundations.t24",
+        "挖掘任务的输出与场景": "computer-foundations.t25"
       },
       "chapter_prefix": {
         "computer-foundations.c01": [
@@ -150,6 +161,18 @@
         ],
         "computer-foundations.t23": [
           "准确率、精确率与召回率"
+        ],
+        "computer-foundations.t24": [
+          "ASCII",
+          "字符码",
+          "字母连续"
+        ],
+        "computer-foundations.t25": [
+          "分类",
+          "回归",
+          "聚类",
+          "关联分析",
+          "异常检测"
         ]
       },
       "chapters": {
@@ -277,7 +300,8 @@
         "CLOCK访问位与指针": "operating-system.t17",
         "SSTF逐次选最近": "operating-system.t18",
         "SCAN与LOOK累计距离": "operating-system.t19",
-        "读者写者的计数与互斥": "operating-system.t20"
+        "读者写者的计数与互斥": "operating-system.t20",
+        "位示图的块号与位号": "operating-system.t21"
       },
       "chapter_prefix": {
         "operating-system.c01": [
@@ -345,6 +369,12 @@
         ],
         "operating-system.t20": [
           "读者写者的计数与互斥"
+        ],
+        "operating-system.t21": [
+          "位示图",
+          "位图",
+          "字号",
+          "位号"
         ]
       },
       "chapters": {
@@ -667,7 +697,8 @@
         "with文件读写与编码": "programming.t18",
         "预处理与static局部状态": "programming.t19",
         "二维数组与指针声明": "programming.t20",
-        "CSV转换统计与格式化": "programming.t21"
+        "CSV转换统计与格式化": "programming.t21",
+        "字典词频累计": "programming.t22"
       },
       "chapter_prefix": {
         "programming.c01": [
@@ -744,6 +775,12 @@
         ],
         "programming.t21": [
           "CSV转换统计与格式化"
+        ],
+        "programming.t22": [
+          "词频",
+          "counts",
+          "split",
+          "get"
         ]
       },
       "chapters": {
@@ -1203,7 +1240,8 @@
         "沿信号链分段定位": "circuit.t12",
         "关联参考方向与功率符号": "circuit.t01",
         "共享电阻的网孔列式": "circuit.t13",
-        "戴维南端口参数求法": "circuit.t14"
+        "戴维南端口参数求法": "circuit.t14",
+        "同步转速与转差率": "circuit.t15"
       },
       "chapter_prefix": {
         "circuit.c01": [
@@ -1249,6 +1287,11 @@
         "circuit.t14": [
           "戴维南端口参数求法",
           "叠加"
+        ],
+        "circuit.t15": [
+          "同步转速",
+          "极对数",
+          "转差率"
         ]
       },
       "parents": {
@@ -1403,7 +1446,8 @@
         "移位寄存器逐拍跟踪": "digital-electronics.t15",
         "计数器状态到T激励": "digital-electronics.t16",
         "脉冲周期与占空比": "digital-electronics.t17",
-        "施密特双阈值整形": "digital-electronics.t18"
+        "施密特双阈值整形": "digital-electronics.t18",
+        "补码加法与有符号溢出": "digital-electronics.t19"
       },
       "chapter_prefix": {
         "digital-electronics.c01": [
@@ -1465,6 +1509,11 @@
         ],
         "digital-electronics.t18": [
           "施密特双阈值整形"
+        ],
+        "digital-electronics.t19": [
+          "补码",
+          "有符号溢出",
+          "最高位进位"
         ]
       },
       "chapters": {
@@ -1683,7 +1732,8 @@
         "控制流图环形复杂度": "software-engineering.t21",
         "关键路径与总工期": "software-engineering.t22",
         "有穷状态机与需求约束": "software-engineering.t23",
-        "借阅对象与协作建模": "software-engineering.t24"
+        "借阅对象与协作建模": "software-engineering.t24",
+        "嵌套判断的N-S与PAD图": "software-engineering.t25"
       },
       "chapter_prefix": {
         "software-engineering.c01": [
@@ -1748,6 +1798,12 @@
         ],
         "software-engineering.t24": [
           "借阅对象与协作建模"
+        ],
+        "software-engineering.t25": [
+          "N-S",
+          "PAD",
+          "嵌套判断",
+          "过程设计"
         ]
       },
       "chapters": {

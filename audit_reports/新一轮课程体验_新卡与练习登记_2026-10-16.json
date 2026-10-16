@@ -1,0 +1,74 @@
+{
+  "new_topics": [
+    {
+      "course": "操作系统原理",
+      "title": "位示图的块号与位号",
+      "topic_id": "operating-system.t21"
+    },
+    {
+      "course": "C与Python程序设计",
+      "title": "字典词频累计",
+      "topic_id": "programming.t22"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "title": "同步转速与转差率",
+      "topic_id": "circuit.t15"
+    },
+    {
+      "course": "数字电子技术",
+      "title": "补码加法与有符号溢出",
+      "topic_id": "digital-electronics.t19"
+    },
+    {
+      "course": "Office软件操作",
+      "title": "按操作选择演示视图",
+      "topic_id": "office.t18"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "title": "ASCII字符与连续编码",
+      "topic_id": "computer-foundations.t24"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "title": "挖掘任务的输出与场景",
+      "topic_id": "computer-foundations.t25"
+    },
+    {
+      "course": "软件工程",
+      "title": "嵌套判断的N-S与PAD图",
+      "topic_id": "software-engineering.t25"
+    }
+  ],
+  "question_assignments": {
+    "uf-ee-022": "circuit.t15",
+    "cg-10-s1-q57": "operating-system.t21",
+    "hn-recall-sy26-003": "programming.t22",
+    "cg-12-s1-q10-dup2": "office.t18",
+    "cg-12-s1-q22-dup2": "office.t18",
+    "dy-2435453e": "computer-foundations.t24",
+    "hn-recall-sy26-002": "computer-foundations.t25",
+    "gap-found-023": "computer-foundations.t25",
+    "cg-06-s1-q107": "computer-foundations.t24",
+    "cg-06-s1-q111": "computer-foundations.t24",
+    "cg-06-s1-q116": "computer-foundations.t24",
+    "cg-06-s1-q119": "computer-foundations.t24",
+    "zg-32924": "computer-foundations.t24",
+    "zg-81295": "computer-foundations.t24",
+    "zg-6311": "computer-foundations.t24",
+    "zg-16583": "computer-foundations.t24",
+    "zg-42544": "computer-foundations.t24",
+    "gap-found-006": "computer-foundations.t25"
+  },
+  "new_question_ids": [
+    "gap-experience26-motor-slip",
+    "gap-experience26-complement-carry",
+    "gap-experience26-complement-minimum",
+    "gap-experience26-word-count-separator",
+    "gap-experience26-bitmap-zero-index",
+    "gap-experience26-ns-nested-branch",
+    "gap-experience26-ns-pad-false-branch"
+  ],
+  "note": "旧题ID及标准答案保持，旧题按新独立回忆任务显式分配；新增任务有不同编号、分隔符或分支边界，非仅换数字。"
+}

@@ -1,6 +1,14 @@
 """Maintained, concrete closed-book tasks; these are outcomes, not exam forecasts."""
 
 STUDY_TASKS = {
+    "operating-system.t21": "先确定编号起点，再用商和余数定位位示图，解释位值约定。",
+    "programming.t22": "按输入约定规范化和分词，逐词更新字典，检查分隔符会否合并单词。",
+    "circuit.t15": "区分极数与极对数，计算同步转速，并用实际转速求转差率。",
+    "digital-electronics.t19": "按固定位宽求补码和，分别判断最高位进位与有符号溢出。",
+    "office.t18": "按编辑对象、整页排序、讲稿和放映需求选择演示视图。",
+    "computer-foundations.t24": "区分7位编码和字节存放，利用各字符区间的连续性计算码值。",
+    "computer-foundations.t25": "根据输出是类别、数值、分组、共现还是偏离，区分五类挖掘任务。",
+    "software-engineering.t25": "先列条件与动作，再确定第二判断嵌入哪个分支，并逐条走通。",
     "office.t04": "给出多级标题，设置样式并说明自动目录为何能随标题更新。",
     "office.t05": "为封面无页码、正文从1开始的文档安排分节、页码和链接到前一节。",
     "office.t08": "判断数字与文本的差异，写出公式并推演填充后的结果。",

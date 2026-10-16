@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="286" viewBox="0 0 360 286" role="img" aria-labelledby="title desc">
+  <title id="title">同样周期和幅度，不同PWM占空比</title>
+  <desc id="desc">两组0到5伏的脉冲周期相同，上方高电平占四分之一，平均电压1.25伏；下方占四分之三，平均电压3.75伏。虚线为一个周期的平均电压，不是瞬时波形。</desc>
+  <style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}.axis{stroke:#8a9a9f;stroke-width:1.5;fill:none}.wave{stroke:#14766d;stroke-width:3;fill:none}.mean{stroke:#426b92;stroke-width:1.5;stroke-dasharray:5 4}text{fill:currentColor}.muted{fill:#67777e}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.wave{stroke:#74cabe}.mean{stroke:#9fbfdb}.muted{fill:#a0b2bb}}</style>
+  <text x="12" y="23" font-size="17" font-weight="650">PWM：改变的是高电平持续时间</text>
+  <text x="12" y="49">同为0/5 V、周期T；蓝色虚线表示平均值</text>
+  <g class="axis"><path d="M46 70V133H338M46 180V243H338"/><path d="M190 74V133M334 74V133M190 184V243M334 184V243" stroke-dasharray="3 4"/></g>
+  <path class="wave" d="M46 126V78H82V126H190V78H226V126H334"/>
+  <path class="wave" d="M46 236V188H154V236H190V188H298V236H334"/>
+  <path class="mean" d="M46 114H334M46 200H334"/>
+  <text x="12" y="83">5 V</text><text x="15" y="131">0</text>
+  <text x="12" y="193">5 V</text><text x="15" y="241">0</text>
+  <text x="46" y="155">D=25%</text><text x="190" y="155">平均电压1.25 V</text>
+  <text x="46" y="265">D=75%</text><text x="190" y="265">平均电压3.75 V</text>
+  <text x="112" y="110" class="muted">1个T</text><text x="256" y="110" class="muted">1个T</text>
+</svg>

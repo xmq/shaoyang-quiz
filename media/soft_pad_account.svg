@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="312" viewBox="0 0 360 312" role="img" aria-labelledby="title desc">
+  <title id="title">PAD图的账号和余额分层选择</title>
+  <desc id="desc">从最左主干开始，账号A有效走真分支向右展开余额B判断；B真扣款成功，B假拒绝余额不足；A假直接拒绝账号无效。折角为选择符，横向展开表示嵌套层次，无程序流程箭头。</desc>
+  <style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}text{fill:currentColor}.line{stroke:currentColor;stroke-width:1.5;fill:none}.condition{fill:#eaf5f2;stroke:currentColor;stroke-width:1.5}.action{fill:none;stroke:currentColor;stroke-width:1.5}.muted{fill:#67777e}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.condition{fill:#203c3b}.muted{fill:#a0b2bb}}</style>
+  <text x="12" y="24" font-size="17" font-weight="650">PAD：向右展开嵌套的处理层次</text>
+  <path class="line" d="M16 44V266M90 54H138M90 244H132M218 54H246M218 154H246"/>
+  <path class="condition" d="M16 54H90L72 149L90 244H16Z"/>
+  <path class="condition" d="M138 54H218L200 104L218 154H138Z"/>
+  <text x="44" y="130" text-anchor="middle"><tspan x="44">A</tspan><tspan x="44" dy="21">账号</tspan><tspan x="44" dy="21">有效？</tspan></text>
+  <text x="171" y="85" text-anchor="middle"><tspan x="171">B</tspan><tspan x="171" dy="21">余额</tspan><tspan x="171" dy="21">足够？</tspan></text>
+  <text x="106" y="46">真</text><text x="104" y="236">假</text>
+  <text x="224" y="46">真</text><text x="224" y="146">假</text>
+  <rect class="action" x="246" y="36" width="102" height="36"/>
+  <text x="297" y="59" text-anchor="middle">扣款成功</text>
+  <rect class="action" x="246" y="132" width="102" height="44"/>
+  <text x="297" y="150" text-anchor="middle"><tspan x="297">拒绝</tspan><tspan x="297" dy="19">余额不足</tspan></text>
+  <rect class="action" x="132" y="224" width="216" height="40"/>
+  <text x="240" y="249" text-anchor="middle">拒绝：账号无效</text>
+  <text x="12" y="294" class="muted">先A后B；一个分支只执行自己的处理。</text>
+</svg>

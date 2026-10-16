@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-16",
+  "baseline_commit": "9dc2a3f",
+  "final_build": "8397fb4e5c5bb295",
+  "reviewers": "3个模型代理，两种路径交叉；不是实际真人或无先验盲测",
+  "scope": {
+    "courses": 16,
+    "chapters": 134,
+    "chapter_experiences": 268,
+    "initial_question_attempts": 536
+  },
+  "rounds": [
+    {
+      "perspective": "计算机初学者",
+      "chapters": 54,
+      "questions": 108,
+      "report": "audit_reports/新一轮课程体验_计算机初学者_2026-10-16.json"
+    },
+    {
+      "perspective": "应用初学者",
+      "chapters": 40,
+      "questions": 80,
+      "report": "audit_reports/新一轮课程体验_应用初学者_2026-10-16.json"
+    },
+    {
+      "perspective": "电子初学者",
+      "chapters": 40,
+      "questions": 80,
+      "report": "audit_reports/新一轮课程体验_电子初学者_2026-10-16.json"
+    },
+    {
+      "perspective": "计算机考生",
+      "chapters": 54,
+      "questions": 108,
+      "report": "audit_reports/新一轮课程体验_计算机考生_2026-10-16.json"
+    },
+    {
+      "perspective": "应用考生",
+      "chapters": 40,
+      "questions": 80,
+      "report": "audit_reports/新一轮课程体验_应用考生_2026-10-16.json"
+    },
+    {
+      "perspective": "电子考生",
+      "chapters": 40,
+      "questions": 80,
+      "report": "audit_reports/新一轮课程体验_电子考生_2026-10-16.json"
+    }
+  ],
+  "issues": [
+    {
+      "id": "EXP-COMP-001",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-COMP-002",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-COMP-003",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-COMP-004",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-COMP-005",
+      "original_priority": "P2",
+      "status": "deferred_optional_organization",
+      "note": "数据库末段组织可继续调整；现有内容可学习，不作为学习阻断，也未擅自把整域缺口关闭。"
+    },
+    {
+      "id": "EXP-COMP-006",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-APP-001",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-APP-002",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-APP-003",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-ELEC-001",
+      "original_priority": "P1",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-ELEC-002",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-ELEC-003",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-ELEC-004",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-ELEC-005",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-COMP-001",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-COMP-002",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-COMP-003",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-COMP-004",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-APP-001",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-APP-002",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-APP-003",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-APP-004",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-APP-005",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    },
+    {
+      "id": "EXP-EXAM-ELEC-001",
+      "original_priority": "P2",
+      "status": "fixed_and_non_author_retested",
+      "note": ""
+    }
+  ],
+  "fixed_count": 23,
+  "deferred_count": 1,
+  "new_cards": 8,
+  "new_questions": 7,
+  "current_topics": 393,
+  "current_questions": 2534,
+  "old_question_stems_options_answers_preserved": 2527,
+  "old_topic_ids_preserved": 385,
+  "explicit_question_topic_moves": 18,
+  "review_point_repairs": [
+    "gap-eg-analog-006",
+    "ap-is-006",
+    "ap-analog-005",
+    "ap-digital-006",
+    "sp-core-ds-033",
+    "sp-elec-circuit-028",
+    "sp-elec-comm-028"
+  ],
+  "extra_repairs": [
+    "优先定位讲义中同名知识点，解决68个精确标题被早期模糊标题抢先的情形；100个既有复合知识点仍回到正确章首，未虚称全部精确定位。",
+    "数据库优先图有环句改成不满足冲突可串行化，消除语义歧义。"
+  ],
+  "invariants": "旧章标题、旧卡相对顺序、既有高亮均保留；旧题标准答案/题干/选项保持。",
+  "independent_math_checks": [
+    "4位补码全部256组加法的符号位溢出规则",
+    "最高位进位与有符号溢出反例",
+    "最小负数无法取可表示相反数",
+    "同步转速/转差率",
+    "0起位图商余",
+    "两种分隔符处理的真实Python字典输出"
+  ],
+  "browser_evidence": {
+    "full_topics": "audit_reports/新一轮课程体验_全知识点浏览器_2026-10-16.json",
+    "anchors": "audit_reports/新一轮课程体验_讲义定位复测_2026-10-16.json",
+    "last_cache_card": "audit_reports/新一轮课程体验_Cache末次浏览器_2026-10-16.json",
+    "last_offline": "audit_reports/新一轮课程体验_末次离线_2026-10-16.json",
+    "build_boundary": "全局1572卡场景/393题池/304路由在3e002732a520b8e1；此后仅补Cache卡取舍，末次8397fb4e5c5bb295对该科168卡场景/42题池、浅深独立复测和全课程离线复查。"
+  },
+  "non_author_retests": [
+    "audit_reports/新一轮课程体验_独立复测_计算机审阅者_2026-10-16.json",
+    "audit_reports/新一轮课程体验_独立复测_应用审阅者_2026-10-16.json",
+    "audit_reports/新一轮课程体验_独立复测_电子审阅者_2026-10-16.json"
+  ],
+  "source_fingerprints": {
+    "course_notes/C与Python程序设计.md": "83a4831e9de30223e740ff7d9e65ba15012f9b8464c883abf7ef4c62e25125c7",
+    "course_notes/Office软件操作.md": "5788ab21b96507384774e2391c60ea5cccdb0fe22ab5220a814e85e5351283b0",
+    "course_notes/信号与系统.md": "bfc234b1afff1e4548675d2da7e383fe93681806318b0e3049705f64178a1f89",
+    "course_notes/信息安全.md": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+    "course_notes/多媒体技术.md": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+    "course_notes/大学计算机基础与新技术.md": "1a5a2c2f193d51ae7f72dcd4c9e4357906ee3a568ad716e098e0ad2159f40a47",
+    "course_notes/操作系统原理.md": "243fa8968d31b394b258b59d1033c06a88d091a2f43ce0291f008093ceb82ed0",
+    "course_notes/数字电子技术.md": "bdc673e7b072e2060ee340ca503512533d2af0393a68d40d512474dd94404841",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "course_notes/数据结构与算法.md": "47df0ddc320464e93e18422839a7318097ff62b38a0232824342104a949ba2e3",
+    "course_notes/模拟电子技术.md": "4ca6cd64c2f975dfab2069fc1a8ded78fbf94a996a0d07076c0ede1ef91e915e",
+    "course_notes/电路分析与电工技术.md": "827d0bb43bf2dbe45d92be0eca27f289f8b9d83370ca004c89a32042bbe02871",
+    "course_notes/计算机组成原理.md": "6ce94d64f271b559a3bb0e734c3dbb5e6bb581afdfeaa0e1bb1eec0270ba3069",
+    "course_notes/计算机网络.md": "59ba02c0ee4353e11ca03fefd716cd8ebd71ee4542b90d1c98b2e534673df9ff",
+    "course_notes/软件工程.md": "48ce977e5f66506e53731c3041c5702edb0865132c2c52f40fa9bf8f9c991628",
+    "course_notes/通信原理与高频电子线路.md": "91112341fe5b066e764942819555eacef99dd33284819afaa332530351a4c5c7",
+    "color_notes/C与Python程序设计.md": "2dac37f2bd98c995fe9790823e405c91a5f0f9cdf608ba5802ae34adf36e6186",
+    "color_notes/Office软件操作.md": "83ca9333dcc64e8a8512983555c13f7290278888eaf391dbf2803d32043e121b",
+    "color_notes/信号与系统.md": "3d728d768148ea73107e255b01def0a413e98936d98cec8161cf707ea7e18c61",
+    "color_notes/信息安全.md": "d070ecfe0e3ac71a15138949865d46012a44c73aea2f7f9f562d2bd0a064c2bb",
+    "color_notes/多媒体技术.md": "8051dcdb28620c0b65e741c1028386fc5c5e244503be323051849b9295ef478b",
+    "color_notes/大学计算机基础与新技术.md": "14d0ebc0ecaef5dbc92f549f0fd68f0097578b81156ee574151e126849b10205",
+    "color_notes/操作系统原理.md": "90e216431f810bf7c2c1684766b93ba08a8dc94f7ca58777541b465c23b8f68b",
+    "color_notes/数字电子技术.md": "a217aa3f1eac2c2930236ba3ad2b77b7a9e62860409431b6a6474bec963e3cb5",
+    "color_notes/数据库技术.md": "3d59927bd9497dc04461e9a8dbac534851021f88d39522105c9381e3a7b232db",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "color_notes/模拟电子技术.md": "2fd82e7afdf84dfccf955921153de9a7a2191aeace4fdcedc3b688c95bc04294",
+    "color_notes/电路分析与电工技术.md": "c4cc2d71e58192854df7e547e26e023e98cb26b607b0d05f6f425b54496d55f4",
+    "color_notes/计算机组成原理.md": "e4b357183f4a74bc924f832de6483c14aac29e29fb1c6f2ab9c79178a590c7ee",
+    "color_notes/计算机网络.md": "d2435d422293fef62dfa7243cbb48f1814d8b63f05c74e2389a04e70f3ba0a35",
+    "color_notes/软件工程.md": "d22bd4bf83c411ecca5fa5128f634fd05fe8a3dbf8acf1888a1ba46623d5c723",
+    "color_notes/通信原理与高频电子线路.md": "efdaf110f5d3316b11bb9821207ecdf01a371aacc31113c1a009a4e80238ab40"
+  },
+  "remaining_boundaries": [
+    "EXP-COMP-005数据库安全章末的新技术内容仍可优化组织，作为可选建议保留。",
+    "外部教材范围缺口（如CMM/Jackson、电路二阶、信号DFT/FFT）未在本轮局部改进中补齐，其余15科教材完整验收仍未通过。",
+    "Word操作链仅书面/界面路径核验，未进行真实桌面Office自动操作；未模拟真实电路或测量硬件。",
+    "没有用题目答对率证明初学者真实掌握或长期记忆；正文/卡片原例曝光和模型先验均在逐章报告保留。"
+  ]
+}

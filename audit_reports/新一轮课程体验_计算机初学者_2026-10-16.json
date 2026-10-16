@@ -1,0 +1,3221 @@
+{
+  "date": "2026-10-16",
+  "baseline_commit": "9dc2a3f",
+  "dist_build": "7339df71cfe62b2a",
+  "reviewer": "计算机六科初学者视角模型代理",
+  "limitations": [
+    "有模型既有学科知识，非真实初学者、非真人盲测。",
+    "完整正文阅读曝光了例题答案；逐章自选过程是独立复算，未谎称未见答案。",
+    "108道题先写TEMP尝试文件再读取答案包；同题/同型曝光不计独立教学有效性证明。",
+    "实际浏览器为桌面Chrome手机视口模拟，无真机体验；每章两模块浅深打开，图像人工抽查范围见mobile。",
+    "本轮不改产品不build，所有问题未修复，不能声称教学修复或二次通过。"
+  ],
+  "method": [
+    "按维护讲义章序阅读六科正文和对应重点，逐章复述及推中间态。",
+    "先存自己的108答到OS TEMP，再开答案包核对；保留LRU自纠。",
+    "学习链接采集用实际DOM data-topic-id和learning-map；fallback章首不作为知识缺失证据。"
+  ],
+  "attempt_file": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_beginner_attempts_before_answers.json",
+  "chapter_count": 54,
+  "task_count": 108,
+  "findings": [
+    {
+      "id": "EXP-COMP-001",
+      "severity": "P2",
+      "chapter_id": "data-structures.c01",
+      "location": "course_notes/数据结构与算法.md",
+      "line": 28,
+      "quote": "若循环每次令 `i=2i`，则执行约 `log₂n` 次。",
+      "actual_learning_failure": "章1练习zg-34137要求写出三基本结构；本章未说明顺序/选择/循环的三分法，独立从本章难可靠填空，模型用既有程序设计知识补上。",
+      "minimum_fix": "在算法特征后补三基本结构各一句/一行伪码，或明确给程序设计章1前置链接。",
+      "evidence_boundary": "题元数据与本章实际授课内容的局部缺口；不是断言整课缺结构化编程。",
+      "status": "待跨组核验；产品冻结未修",
+      "source_standard": "build-study-course：审未教前置、独立任务回忆与对应题。标准是教学设计要求，不是本轮真人实验结论。"
+    },
+    {
+      "id": "EXP-COMP-002",
+      "severity": "P2",
+      "chapter_id": "operating-system.c02",
+      "location": "color_notes/操作系统原理.md",
+      "line": 14,
+      "quote": "库函数不一定发系统调用",
+      "actual_learning_failure": "gap-audit26-core-os-system-call要区分库函数、系统调用与内核态。正文解释普通函数不自动提权，却未先说库函数是什么、何时在用户态直接完成；我的答案依赖已有先验。",
+      "minimum_fix": "补一个库函数纯用户态计算与库read封装系统调用的并列路径，卡附最短区分。",
+      "evidence_boundary": "技能初学者前置要求；本课证据是缺定义而非系统调用路径缺失。",
+      "status": "待跨组核验；产品冻结未修",
+      "source_standard": "build-study-course：审未教前置、独立任务回忆与对应题。标准是教学设计要求，不是本轮真人实验结论。"
+    },
+    {
+      "id": "EXP-COMP-003",
+      "severity": "P2",
+      "chapter_id": "net-05",
+      "location": "course_notes/计算机网络.md",
+      "line": 586,
+      "quote": "cwnd以MSS计、初值取1",
+      "actual_learning_failure": "gap-full-net-congestion-trace可按已给1→2→4→8→9复算，但初学者不能从首次MSS得知它是每段最大数据长度，而不是窗口或bit/s单位；我用模型先验识别。",
+      "minimum_fix": "首次出现展开MSS最大报文段长度（TCP数据部分），用MSS=1000B时cwnd4MSS=4000B举例；不展开实现协商细节。",
+      "evidence_boundary": "术语定义前置问题；Reno过程正文已充分，不能报为缺拥塞算法。",
+      "status": "待跨组核验；产品冻结未修",
+      "source_standard": "build-study-course：审未教前置、独立任务回忆与对应题。标准是教学设计要求，不是本轮真人实验结论。"
+    },
+    {
+      "id": "EXP-COMP-004",
+      "severity": "P2",
+      "chapter_id": "programming.c08",
+      "location": "color_notes/C与Python程序设计.md",
+      "line": 83,
+      "quote": "### Python列表、元组、字典与集合",
+      "actual_learning_failure": "重点只有容器属性/浅拷贝例，hn-recall-sy26-003词频所需lower→replace→split→get累计在讲义已教，却不能由卡可靠召回。",
+      "minimum_fix": "补一张词频累计小卡，以另一组三词展示counts从{}变化两步并说明文本预处理边界。",
+      "evidence_boundary": "复习卡不替代讲义，但应提供已教独立任务的提取线索；不是称词频未教。",
+      "status": "待跨组核验；产品冻结未修",
+      "source_standard": "build-study-course：审未教前置、独立任务回忆与对应题。标准是教学设计要求，不是本轮真人实验结论。"
+    },
+    {
+      "id": "EXP-COMP-005",
+      "severity": "P2",
+      "chapter_id": "database.c09",
+      "location": "course_notes/数据库技术.md",
+      "line": 550,
+      "quote": "#### 分析型数据与新型数据库的比较",
+      "actual_learning_failure": "安全章突然切入OLAP/OLTP、ETL、内存库与区块链；重点唯一认证授权卡无法召回这些已教内容，逐章复习易把末段漏掉。",
+      "minimum_fix": "给新增段独立章内小节入口与1—2张回忆卡（OLTP/OLAP任务比较、内存与持久化条件）；覆盖范围仍保持开放。",
+      "evidence_boundary": "这是已教内容的组织/召回问题；未把教材后续整域缺失擅称高级选修。",
+      "status": "待跨组核验；产品冻结未修",
+      "source_standard": "build-study-course：审未教前置、独立任务回忆与对应题。标准是教学设计要求，不是本轮真人实验结论。"
+    },
+    {
+      "id": "EXP-COMP-006",
+      "severity": "P2",
+      "chapter_id": "net-06",
+      "location": "course_notes/计算机网络.md",
+      "line": 691,
+      "quote": "HTML骨架是",
+      "actual_learning_failure": "dy-340ea980是判断“图片可建立超链接”，题元数据为net.http/net-06；本章HTML只展示骨架/h1/p，没有文字/图片都能作链接的概念。答案主要凭已有网页知识，不能据答对说明本课已支持。",
+      "minimum_fix": "补“超链接可附于文字或图片；点击对象后访问目标URL”，并给点击课程封面进课程页的一句小例；本题不要求HTML代码。",
+      "evidence_boundary": "题元数据确认是本章关联题；不是错章，也不要求扩网页编程教程。",
+      "status": "待跨组核验；产品冻结未修",
+      "source_standard": "build-study-course：审未教前置、独立任务回忆与对应题。标准是教学设计要求，不是本轮真人实验结论。"
+    }
+  ],
+  "chapters": [
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c01",
+      "title": "第1章 计算机系统概论",
+      "order": 1,
+      "independent_restatement": "硬件提供执行部件，软件规定任务；PC选下一指令，数据位串由用途解释。性能是任务用时而非单看频率。",
+      "independent_process": "另取200万指令、CPI1.5、2GHz：总300万拍，耗1.5ms；取指100后PC104。",
+      "tasks": [
+        {
+          "id": "sp-core-co-019",
+          "stem": "存储程序方式要求所有指令只能永远按物理地址连续顺序执行，不能发生转移。（ ）",
+          "topic_id": "computer-organization.t01",
+          "attempt": "错；程序可由转移指令更改PC，连续只是默认顺序",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "错误",
+          "official_explanation": "控制器通常顺序取指，但条件转移、无条件转移和中断都可改变后续指令地址。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t01",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章1.2 计算机的基本组成及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-terms-09",
+          "stem": "某教学机的CPU一次整数运算通常处理32位数据，一条机器指令固定为16位，主存每个存储单元保存8位。在机器字长、指令字长、存储字长三个术语中，描述这里16位的是________。",
+          "topic_id": "computer-organization.t42",
+          "attempt": "指令字长；16描述一条编码的长度，32为机器字长、8为存储字长",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "指令字长",
+          "official_explanation": "机器字长描述CPU通常一次处理的二进制数据位数，此处为32位；指令字长是一条机器指令的位数，此处为16位；存储字长是一个存储单元的位数，此处为8位。三个量描述的对象不同。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c01",
+            "topic_id": "computer-organization.t42",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章1.2 计算机的基本组成及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "ISA、裸机和虚拟机密集出现，但有简释；初学者还不易把指令与数据在同存储器中的用途联起。",
+      "review_consistency": "三张卡分别提醒组成、性能、三字长，能脱离长文复述这三个任务。",
+      "optimization": "可把3+5取指状态改为一次遮住PC更新的短预测。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c08",
+      "title": "第2章 计算机的发展及应用",
+      "order": 2,
+      "independent_restatement": "器件演进与应用分类是两条轴，应用按任务目标判断，并行收益受串行时间限制。",
+      "independent_process": "另取可并行p=.75、n=3：新时间.25+.75/3=.5，加速2。",
+      "tasks": [
+        {
+          "id": "gap-co-textbook-02-2",
+          "stem": "工业控制必须在规定毫秒内响应传感器，离线统计每天记录更关注批量处理。这两类主要要求各是什么？",
+          "topic_id": "computer-organization.t20",
+          "attempt": "前者实时控制重截止时间；后者数据处理重记录批处理",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "前者实时控制，重响应期限；后者数据处理，重吞吐和完成时间。",
+          "official_explanation": "同样使用计算机，判断依据是任务目标，不是设备是否联网。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c08",
+            "topic_id": "computer-organization.t20",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章2.1 计算机的发展史及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-textbook-01-2",
+          "stem": "有人说“CPU可以直接执行未翻译的高级语言源文件”。判断并说明编译器和CPU的分工。",
+          "topic_id": "computer-organization.t19",
+          "attempt": "错；编译器翻译高级语言为目标形式，CPU执行机器指令",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+          "official_explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c08",
+            "topic_id": "computer-organization.t19",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章2.1 计算机的发展史及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "CAD/CAM/CAI只给中文展开，不需为基础分类题再深入；并行公式的p已说明为耗时而非代码行。",
+      "review_consistency": "器件层次与加速边界各一张，条件保留到位。",
+      "optimization": "暂无必须改；可保留这章短读后再进入总线。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c06",
+      "title": "第3章 系统总线",
+      "order": 3,
+      "independent_restatement": "总线是共享通路和规则；仲裁分配谁用，握手决定何时可以取有效数据。",
+      "independent_process": "REQ0/ACK0→1/0不采样→1/1采样→0/1→0/0；另算16bit×50MHz×2=200MB/s。",
+      "tasks": [
+        {
+          "id": "gap-co-textbook-03-2",
+          "stem": "为什么独立请求仲裁通常比链式需要更多连线？是否意味着所有设备可同时驱动共享数据总线？",
+          "topic_id": "computer-organization.t21",
+          "attempt": "各设备独立请求/允许线增多；仲裁仍一次授予一个共享总线主设备",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "每设备有独立请求/允许线；仍需选定一个主设备，不能同时驱动同一共享数据线。",
+          "official_explanation": "独立的是请求线路，不是给每设备增加独占数据通道。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t21",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章3.1 总线的基本概念及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-textbook-04-2",
+          "stem": "半同步总线遇慢设备时用WAIT延长等待，它是否完全取消统一时钟？",
+          "topic_id": "computer-organization.t22",
+          "attempt": "没有，保留时钟，只用WAIT扩展慢设备等待",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "否。半同步仍按统一时钟工作，用等待信号延长特定访问。",
+          "official_explanation": "异步以应答推进，半同步结合统一时钟和可变等待，不可等同。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c06",
+            "topic_id": "computer-organization.t22",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章3.1 总线的基本概念及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "三态与高阻已有解释，REQ/ACK虽英文但动作顺序明确。",
+      "review_consistency": "三张卡可分别回忆带宽、仲裁、异步握手；没有把独立请求误当多设备同时传。",
+      "optimization": "暂无必须改；握手图实际帮助分清请求和就绪。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c04",
+      "title": "第4章 存储器",
+      "order": 4,
+      "independent_restatement": "层次利用局部性；芯片扩展看字数和位数；Cache按组与标记判命中，虚存页表与Cache不是同层。",
+      "independent_process": "另取地址70、块8B、4组：块8偏移6，组0标记2；8K×8→32K×16需4×2=8片。",
+      "tasks": [
+        {
+          "id": "sp-core-co-007",
+          "stem": "主存容量要求较大、成本需要控制，通常优先采用（ ）。",
+          "topic_id": "computer-organization.t08",
+          "attempt": "A，DRAM密度高成本低，适宜大容量主存",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "DRAM密度较高、单位容量成本较低，常用于主存；SRAM更快但成本高，常用于Cache。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t08",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章4.1 概述及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "uc-co-004",
+          "stem": "32位字节地址，Cache数据容量16 KB，块大小64 B，采用4路组相联。组索引位数为（ ）。",
+          "topic_id": "computer-organization.t15",
+          "attempt": "A；16×1024/64/4=64组，log2 64=6",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "组数=16KB/(64B×4)=64=2^6，所以组索引6位；块内偏移为log2 64=6位，标记为32−6−6=20位。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c04",
+            "topic_id": "computer-organization.t15",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章4.1 概述及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "这是本课程负担最重章：主存、汉明、Cache、磁盘、TLB连读。汉明分组和Cache例已有完整中间态，不能再报缺。",
+      "review_consistency": "11张卡覆盖独立计算，Cache概览和地址/时间细卡有重叠但不构成错。",
+      "optimization": "P3：按“容量→检错→缓存→磁盘→虚址”给章内可暂停节点，非缩删核心。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c09",
+      "title": "第5章 输入输出系统",
+      "order": 5,
+      "independent_restatement": "接口用状态/数据/控制寄存器协调设备；中断通知CPU运行服务，DMA由控制器搬块，均有条件。",
+      "independent_process": "DMA地址1000传256B，搬16B后下一1016、余240；查询1000×20/1MHz=.02。",
+      "tasks": [
+        {
+          "id": "gap-co-terms-14",
+          "stem": "某传统教学模型规定：可屏蔽外部中断在指令末检查，DMA在总线可让出的机器周期末检查。仅凭这个规定，就能断言所有现代CPU都必须在每个机器周期结束时响应DMA，且任何异常也只能在指令末响应。（ ）",
+          "topic_id": "computer-organization.t13",
+          "attempt": "错；题设只是传统模型，异常和现代CPU不能一概而论",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "错误",
+          "official_explanation": "模型规定不能无条件推广。DMA还取决于总线或互连协议、仲裁和当前事务能否让出；题设只讨论可屏蔽外部中断，不包含同步异常、不可屏蔽中断等各自的处理规则。判断时要同时保留模型与事件种类两个条件。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t13",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章5.1 概述及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-textbook-08-1",
+          "stem": "CPU要判断键盘接口是否已有新字符、读取字符、允许中断，分别主要访问哪类寄存器？",
+          "topic_id": "computer-organization.t26",
+          "attempt": "判断查状态寄存器；取字符读数据寄存器；允许中断写控制寄存器",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "分别为状态、数据、控制寄存器。",
+          "official_explanation": "状态说明是否就绪，数据给出字符内容，控制改变接口工作方式。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c09",
+            "topic_id": "computer-organization.t26",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章5.1 概述及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "中断隐指令和现代异常规则已作边界，不会将机器周期模型推广。",
+      "review_consistency": "三卡足以回忆CPU分工和接口顺序；讲义另有完整中断/DMA对照。",
+      "optimization": "暂无必须改；可在卡中问“关中断能否禁止DMA”促进条件提取。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c02",
+      "title": "第6章 计算机的运算方法",
+      "order": 6,
+      "independent_restatement": "定长位串先看类型和位宽；补码统一加减，浮点须对阶后规格化；乘除由逐轮状态保证。",
+      "independent_process": "另推4位无符号3×6：Q0110先跳3，再加6、加12得18；8位-7右移一位得-4须说明舍入。",
+      "tasks": [
+        {
+          "id": "gap-co-textbook-12-2",
+          "stem": "不恢复余数法最终商已形成但余数为−2、除数为3，最终余数应如何修正？为什么不能直接报−2？",
+          "topic_id": "computer-organization.t30",
+          "attempt": "末负余数加除数，-2+3=1；最终无符号余数应0≤R<D",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "加除数3，最终余数为1；无符号除法最终余数应满足0≤R<D。",
+          "official_explanation": "负余数是加减交替过程的中间形式，末尾需恢复到标准余数。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t30",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章6.1 无符号数和有符号数及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-textbook-13-2",
+          "stem": "1.1₂×2²−1.01₂×2¹，对阶后得0.111₂×2²，规格化应怎样调整，真值多少？",
+          "topic_id": "computer-organization.t31",
+          "attempt": "左规为1.11₂×2¹，真值3.5；尾数乘2、阶减1",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "左规为1.11₂×2¹，真值3.5。",
+          "official_explanation": "尾数左移一位乘2，阶减1除2，两者抵消保持数值。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c02",
+            "topic_id": "computer-organization.t31",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章6.1 无符号数和有符号数及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "从编码到Booth、除法、浮点、ALU连续切任务较累；表格提供了实际支撑，术语都不等于未教。",
+      "review_consistency": "9张卡基本分开乘/除/浮点/ALU/Booth，独立回忆可行；不能用同例答对当掌握迁移。",
+      "optimization": "P3：Booth后提供留空A/Q/q的练习，可减轻照抄全过程。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c03",
+      "title": "第7章 指令系统",
+      "order": 7,
+      "independent_restatement": "操作码描述动作，字段按约定解释；数据寻址区分常数、地址和取出的值；RISC/CISC不直接给性能结论。",
+      "independent_process": "A20、M20=80、M80=7：立即20，直接80，间接7；不计取指依次0/1/2次访存。",
+      "tasks": [
+        {
+          "id": "uc-co-007",
+          "stem": "若采用定长操作码，要表示至少50种操作，操作码字段最少需要（ ）。",
+          "topic_id": "computer-organization.t33",
+          "attempt": "A；2^5=32不足50，2^6=64足够",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "2^5=32不足，2^6=64可覆盖50种操作，所以至少ceil(log2 50)=6位。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t33",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章7.2 操作数类型和操作类型及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "uc-co-006",
+          "stem": "某相对寻址指令执行时PC内容为1000，指令地址字段是补码表示的-20，则有效地址EA为（ ）。",
+          "topic_id": "computer-organization.t07",
+          "attempt": "A；按题给PC作为相对基准，1000-20=980",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "相对寻址EA=(PC)+位移量=1000−20=980。题中PC已给出为执行该寻址计算时的内容。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c03",
+            "topic_id": "computer-organization.t07",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章7.2 操作数类型和操作类型及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "同名R可能是寄存器内容；本章已明确记号和PC基准，因此相对题不多加指令长度。",
+      "review_consistency": "两卡内容均正确；第一卡合了指令/寻址/RISC，寻址表更依赖讲义。",
+      "optimization": "P2：把“立即/直接/间接”的同数据微对照补成独立小卡，帮助回想地址与值。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c10",
+      "title": "第8章 CPU的结构和功能",
+      "order": 8,
+      "independent_restatement": "CPU寄存器分工和指令阶段必须追踪，流水线提高完成率；相关停顿取决于通路及时序。",
+      "independent_process": "另取k5、n4、停2、周期2ns：5+4-1+2=10拍、20ns；无转发SUB等到WB第5拍读。",
+      "tasks": [
+        {
+          "id": "gap-co-textbook-16-1",
+          "stem": "B服务期间A请求，A优先级更高且未屏蔽、允许嵌套，执行返回顺序是什么？",
+          "topic_id": "computer-organization.t34",
+          "attempt": "B前半→A→B后半，再回主程序；嵌套需保存/恢复各层现场",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "主程序→B前半→A→B后半→主程序。",
+          "official_explanation": "A返回被打断的B，B完成才回主程序，不能A直接跳过B。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t34",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章8.1 CPU的结构及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "sp-core-co-010",
+          "stem": "完成一条指令从取指到执行结束所经历的全部时间称为（ ）。",
+          "topic_id": "computer-organization.t06",
+          "attempt": "A，指令周期包括取指和执行",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "指令周期覆盖一条指令的全部阶段，通常含一个或多个机器周期，每个机器周期又含若干时钟周期。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c10",
+            "topic_id": "computer-organization.t06",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章8.1 CPU的结构及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "CPU前章和此章部分重读，但这里新增逐拍冲突图；未感到知识跳步。",
+      "review_consistency": "理想拍数和停顿拆卡有效；一张概述只提醒冲突类，具体执行仍可看独立卡。",
+      "optimization": "暂无必须改；图的ID等待比单句“数据相关”更有用。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c05",
+      "title": "第9章 控制单元的功能",
+      "order": 9,
+      "independent_restatement": "微操作是实际小动作，微命令让动作发生；控制必须综合操作码、当前状态和就绪条件。",
+      "independent_process": "R1=4,R2=6：拍1Y4，拍2Z10，拍3R1=10；WAIT未READY重复本态不读旧值。",
+      "tasks": [
+        {
+          "id": "gap-co-textbook-18-1",
+          "stem": "在READ_WAIT状态，READY=0与READY=1时分别如何转移？为什么？",
+          "topic_id": "computer-organization.t36",
+          "attempt": "0自环等数据；1锁存并转下一态，防读取旧值",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "READY=0留等待态，READY=1锁存有效数据后继续。",
+          "official_explanation": "未就绪数据可能未稳定，固定一拍强行推进会读到旧值。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c05",
+            "topic_id": "computer-organization.t36",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章9.2 控制单元的功能及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-textbook-17-2",
+          "stem": "MDR送IR与PC加4能否同拍？需要补充什么硬件条件？",
+          "topic_id": "computer-organization.t35",
+          "attempt": "可，但PC须有独立增量器，不与MDR→IR争总线/ALU",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+          "official_explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c05",
+            "topic_id": "computer-organization.t35",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章9.2 控制单元的功能及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "资源冲突靠单总线模型解释，out/in及Y/Z已有定义；没有硬件图亦可沿三拍执行。",
+      "review_consistency": "两卡分别提醒分拍和等待，可独立提取约束。",
+      "optimization": "暂无必须改；可增加一个错误同拍方案供辨错。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-organization",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c11",
+      "title": "第10章 控制单元的设计",
+      "order": 10,
+      "independent_restatement": "硬布线由状态条件生成控制；微程序用控存保存动作，机器PC与微PC各自寻址。",
+      "independent_process": "另取3源加空2位、4目的加空3位、4种ALU2位、下址6位，共13位；64×24/8=192B。",
+      "tasks": [
+        {
+          "id": "gap-co-textbook-21-1",
+          "stem": "同一微指令字段需选择4种互斥动作之一或不动作，最少几位？为什么不是2位？",
+          "topic_id": "computer-organization.t39",
+          "attempt": "3位；4动作加空=5状态，2位仅4状态",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "3位；共5种状态，2位只能4种，3位可8种。",
+          "official_explanation": "若无不动作且保证必选一个才可能2位，题目条件不能省。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t39",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章10.1 组合逻辑设计及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-co-textbook-20-2",
+          "stem": "写出三种下一微地址来源，并解释条件等待态为何可指向自身。",
+          "topic_id": "computer-organization.t38",
+          "attempt": "微PC+1、显式下地址、按条件/操作码分派；未READY时自环保持等待",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "顺序微PC+1、微指令显式下地址、条件或操作码入口映射；未READY时回自身等待。",
+          "official_explanation": "还可有微子程序返回地址等，地址选择由条件与顺序控制字段共同决定。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "computer-organization.c11",
+            "topic_id": "computer-organization.t38",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章10.1 组合逻辑设计及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "本章硬布线和微程序切了数据通路，但正文明确说明差别；避免将第9章限制生搬过去。",
+      "review_consistency": "三卡保留读等待方程、微地址来源和编码位数，回忆完整。",
+      "optimization": "暂无必须改；分派须等新IR生效的条件已明确。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机组成原理.md",
+      "review_source": "color_notes/计算机组成原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c01",
+      "title": "第1章 操作系统引论",
+      "order": 1,
+      "independent_restatement": "OS管理资源并提供接口；单核并发是时间段推进，多核并行是同刻多执行。",
+      "independent_process": "若单核每任务跑1片，A→B→A显示交替；四核80%可并行时总加速2.5。",
+      "tasks": [
+        {
+          "id": "cg-10-s1-q30",
+          "stem": "以下哪项主要是操作系统中的软件策略选择，而不是某种专门硬件机制？",
+          "topic_id": "operating-system.t01",
+          "attempt": "A，选择哪个进程运行是软件策略",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "调度算法选择哪个就绪进程运行，主要是软件策略。中断、硬件地址映射和定时器需要对应硬件；调度执行仍依赖CPU和上下文切换设施，不能说完全不需要硬件。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c01",
+            "topic_id": "operating-system.t01",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章操作系统功能与基本特征及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "cg-10-s1-q12",
+          "stem": "单核计算机上的操作系统为了实现多任务“同时”执行的假象，采用的机制是\n（ ）。",
+          "topic_id": "operating-system.t01",
+          "attempt": "A，轮流分配CPU时间片造成同时推进的体验",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "时间片让多个可运行任务轮流获得CPU，切换足够频繁便产生宏观同时推进的体验。单核同一时刻仍只有一个任务占用CPU执行。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c01",
+            "topic_id": "operating-system.t01",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章操作系统功能与基本特征及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "引论提进程、线程和缓存亲和性，正式定义在后章；可先识别但尚不能解释SMP如何同步。",
+      "review_consistency": "一张卡能回忆四特征/三系统，SMP与多媒体新段没有对应回忆线索。",
+      "optimization": "P2：加一条SMP共享主存仍需同步的提问，范围仅复习已教基础。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c02",
+      "title": "第2章 操作系统结构与用户接口",
+      "order": 2,
+      "independent_restatement": "用户态受限，系统调用受控进入内核；模式变化不必换进程；保护矩阵规定对象操作。",
+      "independent_process": "read命中内核缓存→原进程内核服务→返回；等磁盘→阻塞→调度别的就绪者。",
+      "tasks": [
+        {
+          "id": "gap-audit26-core-os-system-call",
+          "stem": "用户程序调用read读取磁盘文件。说明库函数、系统调用和内核态的关系；为何普通用户代码不能直接执行修改页表等特权操作？系统调用是否必然导致进程切换？",
+          "topic_id": "operating-system.t02",
+          "attempt": "库函数可封装read系统调用，陷入内核核验参数后服务；修改页表影响隔离只准特权态；缓存命中返回可不换进程，I/O等待才可能阻塞切换",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "库函数可封装系统调用；需要内核服务时通过受控入口从用户态进入内核态，由内核检查权限并执行。页表等涉及全系统保护，任意用户修改会破坏隔离，所以受特权限制。进入内核不必然换进程：请求可立即完成并返回；等待I/O等情况下才可能阻塞并调度其他进程。",
+          "official_explanation": "模式切换改变权限级别，进程切换改变执行主体，二者不是同义。部分库函数可在用户态完成，不是每次库调用都系统调用。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c02",
+            "topic_id": "operating-system.t02",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章一次系统调用的基本路径及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "web-33",
+          "stem": "在教材简化的指令周期模型中，CPU通常在何时检查并响应待处理的可屏蔽外部中断请求？",
+          "topic_id": "operating-system.t02",
+          "attempt": "B，按此简化模型在指令末响应",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "通常在一条指令执行结束的边界检查可屏蔽外部中断，并在中断使能等条件满足时响应。异常、陷阱及不可屏蔽中断有不同语义，不能把所有事件都笼统化。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c02",
+            "topic_id": "operating-system.t02",
+            "ability": "概念识记",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章一次系统调用的基本路径及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "库函数在题与卡中出现，但讲义没先定义库函数、普通函数调用与系统调用封装关系；我的解释用到既有先验。",
+      "review_consistency": "路径卡保留模式/进程区别，却直接写“库函数不一定发系统调用”，召回前提不足。",
+      "optimization": "EXP-COMP-002：补一个库函数用户态完成与read封装调用的两路径小例。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "title": "第3章 进程、线程与处理机调度",
+      "order": 3,
+      "independent_restatement": "进程持资源，线程可共享并各存现场；调度在已到达就绪集合中选择，指标需分开。",
+      "independent_process": "RR题逐片P1/P2/P1/P2/P1；另算SJF P1(0,5),P3(5,6),P2(6,9)，等待0/3/5。",
+      "tasks": [
+        {
+          "id": "cg-10-s1-q10",
+          "stem": "为了描述进程的动态变化过程，采用了一个与进程相联系的（ ）系统，根\n据它而感知进程的存在。",
+          "topic_id": "operating-system.t03",
+          "attempt": "C，PCB记录状态与现场，是进程存在标志",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "PCB保存进程标识、状态、寄存器现场、调度和资源等信息，是操作系统管理进程的核心记录。一个状态字或起始地址不能完整描述进程。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c03",
+            "topic_id": "operating-system.t03",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章基本状态及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-accept-card-core-16-1",
+          "stem": "P1、P2均在时刻0到达，服务时间分别为3和2个时间单位，初始就绪队列[P1,P2]。采用时间片1的RR且不计开销，写各片执行进程及两者的完成时刻。",
+          "topic_id": "operating-system.t15",
+          "attempt": "P1[0,1),P2[1,2),P1[2,3),P2[3,4),P1[4,5)，C1=5,C2=4",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "P1、P2、P1、P2、P1；P2在4完成，P1在5完成。",
+          "official_explanation": "每轮未完成回队尾，完成立即移出；各片长度1，逐片累计时间。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c03",
+            "topic_id": "operating-system.t15",
+            "ability": "过程描述",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章基本状态及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "PCB标志和三状态图支撑定义；调度指标较多，但例先说明不计I/O阻塞，可避免W=T-S泛化。",
+      "review_consistency": "五卡把PCB、状态、算法、SJF、RR拆开；RR题数值与卡相同，必须记曝光。",
+      "optimization": "暂无必须改；未来可用不同到达时刻题检验队列更新，而非同题成功证明。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c04",
+      "title": "第4章 进程同步与死锁",
+      "order": 4,
+      "independent_restatement": "临界区是代码，互斥保护共享更新，同步给先后；银行家是假想释放检查，安全不是死锁同义。",
+      "independent_process": "Work(1,1)→P1释放(0,1)变(1,2)→P2释放(1,0)变(2,2)；empty2/full0生产一件后1/1。",
+      "tasks": [
+        {
+          "id": "cg-10-s1-q35",
+          "stem": "在多进程的系统中，为了保证公共变量的完整性，各进程应互斥进入临界区，所\n谓临界区是指（ ）。",
+          "topic_id": "operating-system.t06",
+          "attempt": "D，访问临界资源的代码段而非数据本身",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "D",
+          "official_explanation": "临界区是访问临界资源的那一段程序代码。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c04",
+            "topic_id": "operating-system.t06",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章临界区与原子操作及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "uc-os-004",
+          "stem": "某时刻Available=(1,1)，进程P1的Need=(1,0)、Allocation=(0,1)，P2的Need=(1,1)、Allocation=(1,0)。按银行家安全性算法，正确结论是（ ）。",
+          "topic_id": "operating-system.t08",
+          "attempt": "A；Work(1,1)先P1，释放(0,1)得(1,2)，P2可完成；P2先也可，故B的只能不成立",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "初始Work=(1,1)，P1的Need≤Work，可完成并释放(0,1)，Work变为(1,2)；随后P2也可完成。因此存在安全序列P1、P2。持有资源不等于死锁。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c04",
+            "topic_id": "operating-system.t08",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章临界区与原子操作及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "P/V负数约定与生产消费预约边界已有教；读者优先方案明确可能饥饿。",
+      "review_consistency": "五卡可回忆信号量、死锁、安全检查、读写计数；管程wait释放锁的线索卡中弱。",
+      "optimization": "P2：管程已有讲解，补“wait释放锁，while重查”的小回忆项。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c05",
+      "title": "第5章 存储器与虚拟存储器",
+      "order": 5,
+      "independent_restatement": "页表做离散映射，缺页是合法性检查后调页，置换只在需牺牲页时发生；FIFO与LRU命中状态不同。",
+      "independent_process": "LRU5框序列先5次装入，2/3再缺，7/2命中，9/8/1/0再缺，最后2命中，共11。",
+      "tasks": [
+        {
+          "id": "cg-10-s1-q50",
+          "stem": "在 5 个页框上使用 LRU 页面替换算法，当页框初始为空时，引用序列为 0、1、\n7、8、6、2、3、7、2、9、8、1、0、2，系统将发生（ ）次缺页。",
+          "topic_id": "operating-system.t16",
+          "attempt": "先算为12次（B）：前7个访问全缺，7/2命中，9/8/1/0再缺，2命中，共7+4=11？重新逐步：0,1,7,8,6首5缺；2淘0第6；3淘1第7；7命中；2命中；9淘8第8；8淘6第9；1淘3第10；0淘7第11；2命中，故C=11",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "访问0、1、7、8、6先产生5次缺页；2、3各再缺页；7、2命中；9、8、1、0再各缺页；最后2命中，共11次。LRU每次命中也更新最近使用次序。",
+          "check": "先心算猜12，再在答案文件打开前逐态自纠11；核对C=11。保留原尝试。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c05",
+            "topic_id": "operating-system.t16",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章内存分配与地址空间及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "cg-10-s1-q38",
+          "stem": "单级页表保存在主存中，无TLB、无缺页且不考虑其他缓存。为通过虚拟地址读取一个操作数，需要访问主存几次？",
+          "topic_id": "operating-system.t09",
+          "attempt": "B；页表一次+实际操作数一次，共2次",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "未引入快表时：先访存查页表（1次），再访存取数据（1次），共 2 次。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c05",
+            "topic_id": "operating-system.t09",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章内存分配与地址空间及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "这题起初心算12，写逐态后自纠11；说明长序列确需工作表，不能以模型熟悉而跳过程。",
+      "review_consistency": "4卡给映射、置换概念、FIFO/LRU和CLOCK操作；本章首次适应/段页式/EAT只在长文。",
+      "optimization": "P2：给EAT总缺页时长的公式独立卡，防把F再次加m；无需把所有章节扩写。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c06",
+      "title": "第6章 文件管理",
+      "order": 6,
+      "independent_restatement": "文件逻辑结构、物理块分配和路径目录是三个层次；inode为元数据，硬链接共享对象。",
+      "independent_process": "2500/1024=2余452，索引[8,20,5,13]取第三项块5；删除硬链接a仍可由b取inode7。",
+      "tasks": [
+        {
+          "id": "cg-10-s1-q42",
+          "stem": "按用途分类，某用户自己编写并生成的业务程序可执行文件，通常归为（ ）。",
+          "topic_id": "operating-system.t11",
+          "attempt": "A，用户业务程序按用途是用户文件，是否可执行不是系统/用户判据",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "用途由文件服务的对象决定：用户自建业务程序属于用户文件。可执行只是文件内容或执行属性，系统程序和库也可执行，不能仅凭“可执行”判断必为用户文件。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c06",
+            "topic_id": "operating-system.t11",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章文件结构与基本操作及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-audit26-core-os-file-allocation",
+          "stem": "文件有逻辑块0～3，索引块记录物理块[8,20,5,13]，每块1024 B。访问文件内字节偏移2500应取哪个物理块、块内偏移多少？若新增一个块，说明索引分配与连续分配的不同限制。",
+          "topic_id": "operating-system.t11",
+          "attempt": "2500=2×1024+452，索引第2项为块5，偏移452；索引可另找空块并更新索引，连续分配需邻后空间或迁移/预留",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "2500=2×1024+452，访问逻辑块2，对应物理块5，块内偏移452。索引分配可在其他空闲位置分配新块并追加映射，受索引容量等限制；连续分配通常要求末尾有相邻空闲块，否则需扩展区或搬移。",
+          "official_explanation": "文件块映射与内存分页不是同一管理对象，但都应先做除法拆分编号和偏移。索引表下标从0开始，不能把第三个块误取物理20。",
+          "check": "主要答案与官方一致；自评不是评分器结果。官方另提醒索引容量限制，原答未显式写出。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c06",
+            "topic_id": "operating-system.t11",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章文件结构与基本操作及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "文件索引与页表计算相似但对象不同，正文特别提醒有用；文件用途说明支持第一题。",
+      "review_consistency": "一张卡能回忆块定位/链接，但位图编号规则和用途分类只在讲义。",
+      "optimization": "P3：若常错位示图，可增加从1编号减1/加1的迷你卡；当前不构成教学缺失。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "operating-system",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c07",
+      "title": "第7章 输入输出与磁盘管理",
+      "order": 7,
+      "independent_restatement": "驱动是软件、控制器硬件；I/O策略与缓冲并行分工不同，SSTF每次从新位置重选。",
+      "independent_process": "50→40→10→70总100；40处也可先70再10仍100；单/双缓冲稳态9/8ms须另计启动排空。",
+      "tasks": [
+        {
+          "id": "uf-os-008",
+          "stem": "磁头当前在50号柱面，请求序列为10、55、90，若采用SSTF，下一次访问（ ）。",
+          "topic_id": "operating-system.t18",
+          "attempt": "B，距55仅5，先55",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "最短寻道优先选择与当前磁头距离最小者，|55−50|=5最小；该算法可能使远端请求饥饿。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c07",
+            "topic_id": "operating-system.t18",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章I/O 控制及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-os-005",
+          "stem": "磁头当前位置为50，待访问磁道为10、40、70。按SSTF调度，磁头总移动距离是多少个磁道？",
+          "topic_id": "operating-system.t13",
+          "attempt": "50→40→10→70，10+30+60=100",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "100",
+          "official_explanation": "先从50到最近的40，移动10。此时10和70均距30，可任选；若选10再70，额外移动30+60，总100；若先70再10，总数也为100，答案不受本题平局选择影响。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "operating-system.c07",
+            "topic_id": "operating-system.t13",
+            "ability": "直接计算",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章I/O 控制及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "SPOOLing英文长，但有打印队列场景；稳态公式已限定模型，短任务不能直接乘。",
+      "review_consistency": "4卡磁盘路径充分，缓冲卡只说协调速差，没有单/双缓冲公式与稳态条件。",
+      "optimization": "P2：给缓冲任务加独立公式/模型回忆卡，避免长文已教而复习只能回名称。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/操作系统原理.md",
+      "review_source": "color_notes/操作系统原理.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c01",
+      "title": "第1章 绪论与算法分析",
+      "order": 1,
+      "independent_restatement": "结构同时看关系、存储与运算，算法可终止且每步明确；复杂度计规模增长而非秒数。",
+      "independent_process": "i=1,2,4,8，小于16时4轮，扩规模倍增多1轮，故log级；三角n4时10次。",
+      "tasks": [
+        {
+          "id": "uf-ds-001",
+          "stem": "循环for(i=1;i<n;i*=2)的时间复杂度为（ ）。",
+          "topic_id": "data-structures.t01",
+          "attempt": "B，i每次倍增，2^k<n，k为log n量级",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "i每次乘2，执行次数k满足2ᵏ≈n，所以k≈log₂n。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c01",
+            "topic_id": "data-structures.t01",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数据结构与复杂度及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "zg-34137",
+          "stem": "任何复杂的算法都可以用________基本结构组合而成的程序来实现。",
+          "topic_id": "data-structures.t01",
+          "attempt": "顺序、选择、循环三种基本结构",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "顺序结构、选择结构和循环结构",
+          "official_explanation": "结构化程序设计的三种基本控制结构是顺序、选择和循环；可通过这些结构组合描述通常的算法流程。Böhm和Jacopini的相关结果发表于1966年，不能写成1996年。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c01",
+            "topic_id": "data-structures.t01",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数据结构与复杂度及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "题zg-34137要求三基本结构，本章只展示for循环，没有正式教顺序/选择/循环三结构；我用编程先验补答。",
+      "review_consistency": "一张卡主要回忆复杂度和五特征，不能从卡自身找回三基本结构。",
+      "optimization": "EXP-COMP-001：补三结构一句话及各一行例子，或显式前置链接到程序设计第1章。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c02",
+      "title": "第2章 线性表",
+      "order": 2,
+      "independent_restatement": "顺序表靠连续位置快速访问，插删搬元素；链表改链接但先找位置仍要走链。",
+      "independent_process": "首次x在k位比较k次、移n-k项，总n；p→q插s先s.next=q再p.next=s，链不丢。",
+      "tasks": [
+        {
+          "id": "cg-05-s1-q14",
+          "stem": "一个含n个元素的顺序表中，x至少出现一次。从表头顺序比较，找到第一个x后删除它，并把后续元素依次左移一位。只计元素比较和元素移动，二者总次数为（ ）。",
+          "topic_id": "data-structures.t02",
+          "attempt": "C；第k个首次匹配，比较k次，移动n-k次，总n",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "若第一个x位于从1起算的第i位，需比较i次，后续n-i个元素各移动一次，总次数i+(n-i)=n。结论依赖找到x且按本题不计循环条件等开销的口径。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c02",
+            "topic_id": "data-structures.t02",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章基本操作怎样执行及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "ap-ds-003",
+          "stem": "单链表插入结点的时间复杂度在任何情况下都是O(1)。（ ）",
+          "topic_id": "data-structures.t03",
+          "attempt": "错；已知前驱的改链O(1)，定位插入位置可能O(n)",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "错误",
+          "official_explanation": "已知插入位置及其前驱时修改指针可为O(1)；若先按位置查找前驱，查找过程通常为O(n)。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c02",
+            "topic_id": "data-structures.t03",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章基本操作怎样执行及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "指针符号虽编程前置，正文用结点及next足以跟随；无需先会C代码。",
+      "review_consistency": "两卡分别给移动次数与改链顺序，独立回忆充分。",
+      "optimization": "暂无必须改；首个删除比较+移动题可留步骤空格。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c03",
+      "title": "第3章 栈、队列、串与数组",
+      "order": 3,
+      "independent_restatement": "栈LIFO、队列FIFO，循环队列要约定空位；KMP回退模式而不退文本，数组/三元组/广义表对象不同。",
+      "independent_process": "m10,f7,r2→5个，下标7,8,9,0,1；KMP j5失配先pi4=3，继续比同一文本字符。",
+      "tasks": [
+        {
+          "id": "cg-05-s1-q27",
+          "stem": "一列数字入栈排序是“7、8、C、P、38、39”，全部入栈后再出栈，出栈后的\n顺序应该是（ ）。",
+          "topic_id": "data-structures.t04",
+          "attempt": "C，逆序39、38、P、C、8、7",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "全部入栈后依次弹出最后加入的元素，序列为39、38、P、C、8、7。这是按入栈顺序逆序输出，不是按数值大小排序。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c03",
+            "topic_id": "data-structures.t04",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章栈、队列与串的基本术语及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "uc-ds-002",
+          "stem": "长度为10的数组实现循环队列，采用牺牲一个单元的方案。当前front=7、rear=2，则队列中元素个数为（ ）。",
+          "topic_id": "data-structures.t05",
+          "attempt": "A；(2-7+10)%10=5",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "队长=(rear-front+10) mod 10=(2-7+10) mod 10=5。该约定下最大可容纳9个元素。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c03",
+            "topic_id": "data-structures.t05",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章栈、队列与串的基本术语及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "一章跨栈队列、KMP、二维地址、快速转置、广义表，切换很频繁；操作均有实际例，不能报只列名字。",
+      "review_consistency": "8卡已按任务拆开，包含独立二维、转置、广义表，复习不须长文。",
+      "optimization": "P3：长章按任务显示完成/暂停标记即可，不减内容。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "title": "第4章 树与二叉树",
+      "order": 4,
+      "independent_restatement": "二叉树左右有别，遍历把根安排在不同位置；BST按键，AVL控高，堆控极值，Huffman控带权长度。",
+      "independent_process": "699完全树，1起叶编号350..699，共350；独立LR30,10,20第一步20接30左，第二步20成根。",
+      "tasks": [
+        {
+          "id": "cg-05-s1-q40",
+          "stem": "某棵完全二叉树上有 699 个结点，则该二叉树的叶子结点数为（ ）。",
+          "topic_id": "data-structures.t08",
+          "attempt": "B；1起编号叶为350…699，共350",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "答案依据是B‘350’。完全二叉树按层序编号时，编号大于⌊699/2⌋的结点均无孩子，叶子数为699-349=350。易错点：一般二叉树不能直接套这个编号结论。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c04",
+            "topic_id": "data-structures.t08",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章基本术语及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-final-thin-012",
+          "stem": "二叉树先序为ABDEC、中序为DBEAC。写出还原过程的关键划分，并给出后序序列。",
+          "topic_id": "data-structures.t09",
+          "attempt": "根A；中序左DBE右C，左先序BDE，根B左右D/E；后序DEBCA",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "先序首项A为根，中序在A处分为DBE和C；左子树先序BDE、中序DBE，以B为根，左D右E；右子树为C。后序为DEBCA。",
+          "official_explanation": "先序确定根，中序划分左右子树，递归处理后再写后序。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c04",
+            "topic_id": "data-structures.t09",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章基本术语及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "不同树目标与指针操作很多，但正文给BST删除、四旋、B树分裂中间态，已能跟随。",
+      "review_consistency": "8卡里BST/AVL概述加旋转卡可回忆；Huffman与B/B+同卡仍混两个目标，另有Huffman细卡。",
+      "optimization": "P2：B树分裂已讲，但重点缺独立分裂状态，补“中键上提、两侧分开”的小卡。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c05",
+      "title": "第5章 图",
+      "order": 5,
+      "independent_restatement": "图算法先看结果：遍历、最小总连线、各路径距离与依赖次序各不同；选择须带条件。",
+      "independent_process": "同图Prim A先AB2，再BC1/CD2/DE3总8；Dijkstra A后B使C=3,D=6，再C使D=5,E=9。",
+      "tasks": [
+        {
+          "id": "sp-core-ds-028",
+          "stem": "比较邻接矩阵和邻接表，并分别说明适合稠密图、稀疏图的原因。",
+          "topic_id": "data-structures.t13",
+          "attempt": "矩阵V²空间，判边O(1)，稠密适合；表V+E空间仅存已有邻接，稀疏省空间",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "邻接矩阵空间O(n²)，判定两点是否相邻快，适合稠密图；邻接表空间约O(n+e)，遍历实际邻边方便，适合稀疏图。",
+          "official_explanation": "按空间、判边、遍历和图稠密程度作答。不能笼统说邻接表在所有操作上都更快。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c05",
+            "topic_id": "data-structures.t13",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章图的基本术语与任务及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-ds-004",
+          "stem": "BFS中可以等顶点出队时再设置visited标记，这不会造成同一顶点被重复入队。",
+          "topic_id": "data-structures.t28",
+          "attempt": "错；共同邻点会在首次出队前被多个前驱重复发现，入队时标记",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "错误",
+          "official_explanation": "同一未标记顶点可能被多个已展开顶点同时发现并重复入队。BFS通常在首次入队时立即标记。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c05",
+            "topic_id": "data-structures.t28",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章图的基本术语与任务及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "主线清楚且有反例区分MST/最短路；图章长度大，但逐步表/图确实服务判断。",
+      "review_consistency": "14卡把算法拆细，DFS/BFS、Prim/Kruskal、单源/全点对各有执行线索，足够回忆。",
+      "optimization": "P3：可在进入负权算法前提醒可暂停；不报为内容缺口。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c06",
+      "title": "第6章 查找",
+      "order": 6,
+      "independent_restatement": "查找按条件缩候选，二分依赖有序随机访问；散列冲突后仍需准确继续探测。",
+      "independent_process": "[3,8,12,20,27]查27：mid2值12→low3，mid3值20→low4，mid4找到；槽3,4,5删除4须墓碑。",
+      "tasks": [
+        {
+          "id": "sp-core-ds-032",
+          "stem": "说明散列冲突为什么不能完全避免，并比较开放定址法与拉链法的基本处理思路。",
+          "topic_id": "data-structures.t19",
+          "attempt": "键域常大于槽位数，映射可能同址；开放定址表内探测新槽，拉链同槽建桶链",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "关键字空间通常大于地址空间，不同关键字可能映射同址。开放定址在表内继续探测其他槽；拉链法把同址记录连接在桶链中。",
+          "official_explanation": "得分点为冲突原因和两种处理思路。开放定址装填因子过高会增加探测，删除常需标记。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文同题已曝光（含完整答案）；不称先做盲测。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c06",
+            "topic_id": "data-structures.t19",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章例题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "uf-ds-008",
+          "stem": "在长度为n的有序顺序表中进行二分查找，最坏比较次数的紧确增长量级是（ ），选项以O记号表示。",
+          "topic_id": "data-structures.t18",
+          "attempt": "B，候选范围每次减半",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "每次排除约一半区间，最坏比较次数约⌈log₂(n+1)⌉，所以数量级为O(log n)。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c06",
+            "topic_id": "data-structures.t18",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章例题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "“关键字”在此明确定义；先前结构选型出现该词但有唯一订单号例能理解。",
+      "review_consistency": "二分/散列两卡操作清楚；ASL、分块索引只在长文，复习缺显式概率加权式。",
+      "optimization": "P2：给ASL=Σpᵢcᵢ及成功/失败概率模型一张卡。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c07",
+      "title": "第7章 内部排序",
+      "order": 7,
+      "independent_restatement": "排序需说明一趟规则、稳定性和资源，稳定是同键原序，非程序不崩；基数每轮需稳定。",
+      "independent_process": "另推[4,1,3,2]末枢轴：交换1到首得[1,4,3,2]，放枢轴得[1,2,3,4]，枢轴下标1。",
+      "tasks": [
+        {
+          "id": "cg-05-s1-q48",
+          "stem": "一种排序反复从左向右比较相邻记录，若相邻记录逆序就交换，直到不再发生交换。这种排序称为（ ）。",
+          "topic_id": "data-structures.t20",
+          "attempt": "C，冒泡相邻逆序交换",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "冒泡排序通过相邻比较和交换，使较大或较小元素逐趟到达端部。必须强调相邻，单说“两两比较、逆序交换”无法唯一识别具体算法。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c07",
+            "topic_id": "data-structures.t20",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章例题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-accept-card-core-14-2",
+          "stem": "最低位优先基数排序处理十位时，为什么桶内必须保持上轮顺序？",
+          "topic_id": "data-structures.t38",
+          "attempt": "十位相同的键须保留个位已排顺序，否则前轮低位成果被破坏",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "上轮已确定个位次序；同十位元素如果乱序，会破坏已排的低位关系。",
+          "official_explanation": "例如12与13同十位，必须保留12在13之前，才能使最终整个数有序。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c07",
+            "topic_id": "data-structures.t38",
+            "ability": "机制解释",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章例题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "算法很多但分别有手算；快排示例恰好全有序已用反例边界说明，未误判其一般保证。",
+      "review_consistency": "10卡既有选型概览也有各算法状态；基数稳定性可脱离讲义回忆。",
+      "optimization": "暂无必须改；两道练习是识别+原因，不能代表所有排序已独立实现。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "data-structures",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "title": "第8章 数据结构与算法选择",
+      "order": 8,
+      "independent_restatement": "综合选型须同时看操作、规模、顺序、最坏界与外存；伙伴分配取幂次，外排计每阶段I/O。",
+      "independent_process": "12页/3缓冲→4段，2路4→2→1共3读写阶段72页；伙伴128申请20占32，释放0与32合64再合128。",
+      "tasks": [
+        {
+          "id": "gap-ds-022",
+          "stem": "系统不断合并用户所属群组，并频繁查询两名用户是否已经属于同一群组，优先考虑？",
+          "topic_id": "data-structures.t24",
+          "attempt": "A，find同根判同组，union合并",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "并查集擅长集合合并和同属查询，配合路径压缩及按秩合并后操作的均摊代价接近常数。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c08",
+            "topic_id": "data-structures.t24",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章场景中的结构与算法选择及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-course-revision-core-06-1",
+          "stem": "12页文件、3页缓冲，初始每次排3页、2路归并，含段生成各阶段完整读写，需多少页I/O？",
+          "topic_id": "data-structures.t44",
+          "attempt": "72页I/O；12/3=4初始段，4→2→1两趟归并，加生成共3阶段，各读写24页",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "72页I/O",
+          "official_explanation": "4初始段需2趟归并，连同生成3阶段，每阶段读12写12，3×24=72。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "data-structures.c08",
+            "topic_id": "data-structures.t44",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章场景中的结构与算法选择及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "Trie/DP等标拓展识别，未据其名词认定完整教学；并查集只有find/union接口，近常数条件尚不能手推优化。",
+      "review_consistency": "三卡能回忆综合选型、伙伴与外排；并查集选型能答，但不是会实现路径压缩。",
+      "optimization": "P2：若要求并查集过程练习，先补parent数组压缩一次的状态；本轮题仅选型，不列阻断。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据结构与算法.md",
+      "review_source": "color_notes/数据结构与算法.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "title": "第1章 数据库系统概论",
+      "order": 1,
+      "independent_restatement": "DB是数据、DBMS是软件、DBS是系统；三级模式分用户视图、全局逻辑与底层组织。",
+      "independent_process": "底层文件→索引，只改模式/内模式映像；学生局部视图仍依原逻辑表，不需重写查询接口。",
+      "tasks": [
+        {
+          "id": "gap-audit26-core-db-three-levels",
+          "stem": "学生系统只对学生展示本人姓名和成绩，管理员维护全校学生选课关系，DBA把底层文件改为新索引组织。分别对应哪种模式？底层变化通常依靠哪级映像维持应用不变？",
+          "topic_id": "database.t01",
+          "attempt": "学生本人视图外模式，全校逻辑关系模式，底层文件索引内模式；模式/内模式映像支持物理独立性",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "学生看到的受限视图对应外模式；全校学生选课的全局逻辑结构对应模式（概念模式）；文件与索引存储对应内模式。调整模式/内模式映像可在物理组织改变时保持概念模式和应用接口不变，体现物理数据独立性。",
+          "official_explanation": "教材“模式”不等于某产品SQL schema命名空间。外、概念、内描述抽象层次，独立性也不是不受限制的任意模式修改。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c01",
+            "topic_id": "database.t01",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数据库、DBMS与三级模式及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "zg-39627",
+          "stem": "教材通常把数据管理技术的发展分为人工管理、文件系统、数据库系统三个阶段。下列哪项不属于这三个阶段？",
+          "topic_id": "database.t01",
+          "attempt": "D，目录管理是文件功能，不是第四管理阶段",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "D",
+          "official_explanation": "人工管理、文件系统、数据库系统是常见的数据管理技术发展阶段。目录管理是文件或系统管理中的具体功能，并非与三阶段并列的一种历史阶段。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c01",
+            "topic_id": "database.t01",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数据库、DBMS与三级模式及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "DBMS内部查询流程先出现“元组”，后章才正式定义；上下文仍可理解为返回行。",
+      "review_consistency": "一张卡三级与两映像清晰，但新增数据库类型边界无复习入口。",
+      "optimization": "P3：可给元组首次出现括注“行”，减轻术语往返。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c02",
+      "title": "第2章 概念模型与E-R方法",
+      "order": 2,
+      "independent_restatement": "ER把真实对象、特征和关联分开，基数回答最多几个，参与回答是否必须；重复事件另设标识。",
+      "independent_process": "Student/Course各一表，SC一行一配对，主键(sid,cid)；班级1:N把class_id放学生。",
+      "tasks": [
+        {
+          "id": "zg-73364",
+          "stem": "E-R 模型的组成包括________，________，________元素。",
+          "topic_id": "database.t02",
+          "attempt": "实体、属性、联系",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "实体、属性、联系",
+          "official_explanation": "E-R模型的基本要素是实体、属性、联系。实体是可区分的对象；属性是对象或联系的特征；联系描述实体之间的关联。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c02",
+            "topic_id": "database.t02",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章E-R 转关系的基本规则及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-audit26-core-db-er-convert",
+          "stem": "学生Student(sid,name)与课程Course(cid,title)为M:N选课联系，联系属性为grade，同一学生每课最多选一次。请转换为关系模式，指出选课表主键和两个外键；若改成班级对学生1:N，应把班级编号放哪端？",
+          "topic_id": "database.t03",
+          "attempt": "Student(sid主键,name)、Course(cid主键,title)、SC(sid,cid,grade)，联合主键(sid,cid)，分别外键引Student/Course；1:N班号放Student多端",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "保留Student(sid,name)、Course(cid,title)，新增SC(sid,cid,grade)。SC主键为(sid,cid)，sid参照Student.sid，cid参照Course.cid。班级对学生1:N时，通常把班级主键class_id加入学生表作外键。",
+          "official_explanation": "M:N需关联表容纳组合标识及联系属性；1:N通常把1端键放入N端。不能把多门课的列表直接塞进学生表单个原子列。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c02",
+            "topic_id": "database.t03",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章E-R 转关系的基本规则及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "一对多/m:n图用了实际记录而非只符号，有助看懂为什么外键放多端；主码在后章正式定义，本章已能借学号理解。",
+      "review_consistency": "两卡保留事件重复与1:1唯一约束，回忆足够。",
+      "optimization": "暂无必须改；若先读此章，可在首次“主码”旁写唯一标识的短释。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c03",
+      "title": "第3章 关系模型与完整性",
+      "order": 3,
+      "independent_restatement": "关系是合法元组集合；键的唯一与最小性来自业务，三完整性各管标识、引用和规则。",
+      "independent_process": "部门内员工号唯一，跨部门重复，故单工号不足；(部门,员工)联合唯一且不可删字段。",
+      "tasks": [
+        {
+          "id": "zg-9354",
+          "stem": "关系模型通常讨论哪三类完整性约束？分别说明其约束对象。",
+          "topic_id": "database.t04",
+          "attempt": "实体完整性约束主码唯一非空；参照完整性约束外码有效引用或允许NULL；用户定义完整性约束类型范围及业务规则",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "实体完整性约束主码非空且唯一；参照完整性约束外码取值应为允许的NULL或参照表已有键值；用户定义完整性约束具体业务要求，例如成绩范围和字段组合规则。",
+          "official_explanation": "数据库完整性通常包括实体完整性、参照完整性和用户定义完整性。实体完整性要求主码非空且唯一；参照完整性约束关系间的引用；用户定义完整性约束具体应用中的属性取值范围。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c03",
+            "topic_id": "database.t04",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章关系模式与关系实例及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "cg-09-s1-q42",
+          "stem": "员工关系为(部门编号,部门名称,员工编号,姓名,性别,年龄)。员工编号在同一部门内唯一、不同部门可重复，且没有其他唯一性约束。以下哪项适合作主码？",
+          "topic_id": "database.t04",
+          "attempt": "A，部门编号与员工编号合起来唯一，单独任何一个不保证",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "员工编号单独不能跨部门唯一，部门编号单独也对应多名员工；二者组合才唯一标识员工，且去掉任一项都不再唯一，故选A。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c03",
+            "topic_id": "database.t04",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章关系模式与关系实例及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "关系模式R(U,D,DOM,F)形式密，但后文逐项定义；不必先背整个形式再理解表。",
+      "review_consistency": "一张卡能召回候选/主/外码及三约束，取值NULL边界有保留。",
+      "optimization": "暂无必须改；复杂外键匹配细则已提示非一概而论。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c04",
+      "title": "第4章 关系代数",
+      "order": 4,
+      "independent_restatement": "关系代数闭合于关系，选择筛行、投影筛列去重，除法表达每个必需项都存在。",
+      "independent_process": "CS筛(1,小林),(3,小林)后投name只一行；SC{1DB,1NET,2DB}÷{DB,NET}得{1}。",
+      "tasks": [
+        {
+          "id": "gap-db-003",
+          "stem": "Student(sid,name,dept)用代码CS表示计算机系。写出“计算机系学生姓名”的关系代数表达式，并说明选择和投影后的中间结果。",
+          "topic_id": "database.t05",
+          "attempt": "π_name(σ_dept=CS(Student))；先保留CS完整行，再取姓名去重",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "π_name(σ_dept='CS'(Student))；选择后保留CS元组，投影后只留name并去重。",
+          "official_explanation": "选择取行，投影取列；先选择可减少后续处理元组。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c04",
+            "topic_id": "database.t05",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章关系代数及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-db-004",
+          "stem": "已知SC(sid,cid)和Need(cid)，写出“选修Need中全部课程的学生编号”的关系代数表达式，并解释为何不能用一次等值选择代替。",
+          "topic_id": "database.t05",
+          "attempt": "SC÷Need；返回与Need每个cid都有配对的sid，一次等值选择仅验证某个条件，不能表达对所有",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "SC÷Need；除法要求同一sid与Need中的每个cid都有关联，一次等值选择只能检查某一门课。",
+          "official_explanation": "除法表达“对给定集合中的所有元素均满足”。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c04",
+            "topic_id": "database.t05",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章关系代数及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "用集合行举例能理解除“所有”，不是单看符号；同题例已暴露，作答不能叫盲测。",
+      "review_consistency": "一张卡简例不同于长文姓名例，可独立触发除法。",
+      "optimization": "暂无必须改；可用缺一门课程的反例继续自检。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "title": "第5章 关系数据库标准语言SQL",
+      "order": 5,
+      "independent_restatement": "SQL有多重集与NULL三值，先FROM/WHERE再分组；外连接保留空匹配，相关NOT EXISTS逐外行判存在。",
+      "independent_process": "Dept1无达标员工被补NULL一行，COUNT(e.emp_id)=0而COUNT(*)=1；Borrow NULL不等于任何真实reader_id。",
+      "tasks": [
+        {
+          "id": "gap-exam-db-notexists",
+          "stem": "Reader(reader_id主键,reader_name)与Borrow(reader_id可为空,book_id)。请独立写SQL查询从未借书的读者编号和姓名，要求在Borrow.reader_id含NULL时仍正确。解释NOT EXISTS如何针对当前读者判断，以及直接用NOT IN可能产生什么问题。",
+          "topic_id": "database.t08",
+          "attempt": "SELECT r.reader_id,r.reader_name FROM Reader r WHERE NOT EXISTS (SELECT 1 FROM Borrow b WHERE b.reader_id=r.reader_id); 每个外层读者验证匹配借阅是否不存在；NULL借阅不会匹配，NOT IN中NULL使本应保留者成为UNKNOWN",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "SELECT r.reader_id,r.reader_name FROM Reader r WHERE NOT EXISTS (SELECT 1 FROM Borrow b WHERE b.reader_id=r.reader_id); 对每位读者检查是否存在与其编号匹配的借阅记录，无匹配才保留。NOT IN子查询若含NULL，比较可能为UNKNOWN，导致本应保留的读者也被过滤。",
+          "official_explanation": "相关条件b.reader_id=r.reader_id不可遗漏，否则会变成判断整张Borrow表是否为空。NULL借阅记录不与任何非空主键相等，不影响NOT EXISTS按匹配记录判断。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c05",
+            "topic_id": "database.t08",
+            "ability": "SQL编写",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章SQL数据语义与NULL及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-exam-db-groupjoin",
+          "stem": "有Dept(dept_id主键,dept_name)和Employee(emp_id主键,dept_id外键,salary)。请独立写SQL列出每个部门编号、名称和工资不低于5000的员工数，包括没有达标员工的部门，结果按部门编号升序。说明工资条件应放在哪里，以及为什么不能用COUNT(*)代替COUNT(e.emp_id)。",
+          "topic_id": "database.t07",
+          "attempt": "SELECT d.dept_id,d.dept_name,COUNT(e.emp_id) AS n FROM Dept d LEFT JOIN Employee e ON e.dept_id=d.dept_id AND e.salary>=5000 GROUP BY d.dept_id,d.dept_name ORDER BY d.dept_id; 条件ON保留无达标者；COUNT(*)会把补NULL行算1",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "SELECT d.dept_id,d.dept_name,COUNT(e.emp_id) AS n FROM Dept d LEFT JOIN Employee e ON e.dept_id=d.dept_id AND e.salary>=5000 GROUP BY d.dept_id,d.dept_name ORDER BY d.dept_id; 工资条件放ON，COUNT(e.emp_id)忽略外连接补出的NULL；COUNT(*)会把补出的行也计为1。",
+          "official_explanation": "先保留所有部门，再仅匹配达标员工。把工资条件放WHERE会过滤没有匹配员工的补NULL行，丢失应显示0的部门。按标准分组规则，两个非聚合输出列都列入GROUP BY。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c05",
+            "topic_id": "database.t07",
+            "ability": "SQL编写",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章SQL数据语义与NULL及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "难点是把ON与WHERE区别从一句规则落实到补NULL行；正文给三行连接图充分。",
+      "review_consistency": "三卡覆盖语义/分组/连接子查询；新增触发器/参数绑定长段没有独立复习卡。",
+      "optimization": "P2：触发器已有机制与示例，增“事件触发、旧/新值、回滚”的单任务回忆卡。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c06",
+      "title": "第6章 视图、索引与数据库设计",
+      "order": 6,
+      "independent_restatement": "设计先需求→概念→逻辑→物理；视图改变可见数据，索引改变访问效率，索引不替代约束。",
+      "independent_process": "联合(a,b)=[(1,2),(1,8),(2,1),(2,9)]，a2为连续后段，b9跨各a组难单段定位。",
+      "tasks": [
+        {
+          "id": "gap-db-001",
+          "stem": "数据库逻辑结构已经确定。现在需要根据常用查询选择索引和文件组织方式，这项工作主要属于哪个阶段？",
+          "topic_id": "database.t10",
+          "attempt": "D，物理设计选访问路径与文件组织",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "D",
+          "official_explanation": "索引、存储结构和文件组织属于物理设计。选择时要结合查询频率、选择性、更新代价和存储空间。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c06",
+            "topic_id": "database.t10",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数据库设计流程及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-db-007",
+          "stem": "先用E-R图表示学生、课程及选课规则，再转成表并规范化，最后按常用查询建立索引。指出这三个工作的设计阶段。",
+          "topic_id": "database.t11",
+          "attempt": "E-R为概念设计，表及规范化为逻辑设计，索引为物理设计",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "依次属于概念设计、逻辑设计、物理设计。",
+          "official_explanation": "三个阶段依次产出概念模型、关系模式和存储访问结构。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c06",
+            "topic_id": "database.t11",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数据库设计流程及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "联合索引的局限已用排序说明，不再只背最左前缀口号；查询优化的页/缓冲有定义。",
+      "review_consistency": "4卡含索引和查询执行，能恢复设计阶段与等价下推边界。",
+      "optimization": "暂无必须改；视图权限段明确需查基础表授权，避免建视图即隔离。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c07",
+      "title": "第7章 关系数据理论",
+      "order": 7,
+      "independent_restatement": "依赖是所有合法实例约束，闭包反复扩张，候选键还要最小；无损与保持依赖是两检查。",
+      "independent_process": "AD闭包A→B→C，AD→E得ABCDE；去A仅D，去D仅ABC；AB/AC公共A决定AB故无损。",
+      "tasks": [
+        {
+          "id": "gap-db-010",
+          "stem": "R(A,B,C)满足A→B，分解为R1(A,B)与R2(A,C)。判断是否无损，并说明依赖能否保持。",
+          "topic_id": "database.t14",
+          "attempt": "无损；交集A决定R1(AB)，A→B在R1可检查，保持依赖",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "无损且保持A→B。",
+          "official_explanation": "公共属性A能决定R1全部属性，因此无损；A→B可在R1中检查。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c07",
+            "topic_id": "database.t14",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章函数依赖与规范化及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-db-009",
+          "stem": "R(学号,课程号,姓名,成绩)已满足1NF，候选键为(学号,课程号)，且学号→姓名。判断其最高范式并说明。",
+          "topic_id": "database.t13",
+          "attempt": "最高1NF；姓名对候选键的真子集学号部分依赖，违反2NF",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "满足1NF但不满足2NF。",
+          "official_explanation": "姓名是非主属性，却只依赖复合候选键的一部分，存在部分依赖。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c07",
+            "topic_id": "database.t13",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章函数依赖与规范化及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "从3NF直观说法到形式定义已有补充；4NF独立组合有四行例，但高阶证明仍未覆盖应承认边界。",
+      "review_consistency": "4卡分别闭包、范式、分解、4NF，能单独回忆，不靠一张泛范式卡。",
+      "optimization": "暂无必须改；不能以两道浅题正确关闭所有依赖理论覆盖。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c08",
+      "title": "第8章 事务、并发控制与恢复",
+      "order": 8,
+      "independent_restatement": "事务边界保全整体，锁隔离并发，WAL保恢复；2PL保证冲突可串行但仍可循环等待。",
+      "independent_process": "T1 lockX、T2 lockY、T1等Y、T2等X，无解锁仍合2PL却死锁；日志T1提交A20，T2未提交B8须回B5。",
+      "tasks": [
+        {
+          "id": "ap-db-004",
+          "stem": "多个收银端并发处理同一商品时，下列做法合理的有（ ）。",
+          "topic_id": "database.t16",
+          "attempt": "ABC；事务保证整体，锁/原子更新防丢失，唯一订单约束防重复；D增加无谓写开销",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "ABC",
+          "official_explanation": "事务保证操作边界，并发控制避免更新冲突，唯一键可支持幂等。索引会占空间并增加写维护，不能无条件增加。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c08",
+            "topic_id": "database.t16",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章ACID与事务边界及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-accept-card-core-22-2",
+          "stem": "所有事务都遵守2PL，是否就不会死锁？给一个两事务两资源反例。",
+          "topic_id": "database.t20",
+          "attempt": "不会；T1先锁X，T2先锁Y，随后T1等Y、T2等X，双方尚在增长阶段却死锁",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "仍可死锁；T1持A等B，T2持B等A。",
+          "official_explanation": "双方均处增长阶段、尚未解锁，也满足2PL，却形成循环等待。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c08",
+            "topic_id": "database.t20",
+            "ability": "机制解释",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章ACID与事务边界及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "锁模型与MVCC边界已有说明，未把所有写者都阻塞所有快照读；提交/页落盘区别清晰。",
+      "review_consistency": "5卡含优先图/两段锁新卡，可回忆死锁反例条件。",
+      "optimization": "暂无必须改；可留一张不含答案的事务状态工作表。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "database",
+      "course": "数据库技术",
+      "chapter_id": "database.c09",
+      "title": "第9章 数据库安全性",
+      "order": 9,
+      "independent_restatement": "认证确认主体、授权限制动作、审计留行为证据；安全与完整性目标相关但不同。",
+      "independent_process": "U只SELECT不可再授权；加GRANT OPTION才有转授能力，撤销要追授权链及角色来源。",
+      "tasks": [
+        {
+          "id": "gap-db-014",
+          "stem": "用户U获得Student表SELECT权限后，何时可以继续授予V？回收U权限时还应检查什么？",
+          "topic_id": "database.t18",
+          "attempt": "需有WITH GRANT OPTION等转授权能力；回收检查授权链、级联规则及其他角色来源",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "U同时获得转授权能力（如WITH GRANT OPTION）时才能转授；回收时检查授权链和级联规则。",
+          "official_explanation": "普通使用权限不自动包含转授权能力。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c09",
+            "topic_id": "database.t18",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章认证、授权与审计及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-db-015",
+          "stem": "报表账号只需查看本院学生汇总，设计最小权限方案，并说明审计作用。",
+          "topic_id": "database.t18",
+          "attempt": "只授权本院汇总视图SELECT，撤基础表及其他院系访问；审计留查询/变更记录供追溯并保护日志",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "建立仅暴露必要行列的视图，只授予该视图SELECT权限，可经角色分配；审计记录关键访问和变更。",
+          "official_explanation": "认证、授权、审计分别回答身份、权限和行为记录。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "database.c09",
+            "topic_id": "database.t18",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章认证、授权与审计及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "末尾追加OLAP/内存库/区块链跨出安全主线，转场突然；这不是高级选修可直接排除。",
+      "review_consistency": "唯一卡仅安全，不覆盖新增分析型数据与新型数据库已有基础内容。",
+      "optimization": "EXP-COMP-005：给末段已教OLTP/OLAP、内存持久化边界独立回忆卡；范围保留另列。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/数据库技术.md",
+      "review_source": "color_notes/数据库技术.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c01",
+      "title": "第1章 程序设计与算法",
+      "order": 1,
+      "independent_restatement": "算法给可执行步骤，程序用语言表达；分支与循环控制顺序，错误分语法/运行/逻辑。",
+      "independent_process": "成绩80/90/-1，约定跳非法后sum/count=80/1→170/2，均分85；空输入不相除。",
+      "tasks": [
+        {
+          "id": "zg-36196",
+          "stem": "在传统编译流程中，高级语言源程序首先由________翻译为目标代码，之后可能还需链接才能形成可执行程序。",
+          "topic_id": "programming.t02",
+          "attempt": "编译器；之后链接组合目标代码及库",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "编译器",
+          "official_explanation": "编译器（编译程序）把源程序翻译为目标形式；生成目标代码不等于已完成链接。题目问执行翻译的软件，填编译器或编译程序均可。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c01",
+            "topic_id": "programming.t02",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章算法、结构与逐句执行及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "cg-04-s3-q1",
+          "stem": "在编制计算机程序解决问题的过程中，问题分析后给出解决问题的详细方法和步\n骤，这一过程称为（ ）。",
+          "topic_id": "programming.t01",
+          "attempt": "D，设计算法给步骤",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "D",
+          "official_explanation": "答案依据是D‘设计算法’。算法是明确、有限且可执行的步骤，程序是具体语言实现。易错点：代码能运行不等于算法正确。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c01",
+            "topic_id": "programming.t01",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章算法、结构与逐句执行及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "第一章C main包含stdio与return尚偏模板，正文已解释基本结构，足以开始；未要求背编译器实现。",
+      "review_consistency": "两卡能回忆算法、效率和错误类型；编译/解释边界保留。",
+      "optimization": "暂无必须改；补本机运行方法属学习环境方向，本轮无真机不验证。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c02",
+      "title": "第2章 数据类型、变量与常量",
+      "order": 2,
+      "independent_restatement": "C声明类型并占对象存储，Python名称指对象；转换次序比接收变量类型更早决定算值。",
+      "independent_process": "a7/b2先整数3再double3.0；先(double)a变7.0再除2.0得3.5。",
+      "tasks": [
+        {
+          "id": "gap-audit26-system-002",
+          "stem": "在C语言中，int a=7,b=2; 比较double x=a/b; 与double y=(double)a/b; 的值，写出各自转换顺序。",
+          "topic_id": "programming.t03",
+          "attempt": "x=3.0，整数7/2先截断3再转double；y=3.5，a先转7.0，b转2.0后浮点除",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "x为3.0：a/b先作整数除法得3，再转double。y为3.5：先把a转double，再将b按通常算术转换参与浮点除法。",
+          "official_explanation": "接收变量是double不会倒过来改变已经进行的整数除法；必须在除法之前转换操作数。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c02",
+            "topic_id": "programming.t03",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章类型、变量与转换及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "cg-04-s1-q1",
+          "stem": "下面有关 C 语言中变量的命名，不合法的是（ ）。",
+          "topic_id": "programming.t03",
+          "attempt": "C，&不能用于该标识符",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "选C。C标识符可含字母、数字和下划线，不能以数字开头，也不能使用关键字；&不是标识符字符。其余三个名称在给定语境中合法。避免把以下划线开头的实现保留名称当作推荐命名。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c02",
+            "topic_id": "programming.t03",
+            "ability": "概念识记",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章类型、变量与转换及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "强转例逐步拆开很有用；int实际大小不固定的边界已教。",
+      "review_consistency": "一张卡可直接提取类型与转换次序。",
+      "optimization": "暂无必须改；同题例已曝光，不能推断独立迁移。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c03",
+      "title": "第3章 运算符与表达式",
+      "order": 3,
+      "independent_restatement": "表达式先看语言类型与结合规则，短路可跳副作用；优先级不等于执行顺序。",
+      "independent_process": "x0时0&&++x跳右侧，x0；C-7/2=-3、余-1，Python-7//2=-4、余1。",
+      "tasks": [
+        {
+          "id": "gap-pl-004",
+          "stem": "比较表达式7/2和-7/2在现代C整数运算与Python 3中的结果，并说明Python的//与/有什么区别。",
+          "topic_id": "programming.t04",
+          "attempt": "现代C整数得3/-3；Python /得3.5/-3.5，//向下取整得3/-4，/真除法",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "现代C中整数7/2为3，-7/2向零截断为-3。Python 3的/执行真除法，7/2为3.5、-7/2为-3.5；//执行向下取整，7//2为3，-7//2为-4。",
+          "official_explanation": "同一符号在不同语言和类型下可能具有不同语义，必须先确定语言、类型和运算规则。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c03",
+            "topic_id": "programming.t04",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章关系运算及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-pl-001",
+          "stem": "在C语言中执行int x=0; if (0 && ++x) { }后，x的值是？",
+          "topic_id": "programming.t04",
+          "attempt": "A；左0已确定与为假，不执行++x",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "逻辑与左操作数为假时发生短路，右侧++x不执行，因此x仍为0。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文同题已曝光（含完整答案）；不称先做盲测。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c03",
+            "topic_id": "programming.t04",
+            "ability": "程序阅读",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章关系运算及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "运算符列表多，但具体除法/短路有例；位运算仅列表尚未完整逐位教，不影响本轮两题。",
+      "review_consistency": "一张卡保留最易混除法/短路，C位运算/逗号/前后置自增缺独立提醒。",
+      "optimization": "P2：若考试要求位运算过程，需补逐位例，不能把运算符名单当已学。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c04",
+      "title": "第4章 顺序结构与输入输出",
+      "order": 4,
+      "independent_restatement": "输入先得文本再转换；输出追当前值，C格式还需指针参数匹配与成功返回检查。",
+      "independent_process": "输入12、3得字符串123；int转换后总15；x3,y5,x10输出10 5。",
+      "tasks": [
+        {
+          "id": "gap-pl-002",
+          "stem": "Python 3程序a=input(); b=input(); print(a+b)，依次输入12和3，输出是什么？",
+          "topic_id": "programming.t05",
+          "attempt": "B，字符串拼接123",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "input返回字符串，字符串相加执行拼接。若需要数值相加，应先使用int转换。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文同题已曝光（含完整答案）；不称先做盲测。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c04",
+            "topic_id": "programming.t05",
+            "ability": "程序阅读",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章输入输出与顺序结构及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-final-thin-013",
+          "stem": "Python程序读取两个输入后要输出它们的数值和。写出核心代码，并说明若直接写a=input(); b=input(); print(a+b)会发生什么。",
+          "topic_id": "programming.t05",
+          "attempt": "a=int(input()); b=int(input()); print(a+b)；直接input相加会拼接两段文本",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "可写a=int(input()); b=int(input()); print(a+b)。input返回字符串，若不转换，a+b执行字符串拼接，例如输入12和3输出123。",
+          "official_explanation": "顺序跟踪必须同时记录变量值和类型。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c04",
+            "topic_id": "programming.t05",
+            "ability": "代码编写",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章输入输出与顺序结构及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "讲义scanf &x在指针章前出现，解释了参数类型，仍可先当模板理解；正式取址在第9章。",
+      "review_consistency": "一张卡足够回忆格式与转换，但两题都测input类型，能力范围较窄。",
+      "optimization": "暂无必须改；未来抽题覆盖失败scanf返回值，会更好验证本章。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c05",
+      "title": "第5章 选择结构",
+      "order": 5,
+      "independent_restatement": "条件只执行选中分支，顺序应防宽条件先吞窄条件，C switch还须注意贯穿。",
+      "independent_process": "score90先>=90输出A；score89落>=60输出B；7>9假三目取9。",
+      "tasks": [
+        {
+          "id": "gap-pl-010",
+          "stem": "已知score为0至100的整数，用Python写出成绩分档：90及以上输出A，60至89输出B，其余输出C。",
+          "topic_id": "programming.t06",
+          "attempt": "if score>=90: print(\"A\")\nelif score>=60: print(\"B\")\nelse: print(\"C\")；按高阈值到低，题已保证范围",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "if score >= 90:\n    print(\"A\")\nelif score >= 60:\n    print(\"B\")\nelse:\n    print(\"C\")",
+          "official_explanation": "先判>=90，再判>=60，余下为小于60。边界59、60、89、90应分别输出C、B、B、A。题设限定整数，避免89.5在自然语言分段中无归属。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c05",
+            "topic_id": "programming.t06",
+            "ability": "代码编写",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章分支判断方法及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "cg-04-s1-q9",
+          "stem": "设 int a=7，b=9，t；执行完表达式 t=（a>b）？ a ∶ b 后，t 的值是（ ）。",
+          "topic_id": "programming.t06",
+          "attempt": "C，7>9假，取b=9",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "答案依据是C‘9’。条件a>b为假，因此条件运算符选择冒号后的b，t得到9。易错点：条件表达式只计算被选择的一支。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c05",
+            "topic_id": "programming.t06",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章分支判断方法及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "else归属已明说；switch无break虽写了机制，但没有实际贯穿状态例。",
+      "review_consistency": "一张卡有条件范围与switch边界，可独立回忆基础分支。",
+      "optimization": "P2：加一个无break两行连续输出小例，支持既定贯穿学习目标。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c06",
+      "title": "第6章 循环结构",
+      "order": 6,
+      "independent_restatement": "循环要跟踪初值、条件、体、更新；continue与break的去向不同，range含首不含尾。",
+      "independent_process": "sum range1,6,2取1+3+5=9；t循环每次continue后仍t++，100轮不代表100输出。",
+      "tasks": [
+        {
+          "id": "cg-04-s1-q13",
+          "stem": "对下面程序段，描述正确的是（ ）。\nfor（t=1；t<=100；t++）\n{\nscanf（“%d”，&x）；\nif（x<0） continue；\nprintf（“%d\\n”，t）；\n}",
+          "topic_id": "programming.t07",
+          "attempt": "D，continue只跳本轮printf，仍更新t并共执行100轮；假设输入均按题意完成",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "D",
+          "official_explanation": "答案依据是D‘循环体执行 100 次’。循环要跟踪初始化、条件、循环体和更新；continue只跳过本轮剩余部分。易错点：循环次数与输出次数可能不同。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c06",
+            "topic_id": "programming.t07",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章循环状态与边界及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "ua-program-008",
+          "stem": "Python 3中 sum(range(1,6,2)) 的结果为（ ）。",
+          "topic_id": "programming.t07",
+          "attempt": "B，range为1,3,5，和9",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "range(1,6,2)产生1、3、5，左闭右开，因此求和为9。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c06",
+            "topic_id": "programming.t07",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章循环状态与边界及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "C for与while continue差别已有对照代码与状态表，这是有效缓解死循环误区。",
+      "review_consistency": "一张卡保留各条件/范围，能回忆流程，图又能确认下一轮方向。",
+      "optimization": "暂无必须改；不以答案数量判断整章掌握。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c07",
+      "title": "第7章 函数与模块化程序设计",
+      "order": 7,
+      "independent_restatement": "函数经参数拿输入，以return交结果；作用域管名称可见，存储期管对象存在，递归按栈返回。",
+      "independent_process": "static x0首次++为1，第二次保留1再++为2；maximum(3,5)返回5而不只打印。",
+      "tasks": [
+        {
+          "id": "gap-course-revision-core-10-1",
+          "stem": "C函数int f(void){static int x=0;return ++x;}在程序中此前从未调用过，现在连续调用两次。两次返回值依次是什么？",
+          "topic_id": "programming.t19",
+          "attempt": "1、2；static跨调用保留对象，初始化一次",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "1、2",
+          "official_explanation": "static局部对象跨调用保存，初始化仅一次；第二次从1继续加到2。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c07",
+            "topic_id": "programming.t19",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章函数、参数与返回及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-pl-012",
+          "stem": "用Python定义函数maximum(a,b)，返回较大值；不要在函数内只打印结果。",
+          "topic_id": "programming.t08",
+          "attempt": "def maximum(a,b):\n    return a if a>=b else b",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "def maximum(a, b):\n    if a >= b:\n        return a\n    return b",
+          "official_explanation": "函数通过return把值交给调用者，调用者可继续使用结果。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c07",
+            "topic_id": "programming.t08",
+            "ability": "代码编写",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章函数、参数与返回及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "默认可变对象/LEGB/宏/static/入口在一章集中，内容密；已给绑定图、递归图与static轨迹。",
+      "review_consistency": "4卡拆参数、作用域、递归、预处理，独立回忆有支持；作用域卡同static卡部分重复。",
+      "optimization": "P3：可合并重复static例把空间留给LEGB查找顺序，不是减少必要概念。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c08",
+      "title": "第8章 数组、字符串与Python组合数据",
+      "order": 8,
+      "independent_restatement": "C数组边界不自动保护，字符串容量含0；Python容器的可变性与拷贝层次决定共享。",
+      "independent_process": "词频hello→1，world→1，再hello→2，python→1；嵌套浅拷贝b[0].append2令a也[[1,2]]。",
+      "tasks": [
+        {
+          "id": "ua-program-013",
+          "stem": "C语言会自动检查每次数组下标，越界访问一定在编译阶段报错。（ ）",
+          "topic_id": "programming.t10",
+          "attempt": "错；C越界是未定义行为，不保证编译报错",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "错误",
+          "official_explanation": "C通常不提供自动数组边界检查，越界访问可能编译通过却产生未定义行为，必须由程序设计和测试保证边界。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c08",
+            "topic_id": "programming.t10",
+            "ability": "读图排障",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数组、字符串与容器边界及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "hn-recall-sy26-003",
+          "stem": "使用一种熟悉的编程语言编写代码，统计字符串“hello world, hello python”中每个单词出现的次数。忽略逗号并按小写处理。",
+          "topic_id": "programming.t11",
+          "attempt": "text=\"hello world, hello python\"; counts={}\nfor word in text.lower().replace(\",\", \"\").split():\n    counts[word]=counts.get(word,0)+1\n结果hello2, world1, python1",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "Python示例：\ntext = 'hello world, hello python'.lower().replace(',', '')\ncounts = {}\nfor word in text.split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n结果为hello:2、world:1、python:1。",
+          "official_explanation": "关键步骤是规范化标点和大小写、分词、逐词累计。也可使用其他语言或标准库完成。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c08",
+            "topic_id": "programming.t11",
+            "ability": "代码编写",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章数组、字符串与容器边界及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "“可哈希”已给正反例，但不是完整形式定义；本章基础使用足够；词频方法正文有。",
+      "review_consistency": "两卡都偏容器边界，已教词频get累计和切片操作缺独立过程线索。",
+      "optimization": "EXP-COMP-004：补词频规范化→分词→缺省0累计的短卡，别让复习只剩浅拷贝例。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c09",
+      "title": "第9章 C指针、结构体与文件",
+      "order": 9,
+      "independent_restatement": "指针值和所指内容不同，运算步长取所指类型；对象生命周期决定能否解引用，文件返回值控制读取。",
+      "independent_process": "a二维2×3/int4B，p指一行，p+1=1000+12=1012；*(p+1)+2定位1020。",
+      "tasks": [
+        {
+          "id": "ap-pl-001",
+          "stem": "阅读C代码：`int x=3; int *p=&x; *p=5; printf(\"%d\",x);` 输出是（ ）。",
+          "topic_id": "programming.t12",
+          "attempt": "B，*p写x，因此5",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "p保存x的地址，`*p=5`通过该地址把x改为5，因此输出5。`p`表示地址，`*p`表示该地址处的对象。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c09",
+            "topic_id": "programming.t12",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章指针类型与对象生命周期及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-course-revision-core-11-1",
+          "stem": "在简化的字节编址模型中，int占4B，数组int a[2][3]按行连续存储且首地址记为1000。声明int (*p)[3]=a后，p+1所指位置的地址值是多少？",
+          "topic_id": "programming.t20",
+          "attempt": "1012；p所指是一行3个int，每次跨3×4=12B",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "1012",
+          "official_explanation": "p指向含3个int的一行，每步3×4=12B。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c09",
+            "topic_id": "programming.t20",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章指针类型与对象生命周期及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "指针、动态内存、结构体/联合、文本/二进制多任务，长但分别有边界及步骤；图字在手机可读。",
+      "review_consistency": "4卡含行指针和文件，但fseek/ftell二进制定位只有一句fread返回提醒，复习定位步骤较弱。",
+      "optimization": "P2：给“第3个本机int=偏移2*sizeof(int)”的文件定位小卡，不把结构体原始字节当通用格式。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c10",
+      "title": "第10章 Python异常、模块与文件",
+      "order": 10,
+      "independent_restatement": "异常按类型转控制，with负责资源；CSV字段先文本、数值转换后统计，模块导入不等安装。",
+      "independent_process": "CSV80/90按total0→80→170，count0→1→2，均分85；ValueError分支不走try的else。",
+      "tasks": [
+        {
+          "id": "gap-course-revision-core-12-1",
+          "stem": "csv.DictReader读出score为字符串\"80\"、\"90\"，为什么直接相加不能得到170？应如何统计？",
+          "topic_id": "programming.t21",
+          "attempt": "CSV返回文本，直接相加成8090；逐项int后加到total，80+90=170",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "字符串相加会拼接为\"8090\"；每项int转换后累计并计数",
+          "official_explanation": "CSV默认字段为str；转数值再算总和/均值，并检查空输入与转换异常。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c10",
+            "topic_id": "programming.t21",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章Python按异常类型分支及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-pl-007",
+          "stem": "为什么推荐用with open(path, encoding=\"utf-8\")读取文本？文件不存在与解码失败通常分别是什么异常？",
+          "topic_id": "programming.t18",
+          "attempt": "with确保退出时按协议关闭流、encoding明确文本解码；FileNotFoundError和UnicodeDecodeError",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "with能在离开代码块时关闭文件；文件不存在通常是FileNotFoundError，解码失败通常是UnicodeDecodeError。",
+          "official_explanation": "资源管理、路径错误和编码错误是不同问题，应按异常类型处理。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c10",
+            "topic_id": "programming.t18",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章Python按异常类型分支及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "新加random/Matplotlib与CSV靠后切任务，基础例有但没有真实环境验证；不能称运行测试。",
+      "review_consistency": "3卡含异常/文件/CSV，无标准库第三方和模拟频率的回忆线索。",
+      "optimization": "P2：给import≠install与频率≠概率的小回忆条，范围只已教例。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "programming",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c11",
+      "title": "第11章 C与Python程序模型比较",
+      "order": 11,
+      "independent_restatement": "跨语言先识别版本、类型、存储/控制规则，不能按相同符号推出相同返回类型。",
+      "independent_process": "low0/high6：C int mid3，Python /为float3.0；改//才可普通列表索引。",
+      "tasks": [
+        {
+          "id": "gap-pl-008",
+          "stem": "同一算法要在长度为7的数组中取首尾下标的中点。low=0、high=6。现代C中int mid=(low+high)/2; 与Python 3中mid=(low+high)/2分别得到什么类型和值？Python怎样写才能得到整数下标？",
+          "topic_id": "programming.t16",
+          "attempt": "C int=3；Python float=3.0，整数下标用(low+high)//2或low+(high-low)//2",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C得到int 3；Python 3的/得到float 3.0。Python应写mid=(low+high)//2得到整数3。实际大整数下标还可用low+(high-low)//2形式，避免把C中的low+high溢出风险带入实现。",
+          "official_explanation": "这里即使真除结果恰好是整数，Python的结果类型仍是float，不能直接当普通列表下标。迁移应保持整数下标语义，不是只比较显示数值3与3.0。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c11",
+            "topic_id": "programming.t16",
+            "ability": "程序阅读",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章例题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "ap-pl-005",
+          "stem": "说明阅读一个含分支和循环的短程序时的基本步骤，并列出至少两个容易造成C与Python答案混淆的语言差异。",
+          "topic_id": "programming.t16",
+          "attempt": "先定语言类型与初值，逐条件选分支，逐轮列状态/更新/输出到终止；C整数/与Python/不同，&&与and语义不同，C块作用域与Python函数作用域不同",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "先写变量初值，确定运算和类型，沿控制流逐句跟踪循环与分支，最后核对输出格式。差异可写C整数除法与Python 3的/、代码块大括号与缩进、逻辑运算符、输入返回类型等。",
+          "official_explanation": "评分点：四步读码法和两项真实语言差异。需先识别语言版本，不能把Python 2规则套入Python 3。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "programming.c11",
+            "topic_id": "programming.t16",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章例题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "本章用对照把此前分散差异串起，重复是有目的复习；我没有将C的++带到Python。",
+      "review_consistency": "一张比较卡保留除法/余数与生命周期，能独立回忆；中点类型例本章无同型显例，依类型迁移完成。",
+      "optimization": "暂无必须改；可加整数值但浮点类型的反例提示。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/C与Python程序设计.md",
+      "review_source": "color_notes/C与Python程序设计.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-01",
+      "title": "第1章 概述",
+      "order": 1,
+      "independent_restatement": "网络靠协议把独立系统互连，分组共享链路；分层封装保留上层，时延按不同来源分别算。",
+      "independent_process": "1500B×8=12000bit，除100M得120μs；3包2跳每12ms总(3+2-1)×12=48ms。",
+      "tasks": [
+        {
+          "id": "nw-national-012",
+          "stem": "一个1500 B的数据帧通过100 Mbit/s链路发送。忽略其他开销，发送时延是多少微秒？只填写数字。",
+          "topic_id": "net.performance",
+          "attempt": "120；1500×8/100000000=0.00012s=120μs",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "120",
+          "official_explanation": "计算题不会提示公式，需要先写出t=L/R。数据长度为1500×8=12000 bit，发送时延为12000/(100×10⁶)s=120 μs。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-01",
+            "topic_id": "net.performance",
+            "ability": "直接计算",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章1.5 分层、协议与体系结构及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-final-thin-014",
+          "stem": "在线课堂持续传输与突发网页访问分别更适合怎样理解电路交换和分组交换的取舍？",
+          "topic_id": "net.switching",
+          "attempt": "持续固定资源通信可用电路交换理解稳定时延但闲时浪费；突发网页分组共享更高利用；在线课堂仍常通过分组网络，须有缓冲与时延控制",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "电路交换预留端到端资源，持续业务时延较稳定但空闲时资源仍占用；分组交换统计复用，适合突发网页流量，但排队会带来可变时延和丢包。",
+          "official_explanation": "选择取决于资源预留、突发性和时延稳定要求。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-01",
+            "topic_id": "net.switching",
+            "ability": "比较辨析",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章1.5 分层、协议与体系结构及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "bit/B/频带Hz分开讲有用；TCP/IP/OSI名词多但有层次表对照。",
+      "review_consistency": "5卡分别分类/时延/交换/分层/协议，能完成本轮两题。",
+      "optimization": "暂无必须改；在线课堂实际分组服务不能被理想电路比较误导。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-02",
+      "title": "第2章 物理层",
+      "order": 2,
+      "independent_restatement": "物理层传信号，方向与介质不是一回事；容量受状态数、带宽、噪声条件限制。",
+      "independent_process": "20dB先转100线性；B2000、S/N31时C=2000×5=10000bit/s；3kHz/M4奈氏12k。",
+      "tasks": [
+        {
+          "id": "nw-national-011",
+          "stem": "写出香农公式，说明公式中各参数的含义和单位，并说明信噪比以dB给出时怎样转换为线性功率比。",
+          "topic_id": "net.channel-capacity",
+          "attempt": "C=B log₂(1+S/N)；B Hz、C bit/s、S/N同功率单位线性无量纲，dB转10^(dB/10)",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C=B log₂(1+S/N)。C为理论容量上限，单位bit/s；B为信道带宽，单位Hz；S为信号平均功率，N为噪声平均功率，二者使用相同功率单位；S/N为无量纲线性功率比。若信噪比为x dB，则S/N=10^(x/10)。",
+          "official_explanation": "香农公式用于有噪声、带宽受限信道的理论容量。作答时要同时写出公式、参数含义、单位和dB换算；不能把dB数值直接代入S/N。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-02",
+            "topic_id": "net.channel-capacity",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章2.2 通信方向及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-audit26-core-net-media-direction",
+          "stem": "两栋楼相距800米，需要高速连接，周围电磁干扰较强。在普通铜双绞线直连与光纤中选择较合理方案并说明原因。再说明半双工和全双工的区别，光纤是否天然只允许单向传输？",
+          "topic_id": "net.media",
+          "attempt": "光纤；800米和强干扰较适合，核验纤型模块距离；半双工不能同时双向，全双工可以，光纤本身不限制仅单向",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "选择适合距离的光纤链路及配套收发模块；光纤抗电磁干扰，普通以太网铜双绞线单段距离通常不足800米。半双工允许双向但不能同时，全双工允许同时双向。光纤可以通过双纤或合适波分等方式实现双向通信，不等于只能单向。",
+          "official_explanation": "介质选择要考虑距离、速率和干扰，收发方向由链路实现决定，不能从“用光传输”直接推出单工。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-02",
+            "topic_id": "net.media",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章2.2 通信方向及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "log₂和dB指数可能是数学前置，例把具体数带入；基础计算能跟，未要求任意对数心算。",
+      "review_consistency": "三卡能恢复公式/单位、复用、介质，但CDMA内积、TDM固定槽等新增过程仅长文。",
+      "optimization": "P2：增TDM固定空槽或CDMA点积的单任务线索，让已教过程可回忆。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-03",
+      "title": "第3章 数据链路层",
+      "order": 3,
+      "independent_restatement": "链路层管一跳帧，填充保透明、CRC检错；交换先学源再查目的，泛洪仍受VLAN限制。",
+      "independent_process": "空MAC表A从1入→记A1，VLAN10只泛2；B回从2入→记B2，定向1；CRC1101000首次异或为0110000。",
+      "tasks": [
+        {
+          "id": "gap-audit26-core-net-cd-ca",
+          "stem": "说明为什么传统共享半双工以太网需要CSMA/CD，而普通交换式全双工链路不需要运行它。802.11常用CSMA/CA后是否保证绝不碰撞？",
+          "topic_id": "net.ethernet-wifi",
+          "attempt": "共享半双工多个站争同介质会碰撞，需检测/退避；全双工交换链路两方向独立无该碰撞；CA仍有隐藏站和同时退避结束等碰撞",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "共享半双工链路上多个站争用同一介质，可能同时发送，所以要侦听并检测碰撞、退避重发。交换式全双工点到点链路可同时双向传输，没有这种共享介质碰撞，通常不运行CSMA/CD。802.11用侦听、退避和确认等方式降低碰撞概率，但隐藏站或同时退避结束仍会碰撞。",
+          "official_explanation": "必须带上“共享半双工”“全双工”的条件。冲突避免是降低概率，不是绝对消除，且不同接入机制不能只凭网络名称套用。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-03",
+            "topic_id": "net.ethernet-wifi",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章3.2 PPP 与链路层的三个基本问题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-audit26-core-net-vlan-learning",
+          "stem": "一台二层交换机有端口1、2属于VLAN10，端口3属于VLAN20。MAC表初始为空。端口1收到源MAC=A、目的MAC=B的帧，B连接端口2。写出学习和转发行为；B回复A后表中应有哪些关联？VLAN20能否收到第一帧？",
+          "topic_id": "net.frames-switching",
+          "attempt": "学习(VLAN10,A)→1，未知B只向2泛洪；B回复学(VLAN10,B)→2，查A只去1；VLAN20端口3不收",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "交换机学习A属于VLAN10、位于端口1；B未知，第一帧仅向VLAN10除入端口外的端口2泛洪。端口3属于VLAN20，不接收此次泛洪。B从端口2回复时学习B→端口2，查到A→端口1后定向转发。",
+          "official_explanation": "交换机学习源地址，转发查目的地址；未知单播的泛洪仍受VLAN边界限制。第一次收到帧不能仅由目的MAC猜出B所在端口。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-03",
+            "topic_id": "net.frames-switching",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章3.2 PPP 与链路层的三个基本问题及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "多个协议在本章，但PPP/CRC/窗口/退避/STP均已有过程例，不把较长当没解释。",
+      "review_consistency": "五卡加PPP独立卡可恢复基础；STP在大卡仅一句选根/阻塞，若要重演端口角色还要回长文。",
+      "optimization": "P2：把STP三角形根/根端口/指定端口/阻塞端口的状态压成独立卡。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "title": "第4章 网络层",
+      "order": 4,
+      "independent_restatement": "网络层看前缀转发，ARP只解本跳MAC；路由协议学路径与按表转发分工不同。",
+      "independent_process": "10.1.2.99同时匹配/8 /16 /24，取/24；IPv4数据2000/MTU620首20→600,600,600,200，偏移0/75/150/225。",
+      "tasks": [
+        {
+          "id": "uf-nw-008",
+          "stem": "二层交换机依据目的MAC地址转发帧，路由器依据目的IP地址选择下一跳。",
+          "topic_id": "net.arp-forwarding",
+          "attempt": "对；二层目的MAC、路由目的IP",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "正确",
+          "official_explanation": "二层交换机学习MAC地址表，三层路由器查路由表；实际多层交换设备可同时具备多种功能。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-04",
+            "topic_id": "net.arp-forwarding",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章4.2 IPv4、CIDR 与子网划分及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "uc-net-005",
+          "stem": "路由表同时有10.0.0.0/8、10.1.0.0/16、10.1.2.0/24三项。目的IP为10.1.2.99时应匹配（ ）。",
+          "topic_id": "net.routing",
+          "attempt": "A，三项都匹配，/24最具体",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "A",
+          "official_explanation": "三项都能覆盖该地址，但IP转发采用最长前缀匹配，/24最具体，因此选10.1.2.0/24。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-04",
+            "topic_id": "net.routing",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章4.2 IPv4、CIDR 与子网划分及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "地址算术多但每一步有取模、块边界示例；IPv6超MTU源端调整机制已教。",
+      "review_consistency": "7卡足以回忆分片/ARP/路由等，本轮题只测设备层次和最长前缀，范围有限。",
+      "optimization": "暂无必须改；NAT例外已有单列，避免IP永不变绝对化。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-05",
+      "title": "第5章 运输层",
+      "order": 5,
+      "independent_restatement": "TCP以字节编号可靠有序，窗口同时受接收与网络限制；ACK不代表应用业务成功。",
+      "independent_process": "轮首cwnd1,2,4,8,9；在途10超时门限5窗口1；三重复ACK则临时8、新ACK后5。",
+      "tasks": [
+        {
+          "id": "cg-08-s1-q39",
+          "stem": "某协议通过序号、确认与重传提供可靠字节流，并具有流量控制和拥塞控制机制。该协议简称是（ ）。",
+          "topic_id": "net.tcp-udp",
+          "attempt": "C，TCP可靠有序字节流",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "C",
+          "official_explanation": "TCP 提供确认、流控、拥塞控制、重传等可靠传输机制。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-05",
+            "topic_id": "net.tcp-udp",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章5.6 流量控制与拥塞控制及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-full-net-congestion-trace",
+          "stem": "按教材Reno简化轮次模型，cwnd初值1 MSS、ssthresh=8 MSS，到达门限即转入拥塞避免。每轮数据均获确认且无丢包，写第1至第5轮开始时的cwnd。",
+          "topic_id": "net.congestion-steps",
+          "attempt": "1,2,4,8,9 MSS；门限到8后每轮加1",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "1、2、4、8、9 MSS。",
+          "official_explanation": "门限前每RTT近翻倍，达到8后拥塞避免每轮加1。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-05",
+            "topic_id": "net.congestion-steps",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章5.6 流量控制与拥塞控制及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "Reno时序与超时差别用表明确，但MSS首次当单位使用没在本章展开最大报文段长度。",
+      "review_consistency": "4卡能回忆窗口计算/连接/拥塞；MSS/RTT缩写可对熟悉者友好，初学者先备不全。",
+      "optimization": "EXP-COMP-003：首次MSS解释最大报文段长度及cwnd单位MSS，给1MSS多少B的例。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-06",
+      "title": "第6章 应用层",
+      "order": 6,
+      "independent_restatement": "应用协议按任务区分：DNS查名字，DHCP给配置，HTTP请求内容，邮件发送/读取各有协议。",
+      "independent_process": "DNS无缓存本地解析器根→顶级→权威→返回缓存；DHCP D/O/R/ACK后才拿租约；169.254先查DHCP。",
+      "tasks": [
+        {
+          "id": "dy-340ea980",
+          "stem": "在网页制作过程中，可以利用图片建立超链接。",
+          "topic_id": "net.http",
+          "attempt": "对；图片可以包在a链接内作为可点击目标",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "正确",
+          "official_explanation": "在网页制作过程中，可以给图片、文字等对象创建超链接。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-06",
+            "topic_id": "net.http",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章6.3 HTTP、URL 与状态码及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "nw-national-019",
+          "stem": "分别说明DNS和DHCP的主要作用，并简述主机不能通过域名访问网站、或获得169.254.x.x地址时的优先排查方向。",
+          "topic_id": "net.dns-dhcp",
+          "attempt": "DNS名称→地址，DHCP自动配置IP/掩码/网关/DNS；域名失败先查解析（并核对连通），169.254先查链路/DHCP服务/中继",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "DNS负责名称解析，把域名对应到IP等记录；DHCP为主机分配IP地址、掩码、默认网关和DNS服务器等配置。能访问IP但不能访问域名时优先检查DNS配置与解析；获得169.254.x.x地址时通常说明未取得DHCP租约，应先检查本地链路、DHCP服务和中继。",
+          "official_explanation": "简答要把服务职责和故障现象对应起来。DNS故障不会直接把主机地址改成169.254网段，DHCP和DNS不能混为一种服务。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-06",
+            "topic_id": "net.dns-dhcp",
+            "ability": "过程描述",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章6.3 HTTP、URL 与状态码及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "HTML只给骨架，没有a/img链接示例，图片可作超链接题靠模型网页先验答；题元数据在本章，非错章结论。",
+      "review_consistency": "7卡覆盖协议/排障/DNS/DHCP/Socket/SNMP，但网页图片超链接没有对应线索。",
+      "optimization": "EXP-COMP-006：若保留网页制作题，补<a href>包含<img>的最小例和语义。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-07",
+      "title": "第7章 网络安全",
+      "order": 7,
+      "independent_restatement": "安全目标先分机密/完整/身份，再配加密、签名、证书、边界规则；排障每步证据有限。",
+      "independent_process": "Internet→Web:443允许；WebIP→DBIP:DB端口允许；其余拒绝；签名用私钥、公钥须绑定身份。",
+      "tasks": [
+        {
+          "id": "gap-final-thin-017",
+          "stem": "校园Web服务器必须对互联网开放，数据库只供Web服务器访问。说明合理分区并写出两条最小开放规则。",
+          "topic_id": "net.security-boundary",
+          "attempt": "Web置DMZ，DB内网；允许Internet→Web TCP443；仅WebIP→DBIP指定DB端口，余默认拒绝，禁Internet直达DB",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "Web服务器放DMZ，数据库放内网数据区；允许互联网到Web的必要HTTP/HTTPS端口，允许Web到数据库的指定数据库端口，拒绝互联网直连数据库及其他非必要方向。",
+          "official_explanation": "防火墙策略应明确源、目的、服务和方向，并按最小开放减少横向移动。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-07",
+            "topic_id": "net.security-boundary",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章7.2 加密、摘要、签名与证书及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "nw-national-009",
+          "stem": "某单位要让收件人验证文件确由指定发送者发出，且传输途中未被替换。哪种做法最适合？",
+          "topic_id": "net.crypto-signature",
+          "attempt": "B，私钥签名并核验公钥身份绑定",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "数字签名由私钥生成、公钥验证，结合可信的公钥身份绑定可检查来源与完整性。普通摘要可以一同被替换。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-07",
+            "topic_id": "net.crypto-signature",
+            "ability": "场景选型",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章7.2 加密、摘要、签名与证书及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "TLS1.3仅简化链，已明说真实流程不全；不用本课推部署配置。",
+      "review_consistency": "三卡能回忆安全目标与工具，但DMZ规则卡只选机制没有源/目的/方向的具体模板。",
+      "optimization": "P2：防火墙卡补两规则模板便于独立重建最小开放策略。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-08",
+      "title": "第8章 互联网上的音频/视频服务",
+      "order": 8,
+      "independent_restatement": "实时媒体同时受时延抖动丢包影响；缓冲吸收短波动，恒速公式只在净消费为正时算耗尽。",
+      "independent_process": "进5播4，库存24→25→26，不会-24秒耗尽；另进3播4每秒少1，24秒耗尽。",
+      "tasks": [
+        {
+          "id": "gap-full-net-buffer-boundary",
+          "stem": "播放速率固定4 Mbit/s，网络持续输入5 Mbit/s，已有24 Mbit缓冲。能否用24/(4-5)=-24秒作为耗尽时间？说明原因。",
+          "topic_id": "net.playback-buffer",
+          "attempt": "不能；净输入每秒+1Mbit，缓冲增长，没有此恒速模型下耗尽时刻",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "不能。输入大于消费，缓冲按1 Mbit/s增长，在这一持续条件下不会耗尽；达到容量上限后还需考虑流控。",
+          "official_explanation": "耗尽公式要求消费速率大于输入速率，负时间没有物理意义。",
+          "check": "主要答案与官方一致；自评不是评分器结果。官方还提缓冲上限后的流控；原答未写这一补充。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-08",
+            "topic_id": "net.playback-buffer",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章8.2 流式存储音视频及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-net-media-003",
+          "stem": "说明实时音视频为什么不能只看平均带宽，并分别说明时延、抖动和丢包对体验的影响。",
+          "topic_id": "net.streaming-qos",
+          "attempt": "平均带宽不含短时不足；时延造成对话拖延，抖动使到达不匀/卡顿，丢包造成缺失与重传延迟；缓冲只能以时延换平滑",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "平均带宽不能反映短时波动。时延过大会使互动反馈变慢；抖动会使分组到达间隔不均，需要播放缓冲吸收；丢包会造成声音或画面缺失，过度等待重传又可能增加时延。",
+          "official_explanation": "实时体验由吞吐量、时延、抖动、丢包和缓冲策略共同决定。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-08",
+            "topic_id": "net.streaming-qos",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章8.2 流式存储音视频及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "RTP时间戳/序号区别已有20ms×8k=160例，QoS严格优先不能抢半帧已有边界。",
+      "review_consistency": "两卡主要都讲缓存，RTP/RTCP/SIP分工与QoS过程缺独立召回。",
+      "optimization": "P2：把重复缓存概览让一处给“信令/媒体/统计”分工卡。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    },
+    {
+      "course_id": "computer-network",
+      "course": "计算机网络",
+      "chapter_id": "net-09",
+      "title": "第9章 无线网络和移动网络",
+      "order": 9,
+      "independent_restatement": "无线是介质、移动是位置变化后的可达；CA降低碰撞而不消灭，隐藏站在共同接收端相遇。",
+      "independent_process": "退避3，空1余2，忙冻结2，再空2到0发送；A/C听不到但AP都能收，信号在AP叠加。",
+      "tasks": [
+        {
+          "id": "gap-net-wireless-003",
+          "stem": "解释隐藏站问题，并说明RTS/CTS为什么只能缓解而不能保证完全消除无线碰撞。",
+          "topic_id": "net.wireless-mobile",
+          "attempt": "A/C彼此听不到却同时到同AP，侦听空闲不能证明接收端无碰撞；RTS/CTS让听到预约者退让，控制帧仍可能碰撞",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "隐藏站是两个发送站彼此听不到，却都能把信号送到同一接收端，因而可能同时发送并在接收端冲突。RTS/CTS让接收端附近站点获知预约并推迟发送，可降低冲突，但控制帧也可能丢失或碰撞，覆盖和干扰环境也不完全一致，因此不能保证绝对无碰撞。",
+          "official_explanation": "回答要同时说明形成条件、RTS/CTS作用和机制边界。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-09",
+            "topic_id": "net.wireless-mobile",
+            "ability": "机制解释",
+            "difficulty": "应用"
+          },
+          "lecture_alignment": "本章9.2 WLAN 的组成及相关过程段；具体依据见自己的作答和本章过程记录。"
+        },
+        {
+          "id": "gap-net-wireless-001",
+          "stem": "关于无线接入点AP与家用无线路由器的说法，正确的是？",
+          "topic_id": "net.wireless-mobile",
+          "attempt": "B，无线路由器通常集成AP/交换/路由/NAT",
+          "basis": "依据已读本章过程/条件，并含模型既有学科知识；正文例题若同题出现会在最终报告标曝光",
+          "official_answer": "B",
+          "official_explanation": "AP主要提供无线接入和二层桥接；家用无线路由器通常集成多个网络功能。",
+          "check": "主要答案与官方一致；自评不是评分器结果。",
+          "example_exposure": "正文相关机制/算例已曝光；同数值或近同型如下述说明，练习包答案文件此前未读。",
+          "question_metadata": {
+            "course_id": null,
+            "chapter_id": "net-09",
+            "topic_id": "net.wireless-mobile",
+            "ability": "比较辨析",
+            "difficulty": "基础"
+          },
+          "lecture_alignment": "本章9.2 WLAN 的组成及相关过程段；具体依据见自己的作答和本章过程记录。"
+        }
+      ],
+      "beginner_difficulty_and_prerequisites": "BSS/ESS/SSID多缩写有全称，DCF在章节称经典却未展开全称/协调含义；不影响简单题。",
+      "review_consistency": "一张卡能回忆AP/隐藏站，新增退避冻结和移动IPv4转交过程没线索。",
+      "optimization": "P2：拆退避状态与归属代理转交两张卡，分别回忆，不要求短卡替代完整无线教学。",
+      "worked_example_attempt": "本轮先读完整正文（包括已展开答案），再自选变式/中间态复算；不是遮答案的真人盲测。两道练习包题另先落盘后核对。",
+      "lecture_source": "course_notes/计算机网络.md",
+      "review_source": "color_notes/计算机网络.md",
+      "retest": "只读审计，未修内容，不声称修复复测通过。"
+    }
+  ],
+  "mobile": {
+    "browser": "Desktop Chrome C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "viewport": "390x844",
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "pages": 24,
+    "chapter_views": 216,
+    "screenshots": 48,
+    "evidence": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile",
+    "overflow": 0,
+    "broken_images": 0,
+    "scope": "每科第一章讲义/重点、第一张卡，以及组成流水停顿、OS银行家、数据结构Prim、数据库LEFT JOIN、程序指针步长、网络CRC困难图截图；全部章节做DOM可见性/图加载/页面宽度检查。人工看图是抽查，不声称看清全部图。"
+  },
+  "scope_boundaries": [
+    "数据库末段明确保留大数据架构、内存恢复、多维模型及共识算法专题；本轮未凭基础例关闭后续教材整域。",
+    "DS第8章Trie/DP/回溯等仅拓展识别；未验证教材结构是否允许此范围，亦未擅定为高级选修。",
+    "另有多章已教过程缺独立卡的P2局部建议保留在逐章记录，尚未全部提升为跨课程重复问题。"
+  ],
+  "summary": "54章108题全部落记录；主要作答核对相符，2处答点补充与1次答案打开前自纠已明记。无本轮已证P1；6个P2具体候选，另有逐章回忆/负担建议。答对受先验和例题曝光影响，不能证明课程完整。",
+  "practice_link_check": {
+    "scope": "每科第一章第一知识点链接实际打开；读取题面/知识点标题/过滤题量，未提交答案；不是全部题库关联完整性证明。",
+    "data_topic_id": "从实际重点章DOM data-topic-id与该点练习href采集，topic存在于learning-map；lecture缺精确锚时fallback章首不当知识缺失。",
+    "evidence": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\experience_quiz_link_checks.json",
+    "records": [
+      {
+        "course_id": "computer-organization",
+        "topic_id": "computer-organization.t01",
+        "link": "./quiz.html?topic=computer-organization.t01&mode=seq",
+        "url": "http://127.0.0.1:1055/quiz.html?topic=computer-organization.t01&mode=seq",
+        "stem": [
+          "按教材对系统结构演变的概括，传统冯·诺依曼计算机以运算器为中心，现代计算机的系统结构通常以________为中心。（填部件名称）"
+        ],
+        "body_excerpt": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机组成原理\n填空\n待练 5 题\n☆\n存储程序与系统组成\n按教材对系统结构演变的概括，传统冯·诺依曼计算机以运算器为中心，现代计算机的系统结构通常以________为中心。（填部件名称）\n提交\n查看答案\n上一题\n跳过\n题目有误",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile\\computer-organization_quiz_link.png"
+      },
+      {
+        "course_id": "operating-system",
+        "topic_id": "operating-system.t01",
+        "link": "./quiz.html?topic=operating-system.t01&mode=seq",
+        "url": "http://127.0.0.1:1055/quiz.html?topic=operating-system.t01&mode=seq",
+        "stem": [
+          "下面哪一种描述不是操作系统的主要目标？（ ）"
+        ],
+        "body_excerpt": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n单选\n待练 12 题\n☆\n操作系统功能与基本特征\n下面哪一种描述不是操作系统的主要目标？（ ）\nA\n有效性\nB\n方便性\nC\n可扩充性\nD\n多路复用——一个信道同时传输多路信号\n上一题\n跳过\n题目有误",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile\\operating-system_quiz_link.png"
+      },
+      {
+        "course_id": "data-structures",
+        "topic_id": "data-structures.t01",
+        "link": "./quiz.html?topic=data-structures.t01&mode=seq",
+        "url": "http://127.0.0.1:1055/quiz.html?topic=data-structures.t01&mode=seq",
+        "stem": [
+          "设语句S的执行时间为常数。以下循环的紧确增长量级是（ ），选项用O记号表示。\nfor(i=1;i<=n;i++)\n  for(j=i;j<=n;j++)\n    S;"
+        ],
+        "body_excerpt": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n单选\n待练 20 题\n☆\n数据结构与复杂度\n设语句S的执行时间为常数。以下循环的紧确增长量级是（ ），选项用O记号表示。\nfor(i=1;i<=n;i++)\n  for(j=i;j<=n;j++)\n    S;\nA\nO（n）\nB\nO（n2）\nC\nO（n*i）\nD\nO（n+1）\n上一题\n跳过\n题目有误",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile\\data-structures_quiz_link.png"
+      },
+      {
+        "course_id": "database",
+        "topic_id": "database.t01",
+        "link": "./quiz.html?topic=database.t01&mode=seq",
+        "url": "http://127.0.0.1:1055/quiz.html?topic=database.t01&mode=seq",
+        "stem": [
+          "以下哪些系统通常可以使用数据库保存和管理业务数据？"
+        ],
+        "body_excerpt": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n单选\n待练 31 题\n☆\n数据库、DBMS与三级模式\n以下哪些系统通常可以使用数据库保存和管理业务数据？\nA\n超市系统\nB\n财务系统\nC\n人事系统\nD\n以上都是\n上一题\n跳过\n题目有误",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile\\database_quiz_link.png"
+      },
+      {
+        "course_id": "programming",
+        "topic_id": "programming.t01",
+        "link": "./quiz.html?topic=programming.t01&mode=seq",
+        "url": "http://127.0.0.1:1055/quiz.html?topic=programming.t01&mode=seq",
+        "stem": [
+          "在编制计算机程序解决问题的过程中，问题分析后给出解决问题的详细方法和步\n骤，这一过程称为（ ）。"
+        ],
+        "body_excerpt": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\nC与Python程序设计\n单选\n待练 13 题\n☆\n算法、流程与执行\n在编制计算机程序解决问题的过程中，问题分析后给出解决问题的详细方法和步\n骤，这一过程称为（ ）。\nA\n编写程序\nB\n检测结果\nC\n调试运行\nD\n设计算法\n上一题\n跳过\n题目有误",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile\\programming_quiz_link.png"
+      },
+      {
+        "course_id": "computer-network",
+        "topic_id": "net.overview",
+        "link": "./quiz.html?topic=net.overview&mode=seq",
+        "url": "http://127.0.0.1:1055/quiz.html?topic=net.overview&mode=seq",
+        "stem": [
+          "学校网站上有很多教师制作的微视频，供同学们下载学习，这主要体现了网络的\n（ ）功能。"
+        ],
+        "body_excerpt": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n单选\n待练 43 题\n☆\n网络组成、功能与拓扑\n学校网站上有很多教师制作的微视频，供同学们下载学习，这主要体现了网络的\n（ ）功能。\nA\n数据通信\nB\n资源共享\nC\n自动控制\nD\n分布处理\n上一题\n跳过\n题目有误",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\computing_mobile\\computer-network_quiz_link.png"
+      }
+    ]
+  }
+}

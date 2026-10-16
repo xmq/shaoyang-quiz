@@ -1,0 +1,1538 @@
+{
+  "commit": "9dc2a3f70a4f53738c150493a093122aaea602d2",
+  "scope": "16 courses; beginner then cross-reviewed exam learner; simulated agents, not real students",
+  "courses": [
+    {
+      "course": "Office软件操作",
+      "course_id": "office",
+      "chapters": 7,
+      "topics": 17,
+      "source_fingerprints": {
+        "course_notes/Office软件操作.md": "e9a5f2c778e75f86a4e9d780c388257c1e98431ac4cf140b2a1bc229f6186bb9",
+        "color_notes/Office软件操作.md": "f1da39253dbf76ec4345c3bd1920cc930dba1109507f24e76509bbb3d176f33d"
+      },
+      "question_ids": {
+        "office.c01": {
+          "beginner": [
+            "gap-office-new-002",
+            "gap-office-new-001"
+          ],
+          "exam": [
+            "gap-audit26-found-002",
+            "cg-13-s1-q21"
+          ]
+        },
+        "office.c02": {
+          "beginner": [
+            "gap-audit26-found-003",
+            "gap-office-new-004"
+          ],
+          "exam": [
+            "gap-office-new-003",
+            "cg-11-s1-q76"
+          ]
+        },
+        "office.c03": {
+          "beginner": [
+            "ap-of-002",
+            "ap-of-001"
+          ],
+          "exam": [
+            "gap-office-new-006",
+            "gap-office-new-007"
+          ]
+        },
+        "office.c04": {
+          "beginner": [
+            "cg-12-s1-q51",
+            "gap-office-new-009"
+          ],
+          "exam": [
+            "cg-12-s1-q12",
+            "cg-12-s1-q67"
+          ]
+        },
+        "office.c05": {
+          "beginner": [
+            "gap-audit26-found-009",
+            "gap-audit26-found-011"
+          ],
+          "exam": [
+            "cg-12-s1-q50",
+            "cg-12-s1-q68"
+          ]
+        },
+        "office.c06": {
+          "beginner": [
+            "gap-office-new-014",
+            "gap-office-new-015"
+          ],
+          "exam": [
+            "cg-12-s1-q22-dup2",
+            "cg-12-s1-q10-dup2"
+          ]
+        },
+        "office.c07": {
+          "beginner": [
+            "gap-office-clean-008",
+            "gap-office-clean-009"
+          ],
+          "exam": [
+            "gap-office-new-016",
+            "gap-office-new-017"
+          ]
+        }
+      }
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "course_id": "computer-foundations",
+      "chapters": 10,
+      "topics": 23,
+      "source_fingerprints": {
+        "course_notes/大学计算机基础与新技术.md": "fbd207280510fa77035d98838f3c1cbeec0de7daa9816ce3d91144f550cc56c0",
+        "color_notes/大学计算机基础与新技术.md": "2650b0a3b518742913df2725a6df6fe1a02ce1697e5fd251e289b8aad282a98a"
+      },
+      "question_ids": {
+        "computer-foundations.c01": {
+          "beginner": [
+            "zg-74177",
+            "cg-02-s4-q6"
+          ],
+          "exam": [
+            "gap-found-017",
+            "zg-41175"
+          ]
+        },
+        "computer-foundations.c02": {
+          "beginner": [
+            "dy-e047e561",
+            "cg-06-s1-q17-dup2"
+          ],
+          "exam": [
+            "zg-76959",
+            "dy-2435453e"
+          ]
+        },
+        "computer-foundations.c03": {
+          "beginner": [
+            "gap-course-revision-applied-04-1",
+            "dy-932720df"
+          ],
+          "exam": [
+            "gap-found-003",
+            "dy-c350a16d"
+          ]
+        },
+        "computer-foundations.c04": {
+          "beginner": [
+            "gap-found-004",
+            "gap-found-021"
+          ],
+          "exam": [
+            "gap-found-005",
+            "gap-found-020"
+          ]
+        },
+        "computer-foundations.c05": {
+          "beginner": [
+            "gap-found-006",
+            "gap-final-thin-004"
+          ],
+          "exam": [
+            "hn-recall-sy26-002",
+            "gap-found-023"
+          ]
+        },
+        "computer-foundations.c06": {
+          "beginner": [
+            "dy-60fa8fa5",
+            "gap-found-007"
+          ],
+          "exam": [
+            "gap-course-revision-applied-05-1",
+            "cg-02-s4-q19"
+          ]
+        },
+        "computer-foundations.c07": {
+          "beginner": [
+            "gap-final-thin-005",
+            "gap-found-026"
+          ],
+          "exam": [
+            "gap-found-008",
+            "gap-found-027"
+          ]
+        },
+        "computer-foundations.c08": {
+          "beginner": [
+            "gap-found-010",
+            "gap-found-013"
+          ],
+          "exam": [
+            "gap-found-029",
+            "gap-found-028"
+          ]
+        },
+        "computer-foundations.c09": {
+          "beginner": [
+            "gap-found-030",
+            "gap-found-016"
+          ],
+          "exam": [
+            "cg-08-s1-q107",
+            "gap-final-thin-006"
+          ]
+        },
+        "computer-foundations.c10": {
+          "beginner": [
+            "gap-found-031",
+            "gap-found-032"
+          ],
+          "exam": [
+            "gap-found-032",
+            "gap-found-012"
+          ]
+        }
+      }
+    },
+    {
+      "course": "多媒体技术",
+      "course_id": "multimedia",
+      "chapters": 7,
+      "topics": 21,
+      "source_fingerprints": {
+        "course_notes/多媒体技术.md": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+        "color_notes/多媒体技术.md": "696215070ab3cea6f0e78eca22c0808ff6267d21a161bd8a4f27527dd95bc7a2"
+      },
+      "question_ids": {
+        "multimedia.c01": {
+          "beginner": [
+            "cg-02-s4-q28",
+            "gap-audit26-found-015"
+          ],
+          "exam": [
+            "gap-audit26-found-014",
+            "zg-3594"
+          ]
+        },
+        "multimedia.c02": {
+          "beginner": [
+            "uf-mm-001",
+            "ua-media-003"
+          ],
+          "exam": [
+            "gap-media-new-004",
+            "gap-media-new-003"
+          ]
+        },
+        "multimedia.c03": {
+          "beginner": [
+            "gap-course-revision-applied-06-1",
+            "dy-160fca0c"
+          ],
+          "exam": [
+            "hn-recall-hn26-012",
+            "gap-media-clean-002"
+          ]
+        },
+        "multimedia.c04": {
+          "beginner": [
+            "gap-media-clean-004",
+            "gap-media-new-008"
+          ],
+          "exam": [
+            "gap-media-clean-003",
+            "ua-media-007"
+          ]
+        },
+        "multimedia.c05": {
+          "beginner": [
+            "gap-media-new-002",
+            "gap-media-new-010"
+          ],
+          "exam": [
+            "gap-media-new-011",
+            "gap-final-thin-007"
+          ]
+        },
+        "multimedia.c06": {
+          "beginner": [
+            "gap-course-revision-applied-09-1",
+            "gap-media-clean-008"
+          ],
+          "exam": [
+            "cg-02-s2-q12",
+            "gap-course-revision-applied-07-1"
+          ]
+        },
+        "multimedia.c07": {
+          "beginner": [
+            "gap-media-clean-010",
+            "dy-e22d0d27"
+          ],
+          "exam": [
+            "ap-mm-002",
+            "gap-final-thin-008"
+          ]
+        }
+      }
+    },
+    {
+      "course": "操作系统原理",
+      "course_id": "operating-system",
+      "chapters": 7,
+      "topics": 20,
+      "source_fingerprints": {
+        "course_notes/操作系统原理.md": "c1c6985ce886daa4dbd9b07b161236405cdda209c0c88cab71b7c033de0bad52",
+        "color_notes/操作系统原理.md": "798398e0465c2e5c43cf35bf22ab7b731b44a4a90a3fdae9ca5d0676e2445541"
+      },
+      "question_ids": {
+        "operating-system.c01": {
+          "beginner": [
+            "cg-10-s1-q30",
+            "cg-10-s1-q12"
+          ],
+          "exam": [
+            "zg-32499",
+            "web-34"
+          ]
+        },
+        "operating-system.c02": {
+          "beginner": [
+            "gap-audit26-core-os-system-call",
+            "web-33"
+          ],
+          "exam": [
+            "web-33",
+            "cg-10-s1-q26"
+          ]
+        },
+        "operating-system.c03": {
+          "beginner": [
+            "cg-10-s1-q10",
+            "gap-accept-card-core-16-1"
+          ],
+          "exam": [
+            "uf-os-002",
+            "cg-10-s1-q14"
+          ]
+        },
+        "operating-system.c04": {
+          "beginner": [
+            "cg-10-s1-q35",
+            "uc-os-004"
+          ],
+          "exam": [
+            "dy-58750fc1",
+            "gap-course-revision-core-07-1"
+          ]
+        },
+        "operating-system.c05": {
+          "beginner": [
+            "cg-10-s1-q50",
+            "cg-10-s1-q38"
+          ],
+          "exam": [
+            "gap-os-004",
+            "gap-accept-card-core-18-1"
+          ]
+        },
+        "operating-system.c06": {
+          "beginner": [
+            "cg-10-s1-q42",
+            "gap-audit26-core-os-file-allocation"
+          ],
+          "exam": [
+            "cg-10-s1-q57",
+            "uc-os-008"
+          ]
+        },
+        "operating-system.c07": {
+          "beginner": [
+            "uf-os-008",
+            "gap-os-005"
+          ],
+          "exam": [
+            "cg-10-s1-q29",
+            "gap-accept-card-core-20-1"
+          ]
+        }
+      }
+    },
+    {
+      "course": "数据库技术",
+      "course_id": "database",
+      "chapters": 9,
+      "topics": 22,
+      "source_fingerprints": {
+        "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+        "color_notes/数据库技术.md": "0328fdfe3429583a11f40a09525d256eb35131b84ff31411093f85d8fb13a751"
+      },
+      "question_ids": {
+        "database.c01": {
+          "beginner": [
+            "gap-audit26-core-db-three-levels",
+            "zg-39627"
+          ],
+          "exam": [
+            "zg-23486",
+            "zg-41202"
+          ]
+        },
+        "database.c02": {
+          "beginner": [
+            "zg-73364",
+            "gap-audit26-core-db-er-convert"
+          ],
+          "exam": [
+            "gap-db-002",
+            "cg-09-s1-q19"
+          ]
+        },
+        "database.c03": {
+          "beginner": [
+            "zg-9354",
+            "cg-09-s1-q42"
+          ],
+          "exam": [
+            "zg-91256",
+            "zg-89071"
+          ]
+        },
+        "database.c04": {
+          "beginner": [
+            "gap-db-003",
+            "gap-db-004"
+          ],
+          "exam": [
+            "zg-7295",
+            "cg-09-s1-q60"
+          ]
+        },
+        "database.c05": {
+          "beginner": [
+            "gap-exam-db-notexists",
+            "gap-exam-db-groupjoin"
+          ],
+          "exam": [
+            "gap-audit26-core-db-create-constraints",
+            "uf-db-003"
+          ]
+        },
+        "database.c06": {
+          "beginner": [
+            "gap-db-001",
+            "gap-db-007"
+          ],
+          "exam": [
+            "gap-course-revision-core-08-1",
+            "gap-audit26-core-db-view-permissions"
+          ]
+        },
+        "database.c07": {
+          "beginner": [
+            "gap-db-010",
+            "gap-db-009"
+          ],
+          "exam": [
+            "gap-db-008",
+            "gap-course-revision-core-09-1"
+          ]
+        },
+        "database.c08": {
+          "beginner": [
+            "ap-db-004",
+            "gap-accept-card-core-22-2"
+          ],
+          "exam": [
+            "gap-db-013",
+            "gap-exam-db-transfer"
+          ]
+        },
+        "database.c09": {
+          "beginner": [
+            "gap-db-014",
+            "gap-db-015"
+          ],
+          "exam": [
+            "gap-db-015",
+            "cg-09-s1-q52"
+          ]
+        }
+      }
+    },
+    {
+      "course": "数据结构与算法",
+      "course_id": "data-structures",
+      "chapters": 8,
+      "topics": 44,
+      "source_fingerprints": {
+        "course_notes/数据结构与算法.md": "44f19bb6854c055b04c92cd8d172cf1d261a1a70d6b3e340be12c28a8013bbfd",
+        "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526"
+      },
+      "question_ids": {
+        "data-structures.c01": {
+          "beginner": [
+            "uf-ds-001",
+            "zg-34137"
+          ],
+          "exam": [
+            "zg-48003",
+            "cg-04-s1-q16"
+          ]
+        },
+        "data-structures.c02": {
+          "beginner": [
+            "cg-05-s1-q14",
+            "ap-ds-003"
+          ],
+          "exam": [
+            "cg-05-s1-q16",
+            "gap-ds-026"
+          ]
+        },
+        "data-structures.c03": {
+          "beginner": [
+            "cg-05-s1-q27",
+            "uc-ds-002"
+          ],
+          "exam": [
+            "gap-course-revision-core-03-1",
+            "gap-audit26-core-ds-kmp-prefix"
+          ]
+        },
+        "data-structures.c04": {
+          "beginner": [
+            "cg-05-s1-q40",
+            "gap-final-thin-012"
+          ],
+          "exam": [
+            "gap-context-bst-successor-001",
+            "sp-core-ds-006"
+          ]
+        },
+        "data-structures.c05": {
+          "beginner": [
+            "sp-core-ds-028",
+            "gap-ds-004"
+          ],
+          "exam": [
+            "gap-ds-031",
+            "gap-audit26-core-ds-topo-trace"
+          ]
+        },
+        "data-structures.c06": {
+          "beginner": [
+            "sp-core-ds-032",
+            "uf-ds-008"
+          ],
+          "exam": [
+            "gap-ds-009",
+            "gap-audit26-core-ds-binary-steps"
+          ]
+        },
+        "data-structures.c07": {
+          "beginner": [
+            "cg-05-s1-q48",
+            "gap-accept-card-core-14-2"
+          ],
+          "exam": [
+            "cg-05-s1-q49",
+            "gap-ds-010"
+          ]
+        },
+        "data-structures.c08": {
+          "beginner": [
+            "gap-ds-022",
+            "gap-course-revision-core-06-1"
+          ],
+          "exam": [
+            "gap-course-revision-core-05-1",
+            "gap-ds-013"
+          ]
+        }
+      }
+    },
+    {
+      "course": "C与Python程序设计",
+      "course_id": "programming",
+      "chapters": 11,
+      "topics": 21,
+      "source_fingerprints": {
+        "course_notes/C与Python程序设计.md": "4de69622aaa44ff9d30ced82985a3309b44ffe2e7e715f6e845c342bd45e0e4e",
+        "color_notes/C与Python程序设计.md": "fcfaf195fece8e191ed2383b0134aaf779ab5772e461f08a74ac9f1c0b2ea5a4"
+      },
+      "question_ids": {
+        "programming.c01": {
+          "beginner": [
+            "zg-36196",
+            "cg-04-s3-q1"
+          ],
+          "exam": [
+            "gap-audit26-system-001",
+            "cg-04-s3-q21"
+          ]
+        },
+        "programming.c02": {
+          "beginner": [
+            "gap-audit26-system-002",
+            "cg-04-s1-q1"
+          ],
+          "exam": [
+            "cg-04-s1-q1",
+            "zg-10124"
+          ]
+        },
+        "programming.c03": {
+          "beginner": [
+            "gap-pl-004",
+            "gap-pl-001"
+          ],
+          "exam": [
+            "cg-04-s1-q7",
+            "cg-04-s1-q10"
+          ]
+        },
+        "programming.c04": {
+          "beginner": [
+            "gap-pl-002",
+            "gap-final-thin-013"
+          ],
+          "exam": [
+            "gap-final-thin-013",
+            "zg-73534"
+          ]
+        },
+        "programming.c05": {
+          "beginner": [
+            "gap-pl-010",
+            "cg-04-s1-q9"
+          ],
+          "exam": [
+            "zg-81005",
+            "zg-1554"
+          ]
+        },
+        "programming.c06": {
+          "beginner": [
+            "cg-04-s1-q13",
+            "ua-program-008"
+          ],
+          "exam": [
+            "cg-04-s2-q6",
+            "cg-04-s1-q14"
+          ]
+        },
+        "programming.c07": {
+          "beginner": [
+            "gap-course-revision-core-10-1",
+            "gap-pl-012"
+          ],
+          "exam": [
+            "gap-accept-card-core-28-1",
+            "gap-audit26-system-003"
+          ]
+        },
+        "programming.c08": {
+          "beginner": [
+            "ua-program-013",
+            "hn-recall-sy26-003"
+          ],
+          "exam": [
+            "cg-04-s2-q7",
+            "gap-audit26-system-004"
+          ]
+        },
+        "programming.c09": {
+          "beginner": [
+            "ap-pl-001",
+            "gap-course-revision-core-11-1"
+          ],
+          "exam": [
+            "gap-pl-005",
+            "gap-pl-013"
+          ]
+        },
+        "programming.c10": {
+          "beginner": [
+            "gap-course-revision-core-12-1",
+            "gap-pl-007"
+          ],
+          "exam": [
+            "gap-pl-006",
+            "ap-pl-006"
+          ]
+        },
+        "programming.c11": {
+          "beginner": [
+            "gap-pl-008",
+            "ap-pl-005"
+          ],
+          "exam": [
+            "gap-pl-008",
+            "ap-pl-005"
+          ]
+        }
+      }
+    },
+    {
+      "course": "计算机组成原理",
+      "course_id": "computer-organization",
+      "chapters": 10,
+      "topics": 42,
+      "source_fingerprints": {
+        "course_notes/计算机组成原理.md": "6ce94d64f271b559a3bb0e734c3dbb5e6bb581afdfeaa0e1bb1eec0270ba3069",
+        "color_notes/计算机组成原理.md": "483f905c7e5ea655bb13569951cff389d537eaaec9d3e65c150806cfb332b29e"
+      },
+      "question_ids": {
+        "computer-organization.c01": {
+          "beginner": [
+            "sp-core-co-019",
+            "gap-co-terms-09"
+          ],
+          "exam": [
+            "sp-core-co-018",
+            "gap-co-terms-12"
+          ]
+        },
+        "computer-organization.c08": {
+          "beginner": [
+            "gap-co-textbook-02-2",
+            "gap-co-textbook-01-2"
+          ],
+          "exam": [
+            "gap-co-textbook-02-1",
+            "gap-co-textbook-01-1"
+          ]
+        },
+        "computer-organization.c06": {
+          "beginner": [
+            "gap-co-textbook-03-2",
+            "gap-co-textbook-04-2"
+          ],
+          "exam": [
+            "gap-co-terms-16",
+            "gap-co-textbook-03-1"
+          ]
+        },
+        "computer-organization.c04": {
+          "beginner": [
+            "sp-core-co-007",
+            "uc-co-004"
+          ],
+          "exam": [
+            "gap-co-textbook-06-1",
+            "sp-core-co-044"
+          ]
+        },
+        "computer-organization.c09": {
+          "beginner": [
+            "gap-co-terms-14",
+            "gap-co-textbook-08-1"
+          ],
+          "exam": [
+            "gap-co-textbook-09-2",
+            "uf-co-008"
+          ]
+        },
+        "computer-organization.c02": {
+          "beginner": [
+            "gap-co-textbook-12-2",
+            "gap-co-textbook-13-2"
+          ],
+          "exam": [
+            "gap-co-010",
+            "gap-co-textbook-booth-01"
+          ]
+        },
+        "computer-organization.c03": {
+          "beginner": [
+            "uc-co-007",
+            "uc-co-006"
+          ],
+          "exam": [
+            "gap-co-terms-02",
+            "gap-co-textbook-15-1"
+          ]
+        },
+        "computer-organization.c10": {
+          "beginner": [
+            "gap-co-textbook-16-1",
+            "sp-core-co-010"
+          ],
+          "exam": [
+            "uc-co-014",
+            "gap-co-009"
+          ]
+        },
+        "computer-organization.c05": {
+          "beginner": [
+            "gap-co-textbook-18-1",
+            "gap-co-textbook-17-2"
+          ],
+          "exam": [
+            "gap-co-textbook-18-2",
+            "gap-co-textbook-17-1"
+          ]
+        },
+        "computer-organization.c11": {
+          "beginner": [
+            "gap-co-textbook-21-1",
+            "gap-co-textbook-20-2"
+          ],
+          "exam": [
+            "gap-co-textbook-19-1",
+            "gap-co-textbook-19-2"
+          ]
+        }
+      }
+    },
+    {
+      "course": "计算机网络",
+      "course_id": "computer-network",
+      "chapters": 9,
+      "topics": 37,
+      "source_fingerprints": {
+        "course_notes/计算机网络.md": "3e10b6240a3c655b579747c28ed3de6a48326749a1fea268f01c3db3b44565e7",
+        "color_notes/计算机网络.md": "0b7c781428b9ac0e90f9b0ecffc92272f81adbb2501b06431438fc6a15a80002"
+      },
+      "question_ids": {
+        "net-01": {
+          "beginner": [
+            "nw-national-012",
+            "gap-final-thin-014"
+          ],
+          "exam": [
+            "ap-nw-004",
+            "zg-22893"
+          ]
+        },
+        "net-02": {
+          "beginner": [
+            "nw-national-011",
+            "gap-audit26-core-net-media-direction"
+          ],
+          "exam": [
+            "gap-final-thin-015",
+            "cg-08-s1-q34"
+          ]
+        },
+        "net-03": {
+          "beginner": [
+            "gap-audit26-core-net-cd-ca",
+            "gap-audit26-core-net-vlan-learning"
+          ],
+          "exam": [
+            "gap-course-revision-applied-01-1",
+            "nw-national-002"
+          ]
+        },
+        "net-04": {
+          "beginner": [
+            "uf-nw-008",
+            "uc-net-005"
+          ],
+          "exam": [
+            "nw-national-003",
+            "gap-audit26-core-net-ipv6-fragment"
+          ]
+        },
+        "net-05": {
+          "beginner": [
+            "cg-08-s1-q39",
+            "gap-full-net-congestion-trace"
+          ],
+          "exam": [
+            "uf-nw-006",
+            "nw-national-020"
+          ]
+        },
+        "net-06": {
+          "beginner": [
+            "dy-340ea980",
+            "nw-national-019"
+          ],
+          "exam": [
+            "gap-audit26-core-net-mail-flow",
+            "gap-course-revision-applied-03-1"
+          ]
+        },
+        "net-07": {
+          "beginner": [
+            "gap-final-thin-017",
+            "nw-national-009"
+          ],
+          "exam": [
+            "hn-recall-hn26-004",
+            "nw-national-021"
+          ]
+        },
+        "net-08": {
+          "beginner": [
+            "gap-full-net-buffer-boundary",
+            "gap-net-media-003"
+          ],
+          "exam": [
+            "gap-net-media-002",
+            "gap-net-media-001"
+          ]
+        },
+        "net-09": {
+          "beginner": [
+            "gap-net-wireless-003",
+            "gap-net-wireless-001"
+          ],
+          "exam": [
+            "cg-08-s1-q94",
+            "gap-net-wireless-002"
+          ]
+        }
+      }
+    },
+    {
+      "course": "电路分析与电工技术",
+      "course_id": "circuit",
+      "chapters": 9,
+      "topics": 14,
+      "source_fingerprints": {
+        "course_notes/电路分析与电工技术.md": "342044bb1dfb8f3fc5c46a5013ea069f68c0da7fd4cf59f875e9a1b34412abfb",
+        "color_notes/电路分析与电工技术.md": "2e59d9ed65f90943ed5330ae9484497d11c30b3bab9cbe90b5270de0c4ccd5cd"
+      },
+      "question_ids": {
+        "circuit.c01": {
+          "beginner": [
+            "gap-audit26-elec-reference",
+            "gap-accept-elec-circuit-1-28"
+          ],
+          "exam": [
+            "gap-accept-elec-circuit-1-28",
+            "uf-ee-004"
+          ]
+        },
+        "circuit.c02": {
+          "beginner": [
+            "uf-ee-003",
+            "ap-circuit-001"
+          ],
+          "exam": [
+            "uf-ee-002",
+            "gap-audit26-elec-kcl"
+          ]
+        },
+        "circuit.c03": {
+          "beginner": [
+            "gap-accept-elec-mesh-setup",
+            "gap-eg-circuit-001"
+          ],
+          "exam": [
+            "ue-circuit-003",
+            "gap-eg-circuit-002"
+          ]
+        },
+        "circuit.c04": {
+          "beginner": [
+            "gap-final-thin-020",
+            "sp-elec-circuit-009"
+          ],
+          "exam": [
+            "ue-circuit-014",
+            "sp-elec-circuit-010"
+          ]
+        },
+        "circuit.c05": {
+          "beginner": [
+            "ap-circuit-002",
+            "uf-ee-022"
+          ],
+          "exam": [
+            "uf-ee-019",
+            "gap-eg-circuit-003"
+          ]
+        },
+        "circuit.c06": {
+          "beginner": [
+            "ap-circuit-006",
+            "uf-ee-023"
+          ],
+          "exam": [
+            "uf-ee-023",
+            "gap-eg-circuit-005"
+          ]
+        },
+        "circuit.c07": {
+          "beginner": [
+            "sp-elec-circuit-028",
+            "sp-elec-circuit-024"
+          ],
+          "exam": [
+            "sp-elec-circuit-008",
+            "uf-ee-010"
+          ]
+        },
+        "circuit.c08": {
+          "beginner": [
+            "sp-elec-circuit-011",
+            "sp-elec-circuit-004"
+          ],
+          "exam": [
+            "sp-elec-circuit-021",
+            "sp-elec-circuit-025"
+          ]
+        },
+        "circuit.c09": {
+          "beginner": [
+            "gap-circuit-002",
+            "sp-elec-circuit-012"
+          ],
+          "exam": [
+            "sp-elec-circuit-030",
+            "sp-elec-circuit-027"
+          ]
+        }
+      }
+    },
+    {
+      "course": "模拟电子技术",
+      "course_id": "analog-electronics",
+      "chapters": 8,
+      "topics": 22,
+      "source_fingerprints": {
+        "course_notes/模拟电子技术.md": "4ca6cd64c2f975dfab2069fc1a8ded78fbf94a996a0d07076c0ede1ef91e915e",
+        "color_notes/模拟电子技术.md": "2fd82e7afdf84dfccf955921153de9a7a2191aeace4fdcedc3b688c95bc04294"
+      },
+      "question_ids": {
+        "analog-electronics.c01": {
+          "beginner": [
+            "gap-audit26-visual-pn",
+            "gap-audit26-elec-pn"
+          ],
+          "exam": [
+            "gap-audit26-visual-pn",
+            "gap-audit26-elec-pn"
+          ]
+        },
+        "analog-electronics.c02": {
+          "beginner": [
+            "ue-analog-007",
+            "ue-analog-001"
+          ],
+          "exam": [
+            "ap-analog-001",
+            "gap-audit26-elec-rectifier"
+          ]
+        },
+        "analog-electronics.c03": {
+          "beginner": [
+            "ue-analog-004",
+            "uf-ae-012"
+          ],
+          "exam": [
+            "sp-elec-analog-021",
+            "gap-eg-analog-001"
+          ]
+        },
+        "analog-electronics.c04": {
+          "beginner": [
+            "gap-accept-elec-analog-electronics-03-2",
+            "gap-accept-elec-analog-electronics-04-1"
+          ],
+          "exam": [
+            "gap-accept-elec-analog-electronics-05-1",
+            "gap-analog-001"
+          ]
+        },
+        "analog-electronics.c05": {
+          "beginner": [
+            "gap-eg-analog-003",
+            "gap-accept-elec-analog-electronics-07-2"
+          ],
+          "exam": [
+            "ue-analog-010",
+            "ue-analog-006"
+          ]
+        },
+        "analog-electronics.c06": {
+          "beginner": [
+            "ap-analog-002",
+            "ue-analog-011"
+          ],
+          "exam": [
+            "gap-eg-analog-004",
+            "ue-analog-005"
+          ]
+        },
+        "analog-electronics.c07": {
+          "beginner": [
+            "gap-audit26-elec-classb",
+            "sp-elec-analog-018"
+          ],
+          "exam": [
+            "gap-accept-elec-analog-electronics-09-2",
+            "sp-elec-analog-023"
+          ]
+        },
+        "analog-electronics.c08": {
+          "beginner": [
+            "gap-eg-analog-006",
+            "sp-elec-analog-026"
+          ],
+          "exam": [
+            "sp-elec-analog-029",
+            "sp-elec-analog-006"
+          ]
+        }
+      }
+    },
+    {
+      "course": "数字电子技术",
+      "course_id": "digital-electronics",
+      "chapters": 7,
+      "topics": 18,
+      "source_fingerprints": {
+        "course_notes/数字电子技术.md": "263dd89f3c5a396d4eeba873208caa88e1582b452db8c5a82c00dbb4e8edc147",
+        "color_notes/数字电子技术.md": "ad0187089188c6f43adeb440783ac60fde37e4da8fbe245d56bc6199a0c6057d"
+      },
+      "question_ids": {
+        "digital-electronics.c01": {
+          "beginner": [
+            "uf-de-001",
+            "gap-audit26-elec-gray"
+          ],
+          "exam": [
+            "gap-audit26-elec-gray",
+            "ue-digital-001"
+          ]
+        },
+        "digital-electronics.c02": {
+          "beginner": [
+            "gap-final-thin-021",
+            "ap-digital-001"
+          ],
+          "exam": [
+            "sp-elec-digital-002",
+            "uf-de-005"
+          ]
+        },
+        "digital-electronics.c03": {
+          "beginner": [
+            "gap-eg-digital-001",
+            "ue-digital-014"
+          ],
+          "exam": [
+            "uf-de-006",
+            "ue-digital-002"
+          ]
+        },
+        "digital-electronics.c04": {
+          "beginner": [
+            "gap-accept-elec-digital-electronics-15-2",
+            "gap-eg-digital-003"
+          ],
+          "exam": [
+            "uf-de-010",
+            "gap-audit26-elec-mux"
+          ]
+        },
+        "digital-electronics.c05": {
+          "beginner": [
+            "gap-eg-digital-004",
+            "ap-digital-005"
+          ],
+          "exam": [
+            "gap-final-thin-023",
+            "uf-de-016"
+          ]
+        },
+        "digital-electronics.c06": {
+          "beginner": [
+            "gap-eg-digital-006",
+            "gap-eg-digital-005"
+          ],
+          "exam": [
+            "ap-digital-004",
+            "gap-accept-elec-digital-electronics-16-2"
+          ]
+        },
+        "digital-electronics.c07": {
+          "beginner": [
+            "sp-elec-digital-029",
+            "sp-elec-digital-024"
+          ],
+          "exam": [
+            "sp-elec-digital-012",
+            "gap-accept-elec-digital-electronics-19-1"
+          ]
+        }
+      }
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "course_id": "communication",
+      "chapters": 9,
+      "topics": 22,
+      "source_fingerprints": {
+        "course_notes/通信原理与高频电子线路.md": "91112341fe5b066e764942819555eacef99dd33284819afaa332530351a4c5c7",
+        "color_notes/通信原理与高频电子线路.md": "efdaf110f5d3316b11bb9821207ecdf01a371aacc31113c1a009a4e80238ab40"
+      },
+      "question_ids": {
+        "communication.c01": {
+          "beginner": [
+            "gap-audit26-elec-duplex",
+            "uf-cm-002"
+          ],
+          "exam": [
+            "ap-comm-003",
+            "ue-comm-013"
+          ]
+        },
+        "communication.c02": {
+          "beginner": [
+            "gap-audit26-elec-baud",
+            "sp-elec-comm-025"
+          ],
+          "exam": [
+            "uf-cm-003",
+            "uf-cm-004"
+          ]
+        },
+        "communication.c03": {
+          "beginner": [
+            "uf-cm-017",
+            "uf-cm-009"
+          ],
+          "exam": [
+            "gap-retest-tdm-001",
+            "gap-full-comm-line-clock"
+          ]
+        },
+        "communication.c04": {
+          "beginner": [
+            "gap-final-thin-024",
+            "uf-cm-022"
+          ],
+          "exam": [
+            "uf-cm-022",
+            "ue-comm-010"
+          ]
+        },
+        "communication.c05": {
+          "beginner": [
+            "gap-audit26-elec-qpsk",
+            "uf-cm-019"
+          ],
+          "exam": [
+            "uf-cm-019",
+            "uf-cm-018"
+          ]
+        },
+        "communication.c06": {
+          "beginner": [
+            "uf-cm-023",
+            "gap-final-thin-025"
+          ],
+          "exam": [
+            "ue-comm-009",
+            "ue-comm-008"
+          ]
+        },
+        "communication.c07": {
+          "beginner": [
+            "gap-accept-elec-communication-22-2",
+            "sp-elec-comm-007"
+          ],
+          "exam": [
+            "gap-accept-elec-communication-24-1",
+            "uf-cm-020"
+          ]
+        },
+        "communication.c08": {
+          "beginner": [
+            "sp-elec-comm-023",
+            "sp-elec-comm-008"
+          ],
+          "exam": [
+            "sp-elec-comm-028",
+            "gap-final-comm-003"
+          ]
+        },
+        "communication.c09": {
+          "beginner": [
+            "gap-comm-002",
+            "sp-elec-comm-030"
+          ],
+          "exam": [
+            "sp-elec-comm-029",
+            "sp-elec-comm-014"
+          ]
+        }
+      }
+    },
+    {
+      "course": "信号与系统",
+      "course_id": "signals-systems",
+      "chapters": 7,
+      "topics": 16,
+      "source_fingerprints": {
+        "course_notes/信号与系统.md": "bfc234b1afff1e4548675d2da7e383fe93681806318b0e3049705f64178a1f89",
+        "color_notes/信号与系统.md": "3d728d768148ea73107e255b01def0a413e98936d98cec8161cf707ea7e18c61"
+      },
+      "question_ids": {
+        "signals-systems.c01": {
+          "beginner": [
+            "gap-final-sig-002",
+            "gap-signal-001"
+          ],
+          "exam": [
+            "gap-final-sig-003",
+            "gap-final-sig-001"
+          ]
+        },
+        "signals-systems.c02": {
+          "beginner": [
+            "gap-final-sig-006",
+            "gap-final-sig-004"
+          ],
+          "exam": [
+            "gap-final-sig-005",
+            "gap-signal-002"
+          ]
+        },
+        "signals-systems.c03": {
+          "beginner": [
+            "gap-final-sig-007",
+            "gap-final-sig-008"
+          ],
+          "exam": [
+            "gap-signal-003",
+            "gap-final-sig-009"
+          ]
+        },
+        "signals-systems.c04": {
+          "beginner": [
+            "gap-final-sig-011",
+            "gap-final-sig-012"
+          ],
+          "exam": [
+            "gap-final-sig-013",
+            "gap-final-sig-010"
+          ]
+        },
+        "signals-systems.c05": {
+          "beginner": [
+            "gap-accept-elec-signals-systems-28-1",
+            "gap-final-sig-016"
+          ],
+          "exam": [
+            "gap-final-sig-014",
+            "gap-accept-elec-signals-systems-28-2"
+          ]
+        },
+        "signals-systems.c06": {
+          "beginner": [
+            "gap-signal-006",
+            "gap-final-sig-018"
+          ],
+          "exam": [
+            "gap-final-sig-019",
+            "gap-final-sig-017"
+          ]
+        },
+        "signals-systems.c07": {
+          "beginner": [
+            "gap-final-sig-020",
+            "gap-signal-007"
+          ],
+          "exam": [
+            "gap-signal-007",
+            "gap-signal-004"
+          ]
+        }
+      }
+    },
+    {
+      "course": "软件工程",
+      "course_id": "software-engineering",
+      "chapters": 8,
+      "topics": 24,
+      "source_fingerprints": {
+        "course_notes/软件工程.md": "b4906af8b55a362efd77a1c67fd94baec903c02ba217dcc0d368fb4bb6c83b6c",
+        "color_notes/软件工程.md": "4a82d6e3ac93c82935cca2d72189b070e58091ec4c512f1cc352102aebaa1360"
+      },
+      "question_ids": {
+        "software-engineering.c01": {
+          "beginner": [
+            "sp-core-se-012",
+            "gap-final-thin-026"
+          ],
+          "exam": [
+            "sp-core-se-006",
+            "cg-06-s2-q1"
+          ]
+        },
+        "software-engineering.c02": {
+          "beginner": [
+            "gap-se-001",
+            "ap-se-001"
+          ],
+          "exam": [
+            "ap-se-006",
+            "uf-se-001"
+          ]
+        },
+        "software-engineering.c03": {
+          "beginner": [
+            "sp-core-se-024",
+            "cg-06-s1-q5"
+          ],
+          "exam": [
+            "gap-course-revision-core-13-1",
+            "sp-core-se-026"
+          ]
+        },
+        "software-engineering.c04": {
+          "beginner": [
+            "sp-core-se-003",
+            "gap-audit26-system-009"
+          ],
+          "exam": [
+            "sp-core-se-027",
+            "gap-course-revision-core-14-1"
+          ]
+        },
+        "software-engineering.c05": {
+          "beginner": [
+            "sp-core-se-028",
+            "uc-se-007"
+          ],
+          "exam": [
+            "sp-core-se-011",
+            "gap-se-007"
+          ]
+        },
+        "software-engineering.c06": {
+          "beginner": [
+            "ap-se-004",
+            "cg-06-s1-q18"
+          ],
+          "exam": [
+            "sp-core-se-031",
+            "gap-audit26-system-011"
+          ]
+        },
+        "software-engineering.c07": {
+          "beginner": [
+            "gap-se-010",
+            "gap-audit26-system-012"
+          ],
+          "exam": [
+            "uc-se-008",
+            "uf-se-008"
+          ]
+        },
+        "software-engineering.c08": {
+          "beginner": [
+            "gap-se-012",
+            "gap-se-011"
+          ],
+          "exam": [
+            "gap-final-thin-027",
+            "gap-final-thin-028"
+          ]
+        }
+      }
+    },
+    {
+      "course": "信息安全",
+      "course_id": "information-security",
+      "chapters": 8,
+      "topics": 22,
+      "source_fingerprints": {
+        "course_notes/信息安全.md": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+        "color_notes/信息安全.md": "d070ecfe0e3ac71a15138949865d46012a44c73aea2f7f9f562d2bd0a064c2bb"
+      },
+      "question_ids": {
+        "information-security.c01": {
+          "beginner": [
+            "dy-9d0d0774",
+            "dy-0c0a712a"
+          ],
+          "exam": [
+            "gap-sec-001",
+            "ua-security-002"
+          ]
+        },
+        "information-security.c02": {
+          "beginner": [
+            "gap-sec-002",
+            "ap-is-006"
+          ],
+          "exam": [
+            "gap-course-revision-applied-11-1",
+            "ap-is-003"
+          ]
+        },
+        "information-security.c03": {
+          "beginner": [
+            "dy-c8de56cd",
+            "gap-sec-004"
+          ],
+          "exam": [
+            "ua-security-010",
+            "cg-02-s5-q16"
+          ]
+        },
+        "information-security.c04": {
+          "beginner": [
+            "gap-sec-015",
+            "gap-audit26-system-014"
+          ],
+          "exam": [
+            "gap-sec-005",
+            "cg-02-s1-q28"
+          ]
+        },
+        "information-security.c05": {
+          "beginner": [
+            "gap-sec-006",
+            "gap-sec-007"
+          ],
+          "exam": [
+            "gap-course-revision-applied-12-1",
+            "zg-46628"
+          ]
+        },
+        "information-security.c06": {
+          "beginner": [
+            "gap-sec-008",
+            "hn-recall-hn26-002"
+          ],
+          "exam": [
+            "gap-sec-009",
+            "web-20"
+          ]
+        },
+        "information-security.c07": {
+          "beginner": [
+            "ap-is-005",
+            "gap-sec-010"
+          ],
+          "exam": [
+            "gap-audit26-system-015",
+            "gap-course-revision-applied-13-1"
+          ]
+        },
+        "information-security.c08": {
+          "beginner": [
+            "gap-sec-014",
+            "gap-sec-013"
+          ],
+          "exam": [
+            "gap-course-revision-applied-14-1",
+            "cg-02-s5-q32"
+          ]
+        }
+      }
+    }
+  ]
+}

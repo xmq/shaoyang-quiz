@@ -1158,7 +1158,7 @@ def derive_short_rubric(question: dict) -> list[dict]:
         parts = [part.strip(" ：:") for part in re.split(r"[，,]", answer)]
     criteria = []
     for part in parts:
-        part = re.sub(r"^[（(]?[一二三四五六七八九十\d]+[)）.、]?", "", part).strip()
+        part = re.sub(r"^(?:[（(][一二三四五六七八九十\d]+[)）]|[一二三四五六七八九十\d]+[、)）]|[一二三四五六七八九十\d]+[.．](?!\d))\s*", "", part).strip()
         if len(part) < 2 or part in criteria:
             continue
         criteria.append(part)

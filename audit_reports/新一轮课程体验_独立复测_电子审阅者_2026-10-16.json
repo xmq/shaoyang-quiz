@@ -1,0 +1,495 @@
+{
+  "title": "新一轮课程体验：独立复测（电子审阅者）",
+  "date": "2026-10-16",
+  "reviewer": "模型电子审阅者；本次为计算机/应用修复非作者复测，有学科与办公先验，非真人或盲测",
+  "build": "3e002732a520b8e1",
+  "root_reported_counts": {
+    "cards": 393,
+    "questions": 2534
+  },
+  "scope": "17项原失败任务逐项重做；16项已通过（两项Office为书面流程），Cache取舍待最后候选复查。本人电机及数字作者项不独立签收。",
+  "method": "先读7新题并独立写答案到TEMP，之后才读答案。复读具体修订源段、重点卡以及改变章前后边界；实际Chrome390×844浅深读6张非作者新卡并查看NS/PAD两图，16屏逐张view_image。",
+  "source_boundary_review": "读取Office2/3/6、基础2/5、软件4、多媒体7、OS2/6、数据结构1、程序3/8、网络5/6/8及相邻章末/章首；前后任务分工和编号约定无冲突。组成4正文已在前轮完整读过，本次只复查改卡。",
+  "original_failure_retests": [
+    {
+      "issue_id": "EXP-COMP-001",
+      "status": "通过",
+      "chapter_id": "data-structures.c01",
+      "repeated_task_result": "顺序按先后、选择按条件选一路、循环按规则重复至终止；读x→算x+1→输出不分支；若x≥60则及格否则不及格只选一支；逐成绩累计是循环。",
+      "evidence": "新增三结构短例能支持zg-34137，前接结构/数据定义、后接算法五特征与复杂度，无定义矛盾。"
+    },
+    {
+      "issue_id": "EXP-COMP-002",
+      "status": "通过",
+      "chapter_id": "operating-system.c02",
+      "repeated_task_result": "strlen(abc)仅检查用户态字符串得3；库read需要服务时经受控入口进入内核并核权限；缓存可立即返回原进程，等磁盘则可能阻塞换进程。普通函数调用不自动提权。",
+      "evidence": "库函数定义与两路径已补；与本章前面的特权指令、后面原read缓存/等待例一致。"
+    },
+    {
+      "issue_id": "EXP-COMP-003",
+      "status": "通过",
+      "chapter_id": "net-05",
+      "repeated_task_result": "MSS是单TCP段数据部分最大字节数，不含首部；1000B×4MSS=4000B。Reno门限8时轮次1→2→4→8→9；MSL是生存时间、MTU是链路包长度限制。",
+      "evidence": "MSS释义在预测图和折叠答案前；上下文流控/拥塞限额仍按min(rwnd,cwnd)，并未改Reno原条件。"
+    },
+    {
+      "issue_id": "EXP-COMP-004",
+      "status": "通过",
+      "chapter_id": "programming.c08",
+      "repeated_task_result": "hello world, hello python经小写和本题逗号处理得到4词，counts依次hello1→world1→hello2→python1，总和4。对red,blue必须将分隔逗号换空格，否则合词。",
+      "evidence": "新增词频卡有get默认0、两次red状态和合词反例，讲义同名H4有完整三词状态；与浅拷贝卡/下一章指针不混。"
+    },
+    {
+      "issue_id": "EXP-COMP-006",
+      "status": "通过",
+      "chapter_id": "net-06",
+      "repeated_task_result": "图片和文字都能附超链接；点击课程封面访问目标课程URL，不是把图片格式转换成网页或把HTML当HTTP协议。",
+      "evidence": "正文HTML骨架段之后新增对象链接定义及课程封面例，前后仍分别讲邮件/HTML职责和远程终端协议。"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-001",
+      "status": "待末次候选复查",
+      "chapter_id": "computer-organization.c04",
+      "repeated_task_result": "直接固定行、全相联任意行、组相联固定组内任选。原失败任务还要求简单/冲突/比较硬件成本，当前构建卡尚未写这部分，不能靠先验补全后签通过。",
+      "evidence": "root已确认将补三类取舍；本报告当前不签关闭，待末次构建再核卡面。"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-002",
+      "status": "通过",
+      "chapter_id": "operating-system.c06",
+      "repeated_task_result": "1起块100：先99，除32得商3余3，各+1得字4位4；0起块100：字3位4。位值0/1表示占用与否按题设，不以端序解释。",
+      "evidence": "新卡独立于文件偏移→数据块卡，有编号起点和混合编号提醒；页表/文件块相似除余步骤未混淆。"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-003",
+      "status": "通过",
+      "chapter_id": "programming.c03",
+      "repeated_task_result": "a=2*6置12；a*3仅求36未写回；a+5=17，末项决定表达式值。x=9后x%=x+3即9%12得9。f(a,b)实参逗号不是顺序运算符。",
+      "evidence": "卡新增(x=2,x+3)和实参分隔区别；正文原逗号定义仍在且有x/y状态例，除法与短路条件保留。"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-004",
+      "status": "通过",
+      "chapter_id": "net-08",
+      "repeated_task_result": "RTP序号用于排序/缺失线索，时间戳按媒体采样时刻安排播放；8kHz×.02s=160，而包序号仅+1。RTCP质量统计、SIP会话；24Mbit/(4−3)Mbit/s=24s。",
+      "evidence": "上方综合卡已用协议分工代替重复耗尽例，下方独立耗尽卡及消费大于输入前提保留。"
+    },
+    {
+      "issue_id": "EXP-APP-001",
+      "status": "书面任务通过，未实机Word",
+      "chapter_id": "office.c03",
+      "repeated_task_result": "选图→引用插题注标签图得图1→正文交叉引用类型图、只有标签和编号、选该题注。前插新图并加题注，主体Ctrl+A/F9后核原图及引用均图2；单纯插图不改序，其他区域域另查。",
+      "evidence": "新增具体入口、引用对象、前插新图与更新前后值，原目录/分页分节/表格结构边界保留。没有声称在真实Office点击过。"
+    },
+    {
+      "issue_id": "EXP-APP-002",
+      "status": "通过",
+      "chapter_id": "software-engineering.c04",
+      "repeated_task_result": "A账号无效即拒绝，B不求值；A真再看B，B真扣款，B假余额不足。TT成功、TF余额不足、FT与FF均账号无效；N-S完整B盒嵌A真区，PAD由A真支展开B。",
+      "evidence": "实际手机浅深两图中标签与包含关系一致；假分支新题也能换嵌套位置，未只背原图。"
+    },
+    {
+      "issue_id": "EXP-APP-003",
+      "status": "通过",
+      "chapter_id": "computer-foundations.c02",
+      "repeated_task_result": "8位无符号最高位权128，补码最高位−128，后7位同为64..1。+5=00000101，逐位反11111010再+1=11111011；负权和−5，无符号读251。加+5得1 00000000留低8位为0。",
+      "evidence": "正文与数制卡已补字长及负权机制，范围未改；本项非本人电路/数字修订作品，可独立核查，但对电子作者项仍不签。"
+    },
+    {
+      "issue_id": "EXP-EXAM-APP-001",
+      "status": "书面任务通过，未实机Word",
+      "chapter_id": "office.c02",
+      "repeated_task_result": "Ctrl+H更多，查找指定文字并设原黑色条件；替换框同文字设红色；查下一处→换一处→核文字不变及颜色正确→全部替换，最后清格式条件防影响后查。",
+      "evidence": "卡能唤回定位两类条件和单处核验；正文给精确入口及残留条件，字符/段落及样式边界保留。"
+    },
+    {
+      "issue_id": "EXP-EXAM-APP-002",
+      "status": "通过",
+      "chapter_id": "office.c06",
+      "repeated_task_result": "整页排序移动复制删除用浏览；页内标题改字或裁图用普通；演讲提示用备注；全屏验动画用放映；全套默认格式用母版。把第5页拖第2页不等于可在缩略图改内部文字。",
+      "evidence": "新卡浅深一屏可读，前面动画/母版原卡仍在，后接综合应用按对象选工具一致。"
+    },
+    {
+      "issue_id": "EXP-EXAM-APP-003",
+      "status": "通过",
+      "chapter_id": "computer-foundations.c02",
+      "repeated_task_result": "A=65，S相对A偏18，码83；字符7码48+7=55；9后58为冒号，不能跨区间推A。7位码128种不等于存储仅7位。",
+      "evidence": "新ASCII卡独立于Unicode/GB和媒体容量卡，讲义同名小节明确三个连续区间及字节存放条件。"
+    },
+    {
+      "issue_id": "EXP-EXAM-APP-004",
+      "status": "通过",
+      "chapter_id": "computer-foundations.c05",
+      "repeated_task_result": "类别输出分类、连续数值回归、无标签相似分组聚类、共现规则关联、偏离常态异常检测。无标签找离群转账用异常；已欺诈标签训练类别则分类。Map词1→按键分组→Reduce求和是计算流程。",
+      "evidence": "新五输出卡补关联/异常，旧分布式卡保留HDFS/YARN和Map分组Reduce，不再混五任务；共现非因果及标签反例清楚。"
+    },
+    {
+      "issue_id": "EXP-EXAM-APP-005",
+      "status": "通过",
+      "chapter_id": "multimedia.c07",
+      "repeated_task_result": "素材按图片/音频/视频分类；03_保存_v2包含序号、内容、版本；修改副本保留原件和授权，不能以最终版2覆盖历史。还要在目标屏幕/码率/网络验证交付。",
+      "evidence": "现卡方法已有命名字段和例，核心流程与下一卡图层测试交付一致，非扩成资产管理教程。"
+    }
+  ],
+  "new_tasks": {
+    "role": "有学科先验的模型审阅者，不是真人/盲测",
+    "saved_before_answer_key": "2026-10-16T17:33:10.523495",
+    "attempts": [
+      {
+        "id": "gap-experience26-motor-slip",
+        "stem": "一台50 Hz、四极三相异步电动机处于正常电动运行，转子转速1440 r/min。计算同步转速与转差率，并说明为什么不能把1440直接代入同步转速公式反求极数。",
+        "answer": "四极P=4、p=2；n同步=60×50/2=1500r/min；s=(1500−1440)/1500=.04=4%。1440是转子速度而公式求磁场同步速度，反求极数需用同步速度，不能混同。",
+        "boundary": "本项本人参与讲义修订，仅作答，不作独立签收。",
+        "standard_answer": "四极即p=2对极，同步转速n同步=60×50/2=1500 r/min；s=(1500−1440)/1500=0.04=4%。1440是转子实际转速，不是旋转磁场同步转速，二者因转差而不同。",
+        "check": "主要答案与推演一致",
+        "independent_signoff": false
+      },
+      {
+        "id": "gap-experience26-complement-carry",
+        "stem": "采用4位二进制补码，仅保留4位结果。计算1111+0001，并分别判断是否产生最高位进位、是否产生有符号溢出，说明依据。",
+        "answer": "1111+0001=1 0000，仅留4位0000；最高位向外进位1；有符号解释为−1+1=0在−8..7内，两操作数异号，无有符号溢出。",
+        "boundary": "本人补码卡作者，仅作答不作独立签收。",
+        "standard_answer": "1111表示−1，0001表示+1；相加得到1 0000，保留结果0000，有最高位进位1。实际−1+1=0在−8到7内，没有有符号溢出；异号相加不会因结果超出有符号范围而溢出。",
+        "check": "主要答案与推演一致",
+        "independent_signoff": false
+      },
+      {
+        "id": "gap-experience26-complement-minimum",
+        "stem": "对4位补码1000按位取反加1，并仍仅保留4位，结果仍为1000。正确解释是（ ）。",
+        "answer": "B；4位1000为−8，按位取反0111加1仍1000，数学相反数+8越过最大+7；扩5位表达+8为01000。",
+        "boundary": "本人补码卡作者，仅作答不作独立签收。",
+        "standard_answer": "B",
+        "check": "主要答案与推演一致",
+        "independent_signoff": false
+      },
+      {
+        "id": "gap-experience26-word-count-separator",
+        "stem": "阅读Python代码：\ntext = \"red,blue red\"\ncounts = {}\nfor word in text.lower().replace(\",\", \" \").split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n写出两个词的计数，并说明若把replace(\",\", \" \")改成replace(\",\", \"\")会有什么不同。",
+        "answer": "替换为空格后为red blue red，逐词counts由{}→{red:1}→{red:1,blue:1}→{red:2,blue:1}；若删除逗号成redblue red，则redblue:1、red:1，blue不再是独立词。",
+        "boundary": "非作者，独立按分隔符及更新过程推演。",
+        "standard_answer": "原代码得到red:2、blue:1。逗号换为空格后词序列为red、blue、red；若直接删除逗号，red,blue会合成redblue，词序列变为redblue、red，得到redblue:1、red:1。",
+        "check": "主要答案与推演一致",
+        "independent_signoff": true
+      },
+      {
+        "id": "gap-experience26-bitmap-zero-index",
+        "stem": "位示图每个字含32位，块号、字号和位号全部从0开始编号。第100号块处于几号字的几号位？有人套用从1开始的公式算出“4号字、4号位”，指出错误。位号按题设顺序计算，不讨论机器字节序。",
+        "answer": "0起：100//32=3，100%32=4，故3号字4号位。4/4是一起编号的结果，把减1再加1的口径错用于0起；32位字0覆盖块0..31，字3覆盖96..127。",
+        "boundary": "非作者，独立检查0/1基准。",
+        "standard_answer": "字号=100整除32=3，位号=100 mod 32=4，即3号字4号位。从0开始时直接取商和余数，不需要先减1或最后加1；从1编号的公式不能原样套用。",
+        "check": "主要答案与推演一致",
+        "independent_signoff": true
+      },
+      {
+        "id": "gap-experience26-ns-nested-branch",
+        "stem": "一个N-S盒图先判断A“账号有效”，仅在A的真分支内部嵌套判断B“余额足够”。当A为假时，正确执行方式是（ ）。",
+        "answer": "C；A为假只走拒绝等A假分支，B嵌在A真分支内，根本不被求值。",
+        "boundary": "非作者，独立按嵌套条件判断。",
+        "standard_answer": "C",
+        "check": "主要答案与推演一致",
+        "independent_signoff": true
+      },
+      {
+        "id": "gap-experience26-ns-pad-false-branch",
+        "stem": "模块规则：库存充足则发货；库存不足时，再判断能否补货，能补货则下采购单，否则提示缺货。用N-S盒图或PAD图描述时，第二个判断应嵌入第一个判断的哪一分支？列出三条处理路径。",
+        "answer": "第二判断嵌入第一判断“库存充足”的假分支。路径1充足→发货；路径2不足→可补货真→下采购单；路径3不足→可补货假→提示缺货。充足时不执行能否补货判断。",
+        "boundary": "非作者，独立验证假分支嵌套。",
+        "standard_answer": "第二判断“能否补货”嵌入“库存充足”的假分支。三条路径：库存充足→发货；库存不足且可补货→下采购单；库存不足且不可补货→提示缺货。N-S把第二判断的完整盒放在外层假分支内，PAD从外层假分支向右展开第二选择节点。",
+        "check": "主要答案与推演一致",
+        "independent_signoff": true
+      }
+    ]
+  },
+  "mobile": [
+    {
+      "topic_id": "operating-system.t21",
+      "title": "位示图的块号与位号",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_operating-system.t21_light.png",
+      "card_text": "位示图的块号与位号\n优先练\n先确定编号起点，再用商和余数定位位示图，解释位值约定。\n核心知识：位示图每位对应一个块，位值表示空闲或占用应按题设；先确认块号、字号、位号的编号起点。\n方法与例题：均从1编号先块号减1，除每字位数得商余，再各加1；每字32位，块100：99÷32=3余3，得字号4、位号4。\n易混易错：均从0编号直接用块号除位数，商是字号、余是位号，不加1；混合编号须分别按各自起点换算。\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 5,
+      "card_rect": {
+        "x": 14,
+        "y": 235.578125,
+        "width": 362,
+        "height": 439.578125
+      }
+    },
+    {
+      "topic_id": "operating-system.t21",
+      "title": "位示图的块号与位号",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_operating-system.t21_dark.png",
+      "card_text": "位示图的块号与位号\n优先练\n先确定编号起点，再用商和余数定位位示图，解释位值约定。\n核心知识：位示图每位对应一个块，位值表示空闲或占用应按题设；先确认块号、字号、位号的编号起点。\n方法与例题：均从1编号先块号减1，除每字位数得商余，再各加1；每字32位，块100：99÷32=3余3，得字号4、位号4。\n易混易错：均从0编号直接用块号除位数，商是字号、余是位号，不加1；混合编号须分别按各自起点换算。\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 5,
+      "card_rect": {
+        "x": 14,
+        "y": 235.578125,
+        "width": 362,
+        "height": 439.578125
+      }
+    },
+    {
+      "topic_id": "programming.t22",
+      "title": "字典词频累计",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_programming.t22_light.png",
+      "card_text": "字典词频累计\n优先练\n按输入约定规范化和分词，逐词更新字典，检查分隔符会否合并单词。\n核心知识：先按输入约定统一大小写与分隔符，再分词；字典以词为键、出现次数为值，遇重复词只增加原计数。\n方法与例题：Red,red按逗号分词：lower→逗号换空格→split；get(word,0)+1累计，{}→{'red':1}→{'red':2}。\n易混易错：red,blue不能直接删逗号合成redblue；get给缺省0避免新词缺键，统计末尾用计数总和核对词数。\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 7,
+      "card_rect": {
+        "x": 14,
+        "y": 216.5625,
+        "width": 362,
+        "height": 458.171875
+      }
+    },
+    {
+      "topic_id": "programming.t22",
+      "title": "字典词频累计",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_programming.t22_dark.png",
+      "card_text": "字典词频累计\n优先练\n按输入约定规范化和分词，逐词更新字典，检查分隔符会否合并单词。\n核心知识：先按输入约定统一大小写与分隔符，再分词；字典以词为键、出现次数为值，遇重复词只增加原计数。\n方法与例题：Red,red按逗号分词：lower→逗号换空格→split；get(word,0)+1累计，{}→{'red':1}→{'red':2}。\n易混易错：red,blue不能直接删逗号合成redblue；get给缺省0避免新词缺键，统计末尾用计数总和核对词数。\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 7,
+      "card_rect": {
+        "x": 14,
+        "y": 216.5625,
+        "width": 362,
+        "height": 458.171875
+      }
+    },
+    {
+      "topic_id": "office.t18",
+      "title": "按操作选择演示视图",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_office.t18_light.png",
+      "card_text": "按操作选择演示视图\n正常练\n按编辑对象、整页排序、讲稿和放映需求选择演示视图。\n核心知识：普通视图编辑页内文字、图片和图表；浏览视图操作整页缩略图；备注页写讲稿；放映视图全屏演示。\n方法与例题：第5页移到第2页用浏览视图拖页；改该页标题文字用普通视图；补演讲提示用备注页，验动画用放映。\n易混易错：能拖动整页不等于能改页内对象；备注不自动显示给观众；整套默认格式用母版，勿把它当普通编辑视图。\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 5,
+      "card_rect": {
+        "x": 14,
+        "y": 261.375,
+        "width": 362,
+        "height": 413.984375
+      }
+    },
+    {
+      "topic_id": "office.t18",
+      "title": "按操作选择演示视图",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_office.t18_dark.png",
+      "card_text": "按操作选择演示视图\n正常练\n按编辑对象、整页排序、讲稿和放映需求选择演示视图。\n核心知识：普通视图编辑页内文字、图片和图表；浏览视图操作整页缩略图；备注页写讲稿；放映视图全屏演示。\n方法与例题：第5页移到第2页用浏览视图拖页；改该页标题文字用普通视图；补演讲提示用备注页，验动画用放映。\n易混易错：能拖动整页不等于能改页内对象；备注不自动显示给观众；整套默认格式用母版，勿把它当普通编辑视图。\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 5,
+      "card_rect": {
+        "x": 14,
+        "y": 261.375,
+        "width": 362,
+        "height": 413.984375
+      }
+    },
+    {
+      "topic_id": "computer-foundations.t24",
+      "title": "ASCII字符与连续编码",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_computer-foundations.t24_light.png",
+      "card_text": "ASCII字符与连续编码\n正常练\n区分7位编码和字节存放，利用各字符区间的连续性计算码值。\n核心知识：基本ASCII用7位表示128种编码，常占8位的一个字节；数字字符、大写字母、小写字母分别连续。\n方法与例题：起点为字符0=48、A=65、a=97；字符7为48+7=55，D为65+3=68，d为97+3=100。\n易混易错：位数与存放字节宽度要分开；偏移不能跨字符区间乱加，9后码58是冒号；字符7的码55不是整数7。\n练习这个知识点（10题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 1,
+      "card_rect": {
+        "x": 14,
+        "y": 235.140625,
+        "width": 362,
+        "height": 439.578125
+      }
+    },
+    {
+      "topic_id": "computer-foundations.t24",
+      "title": "ASCII字符与连续编码",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_computer-foundations.t24_dark.png",
+      "card_text": "ASCII字符与连续编码\n正常练\n区分7位编码和字节存放，利用各字符区间的连续性计算码值。\n核心知识：基本ASCII用7位表示128种编码，常占8位的一个字节；数字字符、大写字母、小写字母分别连续。\n方法与例题：起点为字符0=48、A=65、a=97；字符7为48+7=55，D为65+3=68，d为97+3=100。\n易混易错：位数与存放字节宽度要分开；偏移不能跨字符区间乱加，9后码58是冒号；字符7的码55不是整数7。\n练习这个知识点（10题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 1,
+      "card_rect": {
+        "x": 14,
+        "y": 235.140625,
+        "width": 362,
+        "height": 439.578125
+      }
+    },
+    {
+      "topic_id": "computer-foundations.t25",
+      "title": "挖掘任务的输出与场景",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_computer-foundations.t25_light.png",
+      "card_text": "挖掘任务的输出与场景\n正常练\n根据输出是类别、数值、分组、共现还是偏离，区分五类挖掘任务。\n核心知识：分类输出已定义类别，回归输出连续数值，聚类无标签分组，关联输出共现关系，异常检测找偏离常态记录。\n方法与例题：判垃圾邮件选分类，估房价选回归，客户自动分群选聚类，找常搭购商品选关联，查离群转账选异常检测。\n易混易错：先看标签与预期输出；已按欺诈标签训练的任务是分类，不因题里写异常就改选异常检测；共现不证明因果。\n练习这个知识点（3题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 4,
+      "card_rect": {
+        "x": 14,
+        "y": 235.5625,
+        "width": 362,
+        "height": 439.578125
+      }
+    },
+    {
+      "topic_id": "computer-foundations.t25",
+      "title": "挖掘任务的输出与场景",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_computer-foundations.t25_dark.png",
+      "card_text": "挖掘任务的输出与场景\n正常练\n根据输出是类别、数值、分组、共现还是偏离，区分五类挖掘任务。\n核心知识：分类输出已定义类别，回归输出连续数值，聚类无标签分组，关联输出共现关系，异常检测找偏离常态记录。\n方法与例题：判垃圾邮件选分类，估房价选回归，客户自动分群选聚类，找常搭购商品选关联，查离群转账选异常检测。\n易混易错：先看标签与预期输出；已按欺诈标签训练的任务是分类，不因题里写异常就改选异常检测；共现不证明因果。\n练习这个知识点（3题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 4,
+      "card_rect": {
+        "x": 14,
+        "y": 235.5625,
+        "width": 362,
+        "height": 439.578125
+      }
+    },
+    {
+      "topic_id": "software-engineering.t25",
+      "title": "嵌套判断的N-S与PAD图",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_software-engineering.t25_light.png",
+      "card_text": "嵌套判断的N-S与PAD图\n正常练\n先列条件与动作，再确定第二判断嵌入哪个分支，并逐条走通。\n核心知识：N-S用封闭盒的分区和嵌套表示选择，无流程箭头；PAD从左侧主干自上而下，向右展开分支层次。\n方法与例题：先判账号A，仅A真再判余额B；TT扣款成功，TF余额不足，FT与FF均账号无效。内层B只属于A真分支。\n易混易错：分支只执行选中一路，不能看见B真就跳过A；PAD折角不是普通流程图菱形，N-S不能画成盒外箭头连接。\n图解：账号与余额两层选择的N-S盒图\n图解：账号与余额两层选择的PAD图\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 3,
+      "card_rect": {
+        "x": 14,
+        "y": 131.15625,
+        "width": 362,
+        "height": 543.578125
+      }
+    },
+    {
+      "topic_id": "software-engineering.t25",
+      "title": "嵌套判断的N-S与PAD图",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_software-engineering.t25_dark.png",
+      "card_text": "嵌套判断的N-S与PAD图\n正常练\n先列条件与动作，再确定第二判断嵌入哪个分支，并逐条走通。\n核心知识：N-S用封闭盒的分区和嵌套表示选择，无流程箭头；PAD从左侧主干自上而下，向右展开分支层次。\n方法与例题：先判账号A，仅A真再判余额B；TT扣款成功，TF余额不足，FT与FF均账号无效。内层B只属于A真分支。\n易混易错：分支只执行选中一路，不能看见B真就跳过A；PAD折角不是普通流程图菱形，N-S不能画成盒外箭头连接。\n图解：账号与余额两层选择的N-S盒图\n图解：账号与余额两层选择的PAD图\n练习这个知识点（2题） →",
+      "body_width": 390,
+      "viewport": 390,
+      "chapter_index": 3,
+      "card_rect": {
+        "x": 14,
+        "y": 131.15625,
+        "width": 362,
+        "height": 543.578125
+      }
+    },
+    {
+      "diagram": "soft_ns_account.svg",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_soft_ns_account.svg_light.png",
+      "info": {
+        "complete": true,
+        "naturalWidth": 360,
+        "width": 360,
+        "alt": "账号与余额两层选择的N-S盒图"
+      },
+      "chapter_index": 3
+    },
+    {
+      "diagram": "soft_pad_account.svg",
+      "theme": "light",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_soft_pad_account.svg_light.png",
+      "info": {
+        "complete": true,
+        "naturalWidth": 360,
+        "width": 360,
+        "alt": "账号与余额两层选择的PAD图"
+      },
+      "chapter_index": 3
+    },
+    {
+      "diagram": "soft_ns_account.svg",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_soft_ns_account.svg_dark.png",
+      "info": {
+        "complete": true,
+        "naturalWidth": 360,
+        "width": 360,
+        "alt": "账号与余额两层选择的N-S盒图"
+      },
+      "chapter_index": 3
+    },
+    {
+      "diagram": "soft_pad_account.svg",
+      "theme": "dark",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_soft_pad_account.svg_dark.png",
+      "info": {
+        "complete": true,
+        "naturalWidth": 360,
+        "width": 360,
+        "alt": "账号与余额两层选择的PAD图"
+      },
+      "chapter_index": 3
+    }
+  ],
+  "diagram_observations": {
+    "N-S": "A假为左侧贯穿区域，B整个盒在A真右侧内；B假余额不足/B真扣款。浅深字号和分区可辨，FT不会进入B。",
+    "PAD": "从左主干A，A真上支向右进入B；A假下支账号无效。B真扣款/B假余额不足，真假标签可读，与正文四组合一致。"
+  },
+  "excluded": [
+    "本人电机/数字作者修订项不独立签收。",
+    "COMP005数据库末段组织偏好未改，不作为阻断。",
+    "root负责全局链接/离线/门禁；本报告不重复声称已做这些全量检查。",
+    "没有build或修改产品。",
+    "Word/PowerPoint只书面按命令和状态推演，未运行桌面应用。"
+  ],
+  "status": "本次非作者范围17项均已完成复测；Cache由8397末次追加证据关闭，其余保持3e证据归属。无新阻断。",
+  "final_supplement": {
+    "build": "8397fb4e5c5bb295",
+    "time": "2026-10-16T17:37:44.376138",
+    "scope": "仅复测末次修改的Cache卡，先前16项和16屏证据仍属于3e002732a520b8e1，不改标新build。",
+    "issue_id": "EXP-EXAM-COMP-001",
+    "original_question_id": "sp-core-co-044",
+    "repeated_answer_from_card": "直接映射每个主存块固定一行，硬件简单但同映射行的块容易互相替换；全相联允许任意行，放置灵活但需更多标记比较硬件；组相联先固定组再组内任意路，是灵活性、冲突与硬件成本的折中。三者查找仍需有效位和标记；同容量比较，也不能仅凭命中率断定实际速度。",
+    "status": "通过，原位置规则与取舍两部分任务均闭环",
+    "mobile": [
+      {
+        "build": "8397fb4e5c5bb295",
+        "topic_id": "computer-organization.t10",
+        "theme": "light",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_cache_final_light.png",
+        "text": "Cache映射与平均访存时间\n优先练\n拆分Cache地址字段，判断命中并计算包含缺失代价的平均访问时间。\n核心知识：直接、全相联、组相联决定块可放哪里，平均时间还取决于命中时长、失效率与额外代价。\n方法与例题：直接映射放固定行，全相联放任意行，组相联放固定组内任意行；查找仍核对有效位和标记，时间计算先统一代价口径。\n易混易错：同容量下直接映射硬件简单但易冲突；全相联放置灵活但比较硬件多；组相联折中，不能只凭命中率判断速度。\n练习这个知识点（10题） →",
+        "width": 390
+      },
+      {
+        "build": "8397fb4e5c5bb295",
+        "topic_id": "computer-organization.t10",
+        "theme": "dark",
+        "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\retest_cache_final_dark.png",
+        "text": "Cache映射与平均访存时间\n优先练\n拆分Cache地址字段，判断命中并计算包含缺失代价的平均访问时间。\n核心知识：直接、全相联、组相联决定块可放哪里，平均时间还取决于命中时长、失效率与额外代价。\n方法与例题：直接映射放固定行，全相联放任意行，组相联放固定组内任意行；查找仍核对有效位和标记，时间计算先统一代价口径。\n易混易错：同容量下直接映射硬件简单但易冲突；全相联放置灵活但比较硬件多；组相联折中，不能只凭命中率判断速度。\n练习这个知识点（10题） →",
+        "width": 390
+      }
+    ],
+    "visual_check": "两张390×844浅深截图均逐张view_image，卡中固定行/任意行/组内任意行及简单易冲突/比较硬件多/折中均可读；宽度390，无横向溢出。",
+    "boundary": "下方虚拟地址/页表/TLB卡仍可见且职责不混同；只复查该改卡，不重跑其他已验项目。"
+  },
+  "final_summary": {
+    "original_tasks_closed": 17,
+    "self_authored_electronics_signed": false,
+    "new_questions_attempted": 7,
+    "non_author_new_questions_signed": 4,
+    "screenshots_viewed": 18,
+    "real_office_used": false,
+    "no_product_mutation": true
+  }
+}

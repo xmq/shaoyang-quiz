@@ -1,0 +1,2446 @@
+{
+  "title": "新一轮课程体验：电子初学者",
+  "date": "2026-10-16",
+  "baseline_commit": "9dc2a3f",
+  "dist_version": "7339df71cfe62b2a",
+  "role": "模型初学者模拟；有理工模型先验，不是真人或盲测",
+  "method": "先逐章完整读正文和重点，再作答80题落TEMP，最后才读答案；未先读旧体验报告。正文阅读包含展开的Markdown答案，因此逐章记录曝光。",
+  "coverage": {
+    "courses": 5,
+    "chapters": 40,
+    "questions": 80,
+    "answer_key_alignment": 78,
+    "partial": 2,
+    "mobile": "5科×讲义/重点×浅深第一章20屏，另5科困难图浅深10屏，共30张390×844 Chrome实际截图。不是全部40章手机逐页体验；内容覆盖40章，页面抽样。"
+  },
+  "limitations": [
+    "没有真人或盲测；模型有学科和数学先验。",
+    "没有真机、没有build、没有修改产品或dist。",
+    "同例题答对只说明复现，非迁移或完整教学证明；未将例题重复本身当缺陷。",
+    "未验证部署/PWA离线、全量链接和自动评分行为；没有编造这些通过结果。"
+  ],
+  "issues": [
+    {
+      "id": "EXP-ELEC-001",
+      "priority": "P1",
+      "title": "电动机同步转速题缺求法",
+      "chapter": "circuit.c05",
+      "location": "course_notes/电路分析与电工技术.md:279，三相交流和电动机；color_notes同章电动机控制卡",
+      "quote": "转子转速低于同步转速",
+      "task": "只据本课完成uf-ee-022：50Hz、四极同步转速是多少。",
+      "evidence": "全篇与重点没有同步转速公式、极数与极对数的关系。预答1500r/min明确使用模型先验120f/极数；答案要求p=2、60f/p。q metadata归属circuit.c05/t08，经questions.json核实，不是错章。",
+      "fix": "在原电机段补n同步=60f/p、p为极对数、四极p=2的两步例；可另给转子低于同步的对比，重点保留一行公式与极数易错。",
+      "prior": "能记起电机转速公式是模型已有知识，不计本课教学成功。"
+    },
+    {
+      "id": "EXP-ELEC-002",
+      "priority": "P2",
+      "title": "PWM应用题超出占空比讲解",
+      "chapter": "digital-electronics.c07",
+      "location": "course_notes/数字电子技术.md:333–348；sp-elec-digital-029",
+      "quote": "f=1/T，D=tH/T×100%",
+      "task": "说明PWM为何能调光/调速，并给频率过低、过高和负载响应的边界。",
+      "evidence": "章内PWM只出现在2ms/8ms计算例，未讲固定幅值改变平均作用量，也未给闪烁、转矩脉动、开关损耗/负载惯性解释。全课程检索未见该讲解。答案要求这些点；我的预答边界来自模型先验。",
+      "fix": "补一个固定幅值、25%/75%占空比的平均作用示意，并用三句说明低频闪烁/脉动、高频开关损耗、负载及驱动能力限制；不必扩成驱动器设计章。",
+      "prior": "平均驱动、开关损耗和惯性知识来自先验；正文能独立支持的只是占空比计算。"
+    },
+    {
+      "id": "EXP-ELEC-003",
+      "priority": "P2",
+      "title": "补码溢出缺重点回忆入口",
+      "chapter": "digital-electronics.c01",
+      "location": "course_notes/数字电子技术.md，定字长补码与溢出；color_notes第1章两张卡",
+      "quote": "4位5+4=0101+0100=1001，两正数相加得到负数，属于有符号溢出",
+      "task": "脱离正文复习4位补码范围，并区分最高位进位与有符号溢出。",
+      "evidence": "正文有范围、负权、加法与溢出过程，但第1章重点只有数制BCD格雷、小数位权，未出现补码或溢出提示；重点能唤回编码而唤不回这项独立判断。不是要求短卡覆盖正文每句。",
+      "fix": "新增一张短卡：4位范围−8～7，5+4得1001为溢出，同号变异号判据，并与最高位进位区别。",
+      "prior": "我能记起补码判据，不代表现有重点给出该回忆线索。"
+    },
+    {
+      "id": "EXP-ELEC-004",
+      "priority": "P2",
+      "title": "RC比例评分点被截成2%",
+      "chapter": "circuit.c07",
+      "location": "questions.json：sp-elec-circuit-028 rubric第4项，约61795行",
+      "quote": "criterion: 2%",
+      "task": "按讲义答出一个τ达到63.2%后用题目评分点自评。",
+      "evidence": "题答案和explanation都写63.2%，rubric却为2%。已核questions.json与答案包一致，并非仅报告导出损坏。它不能代表正确回忆目标；未实测自动评分，不声称一定扣分。",
+      "fix": "将评分项改为“从0充电，一个τ达到最终变化量的63.2%”，保留相同题ID。",
+      "prior": "无额外知识要求，仅同一题内部字段不一致。"
+    },
+    {
+      "id": "EXP-ELEC-005",
+      "priority": "P2",
+      "title": "电源排序题评分点写成排障",
+      "chapter": "analog-electronics.c08",
+      "location": "questions.json：gap-eg-analog-006 rubric，约45147行",
+      "quote": "说明电源输入到负载输出的检查顺序；指出关键测量点",
+      "task": "只回答变压、整流、滤波、稳压排序并据评分点自评。",
+      "evidence": "题干仅要求排序，答案也是变压→整流→滤波→稳压，rubric却要求检查顺序与测量点。已核questions.json与答案包；我的正确排序无法自然对应测量点评分。",
+      "fix": "评分点对应四环节顺序及各自作用；若要考排障，应另题提出明确测量任务。",
+      "prior": "不是题目错章；是评分任务与题干不匹配。"
+    }
+  ],
+  "chapters": [
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c01",
+      "title": "第1章 电路模型和基本物理量",
+      "own_explanation": "参考方向约定符号，吸收功率取决于电流进哪一端；开路不等于无电压。",
+      "independent_process": "把电流箭头反过来时i取反，同时吸收功率式由ui换成−ui，物理功率不变。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-audit26-elec-reference",
+          "stem": "元件电压、电流采用关联参考方向，u=3 V、i=-2 A。计算功率并说明吸收还是发出，解释负号与参考方向的关系。",
+          "answer": "−6W，发出6W；负i说明实际电流反参考箭头。",
+          "topic_id": "circuit.t01",
+          "answer_key": "p=ui=3×(-2)=-6 W，元件发出6 W。负号表示实际能量方向与吸收功率的正方向相反，不表示电流不存在或违反守恒。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "参考方向、功率与示波器读数",
+            "chapter_id": "circuit.c01",
+            "topic_id": "circuit.t01",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第1章 电路模型和基本物理量；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-accept-elec-circuit-1-28",
+          "stem": "相同元件的电压正端不变，把电流参考箭头反向，读数由2A变−2A。实际吸收功率会变号吗？为什么？",
+          "answer": "不会；关联变非关联须同时改用−ui，物理过程未变。",
+          "topic_id": "circuit.t01",
+          "answer_key": "不会；参考改变需同时改变功率表达式，物理能量方向不随记号变。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "circuit.t01",
+            "chapter_id": "circuit.c01",
+            "topic_id": "circuit.t01",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第1章 电路模型和基本物理量；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "正文直接给出3V、−2A的−6W，第一题已曝光；第二题需迁移。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "把电流箭头反过来时i取反，同时吸收功率式由ui换成−ui，物理功率不变。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "功率符号卡独立可读，未回顾正弦参数但本章指定任务一致。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c02",
+      "title": "第2章 电路定律与等效连接",
+      "own_explanation": "同一路电流串联，同两节点电压并联，KCL和KVL分别守恒电荷与能量。",
+      "independent_process": "5A进入节点、流出1.5A，剩3.5A；并联4Ω与6Ω先得等效2.4Ω、共压12V，4Ω为3A。",
+      "answers_before_key": [
+        {
+          "question_id": "uf-ee-003",
+          "stem": "某节点有2 A、3 A流入，有1.5 A流出，则另一支路流出电流为（ ）。",
+          "answer": "C，2+3−1.5=3.5A。",
+          "topic_id": "circuit.t02",
+          "answer_key": "C",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "直流电路",
+            "chapter_id": "circuit.c02",
+            "topic_id": "circuit.t02",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第2章 电路定律与等效连接；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "ap-circuit-001",
+          "stem": "4 Ω与6 Ω两个电阻并联，总电流为5 A。流过4 Ω电阻的电流为（ ）。",
+          "answer": "B，5×6/(4+6)=3A。",
+          "topic_id": "circuit.t02",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "并联电路·分流计算",
+            "chapter_id": "circuit.c02",
+            "topic_id": "circuit.t02",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第2章 电路定律与等效连接；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "题值未直接曝光。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "5A进入节点、流出1.5A，剩3.5A；并联4Ω与6Ω先得等效2.4Ω、共压12V，4Ω为3A。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "卡覆盖串并联/KCL，YΔ、理想源相容未入短卡；不据此判完整性缺陷。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c03",
+      "title": "第3章 电阻电路的分析方法与电路定理",
+      "own_explanation": "节点法把未知电位变成KCL，共享网孔电阻须用电流差；戴维南保存端口关系。",
+      "independent_process": "3I1−I2=10、−I1+3I2=4；消元8I1=34，I1=4.25、I2=2.75A。新节点题乘6k得3(U−6)+2U=0，U=3.6V。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-accept-elec-mesh-setup",
+          "stem": "两个相邻网孔都取顺时针，左右外侧各2Ω、共享1Ω，沿各自网孔方向电源升10V与4V。列方程并求I1、I2。",
+          "answer": "I1=4.25A、I2=2.75A，共享1.5A；两方程如上。",
+          "topic_id": "circuit.t13",
+          "answer_key": "3I1−I2=10，−I1+3I2=4；I1=4.25A、I2=2.75A。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "circuit.t13",
+            "chapter_id": "circuit.c03",
+            "topic_id": "circuit.t13",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第3章 电阻电路的分析方法与电路定理；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-eg-circuit-001",
+          "stem": "节点U分别通过2 kΩ电阻接6 V电位、通过3 kΩ电阻接地，且无其他支路。按流出节点为正列KCL并求U。",
+          "answer": "(U−6)/2k+U/3k=0，U=3.6V。",
+          "topic_id": "circuit.t03",
+          "answer_key": "列式为(U-6)/2+U/3=0（电压用V、电阻用kΩ时电流单位为mA），解得U=3.6 V。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "节点电压与回路列式",
+            "chapter_id": "circuit.c03",
+            "topic_id": "circuit.t03",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第3章 电阻电路的分析方法与电路定理；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "网孔题全数值和结果在正文曝光；节点题为变式。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "3I1−I2=10、−I1+3I2=4；消元8I1=34，I1=4.25、I2=2.75A。新节点题乘6k得3(U−6)+2U=0，U=3.6V。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "4卡分别覆盖节点、叠加端口、网孔、参数求法；不是只列名称。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c04",
+      "title": "第4章 电阻、电容与电感元件",
+      "own_explanation": "电容以电压储能，电感以电流储能；无冲激时对应状态保持连续。",
+      "independent_process": "C=10μF、斜率2000V/s，i=20mA；若电压下降则参考电流为负。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-thin-020",
+          "stem": "换路前电容电压为6 V、电感电流为0.4 A。无冲激条件下写出换路后瞬间两个状态量，并说明哪些量可以突变。",
+          "answer": "uC(0+)=6V、iL(0+)=0.4A；电容电流、电感电压可突变，电阻量由新电路决定。",
+          "topic_id": "circuit.t05",
+          "answer_key": "uC(0+)=6 V，iL(0+)=0.4 A；电容电流和电感电压可以在换路瞬间突变。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "电容电感与换路连续性",
+            "chapter_id": "circuit.c04",
+            "topic_id": "circuit.t05",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第4章 电阻、电容与电感元件；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-circuit-009",
+          "stem": "在没有冲激电流的条件下，电路换路瞬间通常保持连续的量是（ ）。",
+          "answer": "A，无冲激电流时电容电压连续。",
+          "topic_id": "circuit.t05",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "换路定律·电容",
+            "chapter_id": "circuit.c04",
+            "topic_id": "circuit.t05",
+            "ability": "概念识记"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第4章 电阻、电容与电感元件；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "连续关系正文直接给；具体6V/0.4A未曝光。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "C=10μF、斜率2000V/s，i=20mA；若电压下降则参考电流为负。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "连续条件与稳态区别清楚，公式只适用线性关联方向。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c05",
+      "title": "第5章 正弦稳态、电工控制与安全",
+      "own_explanation": "同频交流须合成相量，三相换算要有对称条件；电机由旋转磁场产生转矩。",
+      "independent_process": "串联6+j8Ω的模10Ω，20V给2A，角−53.1°；启动按钮松开后辅助触点供线圈，按停止才释放。",
+      "answers_before_key": [
+        {
+          "question_id": "ap-circuit-002",
+          "stem": "在50 Hz正弦交流电路中，电感量为0.1 H的理想电感，其感抗约为（ ）。",
+          "answer": "B，XL=2π×50×0.1≈31.4Ω。",
+          "topic_id": "circuit.t06",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "正弦稳态·感抗计算",
+            "chapter_id": "circuit.c05",
+            "topic_id": "circuit.t06",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第5章 正弦稳态、电工控制与安全；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-ee-022",
+          "stem": "50 Hz四极异步电动机的同步转速为（ ）。",
+          "answer": "C，1500r/min；依赖模型先验n同步=120f/极数，正文未提供此公式。",
+          "topic_id": "circuit.t08",
+          "answer_key": "C",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "三相与电工",
+            "chapter_id": "circuit.c05",
+            "topic_id": "circuit.t08",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第5章 正弦稳态、电工控制与安全；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "同步转速题不能仅据本章解出；感抗公式已在第4章教。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "串联6+j8Ω的模10Ω，20V给2A，角−53.1°；启动按钮松开后辅助触点供线圈，按停止才释放。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "相量/功率/控制3卡范围清楚；同步转速无入口见001。",
+      "optimization_ids": [
+        "EXP-ELEC-001"
+      ]
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c06",
+      "title": "第6章 工程可靠性基础",
+      "own_explanation": "功能全好才成功取概率乘积，任一路好则从全坏概率的补集求。",
+      "independent_process": "两独立0.9支路串联0.81，并联先全坏0.01再1−0.01=0.99。",
+      "answers_before_key": [
+        {
+          "question_id": "ap-circuit-006",
+          "stem": "两个独立元件可靠度均为0.9，系统要求两者都正常才工作。求系统可靠度，并说明这里的“串联”为什么不能与电阻串联计算混淆。",
+          "answer": "0.81；功能串联表示都正常的逻辑事件，不是电阻相加。",
+          "topic_id": "circuit.t09",
+          "answer_key": "系统可靠度为0.9×0.9=0.81；这里的串联表示功能上必须全部成功的可靠性逻辑，电阻串联则描述电路连接及等效电阻相加。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "可靠性·概念辨析",
+            "chapter_id": "circuit.c06",
+            "topic_id": "circuit.t09",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第6章 工程可靠性基础；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-ee-023",
+          "stem": "两个相互独立、可靠度均为0.9的元件构成功能串联系统，系统可靠度为（ ）。",
+          "answer": "B，0.81。",
+          "topic_id": "circuit.t09",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "可靠性",
+            "chapter_id": "circuit.c06",
+            "topic_id": "circuit.t09",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第6章 工程可靠性基础；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题同一数值，正文已曝光0.81。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "两独立0.9支路串联0.81，并联先全坏0.01再1−0.01=0.99。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "独立性和共同原因提醒保留，短卡能复算补集。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c07",
+      "title": "第7章 一阶动态电路",
+      "own_explanation": "一阶响应由初值、终值、τ决定，指数只适用换路后常参常值输入。",
+      "independent_process": "R=20kΩ、C=50μF得τ=1s；10V零初值充电t=1s为6.32V，电流0.184mA。",
+      "answers_before_key": [
+        {
+          "question_id": "sp-elec-circuit-028",
+          "stem": "说明一阶RC充电过程的初值、终值、时间常数和一个时间常数时的典型比例。",
+          "answer": "零初值充到终值U，τ=R等效C；1τ达到终值63.2%，电压连续，稳态开路。",
+          "topic_id": "circuit.t10",
+          "answer_key": "换路前由原稳态确定电容初值，换路后由新稳态确定终值；时间常数τ=RC决定变化快慢。若从0向最终值充电，一个τ后约达到最终变化量的63.2%，随后继续指数逼近终值。电容电压在通常换路瞬间不突变。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "一阶电路·过程说明",
+            "chapter_id": "circuit.c07",
+            "topic_id": "circuit.t10",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第7章 一阶动态电路；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-circuit-024",
+          "stem": "电阻为20 kΩ、电容为50 μF的一阶RC电路，时间常数为____s。",
+          "answer": "1s，20×10³×50×10⁻⁶。",
+          "topic_id": "circuit.t10",
+          "answer_key": "1",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "一阶电路·时间常数",
+            "chapter_id": "circuit.c07",
+            "topic_id": "circuit.t10",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第7章 一阶动态电路；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题均在正文例与三要素过程曝光。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "R=20kΩ、C=50μF得τ=1s；10V零初值充电t=1s为6.32V，电流0.184mA。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "初值、终值和τ齐全；题评分项问题见004。",
+      "optimization_ids": [
+        "EXP-ELEC-004"
+      ]
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c08",
+      "title": "第8章 万用表、示波器与安全测量",
+      "own_explanation": "仪表接入也改变电路；示波器由格数和刻度取幅度时间，探头倍率只补偿一次。",
+      "independent_process": "0.5V/div×4格×1=2V；100kΩ表并100kΩ负载等效50kΩ，把5V拉至3.33V。",
+      "answers_before_key": [
+        {
+          "question_id": "sp-elec-circuit-011",
+          "stem": "周期信号在示波器屏幕上不断左右漂移，首先可尝试调整（ ）。",
+          "answer": "A，调整触发源/电平以固定每次扫描起点。",
+          "topic_id": "circuit.t11",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "示波器·触发",
+            "chapter_id": "circuit.c08",
+            "topic_id": "circuit.t11",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第8章 万用表、示波器与安全测量；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-circuit-004",
+          "stem": "示波器垂直灵敏度为0.5 V/div，探头倍率为1，波形峰峰值占4格，则峰峰值为（ ）。",
+          "answer": "C，2V。",
+          "topic_id": "circuit.t11",
+          "answer_key": "C",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "示波器·幅值读数",
+            "chapter_id": "circuit.c08",
+            "topic_id": "circuit.t11",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第8章 万用表、示波器与安全测量；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "触发用途有解释；题数值未直接曝光。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "0.5V/div×4格×1=2V；100kΩ表并100kΩ负载等效50kΩ，把5V拉至3.33V。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "刻度补偿条件写清；负载误差未缩进卡，不阻断指定题。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "circuit",
+      "chapter_id": "circuit.c09",
+      "title": "第9章 电路故障分析",
+      "own_explanation": "排障用已知正常参考点逐段缩小范围，零读数本身不能唯一指认故障。",
+      "independent_process": "低压12V开关闭合应两端12V；输入12V、输出0V且回线完整时跨压12V，断电测触点通断验证。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-circuit-002",
+          "stem": "串联控制回路不能工作。已确认电源正常，测得开关输入端有电压、输出端无电压，且开关应处于闭合状态。优先判断哪里故障？",
+          "answer": "B，优先检查开关及接线，仍须验证。",
+          "topic_id": "circuit.t12",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "分段定位",
+            "chapter_id": "circuit.c09",
+            "topic_id": "circuit.t12",
+            "ability": "读图排障"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第9章 电路故障分析；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-circuit-012",
+          "stem": "某放大设备各级均无输出，检查的第一优先级通常是（ ）。",
+          "answer": "A，公共供电、保险、地。",
+          "topic_id": "circuit.t12",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "方框图排障·电源",
+            "chapter_id": "circuit.c09",
+            "topic_id": "circuit.t12",
+            "ability": "读图排障"
+          },
+          "supported_by": "course_notes/电路分析与电工技术.md / 第9章 电路故障分析；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第一题为正文例题，答案曝光；第二题受供电优先流程支持。",
+      "lecture_path": "course_notes/电路分析与电工技术.md",
+      "review_path": "color_notes/电路分析与电工技术.md",
+      "lecture_support": "低压12V开关闭合应两端12V；输入12V、输出0V且回线完整时跨压12V，断电测触点通断验证。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "正文与卡都强调参考点及验证，不把零值当唯一证据。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c01",
+      "title": "第1章 绪论与半导体基础",
+      "own_explanation": "掺杂改变载流子比例而非整体电荷；PN扩散留下固定离子形成势垒，外加偏置改变势垒。",
+      "independent_process": "P=0、N=5V，P−N=−5V，反偏使耗尽层加宽，多子扩散受阻，仍有漏电。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-audit26-visual-pn",
+          "stem": "普通PN结在未击穿的条件下受到反向偏置，其耗尽层和势垒怎样变化？",
+          "answer": "B，变宽、势垒升高。",
+          "topic_id": "analog-electronics.t01",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "PN结与器件模型",
+            "chapter_id": "analog-electronics.c01",
+            "topic_id": "analog-electronics.t01",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第1章 绪论与半导体基础；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-audit26-elec-pn",
+          "stem": "普通PN结加正向与反向偏置时，耗尽层和多数载流子运动分别怎样变化？反向截止为什么不等于任何电压下电流严格为零？",
+          "answer": "正偏变窄、多子易越结；反偏变宽、多子受阻，少子漏电仍在，击穿后电流增大。",
+          "topic_id": "analog-electronics.t01",
+          "answer_key": "正向偏置降低势垒、耗尽层变窄，多数载流子扩散增强；反向偏置提高势垒、耗尽层变宽，多数载流子扩散受抑。反向仍有少数载流子造成的小反向电流，电压过大还可能击穿。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "analog-electronics.t01",
+            "chapter_id": "analog-electronics.c01",
+            "topic_id": "analog-electronics.t01",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第1章 绪论与半导体基础；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "正文与图已解释两种偏置；需核对图可读性。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "P=0、N=5V，P−N=−5V，反偏使耗尽层加宽，多子扩散受阻，仍有漏电。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "PN卡足以回忆势垒与偏置，未仅堆名词。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c02",
+      "title": "第2章 半导体二极管及其应用",
+      "own_explanation": "二极管先选模型后验证电流方向；整流、滤波、稳压分别处理极性、纹波、稳定性。",
+      "independent_process": "12V经1k给6V稳压，IR=6mA；2k负载取3mA，IZ=3mA；改1k时剩零，稳压失效。",
+      "answers_before_key": [
+        {
+          "question_id": "ue-analog-007",
+          "stem": "理想桥式整流电路接入有效值10 V的正弦电压，不接滤波电容时，负载上全波整流平均电压约为多少？",
+          "answer": "B，0.9×10=9V，条件无电容、理想桥。",
+          "topic_id": "analog-electronics.t02",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "整流滤波与稳压",
+            "chapter_id": "analog-electronics.c02",
+            "topic_id": "analog-electronics.t02",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第2章 半导体二极管及其应用；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "ue-analog-001",
+          "stem": "采用0.7 V恒压降模型，5 V电源经1 kΩ电阻和正向硅二极管串联接地，回路电流约为多少？",
+          "answer": "B，(5−0.7)/1000=4.3mA。",
+          "topic_id": "analog-electronics.t02",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "半导体二极管",
+            "chapter_id": "analog-electronics.c02",
+            "topic_id": "analog-electronics.t02",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第2章 半导体二极管及其应用；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题数值计算均已正文曝光。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "12V经1k给6V稳压，IR=6mA；2k负载取3mA，IZ=3mA；改1k时剩零，稳压失效。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "0.9U的无滤波前提写入卡，稳压管电流算例在正文。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c03",
+      "title": "第3章 晶体管与基本放大电路",
+      "own_explanation": "Q点决定摆幅和模型工作区，小信号求附近变化；BJT饱和与MOS饱和含义不同。",
+      "independent_process": "分压偏置VTH=2V、RTH=16.67k，IB=1.3/117.67k=11.05μA，UC约9.79V高于UB约1.816V，放大假设成立。",
+      "answers_before_key": [
+        {
+          "question_id": "ue-analog-004",
+          "stem": "某旁路电容充分大的共射放大器，小信号发射结电阻rbe=1 kΩ，交流集电极等效负载为2 kΩ，β=100。忽略源内阻，其电压增益约为多少？",
+          "answer": "D，−100×2k/1k=−200。",
+          "topic_id": "analog-electronics.t12",
+          "answer_key": "D",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "共射放大电路动态分析",
+            "chapter_id": "analog-electronics.c03",
+            "topic_id": "analog-electronics.t12",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第3章 晶体管与基本放大电路；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-ae-012",
+          "stem": "场效应管与双极型三极管相比，常见特点是（ ）。",
+          "answer": "B，FET电压控制、输入电阻高。",
+          "topic_id": "analog-electronics.t03",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "场效应管",
+            "chapter_id": "analog-electronics.c03",
+            "topic_id": "analog-electronics.t03",
+            "ability": "比较辨析"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第3章 晶体管与基本放大电路；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "共射第一题与正文数值相同；分压完整过程可复演但所需电路图需观察。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "分压偏置VTH=2V、RTH=16.67k，IB=1.3/117.67k=11.05μA，UC约9.79V高于UB约1.816V，放大假设成立。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "Q点、BJT/MOS及共射简式分卡，模型边界保留。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c04",
+      "title": "第4章 多级放大、差分放大与频率响应",
+      "own_explanation": "后级输入阻抗会加载前级；差分和共模分别处理差值与平均值，截止频率是幅度0.707点。",
+      "independent_process": "u1−u2=0.02V，平均1V；100×0.02=2V，0.1×1=0.1V，总2.1V，抑制比1000=60dB。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-accept-elec-analog-electronics-03-2",
+          "stem": "前级等效空载电压U0>0、输出电阻Ro>0固定，后级输入电阻Ri>0逐渐增大。实际送入后级电压趋向什么？为什么不超过U0？",
+          "answer": "Ri增大时Ri/(Ro+Ri)趋1，电压趋U0且有限Ri时小于U0。",
+          "topic_id": "analog-electronics.t13",
+          "answer_key": "趋向U0；正电阻分压Ri/(Ro+Ri)趋1但不超过1。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "analog-electronics.t13",
+            "chapter_id": "analog-electronics.c04",
+            "topic_id": "analog-electronics.t13",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第4章 多级放大、差分放大与频率响应；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-accept-elec-analog-electronics-04-1",
+          "stem": "u1=1.01V、u2=0.99V，Ad=100、Ac=0.1，输出在线性范围。求差模、共模、两部分输出和CMRR。",
+          "answer": "ud=0.02V，uc=1V，两贡献2V及0.1V，CMRR=1000=60dB。",
+          "topic_id": "analog-electronics.t14",
+          "answer_key": "ud=0.02V，uc=1V；差模2V、共模0.1V，总2.1V；CMRR1000。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "analog-electronics.t14",
+            "chapter_id": "analog-electronics.c04",
+            "topic_id": "analog-electronics.t14",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第4章 多级放大、差分放大与频率响应；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第二题全数值与正文相同，答案曝光；第一题需从分压推极限。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "u1−u2=0.02V，平均1V；100×0.02=2V，0.1×1=0.1V，总2.1V，抑制比1000=60dB。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "级联/分压/CMRR/截止独立卡，公式条件可找。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c05",
+      "title": "第5章 放大电路中的反馈",
+      "own_explanation": "负反馈看净输入是否被削弱；输出取样与输入比较是两套分类，决定两端电阻。",
+      "independent_process": "A=200、F=.02，AF=4，闭环200/5=40；要求输入高阻用串联，恒流输出用电流取样。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-eg-analog-003",
+          "stem": "某负反馈放大器开环增益A=200、反馈系数F=0.02，按Af=A/(1+AF)计算闭环增益为________。",
+          "answer": "40。",
+          "topic_id": "analog-electronics.t16",
+          "answer_key": "40",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "反馈极性、组态与闭环增益",
+            "chapter_id": "analog-electronics.c05",
+            "topic_id": "analog-electronics.t16",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第5章 放大电路中的反馈；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-accept-elec-analog-electronics-07-2",
+          "stem": "希望提高输入电阻并使输出更接近恒流源，应选哪种稳定负反馈？分别说明两端判断。",
+          "answer": "电流串联负反馈；串联比较增大输入电阻，电流取样增大输出电阻。",
+          "topic_id": "analog-electronics.t17",
+          "answer_key": "电流串联；输入串联增Ri，输出电流取样增Ro。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "analog-electronics.t17",
+            "chapter_id": "analog-electronics.c05",
+            "topic_id": "analog-electronics.t17",
+            "ability": "场景选型"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第5章 放大电路中的反馈；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "闭环为新数据；选型是已教规则组合。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "A=200、F=.02，AF=4，闭环200/5=40；要求输入高阻用串联，恒流输出用电流取样。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "环路式与四组态分卡，稳定性限制未丢。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c06",
+      "title": "第6章 集成运算放大与信号处理",
+      "own_explanation": "线性负反馈且未饱和才有虚短，虚断使输入电流走反馈元件；运算必须先读拓扑。",
+      "independent_process": "反相端近0V，0.2V/10k=20μA，经50k反馈得输出−1V；加法器各路电流相加。",
+      "answers_before_key": [
+        {
+          "question_id": "ap-analog-002",
+          "stem": "理想反相放大器中，输入电阻为10 kΩ、反馈电阻为50 kΩ，输入电压为0.2 V，且输出未饱和，则输出电压为（ ）。",
+          "answer": "A，−1V。",
+          "topic_id": "analog-electronics.t07",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "运算放大器·直接计算",
+            "chapter_id": "analog-electronics.c06",
+            "topic_id": "analog-electronics.t07",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第6章 集成运算放大与信号处理；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "ue-analog-011",
+          "stem": "要用理想运放设计uo=-(2u1+0.5u2)的反相加法器，可采用哪些电阻关系？设反馈电阻为Rf。",
+          "answer": "ABD；Rf/R1=2，Rf/R2=.5，故R2=2Rf。",
+          "topic_id": "analog-electronics.t07",
+          "answer_key": "ABD",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "运放电路设计",
+            "chapter_id": "analog-electronics.c06",
+            "topic_id": "analog-electronics.t07",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第6章 集成运算放大与信号处理；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "反相数值正文直接曝光；加法器电阻比为迁移。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "反相端近0V，0.2V/10k=20μA，经50k反馈得输出−1V；加法器各路电流相加。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "反相主卡可列KCL；积分/求和需回讲义，不能以短卡替代。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c07",
+      "title": "第7章 波形发生与功率放大",
+      "own_explanation": "迟滞须带历史状态，正弦振荡同时有相位、起振与稳幅条件；甲乙偏置以静耗换少交越。",
+      "independent_process": "+5V送积分器使输出−500V/s，从+1降至−1需4ms，翻成−5后再升4ms，T=8ms。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-audit26-elec-classb",
+          "stem": "乙类互补推挽功放为什么在输入过零附近容易产生交越失真？甲乙类如何改善，代价是什么？",
+          "answer": "乙类过零两管未充分导通形成死区；甲乙加偏置令导通重叠，代价静态电流、发热及温漂控制。",
+          "topic_id": "analog-electronics.t09",
+          "answer_key": "乙类两管理想静态电流近零，实际器件有导通门槛，输入过零附近可能两管都未充分导通，形成死区。甲乙类施加适当静态偏置，使两管在零点附近有小的导通重叠，减小交越失真；代价是静态功耗增加，需注意温漂与热稳定。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "analog-electronics.t09",
+            "chapter_id": "analog-electronics.c07",
+            "topic_id": "analog-electronics.t09",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第7章 波形发生与功率放大；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-analog-018",
+          "stem": "比较器输出处于高、低饱和值时，仍可无条件使用运放虚短关系计算两个输入端电位相等。（ ）",
+          "answer": "错误；比较器饱和状态不适用虚短。",
+          "topic_id": "analog-electronics.t08",
+          "answer_key": "错误",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "比较器·虚短",
+            "chapter_id": "analog-electronics.c07",
+            "topic_id": "analog-electronics.t08",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第7章 波形发生与功率放大；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "交越题机制正文直接解释；三角波例无连线图，须靠文字闭环。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "+5V送积分器使输出−500V/s，从+1降至−1需4ms，翻成−5后再升4ms，T=8ms。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "迟滞、振荡、交越分别卡；三角波闭环文字可复演，增加电路图属于后续可选改善。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "analog-electronics",
+      "chapter_id": "analog-electronics.c08",
+      "title": "第8章 直流电源、测量与电路读图",
+      "own_explanation": "供电路径、偏置路径与信号路径分别追踪；采集要先处理幅度与带宽再送ADC。",
+      "independent_process": "50Hz全波峰间约10ms，10mA×.01/1000μF=.1V纹波；12降5V .2A稳压管耗1.4W。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-eg-analog-006",
+          "stem": "将变压、整流、滤波、稳压按典型直流电源信号流顺序排列。",
+          "answer": "变压→整流→滤波→稳压。",
+          "topic_id": "analog-electronics.t10",
+          "answer_key": "变压→整流→滤波→稳压。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "直流电源、采集链与排障",
+            "chapter_id": "analog-electronics.c08",
+            "topic_id": "analog-electronics.t10",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第8章 直流电源、测量与电路读图；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-analog-026",
+          "stem": "说明用万用表二极管挡初步判断普通硅二极管好坏的步骤和局限。",
+          "answer": "断电放电、二极管挡比较正反方向，硅结正向约.6～.7V反向截止；排除在路并联必要时隔离一端；初检不证明动态性能。",
+          "topic_id": "analog-electronics.t22",
+          "answer_key": "先断电、确认放电并尽量脱开一端；交换表笔测两个方向，正常时正向约0.6～0.7 V、反向截止。两向近0疑似短路，两向均截止疑似开路。该方法只做初检，在路并联支路会影响读数，也不能证明耐压等全部参数正常。",
+          "check": "部分：未写两向近0/两向截止的异常判读；正文此段也未教，重点只补“两向近0先疑短路”。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "二极管·检测步骤",
+            "chapter_id": "analog-electronics.c08",
+            "topic_id": "analog-electronics.t22",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/模拟电子技术.md / 第8章 直流电源、测量与电路读图；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "流程已曝光；重点安全步骤比正文二极管测量段更完整。",
+      "lecture_path": "course_notes/模拟电子技术.md",
+      "review_path": "color_notes/模拟电子技术.md",
+      "lecture_support": "50Hz全波峰间约10ms，10mA×.01/1000μF=.1V纹波；12降5V .2A稳压管耗1.4W。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "纹波/选型/初检分卡；初检异常判读记得不完整，未把错漏冒充全部通过。",
+      "optimization_ids": [
+        "EXP-ELEC-005"
+      ]
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c01",
+      "title": "第1章 数制和码制",
+      "own_explanation": "进制代表数值，BCD逐十进制数字编码，格雷码使相邻码字只变一位。",
+      "independent_process": "1101右移0110，与原串异或1011；13的BCD0001 0011和纯二进制1101不相同。",
+      "answers_before_key": [
+        {
+          "question_id": "uf-de-001",
+          "stem": "二进制数101101₂转换为十进制数是（ ）。",
+          "answer": "C，32+8+4+1=45。",
+          "topic_id": "digital-electronics.t12",
+          "answer_key": "C",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "逻辑基础",
+            "chapter_id": "digital-electronics.c01",
+            "topic_id": "digital-electronics.t12",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第1章 数制和码制；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-audit26-elec-gray",
+          "stem": "写出十进制13的8421 BCD码和无符号4位二进制码；再把二进制1101转换为格雷码，说明两种编码用途不同。",
+          "answer": "BCD0001 0011；二进制1101；格雷1011，BCD保留十进制数位、格雷减相邻变化误差。",
+          "topic_id": "digital-electronics.t01",
+          "answer_key": "8421 BCD为0001 0011；4位二进制为1101；格雷码最高位不变，其余为相邻二进制位异或，得1011。BCD逐个十进制数字编码，格雷码用于相邻码字仅变一位的场景。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "digital-electronics.t01",
+            "chapter_id": "digital-electronics.c01",
+            "topic_id": "digital-electronics.t01",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第1章 数制和码制；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "45整数是正文45.25例的一部分；格雷新串需计算。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "1101右移0110，与原串异或1011；13的BCD0001 0011和纯二进制1101不相同。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "编码与小数卡清楚；补码独立判断无回忆线索见003。",
+      "optimization_ids": [
+        "EXP-ELEC-003"
+      ]
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c02",
+      "title": "第2章 逻辑代数与门电路",
+      "own_explanation": "逻辑值是电压范围，低有效按0动作；高阻停止驱动而非输出0。",
+      "independent_process": "低有效三态使能0时按功能驱动0/1，使能1时释放；共享总线须只一器件驱动。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-thin-021",
+          "stem": "某芯片使能端标有低有效小圆圈，输出为三态。说明使能为0和1时输出状态，以及高阻态为何适合共享总线。",
+          "answer": "0使能、按输入驱动；1禁止并高阻，释放后可由另一器件驱动而避免冲突。",
+          "topic_id": "digital-electronics.t02",
+          "answer_key": "使能为0时器件被允许驱动逻辑0或1，使能为1时输出高阻；高阻相当于暂时断开，使其他器件可以驱动同一总线。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "门电路、有效电平与三态",
+            "chapter_id": "digital-electronics.c02",
+            "topic_id": "digital-electronics.t02",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第2章 逻辑代数与门电路；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "ap-digital-001",
+          "stem": "三路火灾传感器中任意一路报警，声光报警器就立即启动。若不要求保持历史报警状态，最直接的基本逻辑是（ ）。",
+          "answer": "B，任一满足为或。",
+          "topic_id": "digital-electronics.t02",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "组合逻辑·场景选型",
+            "chapter_id": "digital-electronics.c02",
+            "topic_id": "digital-electronics.t02",
+            "ability": "场景选型"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第2章 逻辑代数与门电路；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "支持充分；接口符号VOH/VIH等未逐个释义，可作局部改善。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "低有效三态使能0时按功能驱动0/1，使能1时释放；共享总线须只一器件驱动。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "高阻与逻辑0区别保留，低有效能迁移。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c03",
+      "title": "第3章 逻辑函数的表示与化简",
+      "own_explanation": "卡诺图用格雷相邻消去变化变量，圈必须幂次数矩形并覆盖规定1。",
+      "independent_process": "m1/3/5/7在BC=01、11两列，两行圈四格，A/B均变化而C保持1，得C。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-eg-digital-001",
+          "stem": "三变量函数F(A,B,C)=Σm(1,3,5,7)。说明卡诺图如何分组并写最简式。",
+          "answer": "四格2×2相邻矩形，C恒1得F=C。",
+          "topic_id": "digital-electronics.t03",
+          "answer_key": "四个最小项对应C=1的四格，可组成一组4，A和B均变化被消去，最简式F=C。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "逻辑代数、最小项与卡诺图",
+            "chapter_id": "digital-electronics.c03",
+            "topic_id": "digital-electronics.t03",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第3章 逻辑函数的表示与化简；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "ue-digital-014",
+          "stem": "任意奇数个逻辑1进行异或运算，结果为1；任意偶数个逻辑1异或，结果为0。",
+          "answer": "正确；每个1使异或翻转一次，偶次回0、奇次为1。",
+          "topic_id": "digital-electronics.t03",
+          "answer_key": "正确",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "异或逻辑",
+            "chapter_id": "digital-electronics.c03",
+            "topic_id": "digital-electronics.t03",
+            "ability": "概念识记"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第3章 逻辑函数的表示与化简；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第一题完整正文曝光；第二题从二输入异或迭代。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "m1/3/5/7在BC=01、11两列，两行圈四格，A/B均变化而C保持1，得C。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "四格圈组及无关项边界清楚。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c04",
+      "title": "第4章 组合逻辑电路",
+      "own_explanation": "组合输出由当前输入决定但有传播延时；全加器两输出等价于三个输入的整数和。",
+      "independent_process": "1+0+1=2=10，Cout1/S0；B再置1总和3=11，Cout1/S1。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-accept-elec-digital-electronics-15-2",
+          "stem": "全加器A=1、B=0、Cin=1，求S和Cout；再把B也变为1，求两输出。",
+          "answer": "先S0、Cout1；后S1、Cout1。",
+          "topic_id": "digital-electronics.t14",
+          "answer_key": "前者S=0、Cout=1；后者S=1、Cout=1。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "digital-electronics.t14",
+            "chapter_id": "digital-electronics.c04",
+            "topic_id": "digital-electronics.t14",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第4章 组合逻辑电路；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-eg-digital-003",
+          "stem": "某组合电路稳态真值表正确，但输入变化时输出出现很窄的错误脉冲。说明原因，并给出两种处理思路。",
+          "answer": "路径传播延时不一致造成冒险；加覆盖相应转换的冗余项、在稳定后同步采样/选通。",
+          "topic_id": "digital-electronics.t05",
+          "answer_key": "不同逻辑路径传播延迟不一致产生竞争冒险。可在化简时增加冗余项消除静态冒险，或在输出稳定后用时钟边沿采样/选通。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "组合冒险与采样边界",
+            "chapter_id": "digital-electronics.c04",
+            "topic_id": "digital-electronics.t05",
+            "ability": "读图排障"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第4章 组合逻辑电路；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "全加表含答案；冒险正文给处理结论、重点另给具体冗余BC例。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "1+0+1=2=10，Cout1/S0；B再置1总和3=11，Cout1/S1。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "MUX、全加、冒险分卡，冒险卡有BC冗余例比正文更具体。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c05",
+      "title": "第5章 触发器与时序逻辑电路",
+      "own_explanation": "触发器在有效沿按旧状态同时更新；同步复位等边沿，异步复位不等边沿。",
+      "independent_process": "q=0，(x,r)三拍(1,0)(0,0)(0,1)，状态1、1、0，历史报警在中拍保存。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-eg-digital-004",
+          "stem": "上升沿D触发器初态Q=0，三个上升沿到来前D依次稳定为1、1、0，则三个边沿后的Q状态依次为________。",
+          "answer": "1、1、0。",
+          "topic_id": "digital-electronics.t06",
+          "answer_key": "1、1、0",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "RS、JK、D、T触发器",
+            "chapter_id": "digital-electronics.c05",
+            "topic_id": "digital-electronics.t06",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第5章 触发器与时序逻辑电路；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "ap-digital-005",
+          "stem": "某报警系统要求传感器一旦报警，即使传感器随后恢复正常，报警灯仍保持点亮，直到工作人员按下复位键。应采用组合逻辑还是时序逻辑？说明原因。",
+          "answer": "时序逻辑，需要存过去发生报警的状态，复位清除，触发器实现。",
+          "topic_id": "digital-electronics.t07",
+          "answer_key": "应采用时序逻辑并使用触发器等状态存储单元。因为输出不仅取决于当前传感器和复位输入，还取决于过去是否发生过报警；纯组合逻辑没有记忆功能。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "组合与时序·场景说明",
+            "chapter_id": "digital-electronics.c05",
+            "topic_id": "digital-electronics.t07",
+            "ability": "场景选型"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第5章 触发器与时序逻辑电路；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第二题为正文例题答案曝光；第一题为D规则简单迁移。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "q=0，(x,r)三拍(1,0)(0,0)(0,1)，状态1、1、0，历史报警在中拍保存。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "特性方程及状态时序分卡，旧状态同时更新提醒准确。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c06",
+      "title": "第6章 寄存器、计数器与存储器",
+      "own_explanation": "位扩展增加同地址数据位，字扩展增加地址数并片选；计数器未用状态也需出口。",
+      "independent_process": "4K×8由1K×4：位2倍、字4倍，2×4=8片；地址从10增12，多2位片选。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-eg-digital-006",
+          "stem": "用1K×4位RAM组成4K×8位存储器，说明位扩展倍数、字扩展倍数、芯片总数和新增片选地址位数。",
+          "answer": "位2、字4，总8片，新增2位片选地址。",
+          "topic_id": "digital-electronics.t09",
+          "answer_key": "位扩展2倍，字扩展4倍，共8片；片内1K需10根地址线，选择4个字扩展组还需2根高位地址线。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "存储器容量与扩展",
+            "chapter_id": "digital-electronics.c06",
+            "topic_id": "digital-electronics.t09",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第6章 寄存器、计数器与存储器；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-eg-digital-005",
+          "stem": "设计模6计数器至少需要几个触发器？为什么还必须规定两个未用状态的下一状态？",
+          "answer": "3个；8种编码只用6，110/111需能转回有效循环保证自启动。",
+          "topic_id": "digital-electronics.t16",
+          "answer_key": "至少3个，因为2²<6≤2³。3位共有8种编码，两个未用状态若没有回到有效循环的路径，电路可能锁死，因此要设计自启动。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "寄存器与同步计数器",
+            "chapter_id": "digital-electronics.c06",
+            "topic_id": "digital-electronics.t16",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第6章 寄存器、计数器与存储器；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "扩展为正文两种扩展组合；模6图直接教回000。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "4K×8由1K×4：位2倍、字4倍，2×4=8片；地址从10增12，多2位片选。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "扩展、移位、T激励分卡，不能先改Q0再算T1。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "digital-electronics",
+      "chapter_id": "digital-electronics.c07",
+      "title": "第7章 脉冲波形与数模、模数转换",
+      "own_explanation": "采样、量化与编码处理不同维度；555用阈值与电容充放电计时，SAR逐位试探。",
+      "independent_process": "SAR5.3V，试100=4保留，试110=6清第二位，试101=5保留，码101。",
+      "answers_before_key": [
+        {
+          "question_id": "sp-elec-digital-029",
+          "stem": "说明PWM调光或调速的基本原理，并指出占空比、频率和负载的边界。",
+          "answer": "PWM切换高低功率，占空比影响平均供能；频率影响闪烁、负载响应及开关损耗，感性负载需续流等。此后半主要靠模型先验，正文只教占空比计算。",
+          "topic_id": "digital-electronics.t10",
+          "answer_key": "PWM保持脉冲幅值基本不变，通过改变高电平占周期的比例改变负载平均电压或能量，从而调光或调速。频率过低会闪烁或产生转矩脉动，过高会增加开关损耗；负载惯性和驱动器能力也影响效果。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "PWM应用",
+            "chapter_id": "digital-electronics.c07",
+            "topic_id": "digital-electronics.t10",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第7章 脉冲波形与数模、模数转换；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-digital-024",
+          "stem": "8位理想ADC共有____个量化等级。",
+          "answer": "256，2^8。",
+          "topic_id": "digital-electronics.t11",
+          "answer_key": "256",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "ADC量化等级",
+            "chapter_id": "digital-electronics.c07",
+            "topic_id": "digital-electronics.t11",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/数字电子技术.md / 第7章 脉冲波形与数模、模数转换；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "PWM边界题无法完全凭正文；ADC/SAR过程条件齐全。",
+      "lecture_path": "course_notes/数字电子技术.md",
+      "review_path": "color_notes/数字电子技术.md",
+      "lecture_support": "SAR5.3V，试100=4保留，试110=6清第二位，试101=5保留，码101。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "SAR过程正文足够；PWM应用边界缺口见002。",
+      "optimization_ids": [
+        "EXP-ELEC-002"
+      ]
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c01",
+      "title": "第1章 通信系统概论",
+      "own_explanation": "通信把消息经适合媒质的信号送给信宿，方向/同时性与模拟数字分类互相独立。",
+      "independent_process": "净1kbit/s加入25%冗余为1.25k线路比特，业务净率仍1k，不能把冗余当收益。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-audit26-elec-duplex",
+          "stem": "从允许的传输方向和同时性，比较单工、半双工、全双工，并各举一个符合条件的场景。",
+          "answer": "单工单向广播；半双工双向轮流对讲；全双工双向同时电话。",
+          "topic_id": "communication.t01",
+          "answer_key": "单工仅固定一个方向，如单向广播；半双工可双向但不能同时，如按键对讲机；全双工可同时双向，如正常电话通话。要按链路运行方式而不是仅看设备名称判断。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "communication.t01",
+            "chapter_id": "communication.c01",
+            "topic_id": "communication.t01",
+            "ability": "比较辨析"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第1章 通信系统概论；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-cm-002",
+          "stem": "对讲机属于（ ）通信方式。",
+          "answer": "B，半双工。",
+          "topic_id": "communication.t01",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "通信基础",
+            "chapter_id": "communication.c01",
+            "topic_id": "communication.t01",
+            "ability": "概念识记"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第1章 通信系统概论；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "对讲机例直接曝光。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "净1kbit/s加入25%冗余为1.25k线路比特，业务净率仍1k，不能把冗余当收益。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "方向和同时性在重点保留。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c02",
+      "title": "第2章 信号、信道与噪声",
+      "own_explanation": "码元数与比特数分开计算；带宽/信噪比对容量施不同约束，dB先换线性。",
+      "independent_process": "M=8则log2=3，每秒2000×3=6000bit；16态为8000bit。100功率比10log100=20dB。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-audit26-elec-baud",
+          "stem": "某数字调制每个码元有8种等可能状态，码元速率2000 Bd，不计编码冗余。求每码元比特数、比特率；若改成16种状态且码元速率不变，比特率是多少？",
+          "answer": "3bit/码元，6000bit/s；改16态为8000bit/s。",
+          "topic_id": "communication.t02",
+          "answer_key": "每码元log2(8)=3 bit，Rb=2000×3=6000 bit/s。16种状态每码元4 bit，Rb=8000 bit/s。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "communication.t02",
+            "chapter_id": "communication.c02",
+            "topic_id": "communication.t02",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第2章 信号、信道与噪声；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-comm-025",
+          "stem": "功率比S/N=100，对应____dB。",
+          "answer": "20。",
+          "topic_id": "communication.t03",
+          "answer_key": "20",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "信噪比dB",
+            "chapter_id": "communication.c02",
+            "topic_id": "communication.t03",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第2章 信号、信道与噪声；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "新数值支持充分；噪声谱积分参数齐全。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "M=8则log2=3，每秒2000×3=6000bit；16态为8000bit。100功率比10log100=20dB。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "dB先转线性、容量与速率上限不混同。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c03",
+      "title": "第3章 模拟信号数字化与调制",
+      "own_explanation": "数字化先取样再定档编码；调制搬到载波，复用分资源，同步找判决与帧边界。",
+      "independent_process": "β5、fm3k，Δf15k，卡森2(15+3)=36kHz；TDM4路每帧32有效位加1同步，8000帧264kbit/s。",
+      "answers_before_key": [
+        {
+          "question_id": "uf-cm-017",
+          "stem": "调频指数β=5、最高调制频率3 kHz，按卡森公式带宽约为（ ）。",
+          "answer": "D，36kHz。",
+          "topic_id": "communication.t05",
+          "answer_key": "D",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "模拟调制",
+            "chapter_id": "communication.c03",
+            "topic_id": "communication.t05",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第3章 模拟信号数字化与调制；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-cm-009",
+          "stem": "PCM的典型处理顺序为（ ）。",
+          "answer": "A，抽样→量化→编码。",
+          "topic_id": "communication.t04",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "抽样与PCM",
+            "chapter_id": "communication.c03",
+            "topic_id": "communication.t04",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第3章 模拟信号数字化与调制；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第二题流程直接给出；本章六类任务跨度大但小节有各自实例。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "β5、fm3k，Δf15k，卡森2(15+3)=36kHz；TDM4路每帧32有效位加1同步，8000帧264kbit/s。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "四类任务多，但TDM有独立卡不只名词。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c04",
+      "title": "第4章 传输媒质与电磁波谱",
+      "own_explanation": "介质选型要看布线、移动、干扰；衰减让脉冲矮，色散让脉冲宽。",
+      "independent_process": "300MHz波长3e8/3e8=1m，3GHz为.1m；1310nm和1550nm都近红外。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-thin-024",
+          "stem": "同轴电缆、光纤和无线链路分别适合怎样的场景？从抗干扰、带宽、布线和移动性说明取舍。",
+          "answer": "同轴适合有屏蔽射频/有线电视；光纤长距高带宽强电磁环境但接续难；无线适合移动/难布线但受干扰衰落及覆盖约束。",
+          "topic_id": "communication.t07",
+          "answer_key": "同轴屏蔽较好且便于特定有线系统；光纤带宽高、距离远、抗电磁干扰但施工连接要求高；无线支持移动和快速部署但受频谱、遮挡和干扰影响。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "介质、传播与频谱位置",
+            "chapter_id": "communication.c04",
+            "topic_id": "communication.t07",
+            "ability": "场景选型"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第4章 传输媒质与电磁波谱；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-cm-022",
+          "stem": "按频率由低到高排列正确的是（ ）。",
+          "answer": "A。",
+          "topic_id": "communication.t07",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "光纤与移动通信",
+            "chapter_id": "communication.c04",
+            "topic_id": "communication.t07",
+            "ability": "概念识记"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第4章 传输媒质与电磁波谱；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "无线移动性取舍部分依赖常识先验，正文介质属性足以支撑大部。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "300MHz波长3e8/3e8=1m，3GHz为.1m；1310nm和1550nm都近红外。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "波长和频谱边界明确，移动性取舍少量常识先验。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c05",
+      "title": "第5章 数字调制与移动通信",
+      "own_explanation": "星座点表示I/Q候选符号，判最近点需等概与噪声同步条件；更多状态提高每码元比特但缩距离。",
+      "independent_process": "QPSK接收(.7,−.4)距(1,−1)最近判10；DPSK101从0出发相位π、π、0。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-audit26-elec-qpsk",
+          "stem": "未计编码开销，BPSK与QPSK都以1200 Bd发送等概码元。分别求比特率；若传输相同比特率，QPSK的码元速率与BPSK是什么关系？这是否意味着QPSK在任何信道都无代价地更好？",
+          "answer": "BPSK1200、QPSK2400bit/s；相同比特率QPSK码元速率一半；仍有信噪比、同步、带宽、开销条件。",
+          "topic_id": "communication.t08",
+          "answer_key": "BPSK每码元1 bit，为1200 bit/s；QPSK每码元2 bit，为2400 bit/s。相同比特率下，QPSK码元速率为BPSK的一半。不能推成任何信道无代价更好，还要考虑同步、相位误差和收发实现等条件。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "communication.t08",
+            "chapter_id": "communication.c05",
+            "topic_id": "communication.t08",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第5章 数字调制与移动通信；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "uf-cm-019",
+          "stem": "QPSK每个码元携带（ ）bit。",
+          "answer": "B，2bit。",
+          "topic_id": "communication.t08",
+          "answer_key": "B",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "数字调制",
+            "chapter_id": "communication.c05",
+            "topic_id": "communication.t08",
+            "ability": "概念识记"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第5章 数字调制与移动通信；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题速率全部在正文直接曝光。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "QPSK接收(.7,−.4)距(1,−1)最近判10；DPSK101从0出发相位π、π、0。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "BPSK/QPSK速率卡足够，OFDM是正文扩展。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c06",
+      "title": "第6章 高频小信号、功率放大与混频",
+      "own_explanation": "混频只搬频率保留调制；PLL用相位差调VCO频率，捕获与已锁跟踪是不同问题。",
+      "independent_process": "1000k目标+465k中频给1465k本振；1930k镜像同样差465k，需前端抑制。",
+      "answers_before_key": [
+        {
+          "question_id": "uf-cm-023",
+          "stem": "超外差接收机中混频器的主要作用是（ ）。",
+          "answer": "A。",
+          "topic_id": "communication.t09",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "高频电路",
+            "chapter_id": "communication.c06",
+            "topic_id": "communication.t09",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第6章 高频小信号、功率放大与混频；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-final-thin-025",
+          "stem": "说明锁相环从未锁定到锁定的基本过程，并比较捕获范围与保持范围。",
+          "answer": "鉴相产生误差→滤波→控制VCO改频追相，频率一致且相差稳定；捕获从未锁进入、保持是锁定后跟踪，捕获通常更严。",
+          "topic_id": "communication.t18",
+          "answer_key": "鉴相器比较输入与反馈相位，环路滤波后控制振荡器频率，使频差和相差逐步减小并锁定；捕获范围是能从失锁进入锁定的范围，保持范围是已锁定后仍能跟踪而不失锁的范围，通常保持范围更大。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "振荡器、反馈与锁相环",
+            "chapter_id": "communication.c06",
+            "topic_id": "communication.t18",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第6章 高频小信号、功率放大与混频；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "PLL文字可复述但无动态图。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "1000k目标+465k中频给1465k本振；1930k镜像同样差465k，需前端抑制。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "PLL有过程专卡，能够复述误差反馈而不是只背三个元件。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c07",
+      "title": "第7章 信源编码与信道编码",
+      "own_explanation": "信源编码去冗余，信道编码加可检验冗余；CRC只检错，纠错能力靠码距假设。",
+      "independent_process": "1101000异或1011000得0110000，再0101100得0011100，再0010110得0001010，再0001011得1，余001。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-accept-elec-communication-22-2",
+          "stem": "概率1/2、1/4、1/4的信源用码0、10、11。求平均码长，并说明平均1.5bit/符号是否要求每个码字都长1.5位。",
+          "answer": "平均.5×1+.25×2+.25×2=1.5bit/符号；是长期加权均值，码字仍1或2整数位。",
+          "topic_id": "communication.t19",
+          "answer_key": "平均0.5×1+0.25×2+0.25×2=1.5bit/符号；码字实际长度是1、2、2位，平均值可以非整数。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "communication.t19",
+            "chapter_id": "communication.c07",
+            "topic_id": "communication.t19",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第7章 信源编码与信道编码；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-comm-007",
+          "stem": "普通数据链路中CRC的主要作用是（ ）。",
+          "answer": "A，检错。",
+          "topic_id": "communication.t12",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "CRC",
+            "chapter_id": "communication.c07",
+            "topic_id": "communication.t12",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第7章 信源编码与信道编码；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "平均码长与CRC机制均正文曝光；汉明校正子可复演。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "1101000异或1011000得0110000，再0101100得0011100，再0010110得0001010，再0001011得1，余001。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "熵、CRC、ARQ分别卡，汉明例在正文。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c08",
+      "title": "第8章 基带传输、同步与眼图",
+      "own_explanation": "ISI看其他码元在当前采样点残留，不是所有时刻都不能重叠；眼图是叠加余量图。",
+      "independent_process": "Rs2000、滚降.5给单边带宽1.5kHz；模板(.8,.4)点积±1.2，选1。",
+      "answers_before_key": [
+        {
+          "question_id": "sp-elec-comm-023",
+          "stem": "眼图闭合可能与（ ）有关。",
+          "answer": "ABCD，眼闭合可多因，不能唯一指认器件。",
+          "topic_id": "communication.t14",
+          "answer_key": "ABCD",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "眼图闭合原因",
+            "chapter_id": "communication.c08",
+            "topic_id": "communication.t14",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第8章 基带传输、同步与眼图；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-comm-008",
+          "stem": "确定每个码元最佳判决时刻的是（ ）。",
+          "answer": "A，位同步。",
+          "topic_id": "communication.t13",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "位同步",
+            "chapter_id": "communication.c08",
+            "topic_id": "communication.t13",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第8章 基带传输、同步与眼图；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "题面机制正文直接支持；眼图需实际手机判读。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "Rs2000、滚降.5给单边带宽1.5kHz；模板(.8,.4)点积±1.2，选1。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "眼图只作示意图，眼高眼宽与抖动需结合相邻解释；不能声称已能识别真实仪器轨迹。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "communication",
+      "chapter_id": "communication.c09",
+      "title": "第9章 光纤通信与链路分析",
+      "own_explanation": "光链路同时检查功率、色散与同步；dBm是绝对功率，预留余量不改变实际读数。",
+      "independent_process": "发0dBm减实际5+2损耗得−7，距灵敏度−12余5dB，预留1后4dB可用。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-comm-002",
+          "stem": "链路发射功率10 dBm，发射和接收天线增益各2 dB，路径损耗80 dB，其他系统损耗2 dB。接收功率是多少dBm？只填写数字。",
+          "answer": "−68，10+2+2−80−2。",
+          "topic_id": "communication.t22",
+          "answer_key": "-68",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "功率预算",
+            "chapter_id": "communication.c09",
+            "topic_id": "communication.t22",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第9章 光纤通信与链路分析；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "sp-elec-comm-030",
+          "stem": "接收端无数据时，怎样区分无光、光功率不足和同步或帧格式问题？",
+          "answer": "先匹配波长量程测光功率；无光查光源/断链，低于灵敏度查损耗接头弯曲；功率正常再查眼图、时钟位同步、帧格式和边界并逐段验证。",
+          "topic_id": "communication.t16",
+          "answer_key": "先用光功率计确认是否有光及功率是否达标；无光查光源、断纤和连接，功率低查脏污、弯曲、熔接和损耗，必要时用OTDR定位。光功率正常后再查接收电路、位/帧同步、码型、速率和校验。检修时不得直视端面。",
+          "check": "部分：漏OTDR、断纤及不直视端面；正文已有相关信息，归为本次学习提取遗漏。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "光链路排障",
+            "chapter_id": "communication.c09",
+            "topic_id": "communication.t16",
+            "ability": "读图排障"
+          },
+          "supported_by": "course_notes/通信原理与高频电子线路.md / 第9章 光纤通信与链路分析；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第一题正文原题答案曝光；第二题由链路流程组合。",
+      "lecture_path": "course_notes/通信原理与高频电子线路.md",
+      "review_path": "color_notes/通信原理与高频电子线路.md",
+      "lecture_support": "发0dBm减实际5+2损耗得−7，距灵敏度−12余5dB，预留1后4dB可用。",
+      "prerequisites": "需能算四则、单位换算；涉及指数/复数相角时已有模型数学先验，本轮不是真正零数学起点。",
+      "review_consistency": "功率与预算分开清楚；OTDR和安全点为我的提取遗漏。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c01",
+      "title": "第1章 信号与系统概述",
+      "own_explanation": "时间离散和幅值离散分开；能量积分平方，周期需对所有时刻成立。",
+      "independent_process": "0≤2t−4≤3得2≤t≤3.5；ω4π，T2π/4π=.5s。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-sig-002",
+          "stem": "信号x(t)在0≤t≤3内均非零，在区间外为0。信号y(t)=x(2t-4)的非零区间是什么？",
+          "answer": "[2,3.5]。",
+          "topic_id": "signals-systems.t02",
+          "answer_key": "2≤t≤3.5",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "时间变换与冲激阶跃",
+            "chapter_id": "signals-systems.c01",
+            "topic_id": "signals-systems.t02",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第1章 信号与系统概述；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-signal-001",
+          "stem": "连续时间信号x(t)=3cos(4πt+π/6)的周期是多少秒？只填写数字。",
+          "answer": "0.5。",
+          "topic_id": "signals-systems.t01",
+          "answer_key": "0.5",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "时间、幅度与周期",
+            "chapter_id": "signals-systems.c01",
+            "topic_id": "signals-systems.t01",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第1章 信号与系统概述；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题均正文同例曝光；能量1/4也直接给。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "0≤2t−4≤3得2≤t≤3.5；ω4π，T2π/4π=.5s。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "时间变换卡可独立求关键点；能量积分仍需基础微积分。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c02",
+      "title": "第2章 连续时间系统的时域分析",
+      "own_explanation": "性质独立检验；初始储能与外部输入各贡献一项响应，零状态卷积不含初始储能。",
+      "independent_process": "y=tx的延迟输入路径t x(t−t0)，延迟输出(t−t0)x(t−t0)，一般不同故时变；叠加仍保持。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-sig-006",
+          "stem": "一个线性时不变系统初始状态非零，同时受到外部输入。为什么只计算x(t)*h(t)还不是总响应？应怎样补全？",
+          "answer": "卷积只得零初始下输入贡献，须加初始状态产生的零输入响应。",
+          "topic_id": "signals-systems.t04",
+          "answer_key": "x*h只给零初始条件下由输入产生的零状态响应；非零初始状态还会产生零输入响应。线性系统总响应应为零输入响应与零状态响应之和。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "零输入、零状态与总响应",
+            "chapter_id": "signals-systems.c02",
+            "topic_id": "signals-systems.t04",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第2章 连续时间系统的时域分析；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-final-sig-004",
+          "stem": "判断系统y(t)=t·x(t)是否线性、时不变，并用定义说明。",
+          "answer": "线性且时变；叠加齐次保持，两延迟路径如上不等。",
+          "topic_id": "signals-systems.t03",
+          "answer_key": "系统线性，因为输入的线性组合仍按同一系数相乘；系统时变，因为输入延迟t0后得到t·x(t-t0)，而原输出延迟为(t-t0)x(t-t0)，两者一般不等。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "线性、时不变、因果与稳定",
+            "chapter_id": "signals-systems.c02",
+            "topic_id": "signals-systems.t03",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第2章 连续时间系统的时域分析；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第二题正文完整曝光。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "y=tx的延迟输入路径t x(t−t0)，延迟输出(t−t0)x(t−t0)，一般不同故时变；叠加仍保持。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "零输入与零状态分卡；时变两路线反例清楚。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c03",
+      "title": "第3章 卷积与零状态响应",
+      "own_explanation": "卷积把输入各冲激贡献叠加；LTI稳定看h绝对积分，不以因果代替稳定。",
+      "independent_process": "[1,2]*[1,−1]：n0=1，n1=−1+2=1，n2=−2，结果[1,1,−2]。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-sig-007",
+          "stem": "LTI系统h(t)=e^t u(-t)。判断系统是否因果、是否BIBO稳定，并说明依据。",
+          "answer": "非因果，t<0非零；稳定，∫负无穷到0 e^t dt=1有限。",
+          "topic_id": "signals-systems.t05",
+          "answer_key": "非因果，因为h(t)在t<0不为零；稳定，因为∫从负无穷到0 e^t dt=1，h(t)绝对可积。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "冲激响应与LTI判据",
+            "chapter_id": "signals-systems.c03",
+            "topic_id": "signals-systems.t05",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第3章 卷积与零状态响应；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-final-sig-008",
+          "stem": "离散序列x[n]=[1,2]、h[n]=[1,-1]，两者均从n=0开始。写出完整线性卷积序列。",
+          "answer": "[1,1,−2]，长度2+2−1=3。",
+          "topic_id": "signals-systems.t06",
+          "answer_key": "[1,1,-2]",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "卷积反折、平移与重叠",
+            "chapter_id": "signals-systems.c03",
+            "topic_id": "signals-systems.t06",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第3章 卷积与零状态响应；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "均需从正文规则迁移，未同数值曝光。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "[1,2]*[1,−1]：n0=1，n1=−1+2=1，n2=−2，结果[1,1,−2]。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "卷积图、分段式及τ/t区别相互支撑。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c04",
+      "title": "第4章 傅里叶变换与频域分析",
+      "own_explanation": "傅里叶把波形写成频率分量；奇信号无直流余弦，滤波按H改变各频率幅相。",
+      "independent_process": "方波bn=2[1−cos(nπ)]/(nπ)，b1=4/π，b2=0；这同时用奇对称和半波对称。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-sig-011",
+          "stem": "某实周期信号满足x(t)=-x(-t)。不做积分，说明其直流分量以及正弦、余弦系数的基本结论。",
+          "answer": "直流a0=0、所有an=0，bn可非零；只奇对称不能断言偶次谐波全无。",
+          "topic_id": "signals-systems.t14",
+          "answer_key": "该信号为奇信号，一个对称周期内平均值为0，所以直流分量为0；与偶对称余弦相乘后积分为0，因此余弦系数为0，只可能保留正弦项。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "傅里叶级数与谱线",
+            "chapter_id": "signals-systems.c04",
+            "topic_id": "signals-systems.t14",
+            "ability": "机制解释"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第4章 傅里叶变换与频域分析；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-final-sig-012",
+          "stem": "输入含1 kHz和8 kHz两个正弦分量，理想低通截止频率为3 kHz且通带增益为1。输出保留哪些分量？为什么？",
+          "answer": "仅1kHz，8k在3k截止之外；通带增益1保留幅值。",
+          "topic_id": "signals-systems.t08",
+          "answer_key": "输出保留1 kHz分量并抑制8 kHz分量，因为Y(jω)=X(jω)H(jω)，低通在3 kHz内增益为1、截止频率外为0。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "傅里叶变换与滤波",
+            "chapter_id": "signals-systems.c04",
+            "topic_id": "signals-systems.t08",
+            "ability": "过程描述"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第4章 傅里叶变换与频域分析；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第二题图例正文直接曝光；第一题需保持边界。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "方波bn=2[1−cos(nπ)]/(nπ)，b1=4/π，b2=0；这同时用奇对称和半波对称。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "系数/变换/尺度各卡，保留2π和1/|a|。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c05",
+      "title": "第5章 拉普拉斯变换与Z变换",
+      "own_explanation": "系统函数与ROC一起描述响应，连续看虚轴、离散看单位圆；非零初值另加。",
+      "independent_process": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)，右边响应(e^−t−e^−2t)u，ROC Re(s)>−1。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-accept-elec-signals-systems-28-1",
+          "stem": "因果零初始系统y′+2y=x，x=e^(−t)u(t)。求Y(s)，写部分分式、零状态响应和ROC。",
+          "answer": "Y及部分分式如上，零状态响应(e^−t−e^−2t)u(t)，ROC Re(s)>−1。",
+          "topic_id": "signals-systems.t16",
+          "answer_key": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)；y=(e^−t−e^−2t)u(t)，ROC Re(s)>−1。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "signals-systems.t16",
+            "chapter_id": "signals-systems.c05",
+            "topic_id": "signals-systems.t16",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第5章 拉普拉斯变换与Z变换；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-final-sig-016",
+          "stem": "某有理Z变换的极点模最大为0.8。系统因果且BIBO稳定时，ROC应为？",
+          "answer": "A，|z|>.8包含单位圆。",
+          "topic_id": "signals-systems.t10",
+          "answer_key": "A",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "Z变换与差分方程",
+            "chapter_id": "signals-systems.c05",
+            "topic_id": "signals-systems.t10",
+            "ability": "场景选型"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第5章 拉普拉斯变换与Z变换；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "第一题正文完整曝光；Z为极点变式。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "Y=1/[(s+1)(s+2)]=1/(s+1)−1/(s+2)，右边响应(e^−t−e^−2t)u，ROC Re(s)>−1。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "部分分式、ROC、Z序列独立卡；不把代极点求系数误当收敛。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c06",
+      "title": "第6章 抽样定理与离散化",
+      "own_explanation": "采样造成频谱复制，副本重叠后不能靠普通数字滤波找回；量化误差另看中点与过载条件。",
+      "independent_process": "8位0～5V步长5/256V=.01953125V=19.53125mV，中点误差界9.765625mV。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-signal-006",
+          "stem": "连续低通信号最高频率为4 kHz。奈奎斯特临界采样率为多少kHz？只填写数字。",
+          "answer": "8kHz。",
+          "topic_id": "signals-systems.t11",
+          "answer_key": "8",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "采样条件与抗混叠",
+            "chapter_id": "signals-systems.c06",
+            "topic_id": "signals-systems.t11",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第6章 抽样定理与离散化；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-final-sig-018",
+          "stem": "8位均匀ADC输入范围为0到5 V，按Δ=V/2^N估算量化步长约为多少mV？保留1位小数。",
+          "answer": "19.5mV。",
+          "topic_id": "signals-systems.t12",
+          "answer_key": "19.5",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "量化步长与数字化链路",
+            "chapter_id": "signals-systems.c06",
+            "topic_id": "signals-systems.t12",
+            "ability": "直接计算"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第6章 抽样定理与离散化；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题数值正文直接曝光，正确不能证明采样谱会画。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "8位0～5V步长5/256V=.01953125V=19.53125mV，中点误差界9.765625mV。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "中点重建、无过载条件保留。",
+      "optimization_ids": []
+    },
+    {
+      "course_id": "signals-systems",
+      "chapter_id": "signals-systems.c07",
+      "title": "第7章 系统分析方法的联系",
+      "own_explanation": "同一LTI系统可按波形、频率分量或极点看，选域取决于任务与初态。",
+      "independent_process": "RC1：y′+y=x，H1/(s+1)，h=e^−t u；阶跃卷积∫0^t e^−τ=1−e^−t，初值0终值1。",
+      "answers_before_key": [
+        {
+          "question_id": "gap-final-sig-020",
+          "stem": "要完成三项任务：观察脉冲瞬态、判断滤波器保留哪些频率、由极点判断系统稳定性。分别优先选择哪个分析域和工具？",
+          "answer": "瞬态时域微分方程/卷积；保留频率用频域H(jω)；极点稳定用复频域及ROC。",
+          "topic_id": "signals-systems.t13",
+          "answer_key": "观察瞬态优先时域波形或卷积；判断保留频率优先频域傅里叶变换和H(jω)；由极点判断稳定性优先复频域拉普拉斯或Z变换并结合ROC。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "时域、频域与复频域选择",
+            "chapter_id": "signals-systems.c07",
+            "topic_id": "signals-systems.t13",
+            "ability": "场景选型"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第7章 系统分析方法的联系；见本章过程与曝光说明"
+        },
+        {
+          "question_id": "gap-signal-007",
+          "stem": "分别说明时域、频域和复频域分析信号与系统时主要关注什么，并各举一种常用工具。",
+          "answer": "时域波形/初值/卷积与微分方程；频域频谱/带宽/H；复频域微分差分方程化代数、极点ROC，用拉氏/Z。",
+          "topic_id": "signals-systems.t13",
+          "answer_key": "时域关注信号随时间的变化和系统响应，常用微分方程、差分方程或卷积；频域关注频率成分和频率响应，常用傅里叶级数或傅里叶变换；复频域把微分或差分关系转为代数关系并结合收敛域分析系统，常用拉普拉斯变换或Z变换。",
+          "check": "与答案及主要解释相符；未作机械字符串评分。",
+          "actual_metadata": {
+            "course": null,
+            "chapter": "三种分析视角",
+            "chapter_id": "signals-systems.c07",
+            "topic_id": "signals-systems.t13",
+            "ability": "比较辨析"
+          },
+          "supported_by": "course_notes/信号与系统.md / 第7章 系统分析方法的联系；见本章过程与曝光说明"
+        }
+      ],
+      "exposure": "两题高度重复且大部是正文选域表复述；未独立覆盖状态方程。",
+      "lecture_path": "course_notes/信号与系统.md",
+      "review_path": "color_notes/信号与系统.md",
+      "lecture_support": "RC1：y′+y=x，H1/(s+1)，h=e^−t u；阶跃卷积∫0^t e^−τ=1−e^−t，初值0终值1。",
+      "prerequisites": "需微积分、复指数和代数方程先修；本轮模型具备这些，正文有中间式但不能据此证明零数学基础自学可行。",
+      "review_consistency": "选域卡符合题，但两指定题几乎考同件事；不据两题对宣称状态方程已全学会。",
+      "optimization_ids": []
+    }
+  ],
+  "mobile_records": [
+    {
+      "course": "circuit",
+      "mode": "lecture",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=电路分析与电工技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_circuit_lecture_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/9章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "circuit",
+      "mode": "lecture",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=电路分析与电工技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_circuit_lecture_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/9章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "circuit",
+      "mode": "review",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=电路分析与电工技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_circuit_review_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "circuit",
+      "mode": "review",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=电路分析与电工技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_circuit_review_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "circuit",
+      "mode": "diagram",
+      "theme": "light",
+      "chapter": 3,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_circuit_diagram_light.png",
+      "image": "circuit_mesh_currents.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 440,
+        "width": 366,
+        "alt": "两网孔电路：共享支路中的电流是两个网孔电流之差"
+      }
+    },
+    {
+      "course": "circuit",
+      "mode": "diagram",
+      "theme": "dark",
+      "chapter": 3,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_circuit_diagram_dark.png",
+      "image": "circuit_mesh_currents.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 440,
+        "width": 366,
+        "alt": "两网孔电路：共享支路中的电流是两个网孔电流之差"
+      }
+    },
+    {
+      "course": "analog-electronics",
+      "mode": "lecture",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=模拟电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_analog-electronics_lecture_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/8章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "analog-electronics",
+      "mode": "lecture",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=模拟电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_analog-electronics_lecture_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/8章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "analog-electronics",
+      "mode": "review",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=模拟电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_analog-electronics_review_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "analog-electronics",
+      "mode": "review",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=模拟电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_analog-electronics_review_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "analog-electronics",
+      "mode": "diagram",
+      "theme": "light",
+      "chapter": 3,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_analog-electronics_diagram_light.png",
+      "image": "analog_common_emitter.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 500,
+        "width": 366,
+        "alt": "共射极放大电路的偏置、耦合和信号路径"
+      }
+    },
+    {
+      "course": "analog-electronics",
+      "mode": "diagram",
+      "theme": "dark",
+      "chapter": 3,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_analog-electronics_diagram_dark.png",
+      "image": "analog_common_emitter.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 500,
+        "width": 366,
+        "alt": "共射极放大电路的偏置、耦合和信号路径"
+      }
+    },
+    {
+      "course": "digital-electronics",
+      "mode": "lecture",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=数字电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_digital-electronics_lecture_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/7章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "digital-electronics",
+      "mode": "lecture",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=数字电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_digital-electronics_lecture_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/7章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "digital-electronics",
+      "mode": "review",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=数字电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_digital-electronics_review_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "digital-electronics",
+      "mode": "review",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=数字电子技术&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_digital-electronics_review_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "digital-electronics",
+      "mode": "diagram",
+      "theme": "light",
+      "chapter": 7,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_digital-electronics_diagram_light.png",
+      "image": "digital_quantization_steps.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 400,
+        "width": 366,
+        "alt": "量化台阶和2.3V到2.5V的误差"
+      }
+    },
+    {
+      "course": "digital-electronics",
+      "mode": "diagram",
+      "theme": "dark",
+      "chapter": 7,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_digital-electronics_diagram_dark.png",
+      "image": "digital_quantization_steps.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 400,
+        "width": 366,
+        "alt": "量化台阶和2.3V到2.5V的误差"
+      }
+    },
+    {
+      "course": "communication",
+      "mode": "lecture",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=通信原理与高频电子线路&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_communication_lecture_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/9章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "communication",
+      "mode": "lecture",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=通信原理与高频电子线路&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_communication_lecture_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/9章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "communication",
+      "mode": "review",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=通信原理与高频电子线路&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_communication_review_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "communication",
+      "mode": "review",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=通信原理与高频电子线路&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_communication_review_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "communication",
+      "mode": "diagram",
+      "theme": "light",
+      "chapter": 8,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_communication_diagram_light.png",
+      "image": "comm_eye_diagram.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 400,
+        "width": 366,
+        "alt": "眼高与眼宽分别反映幅度噪声余量和定时余量"
+      }
+    },
+    {
+      "course": "communication",
+      "mode": "diagram",
+      "theme": "dark",
+      "chapter": 8,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_communication_diagram_dark.png",
+      "image": "comm_eye_diagram.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 400,
+        "width": 366,
+        "alt": "眼高与眼宽分别反映幅度噪声余量和定时余量"
+      }
+    },
+    {
+      "course": "signals-systems",
+      "mode": "lecture",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=信号与系统&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_signals-systems_lecture_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/7章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "signals-systems",
+      "mode": "lecture",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/notes.html#course=信号与系统&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_signals-systems_lecture_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n1/7章\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频"
+    },
+    {
+      "course": "signals-systems",
+      "mode": "review",
+      "theme": "light",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=信号与系统&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_signals-systems_review_light_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "signals-systems",
+      "mode": "review",
+      "theme": "dark",
+      "chapter": 1,
+      "url": "http://127.0.0.1:3089/color-notes.html#course=信号与系统&chapter=1",
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_signals-systems_review_dark_c01.png",
+      "dimensions": {
+        "width": 390,
+        "body": 390,
+        "root": 390
+      },
+      "visible": "跳到主要内容\n目录\nOffice软件操作\n大学计算机基础与新技术\n多媒体技术\n操作系统原理\n数据库技术\n数据结构与算法\nC与Python程序设计\n计算机组成原理\n计算机网络\n电路分析与电工技术\n模拟电子技术\n数字电子技术\n通信原理与高频电子"
+    },
+    {
+      "course": "signals-systems",
+      "mode": "diagram",
+      "theme": "light",
+      "chapter": 3,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_signals-systems_diagram_light.png",
+      "image": "signal_convolution.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 400,
+        "width": 366,
+        "alt": "两个矩形脉冲卷积时重叠长度随平移位置变化"
+      }
+    },
+    {
+      "course": "signals-systems",
+      "mode": "diagram",
+      "theme": "dark",
+      "chapter": 3,
+      "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\elec_signals-systems_diagram_dark.png",
+      "image": "signal_convolution.svg",
+      "image_info": {
+        "complete": true,
+        "naturalWidth": 400,
+        "width": 366,
+        "alt": "两个矩形脉冲卷积时重叠长度随平移位置变化"
+      }
+    }
+  ],
+  "mobile_observations": {
+    "circuit": "网孔图左右电源极性、两圈箭头、中心差电流可分辨；浅深均能读到I1−I2=1.5A。",
+    "analog-electronics": "共射图B/C/E与R1/R2/RC/RE路径可辨；字标较细但截图可识别，不仅按尺寸判清晰。",
+    "digital-electronics": "量化阶梯2.3V横坐标与2.5V代表值、码10、误差线浅深清楚，能解释输入不等于重建值。",
+    "communication": "眼图中央眼高、眼宽及采样位置可读；图是几何示意，未把一幅椭圆当成真实轨迹学习已通过。",
+    "signals-systems": "卷积三帧在t=.5/1/1.5时橙框位置、绿重叠区与坐标均清楚，独立得到.5/1/.5；深色绿色填充较暗但边界仍足以区分。"
+  },
+  "retest": "未修产品，本轮问题未复测。"
+}

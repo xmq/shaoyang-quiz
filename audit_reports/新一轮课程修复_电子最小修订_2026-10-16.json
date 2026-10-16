@@ -1,0 +1,112 @@
+{
+  "title": "新一轮电子课程最小修复记录",
+  "date": "2026-10-16",
+  "finished_at": "2026-10-16T17:27:49.156776",
+  "status": "源文件已冻结，待root统一登记、构建及其他代理复测",
+  "scope": "仅修改电路和数字两科讲义/重点四份源文件；未改其他三科、registry、题库、staging、脚本或dist，未build。",
+  "changes": [
+    {
+      "issue": "EXP-ELEC-001",
+      "chapter": "circuit.c05",
+      "reserved_topic_id": "circuit.t15",
+      "lecture_h4_and_review_h3": "同步转速与转差率",
+      "content": "补n同步=60f/p=120f/P、Hz/极对/极数/r/min；50Hz四极先p=2得1500；转子1440区分同步，并算s=4%；n<n同步限定正常电动状态。"
+    },
+    {
+      "issue": "EXP-ELEC-002",
+      "chapter": "digital-electronics.c07",
+      "content": "固定幅值周期改脉宽，D用0～1；理想0/5V的5D平均电压，25%/75%得1.25/3.75V；引用已有digital_pwm_duty.svg。补低频/高频及负载驱动限制，不将平均电压直接当转速或严格线性亮度。扩现有脉冲周期与占空比卡，未新增PWM卡。"
+    },
+    {
+      "issue": "EXP-ELEC-003",
+      "chapter": "digital-electronics.c01",
+      "reserved_topic_id": "digital-electronics.t19",
+      "lecture_h4_and_review_h3": "补码加法与有符号溢出",
+      "content": "保留原定字长补码H3，在其中加同名H4；新卡放第1章末。4位−8～7；5+4无进位但溢出，−1+1有进位而不溢出，突出两种判断不同。"
+    },
+    {
+      "issue": "三相术语修正",
+      "chapter": "circuit.c05",
+      "content": "将三相重点“线量与相量”改为“线电压/电流与相电压/电流”；对称条件、有效值、功率和变比条件保留。"
+    }
+  ],
+  "source_checks": {
+    "files": [
+      {
+        "path": "course_notes/电路分析与电工技术.md",
+        "sha256": "827d0bb43bf2dbe45d92be0eca27f289f8b9d83370ca004c89a32042bbe02871",
+        "old_h2_h3_order_preserved": true,
+        "old_highlight_markers_preserved": true,
+        "new_h3": []
+      },
+      {
+        "path": "color_notes/电路分析与电工技术.md",
+        "sha256": "c4cc2d71e58192854df7e547e26e023e98cb26b607b0d05f6f425b54496d55f4",
+        "old_h2_h3_order_preserved": true,
+        "old_highlight_markers_preserved": true,
+        "new_h3": [
+          "### 同步转速与转差率"
+        ]
+      },
+      {
+        "path": "course_notes/数字电子技术.md",
+        "sha256": "bdc673e7b072e2060ee340ca503512533d2af0393a68d40d512474dd94404841",
+        "old_h2_h3_order_preserved": true,
+        "old_highlight_markers_preserved": true,
+        "new_h3": []
+      },
+      {
+        "path": "color_notes/数字电子技术.md",
+        "sha256": "a217aa3f1eac2c2930236ba3ad2b77b7a9e62860409431b6a6474bec963e3cb5",
+        "old_h2_h3_order_preserved": true,
+        "old_highlight_markers_preserved": true,
+        "new_h3": [
+          "### 补码加法与有符号溢出"
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "title": "同步转速与转差率",
+        "block_chars": [
+          59,
+          55,
+          42
+        ],
+        "body_chars": 156
+      },
+      {
+        "title": "补码加法与有符号溢出",
+        "block_chars": [
+          52,
+          53,
+          42
+        ],
+        "body_chars": 147
+      },
+      {
+        "title": "脉冲周期与占空比",
+        "block_chars": [
+          50,
+          63,
+          48
+        ],
+        "body_chars": 161
+      }
+    ],
+    "numeric_checks": [
+      "60×50/2=120×50/4=1500 r/min",
+      "(1500−1440)/1500=0.04=4%",
+      "5×0.25=1.25 V、5×0.75=3.75 V",
+      "4位0101+0100=1001：无向外进位、有符号溢出",
+      "4位1111+0001=1 0000：有进位、无有符号溢出"
+    ],
+    "svg_xml_parse": "通过，引用现有文件，不修改该SVG"
+  },
+  "pending": [
+    "root登记两张新卡预留topic ID并补对应练习/映射。",
+    "root统一构建后，其他代理用失败任务复测电机、PWM、补码卡，并看390×844浅深页面与PWM图。",
+    "两项rubric及生成器由root处理，本代理未触碰。"
+  ],
+  "not_claimed": "源检查不代表页面、离线或修后独立学习复测已通过。"
+}

@@ -1,0 +1,494 @@
+{
+  "title": "新一轮课程体验：独立复测（应用审阅者）",
+  "date": "2026-10-16",
+  "completed_at": "2026-10-16T17:39:36.267657",
+  "reviewer": "应用初学者/电子考生体验代理；本轮独立复测非本人编写的计算机与电子修复。应用N-S/PAD正文曾由本人参与，明确不自签。",
+  "status": "指定15项原失败任务复测通过；数据库组织偏好保留；不代表所有教材完整或真人研究通过。",
+  "build_stages": [
+    {
+      "build": "3e002732a520b8e1",
+      "scope": "14个相关章的讲义/重点两页浅深，共56状态；另4张新卡两色8状态；原任务Cache此阶段仅部分通过",
+      "mobile_states": 64,
+      "overflow": 0,
+      "visible_broken_images": 0,
+      "artifact": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\final_retest_applied_browser"
+    },
+    {
+      "build": "8397fb4e5c5bb295",
+      "scope": "唯一末次修改Cache卡，重做sp-core-co-044完整放置/硬件/冲突任务，只加2个浅深卡状态，其余不无理由重跑",
+      "mobile_states": 2,
+      "overflow": 0,
+      "visible_broken_images": 0,
+      "artifact": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\final_retest_applied_cache_final"
+    }
+  ],
+  "coverage": {
+    "original_tasks": 15,
+    "passed_after_retest": 15,
+    "new_questions": 7,
+    "new_question_key_matches": 7,
+    "lectures_read": "数据结构c01；OS c02/c06；组成c04；程序c03/c08；网络c05/c06/c08；电路c05；数字c01/c07完整读，长输出截断处另补；各前后相关边界也读。电路c07/模拟c08复核原任务与候选字段。",
+    "dependency_results": "三结构→循环分析、库调用→内核/进程、除余编号→文件块与位图、数据/块/行/组→Cache、分隔规范化→get累计、TCP字节/MSS→拥塞轮次、HTTP/HTML→图片链接、媒体时钟→RTP时间戳、极对→同步/实际转速、固定位宽→补码/进位、脉宽比例→平均与负载均能接上。",
+    "mobile": "390×844，本机Chrome headless，Python只读dist随机端口，非真机。实际view_image查看8张新卡浅深、PWM浅深、末次Cache浅深；其余打开章节用于运行态抽查，未声称逐滚动位置全视觉检查。"
+  },
+  "initial_cache_failure": {
+    "build": "3e002732a520b8e1",
+    "status": "部分通过",
+    "why": "卡只有位置规则，没有硬件复杂度和冲突取舍回忆线索；题sp-core-co-044明确要求取舍。已通知root，由root补，审阅者未改产品。",
+    "final_retest": "8397卡已增加同容量下直接简单易冲突、全相联比较硬件多、组相联折中。用两行/块0,2反例检验，完整通过。"
+  },
+  "original_task_retests": [
+    {
+      "issue_id": "EXP-COMP-001",
+      "chapter_id": "data-structures.c01",
+      "original_task": "zg-34137",
+      "repeated_answer": "顺序、选择、循环三种基本结构；顺序如读x→x+1→输出，选择如x>=60分支，循环如遍历成绩累加，需有结束条件。",
+      "check": "新增段在算法特征与复杂度之前，足以为后续三角循环伪代码提供前置。重做填空及自举例均有本章依据。",
+      "status": "通过",
+      "source_file": "course_notes/数据结构与算法.md",
+      "source_line": 15,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-COMP-002",
+      "chapter_id": "operating-system.c02",
+      "original_task": "gap-audit26-core-os-system-call",
+      "repeated_answer": "库函数是现成可调用函数；strlen可全在用户态得3，库read可封装受控系统入口进入内核检查参数和权限。页表不能任意改以免破坏隔离。内核缓存可立即完成read并回原进程，等磁盘时才可能阻塞调度。",
+      "check": "定义先于路径，函数调用/权限模式切换/更换进程三个概念分开；复述覆盖题目三个rubric。",
+      "status": "通过",
+      "source_file": "course_notes/操作系统原理.md",
+      "source_line": 48,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-COMP-003",
+      "chapter_id": "net-05",
+      "original_task": "gap-full-net-congestion-trace",
+      "repeated_answer": "MSS是TCP数据部分最大字节数，不含TCP/IP首部。MSS1000B时4MSS为4000B；门限8的第1至5轮为1、2、4、8、9MSS，达到门限后每轮加1。",
+      "check": "新增定义在首次预测图之前且非折叠答案内；不混MTU、MSL与速率单位。",
+      "status": "通过",
+      "source_file": "course_notes/计算机网络.md",
+      "source_line": 575,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-COMP-004",
+      "chapter_id": "programming.c08",
+      "original_task": "hn-recall-sy26-003",
+      "repeated_answer": "text='hello world, hello python'; counts={}; 逐词执行counts[word]=counts.get(word,0)+1。规范化后hello/world/hello/python，状态{hello:1}→{hello:1,world:1}→{hello:2,world:1}→{hello:2,world:1,python:1}。",
+      "check": "新卡提供lower/分隔符/split/get及实际状态；真实运行结果hello2/world1/python1，总4词。逗号无空格的边界见新题另测。",
+      "status": "通过",
+      "source_file": "color_notes/C与Python程序设计.md",
+      "source_line": 89,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-COMP-006",
+      "chapter_id": "net-06",
+      "original_task": "dy-340ea980",
+      "repeated_answer": "判断正确；文字与图片都能附链接，点课程封面图片可访问课程页URL，图片作为可点击入口，不必先把图变成文字。",
+      "check": "新增段在HTML/HTTP分工之后，直接支持原判断题，不扩展成网页编程要求。",
+      "status": "通过",
+      "source_file": "course_notes/计算机网络.md",
+      "source_line": 695,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-001",
+      "chapter_id": "computer-organization.c04",
+      "original_task": "sp-core-co-044",
+      "repeated_answer": "直接映射固定行、硬件简单但同容量下易冲突；全相联可放任意行、冲突限制少但需更多比较硬件；组相联固定组内任一路，是成本与冲突折中。两行Cache中块0/2直接映射都争行0，全相联可各占一行；不是命中率高就保证速度快。",
+      "check": "3e阶段只恢复位置规则，尚缺硬件/冲突线索，已通知root。末次8397卡补取舍，实际浅深查看后重做完整题，现通过。原阶段不足保留，不回写成原build已通过。",
+      "status": "通过",
+      "source_file": "color_notes/计算机组成原理.md",
+      "source_line": 61,
+      "stage": "8397fb4e5c5bb295末次Cache专项"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-002",
+      "chapter_id": "operating-system.c06",
+      "original_task": "cg-10-s1-q57",
+      "repeated_answer": "均从1起：100−1=99，99÷32商3余3，各加1→4号字4号位，选B；均从0起则100÷32商3余4→3号字4号位。",
+      "check": "新卡明确编号起点与0/1位值约定，和文件偏移逻辑块定位分开。新题也检验不能机械照搬从1公式。",
+      "status": "通过",
+      "source_file": "color_notes/操作系统原理.md",
+      "source_line": 108,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-003",
+      "chapter_id": "programming.c03",
+      "original_task": "cg-04-s1-q7 / cg-04-s1-q10",
+      "repeated_answer": "第一题a=2*6后a12；a*3得36但没写回；末a+5得17，选B。第二题先x9，再x%=x+3即9%12=9并写回x，整个表达式9，选D。",
+      "check": "卡有先赋值再取后表达式的例，并区分实参分隔逗号。正文仍明确从左到右及取最后项；未新增未排序自增错误。",
+      "status": "通过",
+      "source_file": "color_notes/C与Python程序设计.md",
+      "source_line": 24,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-EXAM-COMP-004",
+      "chapter_id": "net-08",
+      "original_task": "gap-net-media-001",
+      "repeated_answer": "选B，RTP时间戳按采样时刻组织播放节奏，序号帮助排序；8kHz×20ms=160样值，时间戳差160而序号+1。RTCP报质量统计，SIP建改停会话，RTP不保证可靠重传。",
+      "check": "上卡替换原重复耗尽算例；下方独立缓冲卡仍保留24/(4−3)=24秒，两个任务不互相挤占。",
+      "status": "通过",
+      "source_file": "color_notes/计算机网络.md",
+      "source_line": 265,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-ELEC-001",
+      "chapter_id": "circuit.c05",
+      "original_task": "uf-ee-022",
+      "repeated_answer": "四极P4→极对p2；n同步=60×50/2=1500r/min，选C。实际1440不是同步转速；转差(1500−1440)/1500=4%。",
+      "check": "正文与新卡均明确f、P、p、单位及正常电动边界。原P1的必要公式和极数解释现已支持，重做通过。",
+      "status": "通过",
+      "source_file": "course_notes/电路分析与电工技术.md",
+      "source_line": 316,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-ELEC-002",
+      "chapter_id": "digital-electronics.c07",
+      "original_task": "sp-elec-digital-029",
+      "repeated_answer": "PWM在固定幅值/周期下改高电平占比D，从而改平均作用量；理想0/5V平均5D，25%/75%得1.25/3.75V。低频可闪烁/转矩脉动，高频增开关损耗；须看负载响应、驱动与电流，平均电压不等直接转速或线性亮度。",
+      "check": "课文与原占空比卡补机制、计算和边界；PWM图实际浅深可读、黑三角消失、T相同脉宽不同与均值位置正确。",
+      "status": "通过",
+      "source_file": "course_notes/数字电子技术.md",
+      "source_line": 339,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-ELEC-003",
+      "chapter_id": "digital-electronics.c01",
+      "original_task": "4位补码范围、进位与有符号溢出回忆任务",
+      "repeated_answer": "4位范围−8..7；0101+0100=1001无向外进位，却把5+4的9编码成负数，发生有符号溢出。1111+0001=1 0000有向外进位，保留0000为0，−1+1无有符号溢出。",
+      "check": "新增独立卡提供范围与两个反例，能回忆判断，不再只能回忆BCD/格雷码。未将有符号溢出与进位同义。",
+      "status": "通过",
+      "source_file": "color_notes/数字电子技术.md",
+      "source_line": 16,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-ELEC-004",
+      "chapter_id": "circuit.c07",
+      "original_task": "sp-elec-circuit-028",
+      "repeated_answer": "由旧稳态定初值，新稳态定终值，τ=RC；从0充至终值时，一个τ比例1−e^-1=0.6321205588，即63.2%，普通无冲激换路电容电压连续。",
+      "check": "题答案/解释/第4rubric现在一致为63.2%，5项每项1分、总5；未改变正确答案，未声称测试了自动主观评分器。",
+      "status": "通过",
+      "source_file": "questions.json",
+      "source_line": 61996,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-ELEC-005",
+      "chapter_id": "analog-electronics.c08",
+      "original_task": "gap-eg-analog-006",
+      "repeated_answer": "变压→整流→滤波→稳压。先调交流幅值，再脉动直流，再减纹波，最后稳输出；题只问排序，不添加测量点。",
+      "check": "唯一rubric为按四环节顺序排列，points3=max_score3；答案未变，原测量点评分与题干错位已解除。",
+      "status": "通过",
+      "source_file": "questions.json",
+      "source_line": 45130,
+      "stage": "3e002732a520b8e1冻结阶段"
+    },
+    {
+      "issue_id": "EXP-EXAM-ELEC-001",
+      "chapter_id": "circuit.c05",
+      "original_task": "区分三相每相物理量与复数相量",
+      "repeated_answer": "卡改为线电压/电流与相电压/电流。对称Y接380V线电压时，每相电压380/√3≈219.4V，线电流等相电流；复数相量则是幅相计算表示，不能把二者当同一个名词。",
+      "check": "原卡的线量对相量歧义已消除，正文Y/Δ换算及名称解释仍完整，未改算法。",
+      "status": "通过",
+      "source_file": "color_notes/电路分析与电工技术.md",
+      "source_line": 60,
+      "stage": "3e002732a520b8e1冻结阶段"
+    }
+  ],
+  "new_tasks": {
+    "time": "2026-10-16T17:33:11.377108",
+    "answers_opened": false,
+    "model_prior": true,
+    "not_human_blind_test": true,
+    "questions": [
+      {
+        "id": "gap-experience26-motor-slip",
+        "topic_id": "circuit.t15",
+        "type": "简答",
+        "stem": "一台50 Hz、四极三相异步电动机处于正常电动运行，转子转速1440 r/min。计算同步转速与转差率，并说明为什么不能把1440直接代入同步转速公式反求极数。",
+        "options": {},
+        "attempt": "n同步=60f/p，四极p=2，60×50/2=1500 r/min；s=(1500−1440)/1500=0.04=4%。1440为有滑差的转子实际转速，不是定子磁场同步转速，不能把它当n同步反求极数。",
+        "basis": "先转极数为极对数再算同步；正常电动转子低于同步。",
+        "expected": {
+          "id": "gap-experience26-motor-slip",
+          "answer": "四极即p=2对极，同步转速n同步=60×50/2=1500 r/min；s=(1500−1440)/1500=0.04=4%。1440是转子实际转速，不是旋转磁场同步转速，二者因转差而不同。",
+          "explanation": "先将极数换成极对数，再算磁场同步转速；转差率比较同步与实际转速。公式60f/p描述旋转磁场，不用于把实际转速当同步转速反推。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。"
+      },
+      {
+        "id": "gap-experience26-complement-carry",
+        "topic_id": "digital-electronics.t19",
+        "type": "简答",
+        "stem": "采用4位二进制补码，仅保留4位结果。计算1111+0001，并分别判断是否产生最高位进位、是否产生有符号溢出，说明依据。",
+        "options": {},
+        "attempt": "1111表示−1，0001表示+1；逐位加得1 0000，仅保留低4位0000。最高位有向外进位1；有符号无溢出，因为异号相加且结果0落在−8..7。",
+        "basis": "区分无符号进位与有符号溢出；负权−8+4+2+1=−1。",
+        "expected": {
+          "id": "gap-experience26-complement-carry",
+          "answer": "1111表示−1，0001表示+1；相加得到1 0000，保留结果0000，有最高位进位1。实际−1+1=0在−8到7内，没有有符号溢出；异号相加不会因结果超出有符号范围而溢出。",
+          "explanation": "进位记录最高位之外的无符号进位，有符号溢出检查结果是否超出补码范围，两者不能互相代替。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。"
+      },
+      {
+        "id": "gap-experience26-complement-minimum",
+        "topic_id": "digital-electronics.t19",
+        "type": "单选",
+        "stem": "对4位补码1000按位取反加1，并仍仅保留4位，结果仍为1000。正确解释是（ ）。",
+        "options": {
+          "A": "结果已经正确表示+8",
+          "B": "−8的相反数+8超出4位补码范围，不能由这个结果表示",
+          "C": "1000一定是负零",
+          "D": "任何数取反加1都会保持不变"
+        },
+        "attempt": "B",
+        "basis": "1000表示−8，4位范围−8..7不含+8；取反0111加1回1000并非+8。",
+        "expected": {
+          "id": "gap-experience26-complement-minimum",
+          "answer": "B",
+          "explanation": "1000原来表示−8，4位补码范围为−8～7，其相反数+8不可表示。位运算得到1000不意味着成功表示+8；固定字长范围必须先检查。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。"
+      },
+      {
+        "id": "gap-experience26-word-count-separator",
+        "topic_id": "programming.t22",
+        "type": "简答",
+        "stem": "阅读Python代码：\ntext = \"red,blue red\"\ncounts = {}\nfor word in text.lower().replace(\",\", \" \").split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n写出两个词的计数，并说明若把replace(\",\", \" \")改成replace(\",\", \"\")会有什么不同。",
+        "options": {},
+        "attempt": "替换为空格后序列red blue red，计数red:2、blue:1。若删除逗号，序列变redblue red，计数redblue:1、red:1；不再有blue独立词。",
+        "basis": "replace必须保留词边界，字典get以0为默认再增1。",
+        "expected": {
+          "id": "gap-experience26-word-count-separator",
+          "answer": "原代码得到red:2、blue:1。逗号换为空格后词序列为red、blue、red；若直接删除逗号，red,blue会合成redblue，词序列变为redblue、red，得到redblue:1、red:1。",
+          "explanation": "预处理规则由输入约定决定。逗号本身充当两个相邻单词的分隔符时，应保留分词边界；get(word,0)+1让新词从0开始累计。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。"
+      },
+      {
+        "id": "gap-experience26-bitmap-zero-index",
+        "topic_id": "operating-system.t21",
+        "type": "简答",
+        "stem": "位示图每个字含32位，块号、字号和位号全部从0开始编号。第100号块处于几号字的几号位？有人套用从1开始的公式算出“4号字、4号位”，指出错误。位号按题设顺序计算，不讨论机器字节序。",
+        "options": {},
+        "attempt": "100=3×32+4，所以字号3、位号4。从1开始公式给floor((100−1)/32)+1=4、((100−1)%32)+1=4，套错编号起点；题意0起不能用它。",
+        "basis": "按整除/余数还原块号，3×32+4=100。",
+        "expected": {
+          "id": "gap-experience26-bitmap-zero-index",
+          "answer": "字号=100整除32=3，位号=100 mod 32=4，即3号字4号位。从0开始时直接取商和余数，不需要先减1或最后加1；从1编号的公式不能原样套用。",
+          "explanation": "编号起点是计算条件。0号字覆盖0～31，1号字覆盖32～63，2号字覆盖64～95，3号字覆盖96～127，因此100在3号字第4号位。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。"
+      },
+      {
+        "id": "gap-experience26-ns-nested-branch",
+        "topic_id": "software-engineering.t25",
+        "type": "单选",
+        "stem": "一个N-S盒图先判断A“账号有效”，仅在A的真分支内部嵌套判断B“余额足够”。当A为假时，正确执行方式是（ ）。",
+        "options": {
+          "A": "仍判断B并按余额扣款",
+          "B": "同时执行A的假分支和B的假分支",
+          "C": "只执行A的假分支，不进入B判断",
+          "D": "无论A真假都必须先执行B"
+        },
+        "attempt": "C",
+        "basis": "B在A真区域内，A假不进入其内部。",
+        "expected": {
+          "id": "gap-experience26-ns-nested-branch",
+          "answer": "C",
+          "explanation": "B整个包含在A的真分支，A假时走外层假分支，不进入B。盒图的包含关系表达控制依赖，不能把上下或左右出现的所有动作都依次执行。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。 本人参与该讲义内容，不能将此题结果作为N-S/PAD修复的独立验收签名。"
+      },
+      {
+        "id": "gap-experience26-ns-pad-false-branch",
+        "topic_id": "software-engineering.t25",
+        "type": "简答",
+        "stem": "模块规则：库存充足则发货；库存不足时，再判断能否补货，能补货则下采购单，否则提示缺货。用N-S盒图或PAD图描述时，第二个判断应嵌入第一个判断的哪一分支？列出三条处理路径。",
+        "options": {},
+        "attempt": "第二判断嵌入库存不足即第一个判断的假分支。三路径：库存足→发货；库存不足且可补货→下采购单；库存不足且不可补货→提示缺货。",
+        "basis": "嵌套属于触发第二判断的业务分支，不固定必须在真分支。",
+        "expected": {
+          "id": "gap-experience26-ns-pad-false-branch",
+          "answer": "第二判断“能否补货”嵌入“库存充足”的假分支。三条路径：库存充足→发货；库存不足且可补货→下采购单；库存不足且不可补货→提示缺货。N-S把第二判断的完整盒放在外层假分支内，PAD从外层假分支向右展开第二选择节点。",
+          "explanation": "本题将嵌套位置改为外层假分支，不能机械照搬讲义中A真才判断B的图；应先把业务条件和动作对应，再确定结构包含关系。"
+        },
+        "check": "关键结论与独立计算一致",
+        "reviewer_boundary": "答案包未打开前落TEMP，但模型有先验，不是真人盲测。 本人参与该讲义内容，不能将此题结果作为N-S/PAD修复的独立验收签名。"
+      }
+    ]
+  },
+  "new_task_calculation_file": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\final_retest_applied_calculations.json",
+  "rubric_retests": [
+    {
+      "id": "ap-is-006",
+      "criteria": [
+        {
+          "criterion": "等保流程",
+          "points": 1
+        },
+        {
+          "criterion": "持续性",
+          "points": 1
+        },
+        {
+          "criterion": "事件响应对象与闭环",
+          "points": 1
+        },
+        {
+          "criterion": "二者联系和不能互相替代的边界",
+          "points": 1
+        }
+      ],
+      "max_score": 4,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    },
+    {
+      "id": "ap-analog-005",
+      "criteria": [
+        {
+          "criterion": "正确区分截止、放大、饱和三种状态的主要特征",
+          "points": 1
+        },
+        {
+          "criterion": "说明开关与放大用途",
+          "points": 1
+        },
+        {
+          "criterion": "说明IC=βIB的适用边界",
+          "points": 1
+        }
+      ],
+      "max_score": 3,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    },
+    {
+      "id": "ap-digital-006",
+      "criteria": [
+        {
+          "criterion": "三种方式各自的状态特征和典型用途",
+          "points": 1
+        },
+        {
+          "criterion": "说明施密特的两个阈值或回差",
+          "points": 1
+        }
+      ],
+      "max_score": 2,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    },
+    {
+      "id": "sp-core-ds-033",
+      "criteria": [
+        {
+          "criterion": "稳定性含义",
+          "points": 1
+        },
+        {
+          "criterion": "一个稳定算法和代价边界",
+          "points": 1
+        }
+      ],
+      "max_score": 2,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    },
+    {
+      "id": "sp-elec-circuit-028",
+      "criteria": [
+        {
+          "criterion": "初值",
+          "points": 1
+        },
+        {
+          "criterion": "终值",
+          "points": 1
+        },
+        {
+          "criterion": "τ=RC",
+          "points": 1
+        },
+        {
+          "criterion": "63.2%",
+          "points": 1
+        },
+        {
+          "criterion": "不突变或指数逼近",
+          "points": 1
+        }
+      ],
+      "max_score": 5,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    },
+    {
+      "id": "sp-elec-comm-028",
+      "criteria": [
+        {
+          "criterion": "开口",
+          "points": 1
+        },
+        {
+          "criterion": "四类原因和需分段验证",
+          "points": 1
+        }
+      ],
+      "max_score": 2,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    },
+    {
+      "id": "gap-eg-analog-006",
+      "criteria": [
+        {
+          "criterion": "按变压→整流→滤波→稳压排列四环节",
+          "points": 3
+        }
+      ],
+      "max_score": 3,
+      "check": "题干任务与分项一致；实义前缀完整，未更改答案要求"
+    }
+  ],
+  "generator": {
+    "test": "python scripts/verify_review_criteria.py",
+    "result": "通过：63.2%、二者、一个、三种、1.5倍、10 MHz、2^n种、一级缓存均保留；仅明确编号被去除。",
+    "scope": "只针对实际简答分项及定向回归样例，不把非简答也计入6项实际差分。"
+  },
+  "runtime_questions": {
+    "count": 2534,
+    "original_questions_checked": 19,
+    "fields": [
+      "stem",
+      "answer",
+      "rubric",
+      "max_score",
+      "chapter_id",
+      "topic_id"
+    ],
+    "result": "最终dist中19道核查题相关字段与3e时所读源一致；末次Cache不改题库。新卡题号映射核验包含电机circuit.t15、补码digital-electronics.t19、位图operating-system.t21与词频programming.t22。"
+  },
+  "database": {
+    "preference": "EXP-COMP-005末段组织偏好未重构，不视本次学习阻断，不称已修。",
+    "wording": "卡已改“有环说明不满足冲突可串行化，不等于已经发生死锁”。",
+    "retest": "r1(X),w1(X),r2(X),w2(X)只有T1→T2，可按T1,T2冲突串行化；再有反向冲突形成环则不满足冲突可串行化，不能把优先图当等待图或宣称已经死锁。算法未变。"
+  },
+  "limitations": [
+    "模型有先验；原题和正文答案已曝光，不能算严格盲测或真人学习效果。",
+    "7新题按先预答写TEMP后开答案的顺序执行，仍不是严格盲测；N-S两题本人曾编写相关内容，不独立签其教学。",
+    "没有修改产品、没有build、没有测试部署/PWA离线或实际主观自动评分。",
+    "既有教材整域缺失继续保留，本轮仅复测指定修复，不据局部通过声称教材全覆盖。"
+  ]
+}

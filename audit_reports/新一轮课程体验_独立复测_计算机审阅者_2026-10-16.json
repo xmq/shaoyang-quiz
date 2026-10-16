@@ -1,0 +1,655 @@
+{
+  "date": "2026-10-16",
+  "dist_build": "3e002732a520b8e1",
+  "role": "应用与电子修复非作者复测；计算机审阅者",
+  "status": "所列14项原失败任务在限定范围通过；无新阻断",
+  "limits": [
+    "模型有已有专业知识，并读过原问题及修复概要；非真人、非严格盲测。",
+    "7新题答案包读取前作答落盘；部分例数值已由正文或修复记录曝光，不以答对证明教学完整。",
+    "位示图operating-system.t21与词频programming.t22本人为作者，只核新题答案，不独立签内容复测。",
+    "Word/PowerPoint只书面操作链与网页阅读，无真实Office软件执行；电子仅计算/图示，无实验电路。",
+    "Chrome桌面390×844浅深为手机模拟，无真机。只对指定新卡/新图人工看截图，页面DOM检查不等逐像素看全图。",
+    "全局返回讲义精确H4与PWA等门禁由root另测，本报告不替其全量验收；未改产品、未build。"
+  ],
+  "original_failures": [
+    {
+      "id": "EXP-APP-001",
+      "chapter_id": "office.c03",
+      "failed_task": "图号与交叉引用更新",
+      "reproduced_steps": "给原图插入题注图1，正文交叉引用该题注；前插新图并添加题注，主体Ctrl+A/F9后原图变图2，正文仍指原图显示见图2；若不变选引用F9，页眉/文本框域另核。",
+      "evidence": "正文新例逐步给创建题注/引用选择/更新/结果，原卡亦保留链。",
+      "result": "通过书面任务复查；未运行真实Word，不把页面阅读说成Office实机操作。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-APP-002",
+      "chapter_id": "software-engineering.c04",
+      "failed_task": "把嵌套条件表达为N-S/PAD",
+      "reproduced_steps": "A真区域内嵌B的完整选择；A假不进入B。TT扣款、TF余额不足、FT/FF账号无效。变式库存不足才检查补货时，内层改放A假分支。",
+      "evidence": "新增图及读法说明分区/包含/层次，手机实看N-S闭盒与PAD右展开，可据结构读条件。",
+      "result": "通过原任务及外层假分支变式，不把同例曝光当盲测。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-APP-003",
+      "chapter_id": "computer-foundations.c02",
+      "failed_task": "解释8位补码并构造-5",
+      "reproduced_steps": "位权-128,64,32,16,8,4,2,1；+5=00000101→取反11111010→加1=11111011；负权和-5；与00000101相加低8位0，不能按无符号251读。",
+      "evidence": "正文给固定字长、负权、构造和双核验；原数制卡增检索线索。",
+      "result": "通过局部机制复查；不据此声称完整补码运算域已覆盖。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-EXAM-APP-001",
+      "chapter_id": "office.c02",
+      "failed_task": "只把黑色指定文字改红",
+      "reproduced_steps": "Ctrl+H展开更多，查找框同词+字体黑色，替换框同词+红色；先命中一处核文字/原色再替换，检查文字不变颜色红后全部；清格式条件防下次漏查。",
+      "evidence": "既有编辑卡同时保留段落/换行并加双条件替换；讲义有具体入口和验证顺序。",
+      "result": "通过书面复查；不声称真实Word执行。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-EXAM-APP-002",
+      "chapter_id": "office.c06",
+      "failed_task": "区分整页排序与页内编辑",
+      "reproduced_steps": "第5页拖到第2页用浏览视图；改标题字用普通；讲稿备注页；测动画放映；改全套默认才母版。",
+      "evidence": "新office.t18短卡能独立给操作对象→视图；不是只记视图名字。",
+      "result": "通过；浅深卡完整读到三块与练习入口。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-EXAM-APP-003",
+      "chapter_id": "computer-foundations.c02",
+      "failed_task": "凭ASCII连续性求S编码",
+      "reproduced_steps": "从P80走Q81,R82,S83；变式D从A65+3=68，9之后58是冒号不是A。基本7位128码常放1B，字符7码55不是整数7。",
+      "evidence": "新t24有独立连续区间/存放宽度/跨区错误提醒，与讲义一致。",
+      "result": "通过；已不依赖卡外先验填连续区间。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-EXAM-APP-004",
+      "chapter_id": "computer-foundations.c05",
+      "failed_task": "四挖掘任务及异常记录选型",
+      "reproduced_steps": "从数据找有用模式/关系；类别→分类，连续金额→回归，无标签分群→聚类，共现→关联，离群→异常；带欺诈标签再输出欺诈类别仍为分类。",
+      "evidence": "新t25按输出列五类与具体场景，旧卡保HDFS/YARN/Map→分组→Reduce，职责分开。",
+      "result": "通过；共现不证明因果的条件仍保留。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-EXAM-APP-005",
+      "chapter_id": "multimedia.c07",
+      "failed_task": "三分钟宣传片流程及素材命名",
+      "reproduced_steps": "目标/受众→脚本分镜→授权采集→编辑集成→画面声音字幕测试→目标平台输出；03_保存_v2含序号/内容/版本，按图片/音频/视频归类，改副本留原件与授权。",
+      "evidence": "既有素材卡方法已明确字段和例，原工作流及手机网络检查移入易错仍可召回。",
+      "result": "通过；不声称实际制作/软件运行。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-ELEC-001",
+      "chapter_id": "circuit.c05",
+      "failed_task": "50Hz四极求同步转速",
+      "reproduced_steps": "P4→p2，60×50/2=1500r/min；转子1440则s60/1500=4%，同步是磁场转速。另推60Hz六极：p3、1200r/min。",
+      "evidence": "新公式明确Hz/极对/极数及P=2p，独立卡t15能回忆且正常电动条件保留。",
+      "result": "通过，原学习阻断在本任务范围解除；非电机全域验收。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-ELEC-002",
+      "chapter_id": "digital-electronics.c07",
+      "failed_task": "PWM调光/调速及频率负载边界",
+      "reproduced_steps": "保持0/5V和T，D25%得U均1.25V、75%得3.75V；瞬时仍0/5V。低频可闪烁/转矩脉动，高频增开关损耗；负载/驱动/电流限制，不能将均压等同转速或亮度线性。",
+      "evidence": "正文公式/两占空比波形与原卡扩展相符；浅深实际看波形长度和均值虚线位置正确，无此前黑三角。",
+      "result": "通过；仅理想平均作用模型，不作为真实驱动器设计建议。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-ELEC-003",
+      "chapter_id": "digital-electronics.c01",
+      "failed_task": "脱离正文判进位与溢出",
+      "reproduced_steps": "4位-8..7；0101+0100=1001，无最高位进位却同号变异号有溢出；1111+0001=1 0000，保0000有进位但无有符号溢出。",
+      "evidence": "新t19卡给两个相反案例，固定字长和解释条件可独立提取，手机三块可读。",
+      "result": "通过；新最小负数题也能由范围判断+8不可表示。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-ELEC-004",
+      "chapter_id": "circuit.c07",
+      "failed_task": "RC一τ答案与rubric对照",
+      "reproduced_steps": "零初值充到终值10V，τ20kΩ×50μF=1s；u(τ)=10(1-e^-1)≈6.32V，即63.2%。实际rubric第四项为63.2%，不再2%。",
+      "evidence": "questions.json的sp-elec-circuit-028答案/解释/rubric一致；只读运行抽出的生成函数保护63.2%不被数字前缀截去。",
+      "result": "通过字段及生成逻辑核查；未操作自动评分UI，不称实测得分。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-ELEC-005",
+      "chapter_id": "analog-electronics.c08",
+      "failed_task": "电源四环节排序后自评",
+      "reproduced_steps": "变压→整流→滤波→稳压；调整交流幅值→脉动直流→减纹波→稳输出。题只要求顺序，rubric现仅该排序3分，无强求测量点。",
+      "evidence": "实际gap-eg-analog-006题干/答案/rubric吻合，前章功放效率和此章供电/信号路径边界不冲突。",
+      "result": "通过题目内部一致性核查；未测试自动评分。",
+      "status": "通过本轮所述范围"
+    },
+    {
+      "id": "EXP-EXAM-ELEC-001",
+      "chapter_id": "circuit.c05",
+      "failed_task": "三相由线电压求每相电压",
+      "reproduced_steps": "对称Y接UL380V，则UP=380/√3≈219.4V，IL=IP；“相电压/电流”是一相物理量，“相量”是复数工具。",
+      "evidence": "卡已改线电压/电流与相电压/电流按Y/Δ换算，讲义另明确UL/IL/UP/IP与术语区别。",
+      "result": "通过卡的消歧任务；讲义粗体标签仍叫“线量与相量”，邻句已消歧，作为既有措辞保留不升级阻断。",
+      "status": "通过本轮所述范围"
+    }
+  ],
+  "boundary_review": [
+    {
+      "course": "Office软件操作",
+      "changed_chapters": [
+        2,
+        3,
+        6
+      ],
+      "before_after": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "finding": "字符/段落对象定义接替换步骤；域定义在题注前，后接表格与Excel未混淆自动重算；新增视图接整页/页内/母版区分，后章综合功能表一致。"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "changed_chapters": [
+        2,
+        5
+      ],
+      "before_after": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "finding": "基本位权在补码前，ASCII与Unicode/GB保持编码边界；五任务与后章监督/无监督标签相符，旧MapReduce卡仍保分组状态，未把HDFS当挖掘类别。"
+    },
+    {
+      "course": "软件工程",
+      "changed_chapters": [
+        4
+      ],
+      "before_after": [
+        3,
+        5
+      ],
+      "finding": "前章状态/DFD按行为与数据分，c04原判定表四组合给新图业务，c05判定表/覆盖定义仍一致；新图没有倒用未教对象或改变A/B业务条件。"
+    },
+    {
+      "course": "多媒体技术",
+      "changed_chapters": [
+        7
+      ],
+      "before_after": [
+        6
+      ],
+      "finding": "命名是素材可追溯，不代替编码/容器兼容、版权或源文件；前章压缩无损边界与交付保源要求一致，最后一章无后章。"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "changed_chapters": [
+        5,
+        7
+      ],
+      "before_after": [
+        4,
+        6,
+        8
+      ],
+      "finding": "电机先有旋转磁场/转子，再定义同步与极对；f单位Hz已给，无需提前会磁场细算。RC仍用前章储能连续性且常值激励，后章仪表安全未改；可靠性逻辑串并联仍与电阻区分。"
+    },
+    {
+      "course": "数字电子技术",
+      "changed_chapters": [
+        1,
+        7
+      ],
+      "before_after": [
+        2,
+        6
+      ],
+      "finding": "二进制位权/定长先于补码判溢出；门电路逻辑0/1仍不固定电压；PWM0/5为明确示例，D比例/百分数分开，后续555标准接法不被改为任意可得低于50%。"
+    },
+    {
+      "course": "模拟电子技术",
+      "changed_chapters": [
+        8
+      ],
+      "before_after": [
+        7
+      ],
+      "finding": "仅题rubric修正，正文电源/测量链保留；前章功放直流功耗与本章线性稳压管耗无矛盾；末章无后章。"
+    }
+  ],
+  "new_questions": {
+    "created_at": "2026-10-16T17:33:01.080012",
+    "answer_file_read_before_save": false,
+    "limitation": "模型已有学科先验且已见原审查与修复概要，部分例数值曝光；不是盲测。OS位图/Python词频内容本人为作者，不作独立内容验收。",
+    "tasks": [
+      {
+        "id": "gap-experience26-motor-slip",
+        "topic_id": "circuit.t15",
+        "type": "简答",
+        "stem": "一台50 Hz、四极三相异步电动机处于正常电动运行，转子转速1440 r/min。计算同步转速与转差率，并说明为什么不能把1440直接代入同步转速公式反求极数。",
+        "options": {},
+        "attempt": "四极P=4，极对p=2；n同步=60×50/2=1500r/min；s=(1500-1440)/1500=.04=4%。1440为实际转子转速，正常电动低于磁场同步转速，不能用它替代n同步反求极数。",
+        "official_answer": "四极即p=2对极，同步转速n同步=60×50/2=1500 r/min；s=(1500−1440)/1500=0.04=4%。1440是转子实际转速，不是旋转磁场同步转速，二者因转差而不同。",
+        "official_explanation": "先将极数换成极对数，再算磁场同步转速；转差率比较同步与实际转速。公式60f/p描述旋转磁场，不用于把实际转速当同步转速反推。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": true
+      },
+      {
+        "id": "gap-experience26-complement-carry",
+        "topic_id": "digital-electronics.t19",
+        "type": "简答",
+        "stem": "采用4位二进制补码，仅保留4位结果。计算1111+0001，并分别判断是否产生最高位进位、是否产生有符号溢出，说明依据。",
+        "options": {},
+        "attempt": "1111+0001=1 0000，保留0000；最高位向外进位1；按4位补码-1+1=0在[-8,7]内且异号相加，无有符号溢出。",
+        "official_answer": "1111表示−1，0001表示+1；相加得到1 0000，保留结果0000，有最高位进位1。实际−1+1=0在−8到7内，没有有符号溢出；异号相加不会因结果超出有符号范围而溢出。",
+        "official_explanation": "进位记录最高位之外的无符号进位，有符号溢出检查结果是否超出补码范围，两者不能互相代替。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": true
+      },
+      {
+        "id": "gap-experience26-complement-minimum",
+        "topic_id": "digital-electronics.t19",
+        "type": "单选",
+        "stem": "对4位补码1000按位取反加1，并仍仅保留4位，结果仍为1000。正确解释是（ ）。",
+        "options": {
+          "A": "结果已经正确表示+8",
+          "B": "−8的相反数+8超出4位补码范围，不能由这个结果表示",
+          "C": "1000一定是负零",
+          "D": "任何数取反加1都会保持不变"
+        },
+        "attempt": "B；1000为-8，取反0111加1回1000是模16环绕，+8超出[-8,7]，不能把结果解成+8。",
+        "official_answer": "B",
+        "official_explanation": "1000原来表示−8，4位补码范围为−8～7，其相反数+8不可表示。位运算得到1000不意味着成功表示+8；固定字长范围必须先检查。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": true
+      },
+      {
+        "id": "gap-experience26-word-count-separator",
+        "topic_id": "programming.t22",
+        "type": "简答",
+        "stem": "阅读Python代码：\ntext = \"red,blue red\"\ncounts = {}\nfor word in text.lower().replace(\",\", \" \").split():\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)\n写出两个词的计数，并说明若把replace(\",\", \" \")改成replace(\",\", \"\")会有什么不同。",
+        "options": {},
+        "attempt": "按逗号换空格分出red/blue/red，字典red:2,blue:1；删逗号则变redblue/red，分别redblue:1,red:1，原来的blue不再独立。此卡我为作者，作答只核新题，不签该内容独立体验。",
+        "official_answer": "原代码得到red:2、blue:1。逗号换为空格后词序列为red、blue、red；若直接删除逗号，red,blue会合成redblue，词序列变为redblue、red，得到redblue:1、red:1。",
+        "official_explanation": "预处理规则由输入约定决定。逗号本身充当两个相邻单词的分隔符时，应保留分词边界；get(word,0)+1让新词从0开始累计。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": false
+      },
+      {
+        "id": "gap-experience26-bitmap-zero-index",
+        "topic_id": "operating-system.t21",
+        "type": "简答",
+        "stem": "位示图每个字含32位，块号、字号和位号全部从0开始编号。第100号块处于几号字的几号位？有人套用从1开始的公式算出“4号字、4号位”，指出错误。位号按题设顺序计算，不讨论机器字节序。",
+        "options": {},
+        "attempt": "100÷32=3余4，因此3号字4号位；全从0不先减1也不商加1，4号字4号位是错用1起公式。此卡我为作者，只核题不自签内容。",
+        "official_answer": "字号=100整除32=3，位号=100 mod 32=4，即3号字4号位。从0开始时直接取商和余数，不需要先减1或最后加1；从1编号的公式不能原样套用。",
+        "official_explanation": "编号起点是计算条件。0号字覆盖0～31，1号字覆盖32～63，2号字覆盖64～95，3号字覆盖96～127，因此100在3号字第4号位。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": false
+      },
+      {
+        "id": "gap-experience26-ns-nested-branch",
+        "topic_id": "software-engineering.t25",
+        "type": "单选",
+        "stem": "一个N-S盒图先判断A“账号有效”，仅在A的真分支内部嵌套判断B“余额足够”。当A为假时，正确执行方式是（ ）。",
+        "options": {
+          "A": "仍判断B并按余额扣款",
+          "B": "同时执行A的假分支和B的假分支",
+          "C": "只执行A的假分支，不进入B判断",
+          "D": "无论A真假都必须先执行B"
+        },
+        "attempt": "C；A假直接账号无效分支，不进入仅嵌于A真中的B；不是同时执行B假。",
+        "official_answer": "C",
+        "official_explanation": "B整个包含在A的真分支，A假时走外层假分支，不进入B。盒图的包含关系表达控制依赖，不能把上下或左右出现的所有动作都依次执行。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": true
+      },
+      {
+        "id": "gap-experience26-ns-pad-false-branch",
+        "topic_id": "software-engineering.t25",
+        "type": "简答",
+        "stem": "模块规则：库存充足则发货；库存不足时，再判断能否补货，能补货则下采购单，否则提示缺货。用N-S盒图或PAD图描述时，第二个判断应嵌入第一个判断的哪一分支？列出三条处理路径。",
+        "options": {},
+        "attempt": "第二判断嵌第一个库存充足判断的假分支。三路径：库存足→发货；库存不足且能补→采购；库存不足且不能补→提示缺货；库存足不检查补货。",
+        "official_answer": "第二判断“能否补货”嵌入“库存充足”的假分支。三条路径：库存充足→发货；库存不足且可补货→下采购单；库存不足且不可补货→提示缺货。N-S把第二判断的完整盒放在外层假分支内，PAD从外层假分支向右展开第二选择节点。",
+        "official_explanation": "本题将嵌套位置改为外层假分支，不能机械照搬讲义中A真才判断B的图；应先把业务条件和动作对应，再确定结构包含关系。",
+        "check": "主要结论及中间计算与答案相符。",
+        "independent_content_signoff": true
+      }
+    ]
+  },
+  "new_cards": [
+    {
+      "topic_id": "office.t18",
+      "theme": "light",
+      "kind": "new-card",
+      "text": "按操作选择演示视图\n正常练\n按编辑对象、整页排序、讲稿和放映需求选择演示视图。\n核心知识：普通视图编辑页内文字、图片和图表；浏览视图操作整页缩略图；备注页写讲稿；放映视图全屏演示。\n方法与例题：第5页移到第2页用浏览视图拖页；改该页标题文字用普通视图；补演讲提示用备注页，验动画用放映。\n易混易错：能拖动整页不等于能改页内对象；备注不自动显示给观众；整套默认格式用母版，勿把它当普通编辑视图。\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 411.984375
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "computer-foundations.t24",
+      "theme": "light",
+      "kind": "new-card",
+      "text": "ASCII字符与连续编码\n正常练\n区分7位编码和字节存放，利用各字符区间的连续性计算码值。\n核心知识：基本ASCII用7位表示128种编码，常占8位的一个字节；数字字符、大写字母、小写字母分别连续。\n方法与例题：起点为字符0=48、A=65、a=97；字符7为48+7=55，D为65+3=68，d为97+3=100。\n易混易错：位数与存放字节宽度要分开；偏移不能跨字符区间乱加，9后码58是冒号；字符7的码55不是整数7。\n练习这个知识点（10题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "computer-foundations.t25",
+      "theme": "light",
+      "kind": "new-card",
+      "text": "挖掘任务的输出与场景\n正常练\n根据输出是类别、数值、分组、共现还是偏离，区分五类挖掘任务。\n核心知识：分类输出已定义类别，回归输出连续数值，聚类无标签分组，关联输出共现关系，异常检测找偏离常态记录。\n方法与例题：判垃圾邮件选分类，估房价选回归，客户自动分群选聚类，找常搭购商品选关联，查离群转账选异常检测。\n易混易错：先看标签与预期输出；已按欺诈标签训练的任务是分类，不因题里写异常就改选异常检测；共现不证明因果。\n练习这个知识点（3题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "software-engineering.t25",
+      "theme": "light",
+      "kind": "new-card",
+      "text": "嵌套判断的N-S与PAD图\n正常练\n先列条件与动作，再确定第二判断嵌入哪个分支，并逐条走通。\n核心知识：N-S用封闭盒的分区和嵌套表示选择，无流程箭头；PAD从左侧主干自上而下，向右展开分支层次。\n方法与例题：先判账号A，仅A真再判余额B；TT扣款成功，TF余额不足，FT与FF均账号无效。内层B只属于A真分支。\n易混易错：分支只执行选中一路，不能看见B真就跳过A；PAD折角不是普通流程图菱形，N-S不能画成盒外箭头连接。\n图解：账号与余额两层选择的N-S盒图\n图解：账号与余额两层选择的PAD图\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 541.578125
+      },
+      "image_states": [
+        {
+          "src": "media/soft_ns_account.svg",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "media/soft_pad_account.svg",
+          "loaded": true,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "topic_id": "circuit.t15",
+      "theme": "light",
+      "kind": "new-card",
+      "text": "同步转速与转差率\n正常练\n区分极数与极对数，计算同步转速，并用实际转速求转差率。\n核心知识：n同步=60f/p=120f/P（r/min），f取Hz，p为极对数、P为极数，P=2p；s=(n同步−n)/n同步。\n方法与例题：50 Hz四极先得p=2，再得同步1500 r/min；转子1440 r/min时，s=60/1500=4%。\n易混易错：同步转速是磁场转速，不是实测转子转速；正常电动状态n<n同步，发电状态不照搬此关系。\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "digital-electronics.t19",
+      "theme": "light",
+      "kind": "new-card",
+      "text": "补码加法与有符号溢出\n优先练\n按固定位宽求补码和，分别判断最高位进位与有符号溢出。\n核心知识：固定n位补码范围为−2^(n−1)～2^(n−1)−1；同号相加结果异号表示有符号溢出，异号相加不溢出。\n方法与例题：4位范围−8～7；5+4得1001，有溢出无向外进位；−1+1得1 0000，留0000，无溢出但有进位。\n易混易错：先固定字长及有符号解释；最高位向外进位不等于有符号溢出，符号位为1也不自动表示越界。\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "office.t18",
+      "theme": "dark",
+      "kind": "new-card",
+      "text": "按操作选择演示视图\n正常练\n按编辑对象、整页排序、讲稿和放映需求选择演示视图。\n核心知识：普通视图编辑页内文字、图片和图表；浏览视图操作整页缩略图；备注页写讲稿；放映视图全屏演示。\n方法与例题：第5页移到第2页用浏览视图拖页；改该页标题文字用普通视图；补演讲提示用备注页，验动画用放映。\n易混易错：能拖动整页不等于能改页内对象；备注不自动显示给观众；整套默认格式用母版，勿把它当普通编辑视图。\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 411.984375
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "computer-foundations.t24",
+      "theme": "dark",
+      "kind": "new-card",
+      "text": "ASCII字符与连续编码\n正常练\n区分7位编码和字节存放，利用各字符区间的连续性计算码值。\n核心知识：基本ASCII用7位表示128种编码，常占8位的一个字节；数字字符、大写字母、小写字母分别连续。\n方法与例题：起点为字符0=48、A=65、a=97；字符7为48+7=55，D为65+3=68，d为97+3=100。\n易混易错：位数与存放字节宽度要分开；偏移不能跨字符区间乱加，9后码58是冒号；字符7的码55不是整数7。\n练习这个知识点（10题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "computer-foundations.t25",
+      "theme": "dark",
+      "kind": "new-card",
+      "text": "挖掘任务的输出与场景\n正常练\n根据输出是类别、数值、分组、共现还是偏离，区分五类挖掘任务。\n核心知识：分类输出已定义类别，回归输出连续数值，聚类无标签分组，关联输出共现关系，异常检测找偏离常态记录。\n方法与例题：判垃圾邮件选分类，估房价选回归，客户自动分群选聚类，找常搭购商品选关联，查离群转账选异常检测。\n易混易错：先看标签与预期输出；已按欺诈标签训练的任务是分类，不因题里写异常就改选异常检测；共现不证明因果。\n练习这个知识点（3题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "software-engineering.t25",
+      "theme": "dark",
+      "kind": "new-card",
+      "text": "嵌套判断的N-S与PAD图\n正常练\n先列条件与动作，再确定第二判断嵌入哪个分支，并逐条走通。\n核心知识：N-S用封闭盒的分区和嵌套表示选择，无流程箭头；PAD从左侧主干自上而下，向右展开分支层次。\n方法与例题：先判账号A，仅A真再判余额B；TT扣款成功，TF余额不足，FT与FF均账号无效。内层B只属于A真分支。\n易混易错：分支只执行选中一路，不能看见B真就跳过A；PAD折角不是普通流程图菱形，N-S不能画成盒外箭头连接。\n图解：账号与余额两层选择的N-S盒图\n图解：账号与余额两层选择的PAD图\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 541.578125
+      },
+      "image_states": [
+        {
+          "src": "media/soft_ns_account.svg",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "media/soft_pad_account.svg",
+          "loaded": true,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "topic_id": "circuit.t15",
+      "theme": "dark",
+      "kind": "new-card",
+      "text": "同步转速与转差率\n正常练\n区分极数与极对数，计算同步转速，并用实际转速求转差率。\n核心知识：n同步=60f/p=120f/P（r/min），f取Hz，p为极对数、P为极数，P=2p；s=(n同步−n)/n同步。\n方法与例题：50 Hz四极先得p=2，再得同步1500 r/min；转子1440 r/min时，s=60/1500=4%。\n易混易错：同步转速是磁场转速，不是实测转子转速；正常电动状态n<n同步，发电状态不照搬此关系。\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    },
+    {
+      "topic_id": "digital-electronics.t19",
+      "theme": "dark",
+      "kind": "new-card",
+      "text": "补码加法与有符号溢出\n优先练\n按固定位宽求补码和，分别判断最高位进位与有符号溢出。\n核心知识：固定n位补码范围为−2^(n−1)～2^(n−1)−1；同号相加结果异号表示有符号溢出，异号相加不溢出。\n方法与例题：4位范围−8～7；5+4得1001，有溢出无向外进位；−1+1得1 0000，留0000，无溢出但有进位。\n易混易错：先固定字长及有符号解释；最高位向外进位不等于有符号溢出，符号位为1也不自动表示越界。\n练习这个知识点（2题） →",
+      "rect": {
+        "x": 14,
+        "y": 120,
+        "width": 362,
+        "height": 437.578125
+      },
+      "image_states": []
+    }
+  ],
+  "mobile": {
+    "evidence": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\independent_computing_retest_browser",
+    "chapter_views": 116,
+    "new_card_views": 12,
+    "diagram_views": 6,
+    "screenshots": 18,
+    "overflow": 0,
+    "broken_images": 0,
+    "human_observations": [
+      "六新卡浅深逐张view_image，三块与练习入口可读；N-S/PAD两图默认折叠，使首屏仍能读完整卡。",
+      "N-S浅深：外A假左域直接拒绝账号，A真右域内含B；B假余额不足/B真扣款，包容关系可见。",
+      "PAD浅深：A最左主干，上真右展B，下假直达拒绝账号；B再真/假展两动作，标签与正文四组合一致。",
+      "PWM浅深：两组同0/5V、同T，上高段约1/4、下约3/4；1.25/3.75V虚线分别低/高，文字明确均值非瞬时，图无黑三角遮挡。"
+    ]
+  },
+  "rubric_checks": [
+    {
+      "id": "gap-eg-analog-006",
+      "stem": "将变压、整流、滤波、稳压按典型直流电源信号流顺序排列。",
+      "answer": "变压→整流→滤波→稳压。",
+      "explanation": "先调整交流幅值，再变为脉动直流，随后减小纹波并稳定输出。",
+      "rubric": [
+        {
+          "criterion": "按变压→整流→滤波→稳压排列四环节",
+          "points": 3
+        }
+      ],
+      "max_score": 3,
+      "topic_id": "analog-electronics.t10",
+      "chapter_id": "analog-electronics.c08"
+    },
+    {
+      "id": "ap-analog-005",
+      "stem": "说明BJT截止、放大、饱和三种工作状态的主要特征和典型用途，并指出为什么不能在所有状态都套用IC=βIB。",
+      "answer": "截止时集电极电流近似为零，可表示开关断开；放大区用于线性放大；饱和时管压降低，可表示开关闭合。IC=βIB主要适用于放大区，饱和后集电极电流受外电路限制。",
+      "explanation": "核对要点：三种状态的主要特征、开关/放大用途、β关系的适用边界。",
+      "rubric": [
+        {
+          "criterion": "正确区分截止、放大、饱和三种状态的主要特征",
+          "points": 1
+        },
+        {
+          "criterion": "说明开关与放大用途",
+          "points": 1
+        },
+        {
+          "criterion": "说明IC=βIB的适用边界",
+          "points": 1
+        }
+      ],
+      "max_score": 3,
+      "topic_id": "analog-electronics.t03",
+      "chapter_id": "analog-electronics.c03"
+    },
+    {
+      "id": "sp-elec-circuit-028",
+      "stem": "说明一阶RC充电过程的初值、终值、时间常数和一个时间常数时的典型比例。",
+      "answer": "换路前由原稳态确定电容初值，换路后由新稳态确定终值；时间常数τ=RC决定变化快慢。若从0向最终值充电，一个τ后约达到最终变化量的63.2%，随后继续指数逼近终值。电容电压在通常换路瞬间不突变。",
+      "explanation": "评分点：初值、终值、τ=RC、63.2%、不突变或指数逼近。",
+      "rubric": [
+        {
+          "criterion": "初值",
+          "points": 1
+        },
+        {
+          "criterion": "终值",
+          "points": 1
+        },
+        {
+          "criterion": "τ=RC",
+          "points": 1
+        },
+        {
+          "criterion": "63.2%",
+          "points": 1
+        },
+        {
+          "criterion": "不突变或指数逼近",
+          "points": 1
+        }
+      ],
+      "max_score": 5,
+      "topic_id": "circuit.t10",
+      "chapter_id": "circuit.c07"
+    }
+  ],
+  "generator_readonly_checks": [
+    {
+      "input": "63.2%；τ=RC",
+      "output": [
+        {
+          "criterion": "63.2%",
+          "points": 1
+        },
+        {
+          "criterion": "τ=RC",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "input": "1. 初值；2. 终值；3. τ=RC；4. 63.2%",
+      "output": [
+        {
+          "criterion": "初值",
+          "points": 1
+        },
+        {
+          "criterion": "终值",
+          "points": 1
+        },
+        {
+          "criterion": "τ=RC",
+          "points": 1
+        },
+        {
+          "criterion": "63.2%",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "input": "（一）初值；（二）终值；三、63.2%",
+      "output": [
+        {
+          "criterion": "初值",
+          "points": 1
+        },
+        {
+          "criterion": "终值",
+          "points": 1
+        },
+        {
+          "criterion": "63.2%",
+          "points": 1
+        }
+      ]
+    }
+  ],
+  "retained_notes": [
+    "讲义circuit.c05粗体“小标题线量与相量”仍较宽泛，但其后明确定义相电压/电流与相量区别；已修卡不再用该歧义，未形成复测阻断。",
+    "不以这次14项通过关闭教材整域缺失或既有范围保留。"
+  ]
+}
