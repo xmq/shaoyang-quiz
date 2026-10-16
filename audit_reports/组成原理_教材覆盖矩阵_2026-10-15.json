@@ -22,28 +22,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "1.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "计算机系统简介",
-            "source_line": 6,
-            "mechanisms_in_current_text": [
-              "🔴 **硬件与软件**：硬件提供运算、保存和传送能力；软件规定执行什么任务，包括程序及有关数据、文档。计算机系统=硬件+软件。",
-              "🔵 **程序怎样运行**：高级语言经编译器翻译，或由解释器解释执行；CPU（中央处理器）最终执行机器指令。汇编语言也要先经汇编器处理。",
-              "⚫ **系统与应用**：操作系统管理CPU、内存和设备，属于系统软件；文档编辑器解决具体任务，属于应用软件。裸机有硬件指令能力，但没有完整的软件使用环境。",
-              "🔴 **体系结构ISA**：规定程序员可见的指令、寄存器、数据类型和寻址规则；组成研究这些功能怎样由部件实现。",
-              "⚫ **寄存器与虚拟机**：寄存器是CPU内部少量、快速的存储位置；虚拟机层次是向上提供另一套抽象接口，不等于每层都有一台实体电脑。"
-            ],
-            "student_explanation": "我能说软件换动作、硬件执行动作；高级语言不是CPU原生指令。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "能说出系统=硬件+软件；ISA约定程序员可见接口，组成负责实现。 最终候选补充定义已在实际手机页定点重读和改词复述通过。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "1.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "硬件/软件分工与编译/解释→机器指令分两短单元；ISA的程序员接口与组成实现直接对比，寄存器与抽象虚拟机也有释义。"
+          "status": "pass_sampled_task",
+          "evidence": "用自己的话区分硬件实体、软件及ISA接口；将“CPU直接运行未翻译源代码”改为最终执行机器指令。"
         }
       },
       "status": "accepted",
@@ -54,6 +42,8 @@
       ],
       "chapter_id": "computer-organization.c01",
       "question_ids": [
+        "gap-co-terms-11",
+        "gap-co-terms-12",
         "sp-core-co-013",
         "sp-core-co-019",
         "sp-core-co-039"
@@ -64,7 +54,11 @@
         "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
         "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
         "build": "47902f9bd047880b"
-      }
+      },
+      "exam_tasks": [
+        "规范定义与术语匹配",
+        "体系结构/ISA/组成辨析"
+      ]
     },
     {
       "textbook_section": "1.2 计算机的基本组成",
@@ -82,29 +76,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "1.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "计算机的基本组成",
-            "source_line": 17,
-            "mechanisms_in_current_text": [
-              "🔴 **冯·诺依曼结构**：指令和数据用二进制预先存入存储器；控制器按指令地址自动取出、执行，遇到转移再改变地址。这是“存储程序、程序控制”。",
-              "🔵 **五部件分工**：运算器计算；控制器解释指令、发控制信号；存储器保存内容；输入、输出部件负责与外界交换信息。",
-              "⚫ **范围区别**：CPU主要含运算器、控制器和寄存器；主机还包括主存；完整系统再加外设与软件。CPU不能等同整台计算机。",
-              "🔴 **PC与IR**：PC保存下一条指令地址，IR保存当前取出的指令。地址是位置编号，指令是其中内容。",
-              "🔵 **完整例子**：PC=100，每条指令4B；R1、R2是寄存器，分别存3、5。约定`ADD R1,R2`将和写回R1：从地址100取指→装IR，PC更新104→译码为相加→ALU算3+5→R1=8，R2仍5。",
-              "⚫ **如何区分指令与数据**：存储器中都是位串，由当前取指/数据访问用途解释；不是某种位模式天生会执行。连接部件、传送数据的路径叫数据通路。"
-            ],
-            "student_explanation": "PC100按4B到104，3+5写R1=8，R2不变。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "闭卷复述六特点；取指后PC100变104，R1最终8；中心描述数据组织而非控制者。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "1.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "先结论存储程序/五部件，再给PC100取4B→104、R1=3+5→8，地址与内容不混。简答考法落实自动连续工作原因和部件分工。"
+          "status": "pass_sampled_task",
+          "evidence": "先独立跟踪3+5：PC100→104、IR装入ADD、R1=8、R2=5；将现代结构中心挖空填存储器，传统填运算器。"
         }
       },
       "status": "accepted",
@@ -115,6 +96,8 @@
       ],
       "chapter_id": "computer-organization.c01",
       "question_ids": [
+        "gap-co-terms-11",
+        "gap-co-terms-12",
         "sp-core-co-013",
         "sp-core-co-019",
         "sp-core-co-039"
@@ -125,7 +108,12 @@
         "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
         "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
         "build": "47902f9bd047880b"
-      }
+      },
+      "exam_tasks": [
+        "六特点完整列举",
+        "传统/现代中心辨析",
+        "五部件功能挖空"
+      ]
     },
     {
       "textbook_section": "1.3 计算机硬件的主要技术指标",
@@ -143,40 +131,30 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "1.3",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "计算机硬件的主要技术指标",
-            "source_line": 30,
-            "mechanisms_in_current_text": [
-              "🔴 **基本单位**：bit是一位0/1；1B=8bit；字长是CPU通常一次处理的位数。字长、地址宽度、数据总线宽度各有职责。",
-              "🔵 **容量**：容量=单元数×每单元位数；n位地址可选2^n个单元，按字节编址才是2^n B。KiB=1024B；传统KB及总线MB/s应按给定口径统一单位。",
-              "🔴 **CPI**：平均每条指令使用的时钟周期数；主频f是每秒拍数，周期T=1/f。",
-              "🔵 **公式与参数**：CPU时间=指令数IC×平均CPI÷f；平均CPI=各类“执行比例×该类周期数”之和。",
-              "🔵 **完整例题**：100万条指令，一半1拍、一半3拍，主频1GHz：CPI=0.5×1+0.5×3=2，总200万拍，时间=2×10⁶/10⁹=2ms。",
-              "⚫ **性能比较**：吞吐量看单位时间完成多少，响应时间看单任务多久；MIPS为每秒百万条指令，跨指令集可能失真。主频高不保证任务快，CPU时间通常不含I/O等待。"
-            ],
-            "student_explanation": "100万条CPI2、1GHz=2ms；另10^9×2/2GHz=1s。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "三个字长分别描述运算、指令、存储字；CPI加权2后100万条/1GHz耗2ms，编址单位另看。 最终候选补充定义已在实际手机页定点重读和改词复述通过。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "1.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "单位、字长、编址与CPI分开；例先加权CPI2，再200万拍/1GHz=2ms，条件保留CPU时间不含I/O。新迁移400万条/CPI1.25/2GHz=2.5ms可推。"
+          "status": "pass_sampled_task",
+          "evidence": "32/16/64三个量分别配运算、指令、存储字；独算CPI=2和CPU时间2ms，不能把按字节编址推出存储字必8位。"
         }
       },
       "status": "accepted",
       "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
       "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
       "topic_ids": [
-        "computer-organization.t02"
+        "computer-organization.t02",
+        "computer-organization.t42"
       ],
       "chapter_id": "computer-organization.c01",
       "question_ids": [
         "uf-co-006",
+        "gap-co-terms-09",
+        "gap-co-terms-10",
         "sp-core-co-001",
         "sp-core-co-018",
         "sp-core-co-041",
@@ -188,7 +166,11 @@
         "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
         "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
         "build": "47902f9bd047880b"
-      }
+      },
+      "exam_tasks": [
+        "三种字长定义/反例",
+        "性能指标公式与单位"
+      ]
     },
     {
       "textbook_section": "2.1 计算机的发展史",
@@ -206,26 +188,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "2.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "计算机的发展史",
-            "source_line": 46,
-            "mechanisms_in_current_text": [
-              "🔴 **主要电子器件**：电子管→晶体管→集成电路→大规模/超大规模集成电路。",
-              "🔵 **发展联系**：器件集成通常使体积、功耗、成本下降，可靠性和能力提升；软件从机器语言、汇编发展到高级语言、操作系统和工具链。",
-              "⚫ **限定条件**：电子、通用、可编程、运行存储程序的“第一”不是同一概念；器件代际也不代表某机器主频或执行效率必然更高。"
-            ],
-            "student_explanation": "不用主频排序：电子管→晶体管→集成→大规模集成。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "按器件排电子管→晶体管→集成电路→大规模；未把存储程序第一与通用第一混同。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "2.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "电子管→晶体管→集成→大规模；按器件而非速度划代，历史“第一”保留限定，不照抄原docx绝对化。"
+          "status": "pass_sampled_task",
+          "evidence": "不看答案列电子管→晶体管→集成电路→大规模/超大规模；代际不推出同任务必更快。"
         }
       },
       "status": "accepted",
@@ -256,28 +228,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "2.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "计算机的应用和展望",
-            "source_line": 53,
-            "mechanisms_in_current_text": [
-              "🔴 **任务区别**：科学计算偏数值运算；数据处理偏记录管理；实时控制要求在截止时间内响应。",
-              "🔵 **例子**：工业传感器必须毫秒级响应，属实时控制；每天汇总业务记录，偏数据处理。CAD辅助设计，CAM辅助制造，CAI辅助教学。",
-              "⚫ **边界**：应用可跨类；人工智能输出不保证正确。微型化、网络化、智能化和高性能计算可并存，量子/光计算也有专门条件，不能视为已全面替代CPU。",
-              "🔵 **公式**：可并行部分占p、这部分加速n倍，忽略开销时S=1/[(1−p)+p/n]。",
-              "🔵 **例题**：80%可4倍加速、20%串行，新时间比例0.2+0.8/4=0.4，所以整体快2.5倍。通信、同步开销会进一步限制收益。"
-            ],
-            "student_explanation": "20%不变+80%/4=40%，2.5倍。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "80%部分加速4倍：剩余时间0.2+0.8/4=0.4，S=2.5；实时任务按期限判断。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "2.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "传感器毫秒响应和日汇总先给场景，实时/数据处理判据清楚；并行80%/4以新时间0.4→2.5倍完整。"
+          "status": "pass_sampled_task",
+          "evidence": "毫秒响应归实时控制；算0.2+0.8/4=0.4、加速2.5；补通信开销后收益只会受限。"
         }
       },
       "status": "accepted",
@@ -308,25 +268,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "3.1",
-          "status": "主从/争用可解释；三态高阻名词仍未展开，非当前例题阻断",
-          "evidence": {
-            "heading": "总线的基本概念",
-            "source_line": 67,
-            "mechanisms_in_current_text": [
-              "🔴 **总线**：多个部件共享的传输通路及通信规则；发起传输者为主设备，被访问者为从设备。CPU、获准的DMA控制器都可作主设备。",
-              "⚫ **共享限制**：同一组数据线通常不能由多个源同时驱动，否则电气冲突；仲裁确定使用权，三态控制避免未获准设备输出。"
-            ],
-            "student_explanation": "仲裁决定一个主设备；DMA也可获准。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "高阻Z不输出0；未获准设备释放驱动，CPU与DMA均可能是主设备。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "3.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "共享路径、主/从角色与多源电气冲突先解释；DMA获权后也可主控，不能默认只有CPU可发起。"
+          "status": "pass_sampled_task",
+          "evidence": "挖空三态为0、1、Z；将“高阻就是0”改为近似不驱动；未获总线者输出0仍会争用。"
         }
       },
       "status": "accepted",
@@ -338,11 +289,17 @@
       "chapter_id": "computer-organization.c06",
       "question_ids": [
         "gap-co-013",
+        "gap-co-terms-15",
+        "gap-co-terms-16",
         "ap-co-002",
         "sp-core-co-016",
         "sp-core-co-022",
         "sp-core-co-023",
         "sp-core-co-036"
+      ],
+      "exam_tasks": [
+        "三态及高阻含义",
+        "总线源争用判断"
       ]
     },
     {
@@ -361,26 +318,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "3.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "总线的分类",
-            "source_line": 75,
-            "mechanisms_in_current_text": [
-              "🔴 **按范围**：片内总线连接芯片内部；系统总线连接CPU、主存、接口；通信总线连接设备或系统。",
-              "🔵 **按职责**：地址线选位置，数据线传内容，控制线传读写、请求、应答、中断。数据线通常双向，控制信号方向不完全相同。",
-              "⚫ **串行与并行**：串行逐位传、线少；并行多位同时传，但有线间偏斜等约束，不能直接断言并行一定更快。"
-            ],
-            "student_explanation": "32数据位不等于32位地址，串行不必然慢。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "分别按范围、职责、传输组织分类；串行不必比并行慢。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "3.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "按范围与按信号职责分两条，串并行另辨；控制线方向不一与并行不一定更快的条件保留。"
+          "status": "pass_sampled_task",
+          "evidence": "分别把地址/数据/读写放地址线/数据线/控制线；串并行速度不能只凭名称排序。"
         }
       },
       "status": "accepted",
@@ -392,6 +339,8 @@
       "chapter_id": "computer-organization.c06",
       "question_ids": [
         "gap-co-013",
+        "gap-co-terms-15",
+        "gap-co-terms-16",
         "ap-co-002",
         "sp-core-co-016",
         "sp-core-co-022",
@@ -415,26 +364,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "3.3",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "总线性能及性能指标",
-            "source_line": 80,
-            "mechanisms_in_current_text": [
-              "🔵 **公式**：理论B=(数据位宽w/8)×频率f×每周期传输次数d；有效带宽≈理论B×利用率η。单位为B/s，不是bit/s。",
-              "🔵 **例题**：32bit、100MHz、每拍2次：4B×10⁸×2=800MB/s；利用率80%则640MB/s。",
-              "⚫ **口径**：实际还有仲裁、地址、等待及协议开销；已给有效传输率时不要重复乘同一利用率。地址线宽度决定寻址范围，不决定单次数据量。"
-            ],
-            "student_explanation": "32bit100MHz双拍80%得640MB/s。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "32位=4B；4×100M×2=800MB/s，80%有效率得640MB/s。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "3.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "每次先bit÷8，再频率×次数×利用率；32bit/100MHz/双传800MB/s、80%为640MB/s有完整单位。"
+          "status": "pass_sampled_task",
+          "evidence": "32bit=4B，4×100MHz×2=800MB/s，再乘80%=640MB/s；地址线数不参与单次数据量。"
         }
       },
       "status": "accepted",
@@ -446,6 +385,8 @@
       "chapter_id": "computer-organization.c06",
       "question_ids": [
         "gap-co-013",
+        "gap-co-terms-15",
+        "gap-co-terms-16",
         "ap-co-002",
         "sp-core-co-016",
         "sp-core-co-022",
@@ -469,26 +410,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "3.4",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "总线结构",
-            "source_line": 88,
-            "mechanisms_in_current_text": [
-              "🔴 **单总线**：CPU、主存、I/O共享通路，成本低，但访存和I/O易争资源。",
-              "🔵 **多总线**：把主存、I/O等路径分层，经桥接器转换；独立路径可并行，共享桥或主存端口仍会争用。",
-              "⚫ **标准与实现**：标准规定机械、电气、功能、时序等规则；USB用于外设串行连接，PCIe采用高速串行点对点互连，名称有“总线”不代表都共享并行线。"
-            ],
-            "student_explanation": "可解释两条路径经过同一桥为何仍排队。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "单总线有共享争用；多总线独立路径可并行，桥和主存端口仍可能冲突。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "3.4",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "单总线访存/I/O争用与桥接多总线的共享端口限制仍有；USB/PCIe例说明名称不代表统一拓扑。"
+          "status": "pass_sampled_task",
+          "evidence": "单总线共享会争用；多总线独立路径可并行，但共享桥仍会争用；没有把PCIe误当所有设备驱动同一并行线。"
         }
       },
       "status": "accepted",
@@ -500,6 +431,8 @@
       "chapter_id": "computer-organization.c06",
       "question_ids": [
         "gap-co-013",
+        "gap-co-terms-15",
+        "gap-co-terms-16",
         "ap-co-002",
         "sp-core-co-016",
         "sp-core-co-022",
@@ -523,29 +456,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "3.5",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "总线控制",
-            "source_line": 93,
-            "mechanisms_in_current_text": [
-              "🔴 **链式查询**：允许信号逐级传，近端优先；线少，但优先级固定、链路故障影响后级，远端可能饥饿。",
-              "🔵 **计数与独立请求**：计数器逐号查询，可改起点但要等待；独立请求每设备有请求/允许线，裁决快、策略灵活，连线多。",
-              "⚫ **例子**：链式设备1比3靠近仲裁器，同时申请则1先；独立请求也不是允许所有设备同时驱动共享数据线。总线优先级与中断优先级不同。",
-              "🔴 **同步/异步/半同步**：同步按统一时钟；异步用请求应答推进；半同步保留时钟，用WAIT/READY延长慢设备访问。",
-              "🔵 **四相全互锁读**：地址先稳定→主设备置REQ→从设备数据有效后置ACK→主设备采样、撤REQ→从设备撤ACK。",
-              "⚫ **判断**：REQ=1、ACK=0时还不能采样；请求仅表示想读，应答才表示数据已准备好。"
-            ],
-            "student_explanation": "先设备1；REQ1 ACK0不采样；采样后先撤REQ再撤ACK。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "链式设备1先于3；REQ1/ACK0不能采样，ACK有效后采样撤REQ，再撤ACK。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "3.5",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "仲裁三法功能/线数/饥饿一组；REQ/ACK四相一组；REQ1/ACK0不可采样由数据有效因果推出，配图同顺序。"
+          "status": "pass_sampled_task",
+          "evidence": "REQ=1/ACK=0预测不能采样；撤销顺序REQ后ACK；链式近端设备1先，不能等同所有设备同时输出。"
         }
       },
       "status": "accepted",
@@ -579,42 +499,36 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "4.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "概述",
-            "source_line": 111,
-            "mechanisms_in_current_text": [
-              "🔵 **位数**：n位可区分2^n种状态，8个位置需3位、64个位置需6位；不是64个位置要64位。",
-              "🔵 **十六进制**：0x为十六进制前缀，A…F=10…15；0x2B=2×16+11=43。",
-              "🔵 **整除取余**：43÷8=5余3，写作⌊43/8⌋=5、43 mod 8=3。每块8B时，地址43落第5块、块内偏移3，编号从0起。",
-              "🔴 **层次**：寄存器→Cache→主存→辅存；越近CPU通常越快、容量越小、每位越贵。",
-              "🔵 **为何缓存有效**：时间局部性=刚访问的可能再访问；空间局部性=邻近地址可能接着访问。重复遍历数组同时体现两者。",
-              "⚫ **区别**：Cache缓存主存块副本，缓解CPU与主存速度差；不是所有访问同样快，也不是靠Cache扩大永久保存容量。"
-            ],
-            "student_explanation": "0x前缀、A..F、整除取余先解释；局部性本次已明确时间/空间含义。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "区分随机/顺序/直接/相联；时间与位置基本无关不等于断电保留，时间/空间局部性可分别举例。 最终候选f74588c9a55176f0定点重读四类完整标签，并实际重答07，同义答案判定通过。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "4.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "先补0x2B=43、整除/取余、位数64→6的短先修，再说层次与时间/空间局部性；压缩未丢先修。"
+          "status": "pass_sampled_task",
+          "evidence": "四类名称挖空填随机/顺序/直接/相联；RAM按地址、CAM按内容；将断电保存与访问方式分开。"
         }
       },
       "status": "accepted",
       "implementation": "lecture numbered section + task/example; practice linked by reconstruction plan",
       "intended_depth": "大学通用教材期末/事业单位岗位：解释因果、手推代表过程和基本计算，轻证明",
       "topic_ids": [
-        "computer-organization.t08"
+        "computer-organization.t08",
+        "computer-organization.t41"
       ],
       "chapter_id": "computer-organization.c04",
       "question_ids": [
         "gap-co-004",
+        "gap-co-terms-07",
+        "gap-co-terms-08",
         "sp-core-co-007",
         "sp-core-co-015"
+      ],
+      "exam_tasks": [
+        "四种存取方式定义/完整列举",
+        "存取与断电保持维度区分"
       ]
     },
     {
@@ -633,29 +547,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "4.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "主存储器",
-            "source_line": 125,
-            "mechanisms_in_current_text": [
-              "🔴 **SRAM与DRAM**：SRAM速度快、无需周期刷新，常用于Cache；DRAM密度高、需刷新，常作主存；二者通常断电丢失。",
-              "🔵 **DRAM读后恢复与刷新**：读出会扰动电荷，需恢复所读行；即使不读取，电荷也泄漏，仍须定期刷新。集中刷新有较长暂停，分散刷新摊入周期，异步刷新在期限内分散安排各行。",
-              "⚫ **非易失介质**：ROM类通常断电保留；PROM一次编程，EPROM紫外擦除，EEPROM电擦除，Flash可电擦写。不能说所有ROM出厂后绝不可改。",
-              "🔴 **芯片规格**：“字数×位数”，1K×8为1024个单元、每个8位。位扩展增字长，字扩展增单元数。",
-              "🔵 **完整例题**：8K×8组成32K×16：字扩4倍、位扩2倍，共8片；8K=2¹³，片内13根地址线；4组再用2根高地址线译码片选。",
-              "⚫ **连线**：位扩展芯片共享地址和片选，接不同数据位；字扩展以片选区别各组。按字编址的容量还要乘字长，不能一律当字节。"
-            ],
-            "student_explanation": "芯片字/位倍数分别算、汉明按编号二进制分组、交叉按除余；新数据迁移另存。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "SRAM无需刷新但易失，ROM可随机读；8K×8到32K×16需8片；四路字地址10落模块2内址2；校验p2+p4定位6。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "4.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "存储类型/DRAM恢复与刷新、芯片4×2=8片/13+2地址线、交叉定位、汉明分组各独立短标题。汉明正文先表1—7再1011→0110011、位6错→p2/p4，能力边界保留。新数据1001→0011001、位5错综合101已独立完成。"
+          "status": "pass_sampled_task",
+          "evidence": "SRAM/DRAM中文名分别写静态/动态随机存取存储器；ROM只读属性与随机按址读取可同时成立；8K×8扩32K×16独算8片、13片内线、2片选线。"
         }
       },
       "status": "accepted",
@@ -670,6 +571,8 @@
       "question_ids": [
         "uf-co-003",
         "gap-co-011",
+        "gap-co-terms-03",
+        "gap-co-terms-04",
         "gap-co-textbook-05-1",
         "gap-co-textbook-05-2",
         "gap-co-textbook-06-1",
@@ -682,6 +585,11 @@
         "sp-core-co-037",
         "sp-core-co-042",
         "uc-co-003"
+      ],
+      "exam_tasks": [
+        "SRAM/DRAM全称",
+        "随机读取/只读/易失性/刷新区分",
+        "存取时间与存储周期"
       ]
     },
     {
@@ -700,29 +608,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "4.3",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "高速缓冲存储器",
-            "source_line": 166,
-            "mechanisms_in_current_text": [
-              "🔴 **概念**：主存按块复制；Cache容纳一个块的位置为行；几行分一组，每组几行就是几路。有效位0表示该行内容无效，标记识别所放主存块。",
-              "🔵 **小例子**：两行直接映射、每块4B；地址13÷4→块号3、偏移1；3 mod 2→行1，⌊3/2⌋→标记1。到行1后，须有效位1且标记1才命中。",
-              "⚫ **组相联**：先找组，再在该组各路查有效位与标记；“两路”不是两条数据总线。",
-              "🔴 **三类映射**：直接映射只能放固定行；全相联可放任意行；组相联固定组、组内任意行。",
-              "🔵 **取舍**：直接映射简单但易冲突；全相联灵活、比较硬件多；组相联折中。组满时按指定LRU/FIFO等规则换，直接映射没有选行余地。",
-              "🔵 **写策略**：写直达同步更新Cache和主存；写回先改Cache并标脏，淘汰脏块再写主存。"
-            ],
-            "student_explanation": "块/行/组/路与有效位先解释，地址拆分→比较标记→替换与命中序列，能按数据改变。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "0x1234拆成偏移52、组8、标记1，再查有效与标记；块序列0/1/0/2/0只有第三次命中；AMAT额外代价与总时长两口径均12ns。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "4.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "块/行/组/路与有效位先定义，简单地址13先定位后到32位大例；0x1234偏移52/组8/标记1、直接映射五访问20%及两种AMAT口径都在主文。新0x3ABC得到偏移60/组42/标记3。"
+          "status": "pass_sampled_task",
+          "evidence": "0x1234=4660，块72余52，组8标记1；须再比较有效位与标记，不将定位说成命中；两行序列0/1/0/2/0只有第三次命中。"
         }
       },
       "status": "accepted",
@@ -767,29 +662,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "4.4",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "辅助存储器",
-            "source_line": 207,
-            "mechanisms_in_current_text": [
-              "🔴 **结构**：盘面有磁道，磁道分扇区；同半径各盘面磁道合为柱面。LBA是连续逻辑块编号，未必暴露真实几何结构。",
-              "🔵 **时间**：访问≈寻道+旋转等待+传输；r转/分时，一转60/r秒，随机扇区平均等半转30/r秒。",
-              "🔵 **例题**：7200rpm→每转8.33ms、平均等4.17ms；寻道8ms、传输1ms，共13.17ms，尚未计控制器开销。",
-              "🔵 **容量**：柱面数×每柱面磁头数H×每磁道扇区数S×每扇区字节数。",
-              "🔵 **定位**：柱面=⌊LBA/(H×S)⌋，余数除S得磁头，最终余数为从0起的扇区偏移。H=4、S=16、LBA70→柱面1余6→磁头0；扇区从1起则为7。",
-              "⚫ **介质边界**：光盘可只读、一次写或重写；SSD常用Flash，没有机械寻道旋转，但有擦写寿命、页写块擦等开销，不能套半转公式。"
-            ],
-            "student_explanation": "7200rpm→半转4.17ms；6+4.17+1=11.17ms；LBA70→1/0/7。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "7200rpm平均等待4.17ms；LBA70、4磁头16扇区得柱面1磁头0扇区7；扩展页表例偏移0x345不变，TLB未中不等于缺页。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "4.4",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "7200rpm半转4.17ms再加寻道/传输；CHS70→柱面1/头0/从1扇区7，SSD不可套旋转公式；TLB扩展仍标为扩展，页号替换偏移不变与111ns串行模型条件均保留。"
+          "status": "pass_sampled_task",
+          "evidence": "7200rpm平均等4.17ms，与8ms寻道和1ms传输相加13.17ms；LBA70拆柱面1磁头0扇区7；SSD不套旋转公式。"
         }
       },
       "status": "accepted",
@@ -820,26 +702,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "5.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "概述",
-            "source_line": 235,
-            "mechanisms_in_current_text": [
-              "🔴 **I/O系统**：把CPU、主存与外设连接，协调速度、格式和工作方式差异；接口负责缓冲、译码和同步。",
-              "🔵 **编址**：统一编址把设备寄存器纳入主存地址空间，用访存指令；独立编址有单独I/O空间及专用指令。",
-              "⚫ **两组分类**：查询/中断/DMA是控制方式，串行/并行是传输组织，可组合。通道或I/O处理机承担更多管理任务，不只是按指定块搬运。"
-            ],
-            "student_explanation": "能够说端口的空间分配不是设备内容，串并行不等于通知方式。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "统一编址用访存指令访问端口；控制方式与串并行组织是不同维度。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "5.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "统一/独立编址的地址空间与指令区分；控制方式与串并行两种分类不混；通道职责仍有基本定位。"
+          "status": "pass_sampled_task",
+          "evidence": "将统一编址与独立编址区别写为地址空间和访问指令；中断/DMA不与串并行互斥。"
         }
       },
       "status": "accepted",
@@ -851,6 +723,9 @@
       "chapter_id": "computer-organization.c09",
       "question_ids": [
         "uf-co-008",
+        "gap-co-terms-06",
+        "gap-co-terms-13",
+        "gap-co-terms-14",
         "ap-co-003",
         "ap-co-005",
         "sp-core-co-011",
@@ -876,26 +751,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "5.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "I/O设备",
-            "source_line": 240,
-            "mechanisms_in_current_text": [
-              "🔴 **输入与输出**：键盘、扫描仪输入；显示器、打印机输出；触摸屏兼有。磁盘常按块交换，终端常按字符流交换。",
-              "🔵 **显示缓存**：像素数×每像素位数；如640×480、每像素8bit，需307200B（未计控制信息）。",
-              "⚫ **参数区别**：分辨率决定像素个数，颜色位数决定可编码颜色数，刷新率不是二者替代值。"
-            ],
-            "student_explanation": "知道触摸屏两用，刷新率不代替颜色位数；本节暂无自己独立帧缓数值题。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "640×480×8/8=307200B；触摸屏兼有输入输出，刷新率不等于分辨率。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "5.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "输入/输出/触摸屏与块/字符流一句区分；640×480×8bit=307200B主文数例完整，分辨率/色深/刷新率非替代。"
+          "status": "pass_sampled_task",
+          "evidence": "独算640×480×8/8=307200B；像素数、颜色位数和刷新率对象不同。"
         }
       },
       "status": "accepted",
@@ -907,6 +772,9 @@
       "chapter_id": "computer-organization.c09",
       "question_ids": [
         "uf-co-008",
+        "gap-co-terms-06",
+        "gap-co-terms-13",
+        "gap-co-terms-14",
         "ap-co-003",
         "ap-co-005",
         "sp-core-co-011",
@@ -932,26 +800,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "5.3",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "I/O接口",
-            "source_line": 245,
-            "mechanisms_in_current_text": [
-              "🔴 **三类寄存器**：数据寄存器放内容；状态寄存器报ready/busy/error；控制寄存器接启动、允许中断等命令。",
-              "🔵 **一次输入**：写启动→设备采集→数据锁存、置READY→CPU确认就绪→读数据→按设备协议清就绪。",
-              "⚫ **边界**：有限缓冲只能吸收瞬时速差，长期生产快于消费仍会溢出；并非所有设备都读后自动清状态。"
-            ],
-            "student_explanation": "键盘判断就绪/字符/允许中断对应三寄存器。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "接口包括译码、命令状态、缓冲、格式及时序匹配；先查状态再读数据，不预设所有设备读后清标志。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "5.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "状态/数据/控制三寄存器与写启动→采集→READY→查状态→读内容流程直接对应；清就绪依协议、有限缓冲边界保留。"
+          "status": "pass_sampled_task",
+          "evidence": "数据/状态/控制分别放内容、READY、启动命令；预测READY先置位才能把数据当新输入；清标志仍按协议。"
         }
       },
       "status": "accepted",
@@ -964,6 +822,9 @@
       "question_ids": [
         "gap-co-textbook-08-1",
         "sp-core-co-012"
+      ],
+      "exam_tasks": [
+        "接口功能与寄存器用途"
       ]
     },
     {
@@ -982,26 +843,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "5.4",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "程序查询方式",
-            "source_line": 251,
-            "mechanisms_in_current_text": [
-              "🔴 **忙等流程**：读状态→未就绪继续查→就绪后传数、更新计数→处理下一项。",
-              "🔵 **成本公式**：每秒N次、每次c拍、主频f，查询占CPU比例≈Nc/f；1000次×20拍÷1MHz=2%，另计数据处理开销。",
-              "⚫ **条件**：查太频浪费CPU，间隔太长可能覆盖或丢数据；READY=0时不能把数据寄存器旧值当新输入。"
-            ],
-            "student_explanation": "2MHz每秒2000次每次10拍=1%；未就绪不读。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "1000次×20拍/1MHz=2%；READY0时不能把旧值作新输入。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "5.4",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "读状态忙等→就绪传数；Nc/f与1000×20/1MHz=2%齐全，额外数据处理开销未删。"
+          "status": "pass_sampled_task",
+          "evidence": "1000×20/1000000=2%；READY=0继续查询，不能读旧值当新值；过慢查询也可能丢数据。"
         }
       },
       "status": "accepted",
@@ -1032,26 +883,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "5.5",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "程序中断方式",
-            "source_line": 256,
-            "mechanisms_in_current_text": [
-              "🔴 **基本过程**：设备请求→CPU在允许边界响应→保存断点/状态→按中断向量找入口→服务→恢复现场、中断返回。",
-              "🔵 **为什么提高利用率**：设备未就绪时CPU可执行其他工作，无须持续轮询；服务程序还要保护会改动的通用寄存器、处理设备并按协议确认请求。",
-              "⚫ **概念区别**：向量找入口，屏蔽暂禁指定可屏蔽请求；被屏蔽不等于已处理。外部中断多来自设备，异常来自当前指令；保存及恢复地址按具体体系规定。"
-            ],
-            "student_explanation": "未保存就嵌套会覆盖自己返回状态。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "有效未屏蔽请求、开中断、指令结束三条件缺一不可；中断隐指令为硬件入口动作，通用寄存器常由软件保护。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "5.5",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "请求、允许边界、保存、向量、服务、恢复返回一条链；为什么不用持续轮询解释利用率，异常/外中断与屏蔽区别仍有。"
+          "status": "pass_sampled_task",
+          "evidence": "填请求有效未屏蔽、开中断、指令末；将隐指令改词为硬件响应动作；未将可屏蔽外中断边界套所有异常。"
         }
       },
       "status": "accepted",
@@ -1063,6 +904,9 @@
       "chapter_id": "computer-organization.c09",
       "question_ids": [
         "uf-co-008",
+        "gap-co-terms-06",
+        "gap-co-terms-13",
+        "gap-co-terms-14",
         "ap-co-003",
         "ap-co-005",
         "sp-core-co-011",
@@ -1070,6 +914,10 @@
         "sp-core-co-034",
         "sp-core-co-046",
         "uc-co-012"
+      ],
+      "exam_tasks": [
+        "有效请求/开中断/指令边界",
+        "硬件隐指令与软件服务分工"
       ]
     },
     {
@@ -1088,28 +936,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "5.6",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "DMA方式",
-            "source_line": 262,
-            "mechanisms_in_current_text": [
-              "🔴 **CPU分工**：初始化首地址、长度、方向，启动并处理结束；逐字数据可直接在设备与主存间传，不必经过CPU寄存器。",
-              "🔵 **控制器流程**：申请总线→获准传送→地址递增、字计数递减→结束记录状态，通常中断通知CPU。控制器含地址、计数、控制状态寄存器和缓冲。",
-              "🔵 **例题**：按字节地址1000开始传256B，每次1B；传10B后下一地址1010、剩246B；完成时下一地址1256、剩0。",
-              "🔵 **方式**：突发连续占用总线搬一块；周期挪用短暂借一个存取周期，用后归还；与CPU交替访问需满足相应总线/存储时序。",
-              "⚫ **易混**：DMA仍会争总线和主存，CPU访存可能等，但不等于CPU全程停机；中断负责通知，DMA负责搬运，两者可配合。偶发键盘适合中断，高速磁盘大块适合DMA。"
-            ],
-            "student_explanation": "1000起搬10B到1010，剩246；CPU不是逐字节搬运者。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "DMA机器周期末让总线只在已声明传统模型成立；传10B后地址1010剩246；关中断仍可能DMA，完成通知可延后。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "5.6",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "CPU初始化/结束与DMAC逐字搬运分工先结论；1000起256B送10B后1010/246，方式/争用边界与图一致。"
+          "status": "pass_sampled_task",
+          "evidence": "DMA全称直接存储器存取；10B后地址1010余246B；关中断本身不禁DMA，仍需DMA使能、仲裁与安全边界；与中断程序转移区分。"
         }
       },
       "status": "accepted",
@@ -1121,6 +957,9 @@
       "chapter_id": "computer-organization.c09",
       "question_ids": [
         "uf-co-008",
+        "gap-co-terms-06",
+        "gap-co-terms-13",
+        "gap-co-terms-14",
         "ap-co-003",
         "ap-co-005",
         "sp-core-co-011",
@@ -1128,6 +967,11 @@
         "sp-core-co-034",
         "sp-core-co-046",
         "uc-co-012"
+      ],
+      "exam_tasks": [
+        "DMA全称",
+        "传统响应时机条件",
+        "中断/DMA简答对照"
       ]
     },
     {
@@ -1146,31 +990,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "6.1",
-          "status": "压缩退步已修：原反补定义与−6迁移、最终手机页面确认通过",
-          "evidence": {
-            "task": "按新6.1写8位−6原码、反码、补码，并解释各步哪一位不变。",
-            "independent_answer": "绝对值6=0000110（7位）；原码符号1加绝对值→10000110；保留最高符号1，其余取反→11111001；反码加1→11111010。三种编码真值同为−6。",
-            "check": "int(11111010,2)−256=−6；原码低7位为6；反码只反了低7位，未反符号。",
-            "status": "源稿−6新数据与最终390页面均复测通过",
-            "source_sha256": "c15b7606668aa08316da49307c526324e5591247e0a86edad9b82a72c4440f27",
-            "browser": {
-              "build": "8572758aa5cb52c0",
-              "url": "http://127.0.0.1:13320/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=6&layout=tang3-10-chapters-v1",
-              "new_definitions_visible_in_default_body": true,
-              "folded": false,
-              "overflow": false,
-              "page_errors": [],
-              "observed_text_excerpt": "机器数与真值\n原码与反码：原码最高位表示符号（0正1负），其余位存绝对值；负数反码保留符号位，其余位取反。正数的原码、反码、补码相同。\n同数对照：8位−5的原码10000101→反码11111010→补码11111011（反码加1）。真值是实际数值−5，机器数是它的编码位串。\n范围：n位无符号0…2^n−1；n位补码整数−2^(n−1)…2^(n−1)−1；8位分别为0…255、−128…127。\n负数补码：对应正数按固定字长取反加1；8位5=00000101，所以−5=11111011。正数原/反/补码相同，补码扩宽复制符号位，无符号扩宽补0。\n零与最小负数：原码有±0，补码只有一个0，能多表示一个最小负数；最小负数在原位宽下没有对应正数。\n端序：0x12345678小端按低地址→高地址为78、56、34、12；大端为12、34、56、78。只改变字节排列，不改变字节内部位序。\n\n通俗理解： 补码像固定刻度的环，减法可改加负数；环绕后的位串若越过有符号范围，就是溢出，不能当真实数学值。\n\n6.2 数的定点表示和浮点表示\n\n可能考 · 计算 / 简答　解读IEEE字段，区别范围与精度\n\n定点位置决定范围\n定点：小数点位置固定；n位补码纯小数符号权−1，其余为2^-1…2^-(n−1)，范围−1…1−2^-(n−1)，不能套整数范围。\n浮点：符号、阶码、尾数组合；阶码主要决定范围，尾数主要决定精度。范围大不等于范围内所有实数都精确。\nIEEE 754单精度\n字段：32位=符号S一位+阶码E八位+小数字段M二十三位。正常数值=(−1)^S×1.M×2^(E−127)，最高1隐含不存"
-            }
-          }
+          "status": "pass",
+          "evidence": "2D逐4位拼00101101；8位-5补码11111011；端序只改变字节排列。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "6.1",
-          "status": "初审缺定义→两短条补齐→857四环境定向复验通过",
-          "evidence": "初稿保留进制、位权、补码、端序，却少负原码/反码定义，已反馈。857版新增原码符号位+绝对值、负反码保持符号反数值，−5同数10000101/11111010/11111011实页核验。范围/符号扩展/固定精度未省略。"
+          "status": "pass_sampled_task",
+          "evidence": "2D→00101101；−5补码11111011，先定8位；小端78/56/34/12而非倒转每字节比特。"
         }
       },
       "status": "accepted",
@@ -1210,29 +1039,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "6.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "数的定点表示和浮点表示",
-            "source_line": 294,
-            "mechanisms_in_current_text": [
-              "🔴 **定点**：小数点位置固定；n位补码纯小数符号权−1，其余为2^-1…2^-(n−1)，范围−1…1−2^-(n−1)，不能套整数范围。",
-              "🔴 **浮点**：符号、阶码、尾数组合；阶码主要决定范围，尾数主要决定精度。范围大不等于范围内所有实数都精确。",
-              "🔵 **字段**：32位=符号S一位+阶码E八位+小数字段M二十三位。正常数值=(−1)^S×1.M×2^(E−127)，最高1隐含不存。",
-              "🔵 **解码例题**：0｜10000001｜010…：S=0、E=129，实际阶2，1.01₂=1.25，得1.25×2²=5。",
-              "🔵 **编码例题**：6.5=110.1₂=1.101₂×2²；S=0，E=129=10000001，M为101后补20个0。",
-              "⚫ **特殊值**：E全0表示零/非规格化数，E全1表示无穷/NaN；不能套正常数隐藏1公式。许多十进制小数不能有限二进制表示。"
-            ],
-            "student_explanation": "6.5=1.101×2²，符号0阶129小数字段101补零。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "6.5=1.101×2²，E129；阶码决定主要范围，尾数决定精度；全0/全1阶码不套正常数公式。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "6.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "定点整数/纯小数范围先分；IEEE S/E/M各位数与隐含1，解5和编码6.5两向例在主文，E全0/1不可套普通式保留。"
+          "status": "pass_sampled_task",
+          "evidence": "0|10000001|010…独算1.25×4=5；阶码范围与尾数精度分别挖空；E全0/全1不套隐藏1。"
         }
       },
       "status": "accepted",
@@ -1264,29 +1080,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "6.3",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "定点运算",
-            "source_line": 310,
-            "mechanisms_in_current_text": [
-              "🔴 **逻辑/算术/循环**：逻辑空位补0；补码算术右移复制符号位；算术左移低位补0并查溢出；循环把移出位送回另一端，带进位循环还含CF。",
-              "🔵 **例题**：11110100（−12）算术右移1→11111010（−6）；逻辑右移→01111010（无符号122）。01111110（126）左移→11111100，已超补码范围。",
-              "⚫ **边界**：固定字长左移会丢有效位；负奇数右移涉及舍入约定，不能一律当精确除2。",
-              "🔵 **减法变加法**：A−B=A+(−B)。8位7−10：00000111+11110110=11111101，即−3，只留字长内结果。",
-              "🔴 **有符号溢出**：同号相加得异号；相减时两操作数异号、结果与被减数异号。127+1→10000000、−128−1→01111111，均越界。",
-              "⚫ **进位不同于溢出**：CF看无符号进/借位，OF看有符号范围；异号数相加不会发生有符号溢出。"
-            ],
-            "student_explanation": "移位乘法、Booth、恢复/不恢复余数均保留数值中间过程；独立新数据−3×3另存。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "算术右移-12得-6；Booth-3×2第二轮0001/1000/1，最终-6；恢复除法13÷3商4余1，不恢复末R=-2须加3。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "6.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "移位、补码加减、无符号乘、Booth、恢复/不恢复除法分别短标题；Booth位对与整体算术移位表完整、除法每轮保留R及末恢复仍在。新Booth−3×3逐轮得11110111=−9，未靠原例照抄。"
+          "status": "pass_sampled_task",
+          "evidence": "独跟Booth −3×2第二轮A/Q/q为0001/1000/1，最终11111010；13÷3不恢复末R−2加3得1；127+1是溢出。"
         }
       },
       "status": "accepted",
@@ -1322,29 +1125,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "6.4",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "浮点四则运算",
-            "source_line": 362,
-            "mechanisms_in_current_text": [
-              "🔴 **步骤**：先检查特殊值，再对阶→尾数加减→规格化→舍入→检查阶码越界。",
-              "🔵 **加法例题**：6=1.1₂×2²，2.5=1.01₂×2¹；小阶右移成0.101₂×2²，尾数1.100+0.101=10.001，右规为1.0001₂×2³=8.5。",
-              "🔵 **减法例题**：1.100−0.101=0.111，左规为1.11₂×2¹=3.5。右规阶加1，左规阶减1，保持值不变。",
-              "⚫ **零与精度**：结果为0须单独处理，不可无限左规；对阶会丢低位，大数加很小数可能无法保留小数贡献。",
-              "🔵 **最近偶数**：若只留隐藏1加3位小数，1.0001恰在1.000与1.001中间，取末位偶的1.000；保护/舍入/粘滞位帮助判断大于半还是正好半。",
-              "🔵 **乘除规则**：符号均异或；乘法实际阶相加、尾数相乘，偏置阶E=E1+E2−Bias；除法实际阶相减、尾数相除，E=E1−E2+Bias；最后规格化、舍入和查范围。"
-            ],
-            "student_explanation": "6+2.5=1.0001×2³；6−2.5=1.11×2¹=3.5。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "6+2.5对阶后1.100+0.101=10.001，右规1.0001×2³；最近偶数中点1.0001保留到3位小数取1.000。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "6.4",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "加6+2.5与减法对阶/规格化过程仍完整；最近偶数、零单独处理、偏置乘除阶、特殊值条件保留。新算5.5+1.25=1.1011₂×2²=6.75；1.25×1.5=1.875，1.5/0.75=2可按规则完成。"
+          "status": "pass_sampled_task",
+          "evidence": "先尝试6+2.5，对阶0.101×2²，加成10.001，再右规1.0001×2³=8.5；中点1.0001留3小数位选1.000。"
         }
       },
       "status": "accepted",
@@ -1375,29 +1165,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "6.5",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "算术逻辑单元",
-            "source_line": 376,
-            "mechanisms_in_current_text": [
-              "🔴 **输入输出**：第i位输入Ai、Bi及低位进位Ci，输出本位Si和高位进位Ci+1。下标表示位号，不是乘数。",
-              "🔵 **逻辑式**：Si=Ai⊕Bi⊕Ci；Ci+1=AiBi+(Ai⊕Bi)Ci。⊕是异或，不同为1、相同为0；相乘写“与”，加号写“或”，不是普通算术。",
-              "🔵 **例题**：Ai=1、Bi=0、Ci=1→和0、进位1；三输入全1→和1、进位仍1。串行进位逐位等待；先行进位用产生G=AiBi、传递P=Ai⊕Bi展开，用电路换速度。",
-              "🔵 **统一加减**：SUB=0时B原样、初始进位0；SUB=1时B逐位异或变反B、初始进位1，完成A+反B+1。",
-              "🔴 **四个标志**：ZF零，SF符号，CF无符号进位，OF有符号溢出；补码加法OF可由符号位输入/输出进位异或得到。",
-              "⚫ **例子**：4位0111+0001=1000，CF=0、OF=1；符号位1也不必然溢出，正常负数本来就可能如此。"
-            ],
-            "student_explanation": "⊕/与/或与普通算术的区别仍在，能代新输入；SUB控制反B与进位有条件。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "1、0、进位1的全加器输出和0进1；4位7+1得到1000，CF0而OF1。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "6.5",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "输入/输出位号先释，⊕、逻辑乘加不是算术，Ai1/Bi0/Ci1得和0进1；SUB复用和ZF/SF/CF/OF定义保留，新4位6+3得1001、CF0/OF1。"
+          "status": "pass_sampled_task",
+          "evidence": "全加器1+0+1→和0进1；0111+0001时CF0/OF1；将有符号溢出与最高位进位区别。"
         }
       },
       "status": "accepted",
@@ -1428,27 +1205,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "7.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "机器指令",
-            "source_line": 391,
-            "mechanisms_in_current_text": [
-              "🔴 **操作码与地址码**：操作码说明做什么；地址字段给操作数位置或寻找方式。指令字长是整条指令位数，不必等于机器字长。",
-              "🔵 **地址数**：可有零、一、二、三地址；少地址可隐含累加器或栈顶，不等于功能弱。定长操作码m位最多2^m种编码，k位寄存器字段最多区分2^k个寄存器。",
-              "🔵 **16位例子**：原为4位操作码+三个4位地址。0000…1110给15种三地址指令，1111留作扩展；前缀1111后再看4位，可编码16种二地址指令，余8位存两个地址。",
-              "⚫ **边界**：若继续保留某8位前缀往下扩展，二地址可用数量须减少；同一前缀不能重复算给两类指令。"
-            ],
-            "student_explanation": "可说明6位最多64个定长编码；具体扩展操作码构造本轮未独立做。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "指令系统集合对象是全部机器指令；零地址并非无操作数；扩展操作码1111保留前缀后可有16条二地址。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "7.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "指令/机器字长、定长字段与地址数先结论；16位保留1111扩展前缀，15种三地址+16二地址数量互斥，继续扩展要扣名额。"
+          "status": "pass_sampled_task",
+          "evidence": "挖空指令系统为全部机器指令集合；微指令只实现机器指令内部控制，不成为该集合的定义对象。"
         }
       },
       "status": "accepted",
@@ -1461,6 +1227,9 @@
       "chapter_id": "computer-organization.c03",
       "question_ids": [
         "uf-co-005",
+        "gap-co-terms-01",
+        "gap-co-terms-02",
+        "gap-co-terms-05",
         "gap-co-textbook-15-1",
         "gap-audit26-system-006",
         "sp-core-co-005",
@@ -1469,6 +1238,10 @@
         "uc-co-006",
         "uc-co-007",
         "uc-co-013"
+      ],
+      "exam_tasks": [
+        "机器指令及指令系统定义",
+        "机器指令/微指令层次辨析"
       ]
     },
     {
@@ -1487,26 +1260,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "7.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "操作数类型和操作类型",
-            "source_line": 401,
-            "mechanisms_in_current_text": [
-              "🔴 **数据类型**：整数、浮点、字符、逻辑位串、地址；同一位串可因类型不同解释不同。",
-              "🔵 **操作类型**：传送、算术逻辑、移位、转移、调用返回、I/O。条件转移先查标志再改PC；调用还保存返回地址，返回用它续接。",
-              "⚫ **栈机顺序**：零地址运算隐含栈顶；先压7再压2，SUB一般计算7−2，先弹出的2是右操作数，不能颠倒成2−7。"
-            ],
-            "student_explanation": "先压7再2，SUB按7−2而非2−7。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "先压7再压2后SUB得到5；调用还需保存返回地址，转移只改变控制流。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "7.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "数据类型/操作类型与调用保存返回地址简列；栈先压7后2，先弹右操作数，SUB7−2仍有解释。"
+          "status": "pass_sampled_task",
+          "evidence": "先压7再压2，SUB得5；调用需保存返回地址，不能只说改PC。"
         }
       },
       "status": "accepted",
@@ -1518,6 +1281,9 @@
       "chapter_id": "computer-organization.c03",
       "question_ids": [
         "uf-co-005",
+        "gap-co-terms-01",
+        "gap-co-terms-02",
+        "gap-co-terms-05",
         "gap-audit26-system-006",
         "sp-core-co-005",
         "sp-core-co-006",
@@ -1542,27 +1308,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "7.3",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "寻址方式",
-            "source_line": 406,
-            "mechanisms_in_current_text": [
-              "🔴 **记号**：A为地址字段，R为寄存器内容，M[x]为地址x处内容，EA为最终有效地址。",
-              "🔵 **取数例题**：A=100、M[100]=400、M[400]=9、R=400：立即得100，直接得400，一次间接得9，寄存器得400，寄存器间接得9。",
-              "🔵 **算址例题**：基址1000+位移20→1020；相对PC104+位移−8→96。数组按字节编址时，元素下标还要乘元素字节数。",
-              "⚫ **访存与约定**：不计取指，立即/寄存器额外0次，直接/寄存器间接1次，一次内存间接2次；相对PC取值按指定体系。基址与变址公式可同为相加，使用目的不同。"
-            ],
-            "student_explanation": "A100,M100400,M4009：立即100/直接400/间接9；PC104−8=96。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "指令寻址顺序/跳跃；A100且M100=400、M400=9时直接得400、间接得9；立即不额外访存。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "7.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "A/R/M[x]/EA释义后表寻址、例取数、例算址；访存次数明确不含取指，相对PC按题设，数组下标乘字节数未丢。"
+          "status": "pass_sampled_task",
+          "evidence": "A100、M100=400、M400=9：立即100/直接400/间接9；一次间接多一次数据访问；顺序/跳跃是指令寻址维度。"
         }
       },
       "status": "accepted",
@@ -1574,12 +1329,18 @@
       "chapter_id": "computer-organization.c03",
       "question_ids": [
         "uf-co-005",
+        "gap-co-terms-01",
+        "gap-co-terms-02",
+        "gap-co-terms-05",
         "gap-audit26-system-006",
         "sp-core-co-005",
         "sp-core-co-006",
         "sp-core-co-017",
         "uc-co-006",
         "uc-co-013"
+      ],
+      "exam_tasks": [
+        "指令寻址/数据寻址分类与用途"
       ]
     },
     {
@@ -1598,26 +1359,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "7.4",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "指令格式举例",
-            "source_line": 427,
-            "mechanisms_in_current_text": [
-              "🔵 **编码例题**：16位规定[15:12]操作码，[11:9]目的，[8:6]源，[5:0]保留0；ADD为0001，R3←R3+R2，编码0001 011 010 000000=0x1680。",
-              "🔵 **字段范围例题**：32位扣6位操作码和两个5位寄存器字段，剩16位；若作补码立即数，范围−32768…32767。",
-              "⚫ **易混**：先按字段切分再解释，不能把十六进制每位直接当寄存器号；字段另分模式位时，立即数范围也会缩小。"
-            ],
-            "student_explanation": "32−6−5−5=16，补码范围−32768..32767。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "0001 011 010 000000拼0x1680；32-6-5-5剩16位补码立即数，范围-32768至32767。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "7.4",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "16位按操作码/目的/源字段切分0001011010000000=0x1680；32扣6+5+5=16bit补码范围例完整。"
+          "status": "pass_sampled_task",
+          "evidence": "4+3+3+6=16位；ADD R3,R2编码0001011010000000=0x1680；32−6−5−5=16位补码立即数。"
         }
       },
       "status": "accepted",
@@ -1630,6 +1381,9 @@
       "chapter_id": "computer-organization.c03",
       "question_ids": [
         "uf-co-005",
+        "gap-co-terms-01",
+        "gap-co-terms-02",
+        "gap-co-terms-05",
         "gap-co-textbook-15-1",
         "gap-audit26-system-006",
         "sp-core-co-005",
@@ -1656,26 +1410,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "7.5",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "RISC技术",
-            "source_line": 432,
-            "mechanisms_in_current_text": [
-              "🔴 **设计取向**：RISC通常指令规整、寻址较少、强调Load/Store；CISC指令功能和寻址更丰富，长度可能变化。现代实现会融合技术。",
-              "🔵 **Load/Store例子**：内存A加1写回：LOAD R1,[A]→ADD R1,#1→STORE [A],R1，先取到寄存器再运算。",
-              "⚫ **性能边界**：规整有利译码和流水，但时间还看指令数、CPI、频率、存储等待；不能断言RISC每条永远一拍或一定更快。"
-            ],
-            "student_explanation": "A加1要LOAD、ADD、STORE，算术不直接等同访存。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "能写RISC/CISC中文名；Load/Store要求先LOAD再ADD再STORE；不能由名称推必然快或永远一拍。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "7.5",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "RISC/CISC取向+LOAD/ADD/STORE三条示例，IC/CPI/f/存储等待约束保留，没有恢复为原docx“一定快/永远一拍”。"
+          "status": "pass_sampled_task",
+          "evidence": "完整写RISC/CISC中文名；Load→Add→Store三步跟踪；把“RISC永远一拍”改为规整设计倾向和实现条件。"
         }
       },
       "status": "accepted",
@@ -1687,12 +1431,18 @@
       "chapter_id": "computer-organization.c03",
       "question_ids": [
         "uf-co-005",
+        "gap-co-terms-01",
+        "gap-co-terms-02",
+        "gap-co-terms-05",
         "gap-audit26-system-006",
         "sp-core-co-005",
         "sp-core-co-006",
         "sp-core-co-017",
         "uc-co-006",
         "uc-co-013"
+      ],
+      "exam_tasks": [
+        "RISC/CISC全称与性能边界"
       ]
     },
     {
@@ -1711,27 +1461,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "8.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "CPU的结构",
-            "source_line": 440,
-            "mechanisms_in_current_text": [
-              "🔴 **分工**：PC下一指令地址，IR当前指令，MAR本次访存地址，MDR本次读写数据；ALU算术逻辑运算，CU控制器产生时序信号。",
-              "🔵 **取指例子**：PC100→MAR100→主存读到MDR→装IR；4B定长指令令PC104。执行ADD R1,R2，若R1=3、R2=5，最后R1=8，R2不变。",
-              "🔵 **三拍过程**：Y/Z为暂存寄存器；R1→Y，再R2与Y相加→Z，最后Z→R1。同拍不能让R1、R2同时驱动同一内部总线。",
-              "⚫ **周期区别**：时钟周期是基本拍；机器周期常完成一次基本操作；指令周期覆盖完成整条指令的时间。具体层次按机器规定，不可把三者等同。"
-            ],
-            "student_explanation": "R1先到Y，R2+Y进Z，Z回R1；MAR不能装成指令正文。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "取指PC→MAR→主存→MDR→IR；三周期定义有对象且数量依机器；PC不是当前指令本身。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "8.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "PC/IR/MAR/MDR/ALU/CU分工配取指ADD图；单总线Y/Z三拍独立，时钟/机器/指令周期不等同。"
+          "status": "pass_sampled_task",
+          "evidence": "CPU中央处理器、CU控制单元分别挖空；PC→MAR、MDR→IR方向能复述；三个周期不能直接画等号。"
         }
       },
       "status": "accepted",
@@ -1750,6 +1489,10 @@
         "sp-core-co-021",
         "sp-core-co-033",
         "sp-core-co-040"
+      ],
+      "exam_tasks": [
+        "寄存器/ALU/CU名称与功能",
+        "三种周期定义与关系"
       ]
     },
     {
@@ -1768,26 +1511,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "8.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "指令周期",
-            "source_line": 452,
-            "mechanisms_in_current_text": [
-              "🔴 **可能阶段**：取指→必要时间址→执行→满足条件时中断；不是每条都含全部阶段。",
-              "🔵 **间接ADD例子**：地址字段A100，M[100]=400、M[400]=9、ACC累加器初3；间址周期读400作为EA，执行再读9，ACC←3+9=12。",
-              "⚫ **易错**：400是地址、9才是数；算成403意味着漏了一次访存。中断周期是控制转移，不是每次ADD都必执行。"
-            ],
-            "student_explanation": "ACC3+M4009=12，误加400会漏一个访存。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "间址读400作为EA，执行再读9，与ACC3相加得12，不误得403。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "8.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "间接ADD A100先M100=400作地址，再M400=9与ACC3得12；寄存器传送表与400/9易错相连，不称每条都有中断周期。"
+          "status": "pass_sampled_task",
+          "evidence": "间址读400作为EA，执行读9，ACC3→12；把403结果修为12以指出漏访存；中断阶段非每指令必有。"
         }
       },
       "status": "accepted",
@@ -1824,29 +1557,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "8.3",
-          "status": "数值与等待例可执行；英文阶段缩写仍可释义",
-          "evidence": {
-            "heading": "指令流水",
-            "source_line": 466,
-            "mechanisms_in_current_text": [
-              "🔴 **目标**：多条指令分阶段重叠，提高吞吐；不保证缩短单条延迟。",
-              "🔵 **公式**：k段等长、n条、无停顿时，拍数=k+n−1；时间=(k+n−1)×节拍。5段20条、每拍1ns→24ns；3条则7拍。",
-              "🔴 **三类原因**：结构冲突争同一资源；数据冲突等前条结果；控制冲突等分支方向。",
-              "🔵 **处理**：增加资源、暂停、数据转发、分支预测分别缓解相应问题；5段10条理想14拍，加2停顿为16拍，1.6ns/拍则25.6ns。",
-              "🔵 **实际节拍**：不等长时取最慢阶段时间+级间寄存器开销；不是把各段耗时之和当每拍。",
-              "🔵 **相关例子**：ADD产R1，紧随SUB读R1；无转发，约定WB前半拍写、ID后半拍读，则SUB第3、4拍在ID等待，第5拍读到新值。"
-            ],
-            "student_explanation": "5级20条24ns；10条加2停顿16拍×1.6=25.6ns。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "5段20条需24拍；5段10条加2停顿需16拍25.6ns；WB前半写/ID后半读才可第5拍读新值。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "8.3",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "理想k+n−1、冲突、实际节拍/停顿分开；5级20条24ns、实际16×1.6=25.6与SUB等到第5拍的读写条件完整。"
+          "status": "pass_sampled_task",
+          "evidence": "5段20条1ns独算24ns；结构/数据/控制各能举例；数据转发不消除所有冲突，表中已有停顿不能重复加。"
         }
       },
       "status": "accepted",
@@ -1867,6 +1587,9 @@
         "uc-co-008",
         "uc-co-011",
         "uc-co-014"
+      ],
+      "exam_tasks": [
+        "结构/数据/控制相关规范名称与原因"
       ]
     },
     {
@@ -1885,26 +1608,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "8.4",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "中断系统",
-            "source_line": 485,
-            "mechanisms_in_current_text": [
-              "🔴 **两种优先级**：请求优先级选同时请求先响应谁；处理优先级可用屏蔽字决定服务时允许谁打断。",
-              "🔵 **嵌套例子**：B服务时更高A到来且允许嵌套：主程序→B前半→A→B后半→主程序。约定屏蔽位1为禁，可屏蔽自身和低级、放行高级。",
-              "⚫ **前提**：先保存现场再开嵌套；高优先级仍受中断开关和屏蔽限制。硬件保存部分断点/状态，软件保护其余寄存器；异常、不可屏蔽中断另有规则。"
-            ],
-            "student_explanation": "主程序→B前→A→B后→主程序，不只按优先级排列完成顺序。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "嵌套轨迹主程序→B前半→A→B后半→主程序；请求优先级与处理优先级不混，先保护再开嵌套。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "8.4",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "请求优先与服务屏蔽优先分开；B中A嵌套回B后半再主程序，先保护现场且高优先仍受屏蔽约束。"
+          "status": "pass_sampled_task",
+          "evidence": "在允许嵌套且未屏蔽时写主程序→B前→A→B后→主程序；撤去允许条件后不再断言A必抢占。"
         }
       },
       "status": "accepted",
@@ -1935,28 +1648,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "9.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "操作命令的分析",
-            "source_line": 493,
-            "mechanisms_in_current_text": [
-              "🔴 **微操作**：寄存器传送、ALU计算、发读写等基本动作；控制信号使动作发生。是否可同拍，看依赖、端口、总线和锁存时序。",
-              "🔵 **读控制名**：out=允许向总线输出；in=目的寄存器接收锁存；Read=读请求；READY=存储器数据就绪。Y/Z暂存操作数和结果。",
-              "🔵 **单总线取指**：T0 PCout、MARin；T1发Read、等READY后锁存MDR；T2 MDRout、IRin。PC加指令长度若有独立增量器可并行，否则另占ALU拍。",
-              "🔵 **直接ADD [A]**：IR地址→MAR→读并等待→MDR→Y→ACC与Y相加进Z→Z写回ACC；用暂存器避免两个源抢总线。",
-              "⚫ **能否同拍**：R1→Y和R2→Z都需同一总线，不能；MDR→IR与独立PC增量可并行。Read不保证一拍结束，未READY直接读会取到旧值。"
-            ],
-            "student_explanation": "R1→Y与R2→Z冲突；独立PC增量可和MDR→IR并行。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "微命令是控制信息、微操作是动作；单总线相加先R1→Y，再R2+Y→Z，最后Z→R1。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "9.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "out/in/Read/READY释义，T0/T1/T2取指与直接ADD经Y/Z可执行；独立PC增量可并行、两源同总线不可。"
+          "status": "pass_sampled_task",
+          "evidence": "微命令是控制信息，微操作是动作；R1和R2不可同拍抢一总线；有独立PC增量器才可同MDR→IR并行。"
         }
       },
       "status": "accepted",
@@ -1969,6 +1670,9 @@
       "question_ids": [
         "gap-co-textbook-17-1",
         "gap-co-textbook-17-2"
+      ],
+      "exam_tasks": [
+        "微操作与微命令"
       ]
     },
     {
@@ -1987,27 +1691,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "9.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "控制单元的功能",
-            "source_line": 507,
-            "mechanisms_in_current_text": [
-              "🔴 **输入决定输出**：操作码说明做什么，时序状态说明做到哪步，标志/READY等说明条件；三者共同决定控制信号，单看ADD操作码不够。",
-              "🔵 **输出**：内部有寄存器装入、总线输出、ALU选择；外部有读写、I/O应答。复位给确定入口，执行结束回取指，等待态未就绪自环。",
-              "🔵 **等待例题**：READ_WAIT中READY0→留本态；READY1→锁存数据并推进。同步按统一时钟，异步按完成应答，联合控制用时钟加等待协调慢操作。",
-              "⚫ **时钟条件**：一拍至少覆盖最长组合路径延迟、建立时间等；不能通过提前采样“强行加速”。指令/机器/节拍层次按具体结构规定。"
-            ],
-            "student_explanation": "READY0留READ_WAIT，1锁存再前进。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "READ_WAIT中READY0自环，READY1锁存前进；操作码、状态、标志共同决定输出。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "9.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "操作码/当前状态/条件共同决定控制输出；READY0自环、1锁存推进，最长组合路径与建立时间时钟边界保留。"
+          "status": "pass_sampled_task",
+          "evidence": "READY0自环，READY1锁存推进；只看ADD不能确定当前控制，还需状态与条件。"
         }
       },
       "status": "accepted",
@@ -2038,29 +1731,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "10.1",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "组合逻辑设计",
-            "source_line": 516,
-            "mechanisms_in_current_text": [
-              "🔴 **机制**：将操作码译码、状态、条件直接组合成控制信号；速度快，但修改指令可能要改逻辑连线。",
-              "🔵 **步骤**：确定数据通路→列微操作→按资源分拍→建状态表→写控制方程→检查复位、等待、非法状态。",
-              "⚫ **本节模型**：LOAD有MDR经总线到ACC；ADD另有ACC、MDR专用ALU输入及结果写ACC路径。若换第9章单总线Y/Z，ADD必须拆拍。",
-              "🔴 **分派含义**：F2末才锁存新IR，下一拍DISPATCH再按稳定操作码选执行入口，避免用旧指令决定入口。",
-              "🔴 **记号**：1=条件成立/控制有效，0=无效；F1等状态线仅当前处于该态时为1，LOAD/ADD为操作码译码线；∨是逻辑或，∧是逻辑与。",
-              "🔵 **推式**：MemRead=F1∨E1；MDRin=(F1∨E1)∧READY；ACC_Load=E2∧LOAD；ACC_Add=E2∧ADD。"
-            ],
-            "student_explanation": "独立DISPATCH避免旧IR，方程∧∨定义与STORE协议前提仍在。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "F2锁存IR后须DISPATCH再分派；F1或E1时MemRead1，READY0时MDRin0，非法码进异常态。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "10.1",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "本节LOAD总线路径/ADD专用ALU输入先声明；F2装IR后DISPATCH再分派，E2数据源明确；∨/∧式和STORE保持式协议例完整，未退回名词表。"
+          "status": "pass_sampled_task",
+          "evidence": "F2末装IR后DISPATCH才能用新操作码；MemRead=F1∨E1，READY0时MDRin=0；不能把此专用ALU通路直接套单总线。"
         }
       },
       "status": "accepted",
@@ -2091,29 +1771,16 @@
       ],
       "student_evidence": {
         "beginner": {
-          "report": "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
           "section": "10.2",
-          "status": "通读后本节主机制可解释；正文例证可复算，不宣称该节所有题型覆盖",
-          "evidence": {
-            "heading": "微程序设计",
-            "source_line": 543,
-            "mechanisms_in_current_text": [
-              "🔴 **控存CM**：存微指令；一条机器指令通常由一段微程序实现，一条微指令可发若干允许并行的控制动作。",
-              "🔵 **工作链**：微PC选控存地址→读入微指令寄存器μIR→操作字段驱动通路→顺序控制字段和条件选下一微地址。",
-              "⚫ **两个空间**：机器PC找用户机器指令，微PC找控制步骤；控存不是普通主存，回微取指入口也不等于把机器PC清0。",
-              "🔵 **来源**：微PC+1顺序、显式下地址、条件分支、操作码入口映射、微子程序返回。未READY可指向自己；执行结束回公共取指入口。",
-              "🔵 **完整微程序例**：以下执行部分采用第9章单总线Y/Z，取指使用独立PC增量器；ADD为直接寻址。",
-              "🔵 **数值核验**：MDR读到9、ACC原3；22后Y9，23后Z12，24后ACC12。22/23/24逐拍只有一个总线源，不会争线。"
-            ],
-            "student_explanation": "00—03取指分派与20—24执行逐微地址完整；PC/微PC分开，编码有空操作数。",
-            "practice_scope": "本节通读机制及例证；章练2题另记，不当成本节全部任务盲测"
-          }
+          "status": "pass",
+          "evidence": "微程序不同于用户程序；22后Y9、23后Z12、24后ACC12，回微地址00不清机器PC；4互斥+空要3位，64×24bit=192B。"
         },
         "applied": {
-          "report": "audit_reports/组成原理_考点版独立体验_2026-10-15.json",
+          "report": "audit_reports/组成原理_术语修复独立复核_2026-10-16.json",
           "section": "10.2",
-          "status": "通读机制保留、无当前教学阻断",
-          "evidence": "机器/微地址分清；00、01等、02装IR、03分派、20—24经Y/Z再回00的全表仍在主文。新M44=6/ACC7推Y6→Z13→ACC13，PC200取4B后204不被μPC00覆盖。字段k+1、13位与1536bit/192B例条件保留。"
+          "status": "pass_sampled_task",
+          "evidence": "区分微操作/微命令/微指令/微程序；22后Y9、23后Z12、24后ACC12；回00只改微PC；4互斥动作加空至少3位。"
         }
       },
       "status": "accepted",
@@ -2129,6 +1796,9 @@
         "gap-co-textbook-20-2",
         "gap-co-textbook-21-1",
         "gap-co-textbook-21-2"
+      ],
+      "exam_tasks": [
+        "微指令/微程序/控存层次"
       ]
     }
   ],
@@ -2136,20 +1806,30 @@
   "change_note": "先建官方38节矩阵后实施；实现不等于学生验收通过，证据待root回填。",
   "acceptance_scope": "出版社38节逐节教学机制覆盖核对；两个独立代理模拟新生，完成逐章代表任务、链接题和修后复测。不是教材所有细节/所有题型的穷尽证明，也不是现实学生长期学习效果。",
   "source_hashes": {
-    "course_notes/计算机组成原理.md": "b0a022fea0789c85241679ba5a6e3867f7259ed869798e51e534b9f664a2ad78",
-    "color_notes/计算机组成原理.md": "fd920fa8b7f922ab0973a267c4c11831f345cf77584f2a97b97b4189e30585f7"
+    "course_notes/计算机组成原理.md": "3f805ca262076f01e74f0ceb5eaaa50b6c491f867fefbb4cac57fa6cda56d7bf",
+    "color_notes/计算机组成原理.md": "cf8852a195af8ac5bb5c2414156e1efe2dfcb9e3e5e624a3dc1b05d97949fa72",
+    "staging/audit_organization_terms_additions.json": "ad3b7c442ba37996383f4a8b732c9a95de9dfc718b35d5937d8fa96c39dbd062"
   },
   "accepted_at": "2026-10-15",
   "previous_student_reviews": [
     "audit_reports/组成原理_新生试学_2026-10-15.json",
-    "audit_reports/组成原理_独立试学_2026-10-15.json"
+    "audit_reports/组成原理_独立试学_2026-10-15.json",
+    "audit_reports/组成原理_考点版新生体验_2026-10-15.json",
+    "audit_reports/组成原理_考点版独立体验_2026-10-15.json"
   ],
-  "current_revision": "考点版：按原三色笔记提炼，保留机制、条件与完整代表例题；6.1规则修后复测，最后仅增加6.1考法标记由root验证。",
+  "current_revision": "2026-10-16规范术语与命题完整性修复：两份新试学38节代表证据，初审和最终定向构建分别记录；非原书逐字/所有变式穷尽审定。",
   "definition_revision": {
     "date": "2026-10-16",
     "scope": "仅第一章定义及首张重点卡规范表述校准，解释单列；未重新声称全课程逐字审定。",
     "review_file": "audit_reports/组成原理_定义表述校准_2026-10-16.md",
     "browser_file": "audit_reports/组成原理_定义校准_显示验证_2026-10-16.json",
     "build": "47902f9bd047880b"
+  },
+  "term_exam_revision": {
+    "report": "audit_reports/组成原理_术语与命题缺口修复_2026-10-16.md",
+    "build": "f74588c9a55176f0",
+    "topics": 42,
+    "new_questions": 16,
+    "open_findings": []
   }
 }

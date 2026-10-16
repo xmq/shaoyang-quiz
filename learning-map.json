@@ -5285,7 +5285,7 @@
             "简答说明"
           ],
           "short_answer": true,
-          "common_trap": "体系结构描述程序员可见属性，组成关注实现方式；CPU不包含全部主存和外设，主机、CPU与完整计算机系统范围不同。"
+          "common_trap": "五部件为运算器、控制器、存储器、输入、输出；CPU不含全部主存和外设。执行顺序可转移，“中心”也不是问谁发控制信号。"
         },
         {
           "topic_id": "computer-organization.t02",
@@ -5325,6 +5325,31 @@
           "short_answer": true,
           "study_task": "由指令数、CPI和时钟频率计算CPU时间，比较优化前后的实际收益。",
           "common_trap": "主频高不保证程序快，MIPS也不能脱离指令集比较；CPU时间通常不含I/O等待，bit与Byte、MHz与GHz先统一单位。"
+        },
+        {
+          "topic_id": "computer-organization.t42",
+          "chapter_id": "computer-organization.c01",
+          "title": "机器字长、指令字长与存储字长",
+          "depth": "直接应用",
+          "keywords": [
+            "机器字长",
+            "指令字长",
+            "存储字长"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "正常练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true,
+          "common_trap": "按字节编址只说明每个地址对应1B，不能推出三个字长均为8位；地址位数描述可区分多少地址。"
         },
         {
           "topic_id": "computer-organization.t19",
@@ -5726,6 +5751,33 @@
           "common_trap": "容量的CHS模型需分清柱面、磁头、扇区及编号起点；LBA是逻辑块编号，不保证直接暴露实际磁盘几何。"
         },
         {
+          "topic_id": "computer-organization.t41",
+          "chapter_id": "computer-organization.c04",
+          "title": "存储器按存取方式分类",
+          "depth": "直接应用",
+          "keywords": [
+            "存取方式",
+            "随机存取",
+            "顺序存取",
+            "直接存取",
+            "相联存取"
+          ],
+          "knowledge_points": [],
+          "core_status": "必学",
+          "practice_priority": "补充练",
+          "target_depth": "直接应用",
+          "mastery_steps": [
+            "识别概念",
+            "完整说明"
+          ],
+          "practice_modes": [
+            "客观辨析",
+            "简答说明"
+          ],
+          "short_answer": true,
+          "common_trap": "存取方式不等于断电保持能力；SRAM无需刷新仍通常易失。CAM按内容访问，不能与Cache全相联映射混作同一定义。"
+        },
+        {
           "topic_id": "computer-organization.t13",
           "chapter_id": "computer-organization.c09",
           "title": "I/O控制、中断与DMA",
@@ -5758,7 +5810,7 @@
           ],
           "short_answer": true,
           "study_task": "按一次I/O流程比较查询、中断与DMA，说明CPU何时参与。",
-          "common_trap": "DMA仍需CPU初始化和结束处理，也会与CPU竞争总线；中断向量用于定位服务程序，不等于设备数据本身。"
+          "common_trap": "CPU关中断不等于禁止DMA；DMA仍需初始化、结束处理及总线仲裁。DMA完成可再发中断，具体边界按模型。"
         },
         {
           "topic_id": "computer-organization.t26",
@@ -6112,7 +6164,7 @@
           ],
           "short_answer": true,
           "study_task": "按寻址方式求有效地址和操作数，比较RISC与CISC的设计特点。",
-          "common_trap": "立即数是操作数本身，直接地址才指向操作数；RISC/CISC是设计取向，不能简化成“谁一定更快”。"
+          "common_trap": "微指令集合不等于机器指令系统；立即数是操作数，直接地址指向操作数；RISC/CISC不表示谁必然更快。"
         },
         {
           "topic_id": "computer-organization.t33",
@@ -6177,7 +6229,7 @@
           ],
           "short_answer": true,
           "study_task": "沿取指、译码和执行说明寄存器与数据通路的变化。",
-          "common_trap": "PC通常指向下一条而非当前指令内容；指令周期可能含多个机器周期，进入中断也不等于正在执行普通函数调用。"
+          "common_trap": "PC保存地址而IR保存指令；CU不等于整个CPU。三种周期不必相等，也不能把一个机器周期一律当一条指令。"
         },
         {
           "topic_id": "computer-organization.t11",

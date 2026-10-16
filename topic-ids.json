@@ -702,7 +702,9 @@
         "硬布线控制方程从状态表来": "computer-organization.t37",
         "微程序入口与下一微地址": "computer-organization.t38",
         "微指令编码与控存容量": "computer-organization.t39",
-        "Booth位对判断与整体右移": "computer-organization.t40"
+        "Booth位对判断与整体右移": "computer-organization.t40",
+        "存储器按存取方式分类": "computer-organization.t41",
+        "机器字长、指令字长与存储字长": "computer-organization.t42"
       },
       "chapter_prefix": {
         "computer-organization.c01": [
@@ -760,7 +762,9 @@
         "computer-organization.t37": "computer-organization.t06",
         "computer-organization.t38": "computer-organization.t06",
         "computer-organization.t39": "computer-organization.t06",
-        "computer-organization.t40": "computer-organization.t04"
+        "computer-organization.t40": "computer-organization.t04",
+        "computer-organization.t41": "computer-organization.t08",
+        "computer-organization.t42": "computer-organization.t01"
       },
       "keywords": {
         "computer-organization.t15": [
@@ -847,6 +851,18 @@
           "Booth",
           "位对",
           "附加位"
+        ],
+        "computer-organization.t41": [
+          "存取方式",
+          "随机存取",
+          "顺序存取",
+          "直接存取",
+          "相联存取"
+        ],
+        "computer-organization.t42": [
+          "机器字长",
+          "指令字长",
+          "存储字长"
         ]
       },
       "chapters": {

@@ -1,0 +1,2551 @@
+{
+  "build": "f74588c9a55176f0",
+  "card_contexts": 168,
+  "topic_pools": 42,
+  "max_phone_card_height": 471,
+  "errors": [],
+  "cards": [
+    {
+      "id": "computer-organization.t01",
+      "title": "存储程序与系统组成",
+      "chapter": 0,
+      "visible": true,
+      "height": 471,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t01&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t02",
+      "title": "性能指标与时间计算",
+      "chapter": 0,
+      "visible": true,
+      "height": 456,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t02&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t42",
+      "title": "机器字长、指令字长与存储字长",
+      "chapter": 0,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t42&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t19",
+      "title": "器件演进与软硬件层次",
+      "chapter": 1,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t19&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t20",
+      "title": "应用场景与并行加速边界",
+      "chapter": 1,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t20&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t12",
+      "title": "总线结构与带宽",
+      "chapter": 2,
+      "visible": true,
+      "height": 442,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t12&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t21",
+      "title": "总线仲裁决定谁先传",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t21&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t22",
+      "title": "异步总线四相握手",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t22&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t08",
+      "title": "存储层次与局部性",
+      "chapter": 3,
+      "visible": true,
+      "height": 442,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t08&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t09",
+      "title": "主存容量、编址与芯片扩展",
+      "chapter": 3,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t09&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t10",
+      "title": "Cache映射与平均访存时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 456,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t10&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t14",
+      "title": "虚拟地址、页表与TLB",
+      "chapter": 3,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t14&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t15",
+      "title": "Cache地址拆分与命中",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t15&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t16",
+      "title": "平均访存时间按口径算",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t16&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t23",
+      "title": "低位交叉存储的模块定位",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t23&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t24",
+      "title": "奇偶校验与汉明纠错",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t24&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t25",
+      "title": "磁盘定位与平均访问时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t25&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t41",
+      "title": "存储器按存取方式分类",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t41&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t13",
+      "title": "I/O控制、中断与DMA",
+      "chapter": 4,
+      "visible": true,
+      "height": 467,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t13&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t26",
+      "title": "I/O接口的三个寄存器",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t26&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t27",
+      "title": "程序查询的忙等开销",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t27&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t03",
+      "title": "数制、编码与位权",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t03&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t04",
+      "title": "原码、反码、补码与溢出",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t04&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t05",
+      "title": "定点与浮点表示",
+      "chapter": 5,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t05&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t28",
+      "title": "移位先辨符号与位宽",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t28&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t29",
+      "title": "移位相加逐位求乘积",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t29&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t30",
+      "title": "逐位试商与余数恢复",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t30&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t31",
+      "title": "浮点加减的对阶与规格化",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t31&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t32",
+      "title": "ALU加减与状态标志",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t32&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t40",
+      "title": "Booth位对判断与整体右移",
+      "chapter": 5,
+      "visible": true,
+      "height": 442,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t40&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t07",
+      "title": "指令、寻址与RISC/CISC",
+      "chapter": 6,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t07&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t33",
+      "title": "指令字段位数与编码",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t33&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t06",
+      "title": "CPU部件与指令周期",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t06&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t11",
+      "title": "流水线与相关冲突",
+      "chapter": 7,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t11&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t17",
+      "title": "理想流水线填充与排空",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t17&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t18",
+      "title": "流水线停顿与总时间",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t18&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t34",
+      "title": "中断屏蔽与嵌套顺序",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t34&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t35",
+      "title": "微操作按通路安排节拍",
+      "chapter": 8,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t35&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t36",
+      "title": "控制时序与就绪等待",
+      "chapter": 8,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t36&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t37",
+      "title": "硬布线控制方程从状态表来",
+      "chapter": 9,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t37&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t38",
+      "title": "微程序入口与下一微地址",
+      "chapter": 9,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t38&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t39",
+      "title": "微指令编码与控存容量",
+      "chapter": 9,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t39&mode=seq",
+      "viewport": 390,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t01",
+      "title": "存储程序与系统组成",
+      "chapter": 0,
+      "visible": true,
+      "height": 471,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t01&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t02",
+      "title": "性能指标与时间计算",
+      "chapter": 0,
+      "visible": true,
+      "height": 456,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t02&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t42",
+      "title": "机器字长、指令字长与存储字长",
+      "chapter": 0,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t42&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t19",
+      "title": "器件演进与软硬件层次",
+      "chapter": 1,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t19&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t20",
+      "title": "应用场景与并行加速边界",
+      "chapter": 1,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t20&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t12",
+      "title": "总线结构与带宽",
+      "chapter": 2,
+      "visible": true,
+      "height": 442,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t12&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t21",
+      "title": "总线仲裁决定谁先传",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t21&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t22",
+      "title": "异步总线四相握手",
+      "chapter": 2,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t22&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t08",
+      "title": "存储层次与局部性",
+      "chapter": 3,
+      "visible": true,
+      "height": 442,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t08&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t09",
+      "title": "主存容量、编址与芯片扩展",
+      "chapter": 3,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t09&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t10",
+      "title": "Cache映射与平均访存时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 456,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t10&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t14",
+      "title": "虚拟地址、页表与TLB",
+      "chapter": 3,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t14&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t15",
+      "title": "Cache地址拆分与命中",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t15&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t16",
+      "title": "平均访存时间按口径算",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t16&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t23",
+      "title": "低位交叉存储的模块定位",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t23&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t24",
+      "title": "奇偶校验与汉明纠错",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t24&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t25",
+      "title": "磁盘定位与平均访问时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t25&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t41",
+      "title": "存储器按存取方式分类",
+      "chapter": 3,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t41&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t13",
+      "title": "I/O控制、中断与DMA",
+      "chapter": 4,
+      "visible": true,
+      "height": 467,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t13&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t26",
+      "title": "I/O接口的三个寄存器",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t26&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t27",
+      "title": "程序查询的忙等开销",
+      "chapter": 4,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t27&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t03",
+      "title": "数制、编码与位权",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t03&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t04",
+      "title": "原码、反码、补码与溢出",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t04&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t05",
+      "title": "定点与浮点表示",
+      "chapter": 5,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t05&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t28",
+      "title": "移位先辨符号与位宽",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t28&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t29",
+      "title": "移位相加逐位求乘积",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t29&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t30",
+      "title": "逐位试商与余数恢复",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t30&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t31",
+      "title": "浮点加减的对阶与规格化",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t31&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t32",
+      "title": "ALU加减与状态标志",
+      "chapter": 5,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t32&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t40",
+      "title": "Booth位对判断与整体右移",
+      "chapter": 5,
+      "visible": true,
+      "height": 442,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t40&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t07",
+      "title": "指令、寻址与RISC/CISC",
+      "chapter": 6,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t07&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t33",
+      "title": "指令字段位数与编码",
+      "chapter": 6,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t33&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t06",
+      "title": "CPU部件与指令周期",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t06&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t11",
+      "title": "流水线与相关冲突",
+      "chapter": 7,
+      "visible": true,
+      "height": 438,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t11&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t17",
+      "title": "理想流水线填充与排空",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t17&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t18",
+      "title": "流水线停顿与总时间",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t18&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t34",
+      "title": "中断屏蔽与嵌套顺序",
+      "chapter": 7,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t34&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t35",
+      "title": "微操作按通路安排节拍",
+      "chapter": 8,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t35&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t36",
+      "title": "控制时序与就绪等待",
+      "chapter": 8,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t36&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t37",
+      "title": "硬布线控制方程从状态表来",
+      "chapter": 9,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t37&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t38",
+      "title": "微程序入口与下一微地址",
+      "chapter": 9,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t38&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t39",
+      "title": "微指令编码与控存容量",
+      "chapter": 9,
+      "visible": true,
+      "height": 412,
+      "width": 362,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t39&mode=seq",
+      "viewport": 390,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t01",
+      "title": "存储程序与系统组成",
+      "chapter": 0,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t01&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t02",
+      "title": "性能指标与时间计算",
+      "chapter": 0,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t02&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t42",
+      "title": "机器字长、指令字长与存储字长",
+      "chapter": 0,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t42&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t19",
+      "title": "器件演进与软硬件层次",
+      "chapter": 1,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t19&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t20",
+      "title": "应用场景与并行加速边界",
+      "chapter": 1,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t20&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t12",
+      "title": "总线结构与带宽",
+      "chapter": 2,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t12&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t21",
+      "title": "总线仲裁决定谁先传",
+      "chapter": 2,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t21&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t22",
+      "title": "异步总线四相握手",
+      "chapter": 2,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t22&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t08",
+      "title": "存储层次与局部性",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t08&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t09",
+      "title": "主存容量、编址与芯片扩展",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t09&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t10",
+      "title": "Cache映射与平均访存时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t10&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t14",
+      "title": "虚拟地址、页表与TLB",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t14&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t15",
+      "title": "Cache地址拆分与命中",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t15&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t16",
+      "title": "平均访存时间按口径算",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t16&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t23",
+      "title": "低位交叉存储的模块定位",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t23&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t24",
+      "title": "奇偶校验与汉明纠错",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t24&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t25",
+      "title": "磁盘定位与平均访问时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t25&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t41",
+      "title": "存储器按存取方式分类",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t41&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t13",
+      "title": "I/O控制、中断与DMA",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t13&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t26",
+      "title": "I/O接口的三个寄存器",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t26&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t27",
+      "title": "程序查询的忙等开销",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t27&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t03",
+      "title": "数制、编码与位权",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t03&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t04",
+      "title": "原码、反码、补码与溢出",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t04&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t05",
+      "title": "定点与浮点表示",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t05&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t28",
+      "title": "移位先辨符号与位宽",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t28&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t29",
+      "title": "移位相加逐位求乘积",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t29&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t30",
+      "title": "逐位试商与余数恢复",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t30&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t31",
+      "title": "浮点加减的对阶与规格化",
+      "chapter": 5,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t31&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t32",
+      "title": "ALU加减与状态标志",
+      "chapter": 5,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t32&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t40",
+      "title": "Booth位对判断与整体右移",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t40&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t07",
+      "title": "指令、寻址与RISC/CISC",
+      "chapter": 6,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t07&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t33",
+      "title": "指令字段位数与编码",
+      "chapter": 6,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t33&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t06",
+      "title": "CPU部件与指令周期",
+      "chapter": 7,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t06&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t11",
+      "title": "流水线与相关冲突",
+      "chapter": 7,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t11&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t17",
+      "title": "理想流水线填充与排空",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t17&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t18",
+      "title": "流水线停顿与总时间",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t18&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t34",
+      "title": "中断屏蔽与嵌套顺序",
+      "chapter": 7,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t34&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t35",
+      "title": "微操作按通路安排节拍",
+      "chapter": 8,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t35&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t36",
+      "title": "控制时序与就绪等待",
+      "chapter": 8,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t36&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t37",
+      "title": "硬布线控制方程从状态表来",
+      "chapter": 9,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t37&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t38",
+      "title": "微程序入口与下一微地址",
+      "chapter": 9,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t38&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t39",
+      "title": "微指令编码与控存容量",
+      "chapter": 9,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t39&mode=seq",
+      "viewport": 1280,
+      "theme": "light"
+    },
+    {
+      "id": "computer-organization.t01",
+      "title": "存储程序与系统组成",
+      "chapter": 0,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t01&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t02",
+      "title": "性能指标与时间计算",
+      "chapter": 0,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t02&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t42",
+      "title": "机器字长、指令字长与存储字长",
+      "chapter": 0,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t42&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t19",
+      "title": "器件演进与软硬件层次",
+      "chapter": 1,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t19&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t20",
+      "title": "应用场景与并行加速边界",
+      "chapter": 1,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t20&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t12",
+      "title": "总线结构与带宽",
+      "chapter": 2,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t12&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t21",
+      "title": "总线仲裁决定谁先传",
+      "chapter": 2,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t21&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t22",
+      "title": "异步总线四相握手",
+      "chapter": 2,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t22&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t08",
+      "title": "存储层次与局部性",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t08&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t09",
+      "title": "主存容量、编址与芯片扩展",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t09&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t10",
+      "title": "Cache映射与平均访存时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t10&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t14",
+      "title": "虚拟地址、页表与TLB",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t14&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t15",
+      "title": "Cache地址拆分与命中",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t15&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t16",
+      "title": "平均访存时间按口径算",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t16&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t23",
+      "title": "低位交叉存储的模块定位",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t23&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t24",
+      "title": "奇偶校验与汉明纠错",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t24&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t25",
+      "title": "磁盘定位与平均访问时间",
+      "chapter": 3,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t25&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t41",
+      "title": "存储器按存取方式分类",
+      "chapter": 3,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t41&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t13",
+      "title": "I/O控制、中断与DMA",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t13&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t26",
+      "title": "I/O接口的三个寄存器",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t26&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t27",
+      "title": "程序查询的忙等开销",
+      "chapter": 4,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t27&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t03",
+      "title": "数制、编码与位权",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t03&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t04",
+      "title": "原码、反码、补码与溢出",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t04&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t05",
+      "title": "定点与浮点表示",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t05&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t28",
+      "title": "移位先辨符号与位宽",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t28&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t29",
+      "title": "移位相加逐位求乘积",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t29&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t30",
+      "title": "逐位试商与余数恢复",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t30&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t31",
+      "title": "浮点加减的对阶与规格化",
+      "chapter": 5,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t31&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t32",
+      "title": "ALU加减与状态标志",
+      "chapter": 5,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t32&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t40",
+      "title": "Booth位对判断与整体右移",
+      "chapter": 5,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t40&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t07",
+      "title": "指令、寻址与RISC/CISC",
+      "chapter": 6,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t07&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t33",
+      "title": "指令字段位数与编码",
+      "chapter": 6,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t33&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t06",
+      "title": "CPU部件与指令周期",
+      "chapter": 7,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t06&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t11",
+      "title": "流水线与相关冲突",
+      "chapter": 7,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t11&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t17",
+      "title": "理想流水线填充与排空",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t17&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t18",
+      "title": "流水线停顿与总时间",
+      "chapter": 7,
+      "visible": true,
+      "height": 264,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t18&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t34",
+      "title": "中断屏蔽与嵌套顺序",
+      "chapter": 7,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t34&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t35",
+      "title": "微操作按通路安排节拍",
+      "chapter": 8,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t35&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t36",
+      "title": "控制时序与就绪等待",
+      "chapter": 8,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t36&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t37",
+      "title": "硬布线控制方程从状态表来",
+      "chapter": 9,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t37&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t38",
+      "title": "微程序入口与下一微地址",
+      "chapter": 9,
+      "visible": true,
+      "height": 323,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t38&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    },
+    {
+      "id": "computer-organization.t39",
+      "title": "微指令编码与控存容量",
+      "chapter": 9,
+      "visible": true,
+      "height": 294,
+      "width": 798,
+      "overflow": false,
+      "diagrams": [],
+      "practice": "./quiz.html?topic=computer-organization.t39&mode=seq",
+      "viewport": 1280,
+      "theme": "dark"
+    }
+  ],
+  "pools": [
+    {
+      "topic_id": "computer-organization.t01",
+      "question_ids": [
+        "gap-co-terms-11",
+        "gap-co-terms-12",
+        "sp-core-co-013",
+        "sp-core-co-019",
+        "sp-core-co-039"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t02",
+      "question_ids": [
+        "uf-co-006",
+        "sp-core-co-001",
+        "sp-core-co-018",
+        "sp-core-co-041",
+        "uc-co-009"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t42",
+      "question_ids": [
+        "gap-co-terms-09",
+        "gap-co-terms-10"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t19",
+      "question_ids": [
+        "gap-co-textbook-01-1",
+        "gap-co-textbook-01-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t20",
+      "question_ids": [
+        "gap-co-textbook-02-1",
+        "gap-co-textbook-02-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t12",
+      "question_ids": [
+        "gap-co-013",
+        "gap-co-terms-15",
+        "gap-co-terms-16",
+        "ap-co-002",
+        "sp-core-co-016",
+        "sp-core-co-022",
+        "sp-core-co-023",
+        "sp-core-co-036"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t21",
+      "question_ids": [
+        "gap-co-textbook-03-1",
+        "gap-co-textbook-03-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t22",
+      "question_ids": [
+        "gap-co-textbook-04-1",
+        "gap-co-textbook-04-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t08",
+      "question_ids": [
+        "gap-co-004",
+        "sp-core-co-007",
+        "sp-core-co-015"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t09",
+      "question_ids": [
+        "uf-co-003",
+        "gap-co-011",
+        "gap-co-terms-03",
+        "gap-co-terms-04",
+        "ap-co-004",
+        "sp-core-co-024",
+        "sp-core-co-025",
+        "sp-core-co-026",
+        "sp-core-co-035",
+        "sp-core-co-037",
+        "sp-core-co-042",
+        "uc-co-003"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t10",
+      "question_ids": [
+        "uf-co-004",
+        "sp-core-co-008",
+        "sp-core-co-009",
+        "sp-core-co-027",
+        "sp-core-co-028",
+        "sp-core-co-029",
+        "sp-core-co-043",
+        "sp-core-co-044",
+        "uc-co-010",
+        "hn-recall-sy26-001"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t14",
+      "question_ids": [
+        "gap-co-005",
+        "gap-co-006",
+        "gap-co-008",
+        "ap-co-006",
+        "uc-co-015"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t15",
+      "question_ids": [
+        "gap-co-012",
+        "uc-co-004"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t16",
+      "question_ids": [
+        "gap-accept-card-core-24-1",
+        "uc-co-005"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t23",
+      "question_ids": [
+        "gap-co-textbook-05-1",
+        "gap-co-textbook-05-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t24",
+      "question_ids": [
+        "gap-co-textbook-06-1",
+        "gap-co-textbook-06-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t25",
+      "question_ids": [
+        "gap-co-textbook-07-1",
+        "gap-co-textbook-07-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t41",
+      "question_ids": [
+        "gap-co-terms-07",
+        "gap-co-terms-08"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t13",
+      "question_ids": [
+        "uf-co-008",
+        "gap-co-terms-06",
+        "gap-co-terms-13",
+        "gap-co-terms-14",
+        "ap-co-003",
+        "ap-co-005",
+        "sp-core-co-011",
+        "sp-core-co-032",
+        "sp-core-co-034",
+        "sp-core-co-046",
+        "uc-co-012"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t26",
+      "question_ids": [
+        "gap-co-textbook-08-1",
+        "sp-core-co-012"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t27",
+      "question_ids": [
+        "gap-co-textbook-09-1",
+        "gap-co-textbook-09-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t03",
+      "question_ids": [
+        "gap-co-001",
+        "sp-core-co-002",
+        "sp-core-co-038"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t04",
+      "question_ids": [
+        "uf-co-002",
+        "gap-co-010",
+        "sp-core-co-003",
+        "uc-co-001"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t05",
+      "question_ids": [
+        "gap-co-002",
+        "gap-co-003",
+        "gap-co-007"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t28",
+      "question_ids": [
+        "gap-co-textbook-10-1",
+        "gap-co-textbook-10-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t29",
+      "question_ids": [
+        "gap-co-textbook-11-1",
+        "gap-co-textbook-11-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t30",
+      "question_ids": [
+        "gap-co-textbook-12-1",
+        "gap-co-textbook-12-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t31",
+      "question_ids": [
+        "gap-co-textbook-13-1",
+        "gap-co-textbook-13-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t32",
+      "question_ids": [
+        "gap-co-textbook-14-1",
+        "uc-co-002"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t40",
+      "question_ids": [
+        "gap-co-textbook-booth-01"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t07",
+      "question_ids": [
+        "uf-co-005",
+        "gap-co-terms-01",
+        "gap-co-terms-02",
+        "gap-co-terms-05",
+        "gap-audit26-system-006",
+        "sp-core-co-005",
+        "sp-core-co-006",
+        "sp-core-co-017",
+        "uc-co-006",
+        "uc-co-013"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t33",
+      "question_ids": [
+        "gap-co-textbook-15-1",
+        "uc-co-007"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t06",
+      "question_ids": [
+        "ap-co-001",
+        "sp-core-co-004",
+        "sp-core-co-010",
+        "sp-core-co-014",
+        "sp-core-co-020",
+        "sp-core-co-021",
+        "sp-core-co-033",
+        "sp-core-co-040"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t11",
+      "question_ids": [
+        "uf-co-007",
+        "sp-core-co-030",
+        "sp-core-co-045",
+        "uc-co-011"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t17",
+      "question_ids": [
+        "uc-co-008",
+        "uc-co-014"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t18",
+      "question_ids": [
+        "gap-co-009",
+        "sp-core-co-031"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t34",
+      "question_ids": [
+        "gap-co-textbook-16-1",
+        "gap-co-textbook-16-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t35",
+      "question_ids": [
+        "gap-co-textbook-17-1",
+        "gap-co-textbook-17-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t36",
+      "question_ids": [
+        "gap-co-textbook-18-1",
+        "gap-co-textbook-18-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t37",
+      "question_ids": [
+        "gap-co-textbook-19-1",
+        "gap-co-textbook-19-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t38",
+      "question_ids": [
+        "gap-co-textbook-20-1",
+        "gap-co-textbook-20-2"
+      ]
+    },
+    {
+      "topic_id": "computer-organization.t39",
+      "question_ids": [
+        "gap-co-textbook-21-1",
+        "gap-co-textbook-21-2"
+      ]
+    }
+  ]
+}

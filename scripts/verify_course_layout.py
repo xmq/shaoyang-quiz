@@ -82,7 +82,7 @@ def main(report_path='audit_reports/组成原理_旧进度迁移_2026-10-15.json
                 page.reload()
                 page.wait_for_selector('.chapter-section', state='attached')
                 assert page.evaluate('[activeChapterIndex+1,activeRecallIndex+1]') == [expected_chapter,expected_card], topic
-            checks.append('all 40 topic links retain their card after refresh')
+            checks.append(f'all {len(course["topics"])} topic links retain their card after refresh')
             page.goto(base+'/index.html')
             page.locator('a.home-course-main').filter(has_text=COURSE).click()
             page.wait_for_selector('.chapter-section', state='attached')

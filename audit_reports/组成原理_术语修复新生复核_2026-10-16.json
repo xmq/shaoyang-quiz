@@ -1,0 +1,1359 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "独立代理，以几乎无先修知识的大一新生视角做任务复核；不是真人测试",
+  "build": "1fd6086756539201",
+  "scope": "实际手机页10章38节逐章通读；42复习卡；26题实际UI作答，其中16新增题先固化答案再读gold，旧题部分答案已见，逐题声明。未穷举题库、未称逐页比对唐朔飞第3版原书。",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "device": "桌面Chrome模拟手机，非实体手机",
+    "theme": "light"
+  },
+  "sources": [
+    {
+      "title": "江苏科技大学组成原理第1章课件",
+      "url": "https://jsjwlw.just.edu.cn/_upload/article/files/89/74/c4e31a8d4884ac5e02c9044be7ac/d1f914a7-001c-4849-8433-6059026447dd.pdf",
+      "use": "冯机六特点及存储容量概念"
+    },
+    {
+      "title": "南京大学Lecture29",
+      "url": "https://cs.nju.edu.cn/swang/CompArchOrg_13F/slides/lecture29.pdf",
+      "use": "外部中断三响应条件、DMA分工"
+    },
+    {
+      "title": "清华社公开教材样章（非唐朔飞）",
+      "url": "https://www.tup.com.cn/upload/books/yz/085216-01.pdf",
+      "use": "存取分类定义，仅核公开样章"
+    },
+    {
+      "title": "清华社公开单片机教材样章",
+      "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/082195-01.pdf",
+      "use": "指令系统为全部指令集合"
+    }
+  ],
+  "section_checks": [
+    {
+      "编号": "1.1",
+      "title": "1.1 计算机系统简介",
+      "status": "pass",
+      "evidence": "能说出系统=硬件+软件；ISA约定程序员可见接口，组成负责实现。 最终候选补充定义已在实际手机页定点重读和改词复述通过。",
+      "actual_mobile_chapter": 1,
+      "textbook_section": "1.1 计算机系统简介"
+    },
+    {
+      "编号": "1.2",
+      "title": "1.2 计算机的基本组成",
+      "status": "pass",
+      "evidence": "闭卷复述六特点；取指后PC100变104，R1最终8；中心描述数据组织而非控制者。",
+      "actual_mobile_chapter": 1,
+      "textbook_section": "1.2 计算机的基本组成"
+    },
+    {
+      "编号": "1.3",
+      "title": "1.3 计算机硬件的主要技术指标",
+      "status": "pass",
+      "evidence": "三个字长分别描述运算、指令、存储字；CPI加权2后100万条/1GHz耗2ms，编址单位另看。 最终候选补充定义已在实际手机页定点重读和改词复述通过。",
+      "actual_mobile_chapter": 1,
+      "textbook_section": "1.3 计算机硬件的主要技术指标"
+    },
+    {
+      "编号": "2.1",
+      "title": "2.1 计算机的发展史",
+      "status": "pass",
+      "evidence": "按器件排电子管→晶体管→集成电路→大规模；未把存储程序第一与通用第一混同。",
+      "actual_mobile_chapter": 2,
+      "textbook_section": "2.1 计算机的发展史"
+    },
+    {
+      "编号": "2.2",
+      "title": "2.2 计算机的应用和展望",
+      "status": "pass",
+      "evidence": "80%部分加速4倍：剩余时间0.2+0.8/4=0.4，S=2.5；实时任务按期限判断。",
+      "actual_mobile_chapter": 2,
+      "textbook_section": "2.2 计算机的应用和展望"
+    },
+    {
+      "编号": "3.1",
+      "title": "3.1 总线的基本概念",
+      "status": "pass",
+      "evidence": "高阻Z不输出0；未获准设备释放驱动，CPU与DMA均可能是主设备。",
+      "actual_mobile_chapter": 3,
+      "textbook_section": "3.1 总线的基本概念"
+    },
+    {
+      "编号": "3.2",
+      "title": "3.2 总线的分类",
+      "status": "pass",
+      "evidence": "分别按范围、职责、传输组织分类；串行不必比并行慢。",
+      "actual_mobile_chapter": 3,
+      "textbook_section": "3.2 总线的分类"
+    },
+    {
+      "编号": "3.3",
+      "title": "3.3 总线性能及性能指标",
+      "status": "pass",
+      "evidence": "32位=4B；4×100M×2=800MB/s，80%有效率得640MB/s。",
+      "actual_mobile_chapter": 3,
+      "textbook_section": "3.3 总线性能及性能指标"
+    },
+    {
+      "编号": "3.4",
+      "title": "3.4 总线结构",
+      "status": "pass",
+      "evidence": "单总线有共享争用；多总线独立路径可并行，桥和主存端口仍可能冲突。",
+      "actual_mobile_chapter": 3,
+      "textbook_section": "3.4 总线结构"
+    },
+    {
+      "编号": "3.5",
+      "title": "3.5 总线控制",
+      "status": "pass",
+      "evidence": "链式设备1先于3；REQ1/ACK0不能采样，ACK有效后采样撤REQ，再撤ACK。",
+      "actual_mobile_chapter": 3,
+      "textbook_section": "3.5 总线控制"
+    },
+    {
+      "编号": "4.1",
+      "title": "4.1 概述",
+      "status": "pass",
+      "evidence": "区分随机/顺序/直接/相联；时间与位置基本无关不等于断电保留，时间/空间局部性可分别举例。 最终候选f74588c9a55176f0定点重读四类完整标签，并实际重答07，同义答案判定通过。",
+      "actual_mobile_chapter": 4,
+      "textbook_section": "4.1 概述"
+    },
+    {
+      "编号": "4.2",
+      "title": "4.2 主存储器",
+      "status": "pass",
+      "evidence": "SRAM无需刷新但易失，ROM可随机读；8K×8到32K×16需8片；四路字地址10落模块2内址2；校验p2+p4定位6。",
+      "actual_mobile_chapter": 4,
+      "textbook_section": "4.2 主存储器"
+    },
+    {
+      "编号": "4.3",
+      "title": "4.3 高速缓冲存储器",
+      "status": "pass",
+      "evidence": "0x1234拆成偏移52、组8、标记1，再查有效与标记；块序列0/1/0/2/0只有第三次命中；AMAT额外代价与总时长两口径均12ns。",
+      "actual_mobile_chapter": 4,
+      "textbook_section": "4.3 高速缓冲存储器"
+    },
+    {
+      "编号": "4.4",
+      "title": "4.4 辅助存储器",
+      "status": "pass",
+      "evidence": "7200rpm平均等待4.17ms；LBA70、4磁头16扇区得柱面1磁头0扇区7；扩展页表例偏移0x345不变，TLB未中不等于缺页。",
+      "actual_mobile_chapter": 4,
+      "textbook_section": "4.4 辅助存储器"
+    },
+    {
+      "编号": "5.1",
+      "title": "5.1 概述",
+      "status": "pass",
+      "evidence": "统一编址用访存指令访问端口；控制方式与串并行组织是不同维度。",
+      "actual_mobile_chapter": 5,
+      "textbook_section": "5.1 概述"
+    },
+    {
+      "编号": "5.2",
+      "title": "5.2 I/O设备",
+      "status": "pass",
+      "evidence": "640×480×8/8=307200B；触摸屏兼有输入输出，刷新率不等于分辨率。",
+      "actual_mobile_chapter": 5,
+      "textbook_section": "5.2 I/O设备"
+    },
+    {
+      "编号": "5.3",
+      "title": "5.3 I/O接口",
+      "status": "pass",
+      "evidence": "接口包括译码、命令状态、缓冲、格式及时序匹配；先查状态再读数据，不预设所有设备读后清标志。",
+      "actual_mobile_chapter": 5,
+      "textbook_section": "5.3 I/O接口"
+    },
+    {
+      "编号": "5.4",
+      "title": "5.4 程序查询方式",
+      "status": "pass",
+      "evidence": "1000次×20拍/1MHz=2%；READY0时不能把旧值作新输入。",
+      "actual_mobile_chapter": 5,
+      "textbook_section": "5.4 程序查询方式"
+    },
+    {
+      "编号": "5.5",
+      "title": "5.5 程序中断方式",
+      "status": "pass",
+      "evidence": "有效未屏蔽请求、开中断、指令结束三条件缺一不可；中断隐指令为硬件入口动作，通用寄存器常由软件保护。",
+      "actual_mobile_chapter": 5,
+      "textbook_section": "5.5 程序中断方式"
+    },
+    {
+      "编号": "5.6",
+      "title": "5.6 DMA方式",
+      "status": "pass",
+      "evidence": "DMA机器周期末让总线只在已声明传统模型成立；传10B后地址1010剩246；关中断仍可能DMA，完成通知可延后。",
+      "actual_mobile_chapter": 5,
+      "textbook_section": "5.6 DMA方式"
+    },
+    {
+      "编号": "6.1",
+      "title": "6.1 无符号数和有符号数",
+      "status": "pass",
+      "evidence": "2D逐4位拼00101101；8位-5补码11111011；端序只改变字节排列。",
+      "actual_mobile_chapter": 6,
+      "textbook_section": "6.1 无符号数和有符号数"
+    },
+    {
+      "编号": "6.2",
+      "title": "6.2 数的定点表示和浮点表示",
+      "status": "pass",
+      "evidence": "6.5=1.101×2²，E129；阶码决定主要范围，尾数决定精度；全0/全1阶码不套正常数公式。",
+      "actual_mobile_chapter": 6,
+      "textbook_section": "6.2 数的定点表示和浮点表示"
+    },
+    {
+      "编号": "6.3",
+      "title": "6.3 定点运算",
+      "status": "pass",
+      "evidence": "算术右移-12得-6；Booth-3×2第二轮0001/1000/1，最终-6；恢复除法13÷3商4余1，不恢复末R=-2须加3。",
+      "actual_mobile_chapter": 6,
+      "textbook_section": "6.3 定点运算"
+    },
+    {
+      "编号": "6.4",
+      "title": "6.4 浮点四则运算",
+      "status": "pass",
+      "evidence": "6+2.5对阶后1.100+0.101=10.001，右规1.0001×2³；最近偶数中点1.0001保留到3位小数取1.000。",
+      "actual_mobile_chapter": 6,
+      "textbook_section": "6.4 浮点四则运算"
+    },
+    {
+      "编号": "6.5",
+      "title": "6.5 算术逻辑单元",
+      "status": "pass",
+      "evidence": "1、0、进位1的全加器输出和0进1；4位7+1得到1000，CF0而OF1。",
+      "actual_mobile_chapter": 6,
+      "textbook_section": "6.5 算术逻辑单元"
+    },
+    {
+      "编号": "7.1",
+      "title": "7.1 机器指令",
+      "status": "pass",
+      "evidence": "指令系统集合对象是全部机器指令；零地址并非无操作数；扩展操作码1111保留前缀后可有16条二地址。",
+      "actual_mobile_chapter": 7,
+      "textbook_section": "7.1 机器指令"
+    },
+    {
+      "编号": "7.2",
+      "title": "7.2 操作数类型和操作类型",
+      "status": "pass",
+      "evidence": "先压7再压2后SUB得到5；调用还需保存返回地址，转移只改变控制流。",
+      "actual_mobile_chapter": 7,
+      "textbook_section": "7.2 操作数类型和操作类型"
+    },
+    {
+      "编号": "7.3",
+      "title": "7.3 寻址方式",
+      "status": "pass",
+      "evidence": "指令寻址顺序/跳跃；A100且M100=400、M400=9时直接得400、间接得9；立即不额外访存。",
+      "actual_mobile_chapter": 7,
+      "textbook_section": "7.3 寻址方式"
+    },
+    {
+      "编号": "7.4",
+      "title": "7.4 指令格式举例",
+      "status": "pass",
+      "evidence": "0001 011 010 000000拼0x1680；32-6-5-5剩16位补码立即数，范围-32768至32767。",
+      "actual_mobile_chapter": 7,
+      "textbook_section": "7.4 指令格式举例"
+    },
+    {
+      "编号": "7.5",
+      "title": "7.5 RISC技术",
+      "status": "pass",
+      "evidence": "能写RISC/CISC中文名；Load/Store要求先LOAD再ADD再STORE；不能由名称推必然快或永远一拍。",
+      "actual_mobile_chapter": 7,
+      "textbook_section": "7.5 RISC技术"
+    },
+    {
+      "编号": "8.1",
+      "title": "8.1 CPU的结构",
+      "status": "pass",
+      "evidence": "取指PC→MAR→主存→MDR→IR；三周期定义有对象且数量依机器；PC不是当前指令本身。",
+      "actual_mobile_chapter": 8,
+      "textbook_section": "8.1 CPU的结构"
+    },
+    {
+      "编号": "8.2",
+      "title": "8.2 指令周期",
+      "status": "pass",
+      "evidence": "间址读400作为EA，执行再读9，与ACC3相加得12，不误得403。",
+      "actual_mobile_chapter": 8,
+      "textbook_section": "8.2 指令周期"
+    },
+    {
+      "编号": "8.3",
+      "title": "8.3 指令流水",
+      "status": "pass",
+      "evidence": "5段20条需24拍；5段10条加2停顿需16拍25.6ns；WB前半写/ID后半读才可第5拍读新值。",
+      "actual_mobile_chapter": 8,
+      "textbook_section": "8.3 指令流水"
+    },
+    {
+      "编号": "8.4",
+      "title": "8.4 中断系统",
+      "status": "pass",
+      "evidence": "嵌套轨迹主程序→B前半→A→B后半→主程序；请求优先级与处理优先级不混，先保护再开嵌套。",
+      "actual_mobile_chapter": 8,
+      "textbook_section": "8.4 中断系统"
+    },
+    {
+      "编号": "9.1",
+      "title": "9.1 操作命令的分析",
+      "status": "pass",
+      "evidence": "微命令是控制信息、微操作是动作；单总线相加先R1→Y，再R2+Y→Z，最后Z→R1。",
+      "actual_mobile_chapter": 9,
+      "textbook_section": "9.1 操作命令的分析"
+    },
+    {
+      "编号": "9.2",
+      "title": "9.2 控制单元的功能",
+      "status": "pass",
+      "evidence": "READ_WAIT中READY0自环，READY1锁存前进；操作码、状态、标志共同决定输出。",
+      "actual_mobile_chapter": 9,
+      "textbook_section": "9.2 控制单元的功能"
+    },
+    {
+      "编号": "10.1",
+      "title": "10.1 组合逻辑设计",
+      "status": "pass",
+      "evidence": "F2锁存IR后须DISPATCH再分派；F1或E1时MemRead1，READY0时MDRin0，非法码进异常态。",
+      "actual_mobile_chapter": 10,
+      "textbook_section": "10.1 组合逻辑设计"
+    },
+    {
+      "编号": "10.2",
+      "title": "10.2 微程序设计",
+      "status": "pass",
+      "evidence": "微程序不同于用户程序；22后Y9、23后Z12、24后ACC12，回微地址00不清机器PC；4互斥+空要3位，64×24bit=192B。",
+      "actual_mobile_chapter": 10,
+      "textbook_section": "10.2 微程序设计"
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "第1章 计算机系统概论",
+      "explain_in_own_words": "系统预存程序后自动按指令控制硬件，三字长分属不同对象。",
+      "example_or_intermediate_attempt": "取指PC100→104；运算3+5后R1=8。",
+      "linked_questions": [
+        {
+          "id": "gap-co-terms-09",
+          "attempt": "指令字长",
+          "answer_seen_before_attempt": false,
+          "gold": "指令字长",
+          "explanation": "机器字长描述CPU通常一次处理的二进制数据位数，此处为32位；指令字长是一条机器指令的位数，此处为16位；存储字长是一个存储单元的位数，此处为8位。三个量描述的对象不同。",
+          "topic_id": "computer-organization.t42",
+          "chapter_id": "computer-organization.c01",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-terms-10",
+          "attempt": "错误",
+          "answer_seen_before_attempt": false,
+          "gold": "错误",
+          "explanation": "机器字长、指令字长和存储字长分别描述CPU一次通常处理的数据、单条指令和单个存储单元的位数，不能由一个量推出另两个量。指令还可能采用变长格式，主存也可能按字节组织。",
+          "topic_id": "computer-organization.t42",
+          "chapter_id": "computer-organization.c01",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 2,
+      "title": "第2章 计算机的发展及应用",
+      "explain_in_own_words": "器件更迭与程序层次是两条线，并行收益受串行部分限制。",
+      "example_or_intermediate_attempt": "0.2+0.8/4=0.4，整体快2.5倍。",
+      "linked_questions": [
+        {
+          "id": "gap-co-textbook-01-1",
+          "attempt": "电子管、晶体管、集成电路、大规模/超大规模集成电路",
+          "answer_seen_before_attempt": true,
+          "gold": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+          "explanation": "按器件特征分类，不是按机器外壳大小分类。",
+          "topic_id": "computer-organization.t19",
+          "chapter_id": "computer-organization.c08",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        },
+        {
+          "id": "gap-co-textbook-01-2",
+          "attempt": "错误；编译器翻译为目标程序，CPU执行机器指令；解释器自身也以机器指令运行",
+          "answer_seen_before_attempt": true,
+          "gold": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+          "explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+          "topic_id": "computer-organization.t19",
+          "chapter_id": "computer-organization.c08",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 3,
+      "title": "第3章 系统总线",
+      "explain_in_own_words": "总线共享必须先仲裁，再依时序判断数据是否有效。",
+      "example_or_intermediate_attempt": "REQ1/ACK0等；收到ACK后采样，再撤REQ。",
+      "linked_questions": [
+        {
+          "id": "gap-co-terms-15",
+          "attempt": "D",
+          "answer_seen_before_attempt": false,
+          "gold": "D",
+          "explanation": "三态输出包括逻辑0、逻辑1和高阻态Z。Z表示输出端对总线近似断开，不是第三个数据值，也不能直接读成0；总线实际电平由其他驱动、上拉下拉及电路条件决定。",
+          "topic_id": "computer-organization.t12",
+          "chapter_id": "computer-organization.c06",
+          "filter_pool_count": 8,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-terms-16",
+          "attempt": "错误",
+          "answer_seen_before_attempt": false,
+          "gold": "错误",
+          "explanation": "在本题的普通三态共享总线中，输出0仍在主动驱动。甲输出1、乙输出0可能造成总线争用；乙应进入高阻态以释放总线。不要把0与Z混同，也不要将开漏线与等其他电路约定套入本题。",
+          "topic_id": "computer-organization.t12",
+          "chapter_id": "computer-organization.c06",
+          "filter_pool_count": 8,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 4,
+      "title": "第4章 存储器",
+      "explain_in_own_words": "存储层次和不同访问规则解决速度容量等权衡。",
+      "example_or_intermediate_attempt": "主存字地址10在4路交叉存储中落模块2、内址2。",
+      "linked_questions": [
+        {
+          "id": "gap-co-terms-03",
+          "attempt": "静态随机存取存储器",
+          "answer_seen_before_attempt": false,
+          "gold": "静态随机存取存储器",
+          "explanation": "SRAM是Static Random Access Memory，中文为静态随机存取存储器。静态表示在供电正常时无需周期刷新来维持信息，不表示断电后仍能保存数据。",
+          "topic_id": "computer-organization.t09",
+          "chapter_id": "computer-organization.c04",
+          "filter_pool_count": 12,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-terms-04",
+          "attempt": "动态随机存取存储器",
+          "answer_seen_before_attempt": false,
+          "gold": "动态随机存取存储器",
+          "explanation": "DRAM是Dynamic Random Access Memory，中文为动态随机存取存储器。动态主要指存储电荷会泄漏，需要刷新；不能解释成地址必须按先后顺序访问。",
+          "topic_id": "computer-organization.t09",
+          "chapter_id": "computer-organization.c04",
+          "filter_pool_count": 12,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "最终构建f74588c9a55176f0对4.1全名与第07题别名实际UI定点复测通过。"
+    },
+    {
+      "chapter": 5,
+      "title": "第5章 输入输出系统",
+      "explain_in_own_words": "查询由CPU等，中断由CPU服务，DMA让控制器搬数据。",
+      "example_or_intermediate_attempt": "DMA传10B后下一地址1010、余246；机器周期末先DMA，指令末再查中断。",
+      "linked_questions": [
+        {
+          "id": "gap-co-terms-06",
+          "attempt": "直接存储器存取",
+          "answer_seen_before_attempt": false,
+          "gold": "直接存储器存取",
+          "explanation": "DMA是Direct Memory Access，即直接存储器存取。其数据传送可由DMA控制器在设备与主存之间进行；直接不等于整个过程完全不需要CPU，初始化和结束处理通常仍需CPU参与。",
+          "topic_id": "computer-organization.t13",
+          "chapter_id": "computer-organization.c09",
+          "filter_pool_count": 11,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-terms-13",
+          "attempt": "B",
+          "answer_seen_before_attempt": false,
+          "gold": "B",
+          "explanation": "按题设，DMA取得总线的检查边界是可让出总线的机器周期末；可屏蔽外部中断的检查边界是指令末。当前指令未结束，DMA可先获得传送机会。结论依赖所给传统模型，不能直接套到所有现代CPU。",
+          "topic_id": "computer-organization.t13",
+          "chapter_id": "computer-organization.c09",
+          "filter_pool_count": 10,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 6,
+      "title": "第6章 计算机的运算方法",
+      "explain_in_own_words": "位串须结合编码、位宽和类型解释；运算需处理中间状态及越界。",
+      "example_or_intermediate_attempt": "Booth第二轮算0011再整体右移为0001/1000/1；13÷3商4余1。",
+      "linked_questions": [
+        {
+          "id": "gap-co-001",
+          "attempt": "00101101",
+          "answer_seen_before_attempt": true,
+          "gold": "00101101",
+          "explanation": "2对应0010，D对应1101，按4位一组拼接。",
+          "topic_id": "computer-organization.t03",
+          "chapter_id": "computer-organization.c02",
+          "filter_pool_count": 3,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-002",
+          "attempt": "符号位决定正负，阶码主要决定范围，尾数主要决定精度",
+          "answer_seen_before_attempt": false,
+          "gold": "符号位决定正负，阶码主要决定数值范围和小数点位置，尾数主要决定有效数字与精度。",
+          "explanation": "浮点值由三个字段共同解释，不能单独把阶码或尾数当作完整数值。",
+          "topic_id": "computer-organization.t05",
+          "chapter_id": "computer-organization.c02",
+          "filter_pool_count": 3,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 7,
+      "title": "第7章 指令系统",
+      "explain_in_own_words": "指令系统是机器指令全集，格式和寻址决定怎样取得操作数。",
+      "example_or_intermediate_attempt": "M100=400、M400=9时一次间接EA400、操作数9。",
+      "linked_questions": [
+        {
+          "id": "gap-co-terms-01",
+          "attempt": "指令系统",
+          "answer_seen_before_attempt": false,
+          "gold": "指令系统",
+          "explanation": "指令系统是计算机所能执行的全部机器指令的集合。这里的对象是机器指令，不是控制器内部使用的微指令。",
+          "topic_id": "computer-organization.t07",
+          "chapter_id": "computer-organization.c03",
+          "filter_pool_count": 10,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-terms-02",
+          "attempt": "C",
+          "answer_seen_before_attempt": false,
+          "gold": "C",
+          "explanation": "机器指令是程序使用的操作命令；微指令组织控制器内部的微操作。本题已给出微程序实现的条件，一条机器指令可由多条微指令实现，不能把两个层次的集合混同。",
+          "topic_id": "computer-organization.t07",
+          "chapter_id": "computer-organization.c03",
+          "filter_pool_count": 10,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 8,
+      "title": "第8章 CPU的结构和功能",
+      "explain_in_own_words": "CPU由寄存器和运算控制配合执行；流水重叠多条指令但会停顿。",
+      "example_or_intermediate_attempt": "5段10条理想14拍，加入2停顿变16拍25.6ns。",
+      "linked_questions": [
+        {
+          "id": "ap-co-001",
+          "attempt": "A",
+          "answer_seen_before_attempt": true,
+          "gold": "A",
+          "explanation": "PC给出指令地址，经MAR访问主存，读出的指令经MDR送入IR。具体微操作可因机器而异，但部件作用不变。",
+          "topic_id": "computer-organization.t06",
+          "chapter_id": "computer-organization.c10",
+          "filter_pool_count": 8,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "pass"
+        },
+        {
+          "id": "gap-co-009",
+          "attempt": "5+10-1+2=16周期；16×1.6=25.6ns",
+          "answer_seen_before_attempt": true,
+          "gold": "16个周期，25.6ns。",
+          "explanation": "理想周期数5+10−1=14，再加2个停顿得16；16×1.6=25.6ns。",
+          "topic_id": "computer-organization.t18",
+          "chapter_id": "computer-organization.c10",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 9,
+      "title": "第9章 控制单元的功能",
+      "explain_in_own_words": "控制单元按状态和条件发微命令，安排动作须看实际资源。",
+      "example_or_intermediate_attempt": "R1先存Y，再R2+Y到Z，最后Z回R1，三个拍均一源。",
+      "linked_questions": [
+        {
+          "id": "gap-co-textbook-17-1",
+          "attempt": "不能；同一总线只能一个源。R1到Y；R2加Y到Z；Z到R1",
+          "answer_seen_before_attempt": true,
+          "gold": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+          "explanation": "用Y保存第一操作数、Z暂存结果，避免同拍竞争同一总线。",
+          "topic_id": "computer-organization.t35",
+          "chapter_id": "computer-organization.c05",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        },
+        {
+          "id": "gap-co-textbook-17-2",
+          "attempt": "有独立PC增量器并且通路无冲突可同拍，共用ALU或总线则拆拍",
+          "answer_seen_before_attempt": true,
+          "gold": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+          "explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+          "topic_id": "computer-organization.t35",
+          "chapter_id": "computer-organization.c05",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    },
+    {
+      "chapter": 10,
+      "title": "第10章 控制单元的设计",
+      "explain_in_own_words": "硬布线由状态逻辑发信号，微程序用控存中的有序微指令发信号。",
+      "example_or_intermediate_attempt": "F1且READY0保持读请求而不锁存，READY1锁存后转F2；微址23后Z12。",
+      "linked_questions": [
+        {
+          "id": "gap-co-textbook-19-1",
+          "attempt": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY",
+          "answer_seen_before_attempt": false,
+          "gold": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+          "explanation": "读请求在等待期间保持，锁存必须等READY有效。",
+          "topic_id": "computer-organization.t37",
+          "chapter_id": "computer-organization.c11",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        },
+        {
+          "id": "gap-co-textbook-19-2",
+          "attempt": "通路决定哪些微操作能并行、有何冲突，先明确资源才能安排状态和控制方程",
+          "answer_seen_before_attempt": false,
+          "gold": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+          "explanation": "状态表不能忽略硬件约束，否则逻辑方程形式正确也会触发资源冲突。",
+          "topic_id": "computer-organization.t37",
+          "chapter_id": "computer-organization.c11",
+          "filter_pool_count": 2,
+          "all_pool_same_topic": true,
+          "ui_attempted": true,
+          "semantic_result": "pass",
+          "ui_result": "reference_checked"
+        }
+      ],
+      "review_card_check": "已读取该章全部实际卡片正文；卡片回忆任务与讲义同对象，单卡三块可复习。",
+      "blocker": null,
+      "retest": "本轮一次通过，无待修问题"
+    }
+  ],
+  "definition_drills": [
+    {
+      "prompt": "指令系统是一台计算机所能执行的全部____的集合。",
+      "attempt": "机器指令",
+      "status": "pass"
+    },
+    {
+      "prompt": "存储字长是一个____所存二进制代码的____。",
+      "attempt": "存储单元；位数",
+      "status": "pass"
+    },
+    {
+      "prompt": "把“随机存取与断电后仍保留信息有关”中的关键词改正。",
+      "attempt": "随机存取与按地址访问且存取时间基本不依位置有关；断电保持由易失性描述。",
+      "status": "pass"
+    },
+    {
+      "prompt": "“ROM只能顺序读，因为它只读”是否可由两种属性推出？",
+      "attempt": "不能；ROM能按地址随机读取，只读与访问顺序是两个分类依据。",
+      "status": "pass"
+    },
+    {
+      "prompt": "“指令周期是CPU的一拍”改错。",
+      "attempt": "时钟周期是基本时间单位；机器周期完成基本操作；指令周期包含取出并执行整条指令的时间，数量依具体机器。",
+      "status": "pass"
+    },
+    {
+      "prompt": "“高阻态就是输出逻辑0”改词。",
+      "attempt": "高阻态是输出端近似断开，不主动驱动。",
+      "status": "pass"
+    },
+    {
+      "prompt": "“传统冯机六点中的中心是控制器”改词并补现代。",
+      "attempt": "传统为运算器中心；现代教材结构为存储器中心。不是问哪个部件控制。",
+      "status": "pass"
+    },
+    {
+      "prompt": "CPU关中断就不能响应DMA；所有异常只能指令末响应。",
+      "attempt": "两句均错；DMA按使能、仲裁和安全让总线边界，异常依其规则，不套外部可屏蔽中断模型。",
+      "status": "pass"
+    },
+    {
+      "prompt": "微操作/微命令/微指令/微程序分别填动作、信息、一周期组织、序列。",
+      "attempt": "微操作是基本动作；微命令控制动作；微指令组织一微周期控制信息；微程序为有序微指令序列。",
+      "status": "pass"
+    }
+  ],
+  "questions": [
+    {
+      "id": "gap-co-terms-01",
+      "attempt": "指令系统",
+      "answer_seen_before_attempt": false,
+      "gold": "指令系统",
+      "explanation": "指令系统是计算机所能执行的全部机器指令的集合。这里的对象是机器指令，不是控制器内部使用的微指令。",
+      "topic_id": "computer-organization.t07",
+      "chapter_id": "computer-organization.c03",
+      "filter_pool_count": 10,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-02",
+      "attempt": "C",
+      "answer_seen_before_attempt": false,
+      "gold": "C",
+      "explanation": "机器指令是程序使用的操作命令；微指令组织控制器内部的微操作。本题已给出微程序实现的条件，一条机器指令可由多条微指令实现，不能把两个层次的集合混同。",
+      "topic_id": "computer-organization.t07",
+      "chapter_id": "computer-organization.c03",
+      "filter_pool_count": 10,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-03",
+      "attempt": "静态随机存取存储器",
+      "answer_seen_before_attempt": false,
+      "gold": "静态随机存取存储器",
+      "explanation": "SRAM是Static Random Access Memory，中文为静态随机存取存储器。静态表示在供电正常时无需周期刷新来维持信息，不表示断电后仍能保存数据。",
+      "topic_id": "computer-organization.t09",
+      "chapter_id": "computer-organization.c04",
+      "filter_pool_count": 12,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-04",
+      "attempt": "动态随机存取存储器",
+      "answer_seen_before_attempt": false,
+      "gold": "动态随机存取存储器",
+      "explanation": "DRAM是Dynamic Random Access Memory，中文为动态随机存取存储器。动态主要指存储电荷会泄漏，需要刷新；不能解释成地址必须按先后顺序访问。",
+      "topic_id": "computer-organization.t09",
+      "chapter_id": "computer-organization.c04",
+      "filter_pool_count": 12,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-05",
+      "attempt": "RISC精简指令集计算机；CISC复杂指令集计算机",
+      "answer_seen_before_attempt": false,
+      "gold": "RISC：精简指令集计算机（也称精简指令系统计算机）；CISC：复杂指令集计算机（也称复杂指令系统计算机）。",
+      "explanation": "RISC中的Reduced对应精简，CISC中的Complex对应复杂，二者都指指令集设计取向。名称本身不能推出某程序在某处理器上必然更快。",
+      "topic_id": "computer-organization.t07",
+      "chapter_id": "computer-organization.c03",
+      "filter_pool_count": 8,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-terms-06",
+      "attempt": "直接存储器存取",
+      "answer_seen_before_attempt": false,
+      "gold": "直接存储器存取",
+      "explanation": "DMA是Direct Memory Access，即直接存储器存取。其数据传送可由DMA控制器在设备与主存之间进行；直接不等于整个过程完全不需要CPU，初始化和结束处理通常仍需CPU参与。",
+      "topic_id": "computer-organization.t13",
+      "chapter_id": "computer-organization.c09",
+      "filter_pool_count": 11,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-07",
+      "attempt": "相联存取存储器",
+      "answer_seen_before_attempt": false,
+      "gold": "相联存储器",
+      "explanation": "这一分类的四类是随机、顺序、直接、相联。相联存储器按内容或内容的一部分匹配查找；Cache的直接映射、组相联和全相联属于另一分类，不能拿来替代这四类。",
+      "topic_id": "computer-organization.t41",
+      "chapter_id": "computer-organization.c04",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass_with_ui_issue",
+      "ui_result": "incorrect_due_to_missing_alias"
+    },
+    {
+      "id": "gap-co-terms-08",
+      "attempt": "A",
+      "answer_seen_before_attempt": false,
+      "gold": "A",
+      "explanation": "甲对应RAM式随机存取；乙对应磁带式顺序存取；丙对应磁盘式直接存取。直接存取允许先定位，不等于随机存取中存取时间基本与地址无关；相联存取的判断依据则是按内容匹配。",
+      "topic_id": "computer-organization.t41",
+      "chapter_id": "computer-organization.c04",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-09",
+      "attempt": "指令字长",
+      "answer_seen_before_attempt": false,
+      "gold": "指令字长",
+      "explanation": "机器字长描述CPU通常一次处理的二进制数据位数，此处为32位；指令字长是一条机器指令的位数，此处为16位；存储字长是一个存储单元的位数，此处为8位。三个量描述的对象不同。",
+      "topic_id": "computer-organization.t42",
+      "chapter_id": "computer-organization.c01",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-10",
+      "attempt": "错误",
+      "answer_seen_before_attempt": false,
+      "gold": "错误",
+      "explanation": "机器字长、指令字长和存储字长分别描述CPU一次通常处理的数据、单条指令和单个存储单元的位数，不能由一个量推出另两个量。指令还可能采用变长格式，主存也可能按字节组织。",
+      "topic_id": "computer-organization.t42",
+      "chapter_id": "computer-organization.c01",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-11",
+      "attempt": "存储器",
+      "answer_seen_before_attempt": false,
+      "gold": "存储器",
+      "explanation": "教材通常将传统结构概括为以运算器为中心，将现代结构概括为以存储器（主要指主存）为中心，突出CPU与I/O围绕存储器交换信息。这里讨论系统部件的组织关系。",
+      "topic_id": "computer-organization.t01",
+      "chapter_id": "computer-organization.c01",
+      "filter_pool_count": 5,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-12",
+      "attempt": "错误",
+      "answer_seen_before_attempt": false,
+      "gold": "错误",
+      "explanation": "以存储器为中心强调CPU和I/O围绕主存交换信息，不要求所有I/O数据绕经运算器。具备DMA通路的系统可由DMA控制器直接组织设备与主存间的数据传送；具体连接仍由机器结构决定。",
+      "topic_id": "computer-organization.t01",
+      "chapter_id": "computer-organization.c01",
+      "filter_pool_count": 5,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-13",
+      "attempt": "B",
+      "answer_seen_before_attempt": false,
+      "gold": "B",
+      "explanation": "按题设，DMA取得总线的检查边界是可让出总线的机器周期末；可屏蔽外部中断的检查边界是指令末。当前指令未结束，DMA可先获得传送机会。结论依赖所给传统模型，不能直接套到所有现代CPU。",
+      "topic_id": "computer-organization.t13",
+      "chapter_id": "computer-organization.c09",
+      "filter_pool_count": 10,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-14",
+      "attempt": "错误",
+      "answer_seen_before_attempt": false,
+      "gold": "错误",
+      "explanation": "模型规定不能无条件推广。DMA还取决于总线或互连协议、仲裁和当前事务能否让出；题设只讨论可屏蔽外部中断，不包含同步异常、不可屏蔽中断等各自的处理规则。判断时要同时保留模型与事件种类两个条件。",
+      "topic_id": "computer-organization.t13",
+      "chapter_id": "computer-organization.c09",
+      "filter_pool_count": 10,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-15",
+      "attempt": "D",
+      "answer_seen_before_attempt": false,
+      "gold": "D",
+      "explanation": "三态输出包括逻辑0、逻辑1和高阻态Z。Z表示输出端对总线近似断开，不是第三个数据值，也不能直接读成0；总线实际电平由其他驱动、上拉下拉及电路条件决定。",
+      "topic_id": "computer-organization.t12",
+      "chapter_id": "computer-organization.c06",
+      "filter_pool_count": 8,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-terms-16",
+      "attempt": "错误",
+      "answer_seen_before_attempt": false,
+      "gold": "错误",
+      "explanation": "在本题的普通三态共享总线中，输出0仍在主动驱动。甲输出1、乙输出0可能造成总线争用；乙应进入高阻态以释放总线。不要把0与Z混同，也不要将开漏线与等其他电路约定套入本题。",
+      "topic_id": "computer-organization.t12",
+      "chapter_id": "computer-organization.c06",
+      "filter_pool_count": 8,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-textbook-01-1",
+      "attempt": "电子管、晶体管、集成电路、大规模/超大规模集成电路",
+      "answer_seen_before_attempt": true,
+      "gold": "电子管→晶体管→集成电路→大规模/超大规模集成电路。",
+      "explanation": "按器件特征分类，不是按机器外壳大小分类。",
+      "topic_id": "computer-organization.t19",
+      "chapter_id": "computer-organization.c08",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-textbook-01-2",
+      "attempt": "错误；编译器翻译为目标程序，CPU执行机器指令；解释器自身也以机器指令运行",
+      "answer_seen_before_attempt": true,
+      "gold": "通常错误。编译器把高级语言翻译为目标程序，CPU执行机器指令；解释运行也需解释器机器指令支持。",
+      "explanation": "语言层次不同于电子器件代际，解释执行不表示CPU直接懂源文件。",
+      "topic_id": "computer-organization.t19",
+      "chapter_id": "computer-organization.c08",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-001",
+      "attempt": "00101101",
+      "answer_seen_before_attempt": true,
+      "gold": "00101101",
+      "explanation": "2对应0010，D对应1101，按4位一组拼接。",
+      "topic_id": "computer-organization.t03",
+      "chapter_id": "computer-organization.c02",
+      "filter_pool_count": 3,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-002",
+      "attempt": "符号位决定正负，阶码主要决定范围，尾数主要决定精度",
+      "answer_seen_before_attempt": false,
+      "gold": "符号位决定正负，阶码主要决定数值范围和小数点位置，尾数主要决定有效数字与精度。",
+      "explanation": "浮点值由三个字段共同解释，不能单独把阶码或尾数当作完整数值。",
+      "topic_id": "computer-organization.t05",
+      "chapter_id": "computer-organization.c02",
+      "filter_pool_count": 3,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "ap-co-001",
+      "attempt": "A",
+      "answer_seen_before_attempt": true,
+      "gold": "A",
+      "explanation": "PC给出指令地址，经MAR访问主存，读出的指令经MDR送入IR。具体微操作可因机器而异，但部件作用不变。",
+      "topic_id": "computer-organization.t06",
+      "chapter_id": "computer-organization.c10",
+      "filter_pool_count": 8,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "pass"
+    },
+    {
+      "id": "gap-co-009",
+      "attempt": "5+10-1+2=16周期；16×1.6=25.6ns",
+      "answer_seen_before_attempt": true,
+      "gold": "16个周期，25.6ns。",
+      "explanation": "理想周期数5+10−1=14，再加2个停顿得16；16×1.6=25.6ns。",
+      "topic_id": "computer-organization.t18",
+      "chapter_id": "computer-organization.c10",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-textbook-17-1",
+      "attempt": "不能；同一总线只能一个源。R1到Y；R2加Y到Z；Z到R1",
+      "answer_seen_before_attempt": true,
+      "gold": "不能两个源同时驱动；可R1→Y，R2+Y→Z，Z→R1。",
+      "explanation": "用Y保存第一操作数、Z暂存结果，避免同拍竞争同一总线。",
+      "topic_id": "computer-organization.t35",
+      "chapter_id": "computer-organization.c05",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-textbook-17-2",
+      "attempt": "有独立PC增量器并且通路无冲突可同拍，共用ALU或总线则拆拍",
+      "answer_seen_before_attempt": true,
+      "gold": "有独立PC增量器且不冲突时可并行；若都依赖同一总线或ALU则需拆拍。",
+      "explanation": "微操作能否并行由通路和端口决定，不能脱离结构作绝对判断。",
+      "topic_id": "computer-organization.t35",
+      "chapter_id": "computer-organization.c05",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-textbook-19-1",
+      "attempt": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY",
+      "answer_seen_before_attempt": false,
+      "gold": "MemRead=F1∨E1；MDRin=(F1∨E1)∧READY。",
+      "explanation": "读请求在等待期间保持，锁存必须等READY有效。",
+      "topic_id": "computer-organization.t37",
+      "chapter_id": "computer-organization.c11",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    },
+    {
+      "id": "gap-co-textbook-19-2",
+      "attempt": "通路决定哪些微操作能并行、有何冲突，先明确资源才能安排状态和控制方程",
+      "answer_seen_before_attempt": false,
+      "gold": "数据通路决定每拍允许的并行微操作；若资源不足，状态需拆分，控制方程也会改变。",
+      "explanation": "状态表不能忽略硬件约束，否则逻辑方程形式正确也会触发资源冲突。",
+      "topic_id": "computer-organization.t37",
+      "chapter_id": "computer-organization.c11",
+      "filter_pool_count": 2,
+      "all_pool_same_topic": true,
+      "ui_attempted": true,
+      "semantic_result": "pass",
+      "ui_result": "reference_checked"
+    }
+  ],
+  "browser": {
+    "lecture_sections": 38,
+    "cards": 42,
+    "images": 12,
+    "horizontal_overflow": false,
+    "javascript_errors": [],
+    "max_card_height": 458.171875,
+    "t41_target": "存储器按存取方式分类",
+    "t42_target": "机器字长、指令字长与存储字长",
+    "target_y": 120,
+    "routes": [
+      {
+        "url": "http://127.0.0.1:9604/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=4&layout=tang3-10-chapters-v1",
+        "chapter": 4,
+        "headings": [
+          {
+            "text": "存储器按存取方式分类",
+            "y": 120
+          },
+          {
+            "text": "先备好地址算术",
+            "y": 706
+          },
+          {
+            "text": "层次与局部性",
+            "y": 995
+          },
+          {
+            "text": "芯片类型和刷新",
+            "y": 1912
+          },
+          {
+            "text": "容量、编址与芯片扩展",
+            "y": 2708
+          },
+          {
+            "text": "低位交叉存储",
+            "y": 3308
+          },
+          {
+            "text": "校验怎样分组",
+            "y": 3634
+          },
+          {
+            "text": "先分清块、行、组、路",
+            "y": 4750
+          },
+          {
+            "text": "放哪里、换谁、何时写主存",
+            "y": 5069
+          },
+          {
+            "text": "地址拆分与一次查找",
+            "y": 5511
+          },
+          {
+            "text": "平均访存时间",
+            "y": 7335
+          },
+          {
+            "text": "磁盘位置和访问时间",
+            "y": 7711
+          },
+          {
+            "text": "容量与CHS定位",
+            "y": 8030
+          },
+          {
+            "text": "扩展：虚拟存储与TLB",
+            "y": 8349
+          }
+        ],
+        "scroll": 131
+      },
+      {
+        "url": "http://127.0.0.1:9604/notes.html#course=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86&chapter=1&layout=tang3-10-chapters-v1",
+        "chapter": 1,
+        "headings": [
+          {
+            "text": "计算机系统、硬件与软件",
+            "y": -2765
+          },
+          {
+            "text": "体系结构与组成",
+            "y": -2387
+          },
+          {
+            "text": "冯·诺依曼结构：存储程序与程序控制",
+            "y": -1953
+          },
+          {
+            "text": "冯·诺依曼机的基本特点",
+            "y": -1634
+          },
+          {
+            "text": "五大部件及其功能",
+            "y": -1166
+          },
+          {
+            "text": "先跟踪一次3+5",
+            "y": -680
+          },
+          {
+            "text": "单位、字长和编址",
+            "y": -164
+          },
+          {
+            "text": "机器字长、指令字长与存储字长",
+            "y": 120
+          },
+          {
+            "text": "CPU性能指标：CPI、主频与执行时间",
+            "y": 596
+          }
+        ],
+        "scroll": 3016
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "alias-07",
+      "severity": "minor",
+      "status": "closed",
+      "detail": "相联存取存储器这一概念正确答法未在第07题允许别名内，UI误判。请求补别名后定点复测。",
+      "fix": "允许相联存取存储器/关联存取存储器作为同义答案，并在4.1把分类名称写完整。",
+      "retest_build": "f74588c9a55176f0",
+      "retest": "实际在第07题输入相联存取存储器后input class=correct。"
+    }
+  ],
+  "not_claimed": [
+    "真人新生实验",
+    "全量题库正确率",
+    "唐朔飞第3版原页完全校勘",
+    "本报告未执行深色/实体机/离线检查；由其他验收负责"
+  ],
+  "summary": "初审10章38节/42卡/26题完成；最终候选只定向复测1章规范定义、4.1完整分类名、07同义填空。唯一发现alias-07已修复且UI复测通过，无未关闭学习阻断。",
+  "final_targeted_retest": {
+    "build": "f74588c9a55176f0",
+    "checks": [
+      {
+        "item": "系统软件",
+        "displayed": true
+      },
+      {
+        "item": "应用软件",
+        "displayed": true
+      },
+      {
+        "item": "寄存器",
+        "displayed": true
+      },
+      {
+        "item": "吞吐量",
+        "displayed": true
+      },
+      {
+        "item": "响应时间",
+        "displayed": true
+      },
+      {
+        "item": "MIPS",
+        "displayed": true
+      },
+      {
+        "item": "随机存取存储器",
+        "displayed": true
+      },
+      {
+        "item": "顺序存取存储器",
+        "displayed": true
+      },
+      {
+        "item": "直接存取存储器",
+        "displayed": true
+      },
+      {
+        "item": "相联存储器",
+        "displayed": true
+      },
+      {
+        "item": "gap-co-terms-07",
+        "attempt": "相联存取存储器",
+        "ui_result": "correct",
+        "status": "pass"
+      }
+    ],
+    "chapter1_text": "第1章 计算机系统概论\n1.1 计算机系统简介\n计算机系统、硬件与软件\n计算机系统：由硬件系统和软件系统组成。硬件是构成计算机的物理实体；软件是程序及其相关数据、文档的集合。\n程序怎样运行：高级语言经编译器翻译，或由解释器解释执行；CPU（中央处理器）最终执行机器指令。汇编语言也要先经汇编器处理。\n系统软件与应用软件：系统软件管理、控制计算机资源并为应用提供运行环境，如操作系统；应用软件面向具体应用任务，如文档编辑器。\n裸机：具有硬件指令能力，但没有完整的软件使用环境。\n体系结构与组成\n计算机体系结构：程序员所见的计算机属性，包括指令系统、数据表示、寻址方式等；计算机组成研究这些属性的具体实现。\n指令集体系结构（ISA）：规定软件与硬件之间的接口，包括指令、程序员可见寄存器和寻址方式等。ISA不等同于全部计算机组成细节。\n寄存器：CPU内部用于暂存指令、数据或地址等信息的存储部件，数量少、访问速度快。\n虚拟机层次：向上提供另一套抽象接口，不等于每层都有一台实体电脑。\n1.2 计算机的基本组成\n\n可能考 · 填空 / 单选 / 简答　识记基本特点、五大部件及其功能\n\n冯·诺依曼结构：存储程序与程序控制\n存储程序：将编好的程序和所需数据预先存入存储器；程序中的指令与数据均采用二进制表示。\n程序控制：计算机按照程序规定的执行顺序，自动取出并执行指令，完成预定任务。\n理解：“存储程序”强调程序预先保存在哪里；“程序控制”强调机器按程序自动工作。执行顺序由程序决定，遇转移指令可转向目标地址，并非始终按相邻地址执行。\n冯·诺依曼机的基本特点\n由运算器、控制器、存储器、输入设备和输出设备五大部件组成。\n指令和数据以同等地位存放在存储器中，可按地址寻访。\n指令和数据均采用二进制表示。\n指令由操作码和地址码组成。\n采用存储程序的工作方式。\n以运算器为中心。\n传统与现代：上述是经典冯·诺依曼机的特点；教材中的现代计算机硬件结构通常以存储器为中心。两者仍遵循存储程序思想。“中心”指部件连接与数据传送的组织，不是问谁负责控制。\n五大部件及其功能\n五大部件：运算器、控制器、存储器、输入设备和输出设备。\n运算器：对数据进行算术运算和逻辑运算。\n控制器：根据指令的要求，控制计算机各部件协调工作。\n存储器：存放程序和数据。\n输入设备：将程序和数据转换成计算机能识别并接收的形式。\n输出设备：将处理结果转换成人们熟悉的形式输出。\n范围区别：CPU主要含运算器、控制器和寄存器；主机还包括主存；完整系统再加外设与软件。CPU不能等同整台计算机。\n先跟踪一次3+5\n程序计数器（PC）与指令寄存器（IR）：PC存放下一条将要执行的指令的地址；IR存放当前正在执行的指令。\n完整例子：PC=100，每条指令4B；R1、R2是寄存器，分别存3、5。约定ADD R1,R2将和写回R1：从地址100取指→装IR，PC更新104→译码为相加→ALU算3+5→R1=8，R2仍5。\n如何区分指令与数据：存储器中都是位串，由当前取指/数据访问用途解释；不是某种位模式天生会执行。连接部件、传送数据的路径叫数据通路。\n1.3 计算机硬件的主要技术指标\n\n可能考 · 计算 / 简答　计算CPU时间，说明指令数、CPI与主频的作用\n\n单位、字长和编址\n位与字节：bit表示位，1B=8bit。地址宽度决定可区分的地址数，数据总线宽度决定一次可并行传输的数据位数。\n容量：容量=单元数×每单元位数；n位地址可选2^n个单元，按字节编址才是2^n B。KiB=1024B；传统KB及总线MB/s应按给定口径统一单位。\n机器字长、指令字长与存储字长\n\n可能考 · 填空 / 单选　区分运算位数、指令位数和存储字位数\n\n机器字长：CPU进行一次整数运算所能处理的二进制数据位数。\n指令字长：一条机器指令包含的二进制代码的总位数。\n存储字长：一个存储单元所存放的二进制代码的位数，即一个存储字的位数。\n对照例：机器字长32位，指令长16位，存储字长64位，分别描述运算、指令编码、存储字三个对象，数值不必相等。\n编址单位另看题设：按字节编址表示每个地址对应一个字节，不表示机器字长或存储字长必为8位；地址宽度也不是这三个字长。\nCPU性能指标：CPI、主频与执行时间\nCPI与主频：CPI是执行每条指令所需的平均时钟周期数；主频f是CPU的时钟频率，单位Hz，时钟周期T=1/f。\n公式与参数：CPU时间=指令数IC×平均CPI÷f；平均CPI=各类“执行比例×该类周期数”之和。\n完整例题：100万条指令，一半1拍、一半3拍，主频1GHz：CPI=0.5×1+0.5×3=2，总200万拍，时间=2×10⁶/10⁹=2ms。\n吞吐量、响应时间与MIPS：吞吐量是单位时间完成的任务量；响应时间是完成一个任务所需的时间；MIPS表示每秒执行的百万条指令数。\n性能比较：跨指令集直接比较MIPS可能失真；主频高不保证任务快，CPU时间通常不含I/O等待。\n查看本章重点与易错 →\n练习本章 →\n完成本章",
+    "classification_text": "第4章 存储器\n4.1 概述\n存储器按存取方式分类\n\n可能考 · 填空 / 单选 / 判断　按访问规则区分四类，区分随机存取与断电保留\n\n随机存取存储器（RAM）：按地址访问任一存储单元，存取时间基本与单元的物理位置无关，如半导体主存。\n顺序存取存储器（SAM）：按信息的物理排列顺序访问，所需时间与当前位置和目标位置有关，如磁带。\n直接存取存储器（DAM）：先定位信息所在区域，再在该区域顺序访问，如磁盘。\n相联存储器（CAM）：也称按内容寻址存储器，按内容或关键字进行匹配访问，而非先给出存储地址；可用于TLB的相联查找。\n分类依据：随机、顺序、直接、相联描述访问方式；易失/非易失描述断电后能否保留信息。磁盘能读写、能直接存取，不因此变成主存RAM；相联存取也不等于Cache全相联映射。\n",
+    "alias_input_class": "correct",
+    "semantic_attempts": [
+      {
+        "item": "系统/应用软件",
+        "attempt": "前者管理资源和提供运行环境；后者解决具体任务，操作系统与编辑器分别对应。",
+        "status": "pass"
+      },
+      {
+        "item": "寄存器",
+        "attempt": "CPU内部暂存指令、数据或地址的存储部件；不是仅能存数据。",
+        "status": "pass"
+      },
+      {
+        "item": "吞吐/响应/MIPS",
+        "attempt": "吞吐看单位时间任务量，响应看单个任务时间，MIPS看每秒百万条指令数；跨ISA不能只比MIPS。",
+        "status": "pass"
+      },
+      {
+        "item": "四分类全称",
+        "attempt": "随机存取存储器、顺序存取存储器、直接存取存储器、相联存储器；最后按内容匹配。",
+        "status": "pass"
+      }
+    ]
+  },
+  "final_build": "f74588c9a55176f0"
+}

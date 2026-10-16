@@ -1266,7 +1266,9 @@
         } else if (markdownSubheading) {
           closeList();
           const level = markdownSubheading[1].length;
-          output.push(`<h${level}>${formatInline(markdownSubheading[2])}</h${level}>`);
+          const title = markdownSubheading[2];
+          const topic = !colorMode && currentCourse?.topics?.find(item => item.title === title);
+          output.push(`<h${level}${topic ? ` class="point" data-topic-id="${escapeHtml(topic.topic_id)}"` : ""}>${formatInline(title)}</h${level}>`);
         } else if (colorMode && /^先答[：:]/.test(trimmed)) {
           closeList();
           output.push(`<p class="recall-prompt">${formatInline(trimmed)}</p>`);
