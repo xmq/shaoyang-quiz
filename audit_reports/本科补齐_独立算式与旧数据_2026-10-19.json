@@ -1,0 +1,332 @@
+[
+  {
+    "task": "欠阻尼方程及初值 0",
+    "result": "pass",
+    "independent_check": "解析微分代回y″+2y′+2y=0；u(0)=1，u′(0)=0。"
+  },
+  {
+    "task": "过阻尼方程及初值 0",
+    "result": "pass",
+    "independent_check": "讲义例2e^-t−e^-2t独立代回常微分方程；相应零状态阶跃为1−此式。"
+  },
+  {
+    "task": "欠阻尼方程及初值 0.1",
+    "result": "pass",
+    "independent_check": "解析微分代回y″+2y′+2y=0；u(0)=1，u′(0)=0。"
+  },
+  {
+    "task": "过阻尼方程及初值 0.1",
+    "result": "pass",
+    "independent_check": "讲义例2e^-t−e^-2t独立代回常微分方程；相应零状态阶跃为1−此式。"
+  },
+  {
+    "task": "欠阻尼方程及初值 1",
+    "result": "pass",
+    "independent_check": "解析微分代回y″+2y′+2y=0；u(0)=1，u′(0)=0。"
+  },
+  {
+    "task": "过阻尼方程及初值 1",
+    "result": "pass",
+    "independent_check": "讲义例2e^-t−e^-2t独立代回常微分方程；相应零状态阶跃为1−此式。"
+  },
+  {
+    "task": "欠阻尼方程及初值 4",
+    "result": "pass",
+    "independent_check": "解析微分代回y″+2y′+2y=0；u(0)=1，u′(0)=0。"
+  },
+  {
+    "task": "过阻尼方程及初值 4",
+    "result": "pass",
+    "independent_check": "讲义例2e^-t−e^-2t独立代回常微分方程；相应零状态阶跃为1−此式。"
+  },
+  {
+    "task": "互感量纲及参考方向",
+    "result": "pass",
+    "independent_check": "M=3mH，1A/ms对应3V；反参考−3V；同反助19/7mH。"
+  },
+  {
+    "task": "T型二端口与无源功率",
+    "result": "pass",
+    "independent_check": "端口矩阵与三电阻独立损耗同得15W。"
+  },
+  {
+    "task": "谐振串并联量纲",
+    "result": "pass",
+    "independent_check": "串联Q=10，BW159.1549Hz；并联R1kΩ独立计算得同Q/BW。"
+  },
+  {
+    "task": "非正弦功率",
+    "result": "pass",
+    "independent_check": "分别由谐波复阻抗取幅值，再按电阻损耗得4.92W；不同频率交叉积分为0。"
+  },
+  {
+    "task": "RC初态放电 0",
+    "result": "pass",
+    "independent_check": "RC=1秒，0.5du/dt+u/2=0；单边变换初值6V。"
+  },
+  {
+    "task": "RC初态放电 0.25",
+    "result": "pass",
+    "independent_check": "RC=1秒，0.5du/dt+u/2=0；单边变换初值6V。"
+  },
+  {
+    "task": "RC初态放电 1",
+    "result": "pass",
+    "independent_check": "RC=1秒，0.5du/dt+u/2=0；单边变换初值6V。"
+  },
+  {
+    "task": "RC初态放电 3",
+    "result": "pass",
+    "independent_check": "RC=1秒，0.5du/dt+u/2=0；单边变换初值6V。"
+  },
+  {
+    "task": "端接反射",
+    "result": "pass",
+    "independent_check": "短路入射2V反射−2V，负载电压0；往返200ns。"
+  },
+  {
+    "task": "既有2534题原文与答案保留",
+    "result": "pass",
+    "independent_check": "逐ID核对题干、选项、答案、解析、题型、学科、topic与chapter稳定归属，无改动或丢失。新增卡只改变显示顺序序号。"
+  },
+  {
+    "task": "旧topic ID保留 Office软件操作",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 大学计算机基础与新技术",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 多媒体技术",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 操作系统原理",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 数据库技术",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 数据结构与算法",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 C与Python程序设计",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 计算机组成原理",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 计算机网络",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 电路分析与电工技术",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 模拟电子技术",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 数字电子技术",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 通信原理与高频电子线路",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 信号与系统",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 软件工程",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧topic ID保留 信息安全",
+    "result": "pass",
+    "independent_check": "仅追加新topic；所有既有标题对应稳定ID均保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/C与Python程序设计.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/Office软件操作.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/信号与系统.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/信息安全.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/多媒体技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/大学计算机基础与新技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/操作系统原理.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/数字电子技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/数据库技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/数据结构与算法.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/模拟电子技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/电路分析与电工技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/计算机组成原理.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/计算机网络.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/软件工程.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 course_notes/通信原理与高频电子线路.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/C与Python程序设计.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/Office软件操作.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/信号与系统.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/信息安全.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/多媒体技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/大学计算机基础与新技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/操作系统原理.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/数字电子技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/数据库技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/数据结构与算法.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/模拟电子技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/电路分析与电工技术.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/计算机组成原理.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/计算机网络.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/软件工程.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  },
+  {
+    "task": "旧强调保留 color_notes/通信原理与高频电子线路.md",
+    "result": "pass",
+    "independent_check": "旧强调文字作为有序子序列保留。"
+  }
+]

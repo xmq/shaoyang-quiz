@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="650" viewBox="0 0 360 650" role="img" aria-labelledby="title"><title id="title">共射：先直流，再中频交流</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">共射：先直流，再中频交流</text>
+<text x="16" y="50" font-size="14" text-anchor="start">CC/C2隔直；CE并联RE；公共参考0 V</text>
+<path class="w" d="M150 78L240 78"/>
+<text x="180" y="70" font-size="14" text-anchor="start">+12 V</text>
+<path class="w" d="M150 90L150 98"/>
+<rect x="145" y="98" width="10" height="26" class="w"/>
+<path class="w" d="M150 124L150 132"/>
+<text x="159" y="115.0" font-size="12" text-anchor="start">R1 100k</text>
+<path class="w" d="M150 78L150 90"/>
+<path class="w" d="M150 132L150 230"/>
+<path class="w" d="M150 265L150 273"/>
+<rect x="145" y="273" width="10" height="26" class="w"/>
+<path class="w" d="M150 299L150 307"/>
+<text x="159" y="290.0" font-size="12" text-anchor="start">R2 20k</text>
+<path class="w" d="M150 230L150 265"/>
+<path class="w" d="M150 320L150 328"/>
+<path class="w" d="M140 328L160 328"/>
+<path class="w" d="M144 333L156 333"/>
+<path class="w" d="M148 338L152 338"/>
+<path class="w" d="M150 307L150 320"/>
+<path class="w" d="M185 230L210 230"/>
+<path class="w" d="M210 210L210 250"/>
+<path class="w" d="M210 216L235 195"/>
+<path class="w" d="M210 244L235 265"/>
+<path class="soft" d="M222 249L232 261L219 257Z"/>
+<path class="w" d="M150 230L185 230"/>
+<path class="w" d="M235 100L235 108"/>
+<rect x="230" y="108" width="10" height="26" class="w"/>
+<path class="w" d="M235 134L235 142"/>
+<text x="244" y="125.0" font-size="12" text-anchor="start">RC 2k</text>
+<path class="w" d="M235 78L235 100"/>
+<path class="w" d="M235 142L235 195"/>
+<path class="w" d="M235 265L235 290"/>
+<path class="w" d="M235 290L235 298"/>
+<rect x="230" y="298" width="10" height="26" class="w"/>
+<path class="w" d="M235 324L235 332"/>
+<text x="244" y="315.0" font-size="12" text-anchor="start">RE 1k</text>
+<path class="w" d="M235 360L235 368"/>
+<path class="w" d="M225 368L245 368"/>
+<path class="w" d="M229 373L241 373"/>
+<path class="w" d="M233 378L237 378"/>
+<path class="w" d="M235 332L235 360"/>
+<path class="w" d="M235 278L305 278"/>
+<path class="w" d="M305 292L305 307.0"/>
+<path class="w" d="M295 307.0L315 307.0"/>
+<path class="w" d="M295 315.0L315 315.0"/>
+<path class="w" d="M305 315.0L305 330"/>
+<text x="318" y="315.0" font-size="12" text-anchor="start">CE</text>
+<path class="w" d="M305 278L305 292"/>
+<path class="w" d="M305 330L305 350"/>
+<path class="w" d="M305 350L235 350"/>
+<circle cx="235" cy="278" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M235 180L285 180"/>
+<path class="w" d="M285 180L301.0 180"/>
+<path class="w" d="M301.0 170L301.0 190"/>
+<path class="w" d="M309.0 170L309.0 190"/>
+<path class="w" d="M309.0 180L325 180"/>
+<text x="305.0" y="165" font-size="12" text-anchor="middle">C2</text>
+<path class="w" d="M325 180L337 180"/>
+<path class="w" d="M337 235L337 243"/>
+<rect x="332" y="243" width="10" height="22" class="w"/>
+<path class="w" d="M337 265L337 273"/>
+<text x="346" y="258.0" font-size="12" text-anchor="start">RL</text>
+<path class="w" d="M337 180L337 235"/>
+<path class="w" d="M337 290L337 298"/>
+<path class="w" d="M327 298L347 298"/>
+<path class="w" d="M331 303L343 303"/>
+<path class="w" d="M335 308L339 308"/>
+<path class="w" d="M337 273L337 290"/>
+<text x="317" y="214" font-size="12" text-anchor="start">uo</text>
+<path class="w" d="M25 195L45 195"/>
+<path class="w" d="M45 195L51 195"/>
+<rect x="51" y="190" width="33" height="10" class="w"/>
+<path class="w" d="M84 195L90 195"/>
+<text x="67.5" y="184" font-size="12" text-anchor="middle">Rs 1k</text>
+<path class="w" d="M90 195L106.0 195"/>
+<path class="w" d="M106.0 185L106.0 205"/>
+<path class="w" d="M114.0 185L114.0 205"/>
+<path class="w" d="M114.0 195L130 195"/>
+<text x="110.0" y="180" font-size="12" text-anchor="middle">CC</text>
+<path class="w" d="M130 195L150 195"/>
+<circle cx="150" cy="230" r="2.6" fill="var(--ink)"/>
+<text x="14" y="225" font-size="12" text-anchor="start">us</text>
+<circle cx="25" cy="245" r="18" class="w"/>
+<path class="w" d="M12 245q6 -12 12 0t12 0"/>
+<path class="w" d="M25 195L25 227"/>
+<path class="w" d="M25 270L25 278"/>
+<path class="w" d="M15 278L35 278"/>
+<path class="w" d="M19 283L31 283"/>
+<path class="w" d="M23 288L27 288"/>
+<path class="w" d="M25 263L25 270"/>
+<text x="12" y="402" font-size="14" text-anchor="start">直流：三个电容开路，RL不影响偏置。</text>
+<text x="12" y="432" font-size="14" text-anchor="start">IB≈11.05 μA，IC≈1.105 mA</text>
+<text x="12" y="459" font-size="14" text-anchor="start">UE≈1.116 V，UC≈9.790 V</text>
+<text x="12" y="486" font-size="14" text-anchor="start">UCE≈8.675 V，C高于B，放大区成立。</text>
+<text x="12" y="526" font-size="14" text-anchor="start">中频：电源交流接地，E由CE接交流地。</text>
+<text x="12" y="554" font-size="14" text-anchor="start">rbe=2.4k，Ri≈2.098k，Au≈−41.67</text>
+<text x="12" y="582" font-size="14" text-anchor="start">源分压后uo/us≈−28.22；Ro≈RC。</text>
+<text x="12" y="618" font-size="13" text-anchor="start">容量/频率不满足时不能继续按电容短路。</text>
+</svg>

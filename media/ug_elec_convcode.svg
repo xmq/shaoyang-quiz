@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="430" viewBox="0 0 360 430" role="img" aria-labelledby="title"><title id="title">卷积编码：先用旧状态，再移位</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">卷积编码：先用旧状态，再移位</text>
+<text x="12" y="55" font-size="14" text-anchor="start">每拍输入u；a、b分别为前1、前2拍</text>
+<rect x="80" y="100" width="65" height="42" class="w"/>
+<text x="112.5" y="126.0" font-size="14" text-anchor="middle">延迟a</text>
+<rect x="210" y="100" width="65" height="42" class="w"/>
+<text x="242.5" y="126.0" font-size="14" text-anchor="middle">延迟b</text>
+<path class="a" d="M15 121L80 121" marker-end="url(#arr)"/>
+<path class="a" d="M145 121L210 121" marker-end="url(#arr)"/>
+<text x="17" y="104" font-size="13" text-anchor="start">u</text>
+<text x="154" y="104" font-size="13" text-anchor="start">a</text>
+<text x="291" y="104" font-size="13" text-anchor="start">b</text>
+<path class="w" d="M275 121L319 121"/>
+<rect x="75" y="205" width="245" height="40" class="soft"/>
+<text x="197.5" y="230.0" font-size="14" text-anchor="middle">v0=u ⊕ a ⊕ b</text>
+<rect x="75" y="274" width="245" height="40" class="soft"/>
+<text x="197.5" y="299.0" font-size="14" text-anchor="middle">v1=u ⊕ b</text>
+<path class="w" d="M35 121L35 294"/>
+<path class="a" d="M35 225L75 225" marker-end="url(#arr)"/>
+<path class="a" d="M35 294L75 294" marker-end="url(#arr)"/>
+<path class="w" d="M175 121L175 188"/>
+<path class="w" d="M175 188L198 188"/>
+<path class="a" d="M198 188L198 205" marker-end="url(#arr)"/>
+<path class="w" d="M319 121L339 121"/>
+<path class="w" d="M339 121L339 294"/>
+<path class="a" d="M339 225L320 225" marker-end="url(#arr)"/>
+<path class="a" d="M339 294L320 294" marker-end="url(#arr)"/>
+<text x="12" y="361" font-size="14" text-anchor="start">初00，101+尾00：11/10/00/10/11</text>
+<text x="12" y="392" font-size="14" text-anchor="start">输出后新(a,b)=(u,a旧)，末态回00。</text>
+</svg>

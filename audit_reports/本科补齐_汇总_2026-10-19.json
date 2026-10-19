@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-19",
+  "scope": "2026-10-19普通本科重评确认的基础机制、常规计算与过程任务缺口；不增加完整工程项目与复杂证明。",
+  "status": "completed_for_confirmed_undergraduate_gaps",
+  "build": "ad79e891e89fb74a",
+  "baseline": {
+    "courses": 16,
+    "chapters": 134,
+    "topics": 393,
+    "questions": 2534
+  },
+  "current": {
+    "courses": 16,
+    "chapters": 135,
+    "topics": 452,
+    "questions": 2652
+  },
+  "new_units": 59,
+  "new_questions": 118,
+  "new_figures": 36,
+  "changed_courses": {
+    "软件工程": 3,
+    "信号与系统": 10,
+    "电路分析与电工技术": 7,
+    "计算机组成原理": 1,
+    "操作系统原理": 3,
+    "数据结构与算法": 4,
+    "数据库技术": 5,
+    "C与Python程序设计": 2,
+    "计算机网络": 3,
+    "模拟电子技术": 5,
+    "数字电子技术": 3,
+    "通信原理与高频电子线路": 13
+  },
+  "coverage_report": "audit_reports/本科补齐_知识点题目对应_2026-10-19.json",
+  "cross_reviews": [
+    "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+    "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+    "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+  ],
+  "two_non_author_reviews_per_new_unit": {
+    "software-engineering.t26": 2,
+    "software-engineering.t27": 2,
+    "software-engineering.t28": 2,
+    "signals-systems.t17": 2,
+    "signals-systems.t18": 2,
+    "signals-systems.t19": 2,
+    "signals-systems.t20": 2,
+    "signals-systems.t21": 2,
+    "signals-systems.t22": 2,
+    "signals-systems.t23": 2,
+    "signals-systems.t24": 2,
+    "signals-systems.t25": 2,
+    "signals-systems.t26": 2,
+    "analog-electronics.t23": 2,
+    "analog-electronics.t24": 2,
+    "analog-electronics.t25": 2,
+    "analog-electronics.t26": 2,
+    "analog-electronics.t27": 2,
+    "digital-electronics.t20": 2,
+    "digital-electronics.t21": 2,
+    "digital-electronics.t22": 2,
+    "communication.t23": 2,
+    "communication.t24": 2,
+    "communication.t25": 2,
+    "communication.t26": 2,
+    "communication.t27": 2,
+    "communication.t28": 2,
+    "communication.t29": 2,
+    "communication.t30": 2,
+    "communication.t31": 2,
+    "communication.t32": 2,
+    "communication.t33": 2,
+    "communication.t34": 2,
+    "communication.t35": 2,
+    "circuit.t16": 2,
+    "circuit.t17": 2,
+    "circuit.t18": 2,
+    "circuit.t19": 2,
+    "circuit.t20": 2,
+    "circuit.t21": 2,
+    "circuit.t22": 2,
+    "computer-organization.t43": 2,
+    "operating-system.t22": 2,
+    "operating-system.t23": 2,
+    "operating-system.t24": 2,
+    "data-structures.t45": 2,
+    "data-structures.t46": 2,
+    "data-structures.t47": 2,
+    "data-structures.t48": 2,
+    "database.t23": 2,
+    "database.t24": 2,
+    "database.t25": 2,
+    "database.t26": 2,
+    "database.t27": 2,
+    "programming.t23": 2,
+    "programming.t24": 2,
+    "net.ospf-flow": 2,
+    "net.mpls-label-flow": 2,
+    "net.sdn-rule-flow": 2
+  },
+  "review_limits": [
+    "非作者agent以初学者/备考者视角复述与试做；具有模型先验，不能称真人新生试验。",
+    "作答前已读正文及同型例；8道计算机题任务包为改客观题前的简答快照，现行8题另由两非作者核选项/标签，不称现行题盲测。",
+    "新增单元正文与卡全读；相邻章节边界抽读，未重新证明全部既有内容。"
+  ],
+  "closed_issues": [
+    {
+      "issue": "电子题目粗分类",
+      "fix": "42题恢复既有合法knowledge_point，细分仍由topic_id表达"
+    },
+    {
+      "issue": "Colpitts标签",
+      "fix": "两电容值拆行，避免右边截字"
+    },
+    {
+      "issue": "OCL下管",
+      "fix": "PNP发射极箭头移至接输出的上支路"
+    },
+    {
+      "issue": "Flash输入",
+      "fix": "各阈值明确接比较器负端，Vin接正端"
+    },
+    {
+      "issue": "RLC参考方向",
+      "fix": "电流文字移至箭头上方，让电容正号单独可见"
+    },
+    {
+      "issue": "传输线时间",
+      "fix": "新题明确t=0为源端发射时，往返200ns不再混淆单程100ns"
+    },
+    {
+      "issue": "谐振口径",
+      "fix": "正文、卡、图和题统一用电流有效值，区分响应曲线最大值与瞬时峰值"
+    },
+    {
+      "issue": "互感和二端口",
+      "fix": "复合path拆开，恢复首支电流箭头"
+    },
+    {
+      "issue": "FFT信号方向",
+      "fix": "各输入/输出单独设箭头，再把输入终点移至圆前，末次浅深复测可辨"
+    }
+  ],
+  "checks": {
+    "all_topic_regression": "audit_reports/本科补齐_全知识点浏览器_2026-10-19.json",
+    "final_release_delta": "audit_reports/本科补齐_末图发布差异_2026-10-19.json",
+    "targeted_pages": "audit_reports/本科补齐_末次专项浏览器_2026-10-19.json",
+    "final_fft": "audit_reports/本科补齐_FFT最终浏览器_2026-10-19.json",
+    "offline_all_courses": "audit_reports/本科补齐_全课程离线_2026-10-19.json",
+    "math_and_old_data": "audit_reports/本科补齐_独立算式与旧数据_2026-10-19.json",
+    "figure_text_bounds": "audit_reports/本科补齐_配图文字边界_2026-10-19.json",
+    "release_gate": "audit_reports/本科补齐_发布检查_2026-10-19.json"
+  },
+  "remaining_boundaries": [
+    "外部各版本教材逐页/逐节全范围矩阵保持原状态，没有将15科历史教材范围未验收改为全书通过。",
+    "部分课的课时、实验/工程占比未指定，保留在各科evidence_pending；不据此增加超出普通本科基础的强制任务。"
+  ],
+  "preserved": "既有2534题的ID、原文、选项、答案、解析及topic/chapter归属保留；旧知识点ID与H3相对次序、高亮保留。新增单元会更新显示顺序号，不清学习记录。"
+}

@@ -1,0 +1,2279 @@
+{
+  "date": "2026-10-19",
+  "build_id": "f440b54bdd3d86ad",
+  "role": "电子作者对计算机/应用与信号的非作者低接触新生/基础数学视角复核",
+  "prior_limits": [
+    "模型有知识先验，并已参与旧计算机课程体验；不是无先验真人盲测",
+    "本轮先解去答案包62题落TEMP，再读答案/当前新增讲义核对；未预读本轮他组修复报告",
+    "答题一致只支持本次有限任务，不证明所有普通本科题或真实新生全程自学完整",
+    "补充：初轮任务包生成早于8题改为客观题，62题机制复算有效；现行客观选项/标签仅以final_retest已有先验核对为准。"
+  ],
+  "counts": {
+    "topics": 31,
+    "independent_tasks": 62,
+    "matched_tasks": 62,
+    "lecture_card_theme_routes": 124,
+    "filtered_practice_topic_theme_routes": 62,
+    "distinct_question_stems_each_filter": true
+  },
+  "attempts_before_key": "C:\\Users\\pc\\AppData\\Local\\Temp\\undergrad_review_20261019\\electronics_reviewer_first_answers.json",
+  "browser": {
+    "viewport": "390x844",
+    "browser": "Chrome本机可执行文件，Playwright，dist随机端口静态服务",
+    "light_dark": true,
+    "screenshots": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser",
+    "coverage": "31单元全部实际访问讲义与重点浅深；31topic过滤题浅深各查看连续2题；实际截图均保存。源内容逐新增单元全读，前后边界抽读；密集图人工view_image抽查，不把截图生成等同全部人工目读",
+    "dense_images_actually_viewed": [
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_notes_light_img2.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_notes_dark_img2.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_notes_light_img3.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t46_notes_dark_img3.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_notes_light_img0.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_notes_dark_img0.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_notes_light_img2.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_notes_dark_img2.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t27_notes_light_img4.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t27_notes_dark_img4.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t18_notes_light_img0.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t18_notes_dark_img0.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t19_notes_light_img1.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t19_notes_dark_img1.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t20_notes_light_img2.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t20_notes_dark_img2.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t23_notes_light_img1.png",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t23_notes_dark_img1.png"
+    ],
+    "visual_findings": "借位/合并图前后状态、中序实线/虚线、释放前后别名、JSP顺序/重复、DFT正负频点、圆周折回、FFT一层和差、输出反馈支路浅深均与正文相符；未见读图阻断"
+  },
+  "findings": [],
+  "topics": [
+    {
+      "topic_id": "computer-organization.t43",
+      "title": "先行进位的两位展开",
+      "course": "计算机组成原理",
+      "chapter_id": "computer-organization.c02",
+      "own_recall": "产生/传递展开把高位进位直接写为输入条件，不取消逻辑延迟。",
+      "difficulty_and_prior_knowledge": "位下标、逻辑与或/普通乘加、CF与OF；相邻全加器已定义Si和Ci，新增展开可接上。",
+      "lecture_support_excerpt": "#### 先行进位的两位展开\n\n用Gi=Ai∧Bi表示第i位自己产生进位，Pi=Ai⊕Bi表示该位能传递低位进位；位号从低位0开始，Ci是进入第i位的进位。∧表示与、∨表示或，以下不是普通算术加乘。\n\n`C1=G0∨(P0∧C0)`；将它代入第二位，得`C2=G1∨(P1∧G0)∨(P1∧P0∧C0)`。串行进位先等C1再求C2；展开式让C2直接由输入产生的G/P与C0组合求出，用更多逻辑连接减少逐位等待，并非电路没有延迟。\n\n先试A=01、B=11、C0=0：低位A0=B0=1，高位A1=0、B1=1。C1、C2和两位和分别是什么？\n\n<details><summary>逐位和展开式交叉核对</summary>\n\nG0=1、P0=0，G1=0、P1=1；C1=1，C2=0∨1∨0=1。S0=P0⊕C0=0，S1=P1⊕C1=0，完整和为100，即1+3=4。C2是向外进位，低两位结果00；是否有符号溢出须另按位宽与解释判断。\n</details>\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-01-a",
+          "topic_id": "computer-organization.t43",
+          "answer_before_key": "G0=0 P0=1 G1=0 P1=1，C1=1 C2=1，低两和00，完整100。逐位异或进位。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "G₀=0、P₀=1、G₁=0、P₁=1；C₁=1，C₂=1，完整和100。",
+          "reference_explanation": "两位均传递输入进位：C₁=0∨1×1=1，C₂=0∨1×0∨1×1×1=1；两和位均0，2+1+1=4。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-01-b",
+          "topic_id": "computer-organization.t43",
+          "answer_before_key": "原式仍依赖C1；展开C2=G1∨P1G0∨P1P0C0；门传播有延迟，先行不是零延迟。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "未展开式仍依赖C₁；应为C₂=G₁∨P₁G₀∨P₁P₀C₀。展开减少逐级等待，不消除门电路延迟。",
+          "reference_explanation": "将C₁=G₀∨P₀C₀代入并分配逻辑与，才使C₂直接由输入G/P及C₀得到。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第6章 计算机的运算方法",
+        "previous": "## 第5章 输入输出系统",
+        "next": "## 第7章 指令系统",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "computer-organization.t43",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\computer-organization.t43_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\computer-organization.t43_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "两位加法器以Gᵢ=Aᵢ∧Bᵢ、Pᵢ=Aᵢ⊕Bᵢ形成先行进位。A=10、B=01、C₀=1，位号从低位0开始。求G₀/P₀/G₁/P₁、C₁和C₂，并给完整和。",
+          "practice_second": "把先行进位C₂展开到G/P与C₀，可以减少进位逐级等待，但并不表示组合门电路没有传播延迟。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机组成原理\n判断\n待练 2 题\n☆\n先行进位的两位展开\n把先行进位C₂展开到G/P与C₀，可以减少进位逐级等待，但并不表示组合门电路没有传播延迟。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "computer-organization.t43",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\computer-organization.t43_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\computer-organization.t43_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "两位加法器以Gᵢ=Aᵢ∧Bᵢ、Pᵢ=Aᵢ⊕Bᵢ形成先行进位。A=10、B=01、C₀=1，位号从低位0开始。求G₀/P₀/G₁/P₁、C₁和C₂，并给完整和。",
+          "practice_second": "把先行进位C₂展开到G/P与C₀，可以减少进位逐级等待，但并不表示组合门电路没有传播延迟。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机组成原理\n判断\n待练 2 题\n☆\n先行进位的两位展开\n把先行进位C₂展开到G/P与C₀，可以减少进位逐级等待，但并不表示组合门电路没有传播延迟。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "operating-system.t22",
+      "title": "多级反馈队列的升降与抢占",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "own_recall": "先给入队/降级/抢占余片规则，再逐段扣执行量。",
+      "difficulty_and_prior_knowledge": "剩余总执行量与剩余本片不同；正文表逐行分开，卡用时间线作回忆线索。",
+      "lecture_support_excerpt": "#### 多级反馈队列的升降与抢占\n\n多级反馈队列允许任务在不同优先级队列间移动。短交互任务可较早响应，持续用CPU的任务逐步让出高优先级位置；规则必须先给清楚，不能只靠“多级”猜次序。\n\n本例单CPU、无I/O与切换开销：Q0高于Q1；新任务进Q0。Q0时间片1，用满未完降Q1；Q1时间片2，用满未完回Q1队尾。高队列新任务可抢占Q1，被抢占者保留本片剩余时间。A在0到达需4，B在2到达需1。\n\n| 时间段 | 执行与队列变化 |\n| --- | --- |\n| [0,1) | A在Q0用满1，余3降Q1 |\n| [1,2) | A在Q1用1，余2，本片还剩1 |\n| [2,3) | B进入Q0并抢占A，B执行1后完成 |\n| [3,4) | A回Q1用剩余1，余1，本片用尽后排Q1尾 |\n| [4,5) | A继续执行余1后完成 |\n\n因此B在3完成、A在5完成。若题改为抢占后重置时间片或有其他就绪任务，必须重排，不能沿用此表。持续有高队列任务时低队列可能饥饿，可用等待老化或定期提升缓解；提升阈值、I/O返回队列及同刻入队次序都应另作约定。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-02-a",
+          "topic_id": "operating-system.t22",
+          "answer_before_key": "A0-1用Q0余3，1-2在Q1已用1，2时余量2余片1；B2-3完成；A3-4用余片余1，再4-5完成；B3 A5。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "时刻2 A余2，本片余1；B[2,3)完成；A[3,4)用余片后余1，A[4,5)完成。C_B=3、C_A=5。",
+          "reference_explanation": "A已在Q0执行1、Q1执行1；高优先级B到达使A暂停但不重置低队列剩余片。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-02-b",
+          "topic_id": "operating-system.t22",
+          "answer_before_key": "会饥饿。可等待超过W上调一级或每T全局提升，需要W/T和同级顺序参数。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不能，低队列可能饥饿；可按等待时长老化提升或定期把等待任务提升，需约定等待阈值/提升周期及提升到哪队列。",
+          "reference_explanation": "降级改善短任务响应并不自动提供低队列有限等待保证；改进要成为明确规则才可重画时间线。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第3章 进程、线程与处理机调度",
+        "previous": "## 第2章 操作系统结构与用户接口",
+        "next": "## 第4章 进程同步与死锁",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "operating-system.t22",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t22_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t22_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "单CPU两级反馈队列：Q0高、片1；Q1低、片2。新任务进Q0，Q0用满未完降Q1；高队列抢占时低队列保留本片剩余时间。无I/O和切换开销。A在0到达需4，B在2到达需1。写2时刻A的剩余执行量及余片、之后的时间线和完成时刻。",
+          "practice_second": "多级反馈队列总先选最高非空队列，且高队列持续有新任务，低队列任务长期得不到CPU。哪项改进最直接针对这种饥饿风险？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n单选\n待练 2 题\n☆\n多级反馈队列的升降与抢占\n多级反馈队列总先选最高非空队列，且高队列持续有新任务，低队列任务长期得不到CPU。哪项改进最直接针对这种饥饿风险？\nA\n按约定的等待阈值或周期提升低队列任务\nB\n禁止所有低队列任务再次进入高队列\nC\n只给最高队列增加更多新任务\nD\n认为多级队列天然保证不会饥饿，无须调整\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "operating-system.t22",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t22_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t22_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "单CPU两级反馈队列：Q0高、片1；Q1低、片2。新任务进Q0，Q0用满未完降Q1；高队列抢占时低队列保留本片剩余时间。无I/O和切换开销。A在0到达需4，B在2到达需1。写2时刻A的剩余执行量及余片、之后的时间线和完成时刻。",
+          "practice_second": "多级反馈队列总先选最高非空队列，且高队列持续有新任务，低队列任务长期得不到CPU。哪项改进最直接针对这种饥饿风险？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n单选\n待练 2 题\n☆\n多级反馈队列的升降与抢占\n多级反馈队列总先选最高非空队列，且高队列持续有新任务，低队列任务长期得不到CPU。哪项改进最直接针对这种饥饿风险？\nA\n按约定的等待阈值或周期提升低队列任务\nB\n禁止所有低队列任务再次进入高队列\nC\n只给最高队列增加更多新任务\nD\n认为多级队列天然保证不会饥饿，无须调整\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "operating-system.t23",
+      "title": "按截止期执行EDF调度",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c03",
+      "own_recall": "EDF按已到达任务的绝对截止期选，先核是否过载。",
+      "difficulty_and_prior_knowledge": "截止时刻和执行时长易混；恢复任务只做余量，文字已明确。",
+      "lecture_support_excerpt": "#### 按截止期执行EDF调度\n\n最早截止期优先（EDF）从已到达且未完成的任务中，选**绝对截止时刻最早**者；抢占式EDF在新任务到达时重新比较。绝对截止时刻是从同一时间原点计的时刻，不是剩余运行时间。下例单CPU，不计开销，每项任务只到达一次。\n\n| 任务 | 到达 | 执行时间 | 截止时刻 |\n| --- | --- | --- | --- |\n| A | 0 | 3 | 5 |\n| B | 1 | 1 | 2 |\n\n时刻0只有A，先做A；时刻1 B到达，2早于5，B抢占A。时间线为`A[0,1)→B[1,2)→A[2,4)`；B在截止时刻2完成，A在4完成，两者都守时。要先扣掉A已执行的1，不能恢复后再给它3。\n\n若只把A的执行时间改为5，到截止时刻5前共需执行6个单位，CPU只有5个单位能力，不可能都守时。EDF不是把任何负载都变可行；接纳新实时任务前还需核对执行需求与期限。周期任务的固定优先级方法可按周期较短者优先（RMS）认识；其假设与EDF不同，不能把周期和绝对截止时刻混用。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-03-a",
+          "topic_id": "operating-system.t23",
+          "answer_before_key": "t1抢占；A0-1，B1-2完成刚好期限，A2-4完成<5，均守时。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "1时刻B抢占A；A[0,1)、B[1,2)、A[2,4)；B在2、A在4完成，均不晚于截止时刻。",
+          "reference_explanation": "EDF比较已到达任务的绝对截止时刻；A恢复时只剩2个执行单位。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-03-b",
+          "topic_id": "operating-system.t23",
+          "answer_before_key": "不可能。到4需要总5而仅4时间；A0-3 B3-5使B超期，即任何策略不能全守时。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不可能。截止4前A和B都必须完成，共需5个CPU单位，区间0—4只有4个单位，任何调度都不能全守时。",
+          "reference_explanation": "EDF不是增加CPU能力的方法；先核需求/期限，过载时须拒绝、降级或调整需求。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第3章 进程、线程与处理机调度",
+        "previous": "## 第2章 操作系统结构与用户接口",
+        "next": "## 第4章 进程同步与死锁",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "operating-system.t23",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t23_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t23_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "抢占式EDF，单CPU、无开销：A到0需3、绝对截止5，B到1需1、截止2。写首次抢占发生时刻、完整时间线，并逐项判断是否守时。",
+          "practice_second": "单CPU、无开销，A/B均在0到达：A需3且截止3，B需2且截止4。因为使用EDF，所以一定能让两个任务都不晚于各自截止时刻完成。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n判断\n待练 2 题\n☆\n按截止期执行EDF调度\n单CPU、无开销，A/B均在0到达：A需3且截止3，B需2且截止4。因为使用EDF，所以一定能让两个任务都不晚于各自截止时刻完成。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "operating-system.t23",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t23_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t23_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "抢占式EDF，单CPU、无开销：A到0需3、绝对截止5，B到1需1、截止2。写首次抢占发生时刻、完整时间线，并逐项判断是否守时。",
+          "practice_second": "单CPU、无开销，A/B均在0到达：A需3且截止3，B需2且截止4。因为使用EDF，所以一定能让两个任务都不晚于各自截止时刻完成。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n判断\n待练 2 题\n☆\n按截止期执行EDF调度\n单CPU、无开销，A/B均在0到达：A需3且截止3，B需2且截止4。因为使用EDF，所以一定能让两个任务都不晚于各自截止时刻完成。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "operating-system.t24",
+      "title": "等待图中的死锁检测",
+      "course": "操作系统原理",
+      "chapter_id": "operating-system.c04",
+      "own_recall": "等待者指向持有者；单实例有环判死锁，多实例另算。",
+      "difficulty_and_prior_knowledge": "实际请求与Need最大剩余需求区别，原死锁四条件/银行家上下文可衔接。",
+      "lecture_support_excerpt": "#### 等待图中的死锁检测\n\n等待图把**进程画成点**：Pi正在等待Pj持有的资源时，画`Pi→Pj`。在这里限定每类资源只有一个实例、等待的是该资源，资源不能强行剥夺；此模型中等待图有环表示死锁。\n\nR1由P1持有，R2由P2持有。P1申请R2且等待，先画P1→P2；此时P2还可继续并释放R2，不能只凭一条边判死锁。若P2又申请R1且等待，就再画P2→P1，形成P1→P2→P1环，两者均等对方释放，不能推进。若撤销P2并回收R2，环被打破，P1才可能继续。\n\n检测查看**已经发生的等待**；银行家安全检查使用最大剩余需求，判断是否仍有安全完成顺序，两者输入与目的不同。多实例资源不能仅凭一个环判死锁：有其他实例可能随后释放。此时须结合当前可用、各进程已分配和实际请求，反复找可满足请求而能完成者并释放其分配量；不能将Need最大需求直接当成实际等待请求。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-04-a",
+          "topic_id": "operating-system.t24",
+          "answer_before_key": "P1→P2→P3→P1，单实例有环死锁；撤P3释放R3先解除P2等待，再P1。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "P1→P2、P2→P3、P3→P1成环，按给定单实例等待模型死锁；撤销P3回收R3后，P2对R3的等待可先解除。",
+          "reference_explanation": "箭头从等待者指向持有者；解除环不代表所有进程已完成，后续还需执行和释放。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-04-b",
+          "topic_id": "operating-system.t24",
+          "answer_before_key": "多实例有环非充分。检测看当前分配/可用/现有请求；银行家安全看分配/可用/最大需求或剩余Need能否满足完成序列。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不能，多实例可能有其他实例可释放；检测关注当前可用、分配和实际请求，银行家安全检查还使用最大剩余需求判断安全完成顺序。",
+          "reference_explanation": "单实例图的环判据不能无条件推广；不安全状态也不等于已死锁。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 进程同步与死锁",
+        "previous": "## 第3章 进程、线程与处理机调度",
+        "next": "## 第5章 存储器与虚拟存储器",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "operating-system.t24",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t24_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t24_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "每类资源仅一个实例且不可剥夺：P1持R1等待P2持有的R2，P2持R2等待P3持有的R3，P3持R3等待P1持有的R1。画等待边并判是否死锁；若撤销P3并回收其资源，哪条等待可先解除？",
+          "practice_second": "每类资源可能有多个实例时，只要进程等待关系中存在P1→P2→P1环，就可以仅凭这个环断定系统已经死锁。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n判断\n待练 2 题\n☆\n等待图中的死锁检测\n每类资源可能有多个实例时，只要进程等待关系中存在P1→P2→P1环，就可以仅凭这个环断定系统已经死锁。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "operating-system.t24",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t24_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\operating-system.t24_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "每类资源仅一个实例且不可剥夺：P1持R1等待P2持有的R2，P2持R2等待P3持有的R3，P3持R3等待P1持有的R1。画等待边并判是否死锁；若撤销P3并回收其资源，哪条等待可先解除？",
+          "practice_second": "每类资源可能有多个实例时，只要进程等待关系中存在P1→P2→P1环，就可以仅凭这个环断定系统已经死锁。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n操作系统原理\n判断\n待练 2 题\n☆\n等待图中的死锁检测\n每类资源可能有多个实例时，只要进程等待关系中存在P1→P2→P1环，就可以仅凭这个环断定系统已经死锁。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "data-structures.t45",
+      "title": "B树删除的借位与合并",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "own_recall": "B树删键下溢通过父分隔键借兄弟或连父合并，根空可降层。",
+      "difficulty_and_prior_knowledge": "兄弟键不能跨父直接搬；四阶/非根下限写全，图的借位/合并独立起始，能照图重做。",
+      "lecture_support_excerpt": "#### B树删除的借位与合并\n\n删除B树关键字后，先检查结点是否低于下限，再修复。以下采用**四阶B树**：最多4个孩子、3个键；非根结点至少1个键，根另算。内部键可先用中序前驱或后继替换，再到相应叶结点删除，最后处理下溢。\n\n**兄弟有余键，经过父键借位。** 初始根[20]，左叶[10]、右叶[30,40]。删10使左叶空；右叶有2键，可把父键20下移到左叶，把右叶最小键30上移替换父键。结果根[30]，左右叶[20]、[40]。不是直接把30挪到左叶而保留父20，否则大小分区会错。\n\n**兄弟无余键，就连同父键合并。** 独立从根[20]、左[10]、右[30]开始，删10后右叶只有下限1键，不能借。将空左叶、父20、右叶30合为[20,30]；旧根没有键且只剩这一个孩子，由孩子成为新根，树高降低一层。\n\n![四阶B树删除10后，分别经过父键借位或合并并降低根](../media/ug_comp_btree_delete.svg)\n\n一般情况向上检查父结点下溢；有孩子的结点借位或合并时，孩子指针也要随键的区间接回。先确定阶数/最少键数，不能把不同材料的“阶”定义混用。B+树的记录主要在叶层，更新还可能改父导航键和叶链，不能原样照搬B树内部记录的替换动作。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-05-a",
+          "topic_id": "data-structures.t45",
+          "answer_before_key": "直接30置左导致左键>父20。父20下移左叶、右30上移父、右余40，根30左20右40。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "错误结果左子树有30大于父20，破坏分区；应父20下移为左叶，右兄弟最小30上提为根，右叶[40]，即根[30]、叶[20]/[40]。",
+          "reference_explanation": "借位是通过父分隔键旋转，不是任意跨父搬一个兄弟键。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-05-b",
+          "topic_id": "data-structures.t45",
+          "answer_before_key": "右仅最低1键不可借；空左+父20+右30合并[20,30]，空旧根缩高，新根该叶。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不能，右叶只有下限1键；把空左叶、父键20与右叶30合成[20,30]，旧根变空且只余一个孩子，由该孩子成为新根，树高降1。",
+          "reference_explanation": "不可把兄弟也借成下溢；根的最少键与降层规则不同于普通非根。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 树与二叉树",
+        "previous": "## 第3章 栈、队列、串与数组",
+        "next": "## 第5章 图",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "data-structures.t45",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "四阶B树根[20]，左叶[10]、右叶[30,40]。删10后，有人直接把30放入左叶、父键仍20，右叶剩40。指出为何错误，并给经过父键借位的正确结果。",
+          "practice_second": "四阶B树根[20]，左右叶分别[10]和[30]，非根至少1键。删除10后能向右兄弟借键吗？写出合并内容和根的变化。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n简答\n待练 2 题\n☆\nB树删除的借位与合并\n四阶B树根[20]，左右叶分别[10]和[30]，非根至少1键。删除10后能向右兄弟借键吗？写出合并内容和根的变化。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "data-structures.t45",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t45_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "四阶B树根[20]，左叶[10]、右叶[30,40]。删10后，有人直接把30放入左叶、父键仍20，右叶剩40。指出为何错误，并给经过父键借位的正确结果。",
+          "practice_second": "四阶B树根[20]，左右叶分别[10]和[30]，非根至少1键。删除10后能向右兄弟借键吗？写出合并内容和根的变化。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n简答\n待练 2 题\n☆\nB树删除的借位与合并\n四阶B树根[20]，左右叶分别[10]和[30]，非根至少1键。删除10后能向右兄弟借键吗？写出合并内容和根的变化。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "data-structures.t46",
+      "title": "中序线索的建立与遍历",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c04",
+      "own_recall": "空链改为前驱后继线索，用tag区分，走子树只沿真实孩子。",
+      "difficulty_and_prior_knowledge": "pre旧访问者和新p顺序；正文表保留B孩子，图虚线清楚，不能把线索递归为孩子。",
+      "lecture_support_excerpt": "#### 中序线索的建立与遍历\n\n约定`ltag/rtag=0`表示对应指针是孩子链接，`=1`表示前驱/后继线索。初始只有孩子链接，标志均为0；以B为根、左A、右C为例，中序为A、B、C。pre保存上一个已访问结点，初值为空。\n\n```text\n按中序访问p：\n    若p.left为空：p.left=pre，p.ltag=1\n    若pre不空且pre.right为空：pre.right=p，pre.rtag=1\n    pre=p\n全部访问结束：若pre不空且右链接为空，令pre.rtag=1\n```\n\n这里的“按中序”仍是先左子树、再当前、再右子树；递归/向下走时只沿tag=0的孩子，不能把刚接的线索再当子树。\n\n| 本次访问 | 左空链的处理 | 前一结点右空链的处理 | 更新pre |\n| --- | --- | --- | --- |\n| A | A.left空，ltag=1，无前驱 | pre空，无处理 | A |\n| B | B.left是A，保持孩子 | A.right=B，A.rtag=1 | B |\n| C | C.left=B，C.ltag=1 | B.right是C，保持孩子 | C |\n\n最后C.right仍空，C.rtag=1，表示无后继；B两标志仍为0。遍历时从根沿真实左孩子走到A：输出A，右为线索便到B；B右为真实孩子，就进右子树并沿真实左孩子找最左结点C；C的后继为空，结束。\n\n![B根左右孩子A和C，中序线索A到B、C到B以虚线表示](../media/ug_comp_thread_tree.svg)\n\n找前驱反向对称：左为线索就直接取；左为孩子就找左子树最右结点。先序/后序线索按各自访问次序定义，不能套中序规则；仅靠两条线索未必能高效取得任意方向的前后继，某些后序后继需父结点信息。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-06-a",
+          "topic_id": "data-structures.t46",
+          "answer_before_key": "中序A B C D。C前驱B后继D，左右均线索tag1；B.right是D孩子tag0保留。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "中序A、B、C、D；C左指B、右指D，ltag=rtag=1；B右指D是真实孩子，rtag仍0，不能改成线索。",
+          "reference_explanation": "C没有孩子，空链补前驱B/后继D；已有孩子链接不能覆盖。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-06-b",
+          "topic_id": "data-structures.t46",
+          "answer_before_key": "当孩子递归会A→B→A循环。A.rtag1直接取后继B；B.rtag0进右子树最左结点C。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "可能沿A→B→A等重复或成环；输出A后按右线索直接到B，B右为真实孩子则进入右子树并沿真实左孩子找最左C。",
+          "reference_explanation": "线索保存访问顺序而非新增子树；递归与下降必须区分孩子和线索。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 树与二叉树",
+        "previous": "## 第3章 栈、队列、串与数组",
+        "next": "## 第5章 图",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "data-structures.t46",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t46_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t46_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "初始树B为根，左A、右D，D的左孩子为C。使用中序线索，tag0表示孩子、tag1表示线索。列出中序序列，以及C的左右线索与两个tag；B的右指针是否应改为线索？",
+          "practice_second": "中序线索树B根左A右C，A的右指针是指向B的后继线索，rtag=1。若递归遍历时不检查tag，把A.right也当右孩子，会有什么问题？怎样正确从A走到B，再从B走到C？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n简答\n待练 2 题\n☆\n中序线索的建立与遍历\n中序线索树B根左A右C，A的右指针是指向B的后继线索，rtag=1。若递归遍历时不检查tag，把A.right也当右孩子，会有什么问题？怎样正确从A走到B，再从B走到C？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "data-structures.t46",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t46_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t46_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "初始树B为根，左A、右D，D的左孩子为C。使用中序线索，tag0表示孩子、tag1表示线索。列出中序序列，以及C的左右线索与两个tag；B的右指针是否应改为线索？",
+          "practice_second": "中序线索树B根左A右C，A的右指针是指向B的后继线索，rtag=1。若递归遍历时不检查tag，把A.right也当右孩子，会有什么问题？怎样正确从A走到B，再从B走到C？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n简答\n待练 2 题\n☆\n中序线索的建立与遍历\n中序线索树B根左A右C，A的右指针是指向B的后继线索，rtag=1。若递归遍历时不检查tag，把A.right也当右孩子，会有什么问题？怎样正确从A走到B，再从B走到C？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "data-structures.t47",
+      "title": "败者树如何更新归并段首",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "own_recall": "有序段首比赛选最小，只重赛获胜一路到根。",
+      "difficulty_and_prior_knowledge": "败者保存但胜者输出；耗尽哨兵非数据，原外部归并先排初始段的前提一致。",
+      "lecture_support_excerpt": "#### 败者树如何更新归并段首\n\nk路有序段归并，每次只从各段**当前段首**选最小项，输出后只换入获胜段的新段首。败者树用比赛树保存各次比较的失败者，沿获胜叶到根的路径重赛，避免每次重新扫描所有段首；这里先跟状态，不要求写整套数组实现。\n\n三段R1=[1,7]、R2=[3,5]、R3=[2,6]，可补一片不输出的哨兵叶∞成四叶树。首次1对3，败者3留下；2对∞，败者∞留下；两个胜者1对2，败者2留下，最终胜者1。\n\n| 输出前段首(R1,R2,R3) | 本次输出 | 补入后段首 |\n| --- | --- | --- |\n| (1,3,2) | R1的1 | (7,3,2) |\n| (7,3,2) | R3的2 | (7,3,6) |\n| (7,3,6) | R2的3 | (7,5,6) |\n| (7,5,6) | R2的5 | (7,∞,6) |\n\n第一轮补7后，与原路径上的3比较得3胜，再与另一边胜者2比较，最终2胜。某段耗尽按∞处理，它不会当真实数据输出；随后输出6、7。预先排好各输入段是前提，不能用这张树直接把任意未排序文件当有序段。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-07-a",
+          "topic_id": "data-structures.t47",
+          "answer_before_key": "先R2的1，补后段首R1=2 R2=9 R3=3；再R1的2。第一次更新重赛R2叶到根，第二次R1路径。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "先R2的1；补9后段首(2,9,3)，再R1的2；每次只更新刚获胜那一路叶到根路径，第一次为R2路径。",
+          "reference_explanation": "获胜段的新段首替换旧叶；其他段首没有变化，仍须与更新路径上的候选比较。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-07-b",
+          "topic_id": "data-structures.t47",
+          "answer_before_key": "不能，各路须已排序，否则7后才暴露1无法有序；∞耗尽哨兵不输出。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不能，R1内部无序会在7后暴露1；归并要求各输入段先有序。耗尽段∞只是哨兵，不作为记录输出。",
+          "reference_explanation": "败者树优化归并选择，不替代初始段生成或内部排序。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第8章 数据结构与算法选择",
+        "previous": "## 第7章 内部排序",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "data-structures.t47",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t47_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t47_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "三路已排序段R1=[2,8]、R2=[1,9]、R3=[3,4]。败者树归并先输出哪个值？补入后段首是什么？再输出哪个值？指出需重赛的路径来自哪一路。",
+          "practice_second": "将多个输入段的当前段首放入败者树进行归并，保证输出整体有序的必要前提是哪项？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n单选\n待练 2 题\n☆\n败者树如何更新归并段首\n将多个输入段的当前段首放入败者树进行归并，保证输出整体有序的必要前提是哪项？\nA\n每个输入段本身已经按相同次序有序\nB\n每个输入段必须长度相等\nC\n每个输入段的全部数据必须同时放进比赛树\nD\n耗尽段的∞哨兵必须作为真实记录输出\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "data-structures.t47",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t47_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t47_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "三路已排序段R1=[2,8]、R2=[1,9]、R3=[3,4]。败者树归并先输出哪个值？补入后段首是什么？再输出哪个值？指出需重赛的路径来自哪一路。",
+          "practice_second": "将多个输入段的当前段首放入败者树进行归并，保证输出整体有序的必要前提是哪项？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n单选\n待练 2 题\n☆\n败者树如何更新归并段首\n将多个输入段的当前段首放入败者树进行归并，保证输出整体有序的必要前提是哪项？\nA\n每个输入段本身已经按相同次序有序\nB\n每个输入段必须长度相等\nC\n每个输入段的全部数据必须同时放进比赛树\nD\n耗尽段的∞哨兵必须作为真实记录输出\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "data-structures.t48",
+      "title": "置换选择中的冻结与新段",
+      "course": "数据结构与算法",
+      "chapter_id": "data-structures.c08",
+      "own_recall": "新值小于本段末输出则冻结，当前可选用尽才换段解冻。",
+      "difficulty_and_prior_knowledge": "段内有序不保证段间有序；和相邻归并形成两阶段，不误认为全部排序结束。",
+      "lecture_support_excerpt": "#### 置换选择中的冻结与新段\n\n置换选择用于生成较长的**初始有序段**，不是最后的多路归并。缓冲中分“本段可选”和“冻结到下段”两类：输出可选最小值后读入一个新值；若新值不小于本段最后输出，仍可本段输出，否则冻结。可选项用尽才结束本段，解冻余项开始新段。\n\n缓冲可放3条，输入依次4、1、3、2、6、0，先装[4,1,3]：\n\n| 输出 | 新读值与条件 | 剩余本段可选 | 冻结 |\n| --- | --- | --- | --- |\n| 1 | 2≥1，可选 | [4,2,3] | 空 |\n| 2 | 6≥2，可选 | [4,6,3] | 空 |\n| 3 | 0<3，冻结 | [4,6] | [0] |\n| 4 | 输入已尽 | [6] | [0] |\n| 6 | 输入已尽 | 空 | [0] |\n\n第1段为[1,2,3,4,6]；解冻0后第2段为[0]。每段内部有序，但前段6大于后段0，所以还需前面所学外部归并。段长依赖输入，不能保证每次都比缓冲长，也不能把冻结的小值丢弃。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-08-a",
+          "topic_id": "data-structures.t48",
+          "answer_before_key": "初5,1，输出1读0因0<1冻结；输出5读4因4<5冻结；第一段[1,5]，第二段[0,4]。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "先出1读0，0<1冻结；可选只剩5，出5读4，4<5也冻结；首段[1,5]，解冻后第二段[0,4]。",
+          "reference_explanation": "冻结以本段最后输出比较，输入未尽时不能跳过读取；解冻只在本段可选项耗尽后进行。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-08-b",
+          "topic_id": "data-structures.t48",
+          "answer_before_key": "只是分段，还需归并。[...6][0]拼接逆序；约2M只为某些随机输入平均，不恒定。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "没有，串接结果6之后是0仍无序，须再归并；段长取决于输入，不保证固定两倍缓冲容量。冻结标志用于分段，不能删除尚未输出的记录。",
+          "reference_explanation": "生成有序段和把所有段归并是不同阶段；平均经验不能替代每次保证。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第8章 数据结构与算法选择",
+        "previous": "## 第7章 内部排序",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "data-structures.t48",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t48_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t48_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "置换选择缓冲2条，输入依次5、1、0、4。初装5、1，每次输出本段可选最小值再读一条；小于本段最后输出的新值冻结。写初始有序段和0在哪一步冻结。",
+          "practice_second": "置换选择已经生成两个各自有序的初始段[1,2,3,4,6]和[0]，因此把这两段依次串接便完成整个文件的排序，不再需要归并。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n判断\n待练 2 题\n☆\n置换选择中的冻结与新段\n置换选择已经生成两个各自有序的初始段[1,2,3,4,6]和[0]，因此把这两段依次串接便完成整个文件的排序，不再需要归并。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "data-structures.t48",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t48_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\data-structures.t48_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "置换选择缓冲2条，输入依次5、1、0、4。初装5、1，每次输出本段可选最小值再读一条；小于本段最后输出的新值冻结。写初始有序段和0在哪一步冻结。",
+          "practice_second": "置换选择已经生成两个各自有序的初始段[1,2,3,4,6]和[0]，因此把这两段依次串接便完成整个文件的排序，不再需要归并。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据结构与算法\n判断\n待练 2 题\n☆\n置换选择中的冻结与新段\n置换选择已经生成两个各自有序的初始段[1,2,3,4,6]和[0]，因此把这两段依次串接便完成整个文件的排序，不再需要归并。\n✓\n正确\n×\n错误\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "database.t23",
+      "title": "存储过程的一次参数调用",
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "own_recall": "过程接参数，查验失败返回而不修改，成功更新也要核返回。",
+      "difficulty_and_prior_knowledge": "同一连续状态与独立从初值调用不同；正文事务/并发前提明确，和触发器职责区分。",
+      "lecture_support_excerpt": "#### 存储过程的一次参数调用\n\n存储过程是保存在数据库中、通过名称与参数调用的程序。下面是**伪码**，展示条件和修改顺序，不对应某产品语法。设Account以id唯一标识账户，调用方已开始事务，成功后统一提交，失败时按业务回滚；暂不考虑并发。\n\n```text\n过程 扣款(account_id, amount)：\n    若amount<=0：返回“金额无效”\n    查询Account中该id的balance\n    若无该账户：返回“账户不存在”\n    若balance<amount：返回“余额不足”\n    UPDATE该账户，balance=balance-amount\n    返回“成功”\n```\n\n账户7余额80，调用扣款(7,30)：参数绑定7/30→找到80→30有效且80≥30→更新50→返回成功。若独立从80调用扣款(7,90)，在余额检查时返回不足，余额仍80；返回值与数据修改是两个结果，都要核对。实际并发应使用带余额条件的原子更新/锁并检查影响行数；把代码放在存储过程中不会自动解决超卖或赋予调用者任意权限。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-09-a",
+          "topic_id": "database.t23",
+          "answer_before_key": "第一次成功余额50，第二金额60>50失败且不更新，最终50。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "第一次成功并将余额改50；第二次余额50<60返回不足、不修改，最终50。",
+          "reference_explanation": "第二次读取的是第一次更新后的50，不能两次都按初始80判断。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-09-b",
+          "topic_id": "database.t23",
+          "answer_before_key": "封装不自动保证并发原子性/隔离，应事务锁或余额条件原子更新、影响行数判断，防读后写竞争。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "存储过程只是执行组织与调用位置；多次更新的整体成败仍需事务，竞争修改仍需适当锁/原子条件更新并检查影响行数，调用权限也须控制。",
+          "reference_explanation": "过程不自动把任意业务逻辑变成正确且原子的并发方案。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第5章 关系数据库标准语言SQL",
+        "previous": "## 第4章 关系代数",
+        "next": "## 第6章 视图、索引与数据库设计",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "database.t23",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t23_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t23_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "伪过程扣款(id,amount)：金额<=0或无账户或余额<金额时返回错误且不UPDATE，否则余额减金额并返回成功。账户7初始80，依次在同一连续状态调用扣款(7,30)、扣款(7,60)，暂不考虑并发。分别返回什么，最终余额多少？",
+          "practice_second": "将扣库存逻辑放进数据库存储过程后，以下判断正确的是哪项？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n单选\n待练 2 题\n☆\n存储过程的一次参数调用\n将扣库存逻辑放进数据库存储过程后，以下判断正确的是哪项？\nA\n多次修改的整体成败、并发控制和访问权限仍需正确设计\nB\n任意存储过程都自动使全部业务逻辑串行化\nC\n从此不必检查更新影响行数\nD\n调用过程自动取得数据库全部表的任意权限\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "database.t23",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t23_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t23_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "伪过程扣款(id,amount)：金额<=0或无账户或余额<金额时返回错误且不UPDATE，否则余额减金额并返回成功。账户7初始80，依次在同一连续状态调用扣款(7,30)、扣款(7,60)，暂不考虑并发。分别返回什么，最终余额多少？",
+          "practice_second": "将扣库存逻辑放进数据库存储过程后，以下判断正确的是哪项？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n单选\n待练 2 题\n☆\n存储过程的一次参数调用\n将扣库存逻辑放进数据库存储过程后，以下判断正确的是哪项？\nA\n多次修改的整体成败、并发控制和访问权限仍需正确设计\nB\n任意存储过程都自动使全部业务逻辑串行化\nC\n从此不必检查更新影响行数\nD\n调用过程自动取得数据库全部表的任意权限\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "database.t24",
+      "title": "游标的逐行读取与关闭",
+      "course": "数据库技术",
+      "chapter_id": "database.c05",
+      "own_recall": "FETCH先看有行才处理，结束/异常关闭，避免旧缓冲重复。",
+      "difficulty_and_prior_knowledge": "无行与值NULL不同；程序sum0和SQL空SUM NULL不混用，正文说明。",
+      "lecture_support_excerpt": "#### 游标的逐行读取与关闭\n\n游标让程序逐行取得查询结果。仅需求总和时通常先用集合SQL `SELECT SUM(score)`；逐行调用外部处理等任务才可能需要一行一行取。以下是产品中立伪码，OPEN使结果可被读取，FETCH同时给出“本次有没有行”的状态。\n\n```text\nsum=0\nOPEN cursor FOR 查询成绩（本例结果非空值80、90）\n循环：\n    FETCH cursor INTO score，取得has_row\n    若has_row为假：退出循环\n    sum=sum+score\nCLOSE cursor\n```\n\n第一次FETCH有行80，sum从0到80；第二次有行90，变170；第三次无行，先退出，不能把旧score=90再加一次。空结果第一次就无行，sum保持0；若业务希望返回NULL而非0，应另定空集规则。CLOSE释放游标占用的资源，异常路径也要清理；NULL成绩的处理和并发可见性须按题设与数据库约定，不能默认为所有产品相同。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-10-a",
+          "topic_id": "database.t24",
+          "answer_before_key": "FETCH1真sum7；2真sum16；3假sum16退出close。第三次缓冲即使仍9也非新行。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "第一次true，sum7；第二次true，sum16；第三次false，sum仍16。第三次无新行，旧score9不能再处理。",
+          "reference_explanation": "先检查取行结果是避免重复旧数据的条件。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-10-b",
+          "topic_id": "database.t24",
+          "answer_before_key": "优先SUM集合SQL；该程序空结果sum0，但SQL SUM空集常NULL可COALESCE。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "优先集合SQL SUM；所给游标空结果第一次has_row=false退出，程序sum保持0。SQL空集SUM可能返回NULL，不能声称两种接口空集结果无条件相同。",
+          "reference_explanation": "用途及空集规则需要分别声明，逐行循环并非更正确。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第5章 关系数据库标准语言SQL",
+        "previous": "## 第4章 关系代数",
+        "next": "## 第6章 视图、索引与数据库设计",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "database.t24",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t24_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t24_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "游标查询两行score=7、9。sum初始0；每次FETCH后先检查has_row，无行就退出，有行才累加，最后CLOSE。列每次FETCH的has_row、sum及最终结果；第三次为什么不能再加9？",
+          "practice_second": "只需要查询全部非空成绩的总和，没有逐行外部动作，应优先集合SQL还是游标？若游标结果为空且程序sum初始0、先检查has_row再累加，会得到什么？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n简答\n待练 2 题\n☆\n游标的逐行读取与关闭\n只需要查询全部非空成绩的总和，没有逐行外部动作，应优先集合SQL还是游标？若游标结果为空且程序sum初始0、先检查has_row再累加，会得到什么？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "database.t24",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t24_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t24_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "游标查询两行score=7、9。sum初始0；每次FETCH后先检查has_row，无行就退出，有行才累加，最后CLOSE。列每次FETCH的has_row、sum及最终结果；第三次为什么不能再加9？",
+          "practice_second": "只需要查询全部非空成绩的总和，没有逐行外部动作，应优先集合SQL还是游标？若游标结果为空且程序sum初始0、先检查has_row再累加，会得到什么？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n简答\n待练 2 题\n☆\n游标的逐行读取与关闭\n只需要查询全部非空成绩的总和，没有逐行外部动作，应优先集合SQL还是游标？若游标结果为空且程序sum初始0、先检查has_row再累加，会得到什么？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "database.t25",
+      "title": "事实表的粒度与维度汇总",
+      "course": "数据库技术",
+      "chapter_id": "database.c09",
+      "own_recall": "先定事实一行粒度，再由维度映射月份汇总同口径度量。",
+      "difficulty_and_prior_knowledge": "月合计不能混明细双计；原OLAP/OLTP边界与新增表一致，未要求仓库部署。",
+      "lecture_support_excerpt": "#### 事实表的粒度与维度汇总\n\n**粒度**规定事实表的一行代表什么。本例一行是一笔销售，不是一月总计；金额是可求和的度量，日期、地区、商品是分析方向。维度表保存日期所属月份、地区名称、商品分类等描述，事实表用相应编号引用它们，形成简单星型组织。\n\n| 销售编号 | 日期ID | 地区ID | 商品ID | 金额 |\n| --- | --- | --- | --- | --- |\n| S1 | D1 | N | P1 | 10 |\n| S2 | D2 | N | P1 | 20 |\n| S3 | D2 | S | P2 | 5 |\n\n日期维：D1=1月1日、D2=1月2日，均属1月；地区维N=北区、S=南区；商品维P1=笔、P2=纸。按月份连接日期维并求和，1月为10+20+5=35；按地区汇总北区30、南区5；只取北区是切片，再看北区每天是向更细层次下钻。\n\n先声明粒度才能解释数字：不能再把一条“1月合计35”与上述三笔作为同粒度事实一起求和，否则得到70，重复计数。销售额可加，平均单价等度量未必能直接求和；汇总前还要统一币种/单位。这里认识组织与聚合，不要求搭建仓库产品。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-11-a",
+          "topic_id": "database.t25",
+          "answer_before_key": "月总35，N30；日期维日期→月份映射决定汇总。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "1月35，N地区30；通过日期维将日期ID映射到月份再分组。",
+          "reference_explanation": "事实金额可求和，日期所属月份是维度描述，不能只看日期ID字符猜月份。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-11-b",
+          "topic_id": "database.t25",
+          "answer_before_key": "混入不同粒度使细项35与月汇35双计70；粒度是一行代表业务事件，度量是可聚合金额。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "把每笔与整月汇总混在同一粒度并重复计数；粒度是一行代表的业务事件/汇总层次，度量是金额等分析数值。应分开层次或只对同粒度明细聚合。",
+          "reference_explanation": "数值都能相加不代表业务语义允许相加。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第9章 数据库安全性",
+        "previous": "## 第8章 事务、并发控制与恢复",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "database.t25",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t25_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t25_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "事实粒度为每笔销售：S1日期D1地区N金额10，S2日期D2地区N金额20，S3日期D2地区S金额5；日期维D1/D2均属1月。求1月总额和N地区总额；说明按月汇总需借哪个维度信息。",
+          "practice_second": "每笔销售事实10、20、5均属1月，又向同一事实集加入“1月总额35”一行。查询SUM(金额)得70。解释错误，并区分粒度与度量。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n简答\n待练 2 题\n☆\n事实表的粒度与维度汇总\n每笔销售事实10、20、5均属1月，又向同一事实集加入“1月总额35”一行。查询SUM(金额)得70。解释错误，并区分粒度与度量。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "database.t25",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t25_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t25_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "事实粒度为每笔销售：S1日期D1地区N金额10，S2日期D2地区N金额20，S3日期D2地区S金额5；日期维D1/D2均属1月。求1月总额和N地区总额；说明按月汇总需借哪个维度信息。",
+          "practice_second": "每笔销售事实10、20、5均属1月，又向同一事实集加入“1月总额35”一行。查询SUM(金额)得70。解释错误，并区分粒度与度量。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n简答\n待练 2 题\n☆\n事实表的粒度与维度汇总\n每笔销售事实10、20、5均属1月，又向同一事实集加入“1月总额35”一行。查询SUM(金额)得70。解释错误，并区分粒度与度量。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "database.t26",
+      "title": "键值数据的写入与读取",
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "own_recall": "键定位整个值，本例PUT替换整值，保字段须显式合并。",
+      "difficulty_and_prior_knowledge": "接口语义是本例约定，不能推广所有产品；原非关系不等于无约束说明一致。",
+      "lecture_support_excerpt": "#### 键值数据的写入与读取\n\n键值模型把唯一键映射到一个值；值可以是字符串或序列化对象。下面的PUT/GET是抽象操作，本例约定PUT已有键会**替换整个值**，并非某个产品命令。\n\n```text\nPUT(\"user:7\", {name:\"小林\", city:\"邵阳\"})\nGET(\"user:7\")       → {name:\"小林\", city:\"邵阳\"}\nPUT(\"user:7\", {city:\"长沙\"})\nGET(\"user:7\")       → {city:\"长沙\"}\n```\n\n第二次写同键没有自动保留name；若要保留，先按业务取得旧值、合成完整新值再更新，实际并发还需原子或条件更新，避免丢失他人修改。键适合已知编号的直接读取；要找所有city=邵阳的用户，基本GET只给键查值，不能据此声称支持任意字段索引。是否有字段命令、过期、事务和一致性保证需看实现，非关系不等于无约束、无事务。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-12-a",
+          "topic_id": "database.t26",
+          "answer_before_key": "返回仅{stock:7}，name丢失；先读合并完整值再PUT并考虑并发或用支持字段更新的接口。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "返回仅{stock:7}；需明确将旧name与新stock合成完整新值，或使用实现支持的字段原子更新，不能假定PUT自动合并。",
+          "reference_explanation": "读改写并发还应使用版本/条件或原子机制以免丢失其他修改。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-12-b",
+          "topic_id": "database.t26",
+          "answer_before_key": "city不是实际主键，不能GET(city)；需扫描过滤或city→用户键的二级索引/查询能力。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不能，city不是已知唯一用户键；需要扫描并检查值、额外按城市建立索引/集合，或使用支持字段查询的模型/实现。",
+          "reference_explanation": "键定位值的接口不等于任意字段谓词查询。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第1章 数据库系统概论",
+        "previous": null,
+        "next": "## 第2章 概念模型与E-R方法",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "database.t26",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t26_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t26_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "约定键值PUT同键替换整个值。先PUT(\"item:8\",{name:\"笔\",stock:10})，再PUT(\"item:8\",{stock:7})，随后GET(\"item:8\")返回什么？若需保留name，应怎样设计这次更新？",
+          "practice_second": "键值接口仅有按用户编号键GET的基本能力。要找所有city=\"邵阳\"的用户，以下说法合理的是哪项？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n单选\n待练 2 题\n☆\n键值数据的写入与读取\n键值接口仅有按用户编号键GET的基本能力。要找所有city=\"邵阳\"的用户，以下说法合理的是哪项？\nA\n需扫描检查值、建立按城市索引，或选择支持字段查询的实现\nB\n一次GET(\"邵阳\")必然得到所有用户，因为城市也是字段\nC\n只需改变键的显示颜色\nD\n键值模型天然为值中的所有字段建立索引\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "database.t26",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t26_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t26_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "约定键值PUT同键替换整个值。先PUT(\"item:8\",{name:\"笔\",stock:10})，再PUT(\"item:8\",{stock:7})，随后GET(\"item:8\")返回什么？若需保留name，应怎样设计这次更新？",
+          "practice_second": "键值接口仅有按用户编号键GET的基本能力。要找所有city=\"邵阳\"的用户，以下说法合理的是哪项？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n单选\n待练 2 题\n☆\n键值数据的写入与读取\n键值接口仅有按用户编号键GET的基本能力。要找所有city=\"邵阳\"的用户，以下说法合理的是哪项？\nA\n需扫描检查值、建立按城市索引，或选择支持字段查询的实现\nB\n一次GET(\"邵阳\")必然得到所有用户，因为城市也是字段\nC\n只需改变键的显示颜色\nD\n键值模型天然为值中的所有字段建立索引\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "database.t27",
+      "title": "文档数据的字段筛选",
+      "course": "数据库技术",
+      "chapter_id": "database.c01",
+      "own_recall": "文档可按字段筛选，本例更新只改所列字段。",
+      "difficulty_and_prior_knowledge": "表达字段查询不保证索引；与前一卡PUT替换形成清晰对照。",
+      "lecture_support_excerpt": "#### 文档数据的字段筛选\n\n文档模型以带字段的文档组织对象，字段可有嵌套结构。这里规定每条文档有唯一id；INSERT、FIND、UPDATE表示抽象行为，不绑定产品语法。与上节整值替换不同，本例UPDATE只修改指明字段。\n\n```text\nINSERT {id:1, name:\"甲\", city:\"邵阳\", age:20}\nINSERT {id:2, name:\"乙\", city:\"长沙\", age:22}\nFIND city==\"邵阳\"   → 只返回id=1\nUPDATE id==1 SET age=21\nFIND id==1          → name/city不变，age=21\n```\n\n查询可以描述city这样的字段条件，不等于系统一定有相应索引：无索引可能仍扫描文档。若文档3没有city，本例不把它视为满足city==邵阳；实际缺失字段、NULL和类型比较规则须另核。嵌套对象可减少某些连接，但也可能重复数据并增加更新维护；文档模型不保证任意结构都更适合订单事务，也不代表不需要验证字段。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-13-a",
+          "topic_id": "database.t27",
+          "answer_before_key": "仅id1 age21，city仍邵阳，因为明示字段更新。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "只返回id1、age21；city仍邵阳，不会被字段更新删除。",
+          "reference_explanation": "这是所给部分字段修改语义，区别于整值替换。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-13-b",
+          "topic_id": "database.t27",
+          "answer_before_key": "查询语义不保证索引，可能全扫描；灵活结构仍需业务/类型/必填校验。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "能按字段表达查询不保证有相应索引，无索引可能扫描；文档仍需按业务验证字段/类型，灵活结构不消灭完整性和维护责任。",
+          "reference_explanation": "查询表达能力、访问效率和数据约束属于不同层面。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第1章 数据库系统概论",
+        "previous": null,
+        "next": "## 第2章 概念模型与E-R方法",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "database.t27",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t27_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t27_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "按本例文档语义：文档1为{id:1,city:\"邵阳\",age:20}，文档2为{id:2,city:\"长沙\",age:22}；UPDATE id==1 SET age=21只改指定字段。FIND city==\"邵阳\"返回哪些id及age？文档1的city会被删除吗？",
+          "practice_second": "文档数据库支持FIND city==\"邵阳\"。有人据此认定“必然已经有city索引，并且任意文档结构都不必校验”。指出两处问题。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n简答\n待练 2 题\n☆\n文档数据的字段筛选\n文档数据库支持FIND city==\"邵阳\"。有人据此认定“必然已经有city索引，并且任意文档结构都不必校验”。指出两处问题。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "database.t27",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t27_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\database.t27_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "按本例文档语义：文档1为{id:1,city:\"邵阳\",age:20}，文档2为{id:2,city:\"长沙\",age:22}；UPDATE id==1 SET age=21只改指定字段。FIND city==\"邵阳\"返回哪些id及age？文档1的city会被删除吗？",
+          "practice_second": "文档数据库支持FIND city==\"邵阳\"。有人据此认定“必然已经有city索引，并且任意文档结构都不必校验”。指出两处问题。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n数据库技术\n简答\n待练 2 题\n☆\n文档数据的字段筛选\n文档数据库支持FIND city==\"邵阳\"。有人据此认定“必然已经有city索引，并且任意文档结构都不必校验”。指出两处问题。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "programming.t23",
+      "title": "无符号数的位运算",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c03",
+      "own_recall": "按位与或异或与逻辑真假不同，无符号右移补0。",
+      "difficulty_and_prior_knowledge": "4位仅示意不是C实际位宽，短路能力与本例实际是否跳右侧须分开。",
+      "lecture_support_excerpt": "#### 无符号数的位运算\n\n位运算逐位处理整数，逻辑运算则判断整体真假并可能短路。先用**4位无符号模型**手算：A=1100、B=1010；&同位都1才1，|至少一位1即1，^不同为1。\n\n| 操作 | 逐位结果 | 无符号十进制 |\n| --- | --- | --- |\n| A & B | 1000 | 8 |\n| A按位或B | 1110 | 14 |\n| A ^ B | 0110 | 6 |\n| A右移1位 | 0110 | 6 |\n\nC中可用`unsigned int a=12u,b=10u;`计算上述与/或/异或及`a>>1`；实际unsigned int宽度不是4位，4位只是低位示意。无符号右移高位补0，移位数必须小于提升后类型的位宽；有符号移位另看标准及类型，不能照抄此模型。`a&&b`则因两者均非0得到1，并非1000；`a&b`会计算两操作数，也没有&&的短路规则。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-14-a",
+          "topic_id": "programming.t23",
+          "answer_before_key": "AND0010 OR1110 XOR1100 逻辑右移0101（无符号补0）。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "A&B=0010，A|B=1110，A^B=1100，A右移1为0101。",
+          "reference_explanation": "分别逐位与/或/异或；无符号右移补0。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-14-b",
+          "topic_id": "programming.t23",
+          "answer_before_key": "a&b=8按位且两操作数求值；a&&b=1逻辑且左假短路，当前左真故右求值。unsigned int宽由实现至少16位，不是4。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "a&b=8，逐位与且不提供&&的短路；a&&b=1，按两者非0判断真假并有逻辑与短路规则。unsigned int实际宽度依实现，不是4位。",
+          "reference_explanation": "本例a非0所以&&仍会求b；短路能力不等于此例右侧被跳过。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第3章 运算符与表达式",
+        "previous": "## 第2章 数据类型、变量与常量",
+        "next": "## 第4章 顺序结构与输入输出",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "programming.t23",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t23_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t23_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "按4位无符号示意，A=1010、B=0110。求A&B、A|B、A^B，以及A右移一位的位串。",
+          "practice_second": "C中unsigned int a=12u,b=10u；比较a&b与a&&b的数值和求值方式。能否把4位示意当作unsigned int实际只有4位？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\nC与Python程序设计\n简答\n待练 2 题\n☆\n无符号数的位运算\nC中unsigned int a=12u,b=10u；比较a&b与a&&b的数值和求值方式。能否把4位示意当作unsigned int实际只有4位？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "programming.t23",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t23_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t23_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "按4位无符号示意，A=1010、B=0110。求A&B、A|B、A^B，以及A右移一位的位串。",
+          "practice_second": "C中unsigned int a=12u,b=10u；比较a&b与a&&b的数值和求值方式。能否把4位示意当作unsigned int实际只有4位？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\nC与Python程序设计\n简答\n待练 2 题\n☆\n无符号数的位运算\nC中unsigned int a=12u,b=10u；比较a&b与a&&b的数值和求值方式。能否把4位示意当作unsigned int实际只有4位？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "programming.t24",
+      "title": "链表结点的改链与释放",
+      "course": "C与Python程序设计",
+      "chapter_id": "programming.c09",
+      "own_recall": "先保存后继改head再释放旧结点，别名也会悬空。",
+      "difficulty_and_prior_knowledge": "指针数值还在不代表对象活着；原数组/指针与malloc前置可接，图分三态明确。",
+      "lecture_support_excerpt": "#### 链表结点的改链与释放\n\n数据结构课用`next`表示后继；在C中，后继地址存于结构体指针，释放结点前必须先保住仍需访问的后继。下例已包含`stdlib.h`，代码位于main内；两个分配失败分支也归还已取得的对象。\n\n```c\ntypedef struct Node { int value; struct Node *next; } Node;\nNode *a = malloc(sizeof *a), *b = malloc(sizeof *b);\nif (a == NULL || b == NULL) { free(a); free(b); return 1; }\na->value = 10; a->next = b;\nb->value = 20; b->next = NULL;\nNode *head = a;\nNode *old = head;\nhead = head->next;        /* 先保住20结点 */\nfree(old); old = NULL; a = NULL;\n/* 此时head->value为20；不再读取已释放的10结点 */\nfree(head); head = NULL; b = NULL;\n```\n\n![两个C结点接链后，先把head改指20，再释放10结点](../media/ug_comp_nodes.svg)\n\n建链后head/a指10，a.next与b指20；改head后head和b同指20，old仍指10；释放old只结束10结点的生命周期，20仍可通过head访问。最后释放20后b也失效，因此清理别名。若先free(head)再读取head->next，会读取已结束生命周期的对象；地址数值未变也不合法。实际链表的插删规则见数据结构课，C在这里落实地址与所有权。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-15-a",
+          "topic_id": "programming.t24",
+          "answer_before_key": "head指20；a悬空不可解引用，free后对象寿命结束。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "head仍指向20结点；a是已释放10结点的别名，不能再解引用或读a->next。",
+          "reference_explanation": "先保存后继使链尾仍可达，但free不自动清理所有别名。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-15-b",
+          "topic_id": "programming.t24",
+          "answer_before_key": "free后head->next用已释放内存。old=head;head=old->next;free(old)。首分配成功第二失败应free首并返回失败，防泄漏。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "第二句读取了已释放对象的next，非法；应old=head; head=head->next; free(old);。若只分配成功一个，失败分支仍需释放已成功者，free(NULL)可安全调用。",
+          "reference_explanation": "地址外观没变不延长对象生命周期；分配和释放需覆盖失败路径。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第9章 C指针、结构体与文件",
+        "previous": "## 第8章 数组、字符串与Python组合数据",
+        "next": "## 第10章 Python异常、模块与文件",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "programming.t24",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "两个已分配Node构成head→10→20→NULL。执行old=head; head=head->next; free(old);后，head指向哪个值的结点？若仍有a指向旧10结点，能否读a->next？",
+          "practice_second": "为什么free(head); head=head->next;不能可靠删除头结点？写出先保后继的三步，并说明malloc创建两个结点时只成功一个的清理要求。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\nC与Python程序设计\n简答\n待练 2 题\n☆\n链表结点的改链与释放\n为什么free(head); head=head->next;不能可靠删除头结点？写出先保后继的三步，并说明malloc创建两个结点时只成功一个的清理要求。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "programming.t24",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\programming.t24_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "两个已分配Node构成head→10→20→NULL。执行old=head; head=head->next; free(old);后，head指向哪个值的结点？若仍有a指向旧10结点，能否读a->next？",
+          "practice_second": "为什么free(head); head=head->next;不能可靠删除头结点？写出先保后继的三步，并说明malloc创建两个结点时只成功一个的清理要求。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\nC与Python程序设计\n简答\n待练 2 题\n☆\n链表结点的改链与释放\n为什么free(head); head=head->next;不能可靠删除头结点？写出先保后继的三步，并说明malloc创建两个结点时只成功一个的清理要求。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "net.ospf-flow",
+      "title": "OSPF从链路状态到路由表",
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "own_recall": "邻居/泛洪→LSDB→各自SPF→下一跳表，变更重算需收敛。",
+      "difficulty_and_prior_knowledge": "完整路由表复制不是链路状态；和本章最短路径例保持同图数值并可改边重算。",
+      "lecture_support_excerpt": "#### OSPF从链路状态到路由表\n\nOSPF使用链路状态方法。先在相连网络上发现邻居并按协议建立必要的相邻关系，交换已有状态；链路状态信息再可靠泛洪，使同一区域路由器建立一致的链路状态数据库LSDB。各路由器以自己为源运行SPF（最短路径优先），把结果转换为下一跳/出接口的路由表；不是直接把邻居的一张路由表照抄过来。\n\n沿用本章四点无向图：AB=1、AC=4、BC=2、BD=5、CD=1。以A为源，初得B1、C4；确定B后C改3、D改6，再确定C使D改4。因此到D经A-B-C-D，下一跳B。\n\n现在**仅BC代价从2升为6**：B/C发布较新的链路状态，经区域内泛洪更新LSDB，再各自重算。A先确定B1，经B到C候选7不改直达4、到D候选6；再确定C4，经C得D5。新路由A-C-D，下一跳C。收敛期间各处获更新的时刻可能不同，不能声称变化瞬间零丢包。\n\n| A到D | 旧BC=2 | 新BC=6 |\n| --- | --- | --- |\n| 最短代价 | 4 | 5 |\n| 路径 | A-B-C-D | A-C-D |\n| 下一跳 | B | C |\n\n区域用于限制状态传播范围并分层组织大网络；本例只有一区域、代价非负。邻居状态和LSA类型有更详细规则，这条基础链不等于完整实现所有状态。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-16-a",
+          "topic_id": "net.ospf-flow",
+          "answer_before_key": "旧A-B-C-D代价4下一跳B；新A-C-D代价5下一跳C（A-B-C-D8/A-B-D6）。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "旧A-B-C-D代价4，下一跳B；新A-C-D代价5，下一跳C。",
+          "reference_explanation": "旧经B将C降至3、D降至4；新经B到C候选7不优于直达4，经C到D得5优于经B6。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-16-b",
+          "topic_id": "net.ospf-flow",
+          "answer_before_key": "不是复制距离表。邻居建立→LSA泛洪→LSDB→本地SPF→转发表；传播异步可能暂态不同步。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不是；邻居发现与必要相邻关系→交换/泛洪链路状态→更新LSDB→以自己为源运行SPF→形成下一跳路由表。传播/计算需时，不保证瞬间同时更新或零丢包。",
+          "reference_explanation": "距离向量与链路状态的信息对象不同；一致拓扑是收敛目标而非每一瞬间保证。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 网络层",
+        "previous": "## 第3章 数据链路层",
+        "next": "## 第5章 运输层",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "net.ospf-flow",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.ospf-flow_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.ospf-flow_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "无向链路AB1、AC4、BC2、BD5、CD1。OSPF同一区域先获这些状态，之后BC升到6并传播完成。求A到D旧/新最短代价、路径和下一跳。",
+          "practice_second": "OSPF路由器收到“邻居发来的完整路由表”后直接复制，是否就是本课链路状态机制？写从邻居到本地路由表的基础链，并说明变化瞬间是否保证全区域同时更新。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n简答\n待练 2 题\n☆\nOSPF从链路状态到路由表\nOSPF路由器收到“邻居发来的完整路由表”后直接复制，是否就是本课链路状态机制？写从邻居到本地路由表的基础链，并说明变化瞬间是否保证全区域同时更新。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "net.ospf-flow",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.ospf-flow_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.ospf-flow_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "无向链路AB1、AC4、BC2、BD5、CD1。OSPF同一区域先获这些状态，之后BC升到6并传播完成。求A到D旧/新最短代价、路径和下一跳。",
+          "practice_second": "OSPF路由器收到“邻居发来的完整路由表”后直接复制，是否就是本课链路状态机制？写从邻居到本地路由表的基础链，并说明变化瞬间是否保证全区域同时更新。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n简答\n待练 2 题\n☆\nOSPF从链路状态到路由表\nOSPF路由器收到“邻居发来的完整路由表”后直接复制，是否就是本课链路状态机制？写从邻居到本地路由表的基础链，并说明变化瞬间是否保证全区域同时更新。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "net.mpls-label-flow",
+      "title": "MPLS标签的压入交换与弹出",
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "own_recall": "入口压、中间换、出口按约定弹，标签按本地上下文解释。",
+      "difficulty_and_prior_knowledge": "本例出口弹非全实现必然；标签不是加密，和普通IP转发上下文无矛盾。",
+      "lecture_support_excerpt": "#### MPLS标签的压入交换与弹出\n\nMPLS转发可按入口、核心、出口三种角色看。IP包进入标签路径时入口压入标签；中间路由器按本地标签表选择出接口并交换标签；出口按约定弹出标签后继续交付。下面是简化标签路径，标签值只在相应链路/结点上下文中解释。\n\n| 位置 | 收到什么 | 本例表项/动作 | 发出什么 |\n| --- | --- | --- | --- |\n| 入口E | 发往目标前缀的IP包 | 压入标签100，送R | 标签100的包 |\n| 中间R | 入接口上的标签100 | 换标签240，送出口X | 标签240的包 |\n| 出口X | 标签240的包 | 弹出标签，按约定继续转发 | 不含该标签的IP包 |\n\n压入、交换、弹出不改变载荷的业务含义。标签不是一个全网永久唯一的目的IP地址，也不因为使用标签就自动加密。真实路径可能采用倒数第二跳弹出或多层标签，本例固定由出口弹出；标签路径还需先有控制或配置机制建立，不能凭这张表推定全部标签分发过程。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-17-a",
+          "topic_id": "net.mpls-label-flow",
+          "answer_before_key": "E标签100；R用接口+100查表换240发X；X弹出恢复无该MPLS标签IP包。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "E发100，R发240，X发不含该层标签的IP包；业务载荷未因此改变。",
+          "reference_explanation": "压、换、弹作用不同，标签按本地上下文解释。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-17-b",
+          "topic_id": "net.mpls-label-flow",
+          "answer_before_key": "均不成立：标签局部有效可换复用；不是加密；可倒数第二跳弹出等按规则。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "均不能如此断言。标签本地上下文解释，不是全网永久IP；标签转发本身不加密；真实实现可倒数第二跳弹出或多层标签，本课例才约定出口弹。",
+          "reference_explanation": "不能把简化路径约定提升为所有部署的唯一规则。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 网络层",
+        "previous": "## 第3章 数据链路层",
+        "next": "## 第5章 运输层",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "net.mpls-label-flow",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.mpls-label-flow_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.mpls-label-flow_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "简化MPLS路径：入口E将目标IP包压标签100；R收到指定入接口标签100后表项为“换240、发X”；X收到240后弹出标签。逐步写E/R/X发出的包头标签状态。",
+          "practice_second": "有人说“标签100在全网永久表示某一目的IP，使用MPLS便自然把载荷加密，且一定由最后一跳弹标签”。分别判断。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n简答\n待练 2 题\n☆\nMPLS标签的压入交换与弹出\n有人说“标签100在全网永久表示某一目的IP，使用MPLS便自然把载荷加密，且一定由最后一跳弹标签”。分别判断。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "net.mpls-label-flow",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.mpls-label-flow_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.mpls-label-flow_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "简化MPLS路径：入口E将目标IP包压标签100；R收到指定入接口标签100后表项为“换240、发X”；X收到240后弹出标签。逐步写E/R/X发出的包头标签状态。",
+          "practice_second": "有人说“标签100在全网永久表示某一目的IP，使用MPLS便自然把载荷加密，且一定由最后一跳弹标签”。分别判断。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n简答\n待练 2 题\n☆\nMPLS标签的压入交换与弹出\n有人说“标签100在全网永久表示某一目的IP，使用MPLS便自然把载荷加密，且一定由最后一跳弹标签”。分别判断。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "net.sdn-rule-flow",
+      "title": "SDN规则未命中后的处理",
+      "course": "计算机网络",
+      "chapter_id": "net-04",
+      "own_recall": "未命中按规定通知/缓存，安装后释放首包，后续本地匹配。",
+      "difficulty_and_prior_knowledge": "默认丢弃与上送取决于规则，首包释放条件明示，前缀匹配前置已给。",
+      "lecture_support_excerpt": "#### SDN规则未命中后的处理\n\nSDN将控制决策与数据转发分开。交换设备先用本地流表匹配字段并执行动作；控制器计算/安装规则，不必让每个包都经过控制器。\n\n本例为**响应式安装**：初始没有匹配10.1.0.0/16的业务规则，但表未命中规则规定“将包头等信息通知控制器，并缓存该包”。目的10.1.2.3首次到达：\n\n1. 设备查本地表未命中，按上述默认动作通知控制器。\n2. 控制器依据拓扑和策略，决定该前缀从端口2发出，下发“匹配目的10.1.0.0/16→输出端口2”的规则。\n3. 设备安装规则；本例控制器另指示释放缓存首包。后续匹配包直接按本地表去端口2。\n\n若目的改成10.2.1.3，不匹配此/16规则，应再按未命中策略处理；不是所有目的都去端口2。若未命中策略设丢弃而非上送，就不会自动请求控制器；主动预先安装的规则也可能没有此次未命中过程。控制器不可达、规则过期或端口状态改变均需相应策略，控制与转发分离不保证业务永不中断。\n",
+      "process_trials": [
+        {
+          "id": "ug-comp-20261019-18-a",
+          "topic_id": "net.sdn-rule-flow",
+          "answer_before_key": "首包缓存→PacketIn→控制器安装/释放→端口2；后续匹配直接端口2无需每包控制器。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "首包未命中按规则缓存/通知，控制器决策下发并指示释放后从端口2发；后续直接命中本地规则从端口2发，不必逐包经控制器。",
+          "reference_explanation": "首包转发还依赖缓存释放约定，不能仅安装规则就假定所有实现都会自动释放。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-comp-20261019-18-b",
+          "topic_id": "net.sdn-rule-flow",
+          "answer_before_key": "10.2不匹配10.1/16，按既定默认丢弃，不会自动通知或走端口2。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "两者都不是；10.2.1.3不在10.1/16，未命中按给定默认动作丢弃，不会自动请求控制器。",
+          "reference_explanation": "未命中是否上送由规则决定，控制/转发分离本身不强制某个动作。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 网络层",
+        "previous": "## 第3章 数据链路层",
+        "next": "## 第5章 运输层",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "net.sdn-rule-flow",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.sdn-rule-flow_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.sdn-rule-flow_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "响应式SDN：初始业务规则空，未命中规则指定缓存首包并通知控制器。控制器下发目的10.1.0.0/16→端口2并指示释放缓存。首个目的10.1.2.3的包及后续同目的包分别怎样走？",
+          "practice_second": "已有SDN规则目的10.1.0.0/16→端口2，默认未命中动作为丢弃。目的10.2.1.3到达，是否也去端口2或自动请求控制器？解释。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n简答\n待练 2 题\n☆\nSDN规则未命中后的处理\n已有SDN规则目的10.1.0.0/16→端口2，默认未命中动作为丢弃。目的10.2.1.3到达，是否也去端口2或自动请求控制器？解释。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "net.sdn-rule-flow",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.sdn-rule-flow_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\net.sdn-rule-flow_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "响应式SDN：初始业务规则空，未命中规则指定缓存首包并通知控制器。控制器下发目的10.1.0.0/16→端口2并指示释放缓存。首个目的10.1.2.3的包及后续同目的包分别怎样走？",
+          "practice_second": "已有SDN规则目的10.1.0.0/16→端口2，默认未命中动作为丢弃。目的10.2.1.3到达，是否也去端口2或自动请求控制器？解释。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n计算机网络\n简答\n待练 2 题\n☆\nSDN规则未命中后的处理\n已有SDN规则目的10.1.0.0/16→端口2，默认未命中动作为丢弃。目的10.2.1.3到达，是否也去端口2或自动请求控制器？解释。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "software-engineering.t26",
+      "title": "CMM五级与过程改进",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c07",
+      "own_recall": "经典CMM按过程证据辨五级，单项行为不构成正式评级。",
+      "difficulty_and_prior_knowledge": "项目计划和组织标准过程不同；版本边界及产品不保证零缺陷已写清。",
+      "lecture_support_excerpt": "#### CMM五级与过程改进\n\n**改进的是组织做事的过程。** 软件能力成熟度模型CMM（Capability Maturity Model）用于认识和改进组织的软件过程。本节采用经典软件CMM v1.1的五级名称；成熟度不是程序员个人的熟练度，也不是某个产品无缺陷的保证。已有计划、评审或版本控制可以成为过程证据，但不能凭一条做法直接宣布一个组织达到某等级。\n\n| 经典等级 | 核心含义 | 观察过程时看什么 |\n|---|---|---|\n| 1 初始级 Initial | 过程临时、反应式，成功较依赖个人 | 遇到变更主要救火，计划与结果缺少稳定联系 |\n| 2 可重复级 Repeatable | 建立基本项目管理纪律，可重复已有项目经验 | 需求、计划、进度、配置等能按项目跟踪 |\n| 3 已定义级 Defined | 组织有文档化标准过程，各项目按规则裁剪使用 | 不只是各项目各自有计划，而是共享组织标准 |\n| 4 已管理级 Managed | 对过程与产品质量进行定量管理 | 指标定义和统计口径明确，用数据理解和控制波动 |\n| 5 优化级 Optimizing | 基于证据持续改进过程 | 分析缺陷根因、试验改进并验证效果 |\n\n**用同一组织的变化辨析。** 甲团队每次延期都靠负责人临时协调，表现接近初始级特征。后来各项目都维护获批需求、计划和变更记录，能够跟踪承诺，体现可重复级特征；但每项目流程仍不同，不能据此认定已定义。组织再建立共同的需求/设计/测试过程，允许项目按规定裁剪，才出现已定义级的关键特征。若只是收集缺陷数却没有统一口径和分析，不能说已经定量管理；若根据统计发现评审薄弱、试行新检查表并比较改进效果，才在做持续优化。\n\n**CMM与CMMI不要混背。** CMMI（Capability Maturity Model Integration）",
+      "process_trials": [
+        {
+          "id": "ug-as-software-engineering-cmm-levels",
+          "topic_id": "software-engineering.t26",
+          "answer_before_key": "最直接第2级可重复项目管理；不能据此确认全组织成熟等级/正式认证，未有第3组织标准过程。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "体现第2级可重复级的项目管理特征；不能直接认定第3级已定义级，也不能据这几个描述完成正式成熟度评级。",
+          "reference_explanation": "项目内有管理纪律与组织统一标准过程是不同证据；课堂辨识不代替全部过程条件和正式评估。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-software-engineering-cmm-version-boundary",
+          "topic_id": "software-engineering.t26",
+          "answer_before_key": "4需量化过程控制/统计稳定性非仅计数；5需持续改进及效果证据非购工具；等级不保证零缺陷；经典CMM不能直接充当当前CMMI认证标准。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "记数还需明确口径并用数据理解和控制过程波动，才有定量管理证据；优化需根因分析、试验与效果验证，不是只买工具；成熟过程不保证产品无缺陷。CMMI的内容、名称与评估规则有版本差别，不能把经典表直接当当前认证标准。",
+          "reference_explanation": "题目区分收集数据、定量管理、持续改进和产品质量保证四件事，不要求列全部过程域。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第7章 项目管理与风险管理",
+        "previous": "## 第6章 软件维护、质量与配置管理",
+        "next": "## 第8章 面向变化的软件开发方法",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "software-engineering.t26",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t26_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t26_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "仅按经典软件CMM五级的特征作课程判断：某组织各项目都有获批需求、计划和进度跟踪，但尚无组织统一的标准过程。最能直接体现哪一级的特征？不能据这些信息做什么结论？",
+          "practice_second": "某团队说“我们每周记一次缺陷数，所以已经是经典CMM第4级；买了新工具就必定达到第5级，产品也不会再出错”。指出这三项判断缺少什么，并说明能否把经典CMM名称直接当作当前CMMI认证标准。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n软件工程\n简答\n待练 2 题\n☆\nCMM五级与过程改进\n某团队说“我们每周记一次缺陷数，所以已经是经典CMM第4级；买了新工具就必定达到第5级，产品也不会再出错”。指出这三项判断缺少什么，并说明能否把经典CMM名称直接当作当前CMMI认证标准。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "software-engineering.t26",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t26_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t26_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "仅按经典软件CMM五级的特征作课程判断：某组织各项目都有获批需求、计划和进度跟踪，但尚无组织统一的标准过程。最能直接体现哪一级的特征？不能据这些信息做什么结论？",
+          "practice_second": "某团队说“我们每周记一次缺陷数，所以已经是经典CMM第4级；买了新工具就必定达到第5级，产品也不会再出错”。指出这三项判断缺少什么，并说明能否把经典CMM名称直接当作当前CMMI认证标准。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n软件工程\n简答\n待练 2 题\n☆\nCMM五级与过程改进\n某团队说“我们每周记一次缺陷数，所以已经是经典CMM第4级；买了新工具就必定达到第5级，产品也不会再出错”。指出这三项判断缺少什么，并说明能否把经典CMM名称直接当作当前CMMI认证标准。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "software-engineering.t27",
+      "title": "Jackson数据结构到程序结构",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "own_recall": "输入输出顺序/重复映射初始化/循环/汇总，循环必须推进读取。",
+      "difficulty_and_prior_knowledge": "零条ITEM边界和JSP/JSD/网页JSP术语清楚，图和伪码同一结构。",
+      "lecture_support_excerpt": "#### Jackson数据结构到程序结构\n\n**先看数据怎样排，再安排程序。** Jackson结构化程序设计（Jackson Structured Programming，以下称JSP）从输入、输出数据的结构出发组织程序。本节JSP不是Java网页技术，也不等于Jackson系统开发方法JSD。数据按固定次序出现，对应顺序处理；数据从几类中择一，对应选择；同类记录重复出现，对应循环。不是看到文件就直接画一个不说明边界的循环。\n\n**输入与输出先对应。** 输入批次约定为`HEAD(批次号) → ITEM(金额)重复零次或多次 → END`，金额已核验为数值；输出为`REPORT(批次号) → DETAIL(金额)重复 → TOTAL(笔数,合计)`。HEAD对应报告初始化，ITEM与DETAIL逐条对应，END对应汇总输出。结构图中带`*`的记录子结点表示重复，其他子结点按从左到右的顺序出现；这里仅用顺序和重复两个结构。\n\n![表头、重复记录和表尾分别对应初始化、循环处理与汇总](../media/ug_as_jackson_records.svg)\n\n| 数据部分 | 程序部分 | 需要保存的状态 |\n|---|---|---|\n| HEAD及REPORT | 读表头、写报告头；count=0，sum=0 | 批次号、笔数、合计 |\n| 每条ITEM及DETAIL | 读金额，count加1，sum累加，写明细 | 本条记录和累计状态 |\n| END及TOTAL | 结束循环，输出count和sum | 最终统计 |\n\n```text\n读取HEAD，写REPORT\ncount = 0；sum = 0\n读取下一项item\n当item类型为ITEM时：\n    count = count + 1\n    sum = sum + item.金额\n    写DETAIL(it",
+      "process_trials": [
+        {
+          "id": "ug-as-software-engineering-jsp-records",
+          "topic_id": "software-engineering.t27",
+          "answer_before_key": "HEAD/ITEM*/END总体顺序；逐条ITEM迭代，记录类型可选择；B2报告头后初count0 sum0，3后1/3，7后2/10，END汇总2/10。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "HEAD对应读表头、写报告头并初始化count=0、sum=0；重复ITEM对应逐条读取、累计并写明细的循环；END对应退出循环与汇总。状态(0,0)→(1,3)→(2,10)，明细3、7，汇总2笔、10。",
+          "reference_explanation": "把输入输出的顺序/重复对应程序结构才是任务重点；不能只写一个不说明初始化和结束的循环。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-software-engineering-jsp-empty",
+          "topic_id": "software-engineering.t27",
+          "answer_before_key": "仍头和零笔零合计尾，无明细；不读取下一项会重复当前ITEM死循环或重复计数；JSP数据结构到程序，JSD系统开发不同。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "应零次循环并输出0笔、合计0；漏读下一项可能反复处理同一条记录，无法按输入结束。不能据此说JSP与JSD相同，本课JSP是面向输入输出数据结构的程序设计，JSD是另一系统开发方法。",
+          "reference_explanation": "考察重复零次、循环推进与术语边界，而不是再做一组相同求和。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 总体设计与详细设计",
+        "previous": "## 第3章 可行性研究与需求工程",
+        "next": "## 第5章 软件实现与软件测试",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "software-engineering.t27",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t27_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t27_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "采用本课JSP思路，输入为HEAD(B2)、ITEM(3)、ITEM(7)、END，输出需报告头、逐条明细及笔数/合计。写出三部分数据分别对应的程序结构，并跟踪累计状态。",
+          "practice_second": "输入约定为HEAD、零条或多条ITEM、END。若HEAD后立即END，应输出什么？若程序处理ITEM后没有读取下一项，会怎样？这能否说明JSP与JSD就是同一方法？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n软件工程\n简答\n待练 2 题\n☆\nJackson数据结构到程序结构\n输入约定为HEAD、零条或多条ITEM、END。若HEAD后立即END，应输出什么？若程序处理ITEM后没有读取下一项，会怎样？这能否说明JSP与JSD就是同一方法？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "software-engineering.t27",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t27_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t27_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "采用本课JSP思路，输入为HEAD(B2)、ITEM(3)、ITEM(7)、END，输出需报告头、逐条明细及笔数/合计。写出三部分数据分别对应的程序结构，并跟踪累计状态。",
+          "practice_second": "输入约定为HEAD、零条或多条ITEM、END。若HEAD后立即END，应输出什么？若程序处理ITEM后没有读取下一项，会怎样？这能否说明JSP与JSD就是同一方法？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n软件工程\n简答\n待练 2 题\n☆\nJackson数据结构到程序结构\n输入约定为HEAD、零条或多条ITEM、END。若HEAD后立即END，应输出什么？若程序处理ITEM后没有读取下一项，会怎样？这能否说明JSP与JSD就是同一方法？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "software-engineering.t28",
+      "title": "界面的一致性、反馈与错误恢复",
+      "course": "软件工程",
+      "chapter_id": "software-engineering.c04",
+      "own_recall": "一致命名、真实状态反馈、定位错误并保可恢复的非敏感输入。",
+      "difficulty_and_prior_knowledge": "超时结果未知和已失败不同；按钮禁用不保证后端幂等，正文/卡一致。",
+      "lecture_support_excerpt": "#### 界面的一致性、反馈与错误恢复\n\n界面设计要帮助用户知道当前状态，并在错误后继续完成原任务。**一致性**是同一概念使用相同标签和操作方式；**反馈**让用户知道输入是否被接受、请求是否仍在处理；**错误恢复**说明哪里不对、怎样修正，并保留适合继续使用的非敏感输入。\n\n以填写转账表单为例，界面规定金额必须大于0，收款人字段名称始终相同。用户输入−20时，应在金额旁说明“金额须大于0，请修改后提交”，保留收款人等非敏感输入，并把焦点引回金额；不能只弹“错误”后清空整张表。修改为20并提交后，先显示“处理中”，得到确定结果再给回执和交易标识；超时应提示查询处理状态，不能直接把它说成转账失败并诱导再次提交。\n\n| 原问题 | 最小改善 | 为什么 |\n|---|---|---|\n| 一处叫收款人，另一处叫账户主人 | 统一同一业务字段的名称 | 减少误解 |\n| 按提交后长时间没有变化 | 显示正在处理及可查询状态 | 区分等待与没有响应 |\n| 金额错后清空全部输入 | 指出错误、保留非敏感输入并允许修正 | 降低重填和误操作 |\n\n前端暂时禁用按钮可以减少重复点击，但不保证服务端只执行一次；成功反馈必须依据可靠结果。密码、验证码等敏感内容不应为了“保留输入”而原样回显。这是基础交互检查，不要求实现完整支付平台。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-software-engineering-ui-recovery",
+          "topic_id": "software-engineering.t28",
+          "answer_before_key": "金额旁显示须大于0并定位，保留非敏感已填收款人供修改，避免清空；密码验证码不一概原样回显保留，按敏感性/时效处理。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "在金额旁说明金额须大于0及修正方式，将焦点引回金额；保留收款人等可继续使用的非敏感输入。密码与验证码不应为了恢复操作而原样回显，不能一概保留全部字段。",
+          "reference_explanation": "错误恢复要帮助继续原任务，不是仅指出失败，也不牺牲敏感信息保护。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-software-engineering-ui-pending",
+          "topic_id": "software-engineering.t28",
+          "answer_before_key": "结果未知不能断言失败诱导重复；显示处理中/状态未知提供查询与安全恢复，服务端幂等键及事务去重，按钮禁用只客户端。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "不能将超时直接认定业务失败；应说明结果待确认并提供状态查询，得到确定结果再给成功或失败回执。禁用按钮只能减少重复点击，不保证服务端只执行一次。",
+          "reference_explanation": "交互反馈须忠于真实处理状态，等待、失败和成功要区分，不要求实现完整交易平台。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 总体设计与详细设计",
+        "previous": "## 第3章 可行性研究与需求工程",
+        "next": "## 第5章 软件实现与软件测试",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "software-engineering.t28",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t28_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t28_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "表单金额规定必须大于0。用户填−20后系统只弹“错误”，清空收款人和金额。给出符合基础界面原则的改法，并说明是否应原样保留密码/验证码。",
+          "practice_second": "提交业务后按钮已禁用，网络超时但结果未知。界面能否立即显示“失败，请再提交一次”？应给什么反馈？按钮禁用是否保证服务端只执行一次？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n软件工程\n简答\n待练 2 题\n☆\n界面的一致性、反馈与错误恢复\n提交业务后按钮已禁用，网络超时但结果未知。界面能否立即显示“失败，请再提交一次”？应给什么反馈？按钮禁用是否保证服务端只执行一次？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "software-engineering.t28",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t28_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\software-engineering.t28_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "表单金额规定必须大于0。用户填−20后系统只弹“错误”，清空收款人和金额。给出符合基础界面原则的改法，并说明是否应原样保留密码/验证码。",
+          "practice_second": "提交业务后按钮已禁用，网络超时但结果未知。界面能否立即显示“失败，请再提交一次”？应给什么反馈？按钮禁用是否保证服务端只执行一次？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n软件工程\n简答\n待练 2 题\n☆\n界面的一致性、反馈与错误恢复\n提交业务后按钮已禁用，网络超时但结果未知。界面能否立即显示“失败，请再提交一次”？应给什么反馈？按钮禁用是否保证服务端只执行一次？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t17",
+      "title": "DFT与IDFT的四点计算",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c08",
+      "own_recall": "DFT负指数，IDFT正指数除N，四点旋转权依次列算。",
+      "difficulty_and_prior_knowledge": "j幂与归一化是数学门槛；正文列权/贡献/还原全过程，可支持短算例。",
+      "lecture_support_excerpt": "#### DFT与IDFT的四点计算\n\n**从N个样值到N个频率系数。** 离散傅里叶变换DFT（Discrete Fourier Transform）把有限样值x[0]至x[N−1]表示为N个复指数分量的系数。本章统一采用：\n\n`X[k]=Σ[n=0..N−1]x[n]e^(−j2πkn/N)，k=0,…,N−1`；\n\n`x[n]=(1/N)Σ[k=0..N−1]X[k]e^(+j2πkn/N)，n=0,…,N−1`。\n\nn为样值下标，k为频率索引，N为变换长度，j²=−1。正变换指数负号，逆变换指数正号且除N；有的教材会把系数分到两侧，不能混用。对一个N点数组，DFT同时对应它按N周期延拓后的傅里叶表示；它不表示原模拟信号必定在N点处周期重复。\n\n**把旋转权重先列出来。** N=4时`W₄=e^(−j2π/4)=−j`，其幂循环为`1,−j,−1,j`。取x=[1,2,0,0]，只有n=0与n=1有贡献：\n\n| k | x[0]的贡献 | x[1]的贡献2W₄^k | X[k] |\n|---|---|---|---|\n| 0 | 1 | 2 | 3 |\n| 1 | 1 | −2j | 1−2j |\n| 2 | 1 | −2 | −1 |\n| 3 | 1 | 2j | 1+2j |\n\n**逆变换不是照抄正变换。** 现在用X=[3,1−2j,−1,1+2j]恢复四个样值。逆权重为`1,j,−1,−j`的相应幂，求和后还要除4：\n\n| n | 四项加权和 | 除4后的x[n] |\n|---|---|---|\n| 0 | 3+(1−2j)−1+(1+2j)=4 | 1 |\n| 1 | 3+(2+j)+1+(2−j)=8 | 2 |\n| 2 | 3−(1−2j)−1−(1+2j)=0 | 0 |\n| 3 | 3+(−2−j)+1+(−2+j)=0 | 0 |\n\n恢复为原数组，",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-dft-four",
+          "topic_id": "signals-systems.t17",
+          "answer_before_key": "X=[1,-j,-1,j]；仅n1权e^-j2πk/4，幅1依次旋转。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "只有n=1项非零，因此X[k]=e^(−jπk/2)；k=0,1,2,3依次为1、−j、−1、j。",
+          "reference_explanation": "考查时域延迟位置对应旋转权重，而非复制讲义的两项相加。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-idft-scale",
+          "topic_id": "signals-systems.t17",
+          "answer_before_key": "x=[1,j,-1,-j]；1/4×4旋转，漏1/4所有幅变4倍。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "只有k=1项非零，x[n]=(1/4)×4e^(jπn/2)，所以x=[1,j,−1,−j]。漏1/4会得到[4,4j,−4,−4j]。",
+          "reference_explanation": "逆变换指数正号与除N缺一不可，不可机械复用正变换权重。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第8章 离散傅里叶变换与快速算法",
+        "previous": "## 第7章 系统分析方法的联系",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t17",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t17_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t17_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "采用X[k]=Σx[n]e^(−j2πkn/N)、逆变换带1/N的约定，求4点序列x=[0,1,0,0]的四个DFT系数，说明权重。",
+          "practice_second": "4点频谱X=[0,4,0,0]，序列允许为复数。按本课IDFT约定求x[0..3]；若漏掉1/4会怎样？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\nDFT与IDFT的四点计算\n4点频谱X=[0,4,0,0]，序列允许为复数。按本课IDFT约定求x[0..3]；若漏掉1/4会怎样？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t17",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t17_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t17_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "采用X[k]=Σx[n]e^(−j2πkn/N)、逆变换带1/N的约定，求4点序列x=[0,1,0,0]的四个DFT系数，说明权重。",
+          "practice_second": "4点频谱X=[0,4,0,0]，序列允许为复数。按本课IDFT约定求x[0..3]；若漏掉1/4会怎样？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\nDFT与IDFT的四点计算\n4点频谱X=[0,4,0,0]，序列允许为复数。按本课IDFT约定求x[0..3]；若漏掉1/4会怎样？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t18",
+      "title": "DFT索引与正负频率",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c08",
+      "own_recall": "索引先乘fs/N，后半谱可减fs用负频率解释。",
+      "difficulty_and_prior_knowledge": "Nyquist正负端等价，实频谱共轭不等于复数完全相同；采样章不冲突。",
+      "lecture_support_excerpt": "#### DFT索引与正负频率\n\n采样率fs以Hz给出时，N点DFT频率间隔为`Δf=fs/N`，未重排数组中的k对应`f_k=kfs/N`。但离散频率每fs重复，靠后的频点也能用负频率解释：k>N/2时，可写`f_k=(k−N)fs/N`。这两种表示描述同一组采样复指数，不是两个互不相关的新频点。\n\n**例：fs=800 Hz，N=4。** Δf=200 Hz，k=0、1、2、3依次可标为0、200、400、−200 Hz。k=2是奈奎斯特边界，+400与−400在采样时刻等价；数组k=3不应误称为带内的600 Hz新分量，常用基带表示是−200 Hz。\n\n![四个DFT数组位置与正负频率标注，实余弦有成对谱线](../media/ug_as_dft_bins.svg)\n\n取x[n]=cos(2π×200n/800)，前四点为[1,0,−1,0]，DFT为[0,2,0,2]。k=1与k=3分别对应+200和−200 Hz，合在一起表示实余弦；不能只保留一侧后仍称它是同样的实信号。实序列满足`X[N−k]=X*[k]`（按模N理解索引）；这表示共轭，不一定是两数完全相同。本例系数恰为实数，而前一节1−2j与1+2j就能看到共轭关系。\n\nk、Ω=2πk/N（rad/样本）和Hz是三种不同量；只有给定fs才能把索引换成实际Hz。DFT栅格变密不代表凭空得到原数据中没有的新信息，不能把补零当成提高采样率。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-dft-frequency",
+          "topic_id": "signals-systems.t18",
+          "answer_before_key": "Δf200Hz k7常用−200Hz(或1400Hz周期代表)，k4奈奎斯特±800同一离散频点。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "间隔1600/8=200Hz。k7未重排标签1400Hz，与(7−8)×200=−200Hz等价；k4是800Hz奈奎斯特边界，+800与−800在采样时刻等价。",
+          "reference_explanation": "分别核对索引、Hz与采样率周期，边界不是额外两个不同频点。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-dft-conjugate",
+          "topic_id": "signals-systems.t18",
+          "answer_before_key": "X7=2-3j，实序列共轭对称。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "B",
+          "reference_explanation": "实序列满足X[N−k]=X*[k]；共轭改变虚部符号，不是直接复制原复数。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第8章 离散傅里叶变换与快速算法",
+        "previous": "## 第7章 系统分析方法的联系",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t18",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t18_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t18_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "采样率1600Hz，做8点DFT。求频率间隔，并给k=7与k=4的常用正负频率解释。",
+          "practice_second": "一个实数8点序列的DFT有X[1]=2+3j，则X[7]应为（ ）。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n单选\n待练 2 题\n☆\nDFT索引与正负频率\n一个实数8点序列的DFT有X[1]=2+3j，则X[7]应为（ ）。\nA\n2+3j\nB\n2−3j\nC\n−2+3j\nD\n必须为0\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t18",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t18_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t18_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "采样率1600Hz，做8点DFT。求频率间隔，并给k=7与k=4的常用正负频率解释。",
+          "practice_second": "一个实数8点序列的DFT有X[1]=2+3j，则X[7]应为（ ）。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n单选\n待练 2 题\n☆\nDFT索引与正负频率\n一个实数8点序列的DFT有X[1]=2+3j，则X[7]应为（ ）。\nA\n2+3j\nB\n2−3j\nC\n−2+3j\nD\n必须为0\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t19",
+      "title": "圆周卷积与补零",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c08",
+      "own_recall": "圆周按模回绕，长度不足尾项加回，补足Lx+Lh−1才保线性。",
+      "difficulty_and_prior_knowledge": "模负下标与截断混淆；图8折回加3=11，正文逐项核，二基与DFT长度分开。",
+      "lecture_support_excerpt": "#### 圆周卷积与补零\n\n线性卷积在有效范围外把序列补0，输出长度为Lx+Lh−1。N点**圆周卷积**则按模N索引：`yc[n]=Σ[m=0..N−1]x[m]h[(n−m) mod N]`，n=0,…,N−1；N点DFT的逐点乘积做IDFT，直接得到的是圆周卷积，不会自动变为完整线性卷积。\n\n**先用两个短序列区分。** x=[1,2]，h=[3,4]。线性卷积逐项为y[0]=1×3=3，y[1]=1×4+2×3=10，y[2]=2×4=8，即[3,10,8]。若只取N=2：\n\n- yc[0]=x[0]h[0]+x[1]h[1]=3+8=11；因为(0−1) mod2=1。\n- yc[1]=x[0]h[1]+x[1]h[0]=4+6=10。\n\n结果[11,10]是线性输出下标2的8折回下标0，与3相加，不是丢掉尾项后得到[3,10]。\n\n![长度不足时卷积尾项折回，补零足够后保留全部线性结果](../media/ug_as_convolution_wrap.svg)\n\n**用DFT计算线性卷积时怎么补？** 选`N≥Lx+Lh−1`，并将两输入补0到同样的N，再做两次DFT→系数逐点相乘→IDFT。本例最小N为3；为便于二基FFT也可选4，输入变为[1,2,0,0]和[3,4,0,0]，结果[3,10,8,0]，取前3项就是线性卷积。长度3也可以做DFT，并非所有DFT都要求2的幂；只为套本章的二基FFT才选2的幂长度。N小于所需长度时会时域折回，不能仅因计算使用FFT就声称无失真。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-circular-fold",
+          "topic_id": "signals-systems.t19",
+          "answer_before_key": "线性[1,2,2,1]，N3折末项到0得到[2,2,2]。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "线性卷积为[1,2,2,1]。N3圆周卷积为[2,2,2]，因为线性尾项下标3的1按模3加回下标0，使原1变2。",
+          "reference_explanation": "长度不足会将尾项加回，不是简单截断；也可逐项模3计算验证。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-circular-padding",
+          "topic_id": "signals-systems.t19",
+          "answer_before_key": "7不足，需>=5+4−1=8，二基选8。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "线性长度为5+4−1=8，N7不足会折回；最小N8。二基FFT可选8，也可选更大的2次幂，但两输入要补到同样长度，结果取有效8项。",
+          "reference_explanation": "补零长度由线性输出支撑决定，不能错写为5+4，也不能把FFT快等同不会折回。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第8章 离散傅里叶变换与快速算法",
+        "previous": "## 第7章 系统分析方法的联系",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t19",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t19_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t19_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "x=[1,1,1]、h=[1,1]，下标从0开始且范围外为0。求线性卷积；再将h补0到3点，求3点圆周卷积并说明折回。",
+          "practice_second": "长度分别为5和4的两个有限序列，要用DFT逐点乘求完整线性卷积。N=7是否足够？最小N是多少？若采用本节二基FFT应怎样选？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n圆周卷积与补零\n长度分别为5和4的两个有限序列，要用DFT逐点乘求完整线性卷积。N=7是否足够？最小N是多少？若采用本节二基FFT应怎样选？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t19",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t19_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t19_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "x=[1,1,1]、h=[1,1]，下标从0开始且范围外为0。求线性卷积；再将h补0到3点，求3点圆周卷积并说明折回。",
+          "practice_second": "长度分别为5和4的两个有限序列，要用DFT逐点乘求完整线性卷积。N=7是否足够？最小N是多少？若采用本节二基FFT应怎样选？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n圆周卷积与补零\n长度分别为5和4的两个有限序列，要用DFT逐点乘求完整线性卷积。N=7是否足够？最小N是多少？若采用本节二基FFT应怎样选？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t20",
+      "title": "FFT偶奇分解与蝶形",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c08",
+      "own_recall": "一层FFT先偶奇DFT，再将同一加权奇支路做和差。",
+      "difficulty_and_prior_knowledge": "输出k与k+N/2索引、−j乘法；图下支路用差，非全算法实现的硬门槛。",
+      "lecture_support_excerpt": "#### FFT偶奇分解与蝶形\n\n快速傅里叶变换FFT（Fast Fourier Transform）是**计算同一DFT的快速算法**，不是另一种频谱定义。这里选N为2的幂，讲二基按时间抽取的一层分解：先把偶下标x[0],x[2],…与奇下标x[1],x[3],…分别做N/2点DFT，记为E[k]、O[k]。\n\n令`W_N=e^(−j2π/N)`，对k=0,…,N/2−1有：\n\n`X[k]=E[k]+W_N^k O[k]`；\n\n`X[k+N/2]=E[k]−W_N^k O[k]`。\n\n共同的乘积只算一次，分别做和与差；交叉的连线形似蝴蝶，称蝶形运算。减号属于下方输出，不能把两输出都写成加法，也不能漏奇分支的旋转权重。\n\n**仍算[1,2,0,0]。** 偶序列[1,0]的2点DFT为E=[1,1]，奇序列[2,0]为O=[2,2]。k=0时权重1，X[0]=1+2=3，X[2]=1−2=−1；k=1时权重W₄=−j，先得`W₄O[1]=−2j`，再得X[1]=1−2j、X[3]=1+2j，按索引整理就是前面直接DFT的结果。\n\n![四点FFT拆成两个两点DFT，再用同一个加权奇分支作和差](../media/ug_as_fft_butterfly.svg)\n\n逐层分治使常见二基FFT的运算量由直接DFT的O(N²)降至O(N log₂N)，数学结果仍依相同DFT约定。实际数值计算可能有舍入误差。其他FFT可处理不同长度，但本节不要求8/16点全蝶形图、倒位序实现细节或程序源码；先会核对一层偶奇、权重和输出索引。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-fft-layer",
+          "topic_id": "signals-systems.t20",
+          "answer_before_key": "k0W O=2，X0=5 X2=1；k1W O=−4j，X1=−1−4j X3=−1+4j。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "k0加权2，X0=3+2=5、X2=3−2=1；k1加权(−j)×4=−4j，X1=−1−4j、X3=−1+4j。按索引X=[5,−1−4j,1,−1+4j]。",
+          "reference_explanation": "先乘旋转权重再和差，下半输出索引加N/2；不能把E/O直接交错当最终DFT。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-fft-boundary",
+          "topic_id": "signals-systems.t20",
+          "answer_before_key": "两项均错；FFT是DFT快算法；二基要求2幂不代表DFT定义限制。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "两项均错。FFT是计算同一DFT的快速分治算法，归一化/指数约定一致时结果相同；2的幂是本节二基算法的长度条件，不是DFT定义条件。",
+          "reference_explanation": "考查算法与变换定义、局部条件与一般条件的区别。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第8章 离散傅里叶变换与快速算法",
+        "previous": "## 第7章 系统分析方法的联系",
+        "next": null,
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t20",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t20_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t20_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "4点FFT偶奇分解后，E=[3,−1]、O=[2,4]。按W₄=−j，算X[0]至X[3]，写出k=1奇支路加权值。",
+          "practice_second": "判断并说明：①FFT与DFT给出两种不同定义的频谱；②因为本节二基FFT用2的幂长度，所以所有DFT都必须用2的幂长度。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\nFFT偶奇分解与蝶形\n判断并说明：①FFT与DFT给出两种不同定义的频谱；②因为本节二基FFT用2的幂长度，所以所有DFT都必须用2的幂长度。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t20",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t20_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t20_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "4点FFT偶奇分解后，E=[3,−1]、O=[2,4]。按W₄=−j，算X[0]至X[3]，写出k=1奇支路加权值。",
+          "practice_second": "判断并说明：①FFT与DFT给出两种不同定义的频谱；②因为本节二基FFT用2的幂长度，所以所有DFT都必须用2的幂长度。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\nFFT偶奇分解与蝶形\n判断并说明：①FFT与DFT给出两种不同定义的频谱；②因为本节二基FFT用2的幂长度，所以所有DFT都必须用2的幂长度。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t21",
+      "title": "差分方程的非零初值响应",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "own_recall": "单边Z延迟留下y[-1]，总响应由输入和初态两项组成。",
+      "difficulty_and_prior_knowledge": "y[-1]不是y[0]；原双边Z/零态HX边界被正文明确，递推表可独立核对。",
+      "lecture_support_excerpt": "#### 差分方程的非零初值响应\n\n单边Z变换只把n≥0的输出收入`Y₊(z)=Σ[n=0..∞]y[n]z⁻ⁿ`，因此延迟一拍时必须另外留下过去的状态：\n\n`Σ[n=0..∞]y[n−1]z⁻ⁿ = y[−1]+z⁻¹Y₊(z)`。\n\n左端n=0这一项就是y[−1]；其余项令m=n−1后得到z⁻¹Y₊，不能直接漏掉首项。\n\n**同一系统，输入与初态分开算。** 系统`y[n]=0.5y[n−1]+x[n]`从n=0开始分析，给定y[−1]=4，输入x[n]=u[n]（n≥0时均为1）。先递推：y[0]=0.5×4+1=3，y[1]=0.5×3+1=2.5，y[2]=2.25。再用两条证据链核对：\n\n| n | 零输入：保留y[−1]=4，令x=0 | 零状态：令y[−1]=0，保留单位阶跃 | 总响应 |\n|---|---|---|---|\n| 0 | 2 | 1 | 3 |\n| 1 | 1 | 1.5 | 2.5 |\n| 2 | 0.5 | 1.75 | 2.25 |\n\n零输入解为`yzi[n]=4(0.5)^(n+1)=2(0.5)^n`；零状态是h与阶跃的卷积，`yzs[n]=Σ[k=0..n](0.5)^k=2−(0.5)^n`。两者相加得到`y[n]=2+(0.5)^n，n≥0`，n=0和长期极限2都能检查。\n\n**带初值列变换式。** `Y₊=0.5[y[−1]+z⁻¹Y₊]+X₊`，移项得`Y₊=H(z)X₊+0.5y[−1]/(1−0.5z⁻¹)`，其中`H=1/(1−0.5z⁻¹)`是零状态系统函数。输入单位阶跃时`X₊=1/(1−z⁻¹)`；第二项恰好给上面的零输入响应。y[−1]与y[0]不是同一个时刻，给了初态就不能只写总Y=HX。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-difference-initial",
+          "topic_id": "signals-systems.t21",
+          "answer_before_key": "y0=.5×−2+1=0；y1=0 y2=0。初态零输入−(.5)^n与冲激零状态(.5)^n抵消，HX仅零初态响应。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "y0=0.5×(−2)+1=0，之后输入为0，y1=y2=0。零输入为−(0.5)^n，零状态为(0.5)^n，两者相消；仅HX会漏初态项并错误得到非零衰减。",
+          "reference_explanation": "与讲义单位阶跃不同，本题以初态和单位样值相消检验总响应。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-difference-decomposition",
+          "topic_id": "signals-systems.t21",
+          "answer_before_key": "Y+=.5(z^-1Y++6)+X+；Y+=(X++3)/(1−.5z^-1)。移位保留y−1。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "Σy[n−1]z⁻ⁿ=6+z⁻¹Y₊；Y₊=0.5(6+z⁻¹Y₊)+X₊，所以(1−0.5z⁻¹)Y₊=X₊+3，Y₊=H X₊+3/(1−0.5z⁻¹)。",
+          "reference_explanation": "首项y[−1]在延迟变换中出现，还要经过系数0.5，不能把6不加权直接塞进分子。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第5章 拉普拉斯变换与Z变换",
+        "previous": "## 第4章 傅里叶变换与频域分析",
+        "next": "## 第6章 抽样定理与离散化",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t21",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t21_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t21_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "n≥0时y[n]=0.5y[n−1]+x[n]，已知y[−1]=−2，x[n]=δ[n]。求y[0]、y[1]、y[2]，并解释为何不能只把总响应写成H(z)X(z)。",
+          "practice_second": "对n≥0的同一系统y[n]=0.5y[n−1]+x[n]，给定y[−1]=6。令Y₊、X₊为从0开始的单边Z变换，写出含初态的变换方程及Y₊表达式，不要求反变换。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n差分方程的非零初值响应\n对n≥0的同一系统y[n]=0.5y[n−1]+x[n]，给定y[−1]=6。令Y₊、X₊为从0开始的单边Z变换，写出含初态的变换方程及Y₊表达式，不要求反变换。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t21",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t21_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t21_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "n≥0时y[n]=0.5y[n−1]+x[n]，已知y[−1]=−2，x[n]=δ[n]。求y[0]、y[1]、y[2]，并解释为何不能只把总响应写成H(z)X(z)。",
+          "practice_second": "对n≥0的同一系统y[n]=0.5y[n−1]+x[n]，给定y[−1]=6。令Y₊、X₊为从0开始的单边Z变换，写出含初态的变换方程及Y₊表达式，不要求反变换。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n差分方程的非零初值响应\n对n≥0的同一系统y[n]=0.5y[n−1]+x[n]，给定y[−1]=6。令Y₊、X₊为从0开始的单边Z变换，写出含初态的变换方程及Y₊表达式，不要求反变换。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t22",
+      "title": "离散频率响应的幅相与零点",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "own_recall": "复频响先求复数值，再取模/相角，零点幅零相位未定义。",
+      "difficulty_and_prior_knowledge": "cos符号改变须加π；原移动平均带1/2而新求和器不带，开头明确区别。",
+      "lecture_support_excerpt": "#### 离散频率响应的幅相与零点\n\n先看**求和器而非平均器**：`y[n]=x[n]+x[n−1]`，冲激响应h=[1,1]。零状态DTFT给出`H(e^jΩ)=1+e^(−jΩ)`，Ω单位rad/样本；它与前面带1/2系数的移动平均器增益相差2倍。\n\n利用`e^jθ+e^−jθ=2cosθ`提出半拍相位：\n\n`H= e^(−jΩ/2)[e^(jΩ/2)+e^(−jΩ/2)] = 2cos(Ω/2)e^(−jΩ/2)`。\n\n所以一般幅值是`2|cos(Ω/2)|`。在−π<Ω<π内cos(Ω/2)>0，相位可取−Ω/2；超出这个区间须处理余弦负号对应的π相位变化，不能把有符号余弦直接当幅值。\n\n| Ω | 直接计算H | 幅值 | 一种相位表示 |\n|---|---|---|---|\n| 0 | 2 | 2 | 0 |\n| π/2 | 1−j | √2 | −π/4 |\n| −π/2 | 1+j | √2 | π/4 |\n| π | 0 | 0 | 不定义 |\n\nH(z)=1+z⁻¹的零点为z=−1，位于单位圆的Ω=π处；因此交替变化的稳态分量在这里被消除。零点处幅值为0，不能再声称存在唯一相位。这个有限两点FIR因果稳定，但频率响应仍是每2π重复的离散频率函数。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-dtft-phase",
+          "topic_id": "signals-systems.t22",
+          "answer_before_key": "e^-j3π/2=j，H=1+j幅sqrt2主相π/4；2cos(Ω/2)负，须补π，不能仅−Ω/2。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "e^(−j3π/2)=j，所以H=1+j，幅值√2、主值相位π/4。因cos(3π/4)<0，因式分解中的负号还带π相位变化，−3π/4不能直接当H相位。",
+          "reference_explanation": "考查主区间外的余弦符号，而不是只背主区间的线性相位式。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-dtft-zero",
+          "topic_id": "signals-systems.t22",
+          "answer_before_key": "x[n]+x[n−1]=0；零幅点相位未定义而非固定0。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "y[n]=(−1)^n+(−1)^(n−1)=0，对所有n均为0。H在Ωπ为0，幅值0而相位不定义，不能宣称唯一相位0。",
+          "reference_explanation": "题目明确完整稳态序列，避开有限起始截断的首项瞬态；零点与相位须分别判断。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第5章 拉普拉斯变换与Z变换",
+        "previous": "## 第4章 傅里叶变换与频域分析",
+        "next": "## 第6章 抽样定理与离散化",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t22",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t22_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t22_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "H(e^jΩ)=1+e^(−jΩ)。求Ω=3π/2时的复数值、幅值及主值相位。为什么不能在此直接用相位−Ω/2？",
+          "practice_second": "两点求和器H(e^jΩ)=1+e^(−jΩ)，输入为所有整数n上定义的x[n]=(−1)^n。输出是什么？能否把Ω=π零点处的相位固定说成0？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n离散频率响应的幅相与零点\n两点求和器H(e^jΩ)=1+e^(−jΩ)，输入为所有整数n上定义的x[n]=(−1)^n。输出是什么？能否把Ω=π零点处的相位固定说成0？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t22",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t22_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t22_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "H(e^jΩ)=1+e^(−jΩ)。求Ω=3π/2时的复数值、幅值及主值相位。为什么不能在此直接用相位−Ω/2？",
+          "practice_second": "两点求和器H(e^jΩ)=1+e^(−jΩ)，输入为所有整数n上定义的x[n]=(−1)^n。输出是什么？能否把Ω=π零点处的相位固定说成0？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n离散频率响应的幅相与零点\n两点求和器H(e^jΩ)=1+e^(−jΩ)，输入为所有整数n上定义的x[n]=(−1)^n。输出是什么？能否把Ω=π零点处的相位固定说成0？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t23",
+      "title": "延迟加法框图读方程",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c05",
+      "own_recall": "从反馈支路识别被延迟的是输出，逐段列方程再解H。",
+      "difficulty_and_prior_knowledge": "图的z^-1延迟一拍不是倒数幅度；换接输入变FIR，初态另代递推。",
+      "lecture_support_excerpt": "#### 延迟加法框图读方程\n\n框图中的`z⁻¹`在本节表示**延迟一拍**，把输入该块的v[n]变为v[n−1]；乘法器标0.5表示缩放，求和结点按所标正负号相加减。先沿箭头写每条支路的时域量，再列等式，不要只看图中几个方块的左右顺序。\n\n![输出延迟一拍并乘0.5后，与输入相加构成递归系统](../media/ug_as_delay_feedback.svg)\n\n沿图读：主支路把x[n]送到加法结点，输出y[n]分出反馈支路；延迟后为y[n−1]，乘0.5得0.5y[n−1]，正号送回，因此`y[n]=x[n]+0.5y[n−1]`。零初始时把延迟换成z⁻¹得到`Y=X+0.5z⁻¹Y`，解`H=Y/X=1/(1−0.5z⁻¹)`；因果ROC为|z|>0.5，包含单位圆。\n\n**给定初态再走两拍。** y[−1]=0，x[0]=1、x[1]=0时，y[0]=1、y[1]=0.5。若初态y[−1]=2，则同一输入的首输出为2，不能只由零状态H忽略初态。若延迟块接在**输入支路**而不是输出反馈上，就会得到`y[n]=x[n]+0.5x[n−1]`，它没有输出递归、H=1+0.5z⁻¹；接线对象不同，分母与响应均不同。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-block-delay",
+          "topic_id": "signals-systems.t23",
+          "answer_before_key": "y[n]=x[n]+.25y[n−1]；H=1/(1−.25z^-1)零态，y0=3 y1=.75。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "y[n]=x[n]+0.25y[n−1]；H=1/(1−0.25z⁻¹)。y0=2+0.25×4=3，y1=0+0.25×3=0.75。",
+          "reference_explanation": "先认被延迟的是输出，再列反馈方程；H是零状态关系，逐拍求输出仍用题给初态。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-block-feedforward",
+          "topic_id": "signals-systems.t23",
+          "answer_before_key": "y=x+.5x[n−1]；H=1+.5z^-1；h=[1,.5,0]，无反馈有限冲激，原反馈为无限尾。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "y[n]=x[n]+0.5x[n−1]；H=1+0.5z⁻¹，h=[1,0.5,0]（其后0）。这是有限两点前馈FIR，没有输出递归；原图y前拍反馈会形成递归分母和衰减尾巴。",
+          "reference_explanation": "改变接线对象即改变系统，不是只移动画布上的方块位置。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第5章 拉普拉斯变换与Z变换",
+        "previous": "## 第4章 傅里叶变换与频域分析",
+        "next": "## 第6章 抽样定理与离散化",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t23",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t23_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t23_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "框图将输出y分出一支，先延迟一拍再乘0.25，以正号加回输入x。写差分方程与零状态H(z)。若y[−1]=4、x[0]=2、x[1]=0，求头两拍输出。",
+          "practice_second": "把本课图中的延迟和0.5增益改接到输入x的分支，再与当前x相加，输出不再回接。写方程、H(z)及零状态单位样值响应前三项，说明与原反馈图有何不同。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n延迟加法框图读方程\n把本课图中的延迟和0.5增益改接到输入x的分支，再与当前x相加，输出不再回接。写方程、H(z)及零状态单位样值响应前三项，说明与原反馈图有何不同。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t23",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t23_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t23_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "框图将输出y分出一支，先延迟一拍再乘0.25，以正号加回输入x。写差分方程与零状态H(z)。若y[−1]=4、x[0]=2、x[1]=0，求头两拍输出。",
+          "practice_second": "把本课图中的延迟和0.5增益改接到输入x的分支，再与当前x相加，输出不再回接。写方程、H(z)及零状态单位样值响应前三项，说明与原反馈图有何不同。",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n延迟加法框图读方程\n把本课图中的延迟和0.5增益改接到输入x的分支，再与当前x相加，输出不再回接。写方程、H(z)及零状态单位样值响应前三项，说明与原反馈图有何不同。\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t24",
+      "title": "信号内积与正交",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "own_recall": "内积是同一窗口乘共轭累计，零内积可正交但能量非零。",
+      "difficulty_and_prior_knowledge": "共轭与卷积星号同形不同义；正文复例防止j²导致假零能量。",
+      "lecture_support_excerpt": "#### 信号内积与正交\n\n把两个信号放在**同一观察区间**比较，内积先逐点相乘再相加或积分。本课约定离散内积`〈x,h〉=Σ[n∈D]x[n]h*[n]`，连续情形为`∫[D]x(t)h*(t)dt`；星号`*`在这里表示复共轭，不是卷积，`a+jb`共轭后为`a−jb`，实数共轭仍为自身。自内积`〈x,x〉`就是该区间的模平方和或积分。\n\n**算一个正交例。** 在n=0、1上，x=[1,1]，h=[1,−1]。两项乘积分别为1和−1，内积为0，因此它们在此区间正交；两者能量却分别是2，并非两个信号都不存在。只取n=0时内积为1，就不能沿用原来的正交结论。正交不是每一时刻的乘积都为0，也不自动等于随机意义的独立。\n\n**为什么必须共轭？** x=[1,j]时，`〈x,x〉=1×1+j×(−j)=2`；不共轭而算`1+j²=0`会把非零信号误判为零能量。傅里叶分析就是用复指数作比较对象，通过这种乘积累计提取各频率成分；这里先会算内积，不要求证明完备基理论。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-inner-orthogonal",
+          "topic_id": "signals-systems.t24",
+          "answer_before_key": "内积2−2=0，能量5与5；仅n0内积2非零，窗口改变正交。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "内积1×2+2×(−1)=0；x能量5、h能量5。只观察n0内积为2，不再正交。零内积不说明两个信号都为零。",
+          "reference_explanation": "观察区间是正交结论的条件，不能只看原向量长度或点乘的单项。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-inner-conjugate",
+          "topic_id": "signals-systems.t24",
+          "answer_before_key": "1×−j+j×1=0；自内积2。漏共轭交内积2j，自内积0，破坏能量。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "〈x,h〉=1×(−j)+j×1=0；〈x,x〉=1+j(−j)=2。忘记h共轭会把两信号内积算为2j，忘记自内积共轭会算成0，均错误。",
+          "reference_explanation": "复数情形必须按明确共轭约定，不能沿用实数点乘的外观。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 傅里叶变换与频域分析",
+        "previous": "## 第3章 卷积与零状态响应",
+        "next": "## 第5章 拉普拉斯变换与Z变换",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t24",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t24_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t24_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "只在n=0、1观察x=[1,2]、h=[2,−1]。按本课内积约定计算内积及两者能量；若只观察n=0，还能说正交吗？",
+          "practice_second": "在n=0、1取x=[1,j]、h=[j,1]。按〈x,h〉=Σx[n]h*[n]求内积，并求x的自内积；若忘记共轭会怎样？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n信号内积与正交\n在n=0、1取x=[1,j]、h=[j,1]。按〈x,h〉=Σx[n]h*[n]求内积，并求x的自内积；若忘记共轭会怎样？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t24",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t24_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t24_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "只在n=0、1观察x=[1,2]、h=[2,−1]。按本课内积约定计算内积及两者能量；若只观察n=0，还能说正交吗？",
+          "practice_second": "在n=0、1取x=[1,j]、h=[j,1]。按〈x,h〉=Σx[n]h*[n]求内积，并求x的自内积；若忘记共轭会怎样？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n信号内积与正交\n在n=0、1取x=[1,j]、h=[j,1]。按〈x,h〉=Σx[n]h*[n]求内积，并求x的自内积；若忘记共轭会怎样？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t25",
+      "title": "相关与延迟匹配",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c04",
+      "own_recall": "相关在不同滞后滑模板求内积，交换序列要反转滞后。",
+      "difficulty_and_prior_knowledge": "本定义线性零延拓非圆周；模板缩放改变原始峰，未归一化不能盲比。",
+      "lecture_support_excerpt": "#### 相关与延迟匹配\n\n相关是在不同相对移位下反复计算内积，用于比较波形是否对齐。这里固定约定为`r_xh[l]=Σ[n]x[n]h*[n−l]`，l为整数滞后；有限序列在给定下标范围外补0。若x是模板h向右延迟d拍得到的相同波形，本约定的匹配峰通常出现在l=d；改变相关的定义或交换x、h，滞后的正负解释也要随之改变。\n\n**滑动一个两点模板。** 模板h[0]=1、h[1]=2，观测x[0..3]=[0,1,2,0]。逐项代入而不是只凭图猜峰值：\n\n| l | 非零模板覆盖处的乘积 | r_xh[l] |\n|---|---|---|\n| 0 | x[0]×1+x[1]×2=0+2 | 2 |\n| 1 | x[1]×1+x[2]×2=1+4 | 5 |\n| 2 | x[2]×1+x[3]×2=2+0 | 2 |\n\n其余整数移位在本例得到0。峰在l=1，说明模板向右移1拍与x中的[1,2]对齐。峰值5也是模板的能量1²+2²。若把模板整体乘2，原始相关值也乘2，所以不同能量模板之间不能只用未归一化峰值大小断言相似性更强。\n\n本节是**零延拓的线性相关**，不采用模N下标。它与卷积不同：相关对模板做共轭移位，卷积按`h[l−n]`反折平移；不能在没有说明约定时互换结果。交换两序列有`r_hx[l]=r_xh*[−l]`，本例反过来比较时峰在−1。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-correlation-lag",
+          "topic_id": "signals-systems.t25",
+          "answer_before_key": "r0=0，r1=2，r2=5，r3=2；延迟2匹配峰5。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "四值为0、2、5、2。l2时x2×1+x3×2=1+4=5为峰，模板向右移2拍与观测对齐。",
+          "reference_explanation": "下标在本题是线性零延拓，不按模4回绕。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-correlation-convention",
+          "topic_id": "signals-systems.t25",
+          "answer_before_key": "交换峰−2（复情形还共轭）；模板幅倍增造成峰倍增，未归一化不能仅凭峰值判断更好。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "交换后r_hx[l]=r_xh*[−l]，峰由+2变−2；把模板乘2会让原始相关值乘2，峰10仅是尺度变化，不能单凭未归一化峰值断言更相似。",
+          "reference_explanation": "区分滞后约定和幅值尺度，避免只记一个正号或拿不同模板峰值直接比较。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第4章 傅里叶变换与频域分析",
+        "previous": "## 第3章 卷积与零状态响应",
+        "next": "## 第5章 拉普拉斯变换与Z变换",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t25",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t25_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t25_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "约定r_xh[l]=Σx[n]h*[n−l]且范围外补0。x=[0,0,1,2]、h=[1,2]，从0开始编号。计算l=0、1、2、3的相关，说明匹配延迟。",
+          "practice_second": "上题同一相关定义下，交换观测x和模板h，匹配峰的滞后怎样变化？若不交换而把模板变成2h，原始峰值由5变10，能否仅据此说匹配更好？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n相关与延迟匹配\n上题同一相关定义下，交换观测x和模板h，匹配峰的滞后怎样变化？若不交换而把模板变成2h，原始峰值由5变10，能否仅据此说匹配更好？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t25",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t25_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t25_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "约定r_xh[l]=Σx[n]h*[n−l]且范围外补0。x=[0,0,1,2]、h=[1,2]，从0开始编号。计算l=0、1、2、3的相关，说明匹配延迟。",
+          "practice_second": "上题同一相关定义下，交换观测x和模板h，匹配峰的滞后怎样变化？若不交换而把模板变成2h，原始峰值由5变10，能否仅据此说匹配更好？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\n相关与延迟匹配\n上题同一相关定义下，交换观测x和模板h，匹配峰的滞后怎样变化？若不交换而把模板变成2h，原始峰值由5变10，能否仅据此说匹配更好？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    },
+    {
+      "topic_id": "signals-systems.t26",
+      "title": "Parseval能量核对",
+      "course": "信号与系统",
+      "chapter_id": "signals-systems.c07",
+      "own_recall": "能量时频相同，但DTFT积分除2π、DFT求和除N。",
+      "difficulty_and_prior_knowledge": "归一化约定/能量和功率及瓦特不同；相邻傅里叶变换因子一致。",
+      "lecture_support_excerpt": "#### Parseval能量核对\n\n同一信号可以在时域或频域计算能量，但必须使用同一变换的归一化。本节星号仍表示共轭，模平方`|x|²=x x*`。对可积能量信号，采用第4章的ω变换约定，有`E=∫|x(t)|²dt=(1/2π)∫|X(jω)|²dω`；采用本课DTFT时，有`Σ[n]|x[n]|²=(1/2π)∫[−π,π]|X(e^jΩ)|²dΩ`。\n\n**先核对两点序列。** x[0]=x[1]=1，其余0，时域能量为1²+1²=2。由第5章H=[1,1]的相同计算，`X=1+e⁻jΩ`，所以`|X|²=(1+e⁻jΩ)(1+e^jΩ)=2+2cosΩ`。一个周期内cos积分为0，频域给`(1/2π)×(2×2π)=2`，与时域相同。这里的2不是“频率为2”，而是两点序列的能量。\n\n第8章采用前向无系数、逆向1/N的N点DFT；对应有限序列的Parseval式是`Σ[n=0..N−1]|x[n]|²=(1/N)Σ[k=0..N−1]|X[k]|²`。例如该章四点x=[1,2,0,0]的DFT为[3,1−2j,−1,1+2j]：时域为5，频域模平方为9、5、1、5，合计20，必须除N=4才得到5。\n\n公式因子不能跨变换搬用：DTFT按一个2π周期积分，DFT对N个点求和；若某书采用其他归一化，能量公式也要相应调整。有限能量与周期功率信号的统计口径不同，本节不把无限长非衰减正弦的总能量硬算成有限值，也不把数学信号能量直接当作瓦特。\n",
+      "process_trials": [
+        {
+          "id": "ug-as-signals-systems-parseval-energy",
+          "topic_id": "signals-systems.t26",
+          "answer_before_key": "时能量(4+0+4+0)/4=2；IDFT[1,0,1,0]能量2。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "频域模平方和4+0+4+0=8，除N4得到能量2。IDFT得x=[1,0,1,0]，时域能量1+0+1+0=2。",
+          "reference_explanation": "不是把8直接当能量；同一约定的正逆和能量等式需一致。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        },
+        {
+          "id": "ug-as-signals-systems-parseval-normalization",
+          "topic_id": "signals-systems.t26",
+          "answer_before_key": "(1/2π)积分5+4cos=5；DTFT连续周期积分除2π，不任取N。",
+          "basis": "按题面给定符号、初态/语义独立推算；具模型先验，非真人盲测",
+          "reference_answer": "E=(1/2π)∫[−π,π](5+4cosΩ)dΩ=5，因cos在完整周期积分0。这里是连续频率DTFT积分，除2π；不能没有定义N点DFT就改除某个N。",
+          "reference_explanation": "考查DTFT积分与DFT有限求和的归一化边界。",
+          "check": "语义/步骤一致；共轭选择题用2−3j语义核对原选项B，未把去选项包的字母当知识答案"
+        }
+      ],
+      "review_card_consistency": "三块定义/方法/边界均与正文相容，可作回忆线索；短卡不替代完整过程教学",
+      "adjacent_chapter_boundary": {
+        "parent": "## 第7章 系统分析方法的联系",
+        "previous": "## 第6章 抽样定理与离散化",
+        "next": "## 第8章 离散傅里叶变换与快速算法",
+        "read_depth": "新增正文与三块短卡全读；父章相邻原小节与前后章导入作边界抽读，未声称重学全部相邻章；前置定义/符号与任务口径已结合试做核查"
+      },
+      "actual_pages": [
+        {
+          "topic_id": "signals-systems.t26",
+          "theme": "light",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t26_notes_light.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t26_color-notes_light.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "按本课前向无系数、逆向1/N约定，一个4点序列的DFT为X=[2,0,2,0]。用Parseval求时域能量，再用IDFT恢复序列核对。",
+          "practice_second": "已知有限能量离散信号的DTFT满足|X(e^jΩ)|²=5+4cosΩ。按本课约定，用−π到π积分求能量。这里应除2π还是随便取某个DFT长度N？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\nParseval能量核对\n已知有限能量离散信号的DTFT满足|X(e^jΩ)|²=5+4cosΩ。按本课约定，用−π到π积分求能量。这里应除2π还是随便取某个DFT长度N？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        },
+        {
+          "topic_id": "signals-systems.t26",
+          "theme": "dark",
+          "page_screenshots": {
+            "notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t26_notes_dark.png",
+            "color-notes": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\signals-systems.t26_color-notes_dark.png"
+          },
+          "source_boundaries": [],
+          "practice_first": "按本课前向无系数、逆向1/N约定，一个4点序列的DFT为X=[2,0,2,0]。用Parseval求时域能量，再用IDFT恢复序列核对。",
+          "practice_second": "已知有限能量离散信号的DTFT满足|X(e^jΩ)|²=5+4cosΩ。按本课约定，用−π到π积分求能量。这里应除2π还是随便取某个DFT长度N？",
+          "practice_different": true,
+          "practice_scope_text": "练习设置\n搜索题目\n清除\n题型\n知识点\n重置筛选\n应用并返回\n数据与设置\n← 返回\n顺序刷题\n信号与系统\n简答\n待练 2 题\n☆\nParseval能量核对\n已知有限能量离散信号的DTFT满足|X(e^jΩ)|²=5+4cosΩ。按本课约定，用−π到π积分求能量。这里应除2π还是随便取某个DFT长度N？\n作答要点\n核对参考答案\n上一题\n跳过\n题目有误"
+        }
+      ],
+      "result": "本次两题与明确边界任务可完成，未发现需修的P1/P2语义或过程阻断"
+    }
+  ],
+  "product_mutation": false,
+  "build_run": false,
+  "scope_limit": "本报告初轮仅验f440；电子作者源的OCL/Flash/Colpitts修正不在本报告自签，待末次构建和他人复测",
+  "final_retest": {
+    "build_id": "f97063ba9a2a7c98",
+    "scope": "FFT图箭头及8道现行客观题标签专项，未重跑31单元",
+    "fft": {
+      "result": "数值/上和下差/交叉非结点通过；输入箭头可辨性待修",
+      "browser": [
+        {
+          "theme": "light",
+          "viewport": "390x844",
+          "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\final_f97063ba9a2a7c98\\fft_lecture_light.png",
+          "image_src": "media/ug_as_fft_butterfly.svg",
+          "image_box": {
+            "x": 12,
+            "y": 289.1875,
+            "width": 366,
+            "height": 264.90625
+          },
+          "build_id": "f97063ba9a2a7c98"
+        },
+        {
+          "theme": "dark",
+          "viewport": "390x844",
+          "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\final_f97063ba9a2a7c98\\fft_lecture_dark.png",
+          "image_src": "media/ug_as_fft_butterfly.svg",
+          "image_box": {
+            "x": 12,
+            "y": 289.1875,
+            "width": 366,
+            "height": 264.90625
+          },
+          "build_id": "f97063ba9a2a7c98"
+        }
+      ],
+      "actual_view_image": [
+        "fft_lecture_light.png",
+        "fft_lecture_dark.png"
+      ],
+      "directions": "E左至上和/下差，O先乘−j后至上和/下差；两输出向右。交叉无圆点，不能当同节点。",
+      "recalculation": "E=1,O=2,W4=−j→WO=−2j，上1+(−2j)=1−2j，下1−(−2j)=1+2j，与图X1/X3一致。",
+      "finding": {
+        "id": "UG-CROSS-FFT-01",
+        "priority": "P2",
+        "location": "media/ug_as_fft_butterfly.svg四条输入path终点x286，与后绘cx298/r17圆重叠",
+        "failed_task": "在390宽讲义图上单凭箭头清楚追踪四条输入方向，斜线方向头仍不明显。",
+        "evidence": "四条输入线结束x286，而圆最左x281；圆后绘可覆盖端点与箭尖，水平箭头只露后部，斜输入更难辨。原六条复合path拆分消除了marker只在末尾的问题，但覆盖关系仍在。全SVG另有O进入乘法器的一条原有箭头，不把总数7误记为6。",
+        "minimal_fix": "四条输入线终点停在各圆周边界或其前，必要时用切向方向按几何求交；两条输出箭头保持。"
+      }
+    },
+    "current_objective_questions": [
+      {
+        "id": "gap-ug-comp-20261019-01-b",
+        "type": "判断",
+        "current_stem": "把先行进位C₂展开到G/P与C₀，可以减少进位逐级等待，但并不表示组合门电路没有传播延迟。",
+        "current_options": {},
+        "semantic_choice": "正确",
+        "semantic_reason": "高位展开减少串行C1依赖，但任何组合门有传播延迟。",
+        "current_answer": "正确",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-02-b",
+        "type": "单选",
+        "current_stem": "多级反馈队列总先选最高非空队列，且高队列持续有新任务，低队列任务长期得不到CPU。哪项改进最直接针对这种饥饿风险？",
+        "current_options": {
+          "A": "按约定的等待阈值或周期提升低队列任务",
+          "B": "禁止所有低队列任务再次进入高队列",
+          "C": "只给最高队列增加更多新任务",
+          "D": "认为多级队列天然保证不会饥饿，无须调整"
+        },
+        "semantic_choice": "A",
+        "semantic_reason": "提高等待过久低优先级任务可改善饥饿；B阻止提升，C加重，D否认风险。",
+        "current_answer": "A",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-03-b",
+        "type": "判断",
+        "current_stem": "单CPU、无开销，A/B均在0到达：A需3且截止3，B需2且截止4。因为使用EDF，所以一定能让两个任务都不晚于各自截止时刻完成。",
+        "current_options": {},
+        "semantic_choice": "错误",
+        "semantic_reason": "到4需3+2=5，CPU仅4单位，不可能全守时。",
+        "current_answer": "错误",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-04-b",
+        "type": "判断",
+        "current_stem": "每类资源可能有多个实例时，只要进程等待关系中存在P1→P2→P1环，就可以仅凭这个环断定系统已经死锁。",
+        "current_options": {},
+        "semantic_choice": "错误",
+        "semantic_reason": "多实例有环不充分，还需当前可用/分配/请求。",
+        "current_answer": "错误",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-07-b",
+        "type": "单选",
+        "current_stem": "将多个输入段的当前段首放入败者树进行归并，保证输出整体有序的必要前提是哪项？",
+        "current_options": {
+          "A": "每个输入段本身已经按相同次序有序",
+          "B": "每个输入段必须长度相等",
+          "C": "每个输入段的全部数据必须同时放进比赛树",
+          "D": "耗尽段的∞哨兵必须作为真实记录输出"
+        },
+        "semantic_choice": "A",
+        "semantic_reason": "同序有序段才保证归并整体有序；等长不是要求，全记录不入树，∞不输出。",
+        "current_answer": "A",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-08-b",
+        "type": "判断",
+        "current_stem": "置换选择已经生成两个各自有序的初始段[1,2,3,4,6]和[0]，因此把这两段依次串接便完成整个文件的排序，不再需要归并。",
+        "current_options": {},
+        "semantic_choice": "错误",
+        "semantic_reason": "首段末6大于次段首0，串接非有序，仍要归并。",
+        "current_answer": "错误",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-09-b",
+        "type": "单选",
+        "current_stem": "将扣库存逻辑放进数据库存储过程后，以下判断正确的是哪项？",
+        "current_options": {
+          "A": "多次修改的整体成败、并发控制和访问权限仍需正确设计",
+          "B": "任意存储过程都自动使全部业务逻辑串行化",
+          "C": "从此不必检查更新影响行数",
+          "D": "调用过程自动取得数据库全部表的任意权限"
+        },
+        "semantic_choice": "A",
+        "semantic_reason": "过程封装不替代事务、并发、权限及影响行数检查。",
+        "current_answer": "A",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      },
+      {
+        "id": "gap-ug-comp-20261019-12-b",
+        "type": "单选",
+        "current_stem": "键值接口仅有按用户编号键GET的基本能力。要找所有city=\"邵阳\"的用户，以下说法合理的是哪项？",
+        "current_options": {
+          "A": "需扫描检查值、建立按城市索引，或选择支持字段查询的实现",
+          "B": "一次GET(\"邵阳\")必然得到所有用户，因为城市也是字段",
+          "C": "只需改变键的显示颜色",
+          "D": "键值模型天然为值中的所有字段建立索引"
+        },
+        "semantic_choice": "A",
+        "semantic_reason": "city非实际主键，按编号GET无法自动做字段集合查询，需扫描或索引/其他接口。",
+        "current_answer": "A",
+        "matches": true,
+        "prior": "已有旧简答试做与答案、且本次读取完整现行题字段后做语义核对，不是答案隔离盲试"
+      }
+    ],
+    "objective_result": "8/8现行语义与正确标签一致；单选为A、判断依序正确/错误/错误/错误，非盲试",
+    "evidence_correction": "初轮62题来自改客观题前的去答案简答快照，独立机制推演仍有效；初轮reference对应旧快照，不等于当前题型/选项/标签已盲试。现行8题以本附录为准。",
+    "product_changes": false,
+    "build_run": false,
+    "resolution": {
+      "build_id": "ad79e891e89fb74a",
+      "history": "f970专项未通过UG-CROSS-FFT-01→root将四输入终点286改279→ad79实际页面复测",
+      "scope": "仅FFT源图与build-meta变化，未将31单元初轮假标最终构建",
+      "browser_evidence": [
+        {
+          "theme": "light",
+          "viewport": "390x844",
+          "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\final_ad79e891e89fb74a\\fft_lecture_light.png",
+          "image_src": "media/ug_as_fft_butterfly.svg",
+          "image_box": {
+            "x": 12,
+            "y": 289.1875,
+            "width": 366,
+            "height": 264.90625
+          },
+          "build_id": "ad79e891e89fb74a"
+        },
+        {
+          "theme": "dark",
+          "viewport": "390x844",
+          "screenshot": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_cross_browser\\final_ad79e891e89fb74a\\fft_lecture_dark.png",
+          "image_src": "media/ug_as_fft_butterfly.svg",
+          "image_box": {
+            "x": 12,
+            "y": 289.1875,
+            "width": 366,
+            "height": 264.90625
+          },
+          "build_id": "ad79e891e89fb74a"
+        }
+      ],
+      "actual_view_image": [
+        "fft_lecture_light.png",
+        "fft_lecture_dark.png"
+      ],
+      "checked": [
+        "四输入线箭头尖在x279，位于圆最左x281之前，浅深实际图可辨，不再被圆填色覆盖",
+        "E分别送上和/下差，O乘−j后分别送上和/下差，两条输出向右",
+        "两斜线交叉无连接圆点，仍是独立信号支路",
+        "E1、O2、W4−j：加权−2j，上X1=1−2j，下X3=1+2j，数值/索引/下差文字一致"
+      ],
+      "finding_resolution": "UG-CROSS-FFT-01已修复，本专项通过",
+      "svg_sha256": "50ce0407a56291d9df367d209896018a6606ac4b605e06dbb831447ceb28d0f8",
+      "product_changed_by_reviewer": false,
+      "build_run_by_reviewer": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="312" viewBox="0 0 360 312" role="img" aria-labelledby="title desc"><title id="title">保持受控源后实际列KCL求测试电流</title><desc id="desc">2欧姆电阻从端口接地，受控电流源从地向端口注入0.25u安；加2伏源时电阻1安、受控源0.5安，外源只需0.5安。</desc><style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}text{fill:currentColor}.wire,.curve{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.part{fill:none;stroke:currentColor;stroke-width:1.8}.accent{fill:none;stroke:#14766d;stroke-width:2.5}.blue{fill:none;stroke:#426b92;stroke-width:2.2}.muted{fill:#67777e}.guide{fill:none;stroke:#93a4aa;stroke-width:1.2;stroke-dasharray:4 4}.node{fill:currentColor}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.accent{stroke:#74cabe}.blue{stroke:#9fbfdb}.muted{fill:#a0b2bb}}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
+<text x="12" y="24" font-size="17" font-weight="650">受控源保留，测试电流来自KCL</text>
+<path class="wire" d="M54 85H302V121M302 175V235H54V181M54 131V85M176 85V127M176 176V235"/>
+<circle class="part" cx="54" cy="156" r="25"/><text x="48" y="151">+</text><text x="48" y="173">−</text>
+<rect class="part" x="166" y="127" width="20" height="49"/>
+<path class="part" d="M302 121L326 148L302 175L278 148Z"/>
+<path class="accent" d="M302 163V134" marker-end="url(#arrow)"/><text x="226" y="198">0.25u A向上</text>
+<path class="blue" d="M96 69H148" marker-end="url(#arrow)"/><text x="99" y="58">It流入</text>
+<text x="16" y="203">测试2 V</text><text x="188" y="157">2 Ω</text><text x="208" y="108">u为端口对地电压</text>
+<circle class="node" cx="176" cy="85" r="3"/><circle class="node" cx="176" cy="235" r="3"/>
+<path class="wire" d="M176 235V246M162 246H190M166 252H186M171 258H181"/>
+<text x="24" y="290">It=2/2−0.25×2=0.5 A，Rth=4 Ω</text></svg>

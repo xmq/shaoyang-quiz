@@ -1,0 +1,319 @@
+{
+  "date": "2026-10-19",
+  "status": "先写计划后实施",
+  "skill": "build-study-course",
+  "units": [
+    {
+      "course_id": "software-engineering",
+      "course": "软件工程",
+      "title": "CMM五级与过程改进",
+      "topic_id": "software-engineering.t26",
+      "chapter_id": "software-engineering.c07",
+      "learner_outcome": "区分经典CMM五级，按项目/组织/量化/持续改进证据判断，不把模型当认证保证。",
+      "mechanism": "五级对照表与组织从项目管理到组织标准的对比",
+      "worked_example": "甲团队各项目有计划跟踪，乙团队统一组织过程，丙团队量化质量并持续找根因；分别指出证据",
+      "visual": "表格即可，不另画装饰图",
+      "practice": [
+        {
+          "id": "ug-as-software-engineering-cmm-levels",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-software-engineering-cmm-version-boundary",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "software-engineering",
+      "course": "软件工程",
+      "title": "Jackson数据结构到程序结构",
+      "topic_id": "software-engineering.t27",
+      "chapter_id": "software-engineering.c04",
+      "learner_outcome": "区分JSP与JSD，把表头/记录重复/表尾映射初始化/逐记录循环/汇总。",
+      "mechanism": "输入输出结构对应、循环读取和状态表",
+      "worked_example": "HEAD批次；ITEM金额10/20/5；END→REPORT/三DETAIL/TOTAL3笔35",
+      "visual": "ug_as_jackson_records.svg",
+      "practice": [
+        {
+          "id": "ug-as-software-engineering-jsp-records",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-software-engineering-jsp-empty",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "software-engineering",
+      "course": "软件工程",
+      "title": "界面的一致性、反馈与错误恢复",
+      "topic_id": "software-engineering.t28",
+      "chapter_id": "software-engineering.c04",
+      "learner_outcome": "同一业务设计一致标签、提交状态与可恢复错误，不要求完整UI理论。",
+      "mechanism": "修改前后对照与一次错误→修复→确认链",
+      "worked_example": "转账金额误输负数，保留输入说明错误；提交中反馈，成功回执防重复提交",
+      "visual": "短对照表足够",
+      "practice": [
+        {
+          "id": "ug-as-software-engineering-ui-recovery",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-software-engineering-ui-pending",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "DFT与IDFT的四点计算",
+      "topic_id": "signals-systems.t17",
+      "chapter_id": "signals-systems.c08",
+      "learner_outcome": "在前向无系数/逆向1/N约定下逐项计算4点并还原。",
+      "mechanism": "定义、W4权重、正逆逐项表",
+      "worked_example": "x=[1,2,0,0]→X=[3,1−2j,−1,1+2j]→原序列",
+      "visual": "权重/结果表可读，不额外画矩阵",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-dft-four",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-idft-scale",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "DFT索引与正负频率",
+      "topic_id": "signals-systems.t18",
+      "chapter_id": "signals-systems.c08",
+      "learner_outcome": "将kfs/N与(k−N)fs/N对应，识别DC、Nyquist和共轭对。",
+      "mechanism": "四频点表与实余弦双边谱",
+      "worked_example": "fs800,N4的0/200/±400/−200Hz；cos200Hz在k1/k3出现",
+      "visual": "ug_as_dft_bins.svg",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-dft-frequency",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-dft-conjugate",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "圆周卷积与补零",
+      "topic_id": "signals-systems.t19",
+      "chapter_id": "signals-systems.c08",
+      "learner_outcome": "手算模N索引及折回，知道N≥Lx+Lh−1时补零得到线性卷积。",
+      "mechanism": "线性结果与N2折回对照，N4补零",
+      "worked_example": "[1,2]*[3,4]线性[3,10,8]；N2圆周[11,10]；N4[3,10,8,0]",
+      "visual": "ug_as_convolution_wrap.svg",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-circular-fold",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-circular-padding",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "FFT偶奇分解与蝶形",
+      "topic_id": "signals-systems.t20",
+      "chapter_id": "signals-systems.c08",
+      "learner_outcome": "FFT为同一DFT的算法，用2点E/O算一层加权和差，非另一种变换。",
+      "mechanism": "E/O分解、W乘法与和差",
+      "worked_example": "[1,2,0,0]的E=[1,1],O=[2,2]，k1权−j得X1/X3",
+      "visual": "ug_as_fft_butterfly.svg",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-fft-layer",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-fft-boundary",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "差分方程的非零初值响应",
+      "topic_id": "signals-systems.t21",
+      "chapter_id": "signals-systems.c05",
+      "learner_outcome": "单边Z中带上y[−1]，区分零输入零状态与总响应并递推核对。",
+      "mechanism": "移位求和、代数方程、几何级数/逐拍状态",
+      "worked_example": "y=.5y前拍+x，y[−1]=4,x=u→3,2.5,2.25；总2+.5^n",
+      "visual": "表格即可",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-difference-initial",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-difference-decomposition",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "离散频率响应的幅相与零点",
+      "topic_id": "signals-systems.t22",
+      "chapter_id": "signals-systems.c05",
+      "learner_outcome": "从H=1+e^−jΩ因式分解算幅相，说明零点处相位不定义。",
+      "mechanism": "欧拉分解与Ω0/π2/π核验",
+      "worked_example": "2e^−jΩ2 cosΩ2；0增益2，π2增益√2相−π4，π为0",
+      "visual": "标量表即可",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-dtft-phase",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-dtft-zero",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "延迟加法框图读方程",
+      "topic_id": "signals-systems.t23",
+      "chapter_id": "signals-systems.c05",
+      "learner_outcome": "按箭头逐支读取延迟与增益并列差分方程，不把输入延迟当反馈。",
+      "mechanism": "递归框图→内部支路变量→方程/H",
+      "worked_example": "输出回接z^−1再乘.5与输入相加→y=x+.5y前拍",
+      "visual": "ug_as_delay_feedback.svg",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-block-delay",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-block-feedforward",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "信号内积与正交",
+      "topic_id": "signals-systems.t24",
+      "chapter_id": "signals-systems.c04",
+      "learner_outcome": "按明确共轭约定算短序列内积/能量，零内积是给定区间的正交。",
+      "mechanism": "实向量逐项乘加、复数共轭反例",
+      "worked_example": "[1,1]与[1,−1]内积0；x=[1,j]自内积2",
+      "visual": "小表足够",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-inner-orthogonal",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-inner-conjugate",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "相关与延迟匹配",
+      "topic_id": "signals-systems.t25",
+      "chapter_id": "signals-systems.c04",
+      "learner_outcome": "固定相关定义及滞后符号，通过滑动内积找到延迟峰，不混卷积。",
+      "mechanism": "r_xh[l]=Σx[n]h*[n−l]的零延拓表",
+      "worked_example": "x=[0,1,2,0],h=[1,2]，l0/1/2相关2/5/2",
+      "visual": "滑动样值对照表",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-correlation-lag",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-correlation-convention",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    },
+    {
+      "course_id": "signals-systems",
+      "course": "信号与系统",
+      "title": "Parseval能量核对",
+      "topic_id": "signals-systems.t26",
+      "chapter_id": "signals-systems.c07",
+      "learner_outcome": "在DTFT/DFT对应归一化下核对能量，不能把DFT系数模平方直接求和当时域能量。",
+      "mechanism": "DTFT积分关系、4点DFT两侧求和",
+      "worked_example": "[1,2,0,0]时域5，频域9+5+1+5=20，除N4得5",
+      "visual": "数值对照表足够",
+      "practice": [
+        {
+          "id": "ug-as-signals-systems-parseval-energy",
+          "ability": "过程描述"
+        },
+        {
+          "id": "ug-as-signals-systems-parseval-normalization",
+          "ability": "比较辨析"
+        }
+      ],
+      "scope": "普通本科最小计算/过程/场景，不扩专业系统"
+    }
+  ],
+  "chapter_addition": {
+    "course": "信号与系统",
+    "title": "第8章 离散傅里叶变换与快速算法",
+    "chapter_id": "signals-systems.c08",
+    "policy": "追加旧七章之后，不改既有顺序"
+  },
+  "frozen_other_courses": [
+    "Office软件操作",
+    "大学计算机基础与新技术",
+    "多媒体技术",
+    "信息安全"
+  ],
+  "scope_constraints": [
+    "只改本组course_notes/color_notes、新ug_as_媒体、指定staging和新报告；不改题库旧题/全局registry/map/metadata/dist，不build。",
+    "旧H2/H3与相对顺序、既有==保留；新卡按章末追加，同名H4入口；每新topic至少两道不同能力/边界原创题。",
+    "每新卡三块各至少25字，三块合计不超过220字；图片默认折叠由现有代码处理。",
+    "CMM经典v1.1五级与CMMI不混；JSP不混JSD；DFT正负指数/1N与相关滞后先声明。",
+    "完工做独立手算及SVG手机浅深实际观察，冻结交另两非作者复测。"
+  ],
+  "sources": [
+    "https://www.sei.cmu.edu/library/capability-maturity-model-for-software-version-11/",
+    "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406",
+    "https://sx.xxu.edu.cn/10Xruanjiangongcheng-112720.pdf",
+    "https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/65956b1f5c262e9118b195b077811d70_ch4_dft.pdf",
+    "https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/2b3897bb64743815afae1543066ed4ff_fft.pdf"
+  ]
+}

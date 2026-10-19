@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="475" viewBox="0 0 360 475" role="img" aria-labelledby="title"><title id="title">互补输出：正负半周均供能</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">互补输出：正负半周均供能</text>
+<path class="w" d="M150 155L175 155"/>
+<path class="w" d="M175 135L175 175"/>
+<path class="w" d="M175 141L200 120"/>
+<path class="w" d="M175 169L200 190"/>
+<path class="soft" d="M187 174L197 186L184 182Z"/>
+<path class="w" d="M150 285L175 285"/>
+<path class="w" d="M175 265L175 305"/>
+<path class="w" d="M175 271L200 250"/>
+<path class="w" d="M175 299L200 320"/>
+<path class="soft" d="M188 257L180 267L193 264Z"/>
+<path class="w" d="M200 75L200 120"/>
+<text x="210" y="80" font-size="14" text-anchor="start">+10 V</text>
+<path class="w" d="M200 190L200 250"/>
+<path class="w" d="M200 320L200 355"/>
+<text x="212" y="355" font-size="14" text-anchor="start">−10 V</text>
+<path class="w" d="M200 225L285 225"/>
+<circle cx="200" cy="225" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M285 250L285 258"/>
+<rect x="280" y="258" width="10" height="26" class="w"/>
+<path class="w" d="M285 284L285 292"/>
+<text x="294" y="275.0" font-size="12" text-anchor="start">RL 8Ω</text>
+<path class="w" d="M285 225L285 250"/>
+<path class="w" d="M285 310L285 318"/>
+<path class="w" d="M275 318L295 318"/>
+<path class="w" d="M279 323L291 323"/>
+<path class="w" d="M283 328L287 328"/>
+<path class="w" d="M285 292L285 310"/>
+<path class="w" d="M110 155L150 155"/>
+<path class="w" d="M110 285L150 285"/>
+<path class="w" d="M110 155L110 285"/>
+<text x="18" y="215" font-size="13" text-anchor="start">输入驱动</text>
+<path class="w" d="M65 225L110 225"/>
+<text x="214" y="150" font-size="12" text-anchor="start">NPN</text>
+<text x="214" y="293" font-size="12" text-anchor="start">PNP</text>
+<path class="a" d="M230 100L230 203" marker-end="url(#arr)"/>
+<text x="239" y="185" font-size="12" text-anchor="start">正半周</text>
+<path class="a" d="M230 246L230 337" marker-end="url(#arr)"/>
+<text x="241" y="275" font-size="12" text-anchor="start">负半周</text>
+<text x="12" y="390" font-size="14" text-anchor="start">正：+电源→上管→RL→0 V</text>
+<text x="12" y="415" font-size="14" text-anchor="start">负：0 V→RL→下管→−电源</text>
+<text x="12" y="444" font-size="14" text-anchor="start">峰8V：Po=4W，Pdc≈6.37W，η≈62.8%</text>
+</svg>

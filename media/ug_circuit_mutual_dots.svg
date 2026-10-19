@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="364" viewBox="0 0 360 364" role="img" aria-labelledby="title desc"><title id="title">同名端与串联助磁反磁</title><desc id="desc">上部两耦合线圈的电流均流入有点端，电压参考从有点端到无点端；下部串联同一电流助磁加2M，反磁减2M。</desc><style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}text{fill:currentColor}.wire,.curve{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.part{fill:none;stroke:currentColor;stroke-width:1.8}.accent{fill:none;stroke:#14766d;stroke-width:2.5}.blue{fill:none;stroke:#426b92;stroke-width:2.2}.muted{fill:#67777e}.guide{fill:none;stroke:#93a4aa;stroke-width:1.2;stroke-dasharray:4 4}.node{fill:currentColor}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.accent{stroke:#74cabe}.blue{stroke:#9fbfdb}.muted{fill:#a0b2bb}}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
+<text x="12" y="24" font-size="17" font-weight="650">同名端只决定参考方向的关系</text>
+<path class="wire" d="M88 56V76a10 10 0 0 1 0 20a10 10 0 0 1 0 20a10 10 0 0 1 0 20V161M272 56V76a10 10 0 0 1 0 20a10 10 0 0 1 0 20a10 10 0 0 1 0 20V161"/>
+<circle class="node" cx="77" cy="66" r="3"/><circle class="node" cx="261" cy="66" r="3"/>
+<path class="accent" d="M57 60V110" marker-end="url(#arrow)"/><path class="accent" d="M240 60V110" marker-end="url(#arrow)"/>
+<text x="34" y="83">i1</text><text x="216" y="83">i2</text>
+<text x="103" y="70">+</text><text x="103" y="155">−</text><text x="110" y="114">u1</text>
+<text x="287" y="70">+</text><text x="287" y="155">−</text><text x="294" y="114">u2</text>
+<text x="65" y="184">L1</text><text x="258" y="184">L2</text><path class="guide" d="M142 111H212"/><text x="168" y="100">M</text>
+<text x="14" y="218">同一串联电流由左向右：</text>
+<path class="wire" d="M24 251H61a8 8 0 0 1 16 0a8 8 0 0 1 16 0H205a8 8 0 0 1 16 0a8 8 0 0 1 16 0H330"/>
+<circle class="node" cx="56" cy="240" r="3"/><circle class="node" cx="200" cy="240" r="3"/>
+<text x="43" y="281">助磁：两次入点，L1+L2+2M</text>
+<path class="wire" d="M24 313H61a8 8 0 0 1 16 0a8 8 0 0 1 16 0H205a8 8 0 0 1 16 0a8 8 0 0 1 16 0H330"/>
+<circle class="node" cx="56" cy="302" r="3"/><circle class="node" cx="242" cy="302" r="3"/>
+<text x="43" y="344">反磁：一次入点/一次出点，L1+L2−2M</text></svg>

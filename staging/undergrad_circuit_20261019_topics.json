@@ -1,0 +1,149 @@
+[
+  {
+    "course": "电路分析与电工技术",
+    "title": "二阶RLC的初值与响应",
+    "topic_id": "circuit.t16",
+    "chapter_id": "circuit.c07",
+    "keywords": [
+      "二阶RLC的初值与响应"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "从RLC列式、给两初值、判阻尼并核对响应。",
+    "question_ids": [
+      "gap-ug26-circuit-16-1",
+      "gap-ug26-circuit-16-2"
+    ]
+  },
+  {
+    "course": "电路分析与电工技术",
+    "title": "互感同名端与串联等效",
+    "topic_id": "circuit.t17",
+    "chapter_id": "circuit.c04",
+    "keywords": [
+      "互感同名端与串联等效"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "先标同名端与参考方向，再求互感项和串联等效。",
+    "question_ids": [
+      "gap-ug26-circuit-17-1",
+      "gap-ug26-circuit-17-2"
+    ]
+  },
+  {
+    "course": "电路分析与电工技术",
+    "title": "二端口Z参数与开路条件",
+    "topic_id": "circuit.t18",
+    "chapter_id": "circuit.c03",
+    "keywords": [
+      "二端口Z参数与开路条件"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "用开路条件求Z参数，按规定电流方向算端口电压。",
+    "question_ids": [
+      "gap-ug26-circuit-18-1",
+      "gap-ug26-circuit-18-2"
+    ]
+  },
+  {
+    "course": "电路分析与电工技术",
+    "title": "谐振、品质因数与带宽",
+    "topic_id": "circuit.t19",
+    "chapter_id": "circuit.c05",
+    "keywords": [
+      "谐振、品质因数与带宽"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "分清串并联模型，计算f0、Q和半功率带宽。",
+    "question_ids": [
+      "gap-ug26-circuit-19-1",
+      "gap-ug26-circuit-19-2"
+    ]
+  },
+  {
+    "course": "电路分析与电工技术",
+    "title": "非正弦分量的有效值与功率",
+    "topic_id": "circuit.t20",
+    "chapter_id": "circuit.c05",
+    "keywords": [
+      "非正弦分量的有效值与功率"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "分直流与各谐波计算，再合并有效值和平均功率。",
+    "question_ids": [
+      "gap-ug26-circuit-20-1",
+      "gap-ug26-circuit-20-2"
+    ]
+  },
+  {
+    "course": "电路分析与电工技术",
+    "title": "RC复频域模型保留初值",
+    "topic_id": "circuit.t21",
+    "chapter_id": "circuit.c07",
+    "keywords": [
+      "RC复频域模型保留初值"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "把非零初值保留进s域元件方程，反变换核对初终值。",
+    "question_ids": [
+      "gap-ug26-circuit-21-1",
+      "gap-ug26-circuit-21-2"
+    ]
+  },
+  {
+    "course": "电路分析与电工技术",
+    "title": "传输延时与端接反射",
+    "topic_id": "circuit.t22",
+    "chapter_id": "circuit.c01",
+    "keywords": [
+      "传输延时与端接反射"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "直接计算",
+      "综合应用"
+    ],
+    "study_task": "先确定入射波与端接，再算首反射与传播时刻。",
+    "question_ids": [
+      "gap-ug26-circuit-22-1",
+      "gap-ug26-circuit-22-2"
+    ]
+  }
+]

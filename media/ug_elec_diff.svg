@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="520" viewBox="0 0 360 520" role="img" aria-labelledby="title"><title id="title">差分：同一尾电流，两个输出</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">差分：同一尾电流，两个输出</text>
+<text x="12" y="52" font-size="14" text-anchor="start">匹配NPN；基极直流0 V；RC各5 kΩ</text>
+<path class="w" d="M92 83L268 83"/>
+<text x="150" y="74" font-size="14" text-anchor="start">+12 V</text>
+<path class="w" d="M92 95L92 103"/>
+<rect x="87" y="103" width="10" height="26" class="w"/>
+<path class="w" d="M92 129L92 137"/>
+<text x="101" y="120.0" font-size="12" text-anchor="start">RC1</text>
+<path class="w" d="M268 95L268 103"/>
+<rect x="263" y="103" width="10" height="26" class="w"/>
+<path class="w" d="M268 129L268 137"/>
+<text x="277" y="120.0" font-size="12" text-anchor="start">RC2</text>
+<path class="w" d="M92 83L92 95"/>
+<path class="w" d="M268 83L268 95"/>
+<path class="w" d="M42 205L67 205"/>
+<path class="w" d="M67 185L67 225"/>
+<path class="w" d="M67 191L92 170"/>
+<path class="w" d="M67 219L92 240"/>
+<path class="soft" d="M79 224L89 236L76 232Z"/>
+<path class="w" d="M218 205L243 205"/>
+<path class="w" d="M243 185L243 225"/>
+<path class="w" d="M243 191L268 170"/>
+<path class="w" d="M243 219L268 240"/>
+<path class="soft" d="M255 224L265 236L252 232Z"/>
+<path class="w" d="M92 137L92 170"/>
+<path class="w" d="M268 137L268 170"/>
+<text x="48" y="153" font-size="12" text-anchor="start">uo1</text>
+<text x="277" y="153" font-size="12" text-anchor="start">uo2</text>
+<path class="w" d="M92 240L92 265"/>
+<path class="w" d="M268 240L268 265"/>
+<path class="w" d="M92 265L268 265"/>
+<path class="w" d="M180 265L180 294"/>
+<circle cx="180" cy="265" r="2.6" fill="var(--ink)"/>
+<circle cx="180" cy="315" r="21" class="w"/>
+<path class="a" d="M180 303L180 328" marker-end="url(#arr)"/>
+<path class="w" d="M180 336L180 360"/>
+<text x="202" y="321" font-size="14" text-anchor="start">尾电流2 mA</text>
+<text x="155" y="382" font-size="14" text-anchor="start">−12 V</text>
+<path class="w" d="M8 205L42 205"/>
+<text x="8" y="192" font-size="12" text-anchor="start">u1=+ud/2</text>
+<path class="w" d="M205 205L218 205"/>
+<text x="196" y="192" font-size="12" text-anchor="start">u2=−ud/2</text>
+<text x="12" y="415" font-size="14" text-anchor="start">每管ICQ≈1 mA，两个集电极均7 V。</text>
+<text x="12" y="444" font-size="14" text-anchor="start">gm=0.04 S；左单端−100，右单端+100。</text>
+<text x="12" y="473" font-size="14" text-anchor="start">uod=uo1−uo2：双端差模增益−200。</text>
+<text x="12" y="501" font-size="13" text-anchor="start">输出方向先约定，不把双端再多乘一次2。</text>
+</svg>

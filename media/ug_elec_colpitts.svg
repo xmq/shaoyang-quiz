@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="610" viewBox="0 0 360 610" role="img" aria-labelledby="title"><title id="title">共基Colpitts：C、E、交流地三点</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">共基Colpitts：C、E、交流地三点</text>
+<text x="12" y="52" font-size="14" text-anchor="start">C1跨C—E；C2跨E—地；B由CB交流接地</text>
+<path class="w" d="M225 83L225 110"/>
+<text x="236" y="89" font-size="14" text-anchor="start">+VCC</text>
+<path class="w" d="M225 110v8c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10v8"/>
+<text x="234" y="138" font-size="12" text-anchor="start">L 10μH</text>
+<path class="w" d="M225 166L225 208"/>
+<path class="w" d="M175 243L200 243"/>
+<path class="w" d="M200 223L200 263"/>
+<path class="w" d="M200 229L225 208"/>
+<path class="w" d="M200 257L225 278"/>
+<path class="soft" d="M212 262L222 274L209 270Z"/>
+<text x="235" y="205" font-size="12" text-anchor="start">C</text>
+<text x="235" y="281" font-size="12" text-anchor="start">E</text>
+<path class="w" d="M225 190L300 190"/>
+<path class="w" d="M300 207L300 222.0"/>
+<path class="w" d="M290 222.0L310 222.0"/>
+<path class="w" d="M290 230.0L310 230.0"/>
+<path class="w" d="M300 230.0L300 245"/>
+<text x="315" y="218" font-size="12" text-anchor="start">C1</text><text x="315" y="236" font-size="12" text-anchor="start">100pF</text>
+<path class="w" d="M300 190L300 207"/>
+<path class="w" d="M300 245L300 300"/>
+<path class="w" d="M300 300L225 300"/>
+<path class="w" d="M225 278L225 300"/>
+<circle cx="225" cy="300" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M300 321L300 336.0"/>
+<path class="w" d="M290 336.0L310 336.0"/>
+<path class="w" d="M290 344.0L310 344.0"/>
+<path class="w" d="M300 344.0L300 359"/>
+<text x="315" y="332" font-size="12" text-anchor="start">C2</text><text x="315" y="350" font-size="12" text-anchor="start">300pF</text>
+<path class="w" d="M300 300L300 321"/>
+<path class="w" d="M300 378L300 386"/>
+<path class="w" d="M290 386L310 386"/>
+<path class="w" d="M294 391L306 391"/>
+<path class="w" d="M298 396L302 396"/>
+<path class="w" d="M300 359L300 378"/>
+<path class="w" d="M225 330L225 338"/>
+<rect x="220" y="338" width="10" height="26" class="w"/>
+<path class="w" d="M225 364L225 372"/>
+<text x="234" y="355.0" font-size="12" text-anchor="start">RE</text>
+<path class="w" d="M225 300L225 330"/>
+<path class="w" d="M225 392L225 400"/>
+<path class="w" d="M215 400L235 400"/>
+<path class="w" d="M219 405L231 405"/>
+<path class="w" d="M223 410L227 410"/>
+<path class="w" d="M225 372L225 392"/>
+<path class="w" d="M90 243L175 243"/>
+<circle cx="90" cy="243" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M90 107L90 115"/>
+<rect x="85" y="115" width="10" height="26" class="w"/>
+<path class="w" d="M90 141L90 149"/>
+<text x="99" y="132.0" font-size="12" text-anchor="start">R1</text>
+<path class="w" d="M90 149L90 243"/>
+<text x="65" y="91" font-size="12" text-anchor="start">+VCC</text>
+<path class="w" d="M90 91L90 107"/>
+<path class="w" d="M90 291L90 299"/>
+<rect x="85" y="299" width="10" height="26" class="w"/>
+<path class="w" d="M90 325L90 333"/>
+<text x="99" y="316.0" font-size="12" text-anchor="start">R2</text>
+<path class="w" d="M90 243L90 291"/>
+<path class="w" d="M90 354L90 362"/>
+<path class="w" d="M80 362L100 362"/>
+<path class="w" d="M84 367L96 367"/>
+<path class="w" d="M88 372L92 372"/>
+<path class="w" d="M90 333L90 354"/>
+<path class="w" d="M90 243L30 243"/>
+<path class="w" d="M30 273L30 288.0"/>
+<path class="w" d="M20 288.0L40 288.0"/>
+<path class="w" d="M20 296.0L40 296.0"/>
+<path class="w" d="M30 296.0L30 311"/>
+<text x="43" y="296.0" font-size="12" text-anchor="start">CB</text>
+<path class="w" d="M30 243L30 273"/>
+<path class="w" d="M30 334L30 342"/>
+<path class="w" d="M20 342L40 342"/>
+<path class="w" d="M24 347L36 347"/>
+<path class="w" d="M28 352L32 352"/>
+<path class="w" d="M30 311L30 334"/>
+<text x="12" y="445" font-size="14" text-anchor="start">B交流不变：E↑→UBE↓→ic↓→C↑</text>
+<text x="12" y="475" font-size="14" text-anchor="start">共基级同相；C1/C2取样同相送回E。</text>
+<text x="12" y="505" font-size="14" text-anchor="start">Ceq=75pF，f0≈5.81MHz</text>
+<text x="12" y="535" font-size="14" text-anchor="start">无载Ve/Vc=C1/(C1+C2)≈1/4</text>
+<text x="12" y="570" font-size="13" text-anchor="start">E输入与RE会加载分压，起振仍查环路增益。</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title"><title id="title">三位DAC：支路电流在虚地相加</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">三位DAC：支路电流在虚地相加</text>
+<text x="12" y="52" font-size="14" text-anchor="start">b2/b1/b0各选择+8 V或0 V</text>
+<text x="12" y="86" font-size="12" text-anchor="start">b2：1→8V / 0→地</text>
+<path class="w" d="M35 110L45 110M35 110L15 98"/><circle cx="15" cy="98" r="2.5" class="w"/><circle cx="15" cy="122" r="2.5" class="w"/>
+<path class="w" d="M45 110L51 110"/>
+<rect x="51" y="105" width="58" height="10" class="w"/>
+<path class="w" d="M109 110L115 110"/>
+<text x="80.0" y="99" font-size="12" text-anchor="middle">20k</text>
+<path class="w" d="M115 110L180 110"/>
+<text x="12" y="161" font-size="12" text-anchor="start">b1：1→8V / 0→地</text>
+<path class="w" d="M35 185L45 185M35 185L15 197"/><circle cx="15" cy="173" r="2.5" class="w"/><circle cx="15" cy="197" r="2.5" class="w"/>
+<path class="w" d="M45 185L51 185"/>
+<rect x="51" y="180" width="58" height="10" class="w"/>
+<path class="w" d="M109 185L115 185"/>
+<text x="80.0" y="174" font-size="12" text-anchor="middle">40k</text>
+<path class="w" d="M115 185L180 185"/>
+<text x="12" y="236" font-size="12" text-anchor="start">b0：1→8V / 0→地</text>
+<path class="w" d="M35 260L45 260M35 260L15 248"/><circle cx="15" cy="248" r="2.5" class="w"/><circle cx="15" cy="272" r="2.5" class="w"/>
+<path class="w" d="M45 260L51 260"/>
+<rect x="51" y="255" width="58" height="10" class="w"/>
+<path class="w" d="M109 260L115 260"/>
+<text x="80.0" y="249" font-size="12" text-anchor="middle">80k</text>
+<path class="w" d="M115 260L180 260"/>
+<path class="w" d="M180 110L180 300"/>
+<circle cx="180" cy="185" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M215 284L215 348L273 316Z"/>
+<text x="222" y="304" font-size="14" text-anchor="start">−</text>
+<text x="222" y="338" font-size="14" text-anchor="start">+</text>
+<text x="240" y="309" font-size="12" text-anchor="start">A</text>
+<path class="w" d="M180 300L215 300"/>
+<path class="w" d="M215 332L195 332"/>
+<path class="w" d="M195 342L195 350"/>
+<path class="w" d="M185 350L205 350"/>
+<path class="w" d="M189 355L201 355"/>
+<path class="w" d="M193 360L197 360"/>
+<path class="w" d="M195 332L195 342"/>
+<path class="w" d="M273 316L330 316"/>
+<text x="301" y="340" font-size="12" text-anchor="start">uo</text>
+<path class="w" d="M180 110L180 70"/>
+<path class="w" d="M180 70L186 70"/>
+<rect x="186" y="65" width="78" height="10" class="w"/>
+<path class="w" d="M264 70L270 70"/>
+<text x="225.0" y="59" font-size="12" text-anchor="middle">Rf10k</text>
+<path class="w" d="M270 70L330 70"/>
+<path class="w" d="M330 70L330 316"/>
+<text x="225" y="380" font-size="12" text-anchor="start">运放供电±12 V</text>
+<text x="12" y="415" font-size="14" text-anchor="start">101：0.4+0+0.1=0.5mA</text>
+<text x="12" y="446" font-size="14" text-anchor="start">uo=−10k×0.5mA=−5V；满码−7V。</text>
+<text x="12" y="476" font-size="13" text-anchor="start">本图为反相输出，勿和正单极例混符号。</text>
+</svg>

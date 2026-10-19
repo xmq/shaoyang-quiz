@@ -1,0 +1,902 @@
+[
+  {
+    "id": "ug-as-software-engineering-cmm-levels",
+    "source": "本科课程补齐原创",
+    "subject": "软件工程",
+    "course_id": "software-engineering",
+    "chapter_id": "software-engineering.c07",
+    "topic_id": "software-engineering.t26",
+    "topic_source": "manual",
+    "chapter": "CMM五级与过程改进",
+    "source_chapter": "CMM五级与过程改进",
+    "knowledge_point": "项目管理",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "仅按经典软件CMM五级的特征作课程判断：某组织各项目都有获批需求、计划和进度跟踪，但尚无组织统一的标准过程。最能直接体现哪一级的特征？不能据这些信息做什么结论？",
+    "options": {},
+    "answer": "体现第2级可重复级的项目管理特征；不能直接认定第3级已定义级，也不能据这几个描述完成正式成熟度评级。",
+    "explanation": "项目内有管理纪律与组织统一标准过程是不同证据；课堂辨识不代替全部过程条件和正式评估。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "指出可重复级",
+        "points": 1
+      },
+      {
+        "criterion": "区分组织标准过程尚缺",
+        "points": 1
+      },
+      {
+        "criterion": "不凭单条证据正式评级",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-software-engineering-cmm-version-boundary",
+    "source": "本科课程补齐原创",
+    "subject": "软件工程",
+    "course_id": "software-engineering",
+    "chapter_id": "software-engineering.c07",
+    "topic_id": "software-engineering.t26",
+    "topic_source": "manual",
+    "chapter": "CMM五级与过程改进",
+    "source_chapter": "CMM五级与过程改进",
+    "knowledge_point": "项目管理",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "某团队说“我们每周记一次缺陷数，所以已经是经典CMM第4级；买了新工具就必定达到第5级，产品也不会再出错”。指出这三项判断缺少什么，并说明能否把经典CMM名称直接当作当前CMMI认证标准。",
+    "options": {},
+    "answer": "记数还需明确口径并用数据理解和控制过程波动，才有定量管理证据；优化需根因分析、试验与效果验证，不是只买工具；成熟过程不保证产品无缺陷。CMMI的内容、名称与评估规则有版本差别，不能把经典表直接当当前认证标准。",
+    "explanation": "题目区分收集数据、定量管理、持续改进和产品质量保证四件事，不要求列全部过程域。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "指出仅记缺陷数不足以证明定量管理",
+        "points": 1
+      },
+      {
+        "criterion": "指出优化需证据/根因/验证非仅买工具",
+        "points": 1
+      },
+      {
+        "criterion": "不保证无缺陷且不混CMMI现行标准",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-software-engineering-jsp-records",
+    "source": "本科课程补齐原创",
+    "subject": "软件工程",
+    "course_id": "software-engineering",
+    "chapter_id": "software-engineering.c04",
+    "topic_id": "software-engineering.t27",
+    "topic_source": "manual",
+    "chapter": "Jackson数据结构到程序结构",
+    "source_chapter": "Jackson数据结构到程序结构",
+    "knowledge_point": "软件设计与UML",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "采用本课JSP思路，输入为HEAD(B2)、ITEM(3)、ITEM(7)、END，输出需报告头、逐条明细及笔数/合计。写出三部分数据分别对应的程序结构，并跟踪累计状态。",
+    "options": {},
+    "answer": "HEAD对应读表头、写报告头并初始化count=0、sum=0；重复ITEM对应逐条读取、累计并写明细的循环；END对应退出循环与汇总。状态(0,0)→(1,3)→(2,10)，明细3、7，汇总2笔、10。",
+    "explanation": "把输入输出的顺序/重复对应程序结构才是任务重点；不能只写一个不说明初始化和结束的循环。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "HEAD到初始化的对应",
+        "points": 1
+      },
+      {
+        "criterion": "ITEM到循环/逐条明细的对应",
+        "points": 1
+      },
+      {
+        "criterion": "END汇总及状态2笔10正确",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-software-engineering-jsp-empty",
+    "source": "本科课程补齐原创",
+    "subject": "软件工程",
+    "course_id": "software-engineering",
+    "chapter_id": "software-engineering.c04",
+    "topic_id": "software-engineering.t27",
+    "topic_source": "manual",
+    "chapter": "Jackson数据结构到程序结构",
+    "source_chapter": "Jackson数据结构到程序结构",
+    "knowledge_point": "软件设计与UML",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "输入约定为HEAD、零条或多条ITEM、END。若HEAD后立即END，应输出什么？若程序处理ITEM后没有读取下一项，会怎样？这能否说明JSP与JSD就是同一方法？",
+    "options": {},
+    "answer": "应零次循环并输出0笔、合计0；漏读下一项可能反复处理同一条记录，无法按输入结束。不能据此说JSP与JSD相同，本课JSP是面向输入输出数据结构的程序设计，JSD是另一系统开发方法。",
+    "explanation": "考察重复零次、循环推进与术语边界，而不是再做一组相同求和。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "空记录时0笔0合计",
+        "points": 1
+      },
+      {
+        "criterion": "解释漏读导致重复或不终止",
+        "points": 1
+      },
+      {
+        "criterion": "区分JSP与JSD",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-software-engineering-ui-recovery",
+    "source": "本科课程补齐原创",
+    "subject": "软件工程",
+    "course_id": "software-engineering",
+    "chapter_id": "software-engineering.c04",
+    "topic_id": "software-engineering.t28",
+    "topic_source": "manual",
+    "chapter": "界面的一致性、反馈与错误恢复",
+    "source_chapter": "界面的一致性、反馈与错误恢复",
+    "knowledge_point": "软件设计与UML",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "表单金额规定必须大于0。用户填−20后系统只弹“错误”，清空收款人和金额。给出符合基础界面原则的改法，并说明是否应原样保留密码/验证码。",
+    "options": {},
+    "answer": "在金额旁说明金额须大于0及修正方式，将焦点引回金额；保留收款人等可继续使用的非敏感输入。密码与验证码不应为了恢复操作而原样回显，不能一概保留全部字段。",
+    "explanation": "错误恢复要帮助继续原任务，不是仅指出失败，也不牺牲敏感信息保护。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "错误位置与修正方法明确",
+        "points": 1
+      },
+      {
+        "criterion": "保留非敏感输入方便继续",
+        "points": 1
+      },
+      {
+        "criterion": "不回显密码验证码",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-software-engineering-ui-pending",
+    "source": "本科课程补齐原创",
+    "subject": "软件工程",
+    "course_id": "software-engineering",
+    "chapter_id": "software-engineering.c04",
+    "topic_id": "software-engineering.t28",
+    "topic_source": "manual",
+    "chapter": "界面的一致性、反馈与错误恢复",
+    "source_chapter": "界面的一致性、反馈与错误恢复",
+    "knowledge_point": "软件设计与UML",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "提交业务后按钮已禁用，网络超时但结果未知。界面能否立即显示“失败，请再提交一次”？应给什么反馈？按钮禁用是否保证服务端只执行一次？",
+    "options": {},
+    "answer": "不能将超时直接认定业务失败；应说明结果待确认并提供状态查询，得到确定结果再给成功或失败回执。禁用按钮只能减少重复点击，不保证服务端只执行一次。",
+    "explanation": "交互反馈须忠于真实处理状态，等待、失败和成功要区分，不要求实现完整交易平台。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "超时不等于业务失败",
+        "points": 1
+      },
+      {
+        "criterion": "说明处理中/待确认并可查状态",
+        "points": 1
+      },
+      {
+        "criterion": "禁按钮不能保证服务只执行一次",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-dft-four",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t17",
+    "topic_source": "manual",
+    "chapter": "DFT与IDFT的四点计算",
+    "source_chapter": "DFT与IDFT的四点计算",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "采用X[k]=Σx[n]e^(−j2πkn/N)、逆变换带1/N的约定，求4点序列x=[0,1,0,0]的四个DFT系数，说明权重。",
+    "options": {},
+    "answer": "只有n=1项非零，因此X[k]=e^(−jπk/2)；k=0,1,2,3依次为1、−j、−1、j。",
+    "explanation": "考查时域延迟位置对应旋转权重，而非复制讲义的两项相加。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "指出仅n1贡献",
+        "points": 1
+      },
+      {
+        "criterion": "权重为负指数W4的k次幂",
+        "points": 1
+      },
+      {
+        "criterion": "四系数顺序正确",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-idft-scale",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t17",
+    "topic_source": "manual",
+    "chapter": "DFT与IDFT的四点计算",
+    "source_chapter": "DFT与IDFT的四点计算",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "4点频谱X=[0,4,0,0]，序列允许为复数。按本课IDFT约定求x[0..3]；若漏掉1/4会怎样？",
+    "options": {},
+    "answer": "只有k=1项非零，x[n]=(1/4)×4e^(jπn/2)，所以x=[1,j,−1,−j]。漏1/4会得到[4,4j,−4,−4j]。",
+    "explanation": "逆变换指数正号与除N缺一不可，不可机械复用正变换权重。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "逆权重正指数",
+        "points": 1
+      },
+      {
+        "criterion": "结果1 j −1 −j",
+        "points": 1
+      },
+      {
+        "criterion": "漏归一化成4倍",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-dft-frequency",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t18",
+    "topic_source": "manual",
+    "chapter": "DFT索引与正负频率",
+    "source_chapter": "DFT索引与正负频率",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "采样率1600Hz，做8点DFT。求频率间隔，并给k=7与k=4的常用正负频率解释。",
+    "options": {},
+    "answer": "间隔1600/8=200Hz。k7未重排标签1400Hz，与(7−8)×200=−200Hz等价；k4是800Hz奈奎斯特边界，+800与−800在采样时刻等价。",
+    "explanation": "分别核对索引、Hz与采样率周期，边界不是额外两个不同频点。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "间隔200Hz",
+        "points": 1
+      },
+      {
+        "criterion": "k7为1400或等价−200Hz",
+        "points": 1
+      },
+      {
+        "criterion": "k4的±800边界等价",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-dft-conjugate",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t18",
+    "topic_source": "manual",
+    "chapter": "DFT索引与正负频率",
+    "source_chapter": "DFT索引与正负频率",
+    "knowledge_point": "频域分析",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "一个实数8点序列的DFT有X[1]=2+3j，则X[7]应为（ ）。",
+    "options": {
+      "A": "2+3j",
+      "B": "2−3j",
+      "C": "−2+3j",
+      "D": "必须为0"
+    },
+    "answer": "B",
+    "explanation": "实序列满足X[N−k]=X*[k]；共轭改变虚部符号，不是直接复制原复数。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。"
+  },
+  {
+    "id": "ug-as-signals-systems-circular-fold",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t19",
+    "topic_source": "manual",
+    "chapter": "圆周卷积与补零",
+    "source_chapter": "圆周卷积与补零",
+    "knowledge_point": "LTI系统与卷积",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "x=[1,1,1]、h=[1,1]，下标从0开始且范围外为0。求线性卷积；再将h补0到3点，求3点圆周卷积并说明折回。",
+    "options": {},
+    "answer": "线性卷积为[1,2,2,1]。N3圆周卷积为[2,2,2]，因为线性尾项下标3的1按模3加回下标0，使原1变2。",
+    "explanation": "长度不足会将尾项加回，不是简单截断；也可逐项模3计算验证。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "线性1 2 2 1",
+        "points": 1
+      },
+      {
+        "criterion": "圆周2 2 2",
+        "points": 1
+      },
+      {
+        "criterion": "解释n3折回n0",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-circular-padding",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t19",
+    "topic_source": "manual",
+    "chapter": "圆周卷积与补零",
+    "source_chapter": "圆周卷积与补零",
+    "knowledge_point": "LTI系统与卷积",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "长度分别为5和4的两个有限序列，要用DFT逐点乘求完整线性卷积。N=7是否足够？最小N是多少？若采用本节二基FFT应怎样选？",
+    "options": {},
+    "answer": "线性长度为5+4−1=8，N7不足会折回；最小N8。二基FFT可选8，也可选更大的2次幂，但两输入要补到同样长度，结果取有效8项。",
+    "explanation": "补零长度由线性输出支撑决定，不能错写为5+4，也不能把FFT快等同不会折回。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "最小8且7不足",
+        "points": 1
+      },
+      {
+        "criterion": "同长度补零",
+        "points": 1
+      },
+      {
+        "criterion": "二基可选8或更大2次幂",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-fft-layer",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t20",
+    "topic_source": "manual",
+    "chapter": "FFT偶奇分解与蝶形",
+    "source_chapter": "FFT偶奇分解与蝶形",
+    "knowledge_point": "频域分析",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "4点FFT偶奇分解后，E=[3,−1]、O=[2,4]。按W₄=−j，算X[0]至X[3]，写出k=1奇支路加权值。",
+    "options": {},
+    "answer": "k0加权2，X0=3+2=5、X2=3−2=1；k1加权(−j)×4=−4j，X1=−1−4j、X3=−1+4j。按索引X=[5,−1−4j,1,−1+4j]。",
+    "explanation": "先乘旋转权重再和差，下半输出索引加N/2；不能把E/O直接交错当最终DFT。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "k1权重乘积−4j",
+        "points": 1
+      },
+      {
+        "criterion": "和差符号正确",
+        "points": 1
+      },
+      {
+        "criterion": "按索引给四结果",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-fft-boundary",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c08",
+    "topic_id": "signals-systems.t20",
+    "topic_source": "manual",
+    "chapter": "FFT偶奇分解与蝶形",
+    "source_chapter": "FFT偶奇分解与蝶形",
+    "knowledge_point": "频域分析",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "判断并说明：①FFT与DFT给出两种不同定义的频谱；②因为本节二基FFT用2的幂长度，所以所有DFT都必须用2的幂长度。",
+    "options": {},
+    "answer": "两项均错。FFT是计算同一DFT的快速分治算法，归一化/指数约定一致时结果相同；2的幂是本节二基算法的长度条件，不是DFT定义条件。",
+    "explanation": "考查算法与变换定义、局部条件与一般条件的区别。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "FFT计算同一DFT",
+        "points": 1
+      },
+      {
+        "criterion": "条件一致数学结果相同",
+        "points": 1
+      },
+      {
+        "criterion": "区分二基长度与一般DFT",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-difference-initial",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c05",
+    "topic_id": "signals-systems.t21",
+    "topic_source": "manual",
+    "chapter": "差分方程的非零初值响应",
+    "source_chapter": "差分方程的非零初值响应",
+    "knowledge_point": "拉普拉斯与Z变换",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "n≥0时y[n]=0.5y[n−1]+x[n]，已知y[−1]=−2，x[n]=δ[n]。求y[0]、y[1]、y[2]，并解释为何不能只把总响应写成H(z)X(z)。",
+    "options": {},
+    "answer": "y0=0.5×(−2)+1=0，之后输入为0，y1=y2=0。零输入为−(0.5)^n，零状态为(0.5)^n，两者相消；仅HX会漏初态项并错误得到非零衰减。",
+    "explanation": "与讲义单位阶跃不同，本题以初态和单位样值相消检验总响应。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "三点均0",
+        "points": 1
+      },
+      {
+        "criterion": "说明非零初态必须单列",
+        "points": 1
+      },
+      {
+        "criterion": "给零输入/零状态相消理由",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-difference-decomposition",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c05",
+    "topic_id": "signals-systems.t21",
+    "topic_source": "manual",
+    "chapter": "差分方程的非零初值响应",
+    "source_chapter": "差分方程的非零初值响应",
+    "knowledge_point": "拉普拉斯与Z变换",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "对n≥0的同一系统y[n]=0.5y[n−1]+x[n]，给定y[−1]=6。令Y₊、X₊为从0开始的单边Z变换，写出含初态的变换方程及Y₊表达式，不要求反变换。",
+    "options": {},
+    "answer": "Σy[n−1]z⁻ⁿ=6+z⁻¹Y₊；Y₊=0.5(6+z⁻¹Y₊)+X₊，所以(1−0.5z⁻¹)Y₊=X₊+3，Y₊=H X₊+3/(1−0.5z⁻¹)。",
+    "explanation": "首项y[−1]在延迟变换中出现，还要经过系数0.5，不能把6不加权直接塞进分子。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "移位项6+z⁻¹Y正确",
+        "points": 1
+      },
+      {
+        "criterion": "初态经0.5为3",
+        "points": 1
+      },
+      {
+        "criterion": "总Y分为HX与初态项",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-dtft-phase",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c05",
+    "topic_id": "signals-systems.t22",
+    "topic_source": "manual",
+    "chapter": "离散频率响应的幅相与零点",
+    "source_chapter": "离散频率响应的幅相与零点",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "H(e^jΩ)=1+e^(−jΩ)。求Ω=3π/2时的复数值、幅值及主值相位。为什么不能在此直接用相位−Ω/2？",
+    "options": {},
+    "answer": "e^(−j3π/2)=j，所以H=1+j，幅值√2、主值相位π/4。因cos(3π/4)<0，因式分解中的负号还带π相位变化，−3π/4不能直接当H相位。",
+    "explanation": "考查主区间外的余弦符号，而不是只背主区间的线性相位式。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "H为1+j",
+        "points": 1
+      },
+      {
+        "criterion": "模√2相位π4",
+        "points": 1
+      },
+      {
+        "criterion": "解释负余弦的π修正",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-dtft-zero",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c05",
+    "topic_id": "signals-systems.t22",
+    "topic_source": "manual",
+    "chapter": "离散频率响应的幅相与零点",
+    "source_chapter": "离散频率响应的幅相与零点",
+    "knowledge_point": "频域分析",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "两点求和器H(e^jΩ)=1+e^(−jΩ)，输入为所有整数n上定义的x[n]=(−1)^n。输出是什么？能否把Ω=π零点处的相位固定说成0？",
+    "options": {},
+    "answer": "y[n]=(−1)^n+(−1)^(n−1)=0，对所有n均为0。H在Ωπ为0，幅值0而相位不定义，不能宣称唯一相位0。",
+    "explanation": "题目明确完整稳态序列，避开有限起始截断的首项瞬态；零点与相位须分别判断。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "交替项相消输出0",
+        "points": 1
+      },
+      {
+        "criterion": "指出Ωπ零点",
+        "points": 1
+      },
+      {
+        "criterion": "零幅值相位不定义",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-block-delay",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c05",
+    "topic_id": "signals-systems.t23",
+    "topic_source": "manual",
+    "chapter": "延迟加法框图读方程",
+    "source_chapter": "延迟加法框图读方程",
+    "knowledge_point": "拉普拉斯与Z变换",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "框图将输出y分出一支，先延迟一拍再乘0.25，以正号加回输入x。写差分方程与零状态H(z)。若y[−1]=4、x[0]=2、x[1]=0，求头两拍输出。",
+    "options": {},
+    "answer": "y[n]=x[n]+0.25y[n−1]；H=1/(1−0.25z⁻¹)。y0=2+0.25×4=3，y1=0+0.25×3=0.75。",
+    "explanation": "先认被延迟的是输出，再列反馈方程；H是零状态关系，逐拍求输出仍用题给初态。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "输出延迟方程正确",
+        "points": 1
+      },
+      {
+        "criterion": "分母1−0.25z⁻¹",
+        "points": 1
+      },
+      {
+        "criterion": "头两拍3和0.75",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-block-feedforward",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c05",
+    "topic_id": "signals-systems.t23",
+    "topic_source": "manual",
+    "chapter": "延迟加法框图读方程",
+    "source_chapter": "延迟加法框图读方程",
+    "knowledge_point": "拉普拉斯与Z变换",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "把本课图中的延迟和0.5增益改接到输入x的分支，再与当前x相加，输出不再回接。写方程、H(z)及零状态单位样值响应前三项，说明与原反馈图有何不同。",
+    "options": {},
+    "answer": "y[n]=x[n]+0.5x[n−1]；H=1+0.5z⁻¹，h=[1,0.5,0]（其后0）。这是有限两点前馈FIR，没有输出递归；原图y前拍反馈会形成递归分母和衰减尾巴。",
+    "explanation": "改变接线对象即改变系统，不是只移动画布上的方块位置。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "输入延迟方程及H",
+        "points": 1
+      },
+      {
+        "criterion": "响应1 .5 0",
+        "points": 1
+      },
+      {
+        "criterion": "区分FIR与输出递归",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-inner-orthogonal",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c04",
+    "topic_id": "signals-systems.t24",
+    "topic_source": "manual",
+    "chapter": "信号内积与正交",
+    "source_chapter": "信号内积与正交",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "只在n=0、1观察x=[1,2]、h=[2,−1]。按本课内积约定计算内积及两者能量；若只观察n=0，还能说正交吗？",
+    "options": {},
+    "answer": "内积1×2+2×(−1)=0；x能量5、h能量5。只观察n0内积为2，不再正交。零内积不说明两个信号都为零。",
+    "explanation": "观察区间是正交结论的条件，不能只看原向量长度或点乘的单项。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "内积0",
+        "points": 1
+      },
+      {
+        "criterion": "能量均5",
+        "points": 1
+      },
+      {
+        "criterion": "缩短区间不正交",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-inner-conjugate",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c04",
+    "topic_id": "signals-systems.t24",
+    "topic_source": "manual",
+    "chapter": "信号内积与正交",
+    "source_chapter": "信号内积与正交",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "在n=0、1取x=[1,j]、h=[j,1]。按〈x,h〉=Σx[n]h*[n]求内积，并求x的自内积；若忘记共轭会怎样？",
+    "options": {},
+    "answer": "〈x,h〉=1×(−j)+j×1=0；〈x,x〉=1+j(−j)=2。忘记h共轭会把两信号内积算为2j，忘记自内积共轭会算成0，均错误。",
+    "explanation": "复数情形必须按明确共轭约定，不能沿用实数点乘的外观。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "h共轭为−j与1",
+        "points": 1
+      },
+      {
+        "criterion": "内积0",
+        "points": 1
+      },
+      {
+        "criterion": "自内积2及遗漏共轭后果",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-correlation-lag",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c04",
+    "topic_id": "signals-systems.t25",
+    "topic_source": "manual",
+    "chapter": "相关与延迟匹配",
+    "source_chapter": "相关与延迟匹配",
+    "knowledge_point": "频域分析",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "约定r_xh[l]=Σx[n]h*[n−l]且范围外补0。x=[0,0,1,2]、h=[1,2]，从0开始编号。计算l=0、1、2、3的相关，说明匹配延迟。",
+    "options": {},
+    "answer": "四值为0、2、5、2。l2时x2×1+x3×2=1+4=5为峰，模板向右移2拍与观测对齐。",
+    "explanation": "下标在本题是线性零延拓，不按模4回绕。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "四相关值0 2 5 2",
+        "points": 1
+      },
+      {
+        "criterion": "峰在2",
+        "points": 1
+      },
+      {
+        "criterion": "解释模板右移2拍",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-correlation-convention",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c04",
+    "topic_id": "signals-systems.t25",
+    "topic_source": "manual",
+    "chapter": "相关与延迟匹配",
+    "source_chapter": "相关与延迟匹配",
+    "knowledge_point": "频域分析",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "上题同一相关定义下，交换观测x和模板h，匹配峰的滞后怎样变化？若不交换而把模板变成2h，原始峰值由5变10，能否仅据此说匹配更好？",
+    "options": {},
+    "answer": "交换后r_hx[l]=r_xh*[−l]，峰由+2变−2；把模板乘2会让原始相关值乘2，峰10仅是尺度变化，不能单凭未归一化峰值断言更相似。",
+    "explanation": "区分滞后约定和幅值尺度，避免只记一个正号或拿不同模板峰值直接比较。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "交换峰到−2",
+        "points": 1
+      },
+      {
+        "criterion": "模板2倍相关2倍",
+        "points": 1
+      },
+      {
+        "criterion": "不能凭未归一峰值比较相似度",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-parseval-energy",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c07",
+    "topic_id": "signals-systems.t26",
+    "topic_source": "manual",
+    "chapter": "Parseval能量核对",
+    "source_chapter": "Parseval能量核对",
+    "knowledge_point": "频域分析",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "按本课前向无系数、逆向1/N约定，一个4点序列的DFT为X=[2,0,2,0]。用Parseval求时域能量，再用IDFT恢复序列核对。",
+    "options": {},
+    "answer": "频域模平方和4+0+4+0=8，除N4得到能量2。IDFT得x=[1,0,1,0]，时域能量1+0+1+0=2。",
+    "explanation": "不是把8直接当能量；同一约定的正逆和能量等式需一致。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "模平方和8",
+        "points": 1
+      },
+      {
+        "criterion": "除4得到2",
+        "points": 1
+      },
+      {
+        "criterion": "IDFT序列1 0 1 0并时域核验",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  },
+  {
+    "id": "ug-as-signals-systems-parseval-normalization",
+    "source": "本科课程补齐原创",
+    "subject": "信号与系统",
+    "course_id": "signals-systems",
+    "chapter_id": "signals-systems.c07",
+    "topic_id": "signals-systems.t26",
+    "topic_source": "manual",
+    "chapter": "Parseval能量核对",
+    "source_chapter": "Parseval能量核对",
+    "knowledge_point": "频域分析",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "已知有限能量离散信号的DTFT满足|X(e^jΩ)|²=5+4cosΩ。按本课约定，用−π到π积分求能量。这里应除2π还是随便取某个DFT长度N？",
+    "options": {},
+    "answer": "E=(1/2π)∫[−π,π](5+4cosΩ)dΩ=5，因cos在完整周期积分0。这里是连续频率DTFT积分，除2π；不能没有定义N点DFT就改除某个N。",
+    "explanation": "考查DTFT积分与DFT有限求和的归一化边界。",
+    "adaptation_note": "按本科最小学习任务原创，区分过程、边界或情境；非历年真题，不只改讲义数字。",
+    "rubric": [
+      {
+        "criterion": "使用DTFT的1/2π因子",
+        "points": 1
+      },
+      {
+        "criterion": "cos周期积分0",
+        "points": 1
+      },
+      {
+        "criterion": "能量5且不混N点求和",
+        "points": 1
+      }
+    ],
+    "max_score": 3
+  }
+]

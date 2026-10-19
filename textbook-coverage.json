@@ -448,11 +448,7 @@
           "finding": "知识域缺失"
         }
       ],
-      "open_findings": [
-        "多级反馈队列规则与轨迹",
-        "两任务实时期限/EDF小例",
-        "死锁检测等待图例"
-      ],
+      "open_findings": [],
       "boundary": "12→7中前9章大多有跨章归并，不能一律报缺章。官方出版社正文简介可核验末三章范围；末三章内容应低深度补齐，不要求现代内核源码。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
       "teaching_revision_report": "audit_reports/其他课程重构_核心组_2026-10-16.json",
@@ -479,12 +475,8 @@
       "undergraduate_review": {
         "course": "操作系统原理",
         "group": "计算机组",
-        "judgment": "传统资源管理主干多数已达；不能把NUMA/专门多媒体调度与普通调度中尚缺的反馈队列混为一组。",
-        "required_units": [
-          "多级反馈队列规则与轨迹",
-          "两任务实时期限/EDF小例",
-          "死锁检测等待图例"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "NUMA一句定义与本地/远端取舍"
         ],
@@ -496,8 +488,54 @@
         ],
         "evidence_pending": [],
         "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "多级反馈队列规则与轨迹",
+          "两任务实时期限/EDF小例",
+          "死锁检测等待图例"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "operating-system.t22",
+            "chapter_id": "operating-system.c03",
+            "title": "多级反馈队列的升降与抢占",
+            "question_ids": [
+              "gap-ug-comp-20261019-02-a",
+              "gap-ug-comp-20261019-02-b"
+            ]
+          },
+          {
+            "topic_id": "operating-system.t23",
+            "chapter_id": "operating-system.c03",
+            "title": "按截止期执行EDF调度",
+            "question_ids": [
+              "gap-ug-comp-20261019-03-a",
+              "gap-ug-comp-20261019-03-b"
+            ]
+          },
+          {
+            "topic_id": "operating-system.t24",
+            "chapter_id": "operating-system.c04",
+            "title": "等待图中的死锁检测",
+            "question_ids": [
+              "gap-ug-comp-20261019-04-a",
+              "gap-ug-comp-20261019-04-b"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "多级反馈队列规则与轨迹",
+        "两任务实时期限/EDF小例",
+        "死锁检测等待图例"
+      ]
     },
     {
       "course": "数据库技术",
@@ -598,9 +636,7 @@
           "finding": "跨课部分提及但数据库比较缺失"
         }
       ],
-      "open_findings": [
-        "过程化SQL/游标的一次简明结构（可伪码）"
-      ],
+      "open_findings": [],
       "boundary": "",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
       "teaching_revision_report": "audit_reports/其他课程重构_核心组_2026-10-16.json",
@@ -629,10 +665,8 @@
       "undergraduate_review": {
         "course": "数据库技术",
         "group": "计算机组",
-        "judgment": "关系数据库基础与典型机制已教，不再按18章一一要求产品级完成；第四篇仍学，深度为数据组织、基本流转和选型。",
-        "required_units": [
-          "过程化SQL/游标的一次简明结构（可伪码）"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "事实/维度/粒度与三行汇总",
           "非关系数据形状与写读/筛选小例"
@@ -645,8 +679,68 @@
         ],
         "evidence_pending": [],
         "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "过程化SQL/游标的一次简明结构（可伪码）"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "database.t23",
+            "chapter_id": "database.c05",
+            "title": "存储过程的一次参数调用",
+            "question_ids": [
+              "gap-ug-comp-20261019-09-a",
+              "gap-ug-comp-20261019-09-b"
+            ]
+          },
+          {
+            "topic_id": "database.t24",
+            "chapter_id": "database.c05",
+            "title": "游标的逐行读取与关闭",
+            "question_ids": [
+              "gap-ug-comp-20261019-10-a",
+              "gap-ug-comp-20261019-10-b"
+            ]
+          },
+          {
+            "topic_id": "database.t25",
+            "chapter_id": "database.c09",
+            "title": "事实表的粒度与维度汇总",
+            "question_ids": [
+              "gap-ug-comp-20261019-11-a",
+              "gap-ug-comp-20261019-11-b"
+            ]
+          },
+          {
+            "topic_id": "database.t26",
+            "chapter_id": "database.c01",
+            "title": "键值数据的写入与读取",
+            "question_ids": [
+              "gap-ug-comp-20261019-12-a",
+              "gap-ug-comp-20261019-12-b"
+            ]
+          },
+          {
+            "topic_id": "database.t27",
+            "chapter_id": "database.c01",
+            "title": "文档数据的字段筛选",
+            "question_ids": [
+              "gap-ug-comp-20261019-13-a",
+              "gap-ug-comp-20261019-13-b"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "过程化SQL/游标的一次简明结构（可伪码）"
+      ]
     },
     {
       "course": "数据结构与算法",
@@ -717,10 +811,7 @@
           "finding": "整章知识域缺失"
         }
       ],
-      "open_findings": [
-        "B树删除借位/合并小例",
-        "中序建线索与前驱/后继小例"
-      ],
+      "open_findings": [],
       "boundary": "广义表长度/深度/表头表尾实际已有例子，未误报整块缺失；动态规划目前诚实标为拓展识别，本轮不把高级DP实现当教材必修缺口。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
       "teaching_revision_report": "audit_reports/其他课程重构_核心组_2026-10-16.json",
@@ -749,11 +840,8 @@
       "undergraduate_review": {
         "course": "数据结构与算法",
         "group": "计算机组",
-        "judgment": "主体过程比旧目录报告充实；B树基本删除仍不能降为后续工程，而B+全部更新代码与非中序所有实现不能捆绑为必补。",
-        "required_units": [
-          "B树删除借位/合并小例",
-          "中序建线索与前驱/后继小例"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "非中序线索次序/方向限制",
           "败者树选段首与置换选择一次小状态"
@@ -766,8 +854,61 @@
         ],
         "evidence_pending": [],
         "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "B树删除借位/合并小例",
+          "中序建线索与前驱/后继小例"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "data-structures.t45",
+            "chapter_id": "data-structures.c04",
+            "title": "B树删除的借位与合并",
+            "question_ids": [
+              "gap-ug-comp-20261019-05-a",
+              "gap-ug-comp-20261019-05-b"
+            ]
+          },
+          {
+            "topic_id": "data-structures.t46",
+            "chapter_id": "data-structures.c04",
+            "title": "中序线索的建立与遍历",
+            "question_ids": [
+              "gap-ug-comp-20261019-06-a",
+              "gap-ug-comp-20261019-06-b"
+            ]
+          },
+          {
+            "topic_id": "data-structures.t47",
+            "chapter_id": "data-structures.c08",
+            "title": "败者树如何更新归并段首",
+            "question_ids": [
+              "gap-ug-comp-20261019-07-a",
+              "gap-ug-comp-20261019-07-b"
+            ]
+          },
+          {
+            "topic_id": "data-structures.t48",
+            "chapter_id": "data-structures.c08",
+            "title": "置换选择中的冻结与新段",
+            "question_ids": [
+              "gap-ug-comp-20261019-08-a",
+              "gap-ug-comp-20261019-08-b"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "B树删除借位/合并小例",
+        "中序建线索与前驱/后继小例"
+      ]
     },
     {
       "course": "C与Python程序设计",
@@ -869,7 +1010,7 @@
       "undergraduate_review": {
         "course": "C与Python程序设计",
         "group": "计算机组",
-        "judgment": "已有大量短代码与状态例，主干不因未写复杂库而判缺；教材与学校对某些高级语法深度不同，分别记录。",
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
         "required_units": [],
         "recognition_support": [],
         "optional_practice": [],
@@ -880,8 +1021,37 @@
         ],
         "evidence_pending": [],
         "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
-        "status": "no_new_core_gap_confirmed"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [],
+        "filled_units": [
+          {
+            "topic_id": "programming.t23",
+            "chapter_id": "programming.c03",
+            "title": "无符号数的位运算",
+            "question_ids": [
+              "gap-ug-comp-20261019-14-a",
+              "gap-ug-comp-20261019-14-b"
+            ]
+          },
+          {
+            "topic_id": "programming.t24",
+            "chapter_id": "programming.c09",
+            "title": "链表结点的改链与释放",
+            "question_ids": [
+              "gap-ug-comp-20261019-15-a",
+              "gap-ug-comp-20261019-15-b"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": []
     },
     {
       "course": "计算机组成原理",
@@ -948,9 +1118,7 @@
         "audit_reports/组成原理_术语修复新生复核_2026-10-16.json",
         "audit_reports/组成原理_术语修复独立复核_2026-10-16.json"
       ],
-      "open_findings": [
-        "先行进位2位展开与一个数值核验"
-      ],
+      "open_findings": [],
       "note": "本轮新增术语/分类/对比任务完成代表验证，发现的同义词判题问题已修后实测；其他15课仍保留外部覆盖缺口。",
       "role_experience_reports": [
         "audit_reports/组成原理_角色体验_零基础学生_2026-10-16.json",
@@ -963,10 +1131,8 @@
       "undergraduate_review": {
         "course": "计算机组成原理",
         "group": "计算机组",
-        "judgment": "本科主干已有大量可执行例；维持已接受主干，不能用本轮未再做实验宣称整书穷尽。",
-        "required_units": [
-          "先行进位2位展开与一个数值核验"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [],
         "optional_practice": [],
         "not_required": [
@@ -976,8 +1142,32 @@
         ],
         "evidence_pending": [],
         "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "先行进位2位展开与一个数值核验"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "computer-organization.t43",
+            "chapter_id": "computer-organization.c02",
+            "title": "先行进位的两位展开",
+            "question_ids": [
+              "gap-ug-comp-20261019-01-a",
+              "gap-ug-comp-20261019-01-b"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "先行进位2位展开与一个数值核验"
+      ]
     },
     {
       "course": "计算机网络",
@@ -1033,9 +1223,7 @@
           "finding": "章级存在；不能据此判断节级完整"
         }
       ],
-      "open_findings": [
-        "OSPF从邻居/链路状态到SPF的基础链与变化小例"
-      ],
+      "open_findings": [],
       "boundary": "9个大章并未缺章；属于章内教材节漏项。IPv4分片已存在正确数值例题，不能误报缺失。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
       "teaching_revision_report": "audit_reports/其他课程重构_应用组_2026-10-16.json",
@@ -1063,10 +1251,8 @@
       "undergraduate_review": {
         "course": "计算机网络",
         "group": "计算机组",
-        "judgment": "已有9章不等于每节完整，也不能把未实现所有工程配置当共同本科不足；主要协议已给过程。",
-        "required_units": [
-          "OSPF从邻居/链路状态到SPF的基础链与变化小例"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "MPLS三步标签流转",
           "SDN一次规则/未命中动作"
@@ -1079,8 +1265,50 @@
         ],
         "evidence_pending": [],
         "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "OSPF从邻居/链路状态到SPF的基础链与变化小例"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "net.ospf-flow",
+            "chapter_id": "net-04",
+            "title": "OSPF从链路状态到路由表",
+            "question_ids": [
+              "gap-ug-comp-20261019-16-a",
+              "gap-ug-comp-20261019-16-b"
+            ]
+          },
+          {
+            "topic_id": "net.mpls-label-flow",
+            "chapter_id": "net-04",
+            "title": "MPLS标签的压入交换与弹出",
+            "question_ids": [
+              "gap-ug-comp-20261019-17-a",
+              "gap-ug-comp-20261019-17-b"
+            ]
+          },
+          {
+            "topic_id": "net.sdn-rule-flow",
+            "chapter_id": "net-04",
+            "title": "SDN规则未命中后的处理",
+            "question_ids": [
+              "gap-ug-comp-20261019-18-a",
+              "gap-ug-comp-20261019-18-b"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "OSPF从邻居/链路状态到SPF的基础链与变化小例"
+      ]
     },
     {
       "course": "电路分析与电工技术",
@@ -1183,9 +1411,8 @@
         }
       ],
       "open_findings": [
-        "共同核心：二阶RLC由电路建模、两初值、阻尼与一条典型响应；不是只补一个阻尼名词。",
-        "主教材低深度补强：互感M及同名端正负列式/同反助一例；二端口方向与一种参数及简单电阻网络。",
-        "普通任务补强：RLC谐振Q/BW/曲线；非正弦分谐波响应；s域元件含初始量的简单例（可跨课复用变换）。"
+        "本复合课理论/电工应用各占多少课时尚未指定，不能由校外某门课学时推定本站篇幅。",
+        "互感、二端口缺基础已确认；非线性/传输线在所选全书正式域保留，但后续若采用明确课程范围需单列深度，不自动标高级选修。"
       ],
       "boundary": "主教材承担电路理论完整主线；电机、控制、安全测量须明确补充教材。工程可靠性可作附录，不得占用主教材缺失知识域的章节。教材星号节可降低到识别与用途，非星号共同核心不能整章静默删除。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
@@ -1201,12 +1428,8 @@
       "undergraduate_review": {
         "course": "电路分析与电工技术",
         "group": "电子组",
-        "judgment": "直流/一阶/正弦基础已有多项普通本科算例；尚不能判为理论电路主干已足够。优先缺口是二阶RLC和若干正式知识域的最小模型/常规短例，而非高级工程设计。",
-        "required_units": [
-          "共同核心：二阶RLC由电路建模、两初值、阻尼与一条典型响应；不是只补一个阻尼名词。",
-          "主教材低深度补强：互感M及同名端正负列式/同反助一例；二端口方向与一种参数及简单电阻网络。",
-          "普通任务补强：RLC谐振Q/BW/曲线；非正弦分谐波响应；s域元件含初始量的简单例（可跨课复用变换）。"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "矩阵/状态给两节点或两储能变量的基本组织；不必重排整个导航。",
           "非线性负载线/分段模型可明确链接模电已有算例；传输线保留延时、Z0/匹配和一次反射短例。",
@@ -1222,8 +1445,90 @@
           "互感、二端口缺基础已确认；非线性/传输线在所选全书正式域保留，但后续若采用明确课程范围需单列深度，不自动标高级选修。"
         ],
         "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "共同核心：二阶RLC由电路建模、两初值、阻尼与一条典型响应；不是只补一个阻尼名词。",
+          "主教材低深度补强：互感M及同名端正负列式/同反助一例；二端口方向与一种参数及简单电阻网络。",
+          "普通任务补强：RLC谐振Q/BW/曲线；非正弦分谐波响应；s域元件含初始量的简单例（可跨课复用变换）。"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "circuit.t16",
+            "chapter_id": "circuit.c07",
+            "title": "二阶RLC的初值与响应",
+            "question_ids": [
+              "gap-ug26-circuit-16-1",
+              "gap-ug26-circuit-16-2"
+            ]
+          },
+          {
+            "topic_id": "circuit.t17",
+            "chapter_id": "circuit.c04",
+            "title": "互感同名端与串联等效",
+            "question_ids": [
+              "gap-ug26-circuit-17-1",
+              "gap-ug26-circuit-17-2"
+            ]
+          },
+          {
+            "topic_id": "circuit.t18",
+            "chapter_id": "circuit.c03",
+            "title": "二端口Z参数与开路条件",
+            "question_ids": [
+              "gap-ug26-circuit-18-1",
+              "gap-ug26-circuit-18-2"
+            ]
+          },
+          {
+            "topic_id": "circuit.t19",
+            "chapter_id": "circuit.c05",
+            "title": "谐振、品质因数与带宽",
+            "question_ids": [
+              "gap-ug26-circuit-19-1",
+              "gap-ug26-circuit-19-2"
+            ]
+          },
+          {
+            "topic_id": "circuit.t20",
+            "chapter_id": "circuit.c05",
+            "title": "非正弦分量的有效值与功率",
+            "question_ids": [
+              "gap-ug26-circuit-20-1",
+              "gap-ug26-circuit-20-2"
+            ]
+          },
+          {
+            "topic_id": "circuit.t21",
+            "chapter_id": "circuit.c07",
+            "title": "RC复频域模型保留初值",
+            "question_ids": [
+              "gap-ug26-circuit-21-1",
+              "gap-ug26-circuit-21-2"
+            ]
+          },
+          {
+            "topic_id": "circuit.t22",
+            "chapter_id": "circuit.c01",
+            "title": "传输延时与端接反射",
+            "question_ids": [
+              "gap-ug26-circuit-22-1",
+              "gap-ug26-circuit-22-2"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "共同核心：二阶RLC由电路建模、两初值、阻尼与一条典型响应；不是只补一个阻尼名词。",
+        "主教材低深度补强：互感M及同名端正负列式/同反助一例；二端口方向与一种参数及简单电阻网络。",
+        "普通任务补强：RLC谐振Q/BW/曲线；非正弦分谐波响应；s域元件含初始量的简单例（可跨课复用变换）。"
+      ]
     },
     {
       "course": "模拟电子技术",
@@ -1290,10 +1595,7 @@
         }
       ],
       "open_findings": [
-        "从实际基本放大图到DC/AC等效、Q、Au/Ri/Ro及带源/负载结果的一体普通题。",
-        "对称差分对从尾电流到Q/差模单端或双端增益的一题，替代只给Ad/Ac代数。",
-        "耦合电容所见等效R→一个fL与主导高频等效→fH的短过程；不是全极点计算。",
-        "OCL半周通路与Po/Pdc/η相接的一例；稳压分压反馈定输出的一例。"
+        "具体BJT/FET小信号参数口径可选rbe/β或gm模型，但须全程一致；无需把多套模型都推完。"
       ],
       "boundary": "允许绪论并入器件、频响并入多级放大；11个教材章合并成8章本身不是缺章证据，关键是合并后的核心任务是否保留。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
@@ -1309,13 +1611,8 @@
       "undergraduate_review": {
         "course": "模拟电子技术",
         "group": "电子组",
-        "judgment": "偏置、共射/共源电压增益、理想运放和基本波形/电源已有真实算例；最主要差距是常规电路的综合分析，不能再写“功放只机制、反馈无实电路、运算子域全缺”。",
-        "required_units": [
-          "从实际基本放大图到DC/AC等效、Q、Au/Ri/Ro及带源/负载结果的一体普通题。",
-          "对称差分对从尾电流到Q/差模单端或双端增益的一题，替代只给Ad/Ac代数。",
-          "耦合电容所见等效R→一个fL与主导高频等效→fH的短过程；不是全极点计算。",
-          "OCL半周通路与Po/Pdc/η相接的一例；稳压分压反馈定输出的一例。"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "保留当前最简电流镜及余量条件，不扩出各种复杂镜。",
           "高/带通、限幅/钳位、迟滞由电阻定阈值等若列入常规题，应给最小拓扑入口；不说现有运放章全缺。"
@@ -1329,8 +1626,74 @@
           "具体BJT/FET小信号参数口径可选rbe/β或gm模型，但须全程一致；无需把多套模型都推完。"
         ],
         "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "从实际基本放大图到DC/AC等效、Q、Au/Ri/Ro及带源/负载结果的一体普通题。",
+          "对称差分对从尾电流到Q/差模单端或双端增益的一题，替代只给Ad/Ac代数。",
+          "耦合电容所见等效R→一个fL与主导高频等效→fH的短过程；不是全极点计算。",
+          "OCL半周通路与Po/Pdc/η相接的一例；稳压分压反馈定输出的一例。"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "analog-electronics.t23",
+            "chapter_id": "analog-electronics.c03",
+            "title": "共射电路的直流与交流分析",
+            "question_ids": [
+              "gap-ug-elec-analog-electronics-t23-01",
+              "gap-ug-elec-analog-electronics-t23-02"
+            ]
+          },
+          {
+            "topic_id": "analog-electronics.t24",
+            "chapter_id": "analog-electronics.c04",
+            "title": "差分对的尾电流与增益",
+            "question_ids": [
+              "gap-ug-elec-analog-electronics-t24-01",
+              "gap-ug-elec-analog-electronics-t24-02"
+            ]
+          },
+          {
+            "topic_id": "analog-electronics.t25",
+            "chapter_id": "analog-electronics.c04",
+            "title": "从电容求放大器截止频率",
+            "question_ids": [
+              "gap-ug-elec-analog-electronics-t25-01",
+              "gap-ug-elec-analog-electronics-t25-02"
+            ]
+          },
+          {
+            "topic_id": "analog-electronics.t26",
+            "chapter_id": "analog-electronics.c07",
+            "title": "互补功放的半周与效率",
+            "question_ids": [
+              "gap-ug-elec-analog-electronics-t26-01",
+              "gap-ug-elec-analog-electronics-t26-02"
+            ]
+          },
+          {
+            "topic_id": "analog-electronics.t27",
+            "chapter_id": "analog-electronics.c08",
+            "title": "稳压反馈分压与输出电压",
+            "question_ids": [
+              "gap-ug-elec-analog-electronics-t27-01",
+              "gap-ug-elec-analog-electronics-t27-02"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "从实际基本放大图到DC/AC等效、Q、Au/Ri/Ro及带源/负载结果的一体普通题。",
+        "对称差分对从尾电流到Q/差模单端或双端增益的一题，替代只给Ad/Ac代数。",
+        "耦合电容所见等效R→一个fL与主导高频等效→fH的短过程；不是全极点计算。",
+        "OCL半周通路与Po/Pdc/η相接的一例；稳压分压反馈定输出的一例。"
+      ]
     },
     {
       "course": "数字电子技术",
@@ -1382,8 +1745,7 @@
         }
       ],
       "open_findings": [
-        "数模转换常规任务支撑不足：权电阻或R-2R网络选一种，讲位权电流相加并算短码输出。",
-        "双积分按两阶段斜率/时间比例的短过程；Flash给并行判档说明。各结构不要求与已有SAR等长。"
+        "数电与独立EDA课分工各校不同，但选定阎石书的PLD/HDL域不应删除；本站不需据此承担独立EDA课所有能力。"
       ],
       "boundary": "门代数分组合并、存储与时序重组可以接受；教材并非没有PLD/HDL。无需做复杂FPGA工程，但基本可编程逻辑、组合/时序描述不能凭空删掉。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
@@ -1399,11 +1761,8 @@
       "undergraduate_review": {
         "course": "数字电子技术",
         "group": "电子组",
-        "judgment": "布尔/卡诺、加法/MUX、时序逐拍、模4激励、容量扩展、555及SAR已可支撑多种常规本科题。仍不能由SAR一例推断所有转换器结构均已教。",
-        "required_units": [
-          "数模转换常规任务支撑不足：权电阻或R-2R网络选一种，讲位权电流相加并算短码输出。",
-          "双积分按两阶段斜率/时间比例的短过程；Flash给并行判档说明。各结构不要求与已有SAR等长。"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "基本PLD/HDL组合与边沿更新描述已存在；补位宽/端口提示即可，不报整域无。",
           "TTL典型级通路、其他门构脉冲作为结构认识，不重教全部器件系列。"
@@ -1419,8 +1778,52 @@
           "数电与独立EDA课分工各校不同，但选定阎石书的PLD/HDL域不应删除；本站不需据此承担独立EDA课所有能力。"
         ],
         "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "数模转换常规任务支撑不足：权电阻或R-2R网络选一种，讲位权电流相加并算短码输出。",
+          "双积分按两阶段斜率/时间比例的短过程；Flash给并行判档说明。各结构不要求与已有SAR等长。"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "digital-electronics.t20",
+            "chapter_id": "digital-electronics.c07",
+            "title": "加权电阻DAC的位权求和",
+            "question_ids": [
+              "gap-ug-elec-digital-electronics-t20-01",
+              "gap-ug-elec-digital-electronics-t20-02"
+            ]
+          },
+          {
+            "topic_id": "digital-electronics.t21",
+            "chapter_id": "digital-electronics.c07",
+            "title": "双积分ADC的两个阶段",
+            "question_ids": [
+              "gap-ug-elec-digital-electronics-t21-01",
+              "gap-ug-elec-digital-electronics-t21-02"
+            ]
+          },
+          {
+            "topic_id": "digital-electronics.t22",
+            "chapter_id": "digital-electronics.c07",
+            "title": "Flash ADC的并行判档",
+            "question_ids": [
+              "gap-ug-elec-digital-electronics-t22-01",
+              "gap-ug-elec-digital-electronics-t22-02"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "数模转换常规任务支撑不足：权电阻或R-2R网络选一种，讲位权电流相加并算短码输出。",
+        "双积分按两阶段斜率/时间比例的短过程；Flash给并行判档说明。各结构不要求与已有SAR等长。"
+      ]
     },
     {
       "course": "通信原理与高频电子线路",
@@ -1534,10 +1937,8 @@
         }
       ],
       "open_findings": [
-        "随机过程/宽平稳/自相关与PSD、Sy=|H|²Sx的最小统计链及带限噪声例。",
-        "完整二元接收：波形→相关/匹配滤波→T抽样→门限→误码事件，并给统一Eb/N0口径的普通Pe计算。",
-        "单音AM频谱功率与FM瞬时频偏联系；基带邻符号ISI短算例。",
-        "高频单元：简化调谐级增益/Q/BW及基本噪声系数；丙类给系数求Pdc/Po/η；一种LC振荡接线判相及一种解调电路过程。"
+        "合并通信原理与高频两门的本站目标课时未给，不可把一门36/48课时大纲直接套成两门合计要求。",
+        "不同课是否把随机过程独立先修差异很大；本站没有独立随机先修，最低基础仍须落地或清楚链接，不能凭课时少删去。"
       ],
       "boundary": "通信原理负责信号/信道/调制/检测/编码/同步；高频教材负责选频、放大、混频、振荡、调制电路、反馈和合成。主教材与补教材可交叉去重，但目前仅在第6章放入高频概述，不能声称两本核心已覆盖。随机过程在站内没有独立先修课，应在本课补最低必要基础。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
@@ -1553,13 +1954,8 @@
       "undergraduate_review": {
         "course": "通信原理与高频电子线路",
         "group": "电子组",
-        "judgment": "已有多项速率、带宽、编码、混频、同步与判决基础，不是概论空壳；随机过程到滤波统计、误码概率、器件单元到性能的常规题支撑仍不足。",
-        "required_units": [
-          "随机过程/宽平稳/自相关与PSD、Sy=|H|²Sx的最小统计链及带限噪声例。",
-          "完整二元接收：波形→相关/匹配滤波→T抽样→门限→误码事件，并给统一Eb/N0口径的普通Pe计算。",
-          "单音AM频谱功率与FM瞬时频偏联系；基带邻符号ISI短算例。",
-          "高频单元：简化调谐级增益/Q/BW及基本噪声系数；丙类给系数求Pdc/Po/η；一种LC振荡接线判相及一种解调电路过程。"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "保留当前QPSK/DPSK、升余弦/眼图、汉明/CRC/TDM/两用户相关，不继续沿旧表说整章无。",
           "DPCM、HDB3、循环/卷积码与伪随机采用最小编码/预测/相关步骤；OFDM以正交/CP与DFT桥接为主。",
@@ -1575,8 +1971,146 @@
           "不同课是否把随机过程独立先修差异很大；本站没有独立随机先修，最低基础仍须落地或清楚链接，不能凭课时少删去。"
         ],
         "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "随机过程/宽平稳/自相关与PSD、Sy=|H|²Sx的最小统计链及带限噪声例。",
+          "完整二元接收：波形→相关/匹配滤波→T抽样→门限→误码事件，并给统一Eb/N0口径的普通Pe计算。",
+          "单音AM频谱功率与FM瞬时频偏联系；基带邻符号ISI短算例。",
+          "高频单元：简化调谐级增益/Q/BW及基本噪声系数；丙类给系数求Pdc/Po/η；一种LC振荡接线判相及一种解调电路过程。"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "communication.t23",
+            "chapter_id": "communication.c02",
+            "title": "平稳噪声的相关与输出功率",
+            "question_ids": [
+              "gap-ug-elec-communication-t23-01",
+              "gap-ug-elec-communication-t23-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t24",
+            "chapter_id": "communication.c08",
+            "title": "二元匹配接收与误码概率",
+            "question_ids": [
+              "gap-ug-elec-communication-t24-01",
+              "gap-ug-elec-communication-t24-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t25",
+            "chapter_id": "communication.c03",
+            "title": "单音AM的频谱与功率",
+            "question_ids": [
+              "gap-ug-elec-communication-t25-01",
+              "gap-ug-elec-communication-t25-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t26",
+            "chapter_id": "communication.c03",
+            "title": "FM的瞬时频率与相位",
+            "question_ids": [
+              "gap-ug-elec-communication-t26-01",
+              "gap-ug-elec-communication-t26-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t27",
+            "chapter_id": "communication.c08",
+            "title": "邻码元干扰的抽样计算",
+            "question_ids": [
+              "gap-ug-elec-communication-t27-01",
+              "gap-ug-elec-communication-t27-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t28",
+            "chapter_id": "communication.c06",
+            "title": "调谐放大级的增益与噪声系数",
+            "question_ids": [
+              "gap-ug-elec-communication-t28-01",
+              "gap-ug-elec-communication-t28-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t29",
+            "chapter_id": "communication.c06",
+            "title": "丙类功放的直流与基波功率",
+            "question_ids": [
+              "gap-ug-elec-communication-t29-01",
+              "gap-ug-elec-communication-t29-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t30",
+            "chapter_id": "communication.c06",
+            "title": "电容三点式振荡的反馈与频率",
+            "question_ids": [
+              "gap-ug-elec-communication-t30-01",
+              "gap-ug-elec-communication-t30-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t31",
+            "chapter_id": "communication.c06",
+            "title": "包络检波的充放电与时间常数",
+            "question_ids": [
+              "gap-ug-elec-communication-t31-01",
+              "gap-ug-elec-communication-t31-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t32",
+            "chapter_id": "communication.c03",
+            "title": "DPCM的重建值预测",
+            "question_ids": [
+              "gap-ug-elec-communication-t32-01",
+              "gap-ug-elec-communication-t32-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t33",
+            "chapter_id": "communication.c08",
+            "title": "HDB3的四零替代",
+            "question_ids": [
+              "gap-ug-elec-communication-t33-01",
+              "gap-ug-elec-communication-t33-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t34",
+            "chapter_id": "communication.c07",
+            "title": "卷积码的移位与输出",
+            "question_ids": [
+              "gap-ug-elec-communication-t34-01",
+              "gap-ug-elec-communication-t34-02"
+            ]
+          },
+          {
+            "topic_id": "communication.t35",
+            "chapter_id": "communication.c03",
+            "title": "伪随机序列的状态与相关",
+            "question_ids": [
+              "gap-ug-elec-communication-t35-01",
+              "gap-ug-elec-communication-t35-02"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_应用视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "随机过程/宽平稳/自相关与PSD、Sy=|H|²Sx的最小统计链及带限噪声例。",
+        "完整二元接收：波形→相关/匹配滤波→T抽样→门限→误码事件，并给统一Eb/N0口径的普通Pe计算。",
+        "单音AM频谱功率与FM瞬时频偏联系；基带邻符号ISI短算例。",
+        "高频单元：简化调谐级增益/Q/BW及基本噪声系数；丙类给系数求Pdc/Po/η；一种LC振荡接线判相及一种解调电路过程。"
+      ]
     },
     {
       "course": "信号与系统",
@@ -1649,9 +2183,8 @@
         }
       ],
       "open_findings": [
-        "选定教材桥接基础：DFT/IDFT、频点、4点正逆短例、圆周与线性卷积及补零。",
-        "离散系统普通综合：非零初值差分、有限序列DTFT幅相、延迟框图到方程。",
-        "正交/内积、相关与Parseval的基础例；已有RC状态/输出例保留。"
+        "全国并无单一信号课边界：DFT/FFT常在DSP主讲，但郑书明确包含，故这里保留基础桥接而不作全域撤销。",
+        "学校大纲未列某节不能证明教材选修；若未来换教材或拆DSP课，再在课程地图明确归属。"
       ],
       "boundary": "按完整本科教材体系降低证明与复杂运算，不把下册整体当选修删去；矩阵指数推导、复杂滤波器综合、根轨迹精细作图可降深度，离散系统/变换/结构与状态基本概念必须保留。",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
@@ -1667,12 +2200,8 @@
       "undergraduate_review": {
         "course": "信号与系统",
         "group": "电子组",
-        "judgment": "连续时域、卷积、Fourier/Laplace、采样以及Z/DTFT入门已有普通例题。DFT小基础仍未教；旧报告将下册多个整域说成“无”与当前文本不符，应修正但不改旧文件。",
-        "required_units": [
-          "选定教材桥接基础：DFT/IDFT、频点、4点正逆短例、圆周与线性卷积及补零。",
-          "离散系统普通综合：非零初值差分、有限序列DTFT幅相、延迟框图到方程。",
-          "正交/内积、相关与Parseval的基础例；已有RC状态/输出例保留。"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "FFT保留同一DFT快速计算、偶奇分解/加权和差及一小步演示；不能只列缩写，但不要求完整多级图。",
           "保留教材DCT/Walsh、滤波家族/指标、根轨迹/Nyquist及可控可观的用途/低阶直观，不删除正式知识地图。",
@@ -1690,8 +2219,117 @@
           "学校大纲未列某节不能证明教材选修；若未来换教材或拆DSP课，再在课程地图明确归属。"
         ],
         "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "选定教材桥接基础：DFT/IDFT、频点、4点正逆短例、圆周与线性卷积及补零。",
+          "离散系统普通综合：非零初值差分、有限序列DTFT幅相、延迟框图到方程。",
+          "正交/内积、相关与Parseval的基础例；已有RC状态/输出例保留。"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "signals-systems.t17",
+            "chapter_id": "signals-systems.c08",
+            "title": "DFT与IDFT的四点计算",
+            "question_ids": [
+              "gap-ug-as-signals-systems-dft-four",
+              "gap-ug-as-signals-systems-idft-scale"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t18",
+            "chapter_id": "signals-systems.c08",
+            "title": "DFT索引与正负频率",
+            "question_ids": [
+              "gap-ug-as-signals-systems-dft-frequency",
+              "gap-ug-as-signals-systems-dft-conjugate"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t19",
+            "chapter_id": "signals-systems.c08",
+            "title": "圆周卷积与补零",
+            "question_ids": [
+              "gap-ug-as-signals-systems-circular-fold",
+              "gap-ug-as-signals-systems-circular-padding"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t20",
+            "chapter_id": "signals-systems.c08",
+            "title": "FFT偶奇分解与蝶形",
+            "question_ids": [
+              "gap-ug-as-signals-systems-fft-layer",
+              "gap-ug-as-signals-systems-fft-boundary"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t21",
+            "chapter_id": "signals-systems.c05",
+            "title": "差分方程的非零初值响应",
+            "question_ids": [
+              "gap-ug-as-signals-systems-difference-initial",
+              "gap-ug-as-signals-systems-difference-decomposition"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t22",
+            "chapter_id": "signals-systems.c05",
+            "title": "离散频率响应的幅相与零点",
+            "question_ids": [
+              "gap-ug-as-signals-systems-dtft-phase",
+              "gap-ug-as-signals-systems-dtft-zero"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t23",
+            "chapter_id": "signals-systems.c05",
+            "title": "延迟加法框图读方程",
+            "question_ids": [
+              "gap-ug-as-signals-systems-block-delay",
+              "gap-ug-as-signals-systems-block-feedforward"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t24",
+            "chapter_id": "signals-systems.c04",
+            "title": "信号内积与正交",
+            "question_ids": [
+              "gap-ug-as-signals-systems-inner-orthogonal",
+              "gap-ug-as-signals-systems-inner-conjugate"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t25",
+            "chapter_id": "signals-systems.c04",
+            "title": "相关与延迟匹配",
+            "question_ids": [
+              "gap-ug-as-signals-systems-correlation-lag",
+              "gap-ug-as-signals-systems-correlation-convention"
+            ]
+          },
+          {
+            "topic_id": "signals-systems.t26",
+            "chapter_id": "signals-systems.c07",
+            "title": "Parseval能量核对",
+            "question_ids": [
+              "gap-ug-as-signals-systems-parseval-energy",
+              "gap-ug-as-signals-systems-parseval-normalization"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "选定教材桥接基础：DFT/IDFT、频点、4点正逆短例、圆周与线性卷积及补零。",
+        "离散系统普通综合：非零初值差分、有限序列DTFT幅相、延迟框图到方程。",
+        "正交/内积、相关与Parseval的基础例；已有RC状态/输出例保留。"
+      ]
     },
     {
       "course": "软件工程",
@@ -1758,8 +2396,12 @@
         }
       ],
       "open_findings": [
-        "CMM/CMMI的用途、成熟层次与基本场景：保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
-        "Jackson面向数据结构设计的最小数据→程序例：知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。"
+        {
+          "item": "人机界面基本原则",
+          "current": "当前有原型、MVC职责及错误返回，但没有单列通用一致性、响应反馈和错误恢复原则。",
+          "evidence": "S12目录6.2及S13详细设计明确列UI设计；第二校可读大纲对这些细则的共同最低深度本轮未充分核定。",
+          "status": "保留待核/小补强候选，不据此宣称专业UI系统未实现即本科不足，不默认为已完整教。"
+        }
       ],
       "boundary": "",
       "teaching_revision": "2026-10-16：按组成原理已接受的表达方式改写本站现有全部章节与重点，保留规范术语，补条件、过程、例题及场景选择；本站教学修订不等于外部教材整书范围验收。",
@@ -1789,11 +2431,8 @@
       "undergraduate_review": {
         "course": "软件工程",
         "group": "应用组",
-        "judgment": "主干大部分已能支撑普通概念、流程、计算和场景；CMM/CMMI与Jackson仍须最小补充，不能因某现代大纲省略而排除。未要求实现专业工程管理系统或完整OO项目。",
-        "required_units": [
-          "CMM/CMMI的用途、成熟层次与基本场景：保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
-          "Jackson面向数据结构设计的最小数据→程序例：知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。"
-        ],
+        "judgment": "2026-10-19普通本科重评确认的基础机制与常规过程缺口已补讲义、短卡和配套练习，并完成两名非作者交叉复核。可选工程任务和原教材全范围未验收项不据此升级。",
+        "required_units": [],
         "recognition_support": [
           "UI一致性、反馈/响应与错误恢复可作短概念例补强候选；其最低统一深度保留待核，不以未实现UI系统判缺。"
         ],
@@ -1824,8 +2463,52 @@
           }
         ],
         "report": "audit_reports/本科深度重评_应用组_2026-10-19.json",
-        "status": "basic_units_to_complete"
-      }
+        "status": "confirmed_undergraduate_gaps_filled_and_cross_reviewed",
+        "required_units_before_fill": [
+          "CMM/CMMI的用途、成熟层次与基本场景：保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
+          "Jackson面向数据结构设计的最小数据→程序例：知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。"
+        ],
+        "filled_units": [
+          {
+            "topic_id": "software-engineering.t26",
+            "chapter_id": "software-engineering.c07",
+            "title": "CMM五级与过程改进",
+            "question_ids": [
+              "gap-ug-as-software-engineering-cmm-levels",
+              "gap-ug-as-software-engineering-cmm-version-boundary"
+            ]
+          },
+          {
+            "topic_id": "software-engineering.t27",
+            "chapter_id": "software-engineering.c04",
+            "title": "Jackson数据结构到程序结构",
+            "question_ids": [
+              "gap-ug-as-software-engineering-jsp-records",
+              "gap-ug-as-software-engineering-jsp-empty"
+            ]
+          },
+          {
+            "topic_id": "software-engineering.t28",
+            "chapter_id": "software-engineering.c04",
+            "title": "界面的一致性、反馈与错误恢复",
+            "question_ids": [
+              "gap-ug-as-software-engineering-ui-recovery",
+              "gap-ug-as-software-engineering-ui-pending"
+            ]
+          }
+        ],
+        "filled_at": "2026-10-19",
+        "implementation_report": "audit_reports/本科补齐_汇总_2026-10-19.json",
+        "learner_reviews": [
+          "audit_reports/本科补齐_交叉体验_初学视角_2026-10-19.json",
+          "audit_reports/本科补齐_交叉体验_低接触视角_2026-10-19.json"
+        ],
+        "review_limit": "两名非作者agent的交叉学习与作答，具有模型先验；不是实际真人新生试验，也不证明外部整本教材逐节完整。"
+      },
+      "undergraduate_findings_before_fill_20261019": [
+        "CMM/CMMI的用途、成熟层次与基本场景：保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
+        "Jackson面向数据结构设计的最小数据→程序例：知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。"
+      ]
     },
     {
       "course": "信息安全",
@@ -1963,5 +2646,6 @@
   ],
   "teaching_reviewed_at": "2026-10-16",
   "undergraduate_review_date": "2026-10-19",
-  "assessment_policy": "status继续记录外部教材全范围验收；undergraduate_review记录当前普通本科深度重评。全书范围待核与本科核心单元缺漏分别判断，不把完整工程/复杂证明未做统称知识缺口。历史accepted也不否认本次发现的局部过程补强。"
+  "assessment_policy": "status继续记录外部教材全范围验收；undergraduate_review记录当前普通本科深度重评。全书范围待核与本科核心单元缺漏分别判断，不把完整工程/复杂证明未做统称知识缺口。历史accepted也不否认本次发现的局部过程补强。",
+  "undergraduate_updated_at": "2026-10-19"
 }

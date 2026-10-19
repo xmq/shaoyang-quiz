@@ -301,7 +301,10 @@
         "SSTF逐次选最近": "operating-system.t18",
         "SCAN与LOOK累计距离": "operating-system.t19",
         "读者写者的计数与互斥": "operating-system.t20",
-        "位示图的块号与位号": "operating-system.t21"
+        "位示图的块号与位号": "operating-system.t21",
+        "多级反馈队列的升降与抢占": "operating-system.t22",
+        "按截止期执行EDF调度": "operating-system.t23",
+        "等待图中的死锁检测": "operating-system.t24"
       },
       "chapter_prefix": {
         "operating-system.c01": [
@@ -375,6 +378,21 @@
           "位图",
           "字号",
           "位号"
+        ],
+        "operating-system.t22": [
+          "多级反馈队列的升降与抢占",
+          "调度",
+          "同步"
+        ],
+        "operating-system.t23": [
+          "按截止期执行EDF调度",
+          "调度",
+          "同步"
+        ],
+        "operating-system.t24": [
+          "等待图中的死锁检测",
+          "调度",
+          "同步"
         ]
       },
       "chapters": {
@@ -410,7 +428,12 @@
         "冲突优先图判串行化": "database.t19",
         "两段锁的首次解锁": "database.t20",
         "查询执行与优化": "database.t21",
-        "多值依赖与4NF": "database.t22"
+        "多值依赖与4NF": "database.t22",
+        "存储过程的一次参数调用": "database.t23",
+        "游标的逐行读取与关闭": "database.t24",
+        "事实表的粒度与维度汇总": "database.t25",
+        "键值数据的写入与读取": "database.t26",
+        "文档数据的字段筛选": "database.t27"
       },
       "chapter_prefix": {
         "database.c01": [
@@ -470,6 +493,26 @@
         ],
         "database.t22": [
           "多值依赖与4NF"
+        ],
+        "database.t23": [
+          "存储过程的一次参数调用",
+          "数据库"
+        ],
+        "database.t24": [
+          "游标的逐行读取与关闭",
+          "数据库"
+        ],
+        "database.t25": [
+          "事实表的粒度与维度汇总",
+          "数据库"
+        ],
+        "database.t26": [
+          "键值数据的写入与读取",
+          "数据库"
+        ],
+        "database.t27": [
+          "文档数据的字段筛选",
+          "数据库"
         ]
       },
       "chapters": {
@@ -529,7 +572,11 @@
         "广义表长度与深度": "data-structures.t41",
         "AOE网关键路径": "data-structures.t42",
         "动态存储分裂与合并": "data-structures.t43",
-        "外部归并与文件组织": "data-structures.t44"
+        "外部归并与文件组织": "data-structures.t44",
+        "B树删除的借位与合并": "data-structures.t45",
+        "中序线索的建立与遍历": "data-structures.t46",
+        "败者树如何更新归并段首": "data-structures.t47",
+        "置换选择中的冻结与新段": "data-structures.t48"
       },
       "chapter_prefix": {
         "data-structures.c01": [
@@ -660,6 +707,22 @@
         ],
         "data-structures.t44": [
           "外部归并与文件组织"
+        ],
+        "data-structures.t45": [
+          "B树删除的借位与合并",
+          "数据结构"
+        ],
+        "data-structures.t46": [
+          "中序线索的建立与遍历",
+          "数据结构"
+        ],
+        "data-structures.t47": [
+          "败者树如何更新归并段首",
+          "数据结构"
+        ],
+        "data-structures.t48": [
+          "置换选择中的冻结与新段",
+          "数据结构"
         ]
       },
       "chapters": {
@@ -698,7 +761,9 @@
         "预处理与static局部状态": "programming.t19",
         "二维数组与指针声明": "programming.t20",
         "CSV转换统计与格式化": "programming.t21",
-        "字典词频累计": "programming.t22"
+        "字典词频累计": "programming.t22",
+        "无符号数的位运算": "programming.t23",
+        "链表结点的改链与释放": "programming.t24"
       },
       "chapter_prefix": {
         "programming.c01": [
@@ -781,6 +846,14 @@
           "counts",
           "split",
           "get"
+        ],
+        "programming.t23": [
+          "无符号数的位运算",
+          "程序设计"
+        ],
+        "programming.t24": [
+          "链表结点的改链与释放",
+          "程序设计"
         ]
       },
       "chapters": {
@@ -840,7 +913,8 @@
         "微指令编码与控存容量": "computer-organization.t39",
         "Booth位对判断与整体右移": "computer-organization.t40",
         "存储器按存取方式分类": "computer-organization.t41",
-        "机器字长、指令字长与存储字长": "computer-organization.t42"
+        "机器字长、指令字长与存储字长": "computer-organization.t42",
+        "先行进位的两位展开": "computer-organization.t43"
       },
       "chapter_prefix": {
         "computer-organization.c01": [
@@ -999,6 +1073,12 @@
           "机器字长",
           "指令字长",
           "存储字长"
+        ],
+        "computer-organization.t43": [
+          "先行进位的两位展开",
+          "先行进位",
+          "产生",
+          "传递"
         ]
       },
       "chapters": {
@@ -1111,7 +1191,10 @@
         "播放缓冲耗尽计算": "net.playback-buffer",
         "PPP透明传输的填充与还原": "net.ppp-stuffing",
         "组播成员与分支转发": "net.multicast-membership",
-        "SNMP轮询与主动通知": "net.snmp-management"
+        "SNMP轮询与主动通知": "net.snmp-management",
+        "OSPF从链路状态到路由表": "net.ospf-flow",
+        "MPLS标签的压入交换与弹出": "net.mpls-label-flow",
+        "SDN规则未命中后的处理": "net.sdn-rule-flow"
       },
       "chapter_prefix": {
         "net-01": [
@@ -1210,6 +1293,18 @@
         ],
         "net.snmp-management": [
           "SNMP轮询与主动通知"
+        ],
+        "net.ospf-flow": [
+          "OSPF从链路状态到路由表",
+          "网络协议"
+        ],
+        "net.mpls-label-flow": [
+          "MPLS标签的压入交换与弹出",
+          "网络协议"
+        ],
+        "net.sdn-rule-flow": [
+          "SDN规则未命中后的处理",
+          "网络协议"
         ]
       },
       "chapters": {
@@ -1241,7 +1336,14 @@
         "关联参考方向与功率符号": "circuit.t01",
         "共享电阻的网孔列式": "circuit.t13",
         "戴维南端口参数求法": "circuit.t14",
-        "同步转速与转差率": "circuit.t15"
+        "同步转速与转差率": "circuit.t15",
+        "二阶RLC的初值与响应": "circuit.t16",
+        "互感同名端与串联等效": "circuit.t17",
+        "二端口Z参数与开路条件": "circuit.t18",
+        "谐振、品质因数与带宽": "circuit.t19",
+        "非正弦分量的有效值与功率": "circuit.t20",
+        "RC复频域模型保留初值": "circuit.t21",
+        "传输延时与端接反射": "circuit.t22"
       },
       "chapter_prefix": {
         "circuit.c01": [
@@ -1292,6 +1394,27 @@
           "同步转速",
           "极对数",
           "转差率"
+        ],
+        "circuit.t16": [
+          "二阶RLC的初值与响应"
+        ],
+        "circuit.t17": [
+          "互感同名端与串联等效"
+        ],
+        "circuit.t18": [
+          "二端口Z参数与开路条件"
+        ],
+        "circuit.t19": [
+          "谐振、品质因数与带宽"
+        ],
+        "circuit.t20": [
+          "非正弦分量的有效值与功率"
+        ],
+        "circuit.t21": [
+          "RC复频域模型保留初值"
+        ],
+        "circuit.t22": [
+          "传输延时与端接反射"
         ]
       },
       "parents": {
@@ -1305,7 +1428,7 @@
         "第4章 电阻、电容与电感元件": "circuit.c04",
         "第5章 正弦稳态、电工控制与安全": "circuit.c05",
         "第6章 工程可靠性基础": "circuit.c06",
-        "第7章 一阶动态电路": "circuit.c07",
+        "第7章 一阶与二阶动态电路": "circuit.c07",
         "第8章 万用表、示波器与安全测量": "circuit.c08",
         "第9章 电路故障分析": "circuit.c09"
       }
@@ -1333,7 +1456,12 @@
         "正弦振荡的起振与稳幅": "analog-electronics.t19",
         "电容滤波纹波估算": "analog-electronics.t20",
         "传感器采集链选型": "analog-electronics.t21",
-        "二极管挡安全初检": "analog-electronics.t22"
+        "二极管挡安全初检": "analog-electronics.t22",
+        "共射电路的直流与交流分析": "analog-electronics.t23",
+        "差分对的尾电流与增益": "analog-electronics.t24",
+        "从电容求放大器截止频率": "analog-electronics.t25",
+        "互补功放的半周与效率": "analog-electronics.t26",
+        "稳压反馈分压与输出电压": "analog-electronics.t27"
       },
       "chapter_prefix": {
         "analog-electronics.c01": [
@@ -1414,6 +1542,31 @@
         ],
         "analog-electronics.t22": [
           "二极管挡安全初检"
+        ],
+        "analog-electronics.t23": [
+          "共射电路的直流与交流分析",
+          "DC开电容/AC短电容并将电源交流接地",
+          "由实际接线求Q、Au、Ri、Ro和带源负载结果"
+        ],
+        "analog-electronics.t24": [
+          "差分对的尾电流与增益",
+          "对称平分尾电流，差模两端±ud/2",
+          "从尾电流求每管Q及不同输出口径增益"
+        ],
+        "analog-electronics.t25": [
+          "从电容求放大器截止频率",
+          "源置零求R，米勒主导输入电容",
+          "找电容两端电阻，估单主极点fL/fH"
+        ],
+        "analog-electronics.t26": [
+          "互补功放的半周与效率",
+          "互补射随输出，按正弦平均电流估功率",
+          "读正负半周电流并算Po/Pdc/η"
+        ],
+        "analog-electronics.t27": [
+          "稳压反馈分压与输出电压",
+          "输出下降→误差→增导通→恢复",
+          "从基准/采样比较求输出与调整管损耗"
         ]
       },
       "chapters": {
@@ -1447,7 +1600,10 @@
         "计数器状态到T激励": "digital-electronics.t16",
         "脉冲周期与占空比": "digital-electronics.t17",
         "施密特双阈值整形": "digital-electronics.t18",
-        "补码加法与有符号溢出": "digital-electronics.t19"
+        "补码加法与有符号溢出": "digital-electronics.t19",
+        "加权电阻DAC的位权求和": "digital-electronics.t20",
+        "双积分ADC的两个阶段": "digital-electronics.t21",
+        "Flash ADC的并行判档": "digital-electronics.t22"
       },
       "chapter_prefix": {
         "digital-electronics.c01": [
@@ -1514,6 +1670,21 @@
           "补码",
           "有符号溢出",
           "最高位进位"
+        ],
+        "digital-electronics.t20": [
+          "加权电阻DAC的位权求和",
+          "三输入开关接Vref或地，电流相加过Rf",
+          "从真实反相求和网络求码输出"
+        ],
+        "digital-electronics.t21": [
+          "双积分ADC的两个阶段",
+          "固定T1积分未知，反极性基准积分回0",
+          "从两阶段斜率求反积分时间和计数"
+        ],
+        "digital-electronics.t22": [
+          "Flash ADC的并行判档",
+          "电阻串产生1/2/3V阈值并行比较",
+          "用多阈值比较器结果编码"
         ]
       },
       "chapters": {
@@ -1549,7 +1720,20 @@
         "离散信源熵的计算": "communication.t19",
         "CRC模2除法与余数": "communication.t20",
         "ARQ确认、序号与超时": "communication.t21",
-        "dB链路预算与余量": "communication.t22"
+        "dB链路预算与余量": "communication.t22",
+        "平稳噪声的相关与输出功率": "communication.t23",
+        "二元匹配接收与误码概率": "communication.t24",
+        "单音AM的频谱与功率": "communication.t25",
+        "FM的瞬时频率与相位": "communication.t26",
+        "邻码元干扰的抽样计算": "communication.t27",
+        "调谐放大级的增益与噪声系数": "communication.t28",
+        "丙类功放的直流与基波功率": "communication.t29",
+        "电容三点式振荡的反馈与频率": "communication.t30",
+        "包络检波的充放电与时间常数": "communication.t31",
+        "DPCM的重建值预测": "communication.t32",
+        "HDB3的四零替代": "communication.t33",
+        "卷积码的移位与输出": "communication.t34",
+        "伪随机序列的状态与相关": "communication.t35"
       },
       "chapter_prefix": {
         "communication.c01": [
@@ -1619,6 +1803,71 @@
         "communication.t22": [
           "dB",
           "链路预算与余量"
+        ],
+        "communication.t23": [
+          "平稳噪声的相关与输出功率",
+          "WSS均值/自相关条件，Sy=|H|²Sx积分",
+          "从统计量/PSD到LTI输出功率"
+        ],
+        "communication.t24": [
+          "二元匹配接收与误码概率",
+          "单位能量矩形模板、匹配反折延迟、Q尾概率",
+          "从波形到相关/抽样/门限/错误事件"
+        ],
+        "communication.t25": [
+          "单音AM的频谱与功率",
+          "载波与双边带分量，平均功率分开相加",
+          "从三角积展开读谱及功率"
+        ],
+        "communication.t26": [
+          "FM的瞬时频率与相位",
+          "f瞬=fc+Δf cos，θ=2πfc t+βsin",
+          "由瞬时频率积分得到单音相位"
+        ],
+        "communication.t27": [
+          "邻码元干扰的抽样计算",
+          "当前主项与前后码元残留相加",
+          "按脉冲抽样系数加权求当前样值"
+        ],
+        "communication.t28": [
+          "调谐放大级的增益与噪声系数",
+          "跨导驱动并联LC与损耗电阻，SNR比",
+          "简化实际调谐级到负载/增益/Q/BW/NF"
+        ],
+        "communication.t29": [
+          "丙类功放的直流与基波功率",
+          "脉冲电流取直流I0和基波I1，谐振负载成电压",
+          "给系数而非全推导，算功率效率"
+        ],
+        "communication.t30": [
+          "电容三点式振荡的反馈与频率",
+          "交流基极接地，发射端取电容分压",
+          "按指定共基拓扑判同相反馈并估f0"
+        ],
+        "communication.t31": [
+          "包络检波的充放电与时间常数",
+          "峰附近快充、峰间RC放电",
+          "从二极管/电容/负载读包络"
+        ],
+        "communication.t32": [
+          "DPCM的重建值预测",
+          "差值量化→预测+量化误差重建→下次预测",
+          "用收发一致预测器追踪两步"
+        ],
+        "communication.t33": [
+          "HDB3的四零替代",
+          "奇000V、偶B00V，V同前脉冲而B正常交替",
+          "按上次V后脉冲奇偶选择替代节"
+        ],
+        "communication.t34": [
+          "卷积码的移位与输出",
+          "旧状态(a,b)，输出u⊕a⊕b与u⊕b，再移位",
+          "执行一个短率1/2卷积编码器"
+        ],
+        "communication.t35": [
+          "伪随机序列的状态与相关",
+          "旧q2q1q0输出q2，新(q1,q0,q2⊕q0)",
+          "执行指定3级反馈并检查周期相关"
         ]
       },
       "chapters": {
@@ -1650,7 +1899,17 @@
         "时域、频域与复频域选择": "signals-systems.t13",
         "傅里叶奇偶与系数": "signals-systems.t14",
         "时移与尺度的频谱变化": "signals-systems.t15",
-        "部分分式与反变换": "signals-systems.t16"
+        "部分分式与反变换": "signals-systems.t16",
+        "DFT与IDFT的四点计算": "signals-systems.t17",
+        "DFT索引与正负频率": "signals-systems.t18",
+        "圆周卷积与补零": "signals-systems.t19",
+        "FFT偶奇分解与蝶形": "signals-systems.t20",
+        "差分方程的非零初值响应": "signals-systems.t21",
+        "离散频率响应的幅相与零点": "signals-systems.t22",
+        "延迟加法框图读方程": "signals-systems.t23",
+        "信号内积与正交": "signals-systems.t24",
+        "相关与延迟匹配": "signals-systems.t25",
+        "Parseval能量核对": "signals-systems.t26"
       },
       "chapter_prefix": {
         "signals-systems.c01": [
@@ -1695,6 +1954,40 @@
         ],
         "signals-systems.t16": [
           "部分分式与反变换"
+        ],
+        "signals-systems.t17": [
+          "DFT与IDFT的四点计算",
+          "DFT",
+          "IDFT"
+        ],
+        "signals-systems.t18": [
+          "DFT索引与正负频率"
+        ],
+        "signals-systems.t19": [
+          "圆周卷积与补零"
+        ],
+        "signals-systems.t20": [
+          "FFT偶奇分解与蝶形",
+          "FFT",
+          "蝶形"
+        ],
+        "signals-systems.t21": [
+          "差分方程的非零初值响应"
+        ],
+        "signals-systems.t22": [
+          "离散频率响应的幅相与零点"
+        ],
+        "signals-systems.t23": [
+          "延迟加法框图读方程"
+        ],
+        "signals-systems.t24": [
+          "信号内积与正交"
+        ],
+        "signals-systems.t25": [
+          "相关与延迟匹配"
+        ],
+        "signals-systems.t26": [
+          "Parseval能量核对"
         ]
       },
       "chapters": {
@@ -1704,7 +1997,8 @@
         "第4章 傅里叶变换与频域分析": "signals-systems.c04",
         "第5章 拉普拉斯变换与Z变换": "signals-systems.c05",
         "第6章 抽样定理与离散化": "signals-systems.c06",
-        "第7章 系统分析方法的联系": "signals-systems.c07"
+        "第7章 系统分析方法的联系": "signals-systems.c07",
+        "第8章 离散傅里叶变换与快速算法": "signals-systems.c08"
       }
     },
     "软件工程": {
@@ -1733,7 +2027,10 @@
         "关键路径与总工期": "software-engineering.t22",
         "有穷状态机与需求约束": "software-engineering.t23",
         "借阅对象与协作建模": "software-engineering.t24",
-        "嵌套判断的N-S与PAD图": "software-engineering.t25"
+        "嵌套判断的N-S与PAD图": "software-engineering.t25",
+        "CMM五级与过程改进": "software-engineering.t26",
+        "Jackson数据结构到程序结构": "software-engineering.t27",
+        "界面的一致性、反馈与错误恢复": "software-engineering.t28"
       },
       "chapter_prefix": {
         "software-engineering.c01": [
@@ -1804,6 +2101,21 @@
           "PAD",
           "嵌套判断",
           "过程设计"
+        ],
+        "software-engineering.t26": [
+          "CMM五级与过程改进",
+          "CMM",
+          "CMMI",
+          "成熟度"
+        ],
+        "software-engineering.t27": [
+          "Jackson数据结构到程序结构",
+          "JSP",
+          "Jackson",
+          "数据结构"
+        ],
+        "software-engineering.t28": [
+          "界面的一致性、反馈与错误恢复"
         ]
       },
       "chapters": {

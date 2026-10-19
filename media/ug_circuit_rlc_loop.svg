@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="300" viewBox="0 0 360 300" role="img" aria-labelledby="title desc"><title id="title">串联RLC自然响应与参考方向</title><desc id="desc">无外部电源的闭合RLC回路，电流取顺时针参考方向，电容上端正，初值电压1伏、电感电流0。</desc><style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}text{fill:currentColor}.wire,.curve{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.part{fill:none;stroke:currentColor;stroke-width:1.8}.accent{fill:none;stroke:#14766d;stroke-width:2.5}.blue{fill:none;stroke:#426b92;stroke-width:2.2}.muted{fill:#67777e}.guide{fill:none;stroke:#93a4aa;stroke-width:1.2;stroke-dasharray:4 4}.node{fill:currentColor}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.accent{stroke:#74cabe}.blue{stroke:#9fbfdb}.muted{fill:#a0b2bb}}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
+<text x="12" y="24" font-size="17" font-weight="650">从实际RLC回路列出方程</text>
+<path class="wire" d="M42 83H70M126 83H151M231 83H300V150M300 171V231H42V83"/>
+<rect class="part" x="70" y="73" width="56" height="20"/>
+<path class="wire" d="M151 83a10 10 0 0 1 20 0a10 10 0 0 1 20 0a10 10 0 0 1 20 0a10 10 0 0 1 20 0M280 150H320M280 171H320"/>
+<text x="73" y="60">R=1.5 Ω</text><text x="166" y="60">L=0.5 H</text>
+<text x="245" y="145">+</text><text x="245" y="182">−</text><text x="226" y="165">uC</text><text x="274" y="207">C=1 F</text>
+<path class="accent" d="M160 119H247" marker-end="url(#arrow)"/><text x="161" y="105">i：顺时针参考</text>
+<text x="60" y="192">t≥0，uS=0</text><text x="34" y="262">uC(0+)=1 V，iL(0+)=0</text><text x="34" y="285" class="muted">i流入电容正端，因此i=C duC/dt。</text></svg>

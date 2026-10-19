@@ -1,0 +1,383 @@
+{
+  "build": "f97063ba9a2a7c98",
+  "contexts": [
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_elec_ocl.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 475,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_elec_flash.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 490,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_elec_colpitts.svg",
+      "zoom_open_close": true,
+      "width": 358.625,
+      "height": 607.65625,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_circuit_rlc_loop.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 300,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_circuit_mutual_dots.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 364,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_circuit_two_port.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_circuit_resonance.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "file": "ug_as_fft_butterfly.svg",
+      "zoom_open_close": true,
+      "width": 366,
+      "height": 264.90625,
+      "naturalWidth": 420,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "question_id": "gap-ug26-circuit-22-1",
+      "clarified": true,
+      "stem": "以入射波从源端发射时为t=0。无损传输线长20m，波速2×10^8m/s，Z0=50Ω，负载短路；到达负载的入射电压波为2V。求单程延时、负载反射系数、反射电压、第一次到达时负载电压，以及反射波首次回到源端的时间。"
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "question_id": "gap-ug26-circuit-19-1",
+      "clarified": true,
+      "stem": "理想串联RLC：R=10Ω、L=10mH、C=1μF。求谐振频率、品质因数和半功率带宽，并写出半功率点的电流有效值与谐振时电流有效值之比。"
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_elec_ocl.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 475,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_elec_flash.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 490,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_elec_colpitts.svg",
+      "zoom_open_close": true,
+      "width": 358.625,
+      "height": 607.65625,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_circuit_rlc_loop.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 300,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_circuit_mutual_dots.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 364,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_circuit_two_port.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_circuit_resonance.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "file": "ug_as_fft_butterfly.svg",
+      "zoom_open_close": true,
+      "width": 366,
+      "height": 264.90625,
+      "naturalWidth": 420,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "question_id": "gap-ug26-circuit-22-1",
+      "clarified": true,
+      "stem": "以入射波从源端发射时为t=0。无损传输线长20m，波速2×10^8m/s，Z0=50Ω，负载短路；到达负载的入射电压波为2V。求单程延时、负载反射系数、反射电压、第一次到达时负载电压，以及反射波首次回到源端的时间。"
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "question_id": "gap-ug26-circuit-19-1",
+      "clarified": true,
+      "stem": "理想串联RLC：R=10Ω、L=10mH、C=1μF。求谐振频率、品质因数和半功率带宽，并写出半功率点的电流有效值与谐振时电流有效值之比。"
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_elec_ocl.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 475,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_elec_flash.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 490,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_elec_colpitts.svg",
+      "zoom_open_close": true,
+      "width": 358.625,
+      "height": 607.65625,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_circuit_rlc_loop.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 300,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_circuit_mutual_dots.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 364,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_circuit_two_port.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_circuit_resonance.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "file": "ug_as_fft_butterfly.svg",
+      "zoom_open_close": true,
+      "width": 420,
+      "height": 304,
+      "naturalWidth": 420,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "question_id": "gap-ug26-circuit-22-1",
+      "clarified": true,
+      "stem": "以入射波从源端发射时为t=0。无损传输线长20m，波速2×10^8m/s，Z0=50Ω，负载短路；到达负载的入射电压波为2V。求单程延时、负载反射系数、反射电压、第一次到达时负载电压，以及反射波首次回到源端的时间。"
+    },
+    {
+      "viewport": 1280,
+      "theme": "light",
+      "question_id": "gap-ug26-circuit-19-1",
+      "clarified": true,
+      "stem": "理想串联RLC：R=10Ω、L=10mH、C=1μF。求谐振频率、品质因数和半功率带宽，并写出半功率点的电流有效值与谐振时电流有效值之比。"
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_elec_ocl.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 475,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_elec_flash.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 490,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_elec_colpitts.svg",
+      "zoom_open_close": true,
+      "width": 358.625,
+      "height": 607.65625,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_circuit_rlc_loop.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 300,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_circuit_mutual_dots.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 364,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_circuit_two_port.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_circuit_resonance.svg",
+      "zoom_open_close": true,
+      "width": 360,
+      "height": 326,
+      "naturalWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "file": "ug_as_fft_butterfly.svg",
+      "zoom_open_close": true,
+      "width": 420,
+      "height": 304,
+      "naturalWidth": 420,
+      "overflow": false
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "question_id": "gap-ug26-circuit-22-1",
+      "clarified": true,
+      "stem": "以入射波从源端发射时为t=0。无损传输线长20m，波速2×10^8m/s，Z0=50Ω，负载短路；到达负载的入射电压波为2V。求单程延时、负载反射系数、反射电压、第一次到达时负载电压，以及反射波首次回到源端的时间。"
+    },
+    {
+      "viewport": 1280,
+      "theme": "dark",
+      "question_id": "gap-ug26-circuit-19-1",
+      "clarified": true,
+      "stem": "理想串联RLC：R=10Ω、L=10mH、C=1μF。求谐振频率、品质因数和半功率带宽，并写出半功率点的电流有效值与谐振时电流有效值之比。"
+    }
+  ],
+  "errors": [],
+  "screenshot_directory": "C:\\Users\\pc\\AppData\\Local\\Temp\\undergrad_final_fixes"
+}

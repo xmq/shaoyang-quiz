@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="370" viewBox="0 0 360 370" role="img" aria-labelledby="title"><title id="title">AM：三条余弦分量与功率</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">AM：三条余弦分量与功率</text>
+<text x="12" y="56" font-size="14" text-anchor="start">正频率余弦峰值谱：非双边复指数高度</text>
+<path class="w" d="M35 240L340 240"/>
+<path class="w" d="M35 240L35 80"/>
+<text x="16" y="80" font-size="12" text-anchor="start">V</text>
+<path class="w" d="M95 240L95 195"/>
+<text x="95" y="184" font-size="13" text-anchor="middle">3V</text>
+<text x="95" y="265" font-size="12" text-anchor="middle">99k</text>
+<path class="w" d="M190 240L190 90"/>
+<text x="190" y="79" font-size="13" text-anchor="middle">10V</text>
+<text x="190" y="265" font-size="12" text-anchor="middle">100k</text>
+<path class="w" d="M285 240L285 195"/>
+<text x="285" y="184" font-size="13" text-anchor="middle">3V</text>
+<text x="285" y="265" font-size="12" text-anchor="middle">101k</text>
+<text x="12" y="305" font-size="14" text-anchor="start">Pc=1W；边带各0.09W；总1.18W</text>
+<text x="12" y="339" font-size="14" text-anchor="start">m=.6；Ac10V峰值；R50Ω；带宽2kHz</text>
+</svg>

@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-19",
+  "status": "先写计划，后实施；源冻结后由root安排两非作者复测",
+  "scope": "只改模拟/数字/通信三科MD，自有ug_elec_ SVG及两个指定staging文件；不改全局registry、map、旧题、dist、不build",
+  "units": [
+    {
+      "course": "analog-electronics",
+      "course_name": "模拟电子技术",
+      "topic_id": "analog-electronics.t23",
+      "chapter_id": "analog-electronics.c03",
+      "title": "共射电路的直流与交流分析",
+      "goal": "由实际接线求Q、Au、Ri、Ro和带源负载结果",
+      "process": "DC开电容/AC短电容并将电源交流接地",
+      "worked_example": "12V分压偏置、rbe2.4kΩ、RL2kΩ",
+      "visual": "ug_elec_ce.svg",
+      "two_practice_tasks": "Q到带载计算；撤去旁路的模型边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "analog-electronics",
+      "course_name": "模拟电子技术",
+      "topic_id": "analog-electronics.t24",
+      "chapter_id": "analog-electronics.c04",
+      "title": "差分对的尾电流与增益",
+      "goal": "从尾电流求每管Q及不同输出口径增益",
+      "process": "对称平分尾电流，差模两端±ud/2",
+      "worked_example": "尾2mA、RC5k、VT25mV",
+      "visual": "ug_elec_diff.svg",
+      "two_practice_tasks": "单端与双端增益；不对称/输出饱和限制",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "analog-electronics",
+      "course_name": "模拟电子技术",
+      "topic_id": "analog-electronics.t25",
+      "chapter_id": "analog-electronics.c04",
+      "title": "从电容求放大器截止频率",
+      "goal": "找电容两端电阻，估单主极点fL/fH",
+      "process": "源置零求R，米勒主导输入电容",
+      "worked_example": "Rs1k、Ri2k、Cin1μF；Cμ2pF、Av−49",
+      "visual": "ug_elec_cutoff.svg",
+      "two_practice_tasks": "找等效R；幅相/多极点近似边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "analog-electronics",
+      "course_name": "模拟电子技术",
+      "topic_id": "analog-electronics.t26",
+      "chapter_id": "analog-electronics.c07",
+      "title": "互补功放的半周与效率",
+      "goal": "读正负半周电流并算Po/Pdc/η",
+      "process": "互补射随输出，按正弦平均电流估功率",
+      "worked_example": "±10V、RL8Ω、峰8V",
+      "visual": "ug_elec_ocl.svg",
+      "two_practice_tasks": "功率效率；摆幅与甲乙类静耗边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "analog-electronics",
+      "course_name": "模拟电子技术",
+      "topic_id": "analog-electronics.t27",
+      "chapter_id": "analog-electronics.c08",
+      "title": "稳压反馈分压与输出电压",
+      "goal": "从基准/采样比较求输出与调整管损耗",
+      "process": "输出下降→误差→增导通→恢复",
+      "worked_example": "Vref2.5V、上3k下1k、Ui12V",
+      "visual": "ug_elec_regulator.svg",
+      "two_practice_tasks": "反馈定输出；压差/功耗限制",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "digital-electronics",
+      "course_name": "数字电子技术",
+      "topic_id": "digital-electronics.t20",
+      "chapter_id": "digital-electronics.c07",
+      "title": "加权电阻DAC的位权求和",
+      "goal": "从真实反相求和网络求码输出",
+      "process": "三输入开关接Vref或地，电流相加过Rf",
+      "worked_example": "Rf10k，支路20/40/80k，Vref8V、101",
+      "visual": "ug_elec_dac.svg",
+      "two_practice_tasks": "电流求和；负号与最大码非Vref",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "digital-electronics",
+      "course_name": "数字电子技术",
+      "topic_id": "digital-electronics.t21",
+      "chapter_id": "digital-electronics.c07",
+      "title": "双积分ADC的两个阶段",
+      "goal": "从两阶段斜率求反积分时间和计数",
+      "process": "固定T1积分未知，反极性基准积分回0",
+      "worked_example": "RC10ms，Ui1V，Vref2V，T120ms",
+      "visual": "ug_elec_dual_slope.svg",
+      "two_practice_tasks": "两阶段数值；工频整周期/饱和边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "digital-electronics",
+      "course_name": "数字电子技术",
+      "topic_id": "digital-electronics.t22",
+      "chapter_id": "digital-electronics.c07",
+      "title": "Flash ADC的并行判档",
+      "goal": "用多阈值比较器结果编码",
+      "process": "电阻串产生1/2/3V阈值并行比较",
+      "worked_example": "2位0..4V，输入2.3V",
+      "visual": "ug_elec_flash.svg",
+      "two_practice_tasks": "温度计码；比较器数量与阈值约定",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t23",
+      "chapter_id": "communication.c02",
+      "title": "平稳噪声的相关与输出功率",
+      "goal": "从统计量/PSD到LTI输出功率",
+      "process": "WSS均值/自相关条件，Sy=|H|²Sx积分",
+      "worked_example": "N0/2双边白噪声过增益2低通B10k",
+      "visual": "ug_elec_noise.svg",
+      "two_practice_tasks": "输出功率；白/高斯/平稳的不同条件",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t24",
+      "chapter_id": "communication.c08",
+      "title": "二元匹配接收与误码概率",
+      "goal": "从波形到相关/抽样/门限/错误事件",
+      "process": "单位能量矩形模板、匹配反折延迟、Q尾概率",
+      "worked_example": "T1ms、Eb/N0=2线性、Q2=.0228",
+      "visual": "ug_elec_receiver.svg",
+      "two_practice_tasks": "相关统计量；dB转线性/不同先验条件",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t25",
+      "chapter_id": "communication.c03",
+      "title": "单音AM的频谱与功率",
+      "goal": "从三角积展开读谱及功率",
+      "process": "载波与双边带分量，平均功率分开相加",
+      "worked_example": "Ac10V峰、R50Ω、m.6、fc100k/fm1k",
+      "visual": "ug_elec_am_spectrum.svg",
+      "two_practice_tasks": "边带/总功率；过调制与幅值口径",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t26",
+      "chapter_id": "communication.c03",
+      "title": "FM的瞬时频率与相位",
+      "goal": "由瞬时频率积分得到单音相位",
+      "process": "f瞬=fc+Δf cos，θ=2πfc t+βsin",
+      "worked_example": "fc100k、Δf2k、fm1k",
+      "visual": "ug_elec_fm.svg",
+      "two_practice_tasks": "频偏/β/带宽；相位与频率不可混同",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t27",
+      "chapter_id": "communication.c08",
+      "title": "邻码元干扰的抽样计算",
+      "goal": "按脉冲抽样系数加权求当前样值",
+      "process": "当前主项与前后码元残留相加",
+      "worked_example": "当前+1邻−1/+1，p(T).2 p(−T).1",
+      "visual": "ug_elec_isi.svg",
+      "two_practice_tasks": "ISI数值；零残留与错误判决区别",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t28",
+      "chapter_id": "communication.c06",
+      "title": "调谐放大级的增益与噪声系数",
+      "goal": "简化实际调谐级到负载/增益/Q/BW/NF",
+      "process": "跨导驱动并联LC与损耗电阻，SNR比",
+      "worked_example": "gm2mS，Rp10k、RL10k，L10μH/C100pF",
+      "visual": "ug_elec_tuned.svg",
+      "two_practice_tasks": "加载增益带宽；线性NF与dB/口径",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t29",
+      "chapter_id": "communication.c06",
+      "title": "丙类功放的直流与基波功率",
+      "goal": "给系数而非全推导，算功率效率",
+      "process": "脉冲电流取直流I0和基波I1，谐振负载成电压",
+      "worked_example": "VCC12V、I0.1A、I1.16A、Rp100Ω",
+      "visual": "ug_elec_class_c.svg",
+      "two_practice_tasks": "功率/效率；欠压临界过压趋势",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t30",
+      "chapter_id": "communication.c06",
+      "title": "电容三点式振荡的反馈与频率",
+      "goal": "按指定共基拓扑判同相反馈并估f0",
+      "process": "交流基极接地，发射端取电容分压",
+      "worked_example": "L10μH、C1100pF/C2300pF",
+      "visual": "ug_elec_colpitts.svg",
+      "two_practice_tasks": "反馈比例/f0；加载与非线性稳幅边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t31",
+      "chapter_id": "communication.c06",
+      "title": "包络检波的充放电与时间常数",
+      "goal": "从二极管/电容/负载读包络",
+      "process": "峰附近快充、峰间RC放电",
+      "worked_example": "fc1MHz、fm1kHz、RC10μs",
+      "visual": "ug_elec_envelope.svg",
+      "two_practice_tasks": "时间常数选择；载波纹波与斜切失真",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t32",
+      "chapter_id": "communication.c03",
+      "title": "DPCM的重建值预测",
+      "goal": "用收发一致预测器追踪两步",
+      "process": "差值量化→预测+量化误差重建→下次预测",
+      "worked_example": "样值10/12/11，初预测8，步长2",
+      "visual": "ug_elec_dpcm.svg",
+      "two_practice_tasks": "重建预测状态；误用原样值预测边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t33",
+      "chapter_id": "communication.c08",
+      "title": "HDB3的四零替代",
+      "goal": "按上次V后脉冲奇偶选择替代节",
+      "process": "奇000V、偶B00V，V同前脉冲而B正常交替",
+      "worked_example": "已知前脉冲−且V后有2个1，再0000/1/0000",
+      "visual": "ug_elec_hdb3.svg",
+      "two_practice_tasks": "编码状态；译码与初始约定",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t34",
+      "chapter_id": "communication.c07",
+      "title": "卷积码的移位与输出",
+      "goal": "执行一个短率1/2卷积编码器",
+      "process": "旧状态(a,b)，输出u⊕a⊕b与u⊕b，再移位",
+      "worked_example": "初00，输入101后加00尾比特",
+      "visual": "ug_elec_convcode.svg",
+      "two_practice_tasks": "逐拍编码；状态与码率/码距能力边界",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    },
+    {
+      "course": "communication",
+      "course_name": "通信原理与高频电子线路",
+      "topic_id": "communication.t35",
+      "chapter_id": "communication.c03",
+      "title": "伪随机序列的状态与相关",
+      "goal": "执行指定3级反馈并检查周期相关",
+      "process": "旧q2q1q0输出q2，新(q1,q0,q2⊕q0)",
+      "worked_example": "初001七步；0→−1/1→+1",
+      "visual": "ug_elec_pn.svg",
+      "two_practice_tasks": "逐状态与零种子；周期相关/非随机性",
+      "practice_modes": [
+        "直接计算",
+        "过程描述/边界判断"
+      ]
+    }
+  ]
+}

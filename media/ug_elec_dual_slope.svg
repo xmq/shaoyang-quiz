@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="550" viewBox="0 0 360 550" role="img" aria-labelledby="title"><title id="title">双积分：切换输入，积分电容回零</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">双积分：切换输入，积分电容回零</text>
+<rect x="10" y="76" width="76" height="47" class="w"/>
+<text x="48.0" y="104.5" font-size="14" text-anchor="middle">Ui / −Vref</text>
+<path class="w" d="M92 99L98 99"/>
+<rect x="98" y="94" width="33" height="10" class="w"/>
+<path class="w" d="M131 99L137 99"/>
+<text x="114.5" y="88" font-size="12" text-anchor="middle">R</text>
+<path class="w" d="M86 99L92 99"/>
+<path class="w" d="M137 99L190 99"/>
+<path class="w" d="M190 83L190 147L248 115Z"/>
+<text x="197" y="103" font-size="14" text-anchor="start">−</text>
+<text x="197" y="137" font-size="14" text-anchor="start">+</text>
+<text x="215" y="108" font-size="12" text-anchor="start">A</text>
+<path class="w" d="M190 131L169 131"/>
+<path class="w" d="M169 145L169 153"/>
+<path class="w" d="M159 153L179 153"/>
+<path class="w" d="M163 158L175 158"/>
+<path class="w" d="M167 163L171 163"/>
+<path class="w" d="M169 131L169 145"/>
+<circle cx="157" cy="99" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M157 99L157 56"/>
+<path class="w" d="M157 56L190.5 56"/>
+<path class="w" d="M190.5 46L190.5 66"/>
+<path class="w" d="M198.5 46L198.5 66"/>
+<path class="w" d="M198.5 56L232 56"/>
+<text x="194.5" y="41" font-size="12" text-anchor="middle">C</text>
+<path class="w" d="M232 56L306 56"/>
+<path class="w" d="M306 56L306 115"/>
+<path class="w" d="M248 115L330 115"/>
+<text x="250" y="146" font-size="12" text-anchor="start">uo，供电±6V</text>
+<rect x="240" y="179" width="105" height="39" class="w"/>
+<text x="292.5" y="203.5" font-size="14" text-anchor="middle">零比较器</text>
+<path class="a" d="M306 115L306 179" marker-end="url(#arr)"/>
+<rect x="82" y="242" width="180" height="38" class="w"/>
+<text x="172.0" y="266.0" font-size="14" text-anchor="middle">切换控制与时钟计数</text>
+<path class="w" d="M292 218L292 261"/>
+<path class="a" d="M292 261L262 261" marker-end="url(#arr)"/>
+<path class="w" d="M82 261L48 261"/>
+<path class="a" d="M48 261L48 123" marker-end="url(#arr)"/>
+<path class="w" d="M35 328L35 466"/>
+<path class="w" d="M35 340L331 340"/>
+<path class="a" d="M35 340L215 446L305 340"/>
+<path class="w" d="M215 328L215 465"/>
+<text x="10" y="321" font-size="14" text-anchor="start">uo</text>
+<text x="2" y="451" font-size="12" text-anchor="start">−2V</text>
+<text x="115" y="490" font-size="13" text-anchor="middle">T1=20ms</text>
+<text x="267" y="490" font-size="13" text-anchor="middle">T2=10ms</text>
+<text x="58" y="378" font-size="12" text-anchor="start">−100 V/s</text>
+<text x="237" y="417" font-size="12" text-anchor="start">+200 V/s</text>
+<text x="12" y="531" font-size="13" text-anchor="start">测前复位；UiT1=VrefT2；比较到0停止。</text>
+</svg>

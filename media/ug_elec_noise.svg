@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="435" viewBox="0 0 360 435" role="img" aria-labelledby="title"><title id="title">噪声：谱乘模平方，再积分</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">噪声：谱乘模平方，再积分</text>
+<text x="12" y="55" font-size="14" text-anchor="start">实宽平稳；μ恒定，R只依时差τ</text>
+<path class="w" d="M35 150L35 84"/>
+<path class="w" d="M15 150L155 150"/>
+<path class="a" d="M35 150H60V105H130V150"/>
+<text x="69" y="96" font-size="12" text-anchor="start">N0/2</text>
+<text x="68" y="174" font-size="12" text-anchor="start">−B..+B</text>
+<path class="a" d="M165 125L210 125" marker-end="url(#arr)"/>
+<text x="165" y="110" font-size="12" text-anchor="start">|H|²</text>
+<path class="w" d="M235 150L235 65"/>
+<path class="w" d="M220 150L350 150"/>
+<path class="a" d="M235 150H255V85H330V150"/>
+<text x="256" y="73" font-size="12" text-anchor="start">4N0/2</text>
+<text x="254" y="174" font-size="12" text-anchor="start">−B..+B</text>
+<rect x="50" y="222" width="255" height="43" class="soft"/>
+<text x="177.5" y="248.5" font-size="14" text-anchor="middle">Sy=|H|²Sn，Ny=∫Sy df</text>
+<text x="12" y="306" font-size="14" text-anchor="start">幅度增益2→功率谱乘4。</text>
+<text x="12" y="336" font-size="14" text-anchor="start">N0=10⁻¹²，B=10kHz：Ny=4×10⁻⁸W</text>
+<text x="12" y="369" font-size="14" text-anchor="start">R(0)=均方值；零均值时才等于方差。</text>
+<text x="12" y="410" font-size="13" text-anchor="start">白描述谱，高斯描述分布，不是同一条件。</text>
+</svg>

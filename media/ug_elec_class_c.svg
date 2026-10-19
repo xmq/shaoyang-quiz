@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="610" viewBox="0 0 360 610" role="img" aria-labelledby="title"><title id="title">丙类：供电与调谐负载分开看</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">丙类：供电与调谐负载分开看</text>
+<text x="12" y="52" font-size="14" text-anchor="start">正电源经馈电电感供直流；CE隔开负载直流</text>
+<path class="w" d="M95 230L120 230"/>
+<path class="w" d="M120 210L120 250"/>
+<path class="w" d="M120 216L145 195"/>
+<path class="w" d="M120 244L145 265"/>
+<path class="soft" d="M132 249L142 261L129 257Z"/>
+<rect x="12" y="205" width="72" height="48" class="w"/>
+<text x="48.0" y="234.0" font-size="14" text-anchor="middle">射频激励</text>
+<path class="w" d="M84 230L95 230"/>
+<text x="14" y="283" font-size="12" text-anchor="start">含负偏置</text>
+<path class="w" d="M145 283L145 291"/>
+<path class="w" d="M135 291L155 291"/>
+<path class="w" d="M139 296L151 296"/>
+<path class="w" d="M143 301L147 301"/>
+<path class="w" d="M145 265L145 283"/>
+<text x="160" y="80" font-size="14" text-anchor="start">+12V</text>
+<path class="w" d="M145 75L145 105"/>
+<path class="w" d="M145 105v8c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10v8"/>
+<text x="154" y="133" font-size="12" text-anchor="start">RFC</text>
+<path class="w" d="M145 161L145 195"/>
+<circle cx="145" cy="180" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M145 180L175 180"/>
+<path class="w" d="M175 180L196.0 180"/>
+<path class="w" d="M196.0 170L196.0 190"/>
+<path class="w" d="M204.0 170L204.0 190"/>
+<path class="w" d="M204.0 180L225 180"/>
+<text x="200.0" y="165" font-size="12" text-anchor="middle">CE</text>
+<path class="w" d="M225 180L325 180"/>
+<path class="w" d="M225 207v8c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10v8"/>
+<text x="234" y="235" font-size="12" text-anchor="start">L</text>
+<path class="w" d="M225 180L225 207"/>
+<path class="w" d="M225 263L225 290"/>
+<path class="w" d="M225 290L225 298"/>
+<path class="w" d="M215 298L235 298"/>
+<path class="w" d="M219 303L231 303"/>
+<path class="w" d="M223 308L227 308"/>
+<path class="w" d="M275 214L275 229.0"/>
+<path class="w" d="M265 229.0L285 229.0"/>
+<path class="w" d="M265 237.0L285 237.0"/>
+<path class="w" d="M275 237.0L275 252"/>
+<text x="288" y="237.0" font-size="12" text-anchor="start">C</text>
+<path class="w" d="M275 180L275 214"/>
+<path class="w" d="M275 252L275 290"/>
+<path class="w" d="M275 290L275 298"/>
+<path class="w" d="M265 298L285 298"/>
+<path class="w" d="M269 303L281 303"/>
+<path class="w" d="M273 308L277 308"/>
+<path class="w" d="M325 211L325 219"/>
+<rect x="320" y="219" width="10" height="24" class="w"/>
+<path class="w" d="M325 243L325 251"/>
+<text x="334" y="235.0" font-size="12" text-anchor="start">50Ω</text>
+<path class="w" d="M325 180L325 211"/>
+<path class="w" d="M325 251L325 290"/>
+<path class="w" d="M325 290L325 298"/>
+<path class="w" d="M315 298L335 298"/>
+<path class="w" d="M319 303L331 303"/>
+<path class="w" d="M323 308L327 308"/>
+<text x="284" y="166" font-size="12" text-anchor="start">Rp</text>
+<path class="w" d="M20 388L180 388"/>
+<path class="a" d="M20 388H45Q60 324 75 388H112Q127 324 142 388H180"/>
+<text x="195" y="353" font-size="12" text-anchor="start">I0=.10A平均</text>
+<text x="195" y="380" font-size="12" text-anchor="start">I1=.16A基波峰</text>
+<text x="12" y="431" font-size="14" text-anchor="start">LC取基波：Ucm=I1Rp=8V</text>
+<text x="12" y="462" font-size="14" text-anchor="start">Po=.64W；Pdc=1.2W；η≈53.3%</text>
+<text x="12" y="503" font-size="14" text-anchor="start">谷值12−8=4V，仍有导通余量。</text>
+<text x="12" y="535" font-size="14" text-anchor="start">到临界后I0/I1会变，不能固定系数外推。</text>
+<text x="12" y="579" font-size="13" text-anchor="start">输出电路为最小机制图，不包含完整匹配设计。</text>
+</svg>

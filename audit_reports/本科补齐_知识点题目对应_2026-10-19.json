@@ -1,0 +1,984 @@
+{
+  "baseline": {
+    "courses": 16,
+    "chapters": 134,
+    "topics": 393,
+    "questions": 2534
+  },
+  "candidate": {
+    "courses": 16,
+    "chapters": 135,
+    "topics": 452,
+    "questions": 2652
+  },
+  "new_units": 59,
+  "new_questions": 118,
+  "new_question_types": {
+    "简答": 102,
+    "单选": 11,
+    "多选": 1,
+    "判断": 4
+  },
+  "courses_changed": {
+    "软件工程": 3,
+    "信号与系统": 10,
+    "电路分析与电工技术": 7,
+    "计算机组成原理": 1,
+    "操作系统原理": 3,
+    "数据结构与算法": 4,
+    "数据库技术": 5,
+    "C与Python程序设计": 2,
+    "计算机网络": 3,
+    "模拟电子技术": 5,
+    "数字电子技术": 3,
+    "通信原理与高频电子线路": 13
+  },
+  "old_h3_order_preserved": true,
+  "units": [
+    {
+      "course": "软件工程",
+      "topic_id": "software-engineering.t26",
+      "chapter_id": "software-engineering.c07",
+      "title": "CMM五级与过程改进",
+      "question_ids": [
+        "gap-ug-as-software-engineering-cmm-levels",
+        "gap-ug-as-software-engineering-cmm-version-boundary"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### CMM五级与过程改进",
+      "review_heading": "### CMM五级与过程改进"
+    },
+    {
+      "course": "软件工程",
+      "topic_id": "software-engineering.t27",
+      "chapter_id": "software-engineering.c04",
+      "title": "Jackson数据结构到程序结构",
+      "question_ids": [
+        "gap-ug-as-software-engineering-jsp-records",
+        "gap-ug-as-software-engineering-jsp-empty"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### Jackson数据结构到程序结构",
+      "review_heading": "### Jackson数据结构到程序结构"
+    },
+    {
+      "course": "软件工程",
+      "topic_id": "software-engineering.t28",
+      "chapter_id": "software-engineering.c04",
+      "title": "界面的一致性、反馈与错误恢复",
+      "question_ids": [
+        "gap-ug-as-software-engineering-ui-recovery",
+        "gap-ug-as-software-engineering-ui-pending"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 界面的一致性、反馈与错误恢复",
+      "review_heading": "### 界面的一致性、反馈与错误恢复"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t17",
+      "chapter_id": "signals-systems.c08",
+      "title": "DFT与IDFT的四点计算",
+      "question_ids": [
+        "gap-ug-as-signals-systems-dft-four",
+        "gap-ug-as-signals-systems-idft-scale"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### DFT与IDFT的四点计算",
+      "review_heading": "### DFT与IDFT的四点计算"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t18",
+      "chapter_id": "signals-systems.c08",
+      "title": "DFT索引与正负频率",
+      "question_ids": [
+        "gap-ug-as-signals-systems-dft-frequency",
+        "gap-ug-as-signals-systems-dft-conjugate"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### DFT索引与正负频率",
+      "review_heading": "### DFT索引与正负频率"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t19",
+      "chapter_id": "signals-systems.c08",
+      "title": "圆周卷积与补零",
+      "question_ids": [
+        "gap-ug-as-signals-systems-circular-fold",
+        "gap-ug-as-signals-systems-circular-padding"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 圆周卷积与补零",
+      "review_heading": "### 圆周卷积与补零"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t20",
+      "chapter_id": "signals-systems.c08",
+      "title": "FFT偶奇分解与蝶形",
+      "question_ids": [
+        "gap-ug-as-signals-systems-fft-layer",
+        "gap-ug-as-signals-systems-fft-boundary"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### FFT偶奇分解与蝶形",
+      "review_heading": "### FFT偶奇分解与蝶形"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t21",
+      "chapter_id": "signals-systems.c05",
+      "title": "差分方程的非零初值响应",
+      "question_ids": [
+        "gap-ug-as-signals-systems-difference-initial",
+        "gap-ug-as-signals-systems-difference-decomposition"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 差分方程的非零初值响应",
+      "review_heading": "### 差分方程的非零初值响应"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t22",
+      "chapter_id": "signals-systems.c05",
+      "title": "离散频率响应的幅相与零点",
+      "question_ids": [
+        "gap-ug-as-signals-systems-dtft-phase",
+        "gap-ug-as-signals-systems-dtft-zero"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 离散频率响应的幅相与零点",
+      "review_heading": "### 离散频率响应的幅相与零点"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t23",
+      "chapter_id": "signals-systems.c05",
+      "title": "延迟加法框图读方程",
+      "question_ids": [
+        "gap-ug-as-signals-systems-block-delay",
+        "gap-ug-as-signals-systems-block-feedforward"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 延迟加法框图读方程",
+      "review_heading": "### 延迟加法框图读方程"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t24",
+      "chapter_id": "signals-systems.c04",
+      "title": "信号内积与正交",
+      "question_ids": [
+        "gap-ug-as-signals-systems-inner-orthogonal",
+        "gap-ug-as-signals-systems-inner-conjugate"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 信号内积与正交",
+      "review_heading": "### 信号内积与正交"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t25",
+      "chapter_id": "signals-systems.c04",
+      "title": "相关与延迟匹配",
+      "question_ids": [
+        "gap-ug-as-signals-systems-correlation-lag",
+        "gap-ug-as-signals-systems-correlation-convention"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 相关与延迟匹配",
+      "review_heading": "### 相关与延迟匹配"
+    },
+    {
+      "course": "信号与系统",
+      "topic_id": "signals-systems.t26",
+      "chapter_id": "signals-systems.c07",
+      "title": "Parseval能量核对",
+      "question_ids": [
+        "gap-ug-as-signals-systems-parseval-energy",
+        "gap-ug-as-signals-systems-parseval-normalization"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### Parseval能量核对",
+      "review_heading": "### Parseval能量核对"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t16",
+      "chapter_id": "circuit.c07",
+      "title": "二阶RLC的初值与响应",
+      "question_ids": [
+        "gap-ug26-circuit-16-1",
+        "gap-ug26-circuit-16-2"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 二阶RLC的初值与响应",
+      "review_heading": "### 二阶RLC的初值与响应"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t17",
+      "chapter_id": "circuit.c04",
+      "title": "互感同名端与串联等效",
+      "question_ids": [
+        "gap-ug26-circuit-17-1",
+        "gap-ug26-circuit-17-2"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 互感同名端与串联等效",
+      "review_heading": "### 互感同名端与串联等效"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t18",
+      "chapter_id": "circuit.c03",
+      "title": "二端口Z参数与开路条件",
+      "question_ids": [
+        "gap-ug26-circuit-18-1",
+        "gap-ug26-circuit-18-2"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 二端口Z参数与开路条件",
+      "review_heading": "### 二端口Z参数与开路条件"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t19",
+      "chapter_id": "circuit.c05",
+      "title": "谐振、品质因数与带宽",
+      "question_ids": [
+        "gap-ug26-circuit-19-1",
+        "gap-ug26-circuit-19-2"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 谐振、品质因数与带宽",
+      "review_heading": "### 谐振、品质因数与带宽"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t20",
+      "chapter_id": "circuit.c05",
+      "title": "非正弦分量的有效值与功率",
+      "question_ids": [
+        "gap-ug26-circuit-20-1",
+        "gap-ug26-circuit-20-2"
+      ],
+      "question_types": [
+        "简答",
+        "多选"
+      ],
+      "lecture_heading": "#### 非正弦分量的有效值与功率",
+      "review_heading": "### 非正弦分量的有效值与功率"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t21",
+      "chapter_id": "circuit.c07",
+      "title": "RC复频域模型保留初值",
+      "question_ids": [
+        "gap-ug26-circuit-21-1",
+        "gap-ug26-circuit-21-2"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### RC复频域模型保留初值",
+      "review_heading": "### RC复频域模型保留初值"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "topic_id": "circuit.t22",
+      "chapter_id": "circuit.c01",
+      "title": "传输延时与端接反射",
+      "question_ids": [
+        "gap-ug26-circuit-22-1",
+        "gap-ug26-circuit-22-2"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 传输延时与端接反射",
+      "review_heading": "### 传输延时与端接反射"
+    },
+    {
+      "course": "计算机组成原理",
+      "topic_id": "computer-organization.t43",
+      "chapter_id": "computer-organization.c02",
+      "title": "先行进位的两位展开",
+      "question_ids": [
+        "gap-ug-comp-20261019-01-a",
+        "gap-ug-comp-20261019-01-b"
+      ],
+      "question_types": [
+        "简答",
+        "判断"
+      ],
+      "lecture_heading": "#### 先行进位的两位展开",
+      "review_heading": "### 先行进位的两位展开"
+    },
+    {
+      "course": "操作系统原理",
+      "topic_id": "operating-system.t22",
+      "chapter_id": "operating-system.c03",
+      "title": "多级反馈队列的升降与抢占",
+      "question_ids": [
+        "gap-ug-comp-20261019-02-a",
+        "gap-ug-comp-20261019-02-b"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 多级反馈队列的升降与抢占",
+      "review_heading": "### 多级反馈队列的升降与抢占"
+    },
+    {
+      "course": "操作系统原理",
+      "topic_id": "operating-system.t23",
+      "chapter_id": "operating-system.c03",
+      "title": "按截止期执行EDF调度",
+      "question_ids": [
+        "gap-ug-comp-20261019-03-a",
+        "gap-ug-comp-20261019-03-b"
+      ],
+      "question_types": [
+        "简答",
+        "判断"
+      ],
+      "lecture_heading": "#### 按截止期执行EDF调度",
+      "review_heading": "### 按截止期执行EDF调度"
+    },
+    {
+      "course": "操作系统原理",
+      "topic_id": "operating-system.t24",
+      "chapter_id": "operating-system.c04",
+      "title": "等待图中的死锁检测",
+      "question_ids": [
+        "gap-ug-comp-20261019-04-a",
+        "gap-ug-comp-20261019-04-b"
+      ],
+      "question_types": [
+        "简答",
+        "判断"
+      ],
+      "lecture_heading": "#### 等待图中的死锁检测",
+      "review_heading": "### 等待图中的死锁检测"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t45",
+      "chapter_id": "data-structures.c04",
+      "title": "B树删除的借位与合并",
+      "question_ids": [
+        "gap-ug-comp-20261019-05-a",
+        "gap-ug-comp-20261019-05-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### B树删除的借位与合并",
+      "review_heading": "### B树删除的借位与合并"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t46",
+      "chapter_id": "data-structures.c04",
+      "title": "中序线索的建立与遍历",
+      "question_ids": [
+        "gap-ug-comp-20261019-06-a",
+        "gap-ug-comp-20261019-06-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 中序线索的建立与遍历",
+      "review_heading": "### 中序线索的建立与遍历"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t47",
+      "chapter_id": "data-structures.c08",
+      "title": "败者树如何更新归并段首",
+      "question_ids": [
+        "gap-ug-comp-20261019-07-a",
+        "gap-ug-comp-20261019-07-b"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 败者树如何更新归并段首",
+      "review_heading": "### 败者树如何更新归并段首"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t48",
+      "chapter_id": "data-structures.c08",
+      "title": "置换选择中的冻结与新段",
+      "question_ids": [
+        "gap-ug-comp-20261019-08-a",
+        "gap-ug-comp-20261019-08-b"
+      ],
+      "question_types": [
+        "简答",
+        "判断"
+      ],
+      "lecture_heading": "#### 置换选择中的冻结与新段",
+      "review_heading": "### 置换选择中的冻结与新段"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t23",
+      "chapter_id": "database.c05",
+      "title": "存储过程的一次参数调用",
+      "question_ids": [
+        "gap-ug-comp-20261019-09-a",
+        "gap-ug-comp-20261019-09-b"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 存储过程的一次参数调用",
+      "review_heading": "### 存储过程的一次参数调用"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t24",
+      "chapter_id": "database.c05",
+      "title": "游标的逐行读取与关闭",
+      "question_ids": [
+        "gap-ug-comp-20261019-10-a",
+        "gap-ug-comp-20261019-10-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 游标的逐行读取与关闭",
+      "review_heading": "### 游标的逐行读取与关闭"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t25",
+      "chapter_id": "database.c09",
+      "title": "事实表的粒度与维度汇总",
+      "question_ids": [
+        "gap-ug-comp-20261019-11-a",
+        "gap-ug-comp-20261019-11-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 事实表的粒度与维度汇总",
+      "review_heading": "### 事实表的粒度与维度汇总"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t26",
+      "chapter_id": "database.c01",
+      "title": "键值数据的写入与读取",
+      "question_ids": [
+        "gap-ug-comp-20261019-12-a",
+        "gap-ug-comp-20261019-12-b"
+      ],
+      "question_types": [
+        "简答",
+        "单选"
+      ],
+      "lecture_heading": "#### 键值数据的写入与读取",
+      "review_heading": "### 键值数据的写入与读取"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t27",
+      "chapter_id": "database.c01",
+      "title": "文档数据的字段筛选",
+      "question_ids": [
+        "gap-ug-comp-20261019-13-a",
+        "gap-ug-comp-20261019-13-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 文档数据的字段筛选",
+      "review_heading": "### 文档数据的字段筛选"
+    },
+    {
+      "course": "C与Python程序设计",
+      "topic_id": "programming.t23",
+      "chapter_id": "programming.c03",
+      "title": "无符号数的位运算",
+      "question_ids": [
+        "gap-ug-comp-20261019-14-a",
+        "gap-ug-comp-20261019-14-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 无符号数的位运算",
+      "review_heading": "### 无符号数的位运算"
+    },
+    {
+      "course": "C与Python程序设计",
+      "topic_id": "programming.t24",
+      "chapter_id": "programming.c09",
+      "title": "链表结点的改链与释放",
+      "question_ids": [
+        "gap-ug-comp-20261019-15-a",
+        "gap-ug-comp-20261019-15-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 链表结点的改链与释放",
+      "review_heading": "### 链表结点的改链与释放"
+    },
+    {
+      "course": "计算机网络",
+      "topic_id": "net.ospf-flow",
+      "chapter_id": "net-04",
+      "title": "OSPF从链路状态到路由表",
+      "question_ids": [
+        "gap-ug-comp-20261019-16-a",
+        "gap-ug-comp-20261019-16-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### OSPF从链路状态到路由表",
+      "review_heading": "### OSPF从链路状态到路由表"
+    },
+    {
+      "course": "计算机网络",
+      "topic_id": "net.mpls-label-flow",
+      "chapter_id": "net-04",
+      "title": "MPLS标签的压入交换与弹出",
+      "question_ids": [
+        "gap-ug-comp-20261019-17-a",
+        "gap-ug-comp-20261019-17-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### MPLS标签的压入交换与弹出",
+      "review_heading": "### MPLS标签的压入交换与弹出"
+    },
+    {
+      "course": "计算机网络",
+      "topic_id": "net.sdn-rule-flow",
+      "chapter_id": "net-04",
+      "title": "SDN规则未命中后的处理",
+      "question_ids": [
+        "gap-ug-comp-20261019-18-a",
+        "gap-ug-comp-20261019-18-b"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### SDN规则未命中后的处理",
+      "review_heading": "### SDN规则未命中后的处理"
+    },
+    {
+      "course": "模拟电子技术",
+      "topic_id": "analog-electronics.t23",
+      "chapter_id": "analog-electronics.c03",
+      "title": "共射电路的直流与交流分析",
+      "question_ids": [
+        "gap-ug-elec-analog-electronics-t23-01",
+        "gap-ug-elec-analog-electronics-t23-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 共射电路的直流与交流分析",
+      "review_heading": "### 共射电路的直流与交流分析"
+    },
+    {
+      "course": "模拟电子技术",
+      "topic_id": "analog-electronics.t24",
+      "chapter_id": "analog-electronics.c04",
+      "title": "差分对的尾电流与增益",
+      "question_ids": [
+        "gap-ug-elec-analog-electronics-t24-01",
+        "gap-ug-elec-analog-electronics-t24-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 差分对的尾电流与增益",
+      "review_heading": "### 差分对的尾电流与增益"
+    },
+    {
+      "course": "模拟电子技术",
+      "topic_id": "analog-electronics.t25",
+      "chapter_id": "analog-electronics.c04",
+      "title": "从电容求放大器截止频率",
+      "question_ids": [
+        "gap-ug-elec-analog-electronics-t25-01",
+        "gap-ug-elec-analog-electronics-t25-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 从电容求放大器截止频率",
+      "review_heading": "### 从电容求放大器截止频率"
+    },
+    {
+      "course": "模拟电子技术",
+      "topic_id": "analog-electronics.t26",
+      "chapter_id": "analog-electronics.c07",
+      "title": "互补功放的半周与效率",
+      "question_ids": [
+        "gap-ug-elec-analog-electronics-t26-01",
+        "gap-ug-elec-analog-electronics-t26-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 互补功放的半周与效率",
+      "review_heading": "### 互补功放的半周与效率"
+    },
+    {
+      "course": "模拟电子技术",
+      "topic_id": "analog-electronics.t27",
+      "chapter_id": "analog-electronics.c08",
+      "title": "稳压反馈分压与输出电压",
+      "question_ids": [
+        "gap-ug-elec-analog-electronics-t27-01",
+        "gap-ug-elec-analog-electronics-t27-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 稳压反馈分压与输出电压",
+      "review_heading": "### 稳压反馈分压与输出电压"
+    },
+    {
+      "course": "数字电子技术",
+      "topic_id": "digital-electronics.t20",
+      "chapter_id": "digital-electronics.c07",
+      "title": "加权电阻DAC的位权求和",
+      "question_ids": [
+        "gap-ug-elec-digital-electronics-t20-01",
+        "gap-ug-elec-digital-electronics-t20-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 加权电阻DAC的位权求和",
+      "review_heading": "### 加权电阻DAC的位权求和"
+    },
+    {
+      "course": "数字电子技术",
+      "topic_id": "digital-electronics.t21",
+      "chapter_id": "digital-electronics.c07",
+      "title": "双积分ADC的两个阶段",
+      "question_ids": [
+        "gap-ug-elec-digital-electronics-t21-01",
+        "gap-ug-elec-digital-electronics-t21-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 双积分ADC的两个阶段",
+      "review_heading": "### 双积分ADC的两个阶段"
+    },
+    {
+      "course": "数字电子技术",
+      "topic_id": "digital-electronics.t22",
+      "chapter_id": "digital-electronics.c07",
+      "title": "Flash ADC的并行判档",
+      "question_ids": [
+        "gap-ug-elec-digital-electronics-t22-01",
+        "gap-ug-elec-digital-electronics-t22-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### Flash ADC的并行判档",
+      "review_heading": "### Flash ADC的并行判档"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t23",
+      "chapter_id": "communication.c02",
+      "title": "平稳噪声的相关与输出功率",
+      "question_ids": [
+        "gap-ug-elec-communication-t23-01",
+        "gap-ug-elec-communication-t23-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 平稳噪声的相关与输出功率",
+      "review_heading": "### 平稳噪声的相关与输出功率"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t24",
+      "chapter_id": "communication.c08",
+      "title": "二元匹配接收与误码概率",
+      "question_ids": [
+        "gap-ug-elec-communication-t24-01",
+        "gap-ug-elec-communication-t24-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 二元匹配接收与误码概率",
+      "review_heading": "### 二元匹配接收与误码概率"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t25",
+      "chapter_id": "communication.c03",
+      "title": "单音AM的频谱与功率",
+      "question_ids": [
+        "gap-ug-elec-communication-t25-01",
+        "gap-ug-elec-communication-t25-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 单音AM的频谱与功率",
+      "review_heading": "### 单音AM的频谱与功率"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t26",
+      "chapter_id": "communication.c03",
+      "title": "FM的瞬时频率与相位",
+      "question_ids": [
+        "gap-ug-elec-communication-t26-01",
+        "gap-ug-elec-communication-t26-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### FM的瞬时频率与相位",
+      "review_heading": "### FM的瞬时频率与相位"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t27",
+      "chapter_id": "communication.c08",
+      "title": "邻码元干扰的抽样计算",
+      "question_ids": [
+        "gap-ug-elec-communication-t27-01",
+        "gap-ug-elec-communication-t27-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 邻码元干扰的抽样计算",
+      "review_heading": "### 邻码元干扰的抽样计算"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t28",
+      "chapter_id": "communication.c06",
+      "title": "调谐放大级的增益与噪声系数",
+      "question_ids": [
+        "gap-ug-elec-communication-t28-01",
+        "gap-ug-elec-communication-t28-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 调谐放大级的增益与噪声系数",
+      "review_heading": "### 调谐放大级的增益与噪声系数"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t29",
+      "chapter_id": "communication.c06",
+      "title": "丙类功放的直流与基波功率",
+      "question_ids": [
+        "gap-ug-elec-communication-t29-01",
+        "gap-ug-elec-communication-t29-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 丙类功放的直流与基波功率",
+      "review_heading": "### 丙类功放的直流与基波功率"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t30",
+      "chapter_id": "communication.c06",
+      "title": "电容三点式振荡的反馈与频率",
+      "question_ids": [
+        "gap-ug-elec-communication-t30-01",
+        "gap-ug-elec-communication-t30-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 电容三点式振荡的反馈与频率",
+      "review_heading": "### 电容三点式振荡的反馈与频率"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t31",
+      "chapter_id": "communication.c06",
+      "title": "包络检波的充放电与时间常数",
+      "question_ids": [
+        "gap-ug-elec-communication-t31-01",
+        "gap-ug-elec-communication-t31-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 包络检波的充放电与时间常数",
+      "review_heading": "### 包络检波的充放电与时间常数"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t32",
+      "chapter_id": "communication.c03",
+      "title": "DPCM的重建值预测",
+      "question_ids": [
+        "gap-ug-elec-communication-t32-01",
+        "gap-ug-elec-communication-t32-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### DPCM的重建值预测",
+      "review_heading": "### DPCM的重建值预测"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t33",
+      "chapter_id": "communication.c08",
+      "title": "HDB3的四零替代",
+      "question_ids": [
+        "gap-ug-elec-communication-t33-01",
+        "gap-ug-elec-communication-t33-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### HDB3的四零替代",
+      "review_heading": "### HDB3的四零替代"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t34",
+      "chapter_id": "communication.c07",
+      "title": "卷积码的移位与输出",
+      "question_ids": [
+        "gap-ug-elec-communication-t34-01",
+        "gap-ug-elec-communication-t34-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 卷积码的移位与输出",
+      "review_heading": "### 卷积码的移位与输出"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "topic_id": "communication.t35",
+      "chapter_id": "communication.c03",
+      "title": "伪随机序列的状态与相关",
+      "question_ids": [
+        "gap-ug-elec-communication-t35-01",
+        "gap-ug-elec-communication-t35-02"
+      ],
+      "question_types": [
+        "简答",
+        "简答"
+      ],
+      "lecture_heading": "#### 伪随机序列的状态与相关",
+      "review_heading": "### 伪随机序列的状态与相关"
+    }
+  ],
+  "note": "只覆盖普通本科重评确认缺口；本表不声称外部全部教材逐页完整。独立复核和末次浏览器证据见汇总。"
+}

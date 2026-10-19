@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "ug-comp-20261019-01-a",
+    "source": "本科课程补充原创",
+    "subject": "计算机组成原理",
+    "topic_id": "computer-organization.t43",
+    "topic_source": "manual",
+    "chapter": "先行进位的两位展开",
+    "chapter_id": "computer-organization.c02",
+    "source_chapter": "第6章 计算机的运算方法",
+    "knowledge_point": "数据表示与运算",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "两位加法器以Gᵢ=Aᵢ∧Bᵢ、Pᵢ=Aᵢ⊕Bᵢ形成先行进位。A=10、B=01、C₀=1，位号从低位0开始。求G₀/P₀/G₁/P₁、C₁和C₂，并给完整和。",
+    "options": {},
+    "answer": "G₀=0、P₀=1、G₁=0、P₁=1；C₁=1，C₂=1，完整和100。",
+    "explanation": "两位均传递输入进位：C₁=0∨1×1=1，C₂=0∨1×0∨1×1×1=1；两和位均0，2+1+1=4。",
+    "rubric": [
+      {
+        "criterion": "G/P四值正确",
+        "points": 1
+      },
+      {
+        "criterion": "展开求C₁=C₂=1",
+        "points": 1
+      },
+      {
+        "criterion": "完整和100并分清低两位",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-01-b",
+    "source": "本科课程补充原创",
+    "subject": "计算机组成原理",
+    "topic_id": "computer-organization.t43",
+    "topic_source": "manual",
+    "chapter": "先行进位的两位展开",
+    "chapter_id": "computer-organization.c02",
+    "source_chapter": "第6章 计算机的运算方法",
+    "knowledge_point": "数据表示与运算",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "判断",
+    "stem": "把先行进位C₂展开到G/P与C₀，可以减少进位逐级等待，但并不表示组合门电路没有传播延迟。",
+    "options": {},
+    "answer": "正确",
+    "explanation": "展开消除了对中间C₁先产生再使用的串行形式，实际门仍有延迟；不能把结构优化理解为零延迟。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-02-a",
+    "source": "本科课程补充原创",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t22",
+    "topic_source": "manual",
+    "chapter": "多级反馈队列的升降与抢占",
+    "chapter_id": "operating-system.c03",
+    "source_chapter": "第3章 进程、线程与处理机调度",
+    "knowledge_point": "进程调度与同步",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "单CPU两级反馈队列：Q0高、片1；Q1低、片2。新任务进Q0，Q0用满未完降Q1；高队列抢占时低队列保留本片剩余时间。无I/O和切换开销。A在0到达需4，B在2到达需1。写2时刻A的剩余执行量及余片、之后的时间线和完成时刻。",
+    "options": {},
+    "answer": "时刻2 A余2，本片余1；B[2,3)完成；A[3,4)用余片后余1，A[4,5)完成。C_B=3、C_A=5。",
+    "explanation": "A已在Q0执行1、Q1执行1；高优先级B到达使A暂停但不重置低队列剩余片。",
+    "rubric": [
+      {
+        "criterion": "A余执行2且余片1",
+        "points": 1
+      },
+      {
+        "criterion": "B抢占后2—3完成",
+        "points": 1
+      },
+      {
+        "criterion": "A续余片后5完成",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-02-b",
+    "source": "本科课程补充原创",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t22",
+    "topic_source": "manual",
+    "chapter": "多级反馈队列的升降与抢占",
+    "chapter_id": "operating-system.c03",
+    "source_chapter": "第3章 进程、线程与处理机调度",
+    "knowledge_point": "进程调度与同步",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "多级反馈队列总先选最高非空队列，且高队列持续有新任务，低队列任务长期得不到CPU。哪项改进最直接针对这种饥饿风险？",
+    "options": {
+      "A": "按约定的等待阈值或周期提升低队列任务",
+      "B": "禁止所有低队列任务再次进入高队列",
+      "C": "只给最高队列增加更多新任务",
+      "D": "认为多级队列天然保证不会饥饿，无须调整"
+    },
+    "answer": "A",
+    "explanation": "老化或定期提升可改善低队列长期等待，阈值/周期和提升位置须成为明确规则；降级机制本身不自动保证有限等待。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-03-a",
+    "source": "本科课程补充原创",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t23",
+    "topic_source": "manual",
+    "chapter": "按截止期执行EDF调度",
+    "chapter_id": "operating-system.c03",
+    "source_chapter": "第3章 进程、线程与处理机调度",
+    "knowledge_point": "进程调度与同步",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "抢占式EDF，单CPU、无开销：A到0需3、绝对截止5，B到1需1、截止2。写首次抢占发生时刻、完整时间线，并逐项判断是否守时。",
+    "options": {},
+    "answer": "1时刻B抢占A；A[0,1)、B[1,2)、A[2,4)；B在2、A在4完成，均不晚于截止时刻。",
+    "explanation": "EDF比较已到达任务的绝对截止时刻；A恢复时只剩2个执行单位。",
+    "rubric": [
+      {
+        "criterion": "时刻1因2早于5抢占",
+        "points": 1
+      },
+      {
+        "criterion": "时间线与剩余执行量正确",
+        "points": 1
+      },
+      {
+        "criterion": "分别核验两完成时刻与期限",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-03-b",
+    "source": "本科课程补充原创",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t23",
+    "topic_source": "manual",
+    "chapter": "按截止期执行EDF调度",
+    "chapter_id": "operating-system.c03",
+    "source_chapter": "第3章 进程、线程与处理机调度",
+    "knowledge_point": "进程调度与同步",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "判断",
+    "stem": "单CPU、无开销，A/B均在0到达：A需3且截止3，B需2且截止4。因为使用EDF，所以一定能让两个任务都不晚于各自截止时刻完成。",
+    "options": {},
+    "answer": "错误",
+    "explanation": "截止4前共需执行5个单位，但CPU在0—4只有4个单位能力，任何调度都无法让两者全守时；EDF不增加处理能力。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-04-a",
+    "source": "本科课程补充原创",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t24",
+    "topic_source": "manual",
+    "chapter": "等待图中的死锁检测",
+    "chapter_id": "operating-system.c04",
+    "source_chapter": "第4章 进程同步与死锁",
+    "knowledge_point": "死锁",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "每类资源仅一个实例且不可剥夺：P1持R1等待P2持有的R2，P2持R2等待P3持有的R3，P3持R3等待P1持有的R1。画等待边并判是否死锁；若撤销P3并回收其资源，哪条等待可先解除？",
+    "options": {},
+    "answer": "P1→P2、P2→P3、P3→P1成环，按给定单实例等待模型死锁；撤销P3回收R3后，P2对R3的等待可先解除。",
+    "explanation": "箭头从等待者指向持有者；解除环不代表所有进程已完成，后续还需执行和释放。",
+    "rubric": [
+      {
+        "criterion": "三条边方向正确",
+        "points": 1
+      },
+      {
+        "criterion": "单实例环判死锁",
+        "points": 1
+      },
+      {
+        "criterion": "R3回收先解除P2等待",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-04-b",
+    "source": "本科课程补充原创",
+    "subject": "操作系统",
+    "topic_id": "operating-system.t24",
+    "topic_source": "manual",
+    "chapter": "等待图中的死锁检测",
+    "chapter_id": "operating-system.c04",
+    "source_chapter": "第4章 进程同步与死锁",
+    "knowledge_point": "死锁",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "判断",
+    "stem": "每类资源可能有多个实例时，只要进程等待关系中存在P1→P2→P1环，就可以仅凭这个环断定系统已经死锁。",
+    "options": {},
+    "answer": "错误",
+    "explanation": "多实例可能有其他实例随后释放，有环不充分。需结合可用、分配与当前实际请求检测；银行家最大剩余需求的安全检查也不等于已发生死锁检测。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-05-a",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t45",
+    "topic_source": "manual",
+    "chapter": "B树删除的借位与合并",
+    "chapter_id": "data-structures.c04",
+    "source_chapter": "第4章 树与二叉树",
+    "knowledge_point": "树与二叉树",
+    "ability": "读图排障",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "四阶B树根[20]，左叶[10]、右叶[30,40]。删10后，有人直接把30放入左叶、父键仍20，右叶剩40。指出为何错误，并给经过父键借位的正确结果。",
+    "options": {},
+    "answer": "错误结果左子树有30大于父20，破坏分区；应父20下移为左叶，右兄弟最小30上提为根，右叶[40]，即根[30]、叶[20]/[40]。",
+    "explanation": "借位是通过父分隔键旋转，不是任意跨父搬一个兄弟键。",
+    "rubric": [
+      {
+        "criterion": "指出左30超过父20",
+        "points": 1
+      },
+      {
+        "criterion": "父20下移与30上提",
+        "points": 1
+      },
+      {
+        "criterion": "最终根30叶20/40",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-05-b",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t45",
+    "topic_source": "manual",
+    "chapter": "B树删除的借位与合并",
+    "chapter_id": "data-structures.c04",
+    "source_chapter": "第4章 树与二叉树",
+    "knowledge_point": "树与二叉树",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "四阶B树根[20]，左右叶分别[10]和[30]，非根至少1键。删除10后能向右兄弟借键吗？写出合并内容和根的变化。",
+    "options": {},
+    "answer": "不能，右叶只有下限1键；把空左叶、父键20与右叶30合成[20,30]，旧根变空且只余一个孩子，由该孩子成为新根，树高降1。",
+    "explanation": "不可把兄弟也借成下溢；根的最少键与降层规则不同于普通非根。",
+    "rubric": [
+      {
+        "criterion": "右兄弟不能借的下限理由",
+        "points": 1
+      },
+      {
+        "criterion": "合并20/30",
+        "points": 1
+      },
+      {
+        "criterion": "空根被唯一孩子替代并降层",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-06-a",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t46",
+    "topic_source": "manual",
+    "chapter": "中序线索的建立与遍历",
+    "chapter_id": "data-structures.c04",
+    "source_chapter": "第4章 树与二叉树",
+    "knowledge_point": "树与二叉树",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "初始树B为根，左A、右D，D的左孩子为C。使用中序线索，tag0表示孩子、tag1表示线索。列出中序序列，以及C的左右线索与两个tag；B的右指针是否应改为线索？",
+    "options": {},
+    "answer": "中序A、B、C、D；C左指B、右指D，ltag=rtag=1；B右指D是真实孩子，rtag仍0，不能改成线索。",
+    "explanation": "C没有孩子，空链补前驱B/后继D；已有孩子链接不能覆盖。",
+    "rubric": [
+      {
+        "criterion": "中序ABCD",
+        "points": 1
+      },
+      {
+        "criterion": "C前驱B后继D且两tag1",
+        "points": 1
+      },
+      {
+        "criterion": "B右孩子D保持tag0",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-06-b",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t46",
+    "topic_source": "manual",
+    "chapter": "中序线索的建立与遍历",
+    "chapter_id": "data-structures.c04",
+    "source_chapter": "第4章 树与二叉树",
+    "knowledge_point": "树与二叉树",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "中序线索树B根左A右C，A的右指针是指向B的后继线索，rtag=1。若递归遍历时不检查tag，把A.right也当右孩子，会有什么问题？怎样正确从A走到B，再从B走到C？",
+    "options": {},
+    "answer": "可能沿A→B→A等重复或成环；输出A后按右线索直接到B，B右为真实孩子则进入右子树并沿真实左孩子找最左C。",
+    "explanation": "线索保存访问顺序而非新增子树；递归与下降必须区分孩子和线索。",
+    "rubric": [
+      {
+        "criterion": "说明重复/环的原因",
+        "points": 1
+      },
+      {
+        "criterion": "A按线索到B",
+        "points": 1
+      },
+      {
+        "criterion": "B真实右子树最左为C",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-07-a",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t47",
+    "topic_source": "manual",
+    "chapter": "败者树如何更新归并段首",
+    "chapter_id": "data-structures.c08",
+    "source_chapter": "第8章 数据结构与算法选择",
+    "knowledge_point": "排序算法",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "三路已排序段R1=[2,8]、R2=[1,9]、R3=[3,4]。败者树归并先输出哪个值？补入后段首是什么？再输出哪个值？指出需重赛的路径来自哪一路。",
+    "options": {},
+    "answer": "先R2的1；补9后段首(2,9,3)，再R1的2；每次只更新刚获胜那一路叶到根路径，第一次为R2路径。",
+    "explanation": "获胜段的新段首替换旧叶；其他段首没有变化，仍须与更新路径上的候选比较。",
+    "rubric": [
+      {
+        "criterion": "先1且来自R2",
+        "points": 1
+      },
+      {
+        "criterion": "补后2/9/3再出2",
+        "points": 1
+      },
+      {
+        "criterion": "重赛获胜R2路径",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-07-b",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t47",
+    "topic_source": "manual",
+    "chapter": "败者树如何更新归并段首",
+    "chapter_id": "data-structures.c08",
+    "source_chapter": "第8章 数据结构与算法选择",
+    "knowledge_point": "排序算法",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "将多个输入段的当前段首放入败者树进行归并，保证输出整体有序的必要前提是哪项？",
+    "options": {
+      "A": "每个输入段本身已经按相同次序有序",
+      "B": "每个输入段必须长度相等",
+      "C": "每个输入段的全部数据必须同时放进比赛树",
+      "D": "耗尽段的∞哨兵必须作为真实记录输出"
+    },
+    "answer": "A",
+    "explanation": "若段[7,1]未排序，输出7后才暴露1，会破坏整体次序。败者树只优化各有序段段首选择，段可不同长；∞仅占位，不输出。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-08-a",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t48",
+    "topic_source": "manual",
+    "chapter": "置换选择中的冻结与新段",
+    "chapter_id": "data-structures.c08",
+    "source_chapter": "第8章 数据结构与算法选择",
+    "knowledge_point": "排序算法",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "置换选择缓冲2条，输入依次5、1、0、4。初装5、1，每次输出本段可选最小值再读一条；小于本段最后输出的新值冻结。写初始有序段和0在哪一步冻结。",
+    "options": {},
+    "answer": "先出1读0，0<1冻结；可选只剩5，出5读4，4<5也冻结；首段[1,5]，解冻后第二段[0,4]。",
+    "explanation": "冻结以本段最后输出比较，输入未尽时不能跳过读取；解冻只在本段可选项耗尽后进行。",
+    "rubric": [
+      {
+        "criterion": "出1时冻结0",
+        "points": 1
+      },
+      {
+        "criterion": "出5时冻结4",
+        "points": 1
+      },
+      {
+        "criterion": "两段1,5与0,4",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-08-b",
+    "source": "本科课程补充原创",
+    "subject": "算法与数据结构",
+    "topic_id": "data-structures.t48",
+    "topic_source": "manual",
+    "chapter": "置换选择中的冻结与新段",
+    "chapter_id": "data-structures.c08",
+    "source_chapter": "第8章 数据结构与算法选择",
+    "knowledge_point": "排序算法",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "判断",
+    "stem": "置换选择已经生成两个各自有序的初始段[1,2,3,4,6]和[0]，因此把这两段依次串接便完成整个文件的排序，不再需要归并。",
+    "options": {},
+    "answer": "错误",
+    "explanation": "串接后6在0前，跨段仍无序；初始段生成和最终多路归并是不同阶段。段长依输入变化，也不能假定固定为缓冲容量两倍。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-09-a",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t23",
+    "topic_source": "manual",
+    "chapter": "存储过程的一次参数调用",
+    "chapter_id": "database.c05",
+    "source_chapter": "第5章 关系数据库标准语言SQL",
+    "knowledge_point": "SQL查询",
+    "ability": "程序阅读",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "伪过程扣款(id,amount)：金额<=0或无账户或余额<金额时返回错误且不UPDATE，否则余额减金额并返回成功。账户7初始80，依次在同一连续状态调用扣款(7,30)、扣款(7,60)，暂不考虑并发。分别返回什么，最终余额多少？",
+    "options": {},
+    "answer": "第一次成功并将余额改50；第二次余额50<60返回不足、不修改，最终50。",
+    "explanation": "第二次读取的是第一次更新后的50，不能两次都按初始80判断。",
+    "rubric": [
+      {
+        "criterion": "首次成功至50",
+        "points": 1
+      },
+      {
+        "criterion": "第二次不足不更新",
+        "points": 1
+      },
+      {
+        "criterion": "最终50并说明状态连续",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-09-b",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t23",
+    "topic_source": "manual",
+    "chapter": "存储过程的一次参数调用",
+    "chapter_id": "database.c05",
+    "source_chapter": "第5章 关系数据库标准语言SQL",
+    "knowledge_point": "SQL查询",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "将扣库存逻辑放进数据库存储过程后，以下判断正确的是哪项？",
+    "options": {
+      "A": "多次修改的整体成败、并发控制和访问权限仍需正确设计",
+      "B": "任意存储过程都自动使全部业务逻辑串行化",
+      "C": "从此不必检查更新影响行数",
+      "D": "调用过程自动取得数据库全部表的任意权限"
+    },
+    "answer": "A",
+    "explanation": "过程规定执行组织与调用位置，不自动解决任意业务的事务边界、并发竞争或授权。实际仍需事务、适当锁/条件原子更新及影响行数检查。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-10-a",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t24",
+    "topic_source": "manual",
+    "chapter": "游标的逐行读取与关闭",
+    "chapter_id": "database.c05",
+    "source_chapter": "第5章 关系数据库标准语言SQL",
+    "knowledge_point": "SQL查询",
+    "ability": "程序阅读",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "游标查询两行score=7、9。sum初始0；每次FETCH后先检查has_row，无行就退出，有行才累加，最后CLOSE。列每次FETCH的has_row、sum及最终结果；第三次为什么不能再加9？",
+    "options": {},
+    "answer": "第一次true，sum7；第二次true，sum16；第三次false，sum仍16。第三次无新行，旧score9不能再处理。",
+    "explanation": "先检查取行结果是避免重复旧数据的条件。",
+    "rubric": [
+      {
+        "criterion": "三次状态true/true/false",
+        "points": 1
+      },
+      {
+        "criterion": "sum7/16/16",
+        "points": 1
+      },
+      {
+        "criterion": "不重复旧score并关闭游标",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-10-b",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t24",
+    "topic_source": "manual",
+    "chapter": "游标的逐行读取与关闭",
+    "chapter_id": "database.c05",
+    "source_chapter": "第5章 关系数据库标准语言SQL",
+    "knowledge_point": "SQL查询",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "只需要查询全部非空成绩的总和，没有逐行外部动作，应优先集合SQL还是游标？若游标结果为空且程序sum初始0、先检查has_row再累加，会得到什么？",
+    "options": {},
+    "answer": "优先集合SQL SUM；所给游标空结果第一次has_row=false退出，程序sum保持0。SQL空集SUM可能返回NULL，不能声称两种接口空集结果无条件相同。",
+    "explanation": "用途及空集规则需要分别声明，逐行循环并非更正确。",
+    "rubric": [
+      {
+        "criterion": "选择集合SQL理由",
+        "points": 1
+      },
+      {
+        "criterion": "游标空集sum0",
+        "points": 1
+      },
+      {
+        "criterion": "指出SQL空集NULL与程序初值差异",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-11-a",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t25",
+    "topic_source": "manual",
+    "chapter": "事实表的粒度与维度汇总",
+    "chapter_id": "database.c09",
+    "source_chapter": "第9章 数据库安全性",
+    "knowledge_point": "数据仓库",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "事实粒度为每笔销售：S1日期D1地区N金额10，S2日期D2地区N金额20，S3日期D2地区S金额5；日期维D1/D2均属1月。求1月总额和N地区总额；说明按月汇总需借哪个维度信息。",
+    "options": {},
+    "answer": "1月35，N地区30；通过日期维将日期ID映射到月份再分组。",
+    "explanation": "事实金额可求和，日期所属月份是维度描述，不能只看日期ID字符猜月份。",
+    "rubric": [
+      {
+        "criterion": "月合35",
+        "points": 1
+      },
+      {
+        "criterion": "N合30",
+        "points": 1
+      },
+      {
+        "criterion": "日期维映射后分组",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-11-b",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t25",
+    "topic_source": "manual",
+    "chapter": "事实表的粒度与维度汇总",
+    "chapter_id": "database.c09",
+    "source_chapter": "第9章 数据库安全性",
+    "knowledge_point": "数据仓库",
+    "ability": "读图排障",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "每笔销售事实10、20、5均属1月，又向同一事实集加入“1月总额35”一行。查询SUM(金额)得70。解释错误，并区分粒度与度量。",
+    "options": {},
+    "answer": "把每笔与整月汇总混在同一粒度并重复计数；粒度是一行代表的业务事件/汇总层次，度量是金额等分析数值。应分开层次或只对同粒度明细聚合。",
+    "explanation": "数值都能相加不代表业务语义允许相加。",
+    "rubric": [
+      {
+        "criterion": "混合粒度重复计数",
+        "points": 1
+      },
+      {
+        "criterion": "粒度与金额度量区别",
+        "points": 1
+      },
+      {
+        "criterion": "同粒度聚合或分开汇总",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-12-a",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t26",
+    "topic_source": "manual",
+    "chapter": "键值数据的写入与读取",
+    "chapter_id": "database.c01",
+    "source_chapter": "第1章 数据库系统概论",
+    "knowledge_point": "数据库系统基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "约定键值PUT同键替换整个值。先PUT(\"item:8\",{name:\"笔\",stock:10})，再PUT(\"item:8\",{stock:7})，随后GET(\"item:8\")返回什么？若需保留name，应怎样设计这次更新？",
+    "options": {},
+    "answer": "返回仅{stock:7}；需明确将旧name与新stock合成完整新值，或使用实现支持的字段原子更新，不能假定PUT自动合并。",
+    "explanation": "读改写并发还应使用版本/条件或原子机制以免丢失其他修改。",
+    "rubric": [
+      {
+        "criterion": "仅stock7",
+        "points": 1
+      },
+      {
+        "criterion": "整值替换不隐式保name",
+        "points": 1
+      },
+      {
+        "criterion": "显式合并或受支持字段更新",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-12-b",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t26",
+    "topic_source": "manual",
+    "chapter": "键值数据的写入与读取",
+    "chapter_id": "database.c01",
+    "source_chapter": "第1章 数据库系统概论",
+    "knowledge_point": "数据库系统基础",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "键值接口仅有按用户编号键GET的基本能力。要找所有city=\"邵阳\"的用户，以下说法合理的是哪项？",
+    "options": {
+      "A": "需扫描检查值、建立按城市索引，或选择支持字段查询的实现",
+      "B": "一次GET(\"邵阳\")必然得到所有用户，因为城市也是字段",
+      "C": "只需改变键的显示颜色",
+      "D": "键值模型天然为值中的所有字段建立索引"
+    },
+    "answer": "A",
+    "explanation": "按已知唯一键定位值，不等于支持任意字段谓词；城市不是用户编号键。查询能力需数据结构或实现明确提供，不能从GET推断自动索引。",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-13-a",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t27",
+    "topic_source": "manual",
+    "chapter": "文档数据的字段筛选",
+    "chapter_id": "database.c01",
+    "source_chapter": "第1章 数据库系统概论",
+    "knowledge_point": "数据库系统基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "按本例文档语义：文档1为{id:1,city:\"邵阳\",age:20}，文档2为{id:2,city:\"长沙\",age:22}；UPDATE id==1 SET age=21只改指定字段。FIND city==\"邵阳\"返回哪些id及age？文档1的city会被删除吗？",
+    "options": {},
+    "answer": "只返回id1、age21；city仍邵阳，不会被字段更新删除。",
+    "explanation": "这是所给部分字段修改语义，区别于整值替换。",
+    "rubric": [
+      {
+        "criterion": "只id1",
+        "points": 1
+      },
+      {
+        "criterion": "年龄21",
+        "points": 1
+      },
+      {
+        "criterion": "city保留且区分整值替换",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-13-b",
+    "source": "本科课程补充原创",
+    "subject": "数据库",
+    "topic_id": "database.t27",
+    "topic_source": "manual",
+    "chapter": "文档数据的字段筛选",
+    "chapter_id": "database.c01",
+    "source_chapter": "第1章 数据库系统概论",
+    "knowledge_point": "数据库系统基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "文档数据库支持FIND city==\"邵阳\"。有人据此认定“必然已经有city索引，并且任意文档结构都不必校验”。指出两处问题。",
+    "options": {},
+    "answer": "能按字段表达查询不保证有相应索引，无索引可能扫描；文档仍需按业务验证字段/类型，灵活结构不消灭完整性和维护责任。",
+    "explanation": "查询表达能力、访问效率和数据约束属于不同层面。",
+    "rubric": [
+      {
+        "criterion": "可表达不等于有索引",
+        "points": 1
+      },
+      {
+        "criterion": "无索引可能扫描",
+        "points": 1
+      },
+      {
+        "criterion": "仍需字段/类型业务校验",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-14-a",
+    "source": "本科课程补充原创",
+    "subject": "编程语言",
+    "topic_id": "programming.t23",
+    "topic_source": "manual",
+    "chapter": "无符号数的位运算",
+    "chapter_id": "programming.c03",
+    "source_chapter": "第3章 运算符与表达式",
+    "knowledge_point": "程序设计基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "按4位无符号示意，A=1010、B=0110。求A&B、A|B、A^B，以及A右移一位的位串。",
+    "options": {},
+    "answer": "A&B=0010，A|B=1110，A^B=1100，A右移1为0101。",
+    "explanation": "分别逐位与/或/异或；无符号右移补0。",
+    "rubric": [
+      {
+        "criterion": "与0010",
+        "points": 1
+      },
+      {
+        "criterion": "或1110且异或1100",
+        "points": 1
+      },
+      {
+        "criterion": "右移0101并说明补0",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-14-b",
+    "source": "本科课程补充原创",
+    "subject": "编程语言",
+    "topic_id": "programming.t23",
+    "topic_source": "manual",
+    "chapter": "无符号数的位运算",
+    "chapter_id": "programming.c03",
+    "source_chapter": "第3章 运算符与表达式",
+    "knowledge_point": "程序设计基础",
+    "ability": "程序阅读",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "C中unsigned int a=12u,b=10u；比较a&b与a&&b的数值和求值方式。能否把4位示意当作unsigned int实际只有4位？",
+    "options": {},
+    "answer": "a&b=8，逐位与且不提供&&的短路；a&&b=1，按两者非0判断真假并有逻辑与短路规则。unsigned int实际宽度依实现，不是4位。",
+    "explanation": "本例a非0所以&&仍会求b；短路能力不等于此例右侧被跳过。",
+    "rubric": [
+      {
+        "criterion": "位与8和逻辑与1",
+        "points": 1
+      },
+      {
+        "criterion": "明确此例a非0会求b且两类规则不同",
+        "points": 1
+      },
+      {
+        "criterion": "4位只是示意",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-15-a",
+    "source": "本科课程补充原创",
+    "subject": "编程语言",
+    "topic_id": "programming.t24",
+    "topic_source": "manual",
+    "chapter": "链表结点的改链与释放",
+    "chapter_id": "programming.c09",
+    "source_chapter": "第9章 C指针、结构体与文件",
+    "knowledge_point": "C指针与内存",
+    "ability": "程序阅读",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "两个已分配Node构成head→10→20→NULL。执行old=head; head=head->next; free(old);后，head指向哪个值的结点？若仍有a指向旧10结点，能否读a->next？",
+    "options": {},
+    "answer": "head仍指向20结点；a是已释放10结点的别名，不能再解引用或读a->next。",
+    "explanation": "先保存后继使链尾仍可达，但free不自动清理所有别名。",
+    "rubric": [
+      {
+        "criterion": "head指20",
+        "points": 1
+      },
+      {
+        "criterion": "a失效不可读",
+        "points": 1
+      },
+      {
+        "criterion": "free不自动清所有别名",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-15-b",
+    "source": "本科课程补充原创",
+    "subject": "编程语言",
+    "topic_id": "programming.t24",
+    "topic_source": "manual",
+    "chapter": "链表结点的改链与释放",
+    "chapter_id": "programming.c09",
+    "source_chapter": "第9章 C指针、结构体与文件",
+    "knowledge_point": "C指针与内存",
+    "ability": "读图排障",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "为什么free(head); head=head->next;不能可靠删除头结点？写出先保后继的三步，并说明malloc创建两个结点时只成功一个的清理要求。",
+    "options": {},
+    "answer": "第二句读取了已释放对象的next，非法；应old=head; head=head->next; free(old);。若只分配成功一个，失败分支仍需释放已成功者，free(NULL)可安全调用。",
+    "explanation": "地址外观没变不延长对象生命周期；分配和释放需覆盖失败路径。",
+    "rubric": [
+      {
+        "criterion": "指出释放后读next",
+        "points": 1
+      },
+      {
+        "criterion": "三步顺序正确",
+        "points": 1
+      },
+      {
+        "criterion": "失败归还成功对象并可freeNULL",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-16-a",
+    "source": "本科课程补充原创",
+    "subject": "计算机网络",
+    "topic_id": "net.ospf-flow",
+    "topic_source": "manual",
+    "chapter": "OSPF从链路状态到路由表",
+    "chapter_id": "net-04",
+    "source_chapter": "第4章 网络层",
+    "knowledge_point": "路由与网络诊断",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "无向链路AB1、AC4、BC2、BD5、CD1。OSPF同一区域先获这些状态，之后BC升到6并传播完成。求A到D旧/新最短代价、路径和下一跳。",
+    "options": {},
+    "answer": "旧A-B-C-D代价4，下一跳B；新A-C-D代价5，下一跳C。",
+    "explanation": "旧经B将C降至3、D降至4；新经B到C候选7不优于直达4，经C到D得5优于经B6。",
+    "rubric": [
+      {
+        "criterion": "旧路径/代价4/下一跳B",
+        "points": 1
+      },
+      {
+        "criterion": "新路径/代价5/下一跳C",
+        "points": 1
+      },
+      {
+        "criterion": "至少一次候选比较正确",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-16-b",
+    "source": "本科课程补充原创",
+    "subject": "计算机网络",
+    "topic_id": "net.ospf-flow",
+    "topic_source": "manual",
+    "chapter": "OSPF从链路状态到路由表",
+    "chapter_id": "net-04",
+    "source_chapter": "第4章 网络层",
+    "knowledge_point": "路由与网络诊断",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "OSPF路由器收到“邻居发来的完整路由表”后直接复制，是否就是本课链路状态机制？写从邻居到本地路由表的基础链，并说明变化瞬间是否保证全区域同时更新。",
+    "options": {},
+    "answer": "不是；邻居发现与必要相邻关系→交换/泛洪链路状态→更新LSDB→以自己为源运行SPF→形成下一跳路由表。传播/计算需时，不保证瞬间同时更新或零丢包。",
+    "explanation": "距离向量与链路状态的信息对象不同；一致拓扑是收敛目标而非每一瞬间保证。",
+    "rubric": [
+      {
+        "criterion": "区分路由表复制与链路状态",
+        "points": 1
+      },
+      {
+        "criterion": "基础链包括LSDB/SPF/路由表",
+        "points": 1
+      },
+      {
+        "criterion": "变化非瞬间一致",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-17-a",
+    "source": "本科课程补充原创",
+    "subject": "计算机网络",
+    "topic_id": "net.mpls-label-flow",
+    "topic_source": "manual",
+    "chapter": "MPLS标签的压入交换与弹出",
+    "chapter_id": "net-04",
+    "source_chapter": "第4章 网络层",
+    "knowledge_point": "路由与网络诊断",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "简化MPLS路径：入口E将目标IP包压标签100；R收到指定入接口标签100后表项为“换240、发X”；X收到240后弹出标签。逐步写E/R/X发出的包头标签状态。",
+    "options": {},
+    "answer": "E发100，R发240，X发不含该层标签的IP包；业务载荷未因此改变。",
+    "explanation": "压、换、弹作用不同，标签按本地上下文解释。",
+    "rubric": [
+      {
+        "criterion": "E100",
+        "points": 1
+      },
+      {
+        "criterion": "R240",
+        "points": 1
+      },
+      {
+        "criterion": "X弹出且载荷不变",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-17-b",
+    "source": "本科课程补充原创",
+    "subject": "计算机网络",
+    "topic_id": "net.mpls-label-flow",
+    "topic_source": "manual",
+    "chapter": "MPLS标签的压入交换与弹出",
+    "chapter_id": "net-04",
+    "source_chapter": "第4章 网络层",
+    "knowledge_point": "路由与网络诊断",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "有人说“标签100在全网永久表示某一目的IP，使用MPLS便自然把载荷加密，且一定由最后一跳弹标签”。分别判断。",
+    "options": {},
+    "answer": "均不能如此断言。标签本地上下文解释，不是全网永久IP；标签转发本身不加密；真实实现可倒数第二跳弹出或多层标签，本课例才约定出口弹。",
+    "explanation": "不能把简化路径约定提升为所有部署的唯一规则。",
+    "rubric": [
+      {
+        "criterion": "标签非全网永久目的IP",
+        "points": 1
+      },
+      {
+        "criterion": "不自动加密",
+        "points": 1
+      },
+      {
+        "criterion": "真实弹出位置可不同于例",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-18-a",
+    "source": "本科课程补充原创",
+    "subject": "计算机网络",
+    "topic_id": "net.sdn-rule-flow",
+    "topic_source": "manual",
+    "chapter": "SDN规则未命中后的处理",
+    "chapter_id": "net-04",
+    "source_chapter": "第4章 网络层",
+    "knowledge_point": "路由与网络诊断",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "响应式SDN：初始业务规则空，未命中规则指定缓存首包并通知控制器。控制器下发目的10.1.0.0/16→端口2并指示释放缓存。首个目的10.1.2.3的包及后续同目的包分别怎样走？",
+    "options": {},
+    "answer": "首包未命中按规则缓存/通知，控制器决策下发并指示释放后从端口2发；后续直接命中本地规则从端口2发，不必逐包经控制器。",
+    "explanation": "首包转发还依赖缓存释放约定，不能仅安装规则就假定所有实现都会自动释放。",
+    "rubric": [
+      {
+        "criterion": "首包缓存通知控制器",
+        "points": 1
+      },
+      {
+        "criterion": "下发且按指示释放至端口2",
+        "points": 1
+      },
+      {
+        "criterion": "后续本地命中不逐包控制器",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  },
+  {
+    "id": "ug-comp-20261019-18-b",
+    "source": "本科课程补充原创",
+    "subject": "计算机网络",
+    "topic_id": "net.sdn-rule-flow",
+    "topic_source": "manual",
+    "chapter": "SDN规则未命中后的处理",
+    "chapter_id": "net-04",
+    "source_chapter": "第4章 网络层",
+    "knowledge_point": "路由与网络诊断",
+    "ability": "读图排障",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "已有SDN规则目的10.1.0.0/16→端口2，默认未命中动作为丢弃。目的10.2.1.3到达，是否也去端口2或自动请求控制器？解释。",
+    "options": {},
+    "answer": "两者都不是；10.2.1.3不在10.1/16，未命中按给定默认动作丢弃，不会自动请求控制器。",
+    "explanation": "未命中是否上送由规则决定，控制/转发分离本身不强制某个动作。",
+    "rubric": [
+      {
+        "criterion": "不匹配10.1/16",
+        "points": 1
+      },
+      {
+        "criterion": "按默认丢弃",
+        "points": 1
+      },
+      {
+        "criterion": "不自动上送控制器",
+        "points": 1
+      }
+    ],
+    "max_score": 3,
+    "rubric_source": "reviewed",
+    "adaptation_note": "普通本科单元补齐原创题；过程与边界分开验证，不作为历年试题。"
+  }
+]

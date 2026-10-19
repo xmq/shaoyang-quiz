@@ -1,0 +1,464 @@
+[
+  {
+    "course": "模拟电子技术",
+    "course_id": "analog-electronics",
+    "title": "共射电路的直流与交流分析",
+    "topic_id": "analog-electronics.t23",
+    "chapter_id": "analog-electronics.c03",
+    "keywords": [
+      "共射电路的直流与交流分析",
+      "DC开电容/AC短电容并将电源交流接地",
+      "由实际接线求Q、Au、Ri、Ro和带源负载结果"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "由实际接线求Q、Au、Ri、Ro和带源负载结果",
+    "question_ids": [
+      "gap-ug-elec-analog-electronics-t23-01",
+      "gap-ug-elec-analog-electronics-t23-02"
+    ]
+  },
+  {
+    "course": "模拟电子技术",
+    "course_id": "analog-electronics",
+    "title": "差分对的尾电流与增益",
+    "topic_id": "analog-electronics.t24",
+    "chapter_id": "analog-electronics.c04",
+    "keywords": [
+      "差分对的尾电流与增益",
+      "对称平分尾电流，差模两端±ud/2",
+      "从尾电流求每管Q及不同输出口径增益"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从尾电流求每管Q及不同输出口径增益",
+    "question_ids": [
+      "gap-ug-elec-analog-electronics-t24-01",
+      "gap-ug-elec-analog-electronics-t24-02"
+    ]
+  },
+  {
+    "course": "模拟电子技术",
+    "course_id": "analog-electronics",
+    "title": "从电容求放大器截止频率",
+    "topic_id": "analog-electronics.t25",
+    "chapter_id": "analog-electronics.c04",
+    "keywords": [
+      "从电容求放大器截止频率",
+      "源置零求R，米勒主导输入电容",
+      "找电容两端电阻，估单主极点fL/fH"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "找电容两端电阻，估单主极点fL/fH",
+    "question_ids": [
+      "gap-ug-elec-analog-electronics-t25-01",
+      "gap-ug-elec-analog-electronics-t25-02"
+    ]
+  },
+  {
+    "course": "模拟电子技术",
+    "course_id": "analog-electronics",
+    "title": "互补功放的半周与效率",
+    "topic_id": "analog-electronics.t26",
+    "chapter_id": "analog-electronics.c07",
+    "keywords": [
+      "互补功放的半周与效率",
+      "互补射随输出，按正弦平均电流估功率",
+      "读正负半周电流并算Po/Pdc/η"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "读正负半周电流并算Po/Pdc/η",
+    "question_ids": [
+      "gap-ug-elec-analog-electronics-t26-01",
+      "gap-ug-elec-analog-electronics-t26-02"
+    ]
+  },
+  {
+    "course": "模拟电子技术",
+    "course_id": "analog-electronics",
+    "title": "稳压反馈分压与输出电压",
+    "topic_id": "analog-electronics.t27",
+    "chapter_id": "analog-electronics.c08",
+    "keywords": [
+      "稳压反馈分压与输出电压",
+      "输出下降→误差→增导通→恢复",
+      "从基准/采样比较求输出与调整管损耗"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从基准/采样比较求输出与调整管损耗",
+    "question_ids": [
+      "gap-ug-elec-analog-electronics-t27-01",
+      "gap-ug-elec-analog-electronics-t27-02"
+    ]
+  },
+  {
+    "course": "数字电子技术",
+    "course_id": "digital-electronics",
+    "title": "加权电阻DAC的位权求和",
+    "topic_id": "digital-electronics.t20",
+    "chapter_id": "digital-electronics.c07",
+    "keywords": [
+      "加权电阻DAC的位权求和",
+      "三输入开关接Vref或地，电流相加过Rf",
+      "从真实反相求和网络求码输出"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从真实反相求和网络求码输出",
+    "question_ids": [
+      "gap-ug-elec-digital-electronics-t20-01",
+      "gap-ug-elec-digital-electronics-t20-02"
+    ]
+  },
+  {
+    "course": "数字电子技术",
+    "course_id": "digital-electronics",
+    "title": "双积分ADC的两个阶段",
+    "topic_id": "digital-electronics.t21",
+    "chapter_id": "digital-electronics.c07",
+    "keywords": [
+      "双积分ADC的两个阶段",
+      "固定T1积分未知，反极性基准积分回0",
+      "从两阶段斜率求反积分时间和计数"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从两阶段斜率求反积分时间和计数",
+    "question_ids": [
+      "gap-ug-elec-digital-electronics-t21-01",
+      "gap-ug-elec-digital-electronics-t21-02"
+    ]
+  },
+  {
+    "course": "数字电子技术",
+    "course_id": "digital-electronics",
+    "title": "Flash ADC的并行判档",
+    "topic_id": "digital-electronics.t22",
+    "chapter_id": "digital-electronics.c07",
+    "keywords": [
+      "Flash ADC的并行判档",
+      "电阻串产生1/2/3V阈值并行比较",
+      "用多阈值比较器结果编码"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "综合应用",
+      "客观辨析"
+    ],
+    "study_task": "用多阈值比较器结果编码",
+    "question_ids": [
+      "gap-ug-elec-digital-electronics-t22-01",
+      "gap-ug-elec-digital-electronics-t22-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "平稳噪声的相关与输出功率",
+    "topic_id": "communication.t23",
+    "chapter_id": "communication.c02",
+    "keywords": [
+      "平稳噪声的相关与输出功率",
+      "WSS均值/自相关条件，Sy=|H|²Sx积分",
+      "从统计量/PSD到LTI输出功率"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从统计量/PSD到LTI输出功率",
+    "question_ids": [
+      "gap-ug-elec-communication-t23-01",
+      "gap-ug-elec-communication-t23-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "二元匹配接收与误码概率",
+    "topic_id": "communication.t24",
+    "chapter_id": "communication.c08",
+    "keywords": [
+      "二元匹配接收与误码概率",
+      "单位能量矩形模板、匹配反折延迟、Q尾概率",
+      "从波形到相关/抽样/门限/错误事件"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从波形到相关/抽样/门限/错误事件",
+    "question_ids": [
+      "gap-ug-elec-communication-t24-01",
+      "gap-ug-elec-communication-t24-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "单音AM的频谱与功率",
+    "topic_id": "communication.t25",
+    "chapter_id": "communication.c03",
+    "keywords": [
+      "单音AM的频谱与功率",
+      "载波与双边带分量，平均功率分开相加",
+      "从三角积展开读谱及功率"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从三角积展开读谱及功率",
+    "question_ids": [
+      "gap-ug-elec-communication-t25-01",
+      "gap-ug-elec-communication-t25-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "FM的瞬时频率与相位",
+    "topic_id": "communication.t26",
+    "chapter_id": "communication.c03",
+    "keywords": [
+      "FM的瞬时频率与相位",
+      "f瞬=fc+Δf cos，θ=2πfc t+βsin",
+      "由瞬时频率积分得到单音相位"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "由瞬时频率积分得到单音相位",
+    "question_ids": [
+      "gap-ug-elec-communication-t26-01",
+      "gap-ug-elec-communication-t26-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "邻码元干扰的抽样计算",
+    "topic_id": "communication.t27",
+    "chapter_id": "communication.c08",
+    "keywords": [
+      "邻码元干扰的抽样计算",
+      "当前主项与前后码元残留相加",
+      "按脉冲抽样系数加权求当前样值"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "按脉冲抽样系数加权求当前样值",
+    "question_ids": [
+      "gap-ug-elec-communication-t27-01",
+      "gap-ug-elec-communication-t27-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "调谐放大级的增益与噪声系数",
+    "topic_id": "communication.t28",
+    "chapter_id": "communication.c06",
+    "keywords": [
+      "调谐放大级的增益与噪声系数",
+      "跨导驱动并联LC与损耗电阻，SNR比",
+      "简化实际调谐级到负载/增益/Q/BW/NF"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "简化实际调谐级到负载/增益/Q/BW/NF",
+    "question_ids": [
+      "gap-ug-elec-communication-t28-01",
+      "gap-ug-elec-communication-t28-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "丙类功放的直流与基波功率",
+    "topic_id": "communication.t29",
+    "chapter_id": "communication.c06",
+    "keywords": [
+      "丙类功放的直流与基波功率",
+      "脉冲电流取直流I0和基波I1，谐振负载成电压",
+      "给系数而非全推导，算功率效率"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "给系数而非全推导，算功率效率",
+    "question_ids": [
+      "gap-ug-elec-communication-t29-01",
+      "gap-ug-elec-communication-t29-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "电容三点式振荡的反馈与频率",
+    "topic_id": "communication.t30",
+    "chapter_id": "communication.c06",
+    "keywords": [
+      "电容三点式振荡的反馈与频率",
+      "交流基极接地，发射端取电容分压",
+      "按指定共基拓扑判同相反馈并估f0"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "按指定共基拓扑判同相反馈并估f0",
+    "question_ids": [
+      "gap-ug-elec-communication-t30-01",
+      "gap-ug-elec-communication-t30-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "包络检波的充放电与时间常数",
+    "topic_id": "communication.t31",
+    "chapter_id": "communication.c06",
+    "keywords": [
+      "包络检波的充放电与时间常数",
+      "峰附近快充、峰间RC放电",
+      "从二极管/电容/负载读包络"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "从二极管/电容/负载读包络",
+    "question_ids": [
+      "gap-ug-elec-communication-t31-01",
+      "gap-ug-elec-communication-t31-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "DPCM的重建值预测",
+    "topic_id": "communication.t32",
+    "chapter_id": "communication.c03",
+    "keywords": [
+      "DPCM的重建值预测",
+      "差值量化→预测+量化误差重建→下次预测",
+      "用收发一致预测器追踪两步"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "综合应用",
+      "客观辨析"
+    ],
+    "study_task": "用收发一致预测器追踪两步",
+    "question_ids": [
+      "gap-ug-elec-communication-t32-01",
+      "gap-ug-elec-communication-t32-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "HDB3的四零替代",
+    "topic_id": "communication.t33",
+    "chapter_id": "communication.c08",
+    "keywords": [
+      "HDB3的四零替代",
+      "奇000V、偶B00V，V同前脉冲而B正常交替",
+      "按上次V后脉冲奇偶选择替代节"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "综合应用",
+      "客观辨析"
+    ],
+    "study_task": "按上次V后脉冲奇偶选择替代节",
+    "question_ids": [
+      "gap-ug-elec-communication-t33-01",
+      "gap-ug-elec-communication-t33-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "卷积码的移位与输出",
+    "topic_id": "communication.t34",
+    "chapter_id": "communication.c07",
+    "keywords": [
+      "卷积码的移位与输出",
+      "旧状态(a,b)，输出u⊕a⊕b与u⊕b，再移位",
+      "执行一个短率1/2卷积编码器"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "综合应用",
+      "客观辨析"
+    ],
+    "study_task": "执行一个短率1/2卷积编码器",
+    "question_ids": [
+      "gap-ug-elec-communication-t34-01",
+      "gap-ug-elec-communication-t34-02"
+    ]
+  },
+  {
+    "course": "通信原理与高频电子线路",
+    "course_id": "communication",
+    "title": "伪随机序列的状态与相关",
+    "topic_id": "communication.t35",
+    "chapter_id": "communication.c03",
+    "keywords": [
+      "伪随机序列的状态与相关",
+      "旧q2q1q0输出q2，新(q1,q0,q2⊕q0)",
+      "执行指定3级反馈并检查周期相关"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "综合应用",
+      "客观辨析"
+    ],
+    "study_task": "执行指定3级反馈并检查周期相关",
+    "question_ids": [
+      "gap-ug-elec-communication-t35-01",
+      "gap-ug-elec-communication-t35-02"
+    ]
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "id": "gap-ug26-circuit-16-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c07",
+    "topic_id": "circuit.t16",
+    "topic_source": "manual",
+    "chapter": "二阶RLC的初值与响应",
+    "source_chapter": "二阶RLC的初值与响应",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "串联RLC电路取电容电压为响应，电流流入电容正端。R=2Ω、L=1H、C=0.5F，t≥0外加电压为0，uC(0+)=1V、iL(0+)=0。列方程、给初始导数、判断阻尼类型并求uC(t)。",
+    "options": {},
+    "answer": "uC″+2uC′+2uC=0；uC′(0+)=0；欠阻尼；uC(t)=e^(-t)(cos t+sin t)V。",
+    "explanation": "由LCuC″+RCuC′+uC=0除以0.5得方程。α=1，ω0=√2，ωd=1；设e^(-t)(A cos t+B sin t)，初值给A=1、B=A=1。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "uC″+2uC′+2uC=0；uC′(0+)=0；欠阻尼；uC(t)=e^(-t)(cos t+sin t)V。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-16-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c07",
+    "topic_id": "circuit.t16",
+    "topic_source": "manual",
+    "chapter": "二阶RLC的初值与响应",
+    "source_chapter": "二阶RLC的初值与响应",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "无冲激激励时，C=0.1F的电容与电感串联。换路前uC=2V、iL=0.3A；电流参考方向流入电容正端。换路瞬间正确的是？",
+    "options": {
+      "A": "uC(0+)=0，uC′(0+)=0",
+      "B": "uC(0+)=2V，uC′(0+)=3V/s",
+      "C": "uC(0+)=2V，uC′(0+)=0.03V/s",
+      "D": "必须知道阶跃幅值才能确定uC(0+)"
+    },
+    "answer": "B",
+    "explanation": "无冲激时电容电压、电感电流连续；uC′=i/C=3V/s。外加电压阶跃本身不让储能状态突变。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  },
+  {
+    "id": "gap-ug26-circuit-17-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c04",
+    "topic_id": "circuit.t17",
+    "topic_source": "manual",
+    "chapter": "互感同名端与串联等效",
+    "source_chapter": "互感同名端与串联等效",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "两线圈L1=4mH、L2=9mH、k=0.5。i1流入线圈1同名端，以1A/ms上升；i2不变。仅求线圈2的互感电压，电压参考为非同名端到同名端。",
+    "options": {},
+    "answer": "M=3mH；所求互感电压为−3V。",
+    "explanation": "M=k√(L1L2)=3mH。若电压从同名端指向非同名端，互感项为+M di1/dt=3V；题给反向参考，因此为−3V。不是串联总等效电感乘电流变化率。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "M=3mH；所求互感电压为−3V。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-17-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c04",
+    "topic_id": "circuit.t17",
+    "topic_source": "manual",
+    "chapter": "互感同名端与串联等效",
+    "source_chapter": "互感同名端与串联等效",
+    "knowledge_point": "电路分析基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "保持两线圈位置和介质不变，只交换线圈2外部接线，关于互感正确的是？",
+    "options": {
+      "A": "L1与L2都改变",
+      "B": "互感大小必为0",
+      "C": "互感大小不变，相对于外部参考的互感项符号可改变",
+      "D": "耦合系数必大于1"
+    },
+    "answer": "C",
+    "explanation": "耦合几何不变，L1、L2与互感大小不变；相对于既定外部参考，互感项的符号变化。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  },
+  {
+    "id": "gap-ug26-circuit-18-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c03",
+    "topic_id": "circuit.t18",
+    "topic_source": "manual",
+    "chapter": "二端口Z参数与开路条件",
+    "source_chapter": "二端口Z参数与开路条件",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "T形纯电阻二端口的Z参数矩阵为[[6,4],[4,7]]Ω。两端口电流均取流入网络为正，I1=2A、I2=−1A。求U1、U2及网络吸收总功率，解释端口2功率的符号。",
+    "options": {},
+    "answer": "U1=8V，U2=1V；总功率15W；端口2功率−1W，表示网络从端口2向外送出1W。",
+    "explanation": "U1=6×2+4×(−1)=8，U2=4×2+7×(−1)=1。P=U1I1+U2I2=16−1=15W，单端口送出功率不等于整个无源网络发电。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "U1=8V，U2=1V；总功率15W；端口2功率−1W，表示网络从端口2向外送出1W。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-18-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c03",
+    "topic_id": "circuit.t18",
+    "topic_source": "manual",
+    "chapter": "二端口Z参数与开路条件",
+    "source_chapter": "二端口Z参数与开路条件",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "Z21=4Ω的二端口，端口2开路，端口1输入I1=1A。端口2的电压U2是多少？",
+    "options": {
+      "A": "0V",
+      "B": "1V",
+      "C": "4V",
+      "D": "无法由这些条件确定"
+    },
+    "answer": "C",
+    "explanation": "Z参数条件为I2=0；U2=Z21I1+Z22I2=4V。开路使电流为0，电压不一定为0。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  },
+  {
+    "id": "gap-ug26-circuit-19-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c05",
+    "topic_id": "circuit.t19",
+    "topic_source": "manual",
+    "chapter": "谐振、品质因数与带宽",
+    "source_chapter": "谐振、品质因数与带宽",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "理想串联RLC：R=10Ω、L=10mH、C=1μF。求谐振频率、品质因数和半功率带宽，并写出半功率点的电流有效值与谐振时电流有效值之比。",
+    "options": {},
+    "answer": "f0≈1591.55Hz；Q=10；BW≈159.15Hz；电流比为1/√2。",
+    "explanation": "f0=1/(2π√LC)，Q=ω0L/R，BW=R/(2πL)=f0/Q。电阻功率与电流平方成正比，半功率并非半电流。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "f0≈1591.55Hz；Q=10；BW≈159.15Hz；电流比为1/√2。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-19-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c05",
+    "topic_id": "circuit.t19",
+    "topic_source": "manual",
+    "chapter": "谐振、品质因数与带宽",
+    "source_chapter": "谐振、品质因数与带宽",
+    "knowledge_point": "电路分析基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "理想R、L、C三支路并联，L、C固定，电阻R加倍。品质因数Q与半功率带宽BW如何变化？",
+    "options": {
+      "A": "Q减半，BW加倍",
+      "B": "Q加倍，BW减半",
+      "C": "Q与BW都加倍",
+      "D": "Q与BW都不变"
+    },
+    "answer": "B",
+    "explanation": "本题是独立电阻支路的并联模型：Q=R√(C/L)，BW=1/(2πRC)。不要套用串联模型Q=ω0L/R。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  },
+  {
+    "id": "gap-ug26-circuit-20-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c05",
+    "topic_id": "circuit.t20",
+    "topic_source": "manual",
+    "chapter": "非正弦分量的有效值与功率",
+    "source_chapter": "非正弦分量的有效值与功率",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "线性无源串联网络在基波处Z1=3Ω，在二次谐波处Z2=3+j4Ω。电源只有这两个谐波，其电压有效值分别为3V和4V。求总电压有效值、总电流有效值和平均有功功率。",
+    "options": {},
+    "answer": "Urms=5V；Irms=√1.64≈1.281A；P=4.92W。",
+    "explanation": "各次独立：I1=3/3=1A，I2=4/5=0.8A。不同频率正交，Urms=√(9+16)，Irms=√(1+0.64)；P=I1²×3+I2²×3=4.92W。不能把全部谐波都除以基波阻抗。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "Urms=5V；Irms=√1.64≈1.281A；P=4.92W。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-20-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c05",
+    "topic_id": "circuit.t20",
+    "topic_source": "manual",
+    "chapter": "非正弦分量的有效值与功率",
+    "source_chapter": "非正弦分量的有效值与功率",
+    "knowledge_point": "电路分析基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "多选",
+    "stem": "对周期非正弦电压、电流求有效值与平均功率，哪些说法正确？",
+    "options": {
+      "A": "各次谐波有效值的平方可参与有效值平方求和",
+      "B": "把各次正弦分量峰值直接平方相加即可得到总有效值平方",
+      "C": "平均功率可按直流项与各同次谐波有功功率相加",
+      "D": "含电感电容时所有谐波统一使用基波阻抗"
+    },
+    "answer": "AC",
+    "explanation": "不同频率分量在共同周期内正交；各次谐波的有效值平方相加，平均功率只累计直流项与同次谐波功率。峰值先除以√2才能用谐波有效值公式，阻抗要按各自频率计算。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  },
+  {
+    "id": "gap-ug26-circuit-21-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c07",
+    "topic_id": "circuit.t21",
+    "topic_source": "manual",
+    "chapter": "RC复频域模型保留初值",
+    "source_chapter": "RC复频域模型保留初值",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "RC串联回路t≥0无外加电源，R=2Ω、C=0.5F，uC(0−)=6V，电流流入电容正端。用单边拉普拉斯变换保留初值，求UC(s)与uC(t)。",
+    "options": {},
+    "answer": "−UC/2=0.5(sUC−6)；UC(s)=6/(s+1)；uC(t)=6e^(−t)V。",
+    "explanation": "KVL给Ri+uC=0，I=C(sUC−uC0)。代入后(s+1)UC=6。时间常数RC=1s，初值6V、终值0，均与放电物理过程相符。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "−UC/2=0.5(sUC−6)；UC(s)=6/(s+1)；uC(t)=6e^(−t)V。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-21-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c07",
+    "topic_id": "circuit.t21",
+    "topic_source": "manual",
+    "chapter": "RC复频域模型保留初值",
+    "source_chapter": "RC复频域模型保留初值",
+    "knowledge_point": "电路分析基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "稳定的一阶RC回路接10V理想直流电源，电容初始电压4V。关于非零初值的影响，正确的是？",
+    "options": {
+      "A": "电容电压瞬间变为10V",
+      "B": "有初值时最终必为4V",
+      "C": "使用复频域就可以忽略初值",
+      "D": "初值影响暂态，最终电压仍为10V"
+    },
+    "answer": "D",
+    "explanation": "非零初值必须保留在暂态方程中；直流稳态电容开路，最终电压由稳定电源和电路决定，本例为10V。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  },
+  {
+    "id": "gap-ug26-circuit-22-1",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c01",
+    "topic_id": "circuit.t22",
+    "topic_source": "manual",
+    "chapter": "传输延时与端接反射",
+    "source_chapter": "传输延时与端接反射",
+    "knowledge_point": "电路分析基础",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "type": "简答",
+    "stem": "以入射波从源端发射时为t=0。无损传输线长20m，波速2×10^8m/s，Z0=50Ω，负载短路；到达负载的入射电压波为2V。求单程延时、负载反射系数、反射电压、第一次到达时负载电压，以及反射波首次回到源端的时间。",
+    "options": {},
+    "answer": "单程100ns；ΓL=−1；反射电压−2V；负载电压0V；首次回到源端为发射后200ns。",
+    "explanation": "td=l/v=10^−7s；短路RL=0给ΓL=(RL−Z0)/(RL+Z0)=−1；负载处电压为入射与反射叠加。这里2V是已知入射波，不能当作未知源电压再分压。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。",
+    "rubric": [
+      {
+        "criterion": "单程100ns；ΓL=−1；反射电压−2V；负载电压0V；首次回到源端为发射后200ns。",
+        "points": 1
+      }
+    ],
+    "max_score": 1
+  },
+  {
+    "id": "gap-ug26-circuit-22-2",
+    "source": "本科课程补齐原创",
+    "subject": "电路分析与电工技术",
+    "course_id": "circuit",
+    "chapter_id": "circuit.c01",
+    "topic_id": "circuit.t22",
+    "topic_source": "manual",
+    "chapter": "传输延时与端接反射",
+    "source_chapter": "传输延时与端接反射",
+    "knowledge_point": "电路分析基础",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "type": "单选",
+    "stem": "理想无损传输线以RL=Z0匹配端接，下列说法正确的是？",
+    "options": {
+      "A": "负载无反射，但仍存在传播延时",
+      "B": "既无反射也无传播延时",
+      "C": "入射波必等于理想源电压",
+      "D": "负载匹配使线路直流电阻等于Z0"
+    },
+    "answer": "A",
+    "explanation": "匹配使ΓL=0，即负载无反射；有限波速和线路长度仍决定非零传播延时。",
+    "adaptation_note": "本科基础原创练习，检验公式、过程或适用边界，非历年真题。"
+  }
+]

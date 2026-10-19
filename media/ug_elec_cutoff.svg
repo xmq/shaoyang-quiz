@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="480" viewBox="0 0 360 480" role="img" aria-labelledby="title"><title id="title">截止：先认电容看到的电阻</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">截止：先认电容看到的电阻</text>
+<text x="12" y="54" font-size="14" text-anchor="start">低频：CC串在两个对地电阻之间</text>
+<path class="w" d="M40 100L46 100"/>
+<rect x="46" y="95" width="53" height="10" class="w"/>
+<path class="w" d="M99 100L105 100"/>
+<text x="72.5" y="89" font-size="12" text-anchor="middle">Rs 1k</text>
+<path class="w" d="M105 100L131.0 100"/>
+<path class="w" d="M131.0 90L131.0 110"/>
+<path class="w" d="M139.0 90L139.0 110"/>
+<path class="w" d="M139.0 100L165 100"/>
+<text x="135.0" y="85" font-size="12" text-anchor="middle">CC 1μF</text>
+<path class="w" d="M165 100L240 100"/>
+<path class="w" d="M240 118L240 126"/>
+<rect x="235" y="126" width="10" height="26" class="w"/>
+<path class="w" d="M240 152L240 160"/>
+<text x="249" y="143.0" font-size="12" text-anchor="start">Ri 2k</text>
+<path class="w" d="M240 100L240 118"/>
+<path class="w" d="M240 175L240 183"/>
+<path class="w" d="M230 183L250 183"/>
+<path class="w" d="M234 188L246 188"/>
+<path class="w" d="M238 193L242 193"/>
+<path class="w" d="M240 160L240 175"/>
+<path class="w" d="M40 150L40 158"/>
+<path class="w" d="M30 158L50 158"/>
+<path class="w" d="M34 163L46 163"/>
+<path class="w" d="M38 168L42 168"/>
+<path class="w" d="M40 100L40 150"/>
+<text x="12" y="223" font-size="14" text-anchor="start">源置零，CC两端经地看Rs+Ri=3k。</text>
+<text x="12" y="250" font-size="14" text-anchor="start">fL≈53.1 Hz；不是把两侧电阻并联。</text>
+<text x="12" y="294" font-size="14" text-anchor="start">高频：跨输入/输出的Cμ产生米勒等效</text>
+<rect x="70" y="320" width="95" height="45" class="w"/>
+<text x="117.5" y="347.5" font-size="14" text-anchor="middle">Av≈−49</text>
+<path class="w" d="M35 342L70 342"/>
+<path class="w" d="M165 342L295 342"/>
+<path class="w" d="M35 342L35 307"/>
+<path class="w" d="M35 307L72 307"/>
+<path class="w" d="M72 307L100.0 307"/>
+<path class="w" d="M100.0 297L100.0 317"/>
+<path class="w" d="M108.0 297L108.0 317"/>
+<path class="w" d="M108.0 307L136 307"/>
+<text x="104.0" y="292" font-size="12" text-anchor="middle">Cμ 2pF</text>
+<path class="w" d="M136 307L295 307"/>
+<path class="w" d="M295 307L295 342"/>
+<text x="12" y="400" font-size="14" text-anchor="start">输入等效100pF，加对地10pF为110pF。</text>
+<text x="12" y="429" font-size="14" text-anchor="start">R=Rs∥Ri≈666.7Ω，fH≈2.17MHz。</text>
+<text x="12" y="460" font-size="13" text-anchor="start">图只估单主极点；实际多极点要另保留。</text>
+</svg>

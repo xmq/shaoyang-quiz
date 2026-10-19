@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title"><title id="title">匹配接收：整段相关后再判</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">匹配接收：整段相关后再判</text>
+<text x="12" y="53" font-size="14" text-anchor="start">φ=1/√T，0≤t≤T；∫φ²dt=1</text>
+<rect x="15" y="87" width="115" height="44" class="w"/>
+<text x="72.5" y="114.0" font-size="14" text-anchor="middle">±√Eb φ + n</text>
+<rect x="200" y="87" width="145" height="44" class="w"/>
+<text x="272.5" y="114.0" font-size="14" text-anchor="middle">h(t)=φ(T−t)</text>
+<path class="a" d="M130 109L200 109" marker-end="url(#arr)"/>
+<rect x="200" y="176" width="145" height="40" class="w"/>
+<text x="272.5" y="201.0" font-size="14" text-anchor="middle">在T抽样得z</text>
+<path class="a" d="M273 131L273 176" marker-end="url(#arr)"/>
+<rect x="200" y="262" width="145" height="45" class="w"/>
+<text x="272.5" y="289.5" font-size="14" text-anchor="middle">z 与0门限比较</text>
+<path class="a" d="M273 216L273 262" marker-end="url(#arr)"/>
+<text x="210" y="342" font-size="14" text-anchor="start">z&gt;0→1，z&lt;0→0</text>
+<text x="15" y="194" font-size="13" text-anchor="start">等价相关：</text>
+<text x="15" y="220" font-size="13" text-anchor="start">∫₀ᵀr(τ)φ(τ)dτ</text>
+<path class="w" d="M70 235L70 282"/>
+<path class="a" d="M70 282L200 282" marker-end="url(#arr)"/>
+<text x="12" y="387" font-size="14" text-anchor="start">z=±√Eb+η；Var(η)=N0/2</text>
+<text x="12" y="417" font-size="14" text-anchor="start">Eb/N0=2→Q(2)≈0.0228</text>
+<text x="12" y="447" font-size="14" text-anchor="start">等概、相干AWGN；改变条件要重算。</text>
+<text x="12" y="478" font-size="13" text-anchor="start">不是只采r(T)一个原始瞬时值。</text>
+</svg>

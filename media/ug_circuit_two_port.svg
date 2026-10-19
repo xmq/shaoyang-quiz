@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="326" viewBox="0 0 360 326" role="img" aria-labelledby="title desc"><title id="title">T形二端口的参考方向和中心节点</title><desc id="desc">R1为2欧姆、R2为3欧姆、中心到地R3为4欧姆，两个端口电流都流入正端。</desc><style>svg{color:#24343b;font:14px system-ui,'Microsoft YaHei',sans-serif}text{fill:currentColor}.wire,.curve{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.part{fill:none;stroke:currentColor;stroke-width:1.8}.accent{fill:none;stroke:#14766d;stroke-width:2.5}.blue{fill:none;stroke:#426b92;stroke-width:2.2}.muted{fill:#67777e}.guide{fill:none;stroke:#93a4aa;stroke-width:1.2;stroke-dasharray:4 4}.node{fill:currentColor}@media(prefers-color-scheme:dark){svg{color:#e7eef0}.accent{stroke:#74cabe}.blue{stroke:#9fbfdb}.muted{fill:#a0b2bb}}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
+<text x="12" y="24" font-size="17" font-weight="650">开路端口仍能有电压</text>
+<path class="wire" d="M22 113H70M124 113H236M290 113H338M180 113V159M180 200V253M22 253H338"/>
+<rect class="part" x="70" y="103" width="54" height="20"/><rect class="part" x="236" y="103" width="54" height="20"/><rect class="part" x="170" y="159" width="20" height="41"/>
+<circle class="node" cx="180" cy="113" r="3"/><circle class="node" cx="180" cy="253" r="3"/>
+<path class="accent" d="M24 77H63" marker-end="url(#arrow)"/><path class="accent" d="M335 77H295" marker-end="url(#arrow)"/>
+<text x="31" y="64">I1</text><text x="309" y="64">I2</text>
+<text x="82" y="96">2 Ω</text><text x="248" y="96">3 Ω</text><text x="199" y="183">4 Ω</text><text x="150" y="94">Uc</text>
+<text x="15" y="143">+</text><text x="15" y="238">−</text><text x="14" y="191">U1</text>
+<text x="325" y="143">+</text><text x="325" y="238">−</text><text x="319" y="191">U2</text>
+<text x="109" y="280">中支路电流=I1+I2</text><text x="30" y="305" class="muted">I2=0时，端口2的电压不必为0。</text></svg>

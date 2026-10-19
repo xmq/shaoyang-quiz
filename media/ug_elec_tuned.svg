@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="490" viewBox="0 0 360 490" role="img" aria-labelledby="title"><title id="title">调谐级：跨导与并联负载</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">调谐级：跨导与并联负载</text>
+<text x="12" y="54" font-size="14" text-anchor="start">交流等效：电源为交流地，忽略管反向反馈</text>
+<path class="w" d="M55 105L320 105"/>
+<text x="14" y="92" font-size="14" text-anchor="start">uo</text>
+<circle cx="55" cy="200" r="25" class="w"/>
+<path class="w" d="M55 105L55 175"/>
+<path class="a" d="M55 186L55 214" marker-end="url(#arr)"/>
+<path class="w" d="M55 225L55 285"/>
+<path class="w" d="M55 285L55 293"/>
+<path class="w" d="M45 293L65 293"/>
+<path class="w" d="M49 298L61 298"/>
+<path class="w" d="M53 303L57 303"/>
+<text x="12" y="249" font-size="12" text-anchor="start">gm ui</text>
+<path class="w" d="M124 153v8c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10c-12 0 -12 10 0 10v8"/>
+<text x="133" y="181" font-size="12" text-anchor="start">L</text>
+<path class="w" d="M124 105L124 153"/>
+<path class="w" d="M124 209L124 285"/>
+<path class="w" d="M124 285L124 293"/>
+<path class="w" d="M114 293L134 293"/>
+<path class="w" d="M118 298L130 298"/>
+<path class="w" d="M122 303L126 303"/>
+<path class="w" d="M190 175L190 190.0"/>
+<path class="w" d="M180 190.0L200 190.0"/>
+<path class="w" d="M180 198.0L200 198.0"/>
+<path class="w" d="M190 198.0L190 213"/>
+<text x="203" y="198.0" font-size="12" text-anchor="start">C</text>
+<path class="w" d="M190 105L190 175"/>
+<path class="w" d="M190 213L190 285"/>
+<path class="w" d="M190 285L190 293"/>
+<path class="w" d="M180 293L200 293"/>
+<path class="w" d="M184 298L196 298"/>
+<path class="w" d="M188 303L192 303"/>
+<path class="w" d="M255 175L255 183"/>
+<rect x="250" y="183" width="10" height="26" class="w"/>
+<path class="w" d="M255 209L255 217"/>
+<text x="264" y="200.0" font-size="12" text-anchor="start">Rp</text>
+<path class="w" d="M255 105L255 175"/>
+<path class="w" d="M255 217L255 285"/>
+<path class="w" d="M255 285L255 293"/>
+<path class="w" d="M245 293L265 293"/>
+<path class="w" d="M249 298L261 298"/>
+<path class="w" d="M253 303L257 303"/>
+<path class="w" d="M320 175L320 183"/>
+<rect x="315" y="183" width="10" height="26" class="w"/>
+<path class="w" d="M320 209L320 217"/>
+<text x="329" y="200.0" font-size="12" text-anchor="start">RL</text>
+<path class="w" d="M320 105L320 175"/>
+<path class="w" d="M320 217L320 285"/>
+<path class="w" d="M320 285L320 293"/>
+<path class="w" d="M310 293L330 293"/>
+<path class="w" d="M314 298L326 298"/>
+<path class="w" d="M318 303L322 303"/>
+<text x="12" y="345" font-size="14" text-anchor="start">gm2mS，Rp=RL10k，R并=5k，Au=−10</text>
+<text x="12" y="375" font-size="14" text-anchor="start">L10μH/C100pF：f0≈5.03MHz</text>
+<text x="12" y="404" font-size="14" text-anchor="start">Q≈15.81，BW≈318kHz；卸载会变窄。</text>
+<text x="12" y="445" font-size="14" text-anchor="start">NF=10log(SNR入/SNR出)，不是增益。</text>
+</svg>

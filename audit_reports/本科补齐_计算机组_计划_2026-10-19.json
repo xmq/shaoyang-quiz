@@ -1,0 +1,298 @@
+{
+  "date": "2026-10-19",
+  "created_before_content": "2026-10-19T11:14:55.843692",
+  "depth": "普通本科：准确概念、典型流程、一个代表例与边界；不做产品全实现和复杂证明。",
+  "evidence_report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+  "units": [
+    {
+      "course": "计算机组成原理",
+      "topic_id": "computer-organization.t43",
+      "chapter_id": "computer-organization.c02",
+      "title": "先行进位的两位展开",
+      "target": "由G/P直接算C1/C2，区分与逐级等待",
+      "process": "两位展开公式与一次输入核验",
+      "example": "A=01、B=11、C0=0→C1=1/C2=1",
+      "visual": "公式足够，无新增图",
+      "practice": "计算进位/解释展开为何减少串行依赖",
+      "question_ids": [
+        "ug-comp-20261019-01-a",
+        "ug-comp-20261019-01-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "操作系统原理",
+      "topic_id": "operating-system.t22",
+      "chapter_id": "operating-system.c03",
+      "title": "多级反馈队列的升降与抢占",
+      "target": "按给定队列规则追踪任务及完成时刻",
+      "process": "两级队列时间线/就绪状态",
+      "example": "A需4，B在2到达需1；Q0片1/Q1片2",
+      "visual": "文字时间线表，无新增图",
+      "practice": "排时间线/检查饥饿与提升规则",
+      "question_ids": [
+        "ug-comp-20261019-02-a",
+        "ug-comp-20261019-02-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "操作系统原理",
+      "topic_id": "operating-system.t23",
+      "chapter_id": "operating-system.c03",
+      "title": "按截止期执行EDF调度",
+      "target": "按绝对截止期选择，检查是否错过",
+      "process": "每次到达/完成重选EDF",
+      "example": "A到0需3限5，B到1需1限2",
+      "visual": "时间线表，无新增图",
+      "practice": "排程判断期限/可行性与过载边界",
+      "question_ids": [
+        "ug-comp-20261019-03-a",
+        "ug-comp-20261019-03-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "操作系统原理",
+      "topic_id": "operating-system.t24",
+      "chapter_id": "operating-system.c04",
+      "title": "等待图中的死锁检测",
+      "target": "单实例图查环并区分安全检查",
+      "process": "边为等待持有者，追循环",
+      "example": "P1等P2资源、P2等P1",
+      "visual": "箭头文字足够",
+      "practice": "画边判环/多实例反例边界",
+      "question_ids": [
+        "ug-comp-20261019-04-a",
+        "ug-comp-20261019-04-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t45",
+      "chapter_id": "data-structures.c04",
+      "title": "B树删除的借位与合并",
+      "target": "按结点下限修复删除后的树",
+      "process": "四阶B树叶删/借位/合并/根降层",
+      "example": "根20，左10，右30/40或右30",
+      "visual": "ug_comp_btree_delete.svg",
+      "practice": "借位中间态/合并根变化",
+      "question_ids": [
+        "ug-comp-20261019-05-a",
+        "ug-comp-20261019-05-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t46",
+      "chapter_id": "data-structures.c04",
+      "title": "中序线索的建立与遍历",
+      "target": "用pre和tag建线索并沿后继走",
+      "process": "三结点完整访问/空链线索/遍历",
+      "example": "B根、A左、C右，中序ABC",
+      "visual": "ug_comp_thread_tree.svg",
+      "practice": "填线索/纠正tag与孩子混用",
+      "question_ids": [
+        "ug-comp-20261019-06-a",
+        "ug-comp-20261019-06-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t47",
+      "chapter_id": "data-structures.c08",
+      "title": "败者树如何更新归并段首",
+      "target": "理解只比较当前段首及更新路径",
+      "process": "两两比赛留败者/补胜者叶",
+      "example": "三段[1,7]/[3,5]/[2,6]",
+      "visual": "状态表，无新增图",
+      "practice": "前几次输出/比较对象边界",
+      "question_ids": [
+        "ug-comp-20261019-07-a",
+        "ug-comp-20261019-07-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据结构与算法",
+      "topic_id": "data-structures.t48",
+      "chapter_id": "data-structures.c08",
+      "title": "置换选择中的冻结与新段",
+      "target": "新输入小于最后输出时留下一段",
+      "process": "固定缓冲最小输出/替换/冻结",
+      "example": "缓冲3，输入4,1,3,2,6,0",
+      "visual": "状态表，无新增图",
+      "practice": "分段状态/非全局有序边界",
+      "question_ids": [
+        "ug-comp-20261019-08-a",
+        "ug-comp-20261019-08-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t23",
+      "chapter_id": "database.c05",
+      "title": "存储过程的一次参数调用",
+      "target": "跟踪参数/条件/修改/返回",
+      "process": "产品中立伪码与一次调用",
+      "example": "余额80，扣30→余额50返回成功",
+      "visual": "伪码足够，无新增图",
+      "practice": "读调用结果/失败不修改",
+      "question_ids": [
+        "ug-comp-20261019-09-a",
+        "ug-comp-20261019-09-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t24",
+      "chapter_id": "database.c05",
+      "title": "游标的逐行读取与关闭",
+      "target": "按fetch结束状态控制循环",
+      "process": "open→fetch→有行处理→close",
+      "example": "查询成绩80,90，sum0→80→170",
+      "visual": "伪码状态表，无新增图",
+      "practice": "跟踪fetch/空结果与集合SQL边界",
+      "question_ids": [
+        "ug-comp-20261019-10-a",
+        "ug-comp-20261019-10-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t25",
+      "chapter_id": "database.c09",
+      "title": "事实表的粒度与维度汇总",
+      "target": "辨事实行/维表/度量，按月汇总",
+      "process": "三行事实+日期地区商品维度",
+      "example": "1月北区笔10/20、南区笔5→月35",
+      "visual": "小表即图，无新增图",
+      "practice": "分组汇总/粒度混用重复计数",
+      "question_ids": [
+        "ug-comp-20261019-11-a",
+        "ug-comp-20261019-11-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t26",
+      "chapter_id": "database.c01",
+      "title": "键值数据的写入与读取",
+      "target": "理解键定位整值与更新",
+      "process": "put/get抽象操作与覆盖",
+      "example": "user:7→姓名/城市，整体更新",
+      "visual": "伪操作足够，无新增图",
+      "practice": "写读结果/键查找不等字段筛选",
+      "question_ids": [
+        "ug-comp-20261019-12-a",
+        "ug-comp-20261019-12-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "数据库技术",
+      "topic_id": "database.t27",
+      "chapter_id": "database.c01",
+      "title": "文档数据的字段筛选",
+      "target": "用对象/字段筛选与修改",
+      "process": "insert/find/update抽象语义",
+      "example": "2个用户文档按city筛与改age",
+      "visual": "记录表足够，无新增图",
+      "practice": "筛选/缺失字段与产品差异",
+      "question_ids": [
+        "ug-comp-20261019-13-a",
+        "ug-comp-20261019-13-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "C与Python程序设计",
+      "topic_id": "programming.t23",
+      "chapter_id": "programming.c03",
+      "title": "无符号数的位运算",
+      "target": "按固定宽逐位算并区分逻辑",
+      "process": "与/或/异或/右移一步",
+      "example": "4位1100与1010→1000",
+      "visual": "位串足够，无新增图",
+      "practice": "位计算/逻辑短路区别",
+      "question_ids": [
+        "ug-comp-20261019-14-a",
+        "ug-comp-20261019-14-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "C与Python程序设计",
+      "topic_id": "programming.t24",
+      "chapter_id": "programming.c09",
+      "title": "链表结点的改链与释放",
+      "target": "两个Node接链后保留后继再free",
+      "process": "malloc检查/改head/free/清理",
+      "example": "10→20→NULL删10保20",
+      "visual": "ug_comp_nodes.svg",
+      "practice": "指针状态/失效地址边界",
+      "question_ids": [
+        "ug-comp-20261019-15-a",
+        "ug-comp-20261019-15-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "计算机网络",
+      "topic_id": "net.ospf-flow",
+      "chapter_id": "net-04",
+      "title": "OSPF从链路状态到路由表",
+      "target": "连接邻居/泛洪/LSDB/SPF与代价变动",
+      "process": "4点图前后距离与下一跳",
+      "example": "AB1/AC4/BC2/BD5/CD1改BC6",
+      "visual": "小表+箭头，无新增图",
+      "practice": "前后路径/泛洪内容边界",
+      "question_ids": [
+        "ug-comp-20261019-16-a",
+        "ug-comp-20261019-16-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "计算机网络",
+      "topic_id": "net.mpls-label-flow",
+      "chapter_id": "net-04",
+      "title": "MPLS标签的压入交换与弹出",
+      "target": "理解本地标签与转发动作",
+      "process": "入口push→中间swap→出口pop",
+      "example": "入口100、中间换240、出口弹",
+      "visual": "3步表，无新增图",
+      "practice": "跟踪标签/标签非全网目的地址",
+      "question_ids": [
+        "ug-comp-20261019-17-a",
+        "ug-comp-20261019-17-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    },
+    {
+      "course": "计算机网络",
+      "topic_id": "net.sdn-rule-flow",
+      "chapter_id": "net-04",
+      "title": "SDN规则未命中后的处理",
+      "target": "理解控制/转发及规则匹配",
+      "process": "查询表→miss按规则请求→控制器下发→匹配转发",
+      "example": "10.1/16→端口2，目的10.1.2.3",
+      "visual": "事件表，无新增图",
+      "practice": "规则动作/控制器不是逐包必经",
+      "question_ids": [
+        "ug-comp-20261019-18-a",
+        "ug-comp-20261019-18-b"
+      ],
+      "student_evidence": "作者算式/源检查待完成，之后由两位非作者复测，不自签学习效果"
+    }
+  ],
+  "existing_content_policy": "保持旧标题/卡顺序/==；同名H4入对应讲义，短卡追加章末。NUMA只补现有SMP段一句场景，不另卡；外排基础例不重写。",
+  "boundaries": "不改旧题/registry/learning-map/metadata/dist/构建脚本。新topic登记与题库合并由root统一处理。"
+}

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="490" viewBox="0 0 360 490" role="img" aria-labelledby="title"><title id="title">两位Flash：并行看三个门槛</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">两位Flash：并行看三个门槛</text>
+<text x="12" y="52" font-size="14" text-anchor="start">Vin接三个比较器+端；阈值接−端</text>
+<text x="28" y="82" font-size="14" text-anchor="start">+4V</text>
+<path class="w" d="M48 90L48 115"/>
+<path class="w" d="M48 115L48 123"/>
+<rect x="43" y="123" width="10" height="24" class="w"/>
+<path class="w" d="M48 147L48 155"/>
+<text x="57" y="139.0" font-size="12" text-anchor="start">R</text>
+<path class="w" d="M48 155L48 177"/>
+<path class="w" d="M48 177L48 185"/>
+<rect x="43" y="185" width="10" height="24" class="w"/>
+<path class="w" d="M48 209L48 217"/>
+<text x="57" y="201.0" font-size="12" text-anchor="start">R</text>
+<path class="w" d="M48 217L48 239"/>
+<path class="w" d="M48 239L48 247"/>
+<rect x="43" y="247" width="10" height="24" class="w"/>
+<path class="w" d="M48 271L48 279"/>
+<text x="57" y="263.0" font-size="12" text-anchor="start">R</text>
+<path class="w" d="M48 279L48 301"/>
+<path class="w" d="M48 301L48 309"/>
+<rect x="43" y="309" width="10" height="24" class="w"/>
+<path class="w" d="M48 333L48 341"/>
+<text x="57" y="325.0" font-size="12" text-anchor="start">R</text>
+<path class="w" d="M48 341L48 363"/>
+<path class="w" d="M48 365L48 373"/>
+<path class="w" d="M38 373L58 373"/>
+<path class="w" d="M42 378L54 378"/>
+<path class="w" d="M46 383L50 383"/>
+<circle cx="48" cy="177" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M48 177L100 177L100 187L142 187"/>
+<text x="73" y="170" font-size="12" text-anchor="start">3V</text>
+<path class="w" d="M142 155L142 199L188 177Z"/>
+<text x="145" y="191" font-size="12" text-anchor="start">−</text>
+<text x="145" y="168" font-size="12" text-anchor="start">+</text>
+<path class="w" d="M120 163L142 163"/>
+<path class="w" d="M188 177L235 177"/>
+<text x="200" y="169" font-size="12" text-anchor="start">C3</text>
+<circle cx="48" cy="239" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M48 239L100 239L100 249L142 249"/>
+<text x="73" y="232" font-size="12" text-anchor="start">2V</text>
+<path class="w" d="M142 217L142 261L188 239Z"/>
+<text x="145" y="253" font-size="12" text-anchor="start">−</text>
+<text x="145" y="230" font-size="12" text-anchor="start">+</text>
+<path class="w" d="M120 225L142 225"/>
+<path class="w" d="M188 239L235 239"/>
+<text x="200" y="231" font-size="12" text-anchor="start">C2</text>
+<circle cx="48" cy="301" r="2.6" fill="var(--ink)"/>
+<path class="w" d="M48 301L100 301L100 311L142 311"/>
+<text x="73" y="294" font-size="12" text-anchor="start">1V</text>
+<path class="w" d="M142 279L142 323L188 301Z"/>
+<text x="145" y="315" font-size="12" text-anchor="start">−</text>
+<text x="145" y="292" font-size="12" text-anchor="start">+</text>
+<path class="w" d="M120 287L142 287"/>
+<path class="w" d="M188 301L235 301"/>
+<text x="200" y="293" font-size="12" text-anchor="start">C1</text>
+<path class="w" d="M120 115L120 287"/>
+<text x="100" y="105" font-size="14" text-anchor="start">Vin</text>
+<rect x="235" y="150" width="102" height="175" class="w"/>
+<text x="286" y="204" font-size="13" text-anchor="middle">温度计码</text>
+<text x="286" y="234" font-size="13" text-anchor="middle">→编码器</text>
+<text x="286" y="268" font-size="13" text-anchor="middle">2位输出</text>
+<text x="12" y="411" font-size="14" text-anchor="start">Vin2.3V：C1/C2/C3=1/1/0→10</text>
+<text x="12" y="442" font-size="14" text-anchor="start">不是把110直接当输出；每个阈值同时比。</text>
+<text x="12" y="472" font-size="13" text-anchor="start">3位需要7个比较器，结构成本随位数增加。</text>
+<path class="w" d="M48 363V365"/></svg>

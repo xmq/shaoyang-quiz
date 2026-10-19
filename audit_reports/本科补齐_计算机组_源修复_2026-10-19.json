@@ -1,0 +1,687 @@
+{
+  "date": "2026-10-19",
+  "finished_at": "2026-10-19T11:25:28.851813",
+  "status": "客观题型补充后源再次冻结，待root重合并与非作者体验",
+  "coverage_plan": "audit_reports/本科补齐_计算机组_计划_2026-10-19.json",
+  "scope": {
+    "courses": 6,
+    "source_files": 12,
+    "new_topics": 18,
+    "new_cards": 18,
+    "new_questions": 36,
+    "new_native_svg": 3
+  },
+  "units": [
+    {
+      "topic_id": "computer-organization.t43",
+      "chapter_id": "computer-organization.c02",
+      "title": "先行进位的两位展开",
+      "goal": "由G/P直接算C1/C2，区分与逐级等待",
+      "process": "两位展开公式与一次输入核验",
+      "example": "A=01、B=11、C0=0→C1=1/C2=1",
+      "question_ids": [
+        "ug-comp-20261019-01-a",
+        "ug-comp-20261019-01-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "operating-system.t22",
+      "chapter_id": "operating-system.c03",
+      "title": "多级反馈队列的升降与抢占",
+      "goal": "按给定队列规则追踪任务及完成时刻",
+      "process": "两级队列时间线/就绪状态",
+      "example": "A需4，B在2到达需1；Q0片1/Q1片2",
+      "question_ids": [
+        "ug-comp-20261019-02-a",
+        "ug-comp-20261019-02-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "operating-system.t23",
+      "chapter_id": "operating-system.c03",
+      "title": "按截止期执行EDF调度",
+      "goal": "按绝对截止期选择，检查是否错过",
+      "process": "每次到达/完成重选EDF",
+      "example": "A到0需3限5，B到1需1限2",
+      "question_ids": [
+        "ug-comp-20261019-03-a",
+        "ug-comp-20261019-03-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "operating-system.t24",
+      "chapter_id": "operating-system.c04",
+      "title": "等待图中的死锁检测",
+      "goal": "单实例图查环并区分安全检查",
+      "process": "边为等待持有者，追循环",
+      "example": "P1等P2资源、P2等P1",
+      "question_ids": [
+        "ug-comp-20261019-04-a",
+        "ug-comp-20261019-04-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "data-structures.t45",
+      "chapter_id": "data-structures.c04",
+      "title": "B树删除的借位与合并",
+      "goal": "按结点下限修复删除后的树",
+      "process": "四阶B树叶删/借位/合并/根降层",
+      "example": "根20，左10，右30/40或右30",
+      "question_ids": [
+        "ug-comp-20261019-05-a",
+        "ug-comp-20261019-05-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "data-structures.t46",
+      "chapter_id": "data-structures.c04",
+      "title": "中序线索的建立与遍历",
+      "goal": "用pre和tag建线索并沿后继走",
+      "process": "三结点完整访问/空链线索/遍历",
+      "example": "B根、A左、C右，中序ABC",
+      "question_ids": [
+        "ug-comp-20261019-06-a",
+        "ug-comp-20261019-06-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "data-structures.t47",
+      "chapter_id": "data-structures.c08",
+      "title": "败者树如何更新归并段首",
+      "goal": "理解只比较当前段首及更新路径",
+      "process": "两两比赛留败者/补胜者叶",
+      "example": "三段[1,7]/[3,5]/[2,6]",
+      "question_ids": [
+        "ug-comp-20261019-07-a",
+        "ug-comp-20261019-07-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "data-structures.t48",
+      "chapter_id": "data-structures.c08",
+      "title": "置换选择中的冻结与新段",
+      "goal": "新输入小于最后输出时留下一段",
+      "process": "固定缓冲最小输出/替换/冻结",
+      "example": "缓冲3，输入4,1,3,2,6,0",
+      "question_ids": [
+        "ug-comp-20261019-08-a",
+        "ug-comp-20261019-08-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "database.t23",
+      "chapter_id": "database.c05",
+      "title": "存储过程的一次参数调用",
+      "goal": "跟踪参数/条件/修改/返回",
+      "process": "产品中立伪码与一次调用",
+      "example": "余额80，扣30→余额50返回成功",
+      "question_ids": [
+        "ug-comp-20261019-09-a",
+        "ug-comp-20261019-09-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "database.t24",
+      "chapter_id": "database.c05",
+      "title": "游标的逐行读取与关闭",
+      "goal": "按fetch结束状态控制循环",
+      "process": "open→fetch→有行处理→close",
+      "example": "查询成绩80,90，sum0→80→170",
+      "question_ids": [
+        "ug-comp-20261019-10-a",
+        "ug-comp-20261019-10-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "database.t25",
+      "chapter_id": "database.c09",
+      "title": "事实表的粒度与维度汇总",
+      "goal": "辨事实行/维表/度量，按月汇总",
+      "process": "三行事实+日期地区商品维度",
+      "example": "1月北区笔10/20、南区笔5→月35",
+      "question_ids": [
+        "ug-comp-20261019-11-a",
+        "ug-comp-20261019-11-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "database.t26",
+      "chapter_id": "database.c01",
+      "title": "键值数据的写入与读取",
+      "goal": "理解键定位整值与更新",
+      "process": "put/get抽象操作与覆盖",
+      "example": "user:7→姓名/城市，整体更新",
+      "question_ids": [
+        "ug-comp-20261019-12-a",
+        "ug-comp-20261019-12-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "database.t27",
+      "chapter_id": "database.c01",
+      "title": "文档数据的字段筛选",
+      "goal": "用对象/字段筛选与修改",
+      "process": "insert/find/update抽象语义",
+      "example": "2个用户文档按city筛与改age",
+      "question_ids": [
+        "ug-comp-20261019-13-a",
+        "ug-comp-20261019-13-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "programming.t23",
+      "chapter_id": "programming.c03",
+      "title": "无符号数的位运算",
+      "goal": "按固定宽逐位算并区分逻辑",
+      "process": "与/或/异或/右移一步",
+      "example": "4位1100与1010→1000",
+      "question_ids": [
+        "ug-comp-20261019-14-a",
+        "ug-comp-20261019-14-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "programming.t24",
+      "chapter_id": "programming.c09",
+      "title": "链表结点的改链与释放",
+      "goal": "两个Node接链后保留后继再free",
+      "process": "malloc检查/改head/free/清理",
+      "example": "10→20→NULL删10保20",
+      "question_ids": [
+        "ug-comp-20261019-15-a",
+        "ug-comp-20261019-15-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "net.ospf-flow",
+      "chapter_id": "net-04",
+      "title": "OSPF从链路状态到路由表",
+      "goal": "连接邻居/泛洪/LSDB/SPF与代价变动",
+      "process": "4点图前后距离与下一跳",
+      "example": "AB1/AC4/BC2/BD5/CD1改BC6",
+      "question_ids": [
+        "ug-comp-20261019-16-a",
+        "ug-comp-20261019-16-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "net.mpls-label-flow",
+      "chapter_id": "net-04",
+      "title": "MPLS标签的压入交换与弹出",
+      "goal": "理解本地标签与转发动作",
+      "process": "入口push→中间swap→出口pop",
+      "example": "入口100、中间换240、出口弹",
+      "question_ids": [
+        "ug-comp-20261019-17-a",
+        "ug-comp-20261019-17-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    },
+    {
+      "topic_id": "net.sdn-rule-flow",
+      "chapter_id": "net-04",
+      "title": "SDN规则未命中后的处理",
+      "goal": "理解控制/转发及规则匹配",
+      "process": "查询表→miss按规则请求→控制器下发→匹配转发",
+      "example": "10.1/16→端口2，目的10.1.2.3",
+      "question_ids": [
+        "ug-comp-20261019-18-a",
+        "ug-comp-20261019-18-b"
+      ],
+      "source_completion": "讲义同名H4与章末三块短卡已写；两题过程/条件或计算/机制分开",
+      "student_retest": "待两位非作者执行；作者不签学习效果"
+    }
+  ],
+  "new_question_file": "staging/audit_undergrad_computing_20261019_additions.json",
+  "topic_proposal_file": "staging/undergrad_computing_20261019_topics.json",
+  "media_files": [
+    "media/ug_comp_btree_delete.svg",
+    "media/ug_comp_thread_tree.svg",
+    "media/ug_comp_nodes.svg"
+  ],
+  "source_checks": [
+    {
+      "file": "course_notes\\数据库技术.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "6a14f9d66ac98cdfbf5ed631bd316267c72028ceeb5ee109dfab42314fc9f07b"
+    },
+    {
+      "file": "color_notes\\数据库技术.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "fcd5920f3fe248f7e3b468001304bee761c4d33fd67ab16434ec613e30137d66"
+    },
+    {
+      "file": "course_notes\\数据结构与算法.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "f5ba765fece805b0b0b11ff099c103cef62c01e3edfe21f412292746eace22fc"
+    },
+    {
+      "file": "color_notes\\数据结构与算法.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "6077aecf5258912d51721afe698192720e7c43dd80fc310754f1aef74b4e3ecc"
+    },
+    {
+      "file": "course_notes\\计算机网络.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "dcfb734496229bb6c121bc5a52349946d365cd8897d6acd04a8e3eb794bf6af7"
+    },
+    {
+      "file": "color_notes\\计算机网络.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "1eddecbdf24838045a772fc758e22403145eed8c0337678a5aeed4976ba56558"
+    },
+    {
+      "file": "course_notes\\操作系统原理.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "4f0fdb2fabcf8cd49ce9883fb16bdf1771bf94b5f7436119e4a98aec76430640"
+    },
+    {
+      "file": "color_notes\\操作系统原理.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "226716587fde059e3cbf56ee54509249e018a1b03a2fbe5a599362659be2beb9"
+    },
+    {
+      "file": "course_notes\\C与Python程序设计.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "3a97e1d646ddf21ee56cd253c5d5a34fe9922fdb75e1489645596e4ec062aec5"
+    },
+    {
+      "file": "color_notes\\C与Python程序设计.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "4938c85071142b62a3e17bc629b2268d6287c6a35d5f6c01c8fa76720d1a18b3"
+    },
+    {
+      "file": "course_notes\\计算机组成原理.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "20fadeb8bbe51e59d4ac1470f98ae2cca539b71d8b281a689ce063e0f2f7162d"
+    },
+    {
+      "file": "color_notes\\计算机组成原理.md",
+      "old_titles_in_order": true,
+      "existing_highlights_preserved": true,
+      "sha256": "fb660456e1dc47cd4c9598bc03ca35be2fa0529602aa3a4d37807f1d4e8e9c44"
+    }
+  ],
+  "card_checks": [
+    {
+      "topic_id": "computer-organization.t43",
+      "title": "先行进位的两位展开",
+      "visible_chars": 164,
+      "block_chars": [
+        48,
+        57,
+        43
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "operating-system.t22",
+      "title": "多级反馈队列的升降与抢占",
+      "visible_chars": 167,
+      "block_chars": [
+        48,
+        54,
+        49
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "operating-system.t23",
+      "title": "按截止期执行EDF调度",
+      "visible_chars": 164,
+      "block_chars": [
+        47,
+        51,
+        50
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "operating-system.t24",
+      "title": "等待图中的死锁检测",
+      "visible_chars": 161,
+      "block_chars": [
+        46,
+        52,
+        47
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "data-structures.t45",
+      "title": "B树删除的借位与合并",
+      "visible_chars": 173,
+      "block_chars": [
+        47,
+        60,
+        50
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "data-structures.t46",
+      "title": "中序线索的建立与遍历",
+      "visible_chars": 168,
+      "block_chars": [
+        54,
+        49,
+        49
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "data-structures.t47",
+      "title": "败者树如何更新归并段首",
+      "visible_chars": 167,
+      "block_chars": [
+        46,
+        57,
+        48
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "data-structures.t48",
+      "title": "置换选择中的冻结与新段",
+      "visible_chars": 168,
+      "block_chars": [
+        47,
+        57,
+        48
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "database.t23",
+      "title": "存储过程的一次参数调用",
+      "visible_chars": 166,
+      "block_chars": [
+        46,
+        57,
+        47
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "database.t24",
+      "title": "游标的逐行读取与关闭",
+      "visible_chars": 181,
+      "block_chars": [
+        52,
+        61,
+        52
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "database.t25",
+      "title": "事实表的粒度与维度汇总",
+      "visible_chars": 169,
+      "block_chars": [
+        48,
+        54,
+        51
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "database.t26",
+      "title": "键值数据的写入与读取",
+      "visible_chars": 181,
+      "block_chars": [
+        54,
+        61,
+        51
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "database.t27",
+      "title": "文档数据的字段筛选",
+      "visible_chars": 173,
+      "block_chars": [
+        56,
+        52,
+        49
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "programming.t23",
+      "title": "无符号数的位运算",
+      "visible_chars": 176,
+      "block_chars": [
+        47,
+        59,
+        55
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "programming.t24",
+      "title": "链表结点的改链与释放",
+      "visible_chars": 191,
+      "block_chars": [
+        53,
+        72,
+        51
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "net.ospf-flow",
+      "title": "OSPF从链路状态到路由表",
+      "visible_chars": 184,
+      "block_chars": [
+        55,
+        59,
+        54
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "net.mpls-label-flow",
+      "title": "MPLS标签的压入交换与弹出",
+      "visible_chars": 164,
+      "block_chars": [
+        48,
+        49,
+        51
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    },
+    {
+      "topic_id": "net.sdn-rule-flow",
+      "title": "SDN规则未命中后的处理",
+      "visible_chars": 172,
+      "block_chars": [
+        48,
+        57,
+        51
+      ],
+      "chapter_match": true,
+      "lecture_h4_exact": true,
+      "two_different_abilities": true
+    }
+  ],
+  "question_checks": {
+    "ids_unique": true,
+    "normalized_stems_unique_and_no_exact_existing_stem": true,
+    "each_topic_two_different_abilities": true,
+    "types_abilities_difficulty_knowledge_point_legal": true,
+    "subjective_rubric_three_explicit_points_each": "28简答各三点；8客观不设主观rubric",
+    "chapter_placement_and_proposal_question_ids_match": true,
+    "new_ids_not_registered_by_author": true
+  },
+  "calculation_checks": {
+    "two_bit_carry_exhaustive_cases": 32,
+    "ospf_before": [
+      4,
+      [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "ospf_after": [
+      5,
+      [
+        "A",
+        "C",
+        "D"
+      ]
+    ],
+    "replacement_lecture": [
+      [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        0
+      ]
+    ],
+    "replacement_question": [
+      [
+        1,
+        5
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "bit_operations": "1010 &/|/^ 0110 → 0010/1110/1100；右移0101",
+    "fact_aggregates": "1月35，北区30",
+    "author_manual_traces": [
+      "MLFQ：A在2余执行2/余片1，B2—3，A3—4用余片后余1，4—5完成",
+      "EDF：A0—1、B1—2、A2—4；过载例5需求/4能力不可行",
+      "四阶B借位：20下移、30上提；合并20/30后唯一孩子升根",
+      "中序线程：pre空→A→B→C，A.right=B/C.left=B，B孩子不覆盖",
+      "败者树：段首1/3/2→7/3/2→7/3/6→7/5/6",
+      "游标：有80/90后无行，0→80→170不重复旧值；过程扣30后扣60第二次不足",
+      "C节点先保存20后free10，仍有别名不能再读；两malloc失败分支均free",
+      "MPLS100→240→弹出；SDN /16匹配与未命中丢弃按明确约定"
+    ]
+  },
+  "media_author_check": {
+    "xml": "3 SVG解析通过；自然尺寸380×590/380×380/380×365，按内容定尺寸",
+    "mobile_source_preview": "以临时HTML包装原生SVG，在390×844浅深各3张截图并逐张view_image；树结点/键值、tag实线虚线、head/old/失效状态可读，0横溢出。",
+    "evidence": "C:\\Users\\pc\\AppData\\Local\\Temp\\course-experience-20261016\\ug_comp_source_svg_preview",
+    "limit": "只预览源SVG，未构建或签编译后课程页；非作者页面/错题返回/离线仍待root候选。"
+  },
+  "validation": {
+    "local": "12文件旧H1/H2/H3相对顺序、已有==均保留；18卡三块各≥25且可见总≤220；同名讲义H4唯一且同章。",
+    "diff_check": "git diff --check指定本组源文件通过。",
+    "global": "本次执行全量讲义检查时，六科讲义无章/题型错误；别组电路/信号新章尚待root同步且信号过程分析标记非法。重点新卡与map未登记不一致，未绕过。"
+  },
+  "limits": [
+    "没有改任何旧题、registry、learning-map、metadata、dist或build脚本；未build。",
+    "NUMA仅在SMP既有段加本地/远端代价与均衡取舍，无新卡；外归并原72页I/O基础例保持，另补最短败者树/置换选择状态。",
+    "DB全部新操作为明确约定的伪码/抽象模型，未安装产品；没有强加Python OOP。",
+    "C片段人工核对类型/对象生命期，未声称真实编译运行；算法数值另用独立Python计算而非运行产品代码。",
+    "本轮源检查不等于整本教材验收或真实学习效果；剩余专题范围保持2026-10-19重评层次。"
+  ],
+  "question_type_revision": {
+    "updated_at": "2026-10-19T11:33:34.715031",
+    "ids_unchanged": true,
+    "topic_chapter_mapping_unchanged": true,
+    "counts": {
+      "简答": 28,
+      "单选": 4,
+      "判断": 4
+    },
+    "changed_question_ids": [
+      "ug-comp-20261019-01-b",
+      "ug-comp-20261019-02-b",
+      "ug-comp-20261019-03-b",
+      "ug-comp-20261019-04-b",
+      "ug-comp-20261019-07-b",
+      "ug-comp-20261019-08-b",
+      "ug-comp-20261019-09-b",
+      "ug-comp-20261019-12-b"
+    ],
+    "reason": "保留过程/计算主观主干，选型与边界改为客观题；客观题删除主观rubric。"
+  }
+}

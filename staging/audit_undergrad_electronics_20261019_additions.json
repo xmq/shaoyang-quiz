@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "ug-elec-analog-electronics-t23-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "共射电路的直流与交流分析",
+    "source_chapter": "analog-electronics.c03",
+    "chapter_id": "analog-electronics.c03",
+    "topic_id": "analog-electronics.t23",
+    "topic_source": "manual",
+    "knowledge_point": "三极管放大",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "共射电路R1=100kΩ、R2=20kΩ、RC=2kΩ、RE=1kΩ，VCC=12V、β=100、UBE=.7V；耦合电容隔直、RE有充分交流旁路。中频给rbe=2.4kΩ、Rs=1kΩ、RL=2kΩ，忽略管输出电阻。求ICQ、UCEQ、Ri、从基极端口的Au、从源的uo/us及移去负载后的Ro。",
+    "options": {},
+    "answer": "IC≈1.105mA、UCE≈8.675V；Ri≈2.098kΩ，Au≈−41.67，uo/us≈−28.22，Ro≈2kΩ。",
+    "explanation": "先用VTH=2V、RTH=16.67k求IB≈11.05μA；交流R负载=1k，源分压约.6772，Ro应移去RL。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "分别完成直流Q点与放大区回查",
+        "points": 1
+      },
+      {
+        "criterion": "区分端口/源增益及移去负载求Ro",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t23-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "共射电路的直流与交流分析",
+    "source_chapter": "analog-electronics.c03",
+    "chapter_id": "analog-electronics.c03",
+    "topic_id": "analog-electronics.t23",
+    "topic_source": "manual",
+    "knowledge_point": "三极管放大",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "上一种共射模型的RE被充分旁路时Au=−β(RC∥RL)/rbe。现在撤掉旁路电容，RE仍存在。能否只保留原rbe、β和RC∥RL，继续报相同Au？给出重画交流等效的理由；独立直流电源在小信号图中如何处理？",
+    "options": {},
+    "answer": "不能。RE引入交流负反馈，发射极不再交流接地，应把RE加入小信号模型后重求。理想直流电源在交流图中置为交流地。",
+    "explanation": "撤旁路改变的是交流通路，不能因直流偏置基本不变就照搬原Au。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "指出RE未旁路改变交流通路/负反馈",
+        "points": 1
+      },
+      {
+        "criterion": "说明电源交流接地且需重算增益",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t24-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "差分对的尾电流与增益",
+    "source_chapter": "analog-electronics.c04",
+    "chapter_id": "analog-electronics.c04",
+    "topic_id": "analog-electronics.t24",
+    "topic_source": "manual",
+    "knowledge_point": "三极管放大",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "匹配差分对理想尾电流4mA，RC各2kΩ、VCC=12V，基极直流0V。忽略IB分流、ro，VT=25mV、β=80。ud=u1−u2，u1=ud/2、u2=−ud/2；求每管ICQ、集电极Q电压、gm、左单端增益及左减右双端增益。",
+    "options": {},
+    "answer": "每管2mA，UCQ=8V，gm=.08S；左单端−80，左减右双端−160。",
+    "explanation": "对称先平分尾流，再用−gmRC/2和−gmRC；不能把双端增益用于单管输出。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "由尾流得到Q点及gm",
+        "points": 1
+      },
+      {
+        "criterion": "按明示单/双端方向求增益",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t24-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "差分对的尾电流与增益",
+    "source_chapter": "analog-electronics.c04",
+    "chapter_id": "analog-electronics.c04",
+    "topic_id": "analog-electronics.t24",
+    "topic_source": "manual",
+    "knowledge_point": "三极管放大",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "stem": "一对称差分级对ud的左右单端输出分别为−1V和+1V。若双端输出定义改为右减左，而不改变输入ud定义，结果是多少？实际尾电流源输出电阻有限时，能否由理想模型断言所有共模输出严格为0？",
+    "options": {},
+    "answer": "右减左为+2V；不能，有限尾源电阻和失配会产生共模增益，需按实际模型检查。",
+    "explanation": "输出端口反向使增益符号反向，但不会改变器件本身的物理电压；理想共模结论有条件。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确改变双端输出符号",
+        "points": 1
+      },
+      {
+        "criterion": "保留实际共模/匹配边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t25-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "从电容求放大器截止频率",
+    "source_chapter": "analog-electronics.c04",
+    "chapter_id": "analog-electronics.c04",
+    "topic_id": "analog-electronics.t25",
+    "topic_source": "manual",
+    "knowledge_point": "负反馈放大",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "只保留输入耦合电容一个低频极点。CC=2μF，两侧为源内阻Rs=1kΩ和输入电阻Ri=3kΩ，二者分别对公共地。将独立源置零后，求CC两端等效电阻与归一化下限频率。",
+    "options": {},
+    "answer": "R=Rs+Ri=4kΩ，fL≈1/(2π×2μF×4kΩ)=19.9Hz。",
+    "explanation": "这只电容跨在两个对地电阻之间，回路经过两者，应串联相加，不是并联。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "识别电容两端为4kΩ",
+        "points": 1
+      },
+      {
+        "criterion": "单位正确求19.9Hz",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t25-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "从电容求放大器截止频率",
+    "source_chapter": "analog-electronics.c04",
+    "chapter_id": "analog-electronics.c04",
+    "topic_id": "analog-electronics.t25",
+    "topic_source": "manual",
+    "knowledge_point": "负反馈放大",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "主导输入极点近似中，Rs∥Ri=666.7Ω，跨输入输出Cμ=2pF，另有输入对地电容10pF。若Av由−49变成−9，分别估米勒后总输入电容，并判断fH变化。可忽略其他极点。",
+    "options": {},
+    "answer": "原总电容110pF，后为30pF；fH由约2.17MHz升至约7.96MHz。",
+    "explanation": "Cμ(1−Av)分别100pF与20pF，反相增益幅度减小使米勒放大减弱；仅在主导极点假设内成立。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确计算两种总电容",
+        "points": 1
+      },
+      {
+        "criterion": "说明截止提高且保留主导极点条件",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t26-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "互补功放的半周与效率",
+    "source_chapter": "analog-electronics.c07",
+    "chapter_id": "analog-electronics.c07",
+    "topic_id": "analog-electronics.t26",
+    "topic_source": "manual",
+    "knowledge_point": "功率放大",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "理想乙类互补OCL供电±12V，电阻负载8Ω，无静态电流，正弦输出峰值6V。求Im、Po、Pdc及η；采用每路全周期平均电流Im/π。",
+    "options": {},
+    "answer": "Im=.75A，Po=2.25W，Pdc=18/π≈5.73W，η≈39.3%。",
+    "explanation": "负半周也消耗负载功率；Pdc需把两路供电功率相加。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "由峰值求负载功率",
+        "points": 1
+      },
+      {
+        "criterion": "正确计两路直流输入和效率",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t26-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "互补功放的半周与效率",
+    "source_chapter": "analog-electronics.c07",
+    "chapter_id": "analog-electronics.c07",
+    "topic_id": "analog-electronics.t26",
+    "topic_source": "manual",
+    "knowledge_point": "功率放大",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "互补输出正半周从正电源供电，负半周电流从地经负载流向负电源。有人说负半周电压为负，因此不应计入负载输出功率；另有人把理想78.5%当作任何甲乙类输出效率。分别判断并说明。",
+    "options": {},
+    "answer": "两说均错。电阻瞬时功率uo²/R非负；78.5%仅理想乙类最大无失真正弦上限，甲乙静态电流和实际压降会改变效率。",
+    "explanation": "电压符号与能量方向还要结合电流；效率有具体模型和幅度条件。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "用功率关系说明负半周供能",
+        "points": 1
+      },
+      {
+        "criterion": "指出理想上限和甲乙静耗条件",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t27-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "稳压反馈分压与输出电压",
+    "source_chapter": "analog-electronics.c08",
+    "chapter_id": "analog-electronics.c08",
+    "topic_id": "analog-electronics.t27",
+    "topic_source": "manual",
+    "knowledge_point": "直流电源",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "串联调整稳压器采样上电阻3kΩ、下电阻1kΩ，Vref=1.25V。假设稳定负反馈且有足够余量、分压负载可忽略，求输出。输入9V、负载.1A时估调整管主要耗散。",
+    "options": {},
+    "answer": "Uo=1.25(1+3/1)=5V；主要管耗(9−5)×.1=.4W。",
+    "explanation": "先令分压点等于基准，不能把分压比例再乘基准而得到更低输出。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "由采样关系反求输出5V",
+        "points": 1
+      },
+      {
+        "criterion": "按压差估耗散.4W",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-analog-electronics-t27-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "模拟电子技术",
+    "chapter": "稳压反馈分压与输出电压",
+    "source_chapter": "analog-electronics.c08",
+    "chapter_id": "analog-electronics.c08",
+    "topic_id": "analog-electronics.t27",
+    "topic_source": "manual",
+    "knowledge_point": "直流电源",
+    "ability": "场景选型",
+    "difficulty": "应用",
+    "stem": "某降压型线性串联稳压器电阻比计算目标5V。输入降到4V时，能否仍用分压式保证实际5V？输出因负载增加而下降时，按正确负反馈方向调整管应增强还是减弱导通？",
+    "options": {},
+    "answer": "不能保证，输入低于目标且还需压差，线性区假设失败；输出下降时应增强导通以抬回输出。",
+    "explanation": "电阻比决定可达条件下的目标，不提供升压能量；负反馈方向要使偏差减小。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "说明输入/压差导致公式失效",
+        "points": 1
+      },
+      {
+        "criterion": "判断正确反馈方向",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-digital-electronics-t20-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "加权电阻DAC的位权求和",
+    "source_chapter": "digital-electronics.c07",
+    "chapter_id": "digital-electronics.c07",
+    "topic_id": "digital-electronics.t20",
+    "topic_source": "manual",
+    "knowledge_point": "A/D与D/A转换",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "三位反相加权DAC：运放同相接地，Rf=10kΩ，b2/b1/b0电阻20/40/80kΩ；每位1接4V、0接地，负反馈线性且电源余量足够。输入码110，求三个电流和输出。",
+    "options": {},
+    "answer": "三电流.2mA、.1mA、0，和.3mA，输出−3V。",
+    "explanation": "电流在虚地点相加经Rf，反相负号来自此拓扑而非编码本身。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "按位电阻求三电流",
+        "points": 1
+      },
+      {
+        "criterion": "由反馈电流求反相输出",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-digital-electronics-t20-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "加权电阻DAC的位权求和",
+    "source_chapter": "digital-electronics.c07",
+    "chapter_id": "digital-electronics.c07",
+    "topic_id": "digital-electronics.t20",
+    "topic_source": "manual",
+    "knowledge_point": "A/D与D/A转换",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "相同加权网络改Vref=8V，理想111应输出−7V。若运放实际只用0V与+5V供电且不能输出负电压，能否认为电阻和码位算对就会实际得到−7V？最高码为什么也不是−8V？",
+    "options": {},
+    "answer": "不能，输出摆幅不满足线性模型；三位权和1/2+1/4+1/8=7/8，故理想满码幅度7V而非8V。",
+    "explanation": "编码、理想传输式及实际供电条件须分别核验。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "指出负摆幅条件失败",
+        "points": 1
+      },
+      {
+        "criterion": "正确解释满码7/8",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-digital-electronics-t21-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "双积分ADC的两个阶段",
+    "source_chapter": "digital-electronics.c07",
+    "chapter_id": "digital-electronics.c07",
+    "topic_id": "digital-electronics.t21",
+    "topic_source": "manual",
+    "knowledge_point": "A/D与D/A转换",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "理想反相双积分ADC，RC=10ms，固定积分T1=20ms、正输入Ui=.8V，之后接−2V基准回零。求阶段1斜率/末值、阶段2斜率/T2；时钟1kHz时回零计数多少？",
+    "options": {},
+    "answer": "阶段1−80V/s、末−1.6V；阶段2+200V/s、T2=8ms，计8拍。",
+    "explanation": "两阶段电压变化相抵，T2=T1Ui/Vref；改变输入不改变固定基准阶段斜率。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确追踪两段斜率与末值",
+        "points": 1
+      },
+      {
+        "criterion": "由时间比得8ms和8拍",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-digital-electronics-t21-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "双积分ADC的两个阶段",
+    "source_chapter": "digital-electronics.c07",
+    "chapter_id": "digital-electronics.c07",
+    "topic_id": "digital-electronics.t21",
+    "topic_source": "manual",
+    "knowledge_point": "A/D与D/A转换",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "双积分ADC用同一R、C完成两阶段。若T1=10ms而干扰为50Hz正弦，能否无条件称积分覆盖整工频周期且完全抵消？共同R/C误差抵消是否表示基准电压误差也会消失？",
+    "options": {},
+    "answer": "均不能。50Hz周期20ms，10ms是半周期，任意初相积分未必0；共同R/C可在比值中抵消，基准误差仍影响结果。",
+    "explanation": "工频抑制要求正确积分窗口及不过载，不能把一项误差抵消泛化成所有误差消失。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "辨别整周期和任意初相条件",
+        "points": 1
+      },
+      {
+        "criterion": "区分共同R/C与基准误差",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-digital-electronics-t22-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "Flash ADC的并行判档",
+    "source_chapter": "digital-electronics.c07",
+    "chapter_id": "digital-electronics.c07",
+    "topic_id": "digital-electronics.t22",
+    "topic_source": "manual",
+    "knowledge_point": "A/D与D/A转换",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "理想3位Flash，范围0～8V、7个比较器阈值依次1至7V，Vin≥阈值输出1。输入5.3V，按低到高写比较器结果和3位无符号码。",
+    "options": {},
+    "answer": "温度计码1111100，3位输出101。",
+    "explanation": "前五个阈值通过，进入[5,6)档，不能把7位温度计串当最终二进制数。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "按阈值顺序求温度计码",
+        "points": 1
+      },
+      {
+        "criterion": "将第五档编码101",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-digital-electronics-t22-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "数字电子技术",
+    "chapter": "Flash ADC的并行判档",
+    "source_chapter": "digital-electronics.c07",
+    "chapter_id": "digital-electronics.c07",
+    "topic_id": "digital-electronics.t22",
+    "topic_source": "manual",
+    "knowledge_point": "A/D与D/A转换",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "stem": "两位Flash需要3个比较器，三位需要几个？为什么这种并行判档不会像SAR一样用同一DAC逐位试探？理想等阈值约定能否保证实际阈值附近毫无气泡码？",
+    "options": {},
+    "answer": "3位需7个；它把输入同时与全部内部阈值比较，再编码；真实失调、噪声和建立时间可造成气泡码。",
+    "explanation": "并行速度以硬件数量为代价，理想边界约定不是器件精度保证。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确区分并行与逐次试探及数量",
+        "points": 1
+      },
+      {
+        "criterion": "说明真实边界误差",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t23-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "平稳噪声的相关与输出功率",
+    "source_chapter": "communication.c02",
+    "chapter_id": "communication.c02",
+    "topic_id": "communication.t23",
+    "topic_source": "manual",
+    "knowledge_point": "信道容量与香农公式",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "零均值宽平稳噪声在−5kHz至5kHz内PSD=2×10⁻¹²W/Hz。稳定LTI在该带幅度增益3、带外0且无内部新增噪声。求输出PSD与带内功率。",
+    "options": {},
+    "answer": "输出PSD=1.8×10⁻¹¹W/Hz，带内功率1.8×10⁻⁷W。",
+    "explanation": "幅度3使PSD乘9，再乘双边总宽10000Hz；不能只按单边5000积分。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确用增益模平方",
+        "points": 1
+      },
+      {
+        "criterion": "按双边带宽积分",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t23-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "平稳噪声的相关与输出功率",
+    "source_chapter": "communication.c02",
+    "chapter_id": "communication.c02",
+    "topic_id": "communication.t23",
+    "topic_source": "manual",
+    "knowledge_point": "信道容量与香农公式",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "实宽平稳过程均值2、方差3，R(0)是多少？“宽平稳”能否自动推出幅值高斯分布或功率谱为白？",
+    "options": {},
+    "answer": "R(0)=E[x²]=3+2²=7；宽平稳不自动推出高斯或白。",
+    "explanation": "R(0)是均方值，零均值时才等方差；平稳、高斯、白是不同条件。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "区分均方值与方差",
+        "points": 1
+      },
+      {
+        "criterion": "不混平稳/高斯/白",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t24-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "二元匹配接收与误码概率",
+    "source_chapter": "communication.c08",
+    "chapter_id": "communication.c08",
+    "topic_id": "communication.t24",
+    "topic_source": "manual",
+    "knowledge_point": "数字调制",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "等概、相干BPSK经AWGN接收，单位能量模板，双边噪声PSD N0/2。给Eb/N0=4.5为线性比，Pe=Q(√(2Eb/N0))，Q(3)=.00135。求误码率并说明Q参数来源。",
+    "options": {},
+    "answer": "参数√(2×4.5)=3，Pe=.00135，即约.135%。",
+    "explanation": "判决噪声投影标准差√(N0/2)，信号投影距0门限√Eb，标准化得到Q参数。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "求得Q参数3及概率",
+        "points": 1
+      },
+      {
+        "criterion": "说明能量/投影噪声口径",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t24-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "二元匹配接收与误码概率",
+    "source_chapter": "communication.c08",
+    "chapter_id": "communication.c08",
+    "topic_id": "communication.t24",
+    "topic_source": "manual",
+    "knowledge_point": "数字调制",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "T=1s，单位能量模板φ=1在[0,1]。二元接收r(t)前半段2、后半段−1；匹配滤波在T的输出等于∫rφdt，门限0，正判1。求判决值。若仅看r(T)的−1会怎样，为什么不等价？",
+    "options": {},
+    "answer": "z=2×.5−1×.5=.5，判1；只看末端−1会判0，却漏掉整段相关累积。",
+    "explanation": "匹配抽样是滤波后统计量而不是原始信号一个瞬时点，端点单点值不影响积分。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确计算相关积分及判决",
+        "points": 1
+      },
+      {
+        "criterion": "区分滤波抽样与原瞬时点",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t25-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "单音AM的频谱与功率",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t25",
+    "topic_source": "manual",
+    "knowledge_point": "模拟调制",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "普通单音AM，载波峰10V、R50Ω、m=.8、fc100kHz、fm1kHz。按正频率余弦峰值表示，求两边带位置/峰值、Pc、总功率与带宽。",
+    "options": {},
+    "answer": "边带99/101kHz、各4V峰；Pc=1W，各边带.16W，总1.32W，带宽2kHz。",
+    "explanation": "边带峰mAc/2，电阻功率峰值平方除2R，互异频率长时平均功率相加。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "展开边带位置及幅度",
+        "points": 1
+      },
+      {
+        "criterion": "正确用峰值功率与带宽",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t25-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "单音AM的频谱与功率",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t25",
+    "topic_source": "manual",
+    "knowledge_point": "模拟调制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "同Ac10V、R50Ω的AM若m=1.2，有人由总功率1.72W比m=.8时高，推断普通包络检波一定恢复得更好。是否成立？载波与直流电源输入功率可否直接等同？",
+    "options": {},
+    "answer": "不成立，m>1包络反转可能失真；信号总功率提高不保证检波更好。载波或负载信号功率也不等于整机直流输入。",
+    "explanation": "功率关系与包络适用条件是两项独立检查。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "指出过调制破坏包络恢复",
+        "points": 1
+      },
+      {
+        "criterion": "区分信号与直流供电功率",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t26-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "FM的瞬时频率与相位",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t26",
+    "topic_source": "manual",
+    "knowledge_point": "模拟调制",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "FM相位θ(t)=2π×100000t+3sin(2π×2000t)，频率单位Hz、t秒。求fc、fm、β、最大频偏及卡森近似带宽。",
+    "options": {},
+    "answer": "fc100kHz、fm2kHz、β3、Δf=6kHz，带宽约16kHz。",
+    "explanation": "先对相位求导除2π得到瞬时频率，βfm是频偏而非β自身的Hz值。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "从相位识频率及积分关系",
+        "points": 1
+      },
+      {
+        "criterion": "求6kHz频偏和16kHz带宽",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t26-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "FM的瞬时频率与相位",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t26",
+    "topic_source": "manual",
+    "knowledge_point": "模拟调制",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "stem": "保持最大频偏2kHz，调制频率从1kHz变2kHz。β变小是否说明按卡森估计的带宽一定变小？请计算比较。",
+    "options": {},
+    "answer": "β由2变1，但带宽由2(2+1)=6kHz增到2(2+2)=8kHz。",
+    "explanation": "卡森带宽同时依赖频偏和调制频率，不能单看无量纲β。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确比较β和两个带宽",
+        "points": 1
+      },
+      {
+        "criterion": "解释不能只据β判断",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t27-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "邻码元干扰的抽样计算",
+    "source_chapter": "communication.c08",
+    "chapter_id": "communication.c08",
+    "topic_id": "communication.t27",
+    "topic_source": "manual",
+    "knowledge_point": "数字调制",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "给p(0)=1、p(T)=.4、p(−T)=.3，其他整数点0，无噪声。当前码+1、前后码均−1，求当前判决样值；0门限下是否一定发生误码？",
+    "options": {},
+    "answer": "样值1−.4−.3=.3，仍判+1，没有本次误码，但存在ISI。",
+    "explanation": "邻项残留改变样值，不一定已经越过门限。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "定位两个邻项并求.3",
+        "points": 1
+      },
+      {
+        "criterion": "区分有ISI与本次误码",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t27-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "邻码元干扰的抽样计算",
+    "source_chapter": "communication.c08",
+    "chapter_id": "communication.c08",
+    "topic_id": "communication.t27",
+    "topic_source": "manual",
+    "knowledge_point": "数字调制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "某系统p(T)=p(−T)=.2。当前+1、前−1后+1时邻项抵消，输出1。能否据此宣布无码间串扰？给另一组合反例。",
+    "options": {},
+    "answer": "不能；前后都−1时输出1−.2−.2=.6。真正归一化无码间串扰要求所有非零整数k的p(kT)=0，对任意数据成立。",
+    "explanation": "单次数据抵消不足以证明系统性质。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "给出有效反例",
+        "points": 1
+      },
+      {
+        "criterion": "表述对任意码序列的零残留条件",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t28-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "调谐放大级的增益与噪声系数",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t28",
+    "topic_source": "manual",
+    "knowledge_point": "高频电路",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "简化并联调谐级gm=1mS，Rp=RL=20kΩ，L10μH、C100pF。忽略管反向反馈和输出导纳，求谐振负载、Au、f0、高Q近似Q与BW。",
+    "options": {},
+    "answer": "R=10kΩ，Au≈−10，f0≈5.03MHz，Q≈31.62，BW≈159kHz。",
+    "explanation": "并联电阻先求加载值，Q=R/(ω0L)，BW=f0/Q，不能直接用Rp20k。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确加载与谐振增益",
+        "points": 1
+      },
+      {
+        "criterion": "按单位求频率/Q/带宽",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t28-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "调谐放大级的增益与噪声系数",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t28",
+    "topic_source": "manual",
+    "knowledge_point": "高频电路",
+    "ability": "比较辨析",
+    "difficulty": "应用",
+    "stem": "同一噪声参考、相同信号频带测得某放大器输入SNR=100、输出SNR=25，线性噪声因子与NF是多少？若信号有很大电压增益，能否把NF直接当该增益？",
+    "options": {},
+    "answer": "F=4，NF≈6.02dB；不能，NF衡量SNR恶化，与单纯信号幅度增益不同。",
+    "explanation": "噪声和信号一同传播，还可能新增噪声；4是线性因子而非4dB。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "求F4与6.02dB",
+        "points": 1
+      },
+      {
+        "criterion": "不混NF和信号增益",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t29-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "丙类功放的直流与基波功率",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t29",
+    "topic_source": "manual",
+    "knowledge_point": "高频电路",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "丙类谐振级给VCC10V、全周期平均I0=.08A、基波峰I1=.12A，Rp50Ω，忽略其他损耗且模型有效。求输出峰、Po、Pdc、效率。",
+    "options": {},
+    "answer": "输出峰6V，Po=.36W，Pdc=.8W，效率45%。",
+    "explanation": "Po=I1²Rp/2，供电只用I0；两种电流口径不同。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "分清平均/基波并求功率",
+        "points": 1
+      },
+      {
+        "criterion": "求45%效率且检查摆幅",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t29-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "丙类功放的直流与基波功率",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t29",
+    "topic_source": "manual",
+    "knowledge_point": "高频电路",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "某丙类估算用VCC12V、I0=.1A、I1=.16A。把Rp升到100Ω还保持这些系数，得到输出峰16V、Po1.28W、效率106.7%。应接受为真实高效率结果吗？说明谷值和模型检查。",
+    "options": {},
+    "answer": "不应。uCE谷值12−16=−4V已不满足放大器实际导通边界，过压区系数会变，固定I0/I1假设失败；不能接受效率大于1。",
+    "explanation": "数学外推越过器件工作区，先检查模型再谈功率最优。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "用谷值识别条件失效",
+        "points": 1
+      },
+      {
+        "criterion": "指出系数不再固定且效率不能如此接受",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t30-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "电容三点式振荡的反馈与频率",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t30",
+    "topic_source": "manual",
+    "knowledge_point": "高频电路",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "指定共基Colpitts：C1跨C—E为100pF，C2自E接地300pF，L40μH。忽略管电容与分压器负载，求Ceq、f0、Ve/Vc。若另外已知实际加载反馈=.25、同相级增益3，按幅值条件能否起振？",
+    "options": {},
+    "answer": "Ceq75pF，f0≈2.91MHz，理想Ve/Vc=.25；给定加载环路幅值3×.25=.75，不满足起振幅值大于1。",
+    "explanation": "频率估算与起振幅值是不同检查，不能因有LC就认为一定振。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "按指定电容端点求频率与分压",
+        "points": 1
+      },
+      {
+        "criterion": "根据加载后的环路幅值判断",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t30-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "电容三点式振荡的反馈与频率",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t30",
+    "topic_source": "manual",
+    "knowledge_point": "高频电路",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "共基电容三点式把C1/C2互换，串联等效电容不变。能否据此断言反馈比例和起振裕量都不变？若又把E用大电容完全旁路成交流地会怎样？",
+    "options": {},
+    "answer": "不能，无载Ve/Vc由C1/(C1+C2)决定，互换改变比例且实际加载也会变；E旁路成交流地破坏本图把E作为反馈输入的通路。",
+    "explanation": "同样f0不等于同样环路条件，判相与幅值须按接线分析。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "区别等效电容与反馈比",
+        "points": 1
+      },
+      {
+        "criterion": "指出E作为反馈输入不能被直接旁路",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t31-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "包络检波的充放电与时间常数",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t31",
+    "topic_source": "manual",
+    "knowledge_point": "模拟调制",
+    "ability": "直接计算",
+    "difficulty": "应用",
+    "stem": "理想包络检波电容刚充到5V，随后二极管截止1μs，仅由R放电，RC=20μs。估峰前输出。fc1MHz、fm1kHz时，它是否处于1/ωc与1/ωm之间？",
+    "options": {},
+    "answer": "峰前约5e^(−.05)=4.76V；.159μs<20μs<159μs，处于两量级之间，但仍需调制度/负载等检查。",
+    "explanation": "放电是指数过程；不等式是初步量级条件，不是完整无失真保证。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "求指数放电约4.76V",
+        "points": 1
+      },
+      {
+        "criterion": "保留时间常数量级和适用边界",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t31-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "包络检波的充放电与时间常数",
+    "source_chapter": "communication.c06",
+    "chapter_id": "communication.c06",
+    "topic_id": "communication.t31",
+    "topic_source": "manual",
+    "knowledge_point": "模拟调制",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "普通AM消息频率1kHz，若将检波RC增到1ms以求更平滑，是否越大越好？输入已过调制m>1时，能否仅调整RC保证恢复原消息？",
+    "options": {},
+    "answer": "不是，RC过大可能跟不上下降包络出现斜切；m>1包络反转也不能只靠RC无条件恢复。",
+    "explanation": "载波纹波与包络跟随是折中，且调制本身先要满足包络条件。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "解释大RC的包络跟随失败",
+        "points": 1
+      },
+      {
+        "criterion": "指出过调制不是单调RC可解决",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t32-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "DPCM的重建值预测",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t32",
+    "topic_source": "manual",
+    "knowledge_point": "抽样与PCM",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "DPCM预测取上一重建值，初8；误差量化为最近的2的整数倍，正负中点均取数值较大者。样值10、13、12，逐项写预测、量化误差及重建值。",
+    "options": {},
+    "answer": "预测8/10/14，量化误差2/4/−2，重建10/14/12。",
+    "explanation": "第二次原误差3量化为4，因此第三次必须用重建14而非原13。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "按约定完成量化与重建",
+        "points": 1
+      },
+      {
+        "criterion": "使用重建历史更新预测",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t32-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "DPCM的重建值预测",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t32",
+    "topic_source": "manual",
+    "knowledge_point": "抽样与PCM",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "在该DPCM规则中第二次原样值13、重建14。下一原样值12，若发送端误用原13作预测而接收端仍用14，发送的量化误差是多少，接收重建又是多少？正确做法是什么？",
+    "options": {},
+    "answer": "发送端误差−1按中点取较大者量化0；接收端重建14+0=14。正确两端均预测14，发送−2而重建12。",
+    "explanation": "预测器状态一致是误差编码可还原的前提。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "算出失配结果14",
+        "points": 1
+      },
+      {
+        "criterion": "说明正确共享重建历史",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t33-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "HDB3的四零替代",
+    "source_chapter": "communication.c08",
+    "chapter_id": "communication.c08",
+    "topic_id": "communication.t33",
+    "topic_source": "manual",
+    "knowledge_point": "复用与线路编码",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "HDB3给最近非零脉冲+，上次V后已有1个数据1。后续0000 1 0000如何编码？明确V极性及每次替代选择。",
+    "options": {},
+    "answer": "先奇数用000+V；数据1按AMI发−；计数重新为1，后四零用000−V。",
+    "explanation": "V与前非零同极性，取代后计数重置，数据1继续正常交替。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确选择两次000V及极性",
+        "points": 1
+      },
+      {
+        "criterion": "明确计数重置/数据交替",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t33-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "HDB3的四零替代",
+    "source_chapter": "communication.c08",
+    "chapter_id": "communication.c08",
+    "topic_id": "communication.t33",
+    "topic_source": "manual",
+    "knowledge_point": "复用与线路编码",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "HDB3已声明最近脉冲−、上次V后2个数据1，收到有效取代节+B 0 0 +V，其后为−1。译码时能否把B当数据1，输出1001 1？说明该段应恢复的数据及B作用。",
+    "options": {},
+    "answer": "不能；B00V整个恢复0000，其后的正常脉冲才恢复数据1，所以为0000 1。B按正常交替插入以满足取代节极性/平衡规则。",
+    "explanation": "冗余插入的B与原数据1在物理脉冲形状上相似，要依据V及完整取代节解码。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "整个替代节还原四零",
+        "points": 1
+      },
+      {
+        "criterion": "区分B与原数据1的职责",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t34-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "卷积码的移位与输出",
+    "source_chapter": "communication.c07",
+    "chapter_id": "communication.c07",
+    "topic_id": "communication.t34",
+    "topic_source": "manual",
+    "knowledge_point": "通信系统基础",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "卷积码初ab=00，v0=u⊕a⊕b、v1=u⊕b，每拍先输出再新ab=(u,a旧)。输入11，写每拍输出和新状态。",
+    "options": {},
+    "answer": "第一拍输出11、新10；第二拍输出01、新11。",
+    "explanation": "第二拍使用旧a1/b0，不能先改状态后再算输出。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "正确输出两拍11/01",
+        "points": 1
+      },
+      {
+        "criterion": "按旧状态更新至10/11",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t34-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "卷积码的移位与输出",
+    "source_chapter": "communication.c07",
+    "chapter_id": "communication.c07",
+    "topic_id": "communication.t34",
+    "topic_source": "manual",
+    "knowledge_point": "通信系统基础",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "率1/2卷积编码器有两位记忆。3信息位后加两个尾0，共产生10发送位。有效信息比例仍是1/2吗？这段编码为何不能仅按“当前输入0”唯一决定输出？",
+    "options": {},
+    "answer": "有效比例3/10，结构1/2未计尾开销；输出还依赖两位旧状态，同一u可有不同输出。",
+    "explanation": "结构码率、业务有效比例与有记忆状态分开解释；并非多发位数就自动任意纠错。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "区分结构码率和有效3/10",
+        "points": 1
+      },
+      {
+        "criterion": "说明历史状态影响输出",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t35-01",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "伪随机序列的状态与相关",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t35",
+    "topic_source": "manual",
+    "knowledge_point": "复用与线路编码",
+    "ability": "过程描述",
+    "difficulty": "应用",
+    "stem": "3级反馈旧q2q1q0输出q2，新态(q1,q0,q2⊕q0)。初态011，写前两次输出及对应新状态；不要逐位使用刚更新的值。",
+    "options": {},
+    "answer": "第一输出0、新111；第二输出1、新110。",
+    "explanation": "每拍反馈都基于该拍完整旧状态，更新同时进行。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "两次输出和新态均正确",
+        "points": 1
+      },
+      {
+        "criterion": "坚持旧状态同时更新",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "ug-elec-communication-t35-02",
+    "source": "本科教学补充原创",
+    "type": "简答",
+    "subject": "通信原理与高频电子线路",
+    "chapter": "伪随机序列的状态与相关",
+    "source_chapter": "communication.c03",
+    "chapter_id": "communication.c03",
+    "topic_id": "communication.t35",
+    "topic_source": "manual",
+    "knowledge_point": "复用与线路编码",
+    "ability": "机制解释",
+    "difficulty": "应用",
+    "stem": "同样反馈若初态000会进入7个非零态循环吗？本例一周期±1序列移位相关R[1]=−1/7，可否据此声称任意截短/不同步时完全正交或可用于密码安全？",
+    "options": {},
+    "answer": "000永远停000；周期相关值不保证任意截短/异步正交，确定递推也不等于密码不可预测。",
+    "explanation": "种子与抽头决定周期，相关使用完整周期和明示映射；用途边界必须保留。",
+    "adaptation_note": "依据通用本科基础知识原创；非历年真题，不以工程实现或复杂证明作门槛。",
+    "max_score": 2,
+    "rubric": [
+      {
+        "criterion": "说明零种子锁死",
+        "points": 1
+      },
+      {
+        "criterion": "区分周期相关、实际同步和密码性质",
+        "points": 1
+      }
+    ]
+  }
+]

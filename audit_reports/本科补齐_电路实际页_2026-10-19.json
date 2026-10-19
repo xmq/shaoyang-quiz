@@ -1,0 +1,114 @@
+[
+  {
+    "width": 390,
+    "theme": "light",
+    "heading": "二阶RLC的初值与响应",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "media/ee_rc_response.svg",
+        "width": 366,
+        "height": 420.890625
+      },
+      {
+        "src": "media/ee_rc_discharge.svg",
+        "width": 366,
+        "height": 413.578125
+      },
+      {
+        "src": "media/ug_circuit_rlc_loop.svg",
+        "width": 360,
+        "height": 300
+      },
+      {
+        "src": "media/ug_circuit_rlc_response.svg",
+        "width": 360,
+        "height": 322
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "heading": "二阶RLC的初值与响应",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "media/ee_rc_response.svg",
+        "width": 366,
+        "height": 420.890625
+      },
+      {
+        "src": "media/ee_rc_discharge.svg",
+        "width": 366,
+        "height": 413.578125
+      },
+      {
+        "src": "media/ug_circuit_rlc_loop.svg",
+        "width": 360,
+        "height": 300
+      },
+      {
+        "src": "media/ug_circuit_rlc_response.svg",
+        "width": 360,
+        "height": 322
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "theme": "light",
+    "heading": "二阶RLC的初值与响应",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "media/ee_rc_response.svg",
+        "width": 400,
+        "height": 460
+      },
+      {
+        "src": "media/ee_rc_discharge.svg",
+        "width": 400,
+        "height": 452
+      },
+      {
+        "src": "media/ug_circuit_rlc_loop.svg",
+        "width": 360,
+        "height": 300
+      },
+      {
+        "src": "media/ug_circuit_rlc_response.svg",
+        "width": 360,
+        "height": 322
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "theme": "dark",
+    "heading": "二阶RLC的初值与响应",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "media/ee_rc_response.svg",
+        "width": 400,
+        "height": 460
+      },
+      {
+        "src": "media/ee_rc_discharge.svg",
+        "width": 400,
+        "height": 452
+      },
+      {
+        "src": "media/ug_circuit_rlc_loop.svg",
+        "width": 360,
+        "height": 300
+      },
+      {
+        "src": "media/ug_circuit_rlc_response.svg",
+        "width": 360,
+        "height": 322
+      }
+    ]
+  }
+]

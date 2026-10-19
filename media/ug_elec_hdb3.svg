@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="390" viewBox="0 0 360 390" role="img" aria-labelledby="title"><title id="title">HDB3：先数奇偶，再放B/V</title>
+<style>svg{--ink:#233b49;--accent:#08796e;--soft:#e8f4f1;--muted:#536d7c;color:var(--ink);font:14px system-ui,"Microsoft YaHei",sans-serif}text{fill:currentColor}.w{stroke:var(--ink);stroke-width:1.7;fill:none}.a{stroke:var(--accent);stroke-width:2;fill:none}.soft{fill:var(--soft);stroke:var(--accent);stroke-width:1.4}.muted{fill:var(--muted)}@media(prefers-color-scheme:dark){svg{--ink:#e0edf2;--accent:#75d2bd;--soft:#173d39;--muted:#b3c4cf}}</style><defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--accent)"/></marker></defs>
+<text x="12" y="25" font-size="17" text-anchor="start">HDB3：先数奇偶，再放B/V</text>
+<text x="12" y="55" font-size="14" text-anchor="start">初条件：前非零−，上次V后已有2个数据1</text>
+<text x="12" y="100" font-size="13" text-anchor="start">数据       0  0  0  0     1     0  0  0  0</text>
+<text x="12" y="142" font-size="13" text-anchor="start">选择        B  0  0  V     1     0  0  0  V</text>
+<text x="12" y="184" font-size="13" text-anchor="start">极性        +  0  0  +     −     0  0  0  −</text>
+<path class="w" d="M48 205L165 205"/>
+<text x="48" y="232" font-size="14" text-anchor="start">计数偶：B00V</text>
+<path class="w" d="M237 205L337 205"/>
+<text x="237" y="232" font-size="13" text-anchor="start">计数奇：000V</text>
+<text x="12" y="282" font-size="14" text-anchor="start">V与前非零同极性，B按正常交替。</text>
+<text x="12" y="312" font-size="14" text-anchor="start">两次V依次+、−；每个替代节恢复0000。</text>
+<text x="12" y="354" font-size="13" text-anchor="start">不把B当原数据1，初始计数须声明。</text>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "previous_build": "f97063ba9a2a7c98",
+  "build": "ad79e891e89fb74a",
+  "changed_files": [
+    "build-meta.js",
+    "media/ug_as_fft_butterfly.svg"
+  ],
+  "unchanged_regression": "讲义/卡渲染、题库、学习地图和全部页面逻辑相同；末次仅FFT图输入箭头终点移至运算圆前及派生版本缓存元信息更新。",
+  "before": {
+    "build-meta.js": "98660e0fab9da6de382165041948c5e36d46c851aafb26ae12e8ce5b4f6a2e9c",
+    "media/ug_as_fft_butterfly.svg": "b281b0385a35c28b57eb40cc9a1bc01ec5526b665e76a1869e2855fa4e6c7328"
+  },
+  "after": {
+    "build-meta.js": "44065c745a39035688e4acfa5bea924ee7af10ed20150b9070006fc6280442ce",
+    "media/ug_as_fft_butterfly.svg": "50ce0407a56291d9df367d209896018a6606ac4b605e06dbb831447ceb28d0f8"
+  }
+}

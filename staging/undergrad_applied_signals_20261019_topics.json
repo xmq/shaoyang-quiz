@@ -1,0 +1,269 @@
+[
+  {
+    "course": "软件工程",
+    "title": "CMM五级与过程改进",
+    "topic_id": "software-engineering.t26",
+    "chapter_id": "software-engineering.c07",
+    "keywords": [
+      "CMM五级与过程改进",
+      "CMM",
+      "CMMI",
+      "成熟度"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "区分经典CMM五级，按项目/组织/量化/持续改进证据判断，不把模型当认证保证。",
+    "question_ids": [
+      "gap-ug-as-software-engineering-cmm-levels",
+      "gap-ug-as-software-engineering-cmm-version-boundary"
+    ]
+  },
+  {
+    "course": "软件工程",
+    "title": "Jackson数据结构到程序结构",
+    "topic_id": "software-engineering.t27",
+    "chapter_id": "software-engineering.c04",
+    "keywords": [
+      "Jackson数据结构到程序结构",
+      "JSP",
+      "Jackson",
+      "数据结构"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "区分JSP与JSD，把表头/记录重复/表尾映射初始化/逐记录循环/汇总。",
+    "question_ids": [
+      "gap-ug-as-software-engineering-jsp-records",
+      "gap-ug-as-software-engineering-jsp-empty"
+    ]
+  },
+  {
+    "course": "软件工程",
+    "title": "界面的一致性、反馈与错误恢复",
+    "topic_id": "software-engineering.t28",
+    "chapter_id": "software-engineering.c04",
+    "keywords": [
+      "界面的一致性、反馈与错误恢复"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "同一业务设计一致标签、提交状态与可恢复错误，不要求完整UI理论。",
+    "question_ids": [
+      "gap-ug-as-software-engineering-ui-recovery",
+      "gap-ug-as-software-engineering-ui-pending"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "DFT与IDFT的四点计算",
+    "topic_id": "signals-systems.t17",
+    "chapter_id": "signals-systems.c08",
+    "keywords": [
+      "DFT与IDFT的四点计算",
+      "DFT",
+      "IDFT"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "在前向无系数/逆向1/N约定下逐项计算4点并还原。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-dft-four",
+      "gap-ug-as-signals-systems-idft-scale"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "DFT索引与正负频率",
+    "topic_id": "signals-systems.t18",
+    "chapter_id": "signals-systems.c08",
+    "keywords": [
+      "DFT索引与正负频率"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "将kfs/N与(k−N)fs/N对应，识别DC、Nyquist和共轭对。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-dft-frequency",
+      "gap-ug-as-signals-systems-dft-conjugate"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "圆周卷积与补零",
+    "topic_id": "signals-systems.t19",
+    "chapter_id": "signals-systems.c08",
+    "keywords": [
+      "圆周卷积与补零"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "手算模N索引及折回，知道N≥Lx+Lh−1时补零得到线性卷积。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-circular-fold",
+      "gap-ug-as-signals-systems-circular-padding"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "FFT偶奇分解与蝶形",
+    "topic_id": "signals-systems.t20",
+    "chapter_id": "signals-systems.c08",
+    "keywords": [
+      "FFT偶奇分解与蝶形",
+      "FFT",
+      "蝶形"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "FFT为同一DFT的算法，用2点E/O算一层加权和差，非另一种变换。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-fft-layer",
+      "gap-ug-as-signals-systems-fft-boundary"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "差分方程的非零初值响应",
+    "topic_id": "signals-systems.t21",
+    "chapter_id": "signals-systems.c05",
+    "keywords": [
+      "差分方程的非零初值响应"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "单边Z中带上y[−1]，区分零输入零状态与总响应并递推核对。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-difference-initial",
+      "gap-ug-as-signals-systems-difference-decomposition"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "离散频率响应的幅相与零点",
+    "topic_id": "signals-systems.t22",
+    "chapter_id": "signals-systems.c05",
+    "keywords": [
+      "离散频率响应的幅相与零点"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "从H=1+e^−jΩ因式分解算幅相，说明零点处相位不定义。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-dtft-phase",
+      "gap-ug-as-signals-systems-dtft-zero"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "延迟加法框图读方程",
+    "topic_id": "signals-systems.t23",
+    "chapter_id": "signals-systems.c05",
+    "keywords": [
+      "延迟加法框图读方程"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "按箭头逐支读取延迟与增益并列差分方程，不把输入延迟当反馈。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-block-delay",
+      "gap-ug-as-signals-systems-block-feedforward"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "信号内积与正交",
+    "topic_id": "signals-systems.t24",
+    "chapter_id": "signals-systems.c04",
+    "keywords": [
+      "信号内积与正交"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明"
+    ],
+    "study_task": "按明确共轭约定算短序列内积/能量，零内积是给定区间的正交。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-inner-orthogonal",
+      "gap-ug-as-signals-systems-inner-conjugate"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "相关与延迟匹配",
+    "topic_id": "signals-systems.t25",
+    "chapter_id": "signals-systems.c04",
+    "keywords": [
+      "相关与延迟匹配"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "客观辨析",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "固定相关定义及滞后符号，通过滑动内积找到延迟峰，不混卷积。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-correlation-lag",
+      "gap-ug-as-signals-systems-correlation-convention"
+    ]
+  },
+  {
+    "course": "信号与系统",
+    "title": "Parseval能量核对",
+    "topic_id": "signals-systems.t26",
+    "chapter_id": "signals-systems.c07",
+    "keywords": [
+      "Parseval能量核对"
+    ],
+    "practice_priority": "优先练",
+    "practice_modes": [
+      "直接计算",
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "在DTFT/DFT对应归一化下核对能量，不能把DFT系数模平方直接求和当时域能量。",
+    "question_ids": [
+      "gap-ug-as-signals-systems-parseval-energy",
+      "gap-ug-as-signals-systems-parseval-normalization"
+    ]
+  }
+]

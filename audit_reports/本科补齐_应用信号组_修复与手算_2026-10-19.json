@@ -1,0 +1,597 @@
+{
+  "date": "2026-10-19",
+  "status": "作者源修复完成并冻结，等待两名非作者复核；不称学生真人试验",
+  "plan": "audit_reports/本科补齐_应用信号组_计划_2026-10-19.json",
+  "scope": {
+    "courses_changed": [
+      "软件工程",
+      "信号与系统"
+    ],
+    "md_files": [
+      "course_notes/软件工程.md",
+      "color_notes/软件工程.md",
+      "course_notes/信号与系统.md",
+      "color_notes/信号与系统.md"
+    ],
+    "new_topics": 13,
+    "new_questions": 26,
+    "new_chapter": "signals-systems.c08 第8章 离散傅里叶变换与快速算法",
+    "new_media": [
+      "media/ug_as_jackson_records.svg",
+      "media/ug_as_dft_bins.svg",
+      "media/ug_as_convolution_wrap.svg",
+      "media/ug_as_fft_butterfly.svg",
+      "media/ug_as_delay_feedback.svg"
+    ],
+    "topics_staging": "staging/undergrad_applied_signals_20261019_topics.json",
+    "questions_staging": "staging/audit_undergrad_applied_signals_20261019_additions.json"
+  },
+  "completed_units": [
+    {
+      "topic_id": "software-engineering.t26",
+      "chapter_id": "software-engineering.c07",
+      "title": "CMM五级与过程改进",
+      "outcome": "区分经典CMM五级，按项目/组织/量化/持续改进证据判断，不把模型当认证保证。",
+      "mechanism": "五级对照表与组织从项目管理到组织标准的对比",
+      "example": "甲团队各项目有计划跟踪，乙团队统一组织过程，丙团队量化质量并持续找根因；分别指出证据"
+    },
+    {
+      "topic_id": "software-engineering.t27",
+      "chapter_id": "software-engineering.c04",
+      "title": "Jackson数据结构到程序结构",
+      "outcome": "区分JSP与JSD，把表头/记录重复/表尾映射初始化/逐记录循环/汇总。",
+      "mechanism": "输入输出结构对应、循环读取和状态表",
+      "example": "HEAD批次；ITEM金额10/20/5；END→REPORT/三DETAIL/TOTAL3笔35"
+    },
+    {
+      "topic_id": "software-engineering.t28",
+      "chapter_id": "software-engineering.c04",
+      "title": "界面的一致性、反馈与错误恢复",
+      "outcome": "同一业务设计一致标签、提交状态与可恢复错误，不要求完整UI理论。",
+      "mechanism": "修改前后对照与一次错误→修复→确认链",
+      "example": "转账金额误输负数，保留输入说明错误；提交中反馈，成功回执防重复提交"
+    },
+    {
+      "topic_id": "signals-systems.t17",
+      "chapter_id": "signals-systems.c08",
+      "title": "DFT与IDFT的四点计算",
+      "outcome": "在前向无系数/逆向1/N约定下逐项计算4点并还原。",
+      "mechanism": "定义、W4权重、正逆逐项表",
+      "example": "x=[1,2,0,0]→X=[3,1−2j,−1,1+2j]→原序列"
+    },
+    {
+      "topic_id": "signals-systems.t18",
+      "chapter_id": "signals-systems.c08",
+      "title": "DFT索引与正负频率",
+      "outcome": "将kfs/N与(k−N)fs/N对应，识别DC、Nyquist和共轭对。",
+      "mechanism": "四频点表与实余弦双边谱",
+      "example": "fs800,N4的0/200/±400/−200Hz；cos200Hz在k1/k3出现"
+    },
+    {
+      "topic_id": "signals-systems.t19",
+      "chapter_id": "signals-systems.c08",
+      "title": "圆周卷积与补零",
+      "outcome": "手算模N索引及折回，知道N≥Lx+Lh−1时补零得到线性卷积。",
+      "mechanism": "线性结果与N2折回对照，N4补零",
+      "example": "[1,2]*[3,4]线性[3,10,8]；N2圆周[11,10]；N4[3,10,8,0]"
+    },
+    {
+      "topic_id": "signals-systems.t20",
+      "chapter_id": "signals-systems.c08",
+      "title": "FFT偶奇分解与蝶形",
+      "outcome": "FFT为同一DFT的算法，用2点E/O算一层加权和差，非另一种变换。",
+      "mechanism": "E/O分解、W乘法与和差",
+      "example": "[1,2,0,0]的E=[1,1],O=[2,2]，k1权−j得X1/X3"
+    },
+    {
+      "topic_id": "signals-systems.t21",
+      "chapter_id": "signals-systems.c05",
+      "title": "差分方程的非零初值响应",
+      "outcome": "单边Z中带上y[−1]，区分零输入零状态与总响应并递推核对。",
+      "mechanism": "移位求和、代数方程、几何级数/逐拍状态",
+      "example": "y=.5y前拍+x，y[−1]=4,x=u→3,2.5,2.25；总2+.5^n"
+    },
+    {
+      "topic_id": "signals-systems.t22",
+      "chapter_id": "signals-systems.c05",
+      "title": "离散频率响应的幅相与零点",
+      "outcome": "从H=1+e^−jΩ因式分解算幅相，说明零点处相位不定义。",
+      "mechanism": "欧拉分解与Ω0/π2/π核验",
+      "example": "2e^−jΩ2 cosΩ2；0增益2，π2增益√2相−π4，π为0"
+    },
+    {
+      "topic_id": "signals-systems.t23",
+      "chapter_id": "signals-systems.c05",
+      "title": "延迟加法框图读方程",
+      "outcome": "按箭头逐支读取延迟与增益并列差分方程，不把输入延迟当反馈。",
+      "mechanism": "递归框图→内部支路变量→方程/H",
+      "example": "输出回接z^−1再乘.5与输入相加→y=x+.5y前拍"
+    },
+    {
+      "topic_id": "signals-systems.t24",
+      "chapter_id": "signals-systems.c04",
+      "title": "信号内积与正交",
+      "outcome": "按明确共轭约定算短序列内积/能量，零内积是给定区间的正交。",
+      "mechanism": "实向量逐项乘加、复数共轭反例",
+      "example": "[1,1]与[1,−1]内积0；x=[1,j]自内积2"
+    },
+    {
+      "topic_id": "signals-systems.t25",
+      "chapter_id": "signals-systems.c04",
+      "title": "相关与延迟匹配",
+      "outcome": "固定相关定义及滞后符号，通过滑动内积找到延迟峰，不混卷积。",
+      "mechanism": "r_xh[l]=Σx[n]h*[n−l]的零延拓表",
+      "example": "x=[0,1,2,0],h=[1,2]，l0/1/2相关2/5/2"
+    },
+    {
+      "topic_id": "signals-systems.t26",
+      "chapter_id": "signals-systems.c07",
+      "title": "Parseval能量核对",
+      "outcome": "在DTFT/DFT对应归一化下核对能量，不能把DFT系数模平方直接求和当时域能量。",
+      "mechanism": "DTFT积分关系、4点DFT两侧求和",
+      "example": "[1,2,0,0]时域5，频域9+5+1+5=20，除N4得5"
+    }
+  ],
+  "source_checks": {
+    "files": [
+      {
+        "file": "course_notes/软件工程.md",
+        "old_headings_and_order_preserved": true,
+        "old_highlights_preserved": true,
+        "sha256": "691604e0246129f8e1f60b174b9b2e55340d9ef8e4deedf39c101d49f7184064"
+      },
+      {
+        "file": "color_notes/软件工程.md",
+        "old_headings_and_order_preserved": true,
+        "old_highlights_preserved": true,
+        "sha256": "465ae028d79c0ac18e258571994ba759a3938e384993bd8c14c104bbfedd8ae1"
+      },
+      {
+        "file": "course_notes/信号与系统.md",
+        "old_headings_and_order_preserved": true,
+        "old_highlights_preserved": true,
+        "sha256": "3cd7f55c785fa41ba669b9b52c952e3b77782e54cb587fa4d913949c4c3c8d1a"
+      },
+      {
+        "file": "color_notes/信号与系统.md",
+        "old_headings_and_order_preserved": true,
+        "old_highlights_preserved": true,
+        "sha256": "4fccbbdcffea21b924024f0bcdc03a010a5434c7e4156c40ee82bc356905e8ce"
+      }
+    ],
+    "cards": [
+      {
+        "topic_id": "software-engineering.t26",
+        "title": "CMM五级与过程改进",
+        "three_blocks": [
+          55,
+          52,
+          53
+        ],
+        "total": 160
+      },
+      {
+        "topic_id": "software-engineering.t27",
+        "title": "Jackson数据结构到程序结构",
+        "three_blocks": [
+          54,
+          75,
+          50
+        ],
+        "total": 179
+      },
+      {
+        "topic_id": "software-engineering.t28",
+        "title": "界面的一致性、反馈与错误恢复",
+        "three_blocks": [
+          46,
+          47,
+          47
+        ],
+        "total": 140
+      },
+      {
+        "topic_id": "signals-systems.t17",
+        "title": "DFT与IDFT的四点计算",
+        "three_blocks": [
+          43,
+          57,
+          47
+        ],
+        "total": 147
+      },
+      {
+        "topic_id": "signals-systems.t18",
+        "title": "DFT索引与正负频率",
+        "three_blocks": [
+          51,
+          63,
+          49
+        ],
+        "total": 163
+      },
+      {
+        "topic_id": "signals-systems.t19",
+        "title": "圆周卷积与补零",
+        "three_blocks": [
+          46,
+          61,
+          50
+        ],
+        "total": 157
+      },
+      {
+        "topic_id": "signals-systems.t20",
+        "title": "FFT偶奇分解与蝶形",
+        "three_blocks": [
+          50,
+          59,
+          49
+        ],
+        "total": 158
+      },
+      {
+        "topic_id": "signals-systems.t21",
+        "title": "差分方程的非零初值响应",
+        "three_blocks": [
+          47,
+          63,
+          46
+        ],
+        "total": 156
+      },
+      {
+        "topic_id": "signals-systems.t22",
+        "title": "离散频率响应的幅相与零点",
+        "three_blocks": [
+          55,
+          41,
+          48
+        ],
+        "total": 144
+      },
+      {
+        "topic_id": "signals-systems.t23",
+        "title": "延迟加法框图读方程",
+        "three_blocks": [
+          39,
+          55,
+          45
+        ],
+        "total": 139
+      },
+      {
+        "topic_id": "signals-systems.t24",
+        "title": "信号内积与正交",
+        "three_blocks": [
+          44,
+          49,
+          44
+        ],
+        "total": 137
+      },
+      {
+        "topic_id": "signals-systems.t25",
+        "title": "相关与延迟匹配",
+        "three_blocks": [
+          49,
+          51,
+          45
+        ],
+        "total": 145
+      },
+      {
+        "topic_id": "signals-systems.t26",
+        "title": "Parseval能量核对",
+        "three_blocks": [
+          49,
+          53,
+          47
+        ],
+        "total": 149
+      }
+    ],
+    "questions": 26,
+    "xml_ok": true,
+    "other_app_sources_unchanged": [
+      "course_notes/Office软件操作.md",
+      "color_notes/Office软件操作.md",
+      "course_notes/大学计算机基础与新技术.md",
+      "color_notes/大学计算机基础与新技术.md",
+      "course_notes/多媒体技术.md",
+      "color_notes/多媒体技术.md",
+      "course_notes/信息安全.md",
+      "color_notes/信息安全.md"
+    ]
+  },
+  "manual_checks": [
+    {
+      "unit": "CMM",
+      "hand_result": "经典次序初始→可重复→已定义→已管理→优化。项目级计划跟踪不替代组织统一过程；仅记缺陷数不等于定量管理，买工具不等于已验证持续改进。依SEI v1.1原文0基26—29页核名称/含义，CMMI不冒称认证标准。"
+    },
+    {
+      "unit": "JSP",
+      "hand_result": "HEAD对应(count,sum)=(0,0)初始化；读10→(1,10)，读20→(2,30)，读5→(3,35)，END输出3笔35。HEAD直接END输出0笔0；每次循环末读下一项。图为顺序/重复数据到程序结构对应，JSP不混JSD。"
+    },
+    {
+      "unit": "UI",
+      "hand_result": "错误明确到金额，保留非敏感输入并可修复；处理中/成功/失败/未知状态分清，超时不能直接诱导重交。禁按钮不能保证服务端一次，敏感字段不原样回显。"
+    },
+    {
+      "unit": "DFT/IDFT",
+      "hand_result": "x=[1,2,0,0]仅两项贡献，W4=-j得3/1−2j/−1/1+2j。逆权重正号，n1加权和3+(2+j)+1+(2−j)=8，除4=2；其余逆和4/0/0恢复1/0/0。"
+    },
+    {
+      "unit": "频率索引",
+      "hand_result": "fs800、N4间隔200；k3未重排600与−200等价，k2=±400为同一Nyquist边界；余弦[1,0,−1,0]频点1/3各2。新题N8/fs1600的k7同样为−200。"
+    },
+    {
+      "unit": "圆周与补零",
+      "hand_result": "[1,2]与[3,4]直接线性3/10/8；N2在n0将3+8=11，n1为10；N4结果3/10/8/0。新题[1,1,1]*[1,1]线性1/2/2/1，N3折回成2/2/2，非截断。"
+    },
+    {
+      "unit": "FFT",
+      "hand_result": "偶[1,0]→E1/1，奇[2,0]→O2/2。k1先乘−j得−2j，和差1−2j/1+2j；新题E3/−1、O2/4给5/−1−4j/1/−1+4j。另12组复数与直接DFT核对。"
+    },
+    {
+      "unit": "非零初态",
+      "hand_result": "y[-1]=4、阶跃输入，前三点3/2.5/2.25；ZI=2(.5)^n，ZS=2−(.5)^n，总2+(.5)^n。单边延迟首项y[-1]经系数.5后进入分子，不把初态4直接当y0。"
+    },
+    {
+      "unit": "幅相与零点",
+      "hand_result": "1+e^-jΩ=2cos(Ω/2)e^-jΩ/2；π/2为1−j，相−π/4。3π/2为1+j，相π/4，要修正余弦负号。π处模0，相位不定义，不用数值库phase(0)替代数学结论。"
+    },
+    {
+      "unit": "框图",
+      "hand_result": "输出经延迟与.5后相加，是y=x+.5y前拍、H分母1−.5z^-1。改接输入得到y=x+.5x前拍，没有输出递归。新题.25反馈、初态4/输入2,0，输出3/.75。"
+    },
+    {
+      "unit": "内积",
+      "hand_result": "[1,1]与[1,−1]内积0但各能量2；[1,j]自内积1+j(−j)=2。新题[1,j]与[j,1]内积−j+j=0，不共轭会误得2j。"
+    },
+    {
+      "unit": "相关",
+      "hand_result": "固定r_xh[l]=Σx[n]h*[n−l]，x=[0,1,2,0]在l0/1/2为2/5/2。新题[0,0,1,2]在0..3为0/2/5/2，峰+2；交换峰−2，模板倍幅使原始峰倍增。"
+    },
+    {
+      "unit": "能量",
+      "hand_result": "两点[1,1]时域2，DTFT模平方2+2cos的周期平均2；四点例时域5、DFT模平方和20除4=5。新题X=[2,0,2,0]逆得[1,0,1,0]能量2；DTFT5+4cos的平均5。"
+    }
+  ],
+  "numerical_verification": {
+    "author_self_check": true,
+    "not_independent_peer_acceptance": true,
+    "checks": [
+      {
+        "task": "正文四点正逆",
+        "computed": [
+          [
+            3.0,
+            -0.0
+          ],
+          [
+            1.0,
+            -2.0
+          ],
+          [
+            -1.0,
+            -0.0
+          ],
+          [
+            1.0,
+            2.0
+          ]
+        ],
+        "independent_derivation": "直接复指数逐项求和，与IDFT独立正号求和闭环"
+      },
+      {
+        "task": "两道正逆新题",
+        "computed": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            -1.0,
+            0.0
+          ],
+          [
+            -0.0,
+            -1.0
+          ]
+        ],
+        "independent_derivation": "单独计算正负指数和1/N，不从答案包反推"
+      },
+      {
+        "task": "双边频谱及索引",
+        "computed": [
+          0,
+          200,
+          400,
+          -200
+        ],
+        "independent_derivation": "fs/N=200；末索引减N映到负频"
+      },
+      {
+        "task": "正文圆周折回与补零",
+        "computed": [
+          [
+            3.0,
+            -0.0
+          ],
+          [
+            10.0,
+            0.0
+          ],
+          [
+            8.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "independent_derivation": "直接线性求和、模下标求和与DFT乘积三路一致"
+      },
+      {
+        "task": "新题圆周折回",
+        "computed": [
+          2,
+          2,
+          2
+        ],
+        "independent_derivation": "线性末项n3按模3加回0"
+      },
+      {
+        "task": "FFT正文/新题及额外复数边界",
+        "computed": [
+          5,
+          [
+            -1.0,
+            -4.0
+          ],
+          1,
+          [
+            -1.0,
+            4.0
+          ]
+        ],
+        "independent_derivation": "一层和差与直接DFT比对；12组非同例复数输入同样一致"
+      },
+      {
+        "task": "非零初态阶跃总响应",
+        "computed": [
+          3.0,
+          2.5,
+          2.25,
+          2.125,
+          2.0625,
+          2.03125
+        ],
+        "independent_derivation": "先逐拍，再核闭式；ZI=2(.5)^n、ZS=2−(.5)^n"
+      },
+      {
+        "task": "初态相消及框图新题",
+        "computed": [
+          3.0,
+          0.75
+        ],
+        "independent_derivation": "−2初态与单位样值相消；.25输出反馈逐拍得3/.75"
+      },
+      {
+        "task": "幅相边界",
+        "computed": 0.7853981633974484,
+        "independent_derivation": "Ω=3π/2的H=1+j，主相位π/4；零点只检查模为0，不把数值phase(0)当数学定义"
+      },
+      {
+        "task": "内积共轭与正交",
+        "computed": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ]
+        ],
+        "independent_derivation": "共轭点乘另算，不以未经共轭的平方和代替"
+      },
+      {
+        "task": "相关滞后新题",
+        "computed": [
+          [
+            0.0,
+            -0.0
+          ],
+          [
+            2.0,
+            -0.0
+          ],
+          [
+            5.0,
+            -0.0
+          ],
+          [
+            2.0,
+            -0.0
+          ]
+        ],
+        "independent_derivation": "零延拓按下标相乘，峰2；交换峰−2；模板2倍相关值2倍"
+      },
+      {
+        "task": "Parseval三口径",
+        "computed": [
+          5,
+          5.0,
+          2.0
+        ],
+        "independent_derivation": "时域求和、DFT模平方/N和DTFT一周期数值积分分别核验"
+      },
+      {
+        "task": "JSP记录[]",
+        "computed": [
+          0,
+          0
+        ],
+        "independent_derivation": "逐记录累计与输入输出对应，包含零条分支"
+      },
+      {
+        "task": "JSP记录[10, 20, 5]",
+        "computed": [
+          3,
+          35
+        ],
+        "independent_derivation": "逐记录累计与输入输出对应，包含零条分支"
+      },
+      {
+        "task": "JSP记录[3, 7]",
+        "computed": [
+          2,
+          10
+        ],
+        "independent_derivation": "逐记录累计与输入输出对应，包含零条分支"
+      }
+    ],
+    "result": "全部数值/方向/归一化核对通过；语义例另依经典CMM来源和UI/JSP边界审阅"
+  },
+  "visual": {
+    "method": "Chrome headless，390×844浅/深两色，Python只读源目录服务SVG临时预览；未build",
+    "screenshots": "C:\\Users\\pc\\AppData\\Local\\Temp\\ug_as_20261019\\svg_preview",
+    "states": 10,
+    "actually_viewed": 10,
+    "results": [
+      "JSP三棵树的HEAD/ITEM*/END、REPORT/DETAIL*/TOTAL及初始化/逐条/汇总对应可辨，星号图例可读。",
+      "DFT图的k1/k3谱线都为2，底部200/−200Hz与Nyquist±400标签清楚。",
+      "圆周折回箭头明确将n2的8加到n0成11，补至4点保留3/10/8/0。",
+      "FFT交叉线无连接点，奇支路乘−j后上下和差结果1∓2j清楚，浅深无错误黑填充。",
+      "反馈图沿输出→z^-1→.5→加法点可读，接线对象是输出而非输入。"
+    ],
+    "boundary": "这是作者对原生SVG的检查，不是最终登记后的实际学习页/题目闭环非作者验收。"
+  },
+  "validation": [
+    "指定4MD的git diff --check通过",
+    "现有validate_course_notes.py通过：16科135章；未改validator",
+    "13新卡各三块>=25字、合计<=220字；实际范围137—179字（指数澄清后仍在范围内）",
+    "旧H2/H3及相对次序、全部既有==逐项保持；新卡追加所属章末，唯一同名H4入口",
+    "每topic恰有2题，ID/章/计划引用一致；简答均有明示评分点且总分一致；题类别与practice_modes使用既有枚举",
+    "5 SVG XML可解析，8份其它应用课程源文件哈希未变"
+  ],
+  "source_basis": [
+    "CMU/SEI CMM v1.1报告：https://www.sei.cmu.edu/documents/1092/1993_005_001_16211.pdf（实际定位经典五级含义页）",
+    "Jackson最小单元依清华教材6.4目录与新乡本科大纲要求，采用自绘顺序/重复例，不混JSD",
+    "MIT DFT/IDFT/卷积与Parseval：https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/65956b1f5c262e9118b195b077811d70_ch4_dft.pdf",
+    "MIT FFT偶奇加权和差：https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/2b3897bb64743815afae1543066ed4ff_fft.pdf"
+  ],
+  "limits": [
+    "本代理没有改全局registry/map/metadata/旧题或dist，没有build；root已登记全局属root操作。",
+    "不改Office/基础/多媒体/安全，未把待核三维或特定安全模型冒充已补。",
+    "只教最小本科任务，未实现CMMI认证、完整Jackson/JSD体系、支付平台、8/16点全FFT图/源码或高维状态空间硬门槛。",
+    "数值和SVG检查为作者自查，不能替代另外两名非作者对新增讲义/卡/题目的独立复测。"
+  ]
+}

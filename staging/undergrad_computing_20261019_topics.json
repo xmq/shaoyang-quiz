@@ -1,0 +1,367 @@
+[
+  {
+    "course": "计算机组成原理",
+    "title": "先行进位的两位展开",
+    "topic_id": "computer-organization.t43",
+    "chapter_id": "computer-organization.c02",
+    "keywords": [
+      "先行进位的两位展开",
+      "先行进位",
+      "产生",
+      "传递"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "直接计算"
+    ],
+    "study_task": "由G/P直接算C1/C2，区分与逐级等待",
+    "question_ids": [
+      "gap-ug-comp-20261019-01-a",
+      "gap-ug-comp-20261019-01-b"
+    ]
+  },
+  {
+    "course": "操作系统原理",
+    "title": "多级反馈队列的升降与抢占",
+    "topic_id": "operating-system.t22",
+    "chapter_id": "operating-system.c03",
+    "keywords": [
+      "多级反馈队列的升降与抢占",
+      "调度",
+      "同步"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "按给定队列规则追踪任务及完成时刻",
+    "question_ids": [
+      "gap-ug-comp-20261019-02-a",
+      "gap-ug-comp-20261019-02-b"
+    ]
+  },
+  {
+    "course": "操作系统原理",
+    "title": "按截止期执行EDF调度",
+    "topic_id": "operating-system.t23",
+    "chapter_id": "operating-system.c03",
+    "keywords": [
+      "按截止期执行EDF调度",
+      "调度",
+      "同步"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "按绝对截止期选择，检查是否错过",
+    "question_ids": [
+      "gap-ug-comp-20261019-03-a",
+      "gap-ug-comp-20261019-03-b"
+    ]
+  },
+  {
+    "course": "操作系统原理",
+    "title": "等待图中的死锁检测",
+    "topic_id": "operating-system.t24",
+    "chapter_id": "operating-system.c04",
+    "keywords": [
+      "等待图中的死锁检测",
+      "调度",
+      "同步"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "单实例图查环并区分安全检查",
+    "question_ids": [
+      "gap-ug-comp-20261019-04-a",
+      "gap-ug-comp-20261019-04-b"
+    ]
+  },
+  {
+    "course": "数据结构与算法",
+    "title": "B树删除的借位与合并",
+    "topic_id": "data-structures.t45",
+    "chapter_id": "data-structures.c04",
+    "keywords": [
+      "B树删除的借位与合并",
+      "数据结构"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "按结点下限修复删除后的树",
+    "question_ids": [
+      "gap-ug-comp-20261019-05-a",
+      "gap-ug-comp-20261019-05-b"
+    ]
+  },
+  {
+    "course": "数据结构与算法",
+    "title": "中序线索的建立与遍历",
+    "topic_id": "data-structures.t46",
+    "chapter_id": "data-structures.c04",
+    "keywords": [
+      "中序线索的建立与遍历",
+      "数据结构"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "用pre和tag建线索并沿后继走",
+    "question_ids": [
+      "gap-ug-comp-20261019-06-a",
+      "gap-ug-comp-20261019-06-b"
+    ]
+  },
+  {
+    "course": "数据结构与算法",
+    "title": "败者树如何更新归并段首",
+    "topic_id": "data-structures.t47",
+    "chapter_id": "data-structures.c08",
+    "keywords": [
+      "败者树如何更新归并段首",
+      "数据结构"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "理解只比较当前段首及更新路径",
+    "question_ids": [
+      "gap-ug-comp-20261019-07-a",
+      "gap-ug-comp-20261019-07-b"
+    ]
+  },
+  {
+    "course": "数据结构与算法",
+    "title": "置换选择中的冻结与新段",
+    "topic_id": "data-structures.t48",
+    "chapter_id": "data-structures.c08",
+    "keywords": [
+      "置换选择中的冻结与新段",
+      "数据结构"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "新输入小于最后输出时留下一段",
+    "question_ids": [
+      "gap-ug-comp-20261019-08-a",
+      "gap-ug-comp-20261019-08-b"
+    ]
+  },
+  {
+    "course": "数据库技术",
+    "title": "存储过程的一次参数调用",
+    "topic_id": "database.t23",
+    "chapter_id": "database.c05",
+    "keywords": [
+      "存储过程的一次参数调用",
+      "数据库"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "跟踪参数/条件/修改/返回",
+    "question_ids": [
+      "gap-ug-comp-20261019-09-a",
+      "gap-ug-comp-20261019-09-b"
+    ]
+  },
+  {
+    "course": "数据库技术",
+    "title": "游标的逐行读取与关闭",
+    "topic_id": "database.t24",
+    "chapter_id": "database.c05",
+    "keywords": [
+      "游标的逐行读取与关闭",
+      "数据库"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "按fetch结束状态控制循环",
+    "question_ids": [
+      "gap-ug-comp-20261019-10-a",
+      "gap-ug-comp-20261019-10-b"
+    ]
+  },
+  {
+    "course": "数据库技术",
+    "title": "事实表的粒度与维度汇总",
+    "topic_id": "database.t25",
+    "chapter_id": "database.c09",
+    "keywords": [
+      "事实表的粒度与维度汇总",
+      "数据库"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "直接计算"
+    ],
+    "study_task": "辨事实行/维表/度量，按月汇总",
+    "question_ids": [
+      "gap-ug-comp-20261019-11-a",
+      "gap-ug-comp-20261019-11-b"
+    ]
+  },
+  {
+    "course": "数据库技术",
+    "title": "键值数据的写入与读取",
+    "topic_id": "database.t26",
+    "chapter_id": "database.c01",
+    "keywords": [
+      "键值数据的写入与读取",
+      "数据库"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "理解键定位整值与更新",
+    "question_ids": [
+      "gap-ug-comp-20261019-12-a",
+      "gap-ug-comp-20261019-12-b"
+    ]
+  },
+  {
+    "course": "数据库技术",
+    "title": "文档数据的字段筛选",
+    "topic_id": "database.t27",
+    "chapter_id": "database.c01",
+    "keywords": [
+      "文档数据的字段筛选",
+      "数据库"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "用对象/字段筛选与修改",
+    "question_ids": [
+      "gap-ug-comp-20261019-13-a",
+      "gap-ug-comp-20261019-13-b"
+    ]
+  },
+  {
+    "course": "C与Python程序设计",
+    "title": "无符号数的位运算",
+    "topic_id": "programming.t23",
+    "chapter_id": "programming.c03",
+    "keywords": [
+      "无符号数的位运算",
+      "程序设计"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "直接计算"
+    ],
+    "study_task": "按固定宽逐位算并区分逻辑",
+    "question_ids": [
+      "gap-ug-comp-20261019-14-a",
+      "gap-ug-comp-20261019-14-b"
+    ]
+  },
+  {
+    "course": "C与Python程序设计",
+    "title": "链表结点的改链与释放",
+    "topic_id": "programming.t24",
+    "chapter_id": "programming.c09",
+    "keywords": [
+      "链表结点的改链与释放",
+      "程序设计"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "两个Node接链后保留后继再free",
+    "question_ids": [
+      "gap-ug-comp-20261019-15-a",
+      "gap-ug-comp-20261019-15-b"
+    ]
+  },
+  {
+    "course": "计算机网络",
+    "title": "OSPF从链路状态到路由表",
+    "topic_id": "net.ospf-flow",
+    "chapter_id": "net-04",
+    "keywords": [
+      "OSPF从链路状态到路由表",
+      "网络协议"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "连接邻居/泛洪/LSDB/SPF与代价变动",
+    "question_ids": [
+      "gap-ug-comp-20261019-16-a",
+      "gap-ug-comp-20261019-16-b"
+    ]
+  },
+  {
+    "course": "计算机网络",
+    "title": "MPLS标签的压入交换与弹出",
+    "topic_id": "net.mpls-label-flow",
+    "chapter_id": "net-04",
+    "keywords": [
+      "MPLS标签的压入交换与弹出",
+      "网络协议"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "理解本地标签与转发动作",
+    "question_ids": [
+      "gap-ug-comp-20261019-17-a",
+      "gap-ug-comp-20261019-17-b"
+    ]
+  },
+  {
+    "course": "计算机网络",
+    "title": "SDN规则未命中后的处理",
+    "topic_id": "net.sdn-rule-flow",
+    "chapter_id": "net-04",
+    "keywords": [
+      "SDN规则未命中后的处理",
+      "网络协议"
+    ],
+    "practice_priority": "正常练",
+    "practice_modes": [
+      "简答说明",
+      "综合应用"
+    ],
+    "study_task": "理解控制/转发及规则匹配",
+    "question_ids": [
+      "gap-ug-comp-20261019-18-a",
+      "gap-ug-comp-20261019-18-b"
+    ]
+  }
+]

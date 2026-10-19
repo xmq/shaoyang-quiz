@@ -1,0 +1,88 @@
+{
+  "course": "电路分析与电工技术",
+  "chapter_change": {
+    "chapter_id": "circuit.c07",
+    "before": "第7章 一阶动态电路",
+    "after": "第7章 一阶与二阶动态电路",
+    "reason": "保留稳定章ID与旧顺序，在同一动态域教一阶/二阶，不把二阶藏在只称一阶的目录中。"
+  },
+  "units": [
+    {
+      "topic_id": "circuit.t16",
+      "title": "二阶RLC的初值与响应",
+      "chapter_id": "circuit.c07",
+      "outcome": "从实际电路列二阶式，初始储能给两初值，判断阻尼并求典型响应",
+      "mechanism": "KVL、VCR、特征根和初值",
+      "example": "R=1.5Ω,L=0.5H,C=1F，自然响应uC(0)=1,iL(0)=0；对比零初始1V阶跃",
+      "visual": "串联RLC参考方向及响应图",
+      "practice": "列式/初值/阻尼与结果核验"
+    },
+    {
+      "topic_id": "circuit.t17",
+      "title": "互感同名端与串联等效",
+      "chapter_id": "circuit.c04",
+      "outcome": "按电压电流参考方向确定M项符号，分串联助磁反磁",
+      "mechanism": "两关联方向入同名端的VCR",
+      "example": "L1=4mH,L2=9mH,k=0.5，M=3mH，串联19/7mH",
+      "visual": "同名端/参考方向、助反串联",
+      "practice": "符号/等效及方向判断"
+    },
+    {
+      "topic_id": "circuit.t18",
+      "title": "二端口Z参数与开路条件",
+      "chapter_id": "circuit.c03",
+      "outcome": "定义两端口方向，写Z方程，从简单T电阻网络求参数",
+      "mechanism": "KCL与两次开路测参",
+      "example": "T网2Ω/3Ω/4Ω，Z=[[6,4],[4,7]]Ω",
+      "visual": "T网络端口电流与电压方向",
+      "practice": "开路含义/给定电流求电压"
+    },
+    {
+      "topic_id": "circuit.t19",
+      "title": "谐振、品质因数与带宽",
+      "chapter_id": "circuit.c05",
+      "outcome": "串并联谐振辨识、Q/BW常规计算与半功率点",
+      "mechanism": "电抗/电纳相消与幅频曲线",
+      "example": "串R10Ω,L10mH,C1μF，f0≈1591.5Hz,Q10,BW159.2Hz",
+      "visual": "串联相对电流频响与半功率点",
+      "practice": "参数计算/串并阻抗辨别"
+    },
+    {
+      "topic_id": "circuit.t20",
+      "title": "非正弦分量的有效值与功率",
+      "chapter_id": "circuit.c05",
+      "outcome": "分直流/谐波算响应并合并RMS与平均功率",
+      "mechanism": "正交分量平方和，功率同频对应相加",
+      "example": "10V直流+10V/5V有效值谐波接5Ω，Urms15V，P45W",
+      "visual": "分量结果表足够，不增加装饰图",
+      "practice": "RMS与功率/不同谐波不能共用单相角"
+    },
+    {
+      "topic_id": "circuit.t21",
+      "title": "RC复频域模型保留初值",
+      "chapter_id": "circuit.c07",
+      "outcome": "单边Laplace把初值保留在元件方程中并核验时域结果",
+      "mechanism": "I=C(sU−u0)、代数方程、简单反变换",
+      "example": "R=C=1，10V阶跃，初值4V；uC=10−6e^-t",
+      "visual": "初值项和回到时域的短流程",
+      "practice": "初值漏项错误/求初终值"
+    },
+    {
+      "topic_id": "circuit.t22",
+      "title": "传输延时与端接反射",
+      "chapter_id": "circuit.c01",
+      "outcome": "认识长线需要传播延时模型，计算一次负载首反射",
+      "mechanism": "Z0为前行波压流比；Γ=(RL−Z0)/(RL+Z0)",
+      "example": "50Ω线到100Ω负载，入射3V反射1V，首到负载4V",
+      "visual": "前行/反行波与负载",
+      "practice": "首反射/匹配条件"
+    }
+  ],
+  "small_support": [
+    "现有戴维南段增加受控源端口实际测试列式，不新造重复卡。",
+    "用两个节点把已有KCL写成小矩阵，不证明矩阵定理。",
+    "非线性用分段负载线的最小认识，复用模电任务边界。",
+    "现有电机控制补双接触器常闭辅助触点的互锁路径，不做PLC工程。"
+  ],
+  "validation": "每新卡≥2原创任务；旧内容保持；两非作者按章及相邻边界复测，SVG手机浅深实际观察。"
+}
