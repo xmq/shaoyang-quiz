@@ -50,10 +50,13 @@ def validate(course_name=None, require_complete=False):
                 if not item or item['status']!=evidence['status'] or any(word in item['status'] for word in ('pending','待复测','待新候选','阻断未修')):
                     raise ValueError(f'Unresolved student check: {section["textbook_section"]}')
     if unresolved:
-        print('教材内容尚未完整验收：'+'、'.join(unresolved))
-        print('上述课程仅有站内结构与已存在内容检查，不能宣称教材完整；具体缺口见外部覆盖报告。')
+        print('外部教材全范围验收尚未完成：'+'、'.join(unresolved))
+        print('这不等于每科都有本科核心缺漏；当前本科深度结论见undergraduate_review，仍不能据此宣称整书完整。')
         if require_complete:raise ValueError('Textbook coverage has unresolved courses')
-    else:print('所选课程外部教材覆盖与独立试学记录通过。')
+    else:print('所选课程既有外部教材矩阵与独立试学记录通过；当前本科深度待补项另行列明。')
+    depth_pending=[row['course'] for row in selected if row.get('undergraduate_review',{}).get('required_units')]
+    if depth_pending:
+        print('本科基础单元或常规过程仍待补：'+'、'.join(depth_pending))
     return unresolved
 
 

@@ -1,0 +1,1316 @@
+{
+  "title": "本科深度重评：应用五科",
+  "date": "2026-10-19",
+  "baseline_commit": "6983728",
+  "review_method": "大学官方本科大纲/课程页与正式出版社目录交叉，结合10/16本会话全章阅读、后续修订/复测和本轮当前源段核查。本轮不是重做真人/盲测，不用字数/标题数证明教学完整；没有浏览器、实机实验、build、内容修复或新题生成。",
+  "depth_rule": "以普通本科共同基础：概念能区分、典型流程能跟随、适用公式能做普通计算、场景能说选择理由；不把专业系统实现与全部教材专用节等同共同必修。保持“知识域都学，深度有别”，不以某短大纲省略删正式教材主干。",
+  "summary": {
+    "confirmed_minimum_units_to_add": [
+      "软件工程：CMM/CMMI用途/层次/基本场景（APP-011保留）",
+      "软件工程：Jackson数据结构→程序结构最小可跟随例（APP-012保留）"
+    ],
+    "other_courses": "Office、大学基础、多媒体、安全的本次已核普通任务多有具体支撑；不是整书验收或全校实践课等价声明。",
+    "pending_not_passed": [
+      "多媒体三维基础细分应补到什么最低结果",
+      "软件工程UI原则是否单列最小单元",
+      "安全特定模型/算法手算范围与动态合规资料"
+    ],
+    "old_status_handling": "只在新报告逐条记录改判理由；不改任何旧报告、gap/coverage注册状态，不批量通过。"
+  },
+  "book_replacement": {
+    "recommendation": "赞成以S05龚沛曾/杨志强通用第7版替代医学类原URL作为本轮主干对照；AI/区块链由S06/S07本科通识补充。",
+    "reason": "正式简介明确通用本科计算思维与基础应用，9章能对应当前课程和已有独立Office/DB/网络/程序课。",
+    "limit": "不把替换当整书全部内容已经验收；不混王移芝等同名书；root负责最终元数据修改。",
+    "root_update": "收尾时root通知已更新course-guide/textbook-map为新通用主干；本代理独立赞成此替换。正文/题库本轮未改，本代理未修改元数据。"
+  },
+  "sources": [
+    {
+      "source_id": "S01",
+      "title": "高等教育出版社：姜永生《大学计算机基础（Windows 10+Office 2019）》",
+      "url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=5f07525ab0b2bda7c523ccc5",
+      "type": "正式出版社",
+      "actual_access": "简介、作者/ISBN与完整目录正文已访问",
+      "hours": "不适用",
+      "relevance": "2020，ISBN9787040545272；办公域含Word编辑排版、邮件合并、Excel统计分析和演示制作。目录不以VBA专业开发为共同门槛。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S02",
+      "title": "辽宁科技大学《大学计算机基础》教学大纲",
+      "url": "https://www.ustl.edu.cn/__local/6/EA/AA/53C7B02BCEB20BC83D8980C721A_7C1A064F_89882.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "PDF全文可取，实际阅读本课程目标/内容/学时/实验条目，0基0—3页",
+      "hours": "总24，实验16，1.5学分",
+      "relevance": "非计算机本科公共必修，重系统与编码基础、网络安全及Office基本操作、计算、排序筛选汇总与演示。不能把该校较短课时当删域依据。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S03",
+      "title": "河南师范大学《大学计算机基础》教学大纲",
+      "url": "https://www.htu.edu.cn/teaching/2010/0727/c3256a45278/page.htm",
+      "type": "大学官方本科大纲",
+      "actual_access": "正文已访问，阅读目标与Word/Excel/PPT/编码各章要求",
+      "hours": "54+36，3学分（网页原口径）",
+      "relevance": "2010旧版本，含较完整操作任务、邮件合并、宏、透视、母版与打印。只用于稳定的任务族交叉校准，不把Office2003/FrontPage按钮或所有旧工具作为当前必修。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S04",
+      "title": "上海交通大学出版社：吴茜、汪张生《大学计算机基础》",
+      "url": "https://www.jiaodapress.com.cn/Data/BookContent/19593",
+      "type": "正式出版社",
+      "actual_access": "作者、版次、ISBN、简介及11模块目录正文已访问",
+      "hours": "不适用",
+      "relevance": "第1版，2024/06，ISBN9787313307101，医学类高校教材，含医学应用模块。可解除URL身份未知，但不以医学专题给通用基础课制造缺口。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S05",
+      "title": "高等教育出版社：龚沛曾、杨志强《大学计算机（第7版）》",
+      "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cf88c8ba9eb884cf8238f8",
+      "type": "正式出版社",
+      "actual_access": "正式页简介、作者、ISBN及9章目录正文已访问；移动页另一次返回500，未隐藏访问波动",
+      "hours": "不适用",
+      "relevance": "2017/08，ISBN9787040483444；计算思维、系统、OS、编码、数据处理、数据库、网络、Web与算法，另含大数据/云/物联网/VR。与本站通用主干更匹配。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S06",
+      "title": "厦门大学数据库实验室《人工智能通识教程》教材官网",
+      "url": "https://dblab.xmu.edu.cn/post/ai/",
+      "type": "大学课程/教材官方页面",
+      "actual_access": "页面正文已访问，阅读定位、简介及通识改革说明，未看视频或网盘实验",
+      "hours": "页面未给本课程统一课时",
+      "relevance": "面向大一通识，说明AI、伦理及新兴数字技术适合作为通用基础的补充。其改革建议不是本站删除Office的授权，也不意味着必须完成大模型部署。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S07",
+      "title": "南开大学2024本科教改拟立项名单",
+      "url": "https://cc.nankai.edu.cn/2024/0514/c13291a542500/page.htm",
+      "type": "大学官方本科教学页面",
+      "actual_access": "页面已访问；检索条目与页面指向一致",
+      "hours": "未给课时",
+      "relevance": "区块链原理与应用基础列为通识选修教学建设项目，仅旁证该主题可在本科通识层次学习；不据此推出全体本科应学共识算法证明。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S08",
+      "title": "高等教育出版社：鄂大伟《多媒体技术基础与应用（第3版）》",
+      "url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=59ccbce3ba9eb884cf817f00",
+      "type": "正式出版社",
+      "actual_access": "作者/ISBN/出版年、简介及13章目录正文已访问",
+      "hours": "不适用",
+      "relevance": "2007/08，ISBN9787040219548；除媒体、压缩、网络与作品外，含图形变换和三维图形技术。目录证明有此域，不等于所有节都须完整数学实现。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S09",
+      "title": "中国海洋大学教育技术本科《多媒体技术》",
+      "url": "https://tcfc.ouc.edu.cn/jyx/2018/0420/c5646a188225/page.psp",
+      "type": "大学官方本科大纲",
+      "actual_access": "完整合页可读，实际定位多媒体条目（工具行789—816），未把邻近其它课程要求混入",
+      "hours": "总64，实践32；理论主题表合计32，3学分",
+      "relevance": "媒体数字化、颜色、压缩原理、通信检索了解及作品设计；章节学习要求有层次。总课时不能误记为32。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S10",
+      "title": "南京大学《多媒体技术》实验教学大纲",
+      "url": "https://sbc.nju.edu.cn/jb/syjxdg/jsjkxyjsx/20150127/i2326.html",
+      "type": "大学官方课程/实验大纲",
+      "actual_access": "网页正文与实验表已访问",
+      "hours": "总54，实验8，3学分",
+      "relevance": "2015发布，计算机专业选修；明确含JPEG/MP3编码与小波等实验，代表较强专业实现要求，是不能一概宣称本科无需实现的反向证据，但不是通用全体共同门槛。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S11",
+      "title": "长江大学《多媒体计算机技术》教学大纲",
+      "url": "https://jky.yangtzeu.edu.cn/__local/F/E3/1F/4D12BADF44F543A5729297012FD_3B0FFD12_EAE67C.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "web直开失败后成功下载PDF合辑；实际提取0基186—189页的本课程正文/表格",
+      "hours": "40=理论32+实践8，2.5学分",
+      "relevance": "重无损压缩、音频编码及JPEG过程，实验含JPEG读取/分块/代码调试。未把合辑别处机器人/计算机图像处理的三维重建要求嫁接到此课。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S12",
+      "title": "清华大学出版社《软件工程导论（第6版）》目录",
+      "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=05016406",
+      "type": "正式出版社",
+      "actual_access": "完整目录正文已访问",
+      "hours": "不适用",
+      "relevance": "6.4有Jackson图/方法，13.7有成熟度模型；另有形式化、UI和OO测试。不能把8个站内章数与13章教材简单对比为缺章。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S13",
+      "title": "新乡学院《软件工程》教学大纲112720",
+      "url": "https://sx.xxu.edu.cn/10Xruanjiangongcheng-112720.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "PDF可读；实际阅读概述、详细设计、项目管理与学时表，0基0/4/9—10页",
+      "hours": "总60=理论40+实践20，2.5学分；详细设计4、项目管理2（理论）",
+      "relevance": "要求Jackson用于小型题，CMM作用及5个成熟度等级；支持保留最小可用教学，不支持强加完整认证实施。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S14",
+      "title": "重庆科技大学《软件工程》大纲3DX1140A",
+      "url": "https://znxy.cqust.edu.cn/__local/F/6B/44/D512C5C2FAAB07B3FC25632423D_2230F5FC_11425E.pdf?e=.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "PDF正文/教学表已访问，2024/04版，0基0—5页相关条目",
+      "hours": "课内32，2学分；新技术及体系单元推荐2学时",
+      "relevance": "本科数据科学专业必修，含CMMI及评估方法与形式化概念。与旧教材CMM五级合看，基础课应有用途/层次/小场景，不能混两模型版本或要求企业认证全套。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S15",
+      "title": "南方医科大学《软件工程》本科大纲",
+      "url": "https://aike.smu.edu.cn/mod/resource/view.php?id=50973&redirect=1",
+      "type": "大学官方本科大纲",
+      "actual_access": "PDF相关正文已访问，0基1/4—6页",
+      "hours": "总48，2.5学分；需求讲授3、概要设计讲授4另有自主/小组/课外实验",
+      "relevance": "2023，智能医学信息方向。写Jackson系统开发方法及面向数据结构方法，不能未经辨别就当教材JSP图语法的完全等价证明。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S16",
+      "title": "衡阳师范学院《软件工程》教学大纲",
+      "url": "https://jkxy.hynu.edu.cn/info/1012/1143.htm",
+      "type": "大学官方本科大纲",
+      "actual_access": "仅官方域检索片段可读，直开Internal Error；不得声称读到全文",
+      "hours": "未核",
+      "relevance": "片段把Jackson应用与详细设计工具列为重点，作为第二校旁证；具体深度以可全文访问的新乡大纲与正式教材交叉确定。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S17",
+      "title": "上海交通大学《软件工程》EE458大纲",
+      "url": "https://www.seiee.sjtu.edu.cn/upload/ueditor/file/20240311/26663492/%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2%E6%A8%A1%E6%9D%BF2020%E7%89%88.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "PDF简介与目标/教学表相关正文已访问",
+      "hours": "48，3学分，四年制本科",
+      "relevance": "强调UML、需求、设计、实现映射、测试、变更和小组项目，作为不同组织方式的旁证，不因未逐列CMM/Jackson就删传统主干。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S18",
+      "title": "清华大学出版社《信息安全导论（第2版）》目录",
+      "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=09024201",
+      "type": "正式出版社",
+      "actual_access": "11章目录正文已访问，尤其密码、物理、OS模型、Web、内容、云与AI安全",
+      "hours": "不适用",
+      "relevance": "安全机制域必须保留；目录中的模型介绍/密码算法不自动等于形式化证明、完整轮函数或实现攻击平台。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S19",
+      "title": "长江大学《信息安全概论》大纲1601ZY042",
+      "url": "https://jky.yangtzeu.edu.cn/__local/C/E6/31/8B34953A5E466E8A70B52011DFD_F3E1CBA4_B79481.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "web直开失败后成功下载221页合辑；实际提取0基86—88页课程正文",
+      "hours": "32理论、0实验，2学分",
+      "relevance": "信息安全专业入门，覆盖威胁、物理、Web、恶意代码、防火墙及VPN；后续专业课承担具体实验。不能把合辑其它48/64学时密码学课的要求算成本课要求。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "source_id": "S20",
+      "title": "上海海洋大学《信息安全概论A》5201016",
+      "url": "https://jwc.shou.edu.cn/_upload/article/files/ea/70/d6f890e1471f87b1a0cbda073e93/6ed7e23d-d01e-4a6a-bcbc-ac97f1b0a106.pdf",
+      "type": "大学官方本科大纲",
+      "actual_access": "web直开失败后成功下载424页合辑；实际读取0基28—30页本课程，避开相邻算法课",
+      "hours": "总48=讲授32+讨论16，2.5学分（原表另列实验项目，不擅自重算课时）",
+      "relevance": "计算机本科专业选修，目标为基本概念/原理/方法及应用；列安全体系模型、认证访问、PKI、病毒、防火墙VPN、扫描检测，不据此要求模型数学证明。",
+      "access_date": "2026-10-19"
+    }
+  ],
+  "courses": [
+    {
+      "course_id": "office",
+      "course": "Office软件操作",
+      "judgment": "本科公共办公应用共同任务支撑较完整；没有依据把VBA开发和复杂透视字段开发列为统一必补。纸面支撑不冒充真正完成学校操作实验。",
+      "sources": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "core_to_current": [
+        {
+          "core": "办公对象、格式与保存恢复",
+          "chapters": "c01",
+          "current_support": "源格式/模板/宏/PDF/CSV的能力边界，保存、恢复、同步与独立备份有区别。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 12,
+            "anchor": "### 2. 文件格式"
+          },
+          "ordinary_tasks_supported": [
+            "概念辨析",
+            "按可编辑与固定版式交付选型"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "文字编辑、样式和长文结构",
+          "chapters": "c02—c03",
+          "current_support": "字符/段落设置、格式替换、标题样式、目录、题注/交叉引用更新、分页与分节提供具体操作链。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 154,
+            "anchor": "**让图号与正文引用一起更新"
+          },
+          "ordinary_tasks_supported": [
+            "流程复述",
+            "局部横向与页码隔离",
+            "题注插新图后更新"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "表格及邮件合并协作",
+          "chapters": "c03",
+          "current_support": "域更新、表格内容/结构、三记录邮件合并的第2人预览与筛选输出均可核对。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 167,
+            "anchor": "#### 邮件合并的完整操作"
+          },
+          "ordinary_tasks_supported": [
+            "流程",
+            "字段/记录/修订批注边界"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "电子表格数据类型、引用及函数",
+          "chapters": "c04",
+          "current_support": "固定/相对/混合引用，IF、COUNTIF(S)、SUMIF、精确查找与错误值有算例及类型前提。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 219,
+            "anchor": "#### 相对、绝对与混合引用"
+          },
+          "ordinary_tasks_supported": [
+            "复制公式计算",
+            "函数条件",
+            "错误与版本排障"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "分析、图表与输出",
+          "chapters": "c05",
+          "current_support": "整记录排序、筛选、验证、分类汇总、部门×月份透视、刷新范围、图表和打印标题均有可核验步骤。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 312,
+            "anchor": "#### 从原表到分类汇总的操作"
+          },
+          "ordinary_tasks_supported": [
+            "分组汇总",
+            "透视字段与总量核对",
+            "图表/打印场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "演示视图、母版与放映",
+          "chapters": "c06",
+          "current_support": "页级与对象级操作分开，版式/母版、动画顺序与计时循环有步骤。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 434,
+            "anchor": "#### 按操作选择演示视图"
+          },
+          "ordinary_tasks_supported": [
+            "视图选择",
+            "母版失效/动画排障"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "跨工具协作与交付",
+          "chapters": "c07",
+          "current_support": "清理数据→合并通知→抽查→PDF且保留源文件，嵌入/链接与断链实验有因果。",
+          "evidence": {
+            "file": "course_notes/Office软件操作.md",
+            "line": 469,
+            "anchor": "#### 综合交付例：成绩表、通知与汇报"
+          },
+          "ordinary_tasks_supported": [
+            "综合流程",
+            "交付方案选择"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        }
+      ],
+      "required_minimum": [],
+      "lower_depth_allowed": [
+        {
+          "domain": "宏与VBA",
+          "keep": "宏是命令序列、支持格式与安全/版本条件已教；有需要再安排简单录制。",
+          "not_required": "VBA程序开发、对象模型和完整自动化系统。宏概念不能一起删掉。"
+        },
+        {
+          "domain": "数据透视",
+          "keep": "行/列/值、求和/计数、刷新和源范围是必留，当前已有。",
+          "not_required": "复杂计算字段、数据模型/DAX/大型商业报表系统。"
+        },
+        {
+          "domain": "专业排版",
+          "keep": "样式、分节、目录、题注、合并与交付要能用。",
+          "not_required": "出版级整套长篇排版工艺或过时插件安装。"
+        }
+      ],
+      "pending_evidence": [
+        "2010河南师大含宏制作，当前HEP主教材不要求VBA；若以后指定“宏录制”为学习结果，须另核操作范围，不能将宏识别自动等同录制熟练。",
+        "本轮没有启动Office或重复10/16手机体验；学校上机实验成果不能仅由讲义确认。"
+      ],
+      "must_add": [],
+      "recognition_strengthening": [
+        "宏的概念/格式/版本边界已有；是否练简单录制宏需按选定操作范围决定，不为此追加VBA开发。"
+      ],
+      "no_need": [
+        {
+          "domain": "宏与VBA",
+          "not_required_at_common_undergrad_depth": "VBA程序开发、对象模型和完整自动化系统。宏概念不能一起删掉。",
+          "retain": "宏是命令序列、支持格式与安全/版本条件已教；有需要再安排简单录制。"
+        },
+        {
+          "domain": "数据透视",
+          "not_required_at_common_undergrad_depth": "复杂计算字段、数据模型/DAX/大型商业报表系统。",
+          "retain": "行/列/值、求和/计数、刷新和源范围是必留，当前已有。"
+        },
+        {
+          "domain": "专业排版",
+          "not_required_at_common_undergrad_depth": "出版级整套长篇排版工艺或过时插件安装。",
+          "retain": "样式、分节、目录、题注、合并与交付要能用。"
+        }
+      ]
+    },
+    {
+      "course_id": "computer-foundations",
+      "course": "大学计算机基础与新技术",
+      "judgment": "通用计算基础及新技术入门支撑较强。不能由原医学教材身份混乱推导缺“医学AI专题”；通用HEP龚/杨7版作为主干对照替换合理。",
+      "sources": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "core_to_current": [
+        {
+          "core": "计算思维、信息评价与算法入门",
+          "chapters": "c01",
+          "current_support": "数据/信息/知识、检索核源、算法特征与max逐项更新提供具体过程；二分先有序条件已说。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 48,
+            "anchor": "#### 概念、信息活动与算法边界"
+          },
+          "ordinary_tasks_supported": [
+            "概念",
+            "信息可信场景",
+            "简单状态跟踪"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "表示、编码、容量与系统",
+          "chapters": "c02",
+          "current_support": "进位制、8位补码负权与−5、ASCII连续区间、GB码、图像/音频容量、五部件/总线/层次等均有例。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 132,
+            "anchor": "**固定8位表示−5"
+          },
+          "ordinary_tasks_supported": [
+            "常规进制/编码/容量计算",
+            "组成辨析"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "操作环境与网络安全基础",
+          "chapters": "c03",
+          "current_support": "文件路径/删除/软件类别/工具、系统资源及域名访问分工和简单排障已教。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 175,
+            "anchor": "#### 域名访问与网络地址分工"
+          },
+          "ordinary_tasks_supported": [
+            "路径与工具",
+            "DNS/地址/端口流程",
+            "安全常识"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "云服务与部署边界",
+          "chapters": "c04",
+          "current_support": "服务层用户管理责任、部署模式与断网/低时延云边分工均给依据。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 242,
+            "anchor": "#### 云特征与IaaS、PaaS、SaaS"
+          },
+          "ordinary_tasks_supported": [
+            "云模型辨析",
+            "约束选型"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "数据处理与挖掘",
+          "chapters": "c05",
+          "current_support": "4V、清洗单位/去重/血缘、HDFS/YARN/MapReduce、五类输出场景分别讲，水果分组能跟踪。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 311,
+            "anchor": "#### 挖掘任务的输出与场景"
+          },
+          "ordinary_tasks_supported": [
+            "质量流程",
+            "分组过程",
+            "分类/回归/聚类/关联/异常场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "AI基础与可靠使用",
+          "chapters": "c06",
+          "current_support": "AI/ML/DL关系、训练验证测试、过拟合、模式识别、TP/FP/FN/TN分母计算及核验边界已教。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 366,
+            "anchor": "#### 准确率、精确率与召回率"
+          },
+          "ordinary_tasks_supported": [
+            "概念",
+            "89%/80%/60%指标计算",
+            "使用边界"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "IoT识别与控制",
+          "chapters": "c07",
+          "current_support": "分层、RFID/传感/执行角色、回差28→35→42→35与双向身份/失联安全规则。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 386,
+            "anchor": "#### 识别、感知和控制的任务分工"
+          },
+          "ordinary_tasks_supported": [
+            "控制状态跟踪",
+            "失联选型"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "区块链基本机制",
+          "chapters": "c08",
+          "current_support": "哈希链失配、签名授权、共识职责和单节点重算不等全网接受；多方信任选型与合约边界明确。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 425,
+            "anchor": "#### 链式校验与多节点确认"
+          },
+          "ordinary_tasks_supported": [
+            "概念职责",
+            "改记录传播过程",
+            "数据库/账本选型"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "发展与信息系统",
+          "chapters": "c09",
+          "current_support": "代际/分类轴和应用任务分开，信息系统含人流程数据技术，医院预约例非纯硬件归因。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 471,
+            "anchor": "#### 信息系统与数字化建设"
+          },
+          "ordinary_tasks_supported": [
+            "分类辨析",
+            "业务场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "综合方案与验收",
+          "chapters": "c10",
+          "current_support": "能耗链输入、连续3次计数、授权输出与反馈/超时/旧时间戳均能核验。",
+          "evidence": {
+            "file": "course_notes/大学计算机基础与新技术.md",
+            "line": 501,
+            "anchor": "#### 综合方案的输入、状态和验证"
+          },
+          "ordinary_tasks_supported": [
+            "组合技术理由",
+            "状态与边界"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        }
+      ],
+      "required_minimum": [],
+      "textbook_identity": {
+        "old_url_identity": "本次实际可读：吴茜/汪张生、2024第1版、ISBN9787313307101，医学类；旧“作者版次未知”是证据状态，不能当知识缺口。",
+        "recommended_comparator": "龚沛曾/杨志强《大学计算机（第7版）》2017、ISBN9787040483444。与王移芝等2022同名书ISBN9787040590500不是同一本。",
+        "independent_judgment": "替换为通用主干是合理维护决定，无须再让用户为日常选书确认；它不是宣布本站与该书每页一一对应。Office、数据库、网络与程序内容应记录跨课承接。",
+        "metadata_change": "本代理只提建议与来源，不修改textbook-map/coverage。"
+      },
+      "cross_course": [
+        {
+          "book_domain": "数据处理与文档/表格",
+          "site": "Office c01—c07，含公式/函数/文档自动化基础",
+          "status": "承接，不因本课未重复一遍而判缺"
+        },
+        {
+          "book_domain": "数据库术语、建库和SQL查询",
+          "site": "数据库技术 c01—c04等；基础课数据流程只承担入门概念",
+          "status": "承接；本轮不代计算机组重新验收整门DB"
+        },
+        {
+          "book_domain": "网络、Web与信息发布",
+          "site": "计算机网络 c01—c06及安全；本课c03访问链",
+          "status": "承接；不要求基础课再实现完整Web系统"
+        },
+        {
+          "book_domain": "问题求解、算法与程序",
+          "site": "本课c01算法/max；C与Python程序设计、数据结构承接实现与算法",
+          "status": "承接；算法知识域仍保留"
+        }
+      ],
+      "lower_depth_allowed": [
+        {
+          "domain": "云/大数据/IoT",
+          "keep": "概念、数据/控制流程、小状态与约束选型，当前已有。",
+          "not_required": "部署整套生产集群/真实控制系统或证明分布式协议。"
+        },
+        {
+          "domain": "AI/区块链",
+          "keep": "基本关系、训练/评估与核验、哈希签名共识/信任选型；不能删主题。",
+          "not_required": "完整神经网络训练推导、共识正确性证明或量子算法。"
+        }
+      ],
+      "pending_evidence": [
+        "通用主干书与当前跨课导航对应表还应由root在维护记录落地；本轮不把建议替换当已更新注册。",
+        "新技术并非所有学校同样设置课时：本科通识补充有官方实例，不能由一校课程名单推出必须覆盖每个前沿工具。"
+      ],
+      "must_add": [],
+      "recognition_strengthening": [
+        "将通用主干与Office/DB/网络/程序跨课去向记录清楚；AI/区块链维持概念、流程与基础场景，不追加专业算法证明。"
+      ],
+      "no_need": [
+        {
+          "domain": "云/大数据/IoT",
+          "not_required_at_common_undergrad_depth": "部署整套生产集群/真实控制系统或证明分布式协议。",
+          "retain": "概念、数据/控制流程、小状态与约束选型，当前已有。"
+        },
+        {
+          "domain": "AI/区块链",
+          "not_required_at_common_undergrad_depth": "完整神经网络训练推导、共识正确性证明或量子算法。",
+          "retain": "基本关系、训练/评估与核验、哈希签名共识/信任选型；不能删主题。"
+        }
+      ]
+    },
+    {
+      "course_id": "multimedia",
+      "course": "多媒体技术",
+      "judgment": "普通本科多媒体入门的媒体/数字化/格式编辑/压缩机制/传输/作品常规题大体有支撑；不要求完整JPEG/MPEG系统实现。三维高级光照不列必补，但也不能声称当前已教完整三维概念细分。",
+      "sources": [
+        "S08",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "core_to_current": [
+        {
+          "core": "媒体分类、超媒体与检索入门",
+          "chapters": "c01",
+          "current_support": "五类处理角色/内容类型、VR/AR、系统硬件职责，元数据及关键词/内容检索的输入区别均有例。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 29,
+            "anchor": "#### 媒体分类与检索"
+          },
+          "ordinary_tasks_supported": [
+            "概念辨析",
+            "查询方式/相似不等同一对象场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "数字化与数据量",
+          "chapters": "c02",
+          "current_support": "采样、量化、编码及位数等级/容量/码率公式明确条件；扫描、缓冲瓶颈与总码率加音频有算例。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 81,
+            "anchor": "#### 采样、量化与编码"
+          },
+          "ordinary_tasks_supported": [
+            "量化级数",
+            "位图/PCM/码率计算",
+            "吞吐瓶颈"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "图像、图形与编辑",
+          "chapters": "c03",
+          "current_support": "位图/矢量、颜色模型、图层选区蒙版、二维变换顺序、Alpha/直方图、选区和仿制采样操作有过程。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 194,
+            "anchor": "#### 二维变换的顺序"
+          },
+          "ordinary_tasks_supported": [
+            "变换中间坐标",
+            "格式/非破坏编辑场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "音频机制与编辑",
+          "chapters": "c04",
+          "current_support": "采集播放链、PCM参数、MIDI事件、编辑导出步骤与两路0.7混音削波例。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 256,
+            "anchor": "#### 音频编辑与事件序列"
+          },
+          "ordinary_tasks_supported": [
+            "音频量计算",
+            "混音峰值",
+            "波形/MIDI选型"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "动画、视频与传送",
+          "chapters": "c05",
+          "current_support": "时间轴/元件/关键帧、补间x=40、场帧、4:2:0样本、容器/编码、缓冲与时间戳，三维制作阶段已列。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 310,
+            "anchor": "#### 帧、场、补间与播放缓冲"
+          },
+          "ordinary_tasks_supported": [
+            "帧率/补间/缓冲计算",
+            "兼容排障",
+            "三维制作顺序识别"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "压缩通用原理",
+          "chapters": "c06",
+          "current_support": "冗余、RLE、哈夫曼合并/前缀解码、JPEG分块变换量化流程和23→2→20误差、I/P/B依赖及先后顺序。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 375,
+            "anchor": "#### JPEG量化与信息损失"
+          },
+          "ordinary_tasks_supported": [
+            "Huffman/RLE过程",
+            "量化损失",
+            "参考帧依赖",
+            "压缩比/节省率"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "作品设计、交互与交付",
+          "chapters": "c07",
+          "current_support": "需求/脚本分镜/素材版本授权、H/D/Q/E返回图、导出与目标设备/字幕同步检查。",
+          "evidence": {
+            "file": "course_notes/多媒体技术.md",
+            "line": 427,
+            "anchor": "#### 交互作品的节点和发布检查"
+          },
+          "ordinary_tasks_supported": [
+            "流程",
+            "导航边验证",
+            "格式与兼容场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        }
+      ],
+      "required_minimum": [],
+      "lower_depth_allowed": [
+        {
+          "domain": "JPEG与MPEG",
+          "keep": "分块/变换/量化与主要损失、前缀或游程过程、参考预测依赖和典型小计算必留，当前均有。",
+          "not_required": "完整8×8 DCT矩阵手算、标准全部标记/熵表/码流解析及开发专业编码器。专业选修实验可要求，但非所有普通本科共同最低门槛。"
+        },
+        {
+          "domain": "三维图形",
+          "keep": "图元/模型与像素渲染、二维变换和三维建模→材质灯光相机→动画→渲染的基本关系；当前有阶段顺序。",
+          "not_required": "完整投影矩阵/消隐算法/光照数学推导、图形硬件结构与专业渲染器。"
+        },
+        {
+          "domain": "检索与数据库",
+          "keep": "元数据、关键词与基于内容特征检索区别、一个输入到核验结果的场景；当前可支持。",
+          "not_required": "实现特征提取全算法、索引引擎、检索系统或大型媒体库。"
+        },
+        {
+          "domain": "著作工具与历史设备",
+          "keep": "需求、脚本、交互节点、素材/授权、输出测试，光盘种类容量等一般识别，不删作品设计域。",
+          "not_required": "Authorware/Director专有安装脚本、光驱电路和旧制盘全工艺；可用现代工具表达相同通用流程。"
+        }
+      ],
+      "pending_evidence": [
+        {
+          "item": "三维基础概念的最小补强",
+          "current": "只有阶段顺序与渲染概述；若要求区别投影、可见面、材质与光照，当前不足以稳定说明。",
+          "proposal": "可保留一幅模型经相机投影、可见性与光照/纹理得到像素的概念示例，不做数学推导。",
+          "status": "选定HEP教材此域存在；本轮两校通用大纲未共同明确这些细分结果，保留为待核/建议，不能虚报已完整覆盖，也不升级为已确认必补"
+        },
+        {
+          "item": "实践课程结课能力",
+          "current": "正文提供可执行思路，但本轮不启动图像/音频工具。",
+          "status": "南大/长江专业实验比本次纸面最低深度高；不能把未做全部实验说成所有本科知识不足，也不能宣称已经等价完成实验学分。"
+        }
+      ],
+      "must_add": [],
+      "recognition_strengthening": [
+        "三维知识域继续保留：建议用极小模型例区分相机投影、可见面、材质/纹理与灯光的职责；这是认识层补强/待核，不是完整光照数学或专业渲染器。"
+      ],
+      "no_need": [
+        {
+          "domain": "JPEG与MPEG",
+          "not_required_at_common_undergrad_depth": "完整8×8 DCT矩阵手算、标准全部标记/熵表/码流解析及开发专业编码器。专业选修实验可要求，但非所有普通本科共同最低门槛。",
+          "retain": "分块/变换/量化与主要损失、前缀或游程过程、参考预测依赖和典型小计算必留，当前均有。"
+        },
+        {
+          "domain": "三维图形",
+          "not_required_at_common_undergrad_depth": "完整投影矩阵/消隐算法/光照数学推导、图形硬件结构与专业渲染器。",
+          "retain": "图元/模型与像素渲染、二维变换和三维建模→材质灯光相机→动画→渲染的基本关系；当前有阶段顺序。"
+        },
+        {
+          "domain": "检索与数据库",
+          "not_required_at_common_undergrad_depth": "实现特征提取全算法、索引引擎、检索系统或大型媒体库。",
+          "retain": "元数据、关键词与基于内容特征检索区别、一个输入到核验结果的场景；当前可支持。"
+        },
+        {
+          "domain": "著作工具与历史设备",
+          "not_required_at_common_undergrad_depth": "Authorware/Director专有安装脚本、光驱电路和旧制盘全工艺；可用现代工具表达相同通用流程。",
+          "retain": "需求、脚本、交互节点、素材/授权、输出测试，光盘种类容量等一般识别，不删作品设计域。"
+        }
+      ]
+    },
+    {
+      "course_id": "software-engineering",
+      "course": "软件工程",
+      "judgment": "主干大部分已能支撑普通概念、流程、计算和场景；CMM/CMMI与Jackson仍须最小补充，不能因某现代大纲省略而排除。未要求实现专业工程管理系统或完整OO项目。",
+      "sources": [
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "core_to_current": [
+        {
+          "core": "工程化、生命周期与模型",
+          "chapters": "c01—c02",
+          "current_support": "软件构成/危机、验证确认、模型条件、原型/增量/敏捷与风险组合。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 56,
+            "anchor": "### 根据证据选模型"
+          },
+          "ordinary_tasks_supported": [
+            "概念比较",
+            "按需求/风险证据选过程"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "可行性、需求及状态约束",
+          "chapters": "c03",
+          "current_support": "静态回收期、可验需求、DFD平衡/字典、SRS追踪与冲突，状态机借出/归还和前后置/不变式。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 120,
+            "anchor": "#### 有穷状态机与需求约束"
+          },
+          "ordinary_tasks_supported": [
+            "流程",
+            "回收期计算",
+            "需求改写/状态反例"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "结构化与OO设计",
+          "chapters": "c04",
+          "current_support": "内聚耦合、变换/事务分析、判定表、N-S/PAD，Student/BookCopy/Loan的属性多重性和协作。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 177,
+            "anchor": "#### 从DFD到模块与判定表"
+          },
+          "ordinary_tasks_supported": [
+            "模块/对象识别",
+            "分支与类消息过程"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "实现验证、测试和可靠性",
+          "chapters": "c05",
+          "current_support": "边界等价类、语句/判定/条件、基本路径E−N+2三路径与四组合，测试层次/桩驱动/调试与可用度。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 224,
+            "anchor": "#### 控制流图环形复杂度"
+          },
+          "ordinary_tasks_supported": [
+            "边界选值",
+            "控制流与环形复杂度计算",
+            "测试场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "维护质量配置",
+          "chapters": "c06",
+          "current_support": "维护四类、McCall、基线/变更审计过程与文档/紧急修复条件。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 303,
+            "anchor": "### 配置项、版本、基线与变更控制"
+          },
+          "ordinary_tasks_supported": [
+            "分类辨析",
+            "受控变更流程"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "估算进度风险",
+          "chapters": "c07",
+          "current_support": "人月/工期分开，前后推关键路径与时差、概率×损失、给系数COCOMO量纲。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 352,
+            "anchor": "#### 关键路径与总时差"
+          },
+          "ordinary_tasks_supported": [
+            "普通估算/路径/风险计算",
+            "约束场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "面向变化与追踪",
+          "chapters": "c08",
+          "current_support": "不同风险控制强度和目标→需求→设计→实现→测试→发布证据链。",
+          "evidence": {
+            "file": "course_notes/软件工程.md",
+            "line": 381,
+            "anchor": "### 贯穿生命周期的追踪"
+          },
+          "ordinary_tasks_supported": [
+            "变更影响分析",
+            "方法组合"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        }
+      ],
+      "required_minimum": [
+        {
+          "old_id": "APP-011",
+          "unit": "CMM/CMMI的用途、成熟层次与基本场景",
+          "current_evidence": "当前讲义/重点均无CMM、CMMI或成熟度模型教学；QA、配置管理、敏捷不能自动代替。",
+          "minimum": "保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
+          "not_required": "全部过程域/实践条文、正式评估量表、SCAMPI等全流程、企业认证或实施项目。",
+          "sources": [
+            "S12",
+            "S13",
+            "S14"
+          ],
+          "verdict": "仍为未教的最小核心单元；不关闭，但将“完整讲解”缩为基本识别/层次/场景。"
+        },
+        {
+          "old_id": "APP-012",
+          "unit": "Jackson面向数据结构设计的最小数据→程序例",
+          "current_evidence": "当前讲义/重点均无Jackson/JSP；有DFD变换分析/事务分析，但二者不能代替以输入输出数据结构组织程序。",
+          "minimum": "知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。",
+          "not_required": "完整改进Jackson图语法、所有复杂结构冲突处理、大型程序推导、JSD全生命周期或生产实现。",
+          "sources": [
+            "S12",
+            "S13",
+            "S16"
+          ],
+          "distinction": "南医S15提Jackson系统开发方法，为关联旁证而非将JSD与JSP不加区别合并。",
+          "verdict": "仍为未教的最小核心单元；一则可跟随的小例，不是仅补名词，也无需全图语法。"
+        }
+      ],
+      "lower_depth_allowed": [
+        {
+          "domain": "形式化方法",
+          "keep": "状态、事件、守卫、前后置和不变式及一条合法/非法迁移；当前借阅例已有。",
+          "not_required": "Petri/Z完整语言语法、形式验证器与数学证明；不能据未证明再标整个形式化域缺失。"
+        },
+        {
+          "domain": "面向对象开发",
+          "keep": "对象/类/关系、需求到属性职责协作和单元/集成反例；当前借阅链已有。",
+          "not_required": "按教材附录完整实现C++类库系统、全套设计模式或大型项目。"
+        },
+        {
+          "domain": "项目估算",
+          "keep": "规模/工作量/工期、给系数基础模型、关键路径/时差和风险，当前有。",
+          "not_required": "完整COCOMO II校准或企业级度量数据库。"
+        }
+      ],
+      "pending_evidence": [
+        {
+          "item": "人机界面基本原则",
+          "current": "当前有原型、MVC职责及错误返回，但没有单列通用一致性、响应反馈和错误恢复原则。",
+          "evidence": "S12目录6.2及S13详细设计明确列UI设计；第二校可读大纲对这些细则的共同最低深度本轮未充分核定。",
+          "status": "保留待核/小补强候选，不据此宣称专业UI系统未实现即本科不足，不默认为已完整教。"
+        }
+      ],
+      "must_add": [
+        {
+          "old_id": "APP-011",
+          "unit": "CMM/CMMI的用途、成熟层次与基本场景",
+          "current_evidence": "当前讲义/重点均无CMM、CMMI或成熟度模型教学；QA、配置管理、敏捷不能自动代替。",
+          "minimum": "保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
+          "not_required": "全部过程域/实践条文、正式评估量表、SCAMPI等全流程、企业认证或实施项目。",
+          "sources": [
+            "S12",
+            "S13",
+            "S14"
+          ],
+          "verdict": "仍为未教的最小核心单元；不关闭，但将“完整讲解”缩为基本识别/层次/场景。"
+        },
+        {
+          "old_id": "APP-012",
+          "unit": "Jackson面向数据结构设计的最小数据→程序例",
+          "current_evidence": "当前讲义/重点均无Jackson/JSP；有DFD变换分析/事务分析，但二者不能代替以输入输出数据结构组织程序。",
+          "minimum": "知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。",
+          "not_required": "完整改进Jackson图语法、所有复杂结构冲突处理、大型程序推导、JSD全生命周期或生产实现。",
+          "sources": [
+            "S12",
+            "S13",
+            "S16"
+          ],
+          "distinction": "南医S15提Jackson系统开发方法，为关联旁证而非将JSD与JSP不加区别合并。",
+          "verdict": "仍为未教的最小核心单元；一则可跟随的小例，不是仅补名词，也无需全图语法。"
+        }
+      ],
+      "recognition_strengthening": [
+        "UI一致性、反馈/响应与错误恢复可作短概念例补强候选；其最低统一深度保留待核，不以未实现UI系统判缺。"
+      ],
+      "no_need": [
+        {
+          "domain": "形式化方法",
+          "not_required_at_common_undergrad_depth": "Petri/Z完整语言语法、形式验证器与数学证明；不能据未证明再标整个形式化域缺失。",
+          "retain": "状态、事件、守卫、前后置和不变式及一条合法/非法迁移；当前借阅例已有。"
+        },
+        {
+          "domain": "面向对象开发",
+          "not_required_at_common_undergrad_depth": "按教材附录完整实现C++类库系统、全套设计模式或大型项目。",
+          "retain": "对象/类/关系、需求到属性职责协作和单元/集成反例；当前借阅链已有。"
+        },
+        {
+          "domain": "项目估算",
+          "not_required_at_common_undergrad_depth": "完整COCOMO II校准或企业级度量数据库。",
+          "retain": "规模/工作量/工期、给系数基础模型、关键路径/时差和风险，当前有。"
+        }
+      ]
+    },
+    {
+      "course_id": "information-security",
+      "course": "信息安全",
+      "judgment": "本科入门安全机制、处置及基础场景/权限与恢复计算已具支撑，旧“物理/内容/AI整章缺失”不能沿用成当前事实。密码学专业推导与模型证明不作为通用入门必补；也不声称本课已教完整密码算法执行。",
+      "sources": [
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "core_to_current": [
+        {
+          "core": "目标、风险与基本原则",
+          "chapters": "c01",
+          "current_support": "CIA/真实性等属性、资产威胁弱点影响、服务/机制、最小权限与纵深防御。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 8,
+            "anchor": "#### CIA安全目标"
+          },
+          "ordinary_tasks_supported": [
+            "目标辨析",
+            "按威胁选控制"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "管理、物理与审计",
+          "chapters": "c02",
+          "current_support": "风险处置/控制分类、供电水火门禁介质、离职角色令牌直接权限审计、盐与口令及等保持续工作。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 52,
+            "anchor": "#### 物理安全的风险与控制"
+          },
+          "ordinary_tasks_supported": [
+            "物理场景",
+            "账号回收核验流程"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "恶意代码与人因",
+          "chapters": "c03",
+          "current_support": "宿主/自传播/伪装/勒索目的分类轴，钓鱼后撤销会话、凭据与留证控制。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 91,
+            "anchor": "#### 恶意代码传播机制"
+          },
+          "ordinary_tasks_supported": [
+            "机制比较",
+            "事件处置排序"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "认证、授权与访问模型",
+          "chapters": "c04",
+          "current_support": "因素、会话、DAC/MAC/RBAC/ABAC、引用监控与TCB、640权限逐组判定。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 138,
+            "anchor": "#### 访问控制模型与复核"
+          },
+          "ordinary_tasks_supported": [
+            "基本模型识别",
+            "权限小计算/判定"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "密码机制与信任",
+          "chapters": "c05",
+          "current_support": "对称/公钥/散列/MAC/签名/证书分工，算法分组位数、模式/nonce及异或相消玩具计算、混合通信与证书核验。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 177,
+            "anchor": "#### 分组模式与nonce重用"
+          },
+          "ordinary_tasks_supported": [
+            "机制选型",
+            "位数区别",
+            "逐位xor关系计算"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "网络边界与通道",
+          "chapters": "c06",
+          "current_support": "DMZ/数据区、首条匹配与返回流量、IDS/IPS误报漏报、TLS/VPN/IPsec职责及排障链。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 227,
+            "anchor": "#### 网络分区与边界防护"
+          },
+          "ordinary_tasks_supported": [
+            "规则匹配流程",
+            "通道/端点边界场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "软件、数据与恢复",
+          "chapters": "c07",
+          "current_support": "XSS/CSRF区别、参数绑定与逐记录授权/输出上下文、上传测试、备份全增差链、RPO/RTO、云责任和事件响应。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 282,
+            "anchor": "#### Web请求的安全检查"
+          },
+          "ordinary_tasks_supported": [
+            "请求防护过程",
+            "恢复链与时间计算",
+            "事件场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        },
+        {
+          "core": "隐私、内容、AI与责任",
+          "chapters": "c08",
+          "current_support": "最小目的、去标识/匿名、加密隐写水印、内容复核、AI分阶段威胁与外部数据不能授予工具权、授权职业责任。",
+          "evidence": {
+            "file": "course_notes/信息安全.md",
+            "line": 322,
+            "anchor": "#### 内容保护、隐私与AI风险"
+          },
+          "ordinary_tasks_supported": [
+            "分类辨析",
+            "内容发布/AI风险控制场景"
+          ],
+          "verdict": "有本科入门与常规题支撑；不等于完成实机实验或整书验收"
+        }
+      ],
+      "required_minimum": [],
+      "lower_depth_allowed": [
+        {
+          "domain": "安全模型",
+          "keep": "安全目标、策略、DAC/MAC/RBAC/ABAC与可信监控、简单权限判定必须保留，当前有。",
+          "not_required": "Bell-LaPadula等形式化证明、模型正确性定理与验证系统。"
+        },
+        {
+          "domain": "密码算法",
+          "keep": "算法类别与任务、密钥/分组区别、模式/nonce前提、哈希签名证书边界、一个基本关系过程，当前有。",
+          "not_required": "AES/DES完整轮函数、RSA安全证明与工程参数配方；不把未做专业密码课计算标为通用安全域缺失。"
+        },
+        {
+          "domain": "软件/AI攻防",
+          "keep": "威胁位置、入口、权限与防御机制和事件流程；当前可支持。",
+          "not_required": "实现攻击平台、恶意代码逆向全流程、对抗样本/差分隐私算法或形式隐私保证。"
+        },
+        {
+          "domain": "法律与标准",
+          "keep": "授权/目的/最小必要/期限责任/个人信息与证据意识，当前有；具体问题要能找到现行官方依据。",
+          "not_required": "背固定年份的处罚金额、所有动态期限与条款逐字；不以条文更新当普遍本科知识不合格。"
+        }
+      ],
+      "pending_evidence": [
+        {
+          "item": "具体模型名称/密码手算的范围",
+          "evidence": "S18只在目录列常见模型/典型算法；两校入门大纲目标偏基本概念和应用，未共同明示须完成某BLP/Biba证明或某整套轮函数。",
+          "status": "若后续正式学习结果指定BLP读写标签或RSA小数值，应保留该最小规则/算例再验；本轮既不强加证明，也不把所有算法计算默认为已教。"
+        },
+        {
+          "item": "法律体系具体条目",
+          "evidence": "本轮校准学习深度，没有另行核验2026各法律最新修订全文。",
+          "status": "不新增动态法律结论；旧“具体合规题须官方现行文本”边界保留，非知识域删除。"
+        }
+      ],
+      "must_add": [],
+      "recognition_strengthening": [
+        "安全策略/模型的目标及简单标签权限判定应保留；特定BLP/Biba名称是否必列以选定章节正文核定。法律体系名称与适用问题可作认识清单补强，动态条款另维护，不要求背处罚金额。"
+      ],
+      "no_need": [
+        {
+          "domain": "安全模型",
+          "not_required_at_common_undergrad_depth": "Bell-LaPadula等形式化证明、模型正确性定理与验证系统。",
+          "retain": "安全目标、策略、DAC/MAC/RBAC/ABAC与可信监控、简单权限判定必须保留，当前有。"
+        },
+        {
+          "domain": "密码算法",
+          "not_required_at_common_undergrad_depth": "AES/DES完整轮函数、RSA安全证明与工程参数配方；不把未做专业密码课计算标为通用安全域缺失。",
+          "retain": "算法类别与任务、密钥/分组区别、模式/nonce前提、哈希签名证书边界、一个基本关系过程，当前有。"
+        },
+        {
+          "domain": "软件/AI攻防",
+          "not_required_at_common_undergrad_depth": "实现攻击平台、恶意代码逆向全流程、对抗样本/差分隐私算法或形式隐私保证。",
+          "retain": "威胁位置、入口、权限与防御机制和事件流程；当前可支持。"
+        },
+        {
+          "domain": "法律与标准",
+          "not_required_at_common_undergrad_depth": "背固定年份的处罚金额、所有动态期限与条款逐字；不以条文更新当普遍本科知识不合格。",
+          "retain": "授权/目的/最小必要/期限责任/个人信息与证据意识，当前有；具体问题要能找到现行官方依据。"
+        }
+      ]
+    }
+  ],
+  "judgment_changes": [
+    {
+      "old": "Office邮件合并与分类汇总/透视仅概括",
+      "current": "原文件已有三记录合并与四记录汇总/刷新步骤",
+      "decision": "当前本科操作流程支撑已不同于旧审查；用具体源段更新事实，不批量改注册状态。"
+    },
+    {
+      "old": "基础教材身份未知或医学领域未覆盖",
+      "current": "原URL精确身份现核实，且更适配的通用HEP对照已独立核实",
+      "decision": "身份问题是书目维护，不生成医学专题知识缺口；建议替换主干并记录跨课承接。"
+    },
+    {
+      "old": "多媒体JPEG/MPEG、二维变换、音频/交互只有名词",
+      "current": "已有量化中间态、前缀解码、预测帧依赖、二维坐标、混音与节点返回",
+      "decision": "以这些最小机制满足普通题深度；未实现完整码流/系统不能继续当共同必补。三维细分仍待核。"
+    },
+    {
+      "old": "软件形式化/OO压缩就视整域缺失",
+      "current": "有借阅状态、约束与Student/BookCopy/Loan协作/测试",
+      "decision": "普通任务有支撑；不要求完整Z/Petri证明/大型OO项目。CMM/Jackson仍明确未教，不关闭APP-011/012。"
+    },
+    {
+      "old": "信息安全物理、内容、AI整章缺失",
+      "current": "有具体机房控制、内容发布/水印、AI阶段风险与控制",
+      "decision": "旧“没有”事实不再成立；按入门任务重判，未证明安全模型/实现攻击系统不是新缺口。"
+    }
+  ],
+  "source_manifest": [
+    {
+      "file": "course_notes/Office软件操作.md",
+      "sha256": "5788ab21b96507384774e2391c60ea5cccdb0fe22ab5220a814e85e5351283b0",
+      "chapters": 7
+    },
+    {
+      "file": "color_notes/Office软件操作.md",
+      "sha256": "83ca9333dcc64e8a8512983555c13f7290278888eaf391dbf2803d32043e121b",
+      "chapters": 7
+    },
+    {
+      "file": "course_notes/大学计算机基础与新技术.md",
+      "sha256": "1a5a2c2f193d51ae7f72dcd4c9e4357906ee3a568ad716e098e0ad2159f40a47",
+      "chapters": 10
+    },
+    {
+      "file": "color_notes/大学计算机基础与新技术.md",
+      "sha256": "14d0ebc0ecaef5dbc92f549f0fd68f0097578b81156ee574151e126849b10205",
+      "chapters": 10
+    },
+    {
+      "file": "course_notes/多媒体技术.md",
+      "sha256": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+      "chapters": 7
+    },
+    {
+      "file": "color_notes/多媒体技术.md",
+      "sha256": "8051dcdb28620c0b65e741c1028386fc5c5e244503be323051849b9295ef478b",
+      "chapters": 7
+    },
+    {
+      "file": "course_notes/软件工程.md",
+      "sha256": "48ce977e5f66506e53731c3041c5702edb0865132c2c52f40fa9bf8f9c991628",
+      "chapters": 8
+    },
+    {
+      "file": "color_notes/软件工程.md",
+      "sha256": "d22bd4bf83c411ecca5fa5128f634fd05fe8a3dbf8acf1888a1ba46623d5c723",
+      "chapters": 8
+    },
+    {
+      "file": "course_notes/信息安全.md",
+      "sha256": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+      "chapters": 8
+    },
+    {
+      "file": "color_notes/信息安全.md",
+      "sha256": "d070ecfe0e3ac71a15138949865d46012a44c73aea2f7f9f562d2bd0a064c2bb",
+      "chapters": 8
+    }
+  ],
+  "access_limits": [
+    "S16仅官方域检索片段，未冒称全文。",
+    "S11/S19/S20的web直开失败后，Python成功下载官方PDF合辑并定位本课程页；不使用整本合辑所有课程的要求。",
+    "S05正式页实际读到作者ISBN简介目录，另一次移动页500；没有据一次失败声称无法核实。",
+    "没有用搜索不到某内容证明它绝不属于本科；疑点保留待核。"
+  ],
+  "status": "只读重评完成：逐科must_add/认识补强/no_need/待核已记录；仅新建两份报告，旧gap状态不变。"
+}

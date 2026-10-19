@@ -1,0 +1,830 @@
+{
+  "date": "2026-10-19",
+  "status": "本科深度范围重评完成；主体已教，局部最小单元待补；没有修改产品或构建",
+  "depth_anchor": "普通本科：概念准确、典型流程、常规计算或伪码、一个代表题与适用条件；弱化复杂证明/全工程实现。知识范围仍按所选通用教材体系保留，低深度不等于删掉主题。",
+  "method": [
+    "读取现有map/coverage与本轮目标相关讲义/重点；结合2026-10-16已完成的54章全文体验及其后源修订，重新读争议段和上下文，不冒充新一轮54章独立学生/浏览器测验。",
+    "读取旧教材上下文/体验/修复报告后逐项重分类；旧报告原样保留。",
+    "联网以高校官方本科大纲/主页和正式出版社目录作深度证据；优先两类/两校交叉。目录仅证范围，不证本站教学完整；单校压学时/未列项目不作删范围理由。",
+    "排除研究生招生408难题作为共同核心的确定依据；本科科研/后续课程仅用于区分实现层次。",
+    "未复跑浏览器、未build、未改任何源内容/映射/题库。"
+  ],
+  "evidence_caveats": [
+    "官方页面访问不稳定，逐条记录实际open、搜索索引及失败；未把JS门禁或失败说成读到全文。",
+    "江西网络大纲含XXXX/XXX，作为弱模板证据；广西学时前后矛盾原样保留。",
+    "Python指定第2版完整目录未核全，OOP深度保留待核。",
+    "本报告是范围与任务深度判断；已达只指列出的代表机制，不是所有习题/代码/学习效果通过。"
+  ],
+  "source_fingerprints": {
+    "textbook-map.json": "ee8192ec91c06e00f455abc181b45a0eee3924e232e6c0fccd618998dd4a916b",
+    "textbook-coverage.json": "7c41d64448862198ba2d7c718b0da240c8920cde22f3d405abce9029cfecfc5e",
+    "course_notes/计算机组成原理.md": "6ce94d64f271b559a3bb0e734c3dbb5e6bb581afdfeaa0e1bb1eec0270ba3069",
+    "color_notes/计算机组成原理.md": "e4b357183f4a74bc924f832de6483c14aac29e29fb1c6f2ab9c79178a590c7ee",
+    "course_notes/操作系统原理.md": "243fa8968d31b394b258b59d1033c06a88d091a2f43ce0291f008093ceb82ed0",
+    "color_notes/操作系统原理.md": "90e216431f810bf7c2c1684766b93ba08a8dc94f7ca58777541b465c23b8f68b",
+    "course_notes/数据结构与算法.md": "47df0ddc320464e93e18422839a7318097ff62b38a0232824342104a949ba2e3",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "color_notes/数据库技术.md": "3d59927bd9497dc04461e9a8dbac534851021f88d39522105c9381e3a7b232db",
+    "course_notes/C与Python程序设计.md": "83a4831e9de30223e740ff7d9e65ba15012f9b8464c883abf7ef4c62e25125c7",
+    "color_notes/C与Python程序设计.md": "2dac37f2bd98c995fe9790823e405c91a5f0f9cdf608ba5802ae34adf36e6186",
+    "course_notes/计算机网络.md": "59ba02c0ee4353e11ca03fefd716cd8ebd71ee4542b90d1c98b2e534673df9ff",
+    "color_notes/计算机网络.md": "d2435d422293fef62dfa7243cbb48f1814d8b63f05c74e2389a04e70f3ba0a35"
+  },
+  "sources": [
+    {
+      "id": "CO-P",
+      "type": "出版社",
+      "title": "唐朔飞《计算机组成原理》第3版",
+      "url": "https://www.hep.com.cn/book/show/ae8b4f15-c953-4445-a56d-ed96390fe0ae",
+      "access": "正式页直接打开仅返回启用JS提示；另经官方域搜索索引读到作者/ISBN及四篇十章简介和部分目录，未获取教材正文。",
+      "hours": "未核官方学时",
+      "use": "十章主干包括部件互连、运算、CPU及组合/微程序控制，不等于每个工业实现均必修。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "CO-U1",
+      "type": "本科大纲",
+      "title": "电子科技大学计算机组成原理",
+      "url": "https://study.uestc.edu.cn/wlxt/ncourse/computer/outline/ProvinceLevelShared/Basic/TeachingProgram.htm",
+      "access": "实际打开HTML大纲并读目标/各章要求。",
+      "hours": "72学时=64讲授+8上机，另8课外",
+      "use": "强调数据通路、执行微操作、微程序；并行进位列为理解，后续另有体系结构等课。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "CO-U2",
+      "type": "本科大纲",
+      "title": "湖南人文科技学院计算机组成原理",
+      "url": "https://www.huhst.edu.cn/dzxx/info/1641/18691.htm",
+      "access": "官方域搜索索引读到本科/必修/学时及分层目标；本轮直接open内部错误，未把失败算全文访问。",
+      "hours": "索引列64=52理论+12实验",
+      "use": "数值表示/运算、部件与控制方法为主；作为交叉证据，不独立决定实现深度。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "OS-P",
+      "type": "出版社",
+      "title": "汤小丹等《计算机操作系统》第四版",
+      "url": "https://www.xduph.com/pages/BookDetail.aspx?doi=e560378d-83d1-4e43-9bbc-73a3e9b3881d",
+      "access": "曾成功打开官方页323行；后续定位内部错误；官方搜索索引再次核到书目信息与12章简介，未读教材正文。",
+      "hours": "未核",
+      "use": "传统资源管理与末章多处理机/网络/多媒体/保护均在体系中；同时面向本科与研究生不能据此要求同等深度。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "OS-U1",
+      "type": "本科课程大纲",
+      "title": "上海交通大学操作系统A类",
+      "url": "https://bjwb.seiee.sjtu.edu.cn/bkjwb/info/13352.htm",
+      "access": "实际open为161行课程页；搜索索引读到课程性质/内容/调度段；find重访无匹配。",
+      "hours": "调度段4学时；全课总数未可靠读出",
+      "use": "课程面向非计算机本科基础选修，不作为删掉计算机专业内容的依据；支撑调度/接口/资源管理基础。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "OS-U2",
+      "type": "本科大纲",
+      "title": "大连理工大学城市学院操作系统精品课",
+      "url": "https://czxt.dlutci.edu.cn/info/5574/2468.htm",
+      "access": "官方搜索索引读到完整度较高的分章表；直接open超时，仅按索引证据使用。",
+      "hours": "72=48理论+24实验（索引）",
+      "use": "FCFS/SJF/HRRN/RR及多级反馈队列有明确要求，说明后者不能混入NUMA工程专题一并免除。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "OS-U3",
+      "type": "本科大纲汇编",
+      "title": "河南农业大学软件技术本科大纲",
+      "url": "https://xinxi.henau.edu.cn/__local/7/46/DA/EEA7B69CAAA38F1B8AF19D8F967_A601A476_22B6E0.pdf?e=.pdf",
+      "access": "实际打开490页官方PDF元数据/解析；相关教学段主要通过官方搜索索引读到；find未稳定定位，不声称逐页读全汇编。",
+      "hours": "索引：调度算法1学时，实时调度1学时",
+      "use": "多级反馈队列列掌握；实时调度强调条件/分类，支持基础层而非复杂实时可调度性证明。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "OS-X",
+      "type": "本科科研训练",
+      "title": "吉林大学系统结构实验室A Level",
+      "url": "https://www.jlu-ca.com/hire/task20230526_A.html",
+      "access": "实际打开并读任务/要求86—101行。",
+      "hours": "科研任务，无统一课时",
+      "use": "NUMA性能实验、Linux调度源码等明确为已有基础后的科研训练；仅证明其工程研究层次，不证明NUMA概念可完全删去。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "OS-P2",
+      "type": "出版社",
+      "title": "操作系统：原理与实现",
+      "url": "https://www.cmpedu.com/books/book/5610210.htm",
+      "access": "实际打开615行官方图书页，读简介及可见目录；未进入ChCore实验。",
+      "hours": "未核",
+      "use": "结合经典、前沿和工业实践的教材可含NUMA与实现，不能从单书包含反推全国本科共同掌握全部源码。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DS-P",
+      "type": "出版社目录",
+      "title": "严蔚敏、吴伟民《数据结构（C语言版）》",
+      "url": "https://www.tup.com.cn/booksCenter/bookcatalog?id=00236807",
+      "access": "实际打开完整408行官方目录，读树/查找/外排序/文件段；未读书中算法正文。",
+      "hours": "未核",
+      "use": "B/B+、线索、外排序保留在体系；多路实现/置换选择/最佳归并树目录带**，因未取得符号说明，不把**直接等同选修许可。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DS-U1",
+      "type": "本科大纲",
+      "title": "华东师范大学数据结构与算法",
+      "url": "https://eietc.ecnu.edu.cn/6b/65/c45183a617317/page.htm",
+      "access": "实际打开并读目标、章安排及教学要求长表。",
+      "hours": "72总，36实践，适用通信专业",
+      "use": "明确B树插删与外排基本过程；B+以概念介绍。课程专业性质表与说明略不一致，不据单校裁范围。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DS-U2",
+      "type": "本科大纲",
+      "title": "广西中医药大学信息管理与信息系统数据结构",
+      "url": "https://www.gxtcmu.edu.cn/ggxy/jysjs1/xxglyxxxtjysyxxxgcjyshs/jxyhygl2/sjjg/content_29237",
+      "access": "实际打开559行HTML，重点实读树/线索/查找434—467行等。",
+      "hours": "页头68、理论32实验32；后文又称理论54，数值矛盾原样记，不代修",
+      "use": "要求B树插删基本思想；线索重点中序前驱后继，并认识某些非中序访问效率限制。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DS-U3",
+      "type": "本科大纲",
+      "title": "中国科学院大学数据结构",
+      "url": "https://jwba.ucas.ac.cn/sc/course/courseplan/176458",
+      "access": "实际打开82行大纲，读章列表/对象/学时。",
+      "hours": "60，3学分，专业必修",
+      "use": "覆盖树、图、查找及外排序；其较全范围作为交叉上界，不要求所有优化代码。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DB-P",
+      "type": "出版社目录",
+      "title": "王珊等《数据库系统概论》第6版",
+      "url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=62e959d4938b7cc2960eef97",
+      "access": "首次open失败；重试实际打开494行官方移动页，读四篇18章、触发器、编程、存储/优化和新技术目录。",
+      "hours": "未核",
+      "use": "前三篇基础/设计开发/系统与第四篇新技术有层次；仓库与非关系不能因新技术篇就删，但不需全产品内部实现。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DB-U1",
+      "type": "本科大纲",
+      "title": "电子科技大学数据库原理及应用",
+      "url": "https://study.uestc.edu.cn/wlkt/index.aspx?courseId=0567",
+      "access": "实际打开73行官方课程页，读48学时与七模块、CO及应用编程/NoSQL内容。",
+      "hours": "48，3学分，软件工程学科基础课",
+      "use": "既要求SQL/设计/管理，也纳入NoSQL模型和基本访问；支持至少一个非关系数据与操作小例。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DB-U2",
+      "type": "本科课程信息",
+      "title": "北京大学数据库概论",
+      "url": "https://elective.pku.edu.cn/elective2008/edu/pku/stu/elective/controller/courseDetail/getCourseDetail.do?course_seq_no=BZ1415201235100_15585&kclx=BK",
+      "access": "实际打开57行官方课程信息；读简介及分章列表；课程为较早年份样本。",
+      "hours": "3学分；学时仅各章部分，未合计",
+      "use": "关系理论、语言、设计及新技术是分层安排；仓库/挖掘列新技术，不能把深入工程当各校共同要求。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "DB-U3",
+      "type": "本科后续课程大纲",
+      "title": "山东交通学院数据科学与大数据技术大数据存储",
+      "url": "https://xdxy.sdjtu.edu.cn/__local/2/8A/2F/F655BC7701675F827A5879FAC08_29E80FBA_19163B.pdf",
+      "access": "实际打开248页PDF；检索读到仓库/粒度/OLAP相关段，搜索索引读到独立大数据存储课程基本信息；未读整汇编。",
+      "hours": "大数据存储56=38理论+18上机（该版），3.5学分，先修数据库原理与应用",
+      "use": "多产品NoSQL及仓库建模有独立后续课程；不是普通数据库原理全部做产品工程的证据。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "C-P",
+      "type": "出版社目录",
+      "title": "谭浩强《C程序设计》第5版",
+      "url": "https://www.tup.com.cn/bookscenter/bookcatalog?id=07645004",
+      "access": "实际打开508行正式目录，未读教材正文。",
+      "hours": "未核",
+      "use": "函数/数组/指针/结构体与文件在主干，需基础读写和常规操作，不强求完整容器库。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "C-U1",
+      "type": "本科大纲",
+      "title": "陕西师范大学C程序设计",
+      "url": "https://jcsy.snnu.edu.cn/info/1182/1626.htm",
+      "access": "实际打开649行HTML，读72学时分配和指针/结构/文件教学层次。",
+      "hours": "72=54理论+18实验；物理师范本科",
+      "use": "基础C包括指针和文件；链表/随机文件在此按较低深度教学，不能把所有复杂声明或链表库实现设成共同门槛。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "C-U2",
+      "type": "本科大纲",
+      "title": "湖南人文科技学院C语言程序设计",
+      "url": "https://www.huhst.edu.cn/jsjx/info/1641/18541.htm",
+      "access": "实际打开389行官方大纲；官方搜索同时核到计算机/软件/网络专业必修性质。",
+      "hours": "本轮未可靠抄取总学时",
+      "use": "用于计算机专业程序设计基础的交叉证据；不把非计算机样本当唯一边界。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "PY-U1",
+      "type": "本科大纲",
+      "title": "山东财经大学程序设计基础Python",
+      "url": "https://yssy.sdufe.edu.cn/info/1012/1091.htm",
+      "access": "实际打开418行官方课程页；搜索索引核到64学时、本科必修与面向对象表述；未稳定定位每节。",
+      "hours": "64",
+      "use": "基础语法、函数、组合数据、文件是共同部分；某校强调OOP不代表指定嵩天教材全章结构已核。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "PY-U2",
+      "type": "本科大纲",
+      "title": "山东第二医科大学程序设计基础Python",
+      "url": "https://wsglxy.sdmpu.edu.cn/2018/1116/c4045a111522/page.htm",
+      "access": "官方搜索索引读到本科统计、64/3及教学要求；直接open内部错误，仅作索引交叉。",
+      "hours": "64/3（索引）",
+      "use": "基本类型、控制、函数、组合数据、文件是基础；第三方库使用不是完整科学图像系统。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "PY-P",
+      "type": "出版社配套资源",
+      "title": "嵩天等Python语言程序设计基础第2版",
+      "url": "https://2d.hep.com.cn/mobile/book/show/java1514",
+      "access": "实际打开99行官方二维码资源页，非全书完整目录；不以其未列某章证明教材无该章。",
+      "hours": "未核",
+      "use": "指定书完整目录本轮仍未核全；Python OOP是否需独立单元保留待核，不判通过亦不凭他校要求强加整章。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "NET-P",
+      "type": "出版社目录/前言",
+      "title": "谢希仁计算机网络第8版",
+      "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=58234",
+      "access": "实际打开155行官方页，实读简介、9章目录与前言。",
+      "hours": "作者参考约70学时；少学时可先前6章，不据此删本站后3章",
+      "use": "前言定位SDN为简要介绍，网络实验与编程另有教材；支持协议原理与完整配置实现区分。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "NET-U1",
+      "type": "本科大纲",
+      "title": "上海交通大学CS3593计算机网络",
+      "url": "https://ai4edu.sjtu.edu.cn/comnet/syllabus",
+      "access": "实际打开48行官方课程页，读本科对象/目标/课时安排。",
+      "hours": "48，3学分；控制平面5学时",
+      "use": "路由算法/OSPF/BGP/SDN控制平面纳入，要求基本分析与工具能力；未将全LSA/控制器工程配置列成共同要求。",
+      "access_date": "2026-10-19"
+    },
+    {
+      "id": "NET-U2",
+      "type": "教学大纲模板",
+      "title": "江西师范大学2023网络大纲PDF",
+      "url": "https://jxpj.jxnu.edu.cn/_upload/article/files/64/3b/9176109a48bca652689244e3c479/f01d0b7b-f7c8-4a43-b6c2-c13695321d4a.pdf",
+      "access": "实际打开12页PDF并实读网络层要求；专业/团队字段仍XXXX/XXX，按模板参考，不当已实施某专业课程。",
+      "hours": "模板48理论+32实验",
+      "use": "模板区分路由推演与SDN概念/原理/架构；仅弱交叉，不用模板替代已实施证据。",
+      "access_date": "2026-10-19"
+    }
+  ],
+  "courses": [
+    {
+      "course_id": "computer-organization",
+      "name": "计算机组成原理",
+      "core": [
+        "整机/ISA/性能与单位",
+        "定长数制、补码/溢出、浮点字段及典型运算",
+        "主存芯片扩展、Cache映射/访存平均时间、基本虚址转换",
+        "指令/寻址、数据通路与微操作、流水线条件与停顿",
+        "查询/中断/DMA及总线握手",
+        "硬布线与微程序控制的基本状态/编码设计"
+      ],
+      "overall": "本科主干已有大量可执行例；维持已接受主干，不能用本轮未再做实验宣称整书穷尽。",
+      "rows": [
+        {
+          "unit": "运算/存储/指令/控制主干",
+          "target_depth": "共同核心：概念+给条件的典型计算/微操作推演",
+          "current_evidence": "c01 CPU时间、c04 Cache地址拆分/命中/AMAT，c06 Booth与除法逐轮，c07寻址，c08流水停顿，c09/10状态表与微地址均已给过程。重点按任务分卡。",
+          "judgment": "当前已达代表深度",
+          "minimum_learning_unit": "保持现有代表题和条件，不为普通本科删掉核心过程。",
+          "unnecessary_depth": "完整商用CPU RTL、乱序执行/缓存一致性协议全实现与所有IEEE异常组合。",
+          "source_ids": [
+            "CO-P",
+            "CO-U1",
+            "CO-U2"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "先行进位",
+          "target_depth": "共同核心中的小型硬件机制理解",
+          "current_evidence": "c06全加器有Si/Ci+1及数值例；先行进位只有G/P定义和“展开”，没有展示一层如何不逐级等待。",
+          "judgment": "已教但缺一个常规展开过程",
+          "minimum_learning_unit": "补C1=G0∨P0C0、C2=G1∨P1G0∨P1P0C0及2位输入一例，解释与串行等待差别即可。",
+          "unnecessary_depth": "任意位宽门级优化、时序收敛、完整超前进位芯片设计。",
+          "source_ids": [
+            "CO-U1",
+            "CO-U2",
+            "CO-P"
+          ],
+          "old_reclassification": "旧accepted无此具体过程核查；本轮不是推翻十章主干，仅建议一小单元。"
+        }
+      ],
+      "must_add": [
+        "先行进位2位展开与一个数值核验"
+      ],
+      "no_need": [
+        "全CPU工程实现",
+        "所有浮点边界的复杂证明",
+        "按考研高难综合题无限增加流水/Cache层级"
+      ]
+    },
+    {
+      "course_id": "operating-system",
+      "name": "操作系统原理",
+      "core": [
+        "进程线程/状态与系统调用权限边界",
+        "典型调度、同步原语/经典同步、死锁处理",
+        "连续/分页/分段、虚存/置换/平均访问",
+        "目录/文件块分配/空闲管理、I/O/缓冲/磁盘调度",
+        "保护域/权限检查；多处理机与网络多媒体的基础联系"
+      ],
+      "overall": "传统资源管理主干多数已达；不能把NUMA/专门多媒体调度与普通调度中尚缺的反馈队列混为一组。",
+      "rows": [
+        {
+          "unit": "进程同步、内存、文件、I/O和保护",
+          "target_depth": "共同核心可执行过程",
+          "current_evidence": "P/V负值、生产消费、读者计数、管程while重查、银行家试分配、页表/替换/CLOCK、inode与文件块、SSTF与缓冲稳态均有过程；OS新位图卡明确编号基准。",
+          "judgment": "当前已达代表深度",
+          "minimum_learning_unit": "保留这些过程，不再沿用旧“同步仅名称/I/O缓冲只有目的”。",
+          "unnecessary_depth": "完整公平锁库、Unix文件系统源码、所有恢复/并发实现。",
+          "source_ids": [
+            "OS-P",
+            "OS-U1",
+            "OS-U2"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "多级反馈队列",
+          "target_depth": "共同核心：给定规则下队列与时间线",
+          "current_evidence": "c03有FCFS/SJF/HRRN/优先级/RR，全文及卡未见反馈队列动作。",
+          "judgment": "整块未教（具体算法单元，非整章缺失）",
+          "minimum_learning_unit": "补2—3队列优先级/时间片/用满下调/新任务进入/防饥饿规则及两任务轨迹；I/O返回和同时到达按题给约定。",
+          "unnecessary_depth": "现代CFS/EEVDF源码与调参、复杂多核实时调度器。",
+          "source_ids": [
+            "OS-U2",
+            "OS-U3",
+            "OS-P"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "实时调度与多媒体接纳",
+          "target_depth": "教材主干低深度：目标、截止期与一次小调度",
+          "current_evidence": "已有实时系统期限、25fps每40ms一帧及云/网络要求；没有deadline驱动的典型排程。",
+          "judgment": "已教目标但缺基础方法例；不要求专用流媒体系统",
+          "minimum_learning_unit": "用两任务给执行时间/到达/截止期，按EDF排一小时间线并检查是否超期；RMS按周期短者优先作概念比较；接纳说明总需求与期限须检验。",
+          "unnecessary_depth": "RMS利用率界证明、复杂抢占阻塞上界、特定多媒体服务器全部调度算法。",
+          "source_ids": [
+            "OS-U1",
+            "OS-U3",
+            "OS-P"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "死锁检测",
+          "target_depth": "共同核心基础判定，不能仅说“检查”",
+          "current_evidence": "c04四策略和银行家充分；检测只有检查等待关系一句。",
+          "judgment": "已教策略但缺检测代表过程",
+          "minimum_learning_unit": "单实例资源等待图P1→P2→P1判环例，说明多实例有环未必死锁，可用已学Work/Allocation思路说明检测与安全性检查输入不同。",
+          "unnecessary_depth": "全量内核死锁检测器及所有多实例证明。",
+          "source_ids": [
+            "OS-P",
+            "OS-U2"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "SMP、NUMA、亲和性、专门调度",
+          "target_depth": "SMP基础概念/场景；NUMA认识与取舍；实现为后续专题",
+          "current_evidence": "c01已讲共享主存、亲和性/均衡取舍和2.5倍例；未定义NUMA。",
+          "judgment": "不是多处理机整域未教；NUMA仅需低深度补名词/场景",
+          "minimum_learning_unit": "若保持所选教材现代多处理机概览，加NUMA本地/远端访问代价不同，以及就近分配与均衡冲突的一例。",
+          "unnecessary_depth": "NUMA性能实验、Linux调度/内存迁移源码、分布式一致性全算法。",
+          "source_ids": [
+            "OS-P",
+            "OS-P2",
+            "OS-X"
+          ],
+          "old_reclassification": "撤销“完整处理器调度/NUMA实现未展开”作为统一本科缺口；保留浅层认识补足，不删主干现代部分。"
+        }
+      ],
+      "must_add": [
+        "多级反馈队列规则与轨迹",
+        "两任务实时期限/EDF小例",
+        "死锁检测等待图例"
+      ],
+      "recognition_add": [
+        "NUMA一句定义与本地/远端取舍"
+      ],
+      "no_need": [
+        "NUMA内核实现及服务器性能实验",
+        "全部专门多媒体调度算法",
+        "完整公平读写锁产品代码"
+      ]
+    },
+    {
+      "course_id": "data-structures",
+      "name": "数据结构与算法",
+      "core": [
+        "结构/ADT/复杂度、线性表和栈队列",
+        "串匹配、数组地址/稀疏表示、树/森林遍历",
+        "BST基本操作、AVL旋转、堆/Huffman、B树基本更新",
+        "图表示/DFS/BFS、MST/最短路、拓扑/关键路径",
+        "顺序/二分/散列、内部排序流程/性能/稳定性",
+        "外排基本流程/缓冲与I/O、文件组织；内存分裂合并的基础认识"
+      ],
+      "overall": "主体过程比旧目录报告充实；B树基本删除仍不能降为后续工程，而B+全部更新代码与非中序所有实现不能捆绑为必补。",
+      "rows": [
+        {
+          "unit": "主要结构/图/内部排序/BST",
+          "target_depth": "共同核心常规流程与伪码",
+          "current_evidence": "已给链表指针顺序、循环队列、KMP前缀回退、树还原/BST三类删除、AVL四旋、图算法表及排序一趟状态；不再是仅有性质。",
+          "judgment": "当前已达代表深度",
+          "minimum_learning_unit": "保持给定规则下的执行与边界；复杂度/选型仍随过程解释。",
+          "unnecessary_depth": "408偏题、所有算法优化版本、复杂最优性证明。",
+          "source_ids": [
+            "DS-P",
+            "DS-U1",
+            "DS-U2",
+            "DS-U3"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "B树删除与B+更新",
+          "target_depth": "B树查找/插分/删除基本操作；B+结构/范围和更新影响认识",
+          "current_evidence": "c04有m阶界、三阶插分、B+叶链范围；没有删除借位/合并。",
+          "judgment": "已教B树但缺删除过程",
+          "minimum_learning_unit": "同一小树演示叶删不足→经父分隔键向兄弟借，不能借则合并、父下溢向上处理、根空时降低树高；给两例即可。B+补一句叶与父导航键更新的差别。",
+          "unnecessary_depth": "完整B+插删所有边界代码、并发页闩/崩溃恢复实现。",
+          "source_ids": [
+            "DS-P",
+            "DS-U1",
+            "DS-U2"
+          ],
+          "old_reclassification": "推翻旧“B树删除借位/合并需专题”这一过度降级；只将完整B+产品实现留后续。"
+        },
+        {
+          "unit": "中序与非中序线索",
+          "target_depth": "中序建立/前驱后继/遍历典型流程；非中序认识规则与限制",
+          "current_evidence": "现有c04仅用D无右孩子指B和中序后继读法，无pre指针建线索全过程。",
+          "judgment": "中序已教但缺建立例；非中序不需全套代码",
+          "minimum_learning_unit": "用3—4结点中序访问一次，记录pre、空左设前驱/空右设后继及tag；给一次找前驱/后继。先序/后序说明次序变线索变，某些方向需父信息，不展开所有变体。",
+          "unnecessary_depth": "先/中/后每种双向遍历及插删完整实现全集。",
+          "source_ids": [
+            "DS-P",
+            "DS-U1",
+            "DS-U2"
+          ],
+          "old_reclassification": "旧“其他线索遍历与删除完整代码未展开”改为无需此深度；不把中序建线索过程也免掉。"
+        },
+        {
+          "unit": "外排序及败者树/置换选择",
+          "target_depth": "基本外归并为共同核心；优化方法按教材低深度认识",
+          "current_evidence": "c08给N/B初始段、k≤B−1、趟数及12页72次I/O，已有典型流程；败者树和置换选择未教。",
+          "judgment": "外排序主干已达；优化方法尚未作认识，不是整块未教",
+          "minimum_learning_unit": "保留现有外归并例；为教材完整认识补三路段首选最小的比较/更新概念和“新记录小于最后输出则冻结到下段”的一次置换选择小例，说明优化目的。",
+          "unnecessary_depth": "完整败者树数组实现、缓冲池并发I/O库、最优归并树复杂证明。",
+          "source_ids": [
+            "DS-P",
+            "DS-U1",
+            "DS-U3"
+          ],
+          "old_reclassification": "撤销“优化实现未完成＝外排序整域缺失”；不从目录**擅自断言本书允许直接删节。"
+        },
+        {
+          "unit": "动态存储与文件",
+          "target_depth": "基本分裂/相邻合并/伙伴及组织取舍",
+          "current_evidence": "c08给区间分裂合并、128→64→32伙伴与异或地址、顺序/索引/散列及倒排交并例。",
+          "judgment": "当前已达低深度代表任务",
+          "minimum_learning_unit": "不需因完整分配器未实现继续判整块缺失。",
+          "unnecessary_depth": "完整malloc/GC/存储紧缩器、ISAM/VSAM全产品库和多关键字文件实现。",
+          "source_ids": [
+            "DS-P",
+            "DS-U3"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        }
+      ],
+      "must_add": [
+        "B树删除借位/合并小例",
+        "中序建线索与前驱/后继小例"
+      ],
+      "recognition_add": [
+        "非中序线索次序/方向限制",
+        "败者树选段首与置换选择一次小状态"
+      ],
+      "no_need": [
+        "所有B+更新工程代码",
+        "全线索树实现全集",
+        "完整分配器与外排序I/O系统"
+      ]
+    },
+    {
+      "course_id": "database",
+      "name": "数据库技术",
+      "core": [
+        "DB/模型/三级模式与独立性",
+        "E-R业务约束/转关系/键和完整性",
+        "关系代数及SQL定义更新连接分组子查询NULL",
+        "依赖/候选键/范式/分解，设计与索引",
+        "事务/锁/冲突串行/WAL/恢复与权限",
+        "查询与存储基础、接口/触发机制；新类型和分析数据的教材认识"
+      ],
+      "overall": "关系数据库基础与典型机制已教，不再按18章一一要求产品级完成；第四篇仍学，深度为数据组织、基本流转和选型。",
+      "rows": [
+        {
+          "unit": "关系基础/设计/事务恢复",
+          "target_depth": "共同核心典型题/SQL/过程",
+          "current_evidence": "已有三模式、ER重复事件主键边界、SQL JOIN/NOT EXISTS/NULL、闭包/3NF/BCNF/4NF例、两段锁/冲突图/WAL撤重做，SQLite参数化代码。",
+          "judgment": "当前已达代表深度",
+          "minimum_learning_unit": "保留这些具体机制，不重报原“编程/优化/4NF整域缺失”。",
+          "unnecessary_depth": "完整DBMS内核、ARIES全部恢复算法证明。",
+          "source_ids": [
+            "DB-P",
+            "DB-U1",
+            "DB-U2"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "触发器/游标/存储过程",
+          "target_depth": "基础机制+一次事件执行/调用结构",
+          "current_evidence": "c05明确事件与旧10→新7写历史、事务回滚；有sqlite3完整参数化往返；游标/存储过程仅定义。",
+          "judgment": "触发机制已达；过程化SQL还可补最小结构，不要求跨产品运行",
+          "minimum_learning_unit": "为所选教材编程部分，给一段产品明确的伪码或SQL过程：参数→SELECT/更新→返回，游标open→fetch直到结束→close；无需再写完整应用。",
+          "unnecessary_depth": "“跨产品直接执行”触发器标准不存在统一语法，不应作为缺口目标；JDBC+多框架全栈。",
+          "source_ids": [
+            "DB-P",
+            "DB-U1"
+          ],
+          "old_reclassification": "旧“无跨产品可执行触发程序”撤销为错误验收口径；基础例与边界仍保留。"
+        },
+        {
+          "unit": "查询优化与存储",
+          "target_depth": "理解页/索引/连接算法、等价性与一个小代价比较",
+          "current_evidence": "c06已有页/缓冲、3×4嵌套比较、归并/散列条件与先筛1000→100例，索引叶链由DS补。",
+          "judgment": "当前基本达；成本模型深度不要求优化器开发",
+          "minimum_learning_unit": "如要提高常规计算，只补给定页数下扫描/索引两方案I/O比较；不能凭有名就判完整，但现有例已超出名称。",
+          "unnecessary_depth": "多级成本优化器实现、统计估计器/所有物理算子。",
+          "source_ids": [
+            "DB-P",
+            "DB-U1",
+            "DB-U2"
+          ],
+          "old_reclassification": "原“外排序/多级优化器/内部恢复未全展开”拆为本科基础已教、工程实现无需此深度。"
+        },
+        {
+          "unit": "数据仓库/维度/OLAP",
+          "target_depth": "教材主干低深度：区分OLTP，识别事实/维度/粒度，做一次汇总",
+          "current_evidence": "c09有ETL/时间地区商品维度与上卷/下钻/切片，但未定义一行事实的粒度与事实/维表。",
+          "judgment": "已教但缺最小数据组织例；不是后续五章全未教",
+          "minimum_learning_unit": "三行销售事实与日期/商品/地区维度：先声明一行一笔或一天商品地区汇总，再按月份求和并一次切片；够说明星型与度量。",
+          "unnecessary_depth": "完整企业仓库/缓慢变化维/全ETL流水线/分布式OLAP引擎。",
+          "source_ids": [
+            "DB-P",
+            "DB-U2",
+            "DB-U3"
+          ],
+          "old_reclassification": "不能因某些学校独立开仓库课就删教材仓库认识；撤销按完整维度工程模型验收。"
+        },
+        {
+          "unit": "非关系/大数据/内存数据库/区块链",
+          "target_depth": "基础认识：数据形状+适用条件+一次基本操作；实现是后续",
+          "current_evidence": "c01/09有键值/文档/列族/图分类、分片副本、内存持久化及区块链边界；没有具体存取数据例。",
+          "judgment": "非关系已教类型但缺代表操作；内存/区块链当前认识基本足够",
+          "minimum_learning_unit": "一对象先用key→value写入/读取，再用文档按字段筛，图例说明沿关系找邻点；选一套抽象伪操作即可，不需每种产品API。",
+          "unnecessary_depth": "Redis/HBase/MongoDB/Neo4j全部安装CRUD实战、内存恢复内核、共识算法完整证明。",
+          "source_ids": [
+            "DB-P",
+            "DB-U1",
+            "DB-U3"
+          ],
+          "old_reclassification": "将“新技术五章未完成”改为逐主题低深度；真实数据/操作小例仍需，不能只列数据库名字。"
+        }
+      ],
+      "must_add": [
+        "过程化SQL/游标的一次简明结构（可伪码）"
+      ],
+      "recognition_add": [
+        "事实/维度/粒度与三行汇总",
+        "非关系数据形状与写读/筛选小例"
+      ],
+      "no_need": [
+        "跨产品统一触发器可执行代码",
+        "完整仓库与多NoSQL产品工程",
+        "多级优化器/内存恢复/共识实现"
+      ]
+    },
+    {
+      "course_id": "programming",
+      "name": "C与Python程序设计",
+      "core": [
+        "基本类型/转换/表达式与顺序选择循环",
+        "函数/参数/返回/作用域/存储期和递归",
+        "C数组字符串/指针/结构体/动态内存及文件",
+        "Python组合容器/别名与复制、异常/模块/文本与CSV/JSON",
+        "把基本算法落实为可追踪短程序与边界处理"
+      ],
+      "overall": "已有大量短代码与状态例，主干不因未写复杂库而判缺；教材与学校对某些高级语法深度不同，分别记录。",
+      "rows": [
+        {
+          "unit": "函数/指针/容器/文件主干",
+          "target_depth": "共同核心常规短程序/读码",
+          "current_evidence": "现有c02/03类型转换、短路/逗号；c07 static/递归与绑定；c09 malloc/free、二维/函数指针和fgets/fread/fseek；c08/10词频CSV状态与异常均有过程。",
+          "judgment": "当前已达代表深度",
+          "minimum_learning_unit": "保留，不能因无完整链表库或通用交换格式继续判整块缺失。",
+          "unnecessary_depth": "复杂组合声明全集、全容器库、跨平台序列化规范和大科学图像系统。",
+          "source_ids": [
+            "C-P",
+            "C-U1",
+            "C-U2",
+            "PY-U1",
+            "PY-U2"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "C链表与位运算的局部支撑",
+          "target_depth": "链表初步，位操作按现已命名的用途做一例",
+          "current_evidence": "c09有Node自引用声明，改链动作在DS c02；C c03列&/|/^/移位，未给一次逐位算例。",
+          "judgment": "已教但跨课连接偏弱；不提升为整科阻断",
+          "minimum_learning_unit": "C链表用两Node连接/改next/释放的6—8行例并链接DS改链过程；位运算用固定无符号4位1100&1010=1000及右移补0一例。",
+          "unnecessary_depth": "完整链表库/复杂未定义行为谜题、任意复合声明竞赛题。",
+          "source_ids": [
+            "C-P",
+            "C-U1",
+            "C-U2"
+          ],
+          "old_reclassification": "旧“复杂组合声明/完整链表库未展开”改无需此深度；基本Node与指针操作连接可小补。"
+        },
+        {
+          "unit": "Python计算生态/网络自动化/OOP",
+          "target_depth": "标准库与第三方使用认识；某个简单数据任务；完整应用后续",
+          "current_evidence": "c10有random循环统计、csv/json与Matplotlib两柱；现无Python类定义。指定第2版官方入口仅配套资源非完整目录。",
+          "judgment": "前者当前已达；OOP在指定书目标内的深度证据待核",
+          "minimum_learning_unit": "不因他校大纲含OOP就直接认本站缺整章，也不宣称OOP已通过；若后续核到指定主干需类/对象，则只补一个属性/方法实例，不上框架。",
+          "unnecessary_depth": "网络自动化/爬虫全栈、科学计算/图像处理完整应用、元类/装饰器全集。",
+          "source_ids": [
+            "PY-P",
+            "PY-U1",
+            "PY-U2"
+          ],
+          "old_reclassification": "撤销“Python完整科学/图像/网络应用未展开”本科缺口；OOP继续证据待核，不用未知当通过。"
+        }
+      ],
+      "must_add": [],
+      "local_add": [
+        "C两节点改链/释放与位运算小例，可跨课链接而非重写DS"
+      ],
+      "no_need": [
+        "完整链表库",
+        "跨平台二进制交换格式规范",
+        "Python生态全应用"
+      ],
+      "pending": [
+        "指定嵩天Python第2版完整目录与OOP目标仍未核全"
+      ]
+    },
+    {
+      "course_id": "computer-network",
+      "name": "计算机网络",
+      "core": [
+        "分层/封装/交换与时延",
+        "物理层容量/码元/复用基本计算",
+        "成帧检错/可靠传输窗口、MAC/交换/VLAN",
+        "IPv4/IPv6与子网、转发、ARP/ICMP与路由算法",
+        "TCP/UDP序号窗口/拥塞/连接及应用服务",
+        "教材安全/音视频/无线与移动基础认识及典型流转"
+      ],
+      "overall": "已有9章不等于每节完整，也不能把未实现所有工程配置当共同本科不足；主要协议已给过程。",
+      "rows": [
+        {
+          "unit": "链路/IP/TCP/应用/无线主干",
+          "target_depth": "共同核心常规计算和协议状态推演",
+          "current_evidence": "CRC逐异或、PPP两填充、GBN/SR、MAC/VLAN、子网分片/最长前缀、RIP距离更新、Dijkstra、Reno、DNS/DHCP、Socket短程序、DCF冻结及移动IPv4均已有例。",
+          "judgment": "当前已达代表深度",
+          "minimum_learning_unit": "不重报IP多播/PPP/接入/CDMA/SNMP仅标签的旧事实。",
+          "unnecessary_depth": "研究性拥塞算法、现代蜂窝全栈、所有802.11扩展状态机。",
+          "source_ids": [
+            "NET-P",
+            "NET-U1"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        },
+        {
+          "unit": "OSPF邻居/泛洪/LSDB/SPF",
+          "target_depth": "理解从信息交换到算路的基础链；SPF常规小图",
+          "current_evidence": "c04泛洪链路状态一句+完整Dijkstra小例，明确未教邻居/区域等。",
+          "judgment": "已教算法，但协议完整基础链仍可小补；非整协议未教",
+          "minimum_learning_unit": "补邻居发现→交换/泛洪链路状态→相同LSDB→SPF→路由表，一条链路代价变化后重算的4点例；区域只说限制传播/分层目的。",
+          "unnecessary_depth": "所有邻居状态枚举、全部LSA类型/字段、DR选举所有边界和设备配置命令。",
+          "source_ids": [
+            "NET-P",
+            "NET-U1",
+            "NET-U2"
+          ],
+          "old_reclassification": "撤销“未覆盖全部区域/邻居/LSA＝本科缺口”的绝对口径；保留原理链这一最小过程。"
+        },
+        {
+          "unit": "MPLS/SDN",
+          "target_depth": "教材低深度认识：角色、控制/转发分工和一个小动作",
+          "current_evidence": "c04仅一句标签转发/控制分离，没有标签换入换出或规则匹配实例。",
+          "judgment": "已教定义但缺典型流程；不要求控制器配置",
+          "minimum_learning_unit": "MPLS用入站加标签→中间换标签→出口弹标签三步；SDN给匹配目的前缀→输出端口规则，未命中请求控制器→下发规则一例。",
+          "unnecessary_depth": "标签分发协议完整实现、OpenFlow全字段、Mininet控制器工程项目及生产调优。",
+          "source_ids": [
+            "NET-P",
+            "NET-U1",
+            "NET-U2"
+          ],
+          "old_reclassification": "将旧“职责认识未展开完整配置”拆为认识应保留、少量流程可补、工程配置无需此深度。"
+        },
+        {
+          "unit": "无线/移动与媒体QoS",
+          "target_depth": "典型接入/可达/缓冲与时限；后续机制认识",
+          "current_evidence": "c08缓存速率差与RTP/RTCP/SIP、严格优先场景；c09DCF退避冻结、隐藏站、归属代理转交例已经超出名单。",
+          "judgment": "当前已达低深度代表任务",
+          "minimum_learning_unit": "不删教材后3章，也不因现代标准全状态未覆盖判未学；保留网络/媒体条件。",
+          "unnecessary_depth": "完整5G/LTE控制面、现代Wi-Fi全状态实现、RSVP/DiffServ配置和媒体服务器调度源码。",
+          "source_ids": [
+            "NET-P",
+            "NET-U1"
+          ],
+          "old_reclassification": "无旧整域结论；本轮据具体学习任务限定深度。"
+        }
+      ],
+      "must_add": [
+        "OSPF从邻居/链路状态到SPF的基础链与变化小例"
+      ],
+      "recognition_add": [
+        "MPLS三步标签流转",
+        "SDN一次规则/未命中动作"
+      ],
+      "no_need": [
+        "全OSPF邻居状态/全部LSA枚举",
+        "SDN控制器配置项目",
+        "现代蜂窝/Wi-Fi全协议状态机"
+      ]
+    }
+  ],
+  "old_policy_overturns": [
+    {
+      "old": "只要选定教材目录一项未完全展开，就持续归入同等严重的缺口/待专题",
+      "new": "改按共同核心执行层、教材认识层、后续实现层分开；范围保留，只有最低学习单元没教才列具体不足。"
+    },
+    {
+      "old": "B树删除借位/合并、完整B+更新同列需专题",
+      "new": "B树常规删除保留必补；B+基础结构/范围与更新影响认识保留；完整B+并发实现不要求。"
+    },
+    {
+      "old": "非中序所有线索遍历/删除完整代码没给，因而线索域未闭合",
+      "new": "中序建立与前后继常规例应补；非中序按次序/方向限制认识，不强制全套代码。"
+    },
+    {
+      "old": "败者树/置换选择/完整分配器没实现，外排/动态存储仍整体缺",
+      "new": "现有外归并/I/O与伙伴已支持基础任务；教材优化方法留一小认识例，完整实现不作本科共同门槛。"
+    },
+    {
+      "old": "DB第14—18章未到完整非关系/仓库/恢复/共识深度，统一待补",
+      "new": "分主题保留组织/流转/选型；事实维度粒度与非关系小操作仍补，工程仓库/多产品/恢复/共识实现免此深度。"
+    },
+    {
+      "old": "OS NUMA、完整处理器调度、专门多媒体算法未展开",
+      "new": "SMP/亲和性已有；NUMA概念与实时基础小例足够；反馈队列仍是普通调度算法不能免除；内核/专用服务实现后续。"
+    },
+    {
+      "old": "OSPF全部邻居/区域/LSA、SDN控制器配置未展开",
+      "new": "保留基础信息流/SPF和规则例；撤销完整字段/状态/配置作为全体本科必须完成项。"
+    },
+    {
+      "old": "C复杂声明/完整链表库与Python全生态应用未展开持续为缺",
+      "new": "基本类型/指针/文件/数据处理已有，局部加连接小例即可；复杂库与全应用后续；OOP证据不足单列待核。"
+    }
+  ],
+  "unchanged_decisions": [
+    "BST查找/插入/三类删除、ER重复事件标识、inode分工、fgets参数/返回值属于本科基础；旧具体断点成立且当前已修，不因降低深度翻案。",
+    "MSS含义、库函数与系统调用、位图编号、词频分隔规则等属于概念/条件准确性，不因降低深度删除。",
+    "不能把“无复杂证明/全实现”变成只剩算法名称。"
+  ],
+  "next_step": "仅提交范围与最小学习单元清单。是否实施由root按用户新深度统一处理，本代理不做内容修复。"
+}

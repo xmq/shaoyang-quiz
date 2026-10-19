@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-19",
   "policy": "出版社目录用于核对知识范围；chapters记录网站当前导航，不以站内标题一致证明教材完整。分组与压缩必须另有外部目录审查，未补缺口明确保留。",
   "courses": [
     {
@@ -24,9 +24,9 @@
     {
       "name": "大学计算机基础与新技术",
       "textbooks": [
-        "《大学计算机基础》（上海交通大学出版社）"
+        "龚沛曾、杨志强《大学计算机（第7版）》"
       ],
-      "url": "https://www.jiaodapress.com.cn/Data/BookContent/19593",
+      "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cf88c8ba9eb884cf8238f8",
       "chapters": [
         "第1章 信息、计算与计算思维",
         "第2章 信息表示与计算机系统",
@@ -41,7 +41,8 @@
       ],
       "chapter_alignment": "grouped",
       "coverage_status": "gaps_or_mapping_pending",
-      "coverage_review": "audit_reports/教材目录排查_计算机与应用_2026-10-15.json"
+      "coverage_review": "audit_reports/教材目录排查_计算机与应用_2026-10-15.json",
+      "textbook_note": "原链接实际为医学类大学计算机教材，不适合作为本站通用课程的唯一范围基准；现改用通用教材对照。章节仍按原知识点组织，不宣称逐章同名。"
     },
     {
       "name": "多媒体技术",
@@ -331,5 +332,6 @@
       "coverage_status": "gaps_or_mapping_pending",
       "coverage_review": "audit_reports/教材目录排查_电子与安全_2026-10-15.json"
     }
-  ]
+  ],
+  "depth_standard": "普通大学本科；保留教材主干的基本概念、典型过程和常规计算，复杂证明和完整工程实现不作为统一缺口。跨课承接和章节重组另记，不以章数相同证明内容完整。"
 }

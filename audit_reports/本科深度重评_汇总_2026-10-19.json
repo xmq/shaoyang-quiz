@@ -1,0 +1,558 @@
+{
+  "date": "2026-10-19",
+  "baseline_commit": "69837284c5cd9ee31c8c22ba5fc35fc2212476cc",
+  "target": "普通大学本科基础教学与常见期末任务",
+  "scope": "16科课程主干与教学深度重新分类；不因降低实现/证明深度删除正式教材主干",
+  "source_records": 63,
+  "source_access_note": "来源包含全文、正式目录、官方检索片段及访问限制；不是全部来源全文可读。各组逐条记录，未把单校少学时当全国唯一边界。",
+  "standard": {
+    "target": "普通大学本科课程的基础教学与常见期末任务",
+    "required": [
+      "术语和定义准确，能说明条件与参数",
+      "能复述典型机制，跟踪一个完整过程",
+      "能独立完成常规计算、场景判断或简短代码任务",
+      "算法和空间结构提供必要的步骤或图，不只列名称"
+    ],
+    "not_required": [
+      "科研性质或复杂形式化证明",
+      "内核、数据库、编译器等完整工业实现",
+      "完整协议状态/标准条款枚举与产品配置工程",
+      "复杂FPGA、通信设备、编解码器或数据平台项目"
+    ],
+    "scope_rule": "降低证明和实现深度，不删除所选通用教材的正式知识主干；目录有名、站内有关键词或模型能答题都不能代替学习证据。",
+    "exam_rule": "大学期末、事业单位和408借用共通题型；不把完整408综合难题设为全部知识点达标线，也不因事业单位名称降低基础内容。",
+    "review_report": "audit_reports/本科深度重评_汇总_2026-10-19.md"
+  },
+  "courses": [
+    {
+      "course": "Office软件操作",
+      "group": "应用组",
+      "judgment": "本科公共办公应用共同任务支撑较完整；没有依据把VBA开发和复杂透视字段开发列为统一必补。纸面支撑不冒充真正完成学校操作实验。",
+      "required_units": [],
+      "recognition_support": [
+        "宏的概念/格式/版本边界已有；是否练简单录制宏需按选定操作范围决定，不为此追加VBA开发。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        {
+          "domain": "宏与VBA",
+          "not_required_at_common_undergrad_depth": "VBA程序开发、对象模型和完整自动化系统。宏概念不能一起删掉。",
+          "retain": "宏是命令序列、支持格式与安全/版本条件已教；有需要再安排简单录制。"
+        },
+        {
+          "domain": "数据透视",
+          "not_required_at_common_undergrad_depth": "复杂计算字段、数据模型/DAX/大型商业报表系统。",
+          "retain": "行/列/值、求和/计数、刷新和源范围是必留，当前已有。"
+        },
+        {
+          "domain": "专业排版",
+          "not_required_at_common_undergrad_depth": "出版级整套长篇排版工艺或过时插件安装。",
+          "retain": "样式、分节、目录、题注、合并与交付要能用。"
+        }
+      ],
+      "evidence_pending": [
+        "2010河南师大含宏制作，当前HEP主教材不要求VBA；若以后指定“宏录制”为学习结果，须另核操作范围，不能将宏识别自动等同录制熟练。",
+        "本轮没有启动Office或重复10/16手机体验；学校上机实验成果不能仅由讲义确认。"
+      ],
+      "report": "audit_reports/本科深度重评_应用组_2026-10-19.json",
+      "status": "no_new_core_gap_confirmed"
+    },
+    {
+      "course": "大学计算机基础与新技术",
+      "group": "应用组",
+      "judgment": "通用计算基础及新技术入门支撑较强。不能由原医学教材身份混乱推导缺“医学AI专题”；通用HEP龚/杨7版作为主干对照替换合理。",
+      "required_units": [],
+      "recognition_support": [
+        "将通用主干与Office/DB/网络/程序跨课去向记录清楚；AI/区块链维持概念、流程与基础场景，不追加专业算法证明。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        {
+          "domain": "云/大数据/IoT",
+          "not_required_at_common_undergrad_depth": "部署整套生产集群/真实控制系统或证明分布式协议。",
+          "retain": "概念、数据/控制流程、小状态与约束选型，当前已有。"
+        },
+        {
+          "domain": "AI/区块链",
+          "not_required_at_common_undergrad_depth": "完整神经网络训练推导、共识正确性证明或量子算法。",
+          "retain": "基本关系、训练/评估与核验、哈希签名共识/信任选型；不能删主题。"
+        }
+      ],
+      "evidence_pending": [
+        "新技术并非所有学校同样设置课时：本科通识补充有官方实例，不能由一校课程名单推出必须覆盖每个前沿工具。"
+      ],
+      "report": "audit_reports/本科深度重评_应用组_2026-10-19.json",
+      "status": "no_new_core_gap_confirmed",
+      "cross_course_support": {
+        "office": {
+          "course": "Office软件操作",
+          "chapter_ids": [
+            "office.c02",
+            "office.c03",
+            "office.c04",
+            "office.c05",
+            "office.c06"
+          ],
+          "purpose": "通用文字、电子表格和演示操作"
+        },
+        "database": {
+          "course": "数据库技术",
+          "chapter_ids": [
+            "database.c01",
+            "database.c03",
+            "database.c05"
+          ],
+          "purpose": "数据库基本术语、关系与SQL入门"
+        },
+        "network": {
+          "course": "计算机网络",
+          "chapter_ids": [
+            "net-01",
+            "net-04",
+            "net-06"
+          ],
+          "purpose": "网络体系、地址与互联网应用"
+        },
+        "programming": {
+          "course": "C与Python程序设计",
+          "chapter_ids": [
+            "programming.c01",
+            "programming.c03",
+            "programming.c05",
+            "programming.c06"
+          ],
+          "purpose": "程序、算法和基本控制结构"
+        }
+      },
+      "book_note": "已将原医学类教材链接替换为龚沛曾、杨志强《大学计算机（第7版）》通用主干；不是用更换教材假称正文新增或全书逐章对应。",
+      "cross_course_note": "本轮已登记独立课程和稳定章ID承接；没有据此宣称基础讲义自身重复教完其他各科，也没有新增页面跳转功能。"
+    },
+    {
+      "course": "多媒体技术",
+      "group": "应用组",
+      "judgment": "普通本科多媒体入门的媒体/数字化/格式编辑/压缩机制/传输/作品常规题大体有支撑；不要求完整JPEG/MPEG系统实现。三维高级光照不列必补，但也不能声称当前已教完整三维概念细分。",
+      "required_units": [],
+      "recognition_support": [
+        "三维知识域继续保留：建议用极小模型例区分相机投影、可见面、材质/纹理与灯光的职责；这是认识层补强/待核，不是完整光照数学或专业渲染器。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        {
+          "domain": "JPEG与MPEG",
+          "not_required_at_common_undergrad_depth": "完整8×8 DCT矩阵手算、标准全部标记/熵表/码流解析及开发专业编码器。专业选修实验可要求，但非所有普通本科共同最低门槛。",
+          "retain": "分块/变换/量化与主要损失、前缀或游程过程、参考预测依赖和典型小计算必留，当前均有。"
+        },
+        {
+          "domain": "三维图形",
+          "not_required_at_common_undergrad_depth": "完整投影矩阵/消隐算法/光照数学推导、图形硬件结构与专业渲染器。",
+          "retain": "图元/模型与像素渲染、二维变换和三维建模→材质灯光相机→动画→渲染的基本关系；当前有阶段顺序。"
+        },
+        {
+          "domain": "检索与数据库",
+          "not_required_at_common_undergrad_depth": "实现特征提取全算法、索引引擎、检索系统或大型媒体库。",
+          "retain": "元数据、关键词与基于内容特征检索区别、一个输入到核验结果的场景；当前可支持。"
+        },
+        {
+          "domain": "著作工具与历史设备",
+          "not_required_at_common_undergrad_depth": "Authorware/Director专有安装脚本、光驱电路和旧制盘全工艺；可用现代工具表达相同通用流程。",
+          "retain": "需求、脚本、交互节点、素材/授权、输出测试，光盘种类容量等一般识别，不删作品设计域。"
+        }
+      ],
+      "evidence_pending": [
+        {
+          "item": "三维基础概念的最小补强",
+          "current": "只有阶段顺序与渲染概述；若要求区别投影、可见面、材质与光照，当前不足以稳定说明。",
+          "proposal": "可保留一幅模型经相机投影、可见性与光照/纹理得到像素的概念示例，不做数学推导。",
+          "status": "选定HEP教材此域存在；本轮两校通用大纲未共同明确这些细分结果，保留为待核/建议，不能虚报已完整覆盖，也不升级为已确认必补"
+        },
+        {
+          "item": "实践课程结课能力",
+          "current": "正文提供可执行思路，但本轮不启动图像/音频工具。",
+          "status": "南大/长江专业实验比本次纸面最低深度高；不能把未做全部实验说成所有本科知识不足，也不能宣称已经等价完成实验学分。"
+        }
+      ],
+      "report": "audit_reports/本科深度重评_应用组_2026-10-19.json",
+      "status": "no_new_core_gap_confirmed"
+    },
+    {
+      "course": "操作系统原理",
+      "group": "计算机组",
+      "judgment": "传统资源管理主干多数已达；不能把NUMA/专门多媒体调度与普通调度中尚缺的反馈队列混为一组。",
+      "required_units": [
+        "多级反馈队列规则与轨迹",
+        "两任务实时期限/EDF小例",
+        "死锁检测等待图例"
+      ],
+      "recognition_support": [
+        "NUMA一句定义与本地/远端取舍"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "NUMA内核实现及服务器性能实验",
+        "全部专门多媒体调度算法",
+        "完整公平读写锁产品代码"
+      ],
+      "evidence_pending": [],
+      "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "数据库技术",
+      "group": "计算机组",
+      "judgment": "关系数据库基础与典型机制已教，不再按18章一一要求产品级完成；第四篇仍学，深度为数据组织、基本流转和选型。",
+      "required_units": [
+        "过程化SQL/游标的一次简明结构（可伪码）"
+      ],
+      "recognition_support": [
+        "事实/维度/粒度与三行汇总",
+        "非关系数据形状与写读/筛选小例"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "跨产品统一触发器可执行代码",
+        "完整仓库与多NoSQL产品工程",
+        "多级优化器/内存恢复/共识实现"
+      ],
+      "evidence_pending": [],
+      "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "数据结构与算法",
+      "group": "计算机组",
+      "judgment": "主体过程比旧目录报告充实；B树基本删除仍不能降为后续工程，而B+全部更新代码与非中序所有实现不能捆绑为必补。",
+      "required_units": [
+        "B树删除借位/合并小例",
+        "中序建线索与前驱/后继小例"
+      ],
+      "recognition_support": [
+        "非中序线索次序/方向限制",
+        "败者树选段首与置换选择一次小状态"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "所有B+更新工程代码",
+        "全线索树实现全集",
+        "完整分配器与外排序I/O系统"
+      ],
+      "evidence_pending": [],
+      "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "C与Python程序设计",
+      "group": "计算机组",
+      "judgment": "已有大量短代码与状态例，主干不因未写复杂库而判缺；教材与学校对某些高级语法深度不同，分别记录。",
+      "required_units": [],
+      "recognition_support": [],
+      "optional_practice": [],
+      "not_required": [
+        "完整链表库",
+        "跨平台二进制交换格式规范",
+        "Python生态全应用"
+      ],
+      "evidence_pending": [],
+      "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+      "status": "no_new_core_gap_confirmed"
+    },
+    {
+      "course": "计算机组成原理",
+      "group": "计算机组",
+      "judgment": "本科主干已有大量可执行例；维持已接受主干，不能用本轮未再做实验宣称整书穷尽。",
+      "required_units": [
+        "先行进位2位展开与一个数值核验"
+      ],
+      "recognition_support": [],
+      "optional_practice": [],
+      "not_required": [
+        "全CPU工程实现",
+        "所有浮点边界的复杂证明",
+        "按考研高难综合题无限增加流水/Cache层级"
+      ],
+      "evidence_pending": [],
+      "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "计算机网络",
+      "group": "计算机组",
+      "judgment": "已有9章不等于每节完整，也不能把未实现所有工程配置当共同本科不足；主要协议已给过程。",
+      "required_units": [
+        "OSPF从邻居/链路状态到SPF的基础链与变化小例"
+      ],
+      "recognition_support": [
+        "MPLS三步标签流转",
+        "SDN一次规则/未命中动作"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "全OSPF邻居状态/全部LSA枚举",
+        "SDN控制器配置项目",
+        "现代蜂窝/Wi-Fi全协议状态机"
+      ],
+      "evidence_pending": [],
+      "report": "audit_reports/本科深度重评_计算机组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "电路分析与电工技术",
+      "group": "电子组",
+      "judgment": "直流/一阶/正弦基础已有多项普通本科算例；尚不能判为理论电路主干已足够。优先缺口是二阶RLC和若干正式知识域的最小模型/常规短例，而非高级工程设计。",
+      "required_units": [
+        "共同核心：二阶RLC由电路建模、两初值、阻尼与一条典型响应；不是只补一个阻尼名词。",
+        "主教材低深度补强：互感M及同名端正负列式/同反助一例；二端口方向与一种参数及简单电阻网络。",
+        "普通任务补强：RLC谐振Q/BW/曲线；非正弦分谐波响应；s域元件含初始量的简单例（可跨课复用变换）。"
+      ],
+      "recognition_support": [
+        "矩阵/状态给两节点或两储能变量的基本组织；不必重排整个导航。",
+        "非线性负载线/分段模型可明确链接模电已有算例；传输线保留延时、Z0/匹配和一次反射短例。",
+        "电工补充：电机/低压控制/测量安全沿现有范围，不将新找到的秦书整本13章临时加为验收。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "全部二阶强迫激励/阻尼/复频域组合题；矩阵性质全证明；二端口全参数连接转换。",
+        "非线性电路通用数值实现、电报方程全部推导与射频线工程；电机/PLC/保护整定工程。"
+      ],
+      "evidence_pending": [
+        "本复合课理论/电工应用各占多少课时尚未指定，不能由校外某门课学时推定本站篇幅。",
+        "互感、二端口缺基础已确认；非线性/传输线在所选全书正式域保留，但后续若采用明确课程范围需单列深度，不自动标高级选修。"
+      ],
+      "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "模拟电子技术",
+      "group": "电子组",
+      "judgment": "偏置、共射/共源电压增益、理想运放和基本波形/电源已有真实算例；最主要差距是常规电路的综合分析，不能再写“功放只机制、反馈无实电路、运算子域全缺”。",
+      "required_units": [
+        "从实际基本放大图到DC/AC等效、Q、Au/Ri/Ro及带源/负载结果的一体普通题。",
+        "对称差分对从尾电流到Q/差模单端或双端增益的一题，替代只给Ad/Ac代数。",
+        "耦合电容所见等效R→一个fL与主导高频等效→fH的短过程；不是全极点计算。",
+        "OCL半周通路与Po/Pdc/η相接的一例；稳压分压反馈定输出的一例。"
+      ],
+      "recognition_support": [
+        "保留当前最简电流镜及余量条件，不扩出各种复杂镜。",
+        "高/带通、限幅/钳位、迟滞由电阻定阈值等若列入常规题，应给最小拓扑入口；不说现有运放章全缺。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "所有电流镜变体、整颗运放晶体管级和版图；全部寄生电容同时保留的全极点求根。",
+        "全功放热保护和开关电源控制/PCB整机设计。"
+      ],
+      "evidence_pending": [
+        "具体BJT/FET小信号参数口径可选rbe/β或gm模型，但须全程一致；无需把多套模型都推完。"
+      ],
+      "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "数字电子技术",
+      "group": "电子组",
+      "judgment": "布尔/卡诺、加法/MUX、时序逐拍、模4激励、容量扩展、555及SAR已可支撑多种常规本科题。仍不能由SAR一例推断所有转换器结构均已教。",
+      "required_units": [
+        "数模转换常规任务支撑不足：权电阻或R-2R网络选一种，讲位权电流相加并算短码输出。",
+        "双积分按两阶段斜率/时间比例的短过程；Flash给并行判档说明。各结构不要求与已有SAR等长。"
+      ],
+      "recognition_support": [
+        "基本PLD/HDL组合与边沿更新描述已存在；补位宽/端口提示即可，不报整域无。",
+        "TTL典型级通路、其他门构脉冲作为结构认识，不重教全部器件系列。"
+      ],
+      "optional_practice": [
+        "同步时序设计再给一个非2幂或带输入两位状态任务，包含未用态检查。"
+      ],
+      "not_required": [
+        "FPGA完整工程、工具链安装、板卡外设、约束/时序收敛、跨时钟工程。",
+        "所有ADC架构完整实现和误差校准、复杂异步全证明。"
+      ],
+      "evidence_pending": [
+        "数电与独立EDA课分工各校不同，但选定阎石书的PLD/HDL域不应删除；本站不需据此承担独立EDA课所有能力。"
+      ],
+      "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "通信原理与高频电子线路",
+      "group": "电子组",
+      "judgment": "已有多项速率、带宽、编码、混频、同步与判决基础，不是概论空壳；随机过程到滤波统计、误码概率、器件单元到性能的常规题支撑仍不足。",
+      "required_units": [
+        "随机过程/宽平稳/自相关与PSD、Sy=|H|²Sx的最小统计链及带限噪声例。",
+        "完整二元接收：波形→相关/匹配滤波→T抽样→门限→误码事件，并给统一Eb/N0口径的普通Pe计算。",
+        "单音AM频谱功率与FM瞬时频偏联系；基带邻符号ISI短算例。",
+        "高频单元：简化调谐级增益/Q/BW及基本噪声系数；丙类给系数求Pdc/Po/η；一种LC振荡接线判相及一种解调电路过程。"
+      ],
+      "recognition_support": [
+        "保留当前QPSK/DPSK、升余弦/眼图、汉明/CRC/TDM/两用户相关，不继续沿旧表说整章无。",
+        "DPCM、HDB3、循环/卷积码与伪随机采用最小编码/预测/相关步骤；OFDM以正交/CP与DFT桥接为主。",
+        "高频控制与合成已有PLL/整数N小例，AGC/AFC给输入输出方向即可。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        "所有M元MAP证明/全误码率公式库、随机测度或所有衰落闭式积分。",
+        "通用接收DSP实现、全部自适应均衡算法；射频器件选型/匹配/热设计、完整5G或软件无线电系统工程。"
+      ],
+      "evidence_pending": [
+        "合并通信原理与高频两门的本站目标课时未给，不可把一门36/48课时大纲直接套成两门合计要求。",
+        "不同课是否把随机过程独立先修差异很大；本站没有独立随机先修，最低基础仍须落地或清楚链接，不能凭课时少删去。"
+      ],
+      "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "信号与系统",
+      "group": "电子组",
+      "judgment": "连续时域、卷积、Fourier/Laplace、采样以及Z/DTFT入门已有普通例题。DFT小基础仍未教；旧报告将下册多个整域说成“无”与当前文本不符，应修正但不改旧文件。",
+      "required_units": [
+        "选定教材桥接基础：DFT/IDFT、频点、4点正逆短例、圆周与线性卷积及补零。",
+        "离散系统普通综合：非零初值差分、有限序列DTFT幅相、延迟框图到方程。",
+        "正交/内积、相关与Parseval的基础例；已有RC状态/输出例保留。"
+      ],
+      "recognition_support": [
+        "FFT保留同一DFT快速计算、偶奇分解/加权和差及一小步演示；不能只列缩写，但不要求完整多级图。",
+        "保留教材DCT/Walsh、滤波家族/指标、根轨迹/Nyquist及可控可观的用途/低阶直观，不删除正式知识地图。",
+        "当前FIR/IIR、RC状态和闭环稳定例已存在，旧整域无描述撤销。"
+      ],
+      "optional_practice": [
+        "两储能状态/输出分工可增加迁移练习；现有RC状态例已可支撑基本概念，不能仅因没有更多维度就称状态域未教。"
+      ],
+      "not_required": [
+        "完整8/16点多级FFT蝶形、位倒序与通用代码/复杂度证明、OFDM收发工程。",
+        "滤波器全部逼近/无源网络综合；矩阵指数/变换和可控可观全证明、精细根轨迹全套作图。"
+      ],
+      "evidence_pending": [
+        "全国并无单一信号课边界：DFT/FFT常在DSP主讲，但郑书明确包含，故这里保留基础桥接而不作全域撤销。",
+        "学校大纲未列某节不能证明教材选修；若未来换教材或拆DSP课，再在课程地图明确归属。"
+      ],
+      "report": "audit_reports/本科深度重评_电子组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "软件工程",
+      "group": "应用组",
+      "judgment": "主干大部分已能支撑普通概念、流程、计算和场景；CMM/CMMI与Jackson仍须最小补充，不能因某现代大纲省略而排除。未要求实现专业工程管理系统或完整OO项目。",
+      "required_units": [
+        "CMM/CMMI的用途、成熟层次与基本场景：保留模型是组织过程评估/改进工具的含义；CMM经典五级的名称和层次差异；知道CMMI是集成改进框架，按所选版本说明名称差别；用一个组织只做项目级管理与采用组织统一过程的普通情境作基本判断。",
+        "Jackson面向数据结构设计的最小数据→程序例：知道顺序、选择、重复的数据结构与程序控制结构对应；给一个表头+重复记录+表尾的最小输入/输出结构，映射到初始化→循环处理→结束汇总，逐步指出数据节点对应哪段处理。使用最少必要结构符号/伪代码即可。"
+      ],
+      "recognition_support": [
+        "UI一致性、反馈/响应与错误恢复可作短概念例补强候选；其最低统一深度保留待核，不以未实现UI系统判缺。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        {
+          "domain": "形式化方法",
+          "not_required_at_common_undergrad_depth": "Petri/Z完整语言语法、形式验证器与数学证明；不能据未证明再标整个形式化域缺失。",
+          "retain": "状态、事件、守卫、前后置和不变式及一条合法/非法迁移；当前借阅例已有。"
+        },
+        {
+          "domain": "面向对象开发",
+          "not_required_at_common_undergrad_depth": "按教材附录完整实现C++类库系统、全套设计模式或大型项目。",
+          "retain": "对象/类/关系、需求到属性职责协作和单元/集成反例；当前借阅链已有。"
+        },
+        {
+          "domain": "项目估算",
+          "not_required_at_common_undergrad_depth": "完整COCOMO II校准或企业级度量数据库。",
+          "retain": "规模/工作量/工期、给系数基础模型、关键路径/时差和风险，当前有。"
+        }
+      ],
+      "evidence_pending": [
+        {
+          "item": "人机界面基本原则",
+          "current": "当前有原型、MVC职责及错误返回，但没有单列通用一致性、响应反馈和错误恢复原则。",
+          "evidence": "S12目录6.2及S13详细设计明确列UI设计；第二校可读大纲对这些细则的共同最低深度本轮未充分核定。",
+          "status": "保留待核/小补强候选，不据此宣称专业UI系统未实现即本科不足，不默认为已完整教。"
+        }
+      ],
+      "report": "audit_reports/本科深度重评_应用组_2026-10-19.json",
+      "status": "basic_units_to_complete"
+    },
+    {
+      "course": "信息安全",
+      "group": "应用组",
+      "judgment": "本科入门安全机制、处置及基础场景/权限与恢复计算已具支撑，旧“物理/内容/AI整章缺失”不能沿用成当前事实。密码学专业推导与模型证明不作为通用入门必补；也不声称本课已教完整密码算法执行。",
+      "required_units": [],
+      "recognition_support": [
+        "安全策略/模型的目标及简单标签权限判定应保留；特定BLP/Biba名称是否必列以选定章节正文核定。法律体系名称与适用问题可作认识清单补强，动态条款另维护，不要求背处罚金额。"
+      ],
+      "optional_practice": [],
+      "not_required": [
+        {
+          "domain": "安全模型",
+          "not_required_at_common_undergrad_depth": "Bell-LaPadula等形式化证明、模型正确性定理与验证系统。",
+          "retain": "安全目标、策略、DAC/MAC/RBAC/ABAC与可信监控、简单权限判定必须保留，当前有。"
+        },
+        {
+          "domain": "密码算法",
+          "not_required_at_common_undergrad_depth": "AES/DES完整轮函数、RSA安全证明与工程参数配方；不把未做专业密码课计算标为通用安全域缺失。",
+          "retain": "算法类别与任务、密钥/分组区别、模式/nonce前提、哈希签名证书边界、一个基本关系过程，当前有。"
+        },
+        {
+          "domain": "软件/AI攻防",
+          "not_required_at_common_undergrad_depth": "实现攻击平台、恶意代码逆向全流程、对抗样本/差分隐私算法或形式隐私保证。",
+          "retain": "威胁位置、入口、权限与防御机制和事件流程；当前可支持。"
+        },
+        {
+          "domain": "法律与标准",
+          "not_required_at_common_undergrad_depth": "背固定年份的处罚金额、所有动态期限与条款逐字；不以条文更新当普遍本科知识不合格。",
+          "retain": "授权/目的/最小必要/期限责任/个人信息与证据意识，当前有；具体问题要能找到现行官方依据。"
+        }
+      ],
+      "evidence_pending": [
+        {
+          "item": "具体模型名称/密码手算的范围",
+          "evidence": "S18只在目录列常见模型/典型算法；两校入门大纲目标偏基本概念和应用，未共同明示须完成某BLP/Biba证明或某整套轮函数。",
+          "status": "若后续正式学习结果指定BLP读写标签或RSA小数值，应保留该最小规则/算例再验；本轮既不强加证明，也不把所有算法计算默认为已教。"
+        },
+        {
+          "item": "法律体系具体条目",
+          "evidence": "本轮校准学习深度，没有另行核验2026各法律最新修订全文。",
+          "status": "不新增动态法律结论；旧“具体合规题须官方现行文本”边界保留，非知识域删除。"
+        }
+      ],
+      "report": "audit_reports/本科深度重评_应用组_2026-10-19.json",
+      "status": "no_new_core_gap_confirmed"
+    }
+  ],
+  "editorial_decisions": [
+    "数字时序已有模4激励和模6未用态示例，再给更复杂变体改为练习加强，不作为新的硬缺口。",
+    "已有RC状态和闭环小例，撤销旧的整域没有判断；更多状态维度是可增加的迁移例，不据此无限抬高最低门槛。",
+    "CMM/Jackson、RLC二阶、DFT基础仍保留真实缺漏，不因为目标本科就仅列名词。",
+    "完整FFT工程、全协议状态、内核与多产品工程、形式化证明等不再混入必补清单。"
+  ],
+  "book_correction": "已将原医学类教材链接替换为龚沛曾、杨志强《大学计算机（第7版）》通用主干；不是用更换教材假称正文新增或全书逐章对应。",
+  "changes": "只调整评审、内部深度标准与教材来源元数据；没有补写讲义、增加题目、修改页面、知识点ID或学习记录。",
+  "source_fingerprints": {
+    "course_notes/C与Python程序设计.md": "83a4831e9de30223e740ff7d9e65ba15012f9b8464c883abf7ef4c62e25125c7",
+    "course_notes/Office软件操作.md": "5788ab21b96507384774e2391c60ea5cccdb0fe22ab5220a814e85e5351283b0",
+    "course_notes/信号与系统.md": "bfc234b1afff1e4548675d2da7e383fe93681806318b0e3049705f64178a1f89",
+    "course_notes/信息安全.md": "290c2d2fba0dfbd1aadf9b8d43b50166d4f571801b00c6d1236a428b01866473",
+    "course_notes/多媒体技术.md": "9bcbfb1a6884abeb1feeebd4e3e7ae215404f816d2a19055fea316de200a57a7",
+    "course_notes/大学计算机基础与新技术.md": "1a5a2c2f193d51ae7f72dcd4c9e4357906ee3a568ad716e098e0ad2159f40a47",
+    "course_notes/操作系统原理.md": "243fa8968d31b394b258b59d1033c06a88d091a2f43ce0291f008093ceb82ed0",
+    "course_notes/数字电子技术.md": "bdc673e7b072e2060ee340ca503512533d2af0393a68d40d512474dd94404841",
+    "course_notes/数据库技术.md": "7b6215b310c9f304017f2013787914ed6c47b5d403d04b72b0bf5e5491851715",
+    "course_notes/数据结构与算法.md": "47df0ddc320464e93e18422839a7318097ff62b38a0232824342104a949ba2e3",
+    "course_notes/模拟电子技术.md": "4ca6cd64c2f975dfab2069fc1a8ded78fbf94a996a0d07076c0ede1ef91e915e",
+    "course_notes/电路分析与电工技术.md": "827d0bb43bf2dbe45d92be0eca27f289f8b9d83370ca004c89a32042bbe02871",
+    "course_notes/计算机组成原理.md": "6ce94d64f271b559a3bb0e734c3dbb5e6bb581afdfeaa0e1bb1eec0270ba3069",
+    "course_notes/计算机网络.md": "59ba02c0ee4353e11ca03fefd716cd8ebd71ee4542b90d1c98b2e534673df9ff",
+    "course_notes/软件工程.md": "48ce977e5f66506e53731c3041c5702edb0865132c2c52f40fa9bf8f9c991628",
+    "course_notes/通信原理与高频电子线路.md": "91112341fe5b066e764942819555eacef99dd33284819afaa332530351a4c5c7",
+    "color_notes/C与Python程序设计.md": "2dac37f2bd98c995fe9790823e405c91a5f0f9cdf608ba5802ae34adf36e6186",
+    "color_notes/Office软件操作.md": "83ca9333dcc64e8a8512983555c13f7290278888eaf391dbf2803d32043e121b",
+    "color_notes/信号与系统.md": "3d728d768148ea73107e255b01def0a413e98936d98cec8161cf707ea7e18c61",
+    "color_notes/信息安全.md": "d070ecfe0e3ac71a15138949865d46012a44c73aea2f7f9f562d2bd0a064c2bb",
+    "color_notes/多媒体技术.md": "8051dcdb28620c0b65e741c1028386fc5c5e244503be323051849b9295ef478b",
+    "color_notes/大学计算机基础与新技术.md": "14d0ebc0ecaef5dbc92f549f0fd68f0097578b81156ee574151e126849b10205",
+    "color_notes/操作系统原理.md": "90e216431f810bf7c2c1684766b93ba08a8dc94f7ca58777541b465c23b8f68b",
+    "color_notes/数字电子技术.md": "a217aa3f1eac2c2930236ba3ad2b77b7a9e62860409431b6a6474bec963e3cb5",
+    "color_notes/数据库技术.md": "3d59927bd9497dc04461e9a8dbac534851021f88d39522105c9381e3a7b232db",
+    "color_notes/数据结构与算法.md": "661deae120e801b6913d626bb72dcf7ff24b4e7f12622ae8e6cc01c8330ee526",
+    "color_notes/模拟电子技术.md": "2fd82e7afdf84dfccf955921153de9a7a2191aeace4fdcedc3b688c95bc04294",
+    "color_notes/电路分析与电工技术.md": "c4cc2d71e58192854df7e547e26e023e98cb26b607b0d05f6f425b54496d55f4",
+    "color_notes/计算机组成原理.md": "e4b357183f4a74bc924f832de6483c14aac29e29fb1c6f2ab9c79178a590c7ee",
+    "color_notes/计算机网络.md": "d2435d422293fef62dfa7243cbb48f1814d8b63f05c74e2389a04e70f3ba0a35",
+    "color_notes/软件工程.md": "d22bd4bf83c411ecca5fa5128f634fd05fe8a3dbf8acf1888a1ba46623d5c723",
+    "color_notes/通信原理与高频电子线路.md": "efdaf110f5d3316b11bb9821207ecdf01a371aacc31113c1a009a4e80238ab40"
+  },
+  "pending_note": "以上清单不是已修复证明；后续补内容后仍需独立学习复测，普通本科范围也不等于每个本科专业实际学时完全相同。"
+}
